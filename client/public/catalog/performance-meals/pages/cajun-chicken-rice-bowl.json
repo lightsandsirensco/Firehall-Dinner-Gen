@@ -1,8 +1,8 @@
 {
   "slug": "cajun-chicken-rice-bowl",
-  "title": "Cajun Chicken Rice Bowl",
-  "displayTitle": "Cajun Chicken Rice Bowl",
-  "seoTitle": "Cajun Chicken Rice Bowl | Firefighter Meal",
+  "title": "Cajun Chicken and Rice",
+  "displayTitle": "Cajun Chicken and Rice",
+  "seoTitle": "Cajun Chicken and Rice | Firefighter Meal",
   "shortDescription": "Blackened chicken thighs over rice with bell pepper and creole spices",
   "subtitle": "Blackened chicken thighs over rice with bell pepper and creole spices",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 696,
-  "protein": 51,
-  "carbs": 64,
-  "fats": 24,
+  "calories": 495,
+  "protein": 38,
+  "carbs": 52,
+  "fats": 14,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -102,55 +102,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Cajun Chicken Rice Bowl in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Mix Cajun spice blend",
       "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, 1 tbsp salt, and 1 tsp pepper until evenly blended and deeply red in color.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Cook rice",
-      "instruction": "Simmer rice in salted water or broth until fluffy grains separate easily with a fork, not sticky, gummy, or wet at the bottom. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 20 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer rice in salted water or broth until fluffy grains separate easily with a fork, not sticky, gummy, or wet at the bottom.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Sauté trinity vegetables",
-      "instruction": "Cook onion, bell peppers, and celery in oil over medium 8 minutes until softened and edges lightly caramelized with sweet aroma. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Cook onion, bell peppers, and celery in oil over medium 8 minutes until softened and edges lightly caramelized with sweet aroma.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Blacken chicken",
       "instruction": "Coat thighs generously with Cajun blend. Sear in hot oiled skillet 5–6 minutes per side until dark crust forms and internal temp hits 165°F.",
       "minutes": 14,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Build bowls",
       "instruction": "Slice chicken, portion over rice with sautéed trinity. Deglaze pan with broth for light sauce drizzle. Chicken should be juicy inside, charred outside.",
       "minutes": 5,
@@ -175,26 +154,11 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 696,
-    "protein": 51,
-    "carbs": 64,
-    "fats": 24,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 495,
+    "protein": 38,
+    "carbs": 52,
+    "fats": 14,
+    "label": "~495 cal/serving · 38g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
   "mobileImage": "/images/mobile/cajun-chicken-rice-bowl.jpg",
@@ -204,6 +168,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
+    "cajun chicken and rice",
     "cajun chicken rice bowl",
     "chicken",
     "Cajun",
@@ -219,6 +184,6 @@
     "korean-beef-rice-bowls",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

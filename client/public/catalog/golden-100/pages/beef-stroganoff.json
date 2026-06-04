@@ -13,10 +13,10 @@
   "cookTime": 65,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1177,
+  "protein": 68,
+  "carbs": 101,
+  "fats": 57,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -127,83 +127,41 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Beef Stroganoff in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Cremini mushrooms, sliced, Yellow onion, sliced, Fresh parsley, chopped as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Slice beef and prep mushrooms",
       "instruction": "Slice beef across the grain into thin strips. Pat dry and season with salt, pepper, and paprika. Slice mushrooms and onion — uniform pieces cook evenly in one pan.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Sear beef in batches",
-      "instruction": "Melt 2 tbsp butter in a large skillet over high heat. Sear beef in a single layer 2 minutes per side until browned but still pink inside. Transfer to a plate — do not crowd or you steam instead of sear. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Melt 2 tbsp butter in a large skillet over high heat. Sear beef in a single layer 2 minutes per side until browned but still pink inside. Transfer to a plate — do not crowd or you steam instead of sear.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Cook mushrooms and onions",
       "instruction": "Add remaining butter to the pan. Cook mushrooms and onions over medium heat 10–12 minutes until deeply browned and moisture evaporates. Stir in garlic 30 seconds until fragrant.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Build the stroganoff sauce",
-      "instruction": "Sprinkle flour over vegetables; cook 1 minute. Whisk in beef broth and Worcestershire; simmer 5 minutes until thickened. Remove from heat, stir in Dijon, then fold in sour cream — boiling curdles sour cream. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Sprinkle flour over vegetables; cook 1 minute. Whisk in beef broth and Worcestershire; simmer 5 minutes until thickened. Remove from heat, stir in Dijon, then fold in sour cream — boiling curdles sour cream.",
       "minutes": 12,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Return beef and simmer gently",
-      "instruction": "Return beef and any juices to the pan. Simmer 5–8 minutes on low until beef is tender and sauce coats a spoon. Taste for salt — beef broth varies. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Return beef and any juices to the pan. Simmer 5–8 minutes on low until beef is tender and sauce coats a spoon. Taste for salt — beef broth varies.",
       "minutes": 8,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 8,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 10,
-      "title": "Portion and open the line",
-      "instruction": "Portion Beef Stroganoff onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
+      "stepNumber": 6,
       "title": "Boil noodles and serve",
       "instruction": "Boil egg noodles in salted water until tender; drain well. Toss noodles with stroganoff on sheet trays or serve noodles first with sauce ladled over. Finish with parsley.",
       "minutes": 12,
@@ -230,20 +188,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 1177,
+    "protein": 68,
+    "carbs": 101,
+    "fats": 57,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -277,7 +234,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.070Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Beef Stroganoff runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.353Z",
+  "contentVersion": 2
 }

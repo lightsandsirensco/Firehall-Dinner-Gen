@@ -41,7 +41,7 @@
   "mealRecommendations": [
     {
       "slug": "big-chili",
-      "title": "1. Hall-Sized Beef and Bean Chili",
+      "title": "Beef and Bean Chili",
       "blurb": "Simmers — season late so you do not oversalt before it reduces. Hold on low; toppings fix a lot."
     },
     {
@@ -51,22 +51,22 @@
     },
     {
       "slug": "hall-taco-bar",
-      "title": "3. Hall Taco Bar Night",
+      "title": "Taco Bar",
       "blurb": "Lay out cold toppings before the meat hits — assembly, not plating stress."
     },
     {
       "slug": "batch-lasagna",
-      "title": "4. Giant Batch Lasagna",
+      "title": "Batch Lasagna",
       "blurb": "Oven does the work. Rest ten minutes before you cut or the slices slide."
     },
     {
       "slug": "chicken-parm",
-      "title": "5. Chicken Parm",
+      "title": "Chicken Parmesan",
       "blurb": "Sear cutlets in batches — crowding steams instead of browning."
     },
     {
       "slug": "beef-dip",
-      "title": "6. Beef Dip Sandwiches",
+      "title": "Beef Dip Sandwiches",
       "blurb": "Rest the roast before slice. Warm au jus separate from the rolls."
     },
     {
@@ -81,12 +81,12 @@
     },
     {
       "slug": "one-pot-chicken-rice",
-      "title": "9. One-Pot Chicken and Rice",
+      "title": "Chicken and Rice",
       "blurb": "Set a timer; lifting the lid every two minutes turns rice mushy."
     },
     {
       "slug": "slider-bar",
-      "title": "10. Slider Bar Night",
+      "title": "Slider Bar",
       "blurb": "Toast the buns. Two proteins max so you are not running three flat-tops."
     }
   ],

@@ -77,87 +77,31 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Chicken Cutlets Marinara in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Eggs, beaten, Parmesan, grated as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Bread the cutlets",
       "instruction": "Season cutlets with salt. Dredge flour → egg → panko, pressing crumbs to adhere. Rest breaded cutlets on a rack 10 minutes so coating sets.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Fry until golden",
       "instruction": "Fry in 350°F oil in batches 3–4 minutes per side until deep golden and 165°F inside. Drain on a rack, not paper-only — steam softens crust.",
       "minutes": 15,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Simmer marinara",
       "instruction": "Warm marinara in a wide skillet over medium heat. Season with a pinch of salt and basil if you have it — sauce should bubble gently, not spit.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Crispy Chicken Cutlets Marinara onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Melt cheese and serve",
       "instruction": "Nestle cutlets in sauce, top with mozzarella, cover 2–3 minutes until cheese melts. Finish with Parmesan. Serve from the skillet or transfer to sheet trays at 200°F for late eaters.",
       "minutes": 6,
       "heatLevel": "medium-low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Crispy Chicken Cutlets Marinara — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Crispy Chicken Cutlets Marinara — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -228,7 +172,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.022Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Crispy Chicken Cutlets Marinara runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.284Z",
+  "contentVersion": 2
 }

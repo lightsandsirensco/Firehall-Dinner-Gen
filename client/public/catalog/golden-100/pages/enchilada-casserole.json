@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1122,
+  "protein": 72,
+  "carbs": 72,
+  "fats": 62,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -65,71 +65,29 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chicken Enchilada Casserole in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Shredded cheddar, Black olives, sliced as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
+      "title": "Brown seasoned beef",
+      "instruction": "Brown ground beef with taco seasoning and diced onion. Drain grease; stir in 1 cup enchilada sauce.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Brown seasoned beef",
-      "instruction": "Brown ground beef with taco seasoning and diced onion. Drain grease; stir in 1 cup enchilada sauce. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 15,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
       "title": "Layer the casserole",
-      "instruction": "In a deep hotel pan: sauce, tortillas torn to fit, beef, cheese — repeat twice. Finish with sauce and cheese on top. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "In a deep hotel pan: sauce, tortillas torn to fit, beef, cheese — repeat twice. Finish with sauce and cheese on top.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Bake until bubbling",
-      "instruction": "Bake covered at 375°F 30 minutes; uncover and bake 15 more until cheese browns at edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Bake covered at 375°F 30 minutes; uncover and bake 15 more until cheese browns at edges.",
       "minutes": 45,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Chicken Enchilada Casserole onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Rest and scoop",
-      "instruction": "Rest 10 minutes so layers set. Scoop Enchilada Casserole with a square spatula — it should hold its shape, not slide like soup. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 10 minutes so layers set. Scoop Enchilada Casserole with a square spatula — it should hold its shape, not slide like soup.",
       "minutes": 10,
       "heatLevel": "low"
     }
@@ -158,20 +116,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 1122,
+    "protein": 72,
+    "carbs": 72,
+    "fats": 62,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -206,7 +163,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.140Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Chicken Enchilada Casserole runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.488Z",
+  "contentVersion": 2
 }

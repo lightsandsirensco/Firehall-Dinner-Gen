@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 802,
-  "protein": 57,
-  "carbs": 65,
-  "fats": 33,
+  "calories": 495,
+  "protein": 36,
+  "carbs": 52,
+  "fats": 16,
   "tags": [
     "protein:salmon",
     "format:bowl",
@@ -103,57 +103,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Maple Soy Salmon Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch salmon. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Cook brown rice",
-      "instruction": "Simmer brown rice until tender and chewy, about 35–40 minutes. Fluff with fork so grains stay separate, not mashed or sticky. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer brown rice until tender and chewy, about 35–40 minutes. Fluff with fork so grains stay separate, not mashed or sticky.",
       "minutes": 40,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Mix maple soy glaze",
-      "instruction": "Whisk maple syrup, soy sauce, vinegar, garlic, ginger, and 1 tbsp sesame oil until combined and slightly thickened. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk maple syrup, soy sauce, vinegar, garlic, ginger, and 1 tbsp sesame oil until combined and slightly thickened.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast salmon",
+      "instruction": "Place salmon on parchment-lined pans. Brush half the glaze. Bake at 400°F 12–14 minutes, brush again, finish 2–4 minutes until 125–130°F at center.",
+      "minutes": 16,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Warm edamame",
+      "instruction": "Steam or microwave edamame 2–3 minutes until bright green and heated through. Toss with pinch of salt and remaining sesame oil.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Roast salmon",
-      "instruction": "Place salmon on parchment-lined pans. Brush half the glaze. Bake at 400°F 12–14 minutes, brush again, finish 2–4 minutes until 125–130°F at center. Target 145°F at the thickest point before moving to the next batch.",
-      "minutes": 16,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 6,
-      "title": "Warm edamame",
-      "instruction": "Steam or microwave edamame 2–3 minutes until bright green and heated through. Toss with pinch of salt and remaining sesame oil. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
       "title": "Assemble bowls",
-      "instruction": "Flake or slice salmon over rice with edamame and carrot. Drizzle extra glaze, top with scallions and sesame seeds. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Flake or slice salmon over rice with edamame and carrot. Drizzle extra glaze, top with scallions and sesame seeds.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -176,25 +155,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 802,
-    "protein": 57,
-    "carbs": 65,
-    "fats": 33,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 495,
+    "protein": 36,
+    "carbs": 52,
+    "fats": 16,
+    "label": "~495 cal/serving · 36g protein · 5g fiber (est.)"
   },
   "heroImage": "/images/golden-100/maple-soy-salmon-bowls.jpg",
   "mobileImage": "/images/mobile/maple-soy-salmon-bowls.jpg",
@@ -219,6 +184,6 @@
     "tabbouleh-chicken-bowls",
     "lemon-salmon-orzo-skillet"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

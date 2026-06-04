@@ -1,8 +1,8 @@
 {
   "slug": "chicken-enchilada-skillet-light",
-  "title": "Garlic Chicken Skillet",
-  "displayTitle": "Garlic Chicken Skillet",
-  "seoTitle": "Light Chicken Enchilada Skillet | Firefighter Meal",
+  "title": "Chicken Enchilada Skillet",
+  "displayTitle": "Chicken Enchilada Skillet",
+  "seoTitle": "Chicken Enchilada Skillet | Firefighter Meal",
   "shortDescription": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
   "subtitle": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 607,
-  "protein": 58,
-  "carbs": 46,
-  "fats": 20,
+  "calories": 445,
+  "protein": 38,
+  "carbs": 42,
+  "fats": 16,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -102,57 +102,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Garlic Chicken Skillet in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Poach and shred chicken",
-      "instruction": "Simmer chicken in salted water 15–18 minutes until 165°F. Rest, shred into bite-size strands that hold together when sauced. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Simmer chicken in salted water 15–18 minutes until 165°F. Rest, shred into bite-size strands that hold together when sauced.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Sweat onion and spices",
       "instruction": "Sauté onion in a large skillet 5 minutes until soft. Add garlic, chili powder, and cumin; cook 1 minute until fragrant and toasty.",
       "minutes": 6,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Simmer filling",
-      "instruction": "Add enchilada sauce, beans, corn, green chiles, and shredded chicken. Simmer 10 minutes until mixture thickens slightly and smells rich. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Add enchilada sauce, beans, corn, green chiles, and shredded chicken. Simmer 10 minutes until mixture thickens slightly and smells rich.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Add tortilla strips",
-      "instruction": "Stir in tortilla strips, simmer 5 minutes until they soften and absorb sauce like dumplings, not dissolve into paste. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir in tortilla strips, simmer 5 minutes until they soften and absorb sauce like dumplings, not dissolve into paste.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Melt cheese and serve",
-      "instruction": "Remove from heat, top with cheese, cover 3 minutes until melted and glossy. Skillet should look bubbly at edges, not dry. Target 165°F at the thickest part before moving to the next batch. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove from heat, top with cheese, cover 3 minutes until melted and glossy. Skillet should look bubbly at edges, not dry.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -175,25 +154,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 607,
-    "protein": 58,
-    "carbs": 46,
-    "fats": 20,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": true
-    }
+    "calories": 445,
+    "protein": 38,
+    "carbs": 42,
+    "fats": 16,
+    "label": "~445 cal/serving · 38g protein · 8g fiber (est.)"
   },
   "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
   "mobileImage": "/images/mobile/chicken-enchilada-skillet-light.jpg",
@@ -203,7 +168,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
-    "light chicken enchilada skillet",
+    "chicken enchilada skillet",
     "chicken enchilada skillet light",
     "chicken",
     "Mexican",
@@ -219,6 +184,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

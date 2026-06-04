@@ -13,10 +13,10 @@
   "cookTime": 520,
   "prepTime": 40,
   "difficulty": "hard",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1358,
+  "protein": 93,
+  "carbs": 93,
+  "fats": 65,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -175,13 +175,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 1358,
+    "protein": 93,
+    "carbs": 93,
+    "fats": 65,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -223,6 +222,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.056Z",
+  "generatedAt": "2026-06-04T19:44:40.332Z",
   "contentVersion": 2
 }

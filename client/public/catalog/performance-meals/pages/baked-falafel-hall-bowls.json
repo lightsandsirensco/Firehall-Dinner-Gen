@@ -1,8 +1,8 @@
 {
   "slug": "baked-falafel-hall-bowls",
-  "title": "Baked Falafel Hall Bowls",
-  "displayTitle": "Baked Falafel Hall Bowls",
-  "seoTitle": "Baked Falafel Hall Bowls | Firefighter Meal",
+  "title": "Falafel Bowls",
+  "displayTitle": "Falafel Bowls",
+  "seoTitle": "Falafel Bowls | Firefighter Meal",
   "shortDescription": "Crisp oven falafel, tahini drizzle, and cucumber-tomato salad",
   "subtitle": "Crisp oven falafel, tahini drizzle, and cucumber-tomato salad",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 28,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 394,
-  "protein": 6,
-  "carbs": 61,
-  "fats": 14,
+  "calories": 485,
+  "protein": 18,
+  "carbs": 62,
+  "fats": 20,
   "tags": [
     "protein:vegetarian",
     "format:bowl",
@@ -120,76 +120,41 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Baked Falafel Hall Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use fresh parsley, fresh cilantro as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Soak and prep chickpeas",
       "instruction": "Drain soaked chickpeas well and pat dry on towels — wet chickpeas make dense falafel. Pulse in food processor with herbs, onion, garlic, cumin, coriander, 1 tbsp salt, and baking powder until coarse meal holds a squeeze (not hummus smooth).",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Form and chill patties",
       "instruction": "Scoop 2-oz balls and flatten to ½-inch patties. Arrange on oiled sheet pans with space between. Refrigerate uncovered 15 minutes so edges set before baking.",
       "minutes": 18,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Cook rice",
-      "instruction": "Rinse rice until water runs clear. Cook 1:1.75 rice to water with a pinch of salt; fluff and hold covered at low heat. Plan about 22 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rinse rice until water runs clear. Cook 1:1.75 rice to water with a pinch of salt; fluff and hold covered at low heat.",
       "minutes": 22,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Bake falafel until crisp",
       "instruction": "Brush patties lightly with olive oil. Bake at 425°F 22–26 minutes, flipping once at 12 minutes, until deep golden and crisp at edges — centers should read 165°F if checked.",
       "minutes": 26,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Whisk tahini sauce",
       "instruction": "Whisk tahini with lemon juice, ¼ cup cold water, and pinch of salt until pourable — add water 1 tbsp at a time if thick. Taste for bright lemon balance.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 10,
-      "title": "Portion and open the line",
-      "instruction": "Portion Baked Falafel Hall Bowls onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 6,
       "title": "Build bowls at the line",
       "instruction": "Toss cucumber and tomatoes with remaining olive oil and salt. Serve rice, hot falafel, salad, tahini, and optional hot sauce on a build-your-own line.",
       "minutes": 8,
@@ -214,26 +179,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 394,
-    "protein": 6,
-    "carbs": 61,
-    "fats": 14,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "calories": 485,
+    "protein": 18,
+    "carbs": 62,
+    "fats": 20,
+    "label": "~485 cal/serving · 18g protein · 12g fiber (est.)"
   },
   "heroImage": "/images/golden-100/baked-falafel-hall-bowls.jpg",
   "mobileImage": "/images/mobile/baked-falafel-hall-bowls.jpg",
@@ -243,6 +193,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
+    "falafel bowls",
     "baked falafel hall bowls",
     "vegetarian",
     "mediterranean",
@@ -258,6 +209,6 @@
     "tabbouleh-chicken-bowls",
     "cajun-chicken-rice-bowl"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

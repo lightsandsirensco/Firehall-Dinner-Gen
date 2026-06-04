@@ -1,8 +1,8 @@
 {
   "slug": "shepherds-pie",
-  "title": "Shepherd's Pie with Greek Salad",
-  "displayTitle": "Shepherd's Pie with Greek Salad",
-  "seoTitle": "Shepherd's Pie with Greek Salad | Firefighter Meal",
+  "title": "Shepherd's Pie",
+  "displayTitle": "Shepherd's Pie",
+  "seoTitle": "Shepherd's Pie | Firefighter Meal",
   "shortDescription": "Golden potato cap over rich filling, Greek salad on the side",
   "subtitle": "Golden potato cap over rich filling, Greek salad on the side",
   "category": "comfort_food",
@@ -13,10 +13,10 @@
   "cookTime": 113,
   "prepTime": 23,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 882,
+  "protein": 65,
+  "carbs": 55,
+  "fats": 45,
   "tags": [
     "protein:beef",
     "format:plated_main",
@@ -66,121 +66,36 @@
       "quantity": "1",
       "unit": "batch",
       "group": "Potato topping"
-    },
-    {
-      "name": "Romaine lettuce, chopped",
-      "quantity": "4",
-      "unit": "heads",
-      "group": "Greek salad"
-    },
-    {
-      "name": "Cucumber, sliced",
-      "quantity": "4",
-      "unit": "large",
-      "group": "Greek salad"
-    },
-    {
-      "name": "Cherry tomatoes, halved",
-      "quantity": "2",
-      "unit": "pints",
-      "group": "Greek salad"
-    },
-    {
-      "name": "Feta cheese, crumbled",
-      "quantity": "1",
-      "unit": "lb",
-      "group": "Greek salad"
-    },
-    {
-      "name": "Kalamata olives",
-      "quantity": "2",
-      "unit": "cups",
-      "group": "Greek salad"
-    },
-    {
-      "name": "Red wine vinegar and olive oil",
-      "quantity": "1",
-      "unit": "batch",
-      "group": "Greek salad"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Shepherd's Pie with Greek Salad in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Romaine lettuce, chopped, Cucumber, sliced, Cherry tomatoes, halved, Feta cheese, crumbled as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Brown the filling",
-      "instruction": "Brown ground lamb with diced onion until deeply colored. Drain excess fat. Add peas, carrots, broth, and tomato paste; simmer 15 minutes until thick. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Brown ground lamb with diced onion until deeply colored. Drain excess fat. Add peas, carrots, broth, and tomato paste; simmer 15 minutes until thick.",
       "minutes": 25,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Mash the topping",
-      "instruction": "Boil russets until tender; mash with butter and cream until smooth. Season with salt and white pepper. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 25 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Boil russets until tender; mash with butter and cream until smooth. Season with salt and white pepper.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Assemble and bake",
       "instruction": "Spread filling in hotel pans; pipe or spread mashed potatoes over top. Fork ridges for crispy peaks. Bake at 400°F 25–30 minutes until golden and bubbling at edges.",
       "minutes": 30,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Shepherd's Pie with Greek Salad onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Rest before serving",
       "instruction": "Rest 10 minutes so filling sets — scoops stay clean on the line. Shepherd's Pie feeds a hall that wants something hearty after a cold call.",
       "minutes": 10,
       "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Shepherd's Pie with Greek Salad — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -188,8 +103,8 @@
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Shepherd's Pie with Greek Salad with sides in separate pans so the crew can mix portions.",
-    "Line up Shepherd's Pie with Greek Salad on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate Shepherd's Pie with sides in separate pans so the crew can mix portions.",
+    "Line up Shepherd's Pie on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -201,20 +116,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 882,
+    "protein": 65,
+    "carbs": 55,
+    "fats": 45,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -230,7 +144,7 @@
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
-    "shepherd's pie with greek salad",
+    "shepherd's pie",
     "shepherds pie",
     "british",
     "beef",
@@ -250,7 +164,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.066Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Shepherd's Pie with Greek Salad runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.345Z",
+  "contentVersion": 2
 }

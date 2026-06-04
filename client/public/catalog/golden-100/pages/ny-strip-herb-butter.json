@@ -1,8 +1,8 @@
 {
   "slug": "ny-strip-herb-butter",
-  "title": "Grilled NY Strip with Herb Butter",
-  "displayTitle": "Grilled NY Strip with Herb Butter",
-  "seoTitle": "Grilled NY Strip with Herb Butter | Firefighter Meal",
+  "title": "NY Strip with Herb Butter",
+  "displayTitle": "NY Strip with Herb Butter",
+  "seoTitle": "NY Strip with Herb Butter | Firefighter Meal",
   "shortDescription": "Steakhouse night at the station",
   "subtitle": "Steakhouse night at the station",
   "category": "bbq_grill_nights",
@@ -74,87 +74,31 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Grilled NY Strip with Herb Butter in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season and temper",
       "instruction": "Pat steaks dry. Salt heavily 40 minutes ahead (or right before if rushed). Pepper just before cooking. Let meat sit out 20 minutes — cold centers overcook the exterior.",
       "minutes": 45,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Grill over high heat",
       "instruction": "Grill over high heat (450–500°F surface) 3–5 minutes per side for strip to 130°F medium-rare. Flank: sear 4 minutes per side, then medium until 125°F; rest and slice thin against the grain.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Baste with herb butter",
       "instruction": "Melt butter with garlic and parsley. Rest steaks 8 minutes tented with foil, then slice and spoon butter over. Hold on warm trays at 180°F no more than 20 minutes.",
       "minutes": 10,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Grilled NY Strip with Herb Butter onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Serve on sheet trays",
-      "instruction": "Grilled NY Strip with Herb Butter goes out sliced on trays with extra herb butter melting on top — crew grabs with tongs, not forks and knives.",
+      "instruction": "NY Strip with Herb Butter goes out sliced on trays with extra herb butter melting on top — crew grabs with tongs, not forks and knives.",
       "minutes": 5,
       "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Grilled NY Strip with Herb Butter — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Grilled NY Strip with Herb Butter — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -163,8 +107,8 @@
     "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat."
   ],
   "tonightSpread": [
-    "Plate Grilled NY Strip with Herb Butter with sides in separate pans so the crew can mix portions.",
-    "Line up Grilled NY Strip with Herb Butter on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate NY Strip with Herb Butter with sides in separate pans so the crew can mix portions.",
+    "Line up NY Strip with Herb Butter on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run.",
     "Slice proteins on a cutting board at the end of the line so everyone sees the smoke ring and char.",
     "Set sauce and pickles on the side — sauced meat holds better on the backup tray."
@@ -183,16 +127,15 @@
     "protein": 59,
     "carbs": 0,
     "fats": 49,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -208,7 +151,7 @@
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "grilled ny strip with herb butter",
+    "ny strip with herb butter",
     "ny strip herb butter",
     "american",
     "beef",
@@ -227,7 +170,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.040Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Grilled NY Strip with Herb Butter runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.309Z",
+  "contentVersion": 2
 }

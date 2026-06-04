@@ -53,27 +53,27 @@
   "mealRecommendations": [
     {
       "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night",
+      "title": "Taco Bar",
       "blurb": "The baseline hall taco spread."
     },
     {
       "slug": "pork-carnitas-tacos",
-      "title": "Quick Pork Carnitas Tacos",
+      "title": "Pork Carnitas Tacos",
       "blurb": "Crispy pork — fast line."
     },
     {
       "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos",
+      "title": "Steak Tacos",
       "blurb": "Steak night upgrade."
     },
     {
       "slug": "street-corn-chicken",
-      "title": "Street Corn Chicken Tacos",
+      "title": "Street Corn Chicken Bowls",
       "blurb": "Bright street-corn vibe."
     },
     {
       "slug": "sheet-pan-fajitas",
-      "title": "Sheet Pan Chicken Fajitas",
+      "title": "Chicken Fajitas",
       "blurb": "Fajita filling crossover."
     }
   ],

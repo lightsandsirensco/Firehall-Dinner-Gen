@@ -13,10 +13,10 @@
   "cookTime": 360,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 560,
-  "protein": 58,
-  "carbs": 11,
-  "fats": 29,
+  "calories": 375,
+  "protein": 40,
+  "carbs": 8,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:slow_cooker",
@@ -93,71 +93,35 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Salsa Verde Crock Chicken in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Layer crock",
-      "instruction": "Place onion slices in bottom of 8-quart slow cooker. Arrange chicken thighs on top in even layer without stacking too deep. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Place onion slices in bottom of 8-quart slow cooker. Arrange chicken thighs on top in even layer without stacking too deep.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Add salsa verde",
       "instruction": "Pour salsa verde over chicken. Add jalapeño, garlic, cumin, broth, and salt. Stir lightly so thighs are mostly submerged in liquid.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Slow cook until tender",
-      "instruction": "Cover and cook on low 6–8 hours until chicken shreds easily with forks and internal temp reaches 165°F throughout. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 8,
+      "instruction": "Cover and cook on low 6–8 hours until chicken shreds easily with forks and internal temp reaches 165°F throughout.",
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Shred and combine",
-      "instruction": "Shred chicken in crock with two forks. Mix with cooking liquid until meat is moist and coated, not dry or stringy. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Shred chicken in crock with two forks. Mix with cooking liquid until meat is moist and coated, not dry or stringy.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Salsa Verde Crock Chicken onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Finish with lime and cilantro",
-      "instruction": "Stir in lime juice and cilantro off heat. Sauce should taste bright and tangy, not flat or overly salty. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir in lime juice and cilantro off heat. Sauce should taste bright and tangy, not flat or overly salty.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -181,26 +145,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 560,
-    "protein": 58,
-    "carbs": 11,
-    "fats": 29,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 375,
+    "protein": 40,
+    "carbs": 8,
+    "fats": 20,
+    "label": "~375 cal/serving · 40g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/golden-100/salsa-verde-crock-chicken.jpg",
   "mobileImage": "/images/mobile/salsa-verde-crock-chicken.jpg",
@@ -225,6 +174,6 @@
     "white-bean-chicken-chili",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

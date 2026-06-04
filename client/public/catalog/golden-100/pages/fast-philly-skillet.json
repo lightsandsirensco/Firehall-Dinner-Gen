@@ -1,8 +1,8 @@
 {
   "slug": "fast-philly-skillet",
-  "title": "Garlic Butter Steak Skillet",
-  "displayTitle": "Garlic Butter Steak Skillet",
-  "seoTitle": "Fast Philly Cheesesteak Skillet | Firefighter Meal",
+  "title": "Quick Philly Skillet",
+  "displayTitle": "Quick Philly Skillet",
+  "seoTitle": "Quick Philly Skillet | Firefighter Meal",
   "shortDescription": "Cheesy steak without the wait",
   "subtitle": "Cheesy steak without the wait",
   "category": "quick_shift_meals",
@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 545,
+  "calories": 492,
   "protein": 44,
-  "carbs": 1,
-  "fats": 40,
+  "carbs": 0,
+  "fats": 34,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -63,18 +63,6 @@
       "group": "Cooking"
     },
     {
-      "name": "Unsalted butter",
-      "quantity": "4",
-      "unit": "tbsp",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic, minced",
-      "quantity": "4",
-      "unit": "cloves",
-      "group": "Aromatics"
-    },
-    {
       "name": "Kosher salt and black pepper",
       "quantity": "1",
       "unit": "batch",
@@ -84,80 +72,31 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Garlic Butter Steak Skillet in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Heat the flat-top",
-      "instruction": "Preheat cast iron or flat-top to medium-high. This is a shift-night shortcut — speed over perfection. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Preheat cast iron or flat-top to medium-high. This is a shift-night shortcut — speed over perfection.",
       "minutes": 5,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Sear beef and peppers",
-      "instruction": "Sear shaved beef with frozen pepper-onion mix 6–8 minutes until beef edges crisp and vegetables soften. Season with salt and pepper. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Sear shaved beef with frozen pepper-onion mix 6–8 minutes until beef edges crisp and vegetables soften. Season with salt and pepper.",
       "minutes": 8,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Melt provolone",
       "instruction": "Lay provolone slices over the hot beef and pepper mixture; cover the skillet 1 minute until cheese melts into the meat and starts to lace the pan edges.",
       "minutes": 2,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Garlic Butter Steak Skillet onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Load hoagies",
-      "instruction": "Pile into toasted rolls. Fast Philly Skillet feeds the hall in under twenty minutes. Target 145°F for medium beef, 160°F for ground at the thickest part before moving to the next batch. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Pile into toasted rolls. Fast Philly Skillet feeds the hall in under twenty minutes.",
       "minutes": 5,
       "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Garlic Butter Steak Skillet — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -166,8 +105,8 @@
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Fast Philly Cheesesteak Skillet with sides in separate pans so the crew can mix portions.",
-    "Line up Fast Philly Cheesesteak Skillet on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate Quick Philly Skillet with sides in separate pans so the crew can mix portions.",
+    "Line up Quick Philly Skillet on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -180,20 +119,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 545,
+    "calories": 492,
     "protein": 44,
-    "carbs": 1,
-    "fats": 40,
-    "label": "Estimated per serving",
+    "carbs": 0,
+    "fats": 34,
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -205,11 +143,11 @@
   "mobileImage": "/images/mobile/fast-philly-skillet.jpg",
   "thumbImage": "/images/thumbs/fast-philly-skillet.jpg",
   "railImage": "/images/rails/fast-philly-skillet.jpg",
-  "realismScore": 95,
+  "realismScore": 90,
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "fast philly cheesesteak skillet",
+    "quick philly skillet",
     "fast philly skillet",
     "american",
     "beef",
@@ -228,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.112Z",
+  "generatedAt": "2026-06-04T19:44:40.429Z",
   "contentVersion": 2
 }

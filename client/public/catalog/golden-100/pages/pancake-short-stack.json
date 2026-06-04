@@ -1,8 +1,8 @@
 {
   "slug": "pancake-short-stack",
-  "title": "Pancake Short Stack for the Crew",
-  "displayTitle": "Pancake Short Stack for the Crew",
-  "seoTitle": "Pancake Short Stack for the Crew | Firefighter Meal",
+  "title": "Pancake Short Stack",
+  "displayTitle": "Pancake Short Stack",
+  "seoTitle": "Pancake Short Stack | Firefighter Meal",
   "shortDescription": "Fluffy stacks, bacon on the side",
   "subtitle": "Fluffy stacks, bacon on the side",
   "category": "breakfast_brunch",
@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1261,
+  "protein": 63,
+  "carbs": 120,
+  "fats": 60,
   "tags": [
     "protein:vegetarian",
     "format:breakfast",
@@ -86,7 +86,7 @@
     {
       "stepNumber": 4,
       "title": "Serve the line",
-      "instruction": "Pancake Short Stack for the Crew does not wait — call the crew as batches finish. Syrup and butter on the table; backup tray in the 200°F oven.",
+      "instruction": "Pancake Short Stack does not wait — call the crew as batches finish. Syrup and butter on the table; backup tray in the 200°F oven.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -96,9 +96,9 @@
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Pancake Short Stack for the Crew with sides in separate pans so the crew can mix portions.",
+    "Plate Pancake Short Stack with sides in separate pans so the crew can mix portions.",
     "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
-    "Line up Pancake Short Stack for the Crew on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Line up Pancake Short Stack on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -110,13 +110,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 1261,
+    "protein": 63,
+    "carbs": 120,
+    "fats": 60,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -139,7 +138,6 @@
   "firefighterScore": 98,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "pancake short stack for the crew",
     "pancake short stack",
     "american",
     "vegetarian",
@@ -157,6 +155,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.147Z",
+  "generatedAt": "2026-06-04T19:44:40.500Z",
   "contentVersion": 2
 }

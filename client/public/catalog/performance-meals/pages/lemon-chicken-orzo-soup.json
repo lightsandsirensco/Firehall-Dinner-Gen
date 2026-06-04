@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 325,
-  "protein": 42,
-  "carbs": 22,
-  "fats": 6,
+  "calories": 340,
+  "protein": 32,
+  "carbs": 36,
+  "fats": 8,
   "tags": [
     "protein:chicken",
     "format:soup",
@@ -104,71 +104,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Lemon Chicken Orzo Soup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Poach chicken",
       "instruction": "Simmer chicken breasts in 6 cups broth with bay leaves 15–18 minutes until 165°F. Rest, shred into bite-size strands with two forks.",
       "minutes": 20,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Cook orzo separately",
-      "instruction": "Boil orzo in salted water 8–9 minutes until al dente. Drain, toss with 1 tsp oil to prevent clumping. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Boil orzo in salted water 8–9 minutes until al dente. Drain, toss with 1 tsp oil to prevent clumping.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build soup base",
-      "instruction": "Sauté onion, carrot, celery, and garlic in pot 6 minutes until softened. Add remaining broth and shredded chicken, simmer 10 minutes. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Sauté onion, carrot, celery, and garlic in pot 6 minutes until softened. Add remaining broth and shredded chicken, simmer 10 minutes.",
       "minutes": 16,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Finish with lemon",
-      "instruction": "Remove from heat. Stir lemon juice, zest, and dill. Broth should taste bright and balanced, not harsh or overly tart. Plan about 3 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Remove from heat. Stir lemon juice, zest, and dill. Broth should taste bright and balanced, not harsh or overly tart.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Lemon Chicken Orzo Soup onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Serve with orzo",
-      "instruction": "Add cooked orzo to bowls, ladle soup over top. Orzo should stay separate, not swollen and mushy in the pot. Plan about 3 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add cooked orzo to bowls, ladle soup over top. Orzo should stay separate, not swollen and mushy in the pot.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -191,25 +156,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 325,
-    "protein": 42,
-    "carbs": 22,
-    "fats": 6,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
-    }
+    "calories": 340,
+    "protein": 32,
+    "carbs": 36,
+    "fats": 8,
+    "label": "~340 cal/serving · 32g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/golden-100/lemon-chicken-orzo-soup.jpg",
   "mobileImage": "/images/mobile/lemon-chicken-orzo-soup.jpg",
@@ -234,6 +185,6 @@
     "smoky-lentil-kale-soup",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

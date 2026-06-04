@@ -1,8 +1,8 @@
 {
   "slug": "lemon-salmon-orzo-skillet",
-  "title": "Lemon Salmon Orzo Skillet",
-  "displayTitle": "Lemon Salmon Orzo Skillet",
-  "seoTitle": "Lemon Salmon Orzo Skillet | Firefighter Meal",
+  "title": "Lemon Salmon Orzo",
+  "displayTitle": "Lemon Salmon Orzo",
+  "seoTitle": "Lemon Salmon Orzo | Firefighter Meal",
   "shortDescription": "One-pan salmon with orzo, spinach, and capers",
   "subtitle": "One-pan salmon with orzo, spinach, and capers",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 18,
   "difficulty": "medium",
-  "calories": 867,
-  "protein": 60,
-  "carbs": 70,
-  "fats": 36,
+  "calories": 520,
+  "protein": 38,
+  "carbs": 48,
+  "fats": 20,
   "tags": [
     "protein:salmon",
     "format:pasta",
@@ -98,57 +98,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Lemon Salmon Orzo Skillet in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use extra-virgin olive oil as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch salmon. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Sear salmon",
-      "instruction": "Heat 2 tbsp oil in large skillets over medium-high. Sear salmon skin-side down 4 minutes until skin crisps, flip, cook 2 minutes. Remove. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Heat 2 tbsp oil in large skillets over medium-high. Sear salmon skin-side down 4 minutes until skin crisps, flip, cook 2 minutes. Remove.",
       "minutes": 8,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Toast orzo",
-      "instruction": "Add 1 tbsp oil and orzo to pan. Toast 2–3 minutes, stirring, until grains smell nutty and turn lightly golden at edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add 1 tbsp oil and orzo to pan. Toast 2–3 minutes, stirring, until grains smell nutty and turn lightly golden at edges.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Simmer orzo in broth",
       "instruction": "Add garlic, broth, lemon zest, salt, and pepper. Simmer 10–12 minutes, stirring often, until orzo is tender and broth mostly absorbed.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Fold in spinach and capers",
-      "instruction": "Stir spinach, capers, lemon juice, and parmesan off heat until spinach wilts and orzo looks creamy, not soupy or stuck. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir spinach, capers, lemon juice, and parmesan off heat until spinach wilts and orzo looks creamy, not soupy or stuck.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Top with salmon and serve",
-      "instruction": "Nest salmon on orzo, cover 2 minutes to reheat. Salmon should flake at 125°F center, orzo glossy and al dente. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Nest salmon on orzo, cover 2 minutes to reheat. Salmon should flake at 125°F center, orzo glossy and al dente.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -171,25 +150,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 867,
-    "protein": 60,
-    "carbs": 70,
-    "fats": 36,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 520,
+    "protein": 38,
+    "carbs": 48,
+    "fats": 20,
+    "label": "~520 cal/serving · 38g protein · 4g fiber (est.)"
   },
   "heroImage": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
   "mobileImage": "/images/mobile/lemon-salmon-orzo-skillet.jpg",
@@ -199,6 +164,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
+    "lemon salmon orzo",
     "lemon salmon orzo skillet",
     "salmon",
     "Mediterranean",
@@ -214,6 +180,6 @@
     "lentil-mushroom-bolognese",
     "turkey-zoodle-bolognese"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

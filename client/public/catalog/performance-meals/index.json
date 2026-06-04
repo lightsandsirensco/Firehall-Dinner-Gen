@@ -1,12 +1,12 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-05-31T23:32:24.543Z",
+  "generatedAt": "2026-06-04T19:44:43.451Z",
   "recipeCount": 50,
   "recipes": [
     {
       "slug": "lemon-garlic-chicken-tray",
-      "title": "Lemon Garlic Chicken Tray Bake",
+      "title": "Lemon Garlic Chicken Tray",
       "subtitle": "Bright citrus thighs with roasted broccoli and baby potatoes for eight",
       "category": "healthy_performance",
       "cuisine": "American",
@@ -29,7 +29,6 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "lemon garlic chicken tray bake",
         "lemon garlic chicken tray",
         "chicken",
         "American",
@@ -40,7 +39,7 @@
     },
     {
       "slug": "herb-baked-salmon-tray",
-      "title": "Herb-Crusted Baked Salmon Tray",
+      "title": "Baked Salmon Tray",
       "subtitle": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
       "category": "healthy_performance",
       "cuisine": "American",
@@ -63,7 +62,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "herb-crusted baked salmon tray",
+        "baked salmon tray",
         "herb baked salmon tray",
         "salmon",
         "American",
@@ -108,7 +107,7 @@
     },
     {
       "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite",
+      "title": "Chicken Fajitas",
       "subtitle": "Charred peppers and onions with spiced chicken strips—no heavy oil",
       "category": "healthy_performance",
       "cuisine": "Mexican",
@@ -131,6 +130,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "chicken fajitas",
         "sheet pan chicken fajitas lite",
         "chicken",
         "Mexican",
@@ -240,7 +240,7 @@
     },
     {
       "slug": "cottage-cheese-protein-pasta",
-      "title": "Cottage Cheese Protein Pasta Bake",
+      "title": "Protein Pasta Bake",
       "subtitle": "High-protein baked penne with marinara and melted mozzarella",
       "category": "healthy_performance",
       "cuisine": "Italian-American",
@@ -263,7 +263,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "cottage cheese protein pasta bake",
+        "protein pasta bake",
         "cottage cheese protein pasta",
         "mixed",
         "Italian-American",
@@ -274,7 +274,7 @@
     },
     {
       "slug": "honey-garlic-chicken-rice-bowls",
-      "title": "Honey Garlic Chicken Rice Bowls",
+      "title": "Honey Garlic Chicken Bowls",
       "subtitle": "Skillet glazed chicken thighs over jasmine rice with steamed broccoli",
       "category": "healthy_performance",
       "cuisine": "Asian-American",
@@ -297,6 +297,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "honey garlic chicken bowls",
         "honey garlic chicken rice bowls",
         "chicken",
         "Asian-American",
@@ -340,7 +341,7 @@
     },
     {
       "slug": "korean-beef-rice-bowls",
-      "title": "Korean Beef Rice Bowls",
+      "title": "Beef Rice Bowls",
       "subtitle": "Bulgogi-style ground beef over rice with quick cucumber pickle",
       "category": "healthy_performance",
       "cuisine": "Korean",
@@ -363,6 +364,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "beef rice bowls",
         "korean beef rice bowls",
         "beef",
         "Korean",
@@ -373,7 +375,7 @@
     },
     {
       "slug": "crispy-fish-taco-night",
-      "title": "Crispy Fish Taco Night",
+      "title": "Fish Tacos",
       "subtitle": "Oven-crisp cod with cabbage slaw and lime crema for eight",
       "category": "healthy_performance",
       "cuisine": "Mexican",
@@ -396,6 +398,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "fish tacos",
         "crispy fish taco night",
         "fish",
         "Mexican",
@@ -406,7 +409,7 @@
     },
     {
       "slug": "smoky-lentil-kale-soup",
-      "title": "Smoky Lentil and Kale Soup",
+      "title": "Lentil and Kale Soup",
       "subtitle": "Hearty vegetarian pot with fire-roasted tomatoes and smoked paprika",
       "category": "healthy_performance",
       "cuisine": "American",
@@ -429,7 +432,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "smoky lentil and kale soup",
+        "lentil and kale soup",
         "smoky lentil kale soup",
         "plant",
         "American",
@@ -440,7 +443,7 @@
     },
     {
       "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken With Potato Wedges",
+      "title": "Barbacoa Chicken",
       "subtitle": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
       "category": "healthy_performance",
       "cuisine": "Mexican",
@@ -463,7 +466,7 @@
       "firefighterScore": 87,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "crock barbacoa chicken with potato wedges",
+        "barbacoa chicken",
         "crock barbacoa chicken",
         "chicken",
         "Mexican",
@@ -474,7 +477,7 @@
     },
     {
       "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Rice Bowls",
+      "title": "Shawarma Chicken Bowls",
       "subtitle": "Sheet-pan spiced chicken with turmeric rice and cucumber yogurt",
       "category": "healthy_performance",
       "cuisine": "Middle Eastern",
@@ -497,6 +500,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "shawarma chicken bowls",
         "shawarma chicken rice bowls",
         "chicken",
         "Middle Eastern",
@@ -639,7 +643,7 @@
     },
     {
       "slug": "asian-chicken-lettuce-cups",
-      "title": "Asian Chicken Lettuce Cups",
+      "title": "Chicken Lettuce Cups",
       "subtitle": "Ginger-garlic ground chicken in crisp butter lettuce with hoisin drizzle",
       "category": "healthy_performance",
       "cuisine": "Asian",
@@ -662,6 +666,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "chicken lettuce cups",
         "asian chicken lettuce cups",
         "chicken",
         "Asian",
@@ -672,7 +677,7 @@
     },
     {
       "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Cod Tray",
+      "title": "Baked Cod Tray",
       "subtitle": "Cod with cherry tomatoes, olives, and capers on one sheet",
       "category": "healthy_performance",
       "cuisine": "Mediterranean",
@@ -695,7 +700,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "mediterranean baked cod tray",
+        "baked cod tray",
         "mediterranean baked fish tray",
         "fish",
         "Mediterranean",
@@ -706,7 +711,7 @@
     },
     {
       "slug": "greek-lemon-chicken-potatoes",
-      "title": "Greek Lemon Chicken and Potatoes",
+      "title": "Lemon Chicken and Potatoes",
       "subtitle": "Roast chicken thighs with oregano potatoes and pan jus",
       "category": "healthy_performance",
       "cuisine": "Greek",
@@ -729,7 +734,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "greek lemon chicken and potatoes",
+        "lemon chicken and potatoes",
         "greek lemon chicken potatoes",
         "chicken",
         "Greek",
@@ -740,7 +745,7 @@
     },
     {
       "slug": "moroccan-chicken-chickpea-tray",
-      "title": "Moroccan Chicken Chickpea Tray",
+      "title": "Moroccan Chicken and Chickpeas",
       "subtitle": "Warm-spiced thighs with chickpeas, apricots, and roasted carrots",
       "category": "healthy_performance",
       "cuisine": "Moroccan",
@@ -763,6 +768,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "moroccan chicken and chickpeas",
         "moroccan chicken chickpea tray",
         "chicken",
         "Moroccan",
@@ -839,7 +845,7 @@
     },
     {
       "slug": "zaatar-roasted-chicken-thighs",
-      "title": "Za'atar Roasted Chicken Thighs",
+      "title": "Za'atar Chicken Thighs",
       "subtitle": "Middle Eastern spice-crusted thighs with roasted onions and lemon",
       "category": "healthy_performance",
       "cuisine": "Middle Eastern",
@@ -862,7 +868,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "za'atar roasted chicken thighs",
+        "za'atar chicken thighs",
         "zaatar roasted chicken thighs",
         "chicken",
         "Middle Eastern",
@@ -873,7 +879,7 @@
     },
     {
       "slug": "lemon-salmon-orzo-skillet",
-      "title": "Lemon Salmon Orzo Skillet",
+      "title": "Lemon Salmon Orzo",
       "subtitle": "One-pan salmon with orzo, spinach, and capers",
       "category": "healthy_performance",
       "cuisine": "Mediterranean",
@@ -896,6 +902,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "lemon salmon orzo",
         "lemon salmon orzo skillet",
         "salmon",
         "Mediterranean",
@@ -973,7 +980,7 @@
     },
     {
       "slug": "lean-beef-broccoli-rice",
-      "title": "Lean Beef and Broccoli Rice",
+      "title": "Beef and Broccoli Rice",
       "subtitle": "Flat-top stir-fry with flank steak, broccoli, and brown rice",
       "category": "healthy_performance",
       "cuisine": "Chinese-American",
@@ -996,7 +1003,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "lean beef and broccoli rice",
+        "beef and broccoli rice",
         "lean beef broccoli rice",
         "beef",
         "Chinese-American",
@@ -1007,7 +1014,7 @@
     },
     {
       "slug": "turkey-lettuce-wrap-night",
-      "title": "Turkey Lettuce Wrap Night",
+      "title": "Turkey Lettuce Wraps",
       "subtitle": "Ginger-garlic ground turkey in crisp romaine with hoisin and peanuts",
       "category": "healthy_performance",
       "cuisine": "Asian-American",
@@ -1030,6 +1037,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "turkey lettuce wraps",
         "turkey lettuce wrap night",
         "turkey",
         "Asian-American",
@@ -1073,7 +1081,7 @@
     },
     {
       "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Taco Night",
+      "title": "Blackened Cod Tacos",
       "subtitle": "Spice-crusted cod with lime slaw and avocado crema in corn tortillas",
       "category": "healthy_performance",
       "cuisine": "Mexican",
@@ -1096,6 +1104,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "blackened cod tacos",
         "blackened cod taco night",
         "fish",
         "Mexican",
@@ -1106,7 +1115,7 @@
     },
     {
       "slug": "pesto-tomato-chicken-tray",
-      "title": "Pesto Tomato Chicken Tray",
+      "title": "Pesto Chicken Tray",
       "subtitle": "Basil pesto chicken with roasted cherry tomatoes and zucchini",
       "category": "healthy_performance",
       "cuisine": "Italian",
@@ -1129,6 +1138,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "pesto chicken tray",
         "pesto tomato chicken tray",
         "chicken",
         "Italian",
@@ -1139,7 +1149,7 @@
     },
     {
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
-      "title": "Boneless Chicken Thighs with Sweet Potato & Fresh Spinach",
+      "title": "Chicken Thighs with Sweet Potato and Spinach",
       "subtitle": "Seared thighs with roasted sweet potato and garlicky spinach",
       "category": "healthy_performance",
       "cuisine": "American",
@@ -1162,7 +1172,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "boneless chicken thighs with sweet potato & fresh spinach",
+        "chicken thighs with sweet potato and spinach",
         "boneless chicken thighs sweet potato spinach",
         "chicken",
         "American",
@@ -1173,7 +1183,7 @@
     },
     {
       "slug": "spanish-chicken-chorizo-rice",
-      "title": "Spanish Chicken and Chorizo Rice",
+      "title": "Chicken and Chorizo Rice",
       "subtitle": "One-pot saffron rice with chicken thighs, chorizo, and peas",
       "category": "healthy_performance",
       "cuisine": "Spanish",
@@ -1196,7 +1206,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "spanish chicken and chorizo rice",
+        "chicken and chorizo rice",
         "spanish chicken chorizo rice",
         "chicken",
         "Spanish",
@@ -1207,7 +1217,7 @@
     },
     {
       "slug": "yogurt-marinated-grill-chicken",
-      "title": "Yogurt Marinated Grill Chicken",
+      "title": "Yogurt Marinated Chicken",
       "subtitle": "Tender spiced chicken thighs from an overnight yogurt marinade",
       "category": "healthy_performance",
       "cuisine": "Middle Eastern",
@@ -1230,6 +1240,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "yogurt marinated chicken",
         "yogurt marinated grill chicken",
         "chicken",
         "Middle Eastern",
@@ -1240,7 +1251,7 @@
     },
     {
       "slug": "lentil-mushroom-bolognese",
-      "title": "Lentil Mushroom Bolognese",
+      "title": "Lentil Bolognese",
       "subtitle": "Plant-forward ragu with green lentils, cremini, and whole-wheat pasta",
       "category": "healthy_performance",
       "cuisine": "Italian",
@@ -1263,6 +1274,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "lentil bolognese",
         "lentil mushroom bolognese",
         "plant",
         "Italian",
@@ -1273,7 +1285,7 @@
     },
     {
       "slug": "chicken-enchilada-skillet-light",
-      "title": "Light Chicken Enchilada Skillet",
+      "title": "Chicken Enchilada Skillet",
       "subtitle": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
       "category": "healthy_performance",
       "cuisine": "Mexican",
@@ -1296,7 +1308,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "light chicken enchilada skillet",
+        "chicken enchilada skillet",
         "chicken enchilada skillet light",
         "chicken",
         "Mexican",
@@ -1307,7 +1319,7 @@
     },
     {
       "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Italian Sausage and Veg Sheet Pan",
+      "title": "Sausage and Peppers",
       "subtitle": "Sweet Italian sausage with roasted peppers, onion, and zucchini",
       "category": "healthy_performance",
       "cuisine": "Italian",
@@ -1330,7 +1342,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "italian sausage and veg sheet pan",
+        "sausage and peppers",
         "italian sausage veg sheet pan",
         "pork",
         "Italian",
@@ -1374,7 +1386,7 @@
     },
     {
       "slug": "cajun-chicken-rice-bowl",
-      "title": "Cajun Chicken Rice Bowl",
+      "title": "Cajun Chicken and Rice",
       "subtitle": "Blackened chicken thighs over rice with bell pepper and creole spices",
       "category": "healthy_performance",
       "cuisine": "Cajun",
@@ -1397,6 +1409,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "cajun chicken and rice",
         "cajun chicken rice bowl",
         "chicken",
         "Cajun",
@@ -1440,7 +1453,7 @@
     },
     {
       "slug": "grilled-shrimp-quinoa-bowls",
-      "title": "Grilled Shrimp Quinoa Bowls",
+      "title": "Shrimp and Quinoa Bowls",
       "subtitle": "Charred shrimp skewers over quinoa with roasted vegetables",
       "category": "healthy_performance",
       "cuisine": "Mediterranean",
@@ -1463,6 +1476,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "shrimp and quinoa bowls",
         "grilled shrimp quinoa bowls",
         "shrimp",
         "Mediterranean",
@@ -1473,7 +1487,7 @@
     },
     {
       "slug": "veggie-egg-casserole-tray",
-      "title": "Veggie Egg Casserole Tray",
+      "title": "Veggie Egg Casserole",
       "subtitle": "Baked egg casserole with spinach, bell pepper, and feta for eight",
       "category": "healthy_performance",
       "cuisine": "American",
@@ -1496,6 +1510,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "veggie egg casserole",
         "veggie egg casserole tray",
         "egg",
         "American",
@@ -1572,7 +1587,7 @@
     },
     {
       "slug": "turkey-quinoa-stuffed-peppers",
-      "title": "Turkey Quinoa Stuffed Peppers",
+      "title": "Turkey Stuffed Peppers",
       "subtitle": "Colorful bell peppers filled with lean turkey, quinoa, and tomato",
       "category": "healthy_performance",
       "cuisine": "American",
@@ -1595,6 +1610,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "turkey stuffed peppers",
         "turkey quinoa stuffed peppers",
         "turkey",
         "American",
@@ -1605,7 +1621,7 @@
     },
     {
       "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top",
+      "title": "Turkey Shepherd's Pie",
       "subtitle": "Lean turkey and vegetable filling under whipped sweet potato mash",
       "category": "healthy_performance",
       "cuisine": "British-American",
@@ -1628,7 +1644,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
-        "turkey shepherd's with sweet potato top",
+        "turkey shepherd's pie",
         "turkey shepherds sweet potato",
         "turkey",
         "British-American",
@@ -1639,7 +1655,7 @@
     },
     {
       "slug": "baked-falafel-hall-bowls",
-      "title": "Baked Falafel Hall Bowls",
+      "title": "Falafel Bowls",
       "subtitle": "Crisp oven falafel, tahini drizzle, and cucumber-tomato salad",
       "category": "healthy_performance",
       "cuisine": "mediterranean",
@@ -1662,6 +1678,7 @@
       "firefighterScore": 83,
       "popularityWeight": 7.5,
       "searchTerms": [
+        "falafel bowls",
         "baked falafel hall bowls",
         "vegetarian",
         "mediterranean",

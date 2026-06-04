@@ -13,10 +13,10 @@
   "cookTime": 70,
   "prepTime": 25,
   "difficulty": "hard",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1400,
+  "protein": 112,
+  "carbs": 91,
+  "fats": 90,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -102,71 +102,43 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chicken Alfredo Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Mozzarella, shredded, Fresh parsley, chopped as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season and sear chicken",
-      "instruction": "Pat chicken dry; season with salt and pepper. Sear in olive oil until golden and 160°F; rest and slice or cube. Plan about 15 minutes for this step at crew scale. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pat chicken dry; season with salt and pepper. Sear in olive oil until golden and 160°F; rest and slice or cube.",
       "minutes": 15,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Par-cook pasta",
       "instruction": "Boil penne in well-salted water 2 minutes shy of al dente — it finishes in the oven. Drain thoroughly and spread on sheet pans so it does not clump before saucing.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Make alfredo sauce",
-      "instruction": "Melt butter; cook garlic 30 seconds. Add cream and simmer; whisk in parmesan until silky. No crushed tomatoes — this is alfredo. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Melt butter; cook garlic 30 seconds. Add cream and simmer; whisk in parmesan until silky. No crushed tomatoes — this is alfredo.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Combine and pan up",
-      "instruction": "Toss pasta and chicken with alfredo. Transfer to buttered hotel pans; top with mozzarella. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Toss pasta and chicken with alfredo. Transfer to buttered hotel pans; top with mozzarella.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Bake until bubbling",
-      "instruction": "Bake at 375°F 20–25 minutes until cheese browns at edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Bake at 375°F 20–25 minutes until cheese browns at edges.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 8,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 6,
       "title": "Serve Chicken Alfredo Bake",
-      "instruction": "Rest 5 minutes; scoop portions with a spatula. Finish with parsley. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 5 minutes; scoop portions with a spatula. Finish with parsley.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -197,20 +169,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 1400,
+    "protein": 112,
+    "carbs": 91,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -243,7 +214,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.136Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Chicken Alfredo Bake runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.483Z",
+  "contentVersion": 2
 }

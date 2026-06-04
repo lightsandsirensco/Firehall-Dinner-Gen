@@ -1,8 +1,8 @@
 {
   "slug": "sheet-pan-sausage-peppers",
-  "title": "Crispy Honey Chili Chicken Thighs",
-  "displayTitle": "Crispy Honey Chili Chicken Thighs",
-  "seoTitle": "Sheet Pan Sausage and Peppers | Firefighter Meal",
+  "title": "Sausage and Peppers",
+  "displayTitle": "Sausage and Peppers",
+  "seoTitle": "Sausage and Peppers | Firefighter Meal",
   "shortDescription": "One pan, minimal dishes",
   "subtitle": "One pan, minimal dishes",
   "category": "quick_shift_meals",
@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 403,
-  "protein": 54,
+  "calories": 424,
+  "protein": 35,
   "carbs": 11,
-  "fats": 15,
+  "fats": 26,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -73,79 +73,30 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Honey Chili Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Bell peppers, sliced, Red onion, sliced as listed — measure each before heat goes on.",
+      "title": "Heat oven and prep pans",
+      "instruction": "Preheat 425°F. Toss chicken and veg with oil and seasoning on two rimmed pans — single layer only or you'll steam.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Heat oven and prep pans",
-      "instruction": "Preheat 425°F. Toss chicken and veg with oil and seasoning on two rimmed pans — single layer only or you'll steam. Plan about 12 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Roast until charred",
-      "instruction": "Roast 18–22 minutes, swap racks halfway, until chicken reads 165°F and peppers have blistered edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Roast 18–22 minutes, swap racks halfway, until chicken reads 165°F and peppers have blistered edges.",
       "minutes": 22,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Serve family-style",
-      "instruction": "Pile Sheet Pan Sausage and Peppers onto trays. Hold backup pan foil-covered at 200°F. Squeeze lime at the line if using. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pile Sausage and Peppers onto trays. Hold backup pan foil-covered at 200°F. Squeeze lime at the line if using.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Crispy Honey Chili Chicken Thighs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Batch the next pan",
       "instruction": "While the crew eats, start a second batch on clean pans if you're feeding stragglers. Scrape burned bits — they smoke up the hall.",
       "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Crispy Honey Chili Chicken Thighs — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -155,8 +106,8 @@
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Sheet Pan Sausage and Peppers with sides in separate pans so the crew can mix portions.",
-    "Line up Sheet Pan Sausage and Peppers on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate Sausage and Peppers with sides in separate pans so the crew can mix portions.",
+    "Line up Sausage and Peppers on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -169,10 +120,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 403,
-    "protein": 54,
+    "calories": 424,
+    "protein": 35,
     "carbs": 11,
-    "fats": 15,
+    "fats": 26,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -181,23 +132,23 @@
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
   "mobileImage": "/images/mobile/sheet-pan-sausage-peppers.jpg",
   "thumbImage": "/images/thumbs/sheet-pan-sausage-peppers.jpg",
   "railImage": "/images/rails/sheet-pan-sausage-peppers.jpg",
-  "realismScore": 95,
+  "realismScore": 100,
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "sheet pan sausage and peppers",
+    "sausage and peppers",
     "sheet pan sausage peppers",
     "italian",
     "pork",
@@ -218,6 +169,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.105Z",
+  "generatedAt": "2026-06-04T19:44:40.417Z",
   "contentVersion": 2
 }

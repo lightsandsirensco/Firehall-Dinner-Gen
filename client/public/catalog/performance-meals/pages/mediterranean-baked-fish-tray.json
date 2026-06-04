@@ -1,8 +1,8 @@
 {
   "slug": "mediterranean-baked-fish-tray",
-  "title": "Crispy Garlic Fish",
-  "displayTitle": "Crispy Garlic Fish",
-  "seoTitle": "Mediterranean Baked Cod Tray | Firefighter Meal",
+  "title": "Baked Cod Tray",
+  "displayTitle": "Baked Cod Tray",
+  "seoTitle": "Baked Cod Tray | Firefighter Meal",
   "shortDescription": "Cod with cherry tomatoes, olives, and capers on one sheet",
   "subtitle": "Cod with cherry tomatoes, olives, and capers on one sheet",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 18,
   "difficulty": "easy",
-  "calories": 635,
-  "protein": 54,
+  "calories": 320,
+  "protein": 34,
   "carbs": 10,
-  "fats": 40,
+  "fats": 16,
   "tags": [
     "protein:fish",
     "format:sheet_pan",
@@ -99,57 +99,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Garlic Fish in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch fish. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Heat oven and toss vegetables",
       "instruction": "Heat oven to 400°F. Toss tomatoes, olives, capers, onion, garlic, oregano, half the olive oil, and salt on two half-sheets until evenly coated.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Season fish",
-      "instruction": "Pat fish dry. Nest fillets among vegetables. Drizzle remaining oil and lemon juice over fish so surfaces look lightly glossed. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Pat fish dry. Nest fillets among vegetables. Drizzle remaining oil and lemon juice over fish so surfaces look lightly glossed.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Roast until flaky",
-      "instruction": "Roast 16–20 minutes until fish reads 145°F and flakes with gentle pressure. Tomatoes should burst and release juice into the pan. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Roast 16–20 minutes until fish reads 145°F and flakes with gentle pressure. Tomatoes should burst and release juice into the pan.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Finish with lemon and herbs",
-      "instruction": "Top with lemon slices and parsley. Fish flesh should look opaque and moist, not chalky or separating into dry strands. Plan about 2 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Top with lemon slices and parsley. Fish flesh should look opaque and moist, not chalky or separating into dry strands.",
       "minutes": 2,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F until flakes separate. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Portion with pan juices",
-      "instruction": "Serve each fillet with a spoonful of tomato-olive mixture and pan juices spooned over the top for brightness. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Serve each fillet with a spoonful of tomato-olive mixture and pan juices spooned over the top for brightness.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -172,25 +151,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 635,
-    "protein": 54,
+    "calories": 320,
+    "protein": 34,
     "carbs": 10,
-    "fats": 40,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "fats": 16,
+    "label": "~320 cal/serving · 34g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
   "mobileImage": "/images/mobile/mediterranean-baked-fish-tray.jpg",
@@ -200,7 +165,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
-    "mediterranean baked cod tray",
+    "baked cod tray",
     "mediterranean baked fish tray",
     "fish",
     "Mediterranean",
@@ -216,6 +181,6 @@
     "honey-lime-chicken-tray",
     "moroccan-chicken-chickpea-tray"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

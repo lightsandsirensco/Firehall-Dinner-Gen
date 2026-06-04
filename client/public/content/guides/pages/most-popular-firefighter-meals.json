@@ -45,12 +45,12 @@
   "mealRecommendations": [
     {
       "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night",
+      "title": "Taco Bar",
       "blurb": "Most halls run a taco line monthly — fast custom plates, easy scale, broad appeal."
     },
     {
       "slug": "big-chili",
-      "title": "Hall-Sized Beef and Bean Chili",
+      "title": "Beef and Bean Chili",
       "blurb": "Top pot meal — cheap stretch, holds for late eaters, tops dogs and potatoes day two."
     },
     {
@@ -65,22 +65,22 @@
     },
     {
       "slug": "batch-lasagna",
-      "title": "Giant Batch Lasagna",
+      "title": "Batch Lasagna",
       "blurb": "Oven batch — one cut, many plates, minimal active time once it is in."
     },
     {
       "slug": "chicken-parm",
-      "title": "Chicken Parm",
+      "title": "Chicken Parmesan",
       "blurb": "Crowd Italian — cutlets in pans, cheese melts, crew eats family-style."
     },
     {
       "slug": "sheet-pan-fajitas",
-      "title": "Sheet Pan Fajitas",
+      "title": "Chicken Fajitas",
       "blurb": "One pan protein and peppers — tortillas turn it into a line."
     },
     {
       "slug": "one-pot-chicken-rice",
-      "title": "One-Pot Chicken and Rice",
+      "title": "Chicken and Rice",
       "blurb": "Rookie-friendly batch — one pot, predictable timing, easy cleanup."
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "slug": "loaded-baked-potato-bar",
-      "title": "Loaded Baked Potato Bar",
+      "title": "Baked Potato Bar",
       "blurb": "Self-serve — baked potatoes hold in warmers while toppings stay cold."
     },
     {
@@ -115,7 +115,7 @@
     },
     {
       "slug": "fast-philly-skillet",
-      "title": "Fast Philly Cheesesteak Skillet",
+      "title": "Quick Philly Skillet",
       "blurb": "Flat-top cheesesteak without the food-truck wait — feeds fast."
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "slug": "slider-bar",
-      "title": "Slider Bar Night",
+      "title": "Slider Bar",
       "blurb": "Mini sandwiches — two proteins, one line, fast second helpings."
     }
   ],

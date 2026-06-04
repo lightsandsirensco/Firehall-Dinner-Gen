@@ -1,8 +1,8 @@
 {
   "slug": "crock-barbacoa-chicken",
-  "title": "Crock Barbacoa Chicken With Potato Wedges",
-  "displayTitle": "Crock Barbacoa Chicken With Potato Wedges",
-  "seoTitle": "Crock Barbacoa Chicken With Potato Wedges | Firefighter Meal",
+  "title": "Barbacoa Chicken",
+  "displayTitle": "Barbacoa Chicken",
+  "seoTitle": "Barbacoa Chicken | Firefighter Meal",
   "shortDescription": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
   "subtitle": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 360,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 685,
-  "protein": 60,
-  "carbs": 30,
-  "fats": 34,
+  "calories": 485,
+  "protein": 42,
+  "carbs": 38,
+  "fats": 22,
   "tags": [
     "protein:chicken",
     "format:slow_cooker",
@@ -132,69 +132,47 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crock Barbacoa Chicken With Potato Wedges in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use limes as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Roast potato wedges",
       "instruction": "Heat oven to 425°F. Toss potato wedges with olive oil, smoked paprika, salt, and pepper on two sheet pans in a single layer. Roast 28–35 minutes, turning once, until golden and crisp at the edges.",
       "minutes": 35,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Layer crock ingredients",
-      "instruction": "Place onion slices in bottom of 8-quart slow cooker. Arrange chicken thighs on top in an even layer without stacking too deep. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Place onion slices in bottom of 8-quart slow cooker. Arrange chicken thighs on top in an even layer without stacking too deep.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Mix braising liquid",
-      "instruction": "Whisk chipotle, adobo sauce, lime juice, vinegar, cumin, oregano, garlic, salt, pepper, and broth until smooth. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Whisk chipotle, adobo sauce, lime juice, vinegar, cumin, oregano, garlic, salt, pepper, and broth until smooth.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Slow cook until tender",
       "instruction": "Pour liquid over chicken. Cover and cook on low 6–8 hours until meat pulls apart easily and internal temp reaches 165°F throughout.",
-      "minutes": 8,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Shred in pot",
       "instruction": "Transfer thighs to a cutting board if easier, or shred in crock with two forks. Meat should separate into moist strands, not dry clumps.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
+      "stepNumber": 6,
       "title": "Reduce juices if needed",
-      "instruction": "If liquid is thin, simmer shredded chicken on high 20–30 minutes uncovered until sauce clings to meat with a glossy coat. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "If liquid is thin, simmer shredded chicken on high 20–30 minutes uncovered until sauce clings to meat with a glossy coat.",
       "minutes": 25,
       "heatLevel": ""
     },
     {
-      "stepNumber": 9,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 7,
       "title": "Platter for the line",
       "instruction": "Pile shredded barbacoa on a large crew platter beside the roasted potato wedges. Garnish with lime wedges and cilantro. Keep rice and bowls off this spread — wedges are the carb.",
       "minutes": 5,
@@ -219,29 +197,13 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 685,
-    "protein": 60,
-    "carbs": 30,
-    "fats": 34,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 485,
+    "protein": 42,
+    "carbs": 38,
+    "fats": 22,
+    "label": "~485 cal/serving · 42g protein · 4g fiber (est.)"
   },
   "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
-  "heroImageAlt": "Crock Barbacoa Chicken With Potato Wedges — shredded chipotle chicken beside golden roasted potato wedges on a wide firehall platter",
   "mobileImage": "/images/mobile/crock-barbacoa-chicken.jpg",
   "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
   "railImage": "/images/rails/crock-barbacoa-chicken.jpg",
@@ -249,7 +211,7 @@
   "firefighterScore": 87,
   "popularityWeight": 7.5,
   "searchTerms": [
-    "crock barbacoa chicken with potato wedges",
+    "barbacoa chicken",
     "crock barbacoa chicken",
     "chicken",
     "Mexican",
@@ -265,6 +227,6 @@
     "white-bean-chicken-chili",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

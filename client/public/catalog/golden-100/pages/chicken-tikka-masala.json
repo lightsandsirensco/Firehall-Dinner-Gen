@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 699,
-  "protein": 64,
+  "calories": 719,
+  "protein": 45,
   "carbs": 61,
-  "fats": 20,
+  "fats": 31,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -70,71 +70,29 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chicken Tikka Masala in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Marinate chicken",
-      "instruction": "Coat cubed chicken thighs in tikka marinade; rest at least 30 minutes. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Coat cubed chicken thighs in tikka marinade; rest at least 30 minutes.",
       "minutes": 35,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Char the chicken",
-      "instruction": "Broil or grill marinated chicken on racks until edges char and centers reach 165°F. Plan about 15 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Broil or grill marinated chicken on racks until edges char and centers reach 165°F.",
       "minutes": 15,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build the masala",
-      "instruction": "Sweat diced onion in oil 8 minutes. Add crushed tomatoes and cream; simmer 15 minutes. Fold in charred chicken; simmer 10 minutes more. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Sweat diced onion in oil 8 minutes. Add crushed tomatoes and cream; simmer 15 minutes. Fold in charred chicken; simmer 10 minutes more.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Chicken Tikka Masala onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Serve with basmati",
-      "instruction": "Fluff basmati rice. Ladle tikka masala over rice with naan on the side if you have it. Plan about 8 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Fluff basmati rice. Ladle tikka masala over rice with naan on the side if you have it.",
       "minutes": 8,
       "heatLevel": ""
     }
@@ -162,19 +120,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 699,
-    "protein": 64,
+    "calories": 719,
+    "protein": 45,
     "carbs": 61,
-    "fats": 20,
+    "fats": 31,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -208,6 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.110Z",
+  "generatedAt": "2026-06-04T19:44:40.426Z",
   "contentVersion": 2
 }

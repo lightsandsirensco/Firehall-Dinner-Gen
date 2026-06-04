@@ -53,7 +53,7 @@
   "mealRecommendations": [
     {
       "slug": "chicken-parm",
-      "title": "Chicken Parm",
+      "title": "Chicken Parmesan",
       "blurb": "Italian night — feeds a table, holds in the oven."
     },
     {
@@ -63,7 +63,7 @@
     },
     {
       "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos",
+      "title": "Steak Tacos",
       "blurb": "Steak night without plating stress."
     },
     {
@@ -78,7 +78,7 @@
     },
     {
       "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night",
+      "title": "Taco Bar",
       "blurb": "Self-serve — ends protein debates."
     },
     {
@@ -98,17 +98,17 @@
     },
     {
       "slug": "batch-lasagna",
-      "title": "Giant Batch Lasagna",
+      "title": "Batch Lasagna",
       "blurb": "Feeds twelve without drama."
     },
     {
       "slug": "pad-thai",
-      "title": "Hall Rush Pad Thai",
+      "title": "Pad Thai",
       "blurb": "Wok energy, weeknight speed."
     },
     {
       "slug": "one-pot-chicken-rice",
-      "title": "One-Pot Chicken and Rice",
+      "title": "Chicken and Rice",
       "blurb": "Rookie-proof one pot."
     },
     {
@@ -123,7 +123,7 @@
     },
     {
       "slug": "fast-philly-skillet",
-      "title": "Fast Philly Cheesesteak Skillet",
+      "title": "Quick Philly Skillet",
       "blurb": "Flat-top favorite — one-pan crew feed."
     },
     {
@@ -138,7 +138,7 @@
     },
     {
       "slug": "sheet-pan-fajitas",
-      "title": "Sheet Pan Chicken Fajitas",
+      "title": "Chicken Fajitas",
       "blurb": "One pan — peppers, chicken, easy cleanup."
     },
     {
@@ -158,12 +158,12 @@
     },
     {
       "slug": "jerk-chicken",
-      "title": "Jerk Chicken",
+      "title": "Jerk Chicken & Rice and Peas",
       "blurb": "Big flavor grill night."
     },
     {
       "slug": "meatball-hoagies",
-      "title": "Firehall Meatball Hoagies",
+      "title": "Meatball Hoagies",
       "blurb": "Saucy subs — easy portions."
     },
     {
@@ -173,12 +173,12 @@
     },
     {
       "slug": "pork-carnitas-tacos",
-      "title": "Quick Pork Carnitas Tacos",
+      "title": "Pork Carnitas Tacos",
       "blurb": "Crispy pork taco line."
     },
     {
       "slug": "big-chili",
-      "title": "Hall-Sized Beef and Bean Chili",
+      "title": "Beef and Bean Chili",
       "blurb": "When the whole hall is hungry."
     }
   ],

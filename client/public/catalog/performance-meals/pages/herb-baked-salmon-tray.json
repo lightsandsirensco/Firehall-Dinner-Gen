@@ -1,8 +1,8 @@
 {
   "slug": "herb-baked-salmon-tray",
-  "title": "Herb-Crusted Baked Salmon Tray",
-  "displayTitle": "Herb-Crusted Baked Salmon Tray",
-  "seoTitle": "Herb-Crusted Baked Salmon Tray | Firefighter Meal",
+  "title": "Baked Salmon Tray",
+  "displayTitle": "Baked Salmon Tray",
+  "seoTitle": "Baked Salmon Tray | Firefighter Meal",
   "shortDescription": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
   "subtitle": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 578,
-  "protein": 53,
-  "carbs": 10,
-  "fats": 35,
+  "calories": 390,
+  "protein": 38,
+  "carbs": 6,
+  "fats": 24,
   "tags": [
     "protein:salmon",
     "format:sheet_pan",
@@ -93,57 +93,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Herb-Crusted Baked Salmon Tray in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Preheat and prep asparagus",
+      "instruction": "Heat oven to 400°F. Toss asparagus with 1 tbsp olive oil and a pinch of salt until spears look lightly coated, not dripping.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch salmon. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Make herb crust paste",
+      "instruction": "Combine dill, parsley, garlic, lemon zest, Dijon, remaining olive oil, salt, and pepper into a thick paste that clings to fish.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Preheat and prep asparagus",
-      "instruction": "Heat oven to 400°F. Toss asparagus with 1 tbsp olive oil and a pinch of salt until spears look lightly coated, not dripping. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "title": "Season salmon fillets",
+      "instruction": "Pat salmon dry. Spread herb paste evenly on flesh side of each fillet, pressing gently so it adheres during baking.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Make herb crust paste",
-      "instruction": "Combine dill, parsley, garlic, lemon zest, Dijon, remaining olive oil, salt, and pepper into a thick paste that clings to fish. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Season salmon fillets",
-      "instruction": "Pat salmon dry. Spread herb paste evenly on flesh side of each fillet, pressing gently so it adheres during baking. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F at the thickest point before moving to the next batch.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 6,
       "title": "Bake until just opaque",
-      "instruction": "Place salmon on parchment-lined pans with asparagus alongside. Bake 12–16 minutes until thickest part reads 125–130°F and flakes with gentle pressure. Target 145°F at the thickest point before moving to the next batch.",
+      "instruction": "Place salmon on parchment-lined pans with asparagus alongside. Bake 12–16 minutes until thickest part reads 125–130°F and flakes with gentle pressure.",
       "minutes": 16,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Finish with lemon and rest",
-      "instruction": "Top with lemon slices, rest 3 minutes off heat. Flesh should look opaque pink at center, not chalky or gray throughout. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Top with lemon slices, rest 3 minutes off heat. Flesh should look opaque pink at center, not chalky or gray throughout.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -166,25 +145,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 578,
-    "protein": 53,
-    "carbs": 10,
-    "fats": 35,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 390,
+    "protein": 38,
+    "carbs": 6,
+    "fats": 24,
+    "label": "~390 cal/serving · 38g protein · 3g fiber (est.)"
   },
   "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
   "mobileImage": "/images/mobile/herb-baked-salmon-tray.jpg",
@@ -194,7 +159,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
-    "herb-crusted baked salmon tray",
+    "baked salmon tray",
     "herb baked salmon tray",
     "salmon",
     "American",
@@ -210,6 +175,6 @@
     "mediterranean-baked-fish-tray",
     "moroccan-chicken-chickpea-tray"
   ],
-  "generatedAt": "2026-05-31T23:32:24.494Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

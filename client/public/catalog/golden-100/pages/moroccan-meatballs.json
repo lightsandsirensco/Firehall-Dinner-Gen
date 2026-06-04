@@ -1,8 +1,8 @@
 {
   "slug": "moroccan-meatballs",
-  "title": "Moroccan Spiced Lamb Meatballs",
-  "displayTitle": "Moroccan Spiced Lamb Meatballs",
-  "seoTitle": "Moroccan Spiced Lamb Meatballs | Firefighter Meal",
+  "title": "Moroccan Lamb Meatballs",
+  "displayTitle": "Moroccan Lamb Meatballs",
+  "seoTitle": "Moroccan Lamb Meatballs | Firefighter Meal",
   "shortDescription": "Warm spices, couscous base",
   "subtitle": "Warm spices, couscous base",
   "category": "global_flavors",
@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 520,
+  "protein": 32,
+  "carbs": 48,
+  "fats": 22,
   "tags": [
     "protein:lamb",
     "format:plated_main",
@@ -64,69 +64,27 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Moroccan Spiced Lamb Meatballs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Couscous, dry as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch lamb. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Mix and brown meatballs",
-      "instruction": "Combine ground meat with ras el hanout, egg, and breadcrumbs. Roll golf-ball size; brown in batches in a Dutch oven. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Combine ground meat with ras el hanout, egg, and breadcrumbs. Roll golf-ball size; brown in batches in a Dutch oven.",
       "minutes": 20,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Simmer in tomato sauce",
-      "instruction": "Add crushed tomatoes and 1 cup water. Simmer covered 25 minutes until meatballs read 160°F and sauce thickens. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add crushed tomatoes and 1 cup water. Simmer covered 25 minutes until meatballs read 160°F and sauce thickens.",
       "minutes": 30,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Steam couscous",
-      "instruction": "Pour boiling salted water over couscous; cover 5 minutes. Fluff with fork. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pour boiling salted water over couscous; cover 5 minutes. Fluff with fork.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Moroccan Spiced Lamb Meatballs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Serve over couscous",
       "instruction": "Mound couscous; ladle meatballs and sauce. Top with cilantro. Moroccan Meatballs should smell warm and spiced — not like plain tomato sauce.",
       "minutes": 6,
@@ -138,8 +96,8 @@
     "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Plate Moroccan Spiced Lamb Meatballs with sides in separate pans so the crew can mix portions.",
-    "Line up Moroccan Spiced Lamb Meatballs on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate Moroccan Lamb Meatballs with sides in separate pans so the crew can mix portions.",
+    "Line up Moroccan Lamb Meatballs on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -151,25 +109,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 520,
+    "protein": 32,
+    "carbs": 48,
+    "fats": 22,
+    "label": "per serving (hall portion)",
+    "source": "curated",
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/moroccan-meatballs.jpg",
@@ -180,7 +137,7 @@
   "firefighterScore": 96,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "moroccan spiced lamb meatballs",
+    "moroccan lamb meatballs",
     "moroccan meatballs",
     "moroccan",
     "lamb",
@@ -199,7 +156,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.158Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Moroccan Spiced Lamb Meatballs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.521Z",
+  "contentVersion": 2
 }

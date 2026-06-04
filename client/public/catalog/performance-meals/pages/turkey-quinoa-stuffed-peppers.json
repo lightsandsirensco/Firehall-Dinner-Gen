@@ -1,8 +1,8 @@
 {
   "slug": "turkey-quinoa-stuffed-peppers",
-  "title": "Turkey Quinoa Stuffed Peppers",
-  "displayTitle": "Turkey Quinoa Stuffed Peppers",
-  "seoTitle": "Turkey Quinoa Stuffed Peppers | Firefighter Meal",
+  "title": "Turkey Stuffed Peppers",
+  "displayTitle": "Turkey Stuffed Peppers",
+  "seoTitle": "Turkey Stuffed Peppers | Firefighter Meal",
   "shortDescription": "Colorful bell peppers filled with lean turkey, quinoa, and tomato",
   "subtitle": "Colorful bell peppers filled with lean turkey, quinoa, and tomato",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 519,
-  "protein": 38,
-  "carbs": 38,
-  "fats": 23,
+  "calories": 385,
+  "protein": 32,
+  "carbs": 28,
+  "fats": 16,
   "tags": [
     "protein:turkey",
     "format:bake",
@@ -155,25 +155,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 519,
-    "protein": 38,
-    "carbs": 38,
-    "fats": 23,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": true
-    }
+    "calories": 385,
+    "protein": 32,
+    "carbs": 28,
+    "fats": 16,
+    "label": "~385 cal/serving · 32g protein · 6g fiber (est.)"
   },
   "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
   "mobileImage": "/images/mobile/turkey-quinoa-stuffed-peppers.jpg",
@@ -183,6 +169,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
+    "turkey stuffed peppers",
     "turkey quinoa stuffed peppers",
     "turkey",
     "American",
@@ -198,6 +185,6 @@
     "turkey-sweet-potato-chili",
     "turkey-lettuce-wrap-night"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

@@ -202,16 +202,11 @@
       "instruction": "Rest 5 minutes so scoops hold together. Portion about 1.5 cups mac and cheese plus a generous scoop of BBQ chicken per firefighter (~6 oz cooked chicken each). Top with crispy fried onions and green onions at the line, not baked in. Serve with a spatula from the hotel pan — hearty, not eating-contest piles.",
       "minutes": 5,
       "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover BBQ chicken mac — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
-      "minutes": 5,
-      "heatLevel": "low"
     }
   ],
   "proTips": [
+    "Shred chicken while hot — it mixes into the mac easier.",
+    "Rest the tray before serving so the cheese sets for clean scoops.",
     "Target about 6 oz cooked shredded chicken and 1.5 cups mac per firefighter — scale the tray for eight, not twelve.",
     "Use thighs, not breast-only — thighs stay juicy after shredding and survive hold time on the line better than dry breast chunks.",
     "Toss shredded chicken with BBQ sauce before folding into mac — you want visible sauced chicken strands, not white chicken lost in orange cheese.",
@@ -219,11 +214,10 @@
     "If tones drop mid-bake, note the time on the pan with a grease pencil and finish when you return; covered trays hold 15 minutes without drying out."
   ],
   "tonightSpread": [
-    "Main: BBQ chicken mac and cheese from the hotel pan",
-    "Sides: extra warmed BBQ sauce, crispy fried onions, sliced green onions",
-    "Condiments: splash of milk at the line if the mac tightened on hold",
-    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
-    "Keep a backup tray at 200°F for firefighters returning from a run."
+    "Scoop from the corner of the hotel pan so every serving shows shredded BBQ chicken under the cheese pull — not plain mac.",
+    "Drizzle extra warmed BBQ sauce over the tray at the line for crews who want more smoke; keep sauce in a squeeze bottle, not mixed into the whole pan.",
+    "Keep a backup tray at 200°F with foil vented — mac sets fast; loosen with a splash of milk before the second pan hits the line.",
+    "Serve with green onions and crispy fried onions in side bowls so crunch stays crisp through the meal."
   ],
   "leftovers": [
     "Cool in shallow hotel pan lids within two hours — deep mac stays in the danger zone too long to cool safely.",
@@ -242,9 +236,8 @@
     "protein": 54,
     "carbs": 62,
     "fats": 30,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -260,7 +253,6 @@
     }
   },
   "heroImage": "/images/golden-100/bbq-chicken-mac-and-cheese.jpg",
-  "heroImageAlt": "BBQ Chicken Mac and Cheese — creamy baked mac with shredded BBQ chicken, melted cheddar, and BBQ glaze in a firehall hotel pan",
   "mobileImage": "/images/mobile/bbq-chicken-mac-and-cheese.jpg",
   "thumbImage": "/images/thumbs/bbq-chicken-mac-and-cheese.jpg",
   "railImage": "/images/rails/bbq-chicken-mac-and-cheese.jpg",
@@ -287,6 +279,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-02T14:05:59.205Z",
-  "contentVersion": 4
+  "generatedAt": "2026-06-04T19:44:40.378Z",
+  "contentVersion": 2
 }

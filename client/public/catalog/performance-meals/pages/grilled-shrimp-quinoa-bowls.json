@@ -1,8 +1,8 @@
 {
   "slug": "grilled-shrimp-quinoa-bowls",
-  "title": "Grilled Shrimp Quinoa Bowls",
-  "displayTitle": "Grilled Shrimp Quinoa Bowls",
-  "seoTitle": "Grilled Shrimp Quinoa Bowls | Firefighter Meal",
+  "title": "Shrimp and Quinoa Bowls",
+  "displayTitle": "Shrimp and Quinoa Bowls",
+  "seoTitle": "Shrimp and Quinoa Bowls | Firefighter Meal",
   "shortDescription": "Charred shrimp skewers over quinoa with roasted vegetables",
   "subtitle": "Charred shrimp skewers over quinoa with roasted vegetables",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 658,
-  "protein": 47,
-  "carbs": 33,
-  "fats": 36,
+  "calories": 395,
+  "protein": 38,
+  "carbs": 36,
+  "fats": 12,
   "tags": [
     "protein:shrimp",
     "format:grill",
@@ -105,57 +105,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Grilled Shrimp Quinoa Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use extra-virgin olive oil as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch shrimp. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Cook quinoa",
       "instruction": "Simmer quinoa in 4 cups water 15 minutes until tails appear and grains are tender but not mushy. Fluff with fork and season lightly.",
       "minutes": 18,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Roast vegetables",
       "instruction": "Toss zucchini and tomatoes with 2 tbsp oil, salt, and pepper. Roast at 425°F 18–20 minutes until zucchini tender and tomatoes burst.",
       "minutes": 20,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Marinate shrimp",
-      "instruction": "Toss shrimp with remaining oil, lemon juice, garlic, oregano, salt, and pepper. Marinate 15 minutes while vegetables roast. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toss shrimp with remaining oil, lemon juice, garlic, oregano, salt, and pepper. Marinate 15 minutes while vegetables roast.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Grill shrimp skewers",
-      "instruction": "Thread shrimp on skewers. Grill over medium-high 2 minutes per side until pink, opaque, and lightly charred—not curled tight or rubbery. Target 145°F until opaque at the thickest point before moving to the next batch.",
+      "instruction": "Thread shrimp on skewers. Grill over medium-high 2 minutes per side until pink, opaque, and lightly charred—not curled tight or rubbery.",
       "minutes": 6,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Assemble bowls",
-      "instruction": "Portion quinoa, roasted veg, and shrimp skewers. Top with feta and parsley. Shrimp should snap cleanly when bitten. Bake until the center reaches a safe internal temp (165°F) and edges look set — use a thermometer at the thickest point. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Portion quinoa, roasted veg, and shrimp skewers. Top with feta and parsley. Shrimp should snap cleanly when bitten.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -178,25 +157,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 658,
-    "protein": 47,
-    "carbs": 33,
-    "fats": 36,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 395,
+    "protein": 38,
+    "carbs": 36,
+    "fats": 12,
+    "label": "~395 cal/serving · 38g protein · 5g fiber (est.)"
   },
   "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
   "mobileImage": "/images/mobile/grilled-shrimp-quinoa-bowls.jpg",
@@ -206,6 +171,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
+    "shrimp and quinoa bowls",
     "grilled shrimp quinoa bowls",
     "shrimp",
     "Mediterranean",
@@ -217,6 +183,6 @@
     "lemon-garlic-shrimp-pasta",
     "yogurt-marinated-grill-chicken"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

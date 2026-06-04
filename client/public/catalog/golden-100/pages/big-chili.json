@@ -1,8 +1,8 @@
 {
   "slug": "big-chili",
-  "title": "Hall-Sized Beef and Bean Chili",
-  "displayTitle": "Hall-Sized Beef and Bean Chili",
-  "seoTitle": "Hall-Sized Beef and Bean Chili | Firefighter Meal",
+  "title": "Beef and Bean Chili",
+  "displayTitle": "Beef and Bean Chili",
+  "seoTitle": "Beef and Bean Chili | Firefighter Meal",
   "shortDescription": "Double pot, triple appetite",
   "subtitle": "Double pot, triple appetite",
   "category": "big_crew_feeders",
@@ -129,69 +129,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Hall-Sized Beef and Bean Chili in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Kidney beans, drained as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch beef. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Prep the pots",
       "instruction": "Dice onions and peppers into even ¼-inch pieces. Mince garlic. Drain beans. Open tomatoes. Set out your largest stock pot (or two medium pots if feeding 10+). Line a sheet pan if you're making garlic bread on the side.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Brown the meat",
       "instruction": "Heat 2 tbsp oil in the pot over medium-high until it shimmers. Add ground beef in two batches — don't crowd. Break into crumbles and cook until deeply browned with no pink (160°F+). You want fond on the bottom, not gray steam. Drain excess grease if the pot looks oily.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Bloom spices",
       "instruction": "Add onions and peppers; cook 6–8 minutes until edges soften and smell sweet. Stir in garlic, chili powder, smoked paprika, and cumin for 45 seconds until fragrant. Add tomato paste and brown sugar; cook 1 minute until the paste darkens slightly.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Simmer the chili",
-      "instruction": "Pour in crushed tomatoes, diced tomatoes, broth, and beans. Bring to a gentle bubble, then lower to a steady simmer — small bubbles, not a rolling boil. Cook uncovered 35–40 minutes, stirring every 10 minutes. Hall-Sized Beef and Bean Chili is ready when it coats the back of a spoon and a drag through the pot leaves a clear trail. Season with salt and Worcestershire. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Pour in crushed tomatoes, diced tomatoes, broth, and beans. Bring to a gentle bubble, then lower to a steady simmer — small bubbles, not a rolling boil. Cook uncovered 35–40 minutes, stirring every 10 minutes. Beef and Bean Chili is ready when it coats the back of a spoon and a drag through the pot leaves a clear trail. Season with salt and Worcestershire.",
       "minutes": 40,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F for medium beef, 160°F for ground. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Hall-Sized Beef and Bean Chili onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Hold and serve the hall",
       "instruction": "Keep on low (or transfer to a cambro) for late eaters. Set a topping bar: shredded cheese, diced onion, jalapeños, sour cream. Call the crew while it's hot — chili holds well but the first bowl is always the best.",
       "minutes": 5,
@@ -208,7 +173,7 @@
     "Set shredded cheese, crackers, and hot sauce in a row beside the pot.",
     "Serve family-style from two full-size trays — never let the line run dry on a busy night.",
     "Put starch and protein on separate trays so vegetarians can load up on sides.",
-    "Line up Hall-Sized Beef and Bean Chili on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Line up Beef and Bean Chili on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -251,7 +216,7 @@
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
-    "hall-sized beef and bean chili",
+    "beef and bean chili",
     "big chili",
     "american",
     "beef",
@@ -270,7 +235,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.138Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Hall-Sized Beef and Bean Chili runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.486Z",
+  "contentVersion": 2
 }

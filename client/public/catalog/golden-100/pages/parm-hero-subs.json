@@ -1,8 +1,8 @@
 {
   "slug": "parm-hero-subs",
-  "title": "Chicken Parm Hero Subs",
-  "displayTitle": "Chicken Parm Hero Subs",
-  "seoTitle": "Chicken Parm Hero Subs | Firefighter Meal",
+  "title": "Parm Hero Subs",
+  "displayTitle": "Parm Hero Subs",
+  "seoTitle": "Parm Hero Subs | Firefighter Meal",
   "shortDescription": "Parm flavors in a handheld line",
   "subtitle": "Parm flavors in a handheld line",
   "category": "firehall_classics",
@@ -71,87 +71,31 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Chicken Parm Hero Subs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Ground beef, Yellow onion, Garlic cloves as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Cook and sauce filling",
-      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates.",
       "minutes": 30,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Toast buns",
-      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired. Cook until char marks are visible and the thickest piece reads 165°F on an instant-read thermometer. Plan about 6 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired.",
       "minutes": 6,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Build the sandwich line",
-      "instruction": "Chicken Parm Hero Subs on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
+      "instruction": "Parm Hero Subs on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
       "minutes": 8,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Chicken Parm Hero Subs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Hold for late calls",
       "instruction": "Keep backup sandwiches foil-wrapped at 200°F. Slice hoagies in half for easier grabbing — crew eats with one hand when tones are quiet.",
       "minutes": 5,
       "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Chicken Parm Hero Subs — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Chicken Parm Hero Subs — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -160,8 +104,8 @@
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Plate Chicken Parm Hero Subs with sides in separate pans so the crew can mix portions.",
-    "Line up Chicken Parm Hero Subs on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate Parm Hero Subs with sides in separate pans so the crew can mix portions.",
+    "Line up Parm Hero Subs on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -204,7 +148,6 @@
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
-    "chicken parm hero subs",
     "parm hero subs",
     "italian",
     "chicken",
@@ -223,7 +166,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.030Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Chicken Parm Hero Subs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.294Z",
+  "contentVersion": 2
 }

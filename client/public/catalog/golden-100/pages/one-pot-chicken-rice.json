@@ -1,8 +1,8 @@
 {
   "slug": "one-pot-chicken-rice",
-  "title": "Crispy Garlic Chicken Thighs",
-  "displayTitle": "Crispy Garlic Chicken Thighs",
-  "seoTitle": "One-Pot Chicken and Rice | Firefighter Meal",
+  "title": "Chicken and Rice",
+  "displayTitle": "Chicken and Rice",
+  "seoTitle": "Chicken and Rice | Firefighter Meal",
   "shortDescription": "One pot, hard to mess up",
   "subtitle": "One pot, hard to mess up",
   "category": "rookie_friendly",
@@ -115,83 +115,41 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Crispy Garlic Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Double-check seasoning after scaling — crew palates run salty after long shifts, so taste the first portion before opening the line. Use Yellow onion, diced, Fresh parsley, chopped as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Season and brown chicken",
       "instruction": "Pat chicken thighs dry; season all over with salt and pepper. Brown skin-side down in butter in a large Dutch oven over medium-high 6–8 minutes until golden. Flip briefly, then remove to a plate — you are building flavor, not finishing here.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Sweat onion and toast rice",
       "instruction": "In the same pot, cook onion in the chicken fat 4–5 minutes until soft. Stir in garlic and rice; toast 2 minutes until edges look translucent.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Add broth and nestle chicken",
-      "instruction": "Pour in chicken broth, thyme, and bay leaves. Nestle chicken skin-side up on the rice. Bring to a simmer, then cover tightly and reduce heat to low. Target 165°F at the thickest point before moving to the next batch.",
+      "instruction": "Pour in chicken broth, thyme, and bay leaves. Nestle chicken skin-side up on the rice. Bring to a simmer, then cover tightly and reduce heat to low.",
       "minutes": 5,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Simmer until rice is tender",
       "instruction": "Cook covered 22–25 minutes without lifting the lid — steam escapes and rice goes crunchy. Chicken should read 165°F in the thickest part; rice should be tender and broth absorbed.",
       "minutes": 25,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Steam vegetables and rest",
       "instruction": "Scatter peas and carrots over the top; cover 5 minutes off heat so vegetables steam. Discard bay leaves. Fluff rice with a fork, taking care not to shred chicken.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 8,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 10,
-      "title": "Portion and open the line",
-      "instruction": "Portion Crispy Garlic Chicken Thighs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 12,
+      "stepNumber": 6,
       "title": "Serve one-pot portions",
       "instruction": "Plate chicken over rice on sheet trays or serve family-style from the pot. Finish with parsley and lemon wedges. Keep the seasoning simple — thyme, salt, and pepper only.",
       "minutes": 5,
@@ -225,16 +183,15 @@
     "protein": 79,
     "carbs": 67,
     "fats": 14,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -246,11 +203,11 @@
   "mobileImage": "/images/mobile/one-pot-chicken-rice.jpg",
   "thumbImage": "/images/thumbs/one-pot-chicken-rice.jpg",
   "railImage": "/images/rails/one-pot-chicken-rice.jpg",
-  "realismScore": 95,
+  "realismScore": 100,
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "one-pot chicken and rice",
+    "chicken and rice",
     "one pot chicken rice",
     "american",
     "chicken",
@@ -270,6 +227,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.171Z",
+  "generatedAt": "2026-06-04T19:44:40.542Z",
   "contentVersion": 2
 }

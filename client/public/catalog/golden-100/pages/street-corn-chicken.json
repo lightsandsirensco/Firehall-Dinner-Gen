@@ -1,8 +1,8 @@
 {
   "slug": "street-corn-chicken",
-  "title": "Smoky Chicken Thighs Bowls",
-  "displayTitle": "Smoky Chicken Thighs Bowls",
-  "seoTitle": "Mexican Street Corn Chicken Bowls | Firefighter Meal",
+  "title": "Street Corn Chicken Bowls",
+  "displayTitle": "Street Corn Chicken Bowls",
+  "seoTitle": "Street Corn Chicken Bowls | Firefighter Meal",
   "shortDescription": "Elote flavors in a bowl",
   "subtitle": "Elote flavors in a bowl",
   "category": "global_flavors",
@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 693,
-  "protein": 60,
+  "calories": 713,
+  "protein": 41,
   "carbs": 72,
-  "fats": 18,
+  "fats": 29,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -78,69 +78,27 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Smoky Chicken Thighs Bowls in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Cook jasmine rice",
-      "instruction": "Rinse and cook jasmine rice 1:1.25 with water 15 minutes; fluff and hold warm. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rinse and cook jasmine rice 1:1.25 with water 15 minutes; fluff and hold warm.",
       "minutes": 18,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Grill chicken and char corn",
-      "instruction": "Season chicken thighs with chili powder, salt, and cumin; grill to 165°F. Char corn in a dry skillet 4–5 minutes until blistered. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Season chicken thighs with chili powder, salt, and cumin; grill to 165°F. Char corn in a dry skillet 4–5 minutes until blistered.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Mix elote sauce",
-      "instruction": "Stir mayo, cotija, lime juice, and chili powder into charred corn until creamy. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Stir mayo, cotija, lime juice, and chili powder into charred corn until creamy.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Smoky Chicken Thighs Bowls onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Build street corn bowls",
       "instruction": "Rice, sliced chicken, elote corn, extra cotija, and lime wedges. Mexican Street Corn Chicken Bowls should taste like elote in a bowl — bright, salty, and a little messy.",
       "minutes": 8,
@@ -155,7 +113,7 @@
   "tonightSpread": [
     "Set rice or grain in the first pan, main in the second, crunchy toppings last so textures stay distinct.",
     "Put hot components closest to the crew, cold crunch at the far end of the line.",
-    "Line up Mexican Street Corn Chicken Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Line up Street Corn Chicken Bowls on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -169,15 +127,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 693,
-    "protein": 60,
+    "calories": 713,
+    "protein": 41,
     "carbs": 72,
-    "fats": 18,
+    "fats": 29,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
@@ -193,11 +151,11 @@
   "mobileImage": "/images/mobile/street-corn-chicken.jpg",
   "thumbImage": "/images/thumbs/street-corn-chicken.jpg",
   "railImage": "/images/rails/street-corn-chicken.jpg",
-  "realismScore": 95,
+  "realismScore": 100,
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "mexican street corn chicken bowls",
+    "street corn chicken bowls",
     "street corn chicken",
     "mexican",
     "chicken",
@@ -216,7 +174,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.157Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Smoky Chicken Thighs Bowls runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.519Z",
+  "contentVersion": 2
 }

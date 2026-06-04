@@ -135,9 +135,8 @@
     "protein": 90,
     "carbs": 3,
     "fats": 58,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -179,6 +178,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.034Z",
+  "generatedAt": "2026-06-04T19:44:40.299Z",
   "contentVersion": 2
 }

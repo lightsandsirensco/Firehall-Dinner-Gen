@@ -1,8 +1,8 @@
 {
   "slug": "steak-tacos",
-  "title": "Street-Style Chimichurri Steak Tacos",
-  "displayTitle": "Street-Style Chimichurri Steak Tacos",
-  "seoTitle": "Street-Style Chimichurri Steak Tacos | Firefighter Meal",
+  "title": "Steak Tacos",
+  "displayTitle": "Steak Tacos",
+  "seoTitle": "Steak Tacos | Firefighter Meal",
   "shortDescription": "Charred steak, bright chimichurri, tortilla night",
   "subtitle": "Charred steak, bright chimichurri, tortilla night",
   "category": "firehall_classics",
@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1400,
+  "protein": 103,
+  "carbs": 180,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:tacos",
@@ -137,7 +137,7 @@
     {
       "stepNumber": 1,
       "title": "Prep chimichurri (no heat, 10 min)",
-      "instruction": "Finely chop parsley and cilantro — you want small pieces, not a wet purée (blending too long turns chimichurri muddy). Mince garlic. Whisk olive oil, red wine vinegar, garlic, herbs, 1 tsp salt, and cracked pepper. Chimichurri should look like loose green confetti in glossy oil — sharp, herb-forward, not mayonnaise-thick. Taste: it should hit acid first, then garlic, then peppery herbs. Hold at room temp 20 minutes so flavors meld. Use Limes, Neutral oil (high heat) as listed — measure each before heat goes on.",
+      "instruction": "Finely chop parsley and cilantro — you want small pieces, not a wet purée (blending too long turns chimichurri muddy). Mince garlic. Whisk olive oil, red wine vinegar, garlic, herbs, 1 tsp salt, and cracked pepper. Chimichurri should look like loose green confetti in glossy oil — sharp, herb-forward, not mayonnaise-thick. Taste: it should hit acid first, then garlic, then peppery herbs. Hold at room temp 20 minutes so flavors meld.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -158,7 +158,7 @@
     {
       "stepNumber": 4,
       "title": "Sear steak hard (high, 8–10 min)",
-      "instruction": "Heat cast iron or grill to screaming hot — oil should shimmer and barely smoke. Sear steak in batches; don't crowd. You want deep brown crust with grill marks, not gray steamed meat. Flip once. Skirt: 3–4 min per side for medium-rare. Flank: 4–5 min per side. Internal 125–130°F for pink center — carryover cooking will rise 5° while resting. Common mistake: flipping too early; wait until the crust releases cleanly. Target 145°F for steaks, 160°F for ground at the thickest point before moving to the next batch.",
+      "instruction": "Heat cast iron or grill to screaming hot — oil should shimmer and barely smoke. Sear steak in batches; don't crowd. You want deep brown crust with grill marks, not gray steamed meat. Flip once. Skirt: 3–4 min per side for medium-rare. Flank: 4–5 min per side. Internal 125–130°F for pink center — carryover cooking will rise 5° while resting. Common mistake: flipping too early; wait until the crust releases cleanly.",
       "minutes": 10,
       "heatLevel": "high"
     },
@@ -189,63 +189,42 @@
       "instruction": "Call the crew when steak and tortillas are hot — street tacos fall apart when held under heat lamps. Lime wedges on the side for a final squeeze. Balance check on your first taco: char (steak/tortilla), fat (crema/cotija), acid (pickled onion/lime/chimichurri), spice (jalapeño/chili rub). Adjust chimichurri vinegar or salt at the line if needed.",
       "minutes": 3,
       "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover sliced steak — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
-      "minutes": 5,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 10,
-      "title": "Pack down leftovers safely",
-      "instruction": "Cool sliced steak and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
-      "minutes": 10,
-      "heatLevel": ""
     }
   ],
   "proTips": [
     "Slice steak only after resting — rushing guarantees chewy tacos.",
     "Keep chimichurri loose; a thick paste won't cling to sliced steak.",
-    "Char tortillas until pliable — cold shells crack when folded.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Taste for salt at the end — hall palates run salty after long shifts."
   ],
   "tonightSpread": [
-    "Main: Street-style steak tacos",
-    "Sides: charred corn tortillas, pickled red onions",
-    "Condiments: chimichurri, cotija, lime crema, cilantro, jalapeño slices",
-    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
-    "Keep a backup tray at 200°F for firefighters returning from a run."
+    "Warm tortillas in a dry skillet stack — wrap in foil so the line stays soft.",
+    "Set proteins, salsa, and toppings in separate bowls for build-your-own station flow.",
+    "Line up Steak Tacos on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
-    "Cool sliced steak in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
-    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
-    "Store chimichurri and pickled onions separately — acid wilts warm meat overnight."
+    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
+    "Label trays with date and reheat to 165°F minimum before second shift."
   ],
   "whyCrewsLikeIt": "Charred steak, bright chimichurri, tortilla night. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "mealPrepNotes": "Prep mise en place before the shift — Chimichurri Steak Tacos runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.",
   "substitutions": [],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 1400,
+    "protein": 103,
+    "carbs": 180,
+    "fats": 90,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -261,7 +240,6 @@
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
-    "chimichurri steak tacos",
     "steak tacos",
     "mexican",
     "beef",
@@ -281,6 +259,6 @@
   "sourceName": "Firehall Classics",
   "sourceUrl": "",
   "classicSlug": "steak-tacos",
-  "generatedAt": "2026-06-02T14:05:59.179Z",
-  "contentVersion": 4
+  "generatedAt": "2026-06-04T19:44:40.240Z",
+  "contentVersion": 2
 }

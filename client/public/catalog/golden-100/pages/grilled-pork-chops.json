@@ -1,8 +1,8 @@
 {
   "slug": "grilled-pork-chops",
-  "title": "Charcoal Grilled Pork Chops",
-  "displayTitle": "Charcoal Grilled Pork Chops",
-  "seoTitle": "Charcoal Grilled Pork Chops | Firefighter Meal",
+  "title": "Grilled Pork Chops",
+  "displayTitle": "Grilled Pork Chops",
+  "seoTitle": "Grilled Pork Chops | Firefighter Meal",
   "shortDescription": "Thick chops, caramelized edges",
   "subtitle": "Thick chops, caramelized edges",
   "category": "bbq_grill_nights",
@@ -67,80 +67,31 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Charcoal Grilled Pork Chops in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Soy sauce, Garlic cloves, minced as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Brine or season",
-      "instruction": "Pat pork dry. Salt 30 minutes ahead. Whisk glaze ingredients. Chops should be 1–1½ inches thick for even cooking. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Pat pork dry. Salt 30 minutes ahead. Whisk glaze ingredients. Chops should be 1–1½ inches thick for even cooking.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Grill to 145°F",
       "instruction": "Grill over medium-high 4–5 minutes per side until 140°F, then glaze and cook 1 minute per side until 145°F. Tenderloin: sear all sides, finish indirect to 145°F. Meat should spring back lightly.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Rest and slice",
       "instruction": "Rest 5 minutes. Slice tenderloin on a bias. Hold chops on warm trays — pork dries out above 160°F, so don't overcook while waiting for the crew.",
       "minutes": 8,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Charcoal Grilled Pork Chops onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Glaze and hold",
-      "instruction": "Brush any remaining glaze over slices. Keep backup chops on a rack at 180°F — stacked pork steams and loses crust. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Brush any remaining glaze over slices. Keep backup chops on a rack at 180°F — stacked pork steams and loses crust.",
       "minutes": 5,
       "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Charcoal Grilled Pork Chops — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -149,8 +100,8 @@
     "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat."
   ],
   "tonightSpread": [
-    "Plate Charcoal Grilled Pork Chops with sides in separate pans so the crew can mix portions.",
-    "Line up Charcoal Grilled Pork Chops on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate Grilled Pork Chops with sides in separate pans so the crew can mix portions.",
+    "Line up Grilled Pork Chops on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run.",
     "Slice proteins on a cutting board at the end of the line so everyone sees the smoke ring and char.",
     "Set sauce and pickles on the side — sauced meat holds better on the backup tray."
@@ -169,16 +120,15 @@
     "protein": 62,
     "carbs": 4,
     "fats": 32,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -194,7 +144,6 @@
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "charcoal grilled pork chops",
     "grilled pork chops",
     "american",
     "pork",
@@ -213,7 +162,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.044Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Charcoal Grilled Pork Chops runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.314Z",
+  "contentVersion": 2
 }

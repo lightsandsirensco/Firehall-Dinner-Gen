@@ -1,8 +1,8 @@
 {
   "slug": "lemon-garlic-chicken-tray",
-  "title": "Lemon Garlic Chicken Tray Bake",
-  "displayTitle": "Lemon Garlic Chicken Tray Bake",
-  "seoTitle": "Lemon Garlic Chicken Tray Bake | Firefighter Meal",
+  "title": "Lemon Garlic Chicken Tray",
+  "displayTitle": "Lemon Garlic Chicken Tray",
+  "seoTitle": "Lemon Garlic Chicken Tray | Firefighter Meal",
   "shortDescription": "Bright citrus thighs with roasted broccoli and baby potatoes for eight",
   "subtitle": "Bright citrus thighs with roasted broccoli and baby potatoes for eight",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 676,
-  "protein": 77,
-  "carbs": 39,
-  "fats": 23,
+  "calories": 485,
+  "protein": 42,
+  "carbs": 28,
+  "fats": 24,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -88,76 +88,34 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Lemon Garlic Chicken Tray Bake in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Heat oven and prep pans",
+      "instruction": "Heat oven to 425°F. Line two half-sheet pans with parchment. Pat chicken dry so skin crisps instead of steaming in the oven.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
+      "title": "Build the lemon garlic marinade",
+      "instruction": "Whisk olive oil, lemon zest, lemon juice, minced garlic, oregano, salt, and pepper until emulsified and fragrant.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Heat oven and prep pans",
-      "instruction": "Heat oven to 425°F. Line two half-sheet pans with parchment. Pat chicken dry so skin crisps instead of steaming in the oven. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
-      "title": "Build the lemon garlic marinade",
-      "instruction": "Whisk olive oil, lemon zest, lemon juice, minced garlic, oregano, salt, and pepper until emulsified and fragrant. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
       "title": "Season chicken and vegetables",
       "instruction": "Toss thighs with half the marinade until coated. Toss potatoes and broccoli with remaining marinade until glossy and evenly seasoned.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Roast until chicken is done",
       "instruction": "Arrange thighs skin-side up with potatoes around edges and broccoli in gaps. Roast 32–38 minutes until internal temp hits 165°F and skin is golden.",
       "minutes": 35,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion Lemon Garlic Chicken Tray Bake onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
+      "stepNumber": 5,
       "title": "Rest and serve from the tray",
       "instruction": "Rest pans 5 minutes. Spoon pan juices over portions at the line. Chicken should feel firm with clear juices, not pink at the bone.",
       "minutes": 5,
@@ -185,26 +143,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 676,
-    "protein": 77,
-    "carbs": 39,
-    "fats": 23,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 485,
+    "protein": 42,
+    "carbs": 28,
+    "fats": 24,
+    "label": "~485 cal/serving · 42g protein · 5g fiber (est.)"
   },
   "heroImage": "/images/golden-100/lemon-garlic-chicken-tray.jpg",
   "mobileImage": "/images/mobile/lemon-garlic-chicken-tray.jpg",
@@ -214,7 +157,6 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
-    "lemon garlic chicken tray bake",
     "lemon garlic chicken tray",
     "chicken",
     "American",
@@ -230,6 +172,6 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-05-31T23:32:24.494Z",
+  "generatedAt": "2026-06-04T19:44:43.398Z",
   "contentVersion": 2
 }

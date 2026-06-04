@@ -13,10 +13,10 @@
   "cookTime": 65,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1381,
+  "protein": 61,
+  "carbs": 127,
+  "fats": 69,
   "tags": [
     "protein:vegetarian",
     "format:bake",
@@ -109,71 +109,43 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Baked Mac and Cheese in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Sharp cheddar, shredded as listed — measure each before heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Par-cook the macaroni",
       "instruction": "Boil elbow macaroni in well-salted water 2 minutes shy of al dente — it finishes in the oven. Drain thoroughly; wet pasta makes a soupy bake.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Make the cheese sauce",
       "instruction": "Melt butter in a large pot over medium heat. Whisk in flour; cook 1 minute. Whisk in milk in steady streams until smooth. Simmer until thick enough to coat a spoon, then melt in cheddar and gruyere off the heat. Stir in Dijon, salt, and pepper.",
       "minutes": 15,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Combine pasta and sauce",
       "instruction": "Fold drained macaroni into cheese sauce until every piece is coated. The sauce should look slightly loose — pasta absorbs liquid in the oven.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Pan up and add topping",
-      "instruction": "Transfer to buttered hotel pans. Mix panko with melted butter and parmesan; scatter evenly over the top for a crunchy lid. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Transfer to buttered hotel pans. Mix panko with melted butter and parmesan; scatter evenly over the top for a crunchy lid.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
+      "stepNumber": 5,
       "title": "Bake until bubbling",
       "instruction": "Bake at 375°F 25–30 minutes until edges bubble and topping is deep golden. If the top browns before the center is hot, cover with foil and continue baking.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 8,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 6,
       "title": "Rest and serve",
-      "instruction": "Rest 5 minutes so the bake sets — scoops hold together on the line. Serve with a spatula, not a spoon, for clean portions. Bake until the center reaches a safe internal temp (165°F for any egg-based components) and edges look set — use a thermometer at the thickest point. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 5 minutes so the bake sets — scoops hold together on the line. Serve with a spatula, not a spoon, for clean portions.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -195,20 +167,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 1381,
+    "protein": 61,
+    "carbs": 127,
+    "fats": 69,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -236,15 +207,14 @@
   ],
   "relatedSlugs": [
     "french-toast-casserole",
+    "bbq-chicken-mac-and-cheese",
     "pancake-short-stack",
     "beef-barley-soup",
     "chicken-dumpling-soup",
-    "chicken-pot-pie",
-    "loaded-baked-potato-bar"
+    "chicken-pot-pie"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.064Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Baked Mac and Cheese runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.342Z",
+  "contentVersion": 2
 }

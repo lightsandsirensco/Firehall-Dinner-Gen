@@ -66,64 +66,29 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Sausage Peppers and Onions in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
+      "title": "Brown sausage links",
+      "instruction": "Brown Italian sausage in a large skillet over medium-high, turning until all sides color. Slice links on a bias.",
       "minutes": 12,
-      "heatLevel": ""
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch pork. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Brown sausage links",
-      "instruction": "Brown Italian sausage in a large skillet over medium-high, turning until all sides color. Slice links on a bias. Target 145°F with a 3-minute rest at the thickest part before moving to the next batch. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 12,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 4,
       "title": "Sweat peppers and onions",
-      "instruction": "In the same pan, cook sliced peppers and onions 10–12 minutes until soft with golden edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "In the same pan, cook sliced peppers and onions 10–12 minutes until soft with golden edges.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Combine and simmer",
-      "instruction": "Return sausage; add marinara if using. Simmer 5 minutes so flavors meld. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Return sausage; add marinara if using. Simmer 5 minutes so flavors meld.",
       "minutes": 6,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 145°F with a 3-minute rest. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Sausage Peppers and Onions onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
+      "stepNumber": 4,
       "title": "Serve on rolls",
-      "instruction": "Pile sausage and peppers into split hoagie rolls. Sausage Peppers & Onions is a hall classic — keep extra napkins out. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 145°F with a 3-minute rest at the thickest point before moving to the next batch.",
+      "instruction": "Pile sausage and peppers into split hoagie rolls. Sausage Peppers & Onions is a hall classic — keep extra napkins out.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -150,16 +115,15 @@
     "protein": 22,
     "carbs": 11,
     "fats": 46,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
@@ -196,7 +160,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.076Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Sausage Peppers and Onions runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.366Z",
+  "contentVersion": 2
 }

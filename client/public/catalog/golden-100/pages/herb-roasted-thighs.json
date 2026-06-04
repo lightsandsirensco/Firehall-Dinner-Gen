@@ -71,80 +71,31 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Herb Roasted Chicken Thighs in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Fresh thyme, Fresh rosemary, Kosher salt as listed — measure each before heat goes on.",
-      "minutes": 12,
+      "title": "Season and arrange",
+      "instruction": "Pat thighs dry; season under and over skin. Arrange skin-up on oiled sheet pans with space between pieces.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Season and arrange",
-      "instruction": "Pat thighs dry; season under and over skin. Arrange skin-up on oiled sheet pans with space between pieces. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
       "title": "Roast until crisp",
-      "instruction": "Roast at 425°F 35–42 minutes until skin crackles and thickest part reads 165°F. Juices run clear when pierced. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Roast at 425°F 35–42 minutes until skin crackles and thickest part reads 165°F. Juices run clear when pierced.",
       "minutes": 40,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Rest and hold",
-      "instruction": "Rest 5 minutes. Hold on racks at 200°F — stacking steams skin soft. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 5 minutes. Hold on racks at 200°F — stacking steams skin soft.",
       "minutes": 8,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Herb Roasted Chicken Thighs onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Crisp skin under broiler",
-      "instruction": "If skin softened while holding, broil 1–2 minutes skin-up until crackly. Watch closely — thighs go from crisp to burnt fast. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "If skin softened while holding, broil 1–2 minutes skin-up until crackly. Watch closely — thighs go from crisp to burnt fast.",
       "minutes": 3,
       "heatLevel": "high"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Herb Roasted Chicken Thighs — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
-      "heatLevel": ""
     }
   ],
   "proTips": [
@@ -174,16 +125,15 @@
     "protein": 70,
     "carbs": 0,
     "fats": 13,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
-    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -211,14 +161,13 @@
   "relatedSlugs": [
     "chicken-caesar",
     "chicken-souvlaki",
+    "bbq-chicken-mac-and-cheese",
     "chicken-pot-pie",
     "greek-chicken-bowls",
-    "performance-burrito-bowls",
-    "sheet-pan-fajitas"
+    "performance-burrito-bowls"
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.102Z",
-  "contentVersion": 2,
-  "mealPrepNotes": "Prep mise en place before the shift — Herb Roasted Chicken Thighs runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone."
+  "generatedAt": "2026-06-04T19:44:40.412Z",
+  "contentVersion": 2
 }

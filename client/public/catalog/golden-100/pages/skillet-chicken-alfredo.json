@@ -1,8 +1,8 @@
 {
   "slug": "skillet-chicken-alfredo",
-  "title": "Garlic Chicken Pasta",
-  "displayTitle": "Garlic Chicken Pasta",
-  "seoTitle": "One-Skillet Chicken Alfredo | Firefighter Meal",
+  "title": "Chicken Alfredo",
+  "displayTitle": "Chicken Alfredo",
+  "seoTitle": "Chicken Alfredo | Firefighter Meal",
   "shortDescription": "Creamy pasta without the marathon",
   "subtitle": "Creamy pasta without the marathon",
   "category": "quick_shift_meals",
@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 1228,
+  "protein": 77,
+  "carbs": 89,
+  "fats": 61,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -96,57 +96,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Garlic Chicken Pasta in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use Fettuccine or penne, Fresh parsley, chopped as listed — measure each before heat goes on.",
+      "title": "Cook pasta",
+      "instruction": "Boil pasta in salted water to al dente; reserve 1 cup pasta water before draining.",
       "minutes": 12,
-      "heatLevel": ""
+      "heatLevel": "high"
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "title": "Sear chicken strips",
+      "instruction": "Season and sear chicken in olive oil until 165°F; set aside.",
       "minutes": 10,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook pasta",
-      "instruction": "Boil pasta in salted water to al dente; reserve 1 cup pasta water before draining. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 12 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
-      "minutes": 12,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Sear chicken strips",
-      "instruction": "Season and sear chicken in olive oil until 165°F; set aside. Plan about 10 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 5,
       "title": "Build alfredo in the skillet",
-      "instruction": "Melt butter; cook garlic. Add cream and parmesan; simmer until thick. Splash pasta water if needed. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Plan about 8 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Melt butter; cook garlic. Add cream and parmesan; simmer until thick. Splash pasta water if needed.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Toss pasta and chicken",
-      "instruction": "Add pasta and chicken to the skillet; toss until coated. Adjust consistency with pasta water — glossy, not tomato-red. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add pasta and chicken to the skillet; toss until coated. Adjust consistency with pasta water — glossy, not tomato-red.",
       "minutes": 5,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Serve from the skillet",
-      "instruction": "Finish with parsley and extra parmesan. Skillet Chicken Alfredo goes straight from pan to sheet trays. Target 165°F at the thickest part before moving to the next batch. Plan about 5 minutes for this step at crew scale. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Finish with parsley and extra parmesan. Skillet Chicken Alfredo goes straight from pan to sheet trays.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -158,8 +137,8 @@
     "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
   ],
   "tonightSpread": [
-    "Plate One-Skillet Chicken Alfredo with sides in separate pans so the crew can mix portions.",
-    "Line up One-Skillet Chicken Alfredo on the main counter with serving spoons — firefighters grab fast between calls.",
+    "Plate Chicken Alfredo with sides in separate pans so the crew can mix portions.",
+    "Line up Chicken Alfredo on the main counter with serving spoons — firefighters grab fast between calls.",
     "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
   ],
   "leftovers": [
@@ -176,20 +155,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "Estimated per serving",
-    "source": "unavailable",
-    "estimateAvailable": false,
+    "calories": 1228,
+    "protein": 77,
+    "carbs": 89,
+    "fats": 61,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": true
+      "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -201,11 +179,11 @@
   "mobileImage": "/images/mobile/skillet-chicken-alfredo.jpg",
   "thumbImage": "/images/thumbs/skillet-chicken-alfredo.jpg",
   "railImage": "/images/rails/skillet-chicken-alfredo.jpg",
-  "realismScore": 95,
+  "realismScore": 100,
   "firefighterScore": 100,
   "popularityWeight": 3.2,
   "searchTerms": [
-    "one-skillet chicken alfredo",
+    "chicken alfredo",
     "skillet chicken alfredo",
     "italian",
     "chicken",
@@ -224,6 +202,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.107Z",
+  "generatedAt": "2026-06-04T19:44:40.420Z",
   "contentVersion": 2
 }

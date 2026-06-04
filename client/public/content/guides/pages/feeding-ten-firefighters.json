@@ -53,22 +53,22 @@
   "mealRecommendations": [
     {
       "slug": "batch-lasagna",
-      "title": "Giant Batch Lasagna",
+      "title": "Batch Lasagna",
       "blurb": "Built for big tables."
     },
     {
       "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night",
+      "title": "Taco Bar",
       "blurb": "Self-serve at scale."
     },
     {
       "slug": "jambalaya",
-      "title": "Cajun Jambalaya for the Hall",
+      "title": "Jambalaya",
       "blurb": "One pot — loud flavor."
     },
     {
       "slug": "loaded-potato-feed",
-      "title": "Loaded Potato Feed",
+      "title": "Potato Bar Feed",
       "blurb": "Ten-plus friendly self-serve line."
     }
   ],

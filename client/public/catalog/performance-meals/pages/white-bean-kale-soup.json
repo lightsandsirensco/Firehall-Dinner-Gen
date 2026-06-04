@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 309,
-  "protein": 18,
-  "carbs": 37,
-  "fats": 11,
+  "calories": 285,
+  "protein": 14,
+  "carbs": 42,
+  "fats": 8,
   "tags": [
     "protein:plant",
     "format:soup",
@@ -105,71 +105,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for White Bean and Kale Soup in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch plant. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Sweat mirepoix",
       "instruction": "Heat olive oil in an 8-quart pot over medium. Cook onion, carrot, and celery 8 minutes until softened and onion turns translucent at edges.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Add garlic and tomatoes",
       "instruction": "Stir in garlic, cook 1 minute until fragrant. Add crushed tomatoes and cook 3 minutes until color deepens slightly and raw tomato smell fades.",
       "minutes": 4,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Simmer beans and broth",
-      "instruction": "Add 3 cans beans, broth, rosemary, and parmesan rind. Simmer 20 minutes so flavors meld and broth reduces slightly. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Add 3 cans beans, broth, rosemary, and parmesan rind. Simmer 20 minutes so flavors meld and broth reduces slightly.",
       "minutes": 20,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Blend partial batch",
-      "instruction": "Blend 1 can beans with 1 cup soup until smooth. Return to pot for creamy body without heavy cream. Plan about 5 minutes for this step at crew scale. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Blend 1 can beans with 1 cup soup until smooth. Return to pot for creamy body without heavy cream.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 9,
-      "title": "Portion and open the line",
-      "instruction": "Portion White Bean and Kale Soup onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 5,
       "title": "Wilt kale and serve",
-      "instruction": "Stir in kale, simmer 5 minutes until tender-bright green. Soup should coat a spoon; adjust salt before ladle service. Maintain a steady simmer — bubbles should break the surface without a rolling boil that shreds delicate proteins. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Stir in kale, simmer 5 minutes until tender-bright green. Soup should coat a spoon; adjust salt before ladle service.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -192,26 +157,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 309,
-    "protein": 18,
-    "carbs": 37,
-    "fats": 11,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": false,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
-    }
+    "calories": 285,
+    "protein": 14,
+    "carbs": 42,
+    "fats": 8,
+    "label": "~285 cal/serving · 14g protein · 12g fiber (est.)"
   },
   "heroImage": "/images/golden-100/white-bean-kale-soup.jpg",
   "mobileImage": "/images/mobile/white-bean-kale-soup.jpg",
@@ -235,7 +185,6 @@
     "lemon-chicken-orzo-soup",
     "lentil-mushroom-bolognese"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
-  "contentVersion": 2,
-  "heroImageAlt": "White Bean and Kale Soup — wide family-style firehall platter showing kale soup on a crew prep table"
+  "generatedAt": "2026-06-04T19:44:43.399Z",
+  "contentVersion": 2
 }

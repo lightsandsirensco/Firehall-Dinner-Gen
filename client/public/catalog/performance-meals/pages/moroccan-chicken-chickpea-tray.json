@@ -1,8 +1,8 @@
 {
   "slug": "moroccan-chicken-chickpea-tray",
-  "title": "Moroccan Chicken Chickpea Tray",
-  "displayTitle": "Moroccan Chicken Chickpea Tray",
-  "seoTitle": "Moroccan Chicken Chickpea Tray | Firefighter Meal",
+  "title": "Moroccan Chicken and Chickpeas",
+  "displayTitle": "Moroccan Chicken and Chickpeas",
+  "seoTitle": "Moroccan Chicken and Chickpeas | Firefighter Meal",
   "shortDescription": "Warm-spiced thighs with chickpeas, apricots, and roasted carrots",
   "subtitle": "Warm-spiced thighs with chickpeas, apricots, and roasted carrots",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 22,
   "difficulty": "medium",
-  "calories": 509,
-  "protein": 73,
-  "carbs": 12,
-  "fats": 18,
+  "calories": 495,
+  "protein": 40,
+  "carbs": 42,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -102,57 +102,36 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Moroccan Chicken Chickpea Tray in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
+      "title": "Mix spice blend",
+      "instruction": "Combine cumin, cinnamon, ginger, paprika, garlic, salt, and olive oil into a paste that coats a spoon without separating.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch chicken. Confirm burners ignite evenly and sheet pans are greased or lined.",
+      "title": "Coat chicken and vegetables",
+      "instruction": "Toss thighs, chickpeas, carrots, onion, and apricots with spice paste until every piece looks evenly coated and lightly glossy.",
       "minutes": 10,
-      "heatLevel": "medium-high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Mix spice blend",
-      "instruction": "Combine cumin, cinnamon, ginger, paprika, garlic, salt, and olive oil into a paste that coats a spoon without separating. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
-      "title": "Coat chicken and vegetables",
-      "instruction": "Toss thighs, chickpeas, carrots, onion, and apricots with spice paste until every piece looks evenly coated and lightly glossy. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early. Target 165°F at the thickest point before moving to the next batch.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
       "title": "Roast until chicken is done",
-      "instruction": "Spread on two half-sheets in a single layer. Roast at 425°F 32–38 minutes until chicken reads 165°F and chickpeas crisp at edges. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Spread on two half-sheets in a single layer. Roast at 425°F 32–38 minutes until chicken reads 165°F and chickpeas crisp at edges.",
       "minutes": 35,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
+      "stepNumber": 4,
       "title": "Rest and check texture",
-      "instruction": "Rest 5 minutes. Apricots should be plump and lightly caramelized; carrots tender with slight bite at the center. Hold covered at 140°F up to 20 minutes — log the time if your hall tracks food safety during long shifts. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.",
+      "instruction": "Rest 5 minutes. Apricots should be plump and lightly caramelized; carrots tender with slight bite at the center.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 8,
+      "stepNumber": 5,
       "title": "Serve with couscous",
-      "instruction": "Portion chicken with chickpea mixture. Pan should smell warm-spiced, not burnt; chicken juices should run clear. Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line. Keep a backup tray at 200°F for firefighters returning from a call — never serve picked-over pans to late crew.",
+      "instruction": "Portion chicken with chickpea mixture. Pan should smell warm-spiced, not burnt; chicken juices should run clear.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -175,26 +154,11 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 509,
-    "protein": 73,
-    "carbs": 12,
-    "fats": 18,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
-    }
+    "calories": 495,
+    "protein": 40,
+    "carbs": 42,
+    "fats": 20,
+    "label": "~495 cal/serving · 40g protein · 9g fiber (est.)"
   },
   "heroImage": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
   "mobileImage": "/images/mobile/moroccan-chicken-chickpea-tray.jpg",
@@ -204,6 +168,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
+    "moroccan chicken and chickpeas",
     "moroccan chicken chickpea tray",
     "chicken",
     "Moroccan",
@@ -219,6 +184,6 @@
     "white-bean-chicken-chili",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

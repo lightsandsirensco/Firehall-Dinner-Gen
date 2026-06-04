@@ -1,8 +1,8 @@
 {
   "slug": "veggie-egg-casserole-tray",
-  "title": "Veggie Egg Casserole Tray",
-  "displayTitle": "Veggie Egg Casserole Tray",
-  "seoTitle": "Veggie Egg Casserole Tray | Firefighter Meal",
+  "title": "Veggie Egg Casserole",
+  "displayTitle": "Veggie Egg Casserole",
+  "seoTitle": "Veggie Egg Casserole | Firefighter Meal",
   "shortDescription": "Baked egg casserole with spinach, bell pepper, and feta for eight",
   "subtitle": "Baked egg casserole with spinach, bell pepper, and feta for eight",
   "category": "healthy_performance",
@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 386,
-  "protein": 27,
-  "carbs": 12,
-  "fats": 26,
+  "calories": 245,
+  "protein": 16,
+  "carbs": 8,
+  "fats": 17,
   "tags": [
     "protein:egg",
     "format:breakfast",
@@ -155,26 +155,11 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 386,
-    "protein": 27,
-    "carbs": 12,
-    "fats": 26,
-    "label": "Estimated per serving",
-    "source": "calculated",
-    "estimateAvailable": true,
-    "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
-      "mealPrepFriendly": true
-    },
-    "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": false,
-      "performanceMeal": false
-    }
+    "calories": 245,
+    "protein": 16,
+    "carbs": 8,
+    "fats": 17,
+    "label": "~245 cal/serving · 16g protein · 2g fiber (est.)"
   },
   "heroImage": "/images/golden-100/veggie-egg-casserole-tray.jpg",
   "mobileImage": "/images/mobile/veggie-egg-casserole-tray.jpg",
@@ -184,6 +169,7 @@
   "firefighterScore": 83,
   "popularityWeight": 7.5,
   "searchTerms": [
+    "veggie egg casserole",
     "veggie egg casserole tray",
     "egg",
     "American",
@@ -194,6 +180,6 @@
   "relatedSlugs": [
     "turkey-sausage-egg-muffins"
   ],
-  "generatedAt": "2026-05-31T23:32:24.495Z",
+  "generatedAt": "2026-06-04T19:44:43.399Z",
   "contentVersion": 2
 }

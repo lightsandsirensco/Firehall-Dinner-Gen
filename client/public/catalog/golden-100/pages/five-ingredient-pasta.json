@@ -78,79 +78,30 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
-      "instruction": "Line up every ingredient for Garlic Butter Pasta in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
-      "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch vegetarian. Confirm burners ignite evenly and sheet pans are greased or lined.",
-      "minutes": 10,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Boil the pasta",
       "instruction": "Bring a large pot of salted water to a rolling boil (water should taste like the sea). Add spaghetti and stir once so strands don't stick. Cook 1 minute shy of package time — you'll finish in the butter. Reserve 2 cups pasta water before draining.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 2,
       "title": "Make garlic butter",
       "instruction": "While pasta cooks, melt butter in a large skillet or Dutch oven over medium heat. When foam subsides, add garlic and swirl 45–60 seconds until fragrant and pale gold — not brown. If garlic darkens fast, pull the pan off heat for 10 seconds.",
       "minutes": 3,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 3,
       "title": "Toss and finish",
       "instruction": "Add drained pasta to the garlic butter. Toss vigorously, adding pasta water a splash at a time until the sauce clings glossy to every strand. Fold in Parmesan off heat. Taste — Garlic Butter Pasta should be rich, salty, and silky. Adjust with salt, pepper, and more butter if needed.",
       "minutes": 4,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 6,
-      "title": "Verify safe internal temps",
-      "instruction": "Spot-check the thickest pieces with an instant-read thermometer — target 165°F for any egg-based components. If any piece reads low, return it to heat immediately rather than holding under temp on the line.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 7,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-service, cover finished food and hold at 140°F in a warm cabinet or 200°F oven — never leave proteins below 140°F for more than 30 minutes cumulative. Note the hold time on the pan with a grease pencil.",
-      "minutes": 3,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 8,
-      "title": "Portion and open the line",
-      "instruction": "Portion Garlic Butter Pasta onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.",
-      "minutes": 8,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 9,
-      "title": "Scale for larger halls",
-      "instruction": "When cooking for more than 8 firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 10,
+      "stepNumber": 4,
       "title": "Serve immediately",
       "instruction": "Serve straight from the pot or transfer to a warm tray lined with foil. Top with parsley and extra Parmesan. This dish does not hold well on a steam table — call the crew as soon as it is tossed.",
       "minutes": 2,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 11,
-      "title": "Final quality check before service",
-      "instruction": "Walk the line once before opening service for Garlic Butter Pasta — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.",
-      "minutes": 4,
       "heatLevel": ""
     }
   ],
@@ -226,6 +177,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-01T01:40:02.173Z",
+  "generatedAt": "2026-06-04T19:44:40.544Z",
   "contentVersion": 2
 }
