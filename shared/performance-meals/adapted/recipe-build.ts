@@ -6,6 +6,7 @@ import type {
   GoldenRecipePageIngredient,
   GoldenRecipePageStep,
 } from "../../golden-100/recipe-page-schema.js";
+import { humanRecipeTitle } from "../../recipe-human-titles.js";
 import type {
   PerformanceAdaptedRecipe,
   PerformanceManifestEntry,
@@ -110,7 +111,7 @@ export function manifestEntry(input: {
 }): PerformanceManifestEntry {
   return {
     slug: input.slug,
-    title: input.title,
+    title: humanRecipeTitle(input.slug, input.title),
     subtitle: input.subtitle,
     protein: input.protein,
     cuisine: input.cuisine,

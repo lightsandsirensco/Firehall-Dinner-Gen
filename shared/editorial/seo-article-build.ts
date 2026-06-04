@@ -3,6 +3,7 @@
  */
 
 import { enrichGuideArticle } from "./guide-depth-enrichment.js";
+import { humanRecipeTitle } from "../recipe-human-titles.js";
 import type { EditorialPillar } from "./content-pillar.js";
 import type {
   EditorialArticle,
@@ -20,7 +21,8 @@ export function meal(
   blurb: string,
   catalog?: EditorialMealPick["catalog"],
 ): EditorialMealPick {
-  return catalog ? { slug, title, blurb, catalog } : { slug, title, blurb };
+  const resolved = humanRecipeTitle(slug, title);
+  return catalog ? { slug, title: resolved, blurb, catalog } : { slug, title: resolved, blurb };
 }
 
 function defaultPillar(topic: EditorialTopic): EditorialPillar {

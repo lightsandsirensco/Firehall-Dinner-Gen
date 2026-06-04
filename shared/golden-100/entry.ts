@@ -1,4 +1,5 @@
 import type { MasterCategoryId } from "../categories/constants.js";
+import { humanRecipeTitle } from "../recipe-human-titles.js";
 import type { GoldenImageryMeta, GoldenRecipeDefinition, GoldenRecommendationMeta } from "./types.js";
 
 type EntryInput = {
@@ -65,7 +66,7 @@ export function goldenEntry(input: EntryInput): GoldenRecipeDefinition {
 
   return {
     slug: input.slug,
-    title: input.title,
+    title: humanRecipeTitle(input.slug, input.title),
     masterCategoryId: input.cat,
     protein: input.protein,
     cuisine: input.cuisine,

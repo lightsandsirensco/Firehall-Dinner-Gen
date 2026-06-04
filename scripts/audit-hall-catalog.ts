@@ -20,19 +20,27 @@ const asJson = args.includes("--json");
 
 const BANNED_PHRASES = [
   "ultimate",
+  "hearty",
+  "power bowl",
+  "power bowls",
+  "protein packed",
+  "protein-packed",
+  "high-protein",
+  "performance chicken",
   "flavor packed",
   "flavor-packed",
   "packed with flavor",
   "explosion",
   "perfect",
-  "power bowl",
-  "protein packed",
-  "protein-packed",
   "meal prep",
   "clean eating",
   "macro",
   "optimize",
   "recovery fuel",
+  "for the crew",
+  "for the hall",
+  "hall-sized",
+  "giant batch",
 ] as const;
 
 const BAD_PATTERNS: Array<{ id: string; rx: RegExp; note: string }> = [

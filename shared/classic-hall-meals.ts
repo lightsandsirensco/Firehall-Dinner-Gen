@@ -86,7 +86,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
   {
     id: "chicken-parm",
     slug: "chicken-parm",
-    title: "Chicken Parm",
+    title: "Chicken Parmesan",
     shortLabel: "Chicken Parm",
     displayTitle: "Chicken Parm Night — Italian Hall Spread",
     description: "Breaded cutlets, red sauce, pasta, and garlic bread — the full hall spread.",
@@ -111,7 +111,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
   {
     id: "steak-tacos",
     slug: "steak-tacos",
-    title: "Street-Style Chimichurri Steak Tacos",
+    title: "Steak Tacos",
     shortLabel: "Steak Tacos",
     displayTitle: "Street-Style Chimichurri Steak Tacos",
     description:
@@ -167,7 +167,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
   {
     id: "smash-burgers",
     slug: "smash-burgers",
-    title: "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
+    title: "Double Smash Burgers",
     shortLabel: "Double Smash",
     displayTitle: "Double Smash Burgers with Caramelized Onions & Dirty Sauce",
     description:
@@ -198,7 +198,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
   {
     id: "chili-garlic-bread",
     slug: "chili-garlic-bread",
-    title: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
+    title: "Firehall Chili",
     shortLabel: "Smoked Chili Night",
     displayTitle: "Firehouse Smoked Beef Chili with Cheesy Garlic Bread",
     description:
@@ -240,7 +240,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     slug: "chicken-caesar",
     title: "Chicken Caesar Salad",
     shortLabel: "Caesar Night",
-    displayTitle: "Chicken Caesar Salad — Hearty Hall Spread",
+    displayTitle: "Chicken Caesar Salad",
     description:
       "Grilled chicken over a mountain of romaine — garlic bread, bacon, croutons, parmesan, and fries for the crew.",
     tagline: "Big bowls, hot chicken, all the fixings",
@@ -264,7 +264,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
   {
     id: "jerk-chicken",
     slug: "jerk-chicken",
-    title: "Jerk Chicken & Peas and Rice",
+    title: "Jerk Chicken & Rice and Peas",
     shortLabel: "Jerk & Rice",
     displayTitle: "Jerk Chicken & Peas and Rice — Fire on the Grill",
     description: "Charred jerk thighs, coconut rice and peas, island sides for eight.",
