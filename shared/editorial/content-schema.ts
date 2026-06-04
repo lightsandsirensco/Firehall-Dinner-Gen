@@ -71,7 +71,7 @@ export const editorialArticleSchema = z.object({
   topic: editorialTopicSchema,
   pillar: editorialPillarSchema.optional(),
   intro: z.string().trim().min(80).max(1200),
-  sections: z.array(editorialSectionSchema).min(2).max(12),
+  sections: z.array(editorialSectionSchema).min(1).max(12),
   practicalAdvice: z.array(z.string().trim().min(20).max(500)).min(3).max(10),
   mealRecommendations: z.array(editorialMealPickSchema).min(3).max(30),
   faqs: z.array(editorialFaqSchema).min(2).max(10),

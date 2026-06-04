@@ -9,7 +9,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
     slug: "10-classic-firehall-meals",
     seoTitle: "10 Classic Firehall Meals Firefighters Actually Cook",
     title: "10 Classic Firehall Meals Firefighters Actually Cook",
-    subtitle: "The same ten dinners on the Classics Wheel — built for real shift timing",
+    subtitle: "Ten hall-tested dinners — pick one and open the full recipe",
     description:
       "A practical list of classic firehall meals, from jerk chicken and rice and peas to chili, steak sandwiches, BBQ chicken mac and cheese, and more.",
     keywords: [
@@ -21,37 +21,20 @@ export const CORNERSTONE_BLOG_ARTICLES = [
     ],
     topic: "station_lifestyle",
     pillar: "station_lifestyle",
-    readMinutes: 8,
+    readMinutes: 5,
     intro:
-      "When the whiteboard says \"dinner?\" and nobody wants to think, halls reach for the same short list. These ten are the Classics Wheel lineup — jerk, BBQ mac, steak sandwiches, smash burgers, parm, pulled pork, chili with garlic bread, caesar, beef dip, and street tacos. Not food-blog experiments. Meals that hold on low, feed staggered eaters, and still taste right after a run.",
+      "Ten dinners crews actually cook on shift — jerk chicken, BBQ mac, steak sandwiches, smash burgers, parm, pulled pork, chili, caesar, beef dip, and steak tacos. Each link below is a full crew-sized recipe.",
     practicalAdvice: [
-      "Pick one line meal, one tray bake, and one pot — that covers most weeks without burning out the cook.",
-      "Post protein and hold time on the board before tones; the next cook should not guess what \"almost done\" meant.",
-      "Spin the Classics Wheel at /wheel when the crew cannot agree — same ten meals, zero debate spiral.",
+      "Open the recipe first — check headcount and gear before you shop.",
+      "One cook, one runner; sauces and buns on the side for post-call eaters.",
+      "Same ten meals as the Classics Wheel at /wheel if the crew wants a random pick.",
     ],
     sections: [
       {
-        id: "why-ten",
-        heading: "Why these ten and not twenty",
-        paragraphs: [
-          "A longer list looks impressive on paper and useless at 17:15. We trimmed to the meals firefighters actually repeat: formats that scale to six or twelve, survive interrupted prep, and do not need a pastry chef on duty.",
-          "Every recipe below links to crew-sized steps on this site — portions, timing, and notes written for a shared kitchen, not a home stove.",
-        ],
-      },
-      {
-        id: "wheel",
-        heading: "Same picks as the Classics Wheel",
-        paragraphs: [
-          "The wheel at /wheel spins these exact slugs. If your hall already trusts the wheel, this article is the cheat sheet — open a recipe, shop once, cook once.",
-          "New cook on the line? Start with pulled pork or smash burgers. Training night with seniors watching? Chili and garlic bread forgives a late return from the apparatus floor.",
-        ],
-      },
-      {
         id: "tonight",
-        heading: "How to run one tonight",
+        heading: "Quick shift notes",
         paragraphs: [
-          "Read the full recipe before you shop — not just the title. Check headcount, gear, and whether you need a line or a single hotel pan.",
-          "Assign one cook and one runner. Everyone else stays out of the kitchen until called. Sauces and buns on the side keep reheat from turning mushy for post-call eaters.",
+          "Assign one cook and one runner before prep starts. Everyone else stays out until called.",
         ],
       },
     ],

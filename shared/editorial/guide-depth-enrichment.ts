@@ -114,8 +114,12 @@ function needsEnrichment(article: EditorialArticle): boolean {
   return words < 480 || article.sections.length < 3 || thinSection || article.practicalAdvice.length < 4;
 }
 
+/** Recipe-list guides — keep author structure; do not inject filler sections. */
+const SKIP_DEPTH_ENRICHMENT_SLUGS = new Set(["10-classic-firehall-meals"]);
+
 /** Add station depth to thin guides at publish/audit time. */
 export function enrichGuideArticle(article: EditorialArticle): EditorialArticle {
+  if (SKIP_DEPTH_ENRICHMENT_SLUGS.has(article.slug)) return article;
   if (!needsEnrichment(article)) return article;
 
   const keyword = article.keywords[0]?.trim() ?? article.slug.replace(/-/g, " ");

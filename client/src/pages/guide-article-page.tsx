@@ -22,6 +22,102 @@ import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { GuideEmbeddedRecipes } from "@/components/guide-embedded-recipes";
 import { FoodImage } from "@/components/mobile/food-image";
+import type { EditorialMealPick, EditorialSection } from "@shared/editorial/content-schema";
+
+/** Guides that lead with the recipe list — less scroll before picks. */
+const RECIPES_FIRST_GUIDE_SLUGS = new Set(["10-classic-firehall-meals"]);
+
+function GuideMealPicks({
+  meals,
+  heading,
+  lead,
+  className,
+}: {
+  meals: EditorialMealPick[];
+  heading: string;
+  lead: string;
+  className?: string;
+}) {
+  return (
+    <section className={cn("mt-8 sm:mt-10", className)} aria-labelledby="meal-picks-heading">
+      <h2 id="meal-picks-heading" className="font-heading text-xl sm:text-2xl">
+        {heading}
+      </h2>
+      <p className="mt-2 text-sm text-muted-foreground">{lead}</p>
+      <ul className="mt-5 sm:mt-6 space-y-3 sm:space-y-4">
+        {meals.map((meal) => {
+          const href = approvedCatalogRecipePath(meal.slug);
+          return (
+            <li
+              key={meal.slug}
+              className="rounded-xl border border-border/25 bg-muted/10 p-4 sm:p-5"
+            >
+              <h3 className="font-semibold text-foreground text-[17px] sm:text-lg leading-snug">
+                <Link href={href} className="text-primary hover:underline">
+                  {meal.title}
+                </Link>
+              </h3>
+              <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">{meal.blurb}</p>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
+  );
+}
+
+function GuidePracticalAdvice({ tips, className }: { tips: string[]; className?: string }) {
+  if (!tips.length) return null;
+  return (
+    <aside
+      className={cn("rounded-2xl border border-primary/20 bg-primary/5 p-5 sm:p-6", className)}
+      aria-labelledby="practical-advice-heading"
+    >
+      <h2 id="practical-advice-heading" className="font-heading text-lg">
+        Practical advice for the shift
+      </h2>
+      <ul className="mt-3 space-y-2 text-[15px] text-foreground/85 leading-relaxed list-disc pl-5">
+        {tips.map((tip) => (
+          <li key={tip.slice(0, 40)}>{tip}</li>
+        ))}
+      </ul>
+    </aside>
+  );
+}
+
+function GuideBodySections({ sections }: { sections: EditorialSection[] }) {
+  if (!sections.length) return null;
+  return (
+    <>
+      {sections.map((section) => (
+        <section
+          key={section.id}
+          className="mt-8 sm:mt-10"
+          aria-labelledby={`section-${section.id}`}
+        >
+          <h2
+            id={`section-${section.id}`}
+            className="font-heading text-lg sm:text-xl tracking-tight"
+          >
+            {section.heading}
+          </h2>
+          <div className="mt-3 space-y-3 text-[15px] text-muted-foreground leading-[1.65] max-w-prose">
+            {section.paragraphs.map((p, i) => (
+              <p key={i}>{p}</p>
+            ))}
+          </div>
+          {section.tips && section.tips.length > 0 && (
+            <ul className="mt-3 space-y-2 text-sm text-muted-foreground list-disc pl-5">
+              {section.tips.map((t) => (
+                <li key={t.slice(0, 36)}>{t}</li>
+              ))}
+            </ul>
+          )}
+        </section>
+      ))}
+    </>
+  );
+}
 
 export default function GuideArticlePage() {
   const [, guideParams] = useRoute("/guides/:slug");
@@ -60,6 +156,16 @@ export default function GuideArticlePage() {
       .map((s) => index.articles.find((a) => a.slug === s))
       .filter(Boolean);
   }, [article, index?.articles]);
+
+  const recipesFirst = article ? RECIPES_FIRST_GUIDE_SLUGS.has(article.slug) : false;
+  const mealHeading =
+    article?.slug === "10-classic-firehall-meals"
+      ? "10 classic firehall meals"
+      : "Recipes for this kind of night";
+  const mealLead =
+    article?.slug === "10-classic-firehall-meals"
+      ? "Crew-sized recipes — tap a meal for ingredients, timing, and steps."
+      : "Crew-sized portions and station-realistic timing — same recipes as the rest of the site.";
 
   return (
     <div className={cn(app.page, "flex flex-col pb-safe-nav")}>
@@ -180,83 +286,48 @@ export default function GuideArticlePage() {
               </div>
             </header>
 
-            <p className="mt-8 sm:mt-10 text-[16px] sm:text-lg leading-[1.75] text-foreground/90 max-w-prose">
+            <p
+              className={cn(
+                "text-[16px] sm:text-lg leading-[1.7] text-foreground/90 max-w-prose",
+                recipesFirst ? "mt-5 sm:mt-6" : "mt-8 sm:mt-10",
+              )}
+            >
               {article.intro}
             </p>
 
-            <aside
-              className="mt-8 rounded-2xl border border-primary/20 bg-primary/5 p-5 sm:p-6"
-              aria-labelledby="practical-advice-heading"
-            >
-              <h2 id="practical-advice-heading" className="font-heading text-lg">
-                Practical advice for the shift
-              </h2>
-              <ul className="mt-4 space-y-2.5 text-[15px] text-foreground/85 leading-relaxed list-disc pl-5">
-                {(article.practicalAdvice ?? []).map((tip) => (
-                  <li key={tip.slice(0, 40)}>{tip}</li>
-                ))}
-              </ul>
-            </aside>
-
-            {(article.sections ?? []).map((section) => (
-              <section
-                key={section.id}
-                className="mt-11 sm:mt-14"
-                aria-labelledby={`section-${section.id}`}
-              >
-                <h2
-                  id={`section-${section.id}`}
-                  className="font-heading text-xl sm:text-2xl tracking-tight"
-                >
-                  {section.heading}
-                </h2>
-                <div className="mt-5 space-y-4 text-[15px] sm:text-[1.0625rem] text-muted-foreground leading-[1.7] max-w-prose">
-                  {section.paragraphs.map((p, i) => (
-                    <p key={i}>{p}</p>
-                  ))}
-                </div>
-                {section.tips && section.tips.length > 0 && (
-                  <ul className="mt-4 space-y-2 text-sm text-muted-foreground list-disc pl-5">
-                    {section.tips.map((t) => (
-                      <li key={t.slice(0, 36)}>{t}</li>
-                    ))}
-                  </ul>
-                )}
-              </section>
-            ))}
+            {recipesFirst ? (
+              <>
+                <GuideMealPicks
+                  meals={article.mealRecommendations ?? []}
+                  heading={mealHeading}
+                  lead={mealLead}
+                  className="mt-5 sm:mt-6"
+                />
+                <GuideBodySections sections={article.sections ?? []} />
+                <GuidePracticalAdvice
+                  tips={article.practicalAdvice ?? []}
+                  className="mt-8"
+                />
+              </>
+            ) : (
+              <>
+                <GuidePracticalAdvice
+                  tips={article.practicalAdvice ?? []}
+                  className="mt-8"
+                />
+                <GuideBodySections sections={article.sections ?? []} />
+                <GuideMealPicks
+                  meals={article.mealRecommendations ?? []}
+                  heading={mealHeading}
+                  lead={mealLead}
+                  className="mt-12"
+                />
+              </>
+            )}
 
             {article.embeddedRecipes && article.embeddedRecipes.length > 0 && (
               <GuideEmbeddedRecipes recipes={article.embeddedRecipes} />
             )}
-
-            <section className="mt-12" aria-labelledby="meal-picks-heading">
-              <h2 id="meal-picks-heading" className="font-heading text-xl sm:text-2xl">
-                Recipes for this kind of night
-              </h2>
-              <p className="mt-2 text-sm text-muted-foreground">
-                Crew-sized portions and station-realistic timing — same recipes as the rest of the site.
-              </p>
-              <ul className="mt-6 space-y-4">
-                {(article.mealRecommendations ?? []).map((meal) => {
-                  const href = approvedCatalogRecipePath(meal.slug);
-                  return (
-                    <li
-                      key={meal.slug}
-                      className="rounded-xl border border-border/25 bg-muted/10 p-4 sm:p-5"
-                    >
-                      <h3 className="font-semibold text-foreground">
-                        <Link href={href} className="text-primary hover:underline">
-                          {meal.title}
-                        </Link>
-                      </h3>
-                      <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed">
-                        {meal.blurb}
-                      </p>
-                    </li>
-                  );
-                })}
-              </ul>
-            </section>
 
             <aside
               className="mt-12 rounded-2xl border border-primary/25 bg-primary/5 p-5 sm:p-6"
