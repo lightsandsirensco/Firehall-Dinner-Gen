@@ -101,7 +101,11 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         answer:
           "Each recipe scales — open the page, set your crew size, and follow the portions. Line meals like tacos and sandwiches stretch easiest when eaters trickle in.",
       },
-      STANDARD_FAQS.catalog,
+      {
+        question: "Where do these recipes come from?",
+        answer:
+          "Fire Hall Tested. Firefighter Approved. Every recipe on Firehall Meals is based on meals that regularly make their way onto fire station tables. We've adapted them into crew-sized recipes with practical instructions, realistic timing, and portions that work whether you're feeding 4 or 14 firefighters.",
+      },
       STANDARD_FAQS.generator,
     ],
     relatedArticleSlugs: [
