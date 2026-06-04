@@ -9,7 +9,7 @@ export const LIGHTS_AND_SIRENS = {
   home: "https://www.lightsandsirensco.com",
   shop: "https://www.lightsandsirensco.com/collections/all",
   apparel: "https://www.lightsandsirensco.com/collections/all",
-  instagram: "https://www.instagram.com/lightsandsirensco/",
+  instagram: "https://www.instagram.com/lightsandsirens_co/",
   facebook: "https://www.facebook.com/lightsandsirensco/",
 } as const;
 

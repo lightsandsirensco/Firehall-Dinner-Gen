@@ -354,7 +354,7 @@ FirehallMeals.com
 - “Firefighter Built. Firehall Tested.”
 
 - “Not a food blog. Station kitchen rules.”  
-  Built by @lightsandsirensco (if handle matches)
+  Built by @lightsandsirens_co (if handle matches)
 
 **Hashtags (pick 5–8, don’t spam):**  
 `#firefighter #firehouse #firehall #stationlife #firehousemeals #thinredline #firefamily`
