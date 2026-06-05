@@ -15,6 +15,7 @@ import {
   slugLockedImagePaths,
   type ExploreCatalogImageKind,
 } from "./explore-image-paths.js";
+import { CATALOG_ASSET_REVISION } from "./meal-catalog/asset-revision.js";
 
 export type ApprovedCatalogKind = ExploreCatalogImageKind;
 
@@ -35,6 +36,10 @@ export interface ApprovedCatalogEntry {
   cookTimeBucket: ApprovedCatalogCookTimeBucket;
   heroImage: string;
   thumbImage: string;
+  /** Thumb file mtime (seconds) — appended as ?v= for mobile grid cache busting. */
+  thumbCacheVersion: number;
+  /** Hero file mtime (seconds) — for recipe detail cache busting. */
+  heroCacheVersion: number;
   tags: string[];
   searchText: string;
   catalogBadge: CatalogPublicBadge;
@@ -47,16 +52,19 @@ export interface ApprovedCatalogEntry {
 }
 
 export interface ApprovedCatalogResponse {
-  version: 1;
+  version: 2;
+  /** Deploy/catalog bump — invalidates client query keys when changed. */
+  assetRevision: typeof CATALOG_ASSET_REVISION;
   recipeCount: number;
   recipes: ApprovedCatalogEntry[];
 }
 
 /** Lightweight fields for Explore grid — no hero URLs in JSON payload. */
-export type ApprovedCatalogGridEntry = Omit<ApprovedCatalogEntry, "heroImage">;
+export type ApprovedCatalogGridEntry = Omit<ApprovedCatalogEntry, "heroImage" | "heroCacheVersion">;
 
 export interface ApprovedCatalogGridResponse {
-  version: 1;
+  version: 2;
+  assetRevision: typeof CATALOG_ASSET_REVISION;
   recipeCount: number;
   recipes: ApprovedCatalogGridEntry[];
 }
@@ -66,8 +74,9 @@ export function toApprovedCatalogGridResponse(
 ): ApprovedCatalogGridResponse {
   return {
     version: catalog.version,
+    assetRevision: catalog.assetRevision,
     recipeCount: catalog.recipeCount,
-    recipes: catalog.recipes.map(({ heroImage: _hero, ...rest }) => rest),
+    recipes: catalog.recipes.map(({ heroImage: _hero, heroCacheVersion: _hv, ...rest }) => rest),
   };
 }
 

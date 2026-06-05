@@ -84,8 +84,16 @@ for (const entry of catalog.recipes.slice(0, 80)) {
   const route = approvedCatalogRecipePath(entry.slug);
   assert.match(route, /^\/(recipes|breakfast)\//, `${entry.slug} routes to recipe page`);
 
+  assert.ok(
+    typeof entry.thumbCacheVersion === "number" && entry.thumbCacheVersion >= 0,
+    `${entry.slug} thumbCacheVersion`,
+  );
+
   const thumb = exploreCardThumbSrc(entry);
   assert.match(thumb, /\/images\/thumbs\//, `${entry.slug} thumb path`);
+  if (entry.thumbCacheVersion > 0) {
+    assert.match(thumb, /\?v=\d+/, `${entry.slug} thumb must cache-bust when file exists`);
+  }
 
   const candidates = exploreCardImageCandidates(entry);
   assert.ok(candidates.length >= 1, `thumb candidates for ${entry.slug}`);

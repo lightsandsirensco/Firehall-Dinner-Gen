@@ -6,12 +6,19 @@ import {
   APPROVED_CATALOG_TOTAL,
   marketingRecipeCount,
 } from "@shared/meal-catalog/curated-count";
+import { CATALOG_ASSET_REVISION } from "@shared/meal-catalog/asset-revision";
 
 const API_APPROVED = "/api/catalog/approved";
 
-export const approvedCatalogQueryKey = [API_APPROVED] as const;
-export const approvedCatalogGridQueryKey = [`${API_APPROVED}?view=grid`] as const;
-export const approvedCatalogTotalQueryKey = ["approved-catalog-total"] as const;
+export const approvedCatalogQueryKey = [API_APPROVED, CATALOG_ASSET_REVISION] as const;
+export const approvedCatalogGridQueryKey = [
+  `${API_APPROVED}?view=grid`,
+  CATALOG_ASSET_REVISION,
+] as const;
+export const approvedCatalogTotalQueryKey = [
+  "approved-catalog-total",
+  CATALOG_ASSET_REVISION,
+] as const;
 
 export async function fetchApprovedCatalog(): Promise<ApprovedCatalogResponse> {
   const res = await fetch(API_APPROVED);

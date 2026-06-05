@@ -128,19 +128,45 @@ export function imageFileExists(publicPath: string, publicRoot?: string): boolea
   }
 }
 
+/** File mtime (seconds) for cache-busting slug-locked assets at stable URLs. */
+export function imageFileCacheVersion(publicPath: string, publicRoot?: string): number {
+  const trimmed = (publicPath || "").trim();
+  if (!trimmed) return 0;
+  try {
+    const abs = publicImageAbsolute(trimmed, publicRoot);
+    if (!fs.existsSync(abs)) return 0;
+    const stat = fs.statSync(abs);
+    if (!stat.isFile()) return 0;
+    return Math.floor(stat.mtimeMs / 1000);
+  } catch {
+    return 0;
+  }
+}
+
 /** Resolve slug-locked hero only — never substitute neighboring variants. */
 export function resolveExistingSlugImage(
   slug: string,
   kind: ExploreCatalogImageKind,
   publicRoot?: string,
-): { hero: string; thumb: string; cardImage: string; found: boolean } {
+): {
+  hero: string;
+  thumb: string;
+  cardImage: string;
+  thumbCacheVersion: number;
+  heroCacheVersion: number;
+  found: boolean;
+} {
   const paths = slugLockedImagePaths(slug, kind);
   const heroFound = imageFileExists(paths.hero, publicRoot);
+  const thumbCacheVersion = imageFileCacheVersion(paths.thumb, publicRoot);
+  const heroCacheVersion = imageFileCacheVersion(paths.hero, publicRoot);
 
   return {
     hero: paths.hero,
     thumb: paths.thumb,
     cardImage: paths.thumb || paths.rail || paths.mobile,
+    thumbCacheVersion,
+    heroCacheVersion,
     found: heroFound,
   };
 }

@@ -17,7 +17,7 @@ function setStaticCacheHeaders(res: Response, filePath: string, kind: "build" | 
     return;
   }
   if (kind === "images") {
-    res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+    res.setHeader("Cache-Control", "public, max-age=300, must-revalidate");
     return;
   }
   res.setHeader("Cache-Control", "public, max-age=3600");

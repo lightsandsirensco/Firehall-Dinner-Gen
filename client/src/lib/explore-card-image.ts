@@ -1,4 +1,5 @@
-import type { ApprovedCatalogEntry } from "@shared/approved-catalog";
+import type { ApprovedCatalogGridEntry } from "@shared/approved-catalog";
+import { cacheSafeImageUrl } from "@shared/editorial-image-delivery";
 import {
   EXPLORE_CATALOG_PAGE_SIZE_MOBILE,
   exploreCatalogPageSize,
@@ -17,36 +18,47 @@ function isAllowedExploreThumbSrc(src: string): boolean {
   return s.includes("/images/thumbs/") || s.startsWith("/images/thumbs/");
 }
 
-/** Primary Explore grid thumb — always /images/thumbs/{slug}.jpg */
-export function exploreCardThumbSrc(entry: Pick<ApprovedCatalogEntry, "slug" | "thumbImage">): string {
+type ExploreCardImageEntry = Pick<
+  ApprovedCatalogGridEntry,
+  "slug" | "thumbImage" | "thumbCacheVersion"
+>;
+
+function bustExploreThumb(path: string, cacheVersion: number): string {
+  return cacheSafeImageUrl(path, cacheVersion);
+}
+
+/** Primary Explore grid thumb — slug-locked path with ?v=mtime cache busting. */
+export function exploreCardThumbSrc(entry: ExploreCardImageEntry): string {
   const slug = entry.slug.trim().toLowerCase();
-  const canonical = `/images/thumbs/${slug}.jpg`;
+  const version = entry.thumbCacheVersion ?? 0;
+  const canonical = bustExploreThumb(`/images/thumbs/${slug}.jpg`, version);
   const fromEntry = entry.thumbImage?.trim();
   if (fromEntry && isAllowedExploreThumbSrc(fromEntry)) {
-    return fromEntry;
+    return bustExploreThumb(fromEntry, version);
   }
   return canonical;
 }
 
 /** Explore grid — thumb paths only (no hero, mobile, or golden-100). */
-export function exploreCardImageCandidates(
-  entry: Pick<ApprovedCatalogEntry, "slug" | "thumbImage">,
-): string[] {
+export function exploreCardImageCandidates(entry: ExploreCardImageEntry): string[] {
   const slug = entry.slug.trim().toLowerCase();
+  const version = entry.thumbCacheVersion ?? 0;
   const primary = exploreCardThumbSrc(entry);
-  const fallback = `/images/thumbs/${slug}.jpg`;
+  const fallback = bustExploreThumb(`/images/thumbs/${slug}.jpg`, version);
   const candidates = [primary, fallback].filter(
-    (src, i, arr) => isAllowedExploreThumbSrc(src) && arr.indexOf(src) === i,
+    (src, i, arr) => isAllowedExploreThumbSrc(src.split("?")[0] ?? src) && arr.indexOf(src) === i,
   );
   return candidates.length > 0 ? candidates : [fallback];
 }
 
 export function exploreCardImageUsesHero(
   src: string,
-  entry: Pick<ApprovedCatalogEntry, "heroImage">,
+  entry: { heroImage?: string; heroCacheVersion?: number },
 ): boolean {
   const hero = entry.heroImage?.trim();
-  return Boolean(hero && src === hero);
+  if (!hero) return false;
+  const version = entry.heroCacheVersion ?? 0;
+  return src === hero || src === cacheSafeImageUrl(hero, version);
 }
 
 export { exploreCatalogPageSize };

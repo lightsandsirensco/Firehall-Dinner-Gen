@@ -2425,7 +2425,11 @@ export async function registerRoutes(
     try {
       const catalog = buildApprovedCatalog();
       res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-      return res.json({ version: 1 as const, recipeCount: catalog.recipeCount });
+      return res.json({
+        version: 2 as const,
+        assetRevision: catalog.assetRevision,
+        recipeCount: catalog.recipeCount,
+      });
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : "Approved catalog count failed";
       log(`[catalog] Approved count error: ${msg}`, "catalog");

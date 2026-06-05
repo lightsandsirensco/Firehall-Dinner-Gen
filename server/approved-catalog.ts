@@ -24,8 +24,21 @@ import { loadMergedHallCatalogIndex } from "./meal-catalog/load-index.js";
 import { readBreakfastCatalogIndexFromDisk } from "./breakfast-catalog/catalog.js";
 import { readBbqCatalogIndexFromDisk } from "./bbq-catalog/catalog.js";
 import type { BreakfastIndexEntry } from "../shared/breakfast-schema.js";
+import { CATALOG_ASSET_REVISION } from "../shared/meal-catalog/asset-revision.js";
 
 const SMOOTHIE_COOK_MINUTES = 5;
+
+function catalogImageFields(images: ReturnType<typeof resolveExistingSlugImage>): Pick<
+  ApprovedCatalogEntry,
+  "heroImage" | "thumbImage" | "thumbCacheVersion" | "heroCacheVersion"
+> {
+  return {
+    heroImage: images.hero,
+    thumbImage: images.thumb,
+    thumbCacheVersion: images.thumbCacheVersion,
+    heroCacheVersion: images.heroCacheVersion,
+  };
+}
 
 function deriveMealFlags(
   entry: GoldenCatalogIndexEntry,
@@ -96,8 +109,7 @@ function mealEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEnt
     mealFormat: entry.mealFormat,
     cookTime: entry.cookTime,
     cookTimeBucket: approvedCatalogCookTimeBucket(entry.cookTime),
-    heroImage: images.hero,
-    thumbImage: images.thumb,
+    ...catalogImageFields(images),
     tags: entry.tags,
     searchText: buildSearchText([
       entry.title,
@@ -138,8 +150,7 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
     mealFormat: "smoothie",
     cookTime: SMOOTHIE_COOK_MINUTES,
     cookTimeBucket: "under_30",
-    heroImage: images.hero,
-    thumbImage: images.thumb,
+    ...catalogImageFields(images),
     tags: [item.subtitle, item.taxonomyCategory],
     searchText: buildSearchText([
       item.title,
@@ -191,8 +202,7 @@ function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEn
     mealFormat: "breakfast",
     cookTime: entry.totalTime,
     cookTimeBucket: approvedCatalogCookTimeBucket(entry.totalTime),
-    heroImage: images.hero,
-    thumbImage: images.thumb,
+    ...catalogImageFields(images),
     tags: entry.tags,
     searchText: buildSearchText([
       entry.title,
@@ -233,8 +243,7 @@ function bbqEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEntr
     mealFormat: entry.mealFormat,
     cookTime: entry.cookTime,
     cookTimeBucket: approvedCatalogCookTimeBucket(entry.cookTime),
-    heroImage: images.hero,
-    thumbImage: images.thumb,
+    ...catalogImageFields(images),
     tags: entry.tags,
     searchText: buildSearchText([
       entry.title,
@@ -298,7 +307,8 @@ export function buildApprovedCatalog(): ApprovedCatalogResponse {
   const { recipes } = filterExploreEligibleCatalogEntries(allRecipes);
 
   return {
-    version: 1,
+    version: 2,
+    assetRevision: CATALOG_ASSET_REVISION,
     recipeCount: recipes.length,
     recipes,
   };
