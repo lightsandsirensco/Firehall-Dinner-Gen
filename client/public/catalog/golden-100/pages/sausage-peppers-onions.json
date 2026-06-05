@@ -33,33 +33,33 @@
   ],
   "ingredients": [
     {
-      "name": "Italian sausage links",
+      "name": "Italian Sausage Links",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Bell peppers, sliced",
+      "name": "Bell Peppers, Sliced",
       "quantity": "4",
       "unit": "count",
       "group": "Veg"
     },
     {
-      "name": "Yellow onions, sliced",
+      "name": "Yellow Onions, Sliced",
       "quantity": "3",
       "unit": "large",
       "group": "Veg"
     },
     {
-      "name": "Hoagie rolls",
+      "name": "Hoagie Rolls",
       "quantity": "8",
       "unit": "count",
       "group": "Buns"
     },
     {
-      "name": "Marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Optional"
     }
   ],

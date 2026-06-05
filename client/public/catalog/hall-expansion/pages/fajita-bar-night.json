@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "chicken breast",
+      "name": "Chicken Breast",
       "quantity": "3.2",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "thin-sliced",
       "group": "Main"
     },
     {
-      "name": "bell peppers",
+      "name": "Bell Peppers",
       "quantity": "3",
       "unit": "whole",
       "notes": "mixed colors, sliced",
       "group": "Veg"
     },
     {
-      "name": "yellow onions",
+      "name": "Yellow Onions",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "fajita seasoning",
+      "name": "Fajita Seasoning",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "lime juice",
+      "name": "Lime Juice",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "olive oil",
+      "name": "Olive Oil",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Cook"
     },
     {
-      "name": "flour tortillas",
+      "name": "Flour Tortillas",
       "quantity": "16",
       "unit": "whole",
       "notes": "warm",
       "group": "Bar"
     },
     {
-      "name": "shredded cheddar",
+      "name": "Shredded Cheddar",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     },
     {
-      "name": "sour cream",
+      "name": "Sour Cream",
       "quantity": "1 1/4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     },
     {
-      "name": "guacamole",
+      "name": "Guacamole",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     }
   ],

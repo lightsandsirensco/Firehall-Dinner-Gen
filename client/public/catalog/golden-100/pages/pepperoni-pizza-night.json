@@ -34,77 +34,77 @@
   ],
   "ingredients": [
     {
-      "name": "Bread flour",
+      "name": "Bread Flour",
       "quantity": "6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Dough"
     },
     {
-      "name": "Active dry yeast",
+      "name": "Active Dry Yeast",
       "quantity": "2.5",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Dough"
     },
     {
-      "name": "Warm water",
+      "name": "Warm Water",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "110°F",
       "group": "Dough"
     },
     {
-      "name": "Olive oil",
+      "name": "Olive Oil",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Dough"
     },
     {
-      "name": "Kosher salt",
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Dough"
     },
     {
-      "name": "Crushed tomatoes",
+      "name": "Crushed Tomatoes",
       "quantity": "3",
       "unit": "cans",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
-      "name": "Garlic cloves, minced",
+      "name": "Garlic Cloves, Minced",
       "quantity": "4",
       "unit": "cloves",
       "group": "Sauce"
     },
     {
-      "name": "Dried oregano",
+      "name": "Dried Oregano",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Fresh mozzarella, torn",
+      "name": "Fresh Mozzarella, Torn",
       "quantity": "32",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Low-moisture mozzarella, shredded",
+      "name": "Low-Moisture Mozzarella, Shredded",
       "quantity": "16",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Pepperoni slices",
+      "name": "Pepperoni Slices",
       "quantity": "16",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Topping"
     },
     {
-      "name": "Grated parmesan",
+      "name": "Grated Parmesan",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     }
   ],

@@ -6,6 +6,12 @@ import {
   isRequiredForMeal,
 } from "@shared/meal-semantics";
 import { ingredientNameMatchesRecipeTitle } from "@shared/meal-format-contract";
+import {
+  convertShoppingAmountString,
+  formatIngredientAmount,
+  formatIngredientDisplayName,
+  type MeasurementSystem,
+} from "@shared/measurements";
 
 export interface ShoppingItem {
   name: string;
@@ -207,30 +213,59 @@ function mergeItems(items: ShoppingItem[]): ShoppingItem[] {
   });
 }
 
-function ingredientToShoppingItem(ing: IngredientItem): ShoppingItem {
-  return { name: ing.item, amount: ing.amount, notes: ing.notes };
+export type ShoppingListBuildOptions = {
+  recipeTitle?: string;
+  measurementSystem?: MeasurementSystem;
+};
+
+function formatShoppingItemAmount(
+  amount: string,
+  system: MeasurementSystem = "us",
+): string {
+  if (!amount.trim() || system === "us") return amount;
+  return convertShoppingAmountString(amount, system);
 }
 
-function fmtShoppingQty(qty: number, unit: string): string {
+function ingredientToShoppingItem(
+  ing: IngredientItem,
+  system: MeasurementSystem = "us",
+): ShoppingItem {
+  return {
+    name: formatIngredientDisplayName(ing.item),
+    amount: formatShoppingItemAmount(ing.amount, system),
+    notes: ing.notes,
+  };
+}
+
+function fmtShoppingQty(qty: number, unit: string, system: MeasurementSystem = "us"): string {
+  if (system === "metric" && unit) {
+    return formatIngredientAmount(String(qty), unit, system);
+  }
   const rounded = Math.round(qty * 100) / 100;
   const display = Number.isInteger(rounded) ? String(rounded) : rounded.toFixed(1).replace(/\.0$/, "");
   return unit ? `${display} ${unit}` : display;
 }
 
-function clientIngredientToShoppingItem(ing: ClientIngredient): ShoppingItem {
+function clientIngredientToShoppingItem(
+  ing: ClientIngredient,
+  system: MeasurementSystem = "us",
+): ShoppingItem {
   let amount = "";
   if (ing.qty > 0) {
-    amount = fmtShoppingQty(ing.qty, ing.unit);
+    amount = fmtShoppingQty(ing.qty, ing.unit, system);
   }
   const notes =
     ing.category && ing.category !== "other" ? `category: ${ing.category}` : "";
-  return { name: ing.name, amount, notes };
+  return { name: formatIngredientDisplayName(ing.name), amount, notes };
 }
 
-function catalogIngredientToShoppingItem(ing: GoldenRecipePageIngredient): ShoppingItem {
-  const amount = [ing.quantity, ing.unit].filter(Boolean).join(" ");
+function catalogIngredientToShoppingItem(
+  ing: GoldenRecipePageIngredient,
+  system: MeasurementSystem = "us",
+): ShoppingItem {
+  const amount = formatIngredientAmount(ing.quantity, ing.unit, system);
   return {
-    name: ing.name,
+    name: formatIngredientDisplayName(ing.name),
     amount,
     notes: ing.notes || (ing.optional ? "optional" : ""),
   };
@@ -244,12 +279,13 @@ function filterTitleIngredients(items: ShoppingItem[], recipeTitle?: string): Sh
 /** Shopping list from scaled catalog recipe ingredients (Golden, breakfast, performance, etc.). */
 export function buildShoppingListFromCatalogIngredients(
   ingredients: GoldenRecipePageIngredient[],
-  options?: { recipeTitle?: string },
+  options?: ShoppingListBuildOptions,
 ): ShoppingListResult {
+  const system = options?.measurementSystem ?? "us";
   const allItems = filterTitleIngredients(
     ingredients
       .filter((ing) => !ing.optional)
-      .map(catalogIngredientToShoppingItem),
+      .map((ing) => catalogIngredientToShoppingItem(ing, system)),
     options?.recipeTitle,
   );
 
@@ -345,10 +381,11 @@ function getBudgetSwaps(items: ShoppingItem[]): string[] {
 
 export function buildShoppingListFromClientMeal(
   recipe: ClientRecipeResponse,
-  options?: { useWhatWeHave?: boolean; budgetLevel?: string }
+  options?: { useWhatWeHave?: boolean; budgetLevel?: string; measurementSystem?: MeasurementSystem },
 ): ShoppingListResult {
+  const system = options?.measurementSystem ?? "us";
   const allItems = filterTitleIngredients(
-    recipe.ingredients.map(clientIngredientToShoppingItem),
+    recipe.ingredients.map((ing) => clientIngredientToShoppingItem(ing, system)),
     recipe.title,
   );
 
@@ -393,7 +430,7 @@ export function buildShoppingListFromClientMeal(
   if (recipe.veg_option?.enabled && recipe.veg_option.ingredients.length > 0) {
     const vegItems = recipe.veg_option.ingredients
       .filter(ing => !ing.item.toLowerCase().includes("tofu"))
-      .map(ingredientToShoppingItem);
+      .map((ing) => ingredientToShoppingItem(ing, system));
     if (vegItems.length > 0) {
       result.veg_option = { items: mergeItems(vegItems) };
     }
@@ -409,10 +446,11 @@ export function buildShoppingListFromClientMeal(
 
 export function buildShoppingListFromMeal(
   recipe: GenerateResponse,
-  options?: { useWhatWeHave?: boolean; budgetLevel?: string }
+  options?: { useWhatWeHave?: boolean; budgetLevel?: string; measurementSystem?: MeasurementSystem },
 ): ShoppingListResult {
+  const system = options?.measurementSystem ?? "us";
   const allItems = filterTitleIngredients(
-    recipe.ingredients.map(ingredientToShoppingItem),
+    recipe.ingredients.map((ing) => ingredientToShoppingItem(ing, system)),
     recipe.title,
   );
 
@@ -453,7 +491,7 @@ export function buildShoppingListFromMeal(
   if (recipe.veg_option?.enabled && recipe.veg_option.ingredients.length > 0) {
     const vegItems = recipe.veg_option.ingredients
       .filter(ing => !ing.item.toLowerCase().includes("tofu"))
-      .map(ingredientToShoppingItem);
+      .map((ing) => ingredientToShoppingItem(ing, system));
     if (vegItems.length > 0) {
       result.veg_option = { items: mergeItems(vegItems) };
     }
@@ -469,8 +507,9 @@ export function buildShoppingListFromMeal(
 
 export function buildShoppingListFromPizza(
   recipe: PizzaResponse,
-  _options?: { budgetLevel?: string }
+  options?: { budgetLevel?: string; measurementSystem?: MeasurementSystem },
 ): ShoppingListResult {
+  const system = options?.measurementSystem ?? "us";
   const allItems: ShoppingItem[] = [];
 
   const groups = [
@@ -484,7 +523,7 @@ export function buildShoppingListFromPizza(
   for (const group of groups) {
     if (group) {
       for (const ing of group) {
-        allItems.push(ingredientToShoppingItem(ing));
+        allItems.push(ingredientToShoppingItem(ing, system));
       }
     }
   }
@@ -507,7 +546,7 @@ export function buildShoppingListFromPizza(
   if (recipe.veg_option?.enabled && recipe.veg_option.swap_toppings.length > 0) {
     const vegItems = recipe.veg_option.swap_toppings
       .filter(ing => !ing.item.toLowerCase().includes("tofu"))
-      .map(ingredientToShoppingItem);
+      .map((ing) => ingredientToShoppingItem(ing, system));
     if (vegItems.length > 0) {
       result.veg_option = { items: mergeItems(vegItems) };
     }

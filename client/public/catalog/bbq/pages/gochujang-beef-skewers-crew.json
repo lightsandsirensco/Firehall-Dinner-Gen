@@ -39,67 +39,67 @@
   ],
   "ingredients": [
     {
-      "name": "boneless short rib",
+      "name": "Boneless Short Rib",
       "quantity": "5.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
-      "name": "gochujang",
+      "name": "Gochujang",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "doenjang",
+      "name": "Doenjang",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "rice wine",
+      "name": "Rice Wine",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "Asian pear",
+      "name": "Asian Pear",
       "quantity": "1",
       "unit": "whole",
       "notes": "pureed",
       "group": "Marinade"
     },
     {
-      "name": "toasted sesame oil",
+      "name": "Toasted Sesame Oil",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "daikon radish",
+      "name": "Daikon Radish",
       "quantity": "1",
       "unit": "whole",
       "notes": "chunked",
       "group": "Skewers"
     },
     {
-      "name": "shiitake mushrooms",
+      "name": "Shiitake Mushrooms",
       "quantity": "1",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "quartered",
       "group": "Skewers"
     },
     {
-      "name": "toasted sesame seeds",
+      "name": "Toasted Sesame Seeds",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     },
     {
-      "name": "crushed roasted soybeans",
+      "name": "Crushed Roasted Soybeans",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     }
   ],

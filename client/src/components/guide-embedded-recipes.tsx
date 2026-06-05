@@ -2,12 +2,21 @@ import { useState } from "react";
 import { Link } from "wouter";
 import type { EditorialEmbeddedRecipe } from "@shared/editorial/content-schema";
 import { smoothieRecipePath } from "@shared/fuel-catalog/paths";
-import { formatTemperaturesInText } from "@shared/measurements";
+import {
+  formatIngredientAmount,
+  formatRecipeIngredientName,
+  formatTemperaturesInText,
+  type MeasurementSystem,
+} from "@shared/measurements";
+import { useMeasurementSystem } from "@/lib/measurement-preference";
 import { cn } from "@/lib/utils";
 
-function formatIngredient(ing: EditorialEmbeddedRecipe["ingredients"][number]): string {
-  const qty = [ing.quantity, ing.unit].filter(Boolean).join(" ");
-  const base = qty ? `${qty} ${ing.name}` : ing.name;
+function formatIngredient(
+  ing: EditorialEmbeddedRecipe["ingredients"][number],
+  system: MeasurementSystem,
+): string {
+  const qty = formatIngredientAmount(ing.quantity, ing.unit, system);
+  const base = qty ? `${qty} ${formatRecipeIngredientName(ing.name)}` : formatRecipeIngredientName(ing.name);
   return ing.notes ? `${base} (${ing.notes})` : base;
 }
 
@@ -45,6 +54,8 @@ function RecipeImage({
 }
 
 export function GuideEmbeddedRecipes({ recipes }: { recipes: EditorialEmbeddedRecipe[] }) {
+  const [measurementSystem] = useMeasurementSystem();
+
   return (
     <section className="mt-12 sm:mt-14" aria-labelledby="embedded-recipes-heading">
       <h2 id="embedded-recipes-heading" className="font-heading text-xl sm:text-2xl tracking-tight">
@@ -93,7 +104,7 @@ export function GuideEmbeddedRecipes({ recipes }: { recipes: EditorialEmbeddedRe
                     <h4 className="text-sm font-semibold text-foreground">Ingredients</h4>
                     <ul className="mt-2 space-y-1.5 text-sm text-muted-foreground leading-relaxed list-disc pl-4">
                       {recipe.ingredients.map((ing) => (
-                        <li key={`${recipe.id}-${ing.name}`}>{formatIngredient(ing)}</li>
+                        <li key={`${recipe.id}-${ing.name}`}>{formatIngredient(ing, measurementSystem)}</li>
                       ))}
                     </ul>
                   </div>
@@ -101,7 +112,9 @@ export function GuideEmbeddedRecipes({ recipes }: { recipes: EditorialEmbeddedRe
                     <h4 className="text-sm font-semibold text-foreground">Steps</h4>
                     <ol className="mt-2 space-y-2 text-sm text-muted-foreground leading-relaxed list-decimal pl-4">
                       {recipe.instructions.map((step, i) => (
-                        <li key={`${recipe.id}-step-${i}`}>{formatTemperaturesInText(step)}</li>
+                        <li key={`${recipe.id}-step-${i}`}>
+                          {formatTemperaturesInText(step, measurementSystem)}
+                        </li>
                       ))}
                     </ol>
                   </div>

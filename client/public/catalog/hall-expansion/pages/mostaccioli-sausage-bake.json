@@ -37,66 +37,66 @@
   ],
   "ingredients": [
     {
-      "name": "mostaccioli pasta",
+      "name": "Mostaccioli Pasta",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "hot Italian sausage",
+      "name": "Hot Italian Sausage",
       "quantity": "2.4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "casings removed",
       "group": "Main"
     },
     {
-      "name": "marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "4.8",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "whole-milk ricotta",
+      "name": "Whole-Milk Ricotta",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Cheese"
     },
     {
-      "name": "shredded mozzarella",
+      "name": "Shredded Mozzarella",
       "quantity": "2.4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Cheese"
     },
     {
-      "name": "grated Parmesan",
+      "name": "Grated Parmesan",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Cheese"
     },
     {
-      "name": "egg",
+      "name": "Egg",
       "quantity": "3/4",
       "unit": "whole",
       "group": "Cheese"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "fresh basil",
+      "name": "Fresh Basil",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
-      "name": "red pepper flakes",
+      "name": "Red Pepper Flakes",
       "quantity": "7/8",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     }
   ],

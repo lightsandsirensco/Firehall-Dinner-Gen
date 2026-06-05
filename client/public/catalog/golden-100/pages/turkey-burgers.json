@@ -34,19 +34,19 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Potato buns",
+      "name": "Potato Buns",
       "quantity": "8",
       "unit": "count",
       "group": "Buns"
     },
     {
-      "name": "American cheese",
+      "name": "American Cheese",
       "quantity": "12",
       "unit": "slices",
       "group": "Cheese"
@@ -54,19 +54,19 @@
     {
       "name": "Mayonnaise",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "Yellow mustard",
+      "name": "Yellow Mustard",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Dill pickles",
+      "name": "Dill Pickles",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Toppings"
     }
   ],

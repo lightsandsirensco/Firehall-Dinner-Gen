@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "Hawaiian sweet rolls",
+      "name": "Hawaiian Sweet Rolls",
       "quantity": "2",
       "unit": "packages",
       "notes": "12 rolls each",
       "group": "Main"
     },
     {
-      "name": "pepperoni slices",
+      "name": "Pepperoni Slices",
       "quantity": "6.4",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Filling"
     },
     {
-      "name": "mozzarella cheese",
+      "name": "Mozzarella Cheese",
       "quantity": "3/4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "shredded",
       "group": "Filling"
     },
     {
-      "name": "pizza sauce",
+      "name": "Pizza Sauce",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Filling"
     },
     {
-      "name": "unsalted butter",
+      "name": "Unsalted Butter",
       "quantity": "3/8",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "melted",
       "group": "Topping"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Topping"
     },
     {
-      "name": "dried oregano",
+      "name": "Dried Oregano",
       "quantity": "7/8",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Topping"
     },
     {
-      "name": "Parmesan cheese",
+      "name": "Parmesan Cheese",
       "quantity": "3/8",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "grated",
       "group": "Topping"
     },
     {
-      "name": "red pepper flakes",
+      "name": "Red Pepper Flakes",
       "quantity": "7/8",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Topping"
     },
     {
-      "name": "marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "warm, for dipping",
       "group": "Serve"
     }

@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "ribeye steak",
+      "name": "Ribeye Steak",
       "quantity": "2.4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "thin-sliced",
       "group": "Main"
     },
     {
-      "name": "slider buns",
+      "name": "Slider Buns",
       "quantity": "16",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "provolone cheese",
+      "name": "Provolone Cheese",
       "quantity": "10",
       "unit": "slices",
       "group": "Main"
     },
     {
-      "name": "bell peppers",
+      "name": "Bell Peppers",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "yellow onions",
+      "name": "Yellow Onions",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "olive oil",
+      "name": "Olive Oil",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Cook"
     },
     {
-      "name": "kosher salt",
+      "name": "Kosher Salt",
       "quantity": "1 3/4",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "black pepper",
+      "name": "Black Pepper",
       "quantity": "7/8",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "beef broth",
+      "name": "Beef Broth",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Au jus"
     },
     {
-      "name": "Worcestershire sauce",
+      "name": "Worcestershire Sauce",
       "quantity": "7/8",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Au jus"
     }
   ],

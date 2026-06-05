@@ -35,87 +35,87 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine rice, uncooked",
+      "name": "Jasmine Rice, Uncooked",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Base"
     },
     {
       "name": "Water",
       "quantity": "5",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Base"
     },
     {
-      "name": "Boneless chicken thighs",
+      "name": "Boneless Chicken Thighs",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Red bell peppers",
+      "name": "Red Bell Peppers",
       "quantity": "4",
       "unit": "count",
       "group": "Veg"
     },
     {
-      "name": "Large yellow onions",
+      "name": "Large Yellow Onions",
       "quantity": "2",
       "unit": "count",
       "group": "Veg"
     },
     {
-      "name": "Garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "8",
       "unit": "cloves",
       "group": "Aromatics"
     },
     {
-      "name": "Thai basil leaves",
+      "name": "Thai Basil Leaves",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Herbs"
     },
     {
-      "name": "Oyster sauce",
+      "name": "Oyster Sauce",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "Soy sauce",
+      "name": "Soy Sauce",
       "quantity": "0.3",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "Fish sauce",
+      "name": "Fish Sauce",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Brown sugar",
+      "name": "Brown Sugar",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Sesame oil",
+      "name": "Sesame Oil",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Sauce"
     },
     {
-      "name": "Vegetable oil",
+      "name": "Vegetable Oil",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Cooking"
     },
     {
-      "name": "Crushed red chili flakes",
+      "name": "Crushed Red Chili Flakes",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "notes": "optional, for the line",
       "group": "Service"
     }

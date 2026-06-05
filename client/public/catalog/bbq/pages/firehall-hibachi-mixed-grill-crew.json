@@ -38,69 +38,69 @@
   ],
   "ingredients": [
     {
-      "name": "jumbo shrimp",
+      "name": "Jumbo Shrimp",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "peeled and deveined",
       "group": "Main"
     },
     {
-      "name": "pork belly",
+      "name": "Pork Belly",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cubed",
       "group": "Main"
     },
     {
-      "name": "zucchini",
+      "name": "Zucchini",
       "quantity": "3",
       "unit": "whole",
       "notes": "half-moons",
       "group": "Hibachi veg"
     },
     {
-      "name": "cremini mushrooms",
+      "name": "Cremini Mushrooms",
       "quantity": "1",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "quartered",
       "group": "Hibachi veg"
     },
     {
-      "name": "yellow onions",
+      "name": "Yellow Onions",
       "quantity": "2",
       "unit": "whole",
       "notes": "wedges",
       "group": "Hibachi veg"
     },
     {
-      "name": "soy sauce",
+      "name": "Soy Sauce",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Ginger sauce"
     },
     {
-      "name": "fresh ginger",
+      "name": "Fresh Ginger",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "notes": "grated",
       "group": "Ginger sauce"
     },
     {
-      "name": "mirin",
+      "name": "Mirin",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Ginger sauce"
     },
     {
-      "name": "toasted sesame oil",
+      "name": "Toasted Sesame Oil",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Ginger sauce"
     },
     {
-      "name": "cooked fried rice",
+      "name": "Cooked Fried Rice",
       "quantity": "10",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Service"
     }
   ],

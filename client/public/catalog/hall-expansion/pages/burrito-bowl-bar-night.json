@@ -39,64 +39,64 @@
   ],
   "ingredients": [
     {
-      "name": "pork shoulder",
+      "name": "Pork Shoulder",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cubed",
       "group": "Main"
     },
     {
-      "name": "orange juice",
+      "name": "Orange Juice",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Carnitas"
     },
     {
-      "name": "lime juice",
+      "name": "Lime Juice",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Carnitas"
     },
     {
-      "name": "cumin",
+      "name": "Cumin",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Spice"
     },
     {
-      "name": "cilantro-lime rice",
+      "name": "Cilantro-Lime Rice",
       "quantity": "6.4",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "cooked",
       "group": "Base"
     },
     {
-      "name": "black beans",
+      "name": "Black Beans",
       "quantity": "2.4",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "seasoned",
       "group": "Bar"
     },
     {
-      "name": "corn salsa",
+      "name": "Corn Salsa",
       "quantity": "2.4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     },
     {
-      "name": "shredded lettuce",
+      "name": "Shredded Lettuce",
       "quantity": "3.2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     },
     {
-      "name": "shredded cheese",
+      "name": "Shredded Cheese",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     },
     {
-      "name": "flour tortillas",
+      "name": "Flour Tortillas",
       "quantity": "10",
       "unit": "whole",
       "notes": "optional wraps",

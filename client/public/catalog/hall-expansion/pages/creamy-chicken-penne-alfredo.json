@@ -38,64 +38,64 @@
   ],
   "ingredients": [
     {
-      "name": "penne pasta",
+      "name": "Penne Pasta",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "chicken breast",
+      "name": "Chicken Breast",
       "quantity": "2.4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "heavy cream",
+      "name": "Heavy Cream",
       "quantity": "3.2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "unsalted butter",
+      "name": "Unsalted Butter",
       "quantity": "5.1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Sauce"
     },
     {
-      "name": "grated Parmesan",
+      "name": "Grated Parmesan",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "olive oil",
+      "name": "Olive Oil",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Chicken"
     },
     {
-      "name": "kosher salt",
+      "name": "Kosher Salt",
       "quantity": "1 3/4",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "black pepper",
+      "name": "Black Pepper",
       "quantity": "7/8",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "fresh parsley",
+      "name": "Fresh Parsley",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Finish"
     }

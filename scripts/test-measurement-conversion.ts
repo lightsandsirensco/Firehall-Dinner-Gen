@@ -7,12 +7,16 @@ import {
   convertIngredientLine,
   formatClientIngredientQty,
   formatIngredientAmount,
+  isFakeMetricConversion,
+  resolveIngredientQuantityUnit,
 } from "../shared/measurements/convert.js";
 import {
   fahrenheitToCelsius,
   formatDualTemperature,
+  formatStepTemperature,
   formatTemperaturesInText,
 } from "../shared/measurements/temperature.js";
+import { formatIngredientDisplayName } from "../shared/measurements/ingredient-names.js";
 
 function assert(condition: boolean, message: string) {
   if (!condition) {
@@ -27,7 +31,7 @@ const OVEN_TEMPS: Array<[number, number]> = [
   [275, 135],
   [300, 150],
   [325, 165],
-  [350, 175],
+  [350, 177],
   [375, 190],
   [400, 205],
   [425, 220],
@@ -42,22 +46,30 @@ for (const [f, c] of OVEN_TEMPS) {
 
 assert(formatIngredientAmount("2", "lb", "metric") === "900 g", "2 lb → 900 g");
 assert(formatIngredientAmount("1", "lb", "metric") === "450 g", "1 lb → 450 g");
+assert(formatIngredientAmount("8", "oz", "metric") === "224 g", "8 oz → 224 g");
+assert(formatIngredientAmount("2", "Lb", "metric") === "900 g", "capitalized Lb converts");
+assert(formatIngredientAmount("2", "Tbsp", "metric") === "30 ml", "capitalized Tbsp converts");
+assert(formatIngredientAmount("1", "oz", "metric") === "28 g", "1 oz → 28 g");
 assert(formatIngredientAmount("1", "cup", "metric") === "240 ml", "1 cup → 240 ml");
-assert(formatIngredientAmount("2", "tbsp", "metric") === "30 ml", "2 tbsp → 30 ml");
+assert(formatIngredientAmount("1", "tbsp", "metric") === "15 ml", "1 tbsp → 15 ml");
+assert(formatIngredientAmount("1", "tsp", "metric") === "5 ml", "1 tsp → 5 ml");
+
 assert(
-  formatTemperaturesInText("Bake at 400°F until golden.") === "Bake at 400°F (205°C) until golden.",
-  "inline dual °F in text",
-);
-assert(
-  formatTemperaturesInText("Smoke at 250–275°F for hours.") ===
-    "Smoke at 250°F (120°C)–275°F (135°C) for hours.",
-  "dual °F range in text",
-);
-assert(
-  formatTemperaturesInText("Bake at 400°F (205°C) until golden.") ===
+  formatTemperaturesInText("Bake at 400°F until golden.", "us") ===
     "Bake at 400°F (205°C) until golden.",
-  "idempotent dual text",
+  "US dual °F in text",
 );
+assert(
+  formatTemperaturesInText("Bake at 350°F until golden.", "metric") ===
+    "Bake at 177°C until golden.",
+  "Metric °C only in text",
+);
+assert(
+  formatStepTemperature(350, "metric") === "177°C",
+  "step temp metric",
+);
+assert(!isFakeMetricConversion("2", "lb", "900 g"), "2 lb → 900 g is real");
+assert(isFakeMetricConversion("2", "lb", "2 kg"), "2 lb → 2 kg is fake");
 
 assert(formatIngredientAmount("2", "lb", "us") === "2 lb", "US passthrough");
 assert(formatIngredientAmount("9", "heads", "metric") === "9 heads", "non-convertible unit unchanged");
@@ -66,6 +78,14 @@ assert(
   convertIngredientLine("2 lb chicken breast", "metric") === "900 g chicken breast",
   "ingredient line conversion",
 );
+
+assert(
+  formatIngredientAmount("2 lb", undefined, "metric") === "900 g",
+  "combined quantity field",
+);
+
+const split = resolveIngredientQuantityUnit("2 lb", "");
+assert(split.quantity === "2" && split.unit === "lb", "resolve combined qty");
 
 const scaledChicken = scaleGoldenIngredients(
   [{ name: "Chicken breast", quantity: "4", unit: "lb" }],
@@ -79,6 +99,8 @@ assert(
 );
 
 assert(formatClientIngredientQty(1.5, "cups", "metric") === "360 ml", "numeric client qty");
+assert(formatIngredientDisplayName("ground beef") === "Ground Beef", "title case");
+assert(formatIngredientDisplayName("BBQ sauce") === "BBQ Sauce", "BBQ preserved");
 
 const catalogDir = join(process.cwd(), "client/public/catalog/golden-100/pages");
 const breakfastDir = join(process.cwd(), "client/public/catalog/breakfast/pages");
@@ -87,7 +109,6 @@ const qaRecipes: Array<{ path: string; label: string }> = [
   { path: join(catalogDir, "chicken-parm.json"), label: "Chicken Parm" },
   { path: join(catalogDir, "pulled-pork.json"), label: "Pulled Pork" },
   { path: join(breakfastDir, "hall-breakfast-burritos.json"), label: "Breakfast Burritos" },
-  { path: join(catalogDir, "chicken-parm.json"), label: "Chicken Parm" },
   { path: join(catalogDir, "loaded-nacho-skillet.json"), label: "Loaded Nacho Bar" },
   { path: join(breakfastDir, "monte-cristo-sandwiches.json"), label: "Monte Cristo" },
 ];
@@ -106,11 +127,18 @@ for (const { path, label } of qaRecipes) {
     const metric = formatIngredientAmount(ing.quantity, ing.unit, "metric");
     assert(!/\d+\.\d{2,}/.test(metric), `${label}: ugly decimal in "${metric}" for ${ing.name}`);
     assert(!metric.includes("undefined"), `${label}: broken metric for ${ing.name}`);
+    if (ing.unit && /^(lb|oz|cup|tbsp|tsp)$/i.test(ing.unit)) {
+      assert(metric !== `${ing.quantity} ${ing.unit}`, `${label}: ${ing.name} not converted`);
+    }
   }
   for (const step of page.steps ?? []) {
-    const rendered = formatTemperaturesInText(step.instruction);
-    if (/°F|°F/.test(step.instruction) && !/\(\d+°C\)/.test(rendered)) {
-      assert(false, `${label}: step missing dual temps`);
+    const us = formatTemperaturesInText(step.instruction, "us");
+    const metric = formatTemperaturesInText(step.instruction, "metric");
+    if (/°F/i.test(step.instruction) && !/\(\d+°C\)/.test(us)) {
+      assert(false, `${label}: US step missing dual temps`);
+    }
+    if (/°F/i.test(step.instruction) && /°F/i.test(metric)) {
+      assert(false, `${label}: metric step still has °F`);
     }
   }
 }

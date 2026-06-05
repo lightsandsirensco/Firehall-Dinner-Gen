@@ -31,33 +31,33 @@
   ],
   "ingredients": [
     {
-      "name": "Bell peppers, halved and seeded",
+      "name": "Bell Peppers, Halved And Seeded",
       "quantity": "12",
       "unit": "count",
       "group": "Main"
     },
     {
-      "name": "Ground beef (85/15)",
+      "name": "Ground Beef (85/15)",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Filling"
     },
     {
-      "name": "Cooked rice",
+      "name": "Cooked Rice",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Filling"
     },
     {
-      "name": "Crushed tomatoes",
+      "name": "Crushed Tomatoes",
       "quantity": "1",
       "unit": "can",
       "group": "Sauce"
     },
     {
-      "name": "Shredded mozzarella",
+      "name": "Shredded Mozzarella",
       "quantity": "12",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Topping"
     }
   ],

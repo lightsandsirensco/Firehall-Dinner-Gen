@@ -22,6 +22,7 @@ import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
   formatTemperaturesInText,
   formatIngredientAmount,
+  formatRecipeIngredientName,
 } from "@shared/measurements";
 
 export default function PerformanceFuelRecipePage() {
@@ -74,9 +75,12 @@ export default function PerformanceFuelRecipePage() {
   const shoppingList = useMemo(
     () =>
       scaledIngredients.length
-        ? buildShoppingListFromCatalogIngredients(scaledIngredients, { recipeTitle: page?.title })
+        ? buildShoppingListFromCatalogIngredients(scaledIngredients, {
+            recipeTitle: page?.title,
+            measurementSystem,
+          })
         : null,
-    [scaledIngredients, page?.title],
+    [scaledIngredients, page?.title, measurementSystem],
   );
 
   if (!slug || isError) {
@@ -174,7 +178,7 @@ export default function PerformanceFuelRecipePage() {
             {scaledIngredients.map((ing, i) => (
               <li key={i}>
                 {formatIngredientAmount(ing.quantity, ing.unit, measurementSystem)}{" "}
-                {ing.name}
+                {formatRecipeIngredientName(ing.name)}
                 {ing.notes ? <span className="text-muted-foreground"> — {ing.notes}</span> : null}
               </li>
             ))}
@@ -188,7 +192,7 @@ export default function PerformanceFuelRecipePage() {
           <ol className="mt-3 space-y-4 list-decimal list-inside text-[15px] leading-relaxed">
             {page.steps.map((s) => (
               <li key={s.stepNumber}>
-                {formatTemperaturesInText(s.instruction)}
+                {formatTemperaturesInText(s.instruction, measurementSystem)}
               </li>
             ))}
           </ol>

@@ -39,67 +39,67 @@
   ],
   "ingredients": [
     {
-      "name": "pork shoulder",
+      "name": "Pork Shoulder",
       "quantity": "5.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cut into strips",
       "group": "Main"
     },
     {
-      "name": "tamarind paste",
+      "name": "Tamarind Paste",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "galangal",
+      "name": "Galangal",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "notes": "grated",
       "group": "Marinade"
     },
     {
-      "name": "coriander seeds",
+      "name": "Coriander Seeds",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "notes": "toasted and ground",
       "group": "Marinade"
     },
     {
-      "name": "turmeric",
+      "name": "Turmeric",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "coconut cream",
+      "name": "Coconut Cream",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "creamy peanut butter",
+      "name": "Creamy Peanut Butter",
       "quantity": "0.75",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Peanut sauce"
     },
     {
-      "name": "kecap manis",
+      "name": "Kecap Manis",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Peanut sauce"
     },
     {
-      "name": "Thai basil",
+      "name": "Thai Basil",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
-      "name": "cucumber relish",
+      "name": "Cucumber Relish",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "quick-pickled with rice vinegar",
       "group": "Pickle"
     }

@@ -38,65 +38,65 @@
   ],
   "ingredients": [
     {
-      "name": "sirloin steak",
+      "name": "Sirloin Steak",
       "quantity": "5.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
-      "name": "aged balsamic vinegar",
+      "name": "Aged Balsamic Vinegar",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "sun-dried tomato oil",
+      "name": "Sun-Dried Tomato Oil",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "fresh basil leaves",
+      "name": "Fresh Basil Leaves",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "heirloom cherry tomatoes",
+      "name": "Heirloom Cherry Tomatoes",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Skewers"
     },
     {
-      "name": "buffalo mozzarella balls",
+      "name": "Buffalo Mozzarella Balls",
       "quantity": "1.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cold at service",
       "group": "Finish"
     },
     {
-      "name": "Saba balsamic syrup",
+      "name": "Saba Balsamic Syrup",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     },
     {
-      "name": "Maldon salt",
+      "name": "Maldon Salt",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Tellicherry pepper",
+      "name": "Tellicherry Pepper",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "basil oil",
+      "name": "Basil Oil",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     }
   ],

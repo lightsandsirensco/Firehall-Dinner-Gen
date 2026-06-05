@@ -33,45 +33,45 @@
   ],
   "ingredients": [
     {
-      "name": "Restaurant-style tortilla chips",
+      "name": "Restaurant-Style Tortilla Chips",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Base"
     },
     {
-      "name": "Ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Taco seasoning",
+      "name": "Taco Seasoning",
       "quantity": "4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Shredded Mexican cheese blend",
+      "name": "Shredded Mexican Cheese Blend",
       "quantity": "20",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Pickled jalapeños, sliced",
+      "name": "Pickled Jalapeños, Sliced",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Toppings"
     },
     {
-      "name": "Fresh pico de gallo",
+      "name": "Fresh Pico De Gallo",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Toppings"
     },
     {
-      "name": "Sour cream",
+      "name": "Sour Cream",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Toppings"
     }
   ],

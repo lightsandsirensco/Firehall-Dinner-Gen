@@ -39,66 +39,66 @@
   ],
   "ingredients": [
     {
-      "name": "ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "yellow onion",
+      "name": "Yellow Onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Vegetables"
     },
     {
-      "name": "green bell pepper",
+      "name": "Green Bell Pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Vegetables"
     },
     {
-      "name": "ketchup",
+      "name": "Ketchup",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "tomato paste",
+      "name": "Tomato Paste",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "Worcestershire sauce",
+      "name": "Worcestershire Sauce",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "apple cider vinegar",
+      "name": "Apple Cider Vinegar",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "brown sugar",
+      "name": "Brown Sugar",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "hamburger buns",
+      "name": "Hamburger Buns",
       "quantity": "10",
       "unit": "whole",
       "notes": "toasted",
       "group": "Service"
     },
     {
-      "name": "dill pickle chips",
+      "name": "Dill Pickle Chips",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Service"
     }
   ],

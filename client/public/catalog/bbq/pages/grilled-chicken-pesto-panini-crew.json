@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "chicken breast",
+      "name": "Chicken Breast",
       "quantity": "5.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "about 10 breasts",
       "group": "Main"
     },
     {
-      "name": "sun-dried tomato pesto",
+      "name": "Sun-Dried Tomato Pesto",
       "quantity": "1.5",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Panini"
     },
     {
-      "name": "focaccia loaves",
+      "name": "Focaccia Loaves",
       "quantity": "5",
       "unit": "whole",
       "notes": "split into 10 sandwiches",
       "group": "Panini"
     },
     {
-      "name": "buffalo mozzarella",
+      "name": "Buffalo Mozzarella",
       "quantity": "1.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "sliced",
       "group": "Panini"
     },
     {
-      "name": "oil-packed sun-dried tomatoes",
+      "name": "Oil-Packed Sun-Dried Tomatoes",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "drained and sliced",
       "group": "Panini"
     },
     {
-      "name": "grapeseed oil",
+      "name": "Grapeseed Oil",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "white balsamic vinegar",
+      "name": "White Balsamic Vinegar",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "shallots",
+      "name": "Shallots",
       "quantity": "2",
       "unit": "whole",
       "notes": "minced",
       "group": "Marinade"
     },
     {
-      "name": "peppered arugula",
+      "name": "Peppered Arugula",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Finish"
     },
     {
-      "name": "clarified butter",
+      "name": "Clarified Butter",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "for pressing",
       "group": "Griddle"
     }

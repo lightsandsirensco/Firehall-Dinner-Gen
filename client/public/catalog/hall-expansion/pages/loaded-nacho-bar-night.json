@@ -39,65 +39,65 @@
   ],
   "ingredients": [
     {
-      "name": "ground beef (85/15)",
+      "name": "Ground Beef (85/15)",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Protein"
     },
     {
-      "name": "taco seasoning",
+      "name": "Taco Seasoning",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Protein"
     },
     {
-      "name": "tortilla chips",
+      "name": "Tortilla Chips",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "sturdy restaurant style",
       "group": "Base"
     },
     {
-      "name": "queso dip",
+      "name": "Queso Dip",
       "quantity": "2.4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Cheese"
     },
     {
-      "name": "shredded cheddar",
+      "name": "Shredded Cheddar",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Cheese"
     },
     {
-      "name": "black beans",
+      "name": "Black Beans",
       "quantity": "2",
       "unit": "cans",
       "notes": "15 oz, drained, warmed",
       "group": "Bar"
     },
     {
-      "name": "jalapeño slices",
+      "name": "Jalapeño Slices",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Bar"
     },
     {
-      "name": "pico de gallo",
+      "name": "Pico De Gallo",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     },
     {
-      "name": "sour cream",
+      "name": "Sour Cream",
       "quantity": "1 1/4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     },
     {
-      "name": "guacamole",
+      "name": "Guacamole",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Bar"
     }
   ],

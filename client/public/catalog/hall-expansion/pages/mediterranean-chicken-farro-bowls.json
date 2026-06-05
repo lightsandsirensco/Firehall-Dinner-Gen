@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "chicken breast",
+      "name": "Chicken Breast",
       "quantity": "2.8",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "farro",
+      "name": "Farro",
       "quantity": "2.4",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "dry",
       "group": "Base"
     },
     {
-      "name": "English cucumber",
+      "name": "English Cucumber",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Vegetables"
     },
     {
-      "name": "cherry tomatoes",
+      "name": "Cherry Tomatoes",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "halved",
       "group": "Vegetables"
     },
     {
-      "name": "kalamata olives",
+      "name": "Kalamata Olives",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "pitted, halved",
       "group": "Vegetables"
     },
     {
-      "name": "hummus",
+      "name": "Hummus",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Topping"
     },
     {
-      "name": "lemon",
+      "name": "Lemon",
       "quantity": "2",
       "unit": "whole",
       "notes": "juiced",
       "group": "Marinade"
     },
     {
-      "name": "dried oregano",
+      "name": "Dried Oregano",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "olive oil",
+      "name": "Olive Oil",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Dressing"
     },
     {
-      "name": "feta cheese",
+      "name": "Feta Cheese",
       "quantity": "1 1/4",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "crumbled",
       "group": "Finish"
     }

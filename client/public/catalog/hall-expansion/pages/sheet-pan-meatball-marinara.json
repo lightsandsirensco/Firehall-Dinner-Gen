@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "3.2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "breadcrumbs",
+      "name": "Breadcrumbs",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Main"
     },
     {
-      "name": "eggs",
+      "name": "Eggs",
       "quantity": "2",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "grated Parmesan",
+      "name": "Grated Parmesan",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Main"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Main"
     },
     {
-      "name": "marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "6.4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "spaghetti",
+      "name": "Spaghetti",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Base"
     },
     {
-      "name": "fresh basil",
+      "name": "Fresh Basil",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
-      "name": "sub rolls",
+      "name": "Sub Rolls",
       "quantity": "8",
       "unit": "rolls",
       "notes": "optional for sandwiches",
       "group": "Service"
     },
     {
-      "name": "shredded mozzarella",
+      "name": "Shredded Mozzarella",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "optional for subs",
       "group": "Service"
     }

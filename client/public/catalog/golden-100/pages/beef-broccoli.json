@@ -32,31 +32,31 @@
   ],
   "ingredients": [
     {
-      "name": "Flank steak, sliced thin",
+      "name": "Flank Steak, Sliced Thin",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Broccoli florets",
+      "name": "Broccoli Florets",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Veg"
     },
     {
-      "name": "Soy sauce",
+      "name": "Soy Sauce",
       "quantity": "0.3",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "Oyster sauce",
+      "name": "Oyster Sauce",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Garlic cloves, minced",
+      "name": "Garlic Cloves, Minced",
       "quantity": "5",
       "unit": "cloves",
       "group": "Aromatics"
@@ -64,7 +64,7 @@
     {
       "name": "Cornstarch",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     }
   ],

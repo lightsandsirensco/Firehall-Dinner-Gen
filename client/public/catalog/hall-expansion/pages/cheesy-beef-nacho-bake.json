@@ -39,68 +39,68 @@
   ],
   "ingredients": [
     {
-      "name": "ground beef (85/15)",
+      "name": "Ground Beef (85/15)",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "taco seasoning",
+      "name": "Taco Seasoning",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Main"
     },
     {
-      "name": "tortilla chips",
+      "name": "Tortilla Chips",
       "quantity": "1 1/4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "sturdy style",
       "group": "Main"
     },
     {
-      "name": "black beans",
+      "name": "Black Beans",
       "quantity": "2",
       "unit": "cans",
       "notes": "15 oz, drained",
       "group": "Main"
     },
     {
-      "name": "cheddar cheese",
+      "name": "Cheddar Cheese",
       "quantity": "3/4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
-      "name": "Monterey Jack cheese",
+      "name": "Monterey Jack Cheese",
       "quantity": "3/8",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
-      "name": "jalapeño peppers",
+      "name": "Jalapeño Peppers",
       "quantity": "3",
       "unit": "whole",
       "notes": "sliced",
       "group": "Main"
     },
     {
-      "name": "salsa",
+      "name": "Salsa",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Topping"
     },
     {
-      "name": "sour cream",
+      "name": "Sour Cream",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Topping"
     },
     {
-      "name": "fresh cilantro",
+      "name": "Fresh Cilantro",
       "quantity": "3/8",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Topping"
     }

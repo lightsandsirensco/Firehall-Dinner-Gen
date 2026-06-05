@@ -32,15 +32,15 @@
   ],
   "ingredients": [
     {
-      "name": "Ground turkey",
+      "name": "Ground Turkey",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
       "name": "Breadcrumbs",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Meatballs"
     },
     {
@@ -50,51 +50,51 @@
       "group": "Meatballs"
     },
     {
-      "name": "Parmesan, grated",
+      "name": "Parmesan, Grated",
       "quantity": "4",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Meatballs"
     },
     {
-      "name": "Garlic cloves, minced",
+      "name": "Garlic Cloves, Minced",
       "quantity": "4",
       "unit": "cloves",
       "group": "Meatballs"
     },
     {
-      "name": "Fresh zucchini, spiralized",
+      "name": "Fresh Zucchini, Spiralized",
       "quantity": "8",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Noodles"
     },
     {
-      "name": "Marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Olive oil",
+      "name": "Olive Oil",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Cooking"
     },
     {
-      "name": "Kosher salt",
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black pepper",
+      "name": "Black Pepper",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Fresh basil, torn",
+      "name": "Fresh Basil, Torn",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     }
   ],

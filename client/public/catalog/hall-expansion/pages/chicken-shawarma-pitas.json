@@ -36,91 +36,91 @@
   ],
   "ingredients": [
     {
-      "name": "boneless, skinless chicken thighs",
+      "name": "Boneless, Skinless Chicken Thighs",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Chicken"
     },
     {
-      "name": "plain yogurt",
+      "name": "Plain Yogurt",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "lemon juice",
+      "name": "Lemon Juice",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "ground cumin",
+      "name": "Ground Cumin",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Shawarma spice"
     },
     {
-      "name": "ground coriander",
+      "name": "Ground Coriander",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Shawarma spice"
     },
     {
-      "name": "turmeric",
+      "name": "Turmeric",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Shawarma spice"
     },
     {
-      "name": "paprika",
+      "name": "Paprika",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Shawarma spice"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "6",
       "unit": "count",
       "notes": "minced",
       "group": "Marinade"
     },
     {
-      "name": "pita breads",
+      "name": "Pita Breads",
       "quantity": "10",
       "unit": "count",
       "group": "Pita"
     },
     {
-      "name": "pickled vegetables",
+      "name": "Pickled Vegetables",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "turnip, cabbage, or pickled onion",
       "group": "Pickles"
     },
     {
-      "name": "tomatoes",
+      "name": "Tomatoes",
       "quantity": "2",
       "unit": "large",
       "notes": "diced",
       "group": "Veg"
     },
     {
-      "name": "tahini",
+      "name": "Tahini",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Garlic sauce"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "2",
       "unit": "count",
       "notes": "for sauce",
       "group": "Garlic sauce"
     },
     {
-      "name": "lemon juice",
+      "name": "Lemon Juice",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "notes": "for sauce",
       "group": "Garlic sauce"
     }

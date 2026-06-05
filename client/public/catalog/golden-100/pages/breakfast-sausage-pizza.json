@@ -34,76 +34,76 @@
   ],
   "ingredients": [
     {
-      "name": "Pizza dough balls (15 oz)",
+      "name": "Pizza Dough Balls (15 Oz)",
       "quantity": "4",
       "unit": "count",
       "group": "Crust"
     },
     {
-      "name": "Breakfast sausage, bulk",
+      "name": "Breakfast Sausage, Bulk",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Whole milk",
+      "name": "Whole Milk",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Gravy"
     },
     {
-      "name": "Unsalted butter",
+      "name": "Unsalted Butter",
       "quantity": "6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Gravy"
     },
     {
-      "name": "All-purpose flour",
+      "name": "All-Purpose Flour",
       "quantity": "6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Gravy"
     },
     {
-      "name": "Country sausage gravy mix",
+      "name": "Country Sausage Gravy Mix",
       "quantity": "2",
       "unit": "packets",
       "notes": "optional shortcut",
       "group": "Gravy"
     },
     {
-      "name": "Large eggs",
+      "name": "Large Eggs",
       "quantity": "12",
       "unit": "count",
       "group": "Topping"
     },
     {
-      "name": "Shredded cheddar-mozzarella blend",
+      "name": "Shredded Cheddar-Mozzarella Blend",
       "quantity": "24",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Black pepper",
+      "name": "Black Pepper",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Dried sage",
+      "name": "Dried Sage",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Kosher salt",
+      "name": "Kosher Salt",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Vegetable oil",
+      "name": "Vegetable Oil",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Pan"
     }
   ],

@@ -31,15 +31,15 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
       "name": "Breadcrumbs",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Binders"
     },
     {
@@ -49,19 +49,19 @@
       "group": "Binders"
     },
     {
-      "name": "Ketchup glaze",
+      "name": "Ketchup Glaze",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Glaze"
     },
     {
-      "name": "Russet potatoes",
+      "name": "Russet Potatoes",
       "quantity": "5",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Sides"
     },
     {
-      "name": "Butter and milk",
+      "name": "Butter And Milk",
       "quantity": "1",
       "unit": "batch",
       "group": "Mashed potatoes"

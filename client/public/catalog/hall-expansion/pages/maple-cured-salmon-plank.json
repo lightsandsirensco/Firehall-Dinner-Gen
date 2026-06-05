@@ -38,73 +38,73 @@
   ],
   "ingredients": [
     {
-      "name": "salmon fillets",
+      "name": "Salmon Fillets",
       "quantity": "5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "skin-on, portioned",
       "group": "Main"
     },
     {
-      "name": "maple syrup",
+      "name": "Maple Syrup",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Brine"
     },
     {
-      "name": "kosher salt",
+      "name": "Kosher Salt",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Brine"
     },
     {
-      "name": "brown sugar",
+      "name": "Brown Sugar",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Glaze"
     },
     {
-      "name": "Dijon mustard",
+      "name": "Dijon Mustard",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Glaze"
     },
     {
-      "name": "soy sauce",
+      "name": "Soy Sauce",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Glaze"
     },
     {
-      "name": "cedar grilling planks",
+      "name": "Cedar Grilling Planks",
       "quantity": "4",
       "unit": "planks",
       "notes": "soaked",
       "group": "Grill"
     },
     {
-      "name": "Greek yogurt",
+      "name": "Greek Yogurt",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "fresh dill",
+      "name": "Fresh Dill",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Sauce"
     },
     {
-      "name": "lemon",
+      "name": "Lemon",
       "quantity": "2",
       "unit": "whole",
       "notes": "zested and juiced",
       "group": "Sauce"
     },
     {
-      "name": "asparagus",
+      "name": "Asparagus",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "trimmed",
       "group": "Side"
     }

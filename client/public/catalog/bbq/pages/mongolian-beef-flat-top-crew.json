@@ -38,65 +38,65 @@
   ],
   "ingredients": [
     {
-      "name": "flank steak",
+      "name": "Flank Steak",
       "quantity": "5.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "thin-sliced against grain",
       "group": "Main"
     },
     {
-      "name": "cornstarch",
+      "name": "Cornstarch",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Crisp coat"
     },
     {
-      "name": "coconut aminos",
+      "name": "Coconut Aminos",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Mongolian sauce"
     },
     {
-      "name": "dark brown sugar",
+      "name": "Dark Brown Sugar",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Mongolian sauce"
     },
     {
-      "name": "Chinese black vinegar",
+      "name": "Chinese Black Vinegar",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Mongolian sauce"
     },
     {
-      "name": "dried Thai chilies",
+      "name": "Dried Thai Chilies",
       "quantity": "6",
       "unit": "whole",
       "group": "Mongolian sauce"
     },
     {
-      "name": "shaoxing wine",
+      "name": "Shaoxing Wine",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Mongolian sauce"
     },
     {
-      "name": "garlic chives",
+      "name": "Garlic Chives",
       "quantity": "2",
       "unit": "bunches",
       "notes": "cut into 2-inch pieces",
       "group": "Finish"
     },
     {
-      "name": "peanut oil",
+      "name": "Peanut Oil",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Griddle"
     },
     {
-      "name": "jasmine rice",
+      "name": "Jasmine Rice",
       "quantity": "10",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "cooked",
       "group": "Service"
     }

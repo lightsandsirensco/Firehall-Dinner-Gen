@@ -33,88 +33,88 @@
   ],
   "ingredients": [
     {
-      "name": "Ziti or rigatoni",
+      "name": "Ziti Or Rigatoni",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "2.5",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Crushed tomatoes",
+      "name": "Crushed Tomatoes",
       "quantity": "1",
       "unit": "can",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
-      "name": "Whole-milk ricotta",
+      "name": "Whole-Milk Ricotta",
       "quantity": "24",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Low-moisture mozzarella, shredded",
+      "name": "Low-Moisture Mozzarella, Shredded",
       "quantity": "24",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Grated parmesan",
+      "name": "Grated Parmesan",
       "quantity": "8",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Yellow onion, diced",
+      "name": "Yellow Onion, Diced",
       "quantity": "1",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic cloves, minced",
+      "name": "Garlic Cloves, Minced",
       "quantity": "5",
       "unit": "cloves",
       "group": "Aromatics"
     },
     {
-      "name": "Dried Italian seasoning",
+      "name": "Dried Italian Seasoning",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Olive oil",
+      "name": "Olive Oil",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Cooking"
     },
     {
-      "name": "Kosher salt",
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black pepper",
+      "name": "Black Pepper",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Fresh basil, chopped",
+      "name": "Fresh Basil, Chopped",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     }
   ],

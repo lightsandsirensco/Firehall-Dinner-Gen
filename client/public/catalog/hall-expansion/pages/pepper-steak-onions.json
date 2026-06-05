@@ -37,70 +37,70 @@
   ],
   "ingredients": [
     {
-      "name": "round steak",
+      "name": "Round Steak",
       "quantity": "2.8",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "sliced thin",
       "group": "Main"
     },
     {
-      "name": "long-grain white rice",
+      "name": "Long-Grain White Rice",
       "quantity": "2.4",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "uncooked",
       "group": "Base"
     },
     {
-      "name": "green bell pepper",
+      "name": "Green Bell Pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "red bell pepper",
+      "name": "Red Bell Pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "yellow onion",
+      "name": "Yellow Onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "soy sauce",
+      "name": "Soy Sauce",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "fresh ginger",
+      "name": "Fresh Ginger",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "notes": "grated",
       "group": "Marinade"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Marinade"
     },
     {
-      "name": "beef broth",
+      "name": "Beef Broth",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Gravy"
     },
     {
-      "name": "cornstarch",
+      "name": "Cornstarch",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Gravy"
     }
   ],

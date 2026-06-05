@@ -33,71 +33,71 @@
   ],
   "ingredients": [
     {
-      "name": "Bread flour",
+      "name": "Bread Flour",
       "quantity": "6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Dough"
     },
     {
-      "name": "Active dry yeast",
+      "name": "Active Dry Yeast",
       "quantity": "2.5",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Dough"
     },
     {
-      "name": "Warm water",
+      "name": "Warm Water",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "110°F",
       "group": "Dough"
     },
     {
-      "name": "Olive oil",
+      "name": "Olive Oil",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Dough"
     },
     {
-      "name": "Kosher salt",
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Dough"
     },
     {
-      "name": "San Marzano crushed tomatoes",
+      "name": "San Marzano Crushed Tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
-      "name": "Garlic cloves, smashed",
+      "name": "Garlic Cloves, Smashed",
       "quantity": "3",
       "unit": "cloves",
       "group": "Sauce"
     },
     {
-      "name": "Fresh mozzarella, sliced",
+      "name": "Fresh Mozzarella, Sliced",
       "quantity": "32",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Fresh basil leaves",
+      "name": "Fresh Basil Leaves",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Finish"
     },
     {
-      "name": "Extra-virgin olive oil",
+      "name": "Extra-Virgin Olive Oil",
       "quantity": "0.3",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     },
     {
-      "name": "Flaky sea salt",
+      "name": "Flaky Sea Salt",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Finish"
     }
   ],

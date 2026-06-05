@@ -13,7 +13,12 @@ import {
 } from "@/lib/email-capture";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
-import { formatTemperaturesInText } from "@shared/measurements";
+import {
+  formatClientIngredientQty,
+  formatRecipeIngredientName,
+  formatTemperaturesInText,
+} from "@shared/measurements";
+import { useMeasurementSystem } from "@/lib/measurement-preference";
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 
 export type EmailModalVariant = "manual" | "earned";
@@ -38,6 +43,7 @@ export function EmailModal({
   variant = "manual",
   captureTrigger,
 }: EmailModalProps) {
+  const [measurementSystem] = useMeasurementSystem();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -62,14 +68,17 @@ export function EmailModal({
           healthiness_level: healthinessLevel,
           crew_size: crewSize,
           ingredients: recipe.ingredients.map((i) => {
-            const qty = i.qty ? (i.unit ? `${i.qty} ${i.unit}` : `${i.qty}`) : "";
-            return qty ? `${i.name} — ${qty}` : i.name;
+            const qty = formatClientIngredientQty(i.qty, i.unit, measurementSystem);
+            const name = formatRecipeIngredientName(i.name);
+            return qty ? `${name} — ${qty}` : name;
           }),
           steps: recipe.steps.map((s) => {
             const text = s.title ? `${s.title}: ${s.instructions}` : s.instructions;
-            return formatTemperaturesInText(text);
+            return formatTemperaturesInText(text, measurementSystem);
           }),
-          pro_tips: (recipe.pro_tips || []).map((tip) => formatTemperaturesInText(tip)),
+          pro_tips: (recipe.pro_tips || []).map((tip) =>
+            formatTemperaturesInText(tip, measurementSystem),
+          ),
           macros: recipe.macros_per_serving,
           timestamp: new Date().toISOString(),
           capture_source: isEarned ? captureTrigger || "earned" : "manual",

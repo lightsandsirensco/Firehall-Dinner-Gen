@@ -48,6 +48,7 @@ import {
 import {
   formatTemperaturesInText,
   formatClientIngredientQty,
+  formatRecipeIngredientName,
 } from "@shared/measurements";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { exploreRecipeRatingSlug } from "@shared/recipe-crew-ratings/slugs";
@@ -425,8 +426,9 @@ function RecipeDetailView({
       buildShoppingListFromClientMeal(clientRecipe, {
         useWhatWeHave: false,
         budgetLevel: "standard",
+        measurementSystem,
       }),
-    [clientRecipe],
+    [clientRecipe, measurementSystem],
   );
 
   const handleSave = () => {
@@ -629,7 +631,9 @@ function RecipeDetailView({
             <ul className="space-y-3" data-testid="section-detail-ingredients">
               {clientRecipe.ingredients.map((ing, i) => {
                 const qty = formatClientIngredientQty(ing.qty, ing.unit, measurementSystem);
-                const line = qty ? `${qty} ${ing.name}` : ing.name;
+                const line = qty
+                  ? `${qty} ${formatRecipeIngredientName(ing.name)}`
+                  : formatRecipeIngredientName(ing.name);
                 return (
                 <li
                   key={i}
@@ -662,7 +666,7 @@ function RecipeDetailView({
                         <p className="text-[15px] font-semibold text-foreground leading-snug">{step.heading}</p>
                       )}
                       <p className="text-[15px] sm:text-sm text-foreground/90 leading-[1.65]">
-                        {formatTemperaturesInText(step.step)}
+                        {formatTemperaturesInText(step.step, measurementSystem)}
                       </p>
                     </div>
                   </li>

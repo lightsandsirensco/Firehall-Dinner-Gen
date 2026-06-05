@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-06-05T03:22:00.000Z",
+  "mode": "apply-complete",
+  "catalogs": [
+    "golden-100",
+    "breakfast",
+    "performance-meals",
+    "bbq",
+    "hall-expansion"
+  ],
+  "recipesScanned": 339,
+  "recipesWithIngredients": 339,
+  "recipesUpdated": 339,
+  "ingredientLinesScanned": 3300,
+  "ingredientLinesChanged": 5295,
+  "postApplyAudit": {
+    "recipesNeedingChanges": 0,
+    "ingredientLinesNeedingChanges": 0
+  },
+  "byCatalog": {
+    "golden-100": { "recipesUpdated": 104, "filesModified": 104 },
+    "breakfast": { "recipesUpdated": 49, "filesModified": 49 },
+    "performance-meals": { "recipesUpdated": 50, "filesModified": 50 },
+    "bbq": { "recipesUpdated": 45, "filesModified": 45 },
+    "hall-expansion": { "recipesUpdated": 91, "filesModified": 91 }
+  },
+  "standardizationRules": {
+    "names": "Title Case via formatIngredientDisplayName (BBQ, Dijon, Parmesan, Worcestershire, Sriracha, pH preserved)",
+    "units": "Tbsp, Tsp, Cup/Cups (qty>1), Lb, Oz"
+  },
+  "validation": {
+    "npmRunCheck": "PASS",
+    "npmRunCatalogVerify": "NEEDS WORK (pre-existing: beef-barley-soup step count; 10 golden recipes not DB-seeded)",
+    "auditMeasurementConversion": "OK — titleCaseGaps=8 (short connector words in compound names; display layer handles)",
+    "auditTitleDishIdentity": "pass=331 fail=0"
+  },
+  "sampleBeforeAfter": [
+    {
+      "slug": "honey-chipotle-chicken-thighs",
+      "catalog": "bbq",
+      "changes": [
+        { "field": "name", "before": "boneless skinless chicken thighs", "after": "Boneless Skinless Chicken Thighs" },
+        { "field": "unit", "before": "lb", "after": "Lb" },
+        { "field": "unit", "before": "tbsp", "after": "Tbsp" }
+      ]
+    },
+    {
+      "slug": "chicken-parm",
+      "catalog": "golden-100",
+      "changes": [
+        { "field": "name", "before": "Grated parmesan cheese", "after": "Grated Parmesan Cheese" },
+        { "field": "unit", "before": "cups", "after": "Cups" }
+      ]
+    }
+  ]
+}

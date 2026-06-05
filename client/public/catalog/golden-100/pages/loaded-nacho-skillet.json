@@ -33,45 +33,45 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "2.5",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Yellow onion, diced",
+      "name": "Yellow Onion, Diced",
       "quantity": "1",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Taco seasoning",
+      "name": "Taco Seasoning",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Tortilla chips",
+      "name": "Tortilla Chips",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Base"
     },
     {
-      "name": "Shredded cheddar",
+      "name": "Shredded Cheddar",
       "quantity": "12",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Black beans, drained",
+      "name": "Black Beans, Drained",
       "quantity": "2",
       "unit": "cans",
       "group": "Toppings"
     },
     {
-      "name": "Pickled jalapeños",
+      "name": "Pickled Jalapeños",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Toppings"
     }
   ],

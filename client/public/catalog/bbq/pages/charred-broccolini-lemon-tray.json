@@ -38,61 +38,61 @@
   ],
   "ingredients": [
     {
-      "name": "broccolini",
+      "name": "Broccolini",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "trimmed",
       "group": "Main"
     },
     {
-      "name": "anchovy fillets",
+      "name": "Anchovy Fillets",
       "quantity": "4",
       "unit": "whole",
       "notes": "minced",
       "group": "Sicilian finish"
     },
     {
-      "name": "golden raisins",
+      "name": "Golden Raisins",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sicilian finish"
     },
     {
-      "name": "pine nuts",
+      "name": "Pine Nuts",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "toasted",
       "group": "Sicilian finish"
     },
     {
-      "name": "lemon juice",
+      "name": "Lemon Juice",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sicilian finish"
     },
     {
-      "name": "extra-virgin olive oil",
+      "name": "Extra-Virgin Olive Oil",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Grill"
     },
     {
       "name": "Pecorino Romano",
       "quantity": "0.75",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "shaved",
       "group": "Finish"
     },
     {
-      "name": "red pepper flakes",
+      "name": "Red Pepper Flakes",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Finish"
     },
     {
-      "name": "kosher salt",
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     }
   ],

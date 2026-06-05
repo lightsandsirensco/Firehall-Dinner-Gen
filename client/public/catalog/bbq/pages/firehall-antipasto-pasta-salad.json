@@ -38,70 +38,70 @@
   ],
   "ingredients": [
     {
-      "name": "farfalle pasta",
+      "name": "Farfalle Pasta",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "eggplant",
+      "name": "Eggplant",
       "quantity": "2",
       "unit": "whole",
       "notes": "chunked",
       "group": "Grilled veg"
     },
     {
-      "name": "marinated artichoke hearts",
+      "name": "Marinated Artichoke Hearts",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "quartered",
       "group": "Antipasto"
     },
     {
-      "name": "mortadella",
+      "name": "Mortadella",
       "quantity": "1",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cubed",
       "group": "Antipasto"
     },
     {
-      "name": "pepperoncini",
+      "name": "Pepperoncini",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "drained and sliced",
       "group": "Antipasto"
     },
     {
-      "name": "Castelvetrano olives",
+      "name": "Castelvetrano Olives",
       "quantity": "1.5",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "pitted",
       "group": "Antipasto"
     },
     {
-      "name": "sun-dried tomatoes",
+      "name": "Sun-Dried Tomatoes",
       "quantity": "0.75",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "oil-packed, sliced",
       "group": "Antipasto"
     },
     {
       "name": "Pecorino Romano",
       "quantity": "0.75",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "shaved",
       "group": "Antipasto"
     },
     {
-      "name": "red wine vinaigrette",
+      "name": "Red Wine Vinaigrette",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Dressing"
     },
     {
-      "name": "fresh oregano",
+      "name": "Fresh Oregano",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "notes": "chopped",
       "group": "Dressing"
     }

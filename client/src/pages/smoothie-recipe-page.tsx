@@ -17,7 +17,11 @@ import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
 import { smoothieRecipePath, smoothiesIndexPath } from "@shared/fuel-catalog/paths";
 import { cn } from "@/lib/utils";
-import { formatIngredientAmount, formatTemperaturesInText } from "@shared/measurements";
+import {
+  formatIngredientAmount,
+  formatRecipeIngredientName,
+  formatTemperaturesInText,
+} from "@shared/measurements";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
@@ -83,9 +87,12 @@ export default function SmoothieRecipePage() {
   const shoppingList = useMemo(
     () =>
       scaledIngredients.length
-        ? buildShoppingListFromCatalogIngredients(scaledIngredients, { recipeTitle: page?.title })
+        ? buildShoppingListFromCatalogIngredients(scaledIngredients, {
+            recipeTitle: page?.title,
+            measurementSystem,
+          })
         : null,
-    [scaledIngredients, page?.title],
+    [scaledIngredients, page?.title, measurementSystem],
   );
 
   if (!slug || isError) {
@@ -188,7 +195,7 @@ export default function SmoothieRecipePage() {
                 <span className="text-primary shrink-0">·</span>
                 <span>
                   {formatIngredientAmount(ing.quantity, ing.unit, measurementSystem)}{" "}
-                  {ing.name}
+                  {formatRecipeIngredientName(ing.name)}
                   {ing.notes ? (
                     <span className="text-muted-foreground"> ({ing.notes})</span>
                   ) : null}
@@ -205,7 +212,7 @@ export default function SmoothieRecipePage() {
           <ol className="mt-3 space-y-4 list-decimal list-inside text-[15px] leading-relaxed">
             {page.steps.map((s) => (
               <li key={s.stepNumber} className="pl-1">
-                {formatTemperaturesInText(s.instruction)}
+                {formatTemperaturesInText(s.instruction, measurementSystem)}
               </li>
             ))}
           </ol>

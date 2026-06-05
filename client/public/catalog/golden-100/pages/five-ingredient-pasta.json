@@ -33,45 +33,45 @@
   ],
   "ingredients": [
     {
-      "name": "Dried spaghetti",
+      "name": "Dried Spaghetti",
       "quantity": "1.5",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Unsalted butter",
+      "name": "Unsalted Butter",
       "quantity": "0.5",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Garlic butter"
     },
     {
-      "name": "Garlic cloves, minced",
+      "name": "Garlic Cloves, Minced",
       "quantity": "10",
       "unit": "cloves",
       "group": "Garlic butter"
     },
     {
-      "name": "Parmesan cheese, finely grated",
+      "name": "Parmesan Cheese, Finely Grated",
       "quantity": "12",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Finish"
     },
     {
-      "name": "Kosher salt",
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black pepper, freshly cracked",
+      "name": "Black Pepper, Freshly Cracked",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Fresh parsley, chopped",
+      "name": "Fresh Parsley, Chopped",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Garnish"
     }
   ],

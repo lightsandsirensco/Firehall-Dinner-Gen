@@ -34,6 +34,7 @@ import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
   formatIngredientAmount,
+  formatRecipeIngredientName,
   formatStepTemperature,
   formatTemperaturesInText,
   type MeasurementSystem,
@@ -51,7 +52,7 @@ function formatIngredient(
   system: MeasurementSystem,
 ) {
   const qty = formatIngredientAmount(ing.quantity, ing.unit, system);
-  const base = qty ? `${qty} ${ing.name}` : ing.name;
+  const base = qty ? `${qty} ${formatRecipeIngredientName(ing.name)}` : formatRecipeIngredientName(ing.name);
   const notes = [ing.notes, ing.optional ? "optional" : undefined].filter(Boolean).join(", ");
   return notes ? `${base} (${notes})` : base;
 }
@@ -189,7 +190,7 @@ export default function FirefighterRedLeadRecipePage() {
                 <h2 className="font-heading text-xl sm:text-2xl text-foreground">{section.heading}</h2>
                 <div className="mt-4 space-y-4 text-sm sm:text-base text-muted-foreground leading-relaxed">
                   {section.paragraphs.map((p) => (
-                    <p key={p.slice(0, 48)}>{formatTemperaturesInText(p)}</p>
+                    <p key={p.slice(0, 48)}>{formatTemperaturesInText(p, measurementSystem)}</p>
                   ))}
                 </div>
               </section>
@@ -234,14 +235,14 @@ export default function FirefighterRedLeadRecipePage() {
                     <div className="min-w-0">
                       <h3 className="font-medium text-foreground">{step.title}</h3>
                       <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
-                        {formatTemperaturesInText(step.instruction)}
+                        {formatTemperaturesInText(step.instruction, measurementSystem)}
                       </p>
                       {(step.minutes || step.tempF) && (
                         <p className="mt-2 text-xs text-muted-foreground">
                           {step.minutes ? `~${step.minutes} min` : null}
                           {step.minutes && step.tempF ? " · " : null}
                           {step.tempF
-                            ? `Target ${formatStepTemperature(step.tempF)} on whites`
+                            ? `Target ${formatStepTemperature(step.tempF, measurementSystem)} on whites`
                             : null}
                         </p>
                       )}
@@ -263,7 +264,7 @@ export default function FirefighterRedLeadRecipePage() {
                   >
                     <dt className="font-medium text-foreground">{item.title}</dt>
                     <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      {formatTemperaturesInText(item.body)}
+                      {formatTemperaturesInText(item.body, measurementSystem)}
                     </dd>
                   </div>
                 ))}
@@ -287,7 +288,7 @@ export default function FirefighterRedLeadRecipePage() {
                   >
                     <dt className="font-medium text-foreground">{item.title}</dt>
                     <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">
-                      {formatTemperaturesInText(item.body)}
+                      {formatTemperaturesInText(item.body, measurementSystem)}
                     </dd>
                   </div>
                 ))}

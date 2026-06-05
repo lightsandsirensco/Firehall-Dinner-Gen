@@ -28,6 +28,23 @@ import { getPizzaConceptMeta } from "@shared/pizza-concepts";
 import { cn } from "@/lib/utils";
 import { MealHeroImage } from "@/components/meal-hero-image";
 import { ExploreHeldImageryPlaceholder } from "@/components/explore-held-imagery-placeholder";
+import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
+import {
+  convertShoppingAmountString,
+  formatRecipeIngredientName,
+  type MeasurementSystem,
+} from "@shared/measurements";
+
+function mapPizzaIngredient(
+  ing: { item: string; amount: string; notes: string },
+  system: MeasurementSystem,
+) {
+  return {
+    item: formatRecipeIngredientName(ing.item),
+    amount: convertShoppingAmountString(ing.amount, system),
+    notes: ing.notes,
+  };
+}
 
 interface PizzaCardProps {
   recipe: PizzaResponse;
@@ -72,7 +89,11 @@ function IngredientGroup({ title, items }: { title: string; items: { item: strin
   );
 }
 
-function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
+function buildPizzaPrintHtml(
+  recipe: PizzaResponse,
+  crewSize: number,
+  measurementSystem: MeasurementSystem = "us",
+): string {
   const e = escapeHtml;
   const safetyRows = recipe.protein_safety?.length
     ? recipe.protein_safety
@@ -89,8 +110,8 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
     if (!items || items.length === 0) return "";
     return `<h3 style="font-size:14px;font-weight:700;margin:16px 0 6px;text-transform:uppercase;letter-spacing:1px;color:#555">${e(title)}</h3>
     <table class="ingredients"><tbody>${items.map(ing => `<tr>
-      <td style="padding:4px 16px 4px 0;font-weight:600">${e(ing.item)}</td>
-      <td style="padding:4px 0">${e(ing.amount)}</td>
+      <td style="padding:4px 16px 4px 0;font-weight:600">${e(formatRecipeIngredientName(ing.item))}</td>
+      <td style="padding:4px 0">${e(convertShoppingAmountString(ing.amount, measurementSystem))}</td>
       ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${e(ing.notes)}</td>` : "<td></td>"}
     </tr>`).join("")}</tbody></table>`;
   };
@@ -204,13 +225,14 @@ function buildPizzaPrintHtml(recipe: PizzaResponse, crewSize: number): string {
 }
 
 export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick }: PizzaCardProps) {
+  const [measurementSystem] = useMeasurementSystem();
   const meta = getPizzaConceptMeta(recipe.pizza_style_id);
   const badges = recipe.badges?.length ? recipe.badges : meta?.badges ?? [];
   const hasTiming = recipe.timing && (recipe.timing.prep_minutes || recipe.timing.bake_minutes || recipe.timing.total_minutes);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.length > 0;
 
   const handlePrint = () => {
-    const html = buildPizzaPrintHtml(recipe, crewSize);
+    const html = buildPizzaPrintHtml(recipe, crewSize, measurementSystem);
     const printWindow = window.open("", "_blank");
     if (printWindow) {
       printWindow.document.write(html);
@@ -470,11 +492,26 @@ export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick 
         <CardContent className="p-4">
           <h3 className="font-heading text-lg tracking-wider uppercase text-foreground mb-3">Ingredients</h3>
           <div className="space-y-4" data-testid="pizza-section-ingredients">
-            <IngredientGroup title="Dough" items={recipe.ingredients.dough || []} />
-            <IngredientGroup title="Sauce" items={recipe.ingredients.sauce} />
-            <IngredientGroup title="Cheese" items={recipe.ingredients.cheese} />
-            <IngredientGroup title="Toppings" items={recipe.ingredients.toppings} />
-            <IngredientGroup title="Drizzles & Finishing" items={recipe.ingredients.drizzles} />
+            <IngredientGroup
+              title="Dough"
+              items={(recipe.ingredients.dough || []).map((ing) => mapPizzaIngredient(ing, measurementSystem))}
+            />
+            <IngredientGroup
+              title="Sauce"
+              items={recipe.ingredients.sauce.map((ing) => mapPizzaIngredient(ing, measurementSystem))}
+            />
+            <IngredientGroup
+              title="Cheese"
+              items={recipe.ingredients.cheese.map((ing) => mapPizzaIngredient(ing, measurementSystem))}
+            />
+            <IngredientGroup
+              title="Toppings"
+              items={recipe.ingredients.toppings.map((ing) => mapPizzaIngredient(ing, measurementSystem))}
+            />
+            <IngredientGroup
+              title="Drizzles & Finishing"
+              items={recipe.ingredients.drizzles.map((ing) => mapPizzaIngredient(ing, measurementSystem))}
+            />
           </div>
         </CardContent>
       </Card>

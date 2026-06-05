@@ -39,64 +39,64 @@
   ],
   "ingredients": [
     {
-      "name": "ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "breadcrumbs",
+      "name": "Breadcrumbs",
       "quantity": "1 1/4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Main"
     },
     {
-      "name": "eggs",
+      "name": "Eggs",
       "quantity": "2",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "yellow onion",
+      "name": "Yellow Onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "finely diced",
       "group": "Main"
     },
     {
-      "name": "Worcestershire sauce",
+      "name": "Worcestershire Sauce",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Main"
     },
     {
-      "name": "kosher salt",
+      "name": "Kosher Salt",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "black pepper",
+      "name": "Black Pepper",
       "quantity": "7/8",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "ketchup",
+      "name": "Ketchup",
       "quantity": "5/8",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Glaze"
     },
     {
-      "name": "brown sugar",
+      "name": "Brown Sugar",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Glaze"
     },
     {
-      "name": "apple cider vinegar",
+      "name": "Apple Cider Vinegar",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Glaze"
     }
   ],

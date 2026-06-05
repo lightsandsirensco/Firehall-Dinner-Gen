@@ -138,8 +138,10 @@ function convertImperialQuantity(
       }
       return { quantity: String(roundGrams(grams)), unit: "g" };
     }
-    case "oz":
-      return { quantity: String(roundGrams(qty * 28.35)), unit: "g" };
+    case "oz": {
+      const grams = Math.round(qty * 28);
+      return { quantity: String(grams), unit: "g" };
+    }
     case "cup":
       return { quantity: String(roundMl(qty * 240)), unit: "ml" };
     case "tbsp":
@@ -164,19 +166,39 @@ function convertImperialQuantity(
   }
 }
 
+/** Split quantity/unit when unit is embedded in quantity ("2 lb"). */
+export function resolveIngredientQuantityUnit(
+  quantity?: string,
+  unit?: string,
+): { quantity: string; unit: string } {
+  const q = quantity?.trim() ?? "";
+  const u = unit?.trim() ?? "";
+  if (u) return { quantity: q, unit: u };
+
+  const parsed = parseLeadingQuantityUnit(q);
+  if (!parsed) return { quantity: q, unit: u };
+
+  const qtyStr =
+    Math.abs(parsed.quantity - Math.round(parsed.quantity)) < 0.05
+      ? String(Math.round(parsed.quantity))
+      : formatDisplayNumber(parsed.quantity);
+  return { quantity: qtyStr, unit: parsed.unit };
+}
+
 /** Format structured ingredient qty + unit for display. */
 export function formatIngredientAmount(
   quantity: string | undefined,
   unit: string | undefined,
   system: MeasurementSystem,
 ): string {
-  const parts = [quantity, unit].filter(Boolean);
+  const resolved = resolveIngredientQuantityUnit(quantity, unit);
+  const parts = [resolved.quantity, resolved.unit].filter(Boolean);
   if (system === "us" || parts.length === 0) return parts.join(" ");
 
-  const qtyNum = parseQuantityString(quantity);
-  if (qtyNum === null || !unit?.trim()) return parts.join(" ");
+  const qtyNum = parseQuantityString(resolved.quantity);
+  if (qtyNum === null || !resolved.unit) return parts.join(" ");
 
-  const converted = convertImperialQuantity(qtyNum, unit);
+  const converted = convertImperialQuantity(qtyNum, resolved.unit);
   if (!converted) return parts.join(" ");
   return `${converted.quantity} ${converted.unit}`;
 }
@@ -208,7 +230,7 @@ export function formatClientIngredientQty(
 const QTY_TOKEN =
   /(\d+(?:\.\d+)?(?:\s+\d+\/\d+|\s*\/\s*\d+)?|\d+\/\d+|[¼½¾])/;
 
-function parseLeadingQuantityUnit(text: string): {
+export function parseLeadingQuantityUnit(text: string): {
   quantity: number;
   unit: string;
   rest: string;
@@ -253,11 +275,43 @@ export function convertIngredientLine(line: string, system: MeasurementSystem): 
   return `${converted.quantity} ${converted.unit}${rest}`;
 }
 
-export {
-  convertTemperaturesInText,
-  fahrenheitToCelsius,
-  formatDualTemperature,
-  formatDualTemperatureRange,
-  formatStepTemperature,
-  formatTemperaturesInText,
-} from "./temperature.js";
+/** Convert a shopping-list amount string ("2 lb", "1 cup"). */
+export function convertShoppingAmountString(amount: string, system: MeasurementSystem): string {
+  const trimmed = (amount || "").trim();
+  if (!trimmed || system === "us") return trimmed;
+  return convertIngredientLine(trimmed, system);
+}
+
+/** Detect label-only metric swaps (e.g. 2 lb → 2 kg). */
+export function isFakeMetricConversion(
+  quantity: string | undefined,
+  unit: string | undefined,
+  metricDisplay: string,
+): boolean {
+  const resolved = resolveIngredientQuantityUnit(quantity, unit);
+  const qtyNum = parseQuantityString(resolved.quantity);
+  if (qtyNum === null || !resolved.unit) return false;
+
+  const metricTrimmed = metricDisplay.trim();
+  const parsed = parseLeadingQuantityUnit(metricTrimmed);
+  const imperial = normalizeUnit(resolved.unit);
+  if (!imperial) return false;
+
+  const metricQty = parsed?.quantity ?? parseQuantityString(metricTrimmed.split(/\s+/)[0] ?? "");
+  if (metricQty === null) return false;
+
+  const metricUnit = parsed?.unit?.toLowerCase() ?? "";
+  const metricUnits = new Set(["g", "kg", "ml", "l", "cm"]);
+  const looksMetric = metricUnits.has(metricUnit) || /\b(g|kg|ml|l|cm)\b/i.test(metricTrimmed);
+
+  if (looksMetric && Math.abs(metricQty - qtyNum) < 0.02) return true;
+
+  if (parsed && imperial === "cup" && parsed.unit === "ml") {
+    const expected = convertImperialQuantity(qtyNum, "cup");
+    if (expected && Math.abs(parseQuantityString(expected.quantity)! - parsed.quantity) > 5) {
+      return false;
+    }
+  }
+
+  return false;
+}

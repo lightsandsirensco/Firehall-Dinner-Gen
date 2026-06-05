@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-05T00:50:17.488Z",
+  "generatedAt": "2026-06-05T03:26:32.398Z",
   "mode": "audit",
   "pagesScanned": 314,
   "recipesCorrected": 1,
@@ -7,11 +7,11 @@
   "remainingProteinOutliers": [],
   "fixes": [
     {
-      "name": "maple-cured-salmon-plank: salmon fillets",
+      "name": "maple-cured-salmon-plank: Salmon Fillets",
       "crewSize": 8,
-      "oldQuantity": "5 lb",
-      "newQuantity": "3.5 lb",
-      "unit": "lb",
+      "oldQuantity": "5 Lb",
+      "newQuantity": "3.5 Lb",
+      "unit": "Lb",
       "ozPerFirefighter": 7,
       "reason": "Protein capped from 10 oz to 7 oz per firefighter (salmon)"
     }

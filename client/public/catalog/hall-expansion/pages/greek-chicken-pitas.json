@@ -37,75 +37,75 @@
   ],
   "ingredients": [
     {
-      "name": "boneless, skinless chicken breasts",
+      "name": "Boneless, Skinless Chicken Breasts",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Chicken"
     },
     {
-      "name": "plain Greek yogurt",
+      "name": "Plain Greek Yogurt",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "marinade",
       "group": "Marinade"
     },
     {
-      "name": "lemon juice",
+      "name": "Lemon Juice",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "dried oregano",
+      "name": "Dried Oregano",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Marinade"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "4",
       "unit": "count",
       "notes": "minced",
       "group": "Marinade"
     },
     {
-      "name": "pita breads",
+      "name": "Pita Breads",
       "quantity": "10",
       "unit": "count",
       "notes": "pocket or flat",
       "group": "Pita"
     },
     {
-      "name": "English cucumber",
+      "name": "English Cucumber",
       "quantity": "1",
       "unit": "count",
       "notes": "diced",
       "group": "Veg"
     },
     {
-      "name": "tomatoes",
+      "name": "Tomatoes",
       "quantity": "3",
       "unit": "large",
       "notes": "diced",
       "group": "Veg"
     },
     {
-      "name": "red onion",
+      "name": "Red Onion",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "thinly sliced",
       "group": "Veg"
     },
     {
-      "name": "tzatziki",
+      "name": "Tzatziki",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "crumbled feta",
+      "name": "Crumbled Feta",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "optional",
       "group": "Line"
     }

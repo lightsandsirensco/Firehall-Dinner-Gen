@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "andouille sausage",
+      "name": "Andouille Sausage",
       "quantity": "5.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "about 10 links",
       "group": "Main"
     },
     {
-      "name": "French baguettes",
+      "name": "French Baguettes",
       "quantity": "5",
       "unit": "whole",
       "notes": "split into 10 rolls",
       "group": "Po boy"
     },
     {
-      "name": "romaine lettuce",
+      "name": "Romaine Lettuce",
       "quantity": "1",
       "unit": "head",
       "notes": "shredded",
       "group": "Po boy"
     },
     {
-      "name": "tomatoes",
+      "name": "Tomatoes",
       "quantity": "4",
       "unit": "whole",
       "notes": "sliced",
       "group": "Po boy"
     },
     {
-      "name": "mayonnaise",
+      "name": "Mayonnaise",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Remoulade"
     },
     {
-      "name": "Creole mustard",
+      "name": "Creole Mustard",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Remoulade"
     },
     {
-      "name": "hot sauce",
+      "name": "Hot Sauce",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Remoulade"
     },
     {
-      "name": "celery",
+      "name": "Celery",
       "quantity": "2",
       "unit": "stalks",
       "notes": "minced",
       "group": "Remoulade"
     },
     {
-      "name": "butter",
+      "name": "Butter",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Toast"
     },
     {
-      "name": "pickle chips",
+      "name": "Pickle Chips",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Service"
     }
   ],

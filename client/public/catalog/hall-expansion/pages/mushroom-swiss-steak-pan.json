@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "sirloin steak",
+      "name": "Sirloin Steak",
       "quantity": "2.4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "sliced thin",
       "group": "Main"
     },
     {
-      "name": "wide egg noodles",
+      "name": "Wide Egg Noodles",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "cremini mushrooms",
+      "name": "Cremini Mushrooms",
       "quantity": "1 1/4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "yellow onion",
+      "name": "Yellow Onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Vegetables"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "beef broth",
+      "name": "Beef Broth",
       "quantity": "2.4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "sour cream",
+      "name": "Sour Cream",
       "quantity": "1 1/4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Dijon mustard",
+      "name": "Dijon Mustard",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "unsalted butter",
+      "name": "Unsalted Butter",
       "quantity": "3.4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "fresh parsley",
+      "name": "Fresh Parsley",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Finish"
     }

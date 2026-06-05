@@ -38,54 +38,54 @@
   ],
   "ingredients": [
     {
-      "name": "corned beef",
+      "name": "Corned Beef",
       "quantity": "5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cooked, thick-sliced",
       "group": "Main"
     },
     {
-      "name": "marbled rye bread",
+      "name": "Marbled Rye Bread",
       "quantity": "20",
       "unit": "slices",
       "group": "Reuben"
     },
     {
-      "name": "Swiss cheese",
+      "name": "Swiss Cheese",
       "quantity": "20",
       "unit": "slices",
       "group": "Reuben"
     },
     {
-      "name": "sauerkraut",
+      "name": "Sauerkraut",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "drained and warmed",
       "group": "Reuben"
     },
     {
-      "name": "Thousand Island dressing",
+      "name": "Thousand Island Dressing",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Reuben"
     },
     {
-      "name": "butter",
+      "name": "Butter",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "softened",
       "group": "Griddle"
     },
     {
-      "name": "caraway seeds",
+      "name": "Caraway Seeds",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "pickles",
+      "name": "Pickles",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "dill chips for side",
       "group": "Service"
     }

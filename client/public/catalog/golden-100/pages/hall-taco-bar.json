@@ -32,25 +32,25 @@
   ],
   "ingredients": [
     {
-      "name": "Flank or skirt steak",
+      "name": "Flank Or Skirt Steak",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Flour or corn tortillas",
+      "name": "Flour Or Corn Tortillas",
       "quantity": "24",
       "unit": "count",
       "group": "Serve"
     },
     {
-      "name": "White onion",
+      "name": "White Onion",
       "quantity": "2",
       "unit": "large",
       "group": "Toppings"
     },
     {
-      "name": "Fresh cilantro",
+      "name": "Fresh Cilantro",
       "quantity": "1",
       "unit": "bunch",
       "group": "Toppings"
@@ -64,7 +64,7 @@
     {
       "name": "Cumin",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     }
   ],

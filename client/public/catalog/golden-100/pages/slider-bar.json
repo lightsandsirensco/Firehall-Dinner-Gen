@@ -35,88 +35,88 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Slider buns",
+      "name": "Slider Buns",
       "quantity": "36",
       "unit": "count",
       "notes": "3–4 per person",
       "group": "Buns"
     },
     {
-      "name": "American cheese slices",
+      "name": "American Cheese Slices",
       "quantity": "36",
       "unit": "count",
       "group": "Cheese"
     },
     {
-      "name": "Kosher salt",
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black pepper",
+      "name": "Black Pepper",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Unsalted butter",
+      "name": "Unsalted Butter",
       "quantity": "4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Buns"
     },
     {
-      "name": "Iceberg lettuce, shredded",
+      "name": "Iceberg Lettuce, Shredded",
       "quantity": "1",
       "unit": "head",
       "group": "Toppings bar"
     },
     {
-      "name": "Roma tomatoes, sliced",
+      "name": "Roma Tomatoes, Sliced",
       "quantity": "6",
       "unit": "count",
       "group": "Toppings bar"
     },
     {
-      "name": "Red onion, thin sliced",
+      "name": "Red Onion, Thin Sliced",
       "quantity": "2",
       "unit": "count",
       "group": "Toppings bar"
     },
     {
-      "name": "Dill pickle chips",
+      "name": "Dill Pickle Chips",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Toppings bar"
     },
     {
       "name": "Ketchup",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauces"
     },
     {
-      "name": "Yellow mustard",
+      "name": "Yellow Mustard",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauces"
     },
     {
       "name": "Mayonnaise",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauces"
     },
     {
-      "name": "BBQ sauce",
+      "name": "BBQ Sauce",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "optional",
       "group": "Sauces"
     }

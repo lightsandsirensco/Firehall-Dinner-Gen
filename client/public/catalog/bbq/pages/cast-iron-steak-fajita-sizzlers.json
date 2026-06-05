@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "skirt steak",
+      "name": "Skirt Steak",
       "quantity": "5.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cut into strips",
       "group": "Main"
     },
     {
-      "name": "dried guajillo chiles",
+      "name": "Dried Guajillo Chiles",
       "quantity": "4",
       "unit": "whole",
       "notes": "rehydrated and blended",
       "group": "Marinade"
     },
     {
-      "name": "ancho chili powder",
+      "name": "Ancho Chili Powder",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "poblano peppers",
+      "name": "Poblano Peppers",
       "quantity": "6",
       "unit": "whole",
       "notes": "striped",
       "group": "Sizzler veg"
     },
     {
-      "name": "red onions",
+      "name": "Red Onions",
       "quantity": "2",
       "unit": "whole",
       "notes": "wedges",
       "group": "Sizzler veg"
     },
     {
-      "name": "orange juice",
+      "name": "Orange Juice",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "Mexican oregano",
+      "name": "Mexican Oregano",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "corn tortillas",
+      "name": "Corn Tortillas",
       "quantity": "24",
       "unit": "pieces",
       "group": "Service"
     },
     {
-      "name": "queso fresco",
+      "name": "Queso Fresco",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "crumbled",
       "group": "Garnish"
     },
     {
-      "name": "pickled red onions",
+      "name": "Pickled Red Onions",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Garnish"
     }
   ],

@@ -38,72 +38,72 @@
   ],
   "ingredients": [
     {
-      "name": "ground beef",
+      "name": "Ground Beef",
       "quantity": "2.4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Filling"
     },
     {
-      "name": "yellow onion",
+      "name": "Yellow Onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Filling"
     },
     {
-      "name": "carrots",
+      "name": "Carrots",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Filling"
     },
     {
-      "name": "frozen peas",
+      "name": "Frozen Peas",
       "quantity": "1 1/4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Filling"
     },
     {
-      "name": "tomato paste",
+      "name": "Tomato Paste",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Filling"
     },
     {
-      "name": "beef broth",
+      "name": "Beef Broth",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Filling"
     },
     {
-      "name": "Worcestershire sauce",
+      "name": "Worcestershire Sauce",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Filling"
     },
     {
-      "name": "russet potatoes",
+      "name": "Russet Potatoes",
       "quantity": "3.2",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "peeled and cubed",
       "group": "Topping"
     },
     {
-      "name": "butter",
+      "name": "Butter",
       "quantity": "5.1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Topping"
     },
     {
-      "name": "whole milk",
+      "name": "Whole Milk",
       "quantity": "5/8",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Topping"
     },
     {
-      "name": "cheddar cheese",
+      "name": "Cheddar Cheese",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "grated",
       "group": "Topping"
     }

@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "pork shoulder",
+      "name": "Pork Shoulder",
       "quantity": "5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "for roasting",
       "group": "Main"
     },
     {
-      "name": "Cuban bread loaves",
+      "name": "Cuban Bread Loaves",
       "quantity": "5",
       "unit": "whole",
       "notes": "split into 10 sandwiches",
       "group": "Cuban"
     },
     {
-      "name": "deli ham",
+      "name": "Deli Ham",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "thin-sliced",
       "group": "Cuban"
     },
     {
-      "name": "Swiss cheese",
+      "name": "Swiss Cheese",
       "quantity": "20",
       "unit": "slices",
       "group": "Cuban"
     },
     {
-      "name": "dill pickle chips",
+      "name": "Dill Pickle Chips",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Cuban"
     },
     {
-      "name": "yellow mustard",
+      "name": "Yellow Mustard",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Cuban"
     },
     {
-      "name": "sour orange juice",
+      "name": "Sour Orange Juice",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "or lime-orange blend",
       "group": "Mojo"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "8",
       "unit": "cloves",
       "notes": "minced",
       "group": "Mojo"
     },
     {
-      "name": "dried oregano",
+      "name": "Dried Oregano",
       "quantity": "1",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Mojo"
     },
     {
-      "name": "butter",
+      "name": "Butter",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "softened",
       "group": "Press"
     }

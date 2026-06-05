@@ -158,7 +158,7 @@ export function titleMatchesDishIdentity(
   const ings = ingredientsText(ingredients.map((i) => ({ item: i.item ?? i.name ?? "", notes: i.notes })));
   const t = (title || "").toLowerCase();
 
-  if (/\bbarley\b/.test(t) && !/\bbarley\b/.test(ings)) {
+  if (/\bbarley\b/.test(t) && !/\bbarley\b/i.test(ings)) {
     return { ok: false, reason: "title_barley_missing_barley" };
   }
 

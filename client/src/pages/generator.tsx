@@ -15,6 +15,7 @@ import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { HallVoteModal } from "@/components/hall-vote-modal";
 import { HallVotePromoBanner } from "@/components/hall-vote-promo-banner";
 import { buildShoppingListFromClientMeal } from "@/lib/shopping-list";
+import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { getSavedCount } from "@/lib/saved-meals";
 import { apiRequest } from "@/lib/queryClient";
 import { parseApiError } from "@/lib/parse-api-error";
@@ -255,6 +256,7 @@ export default function Generator() {
   const [emailModalVariant, setEmailModalVariant] = useState<EmailModalVariant>("manual");
   const [emailCaptureTrigger, setEmailCaptureTrigger] = useState<EmailCaptureTrigger | undefined>();
   const [shoppingListOpen, setShoppingListOpen] = useState(false);
+  const [measurementSystem] = useMeasurementSystem();
   const [hallVoteOpen, setHallVoteOpen] = useState(false);
   const [recentRecipes, setRecentRecipes] = useState<ClientRecipeResponse[]>([]);
   const [favCount, setFavCount] = useState(() => getSavedCount());
@@ -819,6 +821,7 @@ export default function Generator() {
             shoppingList={buildShoppingListFromClientMeal(recipe, {
               useWhatWeHave: filters.use_what_we_have,
               budgetLevel: filters.budget_level,
+              measurementSystem,
             })}
             recipeTitle={recipe.title}
             generatorType="meal"

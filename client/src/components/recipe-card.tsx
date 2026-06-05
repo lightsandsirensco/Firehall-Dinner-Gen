@@ -22,8 +22,10 @@ import {
   useMeasurementSystem,
 } from "@/components/measurement-unit-toggle";
 import {
-  convertTemperaturesInText,
+  convertShoppingAmountString,
   formatClientIngredientQty,
+  formatTemperaturesInText,
+  formatRecipeIngredientName,
   formatStepTemperature,
   type MeasurementSystem,
 } from "@shared/measurements";
@@ -102,7 +104,7 @@ export function buildPrintHtml(
   const safetyHtml = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0
     ? `<tr>
         <td style="font-weight:700;padding:6px 12px 6px 0">${e(recipe.protein_safety.protein)}</td>
-        <td style="padding:6px 12px">${e(formatStepTemperature(recipe.protein_safety.internal_temp_f))}</td>
+        <td style="padding:6px 12px">${e(formatStepTemperature(recipe.protein_safety.internal_temp_f, measurementSystem))}</td>
         <td style="padding:6px 12px">${recipe.protein_safety.rest_min > 0 ? e(recipe.protein_safety.rest_min) + " min" : "—"}</td>
         <td style="padding:6px 12px;font-size:13px">${e(recipe.protein_safety.notes)}</td>
       </tr>`
@@ -112,7 +114,7 @@ export function buildPrintHtml(
     .map(
       (ing) =>
         `<tr>
-          <td style="padding:4px 16px 4px 0;font-weight:600">${e(ing.name)}</td>
+          <td style="padding:4px 16px 4px 0;font-weight:600">${e(formatRecipeIngredientName(ing.name))}</td>
           <td style="padding:4px 0">${e(fmtQty(ing.qty, ing.unit, measurementSystem))}</td>
           <td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${e(ing.category)}</td>
         </tr>`
@@ -123,7 +125,7 @@ export function buildPrintHtml(
     .map((step) => {
       return `<li style="margin-bottom:12px;page-break-inside:avoid">
         ${step.title ? `<strong>${e(step.title)}</strong><br/>` : ""}
-        ${e(convertTemperaturesInText(step.instructions))}
+        ${e(formatTemperaturesInText(step.instructions, measurementSystem))}
       </li>`;
     })
     .join("");
@@ -212,19 +214,19 @@ export function buildPrintHtml(
   ${recipe.pro_tips && recipe.pro_tips.length > 0 ? `
   <h2>Pro Tips</h2>
   <ul style="padding-left:20px;font-size:14px">
-    ${recipe.pro_tips.map((tip) => `<li style="margin-bottom:4px">${e(convertTemperaturesInText(tip))}</li>`).join("")}
+    ${recipe.pro_tips.map((tip) => `<li style="margin-bottom:4px">${e(formatTemperaturesInText(tip, measurementSystem))}</li>`).join("")}
   </ul>` : ""}
 
   ${recipe.cleanup_tip ? `
   <div class="cleanup">
     <strong>Cleanup Tip</strong>
-    ${e(convertTemperaturesInText(recipe.cleanup_tip))}
+    ${e(formatTemperaturesInText(recipe.cleanup_tip, measurementSystem))}
   </div>` : ""}
 
   ${recipe.budget_tips && recipe.budget_tips.length > 0 ? `
   <h2>Budget Tips</h2>
   <ul style="padding-left:20px;font-size:14px">
-    ${recipe.budget_tips.map((tip) => `<li style="margin-bottom:4px">${e(convertTemperaturesInText(tip))}</li>`).join("")}
+    ${recipe.budget_tips.map((tip) => `<li style="margin-bottom:4px">${e(formatTemperaturesInText(tip, measurementSystem))}</li>`).join("")}
   </ul>` : ""}
 
   ${recipe.veg_option?.enabled ? `
@@ -233,8 +235,8 @@ export function buildPrintHtml(
   <table class="ingredients">
     <tbody>
       ${recipe.veg_option.ingredients.map((ing) => `<tr>
-        <td style="padding:4px 16px 4px 0;font-weight:600">${e(ing.item)}</td>
-        <td style="padding:4px 0">${e(ing.amount)}</td>
+        <td style="padding:4px 16px 4px 0;font-weight:600">${e(formatRecipeIngredientName(ing.item))}</td>
+        <td style="padding:4px 0">${e(convertShoppingAmountString(ing.amount, measurementSystem))}</td>
         ${ing.notes ? `<td style="padding:4px 0 4px 16px;color:#555;font-size:13px">${e(ing.notes)}</td>` : "<td></td>"}
       </tr>`).join("")}
     </tbody>
@@ -540,7 +542,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             <span className="text-foreground font-medium">{recipe.protein_safety.protein}</span>
             {" — "}
             <span className="text-foreground">
-              {formatStepTemperature(recipe.protein_safety.internal_temp_f)} internal
+              {formatStepTemperature(recipe.protein_safety.internal_temp_f, measurementSystem)} internal
             </span>
             {recipe.protein_safety.rest_min > 0 && (
               <>, rest {recipe.protein_safety.rest_min} min</>
@@ -560,7 +562,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               className="flex justify-between gap-4 py-3.5 text-[15px]"
               data-testid={`ingredient-row-${i}`}
             >
-              <span className="font-medium">{ing.name}</span>
+              <span className="font-medium">{formatRecipeIngredientName(ing.name)}</span>
               <span className="text-muted-foreground tabular-nums shrink-0">
                 {fmtQty(ing.qty, ing.unit, measurementSystem) || "—"}
               </span>
@@ -581,7 +583,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
                   <p className="font-medium text-foreground mb-1">{step.title}</p>
                 )}
                 <p className="text-[15px] text-muted-foreground leading-relaxed">
-                  {convertTemperaturesInText(step.instructions)}
+                  {formatTemperaturesInText(step.instructions, measurementSystem)}
                 </p>
               </div>
             </li>
@@ -597,7 +599,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </p>
           )}
           <p className={app.subtitle} data-testid="text-plating-instructions">
-            {convertTemperaturesInText(recipe.plating.assembly_instructions)}
+            {formatTemperaturesInText(recipe.plating.assembly_instructions, measurementSystem)}
           </p>
         </MealSection>
       )}
@@ -619,7 +621,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             <ul className="space-y-3" data-testid="list-pro-tips">
               {recipe.pro_tips.map((tip, i) => (
                 <li key={i} className={app.subtitle} data-testid={`pro-tip-${i}`}>
-                  {convertTemperaturesInText(tip)}
+                  {formatTemperaturesInText(tip, measurementSystem)}
                 </li>
               ))}
             </ul>
@@ -630,7 +632,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       {recipe.cleanup_tip?.trim() && (
         <MealSection title="Kitchen shutdown">
           <p className={app.subtitle} data-testid="text-cleanup-tip">
-            {convertTemperaturesInText(recipe.cleanup_tip)}
+            {formatTemperaturesInText(recipe.cleanup_tip, measurementSystem)}
           </p>
         </MealSection>
       )}
@@ -640,7 +642,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <ul className="space-y-2">
             {recipe.budget_tips.map((tip, i) => (
               <li key={i} className={app.subtitle} data-testid={`budget-tip-${i}`}>
-                {convertTemperaturesInText(tip)}
+                {formatTemperaturesInText(tip, measurementSystem)}
               </li>
             ))}
           </ul>
@@ -677,9 +679,12 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
                     data-testid={`veg-ingredient-${i}`}
                   >
                     <p className="text-sm whitespace-normal break-words">
-                      <span className="font-bold text-foreground">{ing.item}</span>
+                      <span className="font-bold text-foreground">{formatRecipeIngredientName(ing.item)}</span>
                       {ing.amount && (
-                        <span className="text-green-600 dark:text-green-400 font-medium"> — {ing.amount}</span>
+                        <span className="text-green-600 dark:text-green-400 font-medium">
+                          {" "}
+                          — {convertShoppingAmountString(ing.amount, measurementSystem)}
+                        </span>
                       )}
                     </p>
                     {ing.notes && (

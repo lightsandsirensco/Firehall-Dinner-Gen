@@ -8,6 +8,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { HallFeedbackProvider } from "@/lib/hall-feedback/context";
+import { MeasurementSystemProvider } from "@/lib/measurement-preference";
 import { HallFeedbackShell } from "@/components/hall-feedback/hall-feedback-shell";
 import { RouteLoadingFallback } from "@/components/route-loading-fallback";
 import { PageTransition } from "@/components/page-transition";
@@ -128,13 +129,15 @@ function App() {
   return (
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
-        <HallFeedbackProvider>
-          <TooltipProvider>
-            <Toaster />
-            <Router />
-            <HallFeedbackShell />
-          </TooltipProvider>
-        </HallFeedbackProvider>
+        <MeasurementSystemProvider>
+          <HallFeedbackProvider>
+            <TooltipProvider>
+              <Toaster />
+              <Router />
+              <HallFeedbackShell />
+            </TooltipProvider>
+          </HallFeedbackProvider>
+        </MeasurementSystemProvider>
       </QueryClientProvider>
     </ErrorBoundary>
   );

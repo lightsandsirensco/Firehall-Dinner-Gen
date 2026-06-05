@@ -33,77 +33,77 @@
   ],
   "ingredients": [
     {
-      "name": "Bread flour",
+      "name": "Bread Flour",
       "quantity": "5",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Dough"
     },
     {
-      "name": "Instant yeast",
+      "name": "Instant Yeast",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Dough"
     },
     {
-      "name": "Warm water",
+      "name": "Warm Water",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "110°F",
       "group": "Dough"
     },
     {
-      "name": "Granulated sugar",
+      "name": "Granulated Sugar",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Dough"
     },
     {
-      "name": "Kosher salt",
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Dough"
     },
     {
-      "name": "Olive oil",
+      "name": "Olive Oil",
       "quantity": "4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Dough"
     },
     {
-      "name": "Brick cheese or mild cheddar, shredded",
+      "name": "Brick Cheese Or Mild Cheddar, Shredded",
       "quantity": "32",
-      "unit": "oz",
+      "unit": "Oz",
       "notes": "to the edges",
       "group": "Cheese"
     },
     {
-      "name": "Cup-and-char pepperoni",
+      "name": "Cup-And-Char Pepperoni",
       "quantity": "16",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Topping"
     },
     {
-      "name": "Crushed tomatoes",
+      "name": "Crushed Tomatoes",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Dried oregano",
+      "name": "Dried Oregano",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Sauce"
     },
     {
-      "name": "Garlic powder",
+      "name": "Garlic Powder",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Sauce"
     },
     {
-      "name": "Unsalted butter",
+      "name": "Unsalted Butter",
       "quantity": "4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Pan"
     }
   ],

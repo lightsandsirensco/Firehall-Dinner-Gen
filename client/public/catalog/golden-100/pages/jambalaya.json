@@ -31,40 +31,40 @@
   ],
   "ingredients": [
     {
-      "name": "Andouille sausage",
+      "name": "Andouille Sausage",
       "quantity": "1.5",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Boneless chicken thighs",
+      "name": "Boneless Chicken Thighs",
       "quantity": "1.5",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Long-grain rice",
+      "name": "Long-Grain Rice",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Main"
     },
     {
-      "name": "Crushed tomatoes",
+      "name": "Crushed Tomatoes",
       "quantity": "1",
       "unit": "can",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
-      "name": "Chicken broth",
+      "name": "Chicken Broth",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Broth"
     },
     {
-      "name": "Cajun seasoning",
+      "name": "Cajun Seasoning",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     }
   ],

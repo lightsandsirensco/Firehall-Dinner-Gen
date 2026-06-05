@@ -60,6 +60,7 @@ import { useCrewScaling } from "@/hooks/use-crew-scaling";
 import { buildShoppingListFromCatalogIngredients } from "@/lib/shopping-list";
 import {
   formatIngredientAmount,
+  formatRecipeIngredientName,
   formatTemperaturesInText,
 } from "@shared/measurements";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
@@ -557,9 +558,12 @@ export default function GoldenRecipePageView() {
   const shoppingList = useMemo(
     () =>
       scaledIngredients.length
-        ? buildShoppingListFromCatalogIngredients(scaledIngredients, { recipeTitle: page?.title })
+        ? buildShoppingListFromCatalogIngredients(scaledIngredients, {
+            recipeTitle: page?.title,
+            measurementSystem,
+          })
         : null,
-    [scaledIngredients, page?.title],
+    [scaledIngredients, page?.title, measurementSystem],
   );
 
   const ingredientGroups = useMemo(() => {
@@ -717,7 +721,7 @@ export default function GoldenRecipePageView() {
                           className="flex justify-between gap-4 py-3.5 text-[15px]"
                         >
                           <span className="font-medium">
-                            {ing.name}
+                            {formatRecipeIngredientName(ing.name)}
                             {ing.notes && (
                               <span className="block text-xs text-muted-foreground font-normal mt-0.5">
                                 {ing.notes}
@@ -767,7 +771,7 @@ export default function GoldenRecipePageView() {
 
                       <p className="mt-2 text-[15px] text-muted-foreground leading-relaxed">
 
-                        {formatTemperaturesInText(step.instruction)}
+                        {formatTemperaturesInText(step.instruction, measurementSystem)}
 
                       </p>
 
@@ -805,7 +809,7 @@ export default function GoldenRecipePageView() {
 
                   {page.tonightSpread.map((line, i) => (
 
-                    <li key={i}>{formatTemperaturesInText(line)}</li>
+                    <li key={i}>{formatTemperaturesInText(line, measurementSystem)}</li>
 
                   ))}
 
@@ -825,7 +829,7 @@ export default function GoldenRecipePageView() {
 
                   {page.proTips.map((tip, i) => (
 
-                    <li key={i}>{formatTemperaturesInText(tip)}</li>
+                    <li key={i}>{formatTemperaturesInText(tip, measurementSystem)}</li>
 
                   ))}
 
@@ -841,7 +845,7 @@ export default function GoldenRecipePageView() {
               <RecipeSection title="Substitutions" id="recipe-substitutions">
                 <ul className="space-y-2 text-[15px] text-muted-foreground leading-relaxed">
                   {page.substitutions.map((line, i) => (
-                    <li key={i}>{formatTemperaturesInText(line)}</li>
+                    <li key={i}>{formatTemperaturesInText(line, measurementSystem)}</li>
                   ))}
                 </ul>
               </RecipeSection>
@@ -850,7 +854,7 @@ export default function GoldenRecipePageView() {
             {page.mealPrepNotes && (
               <RecipeSection title="Meal prep" id="recipe-meal-prep">
                 <p className="text-[15px] text-muted-foreground leading-relaxed">
-                  {formatTemperaturesInText(page.mealPrepNotes)}
+                  {formatTemperaturesInText(page.mealPrepNotes, measurementSystem)}
                 </p>
               </RecipeSection>
             )}
@@ -862,7 +866,7 @@ export default function GoldenRecipePageView() {
 
                   {page.leftovers.map((line, i) => (
 
-                    <li key={i}>{formatTemperaturesInText(line)}</li>
+                    <li key={i}>{formatTemperaturesInText(line, measurementSystem)}</li>
 
                   ))}
 

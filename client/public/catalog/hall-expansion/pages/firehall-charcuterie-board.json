@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "sliced salami",
+      "name": "Sliced Salami",
       "quantity": "1 1/4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Meat"
     },
     {
-      "name": "sliced prosciutto",
+      "name": "Sliced Prosciutto",
       "quantity": "5/8",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Meat"
     },
     {
-      "name": "sliced turkey breast",
+      "name": "Sliced Turkey Breast",
       "quantity": "3/4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Meat"
     },
     {
-      "name": "cheddar cheese",
+      "name": "Cheddar Cheese",
       "quantity": "5/8",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "cubed",
       "group": "Cheese"
     },
     {
-      "name": "gouda cheese",
+      "name": "Gouda Cheese",
       "quantity": "5/8",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
-      "name": "brie wheel",
+      "name": "Brie Wheel",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "8 oz, optional baked",
       "group": "Cheese"
     },
     {
-      "name": "crackers assortment",
+      "name": "Crackers Assortment",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Carbs"
     },
     {
-      "name": "grapes",
+      "name": "Grapes",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Produce"
     },
     {
-      "name": "cornichons",
+      "name": "Cornichons",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Accents"
     },
     {
-      "name": "fig jam",
+      "name": "Fig Jam",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Spreads"
     }
   ],

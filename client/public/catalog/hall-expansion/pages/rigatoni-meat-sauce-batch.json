@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "rigatoni pasta",
+      "name": "Rigatoni Pasta",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Sauce"
     },
     {
-      "name": "ground pork",
+      "name": "Ground Pork",
       "quantity": "3/4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Sauce"
     },
     {
-      "name": "crushed tomatoes",
+      "name": "Crushed Tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz each",
       "group": "Sauce"
     },
     {
-      "name": "tomato paste",
+      "name": "Tomato Paste",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Sauce"
     },
     {
-      "name": "yellow onion",
+      "name": "Yellow Onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "finely diced",
       "group": "Aromatics"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "dry red wine",
+      "name": "Dry Red Wine",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "dried oregano",
+      "name": "Dried Oregano",
       "quantity": "1 3/4",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "grated Parmesan",
+      "name": "Grated Parmesan",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "for serving",
       "group": "Finish"
     }

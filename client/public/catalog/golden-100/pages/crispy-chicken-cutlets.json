@@ -32,45 +32,45 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken cutlets, pounded thin",
+      "name": "Chicken Cutlets, Pounded Thin",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "All-purpose flour",
+      "name": "All-Purpose Flour",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Breading"
     },
     {
-      "name": "Eggs, beaten",
+      "name": "Eggs, Beaten",
       "quantity": "4",
       "unit": "count",
       "group": "Breading"
     },
     {
-      "name": "Panko breadcrumbs",
+      "name": "Panko Breadcrumbs",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Breading"
     },
     {
-      "name": "Marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Fresh mozzarella, sliced",
+      "name": "Fresh Mozzarella, Sliced",
       "quantity": "12",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Parmesan, grated",
+      "name": "Parmesan, Grated",
       "quantity": "4",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Finish"
     }
   ],

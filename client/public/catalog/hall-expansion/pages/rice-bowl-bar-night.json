@@ -39,67 +39,67 @@
   ],
   "ingredients": [
     {
-      "name": "jasmine rice",
+      "name": "Jasmine Rice",
       "quantity": "2.4",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "dry",
       "group": "Base"
     },
     {
-      "name": "chicken thighs",
+      "name": "Chicken Thighs",
       "quantity": "3.2",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "boneless",
       "group": "Protein"
     },
     {
-      "name": "teriyaki sauce",
+      "name": "Teriyaki Sauce",
       "quantity": "1 1/4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Protein"
     },
     {
-      "name": "broccoli florets",
+      "name": "Broccoli Florets",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Veg"
     },
     {
-      "name": "carrots",
+      "name": "Carrots",
       "quantity": "3/4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "julienned",
       "group": "Veg"
     },
     {
-      "name": "edamame",
+      "name": "Edamame",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "shelled, thawed",
       "group": "Toppings"
     },
     {
-      "name": "pickled ginger",
+      "name": "Pickled Ginger",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Toppings"
     },
     {
-      "name": "sesame seeds",
+      "name": "Sesame Seeds",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Toppings"
     },
     {
-      "name": "sriracha mayo",
+      "name": "Sriracha Mayo",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     },
     {
-      "name": "soy sauce",
+      "name": "Soy Sauce",
       "quantity": "1/4",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Sauce"
     }
   ],

@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "beef hot dogs",
+      "name": "Beef Hot Dogs",
       "quantity": "8",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "pretzel dough",
+      "name": "Pretzel Dough",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "store-bought or homemade",
       "group": "Main"
     },
     {
-      "name": "baking soda",
+      "name": "Baking Soda",
       "quantity": "3/8",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "for boil bath",
       "group": "Boil"
     },
     {
-      "name": "egg",
+      "name": "Egg",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "beaten, for wash",
       "group": "Finish"
     },
     {
-      "name": "coarse salt",
+      "name": "Coarse Salt",
       "quantity": "2.6",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Finish"
     },
     {
-      "name": "yellow mustard",
+      "name": "Yellow Mustard",
       "quantity": "3/8",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Mustard bar"
     },
     {
-      "name": "whole-grain mustard",
+      "name": "Whole-Grain Mustard",
       "quantity": "3/8",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Mustard bar"
     },
     {
-      "name": "spicy brown mustard",
+      "name": "Spicy Brown Mustard",
       "quantity": "3/8",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Mustard bar"
     },
     {
-      "name": "sauerkraut",
+      "name": "Sauerkraut",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "warmed",
       "group": "Toppings"
     },
     {
-      "name": "cheddar cheese sauce",
+      "name": "Cheddar Cheese Sauce",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "warm",
       "group": "Toppings"
     }

@@ -33,70 +33,70 @@
   ],
   "ingredients": [
     {
-      "name": "Pizza dough balls (15 oz)",
+      "name": "Pizza Dough Balls (15 Oz)",
       "quantity": "4",
       "unit": "count",
       "group": "Crust"
     },
     {
-      "name": "Crushed tomatoes",
+      "name": "Crushed Tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz",
       "group": "Sauce"
     },
     {
-      "name": "Garlic cloves, minced",
+      "name": "Garlic Cloves, Minced",
       "quantity": "4",
       "unit": "cloves",
       "group": "Sauce"
     },
     {
-      "name": "Dried oregano",
+      "name": "Dried Oregano",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Sauce"
     },
     {
-      "name": "Fresh mozzarella, torn",
+      "name": "Fresh Mozzarella, Torn",
       "quantity": "24",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Low-moisture mozzarella, shredded",
+      "name": "Low-Moisture Mozzarella, Shredded",
       "quantity": "8",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Soppressata or spicy salami, sliced",
+      "name": "Soppressata Or Spicy Salami, Sliced",
       "quantity": "16",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Topping"
     },
     {
-      "name": "Hot honey",
+      "name": "Hot Honey",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     },
     {
-      "name": "Red pepper flakes",
+      "name": "Red Pepper Flakes",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Finish"
     },
     {
-      "name": "Grated parmesan",
+      "name": "Grated Parmesan",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     },
     {
-      "name": "Olive oil",
+      "name": "Olive Oil",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Crust"
     }
   ],

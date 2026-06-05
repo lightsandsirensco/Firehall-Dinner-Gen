@@ -32,33 +32,33 @@
   ],
   "ingredients": [
     {
-      "name": "Cooked chicken, shredded",
+      "name": "Cooked Chicken, Shredded",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Cream cheese, softened",
+      "name": "Cream Cheese, Softened",
       "quantity": "16",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Dip base"
     },
     {
-      "name": "Frank's hot sauce",
+      "name": "Frank's Hot Sauce",
       "quantity": "0.8",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Dip"
     },
     {
-      "name": "Ranch dressing",
+      "name": "Ranch Dressing",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Dip"
     },
     {
-      "name": "Shredded cheddar",
+      "name": "Shredded Cheddar",
       "quantity": "8",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Top"
     }
   ],

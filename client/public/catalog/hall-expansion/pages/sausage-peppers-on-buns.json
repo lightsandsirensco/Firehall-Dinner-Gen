@@ -35,55 +35,55 @@
   ],
   "ingredients": [
     {
-      "name": "Italian sausage links",
+      "name": "Italian Sausage Links",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "sweet or hot",
       "group": "Main"
     },
     {
-      "name": "bell peppers",
+      "name": "Bell Peppers",
       "quantity": "4",
       "unit": "count",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "yellow onions",
+      "name": "Yellow Onions",
       "quantity": "2",
       "unit": "large",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "hoagie or sub rolls",
+      "name": "Hoagie Or Sub Rolls",
       "quantity": "10",
       "unit": "count",
       "group": "Buns"
     },
     {
-      "name": "provolone cheese",
+      "name": "Provolone Cheese",
       "quantity": "12",
       "unit": "slices",
       "notes": "optional",
       "group": "Cheese"
     },
     {
-      "name": "olive oil",
+      "name": "Olive Oil",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Roast"
     },
     {
-      "name": "dried oregano",
+      "name": "Dried Oregano",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "red wine vinegar",
+      "name": "Red Wine Vinegar",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Finish"
     }
   ],

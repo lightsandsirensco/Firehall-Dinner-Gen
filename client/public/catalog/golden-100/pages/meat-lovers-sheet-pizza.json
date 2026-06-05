@@ -33,69 +33,69 @@
   ],
   "ingredients": [
     {
-      "name": "Pizza dough balls (15 oz)",
+      "name": "Pizza Dough Balls (15 Oz)",
       "quantity": "4",
       "unit": "count",
       "group": "Crust"
     },
     {
-      "name": "Pizza sauce",
+      "name": "Pizza Sauce",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Low-moisture mozzarella, shredded",
+      "name": "Low-Moisture Mozzarella, Shredded",
       "quantity": "32",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Pepperoni slices",
+      "name": "Pepperoni Slices",
       "quantity": "12",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Meats"
     },
     {
-      "name": "Italian sausage, cooked crumbles",
+      "name": "Italian Sausage, Cooked Crumbles",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Meats"
     },
     {
-      "name": "Canadian bacon, diced",
+      "name": "Canadian Bacon, Diced",
       "quantity": "12",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Meats"
     },
     {
-      "name": "Bacon, cooked and crumbled",
+      "name": "Bacon, Cooked And Crumbled",
       "quantity": "12",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Meats"
     },
     {
-      "name": "Ground beef, browned",
+      "name": "Ground Beef, Browned",
       "quantity": "1.5",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Meats"
     },
     {
-      "name": "Dried oregano",
+      "name": "Dried Oregano",
       "quantity": "2",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Grated parmesan",
+      "name": "Grated Parmesan",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     },
     {
-      "name": "Olive oil",
+      "name": "Olive Oil",
       "quantity": "4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Pan"
     }
   ],

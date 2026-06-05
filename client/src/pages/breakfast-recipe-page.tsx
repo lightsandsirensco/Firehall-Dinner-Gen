@@ -37,6 +37,7 @@ import { isPerformanceBreakfastSlug } from "@shared/breakfast-catalog/governance
 import {
   formatTemperaturesInText,
   formatIngredientAmount,
+  formatRecipeIngredientName,
   formatStepTemperature,
 } from "@shared/measurements";
 
@@ -113,9 +114,12 @@ export default function BreakfastRecipePage() {
   const shoppingList = useMemo(
     () =>
       scaledIngredients.length
-        ? buildShoppingListFromCatalogIngredients(scaledIngredients, { recipeTitle: page?.title })
+        ? buildShoppingListFromCatalogIngredients(scaledIngredients, {
+            recipeTitle: page?.title,
+            measurementSystem,
+          })
         : null,
-    [scaledIngredients, page?.title],
+    [scaledIngredients, page?.title, measurementSystem],
   );
 
   return (
@@ -262,7 +266,7 @@ export default function BreakfastRecipePage() {
                         {formatIngredientAmount(ing.quantity, ing.unit, measurementSystem)}
                       </span>{" "}
                       {ing.quantity || ing.unit ? "· " : ""}
-                      {ing.name}
+                      {formatRecipeIngredientName(ing.name)}
                       {ing.notes ? <span className="text-muted-foreground"> — {ing.notes}</span> : null}
                     </li>
                   ))}
@@ -286,14 +290,14 @@ export default function BreakfastRecipePage() {
                           </p>
                           {(s.minutes || s.tempF) && (
                             <p className="text-xs text-muted-foreground whitespace-nowrap">
-                              {s.tempF ? formatStepTemperature(s.tempF) : ""}
+                              {s.tempF ? formatStepTemperature(s.tempF, measurementSystem) : ""}
                               {s.tempF && s.minutes ? " · " : ""}
                               {s.minutes ? `${s.minutes} min` : ""}
                             </p>
                           )}
                         </div>
                         <p className="mt-2 text-sm leading-relaxed text-foreground/90">
-                          {formatTemperaturesInText(s.instruction)}
+                          {formatTemperaturesInText(s.instruction, measurementSystem)}
                         </p>
                       </li>
                     ))}

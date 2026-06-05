@@ -31,7 +31,7 @@
   ],
   "ingredients": [
     {
-      "name": "Large eggs",
+      "name": "Large Eggs",
       "quantity": "18",
       "unit": "count",
       "group": "Main"
@@ -39,25 +39,25 @@
     {
       "name": "Buttermilk",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Batter"
     },
     {
-      "name": "All-purpose flour",
+      "name": "All-Purpose Flour",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Batter"
     },
     {
-      "name": "Thick-cut bacon",
+      "name": "Thick-Cut Bacon",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Side"
     },
     {
-      "name": "Maple syrup",
+      "name": "Maple Syrup",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Serve"
     }
   ],

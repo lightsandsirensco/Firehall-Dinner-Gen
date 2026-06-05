@@ -39,65 +39,65 @@
   ],
   "ingredients": [
     {
-      "name": "ribeye steak",
+      "name": "Ribeye Steak",
       "quantity": "5.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "partially frozen for thin slicing",
       "group": "Main"
     },
     {
-      "name": "shoyu",
+      "name": "Shoyu",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Tare"
     },
     {
-      "name": "sake",
+      "name": "Sake",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Tare"
     },
     {
-      "name": "hon-mirin",
+      "name": "Hon-Mirin",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Tare"
     },
     {
-      "name": "grated apple",
+      "name": "Grated Apple",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Tare"
     },
     {
-      "name": "fresh ginger",
+      "name": "Fresh Ginger",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "notes": "grated",
       "group": "Tare"
     },
     {
-      "name": "shishito peppers",
+      "name": "Shishito Peppers",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Grill"
     },
     {
-      "name": "shiso leaves",
+      "name": "Shiso Leaves",
       "quantity": "20",
       "unit": "whole",
       "group": "Finish"
     },
     {
-      "name": "yuzu kosho",
+      "name": "Yuzu Kosho",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Finish"
     },
     {
-      "name": "steamed short-grain rice",
+      "name": "Steamed Short-Grain Rice",
       "quantity": "10",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "cooked",
       "group": "Service"
     }

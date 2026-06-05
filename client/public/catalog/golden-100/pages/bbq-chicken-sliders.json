@@ -35,37 +35,37 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef",
+      "name": "Ground Beef",
       "quantity": "4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Hoagie rolls",
+      "name": "Hoagie Rolls",
       "quantity": "8",
       "unit": "count",
       "group": "Buns"
     },
     {
-      "name": "Provolone slices",
+      "name": "Provolone Slices",
       "quantity": "12",
       "unit": "count",
       "group": "Cheese"
     },
     {
-      "name": "Marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Yellow onion",
+      "name": "Yellow Onion",
       "quantity": "1",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "4",
       "unit": "cloves",
       "group": "Aromatics"

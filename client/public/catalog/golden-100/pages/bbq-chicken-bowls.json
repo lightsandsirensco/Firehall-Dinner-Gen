@@ -33,39 +33,39 @@
   ],
   "ingredients": [
     {
-      "name": "Long-grain rice, uncooked",
+      "name": "Long-Grain Rice, Uncooked",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Base"
     },
     {
-      "name": "Boneless chicken thighs",
+      "name": "Boneless Chicken Thighs",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "BBQ rub",
+      "name": "BBQ Rub",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "BBQ sauce",
+      "name": "BBQ Sauce",
       "quantity": "1.5",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Corn kernels",
+      "name": "Corn Kernels",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Toppings"
     },
     {
-      "name": "Coleslaw mix",
+      "name": "Coleslaw Mix",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Toppings"
     }
   ],

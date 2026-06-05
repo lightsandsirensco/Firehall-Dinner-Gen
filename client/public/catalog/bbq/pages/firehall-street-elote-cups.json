@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "corn on the cob",
+      "name": "Corn On The Cob",
       "quantity": "12",
       "unit": "ears",
       "group": "Main"
     },
     {
-      "name": "Mexican crema",
+      "name": "Mexican Crema",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Epazote crema"
     },
     {
-      "name": "fresh epazote",
+      "name": "Fresh Epazote",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Epazote crema"
     },
     {
-      "name": "queso fresco",
+      "name": "Queso Fresco",
       "quantity": "1.5",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "crumbled",
       "group": "Topping"
     },
     {
-      "name": "Tajín seasoning",
+      "name": "Tajín Seasoning",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Topping"
     },
     {
-      "name": "crushed totopos",
+      "name": "Crushed Totopos",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Topping"
     },
     {
-      "name": "chipotle mayo",
+      "name": "Chipotle Mayo",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Topping"
     },
     {
-      "name": "fresh cilantro",
+      "name": "Fresh Cilantro",
       "quantity": "0.33",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Topping"
     },
     {
-      "name": "lime wedges",
+      "name": "Lime Wedges",
       "quantity": "10",
       "unit": "whole",
       "group": "Service"
     },
     {
-      "name": "avocado oil",
+      "name": "Avocado Oil",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Grill"
     }
   ],

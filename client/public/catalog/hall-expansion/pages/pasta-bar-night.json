@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "penne pasta",
+      "name": "Penne Pasta",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "marinara sauce",
+      "name": "Marinara Sauce",
       "quantity": "3.2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauces"
     },
     {
-      "name": "heavy cream",
+      "name": "Heavy Cream",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Alfredo"
     },
     {
-      "name": "Parmesan cheese",
+      "name": "Parmesan Cheese",
       "quantity": "3/4",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "grated",
       "group": "Alfredo"
     },
     {
-      "name": "unsalted butter",
+      "name": "Unsalted Butter",
       "quantity": "3.4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Alfredo"
     },
     {
-      "name": "basil pesto",
+      "name": "Basil Pesto",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauces"
     },
     {
-      "name": "garlic cloves",
+      "name": "Garlic Cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Alfredo"
     },
     {
-      "name": "French bread",
+      "name": "French Bread",
       "quantity": "2",
       "unit": "loaves",
       "group": "Side"
     },
     {
-      "name": "mozzarella cheese",
+      "name": "Mozzarella Cheese",
       "quantity": "1.6",
-      "unit": "cups",
+      "unit": "Cups",
       "notes": "shredded",
       "group": "Bar"
     },
     {
-      "name": "red pepper flakes",
+      "name": "Red Pepper Flakes",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Bar"
     }
   ],

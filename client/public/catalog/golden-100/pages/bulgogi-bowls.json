@@ -33,43 +33,43 @@
   ],
   "ingredients": [
     {
-      "name": "Short-grain rice, uncooked",
+      "name": "Short-Grain Rice, Uncooked",
       "quantity": "3",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Base"
     },
     {
-      "name": "Ribeye or sirloin, thinly sliced",
+      "name": "Ribeye Or Sirloin, Thinly Sliced",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Soy sauce",
+      "name": "Soy Sauce",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Marinade"
     },
     {
-      "name": "Brown sugar",
+      "name": "Brown Sugar",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
-      "name": "Sesame oil",
+      "name": "Sesame Oil",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
       "name": "Kimchi",
       "quantity": "2",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Toppings"
     },
     {
-      "name": "Cucumber, julienned",
+      "name": "Cucumber, Julienned",
       "quantity": "2",
       "unit": "count",
       "group": "Toppings"

@@ -32,33 +32,33 @@
   ],
   "ingredients": [
     {
-      "name": "Ground beef (80/20)",
+      "name": "Ground Beef (80/20)",
       "quantity": "3",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Corn tortillas",
+      "name": "Corn Tortillas",
       "quantity": "24",
       "unit": "count",
       "group": "Layers"
     },
     {
-      "name": "Red enchilada sauce",
+      "name": "Red Enchilada Sauce",
       "quantity": "4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Shredded cheddar",
+      "name": "Shredded Cheddar",
       "quantity": "16",
-      "unit": "oz",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Black olives, sliced",
+      "name": "Black Olives, Sliced",
       "quantity": "1",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Topping"
     }
   ],

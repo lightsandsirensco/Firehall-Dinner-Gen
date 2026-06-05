@@ -38,74 +38,74 @@
   ],
   "ingredients": [
     {
-      "name": "ground pork",
+      "name": "Ground Pork",
       "quantity": "1 1/4",
-      "unit": "lb",
+      "unit": "Lb",
       "group": "Wonton"
     },
     {
-      "name": "shrimp",
+      "name": "Shrimp",
       "quantity": "3/8",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "finely chopped",
       "group": "Wonton"
     },
     {
-      "name": "wonton wrappers",
+      "name": "Wonton Wrappers",
       "quantity": "48",
       "unit": "wrappers",
       "group": "Wonton"
     },
     {
-      "name": "green onions",
+      "name": "Green Onions",
       "quantity": "3",
       "unit": "whole",
       "notes": "minced",
       "group": "Wonton"
     },
     {
-      "name": "sesame oil",
+      "name": "Sesame Oil",
       "quantity": "7/8",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Wonton"
     },
     {
-      "name": "soy sauce",
+      "name": "Soy Sauce",
       "quantity": "1 3/4",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Wonton"
     },
     {
-      "name": "chicken broth",
+      "name": "Chicken Broth",
       "quantity": "6.4",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Broth"
     },
     {
-      "name": "ginger",
+      "name": "Ginger",
       "quantity": "1.6",
       "unit": "inches",
       "notes": "sliced",
       "group": "Broth"
     },
     {
-      "name": "egg noodles",
+      "name": "Egg Noodles",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "fresh if possible",
       "group": "Noodles"
     },
     {
-      "name": "baby bok choy",
+      "name": "Baby Bok Choy",
       "quantity": "1.6",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "halved",
       "group": "Vegetable"
     },
     {
-      "name": "white pepper",
+      "name": "White Pepper",
       "quantity": "7/8",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     }
   ],

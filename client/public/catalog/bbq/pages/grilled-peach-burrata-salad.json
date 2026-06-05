@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "ripe peaches",
+      "name": "Ripe Peaches",
       "quantity": "10",
       "unit": "whole",
       "notes": "halved and pitted",
       "group": "Main"
     },
     {
-      "name": "burrata cheese",
+      "name": "Burrata Cheese",
       "quantity": "2",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "about 10 balls",
       "group": "Salad"
     },
     {
-      "name": "baby arugula",
+      "name": "Baby Arugula",
       "quantity": "8",
-      "unit": "cups",
+      "unit": "Cups",
       "group": "Salad"
     },
     {
-      "name": "prosciutto di Parma",
+      "name": "Prosciutto Di Parma",
       "quantity": "0.5",
-      "unit": "lb",
+      "unit": "Lb",
       "notes": "crisped",
       "group": "Salad"
     },
     {
-      "name": "pistachios",
+      "name": "Pistachios",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
-      "name": "Prosecco reduction",
+      "name": "Prosecco Reduction",
       "quantity": "0.5",
-      "unit": "cup",
+      "unit": "Cup",
       "group": "Finish"
     },
     {
-      "name": "peach nectar",
+      "name": "Peach Nectar",
       "quantity": "3",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Grill"
     },
     {
-      "name": "fresh mint",
+      "name": "Fresh Mint",
       "quantity": "0.25",
-      "unit": "cup",
+      "unit": "Cup",
       "notes": "torn",
       "group": "Finish"
     },
     {
-      "name": "Maldon salt",
+      "name": "Maldon Salt",
       "quantity": "1",
-      "unit": "tsp",
+      "unit": "Tsp",
       "group": "Seasoning"
     },
     {
-      "name": "lavender honey",
+      "name": "Lavender Honey",
       "quantity": "2",
-      "unit": "tbsp",
+      "unit": "Tbsp",
       "group": "Grill"
     }
   ],
