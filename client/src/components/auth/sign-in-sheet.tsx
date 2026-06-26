@@ -52,12 +52,35 @@ function loadScript(src: string, id: string): Promise<void> {
   });
 }
 
+function parseMagicLinkError(err: unknown): string {
+  if (!(err instanceof Error)) return "We could not send the sign-in link. Try again.";
+  const match = err.message.match(/^(\d{3}):\s*(.+)$/s);
+  if (!match) return err.message || "We could not send the sign-in link. Try again.";
+
+  const status = match[1];
+  const body = match[2]?.trim() ?? "";
+
+  try {
+    const json = JSON.parse(body) as { message?: string };
+    if (json.message) return json.message;
+  } catch {
+    if (body) return body;
+  }
+
+  if (status === "429") return "Too many attempts. Try again in a few minutes.";
+  if (status === "503") return "Email is not configured on this server.";
+  if (status === "403") return "Security token expired. Refresh the page and try again.";
+  if (status === "400") return "Enter a valid email address.";
+  return "We could not send the sign-in link. Try again.";
+}
+
 export function SignInSheet() {
   const { signInOpen, closeSignIn, config, afterSignIn } = useAuth();
   const { toast } = useToast();
   const [email, setEmail] = useState("");
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
+  const [error, setError] = useState<string | null>(null);
   const [devLink, setDevLink] = useState<string | null>(null);
   const [oauthBusy, setOauthBusy] = useState(false);
   const googleRef = useRef<HTMLDivElement>(null);
@@ -117,22 +140,48 @@ export function SignInSheet() {
     const trimmed = email.trim();
     if (!trimmed) return;
     setSending(true);
+    setError(null);
     setDevLink(null);
     try {
       const res = await apiRequest("POST", "/api/auth/magic-link", { email: trimmed });
-      const body = await res.json();
-      setSent(true);
-      if (body.dev_link) setDevLink(body.dev_link);
-      toast({
-        title: body.sent ? "Check your email" : "Sign-in link ready",
-        description: body.sent
-          ? "We sent a magic link — tap it on this device to sign in."
-          : "Development mode: use the link below.",
-      });
-    } catch {
+      const body = (await res.json()) as {
+        sent?: boolean;
+        dev_link?: string;
+        message?: string;
+      };
+
+      if (body.sent) {
+        setSent(true);
+        toast({
+          title: "Check your email",
+          description: body.message ?? "Check your email for a sign-in link.",
+        });
+        return;
+      }
+
+      if (body.dev_link) {
+        setSent(true);
+        setDevLink(body.dev_link);
+        toast({
+          title: "Development sign-in link",
+          description: body.message ?? "Use the link below on this device.",
+        });
+        return;
+      }
+
+      const message = body.message ?? "We could not send the sign-in link. Try again.";
+      setError(message);
       toast({
         title: "Could not send link",
-        description: "Try again in a moment.",
+        description: message,
+        variant: "destructive",
+      });
+    } catch (err: unknown) {
+      const message = parseMagicLinkError(err);
+      setError(message);
+      toast({
+        title: "Could not send link",
+        description: message,
         variant: "destructive",
       });
     } finally {
@@ -197,6 +246,7 @@ export function SignInSheet() {
         if (!open) {
           closeSignIn();
           setSent(false);
+          setError(null);
           setDevLink(null);
           setEmail("");
         }
@@ -221,23 +271,39 @@ export function SignInSheet() {
                   autoComplete="email"
                   placeholder="you@firehall.org"
                   value={email}
-                  onChange={(e) => setEmail(e.target.value)}
+                  onChange={(e) => {
+                    setEmail(e.target.value);
+                    if (error) setError(null);
+                  }}
                   onKeyDown={(e) => e.key === "Enter" && void handleMagicLink()}
+                  aria-invalid={Boolean(error)}
+                  aria-describedby={error ? "sign-in-email-error" : undefined}
                 />
                 <Button
                   type="button"
                   onClick={() => void handleMagicLink()}
                   disabled={sending || !email.trim()}
                   className="shrink-0"
+                  aria-label={sending ? "Sending sign-in link" : "Send sign-in link"}
                 >
                   {sending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Mail className="w-4 h-4" />}
                 </Button>
               </div>
-              <p className="text-xs text-muted-foreground">Preferred — no password needed.</p>
+              {error ? (
+                <p id="sign-in-email-error" className="text-sm text-destructive" role="alert">
+                  {error}
+                </p>
+              ) : (
+                <p className="text-xs text-muted-foreground">Preferred — no password needed.</p>
+              )}
             </div>
           ) : (
-            <div className="rounded-xl border border-border/50 bg-muted/30 p-4 text-sm">
-              <p className="font-medium text-foreground">Check your inbox</p>
+            <div
+              className="rounded-xl border border-border/50 bg-muted/30 p-4 text-sm"
+              role="status"
+              aria-live="polite"
+            >
+              <p className="font-medium text-foreground">Check your email for a sign-in link.</p>
               <p className="text-muted-foreground mt-1">
                 Open the link on this device to finish signing in.
               </p>

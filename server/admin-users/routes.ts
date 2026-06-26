@@ -5,7 +5,7 @@ import { insertAnalyticsEvents } from "../analytics/analytics-store.js";
 import { subscribeToList } from "../klaviyo.js";
 import { adminSetUserPlan } from "../billing/store.js";
 import type { PlanId } from "../../shared/billing/types.js";
-import type { AdminLeadFilter, AdminUserFilter } from "../../shared/admin-users/types.js";
+import type { AdminLeadFilter, AdminSignupFilter, AdminUserFilter } from "../../shared/admin-users/types.js";
 import {
   backfillLeadsFromAnalytics,
   countEmailLeads,
@@ -17,13 +17,16 @@ import {
 import {
   adminCreateHallInvite,
   exportLeadsCsv,
+  exportSignupsCsv,
   exportUsersCsv,
   getAdminUserDetail,
   getPrimaryHallIdForUser,
   initAdminUsersStore,
+  listAdminSignups,
   listAdminUsers,
   updateAdminUserMeta,
 } from "./store.js";
+import { startHallProTrial } from "../billing/store.js";
 
 let storeReady = false;
 
@@ -56,9 +59,24 @@ const LEAD_FILTERS = new Set<AdminLeadFilter>([
   "hall_program",
   "pricing",
   "pilot",
+  "shopping_list",
+  "klaviyo_only",
   "converted",
   "not_converted",
   "hall_created",
+]);
+
+const SIGNUP_FILTERS = new Set<AdminSignupFilter>([
+  "all",
+  "registered_users",
+  "email_leads_only",
+  "joined_hall",
+  "no_hall_yet",
+  "hall_admins",
+  "canteen_managers",
+  "hall_pro_trial",
+  "active_last_7_days",
+  "inactive",
 ]);
 
 function parseUserFilter(raw: unknown): AdminUserFilter {
@@ -71,9 +89,20 @@ function parseLeadFilter(raw: unknown): AdminLeadFilter {
   return LEAD_FILTERS.has(key as AdminLeadFilter) ? (key as AdminLeadFilter) : "all";
 }
 
+function parseSignupFilter(raw: unknown): AdminSignupFilter {
+  const key = String(raw ?? "all");
+  return SIGNUP_FILTERS.has(key as AdminSignupFilter) ? (key as AdminSignupFilter) : "all";
+}
+
 function trackAdminEvent(
   req: Request,
-  eventType: "admin_users_viewed" | "admin_user_opened" | "admin_leads_viewed",
+  eventType:
+    | "admin_users_viewed"
+    | "admin_user_opened"
+    | "admin_leads_viewed"
+    | "admin_signups_viewed"
+    | "admin_signup_opened"
+    | "admin_signups_exported",
   metadata?: Record<string, string | number | boolean>,
 ): void {
   try {
@@ -91,6 +120,65 @@ const patchUserSchema = z.object({
 });
 
 export function registerAdminUsersRoutes(app: Express): void {
+  app.get("/api/admin/signups", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const filter = parseSignupFilter(req.query.filter);
+      const limit = Math.min(Number(req.query.limit) || 500, 2000);
+      const q = typeof req.query.q === "string" ? req.query.q : undefined;
+      const source = typeof req.query.source === "string" ? req.query.source : undefined;
+      const data = listAdminSignups(filter, { limit, q, source });
+      trackAdminEvent(req, "admin_signups_viewed", {
+        filter,
+        total: data.total,
+        query: q ?? "",
+      });
+      return res.json(data);
+    } catch (err) {
+      logError("admin-users", "list signups failed", err);
+      return res.status(500).json({ message: "Failed to load signups" });
+    }
+  });
+
+  app.get("/api/admin/signups/export", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const filter = parseSignupFilter(req.query.filter);
+      const q = typeof req.query.q === "string" ? req.query.q : undefined;
+      const source = typeof req.query.source === "string" ? req.query.source : undefined;
+      const csv = exportSignupsCsv(filter, { q, source });
+      trackAdminEvent(req, "admin_signups_exported", { filter, query: q ?? "" });
+      res.setHeader("Content-Type", "text/csv; charset=utf-8");
+      res.setHeader("Content-Disposition", `attachment; filename="signups-${filter}.csv"`);
+      return res.send(csv);
+    } catch (err) {
+      logError("admin-users", "export signups failed", err);
+      return res.status(500).json({ message: "Failed to export signups" });
+    }
+  });
+
+  const signupOpenedSchema = z.object({
+    email: z.string().email().optional(),
+    user_id: z.string().optional(),
+    row_id: z.string().optional(),
+  });
+
+  app.post("/api/admin/signups/opened", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const parsed = signupOpenedSchema.safeParse(req.body ?? {});
+      trackAdminEvent(req, "admin_signup_opened", {
+        email: parsed.success ? (parsed.data.email ?? "") : "",
+        user_id: parsed.success ? (parsed.data.user_id ?? "") : "",
+        row_id: parsed.success ? (parsed.data.row_id ?? "") : "",
+      });
+      return res.json({ ok: true });
+    } catch (err) {
+      logError("admin-users", "track signup opened failed", err);
+      return res.status(500).json({ message: "Failed to track event" });
+    }
+  });
+
   app.get("/api/admin/users", async (req: Request, res: Response) => {
     try {
       await ensureStore();
@@ -130,6 +218,22 @@ export function registerAdminUsersRoutes(app: Express): void {
     } catch (err) {
       logError("admin-users", "get user failed", err);
       return res.status(500).json({ message: "Failed to load user" });
+    }
+  });
+
+  app.post("/api/admin/users/:userId/hall-pro-trial", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const userId = String(req.params.userId ?? "");
+      const hallId = getPrimaryHallIdForUser(userId);
+      if (!hallId) return res.status(400).json({ message: "User has no hall membership" });
+      const subscription = startHallProTrial(hallId, userId);
+      const detail = getAdminUserDetail(userId);
+      if (!detail) return res.status(404).json({ message: "User not found" });
+      return res.json({ ok: true, subscription, detail });
+    } catch (err) {
+      logError("admin-users", "hall pro trial failed", err);
+      return res.status(500).json({ message: "Failed to start Hall Pro trial" });
     }
   });
 

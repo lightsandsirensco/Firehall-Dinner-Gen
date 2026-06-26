@@ -79,6 +79,9 @@ async function main(): Promise<void> {
   assert.ok(ANALYTICS_EVENT_TYPES.includes("hall_program_started"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("sync_completed"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("sync_failed"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("admin_signups_viewed"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("admin_signup_opened"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("admin_signups_exported"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("hall_dashboard_viewed"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("shift_dashboard_viewed"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("shift_meal_selected"));

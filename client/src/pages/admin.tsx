@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
-import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, ThumbsUp, BarChart3, CreditCard, TrendingUp, Tag } from "lucide-react";
+import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, ThumbsUp, BarChart3, CreditCard, TrendingUp, Tag, UserPlus, Mail } from "lucide-react";
 import { adminFetch } from "@/lib/admin-api";
 
 interface UsageData {
@@ -99,10 +99,22 @@ export default function AdminPage() {
                 Plans & Billing
               </Button>
             </Link>
+            <Link href="/admin/signups">
+              <Button variant="outline" data-testid="button-signups-admin">
+                <UserPlus className="w-4 h-4 mr-2" />
+                Signup Dashboard
+              </Button>
+            </Link>
+            <Link href="/admin/leads">
+              <Button variant="outline" data-testid="button-leads-admin">
+                <Mail className="w-4 h-4 mr-2" />
+                Email Leads
+              </Button>
+            </Link>
             <Link href="/admin/users">
               <Button variant="outline" data-testid="button-users-admin">
                 <Users className="w-4 h-4 mr-2" />
-                Users & Signups
+                Users
               </Button>
             </Link>
             <Link href="/admin/deals">
@@ -170,6 +182,18 @@ export default function AdminPage() {
             <Button variant="outline" size="sm" data-testid="button-billing-admin-nav">
               <CreditCard className="w-4 h-4 mr-2" />
               Plans & Billing
+            </Button>
+          </Link>
+          <Link href="/admin/signups">
+            <Button variant="outline" size="sm" data-testid="button-signups-admin-nav">
+              <UserPlus className="w-4 h-4 mr-2" />
+              Signups
+            </Button>
+          </Link>
+          <Link href="/admin/leads">
+            <Button variant="outline" size="sm" data-testid="button-leads-admin-nav">
+              <Mail className="w-4 h-4 mr-2" />
+              Leads
             </Button>
           </Link>
           <Link href="/admin/users">

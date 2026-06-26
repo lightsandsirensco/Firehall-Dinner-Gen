@@ -13,6 +13,7 @@ import { bindBillingDb } from "../server/billing/store.js";
 import {
   bindAdminUsersDb,
   getAdminUserDetail,
+  listAdminSignups,
   listAdminUsers,
   updateAdminUserMeta,
 } from "../server/admin-users/store.js";
@@ -81,6 +82,19 @@ async function main(): Promise<void> {
 
   const pilotUsers = listAdminUsers("pilot_leads", 100);
   assert.ok(pilotUsers.users.some((u) => u.user_id === user.user_id));
+
+  const allSignups = listAdminSignups("all", { limit: 100 });
+  assert.ok(allSignups.signups.some((s) => s.email === "captain@firehall.test"));
+  assert.ok(allSignups.signups.some((s) => s.email === "lead@firehall.test"));
+
+  const registeredOnly = listAdminSignups("registered_users", { limit: 100 });
+  assert.ok(registeredOnly.signups.every((s) => s.account_type === "registered"));
+
+  const joinedHall = listAdminSignups("joined_hall", { limit: 100 });
+  assert.ok(joinedHall.signups.some((s) => s.email === "captain@firehall.test"));
+
+  const searchByHall = listAdminSignups("all", { q: "Station 7", limit: 100 });
+  assert.ok(searchByHall.signups.some((s) => s.hall_name === "Station 7"));
 
   console.log("[test-admin-users] OK");
   releaseSqliteTimersForTests();

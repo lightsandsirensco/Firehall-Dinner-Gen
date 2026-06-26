@@ -69,6 +69,7 @@ const AccountPage = lazy(() => import("@/pages/account-page"));
 const PlansPage = lazy(() => import("@/pages/plans-page"));
 const AdminBillingPage = lazy(() => import("@/pages/admin-billing"));
 const AdminUsersPage = lazy(() => import("@/pages/admin-users"));
+const AdminSignupsPage = lazy(() => import("@/pages/admin-signups-page"));
 const AdminUserDetailPage = lazy(() => import("@/pages/admin-user-detail"));
 const AdminLeadsPage = lazy(() => import("@/pages/admin-leads"));
 const AdminDealsPage = lazy(() => import("@/pages/admin-deals"));
@@ -152,6 +153,7 @@ function AppRoutes() {
       <Route path="/admin/growth" component={AdminGrowthDashboardPage} />
       <Route path="/admin/billing" component={AdminBillingPage} />
       <Route path="/admin/users/:userId" component={AdminUserDetailPage} />
+      <Route path="/admin/signups" component={AdminSignupsPage} />
       <Route path="/admin/users" component={AdminUsersPage} />
       <Route path="/admin/leads" component={AdminLeadsPage} />
       <Route path="/admin/deals" component={AdminDealsPage} />

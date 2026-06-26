@@ -175,6 +175,10 @@ function leadFilterClause(filter: AdminLeadFilter): { where: string; params: unk
     case "pricing":
     case "pilot":
       return { where: "el.source = ?", params: [filter] };
+    case "shopping_list":
+      return { where: "el.source = 'shopping_list'", params: [] };
+    case "klaviyo_only":
+      return { where: "el.klaviyo_synced = 1", params: [] };
     case "converted":
       return { where: "el.converted_user_id IS NOT NULL", params: [] };
     case "not_converted":

@@ -1,6 +1,55 @@
 import type { PlanId } from "../billing/types.js";
 import type { HallRole } from "../hall-membership/types.js";
 
+export type AdminSignupFilter =
+  | "all"
+  | "registered_users"
+  | "email_leads_only"
+  | "joined_hall"
+  | "no_hall_yet"
+  | "hall_admins"
+  | "canteen_managers"
+  | "hall_pro_trial"
+  | "active_last_7_days"
+  | "inactive";
+
+export type AdminSignupRowType = "user" | "lead";
+
+export interface AdminSignupRow {
+  row_id: string;
+  row_type: AdminSignupRowType;
+  user_id: string | null;
+  lead_id: string | null;
+  hall_id: string | null;
+  email: string;
+  name: string;
+  signup_date: string;
+  signup_source: string;
+  account_type: "registered" | "lead_only";
+  last_active: string | null;
+  hall_linked: boolean;
+  hall_name: string | null;
+  shift: string | null;
+  role: HallRole | null;
+  plan: PlanId | "guest" | "lead";
+  hall_pro: boolean;
+  hall_pro_trial: boolean;
+  meals_generated: number;
+  votes_created: number;
+  recipes_saved: number;
+  lead_source: string | null;
+  klaviyo_synced: boolean;
+  is_pilot_lead: boolean;
+}
+
+export interface AdminSignupListResponse {
+  signups: AdminSignupRow[];
+  total: number;
+  filter: AdminSignupFilter;
+  source_filter: string | null;
+  query: string | null;
+}
+
 export type AdminUserFilter =
   | "all"
   | "new_users"
@@ -23,7 +72,9 @@ export type AdminLeadFilter =
   | "pilot"
   | "converted"
   | "not_converted"
-  | "hall_created";
+  | "hall_created"
+  | "shopping_list"
+  | "klaviyo_only";
 
 export type EmailLeadSource =
   | "homepage"

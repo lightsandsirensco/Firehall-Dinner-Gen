@@ -1,8 +1,8 @@
-import { ChefHat, Link2, Users } from "lucide-react";
+import { ListChecks, Sparkles, Users } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { HOME } from "@/lib/brand-copy";
 
-const STEP_ICONS = [ChefHat, Users, Link2] as const;
+const STEP_ICONS = [Sparkles, Users, ListChecks] as const;
 
 export function HomeHowItWorks() {
   return (
@@ -22,7 +22,7 @@ export function HomeHowItWorks() {
 
       <ol className="mt-8 grid gap-4 sm:grid-cols-3 sm:gap-5">
         {HOME.howSteps.map(({ step, title, body }, index) => {
-          const Icon = STEP_ICONS[index] ?? ChefHat;
+          const Icon = STEP_ICONS[index] ?? Sparkles;
           return (
             <li
               key={step}

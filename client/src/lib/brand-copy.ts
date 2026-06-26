@@ -162,9 +162,7 @@ export const HOME = {
   /** Visible hero — answers "What does this app do for me?" */
   heroHeadline: "Pick dinner for your shift — fast.",
   heroSubheadline:
-    "Crew-sized recipes, saved meals, and cook mode built for firefighters — not single-plate food blogs.",
-  heroActionLine:
-    "Connect your account to your hall when you want shared votes, shopping lists, and meal history.",
+    "Crew-sized recipes and cook mode built for firefighters — not single-plate food blogs.",
   heroTrustLine: "Built by firefighters. Free to cook — no hall required.",
   heroEyebrow: "For firefighters · Your shift · Your meals",
   /** @deprecated Use heroHeadline */
@@ -186,72 +184,83 @@ export const HOME = {
     crew: "Crew size",
     time: "Time windows",
   },
-  howTitle: "How it works for you",
-  howLead: "Start solo. Link your hall when the crew wants to plan together.",
+  howTitle: "How it works",
+  howLead: "Three steps from \"what's for dinner?\" to food on the table.",
   howSteps: [
     {
       step: "01",
-      title: "Pick tonight's meal",
-      body: "Set crew size and time — get a hall-tested recipe in seconds, or browse 300+ options.",
+      title: "Pick a meal",
+      body: "Hall Match, the Classics Wheel, or browse 300+ crew-tested recipes — sized for your run.",
     },
     {
       step: "02",
-      title: "Cook with confidence",
-      body: "Crew-scaled ingredients, step-by-step cook mode, and shopping lists sized for your run.",
+      title: "Let the crew vote",
+      body: "Send options to the hall. Everyone taps a pick — no more 40-minute group chat debates.",
     },
     {
       step: "03",
-      title: "Connect to your hall",
-      body: "Optional — link your account for shared dinner votes, grocery lists, and crew meal history.",
+      title: "Shop and cook",
+      body: "Crew-scaled shopping list, step-by-step cook mode, and portions that actually feed the table.",
     },
   ],
-  featuresTitle: "What you get",
-  featuresLead: "Personal tools that work on any shift — hall link is optional.",
-  features: [
+  whyTitle: "Why firefighters use it",
+  whyLead: "Less debate. More dinner. Built for shift night — at home or at the hall.",
+  whyBenefits: [
     {
-      title: "Pick tonight's meal",
-      body: "Hall Match finds a crew-sized recipe from 300+ firefighter-tested meals in under 30 seconds.",
+      title: "Ends the dinner debate",
+      body: "Pick fast, vote once, move on. Nobody's stuck asking twenty guys what they want.",
     },
     {
-      title: "Save meals you love",
-      body: "Build your own rotation — sync saves across devices so your favorites follow you shift to shift.",
+      title: "Built for crew-sized meals",
+      body: "Portions scale for two on duty or twelve at the table — no spreadsheet math.",
     },
     {
-      title: "Crew-sized by default",
-      body: "Portions scale for two on duty or twelve at the table. No spreadsheet math.",
+      title: "Saves grocery run guesswork",
+      body: "Shopping lists sized for your crew. Grab what you need in one trip.",
     },
     {
-      title: "Shopping lists that fit",
-      body: "Export ingredients sized for your crew — grab groceries once, feed everyone.",
+      title: "Works for home or hall",
+      body: "Cook solo on your shift, or link your hall when the crew wants to plan together.",
     },
     {
-      title: "Classics Wheel",
-      body: "When you can't decide alone, spin ten hall-tested picks and go.",
-    },
-    {
-      title: "Link your hall",
-      body: "Connect your account for shared votes, shopping lists, and meal history — when your crew is ready.",
+      title: "Connect your hall when ready",
+      body: "Optional — shared votes, lists, staples, and meal history when your crew is set up.",
     },
   ],
-  hallConnectTitle: "Cooking for the crew?",
-  hallConnectLead:
-    "Connect your account to your hall for shared dinner planning — votes, grocery lists, and meal history. Free to join.",
+  hallSectionTitle: "Cooking with your crew?",
+  hallSectionLead:
+    "Link your account to your hall for shared planning — free to join, optional until you're ready.",
+  hallSectionFeatures: [
+    {
+      title: "Connect your account",
+      body: "Join with a crew code or invite link. Your saves and profile come with you.",
+    },
+    {
+      title: "Shared shopping list",
+      body: "One list for the grocery run — sized for the hall, not a single plate.",
+    },
+    {
+      title: "Canteen staples",
+      body: "Track what's low, what's out, and what the crew needs restocked.",
+    },
+    {
+      title: "Hall meal history",
+      body: "See what the crew cooked, voted on, and wants again.",
+    },
+  ],
   curatedRecipesLabel: "300+ curated recipes",
   curatedRecipesCount: "300+",
   featuredTitle: "Meals firefighters actually cook",
   featuredLead: "Hall-tested picks — browse the full catalog anytime.",
-  whyTitle: "Built for shift night",
-  whyLead: "Written for firefighters on the line, not the recipe scroll.",
   seoTitle: "The meal app for firefighters",
   introTitle: "Firefighter meals sized for your shift",
-  ctaBandTitle: "Pick your next shift dinner.",
-  ctaBandBody: "Free to use. Save meals, scale for your crew, and cook with steps that respect the bell.",
-  ctaBandSecondary: "Connect to your hall",
+  ctaBandTitle: "Ready for your next shift dinner?",
+  ctaBandBody: "Pick a meal, spin the wheel, or browse the catalog — free to use.",
+  ctaBandSecondary: "Spin the Wheel",
   emailCaptureTitle: "Get new recipes in your inbox",
   emailCaptureLead: "Weekly firefighter meals and new catalog drops — no spam, unsubscribe anytime.",
   emailCaptureCta: "Subscribe",
   faqTitle: "Questions from the crew",
-  trustStrip: "Free for firefighters · 300+ recipes · Crew-sized · Shift-tested",
 } as const;
 
 export const NAV = {

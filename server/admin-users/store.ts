@@ -7,6 +7,9 @@ import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
 import { runDbMigrations } from "../db/migrate.js";
 import type {
   AdminLeadRow,
+  AdminSignupFilter,
+  AdminSignupListResponse,
+  AdminSignupRow,
   AdminUserActivityItem,
   AdminUserDetail,
   AdminUserFilter,
@@ -17,7 +20,7 @@ import type {
 } from "../../shared/admin-users/types.js";
 import type { PlanId } from "../../shared/billing/types.js";
 import type { HallRole } from "../../shared/hall-membership/types.js";
-import { getLeadsForEmail } from "./leads-store.js";
+import { getLeadsForEmail, listEmailLeads } from "./leads-store.js";
 
 let db: SqliteDatabase;
 
@@ -167,6 +170,27 @@ const USER_SELECT = `
   LEFT JOIN user_subscriptions us ON us.user_id = u.user_id AND us.status IN ('active', 'trialing')
   LEFT JOIN admin_user_meta am ON am.user_id = u.user_id
 `;
+
+const SIGNUP_EXTRA_SELECT = `
+    ,(
+      SELECT CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END FROM hall_memberships hm
+      JOIN hall_subscriptions hsub ON hsub.hall_id = hm.hall_id
+      WHERE hm.user_id = u.user_id AND hsub.plan_id = 'hall_pro' AND hsub.status = 'trialing'
+    ) AS hall_pro_trial,
+    (
+      SELECT CASE WHEN COUNT(*) > 0 THEN 1 ELSE 0 END FROM email_leads el
+      WHERE lower(el.email) = lower(u.email) AND el.klaviyo_synced = 1
+    ) AS klaviyo_synced
+  FROM users u
+  LEFT JOIN user_profiles p ON p.user_id = u.user_id
+  LEFT JOIN user_subscriptions us ON us.user_id = u.user_id AND us.status IN ('active', 'trialing')
+  LEFT JOIN admin_user_meta am ON am.user_id = u.user_id
+`;
+
+const SIGNUP_USER_SELECT = USER_SELECT.replace(
+  "  FROM users u\n  LEFT JOIN user_profiles p ON p.user_id = u.user_id\n  LEFT JOIN user_subscriptions us ON us.user_id = u.user_id AND us.status IN ('active', 'trialing')\n  LEFT JOIN admin_user_meta am ON am.user_id = u.user_id",
+  SIGNUP_EXTRA_SELECT.trim(),
+);
 
 function rowToUser(row: Record<string, unknown>): AdminUserRow {
   const email = row.email ? String(row.email) : null;
@@ -489,4 +513,267 @@ export function adminCreateHallInvite(
   ).run(inviteId, hallId, inviteToken, createdByUserId, expiresAt);
 
   return { invite_url: inviteUrl, invite_code: null };
+}
+
+function formatSignupSource(user: AdminUserRow): string {
+  if (user.email_capture_source) return user.email_capture_source;
+  switch (user.auth_provider) {
+    case "magic_link":
+      return "magic_link";
+    case "google":
+      return "google";
+    case "apple":
+      return "apple";
+    default:
+      return user.auth_provider || "account";
+  }
+}
+
+function userToSignupRow(user: AdminUserRow, hallProTrial: boolean): AdminSignupRow {
+  return {
+    row_id: `user:${user.user_id}`,
+    row_type: "user",
+    user_id: user.user_id,
+    lead_id: null,
+    hall_id: null,
+    email: user.email ?? "",
+    name: user.name,
+    signup_date: user.signup_date,
+    signup_source: formatSignupSource(user),
+    account_type: "registered",
+    last_active: user.last_active,
+    hall_linked: Boolean(user.hall_name),
+    hall_name: user.hall_name,
+    shift: user.shift,
+    role: user.hall_role,
+    plan: user.plan,
+    hall_pro: user.hall_pro,
+    hall_pro_trial: hallProTrial,
+    meals_generated: user.meals_generated,
+    votes_created: user.votes_created,
+    recipes_saved: user.saved_recipes,
+    lead_source: user.email_capture_source,
+    klaviyo_synced: false,
+    is_pilot_lead: user.is_pilot_lead,
+  };
+}
+
+function signupFilterClause(filter: AdminSignupFilter): { where: string; params: unknown[] } {
+  switch (filter) {
+    case "registered_users":
+      return { where: "1=1", params: [] };
+    case "email_leads_only":
+      return {
+        where: `EXISTS (SELECT 1 FROM email_leads el WHERE lower(el.email) = lower(u.email))`,
+        params: [],
+      };
+    case "joined_hall":
+      return {
+        where: `EXISTS (SELECT 1 FROM hall_memberships hm WHERE hm.user_id = u.user_id)`,
+        params: [],
+      };
+    case "no_hall_yet":
+      return {
+        where: `NOT EXISTS (SELECT 1 FROM hall_memberships hm WHERE hm.user_id = u.user_id)`,
+        params: [],
+      };
+    case "hall_admins":
+      return {
+        where: `EXISTS (
+          SELECT 1 FROM hall_memberships hm
+          WHERE hm.user_id = u.user_id AND hm.role = 'captain'
+        )`,
+        params: [],
+      };
+    case "canteen_managers":
+      return {
+        where: `EXISTS (
+          SELECT 1 FROM hall_memberships hm
+          WHERE hm.user_id = u.user_id AND hm.role = 'canteen_manager'
+        )`,
+        params: [],
+      };
+    case "hall_pro_trial":
+      return {
+        where: `EXISTS (
+          SELECT 1 FROM hall_memberships hm
+          JOIN hall_subscriptions hs ON hs.hall_id = hm.hall_id
+          WHERE hm.user_id = u.user_id AND hs.plan_id = 'hall_pro' AND hs.status = 'trialing'
+        )`,
+        params: [],
+      };
+    case "active_last_7_days":
+      return {
+        where: `(u.last_login_at >= datetime('now', '-7 days')
+          OR EXISTS (
+            SELECT 1 FROM hall_activity_events hae
+            WHERE hae.user_id = u.user_id AND hae.occurred_at >= datetime('now', '-7 days')
+          ))`,
+        params: [],
+      };
+    case "inactive":
+      return {
+        where: `(u.last_login_at IS NULL OR u.last_login_at < datetime('now', '-30 days'))
+          AND NOT EXISTS (
+            SELECT 1 FROM hall_activity_events hae
+            WHERE hae.user_id = u.user_id AND hae.occurred_at >= datetime('now', '-30 days')
+          )`,
+        params: [],
+      };
+    default:
+      return { where: "1=1", params: [] };
+  }
+}
+
+function includesLeadOnlyRows(filter: AdminSignupFilter): boolean {
+  return filter === "all" || filter === "email_leads_only";
+}
+
+function leadToSignupRow(lead: AdminLeadRow): AdminSignupRow {
+  const email = lead.email;
+  return {
+    row_id: `lead:${lead.lead_id}`,
+    row_type: "lead",
+    user_id: lead.converted_user_id,
+    lead_id: lead.lead_id,
+    hall_id: null,
+    email,
+    name: email.split("@")[0] ?? email,
+    signup_date: lead.captured_at,
+    signup_source: lead.source,
+    account_type: "lead_only",
+    last_active: lead.last_activity,
+    hall_linked: lead.hall_created,
+    hall_name: null,
+    shift: null,
+    role: null,
+    plan: "lead",
+    hall_pro: false,
+    hall_pro_trial: false,
+    meals_generated: 0,
+    votes_created: 0,
+    recipes_saved: 0,
+    lead_source: lead.source,
+    klaviyo_synced: lead.klaviyo_synced,
+    is_pilot_lead: false,
+  };
+}
+
+function matchesSignupSearch(row: AdminSignupRow, q: string): boolean {
+  const needle = q.trim().toLowerCase();
+  if (!needle) return true;
+  return (
+    row.email.toLowerCase().includes(needle) ||
+    row.name.toLowerCase().includes(needle) ||
+    (row.hall_name?.toLowerCase().includes(needle) ?? false)
+  );
+}
+
+function matchesSourceFilter(row: AdminSignupRow, source: string | null): boolean {
+  if (!source) return true;
+  const key = source.trim().toLowerCase();
+  return (
+    row.signup_source.toLowerCase() === key ||
+    row.lead_source?.toLowerCase() === key
+  );
+}
+
+export function listAdminSignups(
+  filter: AdminSignupFilter = "all",
+  options: { limit?: number; q?: string; source?: string | null } = {},
+): AdminSignupListResponse {
+  const d = getDb();
+  const limit = Math.min(options.limit ?? 500, 2000);
+  const { where, params } = signupFilterClause(filter);
+
+  let sourceClause = "";
+  const sourceParams: Array<string | number> = [];
+  if (options.source) {
+    sourceClause = ` AND (
+      EXISTS (SELECT 1 FROM email_leads el WHERE lower(el.email) = lower(u.email) AND el.source = ?)
+      OR u.auth_provider = ?
+    )`;
+    sourceParams.push(options.source, options.source);
+  }
+
+  const rows = d
+    .prepare(
+      `${SIGNUP_USER_SELECT}
+       WHERE u.is_guest = 0 AND ${where}${sourceClause}
+       GROUP BY u.user_id
+       ORDER BY u.created_at DESC LIMIT ?`,
+    )
+    .all(...(params as Array<string | number>), ...sourceParams, limit) as Array<Record<string, unknown>>;
+
+  const userSignups = rows.map((row) => {
+    const user = rowToUser(row);
+    const signup = userToSignupRow(user, Number(row.hall_pro_trial) === 1);
+    signup.klaviyo_synced = Number(row.klaviyo_synced) === 1;
+    signup.hall_id = getPrimaryHallIdForUser(user.user_id);
+    return signup;
+  });
+
+  let signups = userSignups;
+
+  if (includesLeadOnlyRows(filter)) {
+    const leadFilter =
+      filter === "email_leads_only" ? ("not_converted" as const) : ("all" as const);
+    const leads = listEmailLeads(leadFilter, 2000).filter((l) => !l.converted_to_user);
+    const userEmails = new Set(userSignups.map((u) => u.email.toLowerCase()));
+    const leadRows = leads
+      .filter((l) => !userEmails.has(l.email.toLowerCase()))
+      .map(leadToSignupRow);
+    signups = [...userSignups, ...leadRows].sort(
+      (a, b) => (a.signup_date < b.signup_date ? 1 : -1),
+    );
+  }
+
+  const q = options.q?.trim() ?? "";
+  const source = options.source ?? null;
+  signups = signups.filter((row) => matchesSignupSearch(row, q) && matchesSourceFilter(row, source));
+
+  return {
+    signups: signups.slice(0, limit),
+    total: signups.length,
+    filter,
+    source_filter: source,
+    query: q || null,
+  };
+}
+
+export function exportSignupsCsv(
+  filter: AdminSignupFilter = "all",
+  options: { q?: string; source?: string | null } = {},
+): string {
+  const { signups } = listAdminSignups(filter, { ...options, limit: 5000 });
+  const header =
+    "row_id,row_type,email,name,signup_date,signup_source,account_type,last_active,hall_linked,hall_name,shift,role,plan,hall_pro,hall_pro_trial,meals_generated,votes_created,recipes_saved,lead_source,klaviyo_synced,is_pilot_lead,user_id,lead_id";
+  const lines = signups.map((s) =>
+    [
+      s.row_id,
+      s.row_type,
+      csvEscape(s.email),
+      csvEscape(s.name),
+      s.signup_date,
+      csvEscape(s.signup_source),
+      s.account_type,
+      s.last_active ?? "",
+      s.hall_linked ? "yes" : "no",
+      csvEscape(s.hall_name ?? ""),
+      csvEscape(s.shift ?? ""),
+      csvEscape(s.role ?? ""),
+      s.plan,
+      s.hall_pro ? "yes" : "no",
+      s.hall_pro_trial ? "yes" : "no",
+      s.meals_generated,
+      s.votes_created,
+      s.recipes_saved,
+      csvEscape(s.lead_source ?? ""),
+      s.klaviyo_synced ? "yes" : "no",
+      s.is_pilot_lead ? "yes" : "no",
+      s.user_id ?? "",
+      s.lead_id ?? "",
+    ].join(","),
+  );
+  return [header, ...lines].join("\n");
 }

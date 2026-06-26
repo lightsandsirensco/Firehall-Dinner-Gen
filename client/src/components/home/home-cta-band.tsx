@@ -36,7 +36,7 @@ export function HomeCtaBand() {
             variant="outline"
             className="h-12 px-8 font-medium w-full sm:w-auto"
           >
-            <Link href="/hall/join" data-testid="home-cta-band-hall">
+            <Link href="/wheel" data-testid="home-cta-band-wheel">
               {HOME.ctaBandSecondary}
             </Link>
           </Button>

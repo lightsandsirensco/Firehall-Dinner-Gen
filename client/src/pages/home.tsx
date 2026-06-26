@@ -5,13 +5,11 @@ import { useHomeSeo } from "@/lib/seo/use-home-seo";
 import { fetchGoldenCatalogIndex } from "@/lib/golden-recipe-api";
 import { HomeHero } from "@/components/home/home-hero";
 import { HomeSeoIntro } from "@/components/home/home-seo-intro";
-import { HomeTrustStrip } from "@/components/home/home-trust-strip";
 import { HomeHowItWorks } from "@/components/home/home-how-it-works";
-import { HomeFeatures } from "@/components/home/home-features";
+import { HomeWhyCrews } from "@/components/home/home-why-crews";
 import { HomeHallVote } from "@/components/home/home-hall-vote";
 import { HomeFeaturedMeals } from "@/components/home/home-featured-meals";
 import { HomeSocialProof } from "@/components/home/home-social-proof";
-import { HomeWhyCrews } from "@/components/home/home-why-crews";
 import { HomeSeoEditorial } from "@/components/home/home-seo-editorial";
 import { HomeCtaBand } from "@/components/home/home-cta-band";
 import { HomeEmailCapture } from "@/components/home/home-email-capture";
@@ -38,17 +36,15 @@ export default function Home() {
 
       <main>
         <HomeHowItWorks />
-        <HomeFeatures />
-        <HomeFeaturedMeals meals={catalogMeals} loading={catalogLoading} />
+        <HomeWhyCrews />
         <HomeSocialProof />
-        <HomeTrustStrip />
+        <HomeFeaturedMeals meals={catalogMeals} loading={catalogLoading} />
         <HomeHallVote />
         <HomeCtaBand />
 
         <div className="hidden md:block border-t border-border/20">
           <HomeSeoIntro />
           <HomeLightsAuthenticity />
-          <HomeWhyCrews />
           <HomeSeoEditorial />
         </div>
 

@@ -18,6 +18,7 @@ import { sendMagicLinkEmail } from "./magic-link-mail.js";
 import { verifyAppleIdToken, verifyGoogleIdToken } from "./oauth-verify.js";
 import { attachAuthUser, requireAuth, type AuthedRequest } from "./auth-middleware.js";
 import { requireCsrf } from "../csrf.js";
+import { enforceEmailRateLimit } from "../email-rate-limit.js";
 import { logError } from "../logger.js";
 import {
   magicLinkRequestSchema,
@@ -101,21 +102,41 @@ export function registerAuthRoutes(app: Express): void {
         return res.status(400).json({ message: "Enter a valid email address" });
       }
 
+      if (!enforceEmailRateLimit(req, res, parsed.data.email)) return;
+
       const { rawToken } = createMagicLink(parsed.data.email);
       const mail = await sendMagicLinkEmail(parsed.data.email, rawToken);
 
-      const exposeDev =
-        process.env.NODE_ENV !== "production" ||
-        process.env.AUTH_MAGIC_LINK_DEV_EXPOSE === "true";
+      if (mail.sent) {
+        return res.json({
+          ok: true,
+          sent: true,
+          message: "Check your email for a sign-in link.",
+        });
+      }
 
-      return res.json({
-        ok: true,
-        sent: mail.sent,
-        ...(exposeDev && mail.devLink ? { dev_link: mail.devLink } : {}),
-      });
+      if ("mode" in mail && mail.mode === "development") {
+        return res.json({
+          ok: true,
+          sent: false,
+          dev_link: mail.devLink,
+          message: "Development mode: use the sign-in link below.",
+        });
+      }
+
+      if ("error" in mail) {
+        if (mail.error === "not_configured") {
+          return res.status(503).json({ message: mail.message });
+        }
+        return res.status(502).json({
+          message: mail.message || "We could not send the sign-in link. Try again.",
+        });
+      }
+
+      return res.status(500).json({ message: "We could not send the sign-in link. Try again." });
     } catch (err) {
       logError("auth", "magic-link failed", err);
-      return res.status(500).json({ message: "Could not send sign-in link" });
+      return res.status(500).json({ message: "We could not send the sign-in link. Try again." });
     }
   });
 

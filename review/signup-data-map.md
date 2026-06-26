@@ -1,7 +1,21 @@
 # Signup & Contact Data Map
 
-Audit date: 2026-06-22  
+Audit date: 2026-06-22 (updated for founder Signup Dashboard)  
 Scope: every user-facing path that collects email or contact/profile information, where it is stored, and how admins can access it.
+
+---
+
+## Founder admin dashboards
+
+| Route | Purpose | Auth | SEO |
+|-------|---------|------|-----|
+| **`/admin/signups`** | Unified signup CRM — registered users + unconverted email leads in one searchable table | `ADMIN_SECRET` via `x-admin-key` (`client/src/lib/admin-api.ts`) | `noindex, nofollow` via `AdminPageShell`; excluded from `sitemap.xml`; `robots.txt` disallows `/admin` |
+| **`/admin/leads`** | Email-only leads from marketing forms (homepage, generator, PDF, shopping list, etc.) | Same | Same |
+| `/admin/users` | Legacy user list + detail (still linked from signups drawer) | Same | Same |
+
+**Security (fail closed):** If `ADMIN_SECRET` is unset, `requireAdmin` returns **503** and no admin data is served. Wrong key → **401**. Routes are not in public nav (`client/src/lib/app-nav.ts` excludes `/admin`).
+
+**Analytics (product DB):** `admin_signups_viewed`, `admin_signup_opened`, `admin_signups_exported` (server-side on list/export/drawer open).
 
 ---
 
@@ -51,18 +65,20 @@ flowchart LR
 
 ## Master table
 
-| # | Form / component | API endpoint | DB table(s) | Klaviyo | Analytics (product) | Fields collected | Admin view | Exportable |
-|---|------------------|--------------|-------------|---------|---------------------|------------------|------------|------------|
-| 1 | `HomeEmailCapture` | `POST /api/homepage-subscribe` | `email_leads` | List + **Homepage Subscriber** event | `email_capture` (`source: homepage`) | `email` | `/admin/leads` | Yes — leads CSV |
-| 2 | `EmailModal` | `POST /api/email-recipe` | `email_leads` | List + **Recipe Generated** event | `email_capture` (`source: generator`) | `email` + full recipe payload | `/admin/leads`; user row if converted | Yes — leads CSV; users CSV if account exists |
-| 3 | `ShoppingListModal` | `POST /api/email-shopping-list` | `email_leads` | List + **Shopping List Requested** event | `shopping_list_action` only (not `email_capture`) | `email` + shopping list sections | `/admin/leads` | Yes — leads CSV |
-| 4 | `RedLeadPdfCapture` | `POST /api/lead-magnet/red-lead` | `email_leads` | List + **Lead Magnet Downloaded** event | `email_capture` (`source: red_lead`) | `email` | `/admin/leads` | Yes — leads CSV |
-| 5 | `SignInSheet` (magic link) | `POST /api/auth/magic-link` → `GET /api/auth/verify-magic` | `auth_magic_links` (temp), then `users` | No | `account_created` / `login` (provider only, no email in metadata) | `email` | `/admin/users`, `/admin/users/:id` | Yes — users CSV |
-| 6 | `SignInSheet` (Google) | `POST /api/auth/google` | `users`, `user_profiles` | No | `account_created` / `login` | `email`, `first_name`, `last_name` (from token) | `/admin/users`, `/admin/users/:id` | Yes — users CSV |
-| 7 | `SignInSheet` (Apple) | `POST /api/auth/apple` | `users`, `user_profiles` | No | `account_created` / `login` | `email`, `first_name`, `last_name` (first sign-in only) | `/admin/users`, `/admin/users/:id` | Yes — users CSV |
-| 8 | `HallFeedbackModal` | `POST /api/hall-feedback` | `hall_feedback` | No | GA4-style `hall_feedback_*` only (not product DB) | `message`, optional `email`, `source`, `page_path` | **None** | **No** |
-| 9 | `AccountProfileForm` | `PATCH /api/auth/profile` | `user_profiles`, `user_preferences` | No | `profile_updated` | Name, photo URL, department, hall name, shift, crew size, proteins, dietary, appliances, shift reminder schedule | `/admin/users/:id` (profile section) | Yes — users CSV (partial profile fields on detail only) |
-| 10 | Admin manual | `POST /api/admin/users/:userId/klaviyo` | `email_leads.klaviyo_synced` updated | List subscribe | — | Existing user email | `/admin/users/:id` | — |
+| # | Form / component | API endpoint | DB table(s) | Klaviyo | Analytics (product) | Fields collected | `/admin/signups` | `/admin/leads` | Exportable |
+|---|------------------|--------------|-------------|---------|---------------------|------------------|------------------|----------------|------------|
+| 1 | `HomeEmailCapture` | `POST /api/homepage-subscribe` | `email_leads` | List + **Homepage Subscriber** event | `email_capture` (`source: homepage`) | `email` | Yes (lead row or merged user) | Yes — filter Homepage | Yes — both CSVs |
+| 2 | `EmailModal` | `POST /api/email-recipe` | `email_leads` | List + **Recipe Generated** event | `email_capture` (`source: generator`) | `email` + full recipe payload | Yes | Yes — filter Generator | Yes |
+| 3 | `ShoppingListModal` | `POST /api/email-shopping-list` | `email_leads` | List + **Shopping List Requested** event | `shopping_list_action` only (not `email_capture`) | `email` + shopping list sections | Yes | Yes — filter Shopping list | Yes |
+| 4 | `RedLeadPdfCapture` | `POST /api/lead-magnet/red-lead` | `email_leads` | List + **Lead Magnet Downloaded** event | `email_capture` (`source: red_lead`) | `email` | Yes | Yes — filter Red Lead PDF | Yes |
+| 5 | `SignInSheet` (magic link) | `POST /api/auth/magic-link` → `GET /api/auth/verify-magic` | `auth_magic_links` (temp), then `users` | No | `account_created` / `login` (`provider: email`) | `email` | Yes — registered user row | No (account, not lead) | Signups CSV |
+| 6 | `SignInSheet` (Google) | `POST /api/auth/google` | `users`, `user_profiles` | No | `account_created` / `login` | `email`, `first_name`, `last_name` | Yes | No | Signups CSV |
+| 7 | `SignInSheet` (Apple) | `POST /api/auth/apple` | `users`, `user_profiles` | No | `account_created` / `login` | `email`, name (first sign-in) | Yes | No | Signups CSV |
+| 8 | `HallFeedbackModal` | `POST /api/hall-feedback` | `hall_feedback` | No | GA4 `hall_feedback_*` only | `message`, optional `email` | **No** | **No** | **No** |
+| 9 | `AccountProfileForm` | `PATCH /api/auth/profile` | `user_profiles`, `user_preferences` | No | `profile_updated` | Name, hall context, prefs | Yes (profile on user detail) | No | Signups CSV (partial) |
+| 10 | Hall join / create | `POST /api/halls`, invite accept | `halls`, `hall_members` | No | `hall_created`, `hall_joined` | Account email (existing user) | Yes — hall columns | N/A | Signups CSV |
+| 11 | Admin manual Klaviyo | `POST /api/admin/users/:userId/klaviyo` | `email_leads.klaviyo_synced` | List subscribe | — | Existing user email | Yes — Klaviyo column | If lead exists | — |
+| 12 | Admin-created users | `upsertEmailUser` (auth store) | `users` | No | — | `email` | Yes | No | Signups CSV |
 
 **Aggregate analytics (counts only, no PII export):** `/admin/analytics` shows total `email_captures` from `analytics_events`.
 
@@ -115,10 +131,10 @@ flowchart LR
 | **DB** | `email_leads` (`source: "shopping_list"`, `signup_form: "email-shopping-list"`) |
 | **Klaviyo** | `subscribeToList(email)` + metric **Shopping List Requested** |
 | **Analytics** | `shopping_list_open`, `shopping_list_action` with `action: "email"` — **does not** fire product `email_capture` |
-| **Admin** | `/admin/leads` — no dedicated “shopping_list” filter in UI (source stored as `shopping_list` in DB; filter list uses named sources only) |
+| **Admin** | `/admin/signups` + `/admin/leads` (filter: Shopping list) |
 | **Export** | Leads CSV (`filter=all` or backfill) |
 
-**Gap:** Leads admin filter bar has no “Shopping list” chip; data is still in `email_leads` with `source = shopping_list`.
+**Gap:** ~~Leads admin filter bar has no “Shopping list” chip~~ **Fixed** — `/admin/leads` now includes Shopping list and Klaviyo synced filters.
 
 ---
 
@@ -242,8 +258,11 @@ Account signups do **not** call Klaviyo unless admin uses `POST /api/admin/users
 | `profile_updated` | Profile save | `has_photo` (server) |
 | `shopping_list_action` | Shopping list email/copy/print | `action: email`, `recipe_title`, `generator_type` |
 | `admin_users_viewed` | Admin opens users list | `filter`, `total` |
-| `admin_user_opened` | Admin opens user detail | `user_id` |
+| `admin_user_opened` | Admin opens user detail (`/admin/users/:id`) | `user_id` |
 | `admin_leads_viewed` | Admin opens leads list | `filter`, `total` |
+| `admin_signups_viewed` | Admin opens signup dashboard | `filter`, `total`, `query` |
+| `admin_signup_opened` | Admin opens signup detail drawer | `email`, `user_id`, `row_id` |
+| `admin_signups_exported` | Admin exports signups CSV | `filter`, `query` |
 
 ### Client-only (GA4 / gtag, not `email_leads`)
 
@@ -265,8 +284,9 @@ Account signups do **not** call Klaviyo unless admin uses `POST /api/admin/users
 
 | Data | View in app | Export |
 |------|-------------|--------|
-| Email leads (all marketing forms) | `/admin/leads` | `GET /api/admin/leads/export` |
-| Registered users + lead source | `/admin/users`, `/admin/users/:id` | `GET /api/admin/users/export` |
+| **Unified signups (users + leads)** | **`/admin/signups`** | `GET /api/admin/signups/export` |
+| Email leads (marketing forms only) | `/admin/leads` | `GET /api/admin/leads/export` |
+| Registered users (legacy list) | `/admin/users`, `/admin/users/:id` | `GET /api/admin/users/export` |
 | Klaviyo sync status | User detail + leads table | Klaviyo UI |
 | Pilot flag / internal notes | User detail (`admin_user_meta`) | Users CSV (`is_pilot_lead` only) |
 | Email capture totals | `/admin/analytics` | No |
@@ -281,13 +301,15 @@ All `/api/admin/*` routes require `ADMIN_SECRET` (`x-admin-key` header).
 ## Gaps & inconsistencies
 
 1. **Hall feedback** is stored in `hall_feedback` with no admin UI or export.
-2. **Shopping list leads** land in `email_leads` but the leads admin filter bar has no `shopping_list` option.
+2. ~~**Shopping list leads** land in `email_leads` but the leads admin filter bar has no `shopping_list` option.~~ **Fixed.**
 3. **Email recipe modal** on explore/package pages still records `source: generator` in both `email_leads` and analytics.
 4. **Shopping list email** does not emit product `email_capture` — only `shopping_list_action`.
 5. **Account signups** are not auto-added to Klaviyo; only marketing forms + manual admin action.
 6. **Analytics `email_capture` events** do not store raw email in metadata (privacy-friendly but limits backfill quality).
-7. **Defined but unused lead sources** in types: `hall_program`, `pricing`, `pilot` — no live capture forms yet.
+7. **Defined but unused lead sources** in types: `hall_program`, `pricing`, `pilot` — no live capture forms yet (filters exist for future / backfill).
 8. **`/hall-program` and `/plans`** — no email forms; CTAs route to sign-in or hall creation.
+9. **Contact forms** — only `HallFeedbackModal` (optional email); not in signup dashboards.
+10. **Plan interest** — tracked via `plan_viewed` / `plan_selected` analytics only; no email capture.
 
 ---
 
@@ -301,5 +323,6 @@ All `/api/admin/*` routes require `ADMIN_SECRET` (`x-admin-key` header).
 | Auth / accounts | `server/auth/auth-routes.ts`, `server/auth/auth-store.ts` |
 | Feedback | `server/hall-feedback-routes.ts`, `server/hall-feedback-store.ts` |
 | Schemas | `shared/schema.ts`, `shared/auth/schema.ts`, `shared/hall-feedback/schema.ts` |
-| Admin UI | `client/src/pages/admin-users.tsx`, `admin-user-detail.tsx`, `admin-leads.tsx`, `admin-analytics.tsx` |
+| Admin UI | `client/src/pages/admin-signups-page.tsx`, `admin-leads.tsx`, `admin-users.tsx`, `admin-user-detail.tsx`, `client/src/components/admin/signup-detail-drawer.tsx`, `admin-page-shell.tsx` |
+| Signups API | `GET /api/admin/signups`, `GET /api/admin/signups/export`, `POST /api/admin/signups/opened` |
 | Client tracking | `client/src/lib/analytics.ts`, `client/src/lib/product-analytics.ts` |
