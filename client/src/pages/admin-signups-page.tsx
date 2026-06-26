@@ -211,6 +211,33 @@ export default function AdminSignupsPage() {
         </p>
       ) : null}
 
+      {data?.magic_link_funnel ? (
+        <div className="rounded-xl border border-border/40 bg-muted/20 p-4">
+          <h2 className="font-heading text-lg tracking-wide">Magic link funnel (30 days)</h2>
+          <p className="text-xs text-muted-foreground mt-1 mb-4">
+            Requested → sent → opened → completed. Completion rate uses sent as the denominator.
+          </p>
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:grid-cols-7">
+            {(
+              [
+                ["Requested", data.magic_link_funnel.requested],
+                ["Sent", data.magic_link_funnel.sent],
+                ["Failed", data.magic_link_funnel.failed],
+                ["Opened", data.magic_link_funnel.opened],
+                ["Completed", data.magic_link_funnel.completed],
+                ["Expired", data.magic_link_funnel.expired],
+                ["Rate", `${data.magic_link_funnel.completion_rate}%`],
+              ] as const
+            ).map(([label, value]) => (
+              <div key={label} className="rounded-lg border border-border/30 bg-background/60 px-3 py-2">
+                <p className="text-[10px] uppercase tracking-wide text-muted-foreground">{label}</p>
+                <p className="text-lg font-semibold tabular-nums">{value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      ) : null}
+
       <div className="overflow-x-auto rounded-xl border border-border/40">
         <table className="w-full min-w-[72rem] text-sm">
           <thead>

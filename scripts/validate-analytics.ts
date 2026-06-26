@@ -33,6 +33,12 @@ async function main(): Promise<void> {
   assert.ok(ANALYTICS_EVENT_TYPES.includes("hall_of_fame_viewed"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("account_created"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("login"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("magic_link_requested"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("magic_link_sent"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("magic_link_failed"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("magic_link_opened"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("magic_link_completed"));
+  assert.ok(ANALYTICS_EVENT_TYPES.includes("magic_link_expired"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("profile_updated"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("hall_created"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("hall_updated"));

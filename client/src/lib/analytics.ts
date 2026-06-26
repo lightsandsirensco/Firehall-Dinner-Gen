@@ -549,6 +549,12 @@ export function trackLogin(provider: string): void {
   trackProductEvent("login", { provider });
 }
 
+export function trackMagicLinkRequested(returnTo?: string): void {
+  const params = returnTo ? { return_to: returnTo } : undefined;
+  trackEvent("magic_link_requested", params);
+  trackProductEvent("magic_link_requested", params);
+}
+
 export function trackProfileUpdated(): void {
   trackEvent("profile_updated");
   trackProductEvent("profile_updated");

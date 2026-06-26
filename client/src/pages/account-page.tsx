@@ -29,14 +29,10 @@ export default function AccountPage() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-    if (params.get("signed_in") === "1") {
-      void refresh();
-      window.history.replaceState({}, "", "/me/profile");
-    }
     if (params.get("create_hall") === "1") {
       setShowCreate(true);
     }
-  }, [refresh]);
+  }, []);
 
   return (
     <MeSubpageShell
@@ -62,7 +58,7 @@ export default function AccountPage() {
               </p>
             </div>
           </div>
-          <Button onClick={openSignIn} className="w-full min-h-11 touch-manipulation">
+          <Button onClick={() => openSignIn()} className="w-full min-h-11 touch-manipulation">
             Sign in
           </Button>
           <p className="text-xs text-muted-foreground leading-relaxed">

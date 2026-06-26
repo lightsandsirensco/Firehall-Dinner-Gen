@@ -167,6 +167,7 @@ export function revokeAuthSession(token: string): void {
 export function getUserIdFromSessionToken(token: string | undefined): string | null {
   if (!token) return null;
   const d = getDb();
+  const tokenHash = hashToken(token);
   const row = d
     .prepare(
       `SELECT s.user_id, s.expires_at, u.is_guest
@@ -174,14 +175,21 @@ export function getUserIdFromSessionToken(token: string | undefined): string | n
        JOIN users u ON u.user_id = s.user_id
        WHERE s.session_token_hash = ?`,
     )
-    .get(hashToken(token)) as { user_id: string; expires_at: string; is_guest: number } | undefined;
+    .get(tokenHash) as { user_id: string; expires_at: string; is_guest: number } | undefined;
 
   if (!row) return null;
   if (new Date(row.expires_at).getTime() < Date.now()) {
-    d.prepare(`DELETE FROM auth_sessions WHERE session_token_hash = ?`).run(hashToken(token));
+    d.prepare(`DELETE FROM auth_sessions WHERE session_token_hash = ?`).run(tokenHash);
     return null;
   }
   if (Number(row.is_guest) === 1) return null;
+
+  const refreshedExpires = new Date(Date.now() + SESSION_DAYS * 24 * 60 * 60 * 1000).toISOString();
+  d.prepare(`UPDATE auth_sessions SET expires_at = ? WHERE session_token_hash = ?`).run(
+    refreshedExpires,
+    tokenHash,
+  );
+
   return row.user_id;
 }
 
@@ -261,33 +269,46 @@ export function upsertOAuthUser(input: {
   return { user: rowToUser(userRow), isNew: true };
 }
 
-export function createMagicLink(email: string): { rawToken: string; expiresAt: string } {
+export function createMagicLink(
+  email: string,
+  returnTo?: string | null,
+): { rawToken: string; expiresAt: string } {
   const d = getDb();
   const normalized = email.trim().toLowerCase();
   const rawToken = crypto.randomBytes(32).toString("base64url");
   const tokenHash = hashToken(rawToken);
   const expiresAt = new Date(Date.now() + MAGIC_LINK_MINUTES * 60 * 1000).toISOString();
+  const safeReturnTo = returnTo?.trim() || null;
 
   d.prepare(`DELETE FROM auth_magic_links WHERE email = ? AND used_at IS NULL`).run(normalized);
   d.prepare(
-    `INSERT INTO auth_magic_links (token_hash, email, expires_at) VALUES (?, ?, ?)`,
-  ).run(tokenHash, normalized, expiresAt);
+    `INSERT INTO auth_magic_links (token_hash, email, expires_at, return_to) VALUES (?, ?, ?, ?)`,
+  ).run(tokenHash, normalized, expiresAt, safeReturnTo);
 
   return { rawToken, expiresAt };
 }
 
-export function consumeMagicLink(rawToken: string): { email: string } | null {
+export type MagicLinkConsumeResult =
+  | { ok: true; email: string; returnTo: string | null }
+  | { ok: false; reason: "invalid" | "expired" | "used" };
+
+export function consumeMagicLink(rawToken: string): MagicLinkConsumeResult {
   const d = getDb();
   const tokenHash = hashToken(rawToken);
   const row = d
-    .prepare(`SELECT email, expires_at, used_at FROM auth_magic_links WHERE token_hash = ?`)
-    .get(tokenHash) as { email: string; expires_at: string; used_at: string | null } | undefined;
+    .prepare(`SELECT email, expires_at, used_at, return_to FROM auth_magic_links WHERE token_hash = ?`)
+    .get(tokenHash) as
+    | { email: string; expires_at: string; used_at: string | null; return_to: string | null }
+    | undefined;
 
-  if (!row || row.used_at) return null;
-  if (new Date(row.expires_at).getTime() < Date.now()) return null;
+  if (!row) return { ok: false, reason: "invalid" };
+  if (row.used_at) return { ok: false, reason: "used" };
+  if (new Date(row.expires_at).getTime() < Date.now()) {
+    return { ok: false, reason: "expired" };
+  }
 
   d.prepare(`UPDATE auth_magic_links SET used_at = datetime('now') WHERE token_hash = ?`).run(tokenHash);
-  return { email: row.email };
+  return { ok: true, email: row.email, returnTo: row.return_to };
 }
 
 function getUserHalls(userId: string): HallSummary[] {

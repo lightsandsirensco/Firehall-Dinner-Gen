@@ -7,6 +7,7 @@ import {
   type ReactNode,
 } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useLocation } from "wouter";
 import { apiRequest } from "@/lib/queryClient";
 import { trackAccountCreated, trackLogin } from "@/lib/analytics";
 import type { AuthCapabilities } from "@shared/auth/types";
@@ -16,6 +17,11 @@ import { GUEST_BILLING } from "@/lib/billing/constants";
 import { fetchAuthConfig, fetchAuthMe, type AuthConfig, type AuthMePayload } from "./api";
 import { primePersonalOnboardingAfterSignIn } from "@/lib/onboarding/state";
 import { trackPersonalOnboardingStarted } from "@/lib/analytics";
+import {
+  captureAuthReturnTo,
+  clearAuthReturnTo,
+  readAuthReturnTo,
+} from "@/lib/auth/return-to";
 
 interface AuthContextValue {
   loading: boolean;
@@ -28,7 +34,8 @@ interface AuthContextValue {
   capabilities: AuthCapabilities;
   config: AuthConfig | null;
   signInOpen: boolean;
-  openSignIn: () => void;
+  authReturnTo: string | null;
+  openSignIn: (returnTo?: string) => void;
   closeSignIn: () => void;
   refresh: () => Promise<void>;
   logout: () => Promise<void>;
@@ -41,7 +48,9 @@ const guestCapabilities = authCapabilities(null, GUEST_BILLING);
 
 export function AuthProvider({ children }: { children: ReactNode }) {
   const queryClient = useQueryClient();
+  const [, navigate] = useLocation();
   const [signInOpen, setSignInOpen] = useState(false);
+  const [authReturnTo, setAuthReturnTo] = useState<string | null>(null);
 
   const configQuery = useQuery({
     queryKey: ["/api/auth/config"],
@@ -59,19 +68,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const me = meQuery.data;
   const authenticated = Boolean(me?.authenticated);
 
+  const openSignIn = useCallback((returnTo?: string) => {
+    const path = captureAuthReturnTo(returnTo);
+    setAuthReturnTo(path);
+    setSignInOpen(true);
+  }, []);
+
   const afterSignIn = useCallback(
     async (isNew?: boolean, provider?: string) => {
       await queryClient.invalidateQueries({ queryKey: ["/api/auth/me"] });
       if (isNew) {
         trackAccountCreated(provider ?? "unknown");
         trackPersonalOnboardingStarted();
+        primePersonalOnboardingAfterSignIn();
       } else {
         trackLogin(provider ?? "unknown");
       }
-      primePersonalOnboardingAfterSignIn();
       setSignInOpen(false);
+
+      const destination = authReturnTo ?? readAuthReturnTo();
+      clearAuthReturnTo();
+      setAuthReturnTo(null);
+      if (destination && destination !== window.location.pathname + window.location.search) {
+        navigate(destination);
+      }
     },
-    [queryClient],
+    [queryClient, navigate, authReturnTo],
   );
 
   const refresh = useCallback(async () => {
@@ -80,6 +102,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = useCallback(async () => {
     await apiRequest("POST", "/api/auth/logout");
+    clearAuthReturnTo();
+    setAuthReturnTo(null);
     await queryClient.invalidateQueries({ queryKey: ["/api/auth/me"] });
   }, [queryClient]);
 
@@ -95,7 +119,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       capabilities: me?.capabilities ?? authCapabilities(me?.user ?? null, me?.billing ?? GUEST_BILLING),
       config: configQuery.data ?? null,
       signInOpen,
-      openSignIn: () => setSignInOpen(true),
+      authReturnTo,
+      openSignIn,
       closeSignIn: () => setSignInOpen(false),
       refresh,
       logout,
@@ -107,6 +132,8 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       me,
       configQuery.data,
       signInOpen,
+      authReturnTo,
+      openSignIn,
       refresh,
       logout,
       afterSignIn,

@@ -86,7 +86,7 @@ export function PaywallGate({
 
       <div className="flex flex-wrap justify-center gap-2 mt-4">
         {!authenticated ? (
-          <Button type="button" size="sm" onClick={openSignIn}>
+          <Button type="button" size="sm" onClick={() => openSignIn()}>
             Sign in
           </Button>
         ) : hallScoped && targetHallId ? (

@@ -1,6 +1,6 @@
 # Hero image validation
 
-Generated: 2026-06-26T01:53:23.730Z
+Generated: 2026-06-26T02:13:52.361Z
 
 ## Root cause
 

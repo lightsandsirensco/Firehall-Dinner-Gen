@@ -2,6 +2,7 @@ import { z } from "zod";
 
 export const magicLinkRequestSchema = z.object({
   email: z.string().email().max(254),
+  return_to: z.string().max(500).optional(),
 });
 
 export const oauthTokenSchema = z.object({

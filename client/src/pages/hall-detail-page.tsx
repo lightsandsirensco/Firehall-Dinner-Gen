@@ -193,7 +193,7 @@ export default function HallDetailPage() {
 
             <p className="text-sm text-muted-foreground">Sign in to view this hall.</p>
 
-            <Button onClick={openSignIn}>Sign in</Button>
+            <Button onClick={() => openSignIn()}>Sign in</Button>
 
           </div>
 

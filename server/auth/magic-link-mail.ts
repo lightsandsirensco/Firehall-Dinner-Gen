@@ -28,17 +28,61 @@ export function buildMagicLinkUrl(rawToken: string): string {
 }
 
 function buildMagicLinkContent(link: string): { subject: string; text: string; html: string } {
-  const subject = "Sign in to Firehall Meals";
-  const text = `Tap to sign in (expires in 15 minutes):\n\n${link}\n\nIf you didn't request this, ignore this email.`;
+  const subject = "Your Firehall Meals sign-in link";
+  const text = [
+    "Firehall Meals",
+    "Built by Firefighters. Tested in the Firehall.",
+    "",
+    "Tap to sign in (expires in 15 minutes):",
+    link,
+    "",
+    "If you didn't request this, ignore this email.",
+  ].join("\n");
+
   const html = `<!DOCTYPE html>
-<html>
-<body style="font-family:system-ui,sans-serif;line-height:1.5;color:#1a1a1a;max-width:560px;margin:0 auto;padding:24px;">
-  <p>Tap the button below to sign in to Firehall Meals. This link expires in 15 minutes.</p>
-  <p style="margin:24px 0;">
-    <a href="${link}" style="display:inline-block;padding:12px 20px;background:#c41e1e;color:#fff;text-decoration:none;border-radius:8px;font-weight:600;">Sign in</a>
-  </p>
-  <p style="font-size:13px;color:#666;word-break:break-all;">Or copy this link:<br>${link}</p>
-  <p style="font-size:13px;color:#666;">If you didn't request this, you can ignore this email.</p>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>${subject}</title>
+</head>
+<body style="margin:0;padding:0;background:#0f0f0f;font-family:Inter,Segoe UI,Roboto,Helvetica,Arial,sans-serif;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#0f0f0f;padding:32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:520px;background:#171717;border:1px solid #2a2a2a;border-radius:16px;overflow:hidden;">
+          <tr>
+            <td style="padding:28px 28px 12px;text-align:center;background:linear-gradient(180deg,#1f1f1f 0%,#171717 100%);">
+              <div style="font-family:'Bebas Neue',Impact,sans-serif;font-size:28px;letter-spacing:0.08em;color:#f5f5f5;">FIREHALL MEALS</div>
+              <div style="margin-top:6px;font-size:12px;color:#a3a3a3;letter-spacing:0.04em;text-transform:uppercase;">Built by Firefighters · Tested in the Firehall</div>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:8px 28px 0;color:#e5e5e5;font-size:16px;line-height:1.6;">
+              <p style="margin:0 0 12px;">Tap below to sign in to your shift kitchen — saves, hall tools, and crew planning when you're ready.</p>
+              <p style="margin:0;color:#a3a3a3;font-size:14px;">This link expires in <strong style="color:#f5f5f5;">15 minutes</strong> and works once.</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:24px 28px;text-align:center;">
+              <a href="${link}" style="display:inline-block;padding:14px 28px;background:#dc2626;color:#ffffff;text-decoration:none;border-radius:10px;font-weight:700;font-size:15px;letter-spacing:0.02em;">Sign in to Firehall Meals</a>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:0 28px 24px;color:#737373;font-size:12px;line-height:1.5;">
+              <p style="margin:0 0 8px;">Button not working? Copy this link:</p>
+              <p style="margin:0;word-break:break-all;color:#a3a3a3;">${link}</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="padding:16px 28px 24px;border-top:1px solid #2a2a2a;color:#737373;font-size:12px;line-height:1.5;">
+              If you didn't request a sign-in link, you can safely ignore this email.
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
 </body>
 </html>`;
   return { subject, text, html };

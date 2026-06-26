@@ -15,6 +15,7 @@ import { AuthProvider } from "@/lib/auth/context";
 import { HallMembershipProvider } from "@/lib/hall-membership/context";
 import { CloudSyncProvider } from "@/lib/sync/provider";
 import { SignInSheet } from "@/components/auth/sign-in-sheet";
+import { AuthCompleteHandler } from "@/components/auth/auth-complete-handler";
 import { HallActivationGate } from "@/components/hall-activation/hall-activation-gate";
 import { OnboardingGate } from "@/components/onboarding/onboarding-gate";
 import { MeasurementSystemProvider } from "@/lib/measurement-preference";
@@ -221,6 +222,7 @@ function App() {
                 <PwaOfflineBanner />
                 <Router />
                 <PwaInstallPrompt />
+                <AuthCompleteHandler />
                 <SignInSheet />
                 <OnboardingGate />
                 <HallActivationGate />

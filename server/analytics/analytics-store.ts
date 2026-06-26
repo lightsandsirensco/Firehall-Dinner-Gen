@@ -9,6 +9,7 @@ import type {
   AnalyticsEventInput,
   AnalyticsPeriod,
   AnalyticsRankedRow,
+  MagicLinkFunnelStats,
 } from "../../shared/analytics/events.js";
 import type { HallOfFamePayload } from "../../shared/hall-of-fame/types.js";
 
@@ -371,4 +372,24 @@ export function insertAnalyticsTestEvents(sessionId: string, visitorId: string):
     ],
     sessionId,
   );
+}
+
+export function getMagicLinkFunnelStats(period: AnalyticsPeriod = "30d"): MagicLinkFunnelStats {
+  const requested = countEvents(period, "magic_link_requested");
+  const sent = countEvents(period, "magic_link_sent");
+  const failed = countEvents(period, "magic_link_failed");
+  const opened = countEvents(period, "magic_link_opened");
+  const completed = countEvents(period, "magic_link_completed");
+  const expired = countEvents(period, "magic_link_expired");
+  const denominator = Math.max(sent, 1);
+  return {
+    period,
+    requested,
+    sent,
+    failed,
+    opened,
+    completed,
+    expired,
+    completion_rate: Math.round((completed / denominator) * 1000) / 10,
+  };
 }

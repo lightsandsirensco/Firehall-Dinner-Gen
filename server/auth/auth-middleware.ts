@@ -1,5 +1,8 @@
 import type { Request, Response, NextFunction } from "express";
-import { getAuthCookieName, getUserIdFromSessionToken } from "./auth-store.js";
+import {
+  getAuthCookieName,
+  getUserIdFromSessionToken,
+} from "./auth-store.js";
 
 export interface AuthedRequest extends Request {
   _sessionId?: string;
@@ -11,9 +14,24 @@ function readAuthToken(req: Request): string | undefined {
   return req.cookies?.[cookieName] as string | undefined;
 }
 
-export function attachAuthUser(req: AuthedRequest, _res: Response, next: NextFunction): void {
+function authCookieOptions() {
+  const secure = process.env.NODE_ENV === "production";
+  return {
+    httpOnly: true,
+    sameSite: "lax" as const,
+    secure,
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    path: "/",
+  };
+}
+
+export function attachAuthUser(req: AuthedRequest, res: Response, next: NextFunction): void {
   const token = readAuthToken(req);
-  req._authUserId = getUserIdFromSessionToken(token) ?? null;
+  const userId = getUserIdFromSessionToken(token);
+  if (userId && token) {
+    res.cookie(getAuthCookieName(), token, authCookieOptions());
+  }
+  req._authUserId = userId ?? null;
   next();
 }
 

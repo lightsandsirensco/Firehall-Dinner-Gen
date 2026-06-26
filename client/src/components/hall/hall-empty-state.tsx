@@ -60,7 +60,7 @@ export function HallEmptyState() {
       </div>
 
       {!authenticated ? (
-        <Button type="button" variant="outline" className="w-full min-h-11" onClick={openSignIn}>
+        <Button type="button" variant="outline" className="w-full min-h-11" onClick={() => openSignIn()}>
           Sign in to sync with your crew
         </Button>
       ) : null}

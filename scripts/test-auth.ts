@@ -77,6 +77,11 @@ const MIGRATION_022 = fs.readFileSync(
 
 
 
+const MIGRATION_038 = fs.readFileSync(
+  path.join(process.cwd(), "server", "db", "migrations", "038_magic_link_return_to.sql"),
+  "utf8",
+);
+
 const tmpDb = path.join(os.tmpdir(), `fh-auth-validate-${Date.now()}.db`);
 
 
@@ -92,6 +97,7 @@ async function bindTestDb(): Promise<void> {
   db.exec(MIGRATION_016);
 
   db.exec(MIGRATION_022);
+  db.exec(MIGRATION_038);
 
   bindAuthDb(db);
 
@@ -113,9 +119,10 @@ async function main(): Promise<void> {
 
   const consumed = consumeMagicLink(rawToken);
 
-  assert.ok(consumed);
-
-  assert.equal(consumed!.email, "crew@firehall.test");
+  assert.equal(consumed.ok, true);
+  if (consumed.ok) {
+    assert.equal(consumed.email, "crew@firehall.test");
+  }
 
 
 

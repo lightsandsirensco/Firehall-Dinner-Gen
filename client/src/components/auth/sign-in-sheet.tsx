@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Loader2, Mail } from "lucide-react";
+import { ExternalLink, Loader2, Mail, Pencil } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -13,6 +13,10 @@ import {
 import { apiRequest } from "@/lib/queryClient";
 import { useAuth } from "@/lib/auth/context";
 import { useToast } from "@/hooks/use-toast";
+import { trackMagicLinkRequested } from "@/lib/analytics";
+import { inboxUrlForEmail, maskEmailAddress } from "@shared/auth/return-to";
+
+const RESEND_COOLDOWN_SEC = 60;
 
 declare global {
   interface Window {
@@ -75,16 +79,26 @@ function parseMagicLinkError(err: unknown): string {
 }
 
 export function SignInSheet() {
-  const { signInOpen, closeSignIn, config, afterSignIn } = useAuth();
+  const { signInOpen, closeSignIn, config, afterSignIn, authReturnTo } = useAuth();
   const { toast } = useToast();
   const [email, setEmail] = useState("");
+  const [sentEmail, setSentEmail] = useState("");
   const [sending, setSending] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [devLink, setDevLink] = useState<string | null>(null);
   const [oauthBusy, setOauthBusy] = useState(false);
+  const [resendSeconds, setResendSeconds] = useState(0);
   const googleRef = useRef<HTMLDivElement>(null);
   const googleClientId = import.meta.env.VITE_GOOGLE_CLIENT_ID?.trim();
+
+  useEffect(() => {
+    if (!sent || resendSeconds <= 0) return;
+    const timer = window.setInterval(() => {
+      setResendSeconds((s) => Math.max(0, s - 1));
+    }, 1000);
+    return () => window.clearInterval(timer);
+  }, [sent, resendSeconds]);
 
   useEffect(() => {
     if (!signInOpen || !config?.google || !googleClientId || !googleRef.current) return;
@@ -136,14 +150,25 @@ export function SignInSheet() {
     };
   }, [signInOpen, config?.google, googleClientId, afterSignIn, toast]);
 
+  const resetSentState = () => {
+    setSent(false);
+    setSentEmail("");
+    setDevLink(null);
+    setResendSeconds(0);
+  };
+
   const handleMagicLink = async () => {
-    const trimmed = email.trim();
+    const trimmed = (sent ? sentEmail : email).trim();
     if (!trimmed) return;
     setSending(true);
     setError(null);
     setDevLink(null);
+    trackMagicLinkRequested(authReturnTo ?? undefined);
     try {
-      const res = await apiRequest("POST", "/api/auth/magic-link", { email: trimmed });
+      const res = await apiRequest("POST", "/api/auth/magic-link", {
+        email: trimmed,
+        return_to: authReturnTo ?? undefined,
+      });
       const body = (await res.json()) as {
         sent?: boolean;
         dev_link?: string;
@@ -151,17 +176,21 @@ export function SignInSheet() {
       };
 
       if (body.sent) {
+        setSentEmail(trimmed);
         setSent(true);
+        setResendSeconds(RESEND_COOLDOWN_SEC);
         toast({
           title: "Check your email",
-          description: body.message ?? "Check your email for a sign-in link.",
+          description: `We sent a sign-in link to ${maskEmailAddress(trimmed)}.`,
         });
         return;
       }
 
       if (body.dev_link) {
+        setSentEmail(trimmed);
         setSent(true);
         setDevLink(body.dev_link);
+        setResendSeconds(RESEND_COOLDOWN_SEC);
         toast({
           title: "Development sign-in link",
           description: body.message ?? "Use the link below on this device.",
@@ -239,15 +268,17 @@ export function SignInSheet() {
       .catch(() => undefined);
   }, [signInOpen, config?.apple]);
 
+  const displayEmail = sentEmail || email.trim();
+  const masked = displayEmail ? maskEmailAddress(displayEmail) : "";
+
   return (
     <Sheet
       open={signInOpen}
       onOpenChange={(open) => {
         if (!open) {
           closeSignIn();
-          setSent(false);
+          resetSentState();
           setError(null);
-          setDevLink(null);
           setEmail("");
         }
       }}
@@ -299,19 +330,56 @@ export function SignInSheet() {
             </div>
           ) : (
             <div
-              className="rounded-xl border border-border/50 bg-muted/30 p-4 text-sm"
+              className="rounded-xl border border-primary/20 bg-primary/5 p-4 space-y-4"
               role="status"
               aria-live="polite"
             >
-              <p className="font-medium text-foreground">Check your email for a sign-in link.</p>
-              <p className="text-muted-foreground mt-1">
-                Open the link on this device to finish signing in.
-              </p>
-              {devLink && (
-                <a href={devLink} className="text-primary text-xs break-all mt-2 inline-block">
-                  {devLink}
+              <div>
+                <p className="font-medium text-foreground">Check your inbox</p>
+                <p className="text-sm text-muted-foreground mt-1">
+                  We sent a sign-in link to{" "}
+                  <span className="font-medium text-foreground">{masked}</span>. Open it on this device to
+                  finish signing in.
+                </p>
+              </div>
+
+              <div className="flex flex-col gap-2 sm:flex-row">
+                <Button type="button" className="flex-1 min-h-11" asChild>
+                  <a href={inboxUrlForEmail(displayEmail)} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="w-4 h-4 mr-2" />
+                    Open inbox
+                  </a>
+                </Button>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="flex-1 min-h-11"
+                  disabled={resendSeconds > 0 || sending}
+                  onClick={() => void handleMagicLink()}
+                >
+                  {resendSeconds > 0 ? `Resend in ${resendSeconds}s` : "Resend link"}
+                </Button>
+              </div>
+
+              <Button
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="w-full text-muted-foreground"
+                onClick={() => {
+                  resetSentState();
+                  setEmail("");
+                }}
+              >
+                <Pencil className="w-3.5 h-3.5 mr-2" />
+                Use a different email
+              </Button>
+
+              {devLink ? (
+                <a href={devLink} className="text-primary text-xs break-all block">
+                  Dev link: {devLink}
                 </a>
-              )}
+              ) : null}
             </div>
           )}
 

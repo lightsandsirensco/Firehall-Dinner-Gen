@@ -1,5 +1,6 @@
 import type { PlanId } from "../billing/types.js";
 import type { HallRole } from "../hall-membership/types.js";
+import type { MagicLinkFunnelStats } from "../analytics/events.js";
 
 export type AdminSignupFilter =
   | "all"
@@ -48,6 +49,7 @@ export interface AdminSignupListResponse {
   filter: AdminSignupFilter;
   source_filter: string | null;
   query: string | null;
+  magic_link_funnel?: MagicLinkFunnelStats;
 }
 
 export type AdminUserFilter =

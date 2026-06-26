@@ -48,6 +48,12 @@ export const ANALYTICS_EVENT_TYPES = [
   "pwa_installed",
   "account_created",
   "login",
+  "magic_link_requested",
+  "magic_link_sent",
+  "magic_link_failed",
+  "magic_link_opened",
+  "magic_link_completed",
+  "magic_link_expired",
   "profile_updated",
   "hall_created",
   "hall_updated",
@@ -141,6 +147,17 @@ export interface AnalyticsRankedRow {
   key: string;
   label: string;
   count: number;
+}
+
+export interface MagicLinkFunnelStats {
+  period: AnalyticsPeriod;
+  requested: number;
+  sent: number;
+  failed: number;
+  opened: number;
+  completed: number;
+  expired: number;
+  completion_rate: number;
 }
 
 export interface AnalyticsDashboardPayload {

@@ -1,7 +1,7 @@
 import type { Express, Request, Response } from "express";
 import { z } from "zod";
 import { logError } from "../logger.js";
-import { insertAnalyticsEvents } from "../analytics/analytics-store.js";
+import { getMagicLinkFunnelStats, insertAnalyticsEvents } from "../analytics/analytics-store.js";
 import { subscribeToList } from "../klaviyo.js";
 import { adminSetUserPlan } from "../billing/store.js";
 import type { PlanId } from "../../shared/billing/types.js";
@@ -133,7 +133,10 @@ export function registerAdminUsersRoutes(app: Express): void {
         total: data.total,
         query: q ?? "",
       });
-      return res.json(data);
+      return res.json({
+        ...data,
+        magic_link_funnel: getMagicLinkFunnelStats("30d"),
+      });
     } catch (err) {
       logError("admin-users", "list signups failed", err);
       return res.status(500).json({ message: "Failed to load signups" });

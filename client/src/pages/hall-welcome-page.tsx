@@ -69,7 +69,7 @@ export default function HallWelcomePage() {
         <AppTopBar title={HALL_ONBOARDING.welcomeTitle} />
         <main className={cn(app.main, "mx-auto max-w-lg px-4 py-8 pb-safe-nav space-y-4")}>
           <p className="text-sm text-muted-foreground">{HALL_ONBOARDING.signInPrompt}</p>
-          <Button type="button" className="w-full min-h-[48px]" onClick={openSignIn}>
+          <Button type="button" className="w-full min-h-[48px]" onClick={() => openSignIn()}>
             Sign in
           </Button>
         </main>

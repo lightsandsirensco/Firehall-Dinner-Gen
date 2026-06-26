@@ -27,6 +27,7 @@ import {
   savedRecipesSyncSchema,
 } from "../../shared/auth/schema.js";
 import { insertAnalyticsEvents } from "../analytics/analytics-store.js";
+import { appendSignedInQuery, sanitizeReturnToPath } from "../../shared/auth/return-to.js";
 
 let storeReady = false;
 
@@ -58,12 +59,23 @@ function clearAuthCookie(res: Response): void {
 
 function trackAuthEvent(
   req: Request,
-  eventType: "account_created" | "login" | "profile_updated",
+  eventType:
+    | "account_created"
+    | "login"
+    | "profile_updated"
+    | "magic_link_sent"
+    | "magic_link_failed"
+    | "magic_link_opened"
+    | "magic_link_completed"
+    | "magic_link_expired",
   metadata?: Record<string, string | number | boolean>,
 ): void {
   try {
     const sessionId = (req as AuthedRequest)._sessionId;
-    insertAnalyticsEvents([{ event_type: eventType, route: "/account", metadata }], sessionId);
+    insertAnalyticsEvents(
+      [{ event_type: eventType, route: "/account", metadata }],
+      sessionId,
+    );
   } catch {
     /* analytics optional */
   }
@@ -104,10 +116,14 @@ export function registerAuthRoutes(app: Express): void {
 
       if (!enforceEmailRateLimit(req, res, parsed.data.email)) return;
 
-      const { rawToken } = createMagicLink(parsed.data.email);
+      const returnTo = sanitizeReturnToPath(parsed.data.return_to);
+      const { rawToken } = createMagicLink(parsed.data.email, returnTo);
       const mail = await sendMagicLinkEmail(parsed.data.email, rawToken);
 
       if (mail.sent) {
+        trackAuthEvent(req, "magic_link_sent", {
+          return_to: returnTo ?? "",
+        });
         return res.json({
           ok: true,
           sent: true,
@@ -125,6 +141,9 @@ export function registerAuthRoutes(app: Express): void {
       }
 
       if ("error" in mail) {
+        trackAuthEvent(req, "magic_link_failed", {
+          error: mail.error,
+        });
         if (mail.error === "not_configured") {
           return res.status(503).json({ message: mail.message });
         }
@@ -133,9 +152,11 @@ export function registerAuthRoutes(app: Express): void {
         });
       }
 
+      trackAuthEvent(req, "magic_link_failed", { error: "unknown" });
       return res.status(500).json({ message: "We could not send the sign-in link. Try again." });
     } catch (err) {
       logError("auth", "magic-link failed", err);
+      trackAuthEvent(req, "magic_link_failed", { error: "exception" });
       return res.status(500).json({ message: "We could not send the sign-in link. Try again." });
     }
   });
@@ -145,12 +166,18 @@ export function registerAuthRoutes(app: Express): void {
       await ensureStore();
       const token = String(req.query.token ?? "");
       if (!token) {
-        return res.redirect("/account?error=invalid_link");
+        trackAuthEvent(req, "magic_link_opened", { valid: false });
+        return res.redirect("/me/profile?error=invalid_link");
       }
 
+      trackAuthEvent(req, "magic_link_opened", { valid: true });
       const consumed = consumeMagicLink(token);
-      if (!consumed) {
-        return res.redirect("/account?error=expired_link");
+      if (!consumed.ok) {
+        if (consumed.reason === "expired" || consumed.reason === "used") {
+          trackAuthEvent(req, "magic_link_expired", { reason: consumed.reason });
+        }
+        const errorParam = consumed.reason === "expired" ? "expired_link" : "invalid_link";
+        return res.redirect(`/me/profile?error=${errorParam}`);
       }
 
       const { user, isNew } = upsertEmailUser(consumed.email);
@@ -160,11 +187,16 @@ export function registerAuthRoutes(app: Express): void {
       trackAuthEvent(req, isNew ? "account_created" : "login", {
         provider: "email",
       });
+      trackAuthEvent(req, "magic_link_completed", {
+        is_new: isNew,
+        return_to: consumed.returnTo ?? "",
+      });
 
-      return res.redirect("/account?signed_in=1");
+      const destination = appendSignedInQuery(consumed.returnTo ?? "/me/profile");
+      return res.redirect(destination);
     } catch (err) {
       logError("auth", "verify-magic failed", err);
-      return res.redirect("/account?error=sign_in_failed");
+      return res.redirect("/me/profile?error=sign_in_failed");
     }
   });
 

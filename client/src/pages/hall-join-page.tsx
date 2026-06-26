@@ -129,7 +129,7 @@ export default function HallJoinPage() {
             {!authenticated ? (
               <div className="space-y-2">
                 <p className="text-sm text-muted-foreground">{HALL_ONBOARDING.signInPrompt}</p>
-                <Button type="button" className="w-full min-h-[48px]" onClick={openSignIn}>
+                <Button type="button" className="w-full min-h-[48px]" onClick={() => openSignIn()}>
                   Sign in to join
                 </Button>
               </div>
@@ -155,7 +155,7 @@ export default function HallJoinPage() {
                 <button
                   type="button"
                   className="text-primary underline-offset-2 hover:underline"
-                  onClick={openSignIn}
+                  onClick={() => openSignIn()}
                 >
                   Sign in
                 </button>{" "}

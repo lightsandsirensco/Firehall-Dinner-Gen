@@ -207,7 +207,7 @@ export function HallIdentityHeader({
         {!authenticated ? (
           <div className="pt-2 border-t border-border/30 flex flex-col sm:flex-row sm:items-center gap-2">
             <p className="text-sm text-muted-foreground flex-1">{HALL_DASHBOARD.deviceNote}</p>
-            <Button className="min-h-11" onClick={openSignIn}>
+            <Button className="min-h-11" onClick={() => openSignIn()}>
               Sign in
             </Button>
           </div>
