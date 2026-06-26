@@ -72,6 +72,9 @@ export interface BootstrapInitFns {
   initIngestionStore: () => Promise<void>;
   initHallVoteTables: () => Promise<void>;
   initRecipeCrewRatingsStore: () => Promise<void>;
+  initAuthStore: () => Promise<void>;
+  initHallMembershipStore: () => Promise<void>;
+  initBillingStore: () => Promise<void>;
 }
 
 /**
@@ -89,6 +92,9 @@ export async function runStartupBootstrap(inits: BootstrapInitFns): Promise<Star
   stores.ingestion = await initStoreSafe("ingestion", inits.initIngestionStore);
   stores.hallVote = await initStoreSafe("hallVote", inits.initHallVoteTables);
   stores.recipeCrewRatings = await initStoreSafe("recipeCrewRatings", inits.initRecipeCrewRatingsStore);
+  stores.auth = await initStoreSafe("auth", inits.initAuthStore);
+  stores.hallMembership = await initStoreSafe("hallMembership", inits.initHallMembershipStore);
+  stores.billing = await initStoreSafe("billing", inits.initBillingStore);
 
   const criticalFailed = stores.cache === "failed" || stores.curated === "failed";
   if (criticalFailed) {

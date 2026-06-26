@@ -174,7 +174,7 @@ export function extractTitleVisualRequirements(
   if (/\bchicken\b/i.test(t)) protein = "chicken";
   else if (/\b(pulled pork|pork)\b/i.test(t)) protein = "pork";
   else if (/\b(beef|steak|brisket)\b/i.test(t)) protein = "beef";
-  else if (/\b(salmon|fish|cod|tilapia|shrimp)\b/i.test(t)) protein = "seafood";
+  else if (/\b(salmon|fish|cod|tilapia|shrimp|tuna)\b/i.test(t)) protein = "seafood";
   else if (/\bturkey\b/i.test(t)) protein = "turkey";
   else if (/\blamb\b/i.test(t)) protein = "lamb";
 

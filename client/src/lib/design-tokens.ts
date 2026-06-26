@@ -50,6 +50,12 @@ export const app = {
     "rounded-2xl border border-border/25 bg-card/30 backdrop-blur-sm",
 
   stickyBar: "mobile-sticky-bar lg:hidden",
+  stickyBarAboveTabs: "mobile-sticky-bar mobile-sticky-bar-above-tabs lg:hidden",
+
+  /** Mobile shell — 44px touch, generous rhythm */
+  mobileScreen: "mx-auto max-w-lg px-4 py-4 pb-safe-nav sm:max-w-xl sm:py-5 space-y-5",
+  touchMin: "min-h-11 min-w-11 touch-manipulation",
+  cardSurface: "rounded-2xl border border-border/45 bg-card/35 overflow-hidden",
 } as const;
 
 export const type = {

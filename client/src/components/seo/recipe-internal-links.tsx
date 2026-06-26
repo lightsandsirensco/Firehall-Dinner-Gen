@@ -55,7 +55,7 @@ export function RecipeInternalLinks({ clusters, className }: RecipeInternalLinks
       </div>
 
       <p className="text-xs text-muted-foreground">
-        <Link href="/recipes" className="text-primary hover:underline">
+        <Link href="/explore" className="text-primary hover:underline">
           Browse all firefighter meals
         </Link>
         {" · "}

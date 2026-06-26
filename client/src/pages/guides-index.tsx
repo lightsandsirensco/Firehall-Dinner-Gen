@@ -116,12 +116,8 @@ export default function GuidesIndexPage() {
         )}
 
         <p className="mt-10 text-sm text-muted-foreground">
-          <Link href="/recipes" className="text-primary hover:underline font-medium">
+          <Link href="/explore" className="text-primary hover:underline font-medium">
             Browse all firefighter meals
-          </Link>
-          {" · "}
-          <Link href="/explore" className="text-primary hover:underline">
-            Browse all recipes
           </Link>
         </p>
       </main>

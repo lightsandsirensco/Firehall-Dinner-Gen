@@ -7,6 +7,11 @@ let db: SqliteDatabase;
 
 export async function initCacheStore() {
   db = await getSharedLocalDb();
+  const { verifyDatabaseHealth } = await import("./sqlite-migrations.js");
+  const health = await verifyDatabaseHealth(db);
+  if (!health.ok) {
+    throw new Error(`SQLite integrity check failed: ${health.integrity}`);
+  }
   db.pragma("journal_mode = WAL");
   db.pragma("busy_timeout = 5000");
 

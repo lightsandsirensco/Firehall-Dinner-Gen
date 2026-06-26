@@ -41,6 +41,12 @@ assert.ok(EXPLORE_CATALOG_PAGE_SIZE_DESKTOP >= 24, "desktop page size >= 24");
 assert.match(browserSrc, /exploreCatalogPageSize/, "mobile-aware page size");
 assert.match(browserSrc, /useIsMobile/, "uses mobile breakpoint");
 assert.match(browserSrc, /explore-catalog-load-more/, "Load More button present");
+assert.match(browserSrc, /explore-catalog-filter-open/, "mobile Filter button");
+assert.match(browserSrc, /explore-catalog-filter-sheet/, "mobile filter bottom sheet");
+assert.match(browserSrc, /explore-catalog-mobile-toolbar/, "compact mobile toolbar");
+assert.match(browserSrc, /side="bottom"/, "bottom sheet drawer");
+assert.match(browserSrc, /hidden md:block/, "desktop-only inline filters");
+assert.match(browserSrc, /md:hidden/, "mobile-only toolbar");
 assert.match(browserSrc, /fetchApprovedCatalogGrid/, "grid API (no hero payload)");
 assert.match(browserSrc, /ExploreCatalogCardBoundary/, "per-card error boundary");
 assert.match(browserSrc, /exploreCardImageCandidates/, "uses thumb candidate helper");
@@ -50,6 +56,7 @@ assert.match(browserSrc, /width=\{EXPLORE_CARD_IMG_WIDTH\}/, "explicit image wid
 assert.match(browserSrc, /height=\{EXPLORE_CARD_IMG_HEIGHT\}/, "explicit image height");
 assert.doesNotMatch(browserSrc, /entry\.heroImage/, "grid must not use heroImage");
 assert.doesNotMatch(browserSrc, /framer-motion/, "no framer-motion on explore grid");
+assert.match(browserSrc, /aspect-square/, "mobile thumb aspect ratio");
 assert.match(browserSrc, /setTimeout\(\(\) => \{[\s\S]*setSearchQuery/, "search is debounced");
 assert.match(
   browserSrc,

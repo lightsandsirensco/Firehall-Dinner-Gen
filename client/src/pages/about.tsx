@@ -228,7 +228,7 @@ export default function AboutPage() {
 
           <p className="mt-6 text-sm text-muted-foreground">
 
-            <Link href="/recipes" className="text-primary hover:underline font-medium">
+            <Link href="/explore" className="text-primary hover:underline font-medium">
 
               Browse all firefighter meals →
 

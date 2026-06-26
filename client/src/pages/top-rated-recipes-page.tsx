@@ -29,7 +29,7 @@ export default function TopRatedRecipesPage() {
       buildWebSiteSchema(origin),
       buildBreadcrumbListSchema(origin, [
         { name: "Home", path: "/" },
-        { name: "Recipes", path: "/recipes" },
+        { name: "Explore", path: "/explore" },
         { name: "Top Rated Recipes", path: "/top-rated-recipes" },
       ]),
     ],
@@ -66,7 +66,7 @@ export default function TopRatedRecipesPage() {
         <SeoBreadcrumbs
           items={[
             { name: "Home", path: "/" },
-            { name: "Recipes", path: "/recipes" },
+            { name: "Explore", path: "/explore" },
             { name: "Top Rated Recipes", path: "/top-rated-recipes" },
           ]}
         />
@@ -81,7 +81,7 @@ export default function TopRatedRecipesPage() {
           <p className="mt-10 text-sm text-muted-foreground">Loading crew ratings…</p>
         ) : topRated.length === 0 ? (
           <p className="mt-10 text-sm text-muted-foreground">
-            No recipes have enough crew ratings yet. Be the first to vote on your hall favorites.
+            No recipes have enough crew ratings yet. Be the first to vote on crew favorites.
           </p>
         ) : (
           <ol className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" data-testid="top-rated-recipes-list">

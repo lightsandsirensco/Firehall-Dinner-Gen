@@ -40,6 +40,10 @@ import {
   formatRecipeIngredientName,
   formatStepTemperature,
 } from "@shared/measurements";
+import { breakfastPageToCookMode } from "@/lib/cook-mode/adapters";
+import { StartCookingButton } from "@/components/cook-mode/start-cooking-button";
+import { HallFavoriteButton } from "@/components/hall-favorites/hall-favorite-button";
+import { HallRecipeHistoryPanel } from "@/components/hall-history/hall-recipe-history-panel";
 
 export default function BreakfastRecipePage() {
   const [, perfParams] = useRoute("/breakfast/performance/:slug");
@@ -121,6 +125,11 @@ export default function BreakfastRecipePage() {
         : null,
     [scaledIngredients, page?.title, measurementSystem],
   );
+
+  const cookModeRecipe = useMemo(() => {
+    if (!page || scaledIngredients.length === 0) return null;
+    return breakfastPageToCookMode(page, scaledIngredients, measurementSystem, crewSize);
+  }, [page, scaledIngredients, measurementSystem, crewSize]);
 
   return (
     <div className="page-shell min-h-screen min-h-[100dvh] bg-background flex flex-col">
@@ -236,7 +245,21 @@ export default function BreakfastRecipePage() {
               </div>
             </section>
 
+            <HallRecipeHistoryPanel
+              recipeSlug={page.slug}
+              title={page.title}
+              recipePath={recipePath}
+              className="mt-6 max-w-2xl"
+              source="breakfast_recipe_page"
+            />
+
             <RecipeMeasurementBar className="mt-6">
+              <HallFavoriteButton
+                slug={page.slug}
+                title={page.title}
+                recipePath={recipePath}
+                source="breakfast_recipe_page"
+              />
               <Button
                 variant="outline"
                 className="min-h-11 gap-2"
@@ -246,6 +269,12 @@ export default function BreakfastRecipePage() {
                 <List className="w-4 h-4" aria-hidden />
                 Shopping list ({crewSize} crew)
               </Button>
+              <StartCookingButton
+                recipe={cookModeRecipe}
+                recipeSlug={page.slug}
+                recipePath={recipePath}
+                source="breakfast_recipe_page"
+              />
             </RecipeMeasurementBar>
 
             <div className="mt-8 grid grid-cols-1 lg:grid-cols-[1fr_1.2fr] gap-8">

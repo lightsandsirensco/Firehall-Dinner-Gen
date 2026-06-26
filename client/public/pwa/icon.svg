@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Firehall Meals">
+  <defs>
+    <linearGradient id="flame" x1="256" y1="96" x2="256" y2="416" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6b4a"/>
+      <stop offset="55%" stop-color="#dc2626"/>
+      <stop offset="100%" stop-color="#991b1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="112" fill="#141414"/>
+  <path fill="url(#flame)" d="M256 96c-18 52-62 78-62 134 0 34 14 64 38 86-8-44 10-72 24-98 14 30 42 48 42 88 0 58-47 106-106 106S86 314 86 256c0-44 18-82 48-110-10 62 18 118 72 150 10-74 34-112 50-150 16 28 40 52 40 96 0 22-8 42-22 58 30-18 50-50 50-86 0-52-34-94-68-118z"/>
+</svg>

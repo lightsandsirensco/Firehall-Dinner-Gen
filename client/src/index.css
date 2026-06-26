@@ -5,6 +5,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  color-scheme: dark;
 }
 
 html {
@@ -195,6 +196,22 @@ html, body {
   body {
     @apply font-sans antialiased bg-background text-foreground;
   }
+
+  /* Native selects — dark popup where the OS supports color-scheme */
+  select {
+    @apply bg-background text-foreground;
+    color-scheme: dark;
+  }
+
+  select option {
+    background-color: hsl(var(--popover));
+    color: hsl(var(--popover-foreground));
+  }
+
+  select option:checked {
+    background-color: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
 }
 
 /**
@@ -263,12 +280,22 @@ html, body {
     padding-bottom: calc(4.5rem + env(safe-area-inset-bottom, 0px));
   }
 
-  /** Bottom sticky generate bar (home, pizza) */
+  /** Content clearance when bottom tab bar + sticky CTA stack (generator, recipe detail) */
+  .pb-safe-tabs-cta {
+    padding-bottom: calc(9.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /** Tall mobile recipe action dock (save + shop + cook + secondary) */
+  .pb-safe-tabs-cta-tall {
+    padding-bottom: calc(12.5rem + env(safe-area-inset-bottom, 0px));
+  }
+
+  /** Bottom sticky generate bar (home, pizza) — tab bar only */
   .pb-safe-sticky {
     padding-bottom: calc(6.75rem + env(safe-area-inset-bottom, 0px));
   }
 
-  /** Floating Hall Feedback — above mobile sticky CTA, bottom-right on desktop */
+  /** Floating Hall Feedback — above tab bar + optional sticky CTA */
   .hall-feedback-fab {
     position: fixed;
     z-index: 45;
@@ -278,7 +305,7 @@ html, body {
 
   @media (max-width: 1023px) {
     .hall-feedback-fab {
-      bottom: calc(5.75rem + env(safe-area-inset-bottom, 0px));
+      bottom: calc(6.25rem + env(safe-area-inset-bottom, 0px));
     }
   }
 
@@ -289,11 +316,24 @@ html, body {
     right: 0;
     z-index: 40;
     border-top: 1px solid hsl(var(--border) / 0.25);
-    background: hsl(var(--background) / 0.88);
+    background: hsl(var(--background) / 0.92);
     backdrop-filter: blur(20px) saturate(1.2);
     -webkit-backdrop-filter: blur(20px) saturate(1.2);
     box-shadow: 0 -8px 32px rgba(0, 0, 0, 0.45);
     padding-bottom: max(0.5rem, env(safe-area-inset-bottom, 0px));
+  }
+
+  /** Sticky CTA docked above bottom tab bar — no collision */
+  .mobile-sticky-bar-above-tabs {
+    bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));
+    z-index: 55;
+    padding-bottom: 0.5rem;
+  }
+
+  /** Minimum 44px touch target (Apple HIG) */
+  .touch-target {
+    min-height: 2.75rem;
+    min-width: 2.75rem;
   }
 
   .food-image-frame {
@@ -310,7 +350,7 @@ html, body {
     }
 
     .pb-safe-sticky {
-      padding-bottom: calc(5.5rem + env(safe-area-inset-bottom, 0px));
+      padding-bottom: calc(9.5rem + env(safe-area-inset-bottom, 0px));
     }
   }
 
@@ -420,6 +460,18 @@ html, body {
   .scroll-momentum {
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-y: contain;
+  }
+
+  /** Explore mobile grid — Safari scroll + paint containment */
+  .explore-mobile-grid {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+
+  @media (max-width: 767px) {
+    .explore-mobile-grid > li {
+      contain: layout paint style;
+    }
   }
 
   .page-enter {

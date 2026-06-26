@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-02T15:58:19.497Z",
+  "generatedAt": "2026-06-23T15:33:36.751Z",
   "origin": "https://www.firehallmeals.com",
   "sitemapSynced": false,
   "totals": {
-    "sitemapUrls": 309,
-    "recipeUrls": 217,
-    "recipeUrlsInSitemap": 217,
+    "sitemapUrls": 393,
+    "recipeUrls": 311,
+    "recipeUrlsInSitemap": 311,
     "guideUrls": 58,
     "guideUrlsInSitemap": 62,
-    "approvedCatalogRecipes": 224
+    "approvedCatalogRecipes": 313
   },
   "requiredRoutes": {
     "checked": [
@@ -16,8 +16,7 @@
       "/explore",
       "/wheel",
       "/pizza",
-      "/guides",
-      "/recipes"
+      "/guides"
     ],
     "missing": [],
     "pass": true
@@ -34,7 +33,7 @@
     }
   },
   "recipeMetadata": {
-    "audited": 217,
+    "audited": 311,
     "missingMetadata": [],
     "duplicateTitles": 0,
     "duplicateDescriptions": 0,
@@ -42,92 +41,92 @@
     "canonicalMismatch": []
   },
   "internalLinks": {
-    "notInApprovedCatalog": 36,
-    "hubOnlyRecipes": 36,
+    "notInApprovedCatalog": 43,
+    "hubOnlyRecipes": 43,
     "hubOnlySample": [
       {
-        "slug": "lean-turkey-bean-chili",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "turkey-sausage-egg-muffins",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "lean-beef-broccoli-rice",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "veggie-egg-casserole-tray",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "turkey-quinoa-stuffed-peppers",
-        "hub": "performance-meals"
+        "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+        "hub": "hall-guide"
       },
       {
         "slug": "bbq-chicken-pizza",
         "hub": "/pizza"
       },
       {
-        "slug": "breakfast-sausage-pizza",
-        "hub": "/pizza"
+        "slug": "breakfast-burrito-bar",
+        "hub": "hall-guide"
       },
       {
-        "slug": "buffalo-chicken-pizza",
-        "hub": "/pizza"
+        "slug": "cedar-plank-salmon",
+        "hub": "hall-guide"
       },
       {
-        "slug": "pepperoni-pizza-night",
-        "hub": "/pizza"
+        "slug": "chili-mac",
+        "hub": "hall-guide"
       },
       {
-        "slug": "detroit-style-pizza",
-        "hub": "/pizza"
+        "slug": "chorizo-breakfast-tacos",
+        "hub": "hall-guide"
       },
       {
-        "slug": "firehall-supreme-pizza",
-        "hub": "/pizza"
+        "slug": "crispy-chicken-cutlets",
+        "hub": "hall-guide"
       },
       {
-        "slug": "four-cheese-white-pizza",
-        "hub": "/pizza"
+        "slug": "five-ingredient-pasta",
+        "hub": "hall-guide"
       },
       {
-        "slug": "margherita-pizza",
-        "hub": "/pizza"
+        "slug": "four-step-chicken-piccata",
+        "hub": "hall-guide"
       },
       {
-        "slug": "hawaiian-pizza",
-        "hub": "/pizza"
+        "slug": "french-onion-soup-for-the-hall",
+        "hub": "hall-guide"
       },
       {
-        "slug": "honey-soppressata-pizza",
-        "hub": "/pizza"
+        "slug": "french-toast-casserole",
+        "hub": "hall-guide"
       },
       {
-        "slug": "jalapeno-popper-pizza",
-        "hub": "/pizza"
+        "slug": "pancake-short-stack",
+        "hub": "hall-guide"
       },
       {
-        "slug": "meat-lovers-sheet-pizza",
-        "hub": "/pizza"
+        "slug": "sheet-pan-meal-prep",
+        "hub": "hall-guide"
       },
       {
-        "slug": "nashville-hot-chicken-pizza",
-        "hub": "/pizza"
+        "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+        "hub": "hall-guide"
       },
       {
-        "slug": "pesto-chicken-pizza",
-        "hub": "/pizza"
+        "slug": "smash-burgers",
+        "hub": "hall-guide"
       },
       {
-        "slug": "philly-cheesesteak-pizza",
-        "hub": "/pizza"
+        "slug": "spaghetti-aglio-e-olio-for-the-hall",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "tomato-soup-grilled-cheese-croutons",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "turkey-burgers",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "turkey-sausage-egg-muffins",
+        "hub": "performance-meals"
+      },
+      {
+        "slug": "veggie-egg-casserole-tray",
+        "hub": "performance-meals"
       }
     ],
-    "notLinkedFromGuidesOnly": 207,
-    "weakOnPageOutboundLinks": 125,
+    "notLinkedFromGuidesOnly": 226,
+    "weakOnPageOutboundLinks": 127,
     "internallyUnreachable": []
   },
   "sitemapCoverage": {

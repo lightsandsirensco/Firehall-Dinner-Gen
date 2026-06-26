@@ -17,18 +17,30 @@ export function HomeCtaBand() {
         <h2 className="font-heading text-2xl sm:text-3xl tracking-tight text-foreground">
           {HOME.ctaBandTitle}
         </h2>
-        <p className="mt-2 text-sm sm:text-base text-muted-foreground max-w-sm mx-auto">
+        <p className="mt-2 text-sm sm:text-base text-muted-foreground max-w-md mx-auto">
           {HOME.ctaBandBody}
         </p>
-        <Button
-          asChild
-          size="lg"
-          className="mt-7 h-12 px-8 font-heading uppercase tracking-[0.1em] text-xs shadow-lg shadow-primary/20"
-        >
-          <Link href="/generator" data-testid="home-cta-band-generator">
-            {CTA.findDinner}
-          </Link>
-        </Button>
+        <div className="mt-7 flex flex-col sm:flex-row items-center justify-center gap-3">
+          <Button
+            asChild
+            size="lg"
+            className="h-12 px-8 font-heading font-semibold tracking-wide shadow-lg shadow-primary/20 w-full sm:w-auto"
+          >
+            <Link href="/generator" data-testid="home-cta-band-generator">
+              {CTA.pickTonight}
+            </Link>
+          </Button>
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="h-12 px-8 font-medium w-full sm:w-auto"
+          >
+            <Link href="/hall/join" data-testid="home-cta-band-hall">
+              {HOME.ctaBandSecondary}
+            </Link>
+          </Button>
+        </div>
       </div>
     </section>
   );

@@ -4,6 +4,7 @@ import type { SeoLandingPageDef } from "./landing-pages-data.js";
 import { FIREFIGHTER_RED_LEAD_RECIPE } from "./firefighter-red-lead-recipe-data.js";
 import { guidePath, guidesIndexPath } from "../editorial/content-schema.js";
 import { FIREHALL_CATEGORY_LABEL, type FirehallCategoryId } from "../firehall-categories.js";
+import { firehallCategoryExplorePath } from "../browse-canonical.js";
 import {
   APPROVED_CATALOG_TOTAL,
   formatMarketingRecipeCount,
@@ -57,7 +58,7 @@ export function buildGeneratorSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeo
   return {
     title: `Find a Firefighter Meal for Tonight | Firehall Meals`,
     description: clipDescription(
-      `Pick crew size, protein, and time — get a firefighter meal from the Firehall Meals catalog. Browse ${marketingRecipeCountCopy(recipeCount)} anytime.`,
+      `Set crew size, protein, and time — Hall Match finds a curated firefighter meal from ${marketingRecipeCountCopy(recipeCount)}. Browse the full catalog anytime.`,
     ),
     canonicalPath: "/generator",
     ogType: "website",
@@ -65,6 +66,7 @@ export function buildGeneratorSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeo
       ...SEO_TARGET_KEYWORDS,
       "tonight's firefighter dinner",
       "crew meal picker",
+      "hall match",
     ],
   };
 }
@@ -98,7 +100,7 @@ export function buildRecipesIndexSeo(recipeCount = APPROVED_CATALOG_TOTAL): Page
     description: clipDescription(
       `${recipeCount}+ firefighter meals and fire station recipes — crew portions, clear steps, and categories for quick shifts, BBQ nights, and healthy hall cooking.`,
     ),
-    canonicalPath: "/recipes",
+    canonicalPath: "/explore",
     ogType: "website",
     keywords: [...SEO_TARGET_KEYWORDS, "firefighter recipe index", "firehouse meal ideas"],
   };
@@ -113,6 +115,23 @@ export function buildTopRatedRecipesSeo(): PageSeoConfig {
     canonicalPath: "/top-rated-recipes",
     ogType: "website",
     keywords: [...SEO_TARGET_KEYWORDS, "top rated firefighter recipes", "crew approved meals"],
+  };
+}
+
+export function buildHallOfFameSeo(): PageSeoConfig {
+  return {
+    title: "Hall of Fame — Top Firehall Meals | Firehall Meals",
+    description: clipDescription(
+      "Canada's most cooked, voted, and wheel-spun firehall meals — community rankings from crews using Firehall Meals.",
+    ),
+    canonicalPath: "/hall-of-fame",
+    ogType: "website",
+    keywords: [
+      ...SEO_TARGET_KEYWORDS,
+      "top firehall meals",
+      "firefighter meal rankings",
+      "hall of fame dinners",
+    ],
   };
 }
 
@@ -147,7 +166,7 @@ export function buildFirehallCategorySeo(categoryId: FirehallCategoryId, recipeC
   return {
     title: `${titlePrefix} | Firehall Meals`,
     description: clipDescription(recipeCount > 0 ? `${descBase} ${recipeCount} recipes.` : descBase),
-    canonicalPath: `/categories/${categoryId}`,
+    canonicalPath: firehallCategoryExplorePath(categoryId).split("?")[0] ?? "/explore",
     ogType: "website",
     keywords: [...SEO_TARGET_KEYWORDS, keywordLabel, "firehall meals", "firehouse meals"],
   };
@@ -162,6 +181,18 @@ export function buildAboutSeo(): PageSeoConfig {
     canonicalPath: "/about",
     ogType: "website",
     keywords: [...SEO_TARGET_KEYWORDS],
+  };
+}
+
+export function buildHallProgramSeo(): PageSeoConfig {
+  return {
+    title: `Hall Program — Built For Fire Halls | ${SEO_SITE_NAME}`,
+    description: clipDescription(
+      'End the "what\'s for dinner?" debate for every shift. Shared meal history, shopping lists, favorites, supplies, and hall analytics.',
+    ),
+    canonicalPath: "/hall-program",
+    ogType: "website",
+    keywords: [...SEO_TARGET_KEYWORDS, "fire hall program", "station meal planning", "hall pro"],
   };
 }
 

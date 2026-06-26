@@ -10,6 +10,7 @@ import type {
   AnalyticsPeriod,
   AnalyticsRankedRow,
 } from "../../shared/analytics/events.js";
+import type { HallOfFamePayload } from "../../shared/hall-of-fame/types.js";
 
 let db: SqliteDatabase;
 
@@ -131,6 +132,77 @@ function topByMetadataField(
     label: String(r.label ?? r.key),
     count: Number(r.count),
   }));
+}
+
+function topCookedMeals(period: AnalyticsPeriod, limit = 10): AnalyticsRankedRow[] {
+  const { clause } = periodWhere(period);
+  const rows = db
+    .prepare(
+      `
+      SELECT
+        COALESCE(NULLIF(key, ''), label) AS key,
+        MAX(label) AS label,
+        SUM(cnt) AS count
+      FROM (
+        SELECT
+          COALESCE(
+            NULLIF(json_extract(metadata_json, '$.recipe_slug'), ''),
+            NULLIF(json_extract(metadata_json, '$.recipe_title'), '')
+          ) AS key,
+          COALESCE(
+            NULLIF(json_extract(metadata_json, '$.recipe_title'), ''),
+            NULLIF(json_extract(metadata_json, '$.recipe_slug'), '')
+          ) AS label,
+          1 AS cnt
+        FROM analytics_events
+        WHERE event_type IN ('meal_cooked', 'hall_meal_repeated') AND ${clause}
+          AND (
+            json_extract(metadata_json, '$.recipe_slug') IS NOT NULL
+            OR json_extract(metadata_json, '$.recipe_title') IS NOT NULL
+          )
+        UNION ALL
+        SELECT
+          COALESCE(
+            NULLIF(json_extract(metadata_json, '$.recipe_slug'), ''),
+            NULLIF(json_extract(metadata_json, '$.recipe_title'), '')
+          ) AS key,
+          COALESCE(
+            NULLIF(json_extract(metadata_json, '$.recipe_title'), ''),
+            NULLIF(json_extract(metadata_json, '$.recipe_slug'), '')
+          ) AS label,
+          1 AS cnt
+        FROM analytics_events
+        WHERE event_type = 'wheel_recipe_open'
+          AND json_extract(metadata_json, '$.action') = 'cook'
+          AND ${clause}
+          AND (
+            json_extract(metadata_json, '$.recipe_slug') IS NOT NULL
+            OR json_extract(metadata_json, '$.recipe_title') IS NOT NULL
+          )
+      )
+      WHERE key IS NOT NULL
+      GROUP BY key
+      ORDER BY count DESC
+      LIMIT ?
+    `,
+    )
+    .all(limit) as Array<{ key: string; label: string; count: number }>;
+
+  return rows.map((r) => ({
+    key: String(r.key),
+    label: String(r.label ?? r.key),
+    count: Number(r.count),
+  }));
+}
+
+export function getHallOfFame(period: AnalyticsPeriod, limit = 10): HallOfFamePayload {
+  return {
+    period,
+    generated_at: new Date().toISOString(),
+    most_cooked: topCookedMeals(period, limit),
+    most_voted: topByMetadataField(period, "hall_vote_submitted", "option_name", "option_name", limit),
+    most_wheel: topByMetadataField(period, "wheel_spin", "recipe_slug", "recipe_title", limit),
+  };
 }
 
 function getNeverViewedRecipesSample(limit = 12): AnalyticsRankedRow[] {
@@ -258,6 +330,27 @@ export function insertAnalyticsTestEvents(sessionId: string, visitorId: string):
           crew_size: 8,
           time_available: 45,
           meal_category: "firehall_classics",
+        },
+      },
+      {
+        event_type: "meal_cooked",
+        route: "/recipes/chicken-parm",
+        visitor_id: visitorId,
+        metadata: {
+          recipe_slug: "chicken-parm",
+          recipe_title: "Chicken Parm",
+          source: "test",
+          crew_size: 8,
+        },
+      },
+      {
+        event_type: "hall_vote_submitted",
+        route: "/vote/test",
+        visitor_id: visitorId,
+        metadata: {
+          vote_id: "test-vote",
+          option_id: 0,
+          option_name: "Jerk Chicken & Rice and Peas",
         },
       },
       {

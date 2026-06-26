@@ -5,6 +5,7 @@ import {
   APPROVED_CATALOG_TOTAL,
   marketingRecipeCountCopy,
 } from "@shared/meal-catalog/curated-count";
+import { BROWSE_CANONICAL_PATH, firehallCategoryExplorePath } from "@shared/browse-canonical";
 
 export type InternalLink = { href: string; label: string; description?: string };
 
@@ -16,17 +17,35 @@ const HUB_LINKS: InternalLink[] = [
     description: marketingRecipeCountCopy(APPROVED_CATALOG_TOTAL),
   },
   { href: "/firehouse-recipes", label: "Firehouse recipes", description: "Classic station cooking" },
-  { href: "/recipes", label: "Full recipe catalog", description: "Browse every firefighter meal" },
-  { href: "/explore", label: "Browse recipes", description: "Search by protein, time & category" },
-  { href: "/categories/crew_favorites", label: "Hall favorites", description: "Popular firehouse meals" },
-  { href: "/categories/quick_meals", label: "Quick shift meals", description: "Under 45 minutes" },
-  { href: "/categories/healthy_options", label: "Healthy firefighter meals", description: "High-protein hall picks" },
-  { href: "/categories/bbq_smoker", label: "BBQ firefighter recipes", description: "Grill and smoker nights" },
-  { href: "/healthy-firefighter-meals", label: "Healthy firefighter meals", description: "Performance station plates" },
+  {
+    href: BROWSE_CANONICAL_PATH,
+    label: "Browse recipes",
+    description: "Search by protein, time & category",
+  },
+  {
+    href: firehallCategoryExplorePath("crew_favorites"),
+    label: "Hall favorites",
+    description: "Popular firehouse meals",
+  },
+  {
+    href: firehallCategoryExplorePath("quick_meals"),
+    label: "Quick shift meals",
+    description: "Under 45 minutes",
+  },
+  {
+    href: firehallCategoryExplorePath("healthy_options"),
+    label: "Healthy firefighter meals",
+    description: "High-protein hall picks",
+  },
+  {
+    href: firehallCategoryExplorePath("bbq_smoker"),
+    label: "BBQ firefighter recipes",
+    description: "Grill and smoker nights",
+  },  { href: "/healthy-firefighter-meals", label: "Healthy firefighter meals", description: "Performance station plates" },
   { href: "/firefighter-breakfast-recipes", label: "Firefighter breakfast recipes", description: "After night shift" },
   { href: "/wheel", label: "Classics Wheel", description: "Hall kitchen-table picks" },
   { href: "/guides", label: "Firehouse cooking guides", description: "Shift & nutrition notes" },
-  { href: "/generator", label: CTA.findDinner, description: "Fast crew meal picker" },
+  { href: "/generator", label: CTA.findDinner, description: "Curated crew meal picker" },
 ];
 
 const POPULAR_RECIPES: InternalLink[] = [

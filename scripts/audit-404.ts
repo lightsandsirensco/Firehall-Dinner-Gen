@@ -13,6 +13,7 @@ import { approvedCatalogRecipePath } from "../shared/approved-catalog.js";
 import { resolveCatalogHeroPath } from "../shared/hall-catalog/gate.js";
 import { resolveCatalogSlug } from "../shared/catalog-slug-redirects.js";
 import { FIREHALL_CATEGORY_IDS } from "../shared/firehall-categories.js";
+import { firehallCategoryExplorePath } from "../shared/browse-canonical.js";
 import { guidePath } from "../shared/editorial/content-schema.js";
 import { allSeoLandingPagePaths } from "../shared/seo/landing-pages-data.js";
 import { CURATED_HALL_PACKAGES, getCuratedPackageDef } from "../shared/curated-hall-packages.js";
@@ -94,8 +95,10 @@ const STATIC_EXACT = new Set<string>([
   "/wheel",
   "/pizza",
   "/guides",
-  "/recipes",
   "/top-rated-recipes",
+  "/hall-of-fame",
+  "/hall",
+  "/hall-history",
   "/smoothies",
   "/breakfast",
   "/breakfast/performance",
@@ -110,8 +113,6 @@ const STATIC_EXACT = new Set<string>([
   "/admin/recipe-ratings",
   "/firefighter-red-lead-recipe",
   ...allSeoLandingPagePaths(),
-  ...FIREHALL_CATEGORY_IDS.map((id) => `/categories/${id}`),
-  "/categories/breakfast",
   "/guides/topic/firefighter-meals",
   "/guides/topic/firehall-dinners",
   "/guides/topic/firefighter-nutrition",
@@ -151,12 +152,16 @@ function resolvePath(pathname: string): ResolveResult {
 
   if (STATIC_EXACT.has(p)) return { status: "ok" };
 
+  if (p === "/recipes") {
+    return { status: "redirect", redirectTo: "/explore", reason: "legacy recipes index → explore" };
+  }
+
   if (p === "/classics-wheel") {
     return { status: "redirect", redirectTo: "/wheel", reason: "legacy classics wheel" };
   }
 
   if (p === "/performance-fuel") {
-    return { status: "redirect", redirectTo: "/recipes", reason: "legacy performance fuel index" };
+    return { status: "redirect", redirectTo: "/explore", reason: "legacy performance fuel index" };
   }
 
   const perfFuel = p.match(/^\/performance-fuel\/([^/]+)$/);
@@ -165,7 +170,7 @@ function resolvePath(pathname: string): ResolveResult {
     if (APPROVED_SLUGS.has(slug) || resolvePageJson(slug)) {
       return { status: "redirect", redirectTo: `/recipes/${slug}`, reason: "legacy performance fuel recipe" };
     }
-    return { status: "redirect", redirectTo: "/recipes", reason: "legacy performance fuel unknown slug" };
+    return { status: "redirect", redirectTo: "/explore", reason: "legacy performance fuel unknown slug" };
   }
 
   const pkg = p.match(/^\/package\/([^/]+)$/);
@@ -227,9 +232,13 @@ function resolvePath(pathname: string): ResolveResult {
 
   const category = p.match(/^\/categories\/([^/]+)$/);
   if (category) {
-    const id = category[1]!;
+    const id = category[1]!.toLowerCase();
     if (id === "breakfast" || (FIREHALL_CATEGORY_IDS as readonly string[]).includes(id)) {
-      return { status: "ok" };
+      return {
+        status: "redirect",
+        redirectTo: firehallCategoryExplorePath(id),
+        reason: "category hub → explore",
+      };
     }
     return { status: "not_found", reason: "unknown category id" };
   }
@@ -463,10 +472,9 @@ async function main(): Promise<void> {
     "/wheel",
     "/pizza",
     "/guides",
-    "/recipes",
     "/smoothies",
     "/breakfast",
-    ...FIREHALL_CATEGORY_IDS.map((id) => `/categories/${id}`),
+    ...FIREHALL_CATEGORY_IDS.map((id) => firehallCategoryExplorePath(id)),
   ];
   const reachable = new Set<string>(linkGraphSeeds);
   for (const p of linkGraphSeeds) {

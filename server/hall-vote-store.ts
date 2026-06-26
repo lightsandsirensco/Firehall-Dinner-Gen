@@ -145,6 +145,34 @@ export function getHallVote(voteId: string, sessionId?: string, fingerprint?: st
   };
 }
 
+export interface HallVoteOgMeta {
+  title: string;
+  description: string;
+  image: string;
+  optionNames: string[];
+}
+
+/** Lightweight metadata for OG tags on /vote/:voteId (no session required). */
+export function getHallVoteOgMeta(voteId: string): HallVoteOgMeta | null {
+  const d = getDb();
+  const row = d.prepare("SELECT title, options_json, status FROM hall_votes WHERE vote_id = ?").get(voteId) as
+    | { title: string; options_json: string; status: string }
+    | undefined;
+  if (!row) return null;
+
+  const options = JSON.parse(row.options_json) as HallVoteOption[];
+  const names = options.map((o) => o.name).filter(Boolean);
+  const optionList = names.slice(0, 4).join(" · ");
+  const statusLabel = row.status === "closed" ? "Results are in" : "Vote now";
+
+  return {
+    title: `${row.title || "Tonight's Hall Vote"} | Firehall Meals`,
+    description: `${statusLabel} — ${optionList || "Crew dinner vote"}. Tap to pick tonight's hall meal.`,
+    image: "/images/golden-100/chicken-parm.jpg",
+    optionNames: names,
+  };
+}
+
 export function castBallot(
   voteId: string,
   optionId: number,

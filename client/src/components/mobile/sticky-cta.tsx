@@ -1,5 +1,6 @@
 import type { ComponentProps } from "react";
 import { GenerateButtons } from "@/components/filter-panel";
+import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 
 type StickyCTAProps = ComponentProps<typeof GenerateButtons> & { compact?: boolean };
@@ -9,7 +10,7 @@ type StickyCTAProps = ComponentProps<typeof GenerateButtons> & { compact?: boole
  */
 export function StickyCTA(props: StickyCTAProps) {
   return (
-    <div className="mobile-sticky-bar lg:hidden" data-testid="mobile-sticky-cta">
+    <div className={app.stickyBarAboveTabs} data-testid="mobile-sticky-cta">
       <div className="px-page pt-2.5 pb-1">
         <GenerateButtons
           {...props}

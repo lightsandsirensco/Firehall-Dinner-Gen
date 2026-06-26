@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import { Link, useRoute } from "wouter";
 
-import { Clock, Users, ChefHat, Loader2, List, Heart, BookmarkPlus } from "lucide-react";
+import { Clock, Users, ChefHat, Loader2, List } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
@@ -12,8 +12,17 @@ import { SiteFooter } from "@/components/site-footer";
 
 import { Button } from "@/components/ui/button";
 
-import { getSavedCount, saveMeal, isCatalogMealSaved } from "@/lib/saved-meals";
-import { catalogPageToClientRecipe } from "@/lib/catalog-recipe-save";
+import {
+  getHallFavoritesCount,
+  HALL_FAVORITES_CHANGED_EVENT,
+} from "@/lib/hall-favorites-store";
+import { HallFavoriteButton } from "@/components/hall-favorites/hall-favorite-button";
+import { catalogVoteOptions } from "@/lib/hall-vote-recipes";
+import { HallVoteFlow } from "@/components/hall-vote-flow";
+import { goldenPageToCookMode } from "@/lib/cook-mode/adapters";
+import { StartCookingButton } from "@/components/cook-mode/start-cooking-button";
+import { HallRecipeHistoryPanel } from "@/components/hall-history/hall-recipe-history-panel";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 
 import { fetchGoldenCatalogIndex, fetchGoldenRecipePage } from "@/lib/golden-recipe-api";
 import { buildRecipeLinkClusters } from "@shared/golden-100/internal-link-clusters";
@@ -65,7 +74,7 @@ import {
 } from "@shared/measurements";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
-import { trackRecipeView, trackRecipeSave } from "@/lib/analytics";
+import { trackRecipeView } from "@/lib/analytics";
 
 
 
@@ -373,7 +382,7 @@ function RecipeCookStepNav({ steps }: { steps: GoldenRecipePage["steps"] }) {
 
               className={cn(
 
-                "shrink-0 min-w-9 h-9 rounded-full text-sm font-semibold tabular-nums touch-manipulation transition-colors",
+                "shrink-0 min-w-11 min-h-11 rounded-full text-sm font-semibold tabular-nums touch-manipulation transition-colors",
 
                 activeStep === step.stepNumber
 
@@ -411,9 +420,12 @@ export default function GoldenRecipePageView() {
 
   const slug = params?.slug ?? "";
 
-  const [favCount, setFavCount] = useState(() => getSavedCount());
+  const [favCount, setFavCount] = useState(() => getHallFavoritesCount());
   const [shoppingOpen, setShoppingOpen] = useState(false);
-  const [saved, setSaved] = useState(false);
+  const autoCookMode = useMemo(
+    () => new URLSearchParams(window.location.search).get("cook") === "1",
+    [],
+  );
 
   const { data: page, isLoading, error } = useQuery({
 
@@ -428,14 +440,11 @@ export default function GoldenRecipePageView() {
   });
 
   useEffect(() => {
-    const sync = () => {
-      setFavCount(getSavedCount());
-      if (slug) setSaved(isCatalogMealSaved(slug));
-    };
+    const sync = () => setFavCount(getHallFavoritesCount());
     sync();
-    window.addEventListener("favorites-changed", sync);
-    return () => window.removeEventListener("favorites-changed", sync);
-  }, [slug]);
+    window.addEventListener(HALL_FAVORITES_CHANGED_EVENT, sync);
+    return () => window.removeEventListener(HALL_FAVORITES_CHANGED_EVENT, sync);
+  }, []);
 
 
 
@@ -445,13 +454,13 @@ export default function GoldenRecipePageView() {
 
   const breadcrumbs: BreadcrumbItem[] = useMemo(() => {
 
-    if (!page) return [{ name: "Home", path: "/" }, { name: "Recipes", path: "/recipes" }];
+    if (!page) return [{ name: "Home", path: "/" }, { name: "Explore", path: "/explore" }];
 
     return [
 
       { name: "Home", path: "/" },
 
-      { name: "Recipes", path: "/recipes" },
+      { name: "Explore", path: "/explore" },
 
       { name: page.title, path: `/recipes/${page.slug}` },
 
@@ -566,6 +575,16 @@ export default function GoldenRecipePageView() {
     [scaledIngredients, page?.title, measurementSystem],
   );
 
+  const voteRecipes = useMemo(() => {
+    if (!page) return [];
+    return catalogVoteOptions(page, relatedQueries.data ?? []);
+  }, [page, relatedQueries.data]);
+
+  const cookModeRecipe = useMemo(() => {
+    if (!page || scaledIngredients.length === 0) return null;
+    return goldenPageToCookMode(page, scaledIngredients, measurementSystem, crewSize);
+  }, [page, scaledIngredients, measurementSystem, crewSize]);
+
   const ingredientGroups = useMemo(() => {
     const groups = new Map<string, typeof scaledIngredients>();
     for (const ing of scaledIngredients) {
@@ -584,19 +603,6 @@ export default function GoldenRecipePageView() {
       { icon: ChefHat, label: page.difficulty },
     ];
   }, [page, crewSize, displayCookTime]);
-
-  const handleSave = () => {
-    if (!page || saved) return;
-    const recipe = catalogPageToClientRecipe(page, page.slug);
-    const result = saveMeal(recipe);
-    if (result.saved) {
-      setSaved(true);
-      setFavCount(getSavedCount());
-      trackRecipeSave(page.slug, page.title);
-    } else if (result.duplicate) {
-      setSaved(true);
-    }
-  };
 
 
 
@@ -673,17 +679,21 @@ export default function GoldenRecipePageView() {
 
             </div>
 
+            <HallRecipeHistoryPanel
+              recipeSlug={page.slug}
+              title={page.title}
+              recipePath={approvedCatalogRecipePath(page.slug)}
+              className="mt-4 max-w-2xl"
+              source="recipe_page"
+            />
+
             <RecipeMeasurementBar className="mt-4">
-              <Button
-                variant="outline"
-                className={`min-h-11 gap-2 ${saved ? "bg-primary/15 border-primary/30 text-primary" : ""}`}
-                onClick={handleSave}
-                disabled={saved}
-                data-testid="button-recipe-save"
-              >
-                {saved ? <Heart className="w-4 h-4 fill-current" /> : <BookmarkPlus className="w-4 h-4" />}
-                {saved ? "Saved" : "Save recipe"}
-              </Button>
+              <HallFavoriteButton
+                slug={page.slug}
+                title={page.title}
+                recipePath={approvedCatalogRecipePath(page.slug)}
+                source="recipe_page"
+              />
               <Button
                 variant="outline"
                 className="min-h-11 gap-2"
@@ -694,7 +704,24 @@ export default function GoldenRecipePageView() {
                 <List className="w-4 h-4" aria-hidden />
                 Shopping list ({crewSize} crew)
               </Button>
+              <StartCookingButton
+                recipe={cookModeRecipe}
+                recipeSlug={page.slug}
+                recipePath={approvedCatalogRecipePath(page.slug)}
+                source="recipe_page"
+                variant="default"
+                autoOpen={autoCookMode}
+              />
             </RecipeMeasurementBar>
+
+            {voteRecipes.length > 0 && (
+              <HallVoteFlow
+                recipes={voteRecipes}
+                source="recipe_page"
+                variant="banner"
+                className="mt-4"
+              />
+            )}
 
             <p className={cn(app.lead, "max-w-2xl")}>{page.shortDescription || page.description}</p>
 

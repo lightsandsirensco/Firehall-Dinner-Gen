@@ -31,17 +31,17 @@ export const SEO_TARGET_KEYWORDS = [
   "firehall dinner ideas",
 ] as const;
 
-/** Homepage title — primary keyword first; brand for CTR recognition. */
-export const SEO_DEFAULT_TITLE = "Firefighter Meals & Firehall Recipes | Firehall Meals";
+/** Homepage title — personal value first; SEO keywords preserved. */
+export const SEO_DEFAULT_TITLE =
+  "Firefighter Meal App — Pick Dinner, Save Recipes | Firehall Meals";
 
 export const SEO_DEFAULT_DESCRIPTION =
-  `Discover ${formatMarketingRecipeCount(APPROVED_CATALOG_TOTAL)} firefighter meals, firehall recipes, crew dinners, BBQ ideas, healthy station meals, and firefighter cooking classics. Built by firefighters. Tested in the firehall.`;
+  `Pick shift dinners in seconds, save meals you love, and cook with crew-sized recipes from ${formatMarketingRecipeCount(APPROVED_CATALOG_TOTAL)} firefighter-tested meals. Free for firefighters — connect your hall for shared planning when your crew is ready. Built by firefighters.`;
 
-/** Visible homepage H1 (matches title intent). */
-export const SEO_HOME_H1 = "Firefighter Meals & Firehall Recipes";
+/** Visible homepage H1 (legacy; hero uses HOME.heroHeadline). */
+export const SEO_HOME_H1 = "Pick dinner for your shift";
 
-export const SEO_HOME_HERO_EYEBROW =
-  "Firefighter meals · Firehall recipes · Crew-tested";
+export const SEO_HOME_HERO_EYEBROW = "For firefighters · Your shift · Your meals";
 
 export const SEO_DEFAULT_OG_IMAGE_PATH = "/images/golden-100/chicken-parm.jpg";
 

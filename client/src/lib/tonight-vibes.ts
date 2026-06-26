@@ -1,4 +1,5 @@
 import type { FilterState } from "@/components/filter-panel";
+import { isFirehallCategoryId } from "@shared/firehall-categories";
 
 /** UI-only vibe keys; mapped to existing backend filter fields. */
 export type TonightVibe =
@@ -135,7 +136,7 @@ export function applyTonightVibe(filters: FilterState, vibe: TonightVibe): Filte
     healthiness_preference: mapped.healthiness_preference,
     meal_format: mapped.meal_format,
     cuisine_style: mapped.cuisine_style,
-    firehall_category: mapped.firehall_category,
+    firehall_category: filters.category_locked ? filters.firehall_category : mapped.firehall_category,
   };
 }
 
@@ -148,30 +149,34 @@ export function applySimplifiedChipSelection(
 
   if (change.crew_size !== undefined) {
     next.crew_size = change.crew_size;
-    if (change.crew_size >= 10 && next.protein !== "any") {
+    if (!next.category_locked && change.crew_size >= 10 && next.protein !== "any") {
       next = applyTonightVibe(next, "big_appetite");
     }
   }
 
   if (change.time_available !== undefined) {
     next.time_available = change.time_available;
-    if (next.protein === "any") {
-      // Surprise Me owns meal_format/cuisine randomization
-    } else if (change.time_available === "20-30") {
-      next = applyTonightVibe(next, "quick_easy");
-    } else if (change.time_available === "45-60" && next.tonight_vibe === "quick_easy") {
-      next = applyTonightVibe(next, "classic_hall");
+    if (!next.category_locked) {
+      if (next.protein === "any") {
+        // Surprise Me owns meal_format/cuisine randomization
+      } else if (change.time_available === "20-30") {
+        next = applyTonightVibe(next, "quick_easy");
+      } else if (change.time_available === "45-60" && next.tonight_vibe === "quick_easy") {
+        next = applyTonightVibe(next, "classic_hall");
+      }
     }
   }
 
   if (change.protein !== undefined) {
     next.protein = change.protein;
-    if (change.protein === "any") {
-      next = applyTonightVibe(next, "surprise_meal");
-      next.cuisine_style = "any";
-      next.meal_format = "random";
-    } else if (filters.protein === "any") {
-      next = applyTonightVibe(next, DEFAULT_TONIGHT_VIBE);
+    if (!next.category_locked) {
+      if (change.protein === "any") {
+        next = applyTonightVibe(next, "surprise_meal");
+        next.cuisine_style = "any";
+        next.meal_format = "random";
+      } else if (filters.protein === "any") {
+        next = applyTonightVibe(next, DEFAULT_TONIGHT_VIBE);
+      }
     }
   }
 
@@ -207,6 +212,15 @@ export function normalizeLoadedFilters(parsed: Partial<FilterState>): FilterStat
   if (base.protein === "surprise") base.protein = "any";
   if (!PROTEIN_CHIPS.some((p) => p.value === base.protein) && !base.use_what_we_have) {
     base.protein = "chicken";
+  }
+
+  if (base.firehall_category && !isFirehallCategoryId(base.firehall_category)) {
+    base.firehall_category = undefined;
+    base.category_locked = false;
+  }
+
+  if (!Array.isArray(base.appliances) || base.appliances.length === 0) {
+    base.appliances = ["stove", "oven"];
   }
 
   base.tonight_vibe = inferVibeFromFilters(base);
@@ -247,6 +261,7 @@ export function isAdvancedCustomized(filters: FilterState): boolean {
     filters.healthiness_preference !== vibeDefaults.healthiness_preference ||
     filters.vegetarian_swap_needed ||
     filters.tonight_vibe !== DEFAULT_TONIGHT_VIBE ||
+    Boolean(filters.firehall_category) ||
     !["chicken", "beef", "any"].includes(filters.protein) ||
     filters.appliances.length !== 2 ||
     !filters.appliances.includes("stove") ||

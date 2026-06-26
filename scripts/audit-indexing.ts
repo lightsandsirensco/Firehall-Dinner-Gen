@@ -11,7 +11,12 @@ import { buildRobotsTxt, buildSitemapXml, resolvePublicSiteOrigin } from "../ser
 import { SEO_CANONICAL_ORIGIN } from "../shared/seo/constants.js";
 import { absoluteUrl } from "../shared/seo/urls.js";
 import { approvedCatalogRecipePath } from "../shared/approved-catalog.js";
-import { smoothieRecipePath } from "../shared/fuel-catalog/paths.js";
+import { isPerformanceBreakfastSlug } from "../shared/breakfast-catalog/governance-types.js";
+import {
+  breakfastPerformanceRecipePath,
+  breakfastRecipePath,
+  smoothieRecipePath,
+} from "../shared/fuel-catalog/paths.js";
 import { guidePath } from "../shared/editorial/content-schema.js";
 import { buildRecipePageSeo } from "../shared/seo/metadata.js";
 import {
@@ -35,7 +40,6 @@ const REQUIRED_SITEMAP_PATHS = [
   "/wheel",
   "/pizza",
   "/guides",
-  "/recipes",
 ] as const;
 
 /** Valid guide cluster hubs (not individual article slugs). */
@@ -73,6 +77,22 @@ function parseSitemapPaths(xml: string): string[] {
     }
   }
   return paths;
+}
+
+/**
+ * SEO canonical path per collection. Sitemap keys for breakfast/smoothies may still use
+ * `/recipes/:slug` (legacy index URLs) while on-page canonicals point at dedicated hubs.
+ */
+function expectedRecipeCanonicalPath(collection: string, slug: string): string {
+  const normalized = slug.trim().toLowerCase();
+  if (collection === "smoothie") return smoothieRecipePath(normalized);
+  if (collection === "breakfast") {
+    // Breakfast hub owns canonical URLs — not `/recipes/:slug`.
+    return isPerformanceBreakfastSlug(normalized)
+      ? breakfastPerformanceRecipePath(normalized)
+      : breakfastRecipePath(normalized);
+  }
+  return approvedCatalogRecipePath(normalized);
 }
 
 function pageJsonPathForSlug(slug: string, collection: string): string | null {
@@ -257,8 +277,11 @@ function main(): void {
       if (!canonical.startsWith(SEO_CANONICAL_ORIGIN)) {
         missingCanonical.push(slug);
       }
-      if (collection !== "smoothie" && seo.canonicalPath !== p) {
-        canonicalMismatch.push(`${slug} (expected ${p}, got ${seo.canonicalPath})`);
+      const expectedCanonical = expectedRecipeCanonicalPath(collection, slug);
+      if (seo.canonicalPath !== expectedCanonical) {
+        canonicalMismatch.push(
+          `${slug} (expected ${expectedCanonical}, got ${seo.canonicalPath})`,
+        );
       }
     }
 
@@ -439,7 +462,7 @@ ${REQUIRED_SITEMAP_PATHS.map((p) => `| \`${p}\` | ${sitemapPaths.has(p) ? "Yes" 
 
 ${requiredMissing.length ? `\n**Missing:** ${requiredMissing.join(", ")}\n` : ""}
 
-Hall guides index (\`/guides\`) plus **${guideUrlsInSitemap}** individual guide URLs. Recipe index (\`/recipes\`) plus **${recipeUrlsInSitemap}** recipe/smoothie URLs.
+Hall guides index (\`/guides\`) plus **${guideUrlsInSitemap}** individual guide URLs. Explore catalog (\`/explore\`) plus **${recipeUrlsInSitemap}** recipe/smoothie detail URLs.
 
 ## 2. robots.txt
 
@@ -498,6 +521,35 @@ ${hubOnlyRecipes.length ? `\n### Hub-only recipes (indexed, not on Explore)\n\n$
 ${recipesMissingFromSitemap.length ? `**Recipes missing from sitemap:** ${recipesMissingFromSitemap.slice(0, 20).join(", ")}${recipesMissingFromSitemap.length > 20 ? "…" : ""}\n` : ""}
 ${guidesMissingFromSitemap.length ? `**Guides missing:** ${guidesMissingFromSitemap.join(", ")}\n` : ""}
 ${orphanSitemapUrls.length ? `**Orphan sitemap paths:** ${orphanSitemapUrls.join(", ")}\n` : ""}
+
+## 6. Remediation log (browse unification)
+
+### Canonical path rules
+
+| Collection | Valid canonical pattern |
+|------------|-------------------------|
+| Golden / performance / expansion / pizza | \`/recipes/:slug\` |
+| Breakfast | \`/breakfast/:slug\` (performance: \`/breakfast/performance/:slug\`) |
+| Smoothies | \`/smoothies/:slug\` |
+
+Breakfast recipes stay in the sitemap at \`/recipes/:slug\` for legacy routing, but on-page SEO canonicals correctly use \`/breakfast/:slug\`.
+
+### Orphan recipe guide links
+
+Recipes excluded from Explore (duplicate hero imagery) are linked from hall guides:
+
+| Recipe slug | Linked from |
+|-------------|-------------|
+| \`30-minute-pasta-e-fagioli-for-the-hall\` | \`/guides/easy-firehall-pasta-recipes\` |
+| \`spaghetti-aglio-e-olio-for-the-hall\` | \`/guides/easy-firehall-pasta-recipes\` |
+| \`crispy-chicken-cutlets\` | \`/guides/firehouse-comfort-meals\` |
+| \`four-step-chicken-piccata\` | \`/guides/rookie-firefighter-meal-guide\` |
+| \`french-onion-soup-for-the-hall\` | \`/guides/comfort-food-after-a-long-shift\` |
+| \`tomato-soup-grilled-cheese-croutons\` | \`/guides/comfort-food-after-a-long-shift\` |
+| \`sheet-pan-parmesan-dijon-chicken-thigh-dinner\` | \`/guides/fast-firehall-meals-under-30-minutes\` |
+| \`turkey-burgers\` | \`/guides/healthy-firefighter-meals-fill-you-up\` |
+| \`classic-patty-melt-for-the-crew\` | \`/guides/10-classic-firehall-meals\` |
+| \`hall-blt-sandwich-feed\` | \`/guides/quick-meals-between-calls\` |
 
 ## Validation commands
 

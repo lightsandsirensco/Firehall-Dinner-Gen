@@ -95,6 +95,8 @@ const SIGNAL_CONFLICTS = new Set<string>([
   "bowl:pizza",
   "smoothie:grill",
   "grill:smoothie",
+  "pasta:sandwich",
+  "sandwich:pasta",
 ]);
 
 function dominantSignal(signals: Set<MealVisualSignal>): MealVisualSignal | null {
@@ -147,6 +149,9 @@ function slugPairConflicts(title: string, peerSlug: string): boolean {
     return true;
   }
   if (/\boats?\b/i.test(title) && /\b(mac-and-cheese|smoked-mac|pretzel-bite|pasta-bar)\b/.test(peer)) {
+    return true;
+  }
+  if (/\bmelt\b/i.test(title) && /\b(spaghetti|pasta|penne|rigatoni|macaroni)\b/.test(peer)) {
     return true;
   }
   if (/\bhash\b/i.test(title) && !/\bburrito\b/i.test(title) && /\b(falafel|bowl-bar|mediterranean)\b/.test(peer)) {
@@ -353,12 +358,20 @@ export function validateExploreImageMapping(
   };
 }
 
+export interface ExploreImageMappingAuditOptions {
+  context?: ExploreImageMappingContext;
+  peerLookup?: Map<string, Pick<ApprovedCatalogEntry, "title" | "mealFormat">>;
+}
+
 export function auditExploreImageMappings(
   entries: ApprovedCatalogEntry[],
   publicRoot?: string,
+  options: ExploreImageMappingAuditOptions = {},
 ): ExploreImageMappingReport {
-  const context = buildExploreImageMappingContext(entries, publicRoot);
-  const peerLookup = new Map(entries.map((entry) => [normalizeCatalogSlug(entry.slug), entry]));
+  const context = options.context ?? buildExploreImageMappingContext(entries, publicRoot);
+  const peerLookup =
+    options.peerLookup ??
+    new Map(entries.map((entry) => [normalizeCatalogSlug(entry.slug), entry]));
   const rows = entries.map((entry) =>
     validateExploreImageMapping(entry, context, { peerLookup }),
   );
@@ -387,8 +400,9 @@ export function auditExploreImageMappings(
 export function filterExploreEligibleCatalogEntries(
   entries: ApprovedCatalogEntry[],
   publicRoot?: string,
+  options: ExploreImageMappingAuditOptions = {},
 ): { recipes: ApprovedCatalogEntry[]; report: ExploreImageMappingReport } {
-  const report = auditExploreImageMappings(entries, publicRoot);
+  const report = auditExploreImageMappings(entries, publicRoot, options);
   const eligible = new Set(report.rows.filter((row) => row.exploreEligible).map((row) => row.slug));
   return {
     recipes: entries.filter((entry) => eligible.has(normalizeCatalogSlug(entry.slug))),

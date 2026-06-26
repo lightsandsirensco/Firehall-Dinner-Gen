@@ -34,7 +34,7 @@ export function ErrorState({ type, message, title, onSendFeedback }: ErrorStateP
           className="text-muted-foreground text-sm max-w-sm mb-1 leading-relaxed"
           data-testid="text-generator-smoked-description"
         >
-          Generator got smoked. Try again or{" "}
+          Meal picker hit a snag. Try again or{" "}
           {onSendFeedback ? (
             <button
               type="button"
@@ -87,7 +87,7 @@ export function ErrorState({ type, message, title, onSendFeedback }: ErrorStateP
         {title || "Couldn't load a meal"}
       </h2>
       <p className="text-muted-foreground text-sm max-w-sm mb-1 leading-relaxed" data-testid="text-error-description">
-        {message || "The hall line dropped for a second. Your picks are still here — tap generate again."}
+        {message || "The hall line dropped for a second. Your picks are still here — tap Pick Tonight's Meal again."}
       </p>
       <div className="flex items-center gap-1.5 text-muted-foreground/60 text-xs mt-1" data-testid="text-error-hint">
         <RefreshCw className="w-3 h-3" />

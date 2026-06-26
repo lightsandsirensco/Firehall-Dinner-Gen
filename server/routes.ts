@@ -5,7 +5,6 @@ import cookieParser from "cookie-parser";
 import {
   generateRequestSchema,
   pizzaRequestSchema,
-  hallVoteCreateSchema,
   emailRecipeSchema,
   emailShoppingListSchema,
   redLeadLeadMagnetSchema,
@@ -21,8 +20,6 @@ import {
 } from "@shared/schema";
 import { inferBusyLevelFromTime } from "@shared/busy-level";
 import { createDefaultGenerateRequest } from "@shared/generate-request-defaults";
-import { buildMinimalGenerateResponse } from "@shared/minimal-generate-response";
-import type { VoteOptionInput } from "@shared/schema";
 import { loadTemplates, filterTemplates, filterTemplatesWithRelaxation, pickTemplate, chooseProtein } from "./templates";
 import { scanRecipeForAllergens, autoSubstituteAllergens, substituteTextForAllergens, buildAllergenAvoidList } from "./allergens";
 import { auditAndFixRecipe as labelAudit, inferIngredientCategory, type LabelAuditContext } from "./labelAudit";
@@ -45,33 +42,20 @@ import {
 import { getFromPool, refillPool, getPoolSize } from "./recipe-pool";
 import {
   initHallVoteTables,
-  createHallVote,
-  getHallVote,
-  castBallot,
-  closeHallVote,
-  hashVoterFingerprint,
 } from "./hall-vote-store";
 import {
   initRecipeCrewRatingsStore,
-  getRecipeCrewRatingPublicView,
-  castRecipeCrewRatingVote,
-  hashCrewRatingFingerprint,
-  getRecipeCrewRatingCollectionsForCatalog,
-  getRecipeCrewRatingAnalytics,
-  getRatingSortMap,
-  getTopRatedRecipes,
 } from "./recipe-crew-ratings/store.js";
-import { buildApprovedCatalog } from "./approved-catalog.js";
-import { toApprovedCatalogGridResponse } from "../shared/approved-catalog.js";
-import { sanitizeRecipeHeroSurface } from "./sanitize-verified-recipe-hero.js";
-import { castCrewRatingVoteSchema } from "../shared/recipe-crew-ratings/schema.js";
-import { EMPTY_RECIPE_CREW_RATING_COLLECTIONS } from "../shared/recipe-crew-ratings/types.js";
+import { getApprovedCatalog, warmApprovedCatalogCache } from "./approved-catalog-cache.js";
+import { registerBrowseRedirects } from "./browse-redirects.js";
 import { registerHallFeedbackRoutes } from "./hall-feedback-routes.js";
-
-function routeParam(value: string | string[] | undefined): string {
-  return Array.isArray(value) ? (value[0] ?? "") : (value ?? "");
-}
-import { addFavourite, getFavourites, removeFavourite, getAllFavouriteIds } from "./favourites";
+import { registerHealthRoutes } from "./routes/health-routes.js";
+import { registerVoteRoutes } from "./routes/vote-routes.js";
+import { registerCatalogRoutes } from "./routes/catalog-routes.js";
+import { registerRecipeRatingsRoutes } from "./routes/recipe-ratings-routes.js";
+import { registerFavouritesRoutes } from "./routes/favourites-routes.js";
+import { routeParam } from "./routes/param.js";
+import { getAllFavouriteIds } from "./favourites";
 import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
 import { buildFallbackRecipe } from "./fallback-recipe";
 import { searchRecipes, getRecipeById, getRandomRecipes, type SearchOptions } from "./spoonacular";
@@ -107,31 +91,7 @@ import { validateGoldenRecipePage } from "./golden-100/recipe-page-validator.js"
 import fs from "node:fs";
 import path from "node:path";
 import { GOLDEN_CATALOG_PUBLIC_DIR } from "./golden-100/page-store.js";
-import {
-  PIZZA_NIGHT_CATALOG_PUBLIC_DIR,
-  readPizzaNightRecipePage,
-} from "./pizza-night/page-store.js";
-import {
-  PERFORMANCE_CATALOG_PUBLIC_DIR,
-  readPerformanceRecipePage,
-} from "./performance-meals/page-store.js";
-import { buildPerformanceRecipePage } from "./performance-meals/page-builder.js";
-import { getPerformanceRecipeBySlug } from "../shared/performance-meals/adapted/index.js";
-import {
-  HALL_EXPANSION_CATALOG_PUBLIC_DIR,
-  readHallExpansionRecipePage,
-} from "./hall-expansion/page-store.js";
-import { buildHallExpansionRecipePage } from "./hall-expansion/page-builder.js";
-import { getHallExpansionRecipeBySlug } from "../shared/hall-expansion/adapted/index.js";
-import { loadMergedHallCatalogIndex, resolveHallRecipePage } from "./meal-catalog/load-index.js";
-import { readBreakfastRecipePageFromDisk } from "./breakfast-catalog/page-store.js";
 import { hallCatalogExploreCards } from "./meal-catalog/search-golden.js";
-import {
-  SMOOTHIE_CATALOG_PUBLIC_DIR,
-  readSmoothieRecipePage,
-} from "./fuel-catalog/page-store.js";
-import { buildSmoothieRecipePage } from "./fuel-catalog/page-builder.js";
-import { getSmoothieCatalogItem } from "../shared/fuel-catalog/smoothies/catalog-data.js";
 import { buildRobotsTxt, buildSitemapXml, resolvePublicSiteOrigin } from "./seo/sitemap.js";
 import {
   readEditorialArticle,
@@ -222,11 +182,31 @@ import { log, logVerbose, logError, clip, formatLogFields, maskEmail } from "./l
 import { requireAdmin } from "./admin-auth.js";
 import { requireCsrf } from "./csrf.js";
 import { registerAnalyticsRoutes } from "./analytics/analytics-routes.js";
+import { registerGrowthDashboardRoutes } from "./growth-dashboard/routes.js";
+import { registerSocialProofRoutes } from "./social-proof/social-proof-routes.js";
+import { registerAuthRoutes } from "./auth/auth-routes.js";
+import { initAuthStore } from "./auth/auth-store.js";
+import { registerUserSyncRoutes } from "./sync/routes.js";
+import { registerHallMembershipRoutes } from "./hall-membership/routes.js";
+import { registerHallShoppingListRoutes } from "./hall-shopping-list/routes.js";
+import { registerHallSuppliesRoutes } from "./hall-supplies/routes.js";
+import { registerHallCanteenRoutes } from "./hall-canteen/routes.js";
+import { registerHallCanteenPaymentsRoutes } from "./hall-canteen-payments/routes.js";
+import { registerHallNotesRoutes } from "./hall-notes/routes.js";
+import { registerShiftReminderRoutes } from "./shift-reminder/routes.js";
+import { registerHallAnalyticsRoutes } from "./hall-analytics/routes.js";
+import { initHallMembershipStore } from "./hall-membership/store.js";
+import { registerBillingRoutes } from "./billing/routes.js";
+import { initBillingStore } from "./billing/store.js";
+import { captureEmailLead, registerAdminUsersRoutes } from "./admin-users/routes.js";
+import { registerGroceryDealsRoutes } from "./grocery-deals/routes.js";
+import { registerMonitoringRoutes } from "./monitoring/error-monitor.js";
 import {
   sanitizeClientGenerationMeta,
   sanitizeGenerateRequest,
   sanitizePizzaRequest,
 } from "./sanitize-request.js";
+import { normalizeGenerateFirehallCategory } from "../shared/firehall-categories.js";
 import { getClientIp } from "./client-ip.js";
 import { enforceExploreRateLimit } from "./explore-rate-limit.js";
 import { enforceEmailRateLimit } from "./email-rate-limit.js";
@@ -270,6 +250,18 @@ function isBot(ua: string): boolean {
   return BOT_UA_PATTERNS.some((p) => p.test(ua));
 }
 
+function coerceGenerateRequestBody(body: unknown): unknown {
+  if (!body || typeof body !== "object") return body;
+  const next = { ...(body as Record<string, unknown>) };
+  const fc = normalizeGenerateFirehallCategory(next.firehall_category);
+  if (fc) next.firehall_category = fc;
+  else delete next.firehall_category;
+  if (Array.isArray(next.appliances) && next.appliances.length === 0) {
+    next.appliances = ["stove", "oven"];
+  }
+  return next;
+}
+
 export async function registerRoutes(
   httpServer: Server,
   app: Express
@@ -281,6 +273,9 @@ export async function registerRoutes(
     initIngestionStore,
     initHallVoteTables,
     initRecipeCrewRatingsStore,
+    initAuthStore,
+    initHallMembershipStore,
+    initBillingStore,
   });
 
   const klaviyoCheck = validateKlaviyoConfig();
@@ -331,6 +326,29 @@ export async function registerRoutes(
   });
 
   registerAnalyticsRoutes(app);
+  registerGrowthDashboardRoutes(app);
+  registerSocialProofRoutes(app);
+  registerAuthRoutes(app);
+  registerUserSyncRoutes(app);
+  registerHallMembershipRoutes(app);
+  registerHallShoppingListRoutes(app);
+  registerHallSuppliesRoutes(app);
+  registerHallCanteenRoutes(app);
+  registerHallCanteenPaymentsRoutes(app);
+  registerHallNotesRoutes(app);
+  registerShiftReminderRoutes(app);
+  registerHallAnalyticsRoutes(app);
+  registerBillingRoutes(app);
+  registerAdminUsersRoutes(app);
+  registerGroceryDealsRoutes(app);
+  registerMonitoringRoutes(app);
+  registerHealthRoutes(app);
+  registerVoteRoutes(app);
+  registerRecipeRatingsRoutes(app);
+  registerFavouritesRoutes(app);
+  registerCatalogRoutes(app);
+
+  warmApprovedCatalogCache();
 
   app.use((req: Request, res: Response, next: NextFunction) => {
     if (req.method === "GET") {
@@ -344,22 +362,6 @@ export async function registerRoutes(
       }
     }
     next();
-  });
-
-  app.get("/api/warm", (_req: Request, res: Response) => {
-    log("Warm-up ping received", "perf");
-    return res.json({ status: "warm", uptime: process.uptime() });
-  });
-
-  app.get("/api/health", (_req: Request, res: Response) => {
-    const diag = getStartupDiagnostics();
-    const ok = diag?.ok !== false;
-    res.status(ok ? 200 : 503).json({
-      status: ok ? "healthy" : "degraded",
-      uptime: process.uptime(),
-      nodeEnv: process.env.NODE_ENV || "development",
-      diagnostics: diag,
-    });
   });
 
   function parseQtyUnit(amount: string): { qty: number; unit: string } {
@@ -982,6 +984,7 @@ export async function registerRoutes(
             _source: safe.source,
             _recipe_source: safe.recipeSource,
             _catalog_id: safe.catalogId,
+            _slug: safe.slug,
             _realism_firewall_fallback: true,
           },
           debug,
@@ -1028,6 +1031,7 @@ export async function registerRoutes(
               _source: safe.source,
               _recipe_source: safe.recipeSource,
               _catalog_id: safe.catalogId,
+              _slug: safe.slug,
               _realism_firewall_fallback: true,
             },
             debug,
@@ -1163,7 +1167,7 @@ export async function registerRoutes(
       if (reserveCheck.isDuplicate) {
         log(`[rate] Duplicate request_id=${requestId} â€” already completed`, "rate");
         return res.status(409).json(
-          generationError("duplicate_request", "This request already completed. Wait a moment or tap Generate again.", {
+          generationError("duplicate_request", "This request already completed. Wait a moment or tap Pick Tonight's Meal again.", {
             retry_after_seconds: 3,
             request_id: requestId,
           }),
@@ -1172,7 +1176,7 @@ export async function registerRoutes(
       if (reserveCheck.isInFlight) {
         log(`[rate] In-flight request_id=${requestId} â€” blocking concurrent duplicate`, "rate");
         return res.status(409).json(
-          generationError("in_flight", "A recipe is already generating for this session. Please wait.", {
+          generationError("in_flight", "A meal match is already in progress for this session. Please wait.", {
             retry_after_seconds: 5,
             request_id: requestId,
           }),
@@ -1190,7 +1194,7 @@ export async function registerRoutes(
         );
       }
 
-      const parsed = generateRequestSchema.safeParse(req.body);
+      const parsed = generateRequestSchema.safeParse(coerceGenerateRequestBody(req.body));
       if (!parsed.success) {
         cancelRequest(sessionKey, requestId);
         logGenerateValidationFailure(parsed.error, req.body);
@@ -1539,6 +1543,8 @@ export async function registerRoutes(
 
   await registerHallFeedbackRoutes(app);
 
+  registerBrowseRedirects(app);
+
   app.get("/api/csrf-token", (req: Request, res: Response) => {
     let token = req.cookies?.csrf_token;
     if (!token) {
@@ -1618,6 +1624,13 @@ export async function registerRoutes(
         return res.status(502).json({ message: `Email service error: ${reason}` });
       }
 
+      void captureEmailLead({
+        email,
+        source: "generator",
+        signup_form: "email-recipe",
+        klaviyo_synced: !subscribeFailed,
+      });
+
       if (subscribeFailed) {
         return res.status(207).json({ success: true, message: "Recipe tracked but subscription may not have completed. Check your inbox." });
       }
@@ -1694,6 +1707,13 @@ export async function registerRoutes(
         return res.status(502).json({ message: `Email service error: ${reason}` });
       }
 
+      void captureEmailLead({
+        email,
+        source: "shopping_list",
+        signup_form: "email-shopping-list",
+        klaviyo_synced: !subscribeFailed,
+      });
+
       const sectionCount = Array.isArray(shopping_list_sections) ? shopping_list_sections.length : 0;
       log(
         `[email] shopping-list sent ${formatLogFields({
@@ -1755,6 +1775,13 @@ export async function registerRoutes(
         }
         return res.status(502).json({ message: `Email service error: ${reason}` });
       }
+
+      void captureEmailLead({
+        email,
+        source: "homepage",
+        signup_form: "homepage-subscribe",
+        klaviyo_synced: !subscribeFailed,
+      });
 
       if (subscribeFailed) {
         return res.status(207).json({ success: true, message: "You're on the crew." });
@@ -1823,6 +1850,13 @@ export async function registerRoutes(
         }
         return res.status(502).json({ message: `Email service error: ${reason}` });
       }
+
+      void captureEmailLead({
+        email,
+        source: "red_lead",
+        signup_form: "red-lead-pdf",
+        klaviyo_synced: !subscribeFailed,
+      });
 
       if (subscribeFailed) {
         return res.status(207).json({
@@ -1981,243 +2015,6 @@ export async function registerRoutes(
       }
       return res.status(500).json({ message: error.message || "Failed to generate pizza recipe" });
     }
-  });
-
-  app.post("/api/hall-vote", requireCsrf, async (req: Request, res: Response) => {
-    try {
-      const sessionId = (req as any)._sessionId || "unknown";
-      const clientIp = getClientIp(req);
-      const ipHash = hashIp(clientIp);
-
-      const voteLimit = checkRateLimit(`hallvote:${ipHash}`, 60_000, 2);
-      if (!voteLimit.allowed) {
-        return res.status(429).json({ message: "Please wait before creating another vote.", retry_after_seconds: 60 });
-      }
-
-      const parsed = hallVoteCreateSchema.safeParse(req.body);
-      if (!parsed.success) {
-        return res.status(400).json({ message: "Invalid request: " + parsed.error.message });
-      }
-
-      const { title, options } = parsed.data;
-      const voteOptions: VoteOptionInput[] = options.map((opt) => ({
-        name: opt.name,
-        description: opt.description,
-        est_cost: opt.est_cost,
-        est_time: opt.est_time,
-        recipe_payload:
-          (opt.recipe_payload as GenerateResponse | undefined) ??
-          buildMinimalGenerateResponse(opt.name),
-      }));
-
-      const { voteId } = createHallVote(title, voteOptions, sessionId);
-
-      const protocol = req.headers["x-forwarded-proto"] || req.protocol;
-      const host = req.headers["host"] || "localhost:5000";
-      const shareUrl = `${protocol}://${host}/vote/${voteId}`;
-
-      return res.json({ vote_id: voteId, share_url: shareUrl });
-    } catch (error: any) {
-      logError("hallvote", "create failed", error);
-      return res.status(500).json({ message: "Failed to create vote" });
-    }
-  });
-
-  app.get("/api/hall-vote/:voteId", (req: Request, res: Response) => {
-    try {
-      const voteId = routeParam(req.params.voteId);
-      const sessionId = (req as any)._sessionId || "";
-      const clientIp = getClientIp(req);
-      const ua = req.headers["user-agent"] || "";
-      const fingerprint = hashVoterFingerprint(clientIp, ua);
-
-      const vote = getHallVote(voteId, sessionId, fingerprint);
-      if (!vote) {
-        return res.status(404).json({ message: "Vote not found" });
-      }
-
-      return res.json(vote);
-    } catch (error: any) {
-      logError("hallvote", "get failed", error);
-      return res.status(500).json({ message: "Failed to get vote" });
-    }
-  });
-
-  app.post("/api/hall-vote/:voteId/vote", (req: Request, res: Response) => {
-    try {
-      const voteId = routeParam(req.params.voteId);
-      const { optionId } = req.body;
-
-      if (typeof optionId !== "number") {
-        return res.status(400).json({ message: "optionId is required" });
-      }
-
-      const clientIp = getClientIp(req);
-      const ipHash = hashIp(clientIp);
-      const voteRateLimit = checkRateLimit(`vote:${ipHash}`, 60_000, 10);
-      if (!voteRateLimit.allowed) {
-        return res.status(429).json({ message: "Too many vote attempts. Please wait." });
-      }
-
-      const ua = req.headers["user-agent"] || "";
-      const fingerprint = hashVoterFingerprint(clientIp, ua);
-
-      const result = castBallot(voteId, optionId, fingerprint);
-      if (!result.success) {
-        const statusCode = result.error === "You already voted" ? 409 : 400;
-        return res.status(statusCode).json({ message: result.error });
-      }
-
-      const sessionId = (req as any)._sessionId || "";
-      const updatedVote = getHallVote(voteId, sessionId, fingerprint);
-      return res.json(updatedVote);
-    } catch (error: any) {
-      logError("hallvote", "cast failed", error);
-      return res.status(500).json({ message: "Failed to cast vote" });
-    }
-  });
-
-  app.post("/api/hall-vote/:voteId/close", requireCsrf, (req: Request, res: Response) => {
-    try {
-      const voteId = routeParam(req.params.voteId);
-      const sessionId = (req as any)._sessionId || "";
-
-      const result = closeHallVote(voteId, sessionId);
-      if (!result.success) {
-        return res.status(403).json({ message: result.error });
-      }
-
-      const clientIp = getClientIp(req);
-      const ua = req.headers["user-agent"] || "";
-      const fingerprint = hashVoterFingerprint(clientIp, ua);
-      const updatedVote = getHallVote(voteId, sessionId, fingerprint);
-      return res.json(updatedVote);
-    } catch (error: any) {
-      logError("hallvote", "close failed", error);
-      return res.status(500).json({ message: "Failed to close vote" });
-    }
-  });
-
-  app.get("/api/recipe-ratings/collections", (_req: Request, res: Response) => {
-    try {
-      const catalog = buildApprovedCatalog();
-      const collections = getRecipeCrewRatingCollectionsForCatalog(
-        catalog.recipes.map((r) => ({ slug: r.slug, category: r.category })),
-      );
-      return res.json(collections);
-    } catch (error: unknown) {
-      logError("crew-rating", "collections failed", error);
-      return res.json(EMPTY_RECIPE_CREW_RATING_COLLECTIONS);
-    }
-  });
-
-  app.get("/api/recipe-ratings/top-rated", (_req: Request, res: Response) => {
-    try {
-      const limitRaw = typeof _req.query.limit === "string" ? Number.parseInt(_req.query.limit, 10) : 48;
-      const limit = Number.isFinite(limitRaw) ? Math.min(Math.max(limitRaw, 1), 100) : 48;
-      return res.json({ recipes: getTopRatedRecipes(limit) });
-    } catch (error: unknown) {
-      logError("crew-rating", "top-rated failed", error);
-      return res.json({ recipes: [] });
-    }
-  });
-
-  app.get("/api/recipe-ratings/sort-map", (_req: Request, res: Response) => {
-    try {
-      const map = getRatingSortMap();
-      const slugs: Record<string, { approvalScore: number | null; totalVotes: number; trendingScore: number }> = {};
-      for (const [slug, v] of map.entries()) {
-        slugs[slug] = v;
-      }
-      return res.json({ slugs });
-    } catch (error: unknown) {
-      logError("crew-rating", "sort-map failed", error);
-      return res.status(500).json({ message: "Failed to load sort map" });
-    }
-  });
-
-  app.get("/api/recipe-ratings/:slug", (req: Request, res: Response) => {
-    try {
-      const slug = routeParam(req.params.slug);
-      const category = typeof req.query.category === "string" ? req.query.category : undefined;
-      const clientIp = getClientIp(req);
-      const ua = req.headers["user-agent"] || "";
-      const fingerprint = hashCrewRatingFingerprint(clientIp, ua);
-      const view = getRecipeCrewRatingPublicView(slug, { fingerprint, category });
-      return res.json(view);
-    } catch (error: unknown) {
-      logError("crew-rating", "get failed", error);
-      return res.status(500).json({ message: "Failed to load crew rating" });
-    }
-  });
-
-  app.post("/api/recipe-ratings/:slug/vote", requireCsrf, (req: Request, res: Response) => {
-    try {
-      const slug = routeParam(req.params.slug);
-      const parsed = castCrewRatingVoteSchema.safeParse(req.body);
-      if (!parsed.success) {
-        return res.status(400).json({ message: "Invalid vote payload" });
-      }
-      const clientIp = getClientIp(req);
-      const ua = req.headers["user-agent"] || "";
-      const ipHash = hashIp(clientIp);
-      const voteLimit = checkRateLimit(`crew-rating:${ipHash}`, 60 * 60 * 1000, 40);
-      if (!voteLimit.allowed) {
-        return res.status(429).json({ message: "Too many ratings — try again later." });
-      }
-      const fingerprint = hashCrewRatingFingerprint(clientIp, ua);
-      const sessionId = (req as any)._sessionId || "";
-      const result = castRecipeCrewRatingVote(slug, parsed.data, fingerprint, sessionId);
-      if (!result.ok) {
-        return res.status(result.status).json({ message: result.error });
-      }
-      return res.json(result.view);
-    } catch (error: unknown) {
-      logError("crew-rating", "vote failed", error);
-      return res.status(500).json({ message: "Failed to record vote" });
-    }
-  });
-
-  app.get("/api/admin/recipe-ratings/analytics", (_req: Request, res: Response) => {
-    try {
-      const catalog = buildApprovedCatalog();
-      const analytics = getRecipeCrewRatingAnalytics(
-        catalog.recipes.map((r) => ({ slug: r.slug, category: r.category })),
-      );
-      return res.json(analytics);
-    } catch (error: unknown) {
-      logError("crew-rating", "analytics failed", error);
-      return res.status(500).json({ message: "Failed to load analytics" });
-    }
-  });
-
-  app.get("/health", (_req: Request, res: Response) => {
-    return res.json({ status: "ok", uptime: process.uptime() });
-  });
-
-  app.get("/api/favourites", (req: Request, res: Response) => {
-    const userId = (req as any)._sessionId || "unknown";
-    const faves = getFavourites(userId);
-    return res.json({ favourites: faves });
-  });
-
-  app.post("/api/favourites", (req: Request, res: Response) => {
-    const userId = (req as any)._sessionId || "unknown";
-    const { recipeId } = req.body;
-
-    if (!recipeId || typeof recipeId !== "string") {
-      return res.status(400).json({ message: "recipeId (string) is required." });
-    }
-
-    const updated = addFavourite(userId, recipeId);
-    return res.json({ favourites: updated });
-  });
-
-  app.delete("/api/favourites/:recipeId", (req: Request, res: Response) => {
-    const userId = (req as any)._sessionId || "unknown";
-    const recipeId = routeParam(req.params.recipeId);
-    const updated = removeFavourite(userId, recipeId);
-    return res.json({ favourites: updated });
   });
 
   app.get("/api/admin/usage", (req: Request, res: Response) => {
@@ -2413,154 +2210,6 @@ export async function registerRoutes(
     }
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     return res.json(article);
-  });
-
-  app.get("/api/catalog/golden-100", async (_req: Request, res: Response) => {
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const merged = loadMergedHallCatalogIndex();
-    return res.json(merged);
-  });
-
-  app.get("/api/catalog/approved/count", async (_req: Request, res: Response) => {
-    try {
-      const catalog = buildApprovedCatalog();
-      res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-      return res.json({
-        version: 2 as const,
-        assetRevision: catalog.assetRevision,
-        recipeCount: catalog.recipeCount,
-      });
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : "Approved catalog count failed";
-      log(`[catalog] Approved count error: ${msg}`, "catalog");
-      return res.status(500).json({ message: "Approved catalog count failed." });
-    }
-  });
-
-  app.get("/api/catalog/approved", async (req: Request, res: Response) => {
-    try {
-      const catalog = buildApprovedCatalog();
-      const view = String(req.query.view || "").toLowerCase();
-      res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-      if (view === "grid") {
-        const grid = toApprovedCatalogGridResponse(catalog);
-        log(`[catalog] Approved grid browse: ${grid.recipeCount} recipes`, "catalog");
-        return res.json(grid);
-      }
-      log(`[catalog] Approved browse: ${catalog.recipeCount} recipes`, "catalog");
-      return res.json(catalog);
-    } catch (err: unknown) {
-      const msg = err instanceof Error ? err.message : "Approved catalog failed";
-      log(`[catalog] Approved browse error: ${msg}`, "catalog");
-      return res.status(500).json({ message: "Approved catalog failed. Please try again." });
-    }
-  });
-
-  app.get("/api/catalog/golden-100/:slug", async (req: Request, res: Response) => {
-    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
-    const pizzaPage = readPizzaNightRecipePage(slug);
-    if (pizzaPage) {
-      res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-      return res.json(sanitizeRecipeHeroSurface(pizzaPage));
-    }
-    const page = resolveHallRecipePage(slug);
-    if (!page) {
-      return res.status(404).json({ message: "Recipe not in hall catalog" });
-    }
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    return res.json(sanitizeRecipeHeroSurface(page));
-  });
-
-  app.get("/api/catalog/pizza-night", async (_req: Request, res: Response) => {
-    const indexFile = path.join(PIZZA_NIGHT_CATALOG_PUBLIC_DIR, "index.json");
-    if (!fs.existsSync(indexFile)) {
-      return res.status(404).json({ message: "Pizza Night catalog not found" });
-    }
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    return res.json(JSON.parse(fs.readFileSync(indexFile, "utf8")));
-  });
-
-  app.get("/api/catalog/pizza-night/:slug", async (req: Request, res: Response) => {
-    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
-    const page = readPizzaNightRecipePage(slug);
-    if (!page) {
-      return res.status(404).json({ message: "Recipe not in Pizza Night catalog" });
-    }
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    return res.json(sanitizeRecipeHeroSurface(page));
-  });
-
-  app.get("/api/catalog/performance-meals", async (_req: Request, res: Response) => {
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const indexFile = path.join(PERFORMANCE_CATALOG_PUBLIC_DIR, "index.json");
-    if (fs.existsSync(indexFile)) {
-      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
-    }
-    return res.status(404).json({ message: "Performance catalog not generated" });
-  });
-
-  app.get("/api/catalog/performance-meals/:slug", async (req: Request, res: Response) => {
-    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
-    const adapted = getPerformanceRecipeBySlug(slug);
-    if (!adapted) {
-      return res.status(404).json({ message: "Recipe not in Performance Meals catalog" });
-    }
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const onDisk = readPerformanceRecipePage(slug);
-    const page = onDisk ?? buildPerformanceRecipePage(adapted);
-    return res.json(sanitizeRecipeHeroSurface(page));
-  });
-
-  app.get("/api/catalog/hall-expansion", async (_req: Request, res: Response) => {
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const indexFile = path.join(HALL_EXPANSION_CATALOG_PUBLIC_DIR, "index.json");
-    if (fs.existsSync(indexFile)) {
-      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
-    }
-    return res.status(404).json({ message: "Hall expansion catalog not generated" });
-  });
-
-  app.get("/api/catalog/hall-expansion/:slug", async (req: Request, res: Response) => {
-    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
-    const adapted = getHallExpansionRecipeBySlug(slug);
-    if (!adapted) {
-      return res.status(404).json({ message: "Recipe not in Hall Expansion catalog" });
-    }
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const onDisk = readHallExpansionRecipePage(slug);
-    const page = onDisk ?? buildHallExpansionRecipePage(adapted);
-    return res.json(sanitizeRecipeHeroSurface(page));
-  });
-
-  app.get("/api/catalog/smoothies", async (_req: Request, res: Response) => {
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const indexFile = path.join(SMOOTHIE_CATALOG_PUBLIC_DIR, "index.json");
-    if (fs.existsSync(indexFile)) {
-      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
-    }
-    return res.status(404).json({ message: "Smoothie catalog not generated" });
-  });
-
-  app.get("/api/catalog/smoothies/:slug", async (req: Request, res: Response) => {
-    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
-    const item = getSmoothieCatalogItem(slug);
-    if (!item) {
-      return res.status(404).json({ message: "Recipe not in smoothie catalog" });
-    }
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    const onDisk = readSmoothieRecipePage(slug);
-    const page = onDisk ?? buildSmoothieRecipePage(item);
-    return res.json(sanitizeRecipeHeroSurface(page));
-  });
-
-  app.get("/api/catalog/breakfast/:slug", async (req: Request, res: Response) => {
-    const slug = decodeURIComponent(String(req.params.slug)).trim().toLowerCase();
-    const page = readBreakfastRecipePageFromDisk(slug);
-    if (!page) {
-      return res.status(404).json({ message: "Recipe not in breakfast catalog" });
-    }
-    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    return res.json(sanitizeRecipeHeroSurface(page));
   });
 
   app.get("/api/admin/golden-100/manifest", async (_req: Request, res: Response) => {
@@ -2992,7 +2641,7 @@ export async function registerRoutes(
 
   app.get("/api/explore/catalog", async (_req: Request, res: Response) => {
     try {
-      const catalog = buildApprovedCatalog();
+      const catalog = getApprovedCatalog();
       res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
       log(`[explore] Catalog browse: ${catalog.recipeCount} approved recipes`, "catalog");
       return res.json(catalog);
@@ -3096,6 +2745,9 @@ export async function registerRoutes(
 
   const { registerFoodImageryRoutes } = await import("./food-imagery/routes.js");
   registerFoodImageryRoutes(app);
+
+  const { registerHallVoteOgRoute } = await import("./hall-vote-og.js");
+  registerHallVoteOgRoute(app);
 
   app.get("/api/recipe-hero/meal/:recipeId", async (req: Request, res: Response) => {
     try {

@@ -3,9 +3,7 @@
  *
  * CRITICAL product rule:
  * - Generator must only return recipes from approved hall catalogs (Golden 100 + Performance 50).
- * - No runtime AI recipe creation, no live external fetches, no template emergency pool.
- *
- * If user filters are too narrow, we broaden constraints in a controlled way (never blank).
+ * - When user selects a Firehall category, stay in-category until all in-category relaxations fail.
  */
 
 import type { GenerateRequest, GenerateResponse } from "@shared/schema";
@@ -25,7 +23,6 @@ export const MAX_BROADEN_ATTEMPTS = 24;
 export interface LocalFirstPipelineContext {
   request: GenerateRequest;
   v2SessionKey: string;
-  /** Used only for deterministic variety; no live catalog/AI paths. */
   varietySeed: number;
   recentSignatures?: string[];
   recentSlugs?: string[];
@@ -52,6 +49,11 @@ function hitFromCurated(
   ctx: LocalFirstPipelineContext,
   attemptIndex: number,
   broadened: boolean,
+  categoryMeta?: {
+    requested?: string;
+    matched?: string;
+    broadened: boolean;
+  },
 ): LocalFirstPipelineHit {
   const cacheKey = buildCacheKey("v2", ctx.request, pick.protein);
   setCachedRecipe(cacheKey, 0, pick.recipe);
@@ -69,6 +71,9 @@ function hitFromCurated(
       _recipe_source: pick.recipeSource,
       _fallback: broadened,
       _broaden_attempt: attemptIndex,
+      _requested_firehall_category: categoryMeta?.requested ?? ctx.request.firehall_category,
+      _matched_firehall_category: categoryMeta?.matched ?? pick.matchedCategory,
+      _category_broadened: categoryMeta?.broadened ?? false,
     },
     cacheKey,
     cacheHit: false,
@@ -99,34 +104,62 @@ function requestConfigKey(r: GenerateRequest): string {
   });
 }
 
-function broadenRequests(base: GenerateRequest): GenerateRequest[] {
-  const relaxed: GenerateRequest[] = [];
-  const push = (r: GenerateRequest) => relaxed.push({ ...r });
+const TIME_ORDER: GenerateRequest["time_available"][] = [
+  "15-25",
+  "20-30",
+  "25-40",
+  "30-45",
+  "45-60",
+  "60-90",
+];
 
-  push(base);
+function broadenWithinCategory(base: GenerateRequest): GenerateRequest[] {
+  const fc = base.firehall_category!;
+  const attempts: GenerateRequest[] = [base];
+  const push = (r: GenerateRequest) => attempts.push({ ...r });
 
-  const fc = base.firehall_category;
-
-  // Game Day: relax protein within category before dropping the vibe.
   if (fc === "game_day" && base.protein && base.protein !== "any" && base.protein !== "vegetarian") {
     push({ ...base, protein: "any" });
   }
 
-  // Game Day: try alternate curated categories (handled inside pickForFirehallCategory stages).
-  // Also add explicit request variants so downstream logging sees the stage.
+  const timeIdx = TIME_ORDER.indexOf(base.time_available);
+  if (timeIdx >= 0 && timeIdx < TIME_ORDER.length - 1) {
+    push({ ...base, time_available: TIME_ORDER[timeIdx + 1]! });
+  }
+
+  if (base.protein && base.protein !== "any" && base.protein !== "vegetarian") {
+    push({ ...base, protein: "any" });
+  }
+
+  if (base.meal_format && base.meal_format !== "random") {
+    push({ ...base, meal_format: "random" });
+  }
+
+  if (base.cuisine_style && base.cuisine_style !== "any") {
+    push({ ...base, cuisine_style: "any" });
+  }
+
+  if (base.healthiness_preference && base.healthiness_preference !== "balanced") {
+    push({ ...base, healthiness_preference: "balanced" });
+  }
+
   if (fc === "game_day") {
     for (const alt of GAME_DAY_SAFE_FALLBACK_CATEGORIES) {
       push({ ...base, firehall_category: alt });
     }
   }
 
-  // Relax Firehall category selection (never hard-fail on category alone).
-  if (fc) {
-    push({ ...base, firehall_category: undefined });
-  }
+  return attempts;
+}
+
+function broadenWithoutCategory(base: GenerateRequest): GenerateRequest[] {
+  const relaxed: GenerateRequest[] = [];
+  const push = (r: GenerateRequest) => relaxed.push({ ...r });
+
+  push({ ...base, firehall_category: undefined });
 
   if (base.meal_format && base.meal_format !== "random") {
-    push({ ...base, meal_format: "random", firehall_category: fc });
+    push({ ...base, meal_format: "random", firehall_category: undefined });
   }
 
   if (base.cuisine_style && base.cuisine_style !== "any") {
@@ -137,19 +170,11 @@ function broadenRequests(base: GenerateRequest): GenerateRequest[] {
     push({ ...base, healthiness_preference: "balanced", firehall_category: undefined });
   }
 
-  const timeOrder: GenerateRequest["time_available"][] = [
-    "15-25",
-    "20-30",
-    "25-40",
-    "30-45",
-    "45-60",
-    "60-90",
-  ];
-  const idx = timeOrder.indexOf(base.time_available);
-  if (idx >= 0 && idx < timeOrder.length - 1) {
+  const timeIdx = TIME_ORDER.indexOf(base.time_available);
+  if (timeIdx >= 0 && timeIdx < TIME_ORDER.length - 1) {
     push({
       ...base,
-      time_available: timeOrder[Math.min(timeOrder.length - 1, idx + 1)]!,
+      time_available: TIME_ORDER[Math.min(TIME_ORDER.length - 1, timeIdx + 1)]!,
       firehall_category: undefined,
     });
   }
@@ -168,8 +193,17 @@ function broadenRequests(base: GenerateRequest): GenerateRequest[] {
     firehall_category: undefined,
   });
 
+  return relaxed;
+}
+
+function broadenRequests(base: GenerateRequest): GenerateRequest[] {
+  const fc = base.firehall_category;
+  const attempts = fc
+    ? [...broadenWithinCategory(base), ...broadenWithoutCategory(base)]
+    : broadenWithoutCategory({ ...base, firehall_category: undefined });
+
   const seen = new Set<string>();
-  return relaxed.filter((r) => {
+  return attempts.filter((r) => {
     const key = requestConfigKey(r);
     if (seen.has(key)) return false;
     seen.add(key);
@@ -184,9 +218,10 @@ export async function runLocalFirstGeneratePipeline(
   ctx: LocalFirstPipelineContext,
 ): Promise<LocalFirstPipelineHit> {
   const attempts = broadenRequests(ctx.request).slice(0, MAX_BROADEN_ATTEMPTS);
+  const requestedCategory = ctx.request.firehall_category;
 
   log(
-    `[generate:pipeline] start firehall=${ctx.request.firehall_category ?? "none"} protein=${ctx.request.protein} time=${ctx.request.time_available} attempts=${attempts.length}`,
+    `[generate:pipeline] start firehall=${requestedCategory ?? "none"} protein=${ctx.request.protein} time=${ctx.request.time_available} attempts=${attempts.length}`,
     "generate",
   );
 
@@ -199,6 +234,11 @@ export async function runLocalFirstGeneratePipeline(
       varietySeed: `curated150:${ctx.varietySeed}:${i}`,
     });
 
+    const categoryBroadened = Boolean(
+      requestedCategory &&
+        (req.firehall_category !== requestedCategory || !req.firehall_category),
+    );
+
     const broadened =
       i > 0 ||
       req.firehall_category !== ctx.request.firehall_category ||
@@ -206,15 +246,24 @@ export async function runLocalFirstGeneratePipeline(
       req.time_available !== ctx.request.time_available;
 
     log(
-      `[generate:pipeline] attempt=${i + 1}/${attempts.length} firehall=${req.firehall_category ?? "none"} protein=${req.protein} pick=${pick ? pick.slug : "none"}`,
+      `[generate:pipeline] attempt=${i + 1}/${attempts.length} firehall=${req.firehall_category ?? "none"} protein=${req.protein} pick=${pick ? pick.slug : "none"} category_broadened=${categoryBroadened}`,
       "generate",
     );
 
     if (!pick) continue;
-    return hitFromCurated(pick, { ...ctx, request: req }, i, broadened);
+    return hitFromCurated(
+      pick,
+      { ...ctx, request: req },
+      i,
+      broadened,
+      {
+        requested: requestedCategory,
+        matched: pick.matchedCategory ?? req.firehall_category ?? undefined,
+        broadened: categoryBroadened,
+      },
+    );
   }
 
-  // Ultimate fallback: drop all optional filters, keep allergens + vegetarian flag.
   const ultimate: GenerateRequest = {
     ...ctx.request,
     firehall_category: undefined,
@@ -235,7 +284,17 @@ export async function runLocalFirstGeneratePipeline(
   });
 
   if (lastPick) {
-    return hitFromCurated(lastPick, { ...ctx, request: ultimate }, attempts.length, true);
+    return hitFromCurated(
+      lastPick,
+      { ...ctx, request: ultimate },
+      attempts.length,
+      true,
+      {
+        requested: requestedCategory,
+        matched: lastPick.matchedCategory,
+        broadened: Boolean(requestedCategory),
+      },
+    );
   }
 
   throw new Error("No curated recipes available for generator");

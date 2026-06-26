@@ -8,7 +8,7 @@ export default function PerformanceFuelRedirect() {
 
   useEffect(() => {
     const slug = params?.slug?.trim();
-    setLocation(slug ? `/recipes/${slug}` : "/recipes", { replace: true });
+    setLocation(slug ? `/recipes/${slug}` : "/explore", { replace: true });
   }, [params?.slug, setLocation]);
 
   return null;

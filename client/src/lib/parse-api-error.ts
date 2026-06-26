@@ -44,7 +44,7 @@ export function parseApiError(err: unknown): ParsedApiError {
       return {
         status: 504,
         code: "upstream_timeout",
-        message: "Request timed out. Tap Generate again — the hall line is still working.",
+        message: "Request timed out. Tap Pick Tonight's Meal again — the hall line is still working.",
       };
     }
     if (

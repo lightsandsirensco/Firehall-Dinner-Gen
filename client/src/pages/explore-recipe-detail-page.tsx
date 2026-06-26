@@ -52,6 +52,9 @@ import {
 } from "@shared/measurements";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { exploreRecipeRatingSlug } from "@shared/recipe-crew-ratings/slugs";
+import { HallVoteFlow } from "@/components/hall-vote-flow";
+import { exploreDetailToCookMode } from "@/lib/cook-mode/adapters";
+import { StartCookingButton } from "@/components/cook-mode/start-cooking-button";
 
 const DEFAULT_CREW_SIZE = 6;
 
@@ -271,7 +274,7 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
     return (
       <div className={app.page}>
         <SiteHeader activePage="explore" favCount={favCount} />
-        <main className={cn(app.mainDetail, "pb-safe-cta sm:pb-8")}>
+        <main className={cn(app.mainDetail, "pb-safe-tabs-cta-tall sm:pb-8")}>
           <RecipeDetailView
             recipe={displayDetail}
             crewSize={DEFAULT_CREW_SIZE}
@@ -391,7 +394,7 @@ export function ExploreRecipeDetailPage({ registryRef }: ExploreRecipeDetailPage
                 Back to Explore
               </Button>
               <Button variant="outline" asChild data-testid="button-browse-recipes-fallback">
-                <Link href="/recipes">Browse Recipes</Link>
+                <Link href="/explore">Browse Recipes</Link>
               </Button>
             </div>
           </div>
@@ -421,6 +424,10 @@ function RecipeDetailView({
   const [measurementSystem] = useMeasurementSystem();
 
   const clientRecipe = useMemo(() => spoonacularToClientRecipe(recipe, crewSize), [recipe, crewSize]);
+  const cookModeRecipe = useMemo(
+    () => exploreDetailToCookMode(recipe, measurementSystem, crewSize),
+    [recipe, measurementSystem, crewSize],
+  );
   const shoppingList = useMemo(
     () =>
       buildShoppingListFromClientMeal(clientRecipe, {
@@ -583,9 +590,16 @@ function RecipeDetailView({
                 <List className="w-4 h-4" />
                 Shopping List
               </Button>
+              <StartCookingButton recipe={cookModeRecipe} className="col-span-2 sm:col-span-4 justify-center" />
             </div>
           </CardContent>
         </Card>
+
+        <HallVoteFlow
+          recipes={[clientRecipe]}
+          source="explore_recipe"
+          variant="banner"
+        />
 
         {recipe.macros.calories > 0 && (
           <Card className="border-border/50 bg-card/80">
@@ -677,17 +691,17 @@ function RecipeDetailView({
         )}
       </div>
 
-      {/* Mobile sticky CTAs */}
+      {/* Mobile sticky CTAs — docked above tab bar */}
       <div
-        className="sm:hidden fixed bottom-0 inset-x-0 z-40 border-t border-border/50 bg-background/95 backdrop-blur-lg shadow-[0_-8px_32px_rgba(0,0,0,0.45)] pb-safe"
+        className="sm:hidden mobile-sticky-bar mobile-sticky-bar-above-tabs"
         data-testid="explore-detail-mobile-cta"
       >
-        <div className="grid grid-cols-2 gap-2 p-3 max-w-[900px] mx-auto">
+        <div className="grid grid-cols-2 gap-2.5 p-3 max-w-[900px] mx-auto">
           <Button
             variant="outline"
             onClick={handleSave}
             disabled={saved}
-            className={`min-h-12 gap-2 touch-manipulation ${saved ? "bg-primary/15 border-primary/30 text-primary" : ""}`}
+            className={`min-h-11 gap-2 touch-manipulation ${saved ? "bg-primary/15 border-primary/30 text-primary" : ""}`}
             data-testid="button-explore-save-mobile"
           >
             {saved ? <Heart className="w-4 h-4 fill-current" /> : <BookmarkPlus className="w-4 h-4" />}
@@ -695,19 +709,22 @@ function RecipeDetailView({
           </Button>
           <Button
             onClick={() => setShoppingOpen(true)}
-            className="min-h-12 gap-2 touch-manipulation font-semibold"
+            className="min-h-11 gap-2 touch-manipulation font-semibold"
             data-testid="button-explore-shopping-mobile"
           >
             <List className="w-4 h-4" />
             Shopping list
           </Button>
         </div>
-        <div className="grid grid-cols-2 gap-2 px-3 pb-2 max-w-[900px] mx-auto">
-          <Button variant="ghost" size="sm" onClick={handlePrint} className="min-h-10 text-xs touch-manipulation">
+        <div className="px-3 pb-2 max-w-[900px] mx-auto">
+          <StartCookingButton recipe={cookModeRecipe} className="w-full min-h-11" size="lg" />
+        </div>
+        <div className="grid grid-cols-2 gap-2.5 px-3 pb-2 max-w-[900px] mx-auto">
+          <Button variant="ghost" onClick={handlePrint} className="min-h-11 text-xs touch-manipulation">
             <Printer className="w-3.5 h-3.5 mr-1" />
             Print
           </Button>
-          <Button variant="ghost" size="sm" onClick={() => setEmailOpen(true)} className="min-h-10 text-xs touch-manipulation">
+          <Button variant="ghost" onClick={() => setEmailOpen(true)} className="min-h-11 text-xs touch-manipulation">
             <Mail className="w-3.5 h-3.5 mr-1" />
             Email crew
           </Button>

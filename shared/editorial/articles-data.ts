@@ -162,6 +162,11 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       { slug: "one-pot-chicken-rice", title: "One-Pot Chicken and Rice", blurb: "Minimal dishes, predictable timing." },
       { slug: "chicken-quesadillas", title: "Chicken Quesadillas", blurb: "Handheld line — great when people eat staggered." },
       { slug: "pad-thai", title: "Firehall Pad Thai", blurb: "High flavor, wok-or-skillet fast finish." },
+      {
+        slug: "hall-blt-sandwich-feed",
+        title: "Hall BLT Sandwich Feed",
+        blurb: "Crispy bacon, tomato, and lettuce on toasted bread — line-friendly handheld feed.",
+      },
     ],
     faqs: [
       {
@@ -291,6 +296,16 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       { slug: "beef-stroganoff", title: "Beef Stroganoff", blurb: "Savory, rich, good over noodles or rice." },
       { slug: "loaded-potato-feed", title: "Loaded Potato Feed", blurb: "Self-serve, customizable, filling." },
       { slug: "chicken-pot-pie", title: "Chicken Pot Pie", blurb: "All-in-one bowl energy without the debate." },
+      {
+        slug: "french-onion-soup-for-the-hall",
+        title: "French Onion Soup for the Hall",
+        blurb: "Dark onion broth with a broiled Gruyère cap.",
+      },
+      {
+        slug: "tomato-soup-grilled-cheese-croutons",
+        title: "Tomato Soup with Grilled Cheese Croutons",
+        blurb: "Creamy tomato soup topped with real grilled-cheese cubes.",
+      },
     ],
     faqs: [
       {
@@ -457,7 +472,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       "Busy board + 40 minutes → skillet, sheet pan, tacos, pasta.",
       "Unknown board → chili, taco bar, or bowls — hold and serve.",
       "Ask about allergies once, write it on a sticky, stop re-asking mid-cook.",
-      "When stuck, use the generator on the home page — it respects crew size and time.",
+      "When stuck, use Find a Meal on the home page — it matches crew size and time to curated hall recipes.",
     ],
     sections: [
       {

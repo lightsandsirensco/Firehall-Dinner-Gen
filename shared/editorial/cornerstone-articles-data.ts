@@ -89,6 +89,11 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         "Street-Style Chimichurri Steak Tacos",
         "Charred steak, bright chimichurri, pickled onions — taco line energy without a rice side distraction.",
       ),
+      meal(
+        "classic-patty-melt-for-the-crew",
+        "Classic Patty Melt for the Crew",
+        "Griddled beef patties with caramelized onions and Swiss on rye.",
+      ),
     ],
     faqs: [
       {
@@ -435,6 +440,11 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         "slider-bar",
         "10. Slider Bar Night",
         "Toast the buns. Two proteins max so you are not running three flat-tops.",
+      ),
+      meal(
+        "four-step-chicken-piccata",
+        "Four-Step Chicken Piccata",
+        "Lemon-caper pan sauce in four straightforward steps.",
       ),
     ],
     faqs: [

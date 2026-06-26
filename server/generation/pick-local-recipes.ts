@@ -21,6 +21,7 @@ import { hydrateCatalogGenerateResponse } from "../meal-catalog/hydrate-golden-g
 import { applyCrewPortionFloors, hallProTips } from "../firehall-voice.js";
 import {
   getCuratedRecipeBySlug,
+  getCuratedRecipeCategoryKeysBySlug,
   listCuratedRecipeSummaries,
   listCuratedSummariesByTag,
 } from "../curated-recipe-store.js";
@@ -40,6 +41,8 @@ import {
   type FirehallCategorySummaryRow,
 } from "./firehall-category-pools.js";
 import type { FirehallCategoryId } from "../../shared/firehall-categories.js";
+import { FIREHALL_CATEGORY_RULES } from "../../shared/firehall-categories.js";
+import { recipeMetaMatchesFirehallCategory } from "../../shared/firehall-category-validation.js";
 
 const TIME_MAX_MINUTES: Record<string, number> = {
   "15-25": 25,
@@ -57,6 +60,7 @@ export interface LocalRecipePick {
   catalogId: string;
   recipeSource?: RecipeSourceAttribution;
   slug: string;
+  matchedCategory?: FirehallCategoryId;
 }
 
 function signatureBlocked(
@@ -80,7 +84,36 @@ function scoreCuratedRow(
   if (maxMin && row.totalMinutes > 0 && row.totalMinutes <= maxMin + 10) score += 15;
   if (row.sourceKind === "publisher") score += 18;
   else if (row.sourceKind === "hall_classic") score += 12;
+
+  const fc = request.firehall_category;
+  if (fc && FIREHALL_CATEGORY_RULES[fc].preferPerformance) {
+    if (/performance|healthy_performance/i.test(row.sourceKind)) score += 20;
+  }
+
   return score;
+}
+
+function validateCategoryPick(
+  slug: string,
+  request: GenerateRequest,
+  categoryId: FirehallCategoryId,
+): boolean {
+  const full = getCuratedRecipeBySlug(slug);
+  const keys = getCuratedRecipeCategoryKeysBySlug(slug);
+  const result = recipeMetaMatchesFirehallCategory(
+    {
+      slug,
+      totalMinutes: full?.totalMinutes ?? 0,
+      mealFormat: full?.mealFormat,
+      sourceKind: full?.source?.kind,
+      categoryKeys: keys,
+    },
+    categoryId,
+  );
+  if (!result.ok) {
+    log(`[generate:local] reject category mismatch slug=${slug} reason=${result.reason}`, "generate");
+  }
+  return result.ok;
 }
 
 function hydratePick(
@@ -222,11 +255,14 @@ function pickForFirehallCategory(
 
     logFirehallPoolAttempt(request, snapshot, Boolean(pick));
     if (pick) {
+      const matchedId =
+        stage.categoryIds.find((id) => validateCategoryPick(pick.slug, request, id)) ?? null;
+      if (!matchedId) continue;
       log(
-        `[generate:local] firehall(${categoryId}/${stage.stage}) hit slug=${pick.slug} title="${pick.originalTitle.slice(0, 48)}"`,
+        `[generate:local] firehall(${categoryId}/${stage.stage}) hit slug=${pick.slug} title="${pick.originalTitle.slice(0, 48)}" matched=${matchedId}`,
         "generate",
       );
-      return pick;
+      return { ...pick, matchedCategory: matchedId };
     }
   }
 
@@ -283,8 +319,7 @@ export function pickGolden100ForGenerate(
   },
 ): LocalRecipePick | null {
   if (request.firehall_category) {
-    const categoryPick = pickForFirehallCategory(request, request.firehall_category, options);
-    if (categoryPick) return categoryPick;
+    return pickForFirehallCategory(request, request.firehall_category, options);
   }
 
   const rankBias = resolveCatalogRankBias(request);

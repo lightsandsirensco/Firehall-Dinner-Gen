@@ -80,6 +80,16 @@
       "slug": "batch-lasagna",
       "title": "Batch Lasagna",
       "blurb": "Maximum pasta for big tables."
+    },
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "title": "30-Minute Pasta e Fagioli for the Hall",
+      "blurb": "Bean-and-pasta soup that lands in half an hour."
+    },
+    {
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "title": "Spaghetti Aglio e Olio for the Hall",
+      "blurb": "Garlic, oil, and pasta — emulsified the right way."
     }
   ],
   "faqs": [
@@ -89,7 +99,7 @@
     },
     {
       "question": "What if crew size or time changes tonight?",
-      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+      "answer": "Use Find a Meal with your headcount and minutes available. Hall Match pulls from the same curated, hall-tested catalog these guides recommend."
     }
   ],
   "relatedArticleSlugs": [

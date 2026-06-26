@@ -26,6 +26,11 @@ import {
 } from "@shared/generation-reliability";
 import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } from "@/lib/recipe-cache";
 import { getRecentMealSlugs, recordMealSlug } from "@/lib/meal-rotation-memory";
+import { recordMealGenerated } from "@/lib/hall-history-store";
+import { syncHallProfileCrewSizeFromFilters } from "@/lib/hall-profile-store";
+import { RecentlyCookedStrip } from "@/components/hall-history/recently-cooked-strip";
+import { RepeatWarning } from "@/components/hall-history/repeat-warning";
+import { useHallHistory } from "@/hooks/use-hall-history";
 import {
   schedulePrefetchAfterGeneration,
   cancelActivePrefetches,
@@ -59,8 +64,23 @@ import { useToast } from "@/hooks/use-toast";
 import { hapticLight, hapticSuccess, hapticWarning } from "@/lib/haptics";
 import { shouldShowFirstShiftTip } from "@/lib/app-session";
 import { useGeneratorSeo } from "@/lib/seo/use-generator-seo";
+import { useAuth } from "@/lib/auth/context";
+import { OnboardingBanner } from "@/components/onboarding/onboarding-banner";
+import {
+  isOnboardingMode,
+  markFirstMealGenerated,
+  onboardingSignalsFromAuth,
+} from "@/lib/onboarding/state";
+import { trackPersonalOnboardingStepCompleted } from "@/lib/analytics";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
+
+function GeneratorMealRepeatWarning({ recipe }: { recipe: ClientRecipeResponse }) {
+  const { shouldAvoidRepeat } = useHallHistory();
+  const slug = (recipe as ClientRecipeResponse & { _slug?: string })._slug;
+  const repeat = shouldAvoidRepeat(slug);
+  return <RepeatWarning entry={repeat.entry} avoid={repeat.avoid} className="mb-4" />;
+}
 
 function getRecentMealStyles(): string[] {
   try {
@@ -192,6 +212,7 @@ const ResultsPanel = memo(function ResultsPanel({
       )}
       {!loading && showRecipe && recipeWithHero && (
         <div className="meal-reveal motion-reduce:animate-none" key={stableRecipeKey(recipeWithHero)}>
+          <GeneratorMealRepeatWarning recipe={recipeWithHero} />
           {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
             <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
               <span className="text-xs text-muted-foreground/60 font-mono tracking-widest uppercase">
@@ -205,6 +226,7 @@ const ResultsPanel = memo(function ResultsPanel({
             crewSize={filters.crew_size}
             onEmailClick={onEmailClick}
             onShoppingListClick={onShoppingListClick}
+            onHallVoteClick={onHallVoteClick}
           />
           {showHallVotePrompt && (
             <HallVotePromoBanner
@@ -231,6 +253,8 @@ const ResultsPanel = memo(function ResultsPanel({
 
 export default function Generator() {
   useGeneratorSeo();
+  const { user, profile, halls } = useAuth();
+  const onboardingMode = isOnboardingMode();
   // ── Core recipe state ─────────────────────────────────────────────────────
   // recipe is ALWAYS replaced atomically — never partially updated.
   // Title, ingredients, steps, timing, tags, macros all come from the same object.
@@ -327,6 +351,7 @@ export default function Generator() {
 
   useEffect(() => {
     try { localStorage.setItem("firehall_filters", JSON.stringify(filters)); } catch {}
+    syncHallProfileCrewSizeFromFilters(filters.crew_size);
   }, [filters]);
 
   const openEarnedEmailCapture = useCallback((trigger: EmailCaptureTrigger) => {
@@ -421,16 +446,36 @@ export default function Generator() {
     });
 
     markUserHasGenerated();
+    if (user?.user_id) {
+      const signals = onboardingSignalsFromAuth(halls, profile);
+      markFirstMealGenerated(user.user_id, signals);
+      trackPersonalOnboardingStepCompleted("generate_meal");
+    }
     const genFilters = generationFiltersRef.current;
     trackMealGenerated({
       recipe_title: data.title,
+      recipe_slug: slug,
       protein: genFilters?.protein,
       crew_size: genFilters?.crew_size,
       time_available:
         genFilters?.time_available != null ? Number(genFilters.time_available) : undefined,
       meal_category: genFilters?.firehall_category,
+      matched_category:
+        typeof (data as { _matched_firehall_category?: string })._matched_firehall_category ===
+        "string"
+          ? (data as { _matched_firehall_category?: string })._matched_firehall_category
+          : undefined,
+      category_broadened: Boolean(
+        (data as { _category_broadened?: boolean })._category_broadened,
+      ),
       meal_format: data.meal_style,
       cache_hit: generationCacheHitRef.current,
+    });
+    recordMealGenerated({
+      title: data.title,
+      recipeSlug: slug,
+      crewSize: genFilters?.crew_size,
+      source: "generator",
     });
     hapticSuccess();
     const totalGens = recordSuccessfulGeneration();
@@ -459,7 +504,7 @@ export default function Generator() {
         block: isMobile ? "start" : "nearest",
       });
     });
-  }, [openEarnedEmailCapture]);
+  }, [halls, openEarnedEmailCapture, profile, user?.user_id]);
 
   // ─────────────────────────────────────────────────────────────────────────
   // handleGenerate — fires one request at a time.
@@ -506,7 +551,9 @@ export default function Generator() {
     setErrorSmoked(false);
     setErrorTitle(undefined);
     setLoading(true);
-    trackMealGenerationStarted();
+    trackMealGenerationStarted({
+      meal_category: currentFilters.firehall_category,
+    });
     generationFiltersRef.current = currentFilters;
     generationCacheHitRef.current = false;
 
@@ -703,10 +750,11 @@ export default function Generator() {
   const voteRecipes = useMemo(() => {
     const hist = mealHistoryRef.current;
     if (hist.length >= 2) return hist.slice(-5);
+    if (recipe) return [recipe];
     return recentRecipes;
-  }, [recentRecipes, mealHistoryVersion]);
+  }, [recentRecipes, mealHistoryVersion, recipe]);
 
-  const showHallVotePrompt = userGenCount >= 1 && !!recipe && !loading;
+  const showHallVotePrompt = !!recipe && !loading;
   // ─────────────────────────────────────────────────────────────────────────
   return (
     <div className="page-shell min-h-screen min-h-[100dvh] bg-background">
@@ -715,12 +763,18 @@ export default function Generator() {
       <main
         className={cn(
           app.main,
-          "pb-safe-sticky lg:pb-12 transition-[padding] duration-500 ease-out scroll-momentum",
+          "pb-safe-tabs-cta lg:pb-12 transition-[padding] duration-500 ease-out scroll-momentum",
           mealFocusMode ? "py-4 lg:py-6" : "py-6 sm:py-8",
         )}
       >
-        {showFirstShiftTip && !mealFocusMode && (
+        {onboardingMode && <OnboardingBanner className="mb-6 max-w-2xl" />}
+
+        {showFirstShiftTip && !mealFocusMode && !onboardingMode && (
           <FirstShiftTip onDismiss={() => setShowFirstShiftTip(false)} />
+        )}
+
+        {!mealFocusMode && (
+          <RecentlyCookedStrip className="mb-6 max-w-2xl" source="generator" />
         )}
 
         {!mealFocusMode && (
@@ -828,11 +882,12 @@ export default function Generator() {
           />
         </>
       )}
-      {voteRecipes.length >= 1 && (
+      {recipe && (
         <HallVoteModal
           open={hallVoteOpen}
           onOpenChange={setHallVoteOpen}
           recipes={voteRecipes}
+          source="generator"
           onGenerateAnother={handleGenerateAnother}
           isGenerating={loading}
         />

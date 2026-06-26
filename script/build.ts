@@ -7,7 +7,6 @@ import { rm, readFile } from "fs/promises";
 const allowlist = [
   "@google/generative-ai",
   "axios",
-  "connect-pg-simple",
   "cors",
   "date-fns",
   "drizzle-orm",
@@ -16,17 +15,12 @@ const allowlist = [
   "express-rate-limit",
   "express-session",
   "jsonwebtoken",
-  "memorystore",
   "multer",
   "nanoid",
   "nodemailer",
   "openai",
-  "passport",
-  "passport-local",
-  "pg",
   "stripe",
   "uuid",
-  "ws",
   "xlsx",
   "zod",
   "zod-validation-error",
@@ -41,6 +35,9 @@ async function buildAll() {
 
   console.log("generating sitemap…");
   execSync("npx tsx scripts/generate-sitemap.ts", { stdio: "inherit" });
+
+  console.log("generating PWA icons…");
+  execSync("npx tsx scripts/generate-pwa-icons.ts", { stdio: "inherit" });
 
   console.log("building client...");
   await viteBuild();

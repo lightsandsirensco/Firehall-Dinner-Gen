@@ -42,7 +42,9 @@ export function slugLockedImagePaths(slug: string, kind: ExploreCatalogImageKind
   const rail = editorialPathForRole("rail", s, "jpg");
 
   if (kind === "smoothie") {
-    const hero = `/images/smoothies/${s}.jpg`;
+    const webpHero = `/images/smoothies/${s}.webp`;
+    const jpgHero = `/images/smoothies/${s}.jpg`;
+    const hero = imageFileExists(webpHero) ? webpHero : jpgHero;
     return {
       hero,
       thumb,

@@ -1,20 +1,23 @@
 import { Link } from "wouter";
-import { Shield } from "lucide-react";
+import { Shield, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { HeroImage } from "@/components/hero-image";
+import { useAuth } from "@/lib/auth/context";
 import { cn } from "@/lib/utils";
-import { BRAND_NAME, CTA, HOME } from "@/lib/brand-copy";
+import { BRAND_NAME, CTA, HALL_LINKED, HOME } from "@/lib/brand-copy";
 import { HOME_HERO_IMAGE } from "./home-constants";
 
 /**
- * Homepage hero — problem-first copy, two clear CTAs, minimal above-the-fold noise.
+ * Homepage hero — personal value first; hall connection as secondary path.
  */
 export function HomeHero() {
+  const { authenticated } = useAuth();
+
   return (
     <section
       className={cn(
         "relative w-full overflow-hidden bg-black",
-        "min-h-[min(56dvh,480px)] sm:min-h-[min(68dvh,560px)] lg:min-h-[min(70vh,680px)]",
+        "min-h-[min(50dvh,400px)] sm:min-h-[min(56dvh,480px)] lg:min-h-[min(60vh,560px)]",
         "flex flex-col justify-end",
       )}
       data-testid="home-hero"
@@ -23,7 +26,7 @@ export function HomeHero() {
       <div className="absolute inset-0">
         <HeroImage
           src={HOME_HERO_IMAGE}
-          alt=""
+          alt="Firefighter preparing a crew meal on shift"
           layout="card-fill"
           focal="banner"
           fit="contain-blur"
@@ -46,7 +49,11 @@ export function HomeHero() {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-page w-full pb-8 sm:pb-12 pt-24 sm:pt-28">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-page w-full pb-8 sm:pb-10 pt-[calc(3.25rem+env(safe-area-inset-top,0px))] sm:pt-24">
+        <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-primary/90 mb-2">
+          {HOME.heroEyebrow}
+        </p>
+
         <h1
           className={cn(
             "font-heading font-bold text-foreground",
@@ -63,7 +70,7 @@ export function HomeHero() {
         <p
           className={cn(
             "mt-3 sm:mt-4 text-base sm:text-lg text-foreground/90 leading-snug",
-            "max-w-[28ch] sm:max-w-md font-medium",
+            "max-w-[32ch] sm:max-w-lg font-medium",
             "drop-shadow-[0_1px_12px_rgba(0,0,0,0.75)]",
           )}
           data-testid="home-hero-subtitle"
@@ -73,8 +80,8 @@ export function HomeHero() {
 
         <p
           className={cn(
-            "mt-2 text-sm text-foreground/75 leading-snug",
-            "max-w-[32ch] sm:max-w-md",
+            "mt-2 sm:mt-3 text-sm text-foreground/75 leading-relaxed",
+            "max-w-[36ch] sm:max-w-lg",
             "drop-shadow-[0_1px_10px_rgba(0,0,0,0.65)]",
           )}
           data-testid="home-hero-action-line"
@@ -82,7 +89,7 @@ export function HomeHero() {
           {HOME.heroActionLine}
         </p>
 
-        <div className="mt-6 sm:mt-8 flex flex-col gap-3 w-full max-w-md">
+        <div className="mt-6 sm:mt-7 flex flex-col gap-3 w-full max-w-md">
           <Button
             asChild
             size="lg"
@@ -94,38 +101,66 @@ export function HomeHero() {
             )}
           >
             <Link href="/generator" data-testid="home-cta-generator">
-              {CTA.generateTonight}
+              {CTA.pickTonight}
             </Link>
           </Button>
+
+          {authenticated ? (
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className={cn(
+                "h-12 sm:h-14 w-full sm:w-auto sm:min-w-[240px] px-8",
+                "font-heading text-sm sm:text-base font-semibold tracking-wide",
+                "border-foreground/20 bg-background/50 backdrop-blur-sm",
+              )}
+            >
+              <Link href="/home" data-testid="home-cta-app">
+                <Sparkles className="w-4 h-4 mr-2 inline" aria-hidden />
+                Open app
+              </Link>
+            </Button>
+          ) : (
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className={cn(
+                "h-12 sm:h-14 w-full sm:w-auto sm:min-w-[240px] px-8",
+                "font-heading text-sm sm:text-base font-semibold tracking-wide",
+                "border-foreground/20 bg-background/50 backdrop-blur-sm",
+              )}
+            >
+              <Link href="/explore" data-testid="home-cta-explore">
+                {CTA.exploreMeals}
+              </Link>
+            </Button>
+          )}
 
           <Button
             asChild
             size="lg"
-            variant="outline"
+            variant="ghost"
             className={cn(
-              "h-12 sm:h-14 w-full sm:w-auto sm:min-w-[240px] px-8",
-              "font-heading text-sm sm:text-base font-semibold tracking-wide",
-              "border-foreground/20 bg-background/50 backdrop-blur-sm",
-              "hover:bg-foreground/[0.06] transition-[transform,background] duration-200",
+              "h-11 sm:h-12 w-full sm:w-auto px-6",
+              "text-sm font-medium text-foreground/80 hover:text-foreground",
             )}
           >
-            <Link href="/wheel" data-testid="home-cta-wheel">
-              {CTA.spinMealWheel}
+            <Link href="/hall/join" data-testid="home-cta-join-hall">
+              {HALL_LINKED.connect}
             </Link>
           </Button>
         </div>
 
         <p
           className={cn(
-            "mt-5 sm:mt-6 flex items-start gap-2.5 text-sm text-foreground/70 leading-relaxed",
-            "max-w-md drop-shadow-[0_1px_10px_rgba(0,0,0,0.65)]",
+            "mt-4 sm:mt-5 flex items-start gap-2.5 text-xs sm:text-sm text-foreground/70 leading-relaxed",
+            "max-w-lg drop-shadow-[0_1px_10px_rgba(0,0,0,0.65)]",
           )}
           data-testid="home-hero-trust"
         >
-          <Shield
-            className="h-4 w-4 shrink-0 mt-0.5 text-primary/80"
-            aria-hidden
-          />
+          <Shield className="h-4 w-4 shrink-0 mt-0.5 text-primary/80" aria-hidden />
           <span>{HOME.heroTrustLine}</span>
         </p>
       </div>

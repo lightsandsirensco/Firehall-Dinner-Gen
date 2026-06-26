@@ -3,6 +3,8 @@
  * Full articles publish at /guides/{slug} when written from these outlines.
  */
 
+import { BROWSE_CANONICAL_PATH, firehallCategoryExplorePath } from "../browse-canonical.js";
+
 export type BlogOutline = {
   slug: string;
   path: string;
@@ -56,7 +58,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
         bullets: ["Budget per crew", "Rookie recommendations", "Healthy rotation"],
       },
     ],
-    internalLinks: ["/firefighter-meals", "/recipes", "/wheel"],
+    internalLinks: ["/firefighter-meals", BROWSE_CANONICAL_PATH, "/wheel"],
     curatedRecipeSlugs: ["chicken-parm", "smash-burgers", "pulled-pork", "big-chili"],
   },
   {
@@ -90,7 +92,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
       { heading: "Healthy + comfort balance", bullets: ["Rotating comfort nights", "Line-and-serve flexibility"] },
       { heading: "FAQ", bullets: ["Macro-friendly hall food", "Crew buy-in", "Budget"] },
     ],
-    internalLinks: ["/healthy-firefighter-meals", "/categories/healthy_options", "/recipes"],
+    internalLinks: ["/healthy-firefighter-meals", firehallCategoryExplorePath("healthy_options"), BROWSE_CANONICAL_PATH],
     curatedRecipeSlugs: ["ginger-salmon-bowls", "lean-turkey-bean-chili", "sheet-pan-chicken-fajitas-lite"],
   },
   {
@@ -124,7 +126,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
       { heading: "Sides that scale", bullets: ["Mac bakes", "Corn", "Bowls and slaw lines"] },
       { heading: "FAQ", bullets: ["Budget proteins", "Interrupted smokes", "Feeding visitors"] },
     ],
-    internalLinks: ["/firefighter-bbq-recipes", "/categories/bbq_smoker", "/recipes"],
+    internalLinks: ["/firefighter-bbq-recipes", firehallCategoryExplorePath("bbq_smoker"), BROWSE_CANONICAL_PATH],
     curatedRecipeSlugs: ["smoked-brisket", "pulled-pork", "memphis-dry-rub-ribs"],
   },
   {
@@ -141,7 +143,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
       { heading: "Tools on Firehall Meals", bullets: ["Catalog browse", "Find a Meal", "Classics Wheel", "Saved favorites"] },
       { heading: "FAQ", bullets: ["8–12 crew budgets", "Multiple dietary needs", "Rookie rotation"] },
     ],
-    internalLinks: ["/fire-station-meals", "/firefighter-meals", "/recipes"],
+    internalLinks: ["/fire-station-meals", "/firefighter-meals", BROWSE_CANONICAL_PATH],
     curatedRecipeSlugs: ["one-pot-chicken-rice", "big-chili", "meatloaf-mashed"],
   },
   {
@@ -158,7 +160,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
       { heading: "Classics Wheel overlap", bullets: ["Ten wheel picks", "How to use the wheel"] },
       { heading: "FAQ", bullets: ["Easiest classics", "Budget classics", "Healthy alternates"] },
     ],
-    internalLinks: ["/wheel", "/firefighter-recipes", "/recipes"],
+    internalLinks: ["/wheel", "/firefighter-recipes", BROWSE_CANONICAL_PATH],
     curatedRecipeSlugs: ["chicken-parm", "smash-burgers", "beef-dip", "steak-tacos", "chili-garlic-bread"],
   },
   {
@@ -175,7 +177,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
       { heading: "Formats that forgive mistakes", bullets: ["Slow cooker", "Line-and-serve", "One-pot"] },
       { heading: "FAQ", bullets: ["Budget", "Timing", "When to ask for help"] },
     ],
-    internalLinks: ["/firefighter-meals", "/categories/crew_favorites", "/faq"],
+    internalLinks: ["/firefighter-meals", firehallCategoryExplorePath("crew_favorites"), "/faq"],
     curatedRecipeSlugs: ["meatloaf-mashed", "chicken-parm", "sheet-pan-fajitas"],
   },
 ];

@@ -127,7 +127,7 @@ export function resolveApprovedCatalogKind(slug: string, isSmoothie = false): Ap
 /** Public recipe detail route for an approved catalog slug. */
 export function approvedCatalogRecipePath(slug: string): string {
   const s = (slug || "").trim().toLowerCase();
-  if (!s) return "/recipes";
+  if (!s) return "/explore";
   if (isBreakfastCatalogSlug(s)) {
     if (isPerformanceBreakfastSlug(s)) {
       return `/breakfast/performance/${encodeURIComponent(s)}`;

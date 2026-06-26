@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { Link } from "wouter";
-import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, ThumbsUp, BarChart3 } from "lucide-react";
+import { Shield, DollarSign, Database, Activity, RefreshCw, Users, Globe, ChefHat, ThumbsUp, BarChart3, CreditCard, TrendingUp, Tag } from "lucide-react";
 import { adminFetch } from "@/lib/admin-api";
 
 interface UsageData {
@@ -93,10 +93,40 @@ export default function AdminPage() {
                 Recipe Ingestion
               </Button>
             </Link>
+            <Link href="/admin/billing">
+              <Button variant="outline" data-testid="button-billing-admin">
+                <CreditCard className="w-4 h-4 mr-2" />
+                Plans & Billing
+              </Button>
+            </Link>
+            <Link href="/admin/users">
+              <Button variant="outline" data-testid="button-users-admin">
+                <Users className="w-4 h-4 mr-2" />
+                Users & Signups
+              </Button>
+            </Link>
+            <Link href="/admin/deals">
+              <Button variant="outline" data-testid="button-deals-admin">
+                <Tag className="w-4 h-4 mr-2" />
+                Retailer Deals
+              </Button>
+            </Link>
             <Link href="/admin/analytics">
               <Button variant="outline" data-testid="button-analytics-admin">
                 <BarChart3 className="w-4 h-4 mr-2" />
                 Product Analytics
+              </Button>
+            </Link>
+            <Link href="/admin/errors">
+              <Button variant="outline" data-testid="button-errors-admin">
+                <BarChart3 className="w-4 h-4 mr-2" />
+                Production Errors
+              </Button>
+            </Link>
+            <Link href="/admin/growth">
+              <Button variant="outline" data-testid="button-growth-dashboard-admin">
+                <TrendingUp className="w-4 h-4 mr-2" />
+                Hall Growth
               </Button>
             </Link>
             <Link href="/admin/recipe-ratings">
@@ -136,10 +166,40 @@ export default function AdminPage() {
               Ingestion
             </Button>
           </Link>
+          <Link href="/admin/billing">
+            <Button variant="outline" size="sm" data-testid="button-billing-admin-nav">
+              <CreditCard className="w-4 h-4 mr-2" />
+              Plans & Billing
+            </Button>
+          </Link>
+          <Link href="/admin/users">
+            <Button variant="outline" size="sm" data-testid="button-users-admin-nav">
+              <Users className="w-4 h-4 mr-2" />
+              Users
+            </Button>
+          </Link>
+          <Link href="/admin/deals">
+            <Button variant="outline" size="sm" data-testid="button-deals-admin-nav">
+              <Tag className="w-4 h-4 mr-2" />
+              Deals
+            </Button>
+          </Link>
           <Link href="/admin/analytics">
             <Button variant="outline" size="sm" data-testid="button-analytics-admin-nav">
               <BarChart3 className="w-4 h-4 mr-2" />
               Analytics
+            </Button>
+          </Link>
+          <Link href="/admin/errors">
+            <Button variant="outline" size="sm" data-testid="button-errors-admin-nav">
+              <BarChart3 className="w-4 h-4 mr-2" />
+              Errors
+            </Button>
+          </Link>
+          <Link href="/admin/growth">
+            <Button variant="outline" size="sm" data-testid="button-growth-dashboard-admin-nav">
+              <TrendingUp className="w-4 h-4 mr-2" />
+              Hall Growth
             </Button>
           </Link>
           <Link href="/admin/recipe-ratings">

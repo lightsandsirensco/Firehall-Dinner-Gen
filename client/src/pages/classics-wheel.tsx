@@ -6,6 +6,8 @@ import { AppPageHeader } from "@/components/mobile/app-page-header";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { ClassicsWheel, WHEEL_LAYOUT, WheelReveal } from "@/components/classics-wheel";
+import { HallVoteFlow } from "@/components/hall-vote-flow";
+import { wheelVotePair } from "@/lib/hall-vote-recipes";
 import { getSavedCount } from "@/lib/saved-meals";
 import {
   WHEEL_CLASSICS,
@@ -23,6 +25,8 @@ import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
 import { SiteFooter } from "@/components/site-footer";
 import { trackWheelSpin, trackWheelRecipeOpen } from "@/lib/analytics";
+import { recordWheelResult } from "@/lib/hall-history-store";
+import { recordWheelStreakSpin } from "@/lib/wheel-streak-store";
 
 type Phase = "ready" | "spinning" | "reveal";
 
@@ -58,6 +62,13 @@ export default function ClassicsWheelPage() {
       title: classic.title,
       segment_index: idx >= 0 ? idx : undefined,
     });
+    recordWheelResult({
+      title: classic.title,
+      recipeSlug: classic.slug,
+      recipePath: buildRecipeUrl(classic),
+      segmentIndex: idx >= 0 ? idx : undefined,
+    });
+    recordWheelStreakSpin();
     setWinner(classic);
     setWinnerIndex(idx >= 0 ? idx : null);
     setPinned(isClassicPinned(classic.slug));
@@ -91,6 +102,11 @@ export default function ClassicsWheelPage() {
     setPinned(toggleClassicPin(winner.slug));
   }, [winner]);
 
+  const wheelVoteRecipes = useMemo(
+    () => (winner ? wheelVotePair(winner) : []),
+    [winner],
+  );
+
   return (
     <div className="page-shell min-h-screen min-h-[100dvh] bg-background flex flex-col">
       <SiteHeader activePage="wheel" favCount={favCount} />
@@ -109,7 +125,7 @@ export default function ClassicsWheelPage() {
 
       <main className={cn(app.mainDetail, "flex-1 py-8 sm:py-12 pb-safe-nav max-w-[900px] hall-surface rounded-t-3xl")}>
         <LightsAndSirensCredit variant="block" className="mb-8" showFirefighterOwned />
-        <p className="mb-8 text-sm text-muted-foreground leading-relaxed max-w-lg">
+        <p className="mb-6 text-sm text-muted-foreground leading-relaxed max-w-lg">
           {LIGHTS_COPY.wheelLine}
         </p>
 
@@ -186,6 +202,15 @@ export default function ClassicsWheelPage() {
                   onTogglePin={handleTogglePin}
                   onExplore={handleExplore}
                 />
+                {wheelVoteRecipes.length > 0 && (
+                  <div className="mt-6">
+                    <HallVoteFlow
+                      recipes={wheelVoteRecipes}
+                      source="classics_wheel"
+                      variant="banner"
+                    />
+                  </div>
+                )}
               </motion.div>
             )}
           </AnimatePresence>

@@ -1,24 +1,23 @@
 {
-  "generatedAt": "2026-06-02T15:58:18.378Z",
+  "generatedAt": "2026-06-23T15:41:46.492Z",
   "total": 250,
   "successRate": 1,
   "failureRate": 0,
-  "avgMs": 6,
-  "slowestMs": 34,
-  "duplicateRate": 0.648,
-  "duplicateRowRate": 0.888,
-  "maxRepeat": 11,
-  "meanRepeat": 2.840909090909091,
-  "uniqueSlugs": 88,
+  "avgMs": 4,
+  "slowestMs": 19,
+  "duplicateRate": 0.644,
+  "duplicateRowRate": 0.892,
+  "maxRepeat": 12,
+  "meanRepeat": 2.808988764044944,
+  "uniqueSlugs": 89,
   "scalingStress": {
-    "slugsTested": 88,
+    "slugsTested": 89,
     "failures": []
   },
   "qualityCounts": {
-    "vague_step": 1020,
-    "ingredient_unused": 512,
-    "placeholder_ingredient": 242,
-    "nutrition_withheld": 22
+    "vague_step": 1021,
+    "ingredient_unused": 508,
+    "placeholder_ingredient": 272
   },
   "imageConflicts": 0,
   "failureTests": {
@@ -35,39 +34,31 @@
   "readinessPct": 90,
   "top20": [
     {
-      "slug": "baked-turkey-meatball-marinara",
-      "count": 11
+      "slug": "beef-broccoli",
+      "count": 12
     },
     {
-      "slug": "philly-cheesesteak-skillet",
-      "count": 10
-    },
-    {
-      "slug": "ginger-salmon-bowls",
+      "slug": "korean-beef-rice-bowls",
       "count": 9
-    },
-    {
-      "slug": "steak-tacos",
-      "count": 8
     },
     {
       "slug": "pulled-pork",
       "count": 8
     },
     {
-      "slug": "turkey-shepherds-sweet-potato",
-      "count": 7
-    },
-    {
-      "slug": "sheet-pan-sausage-peppers",
-      "count": 7
-    },
-    {
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "count": 6
+      "slug": "ginger-salmon-bowls",
+      "count": 8
     },
     {
       "slug": "honey-garlic-pork-tenderloin",
+      "count": 7
+    },
+    {
+      "slug": "baked-turkey-meatball-marinara",
+      "count": 7
+    },
+    {
+      "slug": "jerk-chicken",
       "count": 6
     },
     {
@@ -75,43 +66,51 @@
       "count": 6
     },
     {
-      "slug": "pork-carnitas-tacos",
-      "count": 6
+      "slug": "sheet-pan-sausage-peppers",
+      "count": 5
     },
     {
-      "slug": "steak-sandwiches",
+      "slug": "pork-carnitas-tacos",
       "count": 5
+    },
+    {
+      "slug": "white-bean-chicken-chili",
+      "count": 5
+    },
+    {
+      "slug": "veggie-egg-casserole-tray",
+      "count": 4
+    },
+    {
+      "slug": "pad-thai",
+      "count": 4
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "count": 4
     },
     {
       "slug": "garlic-butter-shrimp",
-      "count": 5
-    },
-    {
-      "slug": "maple-soy-salmon-bowls",
-      "count": 5
-    },
-    {
-      "slug": "lemon-garlic-shrimp-pasta",
-      "count": 5
-    },
-    {
-      "slug": "texas-beef-ribs",
       "count": 4
     },
     {
-      "slug": "lemon-herb-salmon",
+      "slug": "herb-baked-salmon-tray",
       "count": 4
     },
     {
-      "slug": "crispy-fish-taco-night",
+      "slug": "grilled-pork-chops",
       "count": 4
     },
     {
-      "slug": "turkey-zoodle-bolognese",
+      "slug": "sausage-peppers-onions",
       "count": 4
     },
     {
-      "slug": "shawarma-chicken-rice-bowls",
+      "slug": "steak-tacos",
+      "count": 4
+    },
+    {
+      "slug": "smoked-wings-white-sauce",
       "count": 4
     }
   ],
@@ -121,31 +120,31 @@
       "index": 0,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 34,
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite"
+      "durationMs": 19,
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter"
     },
     {
       "index": 1,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 12,
-      "slug": "hummus-chicken-platter",
-      "title": "Hummus Chicken Platter"
+      "durationMs": 6,
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken Chickpea Tray"
     },
     {
       "index": 2,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 10,
-      "slug": "texas-beef-ribs",
-      "title": "Texas-Style Beef Ribs"
+      "durationMs": 4,
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff"
     },
     {
       "index": 3,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 12,
+      "durationMs": 8,
       "slug": "honey-garlic-pork-tenderloin",
       "title": "Honey Garlic Grilled Pork Tenderloin"
     },
@@ -153,31 +152,31 @@
       "index": 4,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 16,
-      "slug": "turkey-lettuce-wrap-night",
-      "title": "Turkey Lettuce Wrap Night"
+      "durationMs": 10,
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas"
     },
     {
       "index": 5,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 16,
-      "slug": "lemon-herb-salmon",
-      "title": "Lemon Herb Grilled Salmon"
+      "durationMs": 14,
+      "slug": "creamy-tuscan-chicken",
+      "title": "Creamy Tuscan Chicken"
     },
     {
       "index": 6,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 8,
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet"
+      "durationMs": 5,
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole Tray"
     },
     {
       "index": 7,
       "tag": "quick",
       "ok": true,
-      "durationMs": 7,
+      "durationMs": 6,
       "slug": "pad-thai",
       "title": "Hall Rush Pad Thai"
     },
@@ -185,63 +184,63 @@
       "index": 8,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 19,
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos"
+      "durationMs": 7,
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls"
     },
     {
       "index": 9,
       "tag": "classics",
       "ok": true,
-      "durationMs": 13,
-      "slug": "meat-lovers-sheet-pizza",
-      "title": "Meat Lover's Sheet Pan Pizza"
+      "durationMs": 3,
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza"
     },
     {
       "index": 10,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 5,
-      "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top"
+      "durationMs": 3,
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara"
     },
     {
       "index": 11,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 5,
-      "slug": "ginger-salmon-bowls",
-      "title": "Ginger Salmon Rice Bowls"
+      "durationMs": 2,
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Grilled Salmon"
     },
     {
       "index": 12,
       "tag": "dinner",
       "ok": true,
       "durationMs": 4,
-      "slug": "crispy-fish-taco-night",
-      "title": "Crispy Fish Taco Night"
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls"
     },
     {
       "index": 13,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 6,
-      "slug": "jerk-chicken",
-      "title": "Jerk Chicken & Peas and Rice"
+      "durationMs": 3,
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken"
     },
     {
       "index": 14,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 8,
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches"
+      "durationMs": 2,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 15,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 6,
+      "durationMs": 4,
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches"
     },
@@ -249,15 +248,15 @@
       "index": 16,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 7,
-      "slug": "turkey-zoodle-bolognese",
-      "title": "Turkey Zoodle Bolognese"
+      "durationMs": 10,
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers"
     },
     {
       "index": 17,
       "tag": "quick",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "garlic-butter-shrimp",
       "title": "Garlic Butter Shrimp"
     },
@@ -265,47 +264,47 @@
       "index": 18,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 5,
-      "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Rice Bowls"
+      "durationMs": 6,
+      "slug": "herb-baked-salmon-tray",
+      "title": "Herb-Crusted Baked Salmon Tray"
     },
     {
       "index": 19,
       "tag": "classics",
       "ok": true,
-      "durationMs": 5,
-      "slug": "street-corn-chicken",
-      "title": "Mexican Street Corn Chicken Bowls"
+      "durationMs": 3,
+      "slug": "performance-burrito-bowls",
+      "title": "Performance Chicken Burrito Bowls"
     },
     {
       "index": 20,
       "tag": "breakfast",
       "ok": true,
       "durationMs": 3,
-      "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night"
+      "slug": "meatball-hoagies",
+      "title": "Firehall Meatball Hoagies"
     },
     {
       "index": 21,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
-      "slug": "sheet-pan-sausage-peppers",
-      "title": "Sheet Pan Sausage and Peppers"
+      "durationMs": 3,
+      "slug": "grilled-pork-chops",
+      "title": "Charcoal Grilled Pork Chops"
     },
     {
       "index": 22,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 4,
-      "slug": "turkey-taco-skillet",
-      "title": "Turkey Taco Skillet"
+      "durationMs": 3,
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's with Sweet Potato Top"
     },
     {
       "index": 23,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "teriyaki-salmon-grill",
       "title": "Teriyaki Grilled Salmon"
     },
@@ -313,17 +312,17 @@
       "index": 24,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 5,
-      "slug": "asian-chicken-lettuce-cups",
-      "title": "Asian Chicken Lettuce Cups"
+      "durationMs": 2,
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions"
     },
     {
       "index": 25,
       "tag": "comfort",
       "ok": true,
       "durationMs": 4,
-      "slug": "chicken-caesar",
-      "title": "Hall Caesar Chicken"
+      "slug": "parm-hero-subs",
+      "title": "Chicken Parm Hero Subs"
     },
     {
       "index": 26,
@@ -337,7 +336,7 @@
       "index": 27,
       "tag": "quick",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 7,
       "slug": "pork-carnitas-tacos",
       "title": "Quick Pork Carnitas Tacos"
     },
@@ -345,15 +344,15 @@
       "index": 28,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 5,
-      "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top"
+      "durationMs": 6,
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara"
     },
     {
       "index": 29,
       "tag": "classics",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls"
     },
@@ -361,31 +360,31 @@
       "index": 30,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Rice Bowls"
+      "durationMs": 3,
+      "slug": "steak-tacos",
+      "title": "Steak Tacos"
     },
     {
       "index": 31,
       "tag": "lunch",
       "ok": true,
       "durationMs": 4,
-      "slug": "zaatar-roasted-chicken-thighs",
-      "title": "Za'atar Roasted Chicken Thighs"
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter"
     },
     {
       "index": 32,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 3,
-      "slug": "loaded-baked-potato-bar",
-      "title": "Loaded Baked Potato Bar"
+      "durationMs": 2,
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers"
     },
     {
       "index": 33,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "honey-garlic-pork-tenderloin",
       "title": "Honey Garlic Grilled Pork Tenderloin"
     },
@@ -393,95 +392,95 @@
       "index": 34,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 7,
-      "slug": "turkey-meatball-zoodles",
-      "title": "Turkey Meatballs with Zucchini Noodles"
+      "durationMs": 6,
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas"
     },
     {
       "index": 35,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 11,
-      "slug": "lemon-salmon-orzo-skillet",
-      "title": "Lemon Salmon Orzo Skillet"
+      "durationMs": 8,
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie"
     },
     {
       "index": 36,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 5,
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite"
+      "durationMs": 4,
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta"
     },
     {
       "index": 37,
       "tag": "quick",
       "ok": true,
-      "durationMs": 5,
-      "slug": "one-pot-chicken-rice",
-      "title": "One-Pot Chicken and Rice"
+      "durationMs": 7,
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai"
     },
     {
       "index": 38,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 10,
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches"
+      "durationMs": 6,
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls"
     },
     {
       "index": 39,
       "tag": "classics",
       "ok": true,
-      "durationMs": 9,
-      "slug": "honey-soppressata-pizza",
-      "title": "Hot Honey Soppressata Pizza"
+      "durationMs": 5,
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza"
     },
     {
       "index": 40,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 5,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "durationMs": 3,
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers"
     },
     {
       "index": 41,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 5,
-      "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Fish Tray"
+      "durationMs": 4,
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Grilled Shrimp Quinoa Bowls"
     },
     {
       "index": 42,
       "tag": "dinner",
       "ok": true,
       "durationMs": 4,
-      "slug": "honey-garlic-chicken-rice-bowls",
-      "title": "Honey Garlic Chicken Rice Bowls"
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken Chickpea Tray"
     },
     {
       "index": 43,
       "tag": "bbq",
       "ok": true,
       "durationMs": 4,
-      "slug": "bbq-chicken-bowls",
-      "title": "BBQ Chicken Bowls"
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce"
     },
     {
       "index": 44,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 6,
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet"
+      "durationMs": 2,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 45,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 6,
+      "durationMs": 4,
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches"
     },
@@ -489,63 +488,63 @@
       "index": 46,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 8,
-      "slug": "turkey-chili",
-      "title": "High-Protein Turkey Chili"
+      "durationMs": 11,
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas"
     },
     {
       "index": 47,
       "tag": "quick",
       "ok": true,
-      "durationMs": 4,
-      "slug": "maple-soy-salmon-bowls",
-      "title": "Maple Soy Salmon Bowls"
+      "durationMs": 6,
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray"
     },
     {
       "index": 48,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 5,
-      "slug": "cajun-chicken-rice-bowl",
-      "title": "Cajun Chicken Rice Bowl"
+      "durationMs": 8,
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray"
     },
     {
       "index": 49,
       "tag": "classics",
       "ok": true,
-      "durationMs": 4,
-      "slug": "butter-chicken",
-      "title": "Butter Chicken"
+      "durationMs": 3,
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza"
     },
     {
       "index": 50,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches"
+      "durationMs": 3,
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet"
     },
     {
       "index": 51,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 5,
-      "slug": "detroit-style-pizza",
-      "title": "Detroit-Style Pepperoni Pizza"
+      "durationMs": 2,
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs"
     },
     {
       "index": 52,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 4,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "durationMs": 3,
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet"
     },
     {
       "index": 53,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 3,
+      "durationMs": 4,
       "slug": "cedar-plank-salmon",
       "title": "Cedar Plank Grilled Salmon"
     },
@@ -553,31 +552,31 @@
       "index": 54,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 6,
-      "slug": "honey-garlic-chicken-rice-bowls",
-      "title": "Honey Garlic Chicken Rice Bowls"
+      "durationMs": 3,
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice"
     },
     {
       "index": 55,
       "tag": "comfort",
       "ok": true,
       "durationMs": 4,
-      "slug": "crispy-chicken-cutlets",
-      "title": "Crispy Chicken Cutlets Marinara"
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili"
     },
     {
       "index": 56,
       "tag": "rookie",
       "ok": true,
       "durationMs": 4,
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet"
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet"
     },
     {
       "index": 57,
       "tag": "quick",
       "ok": true,
-      "durationMs": 6,
+      "durationMs": 5,
       "slug": "pork-carnitas-tacos",
       "title": "Quick Pork Carnitas Tacos"
     },
@@ -585,7 +584,7 @@
       "index": 58,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 6,
+      "durationMs": 5,
       "slug": "turkey-zoodle-bolognese",
       "title": "Turkey Zoodle Bolognese"
     },
@@ -593,7 +592,7 @@
       "index": 59,
       "tag": "classics",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 4,
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls"
     },
@@ -602,14 +601,14 @@
       "tag": "breakfast",
       "ok": true,
       "durationMs": 4,
-      "slug": "turkey-taco-skillet",
-      "title": "Turkey Taco Skillet"
+      "slug": "turkey-sausage-egg-muffins",
+      "title": "Turkey Sausage Egg Muffins"
     },
     {
       "index": 61,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "yogurt-marinated-grill-chicken",
       "title": "Yogurt Marinated Grill Chicken"
     },
@@ -617,15 +616,15 @@
       "index": 62,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 4,
-      "slug": "texas-beef-ribs",
-      "title": "Texas-Style Beef Ribs"
+      "durationMs": 2,
+      "slug": "hall-taco-bar",
+      "title": "Hall Taco Bar Night"
     },
     {
       "index": 63,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "honey-garlic-pork-tenderloin",
       "title": "Honey Garlic Grilled Pork Tenderloin"
     },
@@ -633,95 +632,95 @@
       "index": 64,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 7,
-      "slug": "turkey-chili",
-      "title": "High-Protein Turkey Chili"
+      "durationMs": 6,
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas"
     },
     {
       "index": 65,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 9,
-      "slug": "maple-soy-salmon-bowls",
-      "title": "Maple Soy Salmon Bowls"
+      "durationMs": 11,
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes"
     },
     {
       "index": 66,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 5,
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Italian Sausage and Veg Sheet Pan"
+      "durationMs": 3,
+      "slug": "sheet-pan-fajitas",
+      "title": "Sheet Pan Chicken Fajitas"
     },
     {
       "index": 67,
       "tag": "quick",
       "ok": true,
-      "durationMs": 4,
-      "slug": "asian-chicken-lettuce-cups",
-      "title": "Asian Chicken Lettuce Cups"
+      "durationMs": 5,
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice"
     },
     {
       "index": 68,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 8,
-      "slug": "loaded-baked-potato-bar",
-      "title": "Loaded Baked Potato Bar"
+      "durationMs": 5,
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls"
     },
     {
       "index": 69,
       "tag": "classics",
       "ok": true,
-      "durationMs": 8,
-      "slug": "sausage-peppers-onions",
-      "title": "Sausage Peppers and Onions"
+      "durationMs": 4,
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza"
     },
     {
       "index": 70,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "turkey-sausage-egg-muffins",
-      "title": "Turkey Sausage Egg Muffins"
+      "durationMs": 3,
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wrap Night"
     },
     {
       "index": 71,
       "tag": "lunch",
       "ok": true,
       "durationMs": 3,
-      "slug": "lemon-garlic-shrimp-pasta",
-      "title": "Lemon Garlic Shrimp Pasta"
+      "slug": "herb-baked-salmon-tray",
+      "title": "Herb-Crusted Baked Salmon Tray"
     },
     {
       "index": 72,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 5,
-      "slug": "white-bean-chicken-chili",
-      "title": "White Bean Chicken Chili"
+      "durationMs": 3,
+      "slug": "tabbouleh-chicken-bowls",
+      "title": "Tabbouleh Chicken Bowls"
     },
     {
       "index": 73,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
-      "slug": "bbq-chicken-bowls",
-      "title": "BBQ Chicken Bowls"
+      "durationMs": 4,
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce"
     },
     {
       "index": 74,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 7,
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos"
+      "durationMs": 3,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 75,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches"
     },
@@ -729,15 +728,15 @@
       "index": 76,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 6,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "durationMs": 9,
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta"
     },
     {
       "index": 77,
       "tag": "quick",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 6,
       "slug": "blackened-cod-taco-night",
       "title": "Blackened Cod Taco Night"
     },
@@ -746,46 +745,46 @@
       "tag": "high_protein",
       "ok": true,
       "durationMs": 5,
-      "slug": "crock-barbacoa-chicken",
-      "title": "Crock Barbacoa Chicken"
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet"
     },
     {
       "index": 79,
       "tag": "classics",
       "ok": true,
-      "durationMs": 4,
-      "slug": "butter-chicken",
-      "title": "Butter Chicken"
+      "durationMs": 3,
+      "slug": "performance-burrito-bowls",
+      "title": "Performance Chicken Burrito Bowls"
     },
     {
       "index": 80,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "hall-taco-bar",
-      "title": "Hall Taco Bar Night"
+      "durationMs": 3,
+      "slug": "steak-sandwiches",
+      "title": "Steak Sandwiches"
     },
     {
       "index": 81,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
-      "slug": "sausage-egg-bake",
-      "title": "Sausage Egg Bake for the Crew"
+      "durationMs": 3,
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions"
     },
     {
       "index": 82,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 5,
-      "slug": "turkey-taco-skillet",
-      "title": "Turkey Taco Skillet"
+      "durationMs": 3,
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara"
     },
     {
       "index": 83,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "lemon-herb-salmon",
       "title": "Lemon Herb Grilled Salmon"
     },
@@ -793,15 +792,15 @@
       "index": 84,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 8,
-      "slug": "lemon-garlic-chicken-tray",
-      "title": "Lemon Garlic Chicken Tray Bake"
+      "durationMs": 3,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 85,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 6,
+      "durationMs": 3,
       "slug": "chicken-pot-pie",
       "title": "Chicken Pot Pie"
     },
@@ -810,30 +809,30 @@
       "tag": "rookie",
       "ok": true,
       "durationMs": 3,
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet"
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet"
     },
     {
       "index": 87,
       "tag": "quick",
       "ok": true,
       "durationMs": 5,
-      "slug": "pork-carnitas-tacos",
-      "title": "Quick Pork Carnitas Tacos"
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers"
     },
     {
       "index": 88,
       "tag": "high_protein",
       "ok": true,
       "durationMs": 5,
-      "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top"
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wrap Night"
     },
     {
       "index": 89,
       "tag": "classics",
       "ok": true,
-      "durationMs": 3,
+      "durationMs": 4,
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls"
     },
@@ -842,14 +841,14 @@
       "tag": "breakfast",
       "ok": true,
       "durationMs": 3,
-      "slug": "maple-soy-salmon-bowls",
-      "title": "Maple Soy Salmon Bowls"
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Rice Bowls"
     },
     {
       "index": 91,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "white-bean-chicken-chili",
       "title": "White Bean Chicken Chili"
     },
@@ -858,14 +857,14 @@
       "tag": "dinner",
       "ok": true,
       "durationMs": 3,
-      "slug": "meatball-hoagies",
-      "title": "Firehall Meatball Hoagies"
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup"
     },
     {
       "index": 93,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "grilled-pork-chops",
       "title": "Charcoal Grilled Pork Chops"
     },
@@ -874,88 +873,88 @@
       "tag": "healthy",
       "ok": true,
       "durationMs": 7,
-      "slug": "turkey-burgers",
-      "title": "Black Bean Turkey Burgers"
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas"
     },
     {
       "index": 95,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 7,
-      "slug": "lemon-salmon-orzo-skillet",
-      "title": "Lemon Salmon Orzo Skillet"
+      "durationMs": 8,
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Cottage Cheese Protein Pasta Bake"
     },
     {
       "index": 96,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 3,
-      "slug": "sheet-pan-fajitas",
-      "title": "Sheet Pan Chicken Fajitas"
+      "durationMs": 4,
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai"
     },
     {
       "index": 97,
       "tag": "quick",
       "ok": true,
       "durationMs": 3,
-      "slug": "pad-thai",
-      "title": "Hall Rush Pad Thai"
+      "slug": "chicken-quesadillas",
+      "title": "Shredded Chicken Quesadillas"
     },
     {
       "index": 98,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 9,
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos"
+      "durationMs": 6,
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls"
     },
     {
       "index": 99,
       "tag": "classics",
       "ok": true,
-      "durationMs": 6,
-      "slug": "sheet-pan-sausage-peppers",
-      "title": "Sheet Pan Sausage and Peppers"
+      "durationMs": 3,
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza"
     },
     {
       "index": 100,
       "tag": "breakfast",
       "ok": true,
       "durationMs": 4,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet"
     },
     {
       "index": 101,
       "tag": "lunch",
       "ok": true,
       "durationMs": 3,
-      "slug": "mediterranean-baked-fish-tray",
-      "title": "Mediterranean Baked Fish Tray"
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray"
     },
     {
       "index": 102,
       "tag": "dinner",
       "ok": true,
       "durationMs": 3,
-      "slug": "hummus-chicken-platter",
-      "title": "Hummus Chicken Platter"
+      "slug": "crispy-fish-taco-night",
+      "title": "Crispy Fish Taco Night"
     },
     {
       "index": 103,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 4,
-      "slug": "beer-can-chicken",
-      "title": "Beer Can Chicken"
+      "durationMs": 3,
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White BBQ Sauce"
     },
     {
       "index": 104,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 5,
-      "slug": "bbq-brisket-burnt-ends",
-      "title": "BBQ Burnt Ends"
+      "durationMs": 3,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 105,
@@ -969,25 +968,25 @@
       "index": 106,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 6,
-      "slug": "turkey-taco-skillet",
-      "title": "Turkey Taco Skillet"
+      "durationMs": 10,
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo Skillet"
     },
     {
       "index": 107,
       "tag": "quick",
       "ok": true,
       "durationMs": 4,
-      "slug": "garlic-butter-shrimp",
-      "title": "Garlic Butter Shrimp"
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls"
     },
     {
       "index": 108,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 5,
-      "slug": "lemon-chicken-orzo-soup",
-      "title": "Lemon Chicken Orzo Soup"
+      "durationMs": 6,
+      "slug": "lemon-garlic-chicken-tray",
+      "title": "Lemon Garlic Chicken Tray Bake"
     },
     {
       "index": 109,
@@ -1001,9 +1000,9 @@
       "index": 110,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 5,
-      "slug": "smash-burgers",
-      "title": "Double Smash Burgers"
+      "durationMs": 3,
+      "slug": "steak-tacos",
+      "title": "Steak Tacos"
     },
     {
       "index": 111,
@@ -1018,14 +1017,14 @@
       "tag": "dinner",
       "ok": true,
       "durationMs": 3,
-      "slug": "turkey-burgers",
-      "title": "Black Bean Turkey Burgers"
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese"
     },
     {
       "index": 113,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "lemon-herb-salmon",
       "title": "Lemon Herb Grilled Salmon"
     },
@@ -1033,9 +1032,9 @@
       "index": 114,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 5,
-      "slug": "korean-beef-rice-bowls",
-      "title": "Korean Beef Rice Bowls"
+      "durationMs": 2,
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice"
     },
     {
       "index": 115,
@@ -1050,14 +1049,14 @@
       "tag": "rookie",
       "ok": true,
       "durationMs": 3,
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet"
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 117,
       "tag": "quick",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 4,
       "slug": "sheet-pan-sausage-peppers",
       "title": "Sheet Pan Sausage and Peppers"
     },
@@ -1065,7 +1064,7 @@
       "index": 118,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 5,
       "slug": "baked-turkey-meatball-marinara",
       "title": "Baked Turkey Meatball Marinara"
     },
@@ -1073,7 +1072,7 @@
       "index": 119,
       "tag": "classics",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls"
     },
@@ -1082,14 +1081,14 @@
       "tag": "breakfast",
       "ok": true,
       "durationMs": 3,
-      "slug": "crispy-fish-taco-night",
-      "title": "Crispy Fish Taco Night"
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter"
     },
     {
       "index": 121,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 2,
       "slug": "asian-chicken-lettuce-cups",
       "title": "Asian Chicken Lettuce Cups"
     },
@@ -1097,15 +1096,15 @@
       "index": 122,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 4,
-      "slug": "texas-beef-ribs",
-      "title": "Texas-Style Beef Ribs"
+      "durationMs": 3,
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff"
     },
     {
       "index": 123,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "honey-garlic-pork-tenderloin",
       "title": "Honey Garlic Grilled Pork Tenderloin"
     },
@@ -1113,25 +1112,25 @@
       "index": 124,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 6,
-      "slug": "turkey-chili",
-      "title": "High-Protein Turkey Chili"
+      "durationMs": 5,
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas"
     },
     {
       "index": 125,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 8,
-      "slug": "herb-baked-salmon-tray",
-      "title": "Herb-Crusted Baked Salmon Tray"
+      "durationMs": 12,
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili"
     },
     {
       "index": 126,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 4,
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite"
+      "durationMs": 3,
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo Skillet"
     },
     {
       "index": 127,
@@ -1145,31 +1144,31 @@
       "index": 128,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 9,
-      "slug": "bbq-brisket-burnt-ends",
-      "title": "BBQ Burnt Ends"
+      "durationMs": 5,
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls"
     },
     {
       "index": 129,
       "tag": "classics",
       "ok": true,
-      "durationMs": 7,
-      "slug": "sausage-egg-bake",
-      "title": "Sausage Egg Bake for the Crew"
+      "durationMs": 3,
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza"
     },
     {
       "index": 130,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "turkey-sausage-egg-muffins",
-      "title": "Turkey Sausage Egg Muffins"
+      "durationMs": 3,
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara"
     },
     {
       "index": 131,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 3,
+      "durationMs": 2,
       "slug": "crispy-fish-taco-night",
       "title": "Crispy Fish Taco Night"
     },
@@ -1177,31 +1176,31 @@
       "index": 132,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 3,
-      "slug": "lemon-garlic-shrimp-pasta",
-      "title": "Lemon Garlic Shrimp Pasta"
+      "durationMs": 4,
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken Chickpea Tray"
     },
     {
       "index": 133,
       "tag": "bbq",
       "ok": true,
       "durationMs": 4,
-      "slug": "bbq-chicken-sliders",
-      "title": "BBQ Chicken Sliders"
+      "slug": "yogurt-marinated-grill-chicken",
+      "title": "Yogurt Marinated Grill Chicken"
     },
     {
       "index": 134,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 7,
-      "slug": "smash-burgers",
-      "title": "Double Smash Burgers"
+      "durationMs": 3,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 135,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches"
     },
@@ -1209,57 +1208,57 @@
       "index": 136,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 5,
-      "slug": "turkey-sweet-potato-chili",
-      "title": "Turkey Sweet Potato Chili"
+      "durationMs": 10,
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole Tray"
     },
     {
       "index": 137,
       "tag": "quick",
       "ok": true,
-      "durationMs": 3,
-      "slug": "garlic-butter-shrimp",
-      "title": "Garlic Butter Shrimp"
+      "durationMs": 4,
+      "slug": "herb-baked-salmon-tray",
+      "title": "Herb-Crusted Baked Salmon Tray"
     },
     {
       "index": 138,
       "tag": "high_protein",
       "ok": true,
       "durationMs": 5,
-      "slug": "tabbouleh-chicken-bowls",
-      "title": "Tabbouleh Chicken Bowls"
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Greek Lemon Chicken and Potatoes"
     },
     {
       "index": 139,
       "tag": "classics",
       "ok": true,
-      "durationMs": 4,
-      "slug": "herb-roasted-thighs",
-      "title": "Herb Roasted Chicken Thighs"
+      "durationMs": 3,
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi"
     },
     {
       "index": 140,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "loaded-nacho-skillet",
-      "title": "Loaded Nacho Skillet"
+      "durationMs": 3,
+      "slug": "texas-beef-ribs",
+      "title": "Texas-Style Beef Ribs"
     },
     {
       "index": 141,
       "tag": "lunch",
       "ok": true,
       "durationMs": 4,
-      "slug": "honey-soppressata-pizza",
-      "title": "Hot Honey Soppressata Pizza"
+      "slug": "grilled-pork-chops",
+      "title": "Charcoal Grilled Pork Chops"
     },
     {
       "index": 142,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 4,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "durationMs": 2,
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili"
     },
     {
       "index": 143,
@@ -1273,23 +1272,23 @@
       "index": 144,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 5,
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite"
+      "durationMs": 2,
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala"
     },
     {
       "index": 145,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 4,
-      "slug": "creamy-tuscan-chicken",
-      "title": "Creamy Tuscan Chicken"
+      "durationMs": 3,
+      "slug": "parm-hero-subs",
+      "title": "Chicken Parm Hero Subs"
     },
     {
       "index": 146,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 2,
       "slug": "philly-cheesesteak-skillet",
       "title": "Philly Cheesesteak Skillet"
     },
@@ -1297,23 +1296,23 @@
       "index": 147,
       "tag": "quick",
       "ok": true,
-      "durationMs": 7,
-      "slug": "pork-carnitas-tacos",
-      "title": "Quick Pork Carnitas Tacos"
+      "durationMs": 4,
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sheet Pan Sausage and Peppers"
     },
     {
       "index": 148,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 7,
-      "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top"
+      "durationMs": 5,
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese"
     },
     {
       "index": 149,
       "tag": "classics",
       "ok": true,
-      "durationMs": 6,
+      "durationMs": 5,
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls"
     },
@@ -1321,31 +1320,31 @@
       "index": 150,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 5,
-      "slug": "crispy-fish-taco-night",
-      "title": "Crispy Fish Taco Night"
+      "durationMs": 3,
+      "slug": "steak-tacos",
+      "title": "Steak Tacos"
     },
     {
       "index": 151,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 5,
-      "slug": "caprese-chicken-bake",
-      "title": "Caprese Chicken Bake"
+      "durationMs": 3,
+      "slug": "lemon-chicken-orzo-soup",
+      "title": "Lemon Chicken Orzo Soup"
     },
     {
       "index": 152,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 5,
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos"
+      "durationMs": 3,
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup"
     },
     {
       "index": 153,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 6,
+      "durationMs": 3,
       "slug": "grilled-pork-chops",
       "title": "Charcoal Grilled Pork Chops"
     },
@@ -1353,39 +1352,39 @@
       "index": 154,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 8,
-      "slug": "turkey-chili",
-      "title": "High-Protein Turkey Chili"
+      "durationMs": 6,
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas"
     },
     {
       "index": 155,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 9,
-      "slug": "garlic-butter-shrimp",
-      "title": "Garlic Butter Shrimp"
+      "durationMs": 6,
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff"
     },
     {
       "index": 156,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 5,
-      "slug": "sausage-peppers-onions",
-      "title": "Sausage Peppers and Onions"
+      "durationMs": 4,
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp"
     },
     {
       "index": 157,
       "tag": "quick",
       "ok": true,
-      "durationMs": 6,
-      "slug": "one-pot-chicken-rice",
-      "title": "One-Pot Chicken and Rice"
+      "durationMs": 4,
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Asian Chicken Lettuce Cups"
     },
     {
       "index": 158,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 13,
+      "durationMs": 5,
       "slug": "korean-beef-rice-bowls",
       "title": "Korean Beef Rice Bowls"
     },
@@ -1393,23 +1392,23 @@
       "index": 159,
       "tag": "classics",
       "ok": true,
-      "durationMs": 10,
-      "slug": "memphis-dry-rub-ribs",
-      "title": "Memphis Dry Rub Ribs"
+      "durationMs": 3,
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza"
     },
     {
       "index": 160,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 5,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "durationMs": 3,
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili"
     },
     {
       "index": 161,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "lemon-garlic-shrimp-pasta",
       "title": "Lemon Garlic Shrimp Pasta"
     },
@@ -1417,31 +1416,31 @@
       "index": 162,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 6,
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite"
+      "durationMs": 2,
+      "slug": "tabbouleh-chicken-bowls",
+      "title": "Tabbouleh Chicken Bowls"
     },
     {
       "index": 163,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 8,
-      "slug": "bbq-chicken-bowls",
-      "title": "BBQ Chicken Bowls"
+      "durationMs": 3,
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders"
     },
     {
       "index": 164,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 7,
-      "slug": "beef-barley-soup",
-      "title": "Beef Barley Soup"
+      "durationMs": 2,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 165,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 8,
+      "durationMs": 4,
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches"
     },
@@ -1449,63 +1448,63 @@
       "index": 166,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 7,
-      "slug": "turkey-taco-skillet",
-      "title": "Turkey Taco Skillet"
+      "durationMs": 8,
+      "slug": "pad-thai",
+      "title": "Hall Rush Pad Thai"
     },
     {
       "index": 167,
       "tag": "quick",
       "ok": true,
-      "durationMs": 6,
-      "slug": "maple-soy-salmon-bowls",
-      "title": "Maple Soy Salmon Bowls"
+      "durationMs": 4,
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Taco Night"
     },
     {
       "index": 168,
       "tag": "high_protein",
       "ok": true,
       "durationMs": 6,
-      "slug": "greek-lemon-chicken-potatoes",
-      "title": "Greek Lemon Chicken and Potatoes"
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili"
     },
     {
       "index": 169,
       "tag": "classics",
       "ok": true,
-      "durationMs": 6,
-      "slug": "performance-burrito-bowls",
-      "title": "Performance Chicken Burrito Bowls"
+      "durationMs": 3,
+      "slug": "street-corn-chicken",
+      "title": "Mexican Street Corn Chicken Bowls"
     },
     {
       "index": 170,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 6,
-      "slug": "texas-beef-ribs",
-      "title": "Texas-Style Beef Ribs"
+      "durationMs": 3,
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers"
     },
     {
       "index": 171,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 6,
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Italian Sausage and Veg Sheet Pan"
+      "durationMs": 2,
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions"
     },
     {
       "index": 172,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 5,
-      "slug": "turkey-burgers",
-      "title": "Black Bean Turkey Burgers"
+      "durationMs": 3,
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili"
     },
     {
       "index": 173,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "teriyaki-salmon-grill",
       "title": "Teriyaki Grilled Salmon"
     },
@@ -1513,47 +1512,47 @@
       "index": 174,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 7,
-      "slug": "zaatar-roasted-chicken-thighs",
-      "title": "Za'atar Roasted Chicken Thighs"
+      "durationMs": 3,
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole Tray"
     },
     {
       "index": 175,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 6,
-      "slug": "parm-hero-subs",
-      "title": "Chicken Parm Hero Subs"
+      "durationMs": 3,
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili"
     },
     {
       "index": 176,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 5,
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet"
+      "durationMs": 4,
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet"
     },
     {
       "index": 177,
       "tag": "quick",
       "ok": true,
-      "durationMs": 6,
-      "slug": "sheet-pan-sausage-peppers",
-      "title": "Sheet Pan Sausage and Peppers"
+      "durationMs": 3,
+      "slug": "pork-carnitas-tacos",
+      "title": "Quick Pork Carnitas Tacos"
     },
     {
       "index": 178,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 6,
-      "slug": "turkey-zoodle-bolognese",
-      "title": "Turkey Zoodle Bolognese"
+      "durationMs": 5,
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara"
     },
     {
       "index": 179,
       "tag": "classics",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls"
     },
@@ -1561,15 +1560,15 @@
       "index": 180,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 5,
-      "slug": "korean-beef-rice-bowls",
-      "title": "Korean Beef Rice Bowls"
+      "durationMs": 3,
+      "slug": "turkey-sausage-egg-muffins",
+      "title": "Turkey Sausage Egg Muffins"
     },
     {
       "index": 181,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "lemon-garlic-chicken-tray",
       "title": "Lemon Garlic Chicken Tray Bake"
     },
@@ -1577,15 +1576,15 @@
       "index": 182,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 5,
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos"
+      "durationMs": 3,
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends"
     },
     {
       "index": 183,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "honey-garlic-pork-tenderloin",
       "title": "Honey Garlic Grilled Pork Tenderloin"
     },
@@ -1593,95 +1592,95 @@
       "index": 184,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 8,
-      "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top"
+      "durationMs": 5,
+      "slug": "one-pot-chicken-rice",
+      "title": "One-Pot Chicken and Rice"
     },
     {
       "index": 185,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 10,
-      "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Taco Night"
+      "durationMs": 11,
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara"
     },
     {
       "index": 186,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 4,
-      "slug": "thai-basil-chicken",
-      "title": "Thai Basil Chicken Stir Fry"
+      "durationMs": 3,
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Sheet Pan Pizza"
     },
     {
       "index": 187,
       "tag": "quick",
       "ok": true,
-      "durationMs": 6,
-      "slug": "caprese-chicken-bake",
-      "title": "Caprese Chicken Bake"
+      "durationMs": 4,
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala"
     },
     {
       "index": 188,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 11,
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches"
+      "durationMs": 5,
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls"
     },
     {
       "index": 189,
       "tag": "classics",
       "ok": true,
-      "durationMs": 9,
-      "slug": "pepperoni-pizza-night",
-      "title": "Classic Pepperoni Pizza"
+      "durationMs": 3,
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza"
     },
     {
       "index": 190,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 5,
-      "slug": "turkey-sausage-egg-muffins",
-      "title": "Turkey Sausage Egg Muffins"
+      "durationMs": 3,
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet"
     },
     {
       "index": 191,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
-      "slug": "lemon-garlic-shrimp-pasta",
-      "title": "Lemon Garlic Shrimp Pasta"
+      "durationMs": 2,
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp"
     },
     {
       "index": 192,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 5,
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Sheet Pan Chicken Fajitas Lite"
+      "durationMs": 2,
+      "slug": "zaatar-roasted-chicken-thighs",
+      "title": "Za'atar Roasted Chicken Thighs"
     },
     {
       "index": 193,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 7,
-      "slug": "smoked-wings-white-sauce",
-      "title": "Smoked Wings with White BBQ Sauce"
+      "durationMs": 4,
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza"
     },
     {
       "index": 194,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 7,
-      "slug": "beef-barley-soup",
-      "title": "Beef Barley Soup"
+      "durationMs": 3,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 195,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches"
     },
@@ -1690,22 +1689,22 @@
       "tag": "rookie",
       "ok": true,
       "durationMs": 8,
-      "slug": "turkey-sweet-potato-chili",
-      "title": "Turkey Sweet Potato Chili"
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo Skillet"
     },
     {
       "index": 197,
       "tag": "quick",
       "ok": true,
-      "durationMs": 6,
-      "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Taco Night"
+      "durationMs": 4,
+      "slug": "herb-baked-salmon-tray",
+      "title": "Herb-Crusted Baked Salmon Tray"
     },
     {
       "index": 198,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 6,
+      "durationMs": 5,
       "slug": "baked-turkey-meatball-marinara",
       "title": "Baked Turkey Meatball Marinara"
     },
@@ -1713,7 +1712,7 @@
       "index": 199,
       "tag": "classics",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 2,
       "slug": "greek-chicken-bowls",
       "title": "Greek Chicken Power Bowls"
     },
@@ -1721,31 +1720,31 @@
       "index": 200,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos"
+      "durationMs": 3,
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends"
     },
     {
       "index": 201,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
-      "slug": "breakfast-sausage-pizza",
-      "title": "Breakfast Sausage Gravy Pizza"
+      "durationMs": 2,
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza"
     },
     {
       "index": 202,
       "tag": "dinner",
       "ok": true,
       "durationMs": 4,
-      "slug": "turkey-burgers",
-      "title": "Black Bean Turkey Burgers"
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet"
     },
     {
       "index": 203,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "grilled-shrimp-quinoa-bowls",
       "title": "Grilled Shrimp Quinoa Bowls"
     },
@@ -1753,31 +1752,31 @@
       "index": 204,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 6,
-      "slug": "moroccan-chicken-chickpea-tray",
-      "title": "Moroccan Chicken Chickpea Tray"
+      "durationMs": 2,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 205,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 5,
-      "slug": "chicken-pot-pie",
-      "title": "Chicken Pot Pie"
+      "durationMs": 4,
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings"
     },
     {
       "index": 206,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 4,
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet"
+      "durationMs": 3,
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet"
     },
     {
       "index": 207,
       "tag": "quick",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "sheet-pan-sausage-peppers",
       "title": "Sheet Pan Sausage and Peppers"
     },
@@ -1786,14 +1785,14 @@
       "tag": "high_protein",
       "ok": true,
       "durationMs": 5,
-      "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top"
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese"
     },
     {
       "index": 209,
       "tag": "classics",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls"
     },
@@ -1801,31 +1800,31 @@
       "index": 210,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Rice Bowls"
+      "durationMs": 2,
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta"
     },
     {
       "index": 211,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 5,
-      "slug": "yogurt-marinated-grill-chicken",
-      "title": "Yogurt Marinated Grill Chicken"
+      "durationMs": 3,
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake"
     },
     {
       "index": 212,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 4,
-      "slug": "meatball-hoagies",
-      "title": "Firehall Meatball Hoagies"
+      "durationMs": 2,
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls"
     },
     {
       "index": 213,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "honey-garlic-pork-tenderloin",
       "title": "Honey Garlic Grilled Pork Tenderloin"
     },
@@ -1834,30 +1833,30 @@
       "tag": "healthy",
       "ok": true,
       "durationMs": 6,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole Tray"
     },
     {
       "index": 215,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 9,
-      "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Taco Night"
+      "durationMs": 6,
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls"
     },
     {
       "index": 216,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 4,
-      "slug": "sausage-peppers-onions",
-      "title": "Sausage Peppers and Onions"
+      "durationMs": 3,
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp"
     },
     {
       "index": 217,
       "tag": "quick",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 4,
       "slug": "asian-chicken-lettuce-cups",
       "title": "Asian Chicken Lettuce Cups"
     },
@@ -1865,47 +1864,47 @@
       "index": 218,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 10,
-      "slug": "loaded-baked-potato-bar",
-      "title": "Loaded Baked Potato Bar"
+      "durationMs": 15,
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Greek Lemon Chicken and Potatoes"
     },
     {
       "index": 219,
       "tag": "classics",
       "ok": true,
-      "durationMs": 9,
-      "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches"
+      "durationMs": 3,
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza"
     },
     {
       "index": 220,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "turkey-meatball-zoodles",
-      "title": "Turkey Meatballs with Zucchini Noodles"
+      "durationMs": 3,
+      "slug": "turkey-chili",
+      "title": "High-Protein Turkey Chili"
     },
     {
       "index": 221,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
-      "slug": "teriyaki-salmon-grill",
-      "title": "Teriyaki Grilled Salmon"
+      "durationMs": 2,
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls"
     },
     {
       "index": 222,
       "tag": "dinner",
       "ok": true,
-      "durationMs": 4,
-      "slug": "lemon-garlic-shrimp-pasta",
-      "title": "Lemon Garlic Shrimp Pasta"
+      "durationMs": 3,
+      "slug": "steak-tacos",
+      "title": "Steak Tacos"
     },
     {
       "index": 223,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 4,
       "slug": "smoked-wings-white-sauce",
       "title": "Smoked Wings with White BBQ Sauce"
     },
@@ -1913,79 +1912,79 @@
       "index": 224,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 4,
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos"
+      "durationMs": 2,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 225,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 7,
-      "slug": "sheet-pan-sausage-peppers",
-      "title": "Sheet Pan Sausage and Peppers"
+      "durationMs": 3,
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches"
     },
     {
       "index": 226,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 7,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "durationMs": 10,
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo Skillet"
     },
     {
       "index": 227,
       "tag": "quick",
       "ok": true,
-      "durationMs": 5,
-      "slug": "garlic-butter-shrimp",
-      "title": "Garlic Butter Shrimp"
+      "durationMs": 4,
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Taco Night"
     },
     {
       "index": 228,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 4,
-      "slug": "turkey-zoodle-bolognese",
-      "title": "Turkey Zoodle Bolognese"
+      "durationMs": 5,
+      "slug": "shawarma-chicken-rice-bowls",
+      "title": "Shawarma Chicken Rice Bowls"
     },
     {
       "index": 229,
       "tag": "classics",
       "ok": true,
       "durationMs": 3,
-      "slug": "butter-chicken",
-      "title": "Butter Chicken"
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi"
     },
     {
       "index": 230,
       "tag": "breakfast",
       "ok": true,
       "durationMs": 3,
-      "slug": "beef-stroganoff",
-      "title": "Beef Stroganoff"
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers"
     },
     {
       "index": 231,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Italian Sausage and Veg Sheet Pan"
+      "durationMs": 2,
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Grilled Pork Tenderloin"
     },
     {
       "index": 232,
       "tag": "dinner",
       "ok": true,
       "durationMs": 3,
-      "slug": "turkey-sweet-potato-chili",
-      "title": "Turkey Sweet Potato Chili"
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles"
     },
     {
       "index": 233,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "grilled-shrimp-quinoa-bowls",
       "title": "Grilled Shrimp Quinoa Bowls"
     },
@@ -1993,25 +1992,25 @@
       "index": 234,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 5,
-      "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Rice Bowls"
+      "durationMs": 2,
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala"
     },
     {
       "index": 235,
       "tag": "comfort",
       "ok": true,
       "durationMs": 4,
-      "slug": "chicken-dumpling-soup",
-      "title": "Chicken and Dumplings"
+      "slug": "chicken-parm",
+      "title": "Chicken Parmesan"
     },
     {
       "index": 236,
       "tag": "rookie",
       "ok": true,
       "durationMs": 3,
-      "slug": "philly-cheesesteak-skillet",
-      "title": "Philly Cheesesteak Skillet"
+      "slug": "fast-philly-skillet",
+      "title": "Fast Philly Cheesesteak Skillet"
     },
     {
       "index": 237,
@@ -2026,14 +2025,14 @@
       "tag": "high_protein",
       "ok": true,
       "durationMs": 4,
-      "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's with Sweet Potato Top"
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet"
     },
     {
       "index": 239,
       "tag": "classics",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 3,
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls"
     },
@@ -2041,15 +2040,15 @@
       "index": 240,
       "tag": "breakfast",
       "ok": true,
-      "durationMs": 4,
-      "slug": "turkey-taco-skillet",
-      "title": "Turkey Taco Skillet"
+      "durationMs": 3,
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili"
     },
     {
       "index": 241,
       "tag": "lunch",
       "ok": true,
-      "durationMs": 4,
+      "durationMs": 2,
       "slug": "lemon-garlic-chicken-tray",
       "title": "Lemon Garlic Chicken Tray Bake"
     },
@@ -2058,14 +2057,14 @@
       "tag": "dinner",
       "ok": true,
       "durationMs": 3,
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches"
+      "slug": "meatloaf-mashed",
+      "title": "Classic Meatloaf with Mashed Potatoes"
     },
     {
       "index": 243,
       "tag": "bbq",
       "ok": true,
-      "durationMs": 5,
+      "durationMs": 3,
       "slug": "memphis-dry-rub-ribs",
       "title": "Memphis Dry Rub Ribs"
     },
@@ -2073,49 +2072,49 @@
       "index": 244,
       "tag": "healthy",
       "ok": true,
-      "durationMs": 7,
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara"
+      "durationMs": 5,
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions"
     },
     {
       "index": 245,
       "tag": "comfort",
       "ok": true,
-      "durationMs": 8,
-      "slug": "maple-soy-salmon-bowls",
-      "title": "Maple Soy Salmon Bowls"
+      "durationMs": 10,
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili"
     },
     {
       "index": 246,
       "tag": "rookie",
       "ok": true,
-      "durationMs": 4,
-      "slug": "thai-basil-chicken",
-      "title": "Thai Basil Chicken Stir Fry"
+      "durationMs": 3,
+      "slug": "beef-broccoli",
+      "title": "Quick Beef and Broccoli"
     },
     {
       "index": 247,
       "tag": "quick",
       "ok": true,
-      "durationMs": 7,
-      "slug": "skillet-chicken-alfredo",
-      "title": "One-Skillet Chicken Alfredo"
+      "durationMs": 3,
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake"
     },
     {
       "index": 248,
       "tag": "high_protein",
       "ok": true,
-      "durationMs": 12,
-      "slug": "steak-tacos",
-      "title": "Chimichurri Steak Tacos"
+      "durationMs": 6,
+      "slug": "korean-beef-rice-bowls",
+      "title": "Korean Beef Rice Bowls"
     },
     {
       "index": 249,
       "tag": "classics",
       "ok": true,
-      "durationMs": 10,
-      "slug": "sheet-pan-sausage-peppers",
-      "title": "Sheet Pan Sausage and Peppers"
+      "durationMs": 3,
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza"
     }
   ]
 }

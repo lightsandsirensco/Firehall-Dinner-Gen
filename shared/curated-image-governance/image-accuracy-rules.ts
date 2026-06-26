@@ -130,6 +130,18 @@ export const TITLE_PATH_ACCURACY_RULES: TitlePathRule[] = [
     severity: "critical",
   },
   {
+    titleRe: /\bmelt\b/i,
+    forbiddenPathRe: /\b(spaghetti|pasta|penne|rigatoni|macaroni|lasagna)\b/i,
+    message: "melt/sandwich recipe but hero path suggests pasta",
+    severity: "critical",
+  },
+  {
+    titleRe: /\btuna\b/i,
+    forbiddenPathRe: /\b(chicken|parm|parmesan|beef|pork|brisket)\b/i,
+    message: "tuna recipe but hero path suggests chicken, beef, or pork",
+    severity: "critical",
+  },
+  {
     titleRe: /\bsalmon\b/i,
     forbiddenPathRe: /\b(cod-taco|tilapia|white-fish|fish-taco)\b/i,
     message: "salmon recipe but hero suggests different fish",

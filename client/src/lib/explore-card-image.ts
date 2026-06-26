@@ -1,6 +1,10 @@
 import type { ApprovedCatalogGridEntry } from "@shared/approved-catalog";
 import { cacheSafeImageUrl } from "@shared/editorial-image-delivery";
 import {
+  slugLockedImagePaths,
+  type ExploreCatalogImageKind,
+} from "@shared/explore-image-paths";
+import {
   EXPLORE_CATALOG_PAGE_SIZE_MOBILE,
   exploreCatalogPageSize,
 } from "@/lib/explore-mobile-page-size";
@@ -20,18 +24,22 @@ function isAllowedExploreThumbSrc(src: string): boolean {
 
 type ExploreCardImageEntry = Pick<
   ApprovedCatalogGridEntry,
-  "slug" | "thumbImage" | "thumbCacheVersion"
+  "slug" | "thumbImage" | "thumbCacheVersion" | "kind"
 >;
 
 function bustExploreThumb(path: string, cacheVersion: number): string {
   return cacheSafeImageUrl(path, cacheVersion);
 }
 
+function canonicalExploreThumbPath(slug: string, kind: ExploreCatalogImageKind): string {
+  return slugLockedImagePaths(slug, kind).thumb;
+}
+
 /** Primary Explore grid thumb — slug-locked path with ?v=mtime cache busting. */
 export function exploreCardThumbSrc(entry: ExploreCardImageEntry): string {
   const slug = entry.slug.trim().toLowerCase();
   const version = entry.thumbCacheVersion ?? 0;
-  const canonical = bustExploreThumb(`/images/thumbs/${slug}.jpg`, version);
+  const canonical = bustExploreThumb(canonicalExploreThumbPath(slug, entry.kind), version);
   const fromEntry = entry.thumbImage?.trim();
   if (fromEntry && isAllowedExploreThumbSrc(fromEntry)) {
     return bustExploreThumb(fromEntry, version);
@@ -44,7 +52,7 @@ export function exploreCardImageCandidates(entry: ExploreCardImageEntry): string
   const slug = entry.slug.trim().toLowerCase();
   const version = entry.thumbCacheVersion ?? 0;
   const primary = exploreCardThumbSrc(entry);
-  const fallback = bustExploreThumb(`/images/thumbs/${slug}.jpg`, version);
+  const fallback = bustExploreThumb(canonicalExploreThumbPath(slug, entry.kind), version);
   const candidates = [primary, fallback].filter(
     (src, i, arr) => isAllowedExploreThumbSrc(src.split("?")[0] ?? src) && arr.indexOf(src) === i,
   );

@@ -11,6 +11,7 @@ import {
   resolveApprovedCatalogKind,
 } from "../shared/approved-catalog.js";
 import { filterExploreEligibleCatalogEntries } from "../shared/explore-image-mapping.js";
+import { buildCrossCatalogHeroAuditContext } from "./cross-catalog-hero-index.js";
 import { resolveExistingSlugImage } from "../shared/explore-image-paths.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../shared/fuel-catalog/smoothies/catalog-data.js";
 import {
@@ -304,7 +305,8 @@ export function buildAllApprovedCatalogEntries(): ApprovedCatalogEntry[] {
 
 export function buildApprovedCatalog(): ApprovedCatalogResponse {
   const allRecipes = buildAllApprovedCatalogEntries();
-  const { recipes } = filterExploreEligibleCatalogEntries(allRecipes);
+  const crossCatalog = buildCrossCatalogHeroAuditContext(allRecipes);
+  const { recipes } = filterExploreEligibleCatalogEntries(allRecipes, undefined, crossCatalog);
 
   return {
     version: 2,

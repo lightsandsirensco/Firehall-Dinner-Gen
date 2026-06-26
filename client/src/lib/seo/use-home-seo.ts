@@ -8,6 +8,7 @@ import {
   buildWebSiteSchema,
 } from "@shared/seo/schema";
 import { FIREHALL_CATEGORY_LABEL, type FirehallCategoryId } from "@shared/firehall-categories";
+import { firehallCategoryExplorePath } from "@shared/browse-canonical";
 import { APPROVED_CATALOG_TOTAL } from "@shared/meal-catalog/curated-count";
 import { getSiteOrigin } from "./site-origin";
 import { usePageSeo } from "./use-page-seo";
@@ -33,7 +34,7 @@ export function useHomeSeo(recipeCount = APPROVED_CATALOG_TOTAL) {
         recipeCount,
         HOME_CATEGORY_CLUSTERS.map((id) => ({
           name: FIREHALL_CATEGORY_LABEL[id],
-          path: `/categories/${id}`,
+          path: firehallCategoryExplorePath(id),
         })),
       ),
       buildFaqPageSchema(HOME_FAQ_ITEMS),

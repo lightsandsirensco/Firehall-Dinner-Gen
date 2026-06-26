@@ -342,16 +342,16 @@ export default function GuideArticlePage() {
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <Link
-                  href="/recipes"
+                  href="/explore"
                   className="inline-flex items-center rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground hover:bg-primary/90"
                 >
                   Browse recipes
                 </Link>
                 <Link
-                  href="/explore"
+                  href="/generator"
                   className="inline-flex items-center rounded-lg border border-border px-4 py-2 text-sm font-semibold text-foreground hover:bg-muted/50"
                 >
-                  Explore meals
+                  Find a Meal
                 </Link>
               </div>
             </aside>
@@ -395,7 +395,7 @@ export default function GuideArticlePage() {
                 ← All guides
               </Link>
               {" · "}
-              <Link href="/recipes" className="text-primary hover:underline">
+              <Link href="/explore" className="text-primary hover:underline">
                 All recipes
               </Link>
             </p>

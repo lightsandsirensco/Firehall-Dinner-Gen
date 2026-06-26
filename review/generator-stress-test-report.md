@@ -1,6 +1,6 @@
 # Generator Stress Test — Firehall Meals
 
-Generated: 2026-06-02T15:58:18.378Z
+Generated: 2026-06-23T15:41:46.492Z
 
 ## Executive summary
 
@@ -9,13 +9,13 @@ Generated: 2026-06-02T15:58:18.378Z
 | **Total generations tested** | 250 |
 | **Success rate** | 100.0% |
 | **Failure rate** | 0.0% |
-| **Duplicate draw rate** (repeat slugs / total) | 64.8% |
-| **Rows hitting a repeated slug** | 88.8% |
-| **Max repeats (single slug)** | 11 |
+| **Duplicate draw rate** (repeat slugs / total) | 64.4% |
+| **Rows hitting a repeated slug** | 89.2% |
+| **Max repeats (single slug)** | 12 |
 | **Mean draws per unique slug** | 2.8 |
-| **Unique recipes generated** | 88 |
-| **Average generation time** | 6 ms |
-| **Slowest generation** | 34 ms |
+| **Unique recipes generated** | 89 |
+| **Average generation time** | 4 ms |
+| **Slowest generation** | 19 ms |
 | **Target avg** | < 2,000 ms |
 | **Broken images** | 0 |
 | **Broken nutrition** | 0 |
@@ -38,41 +38,41 @@ Pipeline: `runLocalFirstGeneratePipeline` (same path as `POST /api/generate`, cu
 - high_protein
 - classics
 
-Crew sizes rotated: 2, 4, 6, 8, 10, 12 · Proteins: any, chicken, beef, pork, turkey, seafood
+Crew sizes rotated: 4, 6, 8, 10, 14 · Proteins: any, chicken, beef, pork, turkey, seafood
 
 ## Duplicate analysis
 
 | Metric | Value |
 |--------|------:|
-| Unique slugs | 88 |
-| Repeat draw rate | 64.8% |
-| Rows with repeated slug | 88.8% |
-| Max slug frequency | 11 |
+| Unique slugs | 89 |
+| Repeat draw rate | 64.4% |
+| Rows with repeated slug | 89.2% |
+| Max slug frequency | 12 |
 
 ### Top 20 most frequently generated recipes
 
 | Rank | Slug | Count |
 |------|------|------:|
-| 1 | `baked-turkey-meatball-marinara` | 11 |
-| 2 | `philly-cheesesteak-skillet` | 10 |
-| 3 | `ginger-salmon-bowls` | 9 |
-| 4 | `steak-tacos` | 8 |
-| 5 | `pulled-pork` | 8 |
-| 6 | `turkey-shepherds-sweet-potato` | 7 |
-| 7 | `sheet-pan-sausage-peppers` | 7 |
-| 8 | `sheet-pan-chicken-fajitas-lite` | 6 |
-| 9 | `honey-garlic-pork-tenderloin` | 6 |
-| 10 | `turkey-taco-skillet` | 6 |
-| 11 | `pork-carnitas-tacos` | 6 |
-| 12 | `steak-sandwiches` | 5 |
-| 13 | `garlic-butter-shrimp` | 5 |
-| 14 | `maple-soy-salmon-bowls` | 5 |
-| 15 | `lemon-garlic-shrimp-pasta` | 5 |
-| 16 | `texas-beef-ribs` | 4 |
-| 17 | `lemon-herb-salmon` | 4 |
-| 18 | `crispy-fish-taco-night` | 4 |
-| 19 | `turkey-zoodle-bolognese` | 4 |
-| 20 | `shawarma-chicken-rice-bowls` | 4 |
+| 1 | `beef-broccoli` | 12 |
+| 2 | `korean-beef-rice-bowls` | 9 |
+| 3 | `pulled-pork` | 8 |
+| 4 | `ginger-salmon-bowls` | 8 |
+| 5 | `honey-garlic-pork-tenderloin` | 7 |
+| 6 | `baked-turkey-meatball-marinara` | 7 |
+| 7 | `jerk-chicken` | 6 |
+| 8 | `turkey-taco-skillet` | 6 |
+| 9 | `sheet-pan-sausage-peppers` | 5 |
+| 10 | `pork-carnitas-tacos` | 5 |
+| 11 | `white-bean-chicken-chili` | 5 |
+| 12 | `veggie-egg-casserole-tray` | 4 |
+| 13 | `pad-thai` | 4 |
+| 14 | `detroit-style-pizza` | 4 |
+| 15 | `garlic-butter-shrimp` | 4 |
+| 16 | `herb-baked-salmon-tray` | 4 |
+| 17 | `grilled-pork-chops` | 4 |
+| 18 | `sausage-peppers-onions` | 4 |
+| 19 | `steak-tacos` | 4 |
+| 20 | `smoked-wings-white-sauce` | 4 |
 
 
 
@@ -80,8 +80,8 @@ Crew sizes rotated: 2, 4, 6, 8, 10, 12 · Proteins: any, chicken, beef, pork, tu
 
 | Metric | Value | Target |
 |--------|------:|--------|
-| Average generation time | 6 ms | < 2,000 ms |
-| Slowest generation | 34 ms | — |
+| Average generation time | 4 ms | < 2,000 ms |
+| Slowest generation | 19 ms | — |
 | Failed generations (pipeline throw) | 0 | 0 |
 | Timeout rate | 0% | 0% |
 
@@ -96,7 +96,7 @@ Every successful generation includes fields for `meal_generation_started` and `m
 
 ## Scaling test (crew 2, 4, 6, 8, 10, 12)
 
-Catalog page ingredient scaling validated for **88** unique slugs drawn during the run.
+Catalog page ingredient scaling validated for **89** unique slugs drawn during the run.
 
 | Result | Count |
 |--------|------:|
@@ -115,10 +115,9 @@ _All tested slugs scale across crew sizes._
 
 | Code | Occurrences |
 |------|------------:|
-| vague_step | 1020 |
-| ingredient_unused | 512 |
-| placeholder_ingredient | 242 |
-| nutrition_withheld | 22 |
+| vague_step | 1021 |
+| ingredient_unused | 508 |
+| placeholder_ingredient | 272 |
 
 ## Failure & resilience tests
 

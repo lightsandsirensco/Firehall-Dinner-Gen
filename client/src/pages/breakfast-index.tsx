@@ -120,7 +120,7 @@ export default function BreakfastIndexPage() {
         <p className="mt-4 text-muted-foreground leading-relaxed max-w-3xl">
           Built for station mornings: burritos, skillets, casseroles, and sandwiches crews actually vote
           for — not fitness-blog oatmeal. Breakfast lives here on purpose; it does not appear in the
-          dinner generator or Explore feed.
+          dinner meal picker or Explore feed.
         </p>
 
         <Link
@@ -213,7 +213,7 @@ export default function BreakfastIndexPage() {
             Find a Meal
           </Link>{" "}
           or{" "}
-          <Link href="/recipes" className="text-primary hover:underline">
+          <Link href="/explore" className="text-primary hover:underline">
             Explore Meals
           </Link>
           .

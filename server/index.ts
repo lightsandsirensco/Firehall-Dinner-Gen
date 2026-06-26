@@ -7,6 +7,8 @@ import { createServer } from "http";
 import { log, logError, summarizeJsonBody, shouldLogHttpRequest } from "./logger";
 import { configureTrustProxy } from "./client-ip.js";
 import { enforceCanonicalHostRedirect } from "./canonical-host-redirect.js";
+import { requestIdMiddleware, recordServerError } from "./monitoring/error-monitor.js";
+import { startDailyBackupScheduler } from "./db-backup.js";
 
 export {
   log,
@@ -56,6 +58,8 @@ app.use(
 
 app.use(express.urlencoded({ extended: false, limit: jsonBodyLimit }));
 
+app.use(requestIdMiddleware);
+
 app.use((req, res, next) => {
   const start = Date.now();
   const path = req.path;
@@ -76,8 +80,8 @@ app.use((req, res, next) => {
       ? summarizeJsonBody(path, capturedJsonResponse)
       : "";
     const line = summary
-      ? `${req.method} ${path} ${res.statusCode} ${duration}ms ${summary}`
-      : `${req.method} ${path} ${res.statusCode} ${duration}ms`;
+      ? `${req.method} ${path} ${res.statusCode} ${duration}ms rid=${req.requestId ?? "-"} ${summary}`
+      : `${req.method} ${path} ${res.statusCode} ${duration}ms rid=${req.requestId ?? "-"}`;
     log(line, "http");
   });
 
@@ -100,12 +104,21 @@ app.use((req, res, next) => {
           : error.message || "Internal Server Error";
 
       logError("express", "Internal Server Error", err);
+      recordServerError(err, {
+        requestId: _req.requestId,
+        path: _req.path,
+        method: _req.method,
+        statusCode: status,
+      });
 
       if (res.headersSent) {
         return next(err);
       }
 
-      return res.status(status).json({ message });
+      return res.status(status).json({
+        message,
+        requestId: _req.requestId,
+      });
     });
 
     if (process.env.NODE_ENV === "production") {
@@ -118,6 +131,7 @@ app.use((req, res, next) => {
     const port = parseInt(process.env.PORT || "5000", 10);
     httpServer.listen(port, "0.0.0.0", () => {
       log(`serving on port ${port}`);
+      startDailyBackupScheduler();
     });
 
     const shutdown = (signal: string) => {

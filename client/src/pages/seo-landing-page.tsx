@@ -85,7 +85,7 @@ export default function SeoLandingPage({ slug }: SeoLandingPageProps) {
 
         <div className="mt-8 flex flex-wrap gap-3">
           <Button asChild className="font-heading uppercase tracking-wide text-xs">
-            <Link href="/recipes">{CTA.viewRecipes}</Link>
+            <Link href="/explore">{CTA.viewRecipes}</Link>
           </Button>
           <Button asChild variant="outline" className="font-heading uppercase tracking-wide text-xs">
             <Link href="/explore">{CTA.exploreMeals}</Link>

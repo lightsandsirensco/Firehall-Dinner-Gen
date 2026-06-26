@@ -284,6 +284,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("cedar-plank-salmon", "Cedar Plank Grilled Salmon", "Grill night without heavy sides on the plate."),
       meal("chicken-souvlaki", "Grilled Chicken Souvlaki", "Pita-ready protein — easy line."),
       meal("mediterranean-chickpea", "Mediterranean Chickpea Tray", "Plant-forward tray that still fills."),
+      meal("turkey-burgers", "Black Bean Turkey Burgers", "Juicy lean burgers that still satisfy the crew."),
     ],
     faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
     relatedArticleSlugs: ["healthy-meals-for-active-crews"],
@@ -341,6 +342,11 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("chicken-quesadillas", "Chicken Quesadillas", "Handheld speed — great for late eaters."),
       meal("pork-carnitas-tacos", "Quick Pork Carnitas Tacos", "Taco night on a clock."),
       meal("teriyaki-donburi", "Teriyaki Donburi", "Bowl line — quick assembly."),
+      meal(
+        "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+        "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner",
+        "Crispy thighs, Dijon potatoes, and green beans on one pan.",
+      ),
     ],
     faqs: [
       {
@@ -435,6 +441,11 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("meatloaf-mashed", "Classic Meatloaf with Mashed Potatoes", "Sunday-dinner energy on a weeknight."),
       meal("chicken-pot-pie", "Chicken Pot Pie", "All-in-one bowl meal."),
       meal("beef-stroganoff", "Beef Stroganoff", "Rich, savory noodles."),
+      meal(
+        "crispy-chicken-cutlets",
+        "Crispy Chicken Cutlets Marinara",
+        "Golden cutlets with bubbling sauce — Italian night energy.",
+      ),
     ],
     faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
     relatedArticleSlugs: REL.comfort,
@@ -477,6 +488,16 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("chicken-parm", "Chicken Parm", "Over pasta — hall tradition."),
       meal("skillet-chicken-alfredo", "One-Skillet Chicken Alfredo", "Creamy skillet finish."),
       meal("batch-lasagna", "Giant Batch Lasagna", "Maximum pasta for big tables."),
+      meal(
+        "30-minute-pasta-e-fagioli-for-the-hall",
+        "30-Minute Pasta e Fagioli for the Hall",
+        "Bean-and-pasta soup that lands in half an hour.",
+      ),
+      meal(
+        "spaghetti-aglio-e-olio-for-the-hall",
+        "Spaghetti Aglio e Olio for the Hall",
+        "Garlic, oil, and pasta — emulsified the right way.",
+      ),
     ],
     faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
     relatedArticleSlugs: ["one-pot-firehall-meals"],

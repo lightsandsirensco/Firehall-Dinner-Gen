@@ -13,7 +13,7 @@ export const HALL_FEEDBACK_COPY = {
   footerTagline: "Built by firefighters. Improved every shift.",
   footerLink: "Hall Feedback",
   generatorSmoked:
-    "Generator got smoked. Try again or send feedback.",
+    "Meal picker hit a snag. Try again or send feedback.",
   generatorSmokedAction: "send feedback",
   successToast: "Got it — the hall hears you.",
 } as const;

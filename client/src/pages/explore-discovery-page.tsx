@@ -48,24 +48,38 @@ export function ExploreDiscoveryPage() {
     <div className={cn(app.page, "pb-safe-nav")}>
       <SiteHeader activePage="explore" favCount={favCount} />
 
-      <div className={cn(app.main, "pt-2")}>
-        <SeoBreadcrumbs
-          items={[
-            { name: "Home", path: "/" },
-            { name: "Explore", path: "/explore" },
-          ]}
-        />
+      <div className="hidden md:block border-b border-border/20 bg-muted/15">
+        <div className={cn(app.main, "pt-2 pb-0")}>
+          <SeoBreadcrumbs
+            items={[
+              { name: "Home", path: "/" },
+              { name: "Explore", path: "/explore" },
+            ]}
+          />
+        </div>
+        <div className={cn(app.main, "py-4 pt-2")}>
+          <AppPageHeader
+            variant="feed"
+            title="Full Catalog"
+            subtitle={`Browse ${formatMarketingRecipeCount(recipeCount)} approved Firehall Meals recipes.`}
+          />
+        </div>
       </div>
 
-      <AppPageHeader
-        variant="feed"
-        title="Full Catalog"
-        subtitle={`Browse ${formatMarketingRecipeCount(recipeCount)} approved Firehall Meals recipes.`}
-      />
+      <div className="md:hidden border-b border-border/20 bg-muted/15">
+        <div className={cn(app.main, "py-4 px-page")}>
+          <h1 className="font-heading text-2xl tracking-tight">Explore</h1>
+          <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+            {formatMarketingRecipeCount(recipeCount)} hall-tested recipes
+          </p>
+        </div>
+      </div>
 
-      <main className={cn(app.mainFeed, "pb-10 pt-2 sm:pb-14")}>
+      <main className={cn(app.mainFeed, "pb-10 pt-3 md:pt-2 sm:pb-14")}>
+        <h1 className="sr-only">Explore firehall recipes</h1>
         <ExploreErrorBoundary>
           <ExploreCatalogBrowser
+            totalRecipeCount={recipeCount}
             onRecipeClick={(slug) => navigate(approvedCatalogRecipePath(slug))}
           />
         </ExploreErrorBoundary>

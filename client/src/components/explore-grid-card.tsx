@@ -68,7 +68,7 @@ export function ExploreGridCard({
             {isFirehallFallback && (
               <span className="inline-flex items-center gap-1 bg-primary/95 text-primary-foreground text-[10px] font-semibold px-2 py-0.5 rounded-full shadow-lg">
                 <Flame className="w-3 h-3" />
-                Firehall AI
+                Hall Match
               </span>
             )}
             {softHeld && (

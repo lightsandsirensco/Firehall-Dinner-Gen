@@ -39,6 +39,12 @@ import {
   appendMetadataFilterSql,
 } from "./curated-recipe-metadata.js";
 import type { CuratedRecipeMetadata, CuratedRecipeMetadataOverrides } from "../shared/curated-recipe/metadata/types.js";
+import {
+  firehallCategoryKey,
+  firehallCategoryPrimaryTagKey,
+  firehallCategoryTagKey,
+  type FirehallCategoryId,
+} from "../shared/firehall-categories.js";
 
 const GOLDEN_100_SLUGS = new Set(GOLDEN_100_RECIPES.map((r) => r.slug));
 import type { IngestRecipeDraft } from "../shared/ingestion/recipe-ingest-schema.js";
@@ -651,6 +657,87 @@ export function listCuratedRecipeSummaries(query: CuratedRecipeListQuery = {}): 
   return rows.map(rowToSummary);
 }
 
+/**
+ * Recipes assigned to a Firehall generator category — primary `fh:<id>` rows plus
+ * supporting `fh_tag:<id>` / `fh_primary:<id>` editorial tags.
+ */
+export function listCuratedRecipeSummariesForFirehallCategory(
+  categoryId: FirehallCategoryId,
+  query: Omit<CuratedRecipeListQuery, "explorePool"> = {},
+): CuratedRecipeSummary[] {
+  const database = requireDb();
+  const keys = [
+    firehallCategoryKey(categoryId),
+    firehallCategoryTagKey(categoryId),
+    firehallCategoryPrimaryTagKey(categoryId),
+  ].map((k) => k.toLowerCase());
+
+  const limit = query.limit ?? 100;
+  const offset = query.offset ?? 0;
+  const conditions: string[] = [];
+  const params: (string | number)[] = [...keys, ...keys];
+
+  if (query.status) {
+    const statuses = Array.isArray(query.status) ? query.status : [query.status];
+    conditions.push(
+      `curated_recipes.status IN (${statuses.map(() => "?").join(",")})`,
+    );
+    params.push(...statuses);
+  } else {
+    conditions.push("curated_recipes.status = 'published'");
+  }
+
+  if (query.protein) {
+    conditions.push("curated_recipes.protein = ?");
+    params.push(query.protein);
+  }
+  if (query.category) {
+    conditions.push("curated_recipes.category = ?");
+    params.push(query.category);
+  }
+  if (query.minQuality != null) {
+    conditions.push("curated_recipes.quality_score >= ?");
+    params.push(query.minQuality);
+  }
+  if (query.featured) {
+    conditions.push("curated_recipes.featured = 1");
+  }
+
+  appendMetadataFilterSql(query.metadata, conditions, params);
+
+  const placeholders = keys.map(() => "?").join(", ");
+  const where = conditions.length ? `AND ${conditions.join(" AND ")}` : "";
+
+  const orderBy =
+    query.orderBy === "publisherFirst"
+      ? `CASE curated_recipes.source_kind WHEN 'publisher' THEN 0 WHEN 'partner' THEN 1 WHEN 'hall_classic' THEN 2 ELSE 3 END,
+         CASE WHEN curated_recipes.hero_image LIKE '%spoonacular.com%' THEN 1 ELSE 0 END,
+         curated_recipes.quality_score DESC`
+      : query.orderBy === "trending"
+        ? "CASE WHEN curated_recipes.trending_rank IS NULL THEN 1 ELSE 0 END, curated_recipes.trending_rank ASC, curated_recipes.quality_score DESC"
+        : query.orderBy === "served"
+          ? "curated_recipes.served_count DESC"
+          : query.orderBy === "recent"
+            ? "curated_recipes.updated_at DESC"
+            : "curated_recipes.quality_score DESC";
+
+  const sql = `
+    SELECT DISTINCT curated_recipes.*
+    FROM curated_recipes
+    WHERE curated_recipes.recipe_id IN (
+      SELECT recipe_id FROM curated_recipe_categories WHERE category_key IN (${placeholders})
+      UNION
+      SELECT recipe_id FROM curated_recipe_tags WHERE tag IN (${placeholders})
+    )
+    ${where}
+    ORDER BY ${orderBy}
+    LIMIT ? OFFSET ?
+  `;
+
+  const rows = database.prepare(sql).all(...params, limit, offset) as Record<string, unknown>[];
+  return rows.map(rowToSummary);
+}
+
 export function getCuratedRecipeById(recipeId: string): CuratedRecipe | null {
   const database = requireDb();
   const row = database
@@ -667,6 +754,30 @@ export function getCuratedRecipeBySlug(slug: string): CuratedRecipe | null {
     .get(slug) as Record<string, unknown> | undefined;
   if (!row) return null;
   return hydrateCuratedRecipe(database, row);
+}
+
+/** Category + tag keys for generator category validation (`fh:*`, `fh_tag:*`). */
+export function getCuratedRecipeCategoryKeysBySlug(slug: string): string[] {
+  const database = requireDb();
+  const row = database
+    .prepare("SELECT recipe_id FROM curated_recipes WHERE slug = ?")
+    .get(slug) as { recipe_id: string } | undefined;
+  if (!row) return [];
+
+  const categories = database
+    .prepare(
+      `SELECT category_key FROM curated_recipe_categories WHERE recipe_id = ? ORDER BY weight DESC`,
+    )
+    .all(row.recipe_id) as { category_key: string }[];
+
+  const tags = database
+    .prepare(`SELECT tag FROM curated_recipe_tags WHERE recipe_id = ? AND tag LIKE 'fh%'`)
+    .all(row.recipe_id) as { tag: string }[];
+
+  return [
+    ...categories.map((c) => c.category_key),
+    ...tags.map((t) => t.tag),
+  ];
 }
 
 /** Lookup by Spoonacular id (Explore cards use numeric Spoonacular ids). */

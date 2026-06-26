@@ -70,6 +70,18 @@ function assertManifestGate(): string[] {
       errors.push(`performance ${slug}: expected Performance Meal badge`);
     }
   }
+
+  const curatedManualGate = evaluateCatalogRecipe({
+    slug: "turkey-taco-skillet",
+    title: "Turkey Taco Skillet",
+    heroImage: resolveCatalogHeroPath("turkey-taco-skillet"),
+    source: "hall_catalog",
+    recipeSource: { kind: "manual", name: "Firehall Meals", url: "", license: "owned" },
+  });
+  if (!curatedManualGate.approved) {
+    errors.push(`curated manual source gate: ${curatedManualGate.reasons.join(",")}`);
+  }
+
   return errors;
 }
 

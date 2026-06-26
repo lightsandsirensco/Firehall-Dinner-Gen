@@ -37,8 +37,8 @@ function pickPrimary(r: {
   const t = `${r.title} ${r.category} ${r.mealFormat}`.toLowerCase();
   const nutrition = (r.metadata?.nutritionCategory || "").toLowerCase();
 
-  // Breakfast
-  if (r.mealFormat === "breakfast" || /breakfast|pancake|egg|hash/.test(t)) return "breakfast";
+  // Breakfast → quick_meals for dinner generator (no fh:breakfast key).
+  if (r.mealFormat === "breakfast" || /breakfast|pancake|egg|hash/.test(t)) return "quick_meals";
 
   // BBQ & Smoker
   if (/bbq|barbecue|smok|brisket|ribs|wings|grill/.test(t)) return "bbq_smoker";
@@ -55,6 +55,10 @@ function pickPrimary(r: {
   // Feed a crowd
   if (/batch|feed|crowd|giant|tray|casserole|lasagna|ziti/.test(t)) return "feed_a_crowd";
 
+  // Healthy / High protein — before quick/cleanup so lighter meals land in Healthy Options
+  if (nutrition === "high_protein") return "high_protein";
+  if (nutrition === "lighter" || nutrition === "healthy") return "healthy_options";
+
   // Quick meals
   if ((r.metadata?.busyNightSuitable && r.totalMinutes > 0 && r.totalMinutes <= 40) || /quick|fast|30/.test(t)) {
     return "quick_meals";
@@ -62,10 +66,6 @@ function pickPrimary(r: {
 
   // Easy cleanup
   if (r.cleanupDifficulty <= 2 || /sheet pan|one pot|one-pan|skillet/.test(t)) return "easy_cleanup";
-
-  // Healthy / High protein split
-  if (nutrition === "high_protein") return "high_protein";
-  if (nutrition === "lighter" || nutrition === "healthy") return "healthy_options";
 
   // Comfort
   if (r.scores.comfort >= 70 || /comfort|mac|cheese|meatloaf|pot pie|mashed|stroganoff|alfredo/.test(t)) {
@@ -94,7 +94,7 @@ function supportingTags(primary: FirehallCategoryId, r: { title: string; totalMi
   if (/nacho|dip|slider|wings|pizza|burger|finger|queso|pretzel|loaded fries/.test(t)) tags.add("game_day");
   if (/batch|feed|crowd|tray|casserole|lasagna|ziti|chili/.test(t)) tags.add("feed_a_crowd");
   if (/comfort|mac|cheese|pot pie|mashed|chili|stroganoff/.test(t)) tags.add("comfort_food");
-  if (/breakfast|pancake|egg|hash|burrito/.test(t)) tags.add("breakfast");
+  if (/breakfast|pancake|egg|hash|burrito/.test(t) && primary !== "quick_meals") tags.add("quick_meals");
 
   tags.delete(primary);
 

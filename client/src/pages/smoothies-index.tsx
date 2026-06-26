@@ -82,7 +82,7 @@ export default function SmoothiesIndexPage() {
               Read the full hall guide
             </Link>
             {" · "}
-            <Link href="/recipes" className="text-primary hover:underline">
+            <Link href="/explore" className="text-primary hover:underline">
               All hall recipes
             </Link>
           </p>

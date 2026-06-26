@@ -80,6 +80,11 @@
       "slug": "mediterranean-chickpea",
       "title": "Mediterranean Chickpea Tray",
       "blurb": "Plant-forward tray that still fills."
+    },
+    {
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "blurb": "Juicy lean burgers that still satisfy the crew."
     }
   ],
   "faqs": [
@@ -89,7 +94,7 @@
     },
     {
       "question": "What if crew size or time changes tonight?",
-      "answer": "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend."
+      "answer": "Use Find a Meal with your headcount and minutes available. Hall Match pulls from the same curated, hall-tested catalog these guides recommend."
     }
   ],
   "relatedArticleSlugs": [

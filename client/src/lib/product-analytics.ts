@@ -88,6 +88,8 @@ export function inferPageName(path: string): string {
   if (path.startsWith("/breakfast")) return "breakfast";
   if (path.startsWith("/smoothies")) return "smoothies";
   if (path.startsWith("/firefighter-red-lead")) return "red_lead";
+  if (path.startsWith("/hall-of-fame")) return "hall_of_fame";
+  if (path.startsWith("/hall")) return "hall";
   return path.split("/").filter(Boolean)[0] ?? "other";
 }
 

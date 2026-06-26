@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { buildAllApprovedCatalogEntries } from "../server/approved-catalog.js";
+import { buildCrossCatalogHeroAuditContext } from "../server/cross-catalog-hero-index.js";
 import { resolveApprovedCatalogKind } from "../shared/approved-catalog.js";
 import {
   auditExploreImageMappings,
@@ -174,7 +175,8 @@ function main(): void {
   }
 
   const entries = buildAllApprovedCatalogEntries();
-  const report = auditExploreImageMappings(entries, PUBLIC);
+  const crossCatalog = buildCrossCatalogHeroAuditContext(entries, PUBLIC);
+  const report = auditExploreImageMappings(entries, PUBLIC, crossCatalog);
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
   fs.writeFileSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");

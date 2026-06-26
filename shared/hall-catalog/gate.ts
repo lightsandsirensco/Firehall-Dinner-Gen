@@ -282,6 +282,9 @@ function isApprovedSourceAttribution(source: CatalogGateInput["recipeSource"]): 
   return (
     kind === "curated" ||
     kind === "catalog" ||
+    kind === "manual" ||
+    kind === "import" ||
+    kind === "partner" ||
     kind === "golden_100" ||
     kind === "performance_meals_50" ||
     kind === "hall_expansion_74" ||

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Flame, Heart, Menu } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Flame, Heart, Menu, User } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -13,9 +13,14 @@ import {
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { hapticLight } from "@/lib/haptics";
-import { BRAND_NAME, CTA, NAV } from "@/lib/brand-copy";
+import { BRAND_NAME, CTA, HALL_LINKED, NAV } from "@/lib/brand-copy";
 import { LightsAndSirensMobilePanel } from "@/components/brand/lights-and-sirens-mobile-panel";
 import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
+import {
+  getHallFavoritesCount,
+  HALL_FAVORITES_CHANGED_EVENT,
+} from "@/lib/hall-favorites-store";
+import { useAuth } from "@/lib/auth/context";
 
 export type SiteHeaderActivePage =
   | "home"
@@ -28,16 +33,30 @@ export type SiteHeaderActivePage =
   | "faq"
   | "wheel"
   | "pizza"
-  | "favorites";
+  | "favorites"
+  | "hall";
 
 interface SiteHeaderProps {
   activePage: SiteHeaderActivePage;
   favCount?: number;
 }
 
-export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
+export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [, navigate] = useLocation();
+  const { authenticated, openSignIn } = useAuth();
+  const [badgeCount, setBadgeCount] = useState(() => favCount ?? getHallFavoritesCount());
+
+  useEffect(() => {
+    const sync = () => setBadgeCount(getHallFavoritesCount());
+    sync();
+    window.addEventListener(HALL_FAVORITES_CHANGED_EVENT, sync);
+    return () => window.removeEventListener(HALL_FAVORITES_CHANGED_EVENT, sync);
+  }, []);
+
+  useEffect(() => {
+    if (favCount != null) setBadgeCount(favCount);
+  }, [favCount]);
 
   const navItems: Array<{ key: SiteHeaderActivePage; label: string; href: string }> = [
     { key: "home", label: NAV.home, href: "/" },
@@ -120,29 +139,40 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
           </div>
 
           <div className="hidden md:flex items-center gap-2 shrink-0">
-            {activePage === "favorites" ? (
+            <button
+              type="button"
+              onClick={() => (authenticated ? navigate("/account") : openSignIn())}
+              className={cn(linkClass(false), "gap-1.5")}
+              data-testid="nav-link-account"
+              aria-label={authenticated ? "Your account" : "Sign in"}
+            >
+              <User className="w-3.5 h-3.5" />
+              <span className="hidden lg:inline">{authenticated ? "Account" : "Sign in"}</span>
+            </button>
+
+            {activePage === "hall" || activePage === "favorites" ? (
               <span
                 className={cn(linkClass(true), "gap-1.5")}
-                data-testid="nav-link-favorites-active"
+                data-testid="nav-link-hall-active"
               >
                 <Heart className="w-3.5 h-3.5" />
-                {NAV.saved}
+                {NAV.hall}
               </span>
             ) : (
               <Link
-                href="/favorites"
+                href="/hall"
                 className={cn(linkClass(false), "gap-1.5")}
-                data-testid="nav-link-favorites"
+                data-testid="nav-link-hall"
               >
                 <Heart className="w-3.5 h-3.5" />
-                {NAV.saved}
-                {favCount > 0 && (
+                {NAV.hall}
+                {badgeCount > 0 && (
                   <Badge
                     variant="secondary"
                     className="text-[10px] px-1.5 py-0 h-4 min-w-[16px] leading-none"
                     data-testid="badge-fav-count"
                   >
-                    {favCount}
+                    {badgeCount}
                   </Badge>
                 )}
               </Link>
@@ -166,17 +196,17 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
               </Button>
             )}
 
-            {activePage !== "favorites" && (
+            {activePage !== "hall" && activePage !== "favorites" && (
               <Link
-                href="/favorites"
+                href="/hall"
                 className="relative flex items-center justify-center min-h-11 min-w-11 rounded-lg hover:bg-muted/40 touch-manipulation"
-                data-testid="nav-link-favorites-mobile"
-                aria-label="Saved meals"
+                data-testid="nav-link-hall-mobile"
+                aria-label={HALL_LINKED.linked}
               >
                 <Heart className="w-5 h-5 text-muted-foreground" />
-                {favCount > 0 && (
+                {badgeCount > 0 && (
                   <span className="absolute top-1.5 right-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-primary text-[9px] font-bold text-primary-foreground px-1">
-                    {favCount > 9 ? "9+" : favCount}
+                    {badgeCount > 9 ? "9+" : badgeCount}
                   </span>
                 )}
               </Link>
@@ -223,20 +253,37 @@ export function SiteHeader({ activePage, favCount = 0 }: SiteHeaderProps) {
                   })}
                   <button
                     type="button"
-                    onClick={() => go("/favorites")}
+                    onClick={() => {
+                      hapticLight();
+                      setMenuOpen(false);
+                      if (authenticated) navigate("/account");
+                      else openSignIn();
+                    }}
                     className={cn(
                       "w-full text-left rounded-xl px-4 py-3.5 text-base font-medium min-h-[52px] touch-manipulation flex items-center gap-2",
-                      activePage === "favorites"
+                      "text-foreground hover:bg-muted/50",
+                    )}
+                    data-testid="nav-mobile-account"
+                  >
+                    <User className="w-4 h-4" />
+                    {authenticated ? "Account" : "Sign in"}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => go("/hall")}
+                    className={cn(
+                      "w-full text-left rounded-xl px-4 py-3.5 text-base font-medium min-h-[52px] touch-manipulation flex items-center gap-2",
+                      activePage === "hall" || activePage === "favorites"
                         ? "bg-primary/12 text-foreground"
                         : "text-foreground hover:bg-muted/50",
                     )}
-                    data-testid="nav-mobile-favorites"
+                    data-testid="nav-mobile-hall"
                   >
                     <Heart className="w-4 h-4" />
-                    {NAV.saved}
-                    {favCount > 0 && (
+                    {NAV.hall}
+                    {badgeCount > 0 && (
                       <Badge variant="secondary" className="ml-auto text-[10px]">
-                        {favCount}
+                        {badgeCount}
                       </Badge>
                     )}
                   </button>

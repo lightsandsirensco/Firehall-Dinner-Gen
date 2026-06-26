@@ -5,10 +5,9 @@
 
 import type { GenerateRequest } from "@shared/schema";
 import {
-  firehallCategoryKey,
   type FirehallCategoryId,
 } from "../../shared/firehall-categories.js";
-import { listCuratedRecipeSummaries } from "../curated-recipe-store.js";
+import { listCuratedRecipeSummariesForFirehallCategory } from "../curated-recipe-store.js";
 import { isApprovedCatalogSlug } from "../../shared/hall-catalog/gate.js";
 import { log } from "../logger.js";
 
@@ -44,10 +43,8 @@ export interface FirehallPoolSnapshot {
 function rowsForCategory(
   categoryId: FirehallCategoryId,
 ): { all: FirehallCategorySummaryRow[]; withHero: FirehallCategorySummaryRow[] } {
-  const key = firehallCategoryKey(categoryId);
-  const summaries = listCuratedRecipeSummaries({
+  const summaries = listCuratedRecipeSummariesForFirehallCategory(categoryId, {
     status: "published",
-    explorePool: key,
     minQuality: 35,
     limit: 100,
     orderBy: "publisherFirst",

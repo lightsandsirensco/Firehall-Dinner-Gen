@@ -82,7 +82,7 @@ export async function apiRequest(
       if (externalSignal?.aborted) {
         throw err;
       }
-      throw new Error("Request timed out. The server is still working — tap Generate again to retry.");
+      throw new Error("Request timed out. The server is still working — tap Pick Tonight's Meal again to retry.");
     }
     throw err;
   }

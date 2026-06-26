@@ -23,7 +23,7 @@ export function HomeFaqSection() {
 
       <div className="mt-4 md:hidden">
         <p className="text-sm text-muted-foreground leading-relaxed max-w-md">
-          Crew sizing, shift timing, and how the generator works — answered on the FAQ page.
+          Crew sizing, personal saves, and optional hall linking — answered on the FAQ page.
         </p>
         <Link
           href="/faq"

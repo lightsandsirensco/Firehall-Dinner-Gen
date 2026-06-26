@@ -109,7 +109,7 @@ export const STANDARD_FAQS = {
   generator: {
     question: "What if crew size or time changes tonight?",
     answer:
-      "Use Find a Meal with your headcount and minutes available. It pulls from the same hall-tested dinners these guides recommend.",
+      "Use Find a Meal with your headcount and minutes available. Hall Match pulls from the same curated, hall-tested catalog these guides recommend.",
   },
   nutrition: {
     question: "Is this medical advice?",

@@ -6,14 +6,14 @@ import type { GenerateResponse } from "./schema.js";
 
 /** Never expose Zod/validation traces to clients. */
 export const GENERATION_USER_RETRY_MESSAGE =
-  "Couldn't cook up a good meal right now — trying another one...";
+  "Couldn't find a good match right now — trying another one…";
 
 export const GENERATION_USER_FAILURE_MESSAGE =
-  "Couldn't cook up a good meal right now — tap Generate to try again.";
+  "Couldn't find a good match right now — tap Pick Tonight's Meal to try again.";
 
 /** Shown when Game Day filter could not match but a retry may succeed after broadening. */
 export const GENERATION_GAME_DAY_MESSAGE =
-  "Game Day picks were tight for that combo — we widened to BBQ and crowd favorites. Tap Pick dinner again.";
+  "Game Day picks were tight for that combo — we widened to BBQ and crowd favorites. Tap Pick Tonight's Meal again.";
 
 export const GENERATION_GAME_DAY_EMPTY_MESSAGE =
   "Nothing in the Game Day lineup matched those filters. Try any protein or fewer restrictions, then pick again.";

@@ -19,7 +19,6 @@ const PATHS = [
   { name: "generator", path: "/generator" },
   { name: "faq", path: "/faq" },
   { name: "explore", path: "/explore" },
-  { name: "recipes", path: "/recipes" },
   { name: "about", path: "/about" },
   { name: "recipe-chicken-parm", path: "/recipes/chicken-parm" },
   { name: "sitemap", path: "/sitemap.xml" },

@@ -19,11 +19,7 @@ const SPECS: CopySpec[] = [
     collection: "hall-expansion",
     donor: { collection: "golden-100", slug: "smash-burgers" },
   },
-  {
-    slug: "best-tuna-melt-for-the-hall",
-    collection: "hall-expansion",
-    donor: { collection: "golden-100", slug: "mediterranean-inspired-tuna-almond-whole-wheat-spaghetti" },
-  },
+  // best-tuna-melt-for-the-hall removed — donor copy caused pasta hero on melt title (see audit:hero-images)
   {
     slug: "hall-blt-sandwich-feed",
     collection: "hall-expansion",

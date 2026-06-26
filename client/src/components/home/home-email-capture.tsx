@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { CheckCircle, Loader2, Users } from "lucide-react";
+import { CheckCircle, Loader2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -11,6 +11,7 @@ import {
   trackHomepageCaptureView,
 } from "@/lib/analytics";
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
+import { HOME } from "@/lib/brand-copy";
 
 type CaptureStatus = "idle" | "loading" | "success" | "error";
 
@@ -82,16 +83,16 @@ export function HomeEmailCapture() {
       <div className="max-w-[1400px] mx-auto px-page py-14 sm:py-16">
         <div className="mx-auto max-w-2xl text-center">
           <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/15 text-amber-400">
-            <Users className="h-5 w-5" aria-hidden />
+            <Mail className="h-5 w-5" aria-hidden />
           </div>
           <h2
             id="home-email-capture-heading"
             className="font-heading text-2xl sm:text-3xl tracking-tight text-foreground"
           >
-            Join The Firehall Meals Crew
+            {HOME.emailCaptureTitle}
           </h2>
           <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg mx-auto">
-            Weekly firefighter meals, breakfast recipes, and new recipe releases.
+            {HOME.emailCaptureLead}
           </p>
         </div>
 
@@ -102,7 +103,7 @@ export function HomeEmailCapture() {
               data-testid="home-email-capture-success"
             >
               <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-green-500" aria-hidden />
-              <p className="font-medium text-foreground text-left">✓ You&apos;re on the crew.</p>
+              <p className="font-medium text-foreground text-left">You&apos;re subscribed.</p>
             </div>
           ) : (
             <form
@@ -130,14 +131,14 @@ export function HomeEmailCapture() {
               <Button
                 type="submit"
                 size="lg"
-                className="min-h-11 w-full sm:w-auto shrink-0 px-8 font-heading uppercase tracking-[0.1em] text-xs touch-manipulation"
+                className="min-h-11 w-full sm:w-auto shrink-0 px-8 font-heading font-semibold tracking-wide touch-manipulation"
                 disabled={status === "loading" || !email.trim()}
                 data-testid="button-home-email-submit"
               >
                 {status === "loading" ? (
                   <Loader2 className="mr-2 h-4 w-4 animate-spin" aria-hidden />
                 ) : null}
-                {status === "loading" ? "Joining…" : "Join The Crew"}
+                {status === "loading" ? "Subscribing…" : HOME.emailCaptureCta}
               </Button>
             </form>
           )}

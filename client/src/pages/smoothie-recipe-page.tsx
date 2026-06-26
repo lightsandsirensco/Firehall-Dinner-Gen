@@ -23,6 +23,7 @@ import {
   formatTemperaturesInText,
 } from "@shared/measurements";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
+import { CTA } from "@/lib/brand-copy";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
@@ -264,7 +265,7 @@ export default function SmoothieRecipePage() {
         <p className="mt-10 text-sm text-muted-foreground">
           Need a real meal?{" "}
           <Link href="/generator" className="text-primary hover:underline">
-            Find dinner
+            {CTA.findDinner}
           </Link>{" "}
           — smoothies are fuel, not crew dinner.
         </p>

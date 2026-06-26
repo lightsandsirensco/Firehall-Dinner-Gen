@@ -48,7 +48,7 @@ export function buildWebSiteSchema(origin: string) {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: `${absoluteUrl(origin, "/recipes")}?q={search_term_string}`,
+        urlTemplate: `${absoluteUrl(origin, "/explore")}?q={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },

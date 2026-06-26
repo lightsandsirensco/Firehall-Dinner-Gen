@@ -25,7 +25,7 @@ export function FirstShiftTip({ onDismiss }: FirstShiftTipProps) {
         <p className="text-xs font-semibold uppercase tracking-wider text-primary">First time?</p>
         <p className="text-sm text-muted-foreground mt-0.5 leading-snug">
           Crew size is already set. Tap{" "}
-          <span className="text-foreground font-medium">{CTA.pickDinner}</span> or open More options
+          <span className="text-foreground font-medium">{CTA.pickTonight}</span> or open More options
           if you need to tweak protein and time.
         </p>
       </div>

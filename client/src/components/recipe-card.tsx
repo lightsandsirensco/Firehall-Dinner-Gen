@@ -9,14 +9,24 @@ import { resolveMealPlate } from "@/lib/meal-plate-ui";
 import { MealHeroImage } from "@/components/meal-hero-image";
 import { resolveEditorialFallbackHero } from "@shared/meal-hero-fallback";
 import { buildRecipeTrustLine } from "@/lib/recipe-trust-line";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug, Vote } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
-import { trackRecipeSave, trackRecipePrint } from "@/lib/analytics";
+import { trackRecipeSave, trackRecipePrint, trackPersonalOnboardingStepCompleted } from "@/lib/analytics";
+import { useOptionalAuth } from "@/lib/auth/context";
+import { useLocation } from "wouter";
+import {
+  isOnboardingMode,
+  markFirstMealSaved,
+  onboardingSignalsFromAuth,
+  personalOnboardingStep,
+  readPersonalOnboardingProgress,
+} from "@/lib/onboarding/state";
 import { hapticSuccess } from "@/lib/haptics";
 import { escapeHtml } from "@/lib/escape-html";
 import { useState, useEffect, useMemo, type ReactNode } from "react";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
+import { HALL_VOTE } from "@/lib/brand-copy";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
   useMeasurementSystem,
@@ -40,6 +50,7 @@ interface RecipeCardProps {
   crewSize: number;
   onEmailClick?: () => void;
   onShoppingListClick?: () => void;
+  onHallVoteClick?: () => void;
   hideSave?: boolean;
 }
 
@@ -259,7 +270,9 @@ export function buildPrintHtml(
 </html>`;
 }
 
-export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, hideSave }: RecipeCardProps) {
+export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, onHallVoteClick, hideSave }: RecipeCardProps) {
+  const auth = useOptionalAuth();
+  const [, navigate] = useLocation();
   const hasTiming = recipe.timing && (recipe.timing.prep_min || recipe.timing.cook_min || recipe.timing.total_min);
   const hasSafety = recipe.protein_safety && recipe.protein_safety.internal_temp_f > 0;
   const [measurementSystem] = useMeasurementSystem();
@@ -290,6 +303,18 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         (recipe as ClientRecipeResponse & { _slug?: string })._slug ?? recipe.title.toLowerCase().replace(/\s+/g, "-"),
         recipe.title,
       );
+      if (auth?.user?.user_id && result.saved) {
+        const signals = onboardingSignalsFromAuth(auth.halls, auth.profile);
+        const progress = readPersonalOnboardingProgress(auth.user.user_id, signals);
+        const step = personalOnboardingStep(progress, auth.halls.length > 0);
+        if (step === "save_meal" || isOnboardingMode()) {
+          markFirstMealSaved(auth.user.user_id, signals);
+          trackPersonalOnboardingStepCompleted("save_meal");
+          if (isOnboardingMode() && result.saved) {
+            window.setTimeout(() => navigate("/me/profile?onboarding=1"), 900);
+          }
+        }
+      }
       setTimeout(() => setShowConfirm(false), 2500);
     }
   };
@@ -454,7 +479,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               size="sm"
               onClick={handleSave}
               disabled={saved}
-              className="min-h-10 touch-manipulation"
+              className="min-h-11 touch-manipulation"
               data-testid="button-save-favorite"
             >
               {saved ? <Check className="w-4 h-4 mr-1.5" /> : <Heart className="w-4 h-4 mr-1.5" />}
@@ -462,18 +487,30 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </Button>
           )}
           {onShoppingListClick && (
-            <Button size="sm" variant="outline" onClick={onShoppingListClick} className="min-h-10 touch-manipulation" data-testid="button-shopping-list">
+            <Button size="sm" variant="outline" onClick={onShoppingListClick} className="min-h-11 touch-manipulation" data-testid="button-shopping-list">
               <List className="w-4 h-4 mr-1.5" />
               List
             </Button>
           )}
+          {onHallVoteClick && (
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={onHallVoteClick}
+              className="min-h-11 touch-manipulation border-primary/30 text-primary hover:bg-primary/10"
+              data-testid="button-recipe-hall-vote"
+            >
+              <Vote className="w-4 h-4 mr-1.5" />
+              {HALL_VOTE.startVote}
+            </Button>
+          )}
           {onEmailClick && (
-            <Button size="sm" variant="outline" onClick={onEmailClick} className="min-h-10 touch-manipulation" data-testid="button-email-recipe">
+            <Button size="sm" variant="outline" onClick={onEmailClick} className="min-h-11 touch-manipulation" data-testid="button-email-recipe">
               <Mail className="w-4 h-4 mr-1.5" />
               Email
             </Button>
           )}
-          <Button size="sm" variant="ghost" onClick={handlePrint} className="min-h-10 touch-manipulation" data-testid="button-print">
+          <Button size="sm" variant="ghost" onClick={handlePrint} className="min-h-11 touch-manipulation" data-testid="button-print">
             <Printer className="w-4 h-4 mr-1.5" />
             Print
           </Button>

@@ -1,0 +1,79 @@
+{
+  "generated_at": "2026-06-23T15:33:38.513Z",
+  "runs_per_category": 25,
+  "total_failures": 0,
+  "results": [
+    {
+      "category": "crew_favorites",
+      "label": "Crew Favorites",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    },
+    {
+      "category": "quick_meals",
+      "label": "Quick Meals",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    },
+    {
+      "category": "comfort_food",
+      "label": "Comfort Food",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    },
+    {
+      "category": "high_protein",
+      "label": "High Protein",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    },
+    {
+      "category": "bbq_smoker",
+      "label": "BBQ & Smoker",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    },
+    {
+      "category": "healthy_options",
+      "label": "Healthy Options",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    },
+    {
+      "category": "easy_cleanup",
+      "label": "Easy Cleanup",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    },
+    {
+      "category": "feed_a_crowd",
+      "label": "Feed a Crowd",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    },
+    {
+      "category": "game_day",
+      "label": "Game Day",
+      "runs": 25,
+      "successes": 25,
+      "failures": [],
+      "broadenedCount": 0
+    }
+  ]
+}

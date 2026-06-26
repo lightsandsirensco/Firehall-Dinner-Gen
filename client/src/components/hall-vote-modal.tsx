@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from "react";
+import { Link } from "wouter";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -6,9 +7,25 @@ import { Badge } from "@/components/ui/badge";
 import { apiRequest } from "@/lib/queryClient";
 import type { ClientRecipeResponse } from "@shared/schema";
 import { buildMinimalClientRecipe } from "@shared/minimal-client-recipe";
-import { Vote, Copy, Check, ExternalLink, QrCode, Loader2, Users, Shuffle } from "lucide-react";
+import {
+  Vote,
+  Copy,
+  Check,
+  ExternalLink,
+  QrCode,
+  Loader2,
+  Users,
+  Shuffle,
+  Share2,
+  ChevronRight,
+} from "lucide-react";
 import { motion } from "framer-motion";
-import { trackHallVoteCreate, trackHallVoteShare } from "@/lib/analytics";
+import { trackHallVoteStarted, trackHallVoteShared } from "@/lib/analytics";
+import { recordHallVoteCreated } from "@/lib/hall-history-store";
+import { HALL_VOTE } from "@/lib/brand-copy";
+import { shareMealNative } from "@/components/share/meal-share-card";
+import { resolveHallVoteRecipeHref } from "@/lib/hall-vote-recipes";
+import { cn } from "@/lib/utils";
 
 const TRY_ANOTHER_LABEL = "Try another direction";
 const TRY_ANOTHER_DESC =
@@ -27,16 +44,20 @@ interface HallVoteModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   recipes: ClientRecipeResponse[];
+  source?: string;
   onGenerateAnother?: () => void;
   isGenerating?: boolean;
+  onVoteCreated?: (input: { voteId: string; optionCount: number }) => void;
 }
 
 export function HallVoteModal({
   open,
   onOpenChange,
   recipes,
+  source,
   onGenerateAnother,
   isGenerating = false,
+  onVoteCreated,
 }: HallVoteModalProps) {
   const [step, setStep] = useState<"confirm" | "share">("confirm");
   const [loading, setLoading] = useState(false);
@@ -45,6 +66,7 @@ export function HallVoteModal({
   const [copied, setCopied] = useState(false);
   const [qrDataUrl, setQrDataUrl] = useState("");
   const [error, setError] = useState("");
+  const canNativeShare = typeof navigator !== "undefined" && !!navigator.share;
 
   const voteOptions = useMemo(() => {
     const real = recipes.filter(Boolean).slice(0, 5);
@@ -80,14 +102,26 @@ export function HallVoteModal({
       }));
 
       const res = await apiRequest("POST", "/api/hall-vote", {
-        title: "Tonight's Hall Vote",
+        title: HALL_VOTE.shareTitle,
         options,
+        ...(source ? { source } : {}),
       });
       const data = await res.json();
       setVoteId(data.vote_id);
       setShareUrl(data.share_url);
       setStep("share");
-      trackHallVoteCreate({ voteId: data.vote_id, optionCount: voteOptions.length });
+      trackHallVoteStarted({
+        voteId: data.vote_id,
+        optionCount: voteOptions.length,
+        source,
+      });
+      recordHallVoteCreated({
+        voteId: data.vote_id,
+        title: HALL_VOTE.shareTitle,
+        optionCount: voteOptions.length,
+        source,
+      });
+      onVoteCreated?.({ voteId: data.vote_id, optionCount: voteOptions.length });
 
       try {
         const QRCode = await import("qrcode");
@@ -113,7 +147,7 @@ export function HallVoteModal({
     try {
       await navigator.clipboard.writeText(shareUrl);
       setCopied(true);
-      if (voteId) trackHallVoteShare({ voteId, action: "copy" });
+      if (voteId) trackHallVoteShared({ voteId, action: "copy" });
       setTimeout(() => setCopied(false), 2000);
     } catch {
       const input = document.querySelector<HTMLInputElement>('[data-testid="input-share-url"]');
@@ -121,8 +155,23 @@ export function HallVoteModal({
         input.select();
         document.execCommand("copy");
         setCopied(true);
+        if (voteId) trackHallVoteShared({ voteId, action: "copy" });
         setTimeout(() => setCopied(false), 2000);
       }
+    }
+  };
+
+  const handleNativeShare = async () => {
+    if (!shareUrl || !voteId) return;
+    const shared = await shareMealNative({
+      title: HALL_VOTE.shareTitle,
+      text: `${HALL_VOTE.shareText}\n${shareUrl}`,
+      url: shareUrl,
+    });
+    if (shared) {
+      trackHallVoteShared({ voteId, action: "native" });
+    } else {
+      await handleCopy();
     }
   };
 
@@ -144,7 +193,7 @@ export function HallVoteModal({
         <DialogHeader>
           <DialogTitle className="font-heading text-2xl tracking-wide flex items-center gap-2">
             <Vote className="w-5 h-5 text-primary" />
-            {step === "confirm" ? "Hall Vote" : "Gather the crew"}
+            {step === "confirm" ? HALL_VOTE.letCrewVote : HALL_VOTE.sendToCrew}
           </DialogTitle>
         </DialogHeader>
 
@@ -153,13 +202,13 @@ export function HallVoteModal({
             <p className="text-sm text-muted-foreground leading-relaxed">
               {usingTryAnother ? (
                 <>
-                  The crew gathers around the table — vote on tonight&apos;s meal or send it back
-                  for another draw. Add a second real option anytime.
+                  Vote on tonight&apos;s meal or send it back for another draw. Add a second real option
+                  anytime.
                 </>
               ) : (
                 <>
-                  Line up the options, share the QR, and let the hall pick dinner. No accounts —
-                  just scan and vote.
+                  Line up the options, share the link, and let the hall pick dinner. No accounts — just
+                  tap and vote.
                 </>
               )}
             </p>
@@ -167,14 +216,10 @@ export function HallVoteModal({
             <div className="space-y-2">
               {voteOptions.map((r, i) => {
                 const isAlt = r._id === "hall-vote-try-another";
-                return (
-                  <div
-                    key={(r as ClientRecipeResponse & { _id?: string })._id || i}
-                    className={`flex items-center gap-3 p-3 rounded-lg border bg-card ${
-                      isAlt ? "border-dashed border-primary/40 bg-primary/5" : "border-border/50"
-                    }`}
-                    data-testid={`vote-option-preview-${i}`}
-                  >
+                const recipeHref = resolveHallVoteRecipeHref(r);
+                const optionKey = (r as ClientRecipeResponse & { _id?: string })._id || i;
+                const optionBody = (
+                  <>
                     <span className="font-heading text-2xl text-primary w-6 text-center shrink-0">
                       {i + 1}
                     </span>
@@ -196,6 +241,44 @@ export function HallVoteModal({
                         )}
                       </div>
                     </div>
+                    {recipeHref ? (
+                      <ChevronRight
+                        className="w-5 h-5 text-muted-foreground/50 shrink-0"
+                        aria-hidden
+                      />
+                    ) : null}
+                  </>
+                );
+
+                if (recipeHref) {
+                  return (
+                    <Link
+                      key={optionKey}
+                      href={recipeHref}
+                      className={cn(
+                        "flex items-center gap-3 p-3 min-h-[52px] rounded-lg border bg-card border-border/50",
+                        "cursor-pointer touch-manipulation transition-colors",
+                        "hover:border-primary/50 hover:bg-primary/5 active:bg-primary/10",
+                        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
+                      )}
+                      data-testid={`vote-option-preview-${i}`}
+                      aria-label={`View recipe: ${r.title}`}
+                    >
+                      {optionBody}
+                    </Link>
+                  );
+                }
+
+                return (
+                  <div
+                    key={optionKey}
+                    className={cn(
+                      "flex items-center gap-3 p-3 min-h-[52px] rounded-lg border bg-card",
+                      isAlt ? "border-dashed border-primary/40 bg-primary/5" : "border-border/50",
+                    )}
+                    data-testid={`vote-option-preview-${i}`}
+                  >
+                    {optionBody}
                   </div>
                 );
               })}
@@ -242,7 +325,7 @@ export function HallVoteModal({
               ) : (
                 <>
                   <Users className="w-4 h-4 mr-2" />
-                  Start Hall Vote
+                  {HALL_VOTE.startVote}
                 </>
               )}
             </Button>
@@ -252,7 +335,7 @@ export function HallVoteModal({
         {step === "share" && (
           <div className="space-y-5">
             <p className="text-sm text-muted-foreground text-center">
-              Prop the phone on the counter — crew scans, taps, and the hall decides.
+              Prop the phone on the counter — crew taps the link or scans the QR. The hall decides.
             </p>
 
             {qrDataUrl && (
@@ -302,14 +385,27 @@ export function HallVoteModal({
               </Button>
             </div>
 
+            {canNativeShare && (
+              <Button
+                className="w-full min-h-[48px] font-heading tracking-wider"
+                onClick={handleNativeShare}
+                data-testid="button-native-share-vote"
+              >
+                <Share2 className="w-4 h-4 mr-2" />
+                {HALL_VOTE.sendToCrew}
+              </Button>
+            )}
+
             <Button
+              asChild
               variant="outline"
               className="w-full min-h-[48px] font-heading tracking-wider"
-              onClick={() => window.open(`/vote/${voteId}`, "_blank")}
               data-testid="button-open-results"
             >
-              <ExternalLink className="w-4 h-4 mr-2" />
-              Open live results
+              <Link href={`/vote/${voteId}`}>
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Open live results
+              </Link>
             </Button>
           </div>
         )}

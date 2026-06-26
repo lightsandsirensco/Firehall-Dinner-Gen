@@ -99,7 +99,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
                   </Link>
                 </li>
                 <li>
-                  <Link href="/recipes" className="text-foreground/85 hover:text-primary transition-colors">
+                  <Link href="/explore" className="text-foreground/85 hover:text-primary transition-colors">
                     {CTA.viewRecipes}
                   </Link>
                 </li>

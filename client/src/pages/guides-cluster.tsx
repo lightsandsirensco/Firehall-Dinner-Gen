@@ -138,10 +138,10 @@ export default function GuidesClusterPage() {
               Explore meals
             </Link>
             <Link
-              href="/recipes"
+              href="/generator"
               className="inline-flex items-center gap-2 rounded-xl border border-border/40 bg-muted/20 px-4 py-2.5 text-sm font-semibold text-foreground"
             >
-              Browse recipes
+              Find a Meal
             </Link>
           </div>
         </header>

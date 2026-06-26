@@ -1,3 +1,4 @@
+import { VitePWA } from "vite-plugin-pwa";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
@@ -7,6 +8,95 @@ export default defineConfig({
   plugins: [
     react(),
     runtimeErrorOverlay(),
+    VitePWA({
+      registerType: "autoUpdate",
+      injectRegister: null,
+      includeAssets: [
+        "favicon.ico",
+        "pwa/icon.svg",
+        "pwa/icon-192.png",
+        "pwa/icon-512.png",
+        "pwa/icon-maskable-512.png",
+        "pwa/apple-touch-icon.png",
+      ],
+      manifest: {
+        name: "Firehall Meals",
+        short_name: "Firehall",
+        description:
+          "Firefighter meals and firehall recipes — crew dinners, wheel picks, and hall-tested cooking.",
+        theme_color: "#141414",
+        background_color: "#141414",
+        display: "standalone",
+        orientation: "portrait",
+        scope: "/",
+        start_url: "/",
+        categories: ["food", "lifestyle"],
+        icons: [
+          {
+            src: "pwa/icon-192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "pwa/icon-512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+          {
+            src: "pwa/icon-maskable-512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
+          },
+        ],
+      },
+      workbox: {
+        navigateFallback: "/index.html",
+        navigateFallbackDenylist: [/^\/api\//, /^\/admin/],
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2}"],
+        globIgnores: ["**/images/**", "**/catalog/**", "**/content/**", "**/downloads/**"],
+        maximumFileSizeToCacheInBytes: 5 * 1024 * 1024,
+        cleanupOutdatedCaches: true,
+        runtimeCaching: [
+          {
+            urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "google-fonts-stylesheets",
+              expiration: { maxEntries: 10, maxAgeSeconds: 60 * 60 * 24 * 365 },
+            },
+          },
+          {
+            urlPattern: /^https:\/\/fonts\.gstatic\.com\/.*/i,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "google-fonts-webfonts",
+              expiration: { maxEntries: 20, maxAgeSeconds: 60 * 60 * 24 * 365 },
+            },
+          },
+          {
+            urlPattern: /\/images\//i,
+            handler: "StaleWhileRevalidate",
+            options: {
+              cacheName: "firehall-images",
+              expiration: { maxEntries: 300, maxAgeSeconds: 60 * 60 * 24 * 14 },
+            },
+          },
+          {
+            urlPattern: /\/api\//i,
+            handler: "NetworkFirst",
+            options: {
+              cacheName: "firehall-api",
+              networkTimeoutSeconds: 8,
+              expiration: { maxEntries: 64, maxAgeSeconds: 60 * 10 },
+            },
+          },
+        ],
+      },
+      devOptions: {
+        enabled: false,
+      },
+    }),
     ...(process.env.NODE_ENV !== "production" &&
     process.env.REPL_ID !== undefined
       ? [

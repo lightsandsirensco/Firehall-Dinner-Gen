@@ -5,18 +5,24 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
-import { Copy, Printer, Mail, CheckCircle, Loader2, ShoppingCart, Leaf, Lightbulb, Package, Check } from "lucide-react";
+import { Copy, Printer, Mail, CheckCircle, Loader2, ShoppingCart, Leaf, Lightbulb, Package, Check, Users } from "lucide-react";
 import type { ShoppingListResult } from "@/lib/shopping-list";
 import { shoppingListToText } from "@/lib/shopping-list";
 import { escapeHtml } from "@/lib/escape-html";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
 import { trackShoppingListAction, trackShoppingListOpen } from "@/lib/analytics";
+import { useHallMembership } from "@/lib/hall-membership/context";
+import { useAuth } from "@/lib/auth/context";
+import { useHallFeature } from "@/lib/billing/hooks";
+import { addRecipeToHallShoppingList } from "@/lib/hall-shopping-list/api";
+import { useToast } from "@/hooks/use-toast";
 
 interface ShoppingListModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
   shoppingList: ShoppingListResult;
   recipeTitle: string;
+  recipeSlug?: string;
   generatorType: "meal" | "pizza";
 }
 
@@ -111,17 +117,56 @@ function buildPrintHtml(shoppingList: ShoppingListResult, recipeTitle: string): 
 </html>`;
 }
 
-export function ShoppingListModal({ open, onOpenChange, shoppingList, recipeTitle, generatorType }: ShoppingListModalProps) {
+export function ShoppingListModal({
+  open,
+  onOpenChange,
+  shoppingList,
+  recipeTitle,
+  recipeSlug,
+  generatorType,
+}: ShoppingListModalProps) {
+  const { toast } = useToast();
+  const { authenticated } = useAuth();
+  const { activeHallId, activeHall } = useHallMembership();
+  const canUseSharedList = useHallFeature("shared_shopping_lists", activeHallId);
   const [copied, setCopied] = useState(false);
   const [emailView, setEmailView] = useState(false);
   const [email, setEmail] = useState("");
   const [emailStatus, setEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [emailError, setEmailError] = useState("");
+  const [hallAddBusy, setHallAddBusy] = useState(false);
+  const [hallAddDone, setHallAddDone] = useState(false);
+
+  const canAddToHallList = authenticated && Boolean(activeHallId) && canUseSharedList;
 
   useEffect(() => {
     if (!open) return;
     trackShoppingListOpen({ recipeTitle, generatorType });
+    setHallAddDone(false);
   }, [open, recipeTitle, generatorType]);
+
+  const handleAddToHallList = async () => {
+    if (!activeHallId || hallAddBusy) return;
+    setHallAddBusy(true);
+    try {
+      await addRecipeToHallShoppingList(activeHallId, {
+        recipe_title: recipeTitle,
+        recipe_slug: recipeSlug,
+        sections: shoppingList.sections,
+      });
+      setHallAddDone(true);
+      toast({
+        title: "Added to hall list",
+        description: activeHall?.hall_name
+          ? `${recipeTitle} ingredients are on ${activeHall.hall_name}'s grocery run.`
+          : undefined,
+      });
+    } catch {
+      toast({ title: "Could not add to hall list", variant: "destructive" });
+    } finally {
+      setHallAddBusy(false);
+    }
+  };
 
   const handleCopy = async () => {
     const text = shoppingListToText(shoppingList, recipeTitle);
@@ -282,6 +327,23 @@ export function ShoppingListModal({ open, onOpenChange, shoppingList, recipeTitl
         ) : (
           <>
             <div className="flex gap-2 flex-wrap">
+              {canAddToHallList ? (
+                <Button
+                  variant="default"
+                  onClick={() => void handleAddToHallList()}
+                  disabled={hallAddBusy || hallAddDone}
+                  data-testid="button-shopping-add-hall"
+                >
+                  {hallAddBusy ? (
+                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                  ) : hallAddDone ? (
+                    <Check className="w-4 h-4 mr-2" />
+                  ) : (
+                    <Users className="w-4 h-4 mr-2" />
+                  )}
+                  {hallAddDone ? "On hall list" : "Add to hall list"}
+                </Button>
+              ) : null}
               <Button variant="outline" onClick={handleCopy} data-testid="button-shopping-copy">
                 {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
                 {copied ? "Copied" : "Copy List"}

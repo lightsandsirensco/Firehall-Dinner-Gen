@@ -74,6 +74,8 @@ export interface FilterState {
   meal_format: string;
   /** Practical Firehall category — primary navigation (optional) */
   firehall_category?: (typeof FIREHALL_CATEGORY_IDS)[number];
+  /** User explicitly picked a category chip — vibes must not overwrite. */
+  category_locked?: boolean;
   allergens_to_avoid: string[];
   vegetarian_swap_needed: boolean;
   use_what_we_have: boolean;
@@ -389,7 +391,7 @@ MoreOptionsTrigger.displayName = "MoreOptionsTrigger";
 function getGenerateDisabledReason(filters: FilterState, isLoading: boolean): string | null {
   if (isLoading) return null;
   if (filters.appliances.length === 0) {
-    return "Select at least one cooking appliance to generate a meal.";
+    return "Select at least one cooking appliance to pick a meal.";
   }
   if (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0) {
     return "List what's in the fridge or turn off “Use what we have”.";
@@ -647,12 +649,21 @@ export const FilterPanel = memo(function FilterPanel({
                     })),
                   ]}
                   value={(filters.firehall_category ?? "all") as any}
-                  onChange={(val) =>
-                    update(
-                      "firehall_category",
-                      val === "all" ? undefined : (val as (typeof FIREHALL_CATEGORY_IDS)[number]),
-                    )
-                  }
+                  onChange={(val) => {
+                    if (val === "all") {
+                      onFiltersChange({
+                        ...filters,
+                        firehall_category: undefined,
+                        category_locked: false,
+                      });
+                    } else {
+                      onFiltersChange({
+                        ...filters,
+                        firehall_category: val as (typeof FIREHALL_CATEGORY_IDS)[number],
+                        category_locked: true,
+                      });
+                    }
+                  }}
                   testIdPrefix="chip-firehall-category"
                 />
               </div>

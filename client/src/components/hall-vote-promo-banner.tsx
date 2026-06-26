@@ -2,18 +2,22 @@ import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Users, Vote, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { HALL_VOTE } from "@/lib/brand-copy";
+import { cn } from "@/lib/utils";
 
 interface HallVotePromoBannerProps {
   onStartVote: () => void;
   optionCount: number;
   /** Ref for smooth scroll on first reveal */
   bannerRef?: React.RefObject<HTMLDivElement | null>;
+  className?: string;
 }
 
 export function HallVotePromoBanner({
   onStartVote,
   optionCount,
   bannerRef,
+  className,
 }: HallVotePromoBannerProps) {
   const innerRef = useRef<HTMLDivElement>(null);
   const setRef = (el: HTMLDivElement | null) => {
@@ -29,8 +33,8 @@ export function HallVotePromoBanner({
 
   const subline =
     optionCount >= 2
-      ? `${optionCount} meals on the board — scan the QR and let the hall decide dinner tonight.`
-      : "Scan the QR and let the hall decide dinner tonight.";
+      ? `${optionCount} meals on the board — ${HALL_VOTE.sendToCrew.toLowerCase()} in the group chat or scan the QR.`
+      : `${HALL_VOTE.sendToCrew} in the group chat or scan the QR when you're ready.`;
 
   return (
     <motion.div
@@ -39,7 +43,7 @@ export function HallVotePromoBanner({
       initial={{ opacity: 0, y: 20, scale: 0.98 }}
       animate={{ opacity: 1, y: 0, scale: 1 }}
       transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: 0.15 }}
-      className="mt-6 outline-none"
+      className={cn("outline-none", className)}
       data-testid="hall-vote-promo-banner"
       aria-label="Hall Vote promotion"
     >
@@ -66,7 +70,7 @@ export function HallVotePromoBanner({
               </span>
             </div>
             <h3 className="font-heading text-xl sm:text-2xl tracking-wide text-foreground leading-tight mb-2">
-              Can&apos;t agree? Let the crew vote.
+              {HALL_VOTE.letCrewVote}
             </h3>
             <p className="text-sm text-muted-foreground leading-relaxed mb-4 max-w-md">
               {subline}
@@ -79,7 +83,7 @@ export function HallVotePromoBanner({
               data-testid="button-start-hall-vote"
             >
               <Vote className="w-5 h-5 mr-2" />
-              Start Hall Vote
+              {HALL_VOTE.startVote}
             </Button>
           </div>
 

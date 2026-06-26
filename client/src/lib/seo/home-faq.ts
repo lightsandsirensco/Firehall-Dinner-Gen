@@ -3,14 +3,24 @@ import type { FaqItem } from "@shared/seo/schema";
 /** Firefighter-focused FAQ — home, /faq, and FAQPage schema. */
 export const HOME_FAQ_ITEMS: FaqItem[] = [
   {
-    question: "What are the most popular meals cooked in fire stations?",
+    question: "What does Firehall Meals do for me as a firefighter?",
     answer:
-      "Chicken parm, smash burgers, pulled pork, big-batch chili, taco bars, and sheet-pan fajitas show up in halls across North America because they feed crews, hold after calls, and do not require fine-dining skills. Pizza night and breakfast spreads after night shift are close behind.",
+      "Pick shift dinners in seconds, save meals you love, get crew-sized ingredients and shopping lists, and cook with steps written for station kitchens. Sign in to sync across devices. Connect your hall later for shared votes and grocery planning — optional and free to join.",
+  },
+  {
+    question: "What are the most popular meals cooked on shift?",
+    answer:
+      "Chicken parm, smash burgers, pulled pork, big-batch chili, taco bars, and sheet-pan fajitas show up on shifts across North America because they feed crews, hold after calls, and do not require fine-dining skills. Pizza night and breakfast spreads after night shift are close behind.",
+  },
+  {
+    question: "Do I need to join a hall to use Firehall Meals?",
+    answer:
+      "No. You can pick meals, browse recipes, spin the wheel, and save favorites without linking a hall. Connect your account to your hall when you want shared dinner votes, grocery lists, and crew meal history.",
   },
   {
     question: "What firefighter meals feed a crew of 8–12 without breaking the budget?",
     answer:
-      "Chili, taco bars, pasta bakes, rice bowls, and sheet-pan proteins stretch grocery dollars. Plan one primary protein, one starch, and a simple side. Most halls run roughly $10–15 per person depending on protein — less when you batch smart and use line-and-serve formats.",
+      "Chili, taco bars, pasta bakes, rice bowls, and sheet-pan proteins stretch grocery dollars. Plan one primary protein, one starch, and a simple side. Most crews run roughly $10–15 per person depending on protein — less when you batch smart and use line-and-serve formats.",
   },
   {
     question: "What are the best healthy firefighter meals for long shifts?",
@@ -60,6 +70,6 @@ export const HOME_FAQ_ITEMS: FaqItem[] = [
   {
     question: "How is Firehall Meals different from a regular recipe site?",
     answer:
-      "Portions, timing, and steps are written for station kitchens — not single-plate blog cooking. Built by firefighters. Tested in the firehall. Browse the recipe catalog first; use Find a Meal or the Classics Wheel when you want a faster pick.",
+      "It is a meal app for firefighters — crew portions, shift timing, and cook mode built in. Use it solo or connect your hall for shared planning. Built by firefighters. Tested on real shifts.",
   },
 ];

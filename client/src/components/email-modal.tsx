@@ -127,7 +127,7 @@ export function EmailModal({
 
   const title = isEarned
     ? captureTrigger === "save"
-      ? "Save your hall favorites"
+      ? "Save your crew favorites"
       : "Keep tonight's winners handy"
     : "Email this meal for next shift";
 
@@ -168,7 +168,7 @@ export function EmailModal({
               <p className="text-base font-heading tracking-wide text-foreground text-center">
                 You're on the list. Check your inbox.
               </p>
-              <p className="text-xs text-muted-foreground text-center">Hall favorites and dinner ideas — when you need them.</p>
+              <p className="text-xs text-muted-foreground text-center">Saved meals and dinner ideas — when you need them.</p>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-4">

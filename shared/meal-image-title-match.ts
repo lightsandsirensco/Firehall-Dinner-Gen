@@ -36,7 +36,7 @@ const SIGNAL_PATTERNS: Array<{ signal: MealVisualSignal; re: RegExp }> = [
   { signal: "skillet", re: /\b(skillet|one.?pan|cast iron)\b/i },
   { signal: "stir_fry", re: /\b(stir.?fry|wok)\b/i },
   { signal: "soup", re: /\b(soup|chili|chowder|stew|bisque)\b/i },
-  { signal: "sandwich", re: /\b(sandwich|sub|hoagie|panini)\b/i },
+  { signal: "sandwich", re: /\b(sandwich|sub|hoagie|panini|melt|grilled cheese)\b/i },
   { signal: "sandwich", re: /\b(lettuce cups?|lettuce wraps?)\b/i },
   { signal: "salad", re: /\b(salad|caesar|greens)\b/i },
   { signal: "sheet_pan", re: /\b(sheet.?pan|tray bake|roasted vegetables)\b/i },
