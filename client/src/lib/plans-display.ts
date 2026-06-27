@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import { MalteseCross } from "@/components/icons/maltese-cross";
 import {
   BarChart3,
   Bell,
@@ -10,7 +11,6 @@ import {
   History,
   Layers,
   RotateCw,
-  Shield,
   ShoppingCart,
   ShoppingBag,
   Sparkles,
@@ -106,7 +106,7 @@ export const PLAN_PRESENTATIONS: Record<PlanId, PlanPresentation> = {
       { label: "Canteen payment tracker", icon: Wallet },
       { label: "Hall analytics", icon: BarChart3 },
       { label: "Exclusive firefighter partner discounts", icon: Tag },
-      { label: "Captain administration tools", icon: Shield },
+      { label: "Captain administration tools", icon: MalteseCross },
     ],
     footer: "Designed for entire fire halls.",
     ctaLabel: "Coming Soon",

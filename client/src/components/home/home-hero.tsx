@@ -1,14 +1,15 @@
 import { Link } from "wouter";
-import { Shield, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
+import { MalteseCross } from "@/components/icons/maltese-cross";
 import { Button } from "@/components/ui/button";
 import { HeroImage } from "@/components/hero-image";
 import { useAuth } from "@/lib/auth/context";
 import { cn } from "@/lib/utils";
-import { BRAND_NAME, CTA, HOME } from "@/lib/brand-copy";
+import { BRAND_NAME, HOME } from "@/lib/brand-copy";
 import { HOME_HERO_IMAGE } from "./home-constants";
 
 /**
- * Homepage hero — personal value first; hall connection lives lower on the page.
+ * Homepage hero — names the shift problem, offers the fix. Kitchen-table voice.
  */
 export function HomeHero() {
   const { authenticated } = useAuth();
@@ -17,7 +18,7 @@ export function HomeHero() {
     <section
       className={cn(
         "relative w-full overflow-hidden bg-black",
-        "min-h-[min(50dvh,400px)] sm:min-h-[min(56dvh,480px)] lg:min-h-[min(60vh,560px)]",
+        "min-h-[min(52dvh,420px)] sm:min-h-[min(58dvh,500px)] lg:min-h-[min(62vh,580px)]",
         "flex flex-col justify-end",
       )}
       data-testid="home-hero"
@@ -40,57 +41,60 @@ export function HomeHero() {
         />
 
         <div
-          className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/20"
+          className="absolute inset-0 bg-gradient-to-t from-background via-background/92 to-background/25"
           aria-hidden
         />
         <div
-          className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/60 to-transparent sm:via-background/50"
+          className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/65 to-transparent sm:via-background/55"
           aria-hidden
         />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-page w-full pb-8 sm:pb-10 pt-[calc(3.25rem+env(safe-area-inset-top,0px))] sm:pt-24">
-        <p className="text-[11px] sm:text-xs font-semibold uppercase tracking-[0.18em] text-primary/90 mb-2">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-page w-full pb-10 sm:pb-12 pt-[calc(3.5rem+env(safe-area-inset-top,0px))] sm:pt-28">
+        <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/90 mb-4 sm:mb-5">
           {HOME.heroEyebrow}
         </p>
 
         <h1
           className={cn(
-            "font-heading font-bold text-foreground",
-            "text-[2rem] leading-[1.05] tracking-tight",
-            "sm:text-[2.75rem] md:text-5xl lg:text-[3.25rem]",
-            "max-w-[16ch] sm:max-w-[18ch]",
-            "drop-shadow-[0_2px_20px_rgba(0,0,0,0.85)]",
+            "font-heading font-bold text-foreground uppercase",
+            "text-[2.125rem] leading-[1.02] tracking-[0.02em]",
+            "sm:text-[3rem] md:text-[3.375rem] lg:text-[3.75rem]",
+            "max-w-[14ch] sm:max-w-[16ch]",
+            "drop-shadow-[0_2px_24px_rgba(0,0,0,0.9)]",
           )}
           data-testid="home-hero-title"
         >
           {HOME.heroHeadline}
         </h1>
 
-        <p
-          className={cn(
-            "mt-3 sm:mt-4 text-base sm:text-lg text-foreground/90 leading-snug",
-            "max-w-[32ch] sm:max-w-lg font-medium",
-            "drop-shadow-[0_1px_12px_rgba(0,0,0,0.75)]",
-          )}
+        <div
+          className="mt-5 sm:mt-7 space-y-3 sm:space-y-3.5 max-w-md"
           data-testid="home-hero-subtitle"
         >
-          {HOME.heroSubheadline}
-        </p>
+          <p className="text-base sm:text-lg text-foreground/95 leading-snug font-normal">
+            {HOME.heroLead}
+          </p>
+          <ul className="space-y-1 text-sm sm:text-base text-foreground/75 leading-snug" aria-label="What you skip">
+            {HOME.heroPunchlines.map((line) => (
+              <li key={line}>{line}</li>
+            ))}
+          </ul>
+        </div>
 
-        <div className="mt-6 sm:mt-7 flex flex-col gap-3 w-full max-w-md sm:flex-row sm:flex-wrap">
+        <div className="mt-8 sm:mt-10 flex flex-col gap-3 w-full max-w-md sm:flex-row sm:flex-wrap">
           <Button
             asChild
             size="lg"
             className={cn(
               "h-12 sm:h-14 w-full sm:w-auto sm:min-w-[240px] px-8",
-              "font-heading text-sm sm:text-base font-semibold tracking-wide",
+              "font-heading text-sm sm:text-base font-semibold tracking-wide uppercase",
               "shadow-lg shadow-primary/30 hover:shadow-primary/40",
               "transition-[transform,box-shadow] duration-200 hover:scale-[1.01] active:scale-[0.99]",
             )}
           >
             <Link href="/generator" data-testid="home-cta-generator">
-              {CTA.pickTonight}
+              {HOME.heroPrimaryCta}
             </Link>
           </Button>
 
@@ -99,13 +103,13 @@ export function HomeHero() {
             size="lg"
             variant="outline"
             className={cn(
-              "h-12 sm:h-14 w-full sm:w-auto sm:min-w-[200px] px-8",
+              "h-12 sm:h-14 w-full sm:w-auto sm:min-w-[220px] px-6 sm:px-8",
               "font-heading text-sm sm:text-base font-semibold tracking-wide",
               "border-foreground/20 bg-background/50 backdrop-blur-sm",
             )}
           >
             <Link href="/wheel" data-testid="home-cta-wheel">
-              {CTA.spinWheel}
+              {HOME.heroSecondaryCta}
             </Link>
           </Button>
 
@@ -129,12 +133,12 @@ export function HomeHero() {
 
         <p
           className={cn(
-            "mt-4 sm:mt-5 flex items-start gap-2.5 text-xs sm:text-sm text-foreground/70 leading-relaxed",
-            "max-w-lg drop-shadow-[0_1px_10px_rgba(0,0,0,0.65)]",
+            "mt-5 sm:mt-6 flex items-start gap-2.5 text-xs sm:text-sm text-foreground/65 leading-relaxed",
+            "max-w-sm drop-shadow-[0_1px_10px_rgba(0,0,0,0.65)]",
           )}
           data-testid="home-hero-trust"
         >
-          <Shield className="h-4 w-4 shrink-0 mt-0.5 text-primary/80" aria-hidden />
+          <MalteseCross className="h-3.5 w-3.5 sm:h-4 sm:w-4 shrink-0 mt-0.5 text-primary" strokeWidth={2} aria-hidden />
           <span>{HOME.heroTrustLine}</span>
         </p>
       </div>

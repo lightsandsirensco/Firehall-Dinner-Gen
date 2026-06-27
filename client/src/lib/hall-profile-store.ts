@@ -11,6 +11,24 @@ export const HALL_PROFILE_CHANGED_EVENT = "hall-profile-changed";
 
 function readFiltersCrewSize(): number {
   try {
+    const personal = localStorage.getItem("firehall_generator_personal_v1");
+    if (personal) {
+      const parsed = JSON.parse(personal) as { crew_bucket?: string };
+      const bucket = parsed.crew_bucket;
+      if (bucket === "2-4") return 4;
+      if (bucket === "5-8") return 6;
+      if (bucket === "9-12") return 10;
+      if (bucket === "12+") return 14;
+    }
+    const v2 = localStorage.getItem("firehall_generator_v2");
+    if (v2) {
+      const parsed = JSON.parse(v2) as { crew_bucket?: string };
+      const bucket = parsed.crew_bucket;
+      if (bucket === "2-4") return 4;
+      if (bucket === "5-8") return 6;
+      if (bucket === "9-12") return 10;
+      if (bucket === "12+") return 14;
+    }
     const raw = localStorage.getItem("firehall_filters");
     if (!raw) return 6;
     const parsed = JSON.parse(raw) as { crew_size?: number };

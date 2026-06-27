@@ -31,7 +31,7 @@ export const generateRequestSchema = z.object({
   crew_size: z.number().min(2).max(20),
   busy_level: z.enum(["quiet", "average", "busy", "slammed"]),
   time_available: z.enum(["15-25", "20-30", "25-40", "30-45", "45-60", "60-90"]),
-  appliances: z.array(z.string().trim().min(1).max(40)).min(1).max(8),
+  appliances: z.array(z.string().trim().min(1).max(40)).min(0).max(8),
   protein: z.enum(["chicken", "beef", "pork", "turkey", "fish", "seafood", "vegetarian", "any"]),
   healthiness_preference: z.enum(["lean", "balanced", "comfort"]),
   /** Firehall Meals primary browsing category (practical situations). */
@@ -372,6 +372,9 @@ export interface ClientRecipeResponse {
   hero_image_status?: HeroImageStatus;
   /** Curated catalog slug (Golden 100 or Performance 50 internally) */
   _slug?: string;
+  /** When healthiness preference was relaxed to find a match */
+  _relaxation_note?: string;
+  _healthiness_relaxed?: boolean;
   /** Customer-facing catalog lineage badge */
   /** Customer-facing catalog lineage badge */
   catalog_badge?:

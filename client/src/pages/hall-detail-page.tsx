@@ -2,7 +2,8 @@ import { useCallback, useEffect, useState } from "react";
 
 import { Link, useRoute } from "wouter";
 
-import { ArrowLeft, Package, Shield, ShoppingCart, Vote } from "lucide-react";
+import { ArrowLeft, Package, ShoppingCart, Vote } from "lucide-react";
+import { MalteseCross } from "@/components/icons/maltese-cross";
 
 import { SiteHeader } from "@/components/site-header";
 
@@ -239,7 +240,7 @@ export default function HallDetailPage() {
 
               <PermissionCard
 
-                icon={Shield}
+                icon={MalteseCross}
 
                 label={HALL_LINKED.manage}
 

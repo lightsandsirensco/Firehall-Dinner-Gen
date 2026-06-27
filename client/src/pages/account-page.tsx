@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "wouter";
-import { Check, Cloud, ChevronRight, LogOut, Shield, User, Users } from "lucide-react";
+import { Check, Cloud, ChevronRight, LogOut, User, Users } from "lucide-react";
+import { MalteseCross } from "@/components/icons/maltese-cross";
 import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
 import { Button } from "@/components/ui/button";
 import { AccountProfileForm } from "@/components/auth/account-profile-form";
@@ -74,7 +75,7 @@ export default function AccountPage() {
               <FeaturePill icon={Cloud} label="Sync saves" active={capabilities.sync_saves} />
               <FeaturePill icon={Users} label={HALL_LINKED.linkedHalls} active={capabilities.join_halls} />
               <FeaturePill
-                icon={Shield}
+                icon={MalteseCross}
                 label="Hall Pro"
                 active={capabilities.hall_pro}
                 hint={capabilities.hall_pro ? "Active" : "Invite only"}

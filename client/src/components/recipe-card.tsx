@@ -9,7 +9,7 @@ import { resolveMealPlate } from "@/lib/meal-plate-ui";
 import { MealHeroImage } from "@/components/meal-hero-image";
 import { resolveEditorialFallbackHero } from "@shared/meal-hero-fallback";
 import { buildRecipeTrustLine } from "@/lib/recipe-trust-line";
-import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, ShieldCheck, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug, Vote } from "lucide-react";
+import { Flame, Droplets, Wheat, Beef, Sparkles, Trash2, Clock, Timer, Thermometer, Printer, Leaf, Mail, Package, ShoppingCart, DollarSign, Lightbulb, List, Heart, Check, ChevronDown, UtensilsCrossed, Globe, Zap, Bug, Vote } from "lucide-react";
 import { saveMeal, isMealSaved } from "@/lib/saved-meals";
 import { trackRecipeSave, trackRecipePrint, trackPersonalOnboardingStepCompleted } from "@/lib/analytics";
 import { useOptionalAuth } from "@/lib/auth/context";

@@ -13,7 +13,7 @@ import {
   Trash2,
   Clock,
   Timer,
-  ShieldCheck,
+  CircleCheck,
   Thermometer,
   Printer,
   Leaf,
@@ -455,7 +455,7 @@ export function PizzaCard({ recipe, crewSize, onEmailClick, onShoppingListClick 
         <Card>
           <CardContent className="p-4">
             <div className="flex items-center gap-2 mb-3">
-              <ShieldCheck className="w-4 h-4 text-primary" />
+              <CircleCheck className="w-4 h-4 text-primary" />
               <h3 className="font-heading text-lg tracking-wider uppercase text-foreground">Food Safety</h3>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3" data-testid="pizza-section-safety">

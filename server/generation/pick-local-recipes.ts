@@ -43,6 +43,12 @@ import {
 import type { FirehallCategoryId } from "../../shared/firehall-categories.js";
 import { FIREHALL_CATEGORY_RULES } from "../../shared/firehall-categories.js";
 import { recipeMetaMatchesFirehallCategory } from "../../shared/firehall-category-validation.js";
+import {
+  recipePassesHardFilters,
+  scoreCrewFit,
+  scoreHealthinessPreference,
+} from "./generator-match.js";
+import { scanRecipeForAllergens } from "../allergens.js";
 
 const TIME_MAX_MINUTES: Record<string, number> = {
   "15-25": 25,
@@ -130,6 +136,17 @@ function hydratePick(
   const wantsBreakfast = request.meal_format === "breakfast";
   if (!wantsBreakfast && full && isBreakfastMeal(full)) return null;
 
+  if (full) {
+    const hard = recipePassesHardFilters(full, request);
+    if (!hard.ok) {
+      log(
+        `[generate:local] reject hard filter slug=${slug} reason=${hard.reason} detail=${hard.detail ?? ""}`,
+        "generate",
+      );
+      return null;
+    }
+  }
+
   const hydrated = hydrateCatalogGenerateResponse(slug, request.crew_size);
   if (!hydrated) {
     log(`[generate:local] reject unhydrated catalog slug=${slug}`, "generate");
@@ -149,6 +166,27 @@ function hydratePick(
     _recipe_source: (hydrated.recipe._recipe_source ?? full?.source) as RecipeSourceAttribution,
     hall_curated: true,
   };
+
+  const allergens = request.allergens_to_avoid || [];
+  if (allergens.length > 0) {
+    const scan = scanRecipeForAllergens(
+      (scaled.ingredients || []).map((i) => ({
+        item: i.item,
+        amount: i.amount,
+        notes: i.notes,
+      })),
+      scaled.steps || [],
+      scaled.title,
+      allergens,
+    );
+    if (scan.found) {
+      log(
+        `[generate:local] reject hydrated allergen slug=${slug} violations=${scan.violations.join(";")}`,
+        "generate",
+      );
+      return null;
+    }
+  }
 
   return {
     recipe: scaled,
@@ -194,6 +232,13 @@ function pickFromSummaries(
     .filter((r) => !request.vegetarian_swap_needed || r.protein === "vegetarian")
     .map((row) => {
       let score = scoreCuratedRow(row, request);
+      const full = getCuratedRecipeBySlug(row.slug);
+      if (full) {
+        const hard = recipePassesHardFilters(full, request);
+        if (!hard.ok) return { row, score: -9999 };
+        score += scoreHealthinessPreference(request.healthiness_preference || "balanced", full);
+        score += scoreCrewFit(full, request.crew_size);
+      }
       score -= recentSlugPenalty(row.slug, options.recentSlugs);
       if (typeof row.catalogBoost === "number") score += row.catalogBoost;
       return { row, score };

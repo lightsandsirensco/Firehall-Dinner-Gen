@@ -9,7 +9,7 @@ import {
   RefreshCw,
   Users,
   Clock,
-  ShieldAlert,
+  CircleAlert,
   Leaf,
   CircleDot,
   ThermometerSun,
@@ -369,7 +369,7 @@ export function PizzaFilterPanel({
 
           <div className="space-y-2">
             <Label className="flex items-center gap-2 text-xs uppercase tracking-wider text-muted-foreground font-medium">
-              <ShieldAlert className="w-3.5 h-3.5" />
+              <CircleAlert className="w-3.5 h-3.5" />
               Avoid (Allergies)
             </Label>
             <MultiToggle

@@ -11,7 +11,7 @@ import {
   Users,
   Clock,
   Dumbbell,
-  ShieldAlert,
+  CircleAlert,
   ChefHat,
   Leaf,
   Package,
@@ -294,7 +294,7 @@ function AdvancedFilterSections({
         </div>
 
         <div className="space-y-2">
-          <FieldLabel icon={ShieldAlert}>Avoid allergies</FieldLabel>
+          <FieldLabel icon={CircleAlert}>Avoid allergies</FieldLabel>
           <MultiToggle
             options={ALLERGEN_OPTIONS}
             selected={filters.allergens_to_avoid}

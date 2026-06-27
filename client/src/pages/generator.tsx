@@ -1,8 +1,13 @@
 import { useState, useRef, useEffect, useCallback, memo, useMemo } from "react";
-import { FilterPanel, GenerateButtons, type FilterState } from "@/components/filter-panel";
-import { createFirstTapDefaults, normalizeLoadedFilters, apiProtein } from "@/lib/tonight-vibes";
-import { formatDinnerOutcomeLine, ONE_TAP_MEAL_LABEL } from "@/lib/meal-outcome-copy";
-import { inferBusyLevelFromTime } from "@shared/busy-level";
+import { SimplifiedGeneratorForm, SimplifiedStickyGenerate } from "@/components/generator/simplified-generator-form";
+import {
+  simplifiedFiltersToGenerateRequest,
+  CREW_BUCKET_TO_SIZE,
+  type SimplifiedGeneratorFilters,
+  formatGeneratorSummary,
+} from "@shared/generator-simplified";
+import { ONE_TAP_MEAL_LABEL } from "@/lib/meal-outcome-copy";
+import { buildGenerateRequestInput } from "@shared/generate-request-defaults";
 import { getWheelClassicBySlug, buildPackageUrl } from "@/lib/firehall-classics-wheel";
 import { RecipeCard } from "@/components/recipe-card";
 import { EmptyState } from "@/components/empty-state";
@@ -58,13 +63,21 @@ import { SiteFooter } from "@/components/site-footer";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "@/components/site-header";
-import { StickyCTA } from "@/components/mobile/sticky-cta";
 import { FirstShiftTip } from "@/components/first-shift-tip";
 import { useToast } from "@/hooks/use-toast";
 import { hapticLight, hapticSuccess, hapticWarning } from "@/lib/haptics";
 import { shouldShowFirstShiftTip } from "@/lib/app-session";
 import { useGeneratorSeo } from "@/lib/seo/use-generator-seo";
 import { useAuth } from "@/lib/auth/context";
+import { useHallMembership } from "@/lib/hall-membership/context";
+import {
+  isReturningGeneratorUser,
+  loadInitialGeneratorFilters,
+  mergeAuthAndHallIntoFilters,
+  persistGeneratorSelections,
+  persistGeneratorSession,
+  savePersonalGeneratorPrefs,
+} from "@/lib/generator-personalization";
 import { OnboardingBanner } from "@/components/onboarding/onboarding-banner";
 import {
   isOnboardingMode,
@@ -97,29 +110,22 @@ function trackMealStyle(style: string) {
   } catch {}
 }
 
-function buildRequestPayload(filters: FilterState, templateId?: number, preferDifferentStyle = false) {
-  const ingredients_on_hand = filters.use_what_we_have
-    ? filters.ingredients_on_hand_text.split(",").map(s => s.trim()).filter(Boolean)
-    : [];
-  return {
-    crew_size: filters.crew_size,
-    busy_level: inferBusyLevelFromTime(filters.time_available),
-    time_available: filters.time_available,
-    appliances: filters.appliances,
-    protein: filters.use_what_we_have ? "chicken" : apiProtein(filters.protein),
-    healthiness_preference: filters.healthiness_preference,
-    firehall_category: filters.firehall_category,
-    budget_level: filters.budget_level,
-    cuisine_style: filters.cuisine_style,
-    meal_format: filters.meal_format,
-    allergens_to_avoid: filters.allergens_to_avoid,
-    vegetarian_swap_needed: filters.vegetarian_swap_needed,
-    use_what_we_have: filters.use_what_we_have,
-    ingredients_on_hand,
-    last_template_id: templateId,
-    recent_meal_styles: getRecentMealStyles(),
-    prefer_different_style: preferDifferentStyle,
-  };
+function buildRequestPayload(
+  filters: SimplifiedGeneratorFilters,
+  templateId?: number,
+  preferDifferentStyle = false,
+) {
+  return buildGenerateRequestInput(
+    simplifiedFiltersToGenerateRequest(filters, {
+      last_template_id: templateId,
+      prefer_different_style: preferDifferentStyle,
+      recent_meal_styles: getRecentMealStyles(),
+    }),
+  );
+}
+
+function crewSizeFromFilters(filters: SimplifiedGeneratorFilters): number {
+  return CREW_BUCKET_TO_SIZE[filters.crew_bucket];
 }
 
 function makeRequestId(): string {
@@ -162,7 +168,7 @@ const ResultsPanel = memo(function ResultsPanel({
   onSendFeedback?: () => void;
   recipe: ClientRecipeResponse | null;
   recentRecipes: ClientRecipeResponse[];
-  filters: FilterState;
+  filters: SimplifiedGeneratorFilters;
   onEmailClick: () => void;
   onShoppingListClick: () => void;
   onHallVoteClick: () => void;
@@ -190,7 +196,7 @@ const ResultsPanel = memo(function ResultsPanel({
           <div className="opacity-35 pointer-events-none select-none transition-opacity duration-300 blur-[0.5px]">
             <RecipeCard
               recipe={recipeWithHero}
-              crewSize={filters.crew_size}
+              crewSize={crewSizeFromFilters(filters)}
             />
           </div>
         </div>
@@ -212,6 +218,14 @@ const ResultsPanel = memo(function ResultsPanel({
       )}
       {!loading && showRecipe && recipeWithHero && (
         <div className="meal-reveal motion-reduce:animate-none" key={stableRecipeKey(recipeWithHero)}>
+          {(recipeWithHero as ClientRecipeResponse & { _relaxation_note?: string })._relaxation_note && (
+            <p
+              className="mb-3 text-sm text-muted-foreground rounded-lg border border-border/40 bg-muted/30 px-3 py-2"
+              data-testid="relaxation-note"
+            >
+              {(recipeWithHero as ClientRecipeResponse & { _relaxation_note?: string })._relaxation_note}
+            </p>
+          )}
           <GeneratorMealRepeatWarning recipe={recipeWithHero} />
           {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
             <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
@@ -223,7 +237,7 @@ const ResultsPanel = memo(function ResultsPanel({
           <RecipeCard
             key={stableRecipeKey(recipeWithHero)}
             recipe={recipeWithHero}
-            crewSize={filters.crew_size}
+            crewSize={crewSizeFromFilters(filters)}
             onEmailClick={onEmailClick}
             onShoppingListClick={onShoppingListClick}
             onHallVoteClick={onHallVoteClick}
@@ -242,7 +256,7 @@ const ResultsPanel = memo(function ResultsPanel({
           onGenerate={onGenerate}
           generateDisabled={generateDisabled}
           ctaLabel={ONE_TAP_MEAL_LABEL}
-          summaryLine={formatDinnerOutcomeLine(filters, true)}
+          summaryLine={formatGeneratorSummary(filters).replace(/\n/g, " · ")}
         />
       )}
     </div>
@@ -253,7 +267,9 @@ const ResultsPanel = memo(function ResultsPanel({
 
 export default function Generator() {
   useGeneratorSeo();
-  const { user, profile, halls } = useAuth();
+  const { user, profile, preferences, halls } = useAuth();
+  const { detail, activeHall } = useHallMembership();
+  const hallLinked = Boolean(activeHall && detail?.hall);
   const onboardingMode = isOnboardingMode();
   // ── Core recipe state ─────────────────────────────────────────────────────
   // recipe is ALWAYS replaced atomically — never partially updated.
@@ -308,7 +324,7 @@ export default function Generator() {
   // to avoid returning the same recipe twice in a row.
   const currentSignatureRef = useRef("");
 
-  const generationFiltersRef = useRef<FilterState | null>(null);
+  const generationFiltersRef = useRef<SimplifiedGeneratorFilters | null>(null);
   const generationCacheHitRef = useRef(false);
 
   // recipeRef: scroll target for the results panel.
@@ -330,29 +346,40 @@ export default function Generator() {
     return () => window.removeEventListener("favorites-changed", handler);
   }, []);
 
-  // ── Filters (persisted to localStorage) ──────────────────────────────────
-  const [filters, setFilters] = useState<FilterState>(() => {
-    try {
-      const saved = localStorage.getItem("firehall_filters");
-      if (saved) {
-        const parsed = JSON.parse(saved);
-        if (!parsed.protein && Array.isArray(parsed.proteins)) {
-          parsed.protein = parsed.proteins[0] || "chicken";
-          delete parsed.proteins;
-        }
-        return normalizeLoadedFilters(parsed);
-      }
-    } catch {}
-    return createFirstTapDefaults();
-  });
+  // ── Filters (personalized: hall + account + last session) ───────────────
+  const [filtersExpanded, setFiltersExpanded] = useState(false);
+  const returningMode = isReturningGeneratorUser();
+
+  const [filters, setFilters] = useState<SimplifiedGeneratorFilters>(() => loadInitialGeneratorFilters());
+  const filtersPersistInitRef = useRef(true);
 
   /** Meal-first layout: recipe above filters on mobile after first successful gen. */
   const mealFocusMode = !!recipe && userGenCount >= 1;
 
   useEffect(() => {
-    try { localStorage.setItem("firehall_filters", JSON.stringify(filters)); } catch {}
-    syncHallProfileCrewSizeFromFilters(filters.crew_size);
+    persistGeneratorSession(filters);
+    syncHallProfileCrewSizeFromFilters(crewSizeFromFilters(filters));
+    if (filtersPersistInitRef.current) {
+      filtersPersistInitRef.current = false;
+      return;
+    }
+    savePersonalGeneratorPrefs(filters);
   }, [filters]);
+
+  const personalizationMergedRef = useRef("");
+  useEffect(() => {
+    const mergeKey = `${detail?.hall?.hall_id ?? "none"}:${preferences ? "prefs" : "none"}`;
+    if (personalizationMergedRef.current === mergeKey) return;
+    if (!preferences && !detail?.hall) return;
+    personalizationMergedRef.current = mergeKey;
+    setFilters((current) =>
+      mergeAuthAndHallIntoFilters(current, {
+        preferences,
+        hall: detail?.hall ?? null,
+        hallLinked,
+      }),
+    );
+  }, [preferences, detail?.hall, hallLinked]);
 
   const openEarnedEmailCapture = useCallback((trigger: EmailCaptureTrigger) => {
     setEmailModalVariant("earned");
@@ -452,14 +479,12 @@ export default function Generator() {
       trackPersonalOnboardingStepCompleted("generate_meal");
     }
     const genFilters = generationFiltersRef.current;
+    if (genFilters) persistGeneratorSelections(genFilters);
     trackMealGenerated({
       recipe_title: data.title,
       recipe_slug: slug,
       protein: genFilters?.protein,
-      crew_size: genFilters?.crew_size,
-      time_available:
-        genFilters?.time_available != null ? Number(genFilters.time_available) : undefined,
-      meal_category: genFilters?.firehall_category,
+      crew_size: genFilters ? crewSizeFromFilters(genFilters) : undefined,
       matched_category:
         typeof (data as { _matched_firehall_category?: string })._matched_firehall_category ===
         "string"
@@ -474,7 +499,7 @@ export default function Generator() {
     recordMealGenerated({
       title: data.title,
       recipeSlug: slug,
-      crewSize: genFilters?.crew_size,
+      crewSize: genFilters ? crewSizeFromFilters(genFilters) : undefined,
       source: "generator",
     });
     hapticSuccess();
@@ -518,7 +543,7 @@ export default function Generator() {
   //      arrives after a newer request has been fired is discarded.
   // ─────────────────────────────────────────────────────────────────────────
   const handleGenerate = useCallback(async (
-    currentFilters: FilterState,
+    currentFilters: SimplifiedGeneratorFilters,
     templateId?: number,
     preferDifferentStyle = false,
   ) => {
@@ -551,9 +576,7 @@ export default function Generator() {
     setErrorSmoked(false);
     setErrorTitle(undefined);
     setLoading(true);
-    trackMealGenerationStarted({
-      meal_category: currentFilters.firehall_category,
-    });
+    trackMealGenerationStarted({});
     generationFiltersRef.current = currentFilters;
     generationCacheHitRef.current = false;
 
@@ -619,7 +642,7 @@ export default function Generator() {
 
       let errorMsg: string;
       let title: string | undefined;
-      const isGameDay = currentFilters.firehall_category === "game_day";
+      const isGameDay = false;
       if (parsed.code === "no_match" || parsed.status === 404) {
         errorMsg = "no_match";
         setRecipe(null);
@@ -711,9 +734,22 @@ export default function Generator() {
     });
   }, []);
 
-  const onFiltersChange = useCallback((newFilters: FilterState) => {
-    setFilters(newFilters);
-  }, []);
+  const onFiltersChange = useCallback(
+    (newFilters: SimplifiedGeneratorFilters) => {
+      if (hallLinked && detail?.hall) {
+        setFilters(
+          mergeAuthAndHallIntoFilters(newFilters, {
+            preferences,
+            hall: detail.hall,
+            hallLinked: true,
+          }),
+        );
+        return;
+      }
+      setFilters(newFilters);
+    },
+    [hallLinked, detail?.hall, preferences],
+  );
 
   // ── Deep-link: ?classic=<slug> → curated dinner package ─────────────────
   const classicTriggered = useRef(false);
@@ -742,10 +778,7 @@ export default function Generator() {
     document.getElementById("filters-panel")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }, []);
 
-  const generateDisabled =
-    loading ||
-    filters.appliances.length === 0 ||
-    (filters.use_what_we_have && filters.ingredients_on_hand_text.trim().length === 0);
+  const generateDisabled = loading;
 
   const voteRecipes = useMemo(() => {
     const hist = mealHistoryRef.current;
@@ -814,9 +847,9 @@ export default function Generator() {
               mealFocusMode && "lg:max-h-[calc(100dvh-5rem)] lg:overflow-y-auto lg:overscroll-contain",
             )}
           >
-            <FilterPanel
+            <SimplifiedGeneratorForm
               filters={filters}
-              onFiltersChange={onFiltersChange}
+              onChange={onFiltersChange}
               onGenerate={handleGenerateClick}
               onGenerateAnother={handleGenerateAnother}
               isLoading={loading}
@@ -825,9 +858,11 @@ export default function Generator() {
               canGoForward={historyNav.index < historyNav.total - 1}
               onBack={handleBack}
               onForward={handleForward}
-              onScrollToFilters={scrollToFilters}
-              minimalSurface={false}
-              hideGenerateButtons={false}
+              returningMode={returningMode}
+              hallName={hallLinked ? activeHall?.hall_name ?? detail?.hall.hall_name : null}
+              filtersExpanded={filtersExpanded}
+              onToggleFiltersExpanded={() => setFiltersExpanded((v) => !v)}
+              hallLinked={hallLinked}
             />
           </aside>
 
@@ -864,8 +899,8 @@ export default function Generator() {
             open={emailModalOpen}
             onOpenChange={setEmailModalOpen}
             recipe={recipe}
-            crewSize={filters.crew_size}
-            healthinessLevel={filters.healthiness_preference}
+            crewSize={crewSizeFromFilters(filters)}
+            healthinessLevel={filters.healthiness}
             variant={emailModalVariant}
             captureTrigger={emailCaptureTrigger}
           />
@@ -873,8 +908,6 @@ export default function Generator() {
             open={shoppingListOpen}
             onOpenChange={setShoppingListOpen}
             shoppingList={buildShoppingListFromClientMeal(recipe, {
-              useWhatWeHave: filters.use_what_we_have,
-              budgetLevel: filters.budget_level,
               measurementSystem,
             })}
             recipeTitle={recipe.title}
@@ -893,19 +926,14 @@ export default function Generator() {
         />
       )}
 
-      <StickyCTA
-        filters={filters}
-        hasRecipe={!!recipe}
-        isLoading={loading}
-        compact
-        canGoBack={historyNav.index > 0}
-        canGoForward={historyNav.index < historyNav.total - 1}
-        onGenerate={handleGenerateClick}
-        onGenerateAnother={handleGenerateAnother}
-        onBack={handleBack}
-        onForward={handleForward}
-        onScrollToFilters={scrollToFilters}
-      />
+      <div className={app.stickyBarAboveTabs}>
+        <SimplifiedStickyGenerate
+          hasRecipe={!!recipe}
+          isLoading={loading}
+          onGenerate={handleGenerateClick}
+          onGenerateAnother={handleGenerateAnother}
+        />
+      </div>
 
       <SiteFooter variant="compact" className="mt-10" pbSafe />
     </div>

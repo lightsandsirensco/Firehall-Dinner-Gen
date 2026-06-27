@@ -803,6 +803,12 @@ export async function registerRoutes(
       base._filters_adjusted = true;
       base._adjustment_note = "Adjusted meal style to meet allergy requirements.";
     }
+    if (extras._relaxation_note) {
+      base._relaxation_note = extras._relaxation_note;
+    }
+    if (extras._healthiness_relaxed) {
+      base._healthiness_relaxed = extras._healthiness_relaxed;
+    }
 
     const curation = curateRecipeForClient(recipe, validation, {
       mealFormat,

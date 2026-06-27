@@ -159,12 +159,17 @@ export const GENERATOR = {
 } as const;
 
 export const HOME = {
-  /** Visible hero — answers "What does this app do for me?" */
-  heroHeadline: "Pick dinner for your shift — fast.",
+  /** Visible hero — kitchen-table voice; one problem, one fix. */
+  heroEyebrow: "Built by firefighters • For every shift",
+  heroHeadline: 'End the "What\'s for Dinner?" Debate.',
+  heroLead: "Pick a meal, let the crew vote, and get cooking.",
+  heroPunchlines: ["No recipe blogs.", "No group chat.", "No arguing."] as const,
+  heroPrimaryCta: "Find Tonight's Meal",
+  heroSecondaryCta: "Can't Decide? Spin the Wheel",
+  heroTrustLine: "Free to use. Connect to your hall when you're ready.",
+  /** @deprecated Use heroLead + heroPunchlines */
   heroSubheadline:
-    "Crew-sized recipes and cook mode built for firefighters — not single-plate food blogs.",
-  heroTrustLine: "Built by firefighters. Free to cook — no hall required.",
-  heroEyebrow: "For firefighters · Your shift · Your meals",
+    "Pick a meal, let the crew vote, and get cooking.",
   /** @deprecated Use heroHeadline */
   h1: "Firefighter Meals & Firehall Recipes",
   eyebrow: "Your shift kitchen",
