@@ -10,6 +10,7 @@ import { fetchBreakfastRecipePage } from "@/lib/breakfast-api";
 import { displayRecipeHeroSrc } from "@/lib/verified-recipe-hero";
 import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { FoodImage } from "@/components/mobile/food-image";
+import { RECIPE_PAGE_HERO_FRAME } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
@@ -186,18 +187,18 @@ export default function BreakfastRecipePage() {
                     alt={page.imageAlt || page.title}
                     layout="card-fill"
                     fit="cover"
-                    focal="banner"
-                    overlay="cinematic"
+                    focal="food"
+                    overlay="minimal"
                     priority
                     cinematicGrade
                     rounded="none"
-                    className="aspect-[16/12] sm:aspect-[2.2/1] max-h-[min(52vh,520px)]"
+                    className={RECIPE_PAGE_HERO_FRAME}
                   />
                 ) : (
                   <MissingRecipeImagePlaceholder
                     title={page.title}
                     variant="detail"
-                    className="aspect-[16/12] sm:aspect-[2.2/1] max-h-[min(52vh,520px)]"
+                    className={RECIPE_PAGE_HERO_FRAME}
                   />
                 );
               })()}

@@ -195,7 +195,7 @@ export const HOME = {
     {
       step: "01",
       title: "Pick a meal",
-      body: "Hall Match, the Classics Wheel, or browse 300+ crew-tested recipes — sized for your run.",
+      body: "Hall Match, the Classics Wheel, or browse 300+ crew-sized recipes.",
     },
     {
       step: "02",

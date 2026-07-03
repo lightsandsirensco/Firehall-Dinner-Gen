@@ -53,7 +53,7 @@ export function ExploreRecipeImage({
           ? HERO_SIZES.rail
           : HERO_SIZES.grid;
 
-  const overlay = cinematic ? "card-cinematic" : variant === "detail" ? "detail" : "card";
+  const overlay = cinematic ? "card-cinematic" : variant === "detail" ? "minimal" : "card";
 
   if (held) {
     return (
@@ -91,7 +91,7 @@ export function ExploreRecipeImage({
       src={src}
       alt={recipe.imageAlt || recipe.title}
       layout={variant === "detail" ? "detail" : "card-fill"}
-      focal="food-plate"
+      focal="food"
       fit="cover"
       overlay={overlay}
       cinematicGrade={cinematic || variant === "detail"}

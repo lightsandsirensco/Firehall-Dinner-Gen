@@ -22,24 +22,26 @@ export type HeroOverlayPreset =
   | "banner-compact"
   | "banner-utility";
 
+/** Recipe detail pages — consistent 3:2 mobile, 16:9 desktop, capped height */
+export const RECIPE_PAGE_HERO_FRAME =
+  "w-full aspect-[3/2] max-h-[min(50vh,440px)] sm:aspect-video sm:max-h-[min(420px,48vh)]";
+
 /** Outer frame: aspect ratio + max height caps (prevents giant mobile blobs) */
 export const HERO_LAYOUT_FRAME: Record<HeroImageLayout, string> = {
-  detail:
-    "w-full aspect-[4/5] max-h-[min(56vh,520px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)]",
+  detail: RECIPE_PAGE_HERO_FRAME,
   cinematic:
-    "w-full aspect-[4/5] max-h-[min(58vh,540px)] sm:aspect-[16/9] sm:max-h-[min(420px,54vh)]",
+    "w-full aspect-[3/2] max-h-[min(50vh,440px)] sm:aspect-video sm:max-h-[min(420px,48vh)]",
   "card-fill": "w-full h-full min-h-0",
   "banner-full": "w-full h-[min(42vh,300px)] sm:h-[260px] md:h-[340px]",
   "banner-compact": "w-full h-[100px] sm:h-[152px]",
   "banner-utility": "w-full h-[52px] sm:h-[60px]",
 };
 
-/** Intentional crop — food focal point, responsive mobile vs desktop */
+/** Intentional crop — keep plated food in frame; avoid aggressive vertical shifts */
 export const HERO_FOCAL_CLASS: Record<HeroFocalPoint, string> = {
-  food: "object-cover object-[center_50%] sm:object-[center_42%]",
-  "food-plate":
-    "object-cover object-[center_56%] sm:object-[center_40%] md:object-[center_38%]",
-  banner: "object-cover object-[center_40%] sm:object-[center_34%]",
+  food: "object-cover object-[center_45%]",
+  "food-plate": "object-cover object-[center_45%]",
+  banner: "object-cover object-[center_45%] sm:object-[center_40%]",
   center: "object-cover object-center",
 };
 
@@ -62,12 +64,9 @@ export function heroOverlayClasses(preset: HeroOverlayPreset): string {
     case "none":
       return "";
     case "minimal":
-      return "bg-gradient-to-t from-black/50 via-transparent to-transparent";
+      return "bg-gradient-to-t from-black/35 via-transparent to-transparent";
     case "detail":
-      return cn(
-        "bg-gradient-to-t from-black/75 via-black/20 to-transparent",
-        "sm:from-black/70 sm:via-black/15",
-      );
+      return "bg-gradient-to-t from-black/45 via-black/5 to-transparent";
     case "cinematic":
       return cn(
         "bg-gradient-to-b from-amber-500/[0.06] via-transparent to-black/35 mix-blend-soft-light",

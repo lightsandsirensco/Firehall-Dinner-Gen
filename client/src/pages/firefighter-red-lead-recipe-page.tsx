@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
 import { InternalLinkHub } from "@/components/seo/internal-link-hub";
 import { FoodImage } from "@/components/mobile/food-image";
+import { RECIPE_PAGE_HERO_FRAME } from "@/lib/hero-image";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
@@ -128,12 +129,12 @@ export default function FirefighterRedLeadRecipePage() {
             alt={recipe.heroImageAlt}
             layout="card-fill"
             fit="cover"
-            focal="banner"
-            overlay="cinematic"
+            focal="food"
+            overlay="minimal"
             priority
             cinematicGrade
             rounded="none"
-            className="aspect-[16/12] sm:aspect-[2.2/1] max-h-[min(52vh,520px)]"
+            className={RECIPE_PAGE_HERO_FRAME}
           />
         </div>
 

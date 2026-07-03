@@ -31,13 +31,13 @@ import { RecipeInternalLinks } from "@/components/seo/recipe-internal-links";
 
 import { golden100HeroPath } from "@/lib/golden-100-hero";
 import { displayRecipeHeroSrc } from "@/lib/verified-recipe-hero";
-import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 
 import { cn } from "@/lib/utils";
 
 import { app } from "@/lib/design-tokens";
 
 import { FoodImage } from "@/components/mobile/food-image";
+import { RecipePageHeroImage } from "@/components/recipe-page-hero-image";
 
 import { SeoBreadcrumbs } from "@/components/seo/breadcrumbs";
 
@@ -144,78 +144,44 @@ function RecipeHero({ page }: { page: GoldenRecipePage & { heroVerified?: boolea
   );
 
   return (
-    <header className="relative -mx-page sm:mx-0 sm:rounded-3xl overflow-hidden bg-zinc-950">
-      <div className="relative w-full aspect-[16/13] sm:aspect-[16/10] max-h-[min(56vh,520px)] sm:max-h-[min(70vh,560px)]">
-        {src ? (
-          <FoodImage
-            src={src}
-            alt={buildRecipeHeroAlt(page.title)}
-            layout="detail"
-            fit="cover"
-            focal="food"
-            overlay="detail"
-            priority
-            cinematicGrade
-            rounded="none"
-            className="absolute inset-0"
-            debugId={{ context: "golden-hero", slug: page.slug, title: page.title }}
-          />
-        ) : (
-          <MissingRecipeImagePlaceholder title={page.title} variant="detail" className="absolute inset-0" />
-        )}
-
-        <div
-
-          className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"
-
-          aria-hidden
-
+    <header className="space-y-5 sm:space-y-6">
+      <div className="relative -mx-page overflow-hidden bg-zinc-950 sm:mx-0 sm:rounded-3xl sm:ring-1 sm:ring-border/30">
+        <RecipePageHeroImage
+          src={src}
+          alt={buildRecipeHeroAlt(page.title)}
+          title={page.title}
+          debugId={{ context: "golden-hero", slug: page.slug, title: page.title }}
         />
-
-        <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8">
-
-          <p className={app.eyebrowMuted}>{formatCategory(page.category)}</p>
-
-          <h1 className={cn(app.titlePage, "mt-2 text-white drop-shadow-lg max-w-2xl")}>
-
-            {page.displayTitle || page.title}
-
-          </h1>
-
-          {page.subtitle && (
-
-            <p className="mt-2 text-base sm:text-lg text-white/80 max-w-xl leading-relaxed">
-
-              {page.subtitle}
-
-            </p>
-
-          )}
-
-          <MealTrustBadges
-            input={{
-              category: page.category,
-              tags: page.tags,
-              cookTime: page.cookTime,
-              difficulty: page.difficulty,
-              cleanupDifficulty: page.cleanupDifficulty,
-              protein: page.protein,
-              popularityWeight: page.popularityWeight,
-              cuisine: page.cuisine,
-            }}
-            max={4}
-            size="md"
-            className="mt-4"
-          />
-
-        </div>
-
       </div>
 
+      <div className="px-0.5">
+        <p className={app.eyebrowMuted}>{formatCategory(page.category)}</p>
+        <h1 className={cn(app.titlePage, "mt-2 max-w-2xl")}>
+          {page.displayTitle || page.title}
+        </h1>
+        {page.subtitle ? (
+          <p className="mt-2 text-base sm:text-lg text-muted-foreground max-w-xl leading-relaxed">
+            {page.subtitle}
+          </p>
+        ) : null}
+        <MealTrustBadges
+          input={{
+            category: page.category,
+            tags: page.tags,
+            cookTime: page.cookTime,
+            difficulty: page.difficulty,
+            cleanupDifficulty: page.cleanupDifficulty,
+            protein: page.protein,
+            popularityWeight: page.popularityWeight,
+            cuisine: page.cuisine,
+          }}
+          max={4}
+          size="md"
+          className="mt-4"
+        />
+      </div>
     </header>
-
   );
-
 }
 
 

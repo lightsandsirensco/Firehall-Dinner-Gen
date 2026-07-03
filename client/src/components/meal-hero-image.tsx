@@ -30,7 +30,7 @@ export function MealHeroImage({
 }: MealHeroImageProps) {
   const frameClass =
     variant === "cinematic"
-      ? "w-full aspect-[5/4] max-h-[min(48vh,440px)] sm:aspect-[16/9] sm:max-h-[min(400px,52vh)]"
+      ? "w-full aspect-[3/2] max-h-[min(50vh,440px)] sm:aspect-video sm:max-h-[min(420px,48vh)]"
       : "w-full aspect-[16/10]";
 
   const brandedFallback = (

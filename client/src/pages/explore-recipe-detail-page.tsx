@@ -36,7 +36,6 @@ import {
 } from "@/lib/explore-recipe";
 import { resolveExploreLegacyRedirect } from "@/lib/explore-navigation";
 import { ExploreRecipeImage } from "@/components/explore-recipe-image";
-import { HERO_CONTENT_FADE } from "@/lib/hero-image";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { FoodImageSkeleton } from "@/components/mobile/loading-skeletons";
@@ -475,13 +474,6 @@ function RecipeDetailView({
     <div className={cn("fade-up", app.mealReveal)} data-testid="explore-recipe-detail">
       <div className="relative sm:rounded-2xl sm:overflow-hidden sm:ring-1 sm:ring-border/40 sm:shadow-xl sm:shadow-black/20 sm:mt-3 sm:mx-0">
         <ExploreRecipeImage recipe={heroRecipe} variant="detail" priority bleed />
-        <div
-          className={cn(
-            "pointer-events-none absolute inset-0 z-[4]",
-            HERO_CONTENT_FADE,
-          )}
-          aria-hidden
-        />
         <Button
           variant="secondary"
           size="sm"
