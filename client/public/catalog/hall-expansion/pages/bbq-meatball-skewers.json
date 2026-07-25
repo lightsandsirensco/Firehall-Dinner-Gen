@@ -39,63 +39,63 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (85/15)",
+      "name": "ground beef (85/15)",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Breadcrumbs",
+      "name": "breadcrumbs",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Main"
     },
     {
-      "name": "Eggs",
+      "name": "eggs",
       "quantity": "2",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1 3/4",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Onion Powder",
+      "name": "onion powder",
       "quantity": "1 3/4",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "BBQ Sauce",
+      "name": "BBQ sauce",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Glaze"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "16",
       "unit": "whole",
       "group": "Skewer"
     },
     {
-      "name": "Pickled Red Onions",
+      "name": "pickled red onions",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Skewer"
     },
     {
-      "name": "Shredded Cabbage Mix",
+      "name": "shredded cabbage mix",
       "quantity": "6.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Slaw"
     }
   ],
@@ -158,10 +158,19 @@
     "protein": 28,
     "carbs": 22,
     "fats": 20,
-    "label": "~380 cal/serving · 28g protein · 2g fiber (est.)"
+    "label": "~380 cal/serving · 28g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/bbq-meatball-skewers.jpg",
-  "heroImageAlt": "BBQ Meatball Skewers — crew-sized firehall meal",
+  "heroImageAlt": "BBQ Meatball Skewers — american handheld plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/bbq-meatball-skewers.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/bbq-meatball-skewers.jpg",
   "railImage": "/images/rails/hall-expansion/bbq-meatball-skewers.jpg",
@@ -173,12 +182,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
-    "loaded-potato-skins",
-    "game-day-pizza-sliders",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
+    "buffalo-chicken-wraps",
+    "greek-chicken-pitas"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

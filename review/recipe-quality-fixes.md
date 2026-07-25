@@ -1,107 +1,118 @@
 # Recipe Quality Fixes Applied
 
-Generated: 2026-06-01T02:27:10.910Z
-Mode: **fix**
+Generated: 2026-07-23T19:26:13.108Z
+Mode: **dry-run**
 
 ## Summary
 
 | Metric | Count |
 | --- | ---: |
-| Recipes modified | 89 |
-| Spelling/copy corrections | 0 |
-| Missing ingredient mentions fixed | 96 |
-| Step rewrites completed | 89 |
+| Recipes modified | 360 |
+| Spelling/copy corrections | 14 |
+| Missing ingredient mentions fixed | 228 |
+| Step rewrites completed | 360 |
 
 ## Recipes modified
 
 | Slug | Spelling | Ingredients | Steps |
 | --- | ---: | ---: | ---: |
-| mac-and-cheese-bake | 0 | Sharp cheddar, shredded | 10 |
-| baked-ziti | 0 | Yellow onion, diced, Fresh basil, chopped | 10 |
-| bbq-brisket-burnt-ends | 0 | Chuck or brisket point, cubed | 11 |
+| 30-minute-pasta-e-fagioli-for-the-hall | 0 | — | 11 |
+| chili-lime-grilled-tilapia | 0 | — | 8 |
+| andouille-po-boy-rolls-crew | 0 | Mayonnaise | 8 |
+| applewood-pork-shoulder-steaks | 0 | — | 12 |
+| bagel-lox-breakfast-board | 0 | smoked salmon lox, whipped butter | 8 |
+| bagel-sandwich-line | 0 | — | 9 |
+| mediterranean-baked-fish-tray | 0 | — | 8 |
+| mac-and-cheese-bake | 0 | Sharp Cheddar, Shredded | 10 |
+| mostaccioli-sausage-bake | 0 | — | 10 |
+| baked-oatmeal-mixed-berries | 0 | — | 11 |
+| loaded-baked-potato-bar | 0 | — | 12 |
+| herb-baked-salmon-tray | 0 | — | 8 |
+| baked-turkey-meatball-marinara | 0 | — | 12 |
+| baked-ziti | 0 | Yellow Onion, Diced, Fresh Basil, Chopped | 10 |
+| crock-barbacoa-chicken | 0 | Limes | 11 |
+| batch-lasagna | 0 | Yellow Onion, Diced | 10 |
+| bbq-breakfast-hash | 0 | — | 8 |
+| bbq-brisket-burnt-ends | 0 | Chuck Or Brisket Point, Cubed | 11 |
 | bbq-chicken-bowls | 0 | — | 11 |
+| bbq-chicken-mac-and-cheese | 0 | — | 11 |
 | bbq-chicken-pizza | 0 | — | 12 |
-| bbq-chicken-sliders | 0 | Ground beef, Yellow onion, Garlic cloves | 12 |
-| beef-barley-soup | 0 | Carrots, diced, Celery, diced | 9 |
-| beef-stroganoff | 0 | Cremini mushrooms, sliced, Yellow onion, sliced, Fresh parsley, chopped | 12 |
-| beer-can-chicken | 0 | — | 12 |
-| turkey-burgers | 0 | Mayonnaise, Yellow mustard, Dill pickles | 11 |
-| beef-dip | 0 | — | 12 |
-| breakfast-sausage-pizza | 0 | Shredded cheddar-mozzarella blend | 12 |
-| buffalo-chicken-dip | 0 | — | 8 |
-| butter-chicken | 0 | — | 9 |
-| jambalaya | 0 | — | 10 |
-| cedar-plank-salmon | 0 | Soy sauce, Fresh ginger, grated | 11 |
-| grilled-pork-chops | 0 | Soy sauce, Garlic cloves, minced | 11 |
-| chicken-alfredo-bake | 0 | Mozzarella, shredded, Fresh parsley, chopped | 10 |
-| chicken-dumpling-soup | 0 | Carrots, diced, Celery, diced, Fresh parsley, chopped | 9 |
-| enchilada-casserole | 0 | Shredded cheddar, Black olives, sliced | 10 |
-| chicken-parm | 0 | Fresh mozzarella, sliced, Fresh basil, torn | 12 |
-| parm-hero-subs | 0 | Ground beef, Yellow onion, Garlic cloves | 12 |
-| chicken-pot-pie | 0 | — | 9 |
-| chicken-tikka-masala | 0 | — | 10 |
-| chili-mac | 0 | — | 12 |
-| steak-tacos | 0 | Limes, Neutral oil (high heat) | 8 |
-| meatloaf-mashed | 0 | — | 11 |
-| pepperoni-pizza-night | 0 | Grated parmesan | 12 |
-| creamy-tuscan-chicken | 0 | — | 10 |
-| crispy-chicken-cutlets | 0 | Eggs, beaten, Parmesan, grated | 12 |
-| detroit-style-pizza | 0 | — | 12 |
-| smash-burgers | 0 | Mayonnaise, Neutral high-heat oil | 9 |
-| fast-philly-skillet | 0 | — | 11 |
-| meatball-hoagies | 0 | Yellow onion, Garlic cloves | 12 |
-| pad-thai | 0 | — | 10 |
-| margherita-pizza | 0 | — | 12 |
-| five-ingredient-pasta | 0 | — | 11 |
-| garlic-butter-shrimp | 0 | — | 11 |
-| batch-lasagna | 0 | Yellow onion, diced | 10 |
-| ginger-salmon-bowls | 0 | — | 11 |
-| greek-chicken-bowls | 0 | — | 11 |
-| chicken-souvlaki | 0 | — | 12 |
-| flank-chimichurri | 0 | — | 11 |
-| ny-strip-herb-butter | 0 | — | 12 |
-| grilled-corn-cotija | 0 | Mayonnaise | 12 |
-| chicken-caesar | 0 | Thick-cut bacon | 11 |
-| slider-bar | 0 | Roma tomatoes, sliced, Mayonnaise, BBQ sauce | 12 |
-| hall-taco-bar | 0 | — | 11 |
-| big-chili | 0 | Kidney beans, drained | 10 |
-| herb-roasted-thighs | 0 | Fresh thyme, Fresh rosemary, Kosher salt | 11 |
-| turkey-chili | 0 | Kidney beans, drained | 10 |
-| honey-garlic-pork-tenderloin | 0 | Soy sauce | 11 |
-| honey-soppressata-pizza | 0 | — | 13 |
-| jerk-chicken | 0 | Coleslaw mix | 12 |
-| bulgogi-bowls | 0 | — | 12 |
-| lemon-herb-salmon | 0 | Soy sauce, Fresh ginger, grated | 11 |
-| loaded-baked-potato-bar | 0 | — | 11 |
-| game-day-nachos | 0 | Pickled jalapeños, sliced | 12 |
-| loaded-nacho-skillet | 0 | — | 11 |
-| loaded-potato-feed | 0 | — | 12 |
-| meat-lovers-sheet-pizza | 0 | — | 11 |
-| mediterranean-chickpea | 0 | Quinoa, uncooked, Red onion, thinly sliced | 12 |
-| memphis-dry-rub-ribs | 0 | Brown sugar, Paprika, Garlic powder, Onion powder | 12 |
-| street-corn-chicken | 0 | — | 10 |
-| moroccan-meatballs | 0 | Couscous, dry | 10 |
-| one-pot-chicken-rice | 0 | Yellow onion, diced, Fresh parsley, chopped | 12 |
-| skillet-chicken-alfredo | 0 | Fettuccine or penne, Fresh parsley, chopped | 8 |
-| performance-burrito-bowls | 0 | — | 11 |
-| philly-egg-rolls | 0 | Yellow onion, Garlic cloves | 12 |
-| philly-cheesesteak-skillet | 0 | Bell peppers, sliced, Yellow onion, sliced | 9 |
-| pulled-pork | 0 | Yellow mustard | 10 |
+| bbq-chicken-sliders | 0 | Ground Beef, Yellow Onion, Garlic Cloves | 12 |
+| bbq-meatball-skewers | 0 | — | 12 |
+| bbq-pulled-pork-bowls | 0 | — | 12 |
 | beef-broccoli | 0 | — | 9 |
-| pork-carnitas-tacos | 0 | — | 11 |
-| stuffed-peppers | 0 | — | 11 |
-| sausage-egg-bake | 0 | Buttermilk, All-purpose flour | 11 |
-| sausage-peppers-onions | 0 | — | 9 |
-| sheet-pan-fajitas | 0 | Bell peppers, sliced, Red onion, sliced | 11 |
-| sheet-pan-meal-prep | 0 | Bell peppers, sliced, Red onion, sliced | 11 |
-| sheet-pan-sausage-peppers | 0 | Bell peppers, sliced, Red onion, sliced | 11 |
-| shepherds-pie | 0 | Romaine lettuce, chopped, Cucumber, sliced, Cherry tomatoes, halved, Feta cheese, crumbled | 11 |
-| chicken-quesadillas | 0 | Ground beef, Yellow onion, Garlic cloves | 12 |
-| smoked-wings-white-sauce | 0 | Mayonnaise | 11 |
-| steak-sandwiches | 0 | Mayonnaise | 8 |
-| teriyaki-donburi | 0 | — | 11 |
-| teriyaki-salmon-grill | 0 | Soy sauce, Fresh ginger, grated | 11 |
-| texas-beef-ribs | 0 | Garlic powder, Apple cider vinegar | 11 |
-| thai-basil-chicken | 0 | — | 11 |
-| turkey-meatball-zoodles | 0 | Fresh zucchini, spiralized, Fresh basil, torn | 8 |
-| white-garlic-chicken-pizza | 0 | — | 11 |
+| beef-barley-soup | 0 | Carrots, Diced, Celery, Diced | 11 |
+| beef-dip | 0 | Yellow Onion, Halved, Soy Sauce | 11 |
+| enchilada-beef-skillet | 0 | — | 10 |
+| beef-gyros-for-the-hall | 0 | — | 9 |
+| korean-beef-rice-bowls | 0 | Green Onions | 8 |
+| beef-stroganoff | 0 | Cremini Mushrooms, Sliced, Yellow Onion, Sliced, Fresh Parsley, Chopped | 12 |
+| beer-can-chicken | 0 | — | 12 |
+| belgian-waffle-platter | 0 | — | 12 |
+| best-tuna-melt-for-the-hall | 0 | — | 8 |
+| spiedie-chicken-platter-crew | 0 | — | 8 |
+| biscuit-french-toast-sliders | 0 | — | 10 |
+| turkey-burgers | 0 | Mayonnaise, Yellow Mustard, Dill Pickles | 11 |
+| cajun-grilled-cod-crew | 0 | Mayonnaise | 8 |
+| blackened-cod-taco-night | 0 | Cod Fillets | 8 |
+| loaded-ranch-potato-salad-crew | 0 | Crumbled Blue Cheese, Fresh Chives, Watermelon Radish, Buttermilk | 8 |
+| breakfast-crunchwraps | 0 | sour cream | 9 |
+| breakfast-enchiladas | 0 | sour cream, cilantro | 12 |
+| breakfast-fried-rice-crew | 1 | — | 9 |
+| breakfast-nachos-supreme | 0 | — | 10 |
+| breakfast-poutine | 0 | — | 9 |
+| breakfast-quesadillas | 0 | shredded pepper jack, fresh cilantro | 10 |
+| breakfast-sandwich-trays | 0 | — | 8 |
+| breakfast-sausage-pizza | 0 | Shredded Cheddar-Mozzarella Blend | 12 |
+| breakfast-sliders | 0 | everything bagel seasoning | 9 |
+| breakfast-stromboli-roll | 0 | deli ham | 12 |
+| brisket-style-beef-sandwiches-au-jus | 0 | — | 10 |
+| buffalo-chicken-dip | 0 | — | 8 |
+| buffalo-chicken-sweet-potato-bowls | 0 | — | 12 |
+| buffalo-chicken-wraps | 0 | — | 12 |
+| build-your-own-pho-bar | 0 | — | 13 |
+| bulgogi-bowls | 0 | — | 12 |
+| bun-bo-hue-noodle-soup | 1 | — | 10 |
+| burnt-ends-chili-crew | 0 | — | 12 |
+| burrito-bowl-bar-night | 1 | — | 13 |
+| butter-chicken | 0 | — | 12 |
+| buttermilk-pancakes | 0 | — | 8 |
+| cajun-chicken-rice-bowl | 0 | — | 11 |
+| cajun-chicken-rice-skillet | 0 | — | 12 |
+| cajun-shrimp-rice-bowls | 0 | — | 12 |
+| grilled-cod-lemon-packets | 0 | Atlantic Cod Fillets, Fennel Bulb, Picholine Olives, Dry Vermouth | 8 |
+| caprese-chicken-bake | 0 | Garlic Cloves | 8 |
+| cast-iron-breakfast-skillet | 0 | — | 8 |
+| cast-iron-chicken-fajitas | 0 | — | 11 |
+| cast-iron-steak-fajita-sizzlers | 0 | Mexican Oregano | 8 |
+| cedar-plank-salmon | 0 | Soy Sauce, Fresh Ginger, Grated | 11 |
+| cheesy-beef-nacho-bake | 0 | — | 9 |
+| cheesy-chicken-broccoli-rice | 0 | — | 11 |
+| skillet-chicken-alfredo | 0 | Fettuccine Or Penne, Fresh Parsley, Chopped | 8 |
+| chicken-alfredo-bake | 0 | Mozzarella, Shredded, Fresh Parsley, Chopped | 10 |
+| spanish-chicken-chorizo-rice | 0 | Kosher Salt | 12 |
+| chicken-dumpling-soup | 0 | — | 11 |
+| one-pot-chicken-rice | 0 | Yellow Onion, Diced, Fresh Parsley, Chopped | 12 |
+| chicken-and-waffles-crew | 1 | peanut or vegetable oil | 12 |
+| performance-burrito-bowls | 0 | — | 11 |
+| chicken-cacciatore-crew | 0 | — | 9 |
+| chicken-caesar | 0 | — | 11 |
+| enchilada-casserole | 0 | Shredded Cheddar, Black Olives, Sliced | 10 |
+| chicken-enchilada-skillet-light | 0 | — | 8 |
+| sheet-pan-fajitas | 0 | Bell Peppers, Sliced, Red Onion, Sliced | 11 |
+| asian-chicken-lettuce-cups | 0 | Green Onions | 10 |
+| sheet-pan-meal-prep | 0 | Bell Peppers, Sliced, Red Onion, Sliced | 11 |
+| chicken-paprikash-hall | 0 | — | 9 |
+| chicken-parm | 0 | Fresh Mozzarella, Sliced, Fresh Basil, Torn | 10 |
+| chicken-pot-pie | 0 | — | 9 |
+| chicken-quesadillas | 0 | Ground Beef, Yellow Onion, Garlic Cloves | 12 |
+| chicken-shawarma-pitas | 0 | — | 11 |
+| chicken-souvlaki | 0 | — | 12 |
+| chicken-thigh-stretch-dinner | 0 | — | 12 |
+| boneless-chicken-thighs-sweet-potato-spinach | 0 | — | 12 |
+| chicken-tikka-masala | 0 | Yellow Onion, Diced | 10 |
+| chicken-tortilla-soup-for-the-hall | 0 | — | 11 |
+| chicken-wing-bar-night | 0 | — | 12 |
+| chilaquiles-verde-bake | 0 | — | 12 |
+| chili-mac | 0 | — | 12 |
+| chipotle-chicken-burrito-bowls | 0 | — | 12 |

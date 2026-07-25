@@ -13,61 +13,61 @@
     "line-friendly",
     "cheddar"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 20,
   "totalTime": 35,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "14",
+      "name": "large eggs",
+      "quantity": "11",
       "notes": "whisked with a pinch of salt",
       "group": "Eggs"
     },
     {
-      "name": "Shredded Cheddar Or Pepper Jack",
-      "quantity": "2 cups",
+      "name": "shredded cheddar or pepper jack",
+      "quantity": "2",
       "group": "Eggs"
     },
     {
-      "name": "Frozen Hash Browns",
-      "quantity": "3.5 lb",
+      "name": "frozen hash browns",
+      "quantity": "2.8",
       "notes": "or diced par-cooked potatoes",
       "group": "Fillings"
     },
     {
-      "name": "Breakfast Sausage Or Chorizo",
-      "quantity": "2 lb",
+      "name": "breakfast sausage or chorizo",
+      "quantity": "2",
       "notes": "browned and drained",
       "group": "Fillings"
     },
     {
-      "name": "Yellow Onion",
-      "quantity": "1",
+      "name": "yellow onion",
+      "quantity": "3/4",
       "notes": "diced",
       "group": "Fillings"
     },
     {
-      "name": "Bell Peppers",
-      "quantity": "1–2",
+      "name": "bell peppers",
+      "quantity": "3/4",
       "notes": "diced",
       "group": "Fillings"
     },
     {
-      "name": "10-Inch Flour Tortillas",
-      "quantity": "16",
+      "name": "10-inch flour tortillas",
+      "quantity": "13",
       "group": "Build"
     },
     {
-      "name": "Salsa Or Pico De Gallo",
-      "quantity": "1 cup",
+      "name": "salsa or pico de gallo",
+      "quantity": "3/4",
       "group": "Build"
     },
     {
-      "name": "Hot Sauce",
-      "quantity": "1",
+      "name": "hot sauce",
+      "quantity": "3/4",
       "group": "Build",
       "optional": true
     }
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
   "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
   "imageAlt": "Wide firehall crew platter of Hall Breakfast Burritos beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.993Z",
-  "updatedAt": "2026-06-04T20:48:24.993Z",
+  "publishedAt": "2026-07-17T20:15:27.732Z",
+  "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 7,
   "seoTitle": "Hall Breakfast Burritos | Firehall Breakfast",
   "collectionTier": "firehall_classic"

@@ -22,7 +22,7 @@ import type { UserBillingState } from "../../shared/billing/types.js";
 
 const AUTH_COOKIE_NAME = "fh_auth";
 const SESSION_DAYS = 30;
-const MAGIC_LINK_MINUTES = 15;
+const MAGIC_LINK_MINUTES = 30;
 
 let db: SqliteDatabase;
 

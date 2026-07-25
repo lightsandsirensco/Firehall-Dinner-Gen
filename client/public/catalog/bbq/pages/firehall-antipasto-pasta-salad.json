@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Rotini tosses with grilled zucchini and peppers, Genoa salami, pepperoncini, provolone, and zesty Italian dressing. A big antipasto-inspired tray for ten.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
@@ -39,7 +39,7 @@
   "ingredients": [
     {
       "name": "Farfalle Pasta",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Lb",
       "group": "Main"
     },
@@ -52,55 +52,55 @@
     },
     {
       "name": "Marinated Artichoke Hearts",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups",
       "notes": "quartered",
       "group": "Antipasto"
     },
     {
       "name": "Mortadella",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Lb",
       "notes": "cubed",
       "group": "Antipasto"
     },
     {
       "name": "Pepperoncini",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "notes": "drained and sliced",
       "group": "Antipasto"
     },
     {
       "name": "Castelvetrano Olives",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Cups",
       "notes": "pitted",
       "group": "Antipasto"
     },
     {
       "name": "Sun-Dried Tomatoes",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "Cup",
       "notes": "oil-packed, sliced",
       "group": "Antipasto"
     },
     {
       "name": "Pecorino Romano",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "Lb",
       "notes": "shaved",
       "group": "Antipasto"
     },
     {
       "name": "Red Wine Vinaigrette",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Dressing"
     },
     {
       "name": "Fresh Oregano",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "notes": "chopped",
       "group": "Dressing"

@@ -3,20 +3,20 @@
   "title": "Caper-Butter Cod Foil Packets",
   "displayTitle": "Caper-Butter Cod Foil Packets",
   "seoTitle": "Caper-Butter Cod Foil Packets | Firehall BBQ",
-  "shortDescription": "Cod packet night—lemon caper butter steam on the grill, not baked",
-  "subtitle": "Foil-packet cod, caper butter, and herb steam for ten",
+  "shortDescription": "Cod packet night—lemon-caper butter, shaved fennel, and vermouth steam on the grill",
+  "subtitle": "Foil-packet cod with lemon, capers, fennel, and vermouth butter for the crew",
   "category": "bbq_grill_nights",
   "cuisine": "mediterranean",
-  "description": "Cod fillets seal in foil packets with lemon, capers, cherry tomatoes, and white wine butter, grill until 145°F, and open at the table for aromatic steam.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Cod portions sealed over shaved fennel with butter, capers, picholine olives, lemon, tarragon, and a splash of dry vermouth, grilled at a steady 400°F to 145°F and opened at the table for the steam.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 18,
-  "prepTime": 20,
+  "prepTime": 22,
   "difficulty": "medium",
-  "calories": 579,
-  "protein": 52,
-  "carbs": 0,
-  "fats": 39,
+  "calories": 640,
+  "protein": 48,
+  "carbs": 26,
+  "fats": 36,
   "tags": [
     "protein:seafood",
     "format:foil_fish",
@@ -30,30 +30,31 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "flat-top griddle",
-    "heavy foil",
-    "instant-read thermometer",
-    "sheet pans",
-    "tongs"
+    "Gas or charcoal grill with a lid",
+    "Heavy-duty aluminum foil",
+    "Instant-read thermometer",
+    "Sheet pans",
+    "Chef's knife",
+    "Tongs"
   ],
   "ingredients": [
     {
       "name": "Atlantic Cod Fillets",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "Lb",
-      "notes": "about 10 portions",
+      "notes": "8 even portions",
       "group": "Main"
     },
     {
       "name": "Unsalted Butter",
-      "quantity": "0.5",
+      "quantity": "1/2",
       "unit": "Cup",
-      "notes": "cut into pats",
+      "notes": "cut into 8 pats",
       "group": "Packet"
     },
     {
       "name": "Nonpareil Capers",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "drained",
       "group": "Packet"
@@ -62,19 +63,26 @@
       "name": "Fennel Bulb",
       "quantity": "2",
       "unit": "whole",
-      "notes": "thin-sliced",
+      "notes": "shaved thin",
       "group": "Packet"
     },
     {
       "name": "Picholine Olives",
-      "quantity": "0.75",
+      "quantity": "2/3",
       "unit": "Cup",
-      "notes": "pitted",
+      "notes": "pitted and halved",
+      "group": "Packet"
+    },
+    {
+      "name": "Lemons",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced into thin rounds",
       "group": "Packet"
     },
     {
       "name": "Dry Vermouth",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Packet"
     },
@@ -82,23 +90,30 @@
       "name": "Fresh Tarragon",
       "quantity": "2",
       "unit": "Tbsp",
+      "notes": "chopped",
       "group": "Packet"
     },
     {
       "name": "Fresh Dill Fronds",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Finish"
     },
     {
+      "name": "Crusty Baguettes",
+      "quantity": "2",
+      "unit": "loaves",
+      "group": "Service"
+    },
+    {
       "name": "Maldon Salt",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Tsp",
       "group": "Seasoning"
     },
     {
       "name": "White Pepper",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Tsp",
       "group": "Seasoning"
     }
@@ -106,82 +121,111 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Build foil packets",
-      "instruction": "Place each cod portion on heavy foil. Top with butter pat, capers, tomatoes, lemon slice, thyme, wine, salt, and pepper. Seal tightly.",
-      "minutes": 15,
+      "title": "Shave the fennel and stage the foil",
+      "instruction": "Slice the fennel bulbs as thin as you can manage — thick fennel stays crunchy-raw in the short packet steam. Slice the lemons into thin rounds and flick out the seeds, drain the capers, halve the picholine olives, and chop the tarragon. Tear 8 double-layer sheets of heavy foil, about 18 inches each; a single layer tears on the grates and dumps the butter into the fire.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Heat grill",
-      "instruction": "Preheat grill to medium, 400°F. Have sheet pan ready for packet transfer.",
-      "minutes": 8,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Grill packets",
-      "instruction": "Grill sealed packets 12–14 minutes until puffed and cod reads 145°F through foil.",
-      "minutes": 14,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Check doneness",
-      "instruction": "Open one test packet—flesh should flake and butter should be bubbling. Re-seal others if holding.",
-      "minutes": 3,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 5,
-      "title": "Hold sealed",
-      "instruction": "Hold finished packets sealed at 140°F up to 15 minutes on sheet pans.",
+      "title": "Dry and season the cod",
+      "instruction": "Pat every cod portion bone dry with paper towels — surface water dilutes the caper butter into dishwater. Season both sides with the Maldon salt and white pepper. White pepper seasons clean with no black specks against the white flesh, which matters when the packet opens at the table.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
+      "stepNumber": 3,
+      "title": "Build and crimp the packets",
+      "instruction": "Bed each foil sheet with a handful of shaved fennel, set a cod portion on top, then add a butter pat, a spoonful of capers and olives, two lemon rounds, a pinch of tarragon, and a splash of dry vermouth. Fold and double-crimp every seam tight. The fennel bed lifts the fillet off the hot foil so the bottom steams instead of scorching, and the vermouth becomes the steam that does the cooking.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Heat the grill to a steady 400°F",
+      "instruction": "Preheat the grill to medium, 400°F, lid down, and let it settle 8 minutes so the heat is even across the grates. Packets want steady, moderate heat — a raging grate boils the butter over and scorches the fennel through the foil before the center cooks.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Grill the packets until they puff",
+      "instruction": "Set the packets on the grates seam-side up, close the lid, and give them 12–14 minutes without flipping. They're close when they puff like pillows and you can hear butter sizzling inside. Cod is finished at 145°F — probe straight through the foil at the thickest point with an instant-read.",
+      "minutes": 14,
+      "heatLevel": "medium"
+    },
+    {
       "stepNumber": 6,
-      "title": "Open at service",
-      "instruction": "Open packets at the line for steam and aroma. Watch for hot steam burns.",
+      "title": "Open a test packet",
+      "instruction": "Open one packet away from your face — the steam exits fast and hot. The flesh should flake into big white petals at 145°F with the butter bubbling around it. If the center is still translucent, re-crimp that packet and give the whole batch 2 more minutes before checking again.",
       "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 7,
-      "title": "Finish with parsley",
-      "instruction": "Scatter parsley over opened packets. Spoon caper butter over fish.",
-      "minutes": 3,
-      "heatLevel": ""
+      "title": "Toast the baguettes on the cool edge",
+      "instruction": "Halve the crusty baguettes lengthwise and set them cut-side down over the cooler edge of the grates for 1–2 minutes until golden. This is the butter mop — the lemon-caper juice pooled in each packet is the best bite of the night, and the crew will fight over it.",
+      "minutes": 4,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 8,
-      "title": "Platter for ten",
-      "instruction": "Serve one packet per firefighter with crusty bread for soaking butter.",
+      "title": "Open at the table, finish with dill",
+      "instruction": "Carry the sealed packets to the table on sheet pans and open them there for the steam and the smell — steer the first blast away from faces. Scatter the fresh dill fronds over each portion and spoon the caper butter back over the flesh. Baguette goes out alongside for dunking.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover sealed cod packets — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool cod and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Double-fold foil seams—leaky packets lose steam and dry out.",
-    "White wine in the packet creates steam; don't skip it.",
-    "Open packets away from faces—steam exits fast."
+    "Double-crimp every seam — one leaky fold and that packet steams dry instead of poaching in butter.",
+    "Buy even-thickness cod portions or fold thin tails under so every packet finishes at the same time.",
+    "Packets hold sealed at 140°F for about 15 minutes; past that the fillets overcook in their own heat.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Grilled cod lemon packets with caper butter.",
-    "Grilled asparagus or green salad on the side."
+    "Main: Caper-butter cod packets with fennel and lemon",
+    "Sides: grilled baguette, green salad",
+    "Condiments: extra lemon wedges, hot sauce for the heat-seekers",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Flake cod into fish stew with packet butter.",
-    "Chop into Mediterranean fish salad."
+    "Cool cod in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Flake leftover cod into chowder or fish cakes, and save the packet butter — that's the flavor base.",
+    "Reheat gently, covered, with a splash of water; a hard blast turns cod to rubber."
   ],
-  "whyCrewsLikeIt": "Foil packets cook evenly and hold in the packet at 140°F for a short window—perfect when the crew might get toned out mid-service.",
-  "mealPrepNotes": "Build packets ahead. Grill medium 400°F, 12–14 minutes. Hold sealed packets at 140°F up to 15 minutes. Open at service for steam and aroma.",
+  "whyCrewsLikeIt": "Every firefighter gets a sealed packet that opens in a cloud of lemon-caper steam, and the cleanup is a ball of foil — the rare fish night with zero pans to scrub.",
+  "mealPrepNotes": "Build and crimp the packets up to 4 hours ahead and refrigerate on sheet pans. Grill at a steady 400°F for 12–14 minutes to 145°F. Hold sealed at 140°F up to 15 minutes; open at the table.",
+  "substitutions": [
+    "Haddock or halibut swaps for cod portion-for-portion — halibut runs a minute or two longer in the packet.",
+    "Dry white wine works 1:1 for the vermouth; for no alcohol, use chicken broth plus an extra squeeze of lemon.",
+    "Kalamata olives stand in for picholine — stronger and saltier, so use a little less.",
+    "No tarragon? Fresh thyme sprigs hold up in the steam; just pull the stems before serving."
+  ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 579,
-    "protein": 52,
-    "carbs": 0,
-    "fats": 39,
+    "calories": 640,
+    "protein": 48,
+    "carbs": 26,
+    "fats": 36,
     "label": "per serving (hall portion)",
     "source": "estimated"
   },
@@ -202,7 +246,8 @@
     "bbq",
     "firehall",
     "foil packet cod grill",
-    "caper butter cod"
+    "caper butter cod",
+    "fennel vermouth fish packets"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -211,6 +256,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.442Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

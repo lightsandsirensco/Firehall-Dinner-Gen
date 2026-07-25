@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Broccolini bundles toss in olive oil, grill until charred and tender, and finish with lemon-garlic oil, parmesan, and chili flakes on a big tray for ten.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 15,
   "prepTime": 15,
   "difficulty": "medium",
@@ -39,59 +39,59 @@
   "ingredients": [
     {
       "name": "Broccolini",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "Lb",
       "notes": "trimmed",
       "group": "Main"
     },
     {
       "name": "Anchovy Fillets",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "minced",
       "group": "Sicilian finish"
     },
     {
       "name": "Golden Raisins",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Sicilian finish"
     },
     {
       "name": "Pine Nuts",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "toasted",
       "group": "Sicilian finish"
     },
     {
       "name": "Lemon Juice",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "group": "Sicilian finish"
     },
     {
       "name": "Extra-Virgin Olive Oil",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Grill"
     },
     {
       "name": "Pecorino Romano",
-      "quantity": "0.75",
+      "quantity": "5/8",
       "unit": "Cup",
       "notes": "shaved",
       "group": "Finish"
     },
     {
       "name": "Red Pepper Flakes",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Finish"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tsp",
       "group": "Seasoning"
     }

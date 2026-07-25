@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Beef Hot Dogs",
+      "name": "beef hot dogs",
       "quantity": "8",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "Pretzel Dough",
+      "name": "pretzel dough",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "store-bought or homemade",
       "group": "Main"
     },
     {
-      "name": "Baking Soda",
+      "name": "baking soda",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for boil bath",
       "group": "Boil"
     },
     {
-      "name": "Egg",
+      "name": "egg",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "beaten, for wash",
       "group": "Finish"
     },
     {
-      "name": "Coarse Salt",
+      "name": "coarse salt",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Finish"
     },
     {
-      "name": "Yellow Mustard",
+      "name": "yellow mustard",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Mustard bar"
     },
     {
-      "name": "Whole-Grain Mustard",
+      "name": "whole-grain mustard",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Mustard bar"
     },
     {
-      "name": "Spicy Brown Mustard",
+      "name": "spicy brown mustard",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Mustard bar"
     },
     {
-      "name": "Sauerkraut",
+      "name": "sauerkraut",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "warmed",
       "group": "Toppings"
     },
     {
-      "name": "Cheddar Cheese Sauce",
+      "name": "cheddar cheese sauce",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "warm",
       "group": "Toppings"
     }
@@ -162,10 +162,19 @@
     "protein": 16,
     "carbs": 52,
     "fats": 24,
-    "label": "~490 cal/serving · 16g protein · 2g fiber (est.)"
+    "label": "~490 cal/serving · 16g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/soft-pretzel-dogs.jpg",
-  "heroImageAlt": "Soft Pretzel Hot Dogs — crew-sized firehall meal",
+  "heroImageAlt": "Soft Pretzel Hot Dogs — american handheld plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/soft-pretzel-dogs.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/soft-pretzel-dogs.jpg",
   "railImage": "/images/rails/hall-expansion/soft-pretzel-dogs.jpg",
@@ -177,12 +186,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
-    "loaded-potato-skins",
-    "game-day-pizza-sliders",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "bbq-meatball-skewers",
+    "chicken-caesar-wraps",
+    "buffalo-chicken-wraps",
+    "greek-chicken-pitas"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

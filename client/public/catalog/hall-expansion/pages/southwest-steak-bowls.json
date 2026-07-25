@@ -1,0 +1,260 @@
+{
+  "slug": "southwest-steak-bowls",
+  "title": "Southwest Steak Bowls",
+  "displayTitle": "Southwest Steak Bowls",
+  "seoTitle": "Southwest Steak Bowls | Firefighter Meal",
+  "shortDescription": "Grilled steak, cilantro-lime rice, and smoky Southwest toppings",
+  "subtitle": "Grilled steak, cilantro-lime rice, and smoky Southwest toppings",
+  "category": "hall_expansion",
+  "cuisine": "southwestern",
+  "description": "Grilled steak over cilantro-lime rice with roasted corn, black beans, peppers, avocado, pico, cheese, and chipotle crema.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 690,
+  "protein": 48,
+  "carbs": 62,
+  "fats": 29,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "beef",
+    "bbq",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill or cast-iron skillet",
+    "Rice pot",
+    "Grill basket",
+    "Instant-read thermometer",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "flank steak",
+      "quantity": "4",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "cilantro-lime rice",
+      "quantity": "2.4",
+      "unit": "cups",
+      "notes": "uncooked rice",
+      "group": "Base"
+    },
+    {
+      "name": "corn",
+      "quantity": "3.2",
+      "unit": "cups",
+      "group": "Vegetables"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "group": "Vegetables"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "4",
+      "unit": "each",
+      "group": "Vegetables"
+    },
+    {
+      "name": "avocados",
+      "quantity": "3.2",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "pico de gallo",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "chipotle crema",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "limes",
+      "quantity": "4.8",
+      "unit": "each",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Temper the steak and stage toppings",
+      "instruction": "Pull flank steak from the fridge 20 minutes before it hits heat so the center cooks evenly. Slice peppers into strips, drain beans, and portion pico, avocado, cheddar, and lime into cold pans. Pat the steak dry with paper towels and season both sides with salt, pepper, cumin, and a light oil rub; wet steak steams instead of searing.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the cilantro-lime rice",
+      "instruction": "Rinse 3 cups rice until the water runs mostly clear. Bring to a boil with 5 1/2 cups salted water in a heavy pot, cover, and simmer on low 18 minutes without peeking. Rest 10 minutes off heat, fluff with a fork, then fold in lime juice and chopped cilantro. Stirring while it cooks is what turns rice into glue.",
+      "minutes": 28,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Get the grill screaming hot",
+      "instruction": "Heat a gas grill to high or set a cast-iron skillet over high heat for 3–4 minutes until a drop of water evaporates instantly. Oil the grates lightly with a towel-wrapped tongs. A lukewarm grill leaves gray steak with no crust — wait for real heat before the meat goes on.",
+      "minutes": 5,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill the flank steak",
+      "instruction": "Lay the seasoned flank steak on the hot grill and leave it alone 4–6 minutes until deep brown grill marks form and it releases cleanly. Flip once and cook another 4–6 minutes. Pull at 145°F for medium (135°F for medium-rare). Tent loosely with foil on a cutting board for 8 minutes — slicing too early dumps the juices onto the board.",
+      "minutes": 18,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Char the peppers and corn",
+      "instruction": "While the steak rests, cook pepper strips in a screaming-hot skillet or grill basket with a little oil for 5–7 minutes until softened with blackened edges. Add corn for the last 3 minutes and toss until a few kernels blister. Warm beans in a separate small pot with a splash of water — do not dump them into the char pan or you kill the browning.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Whisk the chipotle crema",
+      "instruction": "In a cold bowl, whisk sour cream (or the prepared crema) with minced chipotle in adobo, a squeeze of lime, and a pinch of salt until smooth and pourable. Taste — it should be smoky and tangy, not mouthwash-hot. Load into a squeeze bottle. Keep it away from the grill; warm dairy splits and looks broken on the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Slice the steak across the grain",
+      "instruction": "Find the long muscle fibers running the length of the flank, then slice thinly at a sharp angle against those fibers — not with them. Cutting with the grain is the classic mistake that makes good steak chew like boot leather. Hold sliced steak loosely covered; stack it tight and it steams soggy.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Build the steak bowls",
+      "instruction": "Scoop cilantro-lime rice into each bowl, then add peppers, corn, and beans. Fan a measured portion of sliced steak across the top so it looks generous without over-portioning. Keep avocado and pico off until the next step so the heat does not wilt them.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Garnish with cold crunch and crema",
+      "instruction": "Add avocado slices, pico, and shredded cheddar. Zigzag chipotle crema over the steak, then finish with cilantro and a lime wedge on the rim. Crema goes last so it stays white and clean instead of melting into a muddy pool.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve while the steak is still warm",
+      "instruction": "Send bowls out as soon as they are garnished. Keep a covered backup of sliced steak and rice at 200°F for firefighters coming back from a run. Put extra crema and hot sauce at the end of the table — not next to the rice warmer where they will cook. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the grilled steak — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the chipotle crema and pico away from that heat entirely — warm dairy splits and looks broken on the line. On return, spot-check the steak at a safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool grilled steak and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Let steak lose its fridge chill for 20 minutes before grilling for a more even center.",
+    "Rookie tip: Trust the thermometer — color is unreliable on a dark grill.",
+    "Rookie tip: Slice only what you need for the first pass so the rest stays juicy.",
+    "Prep tip: Put crema in squeeze bottles instead of leaving a ladle in it.",
+    "Slice against the grain every single time — it is the difference between tender and tough."
+  ],
+  "tonightSpread": [
+    "Main: Southwest steak bowls",
+    "Sides: Tortilla chips, citrus slaw",
+    "Condiments: Chipotle crema, hot sauce, lime wedges",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool grilled steak in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Slice leftover steak cold for next-day fajita sandwiches or salads."
+  ],
+  "whyCrewsLikeIt": "Steak feels like a reward meal, but a bowl line stretches it sensibly and lets every firefighter customize toppings.",
+  "mealPrepNotes": "Make-ahead: marinate steak, make chipotle crema, and chop pico one day early. Storage: keep sliced steak, rice, and hot vegetables separate for 3 days. Reheating: warm steak covered with a spoonful of broth to 165°F; keep avocado, pico, and crema cold.",
+  "substitutions": [
+    "Use sirloin for flank steak.",
+    "Use frozen roasted corn.",
+    "Use Greek yogurt crema.",
+    "Use pinto beans for black beans."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 690,
+    "protein": 48,
+    "carbs": 62,
+    "fats": 29,
+    "label": "~690 cal/serving · 48g protein · 11g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/southwest-steak-bowls.jpg",
+  "heroImageAlt": "Southwest Steak Bowls — southwestern bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/southwest-steak-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/southwest-steak-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/southwest-steak-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "southwest steak bowls",
+    "grilled steak rice bowl",
+    "chipotle crema bowl",
+    "firehall steak dinner",
+    "beef bowl for 10",
+    "southwestern crew meal",
+    "flank steak meal prep",
+    "cilantro lime steak bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

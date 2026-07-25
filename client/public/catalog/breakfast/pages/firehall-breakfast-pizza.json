@@ -15,58 +15,58 @@
     "eggs",
     "cheddar"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 20,
   "cookTime": 28,
   "totalTime": 48,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Store-Bought Pizza Dough Balls",
-      "quantity": "2",
+      "name": "store-bought pizza dough balls",
+      "quantity": "1.3",
       "notes": "or 2 lb homemade dough",
       "group": "Base"
     },
     {
-      "name": "Olive Oil",
-      "quantity": "2 tbsp",
+      "name": "olive oil",
+      "quantity": "1.3",
       "notes": "for stretching and pan",
       "group": "Base"
     },
     {
-      "name": "Country Gravy",
-      "quantity": "1 cup",
+      "name": "country gravy",
+      "quantity": "5/8",
       "notes": "jarred or leftover, warmed",
       "group": "Sauce"
     },
     {
-      "name": "Shredded Mozzarella",
-      "quantity": "1/2 cup",
+      "name": "shredded mozzarella",
+      "quantity": "3/8",
       "notes": "mixed into gravy for white sauce",
       "group": "Sauce"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "18",
+      "name": "large eggs",
+      "quantity": "12",
       "notes": "soft-scrambled off heat",
       "group": "Toppings"
     },
     {
-      "name": "Breakfast Sausage",
-      "quantity": "2 lb",
+      "name": "breakfast sausage",
+      "quantity": "1",
       "notes": "browned and crumbled, drained",
       "group": "Toppings"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "3 cups",
+      "name": "shredded cheddar",
+      "quantity": "2",
       "notes": "sharp or medium",
       "group": "Toppings"
     },
     {
-      "name": "Sliced Green Onions",
-      "quantity": "1/2 cup",
+      "name": "sliced green onions",
+      "quantity": "1/4",
       "notes": "and hot sauce at the line",
       "group": "Finish"
     }
@@ -143,8 +143,8 @@
   "heroImage": "/images/breakfast/firehall-breakfast-pizza.jpg",
   "thumbImage": "/images/thumbs/breakfast/firehall-breakfast-pizza.jpg",
   "imageAlt": "Sheet-pan breakfast pizza topped with scrambled eggs, sausage, and melted cheddar",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Firehall Breakfast Pizza | Firehall Breakfast",
   "collectionTier": "firehall_classic"

@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Italian sausage links smash flat on the griddle until crisp, griddle with peppers and onions, and serve on toasted rolls with marinara dip.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 22,
   "prepTime": 25,
   "difficulty": "medium",
@@ -39,58 +39,58 @@
   "ingredients": [
     {
       "name": "Sweet Italian Sausage",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
       "notes": "about 12 links",
       "group": "Main"
     },
     {
       "name": "Cubanelle Peppers",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "striped",
       "group": "Peppers"
     },
     {
       "name": "Vidalia Onions",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "striped",
       "group": "Peppers"
     },
     {
       "name": "Hoagie Rolls",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Service"
     },
     {
       "name": "Giardiniera Relish",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Cups",
       "group": "Service"
     },
     {
       "name": "Beef Tallow",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "group": "Griddle"
     },
     {
       "name": "Fennel Pollen",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Seasoning"
     },
     {
       "name": "Calabrian Chili Paste",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
       "name": "Provolone Cheese",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "slices",
       "notes": "optional melt",
       "group": "Finish"

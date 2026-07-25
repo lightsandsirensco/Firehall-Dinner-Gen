@@ -39,67 +39,67 @@
   ],
   "ingredients": [
     {
-      "name": "Jasmine Rice",
+      "name": "jasmine rice",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry",
       "group": "Base"
     },
     {
-      "name": "Chicken Thighs",
+      "name": "chicken thighs",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "boneless",
       "group": "Protein"
     },
     {
-      "name": "Teriyaki Sauce",
+      "name": "teriyaki sauce",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Protein"
     },
     {
-      "name": "Broccoli Florets",
+      "name": "broccoli florets",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Veg"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "julienned",
       "group": "Veg"
     },
     {
-      "name": "Edamame",
+      "name": "edamame",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "shelled, thawed",
       "group": "Toppings"
     },
     {
-      "name": "Pickled Ginger",
+      "name": "pickled ginger",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Toppings"
     },
     {
-      "name": "Sesame Seeds",
+      "name": "sesame seeds",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Toppings"
     },
     {
-      "name": "Sriracha Mayo",
+      "name": "sriracha mayo",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Soy Sauce",
+      "name": "soy sauce",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     }
   ],
@@ -162,10 +162,19 @@
     "protein": 32,
     "carbs": 58,
     "fats": 14,
-    "label": "~490 cal/serving · 32g protein · 5g fiber (est.)"
+    "label": "~490 cal/serving · 32g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/rice-bowl-bar-night.jpg",
-  "heroImageAlt": "Rice Bowl Bar Night — crew-sized firehall meal",
+  "heroImageAlt": "Rice Bowl Bar Night — asian-fusion bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/rice-bowl-bar-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/rice-bowl-bar-night.jpg",
   "railImage": "/images/rails/hall-expansion/rice-bowl-bar-night.jpg",
@@ -177,12 +186,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

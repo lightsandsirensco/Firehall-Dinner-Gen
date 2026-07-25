@@ -13,40 +13,40 @@
     "eggs",
     "cheddar"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 18,
   "totalTime": 33,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "14",
+      "name": "large eggs",
+      "quantity": "11",
       "notes": "for scrambling or fried"
     },
     {
-      "name": "English Muffins Or Brioche Buns",
-      "quantity": "16"
+      "name": "English muffins or brioche buns",
+      "quantity": "13"
     },
     {
-      "name": "Breakfast Sausage Patties Or Links",
-      "quantity": "2 lb",
+      "name": "breakfast sausage patties or links",
+      "quantity": "2",
       "notes": "cooked through"
     },
     {
-      "name": "Sliced Cheese",
-      "quantity": "2 cups",
+      "name": "sliced cheese",
+      "quantity": "1.6",
       "notes": "American or cheddar"
     },
     {
-      "name": "Butter",
-      "quantity": "4 tbsp",
+      "name": "butter",
+      "quantity": "3.2",
       "notes": "for toasting buns"
     },
     {
-      "name": "Hot Sauce",
-      "quantity": "1",
+      "name": "hot sauce",
+      "quantity": "3/4",
       "optional": true
     }
   ],
@@ -113,8 +113,8 @@
   "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
   "imageAlt": "Wide firehall crew platter of Breakfast Sandwich Trays beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.993Z",
-  "updatedAt": "2026-06-04T20:48:24.993Z",
+  "publishedAt": "2026-07-17T20:15:27.732Z",
+  "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 5,
   "seoTitle": "Breakfast Sandwich Trays | Firehall Breakfast",
   "collectionTier": "firehall_classic"

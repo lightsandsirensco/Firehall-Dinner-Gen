@@ -37,68 +37,68 @@
   ],
   "ingredients": [
     {
-      "name": "Smoked Kielbasa",
+      "name": "smoked kielbasa",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced into coins",
       "group": "Main"
     },
     {
-      "name": "Yukon Gold Potatoes",
+      "name": "Yukon Gold potatoes",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "quartered",
       "group": "Main"
     },
     {
-      "name": "Green Cabbage",
+      "name": "green cabbage",
       "quantity": "3/4",
       "unit": "head",
       "notes": "cut into wedges",
       "group": "Vegetables"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Liquid"
     },
     {
-      "name": "Apple Cider Vinegar",
+      "name": "apple cider vinegar",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Caraway Seeds",
+      "name": "caraway seeds",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     }
   ],
@@ -161,10 +161,19 @@
     "protein": 22,
     "carbs": 38,
     "fats": 28,
-    "label": "~480 cal/serving · 22g protein · 6g fiber (est.)"
+    "label": "~480 cal/serving · 22g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
-  "heroImageAlt": "Kielbasa Cabbage Potato Skillet — crew-sized firehall meal",
+  "heroImageAlt": "Kielbasa Cabbage Potato Skillet — polish-american skillet plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
   "railImage": "/images/rails/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
@@ -176,12 +185,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "cajun-chicken-rice-skillet",
+    "cast-iron-chicken-fajitas",
+    "pepper-steak-onions",
+    "enchilada-beef-skillet"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

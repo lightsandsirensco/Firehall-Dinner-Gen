@@ -1,0 +1,219 @@
+{
+  "slug": "costco-rotisserie-remix",
+  "title": "Costco Rotisserie Chicken Remix",
+  "displayTitle": "Costco Rotisserie Chicken Remix",
+  "seoTitle": "Costco Rotisserie Chicken Remix | Firefighter Meal",
+  "shortDescription": "Creamy chicken-and-rice bake from store-bought birds",
+  "subtitle": "Creamy chicken-and-rice bake from store-bought birds",
+  "category": "hall_expansion",
+  "cuisine": "American",
+  "description": "Shredded chicken, rice, broccoli, and a creamy sauce bake under a crisp cheese topping.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 640,
+  "protein": 40,
+  "carbs": 58,
+  "fats": 27,
+  "tags": [
+    "protein:chicken",
+    "format:casserole",
+    "category:crew_feeders",
+    "budget",
+    "chicken",
+    "casserole",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "casserole pans",
+    "mixing bowl",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "rotisserie chickens",
+      "quantity": "3.2",
+      "unit": "each"
+    },
+    {
+      "name": "cooked rice",
+      "quantity": "9.6",
+      "unit": "cups"
+    },
+    {
+      "name": "broccoli",
+      "quantity": "3.2",
+      "unit": "lb"
+    },
+    {
+      "name": "cream of chicken soup",
+      "quantity": "5",
+      "unit": "cans"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "milk",
+      "quantity": "3.2",
+      "unit": "cups"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and stage pans",
+      "instruction": "Heat the oven to 375°F and grease two deep hotel pans or casserole dishes so the rice bake releases cleanly after service. Set shredded chicken, rice, and broccoli within arm reach before mixing — hunting for pans mid-fold is how portions go uneven. Target oven/smoker temperature: 375°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Pull chicken",
+      "instruction": "Remove meat from rotisserie chickens, discarding bones and checking for small cartilage pieces that can hide in dark meat. Shred into bite-size strips so every scoop gets chicken, not just rice.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Steam broccoli",
+      "instruction": "Steam broccoli only until bright green and still crisp; it will finish in the oven. Soft olive broccoli sat too long and turns mushy in the bake.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Mix sauce",
+      "instruction": "Whisk soup and milk until completely smooth so no concentrated salty pockets remain in the bake. Taste and add black pepper — rotisserie chicken already brings salt.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Combine filling",
+      "instruction": "Fold rice, chicken, broccoli, and sauce together gently so the rice stays distinct instead of turning to porridge. Divide evenly between pans and level the surface.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Cover and bake",
+      "instruction": "Cover with foil and bake until the centre of each pan reaches 165°F on an instant-read thermometer, about 25–30 minutes. Cold spots in the middle mean the pans were overfilled or the oven was crowded. Target oven/smoker temperature: 375°F.",
+      "minutes": 30,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Add cheese",
+      "instruction": "Remove foil, blanket with cheddar, and bake uncovered 8–10 minutes until melted and lightly golden at the edges. Cheese burned black sat under the broiler too long. Target oven/smoker temperature: 375°F.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Let the bake set",
+      "instruction": "Cover and wait 5 minutes so the sauce thickens enough to scoop clean portions without flooding the plate.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold safely",
+      "instruction": "Cover loosely and hold above 140°F in a 200°F oven if the crew is delayed. Stir once before service if the edges look dry. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Scoop servings",
+      "instruction": "Use a large spoon to serve complete portions with chicken, rice, and broccoli in every scoop. Keep hot sauce and cracked pepper at the pass.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover rotisserie chicken bake — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool rotisserie chicken bake and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Save carcasses for stock.",
+    "Use low-sodium soup because rotisserie chicken is seasoned.",
+    "Add crushed crackers only for the last bake."
+  ],
+  "tonightSpread": [
+    "Main: Rotisserie chicken rice bake",
+    "Sides: green salad, dinner rolls",
+    "Condiments: hot sauce, black pepper, crushed crackers",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Rotisserie chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Roll leftovers into burritos."
+  ],
+  "whyCrewsLikeIt": "Using cooked chicken cuts prep time sharply and stretches a grocery run into ten dinners.",
+  "mealPrepNotes": "Make-ahead: assemble casserole 1 day ahead. Storage: refrigerate 3 days. Reheating: bake to 165°F in the centre.",
+  "substitutions": [
+    "Use cooked turkey for chicken.",
+    "Use frozen mixed vegetables for broccoli."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 640,
+    "protein": 40,
+    "carbs": 58,
+    "fats": 27,
+    "label": "~640 cal/serving · 40g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+  "heroImageAlt": "Costco Rotisserie Chicken Remix — American casserole plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/costco-rotisserie-remix.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/costco-rotisserie-remix.jpg",
+  "railImage": "/images/rails/hall-expansion/costco-rotisserie-remix.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "rotisserie chicken dinner for ten",
+    "Costco chicken crew meal",
+    "budget chicken rice bake",
+    "firehall casserole"
+  ],
+  "relatedSlugs": [
+    "shawarma-bar-night",
+    "fajita-bar-night",
+    "hall-burger-bar",
+    "pasta-bar-night"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

@@ -3,9 +3,16 @@ import { z } from "zod";
 import { logError } from "../logger.js";
 import { getMagicLinkFunnelStats, insertAnalyticsEvents } from "../analytics/analytics-store.js";
 import { subscribeToList } from "../klaviyo.js";
-import { adminSetUserPlan } from "../billing/store.js";
+import { adminSetUserPlan, startHallProTrial } from "../billing/store.js";
 import type { PlanId } from "../../shared/billing/types.js";
-import type { AdminLeadFilter, AdminSignupFilter, AdminUserFilter } from "../../shared/admin-users/types.js";
+import type {
+  AdminLeadFilter,
+  AdminSignupFilter,
+  AdminUserFilter,
+  FounderLeadFilters,
+  FounderLeadSortKey,
+  FounderLeadStatus,
+} from "../../shared/admin-users/types.js";
 import {
   backfillLeadsFromAnalytics,
   countEmailLeads,
@@ -14,6 +21,17 @@ import {
   markLeadKlaviyoSynced,
   recordEmailLead,
 } from "./leads-store.js";
+import {
+  bindFounderLeadsDb,
+  deleteTestAccount,
+  exportFounderLeadsCsv,
+  exportFounderLeadsExcel,
+  getFounderLeadDetail,
+  initFounderLeadsStore,
+  listFounderLeads,
+  listHallNamesForFilter,
+  markTestAccount,
+} from "./founder-leads.js";
 import {
   adminCreateHallInvite,
   exportLeadsCsv,
@@ -26,7 +44,8 @@ import {
   listAdminUsers,
   updateAdminUserMeta,
 } from "./store.js";
-import { startHallProTrial } from "../billing/store.js";
+import { createAuthSession, getAuthCookieName } from "../auth/auth-store.js";
+import { getSharedLocalDb } from "../sqlite.js";
 
 let storeReady = false;
 
@@ -34,6 +53,8 @@ async function ensureStore(): Promise<void> {
   if (!storeReady) {
     await initAdminLeadsStore();
     await initAdminUsersStore();
+    await initFounderLeadsStore();
+    bindFounderLeadsDb(await getSharedLocalDb());
     storeReady = true;
   }
 }
@@ -79,6 +100,22 @@ const SIGNUP_FILTERS = new Set<AdminSignupFilter>([
   "inactive",
 ]);
 
+const SORT_KEYS = new Set<FounderLeadSortKey>([
+  "email",
+  "name",
+  "signup_date",
+  "last_seen",
+  "source",
+  "plan",
+  "login_count",
+  "last_login",
+  "recipes_saved",
+  "meals_generated",
+  "votes_cast",
+  "shopping_lists_created",
+  "status",
+]);
+
 function parseUserFilter(raw: unknown): AdminUserFilter {
   const key = String(raw ?? "all");
   return USER_FILTERS.has(key as AdminUserFilter) ? (key as AdminUserFilter) : "all";
@@ -92,6 +129,43 @@ function parseLeadFilter(raw: unknown): AdminLeadFilter {
 function parseSignupFilter(raw: unknown): AdminSignupFilter {
   const key = String(raw ?? "all");
   return SIGNUP_FILTERS.has(key as AdminSignupFilter) ? (key as AdminSignupFilter) : "all";
+}
+
+function parseFounderFilters(query: Request["query"]): FounderLeadFilters {
+  const sortRaw = typeof query.sort === "string" ? query.sort : "signup_date";
+  const sort = SORT_KEYS.has(sortRaw as FounderLeadSortKey)
+    ? (sortRaw as FounderLeadSortKey)
+    : "signup_date";
+  const statusRaw = typeof query.status === "string" ? query.status : null;
+  const status =
+    statusRaw === "New" || statusRaw === "Active" || statusRaw === "Dormant"
+      ? (statusRaw as FounderLeadStatus)
+      : null;
+  const planRaw = typeof query.plan === "string" ? query.plan : null;
+  const plan =
+    planRaw === "free" || planRaw === "firefighter_plus" || planRaw === "hall_pro" ? planRaw : null;
+  const verifiedRaw = typeof query.verified === "string" ? query.verified : null;
+  const verified = verifiedRaw === "yes" || verifiedRaw === "no" ? verifiedRaw : null;
+  const accountRaw = typeof query.account === "string" ? query.account : null;
+  const account = accountRaw === "yes" || accountRaw === "no" ? accountRaw : null;
+
+  return {
+    q: typeof query.q === "string" ? query.q : undefined,
+    source: typeof query.source === "string" && query.source ? query.source : null,
+    plan,
+    hall: typeof query.hall === "string" && query.hall ? query.hall : null,
+    verified,
+    status,
+    account,
+    signup_from: typeof query.signup_from === "string" ? query.signup_from : null,
+    signup_to: typeof query.signup_to === "string" ? query.signup_to : null,
+    last_login_from: typeof query.last_login_from === "string" ? query.last_login_from : null,
+    last_login_to: typeof query.last_login_to === "string" ? query.last_login_to : null,
+    sort,
+    sort_dir: query.sort_dir === "asc" ? "asc" : "desc",
+    page: Math.max(Number(query.page) || 1, 1),
+    page_size: Math.min(Number(query.page_size) || 50, 500),
+  };
 }
 
 function trackAdminEvent(
@@ -118,6 +192,17 @@ const patchUserSchema = z.object({
   is_pilot_lead: z.boolean().optional(),
   plan_id: z.enum(["guest", "personal"]).optional(),
 });
+
+function authCookieOptions() {
+  const secure = process.env.NODE_ENV === "production";
+  return {
+    httpOnly: true,
+    sameSite: "lax" as const,
+    secure,
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    path: "/",
+  };
+}
 
 export function registerAdminUsersRoutes(app: Express): void {
   app.get("/api/admin/signups", async (req: Request, res: Response) => {
@@ -299,15 +384,70 @@ export function registerAdminUsersRoutes(app: Express): void {
     }
   });
 
+  app.post("/api/admin/users/:userId/impersonate", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const userId = String(req.params.userId ?? "");
+      const detail = getAdminUserDetail(userId);
+      if (!detail) return res.status(404).json({ message: "User not found" });
+      const session = createAuthSession(userId, false);
+      res.cookie(getAuthCookieName(), session.token, authCookieOptions());
+      return res.json({ ok: true, user_id: userId, redirect: "/me/profile" });
+    } catch (err) {
+      logError("admin-users", "impersonate failed", err);
+      return res.status(500).json({ message: "Failed to impersonate user" });
+    }
+  });
+
+  app.post("/api/admin/users/:userId/mark-test", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const userId = String(req.params.userId ?? "");
+      const isTest = req.body?.is_test_account !== false;
+      markTestAccount(userId, Boolean(isTest));
+      return res.json({ ok: true, user_id: userId, is_test_account: Boolean(isTest) });
+    } catch (err) {
+      logError("admin-users", "mark test failed", err);
+      return res.status(500).json({ message: err instanceof Error ? err.message : "Failed" });
+    }
+  });
+
+  app.delete("/api/admin/users/:userId/test-account", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const userId = String(req.params.userId ?? "");
+      deleteTestAccount(userId);
+      return res.json({ ok: true });
+    } catch (err) {
+      const msg = err instanceof Error ? err.message : "Failed";
+      logError("admin-users", "delete test failed", err);
+      return res.status(400).json({ message: msg });
+    }
+  });
+
   app.get("/api/admin/leads", async (req: Request, res: Response) => {
     try {
       await ensureStore();
-      const filter = parseLeadFilter(req.query.filter);
-      const limit = Math.min(Number(req.query.limit) || 500, 2000);
-      const leads = listEmailLeads(filter, limit);
-      const total = countEmailLeads(filter);
-      trackAdminEvent(req, "admin_leads_viewed", { filter, total });
-      return res.json({ leads, total, filter });
+      if (req.query.legacy === "1") {
+        const filter = parseLeadFilter(req.query.filter);
+        const limit = Math.min(Number(req.query.limit) || 500, 2000);
+        const leads = listEmailLeads(filter, limit);
+        const total = countEmailLeads(filter);
+        trackAdminEvent(req, "admin_leads_viewed", { filter, total });
+        return res.json({ leads, total, filter });
+      }
+
+      const filters = parseFounderFilters(req.query);
+      const data = listFounderLeads(filters);
+      trackAdminEvent(req, "admin_leads_viewed", {
+        filter: "founder",
+        total: data.total,
+        query: filters.q ?? "",
+      });
+      return res.json({
+        ...data,
+        halls: listHallNamesForFilter(),
+      });
     } catch (err) {
       logError("admin-users", "list leads failed", err);
       return res.status(500).json({ message: "Failed to load leads" });
@@ -317,15 +457,46 @@ export function registerAdminUsersRoutes(app: Express): void {
   app.get("/api/admin/leads/export", async (req: Request, res: Response) => {
     try {
       await ensureStore();
-      const filter = parseLeadFilter(req.query.filter);
-      const leads = listEmailLeads(filter, 5000);
-      const csv = exportLeadsCsv(leads);
+      const filters = parseFounderFilters(req.query);
+      const format = typeof req.query.format === "string" ? req.query.format : "csv";
+
+      if (format === "excel" || format === "xls" || format === "xlsx") {
+        const xml = exportFounderLeadsExcel(filters);
+        res.setHeader("Content-Type", "application/vnd.ms-excel; charset=utf-8");
+        res.setHeader("Content-Disposition", `attachment; filename="founder-leads.xls"`);
+        return res.send(xml);
+      }
+
+      if (req.query.legacy === "1") {
+        const filter = parseLeadFilter(req.query.filter);
+        const leads = listEmailLeads(filter, 5000);
+        const csv = exportLeadsCsv(leads);
+        res.setHeader("Content-Type", "text/csv; charset=utf-8");
+        res.setHeader("Content-Disposition", `attachment; filename="leads-${filter}.csv"`);
+        return res.send(csv);
+      }
+
+      const csv = exportFounderLeadsCsv(filters);
       res.setHeader("Content-Type", "text/csv; charset=utf-8");
-      res.setHeader("Content-Disposition", `attachment; filename="leads-${filter}.csv"`);
+      res.setHeader("Content-Disposition", `attachment; filename="founder-leads.csv"`);
       return res.send(csv);
     } catch (err) {
       logError("admin-users", "export leads failed", err);
       return res.status(500).json({ message: "Failed to export leads" });
+    }
+  });
+
+  app.get("/api/admin/leads/detail", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const email = typeof req.query.email === "string" ? req.query.email : "";
+      if (!email.includes("@")) return res.status(400).json({ message: "email required" });
+      const detail = getFounderLeadDetail(email);
+      if (!detail) return res.status(404).json({ message: "Lead not found" });
+      return res.json(detail);
+    } catch (err) {
+      logError("admin-users", "lead detail failed", err);
+      return res.status(500).json({ message: "Failed to load lead detail" });
     }
   });
 

@@ -111,32 +111,11 @@ export function buildFaqPageSchema(faqs: FaqItem[]) {
   };
 }
 
-export function buildRecipeSchema(origin: string, page: GoldenRecipePage) {
-  return buildRecipeSchemaAtPath(origin, page, recipePath(page.slug));
-}
-
-export type StandaloneRecipeSchemaInput = {
-  path: string;
-  title: string;
-  subtitle?: string;
-  description: string;
-  heroImage?: string;
-  prepTime: number;
-  cookTime: number;
-  crewSize: number;
-  recipeCategory: string;
-  recipeCuisine: string;
-  tags: string[];
-  ingredients: Array<{ name: string; quantity?: string; unit?: string; notes?: string; optional?: boolean }>;
-  steps: Array<{ stepNumber: number; title: string; instruction: string; minutes?: number }>;
-  nutrition: { calories: number; protein: number; carbs: number; fat: number };
-  generatedAt: string;
-};
-
 export function buildRecipeSchemaAtPath(
   origin: string,
   page: GoldenRecipePage,
   canonicalPath: string,
+  options?: { aggregateRating?: { ratingValue: number; ratingCount: number; reviewCount?: number } },
 ) {
   const url = absoluteUrl(origin, canonicalPath);
   const hero = page.heroImage?.trim();
@@ -158,6 +137,7 @@ export function buildRecipeSchemaAtPath(
   }));
 
   const categoryLabel = page.category.replace(/_/g, " ");
+  const aggregate = options?.aggregateRating;
 
   return {
     "@context": "https://schema.org",
@@ -199,8 +179,52 @@ export function buildRecipeSchemaAtPath(
       carbohydrateContent: `${page.nutrition.carbs} g`,
       fatContent: `${page.nutrition.fats} g`,
     },
+    ...(aggregate && aggregate.ratingCount > 0
+      ? {
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: aggregate.ratingValue,
+            bestRating: 5,
+            worstRating: 1,
+            ratingCount: aggregate.ratingCount,
+            ...(aggregate.reviewCount != null ? { reviewCount: aggregate.reviewCount } : {}),
+          },
+        }
+      : {}),
   };
 }
+
+/** Map crew approval (0–1) to a 1–5 AggregateRating value for schema. */
+export function approvalScoreToRatingValue(approvalScore: number): number {
+  const clamped = Math.min(1, Math.max(0, approvalScore));
+  return Math.round((1 + clamped * 4) * 10) / 10;
+}
+
+export function buildRecipeSchema(
+  origin: string,
+  page: GoldenRecipePage,
+  options?: { aggregateRating?: { ratingValue: number; ratingCount: number; reviewCount?: number } },
+) {
+  return buildRecipeSchemaAtPath(origin, page, recipePath(page.slug), options);
+}
+
+export type StandaloneRecipeSchemaInput = {
+  path: string;
+  title: string;
+  subtitle?: string;
+  description: string;
+  heroImage?: string;
+  prepTime: number;
+  cookTime: number;
+  crewSize: number;
+  recipeCategory: string;
+  recipeCuisine: string;
+  tags: string[];
+  ingredients: Array<{ name: string; quantity?: string; unit?: string; notes?: string; optional?: boolean }>;
+  steps: Array<{ stepNumber: number; title: string; instruction: string; minutes?: number }>;
+  nutrition: { calories: number; protein: number; carbs: number; fat: number };
+  generatedAt: string;
+};
 
 export function buildStandaloneRecipeSchema(origin: string, recipe: StandaloneRecipeSchemaInput) {
   const url = absoluteUrl(origin, recipe.path);
@@ -301,4 +325,41 @@ export function buildGuideArticleBreadcrumbs(
     { name: "Guides", path: guidesIndexPath() },
     { name: article.title, path: guidePath(article.slug) },
   ];
+}
+
+/** Public product SEO explainers — never attach private hall data. */
+export function buildSoftwareApplicationSchema(
+  origin: string,
+  opts: {
+    name: string;
+    description: string;
+    path: string;
+    applicationCategory?: string;
+  },
+) {
+  const url = absoluteUrl(origin, opts.path);
+  return {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: opts.name,
+    description: opts.description,
+    url,
+    applicationCategory: opts.applicationCategory ?? "LifestyleApplication",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD",
+    },
+    provider: {
+      "@type": "Organization",
+      name: SEO_BRAND,
+      url: absoluteUrl(origin, "/"),
+    },
+    isPartOf: {
+      "@type": "WebSite",
+      name: SEO_SITE_NAME,
+      url: absoluteUrl(origin, "/"),
+    },
+  };
 }

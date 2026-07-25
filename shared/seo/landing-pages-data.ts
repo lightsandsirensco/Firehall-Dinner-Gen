@@ -8,6 +8,9 @@ export type SeoLandingPageSlug =
   | "firefighter-meals"
   | "firefighter-recipes"
   | "firehouse-recipes"
+  | "firehouse-meals"
+  | "firefighter-dinner-ideas"
+  | "crew-meals"
   | "fire-station-meals"
   | "healthy-firefighter-meals"
   | "firefighter-breakfast-recipes"
@@ -505,6 +508,231 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
         question: "Can you do BBQ on a busy shift?",
         answer:
           "Quick grill plates and slow-cooker BBQ chicken work when you cannot tend a smoker all day. Save full brisket smokes for days with predictable downtime.",
+      },
+    ],
+  },
+  {
+    slug: "firehouse-meals",
+    path: "/firehouse-meals",
+    h1: "Firehouse Meals",
+    title: "Firehouse Meals — Classic Station Dinners | Firehall Meals",
+    description:
+      "Firehouse meals built for real station kitchens — crew-sized classics, interruption-friendly timing, and dinners firefighters actually cook on shift.",
+    keywords: [
+      "firehouse meals",
+      "firehouse dinner",
+      "firehouse cooking",
+      "station dinners",
+      "firefighter meals",
+    ],
+    intro:
+      "Firehouse meals are the dinners that show up on the white board week after week — chicken parm, chili, smash burgers, taco night, and the sheet-pan spreads that survive when tones drop mid-cook. They are not restaurant plating. They are crew food: honest portions, clear steps, and leftovers that still taste good at 0200.",
+    sections: [
+      {
+        heading: "What counts as a real firehouse meal",
+        paragraphs: [
+          "A firehouse meal feeds the table without a culinary degree. It scales from a quiet two-person night to a full company, holds under foil when someone gets back late, and uses grocery-store ingredients — not specialty pantry items nobody restocks.",
+          "The classics earn their place because they are reliable under interruption. Slow cookers, sheet pans, Dutch ovens, and big skillets are the tools that match station life better than delicate sauces that need constant attention.",
+          "Firehall Meals documents those dinners with crew scaling built in, so you are not mentally multiplying a four-person blog recipe while the bay doors open.",
+        ],
+      },
+      {
+        heading: "Culture on the plate",
+        paragraphs: [
+          "Firehouse cooking is part of station culture. The meal is where rookies learn timing, veterans pass on shortcuts, and the crew reconnects after a tough run. Getting dinner right matters more than getting it fancy.",
+          "That is why our firehouse meals lean on recognizable hall favorites — not trendy restaurant copy. When the captain asks what is for dinner, you want a confident answer, not a science experiment.",
+          "Browse the catalog for the full rotation, spin the Classics Wheel when nobody can decide, or use Find a Meal when the grocery run already happened and you need a fast answer.",
+        ],
+      },
+      {
+        heading: "Portions for 2 to 20",
+        paragraphs: [
+          "Station head count swings. Firehouse meals here are written for crew tables and adjusted with a crew-size control so shopping lists and steps stay honest whether you are feeding four or fourteen.",
+          "Beginner-friendly instructions matter when the cook of the day is a probationary firefighter. Every recipe assumes limited kitchen experience and a shared kitchen that may not have every gadget.",
+          "Start with chicken parm, big chili, or smash burgers if you want guaranteed buy-in — then branch into bowls, BBQ nights, and healthy plates as the crew trusts the rotation.",
+        ],
+      },
+    ],
+    recipeSlugs: [
+      "chicken-parm",
+      "smash-burgers",
+      "big-chili",
+      "pulled-pork",
+      "meatloaf-mashed",
+      "steak-tacos",
+      "sheet-pan-fajitas",
+      "beef-dip",
+    ],
+    relatedPages: [
+      { slug: "firefighter-meals", label: "Firefighter meals" },
+      { slug: "firehouse-recipes", label: "Firehouse recipes" },
+      { slug: "crew-meals", label: "Crew meals" },
+    ],
+    faqs: [
+      {
+        question: "What are classic firehouse meals?",
+        answer:
+          "Chicken parm, chili, smash burgers, taco bars, pulled pork, meatloaf, and sheet-pan fajitas are staples in firehouses across North America because they scale, hold, and taste like real crew food.",
+      },
+      {
+        question: "How are firehouse meals different from home recipes?",
+        answer:
+          "They are written for shared kitchens, interruption-friendly timing, and crew portions — not single-plate plating or specialty equipment most stations do not own.",
+      },
+      {
+        question: "Can a rookie cook firehouse meals?",
+        answer:
+          "Yes. Firehall Meals recipes emphasize clear steps, visual cues, and common-mistake notes so a firefighter with little cooking experience can still get dinner on the table.",
+      },
+    ],
+  },
+  {
+    slug: "firefighter-dinner-ideas",
+    path: "/firefighter-dinner-ideas",
+    h1: "Firefighter Dinner Ideas",
+    title: "Firefighter Dinner Ideas for Stuck Crews | Firehall Meals",
+    description:
+      "Firefighter dinner ideas when the hall is stuck on what to cook — quick shift plates, crew classics, BBQ nights, and healthy options that scale.",
+    keywords: [
+      "firefighter dinner ideas",
+      "fire station dinner ideas",
+      "what to cook at the firehouse",
+      "firefighter meals",
+      "crew dinner ideas",
+    ],
+    intro:
+      "When the whiteboard is blank and the debate starts, you need firefighter dinner ideas that end the argument — not another scroll through generic recipe apps. These ideas are sized for the hall, timed for real shifts, and proven enough that someone will actually eat a second plate.",
+    sections: [
+      {
+        heading: "When nobody can decide",
+        paragraphs: [
+          "Stuck crews usually need three paths: a fast skillet or sheet-pan night, a comfort classic everyone already likes, or a build-your-own bowl/taco line that lets picky eaters customize without cooking three dinners.",
+          "If the grocery run already happened, match dinner to what is in the fridge. If you still have to shop, pick a meal with a short list and Costco-friendly packs so you are not hunting specialty sauces at 1600.",
+          "Firehall Meals Find a Meal and the Classics Wheel exist for this exact moment — when the debate is louder than the appetite.",
+        ],
+      },
+      {
+        heading: "Ideas by shift mood",
+        paragraphs: [
+          "Busy night: sheet-pan fajitas, skillet pasta, or teriyaki bowls that finish in under an hour. Quiet night: smoked protein, Dutch-oven comfort, or a longer braise that can hold.",
+          "After a tough run: chili, meatloaf, chicken parm — food that feels like the hall, not a diet plan. Training day: high-protein plates and simple sides that do not wreck the kitchen.",
+          "Breakfast-for-dinner still counts when the crew wants eggs, burritos, or red lead energy. The catalog covers those nights too.",
+        ],
+      },
+      {
+        heading: "Turn an idea into a cooked meal",
+        paragraphs: [
+          "Every idea below links to a full crew-scaled recipe with shopping lists, steps, and hold notes for when tones interrupt. Pick one, set crew size, and cook.",
+          "If you want more browsing, jump into firefighter meals, firehouse meals, or the full Explore catalog by protein and time.",
+          "The goal is simple: fewer takeout nights, less whiteboard arguing, and dinners that still work when half the crew is late from a run.",
+        ],
+      },
+    ],
+    recipeSlugs: [
+      "sheet-pan-fajitas",
+      "chicken-parm",
+      "smash-burgers",
+      "bbq-chicken-bowls",
+      "steak-tacos",
+      "big-chili",
+      "pad-thai",
+      "beef-stroganoff",
+    ],
+    relatedPages: [
+      { slug: "firefighter-meals", label: "Firefighter meals" },
+      { slug: "crew-meals", label: "Crew meals" },
+      { slug: "firehouse-meals", label: "Firehouse meals" },
+    ],
+    faqs: [
+      {
+        question: "What should firefighters cook for dinner tonight?",
+        answer:
+          "Start with a hall classic the crew already likes — chicken parm, chili, fajitas, or smash burgers — or use Find a Meal to match protein, time, and head count.",
+      },
+      {
+        question: "What are easy firefighter dinner ideas for rookies?",
+        answer:
+          "Sheet-pan fajitas, skillet bowls, taco bars, and slow-cooker meals are forgiving. Look for recipes with clear visual cues and hold instructions.",
+      },
+      {
+        question: "How do we feed late-returning crew members?",
+        answer:
+          "Choose meals that hold well — chili, bowls, taco lines, pulled pork — and keep a covered backup pan above safe holding temperature.",
+      },
+    ],
+  },
+  {
+    slug: "crew-meals",
+    path: "/crew-meals",
+    h1: "Crew Meals",
+    title: "Crew Meals for Firefighters & Firehalls | Firehall Meals",
+    description:
+      "Crew meals designed for firefighters cooking together — portions for 2–20, shift-friendly timing, and station dinners built for a shared kitchen.",
+    keywords: [
+      "crew meals",
+      "meals for a crew",
+      "firefighter crew dinner",
+      "firehall crew meals",
+      "meals for 10 firefighters",
+    ],
+    intro:
+      "Crew meals are the opposite of single-plate cooking. Someone shops, someone cooks, everyone eats — and the portions have to match the table, not a food blog serving of four. Firehall Meals builds every recipe around that reality: scalable amounts, shared-kitchen steps, and food that still works when half the company is late.",
+    sections: [
+      {
+        heading: "Cooking for the table, not Instagram",
+        paragraphs: [
+          "A good crew meal has a clear protein, a starch or line that stretches, and sides that can wait without turning to mush. Bowls, taco bars, pasta bakes, and sheet pans dominate for a reason — they portion cleanly and forgive interruptions.",
+          "Beginner cooks should not be set up to fail. Our crew meals spell out pans, times, temperatures, and common mistakes so a rookie can run dinner without the crew ordering pizza behind their back.",
+          "Whether you are feeding two on a quiet night or twenty after mutual aid, set the crew size and let the shopping list and steps adjust.",
+        ],
+      },
+      {
+        heading: "Built for station workflow",
+        paragraphs: [
+          "Station cooking is teamwork with bad timing. Prep what you can before the busy window, keep hot and cold components separate, and use hotel pans or sheet pans that fit a real firehouse kitchen.",
+          "Call interruptions are normal. Recipes that hold — chili, pulled pork, bowl bars, braises — beat delicate dishes that peak in a ten-minute window.",
+          "Use Find a Meal when you need a fast crew answer, or browse firefighter dinner ideas when the whiteboard debate will not end.",
+        ],
+      },
+      {
+        heading: "Budget and leftover sense",
+        paragraphs: [
+          "Crew meals should respect the grocery pool. Batch proteins, use Costco-friendly packs, and plan leftovers that become next-shift lunches instead of trash.",
+          "Leftover guidance on each recipe helps the next cook turn yesterday's chili into nachos or bowl toppings without guessing.",
+          "Firehall Meals exists so crew cooking feels like a system — not a nightly scramble.",
+        ],
+      },
+    ],
+    recipeSlugs: [
+      "big-chili",
+      "pulled-pork",
+      "chicken-parm",
+      "bbq-chicken-bowls",
+      "sheet-pan-fajitas",
+      "steak-tacos",
+      "smash-burgers",
+      "meatloaf-mashed",
+    ],
+    relatedPages: [
+      { slug: "firefighter-dinner-ideas", label: "Firefighter dinner ideas" },
+      { slug: "firefighter-meals", label: "Firefighter meals" },
+      { slug: "fire-station-meals", label: "Fire station meals" },
+    ],
+    faqs: [
+      {
+        question: "What are crew meals for firefighters?",
+        answer:
+          "Crew meals are dinners cooked and eaten together at the firehall — sized for multiple firefighters, timed for shift work, and designed for a shared kitchen.",
+      },
+      {
+        question: "How many people do these recipes feed?",
+        answer:
+          "Most Firehall Meals recipes scale from small crews to larger companies (roughly 2–20). Set crew size on the recipe page to adjust portions and shopping lists.",
+      },
+      {
+        question: "What crew meals work best for beginners?",
+        answer:
+          "Chili, taco bowls, sheet-pan fajitas, and slow-cooker pulled pork are forgiving. Look for recipes with clear steps and hold instructions.",
       },
     ],
   },

@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Chuck roast gets a BBQ-forward rub and smoke, then finishes wrapped until slice-tender. Serve on toasted rolls with a peppery au jus and quick pickled onions.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 210,
   "prepTime": 25,
   "difficulty": "medium",
@@ -40,74 +40,74 @@
   "ingredients": [
     {
       "name": "Beef Chuck Roast",
-      "quantity": "8",
+      "quantity": "4",
       "unit": "Lb"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "2.5",
+      "quantity": "2.1",
       "unit": "Tbsp"
     },
     {
       "name": "Black Pepper",
-      "quantity": "2.5",
+      "quantity": "2.1",
       "unit": "Tbsp"
     },
     {
       "name": "Smoked Paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Granulated Garlic",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Brown Sugar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Yellow Mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "binder"
     },
     {
       "name": "Beef Broth",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "Cups"
     },
     {
       "name": "Worcestershire Sauce",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Apple Cider Vinegar",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup"
     },
     {
       "name": "Red Onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "thin-sliced"
     },
     {
       "name": "Sugar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Cracked Black Pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp"
     },
     {
       "name": "Hoagie Rolls",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole"
     }
   ],

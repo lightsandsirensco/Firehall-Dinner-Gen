@@ -13,10 +13,10 @@
   "cookTime": 110,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1036,
-  "protein": 108,
-  "carbs": 120,
-  "fats": 13,
+  "calories": 1180,
+  "protein": 90,
+  "carbs": 110,
+  "fats": 42,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -137,96 +137,94 @@
     {
       "stepNumber": 1,
       "title": "Trim and prep the chicken",
-      "instruction": "Pat chicken thighs dry. Trim excess fat, score skin lightly, and lay in hotel pans or zip bags for marinating.",
+      "instruction": "Pat the chicken thighs dry and trim ragged fat, leaving the skin on — it shields the meat from direct flame and crisps into the best bite on the plate. Score the skin side lightly in a crosshatch so the marinade soaks in instead of sitting on top. Lay the thighs in hotel pans or zip bags. Wear gloves from here on: scotch bonnet oil stays on your hands through two dish shifts.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Blend the jerk marinade",
-      "instruction": "Blend Scotch bonnets, green onions, thyme, garlic, ginger, allspice, brown sugar, soy, lime juice, and oil until mostly smooth.",
+      "instruction": "Blend the Scotch bonnets (seeds in for full island heat, seeds out for a milder pot), green onions, thyme, garlic, ginger, allspice, brown sugar, soy sauce, lime juice, and a splash of neutral oil until mostly smooth — a little texture is right; jerk is a paste, not a juice. Allspice and thyme are the backbone of real jerk; the scotch bonnet is heat on top of them, not the whole story. Taste a rice-grain amount on a spoon tip: it should hit sweet, then herbal, then burn.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
       "title": "Marinate the chicken",
-      "instruction": "Massage marinade under the skin. Marinate at least 45 minutes in the fridge — 4–12 hours is best.",
+      "instruction": "Massage the marinade over and under the skin so the paste sits directly on the meat. Marinate at least 45 minutes in the fridge; 4–12 hours is where jerk gets serious — salt and lime work into the thigh instead of coating it. Keep raw-chicken pans on the bottom shelf so nothing drips onto ready-to-eat food.",
       "minutes": 45,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Set up grill or oven",
-      "instruction": "Grill: 375°F two-zone fire. Oven: 425°F with foil-lined sheet pans and wire racks.",
+      "title": "Set up two zones of heat",
+      "instruction": "On the barbecue, build a two-zone fire at about 375°F — a direct side for char, an indirect side to finish gently. Indoors, set 425°F with foil-lined sheet pans and wire racks so air circulates underneath. The brown sugar in the marinade scorches fast over direct flame; the two-zone setup is what keeps jerk mahogany instead of black.",
       "minutes": 15,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 5,
       "title": "Start coconut rice and peas",
-      "instruction": "Simmer rice, kidney beans, coconut milk, stock, scallions, and thyme 18–20 minutes until tender. Fluff and hold at 200°F.",
+      "instruction": "Simmer the rinsed rice with kidney beans, coconut milk, the stock, two whole green onions, and a thyme sprig, covered, 18–20 minutes until the liquid absorbs and the rice is tender. Don't stir mid-cook — stirring bursts starch and turns coconut rice gummy. Fluff with a fork, pull the onion and thyme stems, and hold covered at 200°F.",
       "minutes": 25,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 6,
       "title": "Grill or roast the chicken",
-      "instruction": "Char skin over direct heat, finish indirect or in oven until thickest thigh reads 165°F.",
+      "instruction": "Lay thighs skin-side down over direct heat 3–4 minutes until the skin chars in spots and releases from the grate on its own, then move to the indirect side (or the 425°F oven) 25–30 minutes until the thickest thigh reads 165°F internal temp on an instant-read thermometer at the bone. Char is flavor; black is bitter — if flare-ups lick the skin, move the piece, don't fight the flame. Thighs forgive: even 175°F stays juicy, which is why jerk night survives a mid-cook call.",
       "minutes": 35,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 7,
       "title": "Rest the chicken",
-      "instruction": "Tent loosely with foil and rest 10 minutes before slicing.",
+      "instruction": "Tent loosely with foil and rest 10 minutes — juices redistribute so the first cut doesn't bleed the pan dry, and the crust sets so the jerk bark stays on the skin instead of the cutting board.",
       "minutes": 10,
       "heatLevel": "low"
     },
     {
       "stepNumber": 8,
-      "title": "Grill pineapple and dress slaw",
-      "instruction": "Grill pineapple rings 2–3 minutes per side. Toss slaw with lime, salt, and oil; keep cold.",
+      "title": "Grill pineapple and dress the slaw",
+      "instruction": "Grill the pineapple rings over direct heat 2–3 minutes per side until caramel grill marks show — the sugar chars fast, so stand by. Toss the coleslaw mix with lime juice, a pinch of salt, and a splash of oil; keep it cold on ice. Sweet char and cold crunch are what balance scotch bonnet heat on the plate.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 9,
       "title": "Coordinate timing for service",
-      "instruction": "Slice rested thighs. Rice in first pan, chicken second, cold sides at the far end.",
+      "instruction": "Leave thighs whole — the bone does the carving work — or slice for a faster line. Rice and peas in the first hotel pan, jerk thighs in the second, pineapple and slaw at the cold end. Hold hot pans at 140°F or above until the crew hits the line.",
       "minutes": 10,
       "heatLevel": "low"
     },
     {
       "stepNumber": 10,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop, close grill lid or hold chicken at 140°F; keep rice covered at low heat.",
+      "instruction": "Bone-in thighs are the reason jerk night survives a call — they stay juicy even past 175°F. If tones drop, pull thighs to the indirect side or a covered pan and hold at 140°F or above; the coconut rice holds covered at 200°F. On return, confirm thighs read 165°F and give them 2–3 minutes back over direct heat to wake the crust up before serving.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 11,
       "title": "Serve the hall line",
-      "instruction": "Open line with rice and peas, jerk chicken, pineapple, slaw, hot sauce, and lime wedges.",
+      "instruction": "Open the line with rice and peas first, jerk chicken over it, then pineapple, slaw, hot sauce, and lime wedges at the end. Call the crew while the skin still has crackle — jerk keeps its flavor on hold but loses that crisp inside 20 minutes.",
       "minutes": 8,
       "heatLevel": "low"
     },
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool in shallow pans within two hours. Reheat chicken to 165°F next shift.",
+      "instruction": "Cool jerk chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Thighs forgive the grill better than breasts — critical on call-heavy nights.",
-    "Shake coconut milk cans before opening so rice cooks evenly.",
-    "Keep slaw cold; hot rice and cold crunch on one plate is the whole point.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat.",
-    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+    "Bone-in, skin-on thighs forgive the grill far better than breasts — critical on call-heavy nights.",
+    "Allspice and thyme are the backbone of real jerk; the scotch bonnet is the heat on top, not the whole story.",
+    "Shake the coconut milk cans before opening and don't stir the rice mid-cook — stirring bursts the starch and turns it gummy.",
+    "Char is flavor, black is bitter — move pieces off flare-ups instead of fighting the flame.",
+    "Wear gloves through the whole marinade step; scotch bonnet oil lingers on your hands for hours."
   ],
   "tonightSpread": [
     "Main: Jerk chicken thighs",
@@ -242,21 +240,24 @@
   ],
   "whyCrewsLikeIt": "Island heat that still feeds eight. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
-    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top).",
+    "No scotch bonnets at the store? Habaneros are the closest swap — same heat family, slightly less fruit.",
+    "Canned pineapple rings work in a pinch; pat them dry hard or they steam instead of char.",
+    "Optional upgrade: a smoking pouch of pimento (allspice) berries on the coals is the closest a hall gets to Boston Bay."
   ],
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1036,
-    "protein": 108,
-    "carbs": 120,
-    "fats": 13,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 1180,
+    "protein": 90,
+    "carbs": 110,
+    "fats": 42,
+    "label": "per serving (hall portion, with coconut rice + sides)",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
@@ -292,9 +293,9 @@
     "parm-hero-subs",
     "chicken-souvlaki"
   ],
-  "sourceName": "Firehall Classics",
+  "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "jerk-chicken",
-  "generatedAt": "2026-06-04T20:53:34.897Z",
-  "contentVersion": 4
+  "generatedAt": "2026-07-23T21:40:00.000Z",
+  "contentVersion": 5
 }

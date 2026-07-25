@@ -38,75 +38,75 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Leg Quarters",
+      "name": "chicken leg quarters",
       "quantity": "4.8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "about 12 pieces",
       "group": "Main"
     },
     {
-      "name": "Red Chilies",
+      "name": "red chilies",
       "quantity": "5",
       "unit": "whole",
       "notes": "seeded",
       "group": "Sauce"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "7",
       "unit": "cloves",
       "group": "Sauce"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Oregano",
+      "name": "oregano",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "dried",
       "group": "Sauce"
     },
     {
-      "name": "Red Bell Peppers",
+      "name": "red bell peppers",
       "quantity": "3",
       "unit": "whole",
       "notes": "quartered",
       "group": "Grill"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "quartered",
       "group": "Grill"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "3",
       "unit": "whole",
       "notes": "halved",
       "group": "Finish"
     },
     {
-      "name": "Fresh Cilantro",
+      "name": "fresh cilantro",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -170,10 +170,19 @@
     "protein": 38,
     "carbs": 12,
     "fats": 26,
-    "label": "~430 cal/serving · 38g protein · 2g fiber (est.)"
+    "label": "~430 cal/serving · 38g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
-  "heroImageAlt": "Peri Peri Chicken Platter — crew-sized firehall meal",
+  "heroImageAlt": "Peri Peri Chicken Platter — portuguese platter plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/peri-peri-chicken-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/peri-peri-chicken-platter.jpg",
   "railImage": "/images/rails/hall-expansion/peri-peri-chicken-platter.jpg",
@@ -185,12 +194,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "montreal-smoked-meat-platter",
+    "firehall-donair-platter",
+    "classic-poutine-feed-crew",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

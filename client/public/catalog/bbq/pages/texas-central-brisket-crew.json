@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Central Texas pit tradition (Amazing Ribs, Meat Church): a whole packer brisket gets a simple salt-and-pepper rub, smokes low over post oak until probe-tender, rests, and slices against the grain for the crew.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 480,
   "prepTime": 45,
   "difficulty": "hard",
@@ -41,51 +41,51 @@
   "ingredients": [
     {
       "name": "Whole Packer Brisket",
-      "quantity": "14",
+      "quantity": "4",
       "unit": "Lb",
       "notes": "trimmed"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup"
     },
     {
       "name": "Coarse Black Pepper",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup"
     },
     {
       "name": "Garlic Powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp"
     },
     {
       "name": "Yellow Mustard",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "notes": "binder"
     },
     {
       "name": "Beef Broth",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups",
       "notes": "for holding"
     },
     {
       "name": "Dill Pickle Chips",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups"
     },
     {
       "name": "White Onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "thin-sliced"
     },
     {
       "name": "White Bread",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices"
     }
   ],

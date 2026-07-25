@@ -1,0 +1,4748 @@
+{
+  "generatedAt": "2026-07-23T20:54:22.123Z",
+  "totals": {
+    "recipes": 371,
+    "pass": 11,
+    "fail": 360
+  },
+  "rows": [
+    {
+      "slug": "mixed-lamb-chop-grill-board",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/mixed-lamb-chop-grill-board.json",
+      "pass": false,
+      "score": 0,
+      "issues": [
+        "ingredient_unused: unused: Za'atar",
+        "ingredient_unused: unused: Sumac",
+        "ingredient_unused: unused: Pomegranate Molasses",
+        "ingredient_unused: unused: Labneh",
+        "ingredient_unused: unused: Pickled Turnips",
+        "ingredient_unused: unused: Fresh Mint",
+        "ingredient_unused: unused: Grilled Pita Wedges",
+        "ingredient_unused: unused: Aleppo Pepper",
+        "vague_step: Heat grill zones: missing time, heat, or doneness cue",
+        "vague_step: rewrite needed: Char lemons",
+        "completeness: step 6 is generic or too short",
+        "completeness: thin instructions (112 words, min 400)",
+        "completeness: vague step: Char lemons"
+      ]
+    },
+    {
+      "slug": "honey-sriracha-shrimp-skewers",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/honey-sriracha-shrimp-skewers.json",
+      "pass": false,
+      "score": 20,
+      "issues": [
+        "ingredient_unused: unused: Nam Pla",
+        "ingredient_unused: unused: Tamarind Concentrate",
+        "ingredient_unused: unused: Shallots",
+        "ingredient_unused: unused: Thai Bird Chilies",
+        "ingredient_unused: unused: Thai Basil",
+        "ingredient_unused: unused: Fried Shallots",
+        "ingredient_unused: unused: Grapeseed Oil",
+        "internal_temp_missing: step 5 (Grill shrimp) needs safe internal temp cue",
+        "vague_step: Heat grill hot: missing time, heat, or doneness cue",
+        "completeness: thin instructions (120 words, min 280)"
+      ]
+    },
+    {
+      "slug": "maple-bourbon-grilled-trout",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/maple-bourbon-grilled-trout.json",
+      "pass": false,
+      "score": 20,
+      "issues": [
+        "ingredient_unused: unused: Fresh Thyme",
+        "ingredient_unused: unused: Pecans",
+        "ingredient_unused: unused: Shallots",
+        "ingredient_unused: unused: Fresh Sage",
+        "ingredient_unused: unused: Brown Butter",
+        "internal_temp_missing: step 3 (Heat grill) needs safe internal temp cue",
+        "vague_step: rewrite needed: Heat grill",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (110 words, min 280)",
+        "completeness: vague step: Heat grill"
+      ]
+    },
+    {
+      "slug": "charred-broccolini-lemon-tray",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/charred-broccolini-lemon-tray.json",
+      "pass": false,
+      "score": 28,
+      "issues": [
+        "ingredient_unused: unused: Anchovy Fillets",
+        "ingredient_unused: unused: Golden Raisins",
+        "ingredient_unused: unused: Pine Nuts",
+        "ingredient_unused: unused: Pecorino Romano",
+        "vague_step: Prep broccolini: missing time, heat, or doneness cue",
+        "vague_step: rewrite needed: Heat grill",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (93 words, min 280)",
+        "completeness: vague step: Heat grill"
+      ]
+    },
+    {
+      "slug": "firehall-antipasto-pasta-salad",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/firehall-antipasto-pasta-salad.json",
+      "pass": false,
+      "score": 28,
+      "issues": [
+        "ingredient_unused: unused: Eggplant",
+        "ingredient_unused: unused: Marinated Artichoke Hearts",
+        "ingredient_unused: unused: Mortadella",
+        "ingredient_unused: unused: Sun-Dried Tomatoes",
+        "ingredient_unused: unused: Pecorino Romano",
+        "vague_step: Prep veg for grill: missing time, heat, or doneness cue",
+        "vague_step: Build dressing: missing time, heat, or doneness cue",
+        "vague_step: Assemble antipasto salad: missing time, heat, or doneness cue",
+        "completeness: thin instructions (103 words, min 400)"
+      ]
+    },
+    {
+      "slug": "firehall-street-elote-cups",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/firehall-street-elote-cups.json",
+      "pass": false,
+      "score": 28,
+      "issues": [
+        "ingredient_unused: unused: Fresh Epazote",
+        "ingredient_unused: unused: Queso Fresco",
+        "ingredient_unused: unused: Tajín Seasoning",
+        "ingredient_unused: unused: Crushed Totopos",
+        "ingredient_unused: unused: Avocado Oil",
+        "vague_step: rewrite needed: Heat grill",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (99 words, min 280)",
+        "completeness: vague step: Heat grill"
+      ]
+    },
+    {
+      "slug": "griddle-smash-sausage-peppers",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/griddle-smash-sausage-peppers.json",
+      "pass": false,
+      "score": 28,
+      "issues": [
+        "ingredient_unused: unused: Giardiniera Relish",
+        "ingredient_unused: unused: Beef Tallow",
+        "vague_step: rewrite needed: Heat griddle",
+        "vague_step: Hold at 170°F: missing time, heat, or doneness cue",
+        "vague_step: rewrite needed: Toast rolls",
+        "completeness: step 3 is generic or too short",
+        "completeness: step 7 is generic or too short",
+        "completeness: thin instructions (106 words, min 400)",
+        "completeness: vague step: Heat griddle"
+      ]
+    },
+    {
+      "slug": "hall-burger-bar",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/hall-burger-bar.json",
+      "pass": false,
+      "score": 28,
+      "issues": [
+        "ingredient_unused: unused: iceberg lettuce",
+        "ingredient_unused: unused: beefsteak tomatoes",
+        "ingredient_unused: unused: red onion",
+        "ingredient_unused: unused: dill pickle chips",
+        "ingredient_unused: unused: ketchup and mustard",
+        "internal_temp_missing: step 1 (Prep toppings and bacon) needs safe internal temp cue",
+        "completeness: title_burger_no_bun",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (134 words, min 280)"
+      ]
+    },
+    {
+      "slug": "tandoori-lamb-chop-platter",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/tandoori-lamb-chop-platter.json",
+      "pass": false,
+      "score": 28,
+      "issues": [
+        "ingredient_unused: unused: Fenugreek Leaves",
+        "ingredient_unused: unused: Mustard Oil",
+        "ingredient_unused: unused: Gram Flour",
+        "ingredient_unused: unused: Pomegranate Molasses",
+        "internal_temp_missing: step 3 (Heat grill hot) needs safe internal temp cue",
+        "vague_step: Heat grill hot: missing time, heat, or doneness cue",
+        "vague_step: Char lemons: missing time, heat, or doneness cue",
+        "vague_step: Rest and hold: missing time, heat, or doneness cue",
+        "completeness: thin instructions (122 words, min 400)"
+      ]
+    },
+    {
+      "slug": "yakiniku-grill-platter-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/yakiniku-grill-platter-crew.json",
+      "pass": false,
+      "score": 28,
+      "issues": [
+        "ingredient_unused: unused: Shoyu",
+        "ingredient_unused: unused: Hon-Mirin",
+        "ingredient_unused: unused: Grated Apple",
+        "ingredient_unused: unused: Shiso Leaves",
+        "ingredient_unused: unused: Yuzu Kosho",
+        "internal_temp_missing: step 2 (Build tare marinade) needs safe internal temp cue",
+        "internal_temp_missing: step 5 (Grill beef in batches) needs safe internal temp cue",
+        "vague_step: Heat grill screaming hot: missing time, heat, or doneness cue",
+        "completeness: thin instructions (128 words, min 400)"
+      ]
+    },
+    {
+      "slug": "beef-stroganoff",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/beef-stroganoff.json",
+      "pass": false,
+      "score": 36,
+      "issues": [
+        "ingredient_unused: unused: Cremini Mushrooms, Sliced",
+        "ingredient_unused: unused: Yellow Onion, Sliced",
+        "ingredient_unused: unused: Fresh Parsley, Chopped",
+        "internal_temp_missing: step 2 (Sear beef in batches) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Build the stroganoff sauce) needs safe internal temp cue",
+        "internal_temp_missing: step 5 (Return beef and simmer gently) needs safe internal temp cue",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (189 words, min 400)"
+      ]
+    },
+    {
+      "slug": "breakfast-sliders",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-sliders.json",
+      "pass": false,
+      "score": 36,
+      "issues": [
+        "authenticity: ai_wording: until done",
+        "spelling_grammar: banned_phrase: \\buntil done\\b",
+        "ingredient_unused: unused: everything bagel seasoning",
+        "internal_temp_missing: step 1 (Heat the oven) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (124 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/grilled-chicken-pesto-panini-crew.json",
+      "pass": false,
+      "score": 36,
+      "issues": [
+        "ingredient_unused: unused: Focaccia Loaves",
+        "ingredient_unused: unused: Buffalo Mozzarella",
+        "ingredient_unused: unused: Oil-Packed Sun-Dried Tomatoes",
+        "ingredient_unused: unused: Grapeseed Oil",
+        "ingredient_unused: unused: White Balsamic Vinegar",
+        "ingredient_unused: unused: Shallots",
+        "vague_step: Heat griddle: missing time, heat, or doneness cue",
+        "completeness: thin instructions (104 words, min 400)"
+      ]
+    },
+    {
+      "slug": "grilled-cod-lemon-packets",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/grilled-cod-lemon-packets.json",
+      "pass": false,
+      "score": 36,
+      "issues": [
+        "ingredient_unused: unused: Atlantic Cod Fillets",
+        "ingredient_unused: unused: Fennel Bulb",
+        "ingredient_unused: unused: Picholine Olives",
+        "ingredient_unused: unused: Dry Vermouth",
+        "ingredient_unused: unused: Fresh Tarragon",
+        "ingredient_unused: unused: Fresh Dill Fronds",
+        "vague_step: Heat grill: missing time, heat, or doneness cue",
+        "completeness: thin instructions (110 words, min 280)"
+      ]
+    },
+    {
+      "slug": "memphis-dry-rub-ribs",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/memphis-dry-rub-ribs.json",
+      "pass": false,
+      "score": 36,
+      "issues": [
+        "ingredient_unused: unused: Brown Sugar",
+        "ingredient_unused: unused: Paprika",
+        "ingredient_unused: unused: Garlic Powder",
+        "ingredient_unused: unused: Onion Powder",
+        "ingredient_unused: unused: Cayenne",
+        "ingredient_unused: unused: Kosher Salt",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (131 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pork-satay-skewers-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/pork-satay-skewers-crew.json",
+      "pass": false,
+      "score": 36,
+      "issues": [
+        "ingredient_unused: unused: Tamarind Paste",
+        "ingredient_unused: unused: Galangal",
+        "ingredient_unused: unused: Coriander Seeds",
+        "ingredient_unused: unused: Thai Basil",
+        "vague_step: rewrite needed: Heat grill",
+        "completeness: step 4 is generic or too short",
+        "completeness: thin instructions (128 words, min 400)",
+        "completeness: vague step: Heat grill"
+      ]
+    },
+    {
+      "slug": "tonkotsu-ramen-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/tonkotsu-ramen-crew.json",
+      "pass": false,
+      "score": 36,
+      "issues": [
+        "ingredient_unused: unused: soy sauce",
+        "ingredient_unused: unused: green onions",
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "internal_temp_missing: step 1 (Blanch and start broth) needs safe internal temp cue",
+        "completeness: step 3 uses vague phrasing",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (111 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bagel-lox-breakfast-board",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/bagel-lox-breakfast-board.json",
+      "pass": false,
+      "score": 44,
+      "issues": [
+        "ingredient_unused: unused: smoked salmon lox",
+        "ingredient_unused: unused: whipped butter",
+        "vague_step: rewrite needed: Set the line",
+        "completeness: step 4 uses template title: Set the line",
+        "completeness: step 4 is generic or too short",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (131 words, min 280)"
+      ]
+    },
+    {
+      "slug": "breakfast-fried-rice-crew",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-fried-rice-crew.json",
+      "pass": false,
+      "score": 44,
+      "issues": [
+        "authenticity: ai_wording: perfect for",
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "internal_temp_missing: step 3 (Stir-fry vegetables) needs safe internal temp cue",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (156 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/cast-iron-steak-fajita-sizzlers.json",
+      "pass": false,
+      "score": 44,
+      "issues": [
+        "ingredient_unused: unused: Mexican Oregano",
+        "internal_temp_missing: step 4 (Sear steak batches) needs safe internal temp cue",
+        "vague_step: rewrite needed: Heat griddle hot",
+        "vague_step: Heat sizzle platters: missing time, heat, or doneness cue",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (114 words, min 400)",
+        "completeness: vague step: Heat griddle hot"
+      ]
+    },
+    {
+      "slug": "chicken-quesadillas",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/chicken-quesadillas.json",
+      "pass": false,
+      "score": 44,
+      "issues": [
+        "ingredient_unused: unused: Ground Beef",
+        "ingredient_unused: unused: Yellow Onion",
+        "ingredient_unused: unused: Garlic Cloves",
+        "internal_temp_missing: step 1 (Cook and sauce filling) needs safe internal temp cue",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (80 words, min 400)"
+      ]
+    },
+    {
+      "slug": "miso-ramen-bar",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/miso-ramen-bar.json",
+      "pass": false,
+      "score": 44,
+      "issues": [
+        "ingredient_unused: unused: green onions",
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "internal_temp_missing: step 1 (Simmer chicken broth) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Sear tofu) needs safe internal temp cue",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (91 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-breakfast-hash",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/sheet-pan-breakfast-hash.json",
+      "pass": false,
+      "score": 44,
+      "issues": [
+        "ingredient_unused: unused: olive oil or bacon fat",
+        "ingredient_unused: unused: shredded cheddar",
+        "internal_temp_missing: step 2 (Roast the hash base) needs safe internal temp cue",
+        "completeness: robotic_title",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (85 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "andouille-po-boy-rolls-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/andouille-po-boy-rolls-crew.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Mayonnaise",
+        "internal_temp_missing: step 2 (Split andouille) needs safe internal temp cue",
+        "vague_step: rewrite needed: Hold sausage",
+        "completeness: step 4 is generic or too short",
+        "completeness: thin instructions (102 words, min 400)",
+        "completeness: vague step: Hold sausage"
+      ]
+    },
+    {
+      "slug": "bbq-breakfast-hash",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/bbq-breakfast-hash.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "vague_step: Serve with extra sauce: missing time, heat, or doneness cue",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (76 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-sliders",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/bbq-chicken-sliders.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Ground Beef",
+        "ingredient_unused: unused: Yellow Onion",
+        "ingredient_unused: unused: Garlic Cloves",
+        "internal_temp_missing: step 1 (Cook and sauce filling) needs safe internal temp cue",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (81 words, min 400)"
+      ]
+    },
+    {
+      "slug": "beef-dip",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/beef-dip.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Yellow Onion, Halved",
+        "ingredient_unused: unused: Soy Sauce",
+        "internal_temp_missing: step 1 (Season the roast beef) needs safe internal temp cue",
+        "internal_temp_missing: step 2 (Sear and roast the beef) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Build the au jus) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Slice beef paper-thin) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "bun-bo-hue-noodle-soup",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/bun-bo-hue-noodle-soup.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "authenticity: ai_wording: perfect for",
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "internal_temp_missing: step 1 (Start the broth) needs safe internal temp cue",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (92 words, min 400)"
+      ]
+    },
+    {
+      "slug": "buttermilk-pancakes",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/buttermilk-pancakes.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "vague_step: Heat the griddle: missing time, heat, or doneness cue",
+        "vague_step: Serve the stack: missing time, heat, or doneness cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (66 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "cedar-plank-salmon",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/cedar-plank-salmon.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Brown Sugar",
+        "ingredient_unused: unused: Soy Sauce",
+        "ingredient_unused: unused: Fresh Ginger, Grated",
+        "internal_temp_missing: step 2 (Grill on the plank) needs safe internal temp cue",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (100 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-and-waffles-crew",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/chicken-and-waffles-crew.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "authenticity: ai_wording: plate and serve",
+        "ingredient_unused: unused: peanut or vegetable oil",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (150 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "chili-lime-grilled-tilapia",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/chili-lime-grilled-tilapia.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "vague_step: Heat grill: missing time, heat, or doneness cue",
+        "vague_step: rewrite needed: Rest briefly",
+        "vague_step: Hold at 140°F: missing time, heat, or doneness cue",
+        "completeness: step 6 is generic or too short",
+        "completeness: thin instructions (103 words, min 280)",
+        "completeness: vague step: Rest briefly"
+      ]
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/denver-breakfast-casserole.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: diced ham",
+        "ingredient_unused: unused: shredded cheddar",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (131 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "dirty-rice-crew-skillet",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/dirty-rice-crew-skillet.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "internal_temp_missing: step 2 (Brown sausage) needs safe internal temp cue",
+        "vague_step: Slice sausage: missing time, heat, or doneness cue",
+        "vague_step: Verify meat: missing time, heat, or doneness cue",
+        "vague_step: Simmer covered: missing time, heat, or doneness cue",
+        "completeness: robotic_title",
+        "completeness: thin instructions (259 words, min 400)"
+      ]
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/fire-captain-omelette-bar.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: shredded cheddar",
+        "ingredient_unused: unused: diced ham",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (126 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/firehall-breakfast-pizza.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: sliced green onions",
+        "internal_temp_missing: step 4 (Build and bake) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (137 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "game-day-nachos",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/game-day-nachos.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Pickled Jalapeños, Sliced",
+        "internal_temp_missing: step 1 (Brown the beef) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Melt and load) needs safe internal temp cue",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (120 words, min 400)"
+      ]
+    },
+    {
+      "slug": "grilled-peach-burrata-salad",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/grilled-peach-burrata-salad.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Pistachios",
+        "ingredient_unused: unused: Prosecco Reduction",
+        "ingredient_unused: unused: Fresh Mint",
+        "vague_step: Heat grill: missing time, heat, or doneness cue",
+        "vague_step: Plate arugula base: missing time, heat, or doneness cue",
+        "completeness: thin instructions (104 words, min 280)"
+      ]
+    },
+    {
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/grilled-shrimp-quinoa-bowls.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Extra-Virgin Olive Oil",
+        "internal_temp_missing: step 3 (Marinate shrimp) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Grill shrimp skewers) needs safe internal temp cue",
+        "completeness: awkward_with_starch",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (103 words, min 280)"
+      ]
+    },
+    {
+      "slug": "hungarian-goulash-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/hungarian-goulash-crew.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "internal_temp_missing: step 3 (Simmer the stew) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Add potatoes) needs safe internal temp cue",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (94 words, min 400)"
+      ]
+    },
+    {
+      "slug": "korean-bulgogi-grill-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/korean-bulgogi-grill-night.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: soy sauce",
+        "ingredient_unused: unused: green onions",
+        "internal_temp_missing: step 4 (Grill bulgogi in batches) needs safe internal temp cue",
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (88 words, min 400)"
+      ]
+    },
+    {
+      "slug": "leftover-roast-beef-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/leftover-roast-beef-bowls.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "internal_temp_missing: step 3 (Slice beef) needs safe internal temp cue",
+        "vague_step: Warm gravy: missing time, heat, or doneness cue",
+        "vague_step: Slice beef: missing time, heat, or doneness cue",
+        "vague_step: Mash potatoes: missing time, heat, or doneness cue",
+        "vague_step: Warm beef gently: missing time, heat, or doneness cue",
+        "completeness: thin instructions (241 words, min 400)"
+      ]
+    },
+    {
+      "slug": "lemon-herb-salmon",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/lemon-herb-salmon.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Brown Sugar",
+        "ingredient_unused: unused: Soy Sauce",
+        "ingredient_unused: unused: Fresh Ginger, Grated",
+        "internal_temp_missing: step 2 (Grill on the plank) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (100 words, min 400)"
+      ]
+    },
+    {
+      "slug": "meatball-hoagies",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/meatball-hoagies.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Ground Beef",
+        "ingredient_unused: unused: Yellow Onion",
+        "ingredient_unused: unused: Garlic Cloves",
+        "internal_temp_missing: step 1 (Cook and sauce filling) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (80 words, min 400)"
+      ]
+    },
+    {
+      "slug": "mississippi-pot-roast-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/mississippi-pot-roast-crew.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "internal_temp_missing: step 1 (Morning start) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Shred beef) needs safe internal temp cue",
+        "vague_step: Test tenderness: missing time, heat, or doneness cue",
+        "vague_step: Shred beef: missing time, heat, or doneness cue",
+        "vague_step: Finish juices: missing time, heat, or doneness cue",
+        "completeness: thin instructions (258 words, min 400)"
+      ]
+    },
+    {
+      "slug": "mongolian-beef-flat-top-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/mongolian-beef-flat-top-crew.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Peanut Oil",
+        "internal_temp_missing: step 4 (Sear beef batches) needs safe internal temp cue",
+        "vague_step: rewrite needed: Heat griddle hot",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (108 words, min 400)",
+        "completeness: vague step: Heat griddle hot"
+      ]
+    },
+    {
+      "slug": "mushroom-swiss-steak-pan",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/mushroom-swiss-steak-pan.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "internal_temp_missing: step 1 (Sear the beef) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Build the sauce) needs safe internal temp cue",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (123 words, min 400)"
+      ]
+    },
+    {
+      "slug": "parm-hero-subs",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/parm-hero-subs.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Ground Beef",
+        "ingredient_unused: unused: Yellow Onion",
+        "ingredient_unused: unused: Garlic Cloves",
+        "internal_temp_missing: step 1 (Cook and sauce filling) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (81 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pasta-e-fagioli-hall",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/pasta-e-fagioli-hall.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "vague_step: Heat pot: missing time, heat, or doneness cue",
+        "vague_step: Check beef: missing time, heat, or doneness cue",
+        "vague_step: Cook pasta: missing time, heat, or doneness cue",
+        "vague_step: Adjust texture: missing time, heat, or doneness cue",
+        "completeness: title_pasta_no_pasta",
+        "completeness: thin instructions (250 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pepper-steak-onions",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/pepper-steak-onions.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "internal_temp_missing: step 1 (Marinate and prep rice) needs safe internal temp cue",
+        "internal_temp_missing: step 2 (Sear the beef) needs safe internal temp cue",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (108 words, min 400)"
+      ]
+    },
+    {
+      "slug": "philly-cheesesteak-skillet",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/philly-cheesesteak-skillet.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Bell Peppers, Sliced",
+        "ingredient_unused: unused: Yellow Onion, Sliced",
+        "internal_temp_missing: step 2 (Sear beef and peppers) needs safe internal temp cue",
+        "completeness: robotic_title",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (64 words, min 400)"
+      ]
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/philly-egg-rolls.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Ground Beef",
+        "ingredient_unused: unused: Yellow Onion",
+        "ingredient_unused: unused: Garlic Cloves",
+        "internal_temp_missing: step 1 (Cook and sauce filling) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (82 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pressed-cuban-sandwiches-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/pressed-cuban-sandwiches-crew.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Deli Ham",
+        "internal_temp_missing: step 2 (Grill roast pork) needs safe internal temp cue",
+        "vague_step: rewrite needed: Heat griddle",
+        "completeness: step 5 is generic or too short",
+        "completeness: thin instructions (103 words, min 400)",
+        "completeness: vague step: Heat griddle"
+      ]
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/sausage-egg-bake.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Buttermilk",
+        "ingredient_unused: unused: All-Purpose Flour",
+        "internal_temp_missing: step 2 (Bake bacon, hold oven) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Serve the line) needs safe internal temp cue",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (90 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/sheet-pan-parmesan-dijon-chicken-thigh-dinner.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "authenticity: ai_wording: until done",
+        "spelling_grammar: banned_phrase: \\buntil done\\b",
+        "internal_temp_missing: step 4 (Roast until done) needs safe internal temp cue",
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (209 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/smoked-chicken-quarters-white-sauce.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Mayonnaise",
+        "internal_temp_missing: step 2 (Smoke steady) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Optional crisp finish) needs safe internal temp cue",
+        "completeness: step 5 uses vague phrasing",
+        "completeness: only 7 steps (min 10 for this meal)",
+        "completeness: thin instructions (173 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-potato-salad-tray",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/smoked-potato-salad-tray.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Neutral Oil",
+        "ingredient_unused: unused: Mayonnaise",
+        "vague_step: rewrite needed: Fold salad",
+        "completeness: step 5 is generic or too short",
+        "completeness: step 5 uses vague phrasing",
+        "completeness: only 8 steps (min 10 for this meal)"
+      ]
+    },
+    {
+      "slug": "tater-tot-breakfast-casserole",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/tater-tot-breakfast-casserole.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "internal_temp_missing: step 1 (Heat the oven) needs safe internal temp cue",
+        "internal_temp_missing: step 2 (Layer tots and bacon) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (128 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "teriyaki-salmon-grill",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/teriyaki-salmon-grill.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Brown Sugar",
+        "ingredient_unused: unused: Soy Sauce",
+        "ingredient_unused: unused: Fresh Ginger, Grated",
+        "internal_temp_missing: step 2 (Grill on the plank) needs safe internal temp cue",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (100 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-meatball-zoodles",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/turkey-meatball-zoodles.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "ingredient_unused: unused: Fresh Zucchini, Spiralized",
+        "ingredient_unused: unused: Fresh Basil, Torn",
+        "vague_step: Spiralize zucchini: missing time, heat, or doneness cue",
+        "vague_step: Warm marinara: missing time, heat, or doneness cue",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (83 words, min 400)"
+      ]
+    },
+    {
+      "slug": "yogurt-marinated-grill-chicken",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/yogurt-marinated-grill-chicken.json",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        "authenticity: ai_wording: ideal for",
+        "authenticity: ai_wording: until done",
+        "spelling_grammar: banned_phrase: \\buntil done\\b",
+        "internal_temp_missing: step 3 (Preheat grill) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (96 words, min 280)"
+      ]
+    },
+    {
+      "slug": "baked-ziti",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/baked-ziti.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Yellow Onion, Diced",
+        "ingredient_unused: unused: Fresh Basil, Chopped",
+        "internal_temp_missing: step 1 (Brown beef and build sauce) needs safe internal temp cue",
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (159 words, min 400)"
+      ]
+    },
+    {
+      "slug": "beef-barley-soup",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/beef-barley-soup.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Carrots, Diced",
+        "ingredient_unused: unused: Celery, Diced",
+        "completeness: fewer than 4 instruction steps for crew cooking",
+        "completeness: only 3 steps (min 8 for this meal)",
+        "completeness: thin instructions (61 words, min 400)"
+      ]
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-crunchwraps.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: sour cream",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (151 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-enchiladas.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: cilantro",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (137 words, min 400)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "breakfast-nachos-supreme",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-nachos-supreme.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "internal_temp_missing: step 3 (First melt) needs safe internal temp cue",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (118 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "breakfast-poutine",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-poutine.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "internal_temp_missing: step 2 (Make sausage gravy) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (126 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "breakfast-quesadillas",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-quesadillas.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: shredded pepper jack",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (133 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "breakfast-stromboli-roll",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-stromboli-roll.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: deli ham",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (138 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "burrito-bowl-bar-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/burrito-bowl-bar-night.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "spelling_grammar: ai_phrase: elevated: AI phrase: elevated",
+        "authenticity: ai_wording: elevate",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (131 words, min 400)"
+      ]
+    },
+    {
+      "slug": "cast-iron-breakfast-skillet",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/cast-iron-breakfast-skillet.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "completeness: robotic_title",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (105 words, min 280)"
+      ]
+    },
+    {
+      "slug": "cast-iron-chicken-fajitas",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/cast-iron-chicken-fajitas.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "internal_temp_missing: step 5 (Serve sizzling) needs safe internal temp cue",
+        "completeness: title_taco_no_tortilla",
+        "completeness: step 4 uses vague phrasing",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (118 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/chicken-alfredo-bake.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Mozzarella, Shredded",
+        "ingredient_unused: unused: Fresh Parsley, Chopped",
+        "internal_temp_missing: step 6 (Serve Chicken Alfredo Bake) needs safe internal temp cue",
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (109 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chipotle-lime-chicken-tacos",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/chipotle-lime-chicken-tacos.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "internal_temp_missing: step 4 (Rest and slice) needs safe internal temp cue",
+        "cook_time_unrealistic: active step minutes (156) exceed declared total (43)",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (108 words, min 280)"
+      ]
+    },
+    {
+      "slug": "country-fried-steak-eggs",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/country-fried-steak-eggs.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "authenticity: ai_wording: plate and serve",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (170 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "crew-french-toast-bake",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/crew-french-toast-bake.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "vague_step: rewrite needed: Heat the oven",
+        "completeness: step 1 is generic or too short",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (63 words, min 400)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "crispy-chicken-cutlets",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/crispy-chicken-cutlets.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Chicken Cutlets, Pounded Thin",
+        "ingredient_unused: unused: Eggs, Beaten",
+        "ingredient_unused: unused: Parmesan, Grated",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (109 words, min 400)"
+      ]
+    },
+    {
+      "slug": "enchilada-casserole",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/enchilada-casserole.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Shredded Cheddar",
+        "ingredient_unused: unused: Black Olives, Sliced",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (78 words, min 400)"
+      ]
+    },
+    {
+      "slug": "firehall-charcuterie-board",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/firehall-charcuterie-board.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "authenticity: ai_wording: culinary",
+        "spelling_grammar: banned_phrase: \\bculinary\\b",
+        "ingredient_unused: unused: sliced turkey breast",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (129 words, min 400)"
+      ]
+    },
+    {
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/flat-top-philly-cheesesteaks-crew.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "vague_step: Slice onions: missing time, heat, or doneness cue",
+        "vague_step: rewrite needed: Heat flat-top",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (98 words, min 400)",
+        "completeness: vague step: Heat flat-top"
+      ]
+    },
+    {
+      "slug": "gochujang-beef-skewers-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/gochujang-beef-skewers-crew.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Boneless Short Rib",
+        "ingredient_unused: unused: Doenjang",
+        "ingredient_unused: unused: Daikon Radish",
+        "ingredient_unused: unused: Shiitake Mushrooms",
+        "completeness: thin instructions (129 words, min 400)"
+      ]
+    },
+    {
+      "slug": "grilled-pork-chops",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/grilled-pork-chops.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Brown Sugar",
+        "ingredient_unused: unused: Soy Sauce",
+        "ingredient_unused: unused: Garlic Cloves, Minced",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (99 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hash-brown-breakfast-casserole",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/hash-brown-breakfast-casserole.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: shredded cheddar",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (212 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "honey-garlic-pork-tenderloin",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/honey-garlic-pork-tenderloin.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Brown Sugar",
+        "ingredient_unused: unused: Soy Sauce",
+        "ingredient_unused: unused: Garlic Cloves, Minced",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (99 words, min 400)"
+      ]
+    },
+    {
+      "slug": "huevos-rancheros-crew",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/huevos-rancheros-crew.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "authenticity: ai_wording: plate and serve",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (180 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "irish-breakfast-fry-up",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/irish-breakfast-fry-up.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "internal_temp_missing: step 2 (Fry bacon and tomatoes) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (140 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "italian-beef-slow-cooker",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/italian-beef-slow-cooker.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "vague_step: Test roast: missing time, heat, or doneness cue",
+        "vague_step: Shred beef: missing time, heat, or doneness cue",
+        "vague_step: Build sandwiches: missing time, heat, or doneness cue",
+        "completeness: robotic_title",
+        "completeness: thin instructions (253 words, min 400)"
+      ]
+    },
+    {
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/kielbasa-cabbage-potato-skillet.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "completeness: robotic_title",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (97 words, min 400)"
+      ]
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/korean-turkey-rice-bowls.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "internal_temp_missing: step 7 (Glaze meat) needs safe internal temp cue",
+        "vague_step: Mix glaze: missing time, heat, or doneness cue",
+        "vague_step: Heat skillet: missing time, heat, or doneness cue",
+        "completeness: robotic_title",
+        "completeness: thin instructions (241 words, min 280)"
+      ]
+    },
+    {
+      "slug": "maple-mustard-salmon-tray",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/maple-mustard-salmon-tray.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "authenticity: ai_wording: until done",
+        "spelling_grammar: banned_phrase: \\buntil done\\b",
+        "internal_temp_missing: step 4 (Bake until done) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (95 words, min 280)"
+      ]
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/maple-sausage-pinwheels.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: everything bagel seasoning",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (111 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "mediterranean-beef-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/mediterranean-beef-bowls.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "spelling_grammar: ai_phrase: restaurant_quality: AI phrase: restaurant-quality",
+        "authenticity: ai_wording: restaurant-quality",
+        "internal_temp_missing: step 3 (Heat the skillet for the beef) needs safe internal temp cue",
+        "internal_temp_missing: step 5 (Optional crispy chickpeas) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Hold the beef and rice hot) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "mediterranean-chickpea",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/mediterranean-chickpea.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Quinoa, Uncooked",
+        "ingredient_unused: unused: Red Onion, Thinly Sliced",
+        "completeness: robotic_title",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (90 words, min 400)"
+      ]
+    },
+    {
+      "slug": "menemen-for-the-crew",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/menemen-for-the-crew.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (147 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "migas-for-the-crew",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/migas-for-the-crew.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (153 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/monte-cristo-sandwiches.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: sliced deli ham",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (115 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/one-pot-chicken-rice.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Yellow Onion, Diced",
+        "ingredient_unused: unused: Fresh Parsley, Chopped",
+        "internal_temp_missing: step 3 (Add broth and nestle chicken) needs safe internal temp cue",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (183 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pasta-e-ceci-for-the-hall",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/pasta-e-ceci-for-the-hall.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Ditalini Or Small Shells",
+        "internal_temp_missing: step 2 (Build the chickpea broth) needs safe internal temp cue",
+        "completeness: title_pasta_no_pasta",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (181 words, min 400)"
+      ]
+    },
+    {
+      "slug": "philly-cheesesteak-sliders",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/philly-cheesesteak-sliders.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "internal_temp_missing: step 2 (Chop and cook steak) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Assemble and bake) needs safe internal temp cue",
+        "internal_temp_missing: step 5 (Make au jus and serve) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (144 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pollo-asado-citrus-platter",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/pollo-asado-citrus-platter.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Jicama Sticks",
+        "internal_temp_missing: step 2 (Heat grill) needs safe internal temp cue",
+        "vague_step: Heat grill: missing time, heat, or doneness cue",
+        "vague_step: Warm tortillas: missing time, heat, or doneness cue",
+        "completeness: thin instructions (112 words, min 400)"
+      ]
+    },
+    {
+      "slug": "salmon-rice-bowls-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/salmon-rice-bowls-crew.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: soy sauce",
+        "internal_temp_missing: step 8 (Finish glaze) needs safe internal temp cue",
+        "vague_step: Heat oven: missing time, heat, or doneness cue",
+        "vague_step: Slice cucumbers: missing time, heat, or doneness cue",
+        "completeness: thin instructions (250 words, min 280)"
+      ]
+    },
+    {
+      "slug": "scrapple-and-eggs-skillet",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/scrapple-and-eggs-skillet.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "authenticity: ai_wording: plate and serve",
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (138 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "shakshuka-for-the-hall",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/shakshuka-for-the-hall.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (194 words, min 400)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/sheet-pan-fajitas.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: Bell Peppers, Sliced",
+        "ingredient_unused: unused: Red Onion, Sliced",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (78 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/sheet-pan-meal-prep.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\bmeal prep\\b",
+        "ingredient_unused: unused: Bell Peppers, Sliced",
+        "ingredient_unused: unused: Red Onion, Sliced",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (80 words, min 400)"
+      ]
+    },
+    {
+      "slug": "shrimp-and-grits-breakfast",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/shrimp-and-grits-breakfast.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "authenticity: ai_wording: plate and serve",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (156 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "smoked-salmon-benedit",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/smoked-salmon-benedit.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "ingredient_unused: unused: rye bread",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (135 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "spiedie-chicken-platter-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/spiedie-chicken-platter-crew.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "vague_step: rewrite needed: Heat grill",
+        "vague_step: Warm rolls briefly: missing time, heat, or doneness cue",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (107 words, min 400)",
+        "completeness: vague step: Heat grill"
+      ]
+    },
+    {
+      "slug": "warm-spinach-chicken-salad",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/warm-spinach-chicken-salad.json",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        "authenticity: ai_wording: plate and serve",
+        "ingredient_unused: unused: hard-boiled eggs",
+        "internal_temp_missing: step 2 (Cook bacon and mushrooms) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (100 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bagel-sandwich-line",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/bagel-sandwich-line.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (199 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "baked-falafel-hall-bowls",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/baked-falafel-hall-bowls.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Fresh Parsley",
+        "ingredient_unused: unused: Fresh Cilantro",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (172 words, min 400)"
+      ]
+    },
+    {
+      "slug": "baked-oatmeal-mixed-berries",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/baked-oatmeal-mixed-berries.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (148 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "batch-lasagna",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/batch-lasagna.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Yellow Onion, Diced",
+        "internal_temp_missing: step 1 (Brown meat sauce) needs safe internal temp cue",
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (116 words, min 400)"
+      ]
+    },
+    {
+      "slug": "beef-broccoli",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/beef-broccoli.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 2 (Stir-fry beef in batches) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Char broccoli) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (71 words, min 400)"
+      ]
+    },
+    {
+      "slug": "belgian-waffle-platter",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/belgian-waffle-platter.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (148 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "biscuit-french-toast-sliders",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/biscuit-french-toast-sliders.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (131 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "blackened-cod-taco-night",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/blackened-cod-taco-night.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Cod Fillets",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (112 words, min 280)"
+      ]
+    },
+    {
+      "slug": "breakfast-sandwich-trays",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/breakfast-sandwich-trays.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (77 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "breakfast-sausage-pizza",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/breakfast-sausage-pizza.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Shredded Cheddar-Mozzarella Blend",
+        "internal_temp_missing: step 2 (Make country gravy) needs safe internal temp cue",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (173 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/bulgogi-bowls.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 3 (Sear bulgogi in batches) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Build bulgogi bowls) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (91 words, min 400)"
+      ]
+    },
+    {
+      "slug": "burnt-ends-chili-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/burnt-ends-chili-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "vague_step: Smoke uncovered: missing time, heat, or doneness cue",
+        "vague_step: Simmer covered: missing time, heat, or doneness cue",
+        "vague_step: Hold chili: missing time, heat, or doneness cue",
+        "completeness: thin instructions (261 words, min 400)"
+      ]
+    },
+    {
+      "slug": "caprese-steak-skewers-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/caprese-steak-skewers-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "vague_step: rewrite needed: Heat grill",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (119 words, min 280)",
+        "completeness: vague step: Heat grill"
+      ]
+    },
+    {
+      "slug": "cheesy-beef-nacho-bake",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/cheesy-beef-nacho-bake.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 3 (Layer and repeat) needs safe internal temp cue",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (131 words, min 280)"
+      ]
+    },
+    {
+      "slug": "chicken-enchilada-skillet-light",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/chicken-enchilada-skillet-light.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 3 (Simmer filling) needs safe internal temp cue",
+        "completeness: robotic_title; title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (102 words, min 280)"
+      ]
+    },
+    {
+      "slug": "chilaquiles-verde-bake",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/chilaquiles-verde-bake.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (149 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "chorizo-breakfast-hash",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/chorizo-breakfast-hash.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (148 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "club-sandwich-breakfast-bake",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/club-sandwich-breakfast-bake.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (143 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "coq-au-vin-batch",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/coq-au-vin-batch.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 1 (Render bacon and brown chicken) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Add wine and simmer) needs safe internal temp cue",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (103 words, min 400)"
+      ]
+    },
+    {
+      "slug": "corned-beef-hash-breakfast",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/corned-beef-hash-breakfast.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (156 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "crispy-fish-taco-night",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/crispy-fish-taco-night.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Large Eggs",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (115 words, min 280)"
+      ]
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/crock-barbacoa-chicken.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Limes",
+        "internal_temp_missing: step 6 (Reduce juices if needed) needs safe internal temp cue",
+        "completeness: only 7 steps (min 10 for this meal)",
+        "completeness: thin instructions (171 words, min 400)"
+      ]
+    },
+    {
+      "slug": "eggs-benedict-hall-style",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/eggs-benedict-hall-style.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (182 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "fajita-bar-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/fajita-bar-night.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: shredded cheddar",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (133 words, min 400)"
+      ]
+    },
+    {
+      "slug": "farmers-breakfast-casserole",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/farmers-breakfast-casserole.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (134 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/fast-philly-skillet.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 2 (Sear beef and peppers) needs safe internal temp cue",
+        "completeness: robotic_title; generic_opener",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (79 words, min 400)"
+      ]
+    },
+    {
+      "slug": "firehall-gyro-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/firehall-gyro-bowls.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 4 (Brown beef) needs safe internal temp cue",
+        "vague_step: Brown beef: missing time, heat, or doneness cue",
+        "vague_step: Season rice: missing time, heat, or doneness cue",
+        "completeness: thin instructions (256 words, min 400)"
+      ]
+    },
+    {
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/firehall-hibachi-mixed-grill-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "vague_step: rewrite needed: Heat griddle",
+        "completeness: step 3 is generic or too short",
+        "completeness: thin instructions (122 words, min 400)",
+        "completeness: vague step: Heat griddle"
+      ]
+    },
+    {
+      "slug": "garlic-butter-shrimp",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/garlic-butter-shrimp.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 2 (Sear shrimp) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Garlic butter sauce) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (160 words, min 400)"
+      ]
+    },
+    {
+      "slug": "greek-lemon-chicken-potatoes",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/greek-lemon-chicken-potatoes.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Extra-Virgin Olive Oil",
+        "internal_temp_missing: step 4 (Deglaze pan juices) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "green-chile-chicken-stew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/green-chile-chicken-stew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 2 (Sear the chicken) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Shred and finish) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (104 words, min 400)"
+      ]
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/grilled-corn-cotija.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "authenticity: ai_wording: set up the station",
+        "ingredient_unused: unused: Mayonnaise",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (105 words, min 400)"
+      ]
+    },
+    {
+      "slug": "grilled-flank-fajita-bar",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/grilled-flank-fajita-bar.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "vague_step: Grill vegetables: missing time, heat, or doneness cue",
+        "vague_step: Warm tortillas: missing time, heat, or doneness cue",
+        "completeness: title_taco_no_tortilla",
+        "completeness: thin instructions (259 words, min 400)"
+      ]
+    },
+    {
+      "slug": "grilled-reuben-sandwiches-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/grilled-reuben-sandwiches-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Marbled Rye Bread",
+        "internal_temp_missing: step 3 (Grill corned beef) needs safe internal temp cue",
+        "vague_step: Heat griddle: missing time, heat, or doneness cue",
+        "completeness: thin instructions (105 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hall-blt-sandwich-feed",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/hall-blt-sandwich-feed.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: mayonnaise",
+        "internal_temp_missing: step 1 (Oven-crisp the bacon) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (210 words, min 280)"
+      ]
+    },
+    {
+      "slug": "hall-breakfast-burritos",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/hall-breakfast-burritos.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (145 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/hall-breakfast-wraps.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (124 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/hall-sausage-biscuits-gravy.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (130 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "herb-roasted-thighs",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/herb-roasted-thighs.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Fresh Thyme",
+        "ingredient_unused: unused: Fresh Rosemary",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (70 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hickory-turkey-legs",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/hickory-turkey-legs.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "authenticity: ai_wording: perfect for",
+        "ingredient_unused: unused: apple juice",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (139 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/hot-honey-grilled-sausage-peppers.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "authenticity: ai_wording: perfect for",
+        "ingredient_unused: unused: Neutral Oil",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (86 words, min 280)"
+      ]
+    },
+    {
+      "slug": "jalapeno-cheddar-smoked-sausages",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/jalapeno-cheddar-smoked-sausages.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "ingredient_unused: unused: Neutral Oil",
+        "completeness: only 7 steps (min 8 for this meal)",
+        "completeness: thin instructions (98 words, min 400)"
+      ]
+    },
+    {
+      "slug": "johnnycakes-with-syrup",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/johnnycakes-with-syrup.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (141 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "korean-beef-rice-bowls",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/korean-beef-rice-bowls.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Green Onions",
+        "internal_temp_missing: step 5 (Glaze and build bowls) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (113 words, min 280)"
+      ]
+    },
+    {
+      "slug": "lemon-garlic-shrimp-pasta",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/lemon-garlic-shrimp-pasta.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 2 (Sear shrimp quickly) needs safe internal temp cue",
+        "completeness: title_pasta_no_pasta",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (120 words, min 280)"
+      ]
+    },
+    {
+      "slug": "lemon-salmon-orzo-skillet",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/lemon-salmon-orzo-skillet.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Extra-Virgin Olive Oil",
+        "internal_temp_missing: step 1 (Sear salmon) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (106 words, min 280)"
+      ]
+    },
+    {
+      "slug": "loaded-nacho-bar-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/loaded-nacho-bar-night.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 1 (Brown the beef) needs safe internal temp cue",
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (133 words, min 280)"
+      ]
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/loaded-nacho-skillet.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 1 (Brown beef and onion) needs safe internal temp cue",
+        "completeness: robotic_title; title_taco_no_tortilla",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (108 words, min 400)"
+      ]
+    },
+    {
+      "slug": "loaded-potato-skins",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/loaded-potato-skins.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 3 (Cook and crumble bacon) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Load and broil) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (157 words, min 400)"
+      ]
+    },
+    {
+      "slug": "loaded-ranch-potato-salad-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/loaded-ranch-potato-salad-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Crumbled Blue Cheese",
+        "ingredient_unused: unused: Fresh Chives",
+        "ingredient_unused: unused: Watermelon Radish",
+        "completeness: thin instructions (117 words, min 400)"
+      ]
+    },
+    {
+      "slug": "lumberjack-breakfast-platter",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/lumberjack-breakfast-platter.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (162 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "montreal-smoked-meat-platter",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/montreal-smoked-meat-platter.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: black peppercorns",
+        "ingredient_unused: unused: rye bread",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (116 words, min 400)"
+      ]
+    },
+    {
+      "slug": "mostaccioli-sausage-bake",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/mostaccioli-sausage-bake.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 2 (Brown the sausage) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Assemble and bake) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (106 words, min 400)"
+      ]
+    },
+    {
+      "slug": "overnight-french-toast-bake",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/overnight-french-toast-bake.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (121 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "overnight-oat-bar-crew",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/overnight-oat-bar-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "authenticity: ai_wording: ideal for",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "overnight-sausage-strata",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/overnight-sausage-strata.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (137 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "paprika-roasted-chicken-quarters",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/paprika-roasted-chicken-quarters.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "authenticity: ai_wording: until done",
+        "spelling_grammar: banned_phrase: \\buntil done\\b",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (96 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pellet-smoked-chicken-quarters",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/pellet-smoked-chicken-quarters.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 3 (Smoke until nearly done) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Glaze and crisp) needs safe internal temp cue",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (131 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pepperoni-pizza-night",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/pepperoni-pizza-night.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "authenticity: ai_wording: run the line",
+        "ingredient_unused: unused: Grated Parmesan",
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (189 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pesto-tomato-chicken-tray",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/pesto-tomato-chicken-tray.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Garlic Cloves",
+        "internal_temp_missing: step 3 (Initial roast) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (95 words, min 400)"
+      ]
+    },
+    {
+      "slug": "portuguese-linguica-grill-platter",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/portuguese-linguica-grill-platter.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 3 (Heat grill) needs safe internal temp cue",
+        "internal_temp_missing: step 5 (Grill veg) needs safe internal temp cue",
+        "vague_step: Rest and slice: missing time, heat, or doneness cue",
+        "completeness: thin instructions (113 words, min 280)"
+      ]
+    },
+    {
+      "slug": "quick-egg-tacos",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/quick-egg-tacos.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: generic_opener; title_taco_no_tortilla; title_taco_format_mismatch",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (74 words, min 200)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "reverse-seared-ribeye-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/reverse-seared-ribeye-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "ingredient_unused: unused: Neutral Oil",
+        "completeness: only 8 steps (min 10 for this meal)",
+        "completeness: thin instructions (146 words, min 400)"
+      ]
+    },
+    {
+      "slug": "rigatoni-meat-sauce-batch",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/rigatoni-meat-sauce-batch.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "temperature_missing: hot cooking steps lack oven/grill/surface temperature",
+        "completeness: no oven/grill/internal temperature cues in steps",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (97 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sandwich-board-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/sandwich-board-night.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: mayonnaise",
+        "internal_temp_missing: step 1 (Slice and arrange proteins) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (127 words, min 280)"
+      ]
+    },
+    {
+      "slug": "santa-maria-tri-tip-roast",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/santa-maria-tri-tip-roast.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "ingredient_unused: unused: Neutral Oil",
+        "completeness: only 8 steps (min 10 for this meal)",
+        "completeness: thin instructions (137 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sausage-egg-cheese-sandwiches",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/sausage-egg-cheese-sandwiches.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (77 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "sausage-gnocchi-skillet",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/sausage-gnocchi-skillet.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "vague_step: Add sauce: missing time, heat, or doneness cue",
+        "vague_step: Wilt spinach: missing time, heat, or doneness cue",
+        "completeness: robotic_title",
+        "completeness: thin instructions (247 words, min 280)"
+      ]
+    },
+    {
+      "slug": "sausage-peppers-onions",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/sausage-peppers-onions.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 3 (Combine and simmer) needs safe internal temp cue",
+        "vague_step: Combine and simmer: missing time, heat, or doneness cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (68 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/sheet-pan-breakfast-sandwiches.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (118 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/sheet-pan-eggs-sausage-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (213 words, min 280)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "sheet-pan-full-english",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/sheet-pan-full-english.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (130 words, min 400)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "sheet-pan-sausage-peppers",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/sheet-pan-sausage-peppers.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Bell Peppers, Sliced",
+        "ingredient_unused: unused: Red Onion, Sliced",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (79 words, min 400)"
+      ]
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/skillet-chicken-alfredo.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Fettuccine Or Penne",
+        "ingredient_unused: unused: Fresh Parsley, Chopped",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (77 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-bbq-chicken-wings-tray",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/smoked-bbq-chicken-wings-tray.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "vague_step: Toss and tray: missing time, heat, or doneness cue",
+        "completeness: only 8 steps (min 10 for this meal)",
+        "completeness: thin instructions (121 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-mac-and-cheese-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/smoked-mac-and-cheese-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "vague_step: Par-cook pasta: missing time, heat, or doneness cue",
+        "completeness: only 7 steps (min 10 for this meal)",
+        "completeness: thin instructions (132 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-tri-tip",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/smoked-tri-tip.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: fresh parsley",
+        "ingredient_unused: unused: red wine vinegar",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (138 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoker-nachos-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/smoker-nachos-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "vague_step: Drain beans: missing time, heat, or doneness cue",
+        "vague_step: Add cold toppings: missing time, heat, or doneness cue",
+        "completeness: title_taco_no_tortilla",
+        "completeness: thin instructions (257 words, min 400)"
+      ]
+    },
+    {
+      "slug": "southwest-egg-bake",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/southwest-egg-bake.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (97 words, min 400)",
+        "completeness: missing tonightSpread",
+        "completeness: missing equipment"
+      ]
+    },
+    {
+      "slug": "southwest-steak-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/southwest-steak-bowls.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: limes",
+        "internal_temp_missing: step 3 (Get the grill screaming hot) needs safe internal temp cue",
+        "internal_temp_missing: step 5 (Char the peppers and corn) needs safe internal temp cue",
+        "internal_temp_missing: step 10 (Serve while the steak is still warm) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "spanish-chicken-chorizo-rice",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/spanish-chicken-chorizo-rice.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Kosher Salt",
+        "internal_temp_missing: step 4 (Simmer covered) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "steak-tacos",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/steak-tacos.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "authenticity: ai_wording: no heat",
+        "ingredient_unused: unused: Limes",
+        "ingredient_unused: unused: Neutral Oil (high Heat)",
+        "internal_temp_missing: step 4 (Sear steak hard (high, 8–10 min)) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "texas-beef-ribs",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/texas-beef-ribs.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Garlic Powder",
+        "ingredient_unused: unused: Apple Cider Vinegar",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (116 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-chili",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/turkey-chili.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Kidney Beans, Drained",
+        "internal_temp_missing: step 4 (Simmer the chili) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (232 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-lettuce-wrap-night",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/turkey-lettuce-wrap-night.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "ingredient_unused: unused: Green Onions",
+        "internal_temp_missing: step 4 (Finish sauce) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (105 words, min 280)"
+      ]
+    },
+    {
+      "slug": "turkey-sausage-burritos",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/turkey-sausage-burritos.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (145 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "veggie-egg-burritos",
+      "kind": "breakfast_catalog",
+      "file": "client/public/catalog/breakfast/pages/veggie-egg-burritos.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (145 words, min 280)",
+        "completeness: missing tonightSpread"
+      ]
+    },
+    {
+      "slug": "wonton-noodle-soup-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/wonton-noodle-soup-crew.json",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        "internal_temp_missing: step 3 (Simmer broth) needs safe internal temp cue",
+        "completeness: step 3 uses vague phrasing",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (95 words, min 400)"
+      ]
+    },
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/30-minute-pasta-e-fagioli-for-the-hall.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: title_pasta_no_pasta",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (196 words, min 400)"
+      ]
+    },
+    {
+      "slug": "asian-chicken-lettuce-cups",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/asian-chicken-lettuce-cups.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Green Onions",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (110 words, min 280)"
+      ]
+    },
+    {
+      "slug": "bbq-brisket-burnt-ends",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/bbq-brisket-burnt-ends.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Chuck Or Brisket Point, Cubed",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (85 words, min 400)"
+      ]
+    },
+    {
+      "slug": "beef-gyros-for-the-hall",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/beef-gyros-for-the-hall.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Season the beef) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (134 words, min 280)"
+      ]
+    },
+    {
+      "slug": "brisket-style-beef-sandwiches-au-jus",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/brisket-style-beef-sandwiches-au-jus.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "vague_step: Leftovers: missing time, heat, or doneness cue",
+        "completeness: only 7 steps (min 10 for this meal)",
+        "completeness: thin instructions (109 words, min 400)"
+      ]
+    },
+    {
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/buffalo-chicken-sweet-potato-bowls.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Cube and stage the bowl ingredients) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Season the chicken) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Hold hot and cold components correctly) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "buffalo-chicken-wraps",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/buffalo-chicken-wraps.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Make buffalo sauce) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (172 words, min 400)"
+      ]
+    },
+    {
+      "slug": "cajun-chicken-rice-skillet",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/cajun-chicken-rice-skillet.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Season and sear chicken) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (119 words, min 400)"
+      ]
+    },
+    {
+      "slug": "cajun-shrimp-rice-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/cajun-shrimp-rice-bowls.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Stage shrimp and vegetables) needs safe internal temp cue",
+        "internal_temp_missing: step 2 (Cook Cajun rice) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Hold the hot components) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "caprese-chicken-bake",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/caprese-chicken-bake.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Garlic Cloves",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (104 words, min 280)"
+      ]
+    },
+    {
+      "slug": "cheesy-chicken-broccoli-rice",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/cheesy-chicken-broccoli-rice.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Sear the chicken) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (95 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-cacciatore-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/chicken-cacciatore-crew.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Brown the chicken) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (104 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-dumpling-soup",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/chicken-dumpling-soup.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Simmer until stew-thick) needs safe internal temp cue",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (220 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-paprikash-hall",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/chicken-paprikash-hall.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Brown the chicken) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (96 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-shawarma-pitas",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/chicken-shawarma-pitas.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Roast or grill chicken) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (133 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-thigh-stretch-dinner",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/chicken-thigh-stretch-dinner.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "vague_step: Heat oven: missing time, heat, or doneness cue",
+        "vague_step: Dry chickpeas: missing time, heat, or doneness cue",
+        "completeness: thin instructions (240 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-tikka-masala",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/chicken-tikka-masala.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Yellow Onion, Diced",
+        "internal_temp_missing: step 7 (Fold in chicken) needs safe internal temp cue",
+        "completeness: thin instructions (231 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/chicken-tortilla-soup-for-the-hall.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Sear chicken and soften aromatics) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (216 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chili-mac",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/chili-mac.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Simmer the chili base) needs safe internal temp cue",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (174 words, min 400)"
+      ]
+    },
+    {
+      "slug": "classic-poutine-feed-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/classic-poutine-feed-crew.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 3 (Build beef gravy) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "competition-bbq-chicken-thighs",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/competition-bbq-chicken-thighs.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "completeness: only 8 steps (min 10 for this meal)",
+        "completeness: thin instructions (134 words, min 400)"
+      ]
+    },
+    {
+      "slug": "cottage-cheese-protein-pasta",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/cottage-cheese-protein-pasta.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title; title_pasta_no_pasta",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (103 words, min 400)"
+      ]
+    },
+    {
+      "slug": "dutch-oven-pot-roast",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/dutch-oven-pot-roast.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 5 (Rest and serve) needs safe internal temp cue",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (118 words, min 400)"
+      ]
+    },
+    {
+      "slug": "egg-roll-in-a-bowl-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/egg-roll-in-a-bowl-crew.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "vague_step: Heat skillet: missing time, heat, or doneness cue",
+        "vague_step: Hold components: missing time, heat, or doneness cue",
+        "completeness: thin instructions (249 words, min 280)"
+      ]
+    },
+    {
+      "slug": "enchilada-beef-skillet",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/enchilada-beef-skillet.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title; title_taco_no_tortilla",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (99 words, min 400)"
+      ]
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/five-ingredient-pasta.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: title_pasta_no_pasta",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (180 words, min 400)"
+      ]
+    },
+    {
+      "slug": "flank-chimichurri",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/flank-chimichurri.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Season the flank) needs safe internal temp cue",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (80 words, min 400)"
+      ]
+    },
+    {
+      "slug": "french-onion-soup-for-the-hall",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/french-onion-soup-for-the-hall.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Deglaze and add stock) needs safe internal temp cue",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (212 words, min 400)"
+      ]
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/greek-chicken-bowls.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (89 words, min 400)"
+      ]
+    },
+    {
+      "slug": "greek-chicken-pitas",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/greek-chicken-pitas.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (128 words, min 280)"
+      ]
+    },
+    {
+      "slug": "hall-taco-bar",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/hall-taco-bar.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (98 words, min 400)"
+      ]
+    },
+    {
+      "slug": "herb-baked-salmon-tray",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/herb-baked-salmon-tray.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 4 (Bake until just opaque) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (106 words, min 280)"
+      ]
+    },
+    {
+      "slug": "honey-chipotle-chicken-thighs",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/honey-chipotle-chicken-thighs.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Neutral Oil",
+        "completeness: only 7 steps (min 8 for this meal)",
+        "completeness: thin instructions (200 words, min 280)"
+      ]
+    },
+    {
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/honey-garlic-chicken-rice-bowls.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 4 (Glaze chicken in pan) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (102 words, min 280)"
+      ]
+    },
+    {
+      "slug": "honey-lime-chicken-tray",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/honey-lime-chicken-tray.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 3 (Initial roast) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "jambalaya",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/jambalaya.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (83 words, min 400)"
+      ]
+    },
+    {
+      "slug": "lamb-merguez-skewers-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/lamb-merguez-skewers-crew.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 4 (Heat grill) needs safe internal temp cue",
+        "vague_step: Warm flatbread: missing time, heat, or doneness cue",
+        "completeness: thin instructions (142 words, min 400)"
+      ]
+    },
+    {
+      "slug": "lemon-chicken-orzo-soup",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/lemon-chicken-orzo-soup.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 3 (Build soup base) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (102 words, min 400)"
+      ]
+    },
+    {
+      "slug": "loaded-baked-potato-soup-crock",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/loaded-baked-potato-soup-crock.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 3 (Cook bacon) needs safe internal temp cue",
+        "vague_step: Morning start: missing time, heat, or doneness cue",
+        "completeness: thin instructions (251 words, min 400)"
+      ]
+    },
+    {
+      "slug": "mac-and-cheese-bake",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/mac-and-cheese-bake.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Sharp Cheddar, Shredded",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (169 words, min 400)"
+      ]
+    },
+    {
+      "slug": "malaysian-laksa-soup",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/malaysian-laksa-soup.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Simmer coconut milk and broth) needs safe internal temp cue",
+        "internal_temp_missing: step 6 (Poach shrimp in laksa broth) needs safe internal temp cue",
+        "completeness: thin instructions (325 words, min 400)"
+      ]
+    },
+    {
+      "slug": "maple-cured-salmon-plank",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/maple-cured-salmon-plank.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 4 (Grill on planks) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "maple-soy-salmon-bowls",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/maple-soy-salmon-bowls.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 3 (Roast salmon) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (102 words, min 280)"
+      ]
+    },
+    {
+      "slug": "mediterranean-chicken-farro-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/mediterranean-chicken-farro-bowls.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (86 words, min 400)"
+      ]
+    },
+    {
+      "slug": "mediterranean-feast-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/mediterranean-feast-night.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (128 words, min 400)"
+      ]
+    },
+    {
+      "slug": "moroccan-meatballs",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/moroccan-meatballs.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Couscous, Dry",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (72 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pasta-bar-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/pasta-bar-night.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: title_pasta_no_pasta",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (139 words, min 400)"
+      ]
+    },
+    {
+      "slug": "performance-burrito-bowls",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/performance-burrito-bowls.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (81 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pork-carnitas-tacos",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/pork-carnitas-tacos.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: title_taco_no_tortilla",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (99 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pulled-pork",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/pulled-pork.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Yellow Mustard",
+        "internal_temp_missing: step 2 (Low-and-slow cook) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Build pulled pork sandwiches) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "red-beans-and-rice-for-the-hall",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/red-beans-and-rice-for-the-hall.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 3 (Simmer beans until creamy) needs safe internal temp cue",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (211 words, min 400)"
+      ]
+    },
+    {
+      "slug": "salsa-verde-chicken-crock",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/salsa-verde-chicken-crock.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: limes",
+        "vague_step: Check temperature: missing time, heat, or doneness cue",
+        "completeness: thin instructions (253 words, min 400)"
+      ]
+    },
+    {
+      "slug": "shawarma-bar-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/shawarma-bar-night.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: pickled turnips",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (133 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sheet-pan-meatball-marinara",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/sheet-pan-meatball-marinara.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (104 words, min 400)"
+      ]
+    },
+    {
+      "slug": "shepherds-pie",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/shepherds-pie.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Brown the filling) needs safe internal temp cue",
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (95 words, min 400)"
+      ]
+    },
+    {
+      "slug": "slider-bar",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/slider-bar.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Roma Tomatoes, Sliced",
+        "completeness: only 6 steps (min 8 for this meal)",
+        "completeness: thin instructions (192 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smash-burgers",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/smash-burgers.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "authenticity: ai_wording: no heat",
+        "ingredient_unused: unused: Mayonnaise",
+        "ingredient_unused: unused: Neutral High-Heat Oil"
+      ]
+    },
+    {
+      "slug": "smoked-baked-beans-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/smoked-baked-beans-crew.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "completeness: only 7 steps (min 10 for this meal)",
+        "completeness: thin instructions (108 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-corned-beef",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/smoked-corned-beef.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: caraway seeds",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (128 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-wings-white-sauce",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/smoked-wings-white-sauce.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Chicken Wings, Split And Tips Trimmed",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (215 words, min 400)"
+      ]
+    },
+    {
+      "slug": "spanish-rice-chicken-one-pot",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/spanish-rice-chicken-one-pot.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "vague_step: Add peas and hold: missing time, heat, or doneness cue",
+        "completeness: robotic_title",
+        "completeness: thin instructions (259 words, min 400)"
+      ]
+    },
+    {
+      "slug": "station-cobb-salad",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/station-cobb-salad.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Crisp the bacon) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (100 words, min 400)"
+      ]
+    },
+    {
+      "slug": "steak-sandwiches",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/steak-sandwiches.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Season and temper the steak) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Grill steak to temp) needs safe internal temp cue",
+        "internal_temp_missing: step 8 (Toast buns and melt provolone) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "stuffed-peppers",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/stuffed-peppers.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Brown beef filling) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (77 words, min 400)"
+      ]
+    },
+    {
+      "slug": "teriyaki-donburi",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/teriyaki-donburi.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 2 (Sear chicken thighs) needs safe internal temp cue",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (90 words, min 400)"
+      ]
+    },
+    {
+      "slug": "texas-central-brisket-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/texas-central-brisket-crew.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "completeness: only 8 steps (min 10 for this meal)",
+        "completeness: thin instructions (209 words, min 400)"
+      ]
+    },
+    {
+      "slug": "thai-basil-chicken",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/thai-basil-chicken.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title",
+        "completeness: only 7 steps (min 8 for this meal)",
+        "completeness: thin instructions (188 words, min 400)"
+      ]
+    },
+    {
+      "slug": "thai-peanut-chicken-crock",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/thai-peanut-chicken-crock.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "vague_step: Check chicken: missing time, heat, or doneness cue",
+        "completeness: robotic_title",
+        "completeness: thin instructions (255 words, min 400)"
+      ]
+    },
+    {
+      "slug": "tourtiere-for-the-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/tourtiere-for-the-crew.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 1 (Brown the meat) needs safe internal temp cue",
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (125 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-burgers",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/turkey-burgers.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "ingredient_unused: unused: Dill Pickles",
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (85 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-taco-skillet",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/turkey-taco-skillet.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "completeness: robotic_title; title_taco_no_tortilla; title_taco_format_mismatch",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (103 words, min 280)"
+      ]
+    },
+    {
+      "slug": "turkey-zoodle-bolognese",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/turkey-zoodle-bolognese.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 4 (Simmer sauce) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (111 words, min 400)"
+      ]
+    },
+    {
+      "slug": "weeknight-bbq-ribs-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/weeknight-bbq-ribs-crew.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "vague_step: Smoke ribs: missing time, heat, or doneness cue",
+        "vague_step: Cut and serve: missing time, heat, or doneness cue",
+        "completeness: thin instructions (259 words, min 400)"
+      ]
+    },
+    {
+      "slug": "white-bean-chicken-chili",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/white-bean-chicken-chili.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "internal_temp_missing: step 3 (Simmer beans and chiles) needs safe internal temp cue",
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (114 words, min 400)"
+      ]
+    },
+    {
+      "slug": "white-chicken-chili-crock",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/white-chicken-chili-crock.json",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        "vague_step: Melt cream cheese: missing time, heat, or doneness cue",
+        "vague_step: Serve bowls: missing time, heat, or doneness cue",
+        "completeness: thin instructions (258 words, min 400)"
+      ]
+    },
+    {
+      "slug": "applewood-pork-shoulder-steaks",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/applewood-pork-shoulder-steaks.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (140 words, min 400)"
+      ]
+    },
+    {
+      "slug": "baked-turkey-meatball-marinara",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/baked-turkey-meatball-marinara.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (113 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-bowls",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/bbq-chicken-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (108 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-mac-and-cheese",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/bbq-chicken-mac-and-cheese.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 1 (Season the chicken) needs safe internal temp cue",
+        "internal_temp_missing: step 3 (Shred and sauce the chicken) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "bbq-chicken-pizza",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/bbq-chicken-pizza.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (219 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bbq-meatball-skewers",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/bbq-meatball-skewers.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (130 words, min 400)"
+      ]
+    },
+    {
+      "slug": "bbq-pulled-pork-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/bbq-pulled-pork-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 1 (Season the pork and set up the braise) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Hold the pork hot and moist) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "beer-can-chicken",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/beer-can-chicken.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (108 words, min 400)"
+      ]
+    },
+    {
+      "slug": "best-tuna-melt-for-the-hall",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/best-tuna-melt-for-the-hall.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (182 words, min 280)"
+      ]
+    },
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/boneless-chicken-thighs-sweet-potato-spinach.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (157 words, min 400)"
+      ]
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/buffalo-chicken-dip.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (87 words, min 400)"
+      ]
+    },
+    {
+      "slug": "build-your-own-pho-bar",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/build-your-own-pho-bar.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (141 words, min 400)"
+      ]
+    },
+    {
+      "slug": "butter-chicken",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/butter-chicken.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 3 (Sear the chicken in batches) needs safe internal temp cue",
+        "completeness: thin instructions (286 words, min 400)"
+      ]
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/cajun-chicken-rice-bowl.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 2 (Rinse and start the rice) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Deglaze pan sauce) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "cajun-grilled-cod-crew",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/cajun-grilled-cod-crew.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "ingredient_unused: unused: Mayonnaise",
+        "completeness: thin instructions (106 words, min 280)"
+      ]
+    },
+    {
+      "slug": "chicken-parm",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/chicken-parm.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "ingredient_unused: unused: Fresh Mozzarella, Sliced",
+        "ingredient_unused: unused: Fresh Basil, Torn"
+      ]
+    },
+    {
+      "slug": "chicken-pot-pie",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/chicken-pot-pie.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (75 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-souvlaki",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/chicken-souvlaki.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-wing-bar-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/chicken-wing-bar-night.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (123 words, min 400)"
+      ]
+    },
+    {
+      "slug": "classic-patty-melt-for-the-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/classic-patty-melt-for-the-crew.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (217 words, min 400)"
+      ]
+    },
+    {
+      "slug": "costco-rotisserie-remix",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/costco-rotisserie-remix.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 1 (Heat oven and stage pans) needs safe internal temp cue",
+        "internal_temp_missing: step 4 (Mix sauce) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "cottage-pie-for-the-crew",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/cottage-pie-for-the-crew.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (103 words, min 400)"
+      ]
+    },
+    {
+      "slug": "creamy-chicken-penne-alfredo",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/creamy-chicken-penne-alfredo.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (109 words, min 400)"
+      ]
+    },
+    {
+      "slug": "creamy-tuscan-chicken",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/creamy-tuscan-chicken.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (76 words, min 400)"
+      ]
+    },
+    {
+      "slug": "detroit-style-pizza",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/detroit-style-pizza.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (207 words, min 400)"
+      ]
+    },
+    {
+      "slug": "firehall-burnt-ends-platter",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/firehall-burnt-ends-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 8 steps (min 10 for this meal)",
+        "completeness: thin instructions (151 words, min 400)"
+      ]
+    },
+    {
+      "slug": "firehall-donair-platter",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/firehall-donair-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (105 words, min 400)"
+      ]
+    },
+    {
+      "slug": "firehall-greek-chicken-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/firehall-greek-chicken-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 3 (Ready the grill chicken) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Hold the Greek hot pans) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "firehall-korean-beef-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/firehall-korean-beef-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 3 (Set up the beef and sauce) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Hold and arrange components) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "four-step-chicken-piccata",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/four-step-chicken-piccata.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (209 words, min 400)"
+      ]
+    },
+    {
+      "slug": "game-day-pizza-sliders",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/game-day-pizza-sliders.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (127 words, min 280)"
+      ]
+    },
+    {
+      "slug": "ginger-salmon-bowls",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/ginger-salmon-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (97 words, min 400)"
+      ]
+    },
+    {
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/ginger-soy-chicken-rice-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (96 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hall-chicken-noodle-soup",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/hall-chicken-noodle-soup.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (101 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hall-sloppy-joe-feed",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/hall-sloppy-joe-feed.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (98 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hickory-smoked-chicken-breast",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/hickory-smoked-chicken-breast.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "completeness: thin instructions (124 words, min 400)"
+      ]
+    },
+    {
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/honey-mustard-oven-chicken-thighs.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (117 words, min 400)"
+      ]
+    },
+    {
+      "slug": "honey-soppressata-pizza",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/honey-soppressata-pizza.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (173 words, min 400)"
+      ]
+    },
+    {
+      "slug": "hummus-chicken-platter",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/hummus-chicken-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (110 words, min 400)"
+      ]
+    },
+    {
+      "slug": "jalapeno-popper-dip",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/jalapeno-popper-dip.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (128 words, min 400)"
+      ]
+    },
+    {
+      "slug": "jerk-chicken",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/jerk-chicken.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "ingredient_unused: unused: Coleslaw Mix",
+        "completeness: thin instructions (190 words, min 400)"
+      ]
+    },
+    {
+      "slug": "lamb-kofta-skewer-platter",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/lamb-kofta-skewer-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (82 words, min 280)"
+      ]
+    },
+    {
+      "slug": "lebanese-chicken-shish-platter",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/lebanese-chicken-shish-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (95 words, min 400)"
+      ]
+    },
+    {
+      "slug": "lemon-garlic-chicken-tray",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/lemon-garlic-chicken-tray.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "lentil-mushroom-bolognese",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/lentil-mushroom-bolognese.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (103 words, min 400)"
+      ]
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/loaded-baked-potato-bar.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (144 words, min 400)"
+      ]
+    },
+    {
+      "slug": "loaded-potato-feed",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/loaded-potato-feed.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (130 words, min 400)"
+      ]
+    },
+    {
+      "slug": "margherita-pizza",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/margherita-pizza.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (187 words, min 400)"
+      ]
+    },
+    {
+      "slug": "meat-lovers-sheet-pizza",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/meat-lovers-sheet-pizza.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (199 words, min 400)"
+      ]
+    },
+    {
+      "slug": "meatloaf-mashed",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/meatloaf-mashed.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (97 words, min 400)"
+      ]
+    },
+    {
+      "slug": "mediterranean-baked-fish-tray",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/mediterranean-baked-fish-tray.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (102 words, min 280)"
+      ]
+    },
+    {
+      "slug": "mesquite-chuck-roast",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/mesquite-chuck-roast.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (144 words, min 400)"
+      ]
+    },
+    {
+      "slug": "molasses-bourbon-pork-ribs",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/molasses-bourbon-pork-ribs.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (142 words, min 400)"
+      ]
+    },
+    {
+      "slug": "moroccan-chicken-chickpea-tray",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/moroccan-chicken-chickpea-tray.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (94 words, min 400)"
+      ]
+    },
+    {
+      "slug": "moroccan-chicken-kebab-platter",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/moroccan-chicken-kebab-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (84 words, min 400)"
+      ]
+    },
+    {
+      "slug": "ny-strip-herb-butter",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/ny-strip-herb-butter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 10 for this meal)",
+        "completeness: thin instructions (117 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pad-thai",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/pad-thai.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 3 (Soak the rice noodles) needs safe internal temp cue",
+        "completeness: only 8 steps (min 10 for this meal)"
+      ]
+    },
+    {
+      "slug": "peri-peri-chicken-platter",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/peri-peri-chicken-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (84 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pork-belly-burnt-ends",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/pork-belly-burnt-ends.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (147 words, min 400)"
+      ]
+    },
+    {
+      "slug": "pretzel-bite-platter",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/pretzel-bite-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (140 words, min 280)"
+      ]
+    },
+    {
+      "slug": "rice-bowl-bar-night",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/rice-bowl-bar-night.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (135 words, min 400)"
+      ]
+    },
+    {
+      "slug": "salsa-verde-crock-chicken",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/salsa-verde-crock-chicken.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (101 words, min 400)"
+      ]
+    },
+    {
+      "slug": "sausage-peppers-on-buns",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/sausage-peppers-on-buns.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (127 words, min 400)"
+      ]
+    },
+    {
+      "slug": "shawarma-chicken-rice-bowls",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/shawarma-chicken-rice-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (105 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-meatloaf",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/smoked-meatloaf.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (131 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-picanha-steak-platter",
+      "kind": "bbq_catalog",
+      "file": "client/public/catalog/bbq/pages/smoked-picanha-steak-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "spelling_grammar: banned_phrase: \\btonight'?s board\\b",
+        "completeness: thin instructions (130 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-queso-fundido",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/smoked-queso-fundido.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (142 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-sausage-platter",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/smoked-sausage-platter.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (138 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoked-turkey-breast",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/smoked-turkey-breast.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (137 words, min 400)"
+      ]
+    },
+    {
+      "slug": "smoky-lentil-kale-soup",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/smoky-lentil-kale-soup.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (109 words, min 400)"
+      ]
+    },
+    {
+      "slug": "soft-pretzel-dogs",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/soft-pretzel-dogs.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (133 words, min 400)"
+      ]
+    },
+    {
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/spaghetti-aglio-e-olio-for-the-hall.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (163 words, min 280)"
+      ]
+    },
+    {
+      "slug": "spatchcock-lemon-roast-chicken",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/spatchcock-lemon-roast-chicken.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (122 words, min 400)"
+      ]
+    },
+    {
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/spicy-tomato-bisque-grilled-brie-toast.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (179 words, min 400)"
+      ]
+    },
+    {
+      "slug": "street-corn-chicken",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/street-corn-chicken.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (78 words, min 400)"
+      ]
+    },
+    {
+      "slug": "tabbouleh-chicken-bowls",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/tabbouleh-chicken-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (102 words, min 400)"
+      ]
+    },
+    {
+      "slug": "teriyaki-chicken-rice-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/teriyaki-chicken-rice-bowls.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "internal_temp_missing: step 3 (Prepare chicken for a hard sear) needs safe internal temp cue",
+        "internal_temp_missing: step 7 (Hold the hot bowl pans) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/tomato-soup-grilled-cheese-croutons.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 4 steps (min 8 for this meal)",
+        "completeness: thin instructions (191 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-shepherds-sweet-potato",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/turkey-shepherds-sweet-potato.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (107 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-sweet-potato-chili",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/turkey-sweet-potato-chili.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 10 for this meal)",
+        "completeness: thin instructions (100 words, min 400)"
+      ]
+    },
+    {
+      "slug": "white-bean-kale-soup",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/white-bean-kale-soup.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (105 words, min 400)"
+      ]
+    },
+    {
+      "slug": "white-garlic-chicken-pizza",
+      "kind": "firehall_catalog",
+      "file": "client/public/catalog/golden-100/pages/white-garlic-chicken-pizza.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 6 steps (min 10 for this meal)",
+        "completeness: thin instructions (223 words, min 400)"
+      ]
+    },
+    {
+      "slug": "zaatar-roasted-chicken-thighs",
+      "kind": "performance_meal",
+      "file": "client/public/catalog/performance-meals/pages/zaatar-roasted-chicken-thighs.json",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        "completeness: only 5 steps (min 8 for this meal)",
+        "completeness: thin instructions (101 words, min 400)"
+      ]
+    },
+    {
+      "slug": "chicken-caesar",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/chicken-caesar.json",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        "internal_temp_missing: step 2 (Crisp the bacon) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "chipotle-chicken-burrito-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/chipotle-chicken-burrito-bowls.json",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        "internal_temp_missing: step 7 (Hold the hot burrito components) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "firehall-taco-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/firehall-taco-bowls.json",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        "internal_temp_missing: step 7 (Hold the hot taco components) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "peanut-chicken-rice-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/peanut-chicken-rice-bowls.json",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        "completeness: thin instructions (263 words, min 400)"
+      ]
+    },
+    {
+      "slug": "turkey-taco-bowls",
+      "kind": "hall_expansion",
+      "file": "client/public/catalog/hall-expansion/pages/turkey-taco-bowls.json",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        "internal_temp_missing: step 7 (Hold hot turkey components) needs safe internal temp cue"
+      ]
+    },
+    {
+      "slug": "big-chili",
+      "kind": "hall_classic",
+      "file": "client/public/catalog/golden-100/pages/big-chili.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "blueberry-almond",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/blueberry-almond.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "chocolate-banana-recovery",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/chocolate-banana-recovery.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "citrus-ginger",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/citrus-ginger.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "green-pineapple",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/green-pineapple.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "mixed-berry-protein",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/mixed-berry-protein.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "mocha-protein",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/mocha-protein.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "peanut-butter-banana-recovery",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/peanut-butter-banana-recovery.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "strawberry-oat-breakfast",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/strawberry-oat-breakfast.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "strawberry-spinach",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/strawberry-spinach.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    },
+    {
+      "slug": "tropical-mango-greek",
+      "kind": "smoothie",
+      "file": "client/public/catalog/smoothies/pages/tropical-mango-greek.json",
+      "pass": true,
+      "score": 100,
+      "issues": []
+    }
+  ]
+}

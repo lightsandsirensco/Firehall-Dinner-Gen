@@ -283,6 +283,16 @@ export default function BreakfastRecipePage() {
                 <h2 id="ingredients" className="font-heading text-xl">
                   Ingredients
                 </h2>
+                {page.equipment && page.equipment.length > 0 && (
+                  <div className="mt-4 rounded-2xl border border-border/20 bg-card/15 p-4">
+                    <h3 className="font-heading text-base">Equipment</h3>
+                    <ul className="mt-2 text-sm text-foreground/90 space-y-1.5">
+                      {page.equipment.map((x, i) => (
+                        <li key={i}>- {x}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
                 <ul className="mt-4 space-y-2.5">
                   {scaledIngredients.map((ing, idx) => (
                     <li
@@ -334,6 +344,17 @@ export default function BreakfastRecipePage() {
                 </ol>
               </section>
             </div>
+
+            {page.tonightSpread && page.tonightSpread.length > 0 && (
+              <section className="mt-10 rounded-2xl border border-border/20 bg-card/15 p-4">
+                <h3 className="font-heading text-base">Morning spread</h3>
+                <ul className="mt-2 text-sm text-foreground/90 space-y-1.5">
+                  {page.tonightSpread.map((x, i) => (
+                    <li key={i}>- {x}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
               <section className="rounded-2xl border border-border/20 bg-card/15 p-4">

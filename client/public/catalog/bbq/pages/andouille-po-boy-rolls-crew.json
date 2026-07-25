@@ -3,20 +3,20 @@
   "title": "Andouille Po Boy Rolls for the Crew",
   "displayTitle": "Andouille Po Boy Rolls for the Crew",
   "seoTitle": "Andouille Po Boy Rolls for the Crew | Firehall BBQ",
-  "shortDescription": "Po boy night—grilled andouille, Cajun remoulade, New Orleans hall energy",
-  "subtitle": "Grilled andouille, remoulade, and crispy baguette for ten",
+  "shortDescription": "Po' boy night—butterflied andouille, rested remoulade, dressed New Orleans style",
+  "subtitle": "Grilled andouille, remoulade, and crisp-toasted baguette for the crew",
   "category": "bbq_grill_nights",
   "cuisine": "cajun",
-  "description": "Andouille sausage splits and grills until charred, piles on toasted baguette with lettuce, tomato, and spicy remoulade for ten po boys.",
-  "crewSize": 10,
-  "baseServings": 10,
-  "cookTime": 18,
+  "description": "Butterflied andouille grilled cut-side down at 400°F for a mahogany crust, sliced into planks, and built dressed — remoulade, salted tomatoes, shredded romaine, pickle chips — on butter-toasted baguette.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 950,
-  "protein": 31,
-  "carbs": 6,
-  "fats": 89,
+  "calories": 980,
+  "protein": 38,
+  "carbs": 52,
+  "fats": 62,
   "tags": [
     "protein:pork",
     "format:hoagie_press",
@@ -30,44 +30,45 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "flat-top griddle",
-    "griddle",
-    "sharp knife",
-    "sheet pans",
-    "hotel pans"
+    "Gas or charcoal grill",
+    "Flat-top griddle or large cast-iron pan",
+    "Instant-read thermometer",
+    "Sharp knife",
+    "Sheet pans",
+    "Hotel pans"
   ],
   "ingredients": [
     {
       "name": "Andouille Sausage",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
-      "notes": "about 10 links",
+      "notes": "8 fat links",
       "group": "Main"
     },
     {
       "name": "French Baguettes",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "whole",
-      "notes": "split into 10 rolls",
+      "notes": "each split into 2 rolls",
       "group": "Po boy"
     },
     {
       "name": "Romaine Lettuce",
       "quantity": "1",
       "unit": "head",
-      "notes": "shredded",
+      "notes": "shredded fine",
       "group": "Po boy"
     },
     {
       "name": "Tomatoes",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "sliced",
       "group": "Po boy"
     },
     {
       "name": "Mayonnaise",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Remoulade"
     },
@@ -91,97 +92,140 @@
       "group": "Remoulade"
     },
     {
+      "name": "Scallions",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "sliced thin",
+      "group": "Remoulade"
+    },
+    {
+      "name": "Smoked Paprika",
+      "quantity": "2",
+      "unit": "Tsp",
+      "group": "Remoulade"
+    },
+    {
       "name": "Butter",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Toast"
     },
     {
       "name": "Pickle Chips",
-      "quantity": "2",
+      "quantity": "1 1/2",
       "unit": "Cups",
+      "notes": "drained",
       "group": "Service"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Build remoulade",
-      "instruction": "Whisk mayo, Creole mustard, hot sauce, and minced celery. Chill until service.",
+      "title": "Whisk the remoulade first",
+      "instruction": "Whisk the mayonnaise, creole mustard, hot sauce, minced celery, sliced scallions, and smoked paprika, then chill at least 30 minutes — the rest is what blooms the mustard and paprika into the mayonnaise. It should bite back a little on a test cracker. This sauce carries the whole sandwich, so make it before anything touches the fire.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Split andouille",
-      "instruction": "Split sausage links lengthwise—not all the way through—so they lay flat on the grill.",
-      "minutes": 10,
+      "title": "Butterfly the andouille",
+      "instruction": "Split each andouille link lengthwise, stopping just short of all the way through, so it opens like a book and lies flat. Flat links mean double the crusty surface and nothing rolling around between the grates. Cut them cold straight from the fridge — a chilled casing slices clean instead of tearing.",
+      "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Grill andouille",
-      "instruction": "Grill split andouille cut-side down at 400°F 5 minutes, flip, grill 5–7 minutes until charred and 165°F.",
-      "minutes": 12,
+      "title": "Settle the grill at 400°F",
+      "instruction": "Preheat to a steady medium, 400°F, and give it a full 8 minutes to even out. Andouille is heavily seasoned and fatty — a raging fire splits the casings and torches the drippings into an acrid haze before the inside is hot. Medium heat builds crust while the fat renders gently.",
+      "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Hold sausage",
-      "instruction": "Slice on bias and hold covered at 170°F in hotel pans.",
+      "title": "Grill the andouille cut-side down",
+      "instruction": "Lay the butterflied links cut-side down and leave them 5 minutes until the face turns deep mahogany with crisp, lacy edges, then flip for 5–7 more. Andouille arrives smoked and pre-cooked, but you're after two things: real crust and real temperature — 160°F on an instant-read so the center is steaming hot, not just warmed at the surface.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Slice the sausage into planks",
+      "instruction": "Slice the grilled links on a hard bias into long planks that blanket the bread edge to edge, and hold them covered in hotel pans at 140°F or above. Bias planks stay put under the toppings; round coins shoot out the back of the roll with every bite.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 5,
-      "title": "Toast baguettes",
-      "instruction": "Butter baguette splits and toast on griddle at 375°F until crisp, 2–3 minutes.",
+      "stepNumber": 6,
+      "title": "Butter and toast the baguettes",
+      "instruction": "Split the french baguettes into 8 rolls, butter the cut faces, and toast on the flat-top at 375°F for 2–3 minutes until the faces are golden and crisp while the crumb still gives. A real po' boy crust shatters, then the bread yields — rolls toasted rock-hard shred the roof of your mouth.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 6,
-      "title": "Prep fixings",
-      "instruction": "Shred lettuce and slice tomatoes. Keep cold until build.",
+      "stepNumber": 7,
+      "title": "Stage the cold dressings",
+      "instruction": "Shred the romaine fine — po' boys take thin shreds that catch sauce, not leafy chunks. Slice the tomatoes 1/4 inch thick and hit them with a pinch of salt 10 minutes ahead so they actually taste like tomatoes. Drain the pickle chips well; wet toppings soak the roll before it leaves the counter. Keep it all cold until the build.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 7,
-      "title": "Build po boys",
-      "instruction": "Spread remoulade on toasted rolls. Layer andouille, lettuce, tomato, and extra remoulade.",
+      "stepNumber": 8,
+      "title": "Build them dressed",
+      "instruction": "Swipe remoulade generously on both toasted faces, then layer sausage planks, salted tomato slices, shredded romaine, and pickle chips. In New Orleans this is ordered 'dressed' — cold crunch against hot, smoky, spicy links is the entire point of the sandwich. Wrap each one in parchment; it holds the build together and catches the drips.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
-      "title": "Line for ten",
-      "instruction": "One po boy per firefighter with pickle chips. Wrap in parchment for messy hands.",
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover grilled andouille — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool grilled andouille and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Split andouille lays flat—whole links roll on the grates.",
-    "Toast rolls well—soft bread collapses under juicy sausage.",
-    "Remoulade on both cut sides of roll prevents dry bites."
+    "Butterfly, don't halve — the hinge keeps each link in one piece and doubles the crusty surface.",
+    "Remoulade needs its 30-minute rest; whisked and served straight away it just tastes like spicy mayonnaise.",
+    "Salt the tomatoes and drain the pickles ahead — wet toppings are how a po' boy roll dies young.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Andouille po boy rolls with remoulade and pickles.",
-    "Red beans and rice if you want a full NOLA plate."
+    "Main: Grilled andouille po' boys, dressed",
+    "Sides: pickle chips, kettle chips or red beans and rice",
+    "Condiments: extra remoulade, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Sliced andouille into jambalaya next shift.",
-    "Po boy halves re-toast on griddle."
+    "Cool grilled andouille in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Day-two andouille slices straight into jambalaya, red beans, or a breakfast scramble.",
+    "Keep rolls and fixings apart overnight — a built po' boy in the fridge turns into bread pudding."
   ],
-  "whyCrewsLikeIt": "Andouille po boys are distinct from pulled pork or brisket sandwiches. Sausage grills fast, holds at 170°F, and builds on toasted rolls at the line.",
-  "mealPrepNotes": "Split and grill andouille at 400°F, 10–12 minutes. Hold sliced sausage at 170°F up to 40 minutes. Toast rolls at 375°F. Build to order.",
+  "whyCrewsLikeIt": "Smoky, spicy links with a crackling toasted roll and a remoulade that bites back — a sandwich night that eats like a trip to New Orleans instead of another pulled pork repeat.",
+  "mealPrepNotes": "Make the remoulade and stage the cold toppings ahead. Butterfly and cook the links at 400°F to 160°F, hold planks at 140°F or above up to 40 minutes, and toast rolls in batches right before the build.",
+  "substitutions": [
+    "Smoked kielbasa swaps for andouille when the store is out — it runs milder, so double the hot sauce in the remoulade.",
+    "No creole mustard? Whole-grain mustard plus a dash of hot sauce lands close.",
+    "Soft hoagie rolls work if real baguette is too crusty for the crew — toast them a minute less.",
+    "Shredded iceberg stands in for romaine and holds crunch even longer against the hot filling."
+  ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 950,
-    "protein": 31,
-    "carbs": 6,
-    "fats": 89,
+    "calories": 980,
+    "protein": 38,
+    "carbs": 52,
+    "fats": 62,
     "label": "per serving (hall portion)",
     "source": "estimated"
   },
@@ -203,7 +247,8 @@
     "firehall",
     "andouille po boy rolls",
     "cajun sausage po boy",
-    "grilled andouille sandwich"
+    "grilled andouille sandwich",
+    "dressed po boy remoulade"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -212,6 +257,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.447Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

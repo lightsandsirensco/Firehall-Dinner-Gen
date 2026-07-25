@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smoked mac and cheese tradition (Hey Grill Hey, Traeger): elbow pasta bakes in a creamy three-cheese sauce, then rides the smoker at 275°F for 30 minutes for subtle smoke and a golden top.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 75,
   "prepTime": 25,
   "difficulty": "easy",
@@ -39,65 +39,65 @@
   "ingredients": [
     {
       "name": "Elbow Macaroni",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Lb"
     },
     {
       "name": "Unsalted Butter",
-      "quantity": "6",
+      "quantity": "5.1",
       "unit": "Tbsp"
     },
     {
       "name": "All-Purpose Flour",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup"
     },
     {
       "name": "Whole Milk",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "Cups"
     },
     {
       "name": "Heavy Cream",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup"
     },
     {
       "name": "Sharp Cheddar",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "Cups",
       "notes": "shredded"
     },
     {
       "name": "Gruyère",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "notes": "shredded"
     },
     {
       "name": "Smoked Gouda",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "notes": "shredded"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tsp"
     },
     {
       "name": "Black Pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp"
     },
     {
       "name": "Smoked Paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp"
     },
     {
       "name": "Panko Breadcrumbs",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup"
     }
   ],

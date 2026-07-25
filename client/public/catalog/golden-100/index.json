@@ -1,7 +1,7 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-06-04T20:48:23.799Z",
+  "generatedAt": "2026-07-24T02:19:05.868Z",
   "recipeCount": 104,
   "recipes": [
     {
@@ -242,8 +242,8 @@
       "cuisine": "american",
       "protein": "chicken",
       "mealFormat": "sandwich",
-      "cookTime": 90,
-      "difficulty": "hard",
+      "cookTime": 60,
+      "difficulty": "easy",
       "heroImage": "/images/golden-100/bbq-chicken-sliders.jpg",
       "thumbImage": "/images/thumbs/bbq-chicken-sliders.jpg",
       "tags": [
@@ -264,6 +264,7 @@
         "bbq",
         "handheld",
         "bbq pulled chicken sliders",
+        "pulled chicken hawaiian rolls",
         "golden_100"
       ]
     },
@@ -337,10 +338,10 @@
       "title": "Beef Dip Sandwiches",
       "subtitle": "Au jus dip energy without the fuss",
       "category": "firehall_classics",
-      "cuisine": "american",
+      "cuisine": "canadian",
       "protein": "beef",
       "mealFormat": "sandwich",
-      "cookTime": 45,
+      "cookTime": 210,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/beef-dip.jpg",
       "thumbImage": "/images/thumbs/beef-dip.jpg",
@@ -393,6 +394,8 @@
         "pasta",
         "comfort",
         "beef stroganoff egg noodles",
+        "classic beef stroganoff",
+        "sour cream mushroom gravy",
         "golden_100"
       ]
     },
@@ -430,13 +433,13 @@
     },
     {
       "slug": "big-chili",
-      "title": "Beef and Bean Chili",
+      "title": "Firehall Chili",
       "subtitle": "Double pot, triple appetite",
       "category": "big_crew_feeders",
       "cuisine": "american",
       "protein": "beef",
       "mealFormat": "soup_chili",
-      "cookTime": 75,
+      "cookTime": 80,
       "difficulty": "hard",
       "heroImage": "/images/golden-100/big-chili.jpg",
       "thumbImage": "/images/thumbs/big-chili.jpg",
@@ -458,6 +461,8 @@
         "soup chili",
         "hearty",
         "large batch beef chili",
+        "competition style chili",
+        "ancho beef chili",
         "golden_100"
       ]
     },
@@ -630,8 +635,8 @@
       "cuisine": "american",
       "protein": "seafood",
       "mealFormat": "grill",
-      "cookTime": 90,
-      "difficulty": "hard",
+      "cookTime": 25,
+      "difficulty": "medium",
       "heroImage": "/images/golden-100/cedar-plank-salmon.jpg",
       "thumbImage": "/images/thumbs/cedar-plank-salmon.jpg",
       "tags": [
@@ -652,6 +657,7 @@
         "bbq",
         "healthy",
         "cedar plank grilled salmon",
+        "brown sugar glazed salmon",
         "golden_100"
       ]
     },
@@ -702,7 +708,7 @@
         "protein:chicken",
         "format:salad",
         "category:firehall_classics",
-        "healthy",
+        "hearty",
         "chicken",
         "golden_100"
       ],
@@ -714,7 +720,6 @@
         "american",
         "chicken",
         "salad",
-        "healthy",
         "golden_100"
       ]
     },
@@ -760,7 +765,7 @@
       "cuisine": "italian",
       "protein": "chicken",
       "mealFormat": "pasta",
-      "cookTime": 95,
+      "cookTime": 60,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/chicken-parm.jpg",
       "thumbImage": "/images/thumbs/chicken-parm.jpg",
@@ -825,7 +830,7 @@
       "cuisine": "mexican",
       "protein": "chicken",
       "mealFormat": "handheld",
-      "cookTime": 35,
+      "cookTime": 30,
       "difficulty": "easy",
       "heroImage": "/images/golden-100/chicken-quesadillas.jpg",
       "thumbImage": "/images/thumbs/chicken-quesadillas.jpg",
@@ -846,6 +851,7 @@
         "handheld",
         "quick",
         "chicken quesadillas dinner",
+        "crispy griddled quesadillas",
         "golden_100"
       ]
     },
@@ -1369,6 +1375,7 @@
         "game day",
         "handheld",
         "loaded nachos ground beef",
+        "sheet pan nachos",
         "game_day",
         "golden_100"
       ]
@@ -1732,7 +1739,7 @@
       "cuisine": "mediterranean",
       "protein": "seafood",
       "mealFormat": "grill",
-      "cookTime": 55,
+      "cookTime": 35,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/lemon-herb-salmon.jpg",
       "thumbImage": "/images/thumbs/lemon-herb-salmon.jpg",
@@ -1752,6 +1759,7 @@
         "grill",
         "healthy",
         "lemon herb grilled salmon",
+        "grilled salmon with lemon and dill",
         "golden_100"
       ]
     },
@@ -1983,6 +1991,7 @@
         "trending",
         "handheld",
         "meatball sub hoagie dinner",
+        "meatball sub with provolone",
         "golden_100"
       ]
     },
@@ -2079,6 +2088,8 @@
         "grill",
         "bbq",
         "memphis dry rub pork ribs",
+        "3-2-1 ribs",
+        "smoked spare ribs",
         "golden_100"
       ]
     },
@@ -2250,7 +2261,7 @@
       "cuisine": "italian",
       "protein": "chicken",
       "mealFormat": "sandwich",
-      "cookTime": 55,
+      "cookTime": 50,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/parm-hero-subs.jpg",
       "thumbImage": "/images/thumbs/parm-hero-subs.jpg",
@@ -2271,6 +2282,8 @@
         "sandwich",
         "handheld",
         "chicken parmesan hero sandwich",
+        "chicken parm sub",
+        "crispy chicken cutlet sandwich",
         "golden_100"
       ]
     },
@@ -2477,13 +2490,13 @@
     },
     {
       "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches",
-      "subtitle": "Slow-smoked pull, soft buns, fast line",
+      "title": "Carolina-Style Pulled Pork Sandwiches",
+      "subtitle": "Vinegar-mopped pull, slaw, soft buns",
       "category": "firehall_classics",
       "cuisine": "american",
       "protein": "pork",
       "mealFormat": "sandwich",
-      "cookTime": 570,
+      "cookTime": 525,
       "difficulty": "hard",
       "heroImage": "/images/golden-100/pulled-pork.jpg",
       "thumbImage": "/images/thumbs/pulled-pork.jpg",
@@ -2500,6 +2513,8 @@
       "searchTerms": [
         "pulled pork sandwiches",
         "pulled pork",
+        "carolina pulled pork",
+        "vinegar bbq",
         "american",
         "pork",
         "sandwich",
@@ -2987,13 +3002,13 @@
     },
     {
       "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches",
-      "subtitle": "Thin-sliced steak, toasted roll, hall classic",
+      "title": "Philly-Style Cheesesteaks",
+      "subtitle": "Chopped ribeye, melted provolone, soft hoagie",
       "category": "firehall_classics",
       "cuisine": "american",
       "protein": "beef",
       "mealFormat": "sandwich",
-      "cookTime": 60,
+      "cookTime": 45,
       "difficulty": "medium",
       "heroImage": "/images/golden-100/steak-sandwiches.jpg",
       "thumbImage": "/images/thumbs/steak-sandwiches.jpg",
@@ -3001,14 +3016,16 @@
         "protein:beef",
         "format:sandwich",
         "category:firehall_classics",
-        "beef",
         "handheld",
+        "beef",
         "golden_100"
       ],
       "firefighterScore": 100,
       "popularityWeight": 3.6,
       "searchTerms": [
+        "philly cheesesteak",
         "steak sandwiches",
+        "cheesesteak",
         "american",
         "beef",
         "sandwich",
@@ -3018,8 +3035,8 @@
     },
     {
       "slug": "steak-tacos",
-      "title": "Steak Tacos",
-      "subtitle": "Charred steak, bright chimichurri, tortilla night",
+      "title": "Chimichurri Steak Tacos",
+      "subtitle": "Charred skirt steak, bright chimichurri, charred tortillas",
       "category": "firehall_classics",
       "cuisine": "mexican",
       "protein": "beef",
@@ -3040,6 +3057,8 @@
       "popularityWeight": 3.6,
       "searchTerms": [
         "steak tacos",
+        "chimichurri steak tacos",
+        "carne asada",
         "mexican",
         "beef",
         "tacos",

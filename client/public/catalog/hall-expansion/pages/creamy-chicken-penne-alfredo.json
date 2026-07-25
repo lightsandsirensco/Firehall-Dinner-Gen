@@ -38,64 +38,64 @@
   ],
   "ingredients": [
     {
-      "name": "Penne Pasta",
+      "name": "penne pasta",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Chicken Breast",
+      "name": "chicken breast",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Heavy Cream",
+      "name": "heavy cream",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "5.1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Sauce"
     },
     {
-      "name": "Grated Parmesan",
+      "name": "grated Parmesan",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Chicken"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -159,10 +159,19 @@
     "protein": 42,
     "carbs": 50,
     "fats": 24,
-    "label": "~560 cal/serving · 42g protein · 3g fiber (est.)"
+    "label": "~560 cal/serving · 42g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
-  "heroImageAlt": "Creamy Chicken Penne Alfredo — crew-sized firehall meal",
+  "heroImageAlt": "Creamy Chicken Penne Alfredo — italian pasta plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/creamy-chicken-penne-alfredo.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/creamy-chicken-penne-alfredo.jpg",
   "railImage": "/images/rails/hall-expansion/creamy-chicken-penne-alfredo.jpg",
@@ -174,12 +183,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "mushroom-swiss-steak-pan",
+    "mostaccioli-sausage-bake",
+    "rigatoni-meat-sauce-batch",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

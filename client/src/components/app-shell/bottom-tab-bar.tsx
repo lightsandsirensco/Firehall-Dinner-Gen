@@ -1,17 +1,20 @@
-import { Building2, Flame, Home, User, UtensilsCrossed } from "lucide-react";
+import { Building2, Compass, User, UtensilsCrossed } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { APP_TABS, isTabActive, type AppTab } from "@/lib/app-nav";
+import { PRIMARY_TABS, isTabActive, type AppTab } from "@/lib/app-nav";
 import { cn } from "@/lib/utils";
 import { hapticLight } from "@/lib/haptics";
 
-const TAB_ICONS: Record<AppTab, typeof Home> = {
-  home: Home,
+const TAB_ICONS: Record<AppTab, typeof UtensilsCrossed> = {
   tonight: UtensilsCrossed,
-  explore: Flame,
+  explore: Compass,
   hall: Building2,
   me: User,
 };
 
+/**
+ * Four in-app destinations — same shift, same product.
+ * Tonight is the command center; Home (the logo) is the landing page.
+ */
 export function BottomTabBar() {
   const [location] = useLocation();
 
@@ -22,12 +25,12 @@ export function BottomTabBar() {
       data-testid="bottom-tab-bar"
     >
       <div className="mx-auto flex max-w-lg items-stretch justify-around px-0.5 pt-1">
-        {APP_TABS.map((tab) => {
+        {PRIMARY_TABS.map((tab) => {
           const Icon = TAB_ICONS[tab.id];
           const active = isTabActive(tab.id, location);
           return (
             <Link
-              key={tab.id}
+              key={tab.testId}
               href={tab.href}
               onClick={() => hapticLight()}
               className={cn(

@@ -38,78 +38,78 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Lamb",
+      "name": "ground lamb",
       "quantity": "3.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Kofta"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "whole",
       "notes": "grated and drained",
       "group": "Kofta"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "1/2",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "finely chopped",
       "group": "Kofta"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "1.8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Ground Coriander",
+      "name": "ground coriander",
       "quantity": "1.8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Kofta"
     },
     {
-      "name": "Greek Yogurt",
+      "name": "Greek yogurt",
       "quantity": "1 3/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "2.8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Flatbread",
+      "name": "flatbread",
       "quantity": "10.7",
       "unit": "pieces",
       "notes": "pita or naan",
       "group": "Service"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "1 3/4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "halved",
       "group": "Service"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "1",
       "unit": "whole",
       "notes": "quick-pickled",
@@ -148,7 +148,7 @@
     {
       "stepNumber": 5,
       "title": "Platter and serve",
-      "instruction": "Slide kofta off skewers onto platters or serve on skewers with warm flatbread, tomatoes, pickled onion, and yogurt sauce.",
+      "instruction": "Slide kofta off skewers onto platters or serve on skewers with warm flatbread, tomatoes, and pickled onion, plus the yogurt sauce kept cold alongside — straight from the fridge, not sitting near the grill.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -175,10 +175,19 @@
     "protein": 34,
     "carbs": 28,
     "fats": 32,
-    "label": "~520 cal/serving · 34g protein · 2g fiber (est.)"
+    "label": "~520 cal/serving · 34g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
-  "heroImageAlt": "Lamb Kofta Skewer Platter — crew-sized firehall meal",
+  "heroImageAlt": "Lamb Kofta Skewer Platter — middle_eastern skewer plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/lamb-kofta-skewer-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/lamb-kofta-skewer-platter.jpg",
   "railImage": "/images/rails/hall-expansion/lamb-kofta-skewer-platter.jpg",
@@ -190,12 +199,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "moroccan-chicken-kebab-platter",
+    "lebanese-chicken-shish-platter",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

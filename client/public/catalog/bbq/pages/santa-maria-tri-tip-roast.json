@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic Santa Maria tri-tip tradition (Amazing Ribs, Weber): tri-tip gets a salt-pepper-garlic rub, smokes over oak at 275°F to 130°F, then sears and slices against the grain with pinquito beans and salsa.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 20,
   "difficulty": "medium",
@@ -39,49 +39,49 @@
   "ingredients": [
     {
       "name": "Tri-Tip Roast",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "Lb"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Black Pepper",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Granulated Garlic",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Neutral Oil",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Beef Broth",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "notes": "for holding"
     },
     {
       "name": "Pinto Beans",
-      "quantity": "4",
+      "quantity": "3.2",
       "unit": "Cups",
       "notes": "cooked, warmed"
     },
     {
       "name": "Pico De Gallo",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups"
     },
     {
       "name": "Flour Tortillas",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "whole",
       "notes": "optional"
     }
@@ -124,7 +124,7 @@
     },
     {
       "stepNumber": 6,
-      "title": "Warm beans and salsa",
+      "title": "Warm the beans, keep the pico cold",
       "instruction": "Heat pinto beans in a pot. Set pico de gallo cold on the line.",
       "minutes": 8,
       "heatLevel": ""
@@ -151,7 +151,7 @@
   ],
   "tonightSpread": [
     "Sliced tri-tip on a board with jus.",
-    "Warm pinto beans, pico de gallo, and tortillas."
+    "Warm pinto beans and tortillas, with cold pico de gallo on the side."
   ],
   "leftovers": [
     "Tri-tip tacos with salsa and avocado.",

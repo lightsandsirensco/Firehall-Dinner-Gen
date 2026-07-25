@@ -38,61 +38,61 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (80/20)",
+      "name": "ground beef (80/20)",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Patties"
     },
     {
-      "name": "Yellow Onions",
+      "name": "yellow onions",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "halved and sliced ¼ inch",
       "group": "Onions"
     },
     {
-      "name": "Marbled Rye Bread",
+      "name": "marbled rye bread",
       "quantity": "24",
       "unit": "slices",
       "notes": "about 2 loaves",
       "group": "Bread"
     },
     {
-      "name": "Swiss Cheese",
+      "name": "Swiss cheese",
       "quantity": "24",
       "unit": "slices",
       "notes": "about 1½ lb",
       "group": "Cheese"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "0.75",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "softened for spreading",
       "group": "Press"
     },
     {
-      "name": "Vegetable Oil",
+      "name": "vegetable oil",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Griddle"
     },
     {
-      "name": "Worcestershire Sauce",
+      "name": "Worcestershire sauce",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Patties"
     },
     {
-      "name": "Kosher Salt And Black Pepper",
+      "name": "kosher salt and black pepper",
       "quantity": "1",
       "unit": "batch",
       "group": "Seasoning"
     },
     {
-      "name": "Dill Pickle Chips",
+      "name": "dill pickle chips",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "optional at the line",
       "group": "Sides"
     }
@@ -156,10 +156,19 @@
     "protein": 34,
     "carbs": 42,
     "fats": 36,
-    "label": "~620 cal/serving · 34g protein · 4g fiber (est.)"
+    "label": "~620 cal/serving · 34g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
-  "heroImageAlt": "Classic Patty Melt for the Crew — crew-sized firehall meal",
+  "heroImageAlt": "Classic Patty Melt for the Crew — american sandwich plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/classic-patty-melt-for-the-crew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/classic-patty-melt-for-the-crew.jpg",
   "railImage": "/images/rails/hall-expansion/classic-patty-melt-for-the-crew.jpg",
@@ -172,12 +181,12 @@
     "rye swiss patty melt"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-sloppy-joe-feed",
+    "best-tuna-melt-for-the-hall",
+    "hall-blt-sandwich-feed",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "https://www.americastestkitchen.com/recipes/14928-diner-style-patty-melts",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

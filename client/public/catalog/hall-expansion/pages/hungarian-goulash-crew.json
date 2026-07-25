@@ -7,16 +7,16 @@
   "subtitle": "Paprika beef stew with caraway and potatoes for ten",
   "category": "hall_expansion",
   "cuisine": "hungarian",
-  "description": "Beef chuck simmers with onions, potatoes, and a heavy hand of sweet paprika until the broth turns rust-red and meat breaks down tender. Serve in deep bowls with sour cream and rye bread.",
+  "description": "Chuck browned hard, a mountain of slow-melted onions, and real Hungarian sweet paprika bloomed off the heat so it never scorches — simmered low until the meat relents, then thickened with potatoes. Sour cream and rye bread at the table.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 120,
   "prepTime": 30,
-  "difficulty": "easy",
-  "calories": 480,
-  "protein": 38,
-  "carbs": 34,
-  "fats": 20,
+  "difficulty": "medium",
+  "calories": 500,
+  "protein": 40,
+  "carbs": 36,
+  "fats": 22,
   "tags": [
     "protein:beef",
     "format:stew",
@@ -30,82 +30,84 @@
     "firefighter_meal"
   ],
   "equipment": [
-    "Dutch oven",
+    "Heavy Dutch oven with lid",
+    "Tray for browned meat",
+    "Instant-read thermometer",
     "Wooden spoon",
-    "Ladle",
-    "Cutting board",
-    "Hotel pan"
+    "Ladle"
   ],
   "ingredients": [
     {
-      "name": "Beef Chuck Roast",
-      "quantity": "3.2",
-      "unit": "Lb",
+      "name": "beef chuck roast",
+      "quantity": "3.5",
+      "unit": "lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
-      "name": "Yellow Onions",
+      "name": "yellow onions",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "diced — goulash wants a mountain of them",
+      "group": "Stew"
+    },
+    {
+      "name": "sweet Hungarian paprika",
+      "quantity": "4",
+      "unit": "tbsp",
+      "notes": "fresh tin — this is the dish",
+      "group": "Stew"
+    },
+    {
+      "name": "caraway seeds",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "crushed",
+      "group": "Stew"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Stew"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Stew"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "5",
+      "unit": "cups",
+      "group": "Stew"
+    },
+    {
+      "name": "russet potatoes",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "peeled and cubed",
+      "group": "Stew"
+    },
+    {
+      "name": "red bell peppers",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Stew"
     },
     {
-      "name": "Sweet Paprika",
-      "quantity": "2.6",
-      "unit": "Tbsp",
-      "group": "Stew"
-    },
-    {
-      "name": "Caraway Seeds",
-      "quantity": "7/8",
-      "unit": "Tsp",
-      "group": "Stew"
-    },
-    {
-      "name": "Garlic Cloves",
-      "quantity": "4",
-      "unit": "cloves",
-      "notes": "minced",
-      "group": "Stew"
-    },
-    {
-      "name": "Tomato Paste",
-      "quantity": "1 3/4",
-      "unit": "Tbsp",
-      "group": "Stew"
-    },
-    {
-      "name": "Beef Broth",
-      "quantity": "4.8",
-      "unit": "Cups",
-      "group": "Stew"
-    },
-    {
-      "name": "Russet Potatoes",
-      "quantity": "1.6",
-      "unit": "Lb",
-      "notes": "cubed",
-      "group": "Stew"
-    },
-    {
-      "name": "Red Bell Pepper",
-      "quantity": "3/4",
-      "unit": "whole",
-      "notes": "diced",
-      "group": "Stew"
-    },
-    {
-      "name": "Sour Cream",
-      "quantity": "3/4",
-      "unit": "Cup",
+      "name": "sour cream",
+      "quantity": "1",
+      "unit": "cup",
       "notes": "for serving",
       "group": "Finish"
     },
     {
-      "name": "Rye Bread",
-      "quantity": "3/4",
+      "name": "rye bread",
+      "quantity": "1",
       "unit": "loaf",
       "notes": "sliced",
       "group": "Service"
@@ -114,66 +116,132 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Brown the beef",
-      "instruction": "Season chuck cubes and brown in batches in a Dutch oven over high heat until deeply colored. Set aside.",
+      "title": "Cube and dry the chuck",
+      "instruction": "Cut the beef chuck into 1.5-inch cubes, trimming only the hard outer fat — the marbling inside melts into the sauce over the braise. Pat every cube bone-dry with paper towels and salt them all over; wet meat refuses to brown and dumps its juice into the pan instead.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Cook onions and spices",
-      "instruction": "Reduce heat, add onions, and cook 8 minutes. Stir in paprika, caraway, garlic, and tomato paste, cooking 2 minutes until fragrant.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Brown the cubes in batches",
+      "instruction": "Heat 2 tablespoons oil in the pot over medium-high until shimmering. Brown the cubes in three batches, 3–4 minutes per side undisturbed, until deeply crusted — a crowded pot steams the meat gray and you lose the roasty base of the stew. No need to check internal temp yet; the long braise carries doneness far past any safety line. Set each batch on a tray as it finishes.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Simmer the stew",
-      "instruction": "Return beef, add broth and bell pepper. Cover and simmer 1.5 hours until beef starts to tenderize.",
-      "minutes": 90,
-      "heatLevel": ""
+      "title": "Melt the onions down",
+      "instruction": "Drop to medium-low, add a splash more oil, and cook the diced yellow onions with a pinch of salt for 10–12 minutes, stirring often, until soft, golden, and collapsed to half their volume. Goulash is an onion dish as much as a meat one — this slow melt becomes the body of the sauce, so don't rush it with high heat.",
+      "minutes": 12,
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 4,
-      "title": "Add potatoes",
-      "instruction": "Stir in potatoes and simmer uncovered 30–40 minutes until beef and potatoes are fork-tender and broth thickens slightly.",
-      "minutes": 35,
+      "title": "Bloom the paprika off the heat",
+      "instruction": "Pull the pot off the burner and let it quiet for 30 seconds, then stir the sweet Hungarian paprika, crushed caraway seeds, garlic, and tomato paste into the onions for about 1 minute until brick red and fragrant. Residual heat blooms paprika's color and aroma; over a live burner it scorches in seconds and turns the whole pot bitter. This off-heat bloom is the single most important move in goulash.",
+      "minutes": 3,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Serve in bowls",
-      "instruction": "Taste and adjust salt. Ladle into bowls with sour cream dolloped on top and rye bread on the side.",
+      "title": "Build the braise",
+      "instruction": "Set the pot back over medium heat, pour in the broth, and scrape the bottom clean before anything can catch. Return the browned cubes with every drop of their tray juices, add the diced red bell peppers, and bring the pot just to a bare simmer — small bubbles at the edges, never a boil.",
+      "minutes": 6,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Simmer low until the meat relents",
+      "instruction": "Cover with the lid cracked and hold the laziest simmer you can manage — a bubble every second or two — for 90 minutes, stirring every 20 minutes so nothing sticks. Hard bubbling squeezes the cubes dry and grainy; low and slow melts their collagen into the sauce instead.",
+      "minutes": 90,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Add potatoes and finish fork-tender",
+      "instruction": "Stir in the cubed russet potatoes and cook uncovered 30–35 minutes more, until a fork twists into the meat with zero resistance — an instant-read slid into a cube shows around 200°F at that point — and the potatoes turn creamy, shedding starch that thickens the broth at the edges.",
+      "minutes": 35,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Season in stages and rest",
+      "instruction": "Taste and add salt a pinch at a time — paprika drinks more salt than you expect. If the pot wants brightness, a teaspoon of red wine vinegar sharpens everything without announcing itself. Rest off the heat 10 minutes; goulash settles and thickens noticeably as it stands.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Serve with sour cream and rye",
+      "instruction": "Ladle into deep bowls and drop a spoonful of sour cream on each so it melts into marbled streaks. Set the sliced rye bread out for mopping and put hot paprika on the table — heat-seekers push their own bowls without changing the pot for everyone else.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the goulash — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Leave the sour cream in the fridge until bowls are actually being served — it's a fresh dollop at the table, not something to stir into the held pot. On return, bring the goulash back to 165°F before reopening the line.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the goulash and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "A bay leaf in the simmer adds subtle depth—remove before service.",
-    "Csipetke noodles are traditional if you want an extra Hungarian touch.",
-    "Hot paprika on the side lets crews customize heat without changing the pot."
+    "Paprika is the whole dish — buy real Hungarian sweet paprika in the tin, and if yours is over a year old, replace it before cooking this.",
+    "A bay leaf through the simmer adds quiet depth; pull it before service.",
+    "Csipetke — pinched flour-and-egg dumplings — are the traditional finish; drop them into the pot for the last 10 minutes if the hall wants the full Budapest version.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Goulash bowls with sour cream, rye bread, and pickled vegetables.",
-    "Simple cabbage salad with vinegar dressing."
+    "Main: Hungarian beef goulash with potatoes",
+    "Sides: rye bread, quick cabbage salad with vinegar dressing",
+    "Condiments: sour cream, hot paprika, pickled vegetables",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Thicken with a little flour and wrap in pastry for goulash hand pies.",
-    "Serve over spaetzle if you have egg noodles gone."
+    "Cool the goulash in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Day-two goulash beats day-one — reheat gently with a splash of broth and re-check the salt.",
+    "Spoon leftovers over egg noodles or spaetzle and it's a second dinner, not a repeat."
   ],
-  "whyCrewsLikeIt": "Goulash is cold-weather hall fuel. It is hearty without being greasy, spices are warm not blow-your-head-off, and one pot feeds everyone including the probie who always takes seconds.",
-  "mealPrepNotes": "Cut beef uniform for even cooking. Stew tastes better the next day. Hold at 165°F in hotel pans with a thin broth layer so meat does not dry.",
+  "whyCrewsLikeIt": "Cold-night fuel with real bloomed paprika instead of a chili-powder shortcut — a cheap cut cooked until it relents, and one pot that covers seconds for the whole table.",
+  "mealPrepNotes": "Cut the meat uniform so it finishes together. The stew improves overnight; hold in hotel pans with a thin layer of broth so the surface doesn't dry.",
+  "substitutions": [
+    "Boneless short rib swaps for chuck with even more richness; bagged stew meat works but check tenderness 20 minutes early.",
+    "Smoked paprika is not a swap — it pushes the pot toward barbecue. If all you have is hot paprika, cut it to 2 tablespoons and warn the crew.",
+    "No caraway? Leave it out rather than substituting — fennel seed drags the flavor toward Italy.",
+    "Yukon golds hold their shape better than russets if the crew prefers distinct potato pieces over a thicker broth."
+  ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 38,
-    "carbs": 34,
-    "fats": 20,
-    "label": "~480 cal/serving · 38g protein · 4g fiber (est.)"
+    "calories": 500,
+    "protein": 40,
+    "carbs": 36,
+    "fats": 22,
+    "label": "~500 cal/serving · 40g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/hungarian-goulash-crew.jpg",
-  "heroImageAlt": "Hungarian Goulash for the Crew — crew-sized firehall meal",
+  "heroImageAlt": "Hungarian Goulash for the Crew — hungarian stew plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/hungarian-goulash-crew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/hungarian-goulash-crew.jpg",
   "railImage": "/images/rails/hall-expansion/hungarian-goulash-crew.jpg",
@@ -182,15 +250,17 @@
   "popularityWeight": 7.8,
   "searchTerms": [
     "hungarian goulash for the crew",
-    "crew feeders"
+    "crew feeders",
+    "paprika beef stew",
+    "dutch oven goulash big batch"
   ],
   "relatedSlugs": [
+    "chicken-paprikash-hall",
     "shawarma-bar-night",
     "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-burger-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-23T20:58:00.000Z",
   "contentVersion": 2
 }

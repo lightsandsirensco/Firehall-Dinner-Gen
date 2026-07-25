@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-23T15:33:36.751Z",
+  "generatedAt": "2026-07-24T02:32:40.424Z",
   "origin": "https://www.firehallmeals.com",
   "sitemapSynced": false,
   "totals": {
-    "sitemapUrls": 393,
-    "recipeUrls": 311,
-    "recipeUrlsInSitemap": 311,
+    "sitemapUrls": 444,
+    "recipeUrls": 348,
+    "recipeUrlsInSitemap": 348,
     "guideUrls": 58,
     "guideUrlsInSitemap": 62,
-    "approvedCatalogRecipes": 313
+    "approvedCatalogRecipes": 299
   },
   "requiredRoutes": {
     "checked": [
@@ -33,19 +33,23 @@
     }
   },
   "recipeMetadata": {
-    "audited": 311,
+    "audited": 348,
     "missingMetadata": [],
-    "duplicateTitles": 0,
+    "duplicateTitles": 1,
     "duplicateDescriptions": 0,
     "missingCanonical": [],
     "canonicalMismatch": []
   },
   "internalLinks": {
-    "notInApprovedCatalog": 43,
-    "hubOnlyRecipes": 43,
+    "notInApprovedCatalog": 94,
+    "hubOnlyRecipes": 57,
     "hubOnlySample": [
       {
         "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "bbq-chicken-bowls",
         "hub": "hall-guide"
       },
       {
@@ -53,7 +57,23 @@
         "hub": "/pizza"
       },
       {
+        "slug": "beef-dip",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "big-chili",
+        "hub": "hall-guide"
+      },
+      {
         "slug": "breakfast-burrito-bar",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "breakfast-sausage-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "bulgogi-bowls",
         "hub": "hall-guide"
       },
       {
@@ -61,7 +81,7 @@
         "hub": "hall-guide"
       },
       {
-        "slug": "chili-mac",
+        "slug": "chicken-parm",
         "hub": "hall-guide"
       },
       {
@@ -70,10 +90,6 @@
       },
       {
         "slug": "crispy-chicken-cutlets",
-        "hub": "hall-guide"
-      },
-      {
-        "slug": "five-ingredient-pasta",
         "hub": "hall-guide"
       },
       {
@@ -89,50 +105,72 @@
         "hub": "hall-guide"
       },
       {
+        "slug": "garlic-butter-shrimp",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "greek-chicken-bowls",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "loaded-baked-potato-bar",
+        "hub": "hall-guide"
+      },
+      {
+        "slug": "meatloaf-mashed",
+        "hub": "hall-guide"
+      },
+      {
         "slug": "pancake-short-stack",
         "hub": "hall-guide"
-      },
-      {
-        "slug": "sheet-pan-meal-prep",
-        "hub": "hall-guide"
-      },
-      {
-        "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
-        "hub": "hall-guide"
-      },
-      {
-        "slug": "smash-burgers",
-        "hub": "hall-guide"
-      },
-      {
-        "slug": "spaghetti-aglio-e-olio-for-the-hall",
-        "hub": "hall-guide"
-      },
-      {
-        "slug": "tomato-soup-grilled-cheese-croutons",
-        "hub": "hall-guide"
-      },
-      {
-        "slug": "turkey-burgers",
-        "hub": "hall-guide"
-      },
-      {
-        "slug": "turkey-sausage-egg-muffins",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "veggie-egg-casserole-tray",
-        "hub": "performance-meals"
       }
     ],
-    "notLinkedFromGuidesOnly": 226,
-    "weakOnPageOutboundLinks": 127,
-    "internallyUnreachable": []
+    "notLinkedFromGuidesOnly": 263,
+    "weakOnPageOutboundLinks": 160,
+    "internallyUnreachable": [
+      "chicken-alfredo-bake",
+      "flank-chimichurri",
+      "loaded-nacho-skillet",
+      "best-tuna-melt-for-the-hall",
+      "firehall-taco-bowls",
+      "buffalo-chicken-sweet-potato-bowls",
+      "firehall-greek-chicken-bowls",
+      "teriyaki-chicken-rice-bowls",
+      "firehall-korean-beef-bowls",
+      "cajun-shrimp-rice-bowls",
+      "southwest-steak-bowls",
+      "bbq-pulled-pork-bowls",
+      "mediterranean-beef-bowls",
+      "chipotle-chicken-burrito-bowls",
+      "turkey-taco-bowls",
+      "peanut-chicken-rice-bowls",
+      "firehall-gyro-bowls",
+      "egg-roll-in-a-bowl-crew",
+      "salmon-rice-bowls-crew",
+      "korean-turkey-rice-bowls",
+      "leftover-roast-beef-bowls",
+      "mississippi-pot-roast-crew",
+      "white-chicken-chili-crock",
+      "italian-beef-slow-cooker",
+      "salsa-verde-chicken-crock",
+      "loaded-baked-potato-soup-crock",
+      "thai-peanut-chicken-crock",
+      "burnt-ends-chili-crew",
+      "smoker-nachos-crew",
+      "weeknight-bbq-ribs-crew",
+      "grilled-flank-fajita-bar",
+      "costco-rotisserie-remix",
+      "chicken-thigh-stretch-dinner",
+      "pasta-e-fagioli-hall",
+      "dirty-rice-crew-skillet",
+      "sausage-gnocchi-skillet",
+      "spanish-rice-chicken-one-pot"
+    ]
   },
   "sitemapCoverage": {
     "recipesMissingFromSitemap": [],
     "guidesMissingFromSitemap": [],
     "orphanSitemapUrls": []
   },
-  "pass": true
+  "pass": false
 }

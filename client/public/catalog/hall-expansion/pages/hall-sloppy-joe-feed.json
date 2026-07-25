@@ -39,66 +39,66 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (80/20)",
+      "name": "ground beef (80/20)",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Vegetables"
     },
     {
-      "name": "Green Bell Pepper",
+      "name": "green bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Vegetables"
     },
     {
-      "name": "Ketchup",
+      "name": "ketchup",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Worcestershire Sauce",
+      "name": "Worcestershire sauce",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Apple Cider Vinegar",
+      "name": "apple cider vinegar",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Hamburger Buns",
+      "name": "hamburger buns",
       "quantity": "10",
       "unit": "whole",
       "notes": "toasted",
       "group": "Service"
     },
     {
-      "name": "Dill Pickle Chips",
+      "name": "dill pickle chips",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Service"
     }
   ],
@@ -161,10 +161,19 @@
     "protein": 36,
     "carbs": 42,
     "fats": 24,
-    "label": "~520 cal/serving · 36g protein · 3g fiber (est.)"
+    "label": "~520 cal/serving · 36g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/hall-sloppy-joe-feed.jpg",
-  "heroImageAlt": "Hall Sloppy Joe Feed — crew-sized firehall meal",
+  "heroImageAlt": "Hall Sloppy Joe Feed — american sandwich plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/hall-sloppy-joe-feed.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/hall-sloppy-joe-feed.jpg",
   "railImage": "/images/rails/hall-expansion/hall-sloppy-joe-feed.jpg",
@@ -176,12 +185,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "classic-patty-melt-for-the-crew",
+    "best-tuna-melt-for-the-hall",
+    "hall-blt-sandwich-feed",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

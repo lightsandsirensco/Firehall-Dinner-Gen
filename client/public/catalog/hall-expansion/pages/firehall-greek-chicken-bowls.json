@@ -1,0 +1,266 @@
+{
+  "slug": "firehall-greek-chicken-bowls",
+  "title": "Greek Chicken Bowls",
+  "displayTitle": "Greek Chicken Bowls",
+  "seoTitle": "Greek Chicken Bowls | Firefighter Meal",
+  "shortDescription": "Lemon-herb chicken with rice, vegetables, feta, and tzatziki",
+  "subtitle": "Lemon-herb chicken with rice, vegetables, feta, and tzatziki",
+  "category": "hall_expansion",
+  "cuisine": "greek",
+  "description": "Lemon-herb chicken over lemon rice with cucumbers, tomatoes, red onion, kalamata olives, feta, romaine, and tzatziki.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 590,
+  "protein": 43,
+  "carbs": 54,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "chicken",
+    "healthy",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Grill or grill pan",
+    "Rice pot",
+    "Chef knife",
+    "Hotel pans",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken thighs",
+      "quantity": "3.2",
+      "unit": "lb",
+      "notes": "boneless, skinless",
+      "group": "Protein"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "3/8",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "oregano",
+      "quantity": "1 3/4",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "cucumbers",
+      "quantity": "1.6",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "tomatoes",
+      "quantity": "4.8",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "red onion",
+      "quantity": "3/4",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "kalamata olives",
+      "quantity": "1 1/4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "romaine",
+      "quantity": "2.4",
+      "unit": "hearts",
+      "group": "Cold bar"
+    },
+    {
+      "name": "feta",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "tzatziki",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Stage the Greek toppings",
+      "instruction": "Marinate thighs with lemon, oil, garlic, oregano, salt, and pepper. Dice cucumber and tomatoes, slice onion paper-thin, chop romaine, and drain olives; hold feta and tzatziki over ice. Soak the onion in ice water for 10 minutes so it bites less. Large cucumber chunks make a bowl awkward to eat.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the lemon rice",
+      "instruction": "Rinse jasmine rice, bring it with salted water to a boil in a lidded pot, then simmer on low 18 minutes and rest 10 more. Fluff gently and fold in lemon zest, juice, parsley, and olive oil. Lemon boiled from the start tastes flat, and frequent lid lifting leaves hard grains.",
+      "minutes": 28,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Ready the grill chicken",
+      "instruction": "Lift thighs from marinade and shake off excess garlic so it will not burn on the grill. Oil the hot grates, then lay thighs out with room between them and keep a thermometer ready. A wet, crowded grill makes pale chicken with no char, so work in rounds if your grill is small.",
+      "minutes": 5,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill and slice the chicken",
+      "instruction": "Grill thighs over medium-high heat 5–6 minutes per side until marked, browned, and 165°F at the thickest point. Rest them on a rimmed tray for 5 minutes, then slice across the grain. Cutting straight off the grill spills the juices onto the board and leaves the serving pan dry.",
+      "minutes": 17,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Warm the chicken juices",
+      "instruction": "Pour any resting juices into a small saucepan with a spoonful of water and warm over low for 2 minutes; drizzle them over sliced chicken in a hotel pan. Do not boil lemony juices hard or they turn sharp. Keep raw salad vegetables completely away from this warm pan.",
+      "minutes": 4,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Set the tzatziki station",
+      "instruction": "Stir tzatziki in a chilled bowl and spoon it into a squeeze bottle or serving dish. Arrange cucumber, tomato, drained onion, olives, feta, and romaine in separate pans. Keeping salty feta and olives apart lets people control the salt; mixing them early gives every bowl the same heavy hit.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold the Greek hot pans",
+      "instruction": "Cover rice and sliced chicken separately and hold at 140°F or warmer, with the chicken in a 200°F oven if service waits. Taste rice with a piece of chicken, adding lemon or salt before it reaches the line. Never hold tzatziki beside the rice; it should stay cold and thick. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Build the Greek bowls",
+      "instruction": "Scoop lemon rice first, set sliced chicken across one side, then add a bed of romaine on the other. Spoon cucumber, tomato, onion, and olives over the romaine, not the hot chicken. That separation keeps the salad crisp instead of turning it into a warm, watery pile.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Garnish with feta and tzatziki",
+      "instruction": "Crumble feta over the salad, add a spoonful of tzatziki beside the chicken, and finish with parsley. Keep the sauce as a visible dollop rather than stirring it through the rice. A heavy ladle of tzatziki drowns the lemon flavor and makes the bowl look careless.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve the Greek bowls",
+      "instruction": "Move bowls to the pass with warm pita wedges and reserve lemon wedges for the crew. Keep chicken and rice covered behind the line for late returns, while cold toppings stay on ice. Replace a wet salad pan instead of topping it off; pooled moisture travels into every new bowl.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the lemon-herb chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Never let the tzatziki sit anywhere near that heat — keep it in the chilled bowl the whole time; it should stay cold and thick, not warm through. On return, spot-check the chicken at a safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool lemon-herb chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Chicken thighs are more forgiving than breast when a call delays dinner.",
+    "Salt cucumbers lightly, drain five minutes, then blot them dry.",
+    "Rookie tip: Slice red onion thinly and soak it in ice water to remove the harsh edge.",
+    "Keep olives and feta in separate bowls because both bring a lot of salt.",
+    "Prep tip: Mix tzatziki a day ahead so the garlic and dill settle in."
+  ],
+  "tonightSpread": [
+    "Main: Greek chicken bowls",
+    "Sides: Warm pita wedges, lemony greens",
+    "Condiments: Tzatziki, feta, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool lemon-herb chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Use the cold components in next-day Greek wraps."
+  ],
+  "whyCrewsLikeIt": "The cool vegetables and tzatziki balance a hearty chicken-and-rice base, and everyone can control the onions and olives.",
+  "mealPrepNotes": "Make-ahead: marinate chicken and make tzatziki up to one day early. Storage: hold chicken, rice, and chopped vegetables separately for 3 days. Reheating: heat chicken and rice to 165°F with a tablespoon of water; add chilled vegetables, feta, olives, and tzatziki afterward.",
+  "substitutions": [
+    "Use chicken breast for thighs.",
+    "Use quinoa instead of rice.",
+    "Use goat cheese for feta.",
+    "Use yogurt-dill sauce for tzatziki."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 590,
+    "protein": 43,
+    "carbs": 54,
+    "fats": 22,
+    "label": "~590 cal/serving · 43g protein · 7g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+  "heroImageAlt": "Greek Chicken Bowls — greek bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehall-greek-chicken-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/firehall-greek-chicken-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "greek chicken bowls",
+    "firehall greek dinner",
+    "lemon herb chicken rice bowl",
+    "tzatziki chicken bowl",
+    "healthy crew dinner",
+    "mediterranean chicken bowl",
+    "meal prep greek bowls",
+    "chicken dinner for 10"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

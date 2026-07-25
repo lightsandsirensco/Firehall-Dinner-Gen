@@ -52,7 +52,7 @@ export function HallDashboardActions({ activeHallId, className }: HallDashboardA
       </p>
       <div className="grid grid-cols-2 gap-2.5">
         <ActionTile
-          href="/tonight"
+          href="/hall"
           icon={Vote}
           label={HALL_DASHBOARD.actions.hallVote}
           testId="hall-action-vote"

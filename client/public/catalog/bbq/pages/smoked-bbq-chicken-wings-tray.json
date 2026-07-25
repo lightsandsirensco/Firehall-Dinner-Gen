@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smoked wing tradition (Hey Grill Hey, Weber): split wings get a dry rub, smoke at 250°F, then finish hot and toss in house BBQ sauce for a tray that feeds ten fast.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 75,
   "prepTime": 15,
   "difficulty": "easy",
@@ -40,64 +40,64 @@
   "ingredients": [
     {
       "name": "Chicken Wings",
-      "quantity": "8",
+      "quantity": "4",
       "unit": "Lb",
       "notes": "split into flats and drums"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Brown Sugar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Smoked Paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Garlic Powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Black Pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp"
     },
     {
       "name": "Baking Powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "notes": "helps crisp skin"
     },
     {
       "name": "BBQ Sauce",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Cups"
     },
     {
       "name": "Hot Sauce",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Butter",
-      "quantity": "4",
+      "quantity": "3.4",
       "unit": "Tbsp"
     },
     {
       "name": "Celery Sticks",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups"
     },
     {
       "name": "Ranch Dressing",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "notes": "optional dip"
     }

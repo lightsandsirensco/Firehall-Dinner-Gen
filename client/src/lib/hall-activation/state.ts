@@ -161,6 +161,6 @@ export function onboardingPathForStep(step: OnboardingStep): string {
     case 2:
       return "/hall/welcome";
     case 3:
-      return "/tonight";
+      return "/hall";
   }
 }

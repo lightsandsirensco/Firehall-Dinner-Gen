@@ -7,16 +7,16 @@
   "subtitle": "Parm flavors in a handheld line",
   "category": "firehall_classics",
   "cuisine": "italian",
-  "description": "Parm flavors in a handheld line. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Chicken parm built for a sandwich line — pounded cutlets under a panko-parmesan crust, shallow-fried until deep gold, then broiled with provolone on toasted hoagies so the crust stays loud under the sauce.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
+  "cookTime": 50,
+  "prepTime": 25,
   "difficulty": "medium",
-  "calories": 596,
-  "protein": 60,
-  "carbs": 6,
-  "fats": 39,
+  "calories": 1040,
+  "protein": 78,
+  "carbs": 82,
+  "fats": 44,
   "tags": [
     "protein:chicken",
     "format:sandwich",
@@ -26,16 +26,45 @@
     "golden_100"
   ],
   "equipment": [
+    "12-inch cast iron skillet or wide sauté pan",
+    "Meat mallet or small heavy pot",
+    "Wire racks set over sheet trays",
+    "3-quart saucepan",
     "Large sheet trays",
     "Instant-read thermometer",
+    "Tongs",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Ground Beef",
+      "name": "Boneless Chicken Breasts",
       "quantity": "4",
       "unit": "Lb",
       "group": "Main"
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": "1.5",
+      "unit": "Cups",
+      "group": "Breading"
+    },
+    {
+      "name": "Large Eggs",
+      "quantity": "4",
+      "unit": "count",
+      "group": "Breading"
+    },
+    {
+      "name": "Panko Bread Crumbs",
+      "quantity": "3",
+      "unit": "Cups",
+      "group": "Breading"
+    },
+    {
+      "name": "Grated Parmesan",
+      "quantity": "6",
+      "unit": "Oz",
+      "group": "Breading"
     },
     {
       "name": "Hoagie Rolls",
@@ -45,93 +74,151 @@
     },
     {
       "name": "Provolone Slices",
-      "quantity": "12",
+      "quantity": "16",
       "unit": "count",
       "group": "Cheese"
     },
     {
       "name": "Marinara Sauce",
-      "quantity": "2",
+      "quantity": "6",
       "unit": "Cups",
       "group": "Sauce"
-    },
-    {
-      "name": "Yellow Onion",
-      "quantity": "1",
-      "unit": "large",
-      "group": "Aromatics"
     },
     {
       "name": "Garlic Cloves",
       "quantity": "4",
       "unit": "cloves",
-      "group": "Aromatics"
+      "group": "Sauce"
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": "1.5",
+      "unit": "Cups",
+      "group": "Frying"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook and sauce filling",
-      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates.",
-      "minutes": 30,
-      "heatLevel": "medium-low"
+      "title": "Pound the cutlets even",
+      "instruction": "Halve each chicken breast horizontally into two thin cutlets, then pound between plastic wrap to an even ½ inch with a mallet or the bottom of a pot, about 15 minutes for the batch. Even thickness is the whole game — a thick middle stays raw while thin edges dry out. Salt both sides now so the seasoning has time to work in while you build the breading station.",
+      "minutes": 15,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Toast buns",
-      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired.",
-      "minutes": 6,
-      "heatLevel": "medium"
+      "title": "Build the three-pan breading station",
+      "instruction": "Line up three wide pans: all-purpose flour in the first, the eggs beaten with a splash of water in the second, and panko bread crumbs mixed with half the grated parmesan in the third. Set a wire rack at the end, about 5 minutes. Keep one hand dry and one hand wet as you work — mixing jobs cakes your fingers in batter and the coating goes on lumpy.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Build the sandwich line",
-      "instruction": "Parm Hero Subs on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
-      "minutes": 8,
-      "heatLevel": "low"
+      "title": "Bread every cutlet before heat goes on",
+      "instruction": "Dredge each cutlet in flour and shake off the excess, coat in egg, then press hard into the panko-parmesan so the crumbs anchor — loose crumbs fall off in the pan and burn in the oil. Rest the breaded cutlets on the rack 10 minutes so the coating sets and hydrates; skipping the rest is why breading slides off in sheets when it hits hot oil.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Hold for late calls",
-      "instruction": "Keep backup sandwiches foil-wrapped at 200°F. Slice hoagies in half for easier grabbing — crew eats with one hand when tones are quiet.",
+      "title": "Warm the garlic marinara",
+      "instruction": "While the coating rests, thinly slice the garlic cloves and sizzle them in a saucepan with a spoon of oil over medium heat, 60–90 seconds until pale gold and fragrant — brown garlic turns bitter fast. Pour in the marinara sauce with the dried oregano and let it bubble gently 10 minutes until slightly thickened. A watery sauce soaks straight through the crust and the bread.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Shallow-fry in batches until deep gold",
+      "instruction": "Heat ½ inch of olive oil in the skillet over medium-high until a pinch of panko sizzles on contact, around 350°F. Fry the cutlets two at a time, 3–4 minutes per side, until the crust is deep golden brown and the chicken reads 165°F on an instant-read thermometer at the thickest point. Crowding the pan drops the oil temperature and you get greasy, blond crust instead of crunch. Drain on the wire rack, never paper towels — trapped steam softens the bottom.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Toast the hoagie rolls",
+      "instruction": "Split the hoagie rolls without cutting all the way through and toast cut-side up under the broiler 1–2 minutes until the faces are light gold and dry. Watch them the whole time — broilers go from toast to carbon in about 30 seconds. That toasted face is the moisture barrier that keeps the sandwich from going soggy under hot sauce.",
+      "minutes": 6,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Build and broil the heroes",
+      "instruction": "Lay a fried cutlet in each toasted roll, spoon a stripe of the garlic marinara down the center — sauce the middle only, so the edges of the crust stay crisp — and cap with two provolone slices per sub. Slide the built subs under the broiler 1–2 minutes until the provolone melts and bubbles with a few brown spots. Cheese goes on top of the sauce, not under it, so it pins everything in place.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Cut, dust, and open the line",
+      "instruction": "Dust the subs with the remaining parmesan, cut each in half on a bias so the crew can grab singles, and stand them cut-side up in foil-lined trays, about 5 minutes. Set the extra warm marinara out in a bowl for dippers. Call everyone while the cheese is still stretchy — a parm hero is at its best for about ten minutes.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover chicken cutlets — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool chicken cutlets and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Sauce the middle of the cutlet only and leave the edges bare — full coverage steams the crust soft before the tray reaches the table.",
+    "Rest breaded cutlets 10 minutes before frying; the coating glues itself on and survives the flip.",
+    "Frying ahead? Hold plain fried cutlets on a rack in a 200°F oven up to 45 minutes, then sauce and broil to order — they re-crisp better than sauced ones hold.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Parm Hero Subs with sides in separate pans so the crew can mix portions.",
-    "Line up Parm Hero Subs on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: crispy chicken parm hero subs",
+    "Sides: green salad with Italian dressing, kettle chips",
+    "Condiments: warm marinara for dipping, crushed red pepper, extra grated parmesan",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Store components separate — assemble fresh; buns go soggy overnight."
+    "Cool chicken cutlets in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Keep leftover cutlets, sauce, and rolls in separate containers; re-crisp cutlets at 400°F for 8 minutes, then sauce and rebuild fresh.",
+    "Never wrap a sauced sub for the fridge — day-two bread turns to paste. Rebuild on a fresh toasted roll instead."
   ],
-  "whyCrewsLikeIt": "Parm flavors in a handheld line. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "whyCrewsLikeIt": "Real fried-to-order chicken parm in one hand — crackling panko crust, garlicky sauce, and a rope of melted provolone that survives the walk from the line to the rig bay.",
   "substitutions": [
-    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+    "Chicken thighs swap for breasts — pound them flat the same way; they run juicier and forgive a distracted cook.",
+    "No panko? Regular dry breadcrumbs work, but the crust comes out finer and softer — add an extra handful of parmesan for crunch.",
+    "Low-moisture mozzarella swaps 1:1 for provolone; it melts stretchier but brings less sharpness.",
+    "Baking instead of frying: 425°F on an oiled sheet pan, 15–18 minutes to 165°F — lighter, with a quieter crust."
   ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 596,
-    "protein": 60,
-    "carbs": 6,
-    "fats": 39,
+    "calories": 1040,
+    "protein": 78,
+    "carbs": 82,
+    "fats": 44,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -155,6 +242,8 @@
     "sandwich",
     "handheld",
     "chicken parmesan hero sandwich",
+    "chicken parm sub",
+    "crispy chicken cutlet sandwich",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -167,6 +256,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.144Z",
+  "generatedAt": "2026-07-23T21:10:00.000Z",
   "contentVersion": 2
 }

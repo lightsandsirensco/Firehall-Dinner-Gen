@@ -1,6 +1,6 @@
 # SEO Indexing Audit
 
-Generated: 2026-06-23T15:33:36.751Z
+Generated: 2026-07-24T02:32:40.424Z
 
 Canonical origin: **https://www.firehallmeals.com**
 
@@ -12,21 +12,21 @@ Canonical origin: **https://www.firehallmeals.com**
 |-------|--------|
 | Required routes in sitemap | PASS |
 | robots.txt allows crawling | PASS |
-| Recipe unique title + meta + canonical | PASS |
+| Recipe unique title + meta + canonical | NEEDS WORK |
 | Recipes in sitemap | PASS |
-| Internal discoverability | PASS |
-| **Overall** | **PASS** |
+| Internal discoverability | NEEDS WORK |
+| **Overall** | **NEEDS WORK** |
 
 ## URL counts
 
 | Metric | Count |
 |--------|------:|
-| **Total URLs in sitemap** | 393 |
-| **Total recipe URLs** (catalog indexes) | 311 |
-| Recipe URLs listed in sitemap | 311 |
+| **Total URLs in sitemap** | 444 |
+| **Total recipe URLs** (catalog indexes) | 348 |
+| Recipe URLs listed in sitemap | 348 |
 | **Total guide URLs** | 58 |
 | Guide URLs listed in sitemap | 62 |
-| Approved catalog (Explore / Recipes browse) | 313 |
+| Approved catalog (Explore / Recipes browse) | 299 |
 
 ## 1. Sitemap — required routes
 
@@ -40,7 +40,7 @@ Canonical origin: **https://www.firehallmeals.com**
 
 
 
-Hall guides index (`/guides`) plus **62** individual guide URLs. Explore catalog (`/explore`) plus **311** recipe/smoothie detail URLs.
+Hall guides index (`/guides`) plus **62** individual guide URLs. Explore catalog (`/explore`) plus **348** recipe/smoothie detail URLs.
 
 ## 2. robots.txt
 
@@ -50,6 +50,13 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
 
 Sitemap: https://www.firehallmeals.com/sitemap.xml
 ```
@@ -65,17 +72,20 @@ Sitemap: https://www.firehallmeals.com/sitemap.xml
 
 ## 3. Recipe page metadata
 
-Audited **311** indexable recipe URLs.
+Audited **348** indexable recipe URLs.
 
 | Issue | Count |
 |-------|------:|
 | Missing title, description, or canonical | 0 |
-| Duplicate meta titles | 0 |
+| Duplicate meta titles | 1 |
 | Duplicate meta descriptions | 0 |
 | Invalid / missing canonical | 0 |
 | Canonical path mismatch | 0 |
 
 
+### Duplicate titles (sample)
+
+- firehall-greek-chicken-bowls ↔ greek-chicken-bowls: "Greek Chicken Bowls | Firehall Meals"
 
 
 
@@ -85,18 +95,56 @@ Recipes should be reachable via **Explore / Recipes** (approved catalog) and/or 
 
 | Signal | Count |
 |--------|------:|
-| In approved catalog (Explore / Recipes grid) | 313 |
-| Hub-only (Pizza / Breakfast / Performance — not on Explore) | 43 |
-| Not linked from any hall guide | 226 |
-| Golden-family pages with &lt;2 outbound related links | 127 |
-| **True orphan recipes** (no catalog hub, no guide link) | **0** |
+| In approved catalog (Explore / Recipes grid) | 299 |
+| Hub-only (Pizza / Breakfast / Performance — not on Explore) | 57 |
+| Not linked from any hall guide | 263 |
+| Golden-family pages with &lt;2 outbound related links | 160 |
+| **True orphan recipes** (no catalog hub, no guide link) | **37** |
 
-_No true orphans — every indexable recipe is reachable via Explore, a dedicated hub (/pizza, /breakfast), performance catalog, or a hall guide._
+### True orphan recipe slugs
+
+- `chicken-alfredo-bake`
+- `flank-chimichurri`
+- `loaded-nacho-skillet`
+- `best-tuna-melt-for-the-hall`
+- `firehall-taco-bowls`
+- `buffalo-chicken-sweet-potato-bowls`
+- `firehall-greek-chicken-bowls`
+- `teriyaki-chicken-rice-bowls`
+- `firehall-korean-beef-bowls`
+- `cajun-shrimp-rice-bowls`
+- `southwest-steak-bowls`
+- `bbq-pulled-pork-bowls`
+- `mediterranean-beef-bowls`
+- `chipotle-chicken-burrito-bowls`
+- `turkey-taco-bowls`
+- `peanut-chicken-rice-bowls`
+- `firehall-gyro-bowls`
+- `egg-roll-in-a-bowl-crew`
+- `salmon-rice-bowls-crew`
+- `korean-turkey-rice-bowls`
+- `leftover-roast-beef-bowls`
+- `mississippi-pot-roast-crew`
+- `white-chicken-chili-crock`
+- `italian-beef-slow-cooker`
+- `salsa-verde-chicken-crock`
+- `loaded-baked-potato-soup-crock`
+- `thai-peanut-chicken-crock`
+- `burnt-ends-chili-crew`
+- `smoker-nachos-crew`
+- `weeknight-bbq-ribs-crew`
+- `grilled-flank-fajita-bar`
+- `costco-rotisserie-remix`
+- `chicken-thigh-stretch-dinner`
+- `pasta-e-fagioli-hall`
+- `dirty-rice-crew-skillet`
+- `sausage-gnocchi-skillet`
+- `spanish-rice-chicken-one-pot`
 
 
 ### Hub-only recipes (indexed, not on Explore)
 
-43 recipes live on dedicated hubs instead of the main catalog — expected for Pizza Night and some breakfast/performance entries. See `hubOnlySample` in JSON.
+57 recipes live on dedicated hubs instead of the main catalog — expected for Pizza Night and some breakfast/performance entries. See `hubOnlySample` in JSON.
 
 
 ## 5. Sitemap generation coverage

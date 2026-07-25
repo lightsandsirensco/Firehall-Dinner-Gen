@@ -38,78 +38,78 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef",
+      "name": "ground beef",
       "quantity": "4.4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "80/20",
       "group": "Main"
     },
     {
-      "name": "Ground Lamb",
+      "name": "ground lamb",
       "quantity": "7/8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "optional for authenticity",
       "group": "Main"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1.8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Onion Powder",
+      "name": "onion powder",
       "quantity": "1.8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Ground Oregano",
+      "name": "ground oregano",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Paprika",
+      "name": "paprika",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Sweetened Condensed Milk",
+      "name": "sweetened condensed milk",
       "quantity": "1/2",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "White Vinegar",
+      "name": "white vinegar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Sauce"
     },
     {
-      "name": "Pita Bread",
+      "name": "pita bread",
       "quantity": "10.7",
       "unit": "rounds",
       "notes": "warmed",
       "group": "Service"
     },
     {
-      "name": "Tomatoes",
+      "name": "tomatoes",
       "quantity": "3",
       "unit": "whole",
       "notes": "diced",
       "group": "Service"
     },
     {
-      "name": "White Onion",
+      "name": "white onion",
       "quantity": "1",
       "unit": "whole",
       "notes": "finely diced",
@@ -175,10 +175,19 @@
     "protein": 38,
     "carbs": 36,
     "fats": 28,
-    "label": "~540 cal/serving · 38g protein · 2g fiber (est.)"
+    "label": "~540 cal/serving · 38g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/firehall-donair-platter.jpg",
-  "heroImageAlt": "Firehall Donair Platter — crew-sized firehall meal",
+  "heroImageAlt": "Firehall Donair Platter — canadian platter plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/firehall-donair-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/firehall-donair-platter.jpg",
   "railImage": "/images/rails/hall-expansion/firehall-donair-platter.jpg",
@@ -190,12 +199,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "montreal-smoked-meat-platter",
+    "classic-poutine-feed-crew",
+    "peri-peri-chicken-platter",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

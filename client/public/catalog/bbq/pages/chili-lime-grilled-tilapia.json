@@ -3,14 +3,14 @@
   "title": "Ancho-Tilapia with Charred Corn Salsa",
   "displayTitle": "Ancho-Tilapia with Charred Corn Salsa",
   "seoTitle": "Ancho-Tilapia with Charred Corn Salsa | Firehall BBQ",
-  "shortDescription": "Tilapia grill night—chili lime char, corn salsa, fast crew portions",
-  "subtitle": "Cilantro-chili lime tilapia, charred corn salsa, and ten portions",
+  "shortDescription": "Tilapia grill night—20-minute chili-lime marinade, charred corn salsa, fast crew portions",
+  "subtitle": "Chili-lime tilapia with charred corn and black bean salsa for the crew",
   "category": "bbq_grill_nights",
   "cuisine": "mexican",
-  "description": "Tilapia fillets marinate in chili-lime-cilantro paste, grill on oiled grates until 145°F, and serve with charred corn-black bean salsa.",
-  "crewSize": 10,
-  "baseServings": 10,
-  "cookTime": 12,
+  "description": "Tilapia fillets in a chipotle-ancho-lime paste — capped at 20 minutes so the acid doesn't cook them first — grilled hot on scrubbed, oiled grates to 145°F and served over a charred corn, black bean, and avocado salsa.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 15,
   "prepTime": 25,
   "difficulty": "medium",
   "calories": 591,
@@ -30,24 +30,27 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "flat-top griddle",
-    "fish spatula",
-    "instant-read thermometer",
-    "large platters",
-    "mixing bowl"
+    "Gas or charcoal grill",
+    "Fish spatula",
+    "Blender or food processor",
+    "Instant-read thermometer",
+    "Large platters",
+    "Mixing bowl",
+    "Tongs"
   ],
   "ingredients": [
     {
       "name": "Tilapia Fillets",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "Lb",
-      "notes": "about 10 fillets",
+      "notes": "8 fillets",
       "group": "Main"
     },
     {
-      "name": "Lime Juice",
-      "quantity": "0.33",
-      "unit": "Cup",
+      "name": "Fresh Limes",
+      "quantity": "5",
+      "unit": "whole",
+      "notes": "3 for the paste, 1 for the salsa, 1 in wedges",
       "group": "Chili lime"
     },
     {
@@ -65,120 +68,147 @@
     },
     {
       "name": "Fresh Cilantro",
-      "quantity": "0.5",
+      "quantity": "1/2",
       "unit": "Cup",
-      "notes": "chopped",
+      "notes": "chopped, divided",
       "group": "Chili lime"
     },
     {
       "name": "Garlic Cloves",
-      "quantity": "4",
-      "unit": "cloves",
-      "notes": "minced",
+      "quantity": "3",
       "group": "Chili lime"
     },
     {
-      "name": "Corn Kernels",
-      "quantity": "3",
-      "unit": "Cups",
-      "notes": "grilled",
+      "name": "Corn On The Cob",
+      "quantity": "4",
+      "unit": "ears",
+      "notes": "shucked",
       "group": "Salsa"
     },
     {
       "name": "Black Beans",
-      "quantity": "2",
-      "unit": "Cups",
+      "quantity": "1",
+      "unit": "can (15 oz)",
       "notes": "drained and rinsed",
       "group": "Salsa"
     },
     {
       "name": "Red Onion",
-      "quantity": "0.5",
+      "quantity": "1",
       "unit": "whole",
-      "notes": "diced",
+      "notes": "small, diced",
       "group": "Salsa"
     },
     {
-      "name": "Avocado",
-      "quantity": "3",
+      "name": "Avocados",
+      "quantity": "2",
       "unit": "whole",
-      "notes": "diced",
+      "notes": "diced at service",
       "group": "Salsa"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Build chili lime paste",
-      "instruction": "Blend lime juice, ancho powder, chipotle, half the cilantro, garlic, and salt into a paste.",
+      "title": "Blend the chili-lime paste",
+      "instruction": "Blend the juice of 3 fresh limes, the ancho chili powder, minced chipotle in adobo, half the cilantro, the garlic, 2 tablespoons of oil, and a big pinch of salt into a loose paste, about 30 seconds. The oil matters twice over — it carries the chile flavor into the flesh and buys insurance against sticking on the grates.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Marinate tilapia",
-      "instruction": "Coat fillets in paste. Marinate 20 minutes refrigerated only—acid toughens longer soaks.",
-      "minutes": 10,
+      "title": "Coat the tilapia — 20 minutes only",
+      "instruction": "Coat the fillets in the paste and refrigerate exactly 20 minutes. The lime juice is already cooking the surface ceviche-style; past the 20-minute mark the fillets go chalky outside and mushy inside at the same time. Set an actual timer — this is the one place the recipe can't be eyeballed.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Char corn for salsa",
-      "instruction": "Grill corn at 425°F until charred. Cut kernels off cob. Toss with beans, onion, lime, and remaining cilantro.",
+      "title": "Char the corn on the cob",
+      "instruction": "Grill the corn on the cob at 425°F, rolling a quarter turn every couple of minutes, 10–12 minutes total until the kernels show deep brown blisters on all sides. Cool until you can hold an ear, then cut the kernels off close to the cob. Char is the backbone of this salsa — pale corn makes a pale salsa.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Heat grill",
-      "instruction": "Preheat grill to medium-high, 400°F. Oil grates generously.",
+      "title": "Toss the salsa base",
+      "instruction": "Toss the charred corn with the drained black beans, diced red onion, the remaining cilantro, the juice of one lime, and salt until it tastes bright and a little sharp. Hold the avocados whole and aside — diced this early they'll be brown mush by the time the crew sits down.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Scrub and oil the grates hard",
+      "instruction": "Heat the grill to 400°F, scrub the grates clean, and wipe them down 3 separate times with an oiled paper towel held in tongs. Sticking is the only way this recipe fails, and it fails on dirty, dry grates every single time — the 3-pass oil wipe builds a slick that a delicate fillet can release from.",
       "minutes": 8,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
-      "title": "Grill tilapia",
-      "instruction": "Grill fillets 3–4 minutes per side until charred and 145°F internal. Use fish spatula—tilapia is fragile.",
-      "minutes": 8,
-      "heatLevel": "high"
-    },
-    {
       "stepNumber": 6,
-      "title": "Rest briefly",
-      "instruction": "Rest fillets 2 minutes. Transfer to hotel pans.",
-      "minutes": 2,
-      "heatLevel": ""
+      "title": "Grill the tilapia to 145°F",
+      "instruction": "Lay the fillets diagonal to the grates and don't touch them for 3 minutes — they release on their own once the crust sets. Slide a fish spatula fully underneath, flip once, and cook 2–3 minutes more to 145°F at the thickest point, opaque all the way through and flaking at the edges. If a fillet fights the flip, give it 30 more seconds; it lets go when it's ready.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 7,
-      "title": "Hold at 140°F",
-      "instruction": "Hold covered at 140°F up to 10 minutes max. Add avocado to salsa at service.",
-      "minutes": 3,
+      "title": "Rest, then fold in the avocados",
+      "instruction": "Rest the fillets 2 minutes on a platter so the flakes set instead of shattering. Dice the avocados now and fold them into the salsa gently, right before service — folded early, avocado bruises into guacamole and the salsa loses its pop.",
+      "minutes": 4,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
-      "title": "Platter for ten",
-      "instruction": "Serve one fillet per firefighter with corn-black bean salsa and avocado.",
+      "title": "Send it with lime wedges",
+      "instruction": "One fillet and a heavy spoon of salsa per firefighter, lime wedges on the side. Serve fast — thin fillets hold at 140°F for maybe 10 minutes before they dry out, so this dish waits for nobody. Cilantro-lime rice alongside turns it into a full plate.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the grilled tilapia — hold at 140°F in a warm cabinet or 200°F oven, but don't push it; thin fillets dry out fast and don't forgive a long hold the way a shoulder roast does. Keep the corn-bean salsa base chilled and leave the avocado out entirely until you're back — folded in early it just turns brown. On return, spot-check the fish is still moist and safe, then fold in fresh avocado only once the line is live again.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool tilapia and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "20-minute marinade max—lime turns tilapia mushy if over-soaked.",
-    "Oiled grates and fish spatula prevent fillet crumble.",
-    "Avocado in salsa at the line, not during hold."
+    "Set a timer on the marinade — 20 minutes, no negotiating; the lime keeps cooking the fillets in the fridge.",
+    "Diagonal to the grates and a real fish spatula — tongs tear tilapia into flake confetti.",
+    "Char the corn darker than feels right; the sweetness needs that bitter edge to stand up to the chipotle.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Chili lime grilled tilapia with charred corn salsa.",
-    "Cilantro-lime rice on the side."
+    "Main: Chili-lime grilled tilapia",
+    "Sides: charred corn and black bean salsa, cilantro-lime rice",
+    "Condiments: lime wedges, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Flake tilapia into fish tacos with extra salsa.",
-    "Chop into tortilla soup with lime."
+    "Cool tilapia in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Flake day-two tilapia into fish tacos with the leftover salsa and a squeeze of lime.",
+    "The salsa keeps 2 days chilled, but scoop the avocado out before storing — it won't make it."
   ],
-  "whyCrewsLikeIt": "Tilapia is budget-friendly and cooks in minutes. Chili-lime flavor is distinct from blackened cod or trout glaze—holds at 140°F briefly on platters.",
-  "mealPrepNotes": "Marinate fillets 20 minutes max. Grill medium-high 400°F, 3–4 minutes per side. Hold covered at 140°F up to 10 minutes. Salsa at room temp.",
+  "whyCrewsLikeIt": "Budget fish that cooks in 8 minutes with real chipotle heat, and a charred corn salsa people spoon straight from the bowl — a light plate that still lands after a heavy shift.",
+  "mealPrepNotes": "Blend the paste and toss the salsa base ahead; marinate the fillets only 20 minutes before the fire. Cook at 400°F to 145°F. Hold no more than 10 minutes at 140°F — fold in avocado at the line.",
+  "substitutions": [
+    "Mahi or red snapper swaps for tilapia and handles the grates with less babysitting.",
+    "Frozen corn works off-season — char it in a dry cast-iron pan until it pops and browns.",
+    "No chipotle in adobo? A teaspoon of smoked paprika plus a pinch of cayenne fakes the smoke and heat.",
+    "Pinto beans stand in for black beans without changing anything else."
+  ],
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 591,
@@ -205,7 +235,8 @@
     "bbq",
     "firehall",
     "mexican tilapia grill",
-    "corn salsa tilapia"
+    "corn salsa tilapia",
+    "chipotle lime fish"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -214,6 +245,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.443Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

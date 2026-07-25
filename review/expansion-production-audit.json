@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-05-30T21:22:59.474Z",
+  "generatedAt": "2026-07-17T20:16:45.463Z",
   "totals": {
-    "recipesAudited": 76,
-    "hallExpansion": 56,
+    "recipesAudited": 135,
+    "hallExpansion": 116,
     "breakfastNew": 20,
-    "errors": 8,
-    "warnings": 102,
-    "heroesOnDisk": 76,
-    "thumbsOnDisk": 76,
-    "productionReadinessScore": 95
+    "errors": 23,
+    "warnings": 124,
+    "heroesOnDisk": 132,
+    "thumbsOnDisk": 132,
+    "productionReadinessScore": 89
   },
   "inventory": [
     {
@@ -29,18 +29,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-meatloaf.jpg",
       "published": true,
-      "heroBytes": 1465139,
-      "thumbOk": true,
-      "mobileOk": true
-    },
-    {
-      "name": "Smoked Mac and Cheese",
-      "slug": "smoked-mac-and-cheese",
-      "category": "smoker_recipes",
-      "catalog": "hall-expansion",
-      "imagePath": "/images/hall-expansion/smoked-mac-and-cheese.jpg",
-      "published": true,
-      "heroBytes": 1542643,
+      "heroBytes": 1647351,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -51,7 +40,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
       "published": true,
-      "heroBytes": 1587507,
+      "heroBytes": 1656002,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -62,7 +51,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-sausage-platter.jpg",
       "published": true,
-      "heroBytes": 1532032,
+      "heroBytes": 1619970,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -95,7 +84,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-tri-tip.jpg",
       "published": true,
-      "heroBytes": 1587507,
+      "heroBytes": 1727124,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -106,7 +95,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/smoked-corned-beef.jpg",
       "published": true,
-      "heroBytes": 1587507,
+      "heroBytes": 1600464,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -117,7 +106,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
       "published": true,
-      "heroBytes": 1690728,
+      "heroBytes": 1802986,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -183,7 +172,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/chicken-wing-bar-night.jpg",
       "published": true,
-      "heroBytes": 1507308,
+      "heroBytes": 1601695,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -238,7 +227,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/shawarma-bar-night.jpg",
       "published": true,
-      "heroBytes": 1497016,
+      "heroBytes": 1574800,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -249,7 +238,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/fajita-bar-night.jpg",
       "published": true,
-      "heroBytes": 1659288,
+      "heroBytes": 1651288,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -260,7 +249,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/hall-burger-bar.jpg",
       "published": true,
-      "heroBytes": 1480808,
+      "heroBytes": 1656281,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -282,7 +271,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/rice-bowl-bar-night.jpg",
       "published": true,
-      "heroBytes": 1639734,
+      "heroBytes": 1735163,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -304,7 +293,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/mediterranean-feast-night.jpg",
       "published": true,
-      "heroBytes": 1639734,
+      "heroBytes": 1654380,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -315,7 +304,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
       "published": true,
-      "heroBytes": 1463692,
+      "heroBytes": 1543445,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -326,7 +315,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
       "published": true,
-      "heroBytes": 1551526,
+      "heroBytes": 1742758,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -348,7 +337,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/mesquite-chuck-roast.jpg",
       "published": true,
-      "heroBytes": 1465139,
+      "heroBytes": 1643247,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -359,7 +348,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
       "published": true,
-      "heroBytes": 1532032,
+      "heroBytes": 1689839,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -370,18 +359,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/applewood-pork-shoulder-steaks.jpg",
       "published": true,
-      "heroBytes": 1532032,
-      "thumbOk": true,
-      "mobileOk": true
-    },
-    {
-      "name": "Pepper-Crusted Smoked Brisket Flat",
-      "slug": "pepper-smoked-brisket-flat",
-      "category": "smoker_recipes",
-      "catalog": "hall-expansion",
-      "imagePath": "/images/hall-expansion/pepper-smoked-brisket-flat.jpg",
-      "published": true,
-      "heroBytes": 1587507,
+      "heroBytes": 1595425,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -392,7 +370,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
       "published": true,
-      "heroBytes": 1610094,
+      "heroBytes": 1675401,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -403,7 +381,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
       "published": true,
-      "heroBytes": 1690728,
+      "heroBytes": 1569066,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -414,7 +392,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
       "published": true,
-      "heroBytes": 1755674,
+      "heroBytes": 1644815,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -425,7 +403,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/paprika-roasted-chicken-quarters.jpg",
       "published": true,
-      "heroBytes": 1690728,
+      "heroBytes": 1575009,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -436,7 +414,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
       "published": true,
-      "heroBytes": 1659288,
+      "heroBytes": 1546857,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -447,7 +425,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
       "published": true,
-      "heroBytes": 1511949,
+      "heroBytes": 1711131,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -458,7 +436,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/pepper-steak-onions.jpg",
       "published": true,
-      "heroBytes": 1441371,
+      "heroBytes": 1640349,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -469,7 +447,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
       "published": true,
-      "heroBytes": 1465139,
+      "heroBytes": 1710399,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -480,7 +458,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/enchilada-beef-skillet.jpg",
       "published": true,
-      "heroBytes": 1566982,
+      "heroBytes": 1666513,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -502,7 +480,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
       "published": true,
-      "heroBytes": 1550496,
+      "heroBytes": 1586848,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -524,7 +502,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/station-cobb-salad.jpg",
       "published": true,
-      "heroBytes": 1693017,
+      "heroBytes": 1722803,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -535,7 +513,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
       "published": true,
-      "heroBytes": 1639734,
+      "heroBytes": 1651387,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -546,7 +524,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/hall-chicken-noodle-soup.jpg",
       "published": true,
-      "heroBytes": 1620144,
+      "heroBytes": 1575349,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -557,7 +535,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/green-chile-chicken-stew.jpg",
       "published": true,
-      "heroBytes": 1514049,
+      "heroBytes": 1586091,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -568,7 +546,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
       "published": true,
-      "heroBytes": 1655310,
+      "heroBytes": 1611321,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -579,7 +557,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
       "published": true,
-      "heroBytes": 1639734,
+      "heroBytes": 1557417,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -590,7 +568,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
       "published": true,
-      "heroBytes": 1468029,
+      "heroBytes": 1671283,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -601,7 +579,7 @@
       "catalog": "hall-expansion",
       "imagePath": "/images/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
       "published": true,
-      "heroBytes": 1514049,
+      "heroBytes": 1656832,
       "thumbOk": true,
       "mobileOk": true
     },
@@ -626,6 +604,677 @@
       "heroBytes": 1577649,
       "thumbOk": true,
       "mobileOk": true
+    },
+    {
+      "name": "Montreal Smoked Meat Platter",
+      "slug": "montreal-smoked-meat-platter",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/montreal-smoked-meat-platter.jpg",
+      "published": true,
+      "heroBytes": 2807293,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Tourtière for the Crew",
+      "slug": "tourtiere-for-the-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/tourtiere-for-the-crew.jpg",
+      "published": true,
+      "heroBytes": 2269347,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Firehall Donair Platter",
+      "slug": "firehall-donair-platter",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/firehall-donair-platter.jpg",
+      "published": true,
+      "heroBytes": 2718159,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Maple-Cured Salmon Plank",
+      "slug": "maple-cured-salmon-plank",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
+      "published": true,
+      "heroBytes": 2649692,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Classic Poutine Feed for the Crew",
+      "slug": "classic-poutine-feed-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/classic-poutine-feed-crew.jpg",
+      "published": true,
+      "heroBytes": 2422170,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Cottage Pie for the Crew",
+      "slug": "cottage-pie-for-the-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/cottage-pie-for-the-crew.jpg",
+      "published": true,
+      "heroBytes": 2358517,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Chicken Paprikash for the Hall",
+      "slug": "chicken-paprikash-hall",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/chicken-paprikash-hall.jpg",
+      "published": true,
+      "heroBytes": 2425126,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Chicken Cacciatore for the Crew",
+      "slug": "chicken-cacciatore-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
+      "published": true,
+      "heroBytes": 2716954,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Coq au Vin Batch",
+      "slug": "coq-au-vin-batch",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/coq-au-vin-batch.jpg",
+      "published": true,
+      "heroBytes": 3079346,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Hungarian Goulash for the Crew",
+      "slug": "hungarian-goulash-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/hungarian-goulash-crew.jpg",
+      "published": true,
+      "heroBytes": 2179711,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Tonkotsu Ramen for the Crew",
+      "slug": "tonkotsu-ramen-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
+      "published": true,
+      "heroBytes": 2134386,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Miso Ramen Bar",
+      "slug": "miso-ramen-bar",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/miso-ramen-bar.jpg",
+      "published": true,
+      "heroBytes": 2543554,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Malaysian Laksa Soup",
+      "slug": "malaysian-laksa-soup",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/malaysian-laksa-soup.jpg",
+      "published": true,
+      "heroBytes": 2188857,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Bun Bo Hue Noodle Soup",
+      "slug": "bun-bo-hue-noodle-soup",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/bun-bo-hue-noodle-soup.jpg",
+      "published": true,
+      "heroBytes": 2566598,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Wonton Noodle Soup for the Crew",
+      "slug": "wonton-noodle-soup-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
+      "published": true,
+      "heroBytes": 2457969,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Peri Peri Chicken Platter",
+      "slug": "peri-peri-chicken-platter",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
+      "published": true,
+      "heroBytes": 3372735,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Korean Bulgogi Grill Night",
+      "slug": "korean-bulgogi-grill-night",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
+      "published": true,
+      "heroBytes": 2352180,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Lamb Kofta Skewer Platter",
+      "slug": "lamb-kofta-skewer-platter",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
+      "published": true,
+      "heroBytes": 2986179,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Moroccan Chicken Kebab Platter",
+      "slug": "moroccan-chicken-kebab-platter",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",
+      "published": true,
+      "heroBytes": 3049752,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Lebanese Chicken Shish Platter",
+      "slug": "lebanese-chicken-shish-platter",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "published": true,
+      "heroBytes": 2605462,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Classic Patty Melt for the Crew",
+      "slug": "classic-patty-melt-for-the-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+      "published": true,
+      "heroBytes": 0,
+      "thumbOk": false,
+      "mobileOk": false
+    },
+    {
+      "name": "Best Tuna Melt for the Hall (Diner Style)",
+      "slug": "best-tuna-melt-for-the-hall",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "published": true,
+      "heroBytes": 0,
+      "thumbOk": false,
+      "mobileOk": false
+    },
+    {
+      "name": "Hall BLT Sandwich Feed",
+      "slug": "hall-blt-sandwich-feed",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "published": true,
+      "heroBytes": 0,
+      "thumbOk": false,
+      "mobileOk": false
+    },
+    {
+      "name": "Buffalo Chicken Wraps",
+      "slug": "buffalo-chicken-wraps",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
+      "published": true,
+      "heroBytes": 1576203,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Greek Chicken Pitas",
+      "slug": "greek-chicken-pitas",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/greek-chicken-pitas.jpg",
+      "published": true,
+      "heroBytes": 1649512,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Beef Gyros",
+      "slug": "beef-gyros-for-the-hall",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "published": true,
+      "heroBytes": 1582050,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Chicken Shawarma Pitas",
+      "slug": "chicken-shawarma-pitas",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
+      "published": true,
+      "heroBytes": 1597289,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Sausage & Peppers on Buns",
+      "slug": "sausage-peppers-on-buns",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
+      "published": true,
+      "heroBytes": 1611283,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Firehall Taco Bowls",
+      "slug": "firehall-taco-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "published": true,
+      "heroBytes": 1580132,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Buffalo Chicken Sweet Potato Bowls",
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "published": true,
+      "heroBytes": 1568310,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Greek Chicken Bowls",
+      "slug": "firehall-greek-chicken-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "published": true,
+      "heroBytes": 1549789,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Teriyaki Chicken Rice Bowls",
+      "slug": "teriyaki-chicken-rice-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "published": true,
+      "heroBytes": 1580604,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Korean Beef Bowls",
+      "slug": "firehall-korean-beef-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "published": true,
+      "heroBytes": 1524393,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Cajun Shrimp Rice Bowls",
+      "slug": "cajun-shrimp-rice-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "published": true,
+      "heroBytes": 1492640,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Southwest Steak Bowls",
+      "slug": "southwest-steak-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/southwest-steak-bowls.jpg",
+      "published": true,
+      "heroBytes": 1603482,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "BBQ Pulled Pork Bowls",
+      "slug": "bbq-pulled-pork-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "published": true,
+      "heroBytes": 1580643,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Mediterranean Beef Bowls",
+      "slug": "mediterranean-beef-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+      "published": true,
+      "heroBytes": 1611844,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Chipotle Chicken Burrito Bowls",
+      "slug": "chipotle-chicken-burrito-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "published": true,
+      "heroBytes": 1515096,
+      "thumbOk": true,
+      "mobileOk": true
+    },
+    {
+      "name": "Turkey Taco Bowls",
+      "slug": "turkey-taco-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "published": true,
+      "heroBytes": 1580132,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Peanut Chicken Rice Bowls",
+      "slug": "peanut-chicken-rice-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "published": true,
+      "heroBytes": 1580604,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Firehall Gyro Bowls",
+      "slug": "firehall-gyro-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+      "published": true,
+      "heroBytes": 1549789,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Egg Roll in a Bowl for the Crew",
+      "slug": "egg-roll-in-a-bowl-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "published": true,
+      "heroBytes": 1524393,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Salmon Rice Bowls for the Crew",
+      "slug": "salmon-rice-bowls-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "published": true,
+      "heroBytes": 1492640,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Korean Turkey Rice Bowls",
+      "slug": "korean-turkey-rice-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "published": true,
+      "heroBytes": 1524393,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Leftover Roast Beef Bowls",
+      "slug": "leftover-roast-beef-bowls",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "published": true,
+      "heroBytes": 1603482,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Mississippi Pot Roast for the Crew",
+      "slug": "mississippi-pot-roast-crew",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "published": true,
+      "heroBytes": 1580643,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "White Chicken Chili Crock",
+      "slug": "white-chicken-chili-crock",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "published": true,
+      "heroBytes": 1584231,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Italian Beef Slow Cooker Sandwiches",
+      "slug": "italian-beef-slow-cooker",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+      "published": true,
+      "heroBytes": 1592230,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Salsa Verde Chicken Crock",
+      "slug": "salsa-verde-chicken-crock",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "published": true,
+      "heroBytes": 1568310,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Loaded Baked Potato Soup Crock",
+      "slug": "loaded-baked-potato-soup-crock",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "published": true,
+      "heroBytes": 1611844,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Thai Peanut Chicken Crock",
+      "slug": "thai-peanut-chicken-crock",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "published": true,
+      "heroBytes": 1580604,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Burnt Ends Chili for the Crew",
+      "slug": "burnt-ends-chili-crew",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+      "published": true,
+      "heroBytes": 1584231,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Smoker Nachos for the Crew",
+      "slug": "smoker-nachos-crew",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/smoker-nachos-crew.jpg",
+      "published": true,
+      "heroBytes": 1580132,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Weeknight BBQ Ribs for the Crew",
+      "slug": "weeknight-bbq-ribs-crew",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "published": true,
+      "heroBytes": 1580643,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Grilled Flank Fajita Bar",
+      "slug": "grilled-flank-fajita-bar",
+      "category": "smoker_recipes",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "published": true,
+      "heroBytes": 1513338,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Costco Rotisserie Chicken Remix",
+      "slug": "costco-rotisserie-remix",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+      "published": true,
+      "heroBytes": 1762694,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Chicken Thigh Stretch Dinner",
+      "slug": "chicken-thigh-stretch-dinner",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "published": true,
+      "heroBytes": 1568310,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Pasta e Fagioli for the Hall",
+      "slug": "pasta-e-fagioli-hall",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "published": true,
+      "heroBytes": 1584231,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Dirty Rice Crew Skillet",
+      "slug": "dirty-rice-crew-skillet",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "published": true,
+      "heroBytes": 1492640,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Sausage Gnocchi Skillet",
+      "slug": "sausage-gnocchi-skillet",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "published": true,
+      "heroBytes": 1669025,
+      "thumbOk": true,
+      "mobileOk": false
+    },
+    {
+      "name": "Spanish Rice Chicken One Pot",
+      "slug": "spanish-rice-chicken-one-pot",
+      "category": "crew_feeders",
+      "catalog": "hall-expansion",
+      "imagePath": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "published": true,
+      "heroBytes": 1513338,
+      "thumbOk": true,
+      "mobileOk": false
     },
     {
       "name": "Red Lead Skillet",
@@ -656,7 +1305,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/breakfast-enchiladas.jpg",
       "published": true,
-      "heroBytes": 1643258,
+      "heroBytes": 1749993,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -667,7 +1316,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/breakfast-crunchwraps.jpg",
       "published": true,
-      "heroBytes": 1573333,
+      "heroBytes": 1620323,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -678,7 +1327,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/denver-breakfast-casserole.jpg",
       "published": true,
-      "heroBytes": 1655310,
+      "heroBytes": 1491479,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -710,7 +1359,7 @@
       "category": "firehall_breakfasts",
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/protein-french-toast.jpg",
-      "published": true,
+      "published": false,
       "heroBytes": 1608474,
       "thumbOk": true,
       "mobileOk": false
@@ -733,7 +1382,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/monte-cristo-sandwiches.jpg",
       "published": true,
-      "heroBytes": 1747296,
+      "heroBytes": 1534975,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -743,8 +1392,8 @@
       "category": "firehall_breakfasts",
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "published": true,
-      "heroBytes": 1582228,
+      "published": false,
+      "heroBytes": 1574368,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -755,7 +1404,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/cowboy-breakfast-skillet.jpg",
       "published": true,
-      "heroBytes": 1511949,
+      "heroBytes": 1624323,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -777,7 +1426,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
       "published": true,
-      "heroBytes": 1616868,
+      "heroBytes": 1580460,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -788,7 +1437,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/chorizo-breakfast-hash.jpg",
       "published": true,
-      "heroBytes": 1752940,
+      "heroBytes": 1696322,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -799,7 +1448,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
       "published": true,
-      "heroBytes": 1747296,
+      "heroBytes": 1649650,
       "thumbOk": true,
       "mobileOk": false
     },
@@ -843,7 +1492,7 @@
       "catalog": "breakfast",
       "imagePath": "/images/breakfast/maple-sausage-pinwheels.jpg",
       "published": true,
-      "heroBytes": 1660947,
+      "heroBytes": 1645635,
       "thumbOk": true,
       "mobileOk": false
     }
@@ -991,6 +1640,209 @@
     },
     {
       "slug": "sheet-pan-meatball-marinara",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "hungarian-goulash-crew",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "hungarian-goulash-crew",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "tonkotsu-ramen-crew",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "tonkotsu-ramen-crew",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "tonkotsu-ramen-crew",
+      "phase": "content",
+      "severity": "warn",
+      "code": "vague_wording",
+      "message": "step 3 uses vague phrasing"
+    },
+    {
+      "slug": "miso-ramen-bar",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "miso-ramen-bar",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "bun-bo-hue-noodle-soup",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "bun-bo-hue-noodle-soup",
+      "phase": "content",
+      "severity": "error",
+      "code": "no_temperature",
+      "message": "no oven/grill/internal temperature cues in steps"
+    },
+    {
+      "slug": "wonton-noodle-soup-crew",
+      "phase": "content",
+      "severity": "warn",
+      "code": "vague_wording",
+      "message": "step 3 uses vague phrasing"
+    },
+    {
+      "slug": "korean-bulgogi-grill-night",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "chicken-caesar-wraps",
+      "phase": "inventory",
+      "severity": "error",
+      "code": "missing_page",
+      "message": "Page not built"
+    },
+    {
+      "slug": "greek-chicken-pitas",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "firehall-taco-bowls",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla; title_taco_format_mismatch"
+    },
+    {
+      "slug": "firehall-greek-chicken-bowls",
+      "phase": "inventory",
+      "severity": "error",
+      "code": "title_collision",
+      "message": "Title collision with greek-chicken-bowls"
+    },
+    {
+      "slug": "firehall-greek-chicken-bowls",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "firehall-korean-beef-bowls",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "mediterranean-beef-bowls",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "chipotle-chicken-burrito-bowls",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "turkey-taco-bowls",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla; title_taco_format_mismatch"
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "italian-beef-slow-cooker",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "thai-peanut-chicken-crock",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "smoker-nachos-crew",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "grilled-flank-fajita-bar",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_taco_no_tortilla"
+    },
+    {
+      "slug": "pasta-e-fagioli-hall",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "title_pasta_no_pasta"
+    },
+    {
+      "slug": "dirty-rice-crew-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "sausage-gnocchi-skillet",
+      "phase": "content",
+      "severity": "warn",
+      "code": "weak_title",
+      "message": "robotic_title"
+    },
+    {
+      "slug": "spanish-rice-chicken-one-pot",
       "phase": "content",
       "severity": "warn",
       "code": "weak_title",
@@ -1229,6 +2081,13 @@
     },
     {
       "slug": "protein-french-toast",
+      "phase": "inventory",
+      "severity": "error",
+      "code": "missing_index",
+      "message": "Not in breakfast index"
+    },
+    {
+      "slug": "protein-french-toast",
       "phase": "content",
       "severity": "warn",
       "code": "orphan_ingredient",
@@ -1303,6 +2162,13 @@
       "severity": "warn",
       "code": "orphan_ingredient",
       "message": "Ingredient may be unused in steps: sliced deli turkey"
+    },
+    {
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "phase": "inventory",
+      "severity": "error",
+      "code": "missing_index",
+      "message": "Not in breakfast index"
     },
     {
       "slug": "apple-cinnamon-baked-oatmeal",
@@ -1618,12 +2484,62 @@
       "severity": "warn",
       "code": "orphan_ingredient",
       "message": "Ingredient may be unused in steps: everything bagel seasoning"
+    },
+    {
+      "slug": "classic-patty-melt-for-the-crew",
+      "phase": "image",
+      "severity": "error",
+      "code": "missing_hero",
+      "message": "Hero missing: /images/hall-expansion/classic-patty-melt-for-the-crew.jpg"
+    },
+    {
+      "slug": "classic-patty-melt-for-the-crew",
+      "phase": "image",
+      "severity": "warn",
+      "code": "missing_thumb",
+      "message": "Thumb variant missing"
+    },
+    {
+      "slug": "best-tuna-melt-for-the-hall",
+      "phase": "image",
+      "severity": "error",
+      "code": "missing_hero",
+      "message": "Hero missing: /images/hall-expansion/best-tuna-melt-for-the-hall.jpg"
+    },
+    {
+      "slug": "best-tuna-melt-for-the-hall",
+      "phase": "image",
+      "severity": "warn",
+      "code": "missing_thumb",
+      "message": "Thumb variant missing"
+    },
+    {
+      "slug": "hall-blt-sandwich-feed",
+      "phase": "image",
+      "severity": "error",
+      "code": "missing_hero",
+      "message": "Hero missing: /images/hall-expansion/hall-blt-sandwich-feed.jpg"
+    },
+    {
+      "slug": "hall-blt-sandwich-feed",
+      "phase": "image",
+      "severity": "warn",
+      "code": "missing_thumb",
+      "message": "Thumb variant missing"
     }
   ],
   "errorsByPhase": {
     "content": {
-      "errors": 8,
-      "warnings": 102
+      "errors": 16,
+      "warnings": 121
+    },
+    "inventory": {
+      "errors": 4,
+      "warnings": 0
+    },
+    "image": {
+      "errors": 3,
+      "warnings": 3
     }
   }
 }

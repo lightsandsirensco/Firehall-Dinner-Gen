@@ -88,7 +88,7 @@ export function PizzaNightCatalog({
 
   const entries = useMemo(() => {
     if (!data?.recipes?.length) return [];
-    return [...data.recipes].sort((a, b) => a.title.localeCompare(b.title, "en"));
+    return [...data.recipes].sort((a, b) => a.cookTime - b.cookTime || a.title.localeCompare(b.title, "en"));
   }, [data]);
 
   if (isLoading) {

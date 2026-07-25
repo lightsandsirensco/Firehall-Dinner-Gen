@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "cuban",
   "description": "Marinated roast pork shoulder grills and slices, layers with ham, Swiss, pickles, and mustard on Cuban bread, and presses on the griddle until shatter-crisp.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 30,
   "prepTime": 40,
   "difficulty": "medium",
@@ -39,66 +39,66 @@
   "ingredients": [
     {
       "name": "Pork Shoulder",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "Lb",
       "notes": "for roasting",
       "group": "Main"
     },
     {
       "name": "Cuban Bread Loaves",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "whole",
       "notes": "split into 10 sandwiches",
       "group": "Cuban"
     },
     {
       "name": "Deli Ham",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Lb",
       "notes": "thin-sliced",
       "group": "Cuban"
     },
     {
       "name": "Swiss Cheese",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices",
       "group": "Cuban"
     },
     {
       "name": "Dill Pickle Chips",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "Cups",
       "group": "Cuban"
     },
     {
       "name": "Yellow Mustard",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Cuban"
     },
     {
       "name": "Sour Orange Juice",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "notes": "or lime-orange blend",
       "group": "Mojo"
     },
     {
       "name": "Garlic Cloves",
-      "quantity": "8",
+      "quantity": "7",
       "unit": "cloves",
       "notes": "minced",
       "group": "Mojo"
     },
     {
       "name": "Dried Oregano",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Mojo"
     },
     {
       "name": "Butter",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "softened",
       "group": "Press"

@@ -1,0 +1,201 @@
+{
+  "slug": "hash-brown-breakfast-casserole",
+  "title": "Hash Brown Breakfast Casserole",
+  "subtitle": "A cheese, egg, hash brown, and breakfast meat bake that holds for late eaters.",
+  "description": "A deep-pan bake with a par-baked hash brown crust — not raw potatoes drowned in custard — layered with browned sausage, sautéed onion, and sharp cheddar. Built for crews whose morning meal gets interrupted, because clean squares hold better than made-to-order eggs.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "casserole",
+    "hash-browns",
+    "eggs",
+    "sausage",
+    "make-ahead"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 20,
+  "cookTime": 50,
+  "totalTime": 70,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "frozen shredded hash browns",
+      "quantity": "1.6",
+      "notes": "thawed and squeezed dry",
+      "group": "Base"
+    },
+    {
+      "name": "melted butter",
+      "quantity": "3.2",
+      "notes": "plus spray for the pan",
+      "group": "Base"
+    },
+    {
+      "name": "breakfast sausage or diced ham",
+      "quantity": "1/2",
+      "notes": "cooked and drained",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "13",
+      "group": "Custard"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "1.6",
+      "notes": "or half-and-half",
+      "group": "Custard"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "2.4",
+      "notes": "divided",
+      "group": "Cheese"
+    },
+    {
+      "name": "small onion",
+      "quantity": "3/4",
+      "notes": "diced and sautéed",
+      "group": "Vegetables"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "3/4",
+      "notes": "plus salt, black pepper, and paprika",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven and squeeze the hash browns dry",
+      "instruction": "Heat the oven to 375°F and grease a deep 9x13 pan or shallow hotel pan with spray. Working in handfuls, squeeze the thawed hash browns in a clean towel until no more liquid drips out — wet potatoes steam instead of crisping and are the main reason this casserole comes out with a soggy bottom. The pile should feel dry and fluffy, not packed into a wet brick.",
+      "minutes": 8,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season and press the potato crust",
+      "instruction": "Toss the dried hash browns with the melted butter, garlic powder, 1 teaspoon salt, and a few grinds of black pepper until every shred looks lightly coated. Press the mixture into the pan in one even layer, packing it up the corners so the custard cannot leak underneath and lift the crust later.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 3,
+      "title": "Par-bake the crust until the edges brown",
+      "instruction": "Bake the crust at 375°F for 15–18 minutes until the edges turn golden and the surface looks dry rather than glossy. This par-bake sets the starch so the base tastes toasted instead of boiled — skip it and the bottom layer eats like wet mashed potato under the eggs.",
+      "minutes": 18,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brown the sausage and soften the onion",
+      "instruction": "While the crust bakes, brown the breakfast sausage in a skillet over medium-high heat, breaking it into rough crumbles, until no pink remains and an instant-read thermometer reads 160°F, about 8 minutes. Using diced ham instead? Warm it 3–4 minutes until the edges take a little color (ham is already cooked; 145°F is plenty). Push the meat aside, drop the diced onion into the rendered fat, and cook 4–5 minutes until soft and translucent. Drain the whole pan well in a lined bowl — greasy meat leaves oil pools in the finished bake.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 5,
+      "title": "Layer the filling over the hot crust",
+      "instruction": "Scatter the drained meat and onion over the par-baked crust, then blanket with two-thirds of the shredded cheddar. Building cheese into the middle instead of only on top means every square pulls apart with melted pockets rather than a dry interior hiding under a cheese lid.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 6,
+      "title": "Whisk the custard and pour it slowly",
+      "instruction": "Whisk the eggs, whole milk, paprika, ¾ teaspoon salt, and black pepper until no streaks of white remain — under-whisked custard bakes into marbled, rubbery patches. Pour slowly over the filling, pausing at the corners to let it settle. Do not stir after pouring or the potato crust breaks apart and floats to the top.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 7,
+      "title": "Bake until the center sets at 165°F",
+      "instruction": "Bake at 375°F for 28–32 minutes until the top is puffed and no liquid egg jiggles when you nudge the pan. Confirm with an instant-read thermometer in the center — not the browned edge — at 165°F. Scatter on the remaining cheddar for the final 5 minutes so it melts without over-browning. If the top colors before the center sets, tent loosely with foil.",
+      "minutes": 32,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 8,
+      "title": "Rest, cut into squares, and hold",
+      "instruction": "Rest the pan 10 minutes on a rack before cutting — the custard finishes setting as it cools, and cutting early gives loose, wet portions. Cut into 8 hall-size squares with a thin knife wiped between cuts. Hold covered at 200°F up to 30 minutes for late eaters, uncovering the last 5 minutes so the top does not steam soft.",
+      "minutes": 10,
+      "tempF": 200
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the casserole — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check the center at safe internal temp before reopening the line.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the casserole and hot components in shallow hotel pans within two hours — deep pans stay in the danger zone too long. Label with date; reheat portions to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10
+    }
+  ],
+  "nutrition": {
+    "calories": 421,
+    "protein": 23,
+    "carbs": 20,
+    "fat": 28,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "equipment": [
+    "Deep 9x13 baking pan or shallow hotel pan",
+    "Large skillet",
+    "Clean kitchen towel (for squeezing hash browns)",
+    "Large mixing bowl and whisk",
+    "Instant-read thermometer",
+    "Aluminum foil"
+  ],
+  "tonightSpread": [
+    "Main: hash brown breakfast casserole squares",
+    "Sides: fresh fruit tray, buttered toast",
+    "Condiments: hot sauce, salsa, sour cream",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "stationWorkflow": [
+    "Assemble the casserole the night before, cover, and refrigerate; add 10 minutes to baking time when it goes in cold.",
+    "Squeeze the hash browns while the oven heats — the towel step is the one crews skip, and it is the one that decides the crust.",
+    "Keep uncut squares in the warm pan during calls and cut only the portions needed for the first line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check the center of the bake with an instant-read thermometer before reopening the line after a call."
+  ],
+  "cleanupNotes": [
+    "Soak the casserole pan with hot soapy water immediately; baked potato starch and egg set hard after cooling.",
+    "Drain the meat in a lined bowl rather than down the sink to keep rendered fat out of plumbing."
+  ],
+  "leftovers": [
+    "Cool the casserole in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Crisp a cold square in a buttered skillet over medium heat, 3 minutes per side — better than the microwave, which turns the crust gummy.",
+    "Top a reheated square with salsa and a fried egg for a fast next-shift breakfast."
+  ],
+  "heroImage": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+  "thumbImage": "/images/thumbs/breakfast/hash-brown-breakfast-casserole.jpg",
+  "imageAlt": "Golden hash brown breakfast casserole squares with eggs, sausage, and melted cheddar",
+  "publishedAt": "2026-07-17T20:15:27.731Z",
+  "updatedAt": "2026-07-23T21:15:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "Hash Brown Breakfast Casserole | Firehall Breakfast"
+}

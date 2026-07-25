@@ -14,58 +14,58 @@
     "bake",
     "make-ahead"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 40,
   "totalTime": 55,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Rolled Oats",
-      "quantity": "3 cups",
+      "name": "rolled oats",
+      "quantity": "2.4",
       "notes": "old-fashioned, not instant",
       "group": "Base"
     },
     {
-      "name": "Steel-Cut Oats",
-      "quantity": "1 cup",
+      "name": "steel-cut oats",
+      "quantity": "3/4",
       "notes": "adds texture; optional",
       "group": "Base"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "4 cups",
+      "name": "whole milk",
+      "quantity": "3.2",
       "notes": "or oat milk for dairy-free",
       "group": "Base"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "2",
       "notes": "whisked in for structure",
       "group": "Base"
     },
     {
-      "name": "Large Apples",
-      "quantity": "3",
+      "name": "large apples",
+      "quantity": "2",
       "notes": "peeled, cored, diced",
       "group": "Fruit"
     },
     {
-      "name": "Ground Cinnamon",
-      "quantity": "2 tsp",
+      "name": "ground cinnamon",
+      "quantity": "1.6",
       "notes": "plus 1/2 tsp nutmeg",
       "group": "Spice"
     },
     {
-      "name": "Brown Sugar",
-      "quantity": "1/2 cup",
+      "name": "brown sugar",
+      "quantity": "3/8",
       "notes": "plus maple for serving",
       "group": "Sweet"
     },
     {
-      "name": "Chopped Walnuts",
-      "quantity": "1/2 cup",
+      "name": "chopped walnuts",
+      "quantity": "3/8",
       "notes": "and butter pats at the line",
       "group": "Finish"
     }
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
   "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
   "imageAlt": "Baked apple cinnamon oatmeal squares with walnuts and maple drizzle",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Apple Cinnamon Baked Oatmeal | Firehall Breakfast",
   "collectionTier": "performance"

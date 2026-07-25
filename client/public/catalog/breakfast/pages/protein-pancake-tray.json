@@ -12,44 +12,44 @@
     "tray-bake",
     "make-ahead"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Complete Pancake Mix",
-      "quantity": "8 cups",
+      "name": "complete pancake mix",
+      "quantity": "5.3",
       "notes": "or from-scratch dry mix"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "6 cups"
-    },
-    {
-      "name": "Large Eggs",
+      "name": "whole milk",
       "quantity": "4"
     },
     {
-      "name": "Melted Butter",
-      "quantity": "1/4 cup",
+      "name": "large eggs",
+      "quantity": "3"
+    },
+    {
+      "name": "melted butter",
+      "quantity": "1/8",
       "notes": "plus more for the griddle"
     },
     {
-      "name": "Sugar",
-      "quantity": "2 tbsp",
+      "name": "sugar",
+      "quantity": "1.3",
       "optional": true
     },
     {
-      "name": "Vanilla Extract",
-      "quantity": "1 tsp",
+      "name": "vanilla extract",
+      "quantity": "5/8",
       "optional": true
     },
     {
-      "name": "Greek Yogurt Or Protein Powder",
-      "quantity": "1 cup",
+      "name": "Greek yogurt or protein powder",
+      "quantity": "5/8",
       "notes": "for protein tray version",
       "optional": true
     }
@@ -117,8 +117,8 @@
   "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
   "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
   "imageAlt": "Wide firehall crew platter of Protein Pancake Tray beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.993Z",
-  "updatedAt": "2026-06-04T20:48:24.993Z",
+  "publishedAt": "2026-07-17T20:15:27.732Z",
+  "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "Protein Pancake Tray | Firehall Breakfast",
   "collectionTier": "performance"

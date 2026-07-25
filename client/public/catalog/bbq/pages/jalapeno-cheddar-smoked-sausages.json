@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smoked sausage platter tradition (Traeger, Weber): jalapeño-cheddar links smoke at 275°F until 165°F internal, then grill with peppers and onions for a handheld tray.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 45,
   "prepTime": 15,
   "difficulty": "easy",
@@ -39,12 +39,12 @@
   "ingredients": [
     {
       "name": "Jalapeño Cheddar Sausage Links",
-      "quantity": "12",
+      "quantity": "10",
       "unit": "links"
     },
     {
       "name": "Bell Peppers",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "sliced"
     },
@@ -56,32 +56,32 @@
     },
     {
       "name": "Neutral Oil",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp"
     },
     {
       "name": "Black Pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp"
     },
     {
       "name": "Sub Rolls",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole"
     },
     {
       "name": "Mustard",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup"
     },
     {
       "name": "Pickled Jalapeños",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup"
     }
   ],

@@ -1,0 +1,208 @@
+{
+  "slug": "egg-roll-in-a-bowl-crew",
+  "title": "Egg Roll in a Bowl for the Crew",
+  "displayTitle": "Egg Roll in a Bowl for the Crew",
+  "seoTitle": "Egg Roll in a Bowl for the Crew | Firefighter Meal",
+  "shortDescription": "Fast pork and cabbage skillet with takeout flavour",
+  "subtitle": "Fast pork and cabbage skillet with takeout flavour",
+  "category": "hall_expansion",
+  "cuisine": "Chinese-American",
+  "description": "Ground pork, cabbage, carrots, ginger, and sesame are stir-fried and served over rice.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 580,
+  "protein": 35,
+  "carbs": 56,
+  "fats": 24,
+  "tags": [
+    "protein:pork",
+    "format:skillet",
+    "category:crew_feeders",
+    "bowls",
+    "one_pot",
+    "budget",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "large skillet or griddle",
+    "rice cooker",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "ground pork",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "coleslaw mix",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "rice",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "3/4",
+      "unit": "cup"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "3/8",
+      "unit": "cup"
+    },
+    {
+      "name": "green onions",
+      "quantity": "2",
+      "unit": "bunches"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Start rice",
+      "instruction": "Start rice first because it needs covered steaming time while the skillet cooks.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix sauce",
+      "instruction": "Stir soy sauce, ginger, garlic, sesame oil, and a little brown sugar in a bowl.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat skillet",
+      "instruction": "Heat a large skillet or griddle over medium-high and add a thin layer of oil.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brown pork",
+      "instruction": "Break pork into small crumbles and cook until browned with no pink showing.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Confirm temperature",
+      "instruction": "Check several pork crumbles; they must reach 165°F before holding.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Add cabbage",
+      "instruction": "Add coleslaw mix in handfuls, stirring after each addition so it contacts the heat.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Pour sauce",
+      "instruction": "Pour sauce around the pan edge and toss for 2 minutes; avoid soaking the cabbage.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Finish texture",
+      "instruction": "Stop cooking when cabbage is wilted but still has crunch, not limp and wet.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold components",
+      "instruction": "Keep pork mixture above 140°F and fluff rice just before the break.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Top bowls",
+      "instruction": "Spoon rice and pork mixture into bowls, then scatter green onions and sesame seeds.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Ground pork — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Ground pork and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use a griddle for the fastest cabbage cook.",
+    "Add chili oil at the table.",
+    "Do not salt early; soy sauce is salty."
+  ],
+  "tonightSpread": [
+    "Main: Pork egg roll skillet bowls",
+    "Sides: mandarin oranges, edamame",
+    "Condiments: chili oil, sesame seeds, soy sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Ground pork in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Fold into lettuce wraps the next day."
+  ],
+  "whyCrewsLikeIt": "It uses one large pan and forgiving ingredients that can wait for a call.",
+  "mealPrepNotes": "Make-ahead: shred vegetables and mix sauce 2 days ahead. Storage: refrigerate for 3 days. Reheating: heat pork mixture to 165°F.",
+  "substitutions": [
+    "Use ground turkey for pork.",
+    "Use cauliflower rice for lower carbs."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 580,
+    "protein": 35,
+    "carbs": 56,
+    "fats": 24,
+    "label": "~580 cal/serving · 35g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+  "heroImageAlt": "Egg Roll in a Bowl for the Crew — Chinese-American skillet plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "egg roll in a bowl crowd",
+    "ground pork cabbage crew meal",
+    "one pan firehall dinner",
+    "budget bowl recipe"
+  ],
+  "relatedSlugs": [
+    "cajun-chicken-rice-skillet",
+    "cast-iron-chicken-fajitas",
+    "pepper-steak-onions",
+    "enchilada-beef-skillet"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

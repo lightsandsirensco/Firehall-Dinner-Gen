@@ -7,16 +7,16 @@
   "subtitle": "The hall's Italian night spread",
   "category": "firehall_classics",
   "cuisine": "italian",
-  "description": "Italian night at the station. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Italian-American red-sauce night at the station: crispy pan-fried cutlets, marinara spooned only on top so the breaded edges stay crunchy, and a three-cheese blend of fresh mozzarella, provolone, and parmesan. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 60,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 120,
-  "carbs": 156,
-  "fats": 63,
+  "calories": 1065,
+  "protein": 70,
+  "carbs": 95,
+  "fats": 45,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -160,7 +160,7 @@
     {
       "stepNumber": 6,
       "title": "Top with cheese and bake",
-      "instruction": "Lay fried cutlets in buttered hotel pans. Spoon marinara over each, then layer mozzarella and provolone. Bake at 425°F 12–15 minutes until cheese bubbles and edges brown. Rest 3 minutes before serving — molten cheese burns rookies.",
+      "instruction": "Lay fried cutlets in buttered hotel pans. Spoon marinara over each, then shingle the sliced fresh mozzarella and provolone on top. Bake at 425°F 12–15 minutes until cheese bubbles and edges brown. Rest 3 minutes before serving — molten cheese burns rookies.",
       "minutes": 15,
       "heatLevel": "high"
     },
@@ -174,14 +174,14 @@
     {
       "stepNumber": 8,
       "title": "Serve Chicken Parm for the crew",
-      "instruction": "Plate cutlets with spaghetti and extra marinara on sheet trays. Finish with remaining parmesan and basil. Garlic bread goes on a separate tray so crust stays crisp.",
+      "instruction": "Plate cutlets with spaghetti and extra marinara on sheet trays. Finish with remaining parmesan and the torn fresh basil. Garlic bread goes on a separate tray so crust stays crisp.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 9,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover chicken cutlets — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "instruction": "Fried cutlets hold better than sauced ones — if tones drop before the bake, keep the fried cutlets uncovered on racks in a 200°F oven at 140°F or above so they stay crisp, and hold the marinara and pasta separately. Sauce and cheese the cutlets only when you're back and ready to bake, so the breading never sits wet. Confirm 165°F before serving.",
       "minutes": 5,
       "heatLevel": "low"
     },
@@ -194,13 +194,11 @@
     }
   ],
   "proTips": [
-    "Hold sauced pasta separate from cutlets so breading stays crisp.",
-    "Broil mozzarella only 1–2 min — watch the hall oven.",
-    "Pull chicken at 160°F out of the oil and let carryover hit 165°F under cheese.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Hold sauced pasta separate from the cutlets so the breading stays crisp.",
+    "Sauce only the top of each cutlet, never underneath — the exposed breaded edges stay crunchy through the bake.",
+    "Rest the fried cutlets on a rack (not paper) before saucing; steam trapped underneath is what turns a crisp crust soggy.",
+    "Pull chicken at 155°F out of the oil and let carryover finish it to 165°F under the cheese — overcooked breast dries out under sauce.",
+    "Grate your own block low-moisture mozzarella for the melt and add fresh mozzarella and provolone for pull and tang; bagged pre-shredded won't melt as smoothly."
   ],
   "tonightSpread": [
     "Main: Chicken Parm cutlets",
@@ -221,12 +219,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 120,
-    "carbs": 156,
-    "fats": 63,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 1065,
+    "protein": 70,
+    "carbs": 95,
+    "fats": 45,
+    "label": "per serving (hall portion, with pasta + garlic bread)",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -270,6 +268,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "chicken-parm",
-  "generatedAt": "2026-06-04T20:53:34.871Z",
-  "contentVersion": 4
+  "generatedAt": "2026-07-23T21:40:00.000Z",
+  "contentVersion": 5
 }

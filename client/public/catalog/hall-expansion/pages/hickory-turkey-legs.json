@@ -39,63 +39,63 @@
   ],
   "ingredients": [
     {
-      "name": "Whole Turkey Legs",
+      "name": "whole turkey legs",
       "quantity": "8",
       "unit": "legs",
       "notes": "about 1 lb each",
       "group": "Main"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Brine"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Brine"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Onion Powder",
+      "name": "onion powder",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Cayenne Pepper",
+      "name": "cayenne pepper",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Rub"
     },
     {
-      "name": "Apple Juice",
+      "name": "apple juice",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "for spritz",
       "group": "Spritz"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Rub"
     },
     {
-      "name": "Corn On The Cob",
+      "name": "corn on the cob",
       "quantity": "8",
       "unit": "ears",
       "group": "Side"
@@ -160,10 +160,19 @@
     "protein": 52,
     "carbs": 18,
     "fats": 16,
-    "label": "~410 cal/serving · 52g protein · 2g fiber (est.)"
+    "label": "~410 cal/serving · 52g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/hickory-turkey-legs.jpg",
-  "heroImageAlt": "Hickory Smoked Turkey Legs — crew-sized firehall meal",
+  "heroImageAlt": "Hickory Smoked Turkey Legs — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/hickory-turkey-legs.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/hickory-turkey-legs.jpg",
   "railImage": "/images/rails/hall-expansion/hickory-turkey-legs.jpg",
@@ -181,6 +190,6 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.929Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

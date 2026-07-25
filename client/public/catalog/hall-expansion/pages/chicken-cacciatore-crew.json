@@ -38,76 +38,76 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Leg Quarters",
+      "name": "chicken leg quarters",
       "quantity": "4.8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into pieces",
       "group": "Main"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Braise"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Braise"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Braise"
     },
     {
-      "name": "Cremini Mushrooms",
+      "name": "cremini mushrooms",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "quartered",
       "group": "Braise"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Braise"
     },
     {
-      "name": "Crushed Tomatoes",
+      "name": "crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz each",
       "group": "Braise"
     },
     {
-      "name": "Dry White Wine",
+      "name": "dry white wine",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Braise"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Herbs"
     },
     {
-      "name": "Fresh Basil",
+      "name": "fresh basil",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "torn",
       "group": "Finish"
     },
     {
-      "name": "Polenta",
+      "name": "polenta",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry",
       "group": "Base"
     }
@@ -171,10 +171,19 @@
     "protein": 38,
     "carbs": 36,
     "fats": 18,
-    "label": "~460 cal/serving · 38g protein · 4g fiber (est.)"
+    "label": "~460 cal/serving · 38g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
-  "heroImageAlt": "Chicken Cacciatore for the Crew — crew-sized firehall meal",
+  "heroImageAlt": "Chicken Cacciatore for the Crew — italian braise plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/chicken-cacciatore-crew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/chicken-cacciatore-crew.jpg",
   "railImage": "/images/rails/hall-expansion/chicken-cacciatore-crew.jpg",
@@ -186,12 +195,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "dutch-oven-pot-roast",
+    "coq-au-vin-batch",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

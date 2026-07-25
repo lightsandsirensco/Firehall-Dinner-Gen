@@ -12,9 +12,16 @@ interface FavoriteMealCardProps {
   onView: () => void;
   onRemove: () => void;
   formatDate: (iso: string) => string;
+  viewLabel?: string;
 }
 
-export function FavoriteMealCard({ meal, onView, onRemove, formatDate }: FavoriteMealCardProps) {
+export function FavoriteMealCard({
+  meal,
+  onView,
+  onRemove,
+  formatDate,
+  viewLabel = "View",
+}: FavoriteMealCardProps) {
   const { recipe } = meal;
   const heroSrc =
     recipe.hero_image && recipe.hero_image_status === "ready"
@@ -74,14 +81,14 @@ export function FavoriteMealCard({ meal, onView, onRemove, formatDate }: Favorit
         <p className="text-[10px] text-muted-foreground/60">Saved {formatDate(meal.savedAt)}</p>
         <div className="flex gap-2">
           <Button
-            variant="outline"
+            variant="default"
             size="sm"
             className="flex-1 text-xs min-h-11 touch-manipulation rounded-xl"
             onClick={onView}
             data-testid={`button-view-${meal.id}`}
           >
             <Eye className="w-3 h-3 mr-1" />
-            View
+            {viewLabel}
           </Button>
           <Button
             variant="outline"

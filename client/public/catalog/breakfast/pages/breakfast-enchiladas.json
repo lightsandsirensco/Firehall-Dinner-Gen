@@ -14,58 +14,58 @@
     "bake",
     "9x13"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 35,
   "totalTime": 60,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "16",
+      "name": "large eggs",
+      "quantity": "13",
       "notes": "soft-scrambled with salt and pepper",
       "group": "Filling"
     },
     {
-      "name": "Mexican Chorizo",
-      "quantity": "1 1/2 lb",
+      "name": "Mexican chorizo",
+      "quantity": "3/8",
       "notes": "cooked and crumbled, fat drained",
       "group": "Filling"
     },
     {
-      "name": "Shredded Monterey Jack",
-      "quantity": "2 cups",
+      "name": "shredded Monterey Jack",
+      "quantity": "1.6",
       "notes": "divided for filling and top",
       "group": "Filling"
     },
     {
-      "name": "8-Inch Flour Tortillas",
-      "quantity": "14",
+      "name": "8-inch flour tortillas",
+      "quantity": "11",
       "notes": "warmed briefly to stay pliable",
       "group": "Build"
     },
     {
-      "name": "Green Enchilada Sauce",
-      "quantity": "3 cups",
+      "name": "green enchilada sauce",
+      "quantity": "2.4",
       "notes": "jarred or homemade",
       "group": "Sauce"
     },
     {
-      "name": "Sour Cream",
-      "quantity": "1/2 cup",
+      "name": "sour cream",
+      "quantity": "3/8",
       "notes": "whisked into half the sauce for creaminess",
       "group": "Sauce"
     },
     {
-      "name": "Cotija Or Feta",
-      "quantity": "1 cup",
+      "name": "cotija or feta",
+      "quantity": "3/4",
       "notes": "crumbled",
       "group": "Finish"
     },
     {
-      "name": "Cilantro",
-      "quantity": "1/2 cup",
+      "name": "cilantro",
+      "quantity": "3/8",
       "notes": "chopped, plus lime wedges",
       "group": "Finish"
     }
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
   "imageAlt": "Crew-sized breakfast enchiladas in a 9x13 casserole — green chile sauce, melted cheese, and egg-chorizo filling in rolled tortillas",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 9,
   "seoTitle": "Breakfast Enchiladas for the Crew | Firehall Breakfast",
   "collectionTier": "firehall_classic"

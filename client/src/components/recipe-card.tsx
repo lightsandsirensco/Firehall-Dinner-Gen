@@ -26,7 +26,9 @@ import { escapeHtml } from "@/lib/escape-html";
 import { useState, useEffect, useMemo, type ReactNode } from "react";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
-import { HALL_VOTE } from "@/lib/brand-copy";
+import { CTA, HALL_VOTE } from "@/lib/brand-copy";
+import { StartCookingButton } from "@/components/cook-mode/start-cooking-button";
+import { clientRecipeToCookMode } from "@/lib/cook-mode/adapters";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import {
   useMeasurementSystem,
@@ -293,6 +295,13 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
     setShowConfirm(false);
   }, [recipe._id, recipe._signature, recipe.title]);
 
+  const cookModeRecipe = useMemo(
+    () => clientRecipeToCookMode(recipe, measurementSystem, crewSize),
+    [recipe, measurementSystem, crewSize],
+  );
+  const recipeSlug =
+    (recipe as ClientRecipeResponse & { _slug?: string })._slug ?? undefined;
+
   const handleSave = () => {
     const result = saveMeal(recipe);
     if (result.saved || result.duplicate) {
@@ -472,57 +481,71 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           </p>
         </RecipeMeasurementBar>
 
-        <div className="flex flex-wrap gap-2">
-          {!hideSave && (
-            <Button
-              variant={saved ? "secondary" : "outline"}
-              size="sm"
-              onClick={handleSave}
-              disabled={saved}
-              className="min-h-11 touch-manipulation"
-              data-testid="button-save-favorite"
-            >
-              {saved ? <Check className="w-4 h-4 mr-1.5" /> : <Heart className="w-4 h-4 mr-1.5" />}
-              {saved ? "Saved" : "Save"}
+        <div className="space-y-2">
+          {cookModeRecipe.steps.length > 0 ? (
+            <StartCookingButton
+              recipe={cookModeRecipe}
+              recipeSlug={recipeSlug}
+              source="generator_result"
+              className="w-full min-h-12 text-base"
+              size="lg"
+            />
+          ) : null}
+          <div className="flex flex-wrap gap-2">
+            {!hideSave && (
+              <Button
+                variant={saved ? "secondary" : "outline"}
+                size="sm"
+                onClick={handleSave}
+                disabled={saved}
+                className="min-h-11 touch-manipulation"
+                data-testid="button-save-favorite"
+              >
+                {saved ? <Check className="w-4 h-4 mr-1.5" /> : <Heart className="w-4 h-4 mr-1.5" />}
+                {saved ? "Saved" : "Save"}
+              </Button>
+            )}
+            {onShoppingListClick && (
+              <Button size="sm" variant="outline" onClick={onShoppingListClick} className="min-h-11 touch-manipulation" data-testid="button-shopping-list">
+                <List className="w-4 h-4 mr-1.5" />
+                Shopping list
+              </Button>
+            )}
+            {onHallVoteClick && (
+              <Button
+                size="sm"
+                variant="ghost"
+                onClick={onHallVoteClick}
+                className="min-h-11 touch-manipulation text-muted-foreground"
+                data-testid="button-recipe-hall-vote"
+              >
+                <Vote className="w-4 h-4 mr-1.5" />
+                {HALL_VOTE.letCrewVote}
+              </Button>
+            )}
+            {onEmailClick && (
+              <Button size="sm" variant="ghost" onClick={onEmailClick} className="min-h-11 touch-manipulation" data-testid="button-email-recipe">
+                <Mail className="w-4 h-4 mr-1.5" />
+                Email
+              </Button>
+            )}
+            <Button size="sm" variant="ghost" onClick={handlePrint} className="min-h-11 touch-manipulation" data-testid="button-print">
+              <Printer className="w-4 h-4 mr-1.5" />
+              Print
             </Button>
-          )}
-          {onShoppingListClick && (
-            <Button size="sm" variant="outline" onClick={onShoppingListClick} className="min-h-11 touch-manipulation" data-testid="button-shopping-list">
-              <List className="w-4 h-4 mr-1.5" />
-              List
-            </Button>
-          )}
-          {onHallVoteClick && (
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={onHallVoteClick}
-              className="min-h-11 touch-manipulation border-primary/30 text-primary hover:bg-primary/10"
-              data-testid="button-recipe-hall-vote"
-            >
-              <Vote className="w-4 h-4 mr-1.5" />
-              {HALL_VOTE.startVote}
-            </Button>
-          )}
-          {onEmailClick && (
-            <Button size="sm" variant="outline" onClick={onEmailClick} className="min-h-11 touch-manipulation" data-testid="button-email-recipe">
-              <Mail className="w-4 h-4 mr-1.5" />
-              Email
-            </Button>
-          )}
-          <Button size="sm" variant="ghost" onClick={handlePrint} className="min-h-11 touch-manipulation" data-testid="button-print">
-            <Printer className="w-4 h-4 mr-1.5" />
-            Print
-          </Button>
+          </div>
         </div>
         {showConfirm && (
           <div className="flex items-center gap-2 text-sm text-primary success-pop motion-reduce:animate-none" data-testid="text-save-confirmation">
             <Check className="w-4 h-4" />
-            Saved to Hall Favorites.
+            Saved to Saved Meals.
           </div>
         )}
         <p className={cn(app.lead, "max-w-2xl")} data-testid="text-recipe-why">
           {recipe.why_it_fits_tonight}
+        </p>
+        <p className="text-xs text-muted-foreground" data-testid="text-recipe-commit">
+          {CTA.cookThis} — or try another if this isn&apos;t it.
         </p>
       </div>
 

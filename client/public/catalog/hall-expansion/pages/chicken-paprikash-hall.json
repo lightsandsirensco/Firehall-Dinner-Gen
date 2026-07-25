@@ -38,73 +38,73 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "4.4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "about 16 pieces",
       "group": "Main"
     },
     {
-      "name": "Sweet Paprika",
+      "name": "sweet paprika",
       "quantity": "2.8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Sauce"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Sauce"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Sauce"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "1.8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "2.7",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Sour Cream",
+      "name": "sour cream",
       "quantity": "7/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Finish"
     },
     {
-      "name": "Egg Noodles",
+      "name": "egg noodles",
       "quantity": "1 3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Base"
     },
     {
-      "name": "Butter",
+      "name": "butter",
       "quantity": "3.7",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Base"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -168,10 +168,19 @@
     "protein": 36,
     "carbs": 44,
     "fats": 20,
-    "label": "~490 cal/serving · 36g protein · 3g fiber (est.)"
+    "label": "~490 cal/serving · 36g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/chicken-paprikash-hall.jpg",
-  "heroImageAlt": "Chicken Paprikash for the Hall — crew-sized firehall meal",
+  "heroImageAlt": "Chicken Paprikash for the Hall — hungarian stew plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/chicken-paprikash-hall.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/chicken-paprikash-hall.jpg",
   "railImage": "/images/rails/hall-expansion/chicken-paprikash-hall.jpg",
@@ -183,12 +192,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "hungarian-goulash-crew",
     "shawarma-bar-night",
     "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-burger-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

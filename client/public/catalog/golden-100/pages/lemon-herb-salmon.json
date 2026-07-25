@@ -7,16 +7,16 @@
   "subtitle": "High protein, light cleanup",
   "category": "healthy_performance",
   "cuisine": "mediterranean",
-  "description": "High protein, light cleanup. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Skin-on fillets in a 20-minute lemon-oregano marinade, grilled over oiled grates to 145°F and finished with a reserved dill-parsley drizzle and caramelized grilled lemon halves. Timed short on purpose — citrus turns fish mushy if it sits.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
+  "cookTime": 35,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 367,
-  "protein": 38,
-  "carbs": 3,
-  "fats": 20,
+  "calories": 390,
+  "protein": 36,
+  "carbs": 6,
+  "fats": 24,
   "tags": [
     "protein:seafood",
     "format:grill",
@@ -25,106 +25,179 @@
     "golden_100"
   ],
   "equipment": [
-    "Grill or flat-top",
-    "Tongs",
-    "Heat-resistant gloves",
+    "Grill set up for two-zone heat",
+    "Wide spatula (fish turner if the hall has one)",
+    "Microplane or fine grater for zest",
+    "Tongs and heat-resistant gloves",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Salmon Fillets, Skin On",
+      "name": "Salmon Fillets (skin-on, cut into 6 oz portions)",
       "quantity": "3",
       "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Cedar Plank",
-      "quantity": "1",
-      "unit": "count",
-      "notes": "soaked 1 hour",
-      "group": "Equipment"
+      "name": "Lemons",
+      "quantity": "4",
+      "group": "Marinade"
     },
     {
-      "name": "Brown Sugar",
+      "name": "Olive Oil",
+      "quantity": "0.5",
+      "unit": "Cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "Garlic Cloves (minced)",
+      "quantity": "4",
+      "unit": "cloves",
+      "group": "Marinade"
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "Honey",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "Fresh Dill (chopped)",
+      "quantity": "0.25",
+      "unit": "Cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Fresh Parsley (chopped)",
+      "quantity": "0.25",
+      "unit": "Cup",
+      "group": "Finish"
+    },
+    {
+      "name": "Kosher Salt",
       "quantity": "2",
-      "unit": "Tbsp",
-      "group": "Glaze"
+      "unit": "Tsp",
+      "group": "Seasoning"
     },
     {
-      "name": "Soy Sauce",
-      "quantity": "3",
-      "unit": "Tbsp",
-      "group": "Glaze"
-    },
-    {
-      "name": "Fresh Ginger, Grated",
+      "name": "Black Pepper",
       "quantity": "1",
-      "unit": "Tbsp",
-      "group": "Glaze"
+      "unit": "Tsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Soak plank and prep fish",
-      "instruction": "Soak cedar plank 1 hour. Pat salmon dry. Mix glaze. Score skin lightly so it doesn't curl.",
-      "minutes": 60,
+      "title": "Zest, juice, and split the marinade",
+      "instruction": "Zest two of the lemons before juicing them — zest carries the lemon oil that survives the grill, while juice mostly cooks off. Whisk the zest and juice with the olive oil, minced garlic, dried oregano, honey, kosher salt, and black pepper for about a minute until it looks cloudy and thick. Pour a third into a separate jar and stir in the chopped dill and parsley — that clean jar is the finishing drizzle, and it never touches the raw fillets. Halve the two remaining lemons and set them aside.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Grill on the plank",
-      "instruction": "Grill indirect at 375°F on the plank 12–18 minutes until salmon flakes at 125–130°F in the thickest part (medium). Skin may stick — that's fine; serve flesh side up.",
-      "minutes": 16,
-      "heatLevel": "medium"
+      "title": "Marinate the fillets for 20 minutes, no longer",
+      "instruction": "Pat the salmon fillets dry, lay them flesh-down in the marinade on a tray, and set a timer for 20 minutes — citrus is acid, and past 30 minutes it starts chemically cooking the surface into a gray, mushy layer that no amount of heat can fix. This is a set-a-timer step, not an all-afternoon one. Use the window to get the fire going.",
+      "minutes": 20,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Glaze and serve",
-      "instruction": "Brush glaze in the last 3 minutes. Rest 2 minutes. Serve from plank or transfer with a wide spatula. Hold backup fillets at 160°F max — salmon toughens fast.",
+      "title": "Get the grates hot, clean, and slick",
+      "instruction": "Heat the grill two-zone to about 400°F on the hot side. Scrub the hot grates with the brush, then wipe them with an oil-soaked paper towel held in tongs — three or four passes until they shine. Fillets weld themselves to dirty, dry grates; this 2-minute ritual is the difference between a clean flip and a torn tray.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Caramelize the lemon halves",
+      "instruction": "Set the four lemon halves cut-side down over direct heat 3–4 minutes until the faces are deeply browned with char marks at the edges. The heat concentrates the sugars, so grilled lemon squeezes on sweeter and rounder than raw — it's the finishing squeeze for the whole tray. Pull them to a corner of the sheet tray to wait.",
+      "minutes": 4,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Grill the salmon skin-down to 145°F",
+      "instruction": "Lift the fillets from the marinade, let the excess drip off — dripping oil means flare-ups — and lay them skin-side down on the hot side. Lid down, 6–8 minutes without touching: the skin shields the flesh while it cooks from below, turning opaque up the sides. Flip just once for a final 1–2 minutes, then check with an instant-read thermometer — grill until the thickest fillet reads 145°F. If skin grabs the grate when you flip, give it 30 more seconds; it releases when it's crisped.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest, then hit it with the reserved drizzle",
+      "instruction": "Rest the fillets 3 minutes on a clean tray so the juices settle instead of flooding out at the first fork. Spoon the reserved dill-parsley drizzle from the clean jar over the tops while they're still hot — warm fish drinks it in — and squeeze one grilled lemon half over the whole tray. Fresh herbs plus zest at the end is why it tastes bright instead of just cooked.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Tray it up with the grilled lemons",
+      "instruction": "Line the portions up on sheet trays with the remaining grilled lemon halves scattered between them so everyone can squeeze their own. Leave the trays uncovered or tented loosely — sealed foil steams the crisped skin soft in about five minutes. Send it out while the surface still glistens.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover salmon — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 4,
-      "title": "Portion for the hall",
-      "instruction": "Break fillets into portions on trays. Keep skin on for transport — crew can peel if they want. Do not cover tightly or fish steams.",
-      "minutes": 3,
+      "stepNumber": 9,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool salmon and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Twenty minutes in the marinade, not a minute more — lemon juice keeps working on the fish and there's no rescuing the texture once the surface goes gray.",
+    "Always split off the finishing drizzle before the fish goes in — reserved marinade with fresh herbs is the flavor, and it stays food-safe in its own jar.",
+    "Skin grabbing the grate isn't stuck, it's not ready — crisp skin releases on its own; forcing the spatula early is what tears fillets.",
+    "Zest is the workhorse, juice is the helper — if the tray needs more lemon at the end, grate zest over it instead of drowning it in juice.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat."
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Lemon Herb Salmon with sides in separate pans so the crew can mix portions.",
-    "Portion bowls on the line with protein visible on top — crew eats with their eyes first.",
-    "Keep dressing and crunchy toppings in side bowls so greens stay crisp through second servings.",
-    "Line up Lemon Herb Salmon on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Grilled lemon herb salmon with dill-parsley drizzle",
+    "Sides: rice or roasted potatoes from the hall rotation, a big green salad",
+    "Condiments: grilled lemon halves down the line for squeezing",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
+    "Cool salmon in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Cold flaked fillets over greens with the leftover drizzle as dressing is a better lunch than any reheat.",
+    "If reheating, go low and covered with a splash of water — a second hard cook chalks the fish out."
   ],
-  "whyCrewsLikeIt": "High protein, light cleanup. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "whyCrewsLikeIt": "Bright, clean, and off the grill in under 15 minutes of fire time — heavy on protein, light on the stomach for crews still working out after dinner, and the grilled lemon squeeze wins over the skeptics.",
   "substitutions": [
-    "Frozen shrimp is fine — thaw under cold running water and pat very dry."
+    "Steelhead trout or arctic char swap 1:1 — same timing, same 145°F target, often cheaper at the counter.",
+    "No fresh dill? Double the parsley and add a pinch more dried oregano to the drizzle — different accent, still bright.",
+    "Maple syrup stands in for honey measure-for-measure in the marinade.",
+    "No grill on a rain night: roast the marinated fillets on an oiled sheet pan at 425°F for 10–12 minutes to the same 145°F, and broil the lemon halves cut-side up."
   ],
   "spiceLevel": "mild",
-  "cleanupDifficulty": "medium",
+  "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 367,
-    "protein": 38,
-    "carbs": 3,
-    "fats": 20,
+    "calories": 390,
+    "protein": 36,
+    "carbs": 6,
+    "fats": 24,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -154,6 +227,7 @@
     "grill",
     "healthy",
     "lemon herb grilled salmon",
+    "grilled salmon with lemon and dill",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -166,6 +240,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.227Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

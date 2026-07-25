@@ -1,0 +1,207 @@
+{
+  "slug": "firehall-gyro-bowls",
+  "title": "Firehall Gyro Bowls",
+  "displayTitle": "Firehall Gyro Bowls",
+  "seoTitle": "Firehall Gyro Bowls | Firefighter Meal",
+  "shortDescription": "Greek-spiced beef, rice, vegetables, and tzatziki",
+  "subtitle": "Greek-spiced beef, rice, vegetables, and tzatziki",
+  "category": "hall_expansion",
+  "cuisine": "Greek",
+  "description": "Seasoned ground beef is served over lemon rice with cucumber, tomato, onion, and cool tzatziki.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 640,
+  "protein": 39,
+  "carbs": 68,
+  "fats": 23,
+  "tags": [
+    "protein:beef",
+    "format:bowls",
+    "category:crew_feeders",
+    "bowls",
+    "crew_feeders",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "stockpot",
+    "wide skillet",
+    "hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground beef",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "long-grain rice",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "cucumber",
+      "quantity": "3.2",
+      "unit": "each"
+    },
+    {
+      "name": "tomatoes",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "tzatziki",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "red onion",
+      "quantity": "1.6",
+      "unit": "each"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook rice",
+      "instruction": "Cook rinsed rice in salted water, keeping the lid closed so steam finishes the grains.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season beef",
+      "instruction": "Mix beef with oregano, garlic, cumin, salt, and pepper before it reaches the hot pan.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Dice vegetables",
+      "instruction": "Dice cucumber and tomatoes into small pieces; keep them chilled in separate pans.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brown beef",
+      "instruction": "Cook beef in a wide skillet, breaking up large pieces with a sturdy spoon.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Drain fat",
+      "instruction": "Pour off excess fat carefully, leaving a thin coating so the spices do not scorch.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Finish beef",
+      "instruction": "Add a splash of water and cook until no pink remains and the beef reaches 165°F.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Season rice",
+      "instruction": "Fold lemon zest, lemon juice, and parsley into the hot rice without mashing it.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Taste tzatziki",
+      "instruction": "Stir tzatziki and adjust with lemon; keep it cold rather than warming it.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold safely",
+      "instruction": "Keep beef and rice covered above 140°F while toppings stay refrigerated.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Assemble bowls",
+      "instruction": "Layer lemon rice, beef, vegetables, onion, and a spoonful of tzatziki in each bowl.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the seasoned ground beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the tzatziki cold the entire time — never move it toward the heat to warm it, that's what breaks the sauce. On return, spot-check the beef at a safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Lean ground beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Drain watery tomatoes before setting them out.",
+    "Offer feta separately for salt control.",
+    "Warm pitas are optional alongside bowls."
+  ],
+  "tonightSpread": [
+    "Main: Greek beef gyro bowls",
+    "Sides: warm pita, Greek salad",
+    "Condiments: tzatziki, feta, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Lean ground beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Stuff leftover beef into breakfast wraps."
+  ],
+  "whyCrewsLikeIt": "Crew members can control sauces and fresh toppings while the hot base stays in one pan.",
+  "mealPrepNotes": "Make-ahead: chop vegetables and mix tzatziki 1 day ahead. Storage: refrigerate beef and rice for 3 days. Reheating: reheat beef to 165°F.",
+  "substitutions": [
+    "Use ground lamb or turkey.",
+    "Use quinoa instead of rice."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 640,
+    "protein": 39,
+    "carbs": 68,
+    "fats": 23,
+    "label": "~640 cal/serving · 39g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+  "heroImageAlt": "Firehall Gyro Bowls — Greek bowls plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehall-gyro-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehall-gyro-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/firehall-gyro-bowls.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "gyro bowls for a crowd",
+    "Greek beef rice bowls",
+    "firehall gyro dinner",
+    "ground beef meal for ten"
+  ],
+  "relatedSlugs": [
+    "peanut-chicken-rice-bowls",
+    "salmon-rice-bowls-crew",
+    "korean-turkey-rice-bowls",
+    "leftover-roast-beef-bowls"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

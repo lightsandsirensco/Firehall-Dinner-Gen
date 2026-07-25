@@ -14,57 +14,57 @@
     "make-ahead",
     "strata"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 45,
   "totalTime": 70,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "18",
+      "name": "large eggs",
+      "quantity": "12",
       "group": "Base"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "3 cups",
+      "name": "whole milk",
+      "quantity": "2",
       "notes": "or half-and-half for richer custard",
       "group": "Base"
     },
     {
-      "name": "Day-Old Bread",
-      "quantity": "1 loaf",
+      "name": "day-old bread",
+      "quantity": "5/8",
       "notes": "cubed and lightly toasted",
       "group": "Base"
     },
     {
-      "name": "Diced Ham",
-      "quantity": "2 lb",
+      "name": "diced ham",
+      "quantity": "1.3",
       "notes": "deli or leftover spiral ham",
       "group": "Fillings"
     },
     {
-      "name": "Bell Peppers",
-      "quantity": "2",
+      "name": "bell peppers",
+      "quantity": "1",
       "notes": "diced, any color",
       "group": "Fillings"
     },
     {
-      "name": "Large Onion",
-      "quantity": "1",
+      "name": "large onion",
+      "quantity": "3/4",
       "notes": "diced and lightly sautéed",
       "group": "Fillings"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "3 cups",
+      "name": "shredded cheddar",
+      "quantity": "2",
       "notes": "divided",
       "group": "Fillings"
     },
     {
-      "name": "Dry Mustard",
-      "quantity": "1 1/2 tsp",
+      "name": "dry mustard",
+      "quantity": "3/8",
       "notes": "plus salt, pepper, and paprika",
       "group": "Seasoning"
     }
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/denver-breakfast-casserole.jpg",
   "thumbImage": "/images/thumbs/breakfast/denver-breakfast-casserole.jpg",
   "imageAlt": "Golden Denver breakfast casserole squares with ham and bell peppers",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Denver Breakfast Casserole | Firehall Breakfast",
   "collectionTier": "firehall_classic"

@@ -37,53 +37,53 @@
   ],
   "ingredients": [
     {
-      "name": "Thick-Cut Bacon",
+      "name": "thick-cut bacon",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Bacon"
     },
     {
-      "name": "Sandwich Bread",
+      "name": "sandwich bread",
       "quantity": "24",
       "unit": "slices",
       "notes": "soft white or potato bread, not thin toast",
       "group": "Bread"
     },
     {
-      "name": "Ripe Tomatoes",
+      "name": "ripe tomatoes",
       "quantity": "6",
       "unit": "large",
       "notes": "¼-inch slices, pat dry",
       "group": "Produce"
     },
     {
-      "name": "Romaine Or Iceberg Lettuce",
+      "name": "romaine or iceberg lettuce",
       "quantity": "2",
       "unit": "heads",
       "notes": "leaves separated, crisp",
       "group": "Produce"
     },
     {
-      "name": "Mayonnaise",
+      "name": "mayonnaise",
       "quantity": "1.5",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Spread"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "softened for toasting",
       "group": "Toast"
     },
     {
-      "name": "Kosher Salt And Black Pepper",
+      "name": "kosher salt and black pepper",
       "quantity": "1",
       "unit": "batch",
       "group": "Seasoning"
     },
     {
-      "name": "Avocado",
+      "name": "avocado",
       "quantity": "4",
       "unit": "count",
       "notes": "sliced, optional at the line",
@@ -149,10 +149,19 @@
     "protein": 22,
     "carbs": 38,
     "fats": 34,
-    "label": "~540 cal/serving · 22g protein · 3g fiber (est.)"
+    "label": "~540 cal/serving · 22g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
-  "heroImageAlt": "Hall BLT Sandwich Feed — crew-sized firehall meal",
+  "heroImageAlt": "Hall BLT Sandwich Feed — american sandwich plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/hall-blt-sandwich-feed.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/hall-blt-sandwich-feed.jpg",
   "railImage": "/images/rails/hall-expansion/hall-blt-sandwich-feed.jpg",
@@ -165,12 +174,12 @@
     "bacon lettuce tomato batch"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-sloppy-joe-feed",
+    "classic-patty-melt-for-the-crew",
+    "best-tuna-melt-for-the-hall",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "https://www.americastestkitchen.com/recipes/8985-ultimate-blt-sandwich",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

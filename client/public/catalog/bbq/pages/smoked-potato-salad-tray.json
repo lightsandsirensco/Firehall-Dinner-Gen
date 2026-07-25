@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic BBQ potato salad tradition (Weber, Hey Grill Hey): Yukon golds smoke at 250°F until tender, get diced, and fold into a tangy mustard-mayo dressing for a tray that feeds ten.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 25,
   "difficulty": "easy",
@@ -39,67 +39,67 @@
   "ingredients": [
     {
       "name": "Yukon Gold Potatoes",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "Lb",
       "notes": "halved"
     },
     {
       "name": "Neutral Oil",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Black Pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp"
     },
     {
       "name": "Mayonnaise",
-      "quantity": "1.25",
+      "quantity": "1",
       "unit": "Cups"
     },
     {
       "name": "Yellow Mustard",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup"
     },
     {
       "name": "Apple Cider Vinegar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp"
     },
     {
       "name": "Celery",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "stalks",
       "notes": "diced"
     },
     {
       "name": "Red Onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced fine"
     },
     {
       "name": "Dill Pickles",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "notes": "chopped"
     },
     {
       "name": "Fresh Dill",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "chopped"
     },
     {
       "name": "Hard-Boiled Eggs",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "chopped (optional)"
     }

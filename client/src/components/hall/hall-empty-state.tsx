@@ -1,5 +1,4 @@
-import { BookOpen, Plus, Users } from "lucide-react";
-import { Link } from "wouter";
+import { BookOpen, Compass, Plus, Users } from "lucide-react";
 import { HubTile } from "@/components/app-shell/hub-tile";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth/context";
@@ -12,7 +11,7 @@ export function HallEmptyState() {
   const joinHref = "/hall/join";
 
   const onCreate = () => {
-    if (!authenticated) openSignIn();
+    if (!authenticated) openSignIn("/hall");
   };
 
   return (
@@ -57,10 +56,24 @@ export function HallEmptyState() {
           secondary
           testId="hall-empty-learn"
         />
+
+        <HubTile
+          href="/tonight"
+          icon={Compass}
+          title={HALL_EMPTY.browseMeals}
+          description={HALL_EMPTY.browseMealsHint}
+          secondary
+          testId="hall-empty-meals"
+        />
       </div>
 
       {!authenticated ? (
-        <Button type="button" variant="outline" className="w-full min-h-11" onClick={() => openSignIn()}>
+        <Button
+          type="button"
+          variant="outline"
+          className="w-full min-h-11"
+          onClick={() => openSignIn("/hall")}
+        >
           Sign in to sync with your crew
         </Button>
       ) : null}

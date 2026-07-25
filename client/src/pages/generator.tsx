@@ -33,7 +33,6 @@ import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } fr
 import { getRecentMealSlugs, recordMealSlug } from "@/lib/meal-rotation-memory";
 import { recordMealGenerated } from "@/lib/hall-history-store";
 import { syncHallProfileCrewSizeFromFilters } from "@/lib/hall-profile-store";
-import { RecentlyCookedStrip } from "@/components/hall-history/recently-cooked-strip";
 import { RepeatWarning } from "@/components/hall-history/repeat-warning";
 import { useHallHistory } from "@/hooks/use-hall-history";
 import {
@@ -58,7 +57,6 @@ import type { ClientRecipeResponse } from "@shared/schema";
 import { useMealHeroPoll } from "@/lib/recipe-hero";
 import { Flame } from "lucide-react";
 import { GENERATOR, CTA } from "@/lib/brand-copy";
-import { Link } from "wouter";
 import { SiteFooter } from "@/components/site-footer";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
@@ -71,7 +69,6 @@ import { useGeneratorSeo } from "@/lib/seo/use-generator-seo";
 import { useAuth } from "@/lib/auth/context";
 import { useHallMembership } from "@/lib/hall-membership/context";
 import {
-  isReturningGeneratorUser,
   loadInitialGeneratorFilters,
   mergeAuthAndHallIntoFilters,
   persistGeneratorSelections,
@@ -330,7 +327,6 @@ export default function Generator() {
   // recipeRef: scroll target for the results panel.
   const recipeRef = useRef<HTMLDivElement>(null);
   const hallVoteBannerRef = useRef<HTMLDivElement>(null);
-  const hallVoteScrollDoneRef = useRef(false);
 
   // Generation counter — only incremented by successful, non-duplicate recipe delivery.
   const lastAppliedSignatureRef = useRef<string | null>(null);
@@ -348,7 +344,6 @@ export default function Generator() {
 
   // ── Filters (personalized: hall + account + last session) ───────────────
   const [filtersExpanded, setFiltersExpanded] = useState(false);
-  const returningMode = isReturningGeneratorUser();
 
   const [filters, setFilters] = useState<SimplifiedGeneratorFilters>(() => loadInitialGeneratorFilters());
   const filtersPersistInitRef = useRef(true);
@@ -505,13 +500,6 @@ export default function Generator() {
     hapticSuccess();
     const totalGens = recordSuccessfulGeneration();
     setUserGenCount(totalGens);
-
-    if (totalGens === 1 && !hallVoteScrollDoneRef.current) {
-      hallVoteScrollDoneRef.current = true;
-      setTimeout(() => {
-        hallVoteBannerRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
-      }, 700);
-    }
 
     if (shouldTriggerEmailCaptureOnGeneration(totalGens)) {
       scheduleEarnedEmailCapture("generation", () => openEarnedEmailCapture("generation"), 1200);
@@ -787,7 +775,8 @@ export default function Generator() {
     return recentRecipes;
   }, [recentRecipes, mealHistoryVersion, recipe]);
 
-  const showHallVotePrompt = !!recipe && !loading;
+  // Demote crew vote until dinner is decided at least once — don't hijack first pick
+  const showHallVotePrompt = !!recipe && !loading && userGenCount >= 2;
   // ─────────────────────────────────────────────────────────────────────────
   return (
     <div className="page-shell min-h-screen min-h-[100dvh] bg-background">
@@ -807,21 +796,12 @@ export default function Generator() {
         )}
 
         {!mealFocusMode && (
-          <RecentlyCookedStrip className="mb-6 max-w-2xl" source="generator" />
-        )}
-
-        {!mealFocusMode && (
           <header className="mb-6 lg:mb-8 max-w-2xl">
             <h1 className="font-heading text-2xl sm:text-3xl md:text-4xl tracking-tight">
               {GENERATOR.headline}
             </h1>
             <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-prose">
               {GENERATOR.subline}
-            </p>
-            <p className="mt-3 text-sm">
-              <Link href="/wheel" className="text-primary font-medium hover:underline">
-                {GENERATOR.wheelLink}
-              </Link>
             </p>
           </header>
         )}
@@ -858,7 +838,7 @@ export default function Generator() {
               canGoForward={historyNav.index < historyNav.total - 1}
               onBack={handleBack}
               onForward={handleForward}
-              returningMode={returningMode}
+              returningMode
               hallName={hallLinked ? activeHall?.hall_name ?? detail?.hall.hall_name : null}
               filtersExpanded={filtersExpanded}
               onToggleFiltersExpanded={() => setFiltersExpanded((v) => !v)}

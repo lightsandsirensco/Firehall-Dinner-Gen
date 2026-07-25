@@ -1,126 +1,1235 @@
 {
-  "generatedAt": "2026-05-31T23:46:23.024Z",
+  "generatedAt": "2026-07-23T19:25:02.938Z",
   "crewOptions": [
-    2,
     4,
     6,
     8,
-    10
+    10,
+    14
   ],
   "canonicalBase": 8,
-  "recipesAudited": 376,
-  "successfullyScaled": 376,
-  "failures": 0,
-  "edgeCaseRecipes": 3,
-  "quantityFormattingNotes": 3,
-  "failed": [],
-  "edgeCases": [
+  "recipesAudited": 406,
+  "successfullyScaled": 325,
+  "failures": 81,
+  "edgeCaseRecipes": 0,
+  "quantityFormattingNotes": 0,
+  "failed": [
     {
-      "slug": "memphis-dry-rub-ribs",
-      "title": "Memphis Dry Rub Ribs",
-      "cases": [
-        "onion_at_2: Onion powder 1 → 3/8 (expected ~1/4 or 1/2)"
-      ]
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "title": "Apple Cinnamon Baked Oatmeal",
+      "file": "client\\public\\catalog\\breakfast\\pages\\apple-cinnamon-baked-oatmeal.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
     },
     {
-      "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Taco Night",
-      "cases": [
-        "onion_at_2: onion powder 1 → 3/8 (expected ~1/4 or 1/2)"
-      ]
+      "slug": "bagel-lox-breakfast-board",
+      "title": "Bagel and Lox Breakfast Board",
+      "file": "client\\public\\catalog\\breakfast\\pages\\bagel-lox-breakfast-board.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
     },
     {
-      "slug": "cajun-chicken-rice-bowl",
-      "title": "Cajun Chicken Rice Bowl",
-      "cases": [
-        "onion_at_2: onion powder 1 → 3/8 (expected ~1/4 or 1/2)"
-      ]
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "file": "client\\public\\catalog\\breakfast\\pages\\bagel-sandwich-line.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "big-pot-savory-oats",
+      "title": "Big-Pot Savory Oats",
+      "file": "client\\public\\catalog\\breakfast\\pages\\big-pot-savory-oats.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "breakfast-crunchwraps",
+      "title": "Breakfast Crunchwraps",
+      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-crunchwraps.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "breakfast-enchiladas",
+      "title": "Breakfast Enchiladas for the Crew",
+      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-enchiladas.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "breakfast-nachos-supreme",
+      "title": "Breakfast Nachos Supreme",
+      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-nachos-supreme.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "breakfast-poutine",
+      "title": "Breakfast Poutine",
+      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-poutine.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "breakfast-sandwich-trays",
+      "title": "Breakfast Sandwich Trays",
+      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-sandwich-trays.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 6,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "breakfast-sliders",
+      "title": "Breakfast Sliders",
+      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-sliders.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "chilaquiles-verde-bake",
+      "title": "Chilaquiles Verde Bake",
+      "file": "client\\public\\catalog\\breakfast\\pages\\chilaquiles-verde-bake.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "club-sandwich-breakfast-bake",
+      "title": "Club Sandwich Breakfast Bake",
+      "file": "client\\public\\catalog\\breakfast\\pages\\club-sandwich-breakfast-bake.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "crew-french-toast-bake",
+      "title": "Crew French Toast Bake",
+      "file": "client\\public\\catalog\\breakfast\\pages\\crew-french-toast-bake.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "title": "Denver Breakfast Casserole",
+      "file": "client\\public\\catalog\\breakfast\\pages\\denver-breakfast-casserole.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "farmers-breakfast-casserole",
+      "title": "Farmer's Breakfast Casserole",
+      "file": "client\\public\\catalog\\breakfast\\pages\\farmers-breakfast-casserole.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "title": "Fire Captain Omelette Bar",
+      "file": "client\\public\\catalog\\breakfast\\pages\\fire-captain-omelette-bar.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "firehall-breakfast-pizza",
+      "title": "Firehall Breakfast Pizza",
+      "file": "client\\public\\catalog\\breakfast\\pages\\firehall-breakfast-pizza.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "green-chile-breakfast-burritos",
+      "title": "Green Chile Breakfast Burritos",
+      "file": "client\\public\\catalog\\breakfast\\pages\\green-chile-breakfast-burritos.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "hall-breakfast-burritos",
+      "title": "Hall Breakfast Burritos",
+      "file": "client\\public\\catalog\\breakfast\\pages\\hall-breakfast-burritos.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "hall-breakfast-wraps",
+      "title": "Hall Breakfast Wraps",
+      "file": "client\\public\\catalog\\breakfast\\pages\\hall-breakfast-wraps.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "hall-sausage-biscuits-gravy",
+      "title": "Hall Sausage Biscuits & Gravy",
+      "file": "client\\public\\catalog\\breakfast\\pages\\hall-sausage-biscuits-gravy.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "file": "client\\public\\catalog\\breakfast\\pages\\hash-brown-breakfast-casserole.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "high-protein-parfaits",
+      "title": "High-Protein Yogurt Parfaits",
+      "file": "client\\public\\catalog\\breakfast\\pages\\high-protein-parfaits.json",
+      "baseServings": 6,
+      "crewSize": 6,
+      "ingredientCount": 6,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 6, expected 8",
+        "metadata: baseServings=6 crewSize=6 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "maple-sausage-pinwheels",
+      "title": "Maple Sausage Pinwheels",
+      "file": "client\\public\\catalog\\breakfast\\pages\\maple-sausage-pinwheels.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "title": "Monte Cristo Sandwiches",
+      "file": "client\\public\\catalog\\breakfast\\pages\\monte-cristo-sandwiches.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "overnight-french-toast-bake",
+      "title": "Overnight French Toast Bake",
+      "file": "client\\public\\catalog\\breakfast\\pages\\overnight-french-toast-bake.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "file": "client\\public\\catalog\\breakfast\\pages\\overnight-oat-bar-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "overnight-sausage-strata",
+      "title": "Overnight Sausage Strata",
+      "file": "client\\public\\catalog\\breakfast\\pages\\overnight-sausage-strata.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "protein-pancake-tray",
+      "title": "Protein Pancake Tray",
+      "file": "client\\public\\catalog\\breakfast\\pages\\protein-pancake-tray.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "quick-egg-tacos",
+      "title": "Quick Egg Tacos",
+      "file": "client\\public\\catalog\\breakfast\\pages\\quick-egg-tacos.json",
+      "baseServings": 6,
+      "crewSize": 6,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 6, expected 8",
+        "metadata: baseServings=6 crewSize=6 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "sheet-pan-breakfast-hash",
+      "title": "Sheet Pan Breakfast Hash",
+      "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-breakfast-hash.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "title": "Sheet Pan Breakfast Sandwiches",
+      "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-breakfast-sandwiches.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-eggs-sausage-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "sheet-pan-full-english",
+      "title": "Sheet Pan Full English",
+      "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-full-english.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "southwest-egg-bake",
+      "title": "Southwest Egg Bake",
+      "file": "client\\public\\catalog\\breakfast\\pages\\southwest-egg-bake.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "tater-tot-breakfast-casserole",
+      "title": "Tater Tot Breakfast Casserole",
+      "file": "client\\public\\catalog\\breakfast\\pages\\tater-tot-breakfast-casserole.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "andouille-po-boy-rolls-crew",
+      "title": "Andouille Po Boy Rolls for the Crew",
+      "file": "client\\public\\catalog\\bbq\\pages\\andouille-po-boy-rolls-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "brisket-style-beef-sandwiches-au-jus",
+      "title": "Brisket-Style Beef Sandwiches",
+      "file": "client\\public\\catalog\\bbq\\pages\\brisket-style-beef-sandwiches-au-jus.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 14,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "file": "client\\public\\catalog\\bbq\\pages\\cajun-grilled-cod-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "caprese-steak-skewers-crew",
+      "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
+      "file": "client\\public\\catalog\\bbq\\pages\\caprese-steak-skewers-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "title": "Cast Iron Skirt Steak Sizzlers",
+      "file": "client\\public\\catalog\\bbq\\pages\\cast-iron-steak-fajita-sizzlers.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "charred-broccolini-lemon-tray",
+      "title": "Sicilian Anchovy Broccolini Tray",
+      "file": "client\\public\\catalog\\bbq\\pages\\charred-broccolini-lemon-tray.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "chili-lime-grilled-tilapia",
+      "title": "Ancho-Tilapia with Charred Corn Salsa",
+      "file": "client\\public\\catalog\\bbq\\pages\\chili-lime-grilled-tilapia.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "competition-bbq-chicken-thighs",
+      "title": "Competition BBQ Chicken Thighs",
+      "file": "client\\public\\catalog\\bbq\\pages\\competition-bbq-chicken-thighs.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 11,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "firehall-antipasto-pasta-salad",
+      "title": "Mortadella Farfalle Antipasto Tray",
+      "file": "client\\public\\catalog\\bbq\\pages\\firehall-antipasto-pasta-salad.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "firehall-burnt-ends-platter",
+      "title": "Firehall Burnt Ends Platter",
+      "file": "client\\public\\catalog\\bbq\\pages\\firehall-burnt-ends-platter.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 12,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "title": "Teppan Shrimp and Pork Belly Mixed Grill",
+      "file": "client\\public\\catalog\\bbq\\pages\\firehall-hibachi-mixed-grill-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "firehall-street-elote-cups",
+      "title": "Epazote Esquites Street Cups",
+      "file": "client\\public\\catalog\\bbq\\pages\\firehall-street-elote-cups.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "title": "Cooper Sharp Chopped Ribeye Hoagies",
+      "file": "client\\public\\catalog\\bbq\\pages\\flat-top-philly-cheesesteaks-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "gochujang-beef-skewers-crew",
+      "title": "Seoul Chili Pear Beef Cubes",
+      "file": "client\\public\\catalog\\bbq\\pages\\gochujang-beef-skewers-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "griddle-smash-sausage-peppers",
+      "title": "Giardiniera Smash Sausage Hoagies",
+      "file": "client\\public\\catalog\\bbq\\pages\\griddle-smash-sausage-peppers.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "title": "Sun-Dried Tomato Pesto Panini Press",
+      "file": "client\\public\\catalog\\bbq\\pages\\grilled-chicken-pesto-panini-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
+      "file": "client\\public\\catalog\\bbq\\pages\\grilled-cod-lemon-packets.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "grilled-peach-burrata-salad",
+      "title": "Pistachio Peach and Burrata Salad",
+      "file": "client\\public\\catalog\\bbq\\pages\\grilled-peach-burrata-salad.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "grilled-reuben-sandwiches-crew",
+      "title": "Grilled Reuben Sandwiches for the Crew",
+      "file": "client\\public\\catalog\\bbq\\pages\\grilled-reuben-sandwiches-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "hickory-smoked-chicken-breast",
+      "title": "Hickory Smoked Chicken Breast",
+      "file": "client\\public\\catalog\\bbq\\pages\\hickory-smoked-chicken-breast.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "honey-chipotle-chicken-thighs",
+      "title": "Honey Chipotle Grilled Chicken Thighs",
+      "file": "client\\public\\catalog\\bbq\\pages\\honey-chipotle-chicken-thighs.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 16,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "honey-sriracha-shrimp-skewers",
+      "title": "Palm Sugar Lime Shrimp Skewers",
+      "file": "client\\public\\catalog\\bbq\\pages\\honey-sriracha-shrimp-skewers.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "title": "Hot Honey Grilled Sausage & Peppers",
+      "file": "client\\public\\catalog\\bbq\\pages\\hot-honey-grilled-sausage-peppers.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "jalapeno-cheddar-smoked-sausages",
+      "title": "Jalapeño Cheddar Smoked Sausages",
+      "file": "client\\public\\catalog\\bbq\\pages\\jalapeno-cheddar-smoked-sausages.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "lamb-merguez-skewers-crew",
+      "title": "North African Urfa Lamb Merguez Logs",
+      "file": "client\\public\\catalog\\bbq\\pages\\lamb-merguez-skewers-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 11,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "loaded-ranch-potato-salad-crew",
+      "title": "Blue Cheese Fingerling Ranch Tray",
+      "file": "client\\public\\catalog\\bbq\\pages\\loaded-ranch-potato-salad-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "maple-bourbon-grilled-trout",
+      "title": "Pecan Bourbon Whole Trout Board",
+      "file": "client\\public\\catalog\\bbq\\pages\\maple-bourbon-grilled-trout.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "mixed-lamb-chop-grill-board",
+      "title": "Za'atar Loin and Shoulder Lamb Board",
+      "file": "client\\public\\catalog\\bbq\\pages\\mixed-lamb-chop-grill-board.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "mongolian-beef-flat-top-crew",
+      "title": "Scallion Crisp Mongolian Flank Tray",
+      "file": "client\\public\\catalog\\bbq\\pages\\mongolian-beef-flat-top-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "pollo-asado-citrus-platter",
+      "title": "Yucatán Achiote Pollo Asado Spread",
+      "file": "client\\public\\catalog\\bbq\\pages\\pollo-asado-citrus-platter.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "pork-satay-skewers-crew",
+      "title": "Indonesian Tamarind Pork Satay Batches",
+      "file": "client\\public\\catalog\\bbq\\pages\\pork-satay-skewers-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "portuguese-linguica-grill-platter",
+      "title": "Lisbon Piri-Piri Linguica Spread",
+      "file": "client\\public\\catalog\\bbq\\pages\\portuguese-linguica-grill-platter.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "pressed-cuban-sandwiches-crew",
+      "title": "Pressed Cuban Sandwiches for the Crew",
+      "file": "client\\public\\catalog\\bbq\\pages\\pressed-cuban-sandwiches-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "reverse-seared-ribeye-crew",
+      "title": "Reverse-Seared Ribeye for the Crew",
+      "file": "client\\public\\catalog\\bbq\\pages\\reverse-seared-ribeye-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "santa-maria-tri-tip-roast",
+      "title": "Santa Maria Tri-Tip Roast",
+      "file": "client\\public\\catalog\\bbq\\pages\\santa-maria-tri-tip-roast.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "smoked-baked-beans-crew",
+      "title": "Smoked Baked Beans for the Crew",
+      "file": "client\\public\\catalog\\bbq\\pages\\smoked-baked-beans-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 11,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "smoked-bbq-chicken-wings-tray",
+      "title": "Smoked BBQ Chicken Wings Tray",
+      "file": "client\\public\\catalog\\bbq\\pages\\smoked-bbq-chicken-wings-tray.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 12,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "title": "Smoked Chicken Quarters with White Sauce",
+      "file": "client\\public\\catalog\\bbq\\pages\\smoked-chicken-quarters-white-sauce.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 17,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "smoked-mac-and-cheese-crew",
+      "title": "Smoked Mac and Cheese for the Crew",
+      "file": "client\\public\\catalog\\bbq\\pages\\smoked-mac-and-cheese-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 12,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "smoked-picanha-steak-platter",
+      "title": "Smoked Picanha Steak Platter",
+      "file": "client\\public\\catalog\\bbq\\pages\\smoked-picanha-steak-platter.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "smoked-potato-salad-tray",
+      "title": "Smoked Potato Salad Tray",
+      "file": "client\\public\\catalog\\bbq\\pages\\smoked-potato-salad-tray.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 12,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "spiedie-chicken-platter-crew",
+      "title": "Binghamton White-Wine Spiedie Tray",
+      "file": "client\\public\\catalog\\bbq\\pages\\spiedie-chicken-platter-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "tandoori-lamb-chop-platter",
+      "title": "Kashmiri Mustard-Oil Lamb Chop Feast",
+      "file": "client\\public\\catalog\\bbq\\pages\\tandoori-lamb-chop-platter.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "texas-central-brisket-crew",
+      "title": "Texas Central Brisket for the Crew",
+      "file": "client\\public\\catalog\\bbq\\pages\\texas-central-brisket-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "yakiniku-grill-platter-crew",
+      "title": "Tokyo Tare Ribeye Yakiniku Board",
+      "file": "client\\public\\catalog\\bbq\\pages\\yakiniku-grill-platter-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 10,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
     }
   ],
-  "sampleScaling": [
-    {
-      "crew": 2,
-      "name": "Ground beef and Italian sausage",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Ground beef",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Boneless chicken breasts or thighs",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Chicken breast",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Boneless chicken breasts, pounded ½ inch",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Ground beef",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Flank steak",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Restaurant-style tortilla chips",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Pork chops or tenderloin",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Bone-in chicken thighs",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Pork chops or tenderloin",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    },
-    {
-      "crew": 2,
-      "name": "Warm pulled beef or chili",
-      "baseQty": "4 lb",
-      "scaledQty": "1 lb",
-      "unit": "lb"
-    }
-  ]
+  "edgeCases": [],
+  "sampleScaling": []
 }

@@ -37,59 +37,59 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless, Skinless Chicken Thighs",
+      "name": "boneless, skinless chicken thighs",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Chicken"
     },
     {
-      "name": "Low-Sodium Chicken Broth",
+      "name": "low-sodium chicken broth",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Poach"
     },
     {
-      "name": "Hot Sauce",
+      "name": "hot sauce",
       "quantity": "0.75",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "Frank's-style",
       "group": "Buffalo"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Buffalo"
     },
     {
-      "name": "Large Flour Tortillas",
+      "name": "large flour tortillas",
       "quantity": "10",
       "unit": "count",
       "group": "Wrap"
     },
     {
-      "name": "Iceberg Or Romaine Lettuce",
+      "name": "iceberg or romaine lettuce",
       "quantity": "1",
       "unit": "head",
       "notes": "shredded",
       "group": "Fill"
     },
     {
-      "name": "Ranch Dressing",
+      "name": "ranch dressing",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "or blue cheese dressing",
       "group": "Line"
     },
     {
-      "name": "Crumbled Blue Cheese",
+      "name": "crumbled blue cheese",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "optional",
       "group": "Line"
     },
     {
-      "name": "Celery Stalks",
+      "name": "celery stalks",
       "quantity": "6",
       "unit": "count",
       "notes": "sticks for the line",
@@ -155,10 +155,19 @@
     "protein": 36,
     "carbs": 42,
     "fats": 24,
-    "label": "~540 cal/serving · 36g protein · 2g fiber (est.)"
+    "label": "~540 cal/serving · 36g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
-  "heroImageAlt": "Buffalo Chicken Wraps — crew-sized firehall meal",
+  "heroImageAlt": "Buffalo Chicken Wraps — american handheld plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/buffalo-chicken-wraps.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-wraps.jpg",
   "railImage": "/images/rails/hall-expansion/buffalo-chicken-wraps.jpg",
@@ -170,12 +179,12 @@
     "buffalo wrap fire station"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "bbq-meatball-skewers",
+    "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
+    "greek-chicken-pitas"
   ],
   "sourceUrl": "https://www.seriouseats.com/buffalo-chicken-wing-recipe",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

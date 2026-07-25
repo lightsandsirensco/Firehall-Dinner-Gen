@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chuck Roast",
+      "name": "boneless chuck roast",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yukon Gold Potatoes",
+      "name": "Yukon Gold potatoes",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "quartered",
       "group": "Vegetables"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "chunked",
       "group": "Vegetables"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "quartered",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "smashed",
       "group": "Aromatics"
     },
     {
-      "name": "Beef Broth",
+      "name": "beef broth",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Braise"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Braise"
     },
     {
-      "name": "Worcestershire Sauce",
+      "name": "Worcestershire sauce",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Braise"
     },
     {
-      "name": "Fresh Thyme",
+      "name": "fresh thyme",
       "quantity": "3",
       "unit": "sprigs",
       "group": "Braise"
     },
     {
-      "name": "All-Purpose Flour",
+      "name": "all-purpose flour",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "for gravy",
       "group": "Finish"
     }
@@ -162,10 +162,19 @@
     "protein": 44,
     "carbs": 38,
     "fats": 24,
-    "label": "~540 cal/serving · 44g protein · 5g fiber (est.)"
+    "label": "~540 cal/serving · 44g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
-  "heroImageAlt": "Dutch Oven Pot Roast — crew-sized firehall meal",
+  "heroImageAlt": "Dutch Oven Pot Roast — american braise plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/dutch-oven-pot-roast.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/dutch-oven-pot-roast.jpg",
   "railImage": "/images/rails/hall-expansion/dutch-oven-pot-roast.jpg",
@@ -177,12 +186,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "chicken-cacciatore-crew",
+    "coq-au-vin-batch",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

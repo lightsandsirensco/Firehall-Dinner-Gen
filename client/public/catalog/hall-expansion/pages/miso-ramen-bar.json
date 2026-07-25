@@ -7,16 +7,16 @@
   "subtitle": "Chicken broth miso ramen with tofu and vegetables for ten",
   "category": "hall_expansion",
   "cuisine": "japanese",
-  "description": "Chicken broth simmers with aromatics, then finishes with red and white miso for a savory bowl base. Serve with ramen noodles, shredded chicken, seared tofu, bean sprouts, corn, and soft eggs.",
+  "description": "Chicken thighs poach right in the broth to double its strength, then a white-and-red miso tare goes in off the heat so it stays aromatic. Seared tofu, jammy eggs, and a staged topping line let the crew build their own bowls.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 90,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 460,
-  "protein": 34,
-  "carbs": 48,
-  "fats": 14,
+  "calories": 480,
+  "protein": 36,
+  "carbs": 50,
+  "fats": 16,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -30,155 +30,229 @@
     "firefighter_meal"
   ],
   "equipment": [
-    "Large pot",
-    "Skillet",
-    "Noodle baskets",
+    "Large pot for the broth",
+    "Skillet for the tofu",
+    "Separate pot for noodles",
     "Hotel pans",
-    "Whisk"
+    "Whisk",
+    "Instant-read thermometer"
   ],
   "ingredients": [
     {
-      "name": "Chicken Thighs",
-      "quantity": "2.7",
-      "unit": "Lb",
-      "notes": "boneless",
+      "name": "chicken thighs",
+      "quantity": "2.5",
+      "unit": "lb",
+      "notes": "boneless, skinless",
       "group": "Protein"
     },
     {
-      "name": "Chicken Broth",
-      "quantity": "7.1",
-      "unit": "Cups",
+      "name": "chicken broth",
+      "quantity": "8",
+      "unit": "cups",
       "group": "Broth"
     },
     {
-      "name": "White Miso Paste",
-      "quantity": "1/4",
-      "unit": "Cup",
+      "name": "white miso paste",
+      "quantity": "1/2",
+      "unit": "cup",
       "group": "Broth"
     },
     {
-      "name": "Red Miso Paste",
-      "quantity": "1.8",
-      "unit": "Tbsp",
+      "name": "red miso paste",
+      "quantity": "2",
+      "unit": "tbsp",
       "group": "Broth"
     },
     {
-      "name": "Ginger",
-      "quantity": "1 3/4",
+      "name": "toasted sesame oil",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Broth"
+    },
+    {
+      "name": "ginger",
+      "quantity": "2",
       "unit": "inches",
       "notes": "sliced",
       "group": "Broth"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "smashed",
       "group": "Broth"
     },
     {
-      "name": "Firm Tofu",
-      "quantity": "1 3/4",
+      "name": "firm tofu",
+      "quantity": "2",
       "unit": "blocks",
-      "notes": "cubed and seared",
+      "notes": "pressed and cubed",
       "group": "Topping"
     },
     {
-      "name": "Ramen Noodles",
-      "quantity": "1 3/4",
-      "unit": "Lb",
+      "name": "ramen noodles",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "fresh or dried",
       "group": "Noodles"
     },
     {
-      "name": "Bean Sprouts",
-      "quantity": "2.7",
-      "unit": "Cups",
+      "name": "bean sprouts",
+      "quantity": "3",
+      "unit": "cups",
       "group": "Topping"
     },
     {
-      "name": "Corn Kernels",
-      "quantity": "1 3/4",
-      "unit": "Cups",
+      "name": "corn kernels",
+      "quantity": "2",
+      "unit": "cups",
       "group": "Topping"
     },
     {
-      "name": "Soft-Boiled Eggs",
-      "quantity": "7",
-      "unit": "eggs",
-      "notes": "halved",
+      "name": "large eggs",
+      "quantity": "8",
+      "unit": "whole",
+      "notes": "soft-boiled and halved",
       "group": "Topping"
     },
     {
-      "name": "Green Onions",
+      "name": "green onions",
       "quantity": "1",
       "unit": "bunch",
-      "notes": "sliced",
+      "notes": "sliced thin",
       "group": "Topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Simmer chicken broth",
-      "instruction": "Poach chicken thighs in broth with ginger and garlic 25 minutes until cooked through. Remove chicken, shred, and reserve.",
+      "title": "Poach the chicken thighs in the broth",
+      "instruction": "Pour the chicken broth into a large pot with the sliced ginger and smashed garlic cloves, then slide in the chicken thighs. Hold at a bare simmer — small bubbles at the edge, never a rolling bubble — for 22–25 minutes, until an instant-read in the thickest thigh reads 165°F. Poaching this gently keeps the meat tender and turns store broth into double-strength stock in the same pot.",
       "minutes": 25,
-      "heatLevel": ""
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 2,
-      "title": "Finish miso base",
-      "instruction": "Keep broth at a gentle simmer. Remove from heat, whisk white and red miso until dissolved, then return to low heat without boiling.",
-      "minutes": 10,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 3,
-      "title": "Sear tofu",
-      "instruction": "Pat tofu dry, sear in oil until golden on multiple sides. Hold warm with shredded chicken.",
+      "title": "Shred the chicken and keep it moist",
+      "instruction": "Lift the thighs to a cutting board, rest 10 minutes until cool enough to handle, and shred with two forks. Toss the shredded chicken with a ladle of warm broth so it doesn't dry into strings while it waits in the pan. Leave the ginger and garlic in the pot — they keep steeping until you strain before service.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
-      "title": "Set the bar",
-      "instruction": "Line up sprouts, corn, eggs, scallions, tofu, and chicken in hotel pans. Keep broth hot in a large pot.",
+      "stepNumber": 3,
+      "title": "Soft-boil the eggs",
+      "instruction": "Lower the eggs into boiling water for exactly 6.5 minutes, then straight into an ice bath — that timing sets the white while the yolk stays jammy and orange. Peel under water, where the shell releases cleaner, and halve just before service so the yolks don't skin over in the pan.",
       "minutes": 15,
-      "heatLevel": ""
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Press and sear the tofu",
+      "instruction": "Cut the firm tofu into 1-inch cubes and press between paper towels under a sheet pan for 10 minutes — surface water is why tofu spits and refuses to brown. Sear in a thin film of oil in a hot skillet, 2–3 minutes per side, until deep golden on at least two faces. There's no internal temp to chase on tofu; the crust is the whole point. Hold it warm beside the chicken.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 5,
-      "title": "Assemble bowls",
-      "instruction": "Cook noodles, divide into bowls, ladle miso broth over, and let crews pick toppings.",
+      "title": "Whisk the miso tare smooth",
+      "instruction": "Whisk the white miso paste and red miso paste with a cup of warm broth and the toasted sesame oil until completely smooth, about 2 minutes — a lumpy slurry never fully dissolves in the pot. White miso brings the sweetness, red brings the depth; the blend is what makes the bowl taste layered instead of just salty.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Blanch sprouts and warm the corn",
+      "instruction": "Dunk the bean sprouts into the hot broth with a spider or strainer for 30 seconds and pull them — just past raw, still crunchy. Give the corn kernels a minute the same way. Both go straight into topping pans at the line; borrowing the broth's heat means zero extra pans to wash.",
+      "minutes": 6,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Season the broth off the heat",
+      "instruction": "Strain out the aromatics and bring the broth just to steaming, then kill the burner and whisk in the miso tare. Miso is a live ferment — a hard bubble dulls its aroma in about a minute, which is why it always goes in off the heat. Taste it: it should be savory enough to flavor plain noodles on its own. Hold warm and covered, below a simmer, until service.",
+      "minutes": 10,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Cook the noodles in batches",
+      "instruction": "Cook the ramen noodles in a separate pot of unsalted, hard-bubbling water in two or three batches, pulling them 30 seconds under the package time, then drain with a firm shake — clinging water thins every bowl it touches. Never cook them in the miso broth; loose starch turns it cloudy and dull.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Open the ramen line",
+      "instruction": "Drop a nest of noodles in each bowl, ladle the miso broth over, and let the crew top their own: shredded chicken, tofu, egg halves, bean sprouts, corn, and green onions in labeled pans, chili crisp at the end. Ladle within a few minutes of the noodles cooking — they keep drinking broth as they sit.",
+      "minutes": 12,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the chicken and tofu — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the chicken and tofu and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "A splash of sesame oil at the bowl station adds aroma without changing the batch.",
-    "Spinach wilted in broth for 30 seconds adds green without extra pans.",
-    "Keep extra miso paste slurry nearby if broth needs salt at service."
+    "Never let miso hit a hard bubble — whisk it in off the heat and it stays aromatic; overheat it and the whole batch flattens.",
+    "Keep a small bowl of extra miso slurry by the stove — if the broth tastes weak at service, stir in a spoonful instead of reaching for salt.",
+    "A couple of handfuls of spinach wilted into the broth at the end adds green without another pan.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Miso ramen bar with tofu, chicken, eggs, and chili crisp.",
-    "Edamame with flaky salt for a simple side."
+    "Main: Miso ramen with shredded chicken, seared tofu, and jammy eggs",
+    "Sides: edamame with flaky salt",
+    "Condiments: chili crisp, extra green onions, toasted sesame seeds",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Broth reheats gently—do not boil or miso flavor dulls.",
-    "Shredded chicken becomes lettuce wraps with miso dressing."
+    "Cool the chicken and tofu in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat the broth gently and refresh it with a spoonful of new miso slurry — reheated miso loses aroma overnight.",
+    "Leftover shredded chicken doubles as lettuce-wrap filling with a miso-mayo dressing next lunch."
   ],
-  "whyCrewsLikeIt": "Miso ramen comes together faster than tonkotsu but still feels special. Tofu and chicken together keep vegetarians and meat eaters happy without cooking two separate meals.",
-  "mealPrepNotes": "Never boil miso—whisk in off heat to preserve flavor. Prep all toppings before noodles go in. Chili crisp at the line is mandatory for half the hall.",
+  "whyCrewsLikeIt": "Lands in under two hours but eats like a project bowl — and tofu and chicken on the same line keep the vegetarians and the meat eaters out of each other's pans.",
+  "mealPrepNotes": "Poach the chicken and soft-boil the eggs a day ahead if needed. Whisk miso in off the heat, always. Cook noodles only at service, in batches, so they never sit.",
+  "substitutions": [
+    "All white miso works if red is missing — add a teaspoon of soy sauce to cover the lost depth.",
+    "Chicken breasts poach in 18–20 minutes but dry out faster; pull them at 165°F sharp.",
+    "Vegetable broth swaps in to make a fully vegetarian pot — season the tare a touch heavier.",
+    "No fresh ramen? Dried instant noodles (seasoning packets binned) hold up fine at a 2-minute cook."
+  ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 460,
-    "protein": 34,
-    "carbs": 48,
-    "fats": 14,
-    "label": "~460 cal/serving · 34g protein · 3g fiber (est.)"
+    "calories": 480,
+    "protein": 36,
+    "carbs": 50,
+    "fats": 16,
+    "label": "~480 cal/serving · 36g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/miso-ramen-bar.jpg",
-  "heroImageAlt": "Miso Ramen Bar — crew-sized firehall meal",
+  "heroImageAlt": "Miso Ramen Bar — japanese bowl plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/miso-ramen-bar.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/miso-ramen-bar.jpg",
   "railImage": "/images/rails/hall-expansion/miso-ramen-bar.jpg",
@@ -187,15 +261,17 @@
   "popularityWeight": 7.8,
   "searchTerms": [
     "miso ramen bar",
-    "crew feeders"
+    "crew feeders",
+    "miso chicken ramen big batch",
+    "ramen topping bar"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "bun-bo-hue-noodle-soup"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-23T20:58:00.000Z",
   "contentVersion": 2
 }

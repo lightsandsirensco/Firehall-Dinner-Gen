@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (85/15)",
+      "name": "ground beef (85/15)",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Flour Tortillas",
+      "name": "flour tortillas",
       "quantity": "10",
       "unit": "whole",
       "notes": "torn into strips",
       "group": "Main"
     },
     {
-      "name": "Red Enchilada Sauce",
+      "name": "red enchilada sauce",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "Chili Powder",
+      "name": "chili powder",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Shredded Cheddar Cheese",
+      "name": "shredded cheddar cheese",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Topping"
     },
     {
-      "name": "Sour Cream",
+      "name": "sour cream",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for serving",
       "group": "Topping"
     },
     {
-      "name": "Fresh Cilantro",
+      "name": "fresh cilantro",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -162,10 +162,19 @@
     "protein": 34,
     "carbs": 36,
     "fats": 28,
-    "label": "~510 cal/serving · 34g protein · 4g fiber (est.)"
+    "label": "~510 cal/serving · 34g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/enchilada-beef-skillet.jpg",
-  "heroImageAlt": "Beef Enchilada Skillet — crew-sized firehall meal",
+  "heroImageAlt": "Beef Enchilada Skillet — mexican skillet plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/enchilada-beef-skillet.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/enchilada-beef-skillet.jpg",
   "railImage": "/images/rails/hall-expansion/enchilada-beef-skillet.jpg",
@@ -177,12 +186,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
-    "loaded-potato-skins",
-    "game-day-pizza-sliders",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "cajun-chicken-rice-skillet",
+    "cast-iron-chicken-fajitas",
+    "pepper-steak-onions",
+    "kielbasa-cabbage-potato-skillet"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

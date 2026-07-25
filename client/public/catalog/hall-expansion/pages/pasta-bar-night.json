@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Penne Pasta",
+      "name": "penne pasta",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Marinara Sauce",
+      "name": "marinara sauce",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauces"
     },
     {
-      "name": "Heavy Cream",
+      "name": "heavy cream",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Alfredo"
     },
     {
-      "name": "Parmesan Cheese",
+      "name": "Parmesan cheese",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "grated",
       "group": "Alfredo"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "3.4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Alfredo"
     },
     {
-      "name": "Basil Pesto",
+      "name": "basil pesto",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauces"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Alfredo"
     },
     {
-      "name": "French Bread",
+      "name": "French bread",
       "quantity": "2",
       "unit": "loaves",
       "group": "Side"
     },
     {
-      "name": "Mozzarella Cheese",
+      "name": "mozzarella cheese",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "shredded",
       "group": "Bar"
     },
     {
-      "name": "Red Pepper Flakes",
+      "name": "red pepper flakes",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Bar"
     }
   ],
@@ -160,10 +160,19 @@
     "protein": 16,
     "carbs": 68,
     "fats": 20,
-    "label": "~520 cal/serving · 16g protein · 4g fiber (est.)"
+    "label": "~520 cal/serving · 16g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/pasta-bar-night.jpg",
-  "heroImageAlt": "Pasta Bar Night — crew-sized firehall meal",
+  "heroImageAlt": "Pasta Bar Night — italian bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/pasta-bar-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/pasta-bar-night.jpg",
   "railImage": "/images/rails/hall-expansion/pasta-bar-night.jpg",
@@ -175,12 +184,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "rice-bowl-bar-night"
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

@@ -15,56 +15,56 @@
     "bacon",
     "bake"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 45,
   "totalTime": 70,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Sandwich Bread",
-      "quantity": "16 slices",
+      "name": "sandwich bread",
+      "quantity": "12.8",
       "notes": "toasted until crisp",
       "group": "Bread"
     },
     {
-      "name": "Deli Turkey",
-      "quantity": "1 1/2 lb",
+      "name": "deli turkey",
+      "quantity": "3/8",
       "notes": "sliced thick",
       "group": "Protein"
     },
     {
-      "name": "Bacon",
-      "quantity": "1 lb",
+      "name": "bacon",
+      "quantity": "3/4",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
-      "name": "Roma Tomatoes",
-      "quantity": "3",
+      "name": "Roma tomatoes",
+      "quantity": "2",
       "notes": "sliced, seeds drained",
       "group": "Veg"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "12",
+      "name": "large eggs",
+      "quantity": "10",
       "group": "Egg mix"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "2 1/2 cups",
+      "name": "whole milk",
+      "quantity": "3/4",
       "group": "Egg mix"
     },
     {
-      "name": "Shredded Swiss",
-      "quantity": "3 cups",
+      "name": "shredded Swiss",
+      "quantity": "2.4",
       "notes": "divided",
       "group": "Cheese"
     },
     {
-      "name": "Mayonnaise",
-      "quantity": "1/2 cup",
+      "name": "mayonnaise",
+      "quantity": "3/8",
       "notes": "light spread on bread, plus lettuce after bake",
       "group": "Finish"
     }
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
   "imageAlt": "Club sandwich breakfast bake with turkey, bacon, tomato, and melted Swiss",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T20:48:24.991Z",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Club Sandwich Breakfast Bake | Firehall Breakfast",
   "collectionTier": "firehall_classic"

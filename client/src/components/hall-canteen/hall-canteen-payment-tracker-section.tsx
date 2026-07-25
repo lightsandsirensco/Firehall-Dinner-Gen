@@ -185,9 +185,9 @@ function PaymentTrackerContent({ hallId }: { hallId: string }) {
         <>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
             <SummaryStat label="Paid" value={data.summary.paid} tone="paid" />
-            <SummaryStat label="Outstanding" value={data.summary.outstanding} tone="due" />
+            <SummaryStat label="Due" value={data.summary.outstanding} tone="due" />
             <SummaryStat label="Overdue" value={data.summary.overdue} tone="overdue" />
-            <SummaryStat label="Total members" value={data.summary.total_members} tone="neutral" />
+            <SummaryStat label="Enrolled" value={data.summary.total_members} tone="neutral" />
           </div>
 
           <div className="flex flex-wrap gap-2">

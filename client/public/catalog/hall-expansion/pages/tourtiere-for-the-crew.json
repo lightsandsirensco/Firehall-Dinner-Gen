@@ -38,71 +38,71 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Pork",
+      "name": "ground pork",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Filling"
     },
     {
-      "name": "Ground Beef",
+      "name": "ground beef",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Filling"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "finely diced",
       "group": "Filling"
     },
     {
-      "name": "Russet Potato",
+      "name": "russet potato",
       "quantity": "3/4",
       "unit": "large",
       "notes": "finely diced",
       "group": "Filling"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Filling"
     },
     {
-      "name": "Ground Cinnamon",
+      "name": "ground cinnamon",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Ground Cloves",
+      "name": "ground cloves",
       "quantity": "3/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Dried Sage",
+      "name": "dried sage",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Pie Crust",
+      "name": "pie crust",
       "quantity": "3.2",
       "unit": "sheets",
       "notes": "store-bought or homemade",
       "group": "Crust"
     },
     {
-      "name": "Beef Broth",
+      "name": "beef broth",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Filling"
     },
     {
-      "name": "Egg",
+      "name": "egg",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "for egg wash",
@@ -168,10 +168,19 @@
     "protein": 28,
     "carbs": 42,
     "fats": 34,
-    "label": "~580 cal/serving · 28g protein · 2g fiber (est.)"
+    "label": "~580 cal/serving · 28g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/tourtiere-for-the-crew.jpg",
-  "heroImageAlt": "Tourtière for the Crew — crew-sized firehall meal",
+  "heroImageAlt": "Tourtière for the Crew — canadian bake plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/tourtiere-for-the-crew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/tourtiere-for-the-crew.jpg",
   "railImage": "/images/rails/hall-expansion/tourtiere-for-the-crew.jpg",
@@ -183,12 +192,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "cottage-pie-for-the-crew",
     "shawarma-bar-night",
     "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-burger-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

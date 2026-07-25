@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Breast",
+      "name": "chicken breast",
       "quantity": "2.8",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Farro",
+      "name": "farro",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry",
       "group": "Base"
     },
     {
-      "name": "English Cucumber",
+      "name": "English cucumber",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Vegetables"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "halved",
       "group": "Vegetables"
     },
     {
-      "name": "Kalamata Olives",
+      "name": "kalamata olives",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "pitted, halved",
       "group": "Vegetables"
     },
     {
-      "name": "Hummus",
+      "name": "hummus",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Topping"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "2",
       "unit": "whole",
       "notes": "juiced",
       "group": "Marinade"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Marinade"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Dressing"
     },
     {
-      "name": "Feta Cheese",
+      "name": "feta cheese",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "crumbled",
       "group": "Finish"
     }
@@ -163,10 +163,19 @@
     "protein": 40,
     "carbs": 44,
     "fats": 14,
-    "label": "~450 cal/serving · 40g protein · 8g fiber (est.)"
+    "label": "~450 cal/serving · 40g protein · 8g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
-  "heroImageAlt": "Mediterranean Chicken Farro Bowls — crew-sized firehall meal",
+  "heroImageAlt": "Mediterranean Chicken Farro Bowls — mediterranean bowl plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
   "railImage": "/images/rails/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
@@ -178,12 +187,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "ginger-soy-chicken-rice-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar",
+    "bun-bo-hue-noodle-soup"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

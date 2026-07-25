@@ -39,64 +39,64 @@
   ],
   "ingredients": [
     {
-      "name": "Pork Shoulder",
+      "name": "pork shoulder",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cubed",
       "group": "Main"
     },
     {
-      "name": "Orange Juice",
+      "name": "orange juice",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Carnitas"
     },
     {
-      "name": "Lime Juice",
+      "name": "lime juice",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Carnitas"
     },
     {
-      "name": "Cumin",
+      "name": "cumin",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Spice"
     },
     {
-      "name": "Cilantro-Lime Rice",
+      "name": "cilantro-lime rice",
       "quantity": "6.4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "cooked",
       "group": "Base"
     },
     {
-      "name": "Black Beans",
+      "name": "black beans",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "seasoned",
       "group": "Bar"
     },
     {
-      "name": "Corn Salsa",
+      "name": "corn salsa",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Shredded Lettuce",
+      "name": "shredded lettuce",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Shredded Cheese",
+      "name": "shredded cheese",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Flour Tortillas",
+      "name": "flour tortillas",
       "quantity": "10",
       "unit": "whole",
       "notes": "optional wraps",
@@ -162,10 +162,19 @@
     "protein": 32,
     "carbs": 52,
     "fats": 22,
-    "label": "~540 cal/serving · 32g protein · 8g fiber (est.)"
+    "label": "~540 cal/serving · 32g protein · 8g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
-  "heroImageAlt": "Burrito Bowl Bar Night — crew-sized firehall meal",
+  "heroImageAlt": "Burrito Bowl Bar Night — mexican bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/burrito-bowl-bar-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/burrito-bowl-bar-night.jpg",
   "railImage": "/images/rails/hall-expansion/burrito-bowl-bar-night.jpg",
@@ -177,12 +186,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

@@ -38,64 +38,64 @@
   ],
   "ingredients": [
     {
-      "name": "Sliced Turkey Breast",
+      "name": "sliced turkey breast",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Meat"
     },
     {
-      "name": "Sliced Ham",
+      "name": "sliced ham",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Meat"
     },
     {
-      "name": "Sliced Roast Beef",
+      "name": "sliced roast beef",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Meat"
     },
     {
-      "name": "Provolone Cheese",
+      "name": "provolone cheese",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
-      "name": "Cheddar Cheese",
+      "name": "cheddar cheese",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
-      "name": "Swiss Cheese",
+      "name": "Swiss cheese",
       "quantity": "3/8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
-      "name": "Sub Rolls",
+      "name": "sub rolls",
       "quantity": "10",
       "unit": "whole",
       "group": "Bread"
     },
     {
-      "name": "Mayonnaise",
+      "name": "mayonnaise",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Spreads"
     },
     {
-      "name": "Mustard Assortment",
+      "name": "mustard assortment",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Spreads"
     },
     {
-      "name": "Lettuce And Tomato",
+      "name": "lettuce and tomato",
       "quantity": "3/4",
       "unit": "tray each",
       "notes": "prepped",
@@ -161,10 +161,19 @@
     "protein": 28,
     "carbs": 42,
     "fats": 22,
-    "label": "~480 cal/serving · 28g protein · 3g fiber (est.)"
+    "label": "~480 cal/serving · 28g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/sandwich-board-night.jpg",
-  "heroImageAlt": "Sandwich Board Night — crew-sized firehall meal",
+  "heroImageAlt": "Sandwich Board Night — american bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/sandwich-board-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/sandwich-board-night.jpg",
   "railImage": "/images/rails/hall-expansion/sandwich-board-night.jpg",
@@ -176,12 +185,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

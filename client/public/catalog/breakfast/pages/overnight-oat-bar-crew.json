@@ -1,0 +1,153 @@
+{
+  "slug": "overnight-oat-bar-crew",
+  "title": "Overnight Oat Bar for the Crew",
+  "subtitle": "Scoop-and-go overnight oats with toppings for a staggered morning hall service.",
+  "description": "This firefighter breakfast oat bar is assembled the night before, then set out as a scoop-and-go station with fruit, nuts, and nut butter. It is ideal for a hall crew that needs a filling morning option without turning on the stove after a late call.",
+  "filters": [
+    "healthy_breakfasts",
+    "feed_a_crew",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "overnight-oats",
+    "oat-bar",
+    "make-ahead",
+    "healthy",
+    "scoop-and-go"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 5,
+  "totalTime": 20,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "old-fashioned rolled oats",
+      "quantity": "4",
+      "notes": "not instant or steel-cut",
+      "group": "Oat base"
+    },
+    {
+      "name": "milk",
+      "quantity": "4",
+      "notes": "dairy or unsweetened oat milk",
+      "group": "Oat base"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "1.6",
+      "notes": "for extra protein",
+      "group": "Oat base"
+    },
+    {
+      "name": "chia seeds",
+      "quantity": "3/8",
+      "notes": "for thickening",
+      "group": "Oat base"
+    },
+    {
+      "name": "maple syrup",
+      "quantity": "3/8",
+      "notes": "adjust to taste",
+      "group": "Sweetener"
+    },
+    {
+      "name": "mixed berries",
+      "quantity": "2.4",
+      "notes": "fresh or thawed and drained",
+      "group": "Toppings"
+    },
+    {
+      "name": "chopped nuts or granola",
+      "quantity": "3/4",
+      "notes": "keep dry until service",
+      "group": "Toppings"
+    },
+    {
+      "name": "peanut or almond butter",
+      "quantity": "3/4",
+      "notes": "plus cinnamon and sliced bananas",
+      "group": "Toppings"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix the overnight oat base",
+      "instruction": "In a large food-safe container, whisk milk, Greek yogurt, chia seeds, maple syrup, and a pinch of salt until smooth. Stir in oats until every oat is wet; dry pockets remain hard even after chilling.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 2,
+      "title": "Chill overnight",
+      "instruction": "Cover and refrigerate at 40°F or below for at least 6 hours and up to 24 hours. Do not leave the dairy-based mixture on the counter to thicken; refrigerator time is both the texture step and the food-safety step.",
+      "minutes": 0
+    },
+    {
+      "stepNumber": 3,
+      "title": "Check texture before service",
+      "instruction": "Stir the oats in the morning. Add milk a few tablespoons at a time if too thick, or let them rest 10 more minutes if loose. Beginners should avoid adding all extra milk at once because oats continue to absorb moisture.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 4,
+      "title": "Set a cold topping bar",
+      "instruction": "Set berries, banana, nut butter, cinnamon, and dry granola in separate bowls with clean spoons. Keep granola and nuts dry until topping so they stay crisp, and label nut-containing toppings for the hall crew.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve scoop-and-go",
+      "instruction": "Portion about 1 cup oats per firefighter into bowls or lidded containers. Keep the oat base over ice or return it to the refrigerator between waves; do not hold dairy oats at room temperature for more than 2 hours.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 6,
+      "title": "Manage call interruptions",
+      "instruction": "Cover the oat container and refrigerate toppings when the alarm sounds. Re-set only the amount needed when the crew returns; the bar is cold-service friendly, but fruit and dairy must remain temperature controlled.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 507,
+    "protein": 22,
+    "carbs": 60,
+    "fat": 22,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Mix the base after dinner or before shift change so it is fully hydrated for the next morning.",
+    "Place the oat container on the cold end of the breakfast line and refresh toppings in small bowls rather than leaving all food out.",
+    "Pack individual lidded portions first when the hall expects a training departure or staggered apparatus checks."
+  ],
+  "cleanupNotes": [
+    "Rinse oat containers and serving spoons immediately; dried oats and chia gel are much harder to scrub later.",
+    "Keep nut butter utensils separate from other toppings to reduce cross-contact on the service line."
+  ],
+  "leftovers": [
+    "Refrigerate leftover overnight oats within 2 hours and use within 3 days; they are served cold and do not require reheating.",
+    "For a warm option, heat a dairy-free portion gently until steaming; any leftover meat or egg add-on must be reheated separately to 165°F."
+  ],
+  "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
+  "thumbImage": "/images/thumbs/breakfast/overnight-oat-bar-crew.jpg",
+  "imageAlt": "Crew-sized overnight oat bar with berries, banana, nut butter, granola, and scoop-and-go bowls",
+  "publishedAt": "2026-07-17T20:15:27.731Z",
+  "updatedAt": "2026-07-17T20:15:27.731Z",
+  "readMinutes": 6,
+  "seoTitle": "Overnight Oat Bar for the Crew | Firehall Breakfast"
+}

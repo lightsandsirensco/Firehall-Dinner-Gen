@@ -1,0 +1,279 @@
+{
+  "slug": "firehall-taco-bowls",
+  "title": "Firehall Taco Bowls",
+  "displayTitle": "Firehall Taco Bowls",
+  "seoTitle": "Firehall Taco Bowls | Firefighter Meal",
+  "shortDescription": "Seasoned beef, cilantro-lime rice, and a full taco bar for ten",
+  "subtitle": "Seasoned beef, cilantro-lime rice, and a full taco bar for ten",
+  "category": "hall_expansion",
+  "cuisine": "mexican",
+  "description": "Seasoned ground beef over cilantro-lime rice with black beans, corn, lettuce, pico, cheddar, sour cream, guacamole, and tortilla strips.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 650,
+  "protein": 38,
+  "carbs": 62,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "beef",
+    "handheld",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large skillet or flat-top",
+    "Rice pot",
+    "Two hotel pans",
+    "Instant-read thermometer",
+    "Serving spoons"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef",
+      "quantity": "2.8",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "taco seasoning",
+      "quantity": "3.4",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "long-grain rice",
+      "quantity": "2.4",
+      "unit": "cups",
+      "notes": "uncooked",
+      "group": "Base"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "1/4",
+      "unit": "cup",
+      "group": "Base"
+    },
+    {
+      "name": "cilantro",
+      "quantity": "3/8",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Base"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "group": "Hot bar"
+    },
+    {
+      "name": "corn",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Hot bar"
+    },
+    {
+      "name": "shredded lettuce",
+      "quantity": "4.8",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "pico de gallo",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "guacamole",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "tortilla strips",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Stage the taco bowl mise en place",
+      "instruction": "Dice no more than 1/4-inch pieces of pico, chop cilantro, and drain the black beans in a colander. Put lettuce, cheese, sour cream, guacamole, and strips into separate shallow pans; keep the dairy and avocado over ice. Measure seasoning and lime now, because hunting for them while beef is browning is how a clean line gets ragged.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Steam the cilantro-lime rice",
+      "instruction": "Rinse rice in a fine sieve until the runoff is mostly clear, then bring it and 5 1/2 cups salted water to a boil in a heavy pot. Cover, reduce to low, and cook 18 minutes without lifting the lid. Rest 10 minutes, fluff, then fold in lime juice and cilantro; stirring during the simmer makes the grains gummy.",
+      "minutes": 28,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season the beef for the skillet",
+      "instruction": "Break the ground beef into loose fist-size pieces on a sheet pan and scatter taco seasoning beside the stove with 1/2 cup water ready. Set a 14-inch skillet over medium-high for 2 minutes; it should shimmer before beef goes in. Starting in a cool pan leaves the meat gray and watery instead of giving you those flavorful browned bits.",
+      "minutes": 5,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brown the taco beef",
+      "instruction": "Add beef to the hot skillet, leave it untouched for 90 seconds, then break it into small crumbles and cook 7–9 minutes until browned with no pink showing. Drain pooled fat, stir in seasoning and water, and simmer 3 minutes until it coats the crumbles. Check 160°F in the center; dry, dusty beef needs a splash of water, not more oil.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Heat beans and char the corn",
+      "instruction": "Warm drained beans with a splash of water in a covered saucepan over medium-low for 5 minutes. At the same time, toast corn in a dry wide skillet over medium-high for 4–5 minutes, stirring only when it starts to pop, until a few kernels brown. Do not combine them early; bean liquid prevents the corn from getting any color.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Set out the taco sauces",
+      "instruction": "Whisk sour cream with a squeeze of lime in a cold bowl until it loosens enough to drizzle, then spoon guacamole into a second bowl and press plastic directly against its surface. Put hot sauce and extra lime beside them. Never warm these sauces near the burners; heat makes sour cream split and turns guacamole brown at the edges.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold the hot taco components",
+      "instruction": "Move rice, beef, beans, and corn into four covered hotel pans and set them in a 200°F oven or warm cabinet, keeping each above 140°F. Taste a spoonful of beef with rice and add salt or lime while it is still in the pan. Covering everything tightly matters; uncovered rice crusts over before the last firefighter gets dinner. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Scoop the taco bowls in order",
+      "instruction": "Put one #8 scoop of cilantro-lime rice into each bowl, then add a ladle of beef, a spoonful each of beans and corn, and a loose handful of lettuce. Keep the hot items on one side so the lettuce stays crisp. A flat mound of toppings looks generous but hides protein and makes portions drift.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Finish the taco bowls",
+      "instruction": "Spoon pico over the lettuce, then add cheddar, a small scoop of guacamole, and a drizzle of lime sour cream. Scatter tortilla strips and cilantro last, with lime wedges on the rim. Keep strips in a dry container until this moment; putting them beside warm beans early is the quickest way to lose their crunch.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Send dinner to the crew",
+      "instruction": "Set the completed bowls at the pass with hot sauce and extra lime, and keep the covered beef and rice pans behind you for refills. Call out that dairy and avocado are on the cold end so nobody parks a hot pan there. Refill toppings in small amounts; an overfilled bowl of pico leaks water across the service table.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the seasoned ground beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the sour cream and guacamole over ice the whole time — warming either near the burners is how you get split cream and browned avocado. On return, spot-check the beef at a safe internal temp, then rebuild bowls with fresh cold toppings.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool seasoned ground beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Brown beef in two batches if the skillet is smaller than 14 inches.",
+    "Rookie tip: Keep mild pico and hot sauce separate so nobody gets surprise heat.",
+    "Use a #8 scoop for rice to keep portions steady.",
+    "Put guacamole out in smaller bowls and replenish it; a big bowl browns fast.",
+    "Prep tip: Drain pico in a sieve for five minutes before service so it does not flood the rice."
+  ],
+  "tonightSpread": [
+    "Main: Firehall taco bowls",
+    "Sides: Tortilla chips and salsa, lime wedges",
+    "Condiments: Guacamole, sour cream, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool seasoned ground beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Turn the beef, beans, and corn into next-shift nachos or quesadillas."
+  ],
+  "whyCrewsLikeIt": "Every firefighter can set their own heat and toppings, while the beef, rice, beans, and corn hold well for a delayed call.",
+  "mealPrepNotes": "Make-ahead: brown the beef and chop toppings one day early. Storage: cool rice, beef, beans, and cold toppings separately for up to 3 days; guacamole is best within 24 hours. Reheating: cover rice and beef with a splash of water and heat to 165°F, then rebuild with chilled toppings.",
+  "substitutions": [
+    "Use ground turkey for beef.",
+    "Use brown rice or cauliflower rice.",
+    "Swap pinto beans for black beans.",
+    "Use Greek yogurt instead of sour cream."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 650,
+    "protein": 38,
+    "carbs": 62,
+    "fats": 28,
+    "label": "~650 cal/serving · 38g protein · 11g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehall-taco-bowls.jpg",
+  "heroImageAlt": "Firehall Taco Bowls — mexican bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehall-taco-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehall-taco-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/firehall-taco-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "firehall taco bowls",
+    "ground beef taco bowls",
+    "crew taco bar",
+    "cilantro lime rice bowl",
+    "mexican dinner for 10",
+    "build your own taco bowl",
+    "firefighter dinner ideas",
+    "meal prep taco bowls"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

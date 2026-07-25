@@ -140,9 +140,13 @@ export default function AboutPage() {
 
         <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl">
 
-          Built by firefighters, for firefighters
+          About Firehall Meals
 
         </h1>
+
+        <p className="mt-2 text-lg text-muted-foreground">
+          Built by firefighters, for firefighters
+        </p>
 
 
 
@@ -196,6 +200,15 @@ export default function AboutPage() {
 
             actually cook — not what looks good on a food blog.
 
+          </p>
+
+          <p className="mt-4 text-muted-foreground leading-relaxed">
+            Recipes are designed for roughly 2–20 firefighters, beginner cooks, and real shift
+            interruptions. Read{" "}
+            <Link href="/how-we-test-recipes" className="text-primary hover:underline">
+              how we test recipes
+            </Link>{" "}
+            for the full standard.
           </p>
 
         </section>

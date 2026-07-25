@@ -1,0 +1,208 @@
+{
+  "slug": "burnt-ends-chili-crew",
+  "title": "Burnt Ends Chili for the Crew",
+  "displayTitle": "Burnt Ends Chili for the Crew",
+  "seoTitle": "Burnt Ends Chili for the Crew | Firefighter Meal",
+  "shortDescription": "Smoky brisket ends folded into hearty bean chili",
+  "subtitle": "Smoky brisket ends folded into hearty bean chili",
+  "category": "hall_expansion",
+  "cuisine": "BBQ",
+  "description": "Chopped burnt ends enrich a tomato-bean chili that simmers in a Dutch oven on the smoker.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 150,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 710,
+  "protein": 45,
+  "carbs": 55,
+  "fats": 33,
+  "tags": [
+    "protein:beef",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "game_day",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "smoker",
+    "Dutch oven",
+    "ladle",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "burnt ends",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "kidney beans",
+      "quantity": "5",
+      "unit": "cans"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "5",
+      "unit": "cans"
+    },
+    {
+      "name": "onions",
+      "quantity": "2.4",
+      "unit": "each"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "4.8",
+      "unit": "cups"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "3/8",
+      "unit": "cup"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat smoker",
+      "instruction": "Preheat smoker to 275°F and make sure its water pan and fuel are ready for a long cook.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Dice burnt ends",
+      "instruction": "Cut burnt ends into spoon-size pieces, trimming only hard fat that will not melt.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Sauté aromatics",
+      "instruction": "Sauté onion and peppers in a Dutch oven until softened, scraping up any browned bits.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bloom spices",
+      "instruction": "Stir chili powder and cumin for 30 seconds so the spices smell fragrant but do not burn.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build chili",
+      "instruction": "Add tomatoes, beans, broth, and burnt ends, stirring until the pot is evenly mixed.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Smoke uncovered",
+      "instruction": "Place the Dutch oven in the smoker uncovered for 45 minutes to pick up smoke.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Simmer covered",
+      "instruction": "Cover and smoke another hour, stirring once so the bottom does not catch.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Check heat",
+      "instruction": "Bring the chili to 165°F, especially if the burnt ends were refrigerated.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold chili",
+      "instruction": "Keep the covered pot above 140°F; add hot broth if it thickens too much.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Ladle bowls",
+      "instruction": "Serve thick chili with cheese, onions, and cornbread rather than thinning it at the table.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Burnt ends — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Burnt ends and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use any smoked brisket if burnt ends are unavailable.",
+    "Smoke can become bitter if the pot stays uncovered too long.",
+    "Offer hot sauce separately."
+  ],
+  "tonightSpread": [
+    "Main: Smoked burnt ends chili",
+    "Sides: cornbread, slaw",
+    "Condiments: cheddar, green onions, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Burnt ends in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Spoon leftovers over baked potatoes."
+  ],
+  "whyCrewsLikeIt": "It turns barbecue leftovers into a complete meal and improves while held hot.",
+  "mealPrepNotes": "Make-ahead: chop burnt ends and chili vegetables 1 day ahead. Storage: refrigerate 3 days. Reheating: bring chili to 165°F.",
+  "substitutions": [
+    "Use smoked chuck roast for burnt ends.",
+    "Use black beans for kidney beans."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 710,
+    "protein": 45,
+    "carbs": 55,
+    "fats": 33,
+    "label": "~710 cal/serving · 45g protein · 12g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+  "heroImageAlt": "Burnt Ends Chili for the Crew — BBQ smoker plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/burnt-ends-chili-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/burnt-ends-chili-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/burnt-ends-chili-crew.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "burnt ends chili recipe",
+    "smoker chili for a crowd",
+    "BBQ firehall chili",
+    "brisket chili ten people"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "pork-belly-burnt-ends",
+    "smoked-sausage-platter"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
+      "name": "boneless chicken thighs",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Baby Spinach",
+      "name": "baby spinach",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Base"
     },
     {
-      "name": "Thick-Cut Bacon",
+      "name": "thick-cut bacon",
       "quantity": "12",
       "unit": "slices",
       "group": "Dressing"
     },
     {
-      "name": "Cremini Mushrooms",
+      "name": "cremini mushrooms",
       "quantity": "1",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Hard-Boiled Eggs",
+      "name": "hard-boiled eggs",
       "quantity": "6",
       "unit": "whole",
       "notes": "quartered",
       "group": "Protein"
     },
     {
-      "name": "Red Wine Vinegar",
+      "name": "red wine vinegar",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Dressing"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Dressing"
     },
     {
-      "name": "Shallot",
+      "name": "shallot",
       "quantity": "1",
       "unit": "whole",
       "notes": "minced",
       "group": "Dressing"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Chicken"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     }
   ],
@@ -160,10 +160,19 @@
     "protein": 34,
     "carbs": 8,
     "fats": 24,
-    "label": "~380 cal/serving · 34g protein · 4g fiber (est.)"
+    "label": "~380 cal/serving · 34g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
-  "heroImageAlt": "Warm Spinach Chicken Salad — crew-sized firehall meal",
+  "heroImageAlt": "Warm Spinach Chicken Salad — american salad plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/warm-spinach-chicken-salad.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/warm-spinach-chicken-salad.jpg",
   "railImage": "/images/rails/hall-expansion/warm-spinach-chicken-salad.jpg",
@@ -175,12 +184,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
+    "station-cobb-salad",
     "loaded-potato-skins",
     "game-day-pizza-sliders",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "pretzel-bite-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Chicken quarters ride a steady 275°F smoke, then get kissed over hotter heat to tighten the skin. Serve with a punchy white sauce and a tray of potato salad.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 120,
   "prepTime": 25,
   "difficulty": "easy",
@@ -39,90 +39,90 @@
   "ingredients": [
     {
       "name": "Chicken Leg Quarters",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
       "notes": "about 8–10 lb total"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp"
     },
     {
       "name": "Black Pepper",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Smoked Paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Garlic Powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Onion Powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp"
     },
     {
       "name": "Brown Sugar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Mayonnaise",
-      "quantity": "1.25",
+      "quantity": "1",
       "unit": "Cups"
     },
     {
       "name": "Apple Cider Vinegar",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup"
     },
     {
       "name": "Lemon Juice",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp"
     },
     {
       "name": "Prepared Horseradish",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Dijon Mustard",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Tbsp"
     },
     {
       "name": "Cayenne",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp"
     },
     {
       "name": "Yukon Gold Potatoes",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "Lb"
     },
     {
       "name": "Celery",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "stalks",
       "notes": "diced"
     },
     {
       "name": "Red Onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "diced"
     },
     {
       "name": "Dill Pickles",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "notes": "chopped"
     }

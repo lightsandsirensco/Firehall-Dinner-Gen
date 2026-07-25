@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { useLocation } from "wouter";
 import { useAuth } from "@/lib/auth/context";
 import {
-  isPathAllowedForOnboardingStep,
   isPersonalOnboardingComplete,
   onboardingPathForStep,
   onboardingSignalsFromAuth,
@@ -10,10 +9,12 @@ import {
   readPersonalOnboardingProgress,
   shouldEnforcePersonalOnboarding,
   shouldShowPersonalOnboardingFunnel,
+  shouldSoftRedirectOnboarding,
 } from "@/lib/onboarding/state";
 
 /**
- * Personal onboarding — routes new users through generate → save → profile → optional hall.
+ * Soft personal onboarding — never traps users in a multi-step funnel.
+ * Incomplete users stay on Home (or meal/hall paths); only redirect away from disallowed dead ends.
  */
 export function OnboardingGate() {
   const { authenticated, loading, user, profile, halls } = useAuth();
@@ -29,11 +30,10 @@ export function OnboardingGate() {
     if (isPersonalOnboardingComplete(progress, halls.length > 0)) return;
 
     const step = personalOnboardingStep(progress, halls.length > 0);
-    if (isPathAllowedForOnboardingStep(location, step)) return;
+    if (!shouldSoftRedirectOnboarding(location, step)) return;
 
     const target = onboardingPathForStep(step);
-    if (location === target) return;
-
+    if (location.split("?")[0] === target.split("?")[0]) return;
     navigate(target);
   }, [authenticated, halls, loading, location, navigate, profile, user?.user_id]);
 

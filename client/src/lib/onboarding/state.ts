@@ -266,15 +266,13 @@ export function onboardingPathForStep(step: PersonalOnboardingStep): string {
   switch (step) {
     case "generate_meal":
     case "save_meal":
-      return "/generator?onboarding=1";
     case "profile":
-      return "/me/profile?onboarding=1";
     case "hall_question":
-      return "/onboarding/hall";
-    case "connect_hall":
-      return "/hall/join?onboarding=1";
     case "completed":
-      return "/home";
+      // Tonight-first — momentum on the personalized dashboard, not a forced funnel.
+      return "/tonight";
+    case "connect_hall":
+      return "/tonight";
   }
 }
 
@@ -284,19 +282,43 @@ export function isPathAllowedForOnboardingStep(
 ): boolean {
   const path = location.split("?")[0];
 
+  // Always allow the Tonight dashboard and workspace switch — never trap users.
+  if (path === "/tonight" || path === "/home" || path === "/onboarding/hall") return true;
+
   switch (step) {
     case "generate_meal":
     case "save_meal":
-      return path === "/generator";
+      return (
+        path === "/generator" ||
+        path === "/explore" ||
+        path === "/wheel" ||
+        path === "/classics-wheel" ||
+        path.startsWith("/recipes")
+      );
     case "profile":
-      return path === "/me/profile";
+      return path === "/me/profile" || path === "/me" || path.startsWith("/me/");
     case "hall_question":
-      return path === "/onboarding/hall";
+      return path === "/onboarding/hall" || path.startsWith("/hall");
     case "connect_hall":
-      return path === "/hall/join" || path === "/hall/welcome";
+      return (
+        path === "/hall/join" ||
+        path === "/hall/welcome" ||
+        path === "/hall/features" ||
+        path === "/hall" ||
+        path.startsWith("/hall/")
+      );
     case "completed":
       return true;
   }
+}
+
+/** Soft gate: only nudge incomplete users back to Home from dead-end forced paths. */
+export function shouldSoftRedirectOnboarding(
+  location: string,
+  step: PersonalOnboardingStep,
+): boolean {
+  if (step === "completed") return false;
+  return !isPathAllowedForOnboardingStep(location, step);
 }
 
 const MARKETING_PATH_PREFIXES = [

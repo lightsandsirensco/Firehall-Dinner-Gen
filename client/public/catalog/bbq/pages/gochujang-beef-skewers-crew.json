@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "korean",
   "description": "Sirloin cubes marinate in gochujang, soy, and pear puree, grill on skewers with scallions until charred and 145°F, and finish with sesame and crushed peanuts.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 14,
   "prepTime": 35,
   "difficulty": "medium",
@@ -40,65 +40,65 @@
   "ingredients": [
     {
       "name": "Boneless Short Rib",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
       "name": "Gochujang",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Marinade"
     },
     {
       "name": "Doenjang",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "group": "Marinade"
     },
     {
       "name": "Rice Wine",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Marinade"
     },
     {
       "name": "Asian Pear",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "pureed",
       "group": "Marinade"
     },
     {
       "name": "Toasted Sesame Oil",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Marinade"
     },
     {
       "name": "Daikon Radish",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "whole",
       "notes": "chunked",
       "group": "Skewers"
     },
     {
       "name": "Shiitake Mushrooms",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Lb",
       "notes": "quartered",
       "group": "Skewers"
     },
     {
       "name": "Toasted Sesame Seeds",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Finish"
     },
     {
       "name": "Crushed Roasted Soybeans",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Finish"
     }

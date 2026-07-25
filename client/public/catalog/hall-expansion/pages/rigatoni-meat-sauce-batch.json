@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Rigatoni Pasta",
+      "name": "rigatoni pasta",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Ground Beef (80/20)",
+      "name": "ground beef (80/20)",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Sauce"
     },
     {
-      "name": "Ground Pork",
+      "name": "ground pork",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Sauce"
     },
     {
-      "name": "Crushed Tomatoes",
+      "name": "crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz each",
       "group": "Sauce"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "finely diced",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "Dry Red Wine",
+      "name": "dry red wine",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "1 3/4",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Grated Parmesan",
+      "name": "grated Parmesan",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for serving",
       "group": "Finish"
     }
@@ -161,10 +161,19 @@
     "protein": 36,
     "carbs": 56,
     "fats": 20,
-    "label": "~540 cal/serving · 36g protein · 5g fiber (est.)"
+    "label": "~540 cal/serving · 36g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
-  "heroImageAlt": "Rigatoni with Meat Sauce — crew-sized firehall meal",
+  "heroImageAlt": "Rigatoni with Meat Sauce — italian pasta plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/rigatoni-meat-sauce-batch.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/rigatoni-meat-sauce-batch.jpg",
   "railImage": "/images/rails/hall-expansion/rigatoni-meat-sauce-batch.jpg",
@@ -176,12 +185,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "mushroom-swiss-steak-pan",
+    "mostaccioli-sausage-bake",
+    "creamy-chicken-penne-alfredo",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

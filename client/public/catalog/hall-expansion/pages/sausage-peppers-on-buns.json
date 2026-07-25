@@ -35,55 +35,55 @@
   ],
   "ingredients": [
     {
-      "name": "Italian Sausage Links",
+      "name": "Italian sausage links",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sweet or hot",
       "group": "Main"
     },
     {
-      "name": "Bell Peppers",
+      "name": "bell peppers",
       "quantity": "4",
       "unit": "count",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "Yellow Onions",
+      "name": "yellow onions",
       "quantity": "2",
       "unit": "large",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "Hoagie Or Sub Rolls",
+      "name": "hoagie or sub rolls",
       "quantity": "10",
       "unit": "count",
       "group": "Buns"
     },
     {
-      "name": "Provolone Cheese",
+      "name": "provolone cheese",
       "quantity": "12",
       "unit": "slices",
       "notes": "optional",
       "group": "Cheese"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Roast"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "1",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Red Wine Vinegar",
+      "name": "red wine vinegar",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Finish"
     }
   ],
@@ -146,10 +146,19 @@
     "protein": 28,
     "carbs": 48,
     "fats": 34,
-    "label": "~620 cal/serving · 28g protein · 4g fiber (est.)"
+    "label": "~620 cal/serving · 28g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
-  "heroImageAlt": "Sausage & Peppers on Buns — crew-sized firehall meal",
+  "heroImageAlt": "Sausage & Peppers on Buns — italian handheld plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/sausage-peppers-on-buns.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/sausage-peppers-on-buns.jpg",
   "railImage": "/images/rails/hall-expansion/sausage-peppers-on-buns.jpg",
@@ -161,12 +170,12 @@
     "italian sausage hoagie firehall"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "bbq-meatball-skewers",
+    "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
+    "buffalo-chicken-wraps"
   ],
   "sourceUrl": "https://www.americastestkitchen.com/recipes/6831-sausage-peppers-and-onions",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

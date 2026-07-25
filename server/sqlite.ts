@@ -203,6 +203,11 @@ export async function getSharedLocalDb(): Promise<SqliteDatabase> {
   return sharedDb;
 }
 
+/** Sync accessor when DB is already open (e.g. mid-request after migrate). */
+export function tryGetSharedLocalDb(): SqliteDatabase | null {
+  return sharedDb;
+}
+
 export function flushSqliteToDisk(): void {
   if (saveTimer) {
     clearTimeout(saveTimer);

@@ -4,19 +4,19 @@
   "displayTitle": "Pecan Bourbon Whole Trout Board",
   "seoTitle": "Pecan Bourbon Whole Trout Board | Firehall BBQ",
   "shortDescription": "Trout on the grill—not salmon, not plank—maple bourbon char for the hall",
-  "subtitle": "Whole butterflied trout, maple-bourbon glaze, and char for ten",
+  "subtitle": "Whole butterflied trout, maple-bourbon glaze, sage brown butter, and pecans for ten",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Whole butterflied rainbow trout brush with maple-bourbon glaze, grill in baskets until skin crisps and flesh reads 145°F, and finish with dill and lemon.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Whole butterflied rainbow trout grilled in baskets at 375°F, glazed with a reduced maple-bourbon-mustard syrup, and finished with sage brown butter, toasted pecans, and Maldon — pulled the moment the flesh flakes at 145°F.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 16,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 412,
-  "protein": 38,
-  "carbs": 5,
-  "fats": 25,
+  "calories": 560,
+  "protein": 40,
+  "carbs": 12,
+  "fats": 38,
   "tags": [
     "protein:seafood",
     "format:river_fish",
@@ -30,30 +30,32 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "flat-top griddle",
-    "fish basket",
+    "gas or charcoal grill",
+    "hinged fish baskets",
     "instant-read thermometer",
+    "small saucepan",
+    "skillet",
     "basting brush",
     "large platters"
   ],
   "ingredients": [
     {
       "name": "Whole Rainbow Trout",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
       "notes": "butterflied, about 5 lb total",
       "group": "Main"
     },
     {
       "name": "Bourbon",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Glaze"
     },
     {
       "name": "Maple Syrup",
-      "quantity": "3",
-      "unit": "Tbsp",
+      "quantity": "1/2",
+      "unit": "Cup",
       "group": "Glaze"
     },
     {
@@ -63,19 +65,6 @@
       "group": "Glaze"
     },
     {
-      "name": "Fresh Thyme",
-      "quantity": "2",
-      "unit": "Tbsp",
-      "group": "Glaze"
-    },
-    {
-      "name": "Pecans",
-      "quantity": "0.5",
-      "unit": "Cup",
-      "notes": "toasted and chopped",
-      "group": "Finish"
-    },
-    {
       "name": "Shallots",
       "quantity": "2",
       "unit": "whole",
@@ -83,16 +72,30 @@
       "group": "Glaze"
     },
     {
-      "name": "Fresh Sage",
+      "name": "Fresh Thyme",
       "quantity": "1",
       "unit": "Tbsp",
-      "notes": "chopped",
+      "notes": "leaves stripped",
+      "group": "Glaze"
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": "1/2",
+      "unit": "Cup",
+      "notes": "for the sage brown butter",
       "group": "Finish"
     },
     {
-      "name": "Brown Butter",
-      "quantity": "0.25",
+      "name": "Fresh Sage",
+      "quantity": "12",
+      "unit": "leaves",
+      "group": "Finish"
+    },
+    {
+      "name": "Pecans",
+      "quantity": "1/2",
       "unit": "Cup",
+      "notes": "roughly chopped",
       "group": "Finish"
     },
     {
@@ -100,87 +103,115 @@
       "quantity": "1",
       "unit": "Tsp",
       "group": "Seasoning"
+    },
+    {
+      "name": "Lemons",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "cut into wedges",
+      "group": "Service"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Build maple-bourbon glaze",
-      "instruction": "Simmer maple syrup, bourbon, mustard, soy, and garlic until slightly thickened. Cool before brushing.",
+      "title": "Reduce the maple-bourbon glaze",
+      "instruction": "Simmer the bourbon with the minced shallots in a small saucepan 2 minutes to burn off the raw alcohol bite, then add the maple syrup, whole-grain mustard, and thyme leaves. Reduce at a lazy bubble 4–5 minutes until it coats a spoon. Split it into two cups: one for brushing during the cook, one reserved clean for the platter — the brushing cup touches raw seafood and gets tossed after.",
       "minutes": 10,
-      "heatLevel": ""
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 2,
-      "title": "Prep trout",
-      "instruction": "Pat trout completely dry inside and out. Season with salt and pepper. Brush flesh lightly with half the glaze.",
+      "title": "Dry the trout and season inside and out",
+      "instruction": "Pat the butterflied trout bone-dry inside and out with paper towels — damp skin welds to hot metal and steams instead of crisping. Season the flesh side with salt and pepper, then brush a thin coat of glaze on the flesh only. Sugared skin burns before it crisps, so the skin stays bare and dry.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Heat grill",
-      "instruction": "Preheat grill to medium, 375°F. Oil fish basket well.",
+      "title": "Toast the pecans, then brown the butter",
+      "instruction": "Toast the chopped pecans in a dry skillet over medium 3–4 minutes, tossing, until they smell nutty; tip them out. In the same skillet, melt the unsalted butter and cook 3–4 minutes, swirling, until the milk solids at the bottom turn hazelnut-brown and the foam smells like toffee. Drop in the sage leaves for the last 30 seconds so they crisp, then pull it off the burner — brown butter goes to black in seconds.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Grill trout",
-      "instruction": "Grill trout in basket flesh-side down 6–8 minutes until skin crisps. Flip carefully.",
+      "title": "Heat the grill and oil the baskets hard",
+      "instruction": "Preheat the grill to medium, 375–400°F at grate level, lid down 8 minutes. Oil the hinged baskets aggressively on both faces — sticking skin is the only way whole trout falls apart, and the basket is what lets you flip eight at once without a spatula ever touching the delicate flesh.",
       "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
-      "title": "Glaze and finish",
-      "instruction": "Brush glaze on flesh side and grill 4–6 minutes until 145°F at thickest part and flesh flakes.",
-      "minutes": 6,
+      "title": "Grill skin-side down until it releases",
+      "instruction": "Load the trout into the baskets opened flat, skin-side down, and grill 6–8 minutes until the skin crisps and turns deep golden — it releases cleanly from hot metal when it's ready and tears when it's not, so give it the full time. Flip the baskets once, gently.",
+      "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 6,
-      "title": "Rest briefly",
-      "instruction": "Rest trout 3 minutes off heat. Transfer to platters flesh-side up.",
-      "minutes": 3,
-      "heatLevel": ""
+      "title": "Glaze and finish to 145°F",
+      "instruction": "Brush the flesh with the cooking glaze, close the lid, and give it 4–6 minutes more. Check the thickest point just behind the head with an instant-read thermometer: 145°F, and the flesh should flake in moist sheets when nudged with a fork. Milky juice between the flakes means just right; dry ridges mean it went a minute long.",
+      "minutes": 6,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 7,
-      "title": "Hold at 140°F",
-      "instruction": "Hold covered at 140°F up to 12 minutes max. Fish dries fast above 145°F hold.",
-      "minutes": 3,
+      "title": "Rest, then pour on the sage brown butter",
+      "instruction": "Rest the trout 3–4 minutes, then move them flesh-side up to platters. Rewarm the brown butter briefly if it seized, spoon it over with the crisped sage and toasted pecans, drizzle thin lines of the reserved glaze, and finish with Maldon salt flakes and lemon wedges — one whole trout per firefighter.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
-      "title": "Serve with dill",
-      "instruction": "Scatter dill and serve with lemon wedges. One whole trout per firefighter.",
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the trout — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the trout and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Fish basket prevents trout from breaking on grates.",
-    "Simmer bourbon glaze to cook off alcohol before brushing.",
-    "145°F hold max—trout tightens into rubber above that."
+    "Oil the basket and dry the skin — sticking is the only failure mode this recipe has.",
+    "Glaze the flesh, never the skin; maple sugar on skin blackens long before the skin crisps.",
+    "Burn the bourbon off in the saucepan, not over the fire — raw alcohol reads harsh against delicate trout.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Maple bourbon grilled trout with dill and lemon.",
-    "Wild rice pilaf with pecans."
+    "Main: maple-bourbon trout with sage brown butter and pecans",
+    "Sides: wild rice pilaf, lemon wedges",
+    "Condiments: reserved glaze, extra Maldon salt",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Flake trout into trout salad sandwiches.",
-    "Mix into creamy trout chowder."
+    "Cool the trout in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Flake cold trout into a quick chowder or fold into a lemony sandwich spread — the skin reheats poorly, so discard it."
   ],
-  "whyCrewsLikeIt": "Trout cooks faster than salmon and feels distinct on the menu. Whole fish on the grill impresses the crew and holds briefly at 140°F between calls.",
-  "mealPrepNotes": "Pat trout dry. Grill medium 375°F in fish baskets 6–8 minutes per side. Hold covered at 140°F up to 12 minutes max. Glaze in last 2 minutes only.",
+  "whyCrewsLikeIt": "A whole fish each looks like a special-occasion cook, but the baskets make it nearly foolproof and it beats salmon night for variety — sixteen minutes of fire, and the sage brown butter does the rest.",
+  "substitutions": [
+    "Salmon fillets swap in if trout isn't at the market — same 375°F grill, same 145°F pull, a couple extra minutes for thickness.",
+    "Skip the bourbon: apple juice plus a teaspoon of cider vinegar keeps the glaze family-friendly with the same sweet-sharp balance.",
+    "Walnuts toast up fine in place of pecans.",
+    "Dried thyme works at a third the amount of fresh."
+  ],
+  "mealPrepNotes": "Glaze and brown butter both hold — make them while the grill heats. Trout goes basket to platter in about 14 minutes; don't hold longer than 12 minutes covered or it dries out.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 412,
-    "protein": 38,
-    "carbs": 5,
-    "fats": 25,
+    "calories": 560,
+    "protein": 40,
+    "carbs": 12,
+    "fats": 38,
     "label": "per serving (hall portion)",
     "source": "estimated"
   },
@@ -201,7 +232,9 @@
     "bbq",
     "firehall",
     "whole trout grill",
-    "bourbon glazed trout"
+    "bourbon glazed trout",
+    "grilled trout fish basket",
+    "sage brown butter trout"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -210,6 +243,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.439Z",
+  "generatedAt": "2026-07-23T21:00:00.000Z",
   "contentVersion": 2
 }

@@ -1,11 +1,11 @@
 # Curated image governance audit
 
-Generated: **2026-06-27T19:41:24.399Z**
+Generated: **2026-07-17T19:16:30.123Z**
 
-- Recipes audited: **677**
-- Failed governance: **70**
+- Recipes audited: **697**
+- Failed governance: **74**
 - Build blockers (≥72): **0**
-- Duplicate hero paths: **212**
+- Duplicate hero paths: **224**
 
 ## Build blockers
 
@@ -29,10 +29,12 @@ _None — images pass governance threshold._
 - `/images/golden-100/bbq-chicken-pizza.jpg` → bbq-chicken-pizza, bbq-chicken-pizza
 - `/images/golden-100/bbq-chicken-sliders.jpg` → bbq-chicken-sliders, bbq-chicken-sliders
 - `/images/hall-expansion/bbq-meatball-skewers.jpg` → bbq-meatball-skewers, bbq-meatball-skewers
+- `/images/hall-expansion/bbq-pulled-pork-bowls.jpg` → bbq-pulled-pork-bowls, bbq-pulled-pork-bowls
 - `/images/golden-100/big-chili.jpg` → big-chili, big-chili
 - `/images/golden-100/beef-broccoli.jpg` → beef-broccoli, beef-broccoli, sheet-pan-dinner-hanger-steak-with-mushrooms-and-carrots
 - `/images/golden-100/beef-barley-soup.jpg` → beef-barley-soup, beef-barley-soup
 - `/images/golden-100/beef-dip.jpg` → beef-dip, beef-dip
+- `/images/hall-expansion/enchilada-beef-skillet.jpg` → enchilada-beef-skillet, enchilada-beef-skillet
 - `/images/hall-expansion/beef-gyros-for-the-hall.jpg` → beef-gyros-for-the-hall, beef-gyros-for-the-hall
 - `/images/golden-100/korean-beef-rice-bowls.jpg` → korean-beef-rice-bowls, korean-beef-rice-bowls
 - `/images/golden-100/beef-stroganoff.jpg` → beef-stroganoff, beef-stroganoff, firehall-beef-plates
@@ -42,6 +44,7 @@ _None — images pass governance threshold._
 - `/images/golden-100/blackened-cod-taco-night.jpg` → blackened-cod-taco-night, blackened-cod-taco-night
 - `/images/golden-100/breakfast-sausage-pizza.jpg` → breakfast-sausage-pizza, breakfast-sausage-pizza
 - `/images/golden-100/buffalo-chicken-dip.jpg` → buffalo-chicken-dip, buffalo-chicken-dip
+- `/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg` → buffalo-chicken-sweet-potato-bowls, buffalo-chicken-sweet-potato-bowls
 - `/images/hall-expansion/buffalo-chicken-wraps.jpg` → buffalo-chicken-wraps, buffalo-chicken-wraps
 - `/images/hall-expansion/build-your-own-pho-bar.jpg` → build-your-own-pho-bar, build-your-own-pho-bar
 - `/images/golden-100/bulgogi-bowls.jpg` → bulgogi-bowls, bulgogi-bowls
@@ -50,6 +53,3 @@ _None — images pass governance threshold._
 - `/images/golden-100/butter-chicken.jpg` → butter-chicken, butter-chicken
 - `/images/golden-100/cajun-chicken-rice-bowl.jpg` → cajun-chicken-rice-bowl, cajun-chicken-rice-bowl
 - `/images/hall-expansion/cajun-chicken-rice-skillet.jpg` → cajun-chicken-rice-skillet, cajun-chicken-rice-skillet
-- `/images/golden-100/caprese-chicken-bake.jpg` → caprese-chicken-bake, caprese-chicken-bake
-- `/images/hall-expansion/cast-iron-chicken-fajitas.jpg` → cast-iron-chicken-fajitas, cast-iron-chicken-fajitas
-- `/images/golden-100/cedar-plank-salmon.jpg` → cedar-plank-salmon, cedar-plank-salmon

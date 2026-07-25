@@ -3,11 +3,11 @@
   "title": "Mushroom Swiss Steak Pan",
   "displayTitle": "Mushroom Swiss Steak Pan",
   "seoTitle": "Mushroom Swiss Steak Pan | Firefighter Meal",
-  "shortDescription": "Seared round steak with mushrooms and Swiss over mashed potatoes for ten",
-  "subtitle": "Seared round steak with mushrooms and Swiss over mashed potatoes for ten",
+  "shortDescription": "Seared sirloin, browned mushrooms, silky sour cream sauce over noodles",
+  "subtitle": "Seared sirloin, browned mushrooms, silky sour cream sauce over noodles",
   "category": "hall_expansion",
   "cuisine": "russian",
-  "description": "Sirloin strips sear fast, simmer with mushrooms and onions in a rich broth base, then finish off heat with sour cream for a silky sauce. Serve over wide egg noodles with parsley.",
+  "description": "Thin-sliced sirloin seared hard in batches, cremini mushrooms browned dry until their water cooks off, and a Dijon–sour cream sauce finished strictly off heat so it stays silky instead of curdling. Served over buttered egg noodles for the whole hall.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 35,
@@ -31,74 +31,82 @@
   ],
   "equipment": [
     "Large Dutch oven",
-    "Stock pot",
+    "Stock pot for noodles",
+    "Colander",
     "Tongs",
     "Whisk",
-    "Chef knife"
+    "Chef knife",
+    "Instant-read thermometer"
   ],
   "ingredients": [
     {
-      "name": "Sirloin Steak",
+      "name": "sirloin steak",
       "quantity": "2.4",
-      "unit": "Lb",
-      "notes": "sliced thin",
+      "unit": "lb",
+      "notes": "sliced thin against the grain",
       "group": "Main"
     },
     {
-      "name": "Wide Egg Noodles",
+      "name": "wide egg noodles",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Cremini Mushrooms",
+      "name": "neutral oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Main"
+    },
+    {
+      "name": "cremini mushrooms",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Yellow Onion",
-      "quantity": "3/4",
+      "name": "yellow onion",
+      "quantity": "1",
       "unit": "whole",
       "notes": "diced",
       "group": "Vegetables"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "Beef Broth",
+      "name": "beef broth",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Sour Cream",
+      "name": "sour cream",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "3.4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Sauce"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -106,55 +114,104 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Sear the beef",
-      "instruction": "Pat sirloin strips dry and season with salt and pepper. Sear in butter over high heat in batches 30–45 seconds per side until browned but still pink inside. Set aside.",
-      "minutes": 10,
+      "title": "Slice the sirloin and prep the vegetables",
+      "instruction": "Slice sirloin against the grain into strips about ¼ inch thick — cutting across the grain shortens the muscle fibers so every bite chews tender instead of ropy. If the meat slides around under the knife, firm it in the freezer 20 minutes first. Pat the strips bone dry with paper towels and season with salt and pepper; wet meat steams instead of browning. Slice the cremini mushrooms ¼ inch thick, dice the yellow onion, mince the garlic cloves, and measure the beef broth, sour cream, and Dijon mustard into cups so nothing waits once the pan is hot.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Cook mushrooms and onion",
-      "instruction": "In the same pot, sauté mushrooms and onion 8 minutes until moisture evaporates and edges brown. Add garlic and cook 1 minute.",
-      "minutes": 9,
-      "heatLevel": ""
+      "title": "Sear the steak strips in hot batches",
+      "instruction": "Heat 2 tbsp neutral oil in the Dutch oven over medium-high until shimmering. Sear the sirloin strips in three batches in a single layer, untouched 60–90 seconds per side, until the edges brown deeply — a crowded pot steams the meat gray instead of building crust, and crust is where the flavor lives. Spot-check a thick strip with an instant-read thermometer: whole-muscle beef is safe at 145°F, and thin strips get there fast. Move each batch to a bowl with tongs, catching every drop of juice for later.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Build the sauce",
-      "instruction": "Pour in beef broth and simmer 5 minutes, scraping fond from the bottom. Whisk Dijon into sour cream, then stir off heat into the warm broth until smooth.",
-      "minutes": 6,
-      "heatLevel": ""
+      "title": "Brown the mushrooms until their water is gone",
+      "instruction": "Add 2 tbsp of the butter to the same pot, still over medium-high. Spread the cremini mushrooms out and leave them alone for the first 3 minutes, then toss occasionally, 8–9 minutes total, until their liquid cooks off and the edges turn deep brown. Mushrooms only brown after their moisture is gone — pull them early and pale and the sauce tastes flat instead of savory.",
+      "minutes": 9,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
-      "title": "Cook the noodles",
-      "instruction": "Boil egg noodles in salted water until al dente, about 8 minutes. Drain and toss with a tablespoon of butter.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Soften the onion and bloom the garlic",
+      "instruction": "Drop the heat to medium. Add the diced onion with a pinch of salt and cook 4–5 minutes, scraping the browned fond off the bottom, until soft and translucent with golden edges. Stir in the minced garlic and cook 30–45 seconds, just until fragrant — garlic goes from toasty to bitter fast, so keep it moving.",
+      "minutes": 6,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
-      "title": "Combine and serve",
-      "instruction": "Return beef and any juices to sauce and warm 2 minutes—do not boil. Serve noodles topped with stroganoff and parsley at the line.",
+      "title": "Deglaze and reduce the broth",
+      "instruction": "Pour in the broth and scrape the bottom of the pot clean — that browned fond is concentrated flavor that would otherwise burn onto the pan. Simmer briskly over medium-high 5–6 minutes until reduced by about a third; a lightly reduced base keeps the finished sauce from going watery once the dairy joins. It should coat the mushrooms loosely, not slosh like soup.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Boil the egg noodles",
+      "instruction": "Meanwhile, bring the stock pot of water to a rolling boil over high heat and salt it hard — it should taste like seawater. Boil the wide egg noodles 7–8 minutes until al dente with a slight chew; they keep softening under hot sauce, so err firm. Drain in the colander and toss with the last tablespoon of butter so they don't weld together on the tray.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Finish the sauce off heat with sour cream",
+      "instruction": "Kill the heat and let the pot stop bubbling, about 1 minute. Whisk the Dijon mustard into the sour cream, then stir the mixture into the warm broth base until smooth and pale tan. Sour cream stirred in over direct heat curdles into grainy flecks — finishing off heat is the whole trick to a silky pan. Taste it: tangy, savory, and rich, with the Dijon giving a quiet background sharpness.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Return the meat and serve over noodles",
+      "instruction": "Slide the seared strips and all their resting juices back into the sauce and warm through 2 minutes on low, never letting it bubble — a hard bubble breaks the sour cream and toughens the thin strips. Pile buttered noodles into hotel pans or onto plates, ladle the pan over the top, and shower with chopped parsley for a fresh bite against the rich sauce. Call the crew while it's steaming.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the beef and sauce — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Partially freeze sirloin 20 minutes for easier thin slicing.",
-    "If sauce breaks, whisk in a spoonful of cold sour cream off heat to bring it back.",
-    "Frozen peas stirred in at the end add color and stretch the dish cheaply."
+    "Partially freeze the sirloin 20 minutes before slicing — firm meat cuts into even thin strips instead of ragged chunks.",
+    "If the sauce breaks, pull the pot off heat and whisk in a spoonful of cold sour cream — it usually pulls back together.",
+    "Frozen peas stirred in with the meat at the end add color and stretch the pot for a bigger crew.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Stroganoff over noodles with crusty bread for sauce mopping.",
-    "Simple cucumber salad with dill for a cool contrast."
+    "Main: Seared sirloin and mushroom pan over buttered egg noodles",
+    "Sides: crusty bread for sauce mopping, cucumber-dill salad for cool contrast",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Reheat gently with splash of broth—microwave on medium, not full blast.",
-    "Fill baked potato skins with stroganoff and melted cheese."
+    "Cool the beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat gently on medium-low with a splash of broth — a hard boil breaks the sour cream on the second pass too.",
+    "Store noodles and sauce separately; noodles soaked in sauce overnight turn to mush."
   ],
-  "whyCrewsLikeIt": "Stroganoff is pure comfort after cold calls. The sauce feels indulgent but comes together in one pot plus a noodle boil—manageable even for newer cooks.",
-  "mealPrepNotes": "Slice beef against the grain thin for tender bites. Stir sour cream off heat so it does not break. Hold sauce and noodles separately if holding more than 30 minutes.",
+  "whyCrewsLikeIt": "Pure comfort after cold night calls — hard-browned mushrooms and a silky sour cream sauce over a pile of buttered noodles, all from one pot plus a noodle boil.",
+  "substitutions": [
+    "Ground chuck swaps for sirloin in a pinch — brown it hard to 160°F and skip the batch searing; the sauce still works.",
+    "No cremini? White button mushrooms work — cook 2 extra minutes since they carry more water.",
+    "Greek yogurt stands in for sour cream 1:1 — tangier finish, and it breaks even faster over heat, so keep it strictly off the burner.",
+    "No egg noodles in the pantry? Rotini or mashed potatoes hold the sauce just as well."
+  ],
+  "mealPrepNotes": "Slice the meat thin against the grain for tender bites. Stir sour cream in off heat so it does not break. Hold sauce and noodles separately if holding more than 30 minutes.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
@@ -162,10 +219,19 @@
     "protein": 38,
     "carbs": 48,
     "fats": 22,
-    "label": "~520 cal/serving · 38g protein · 3g fiber (est.)"
+    "label": "~520 cal/serving · 38g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
-  "heroImageAlt": "Mushroom Swiss Steak Pan — crew-sized firehall meal",
+  "heroImageAlt": "Mushroom Swiss Steak Pan — russian pasta plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/mushroom-swiss-steak-pan.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/mushroom-swiss-steak-pan.jpg",
   "railImage": "/images/rails/hall-expansion/mushroom-swiss-steak-pan.jpg",
@@ -174,15 +240,17 @@
   "popularityWeight": 7.8,
   "searchTerms": [
     "mushroom swiss steak pan",
-    "crew feeders"
+    "crew feeders",
+    "beef stroganoff style skillet",
+    "sirloin mushroom noodles"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "mostaccioli-sausage-bake",
+    "creamy-chicken-penne-alfredo",
+    "rigatoni-meat-sauce-batch",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-23T21:10:00.000Z",
   "contentVersion": 2
 }

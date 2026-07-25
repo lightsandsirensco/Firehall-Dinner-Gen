@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Sliced Salami",
+      "name": "sliced salami",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Meat"
     },
     {
-      "name": "Sliced Prosciutto",
+      "name": "sliced prosciutto",
       "quantity": "5/8",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Meat"
     },
     {
-      "name": "Sliced Turkey Breast",
+      "name": "sliced turkey breast",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Meat"
     },
     {
-      "name": "Cheddar Cheese",
+      "name": "cheddar cheese",
       "quantity": "5/8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cubed",
       "group": "Cheese"
     },
     {
-      "name": "Gouda Cheese",
+      "name": "gouda cheese",
       "quantity": "5/8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced",
       "group": "Cheese"
     },
     {
-      "name": "Brie Wheel",
+      "name": "brie wheel",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "8 oz, optional baked",
       "group": "Cheese"
     },
     {
-      "name": "Crackers Assortment",
+      "name": "crackers assortment",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Carbs"
     },
     {
-      "name": "Grapes",
+      "name": "grapes",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Produce"
     },
     {
-      "name": "Cornichons",
+      "name": "cornichons",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Accents"
     },
     {
-      "name": "Fig Jam",
+      "name": "fig jam",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Spreads"
     }
   ],
@@ -160,10 +160,19 @@
     "protein": 22,
     "carbs": 32,
     "fats": 24,
-    "label": "~420 cal/serving · 22g protein · 2g fiber (est.)"
+    "label": "~420 cal/serving · 22g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/firehall-charcuterie-board.jpg",
-  "heroImageAlt": "Firehall Charcuterie Board — crew-sized firehall meal",
+  "heroImageAlt": "Firehall Charcuterie Board — american bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/firehall-charcuterie-board.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/firehall-charcuterie-board.jpg",
   "railImage": "/images/rails/hall-expansion/firehall-charcuterie-board.jpg",
@@ -175,12 +184,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
-    "loaded-potato-skins",
-    "game-day-pizza-sliders",
     "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

@@ -34,6 +34,18 @@ const SOURCE_MAP: Record<string, EmailLeadSource> = {
   plans: "pricing",
   pilot: "pilot",
   shopping_list: "shopping_list",
+  magic_link: "magic_link",
+  email_modal: "email_modal",
+  "email-modal": "email_modal",
+  waitlist: "waitlist",
+  hall_create: "hall_create",
+  "hall-create": "hall_create",
+  hall_invite: "hall_invite",
+  "hall-invite": "hall_invite",
+  newsletter: "newsletter",
+  beta: "beta",
+  contact: "contact",
+  contact_form: "contact",
 };
 
 export function normalizeLeadSource(raw: string): EmailLeadSource {

@@ -38,65 +38,65 @@
   ],
   "ingredients": [
     {
-      "name": "Cream Cheese",
+      "name": "cream cheese",
       "quantity": "12.8",
-      "unit": "Oz",
+      "unit": "oz",
       "notes": "softened",
       "group": "Main"
     },
     {
-      "name": "Sour Cream",
+      "name": "sour cream",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Main"
     },
     {
-      "name": "Mayonnaise",
+      "name": "mayonnaise",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Main"
     },
     {
-      "name": "Sharp Cheddar Cheese",
+      "name": "sharp cheddar cheese",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "shredded",
       "group": "Main"
     },
     {
-      "name": "Cooked Bacon",
+      "name": "cooked bacon",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "crumbled",
       "group": "Main"
     },
     {
-      "name": "Jalapeño Peppers",
+      "name": "jalapeño peppers",
       "quantity": "5",
       "unit": "whole",
       "notes": "deseeded, diced",
       "group": "Main"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Onion Powder",
+      "name": "onion powder",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Tortilla Chips",
+      "name": "tortilla chips",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Serve"
     },
     {
-      "name": "Baguette",
+      "name": "baguette",
       "quantity": "2",
       "unit": "loaves",
       "notes": "sliced and toasted",
@@ -162,10 +162,19 @@
     "protein": 16,
     "carbs": 24,
     "fats": 40,
-    "label": "~510 cal/serving · 16g protein · 2g fiber (est.)"
+    "label": "~510 cal/serving · 16g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/jalapeno-popper-dip.jpg",
-  "heroImageAlt": "Jalapeño Popper Dip — crew-sized firehall meal",
+  "heroImageAlt": "Jalapeño Popper Dip — american bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/jalapeno-popper-dip.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/jalapeno-popper-dip.jpg",
   "railImage": "/images/rails/hall-expansion/jalapeno-popper-dip.jpg",
@@ -177,12 +186,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
-    "loaded-potato-skins",
-    "game-day-pizza-sliders",
     "pretzel-bite-platter",
-    "philly-cheesesteak-sliders"
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

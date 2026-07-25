@@ -23,49 +23,49 @@
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Cube Steak",
+      "name": "cube steak",
       "quantity": "3 lb",
       "notes": "pounded 1/4-inch thin",
       "group": "Steak"
     },
     {
-      "name": "All-Purpose Flour",
+      "name": "all-purpose flour",
       "quantity": "2 cups",
       "notes": "seasoned with salt, pepper, garlic powder",
       "group": "Steak"
     },
     {
-      "name": "Buttermilk",
+      "name": "buttermilk",
       "quantity": "2 cups",
       "notes": "for dredge",
       "group": "Steak"
     },
     {
-      "name": "Pan Drippings",
+      "name": "pan drippings",
       "quantity": "1/4 cup",
       "notes": "plus 1/4 cup flour for roux",
       "group": "Gravy"
     },
     {
-      "name": "Whole Milk",
+      "name": "whole milk",
       "quantity": "4 cups",
       "notes": "warm",
       "group": "Gravy"
     },
     {
-      "name": "Coarse Black Pepper",
+      "name": "coarse black pepper",
       "quantity": "2 tsp",
       "notes": "freshly cracked",
       "group": "Gravy"
     },
     {
-      "name": "Yukon Gold Potatoes",
+      "name": "Yukon gold potatoes",
       "quantity": "5 lb",
       "notes": "peeled, boiled, and mashed with butter",
       "group": "Sides"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "8",
       "notes": "fried sunny-side up",
       "group": "Protein"
@@ -140,13 +140,10 @@
   ],
   "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
   "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
-  "imageAlt": "Wide firehall breakfast platter: country-fried steak cutlet with white gravy, fried-egg zone, and hash-brown zone on a crew prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T21:53:50.115Z",
+  "imageAlt": "Country fried steak with pepper gravy, mashed potatoes, and a fried egg",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 9,
   "seoTitle": "Country Fried Steak and Eggs | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "heroImageAlt": "Wide firehall breakfast platter: country-fried steak cutlet with white gravy, fried-egg zone, and hash-brown zone on a crew prep table, family-style",
-  "mobileImage": "/images/mobile/breakfast/country-fried-steak-eggs.jpg",
-  "railImage": "/images/rails/breakfast/country-fried-steak-eggs.jpg"
+  "collectionTier": "firehall_classic"
 }

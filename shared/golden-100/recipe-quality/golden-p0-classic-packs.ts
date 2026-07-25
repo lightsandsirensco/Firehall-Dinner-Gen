@@ -85,14 +85,14 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(
         5,
         "Top with cheese and bake",
-        "Lay fried cutlets in buttered hotel pans. Spoon marinara over each, then layer mozzarella and provolone. Bake at 425°F 12–15 minutes until cheese bubbles and edges brown. Rest 3 minutes before serving — molten cheese burns rookies.",
+        "Lay fried cutlets in buttered hotel pans. Spoon marinara over each, then shingle the sliced fresh mozzarella and provolone on top. Bake at 425°F 12–15 minutes until cheese bubbles and edges brown. Rest 3 minutes before serving — molten cheese burns rookies.",
         15,
         "high",
       ),
       step(
         6,
         "Serve Chicken Parm for the crew",
-        "Plate cutlets with spaghetti and extra marinara on sheet trays. Finish with remaining parmesan and basil. Garlic bread goes on a separate tray so crust stays crisp.",
+        "Plate cutlets with spaghetti and extra marinara on sheet trays. Finish with remaining parmesan and the torn fresh basil. Garlic bread goes on a separate tray so crust stays crisp.",
         5,
         "low",
       ),
@@ -128,7 +128,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(
         2,
         "Crisp the bacon",
-        "Lay thick-cut bacon on sheet pans in a single layer. Bake at 400°F 15–18 minutes until shatter-crisp and deep mahogany. Drain on paper towels; crumble when cool. Hold warm in a dry pan — wet bacon steams the salad.",
+        "Lay thick-cut bacon on sheet pans in a single layer. Bake at 400°F 15–18 minutes until shatter-crisp and deep mahogany — bacon clears its 145°F internal temp point long before it crisps, so here you cook for texture, not safety. Drain on paper towels; crumble when cool. Hold warm in a dry pan — wet bacon steams the salad.",
         18,
         "high",
       ),
@@ -486,7 +486,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(
         2,
         "Low-and-slow cook",
-        "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until pork probes tender at 203°F and shreds with a fork. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
+        "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until the pork probes tender at an internal temp of 203°F and shreds with a fork — well past the 145°F safe point, collagen needs the extra heat to melt. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
         480,
         "low",
       ),

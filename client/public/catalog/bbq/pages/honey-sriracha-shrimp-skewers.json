@@ -3,20 +3,20 @@
   "title": "Palm Sugar Lime Shrimp Skewers",
   "displayTitle": "Palm Sugar Lime Shrimp Skewers",
   "seoTitle": "Palm Sugar Lime Shrimp Skewers | Firehall BBQ",
-  "shortDescription": "Shrimp skewer night—honey sriracha glaze, fast char, no generic kabob repeat",
-  "subtitle": "Kaffir lime glazed jumbo shrimp, Thai basil, and char for ten",
+  "shortDescription": "Shrimp skewer night—palm sugar lime lacquer, fast char, no generic kabob repeat",
+  "subtitle": "Palm sugar–lime glazed jumbo shrimp with Thai basil, fried shallots, and char for ten",
   "category": "bbq_grill_nights",
   "cuisine": "thai-american",
-  "description": "Jumbo shrimp marinate briefly in lime and garlic, grill on skewers until pink and 140°F, and glaze with honey-sriracha in the final minute.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Colossal shrimp take a 30-minute lime-shallot marinade, hit a 450°F grate for two minutes a side, and get lacquered with a palm sugar–nam pla–tamarind glaze in the final minute — finished with Thai basil and fried shallots.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 10,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 523,
+  "calories": 540,
   "protein": 50,
-  "carbs": 9,
-  "fats": 30,
+  "carbs": 14,
+  "fats": 28,
   "tags": [
     "protein:seafood",
     "format:crew_kebab",
@@ -30,25 +30,27 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "flat-top griddle",
-    "skewers",
+    "gas or charcoal grill",
+    "metal or soaked bamboo skewers",
     "instant-read thermometer",
     "basting brush",
+    "small saucepan",
     "hotel pans",
     "tongs"
   ],
   "ingredients": [
     {
       "name": "Gulf Colossal Shrimp",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "Lb",
-      "notes": "peeled and deveined",
+      "notes": "peeled and deveined, tails on",
       "group": "Main"
     },
     {
       "name": "Palm Sugar",
-      "quantity": "0.25",
+      "quantity": "1/3",
       "unit": "Cup",
+      "notes": "grated or chopped",
       "group": "Glaze"
     },
     {
@@ -62,20 +64,14 @@
       "name": "Nam Pla",
       "quantity": "2",
       "unit": "Tbsp",
+      "notes": "Thai fish sauce",
       "group": "Glaze"
     },
     {
       "name": "Tamarind Concentrate",
       "quantity": "1",
       "unit": "Tbsp",
-      "group": "Marinade"
-    },
-    {
-      "name": "Shallots",
-      "quantity": "2",
-      "unit": "whole",
-      "notes": "minced",
-      "group": "Marinade"
+      "group": "Glaze"
     },
     {
       "name": "Thai Bird Chilies",
@@ -85,15 +81,29 @@
       "group": "Glaze"
     },
     {
+      "name": "Shallots",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "Limes",
+      "quantity": "3",
+      "unit": "whole",
+      "notes": "2 juiced, 1 in wedges",
+      "group": "Marinade"
+    },
+    {
       "name": "Thai Basil",
-      "quantity": "0.5",
+      "quantity": "1/2",
       "unit": "Cup",
-      "notes": "chopped",
+      "notes": "torn",
       "group": "Finish"
     },
     {
       "name": "Fried Shallots",
-      "quantity": "0.5",
+      "quantity": "1/2",
       "unit": "Cup",
       "group": "Finish"
     },
@@ -107,82 +117,103 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Marinate shrimp briefly",
-      "instruction": "Toss shrimp with half the lime juice, garlic, fish sauce, and salt. Marinate 20–30 minutes refrigerated only.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Simmer the palm sugar glaze",
+      "instruction": "Melt the palm sugar with 2 tablespoons of water in a small saucepan over medium-low, then stir in the nam pla, tamarind concentrate, minced Thai bird chilies, and shredded kaffir lime leaves. Simmer 3–4 minutes until it coats the back of a spoon, then pull it — it thickens more as it cools, and a glaze that sets hard drags off the brush. You want sweet, salty, sour, and hot fighting each other in one spoonful.",
+      "minutes": 8,
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 2,
-      "title": "Build honey sriracha glaze",
-      "instruction": "Whisk honey, sriracha, and remaining lime juice until smooth. Reserve for basting.",
-      "minutes": 5,
+      "title": "Marinate the shrimp — 30 minutes, no longer",
+      "instruction": "Toss the shrimp with the minced shallots, the juice of two limes, a tablespoon of the glaze, and a pinch of salt, then refrigerate 20–30 minutes. Set a timer: lime acid starts cooking the outside like ceviche past the half hour, and over-marinated shrimp turn mushy over the fire instead of snapping.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Heat grill hot",
-      "instruction": "Preheat grill to high, 450°F. Oil grates. Have glaze and brush ready.",
-      "minutes": 8,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 4,
-      "title": "Skewer shrimp",
-      "instruction": "Thread 4–5 shrimp per skewer in a flat line for even contact. Pat dry before grilling.",
+      "title": "Thread them flat",
+      "instruction": "Thread 4–5 shrimp per skewer, running the point through both the thick head end and the tail of each one so they lie flat — flat shrimp make full contact and char, while curled shrimp bridge the grate and steam in their own gaps. Pat the loaded skewers dry with paper towel; surface water is the enemy of char on a two-minute cook.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
+      "stepNumber": 4,
+      "title": "Get the grate screaming and slicked",
+      "instruction": "Preheat the grill to high, 450–500°F at the grate, lid down for 8 minutes. Scrub the grates clean, then wipe them with grapeseed oil on a folded paper towel held in tongs — grapeseed's high smoke point survives where olive oil burns to varnish. At this heat, anything that sticks tears.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
       "stepNumber": 5,
-      "title": "Grill shrimp",
-      "instruction": "Grill skewers 2 minutes per side until pink, lightly charred, and 135–140°F internal.",
+      "title": "Grill the shrimp two minutes a side",
+      "instruction": "Lay the skewers over direct heat and grill 2 minutes per side. Done is pink with charred edges, opaque all the way through, and 145°F on an instant-read thermometer in the thickest shrimp — colossal shrimp can hide a translucent center behind a charred shell, so always check the fattest one. Thirty seconds past that and they start turning to erasers.",
       "minutes": 6,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
-      "title": "Glaze finish",
-      "instruction": "Brush honey sriracha and grill 30 seconds per side until sticky. Move to cooler zone if sugar burns.",
+      "title": "Lacquer with glaze over the flame",
+      "instruction": "Brush the glaze on both sides of the skewers and give them 30 seconds per side more, until sticky and glossy with a few caramelized spots. Palm sugar scorches fast — if flames chase the drips, slide the skewers to the cooler edge and finish there. Glazing at the end keeps the char clean and the lacquer bright.",
       "minutes": 2,
       "heatLevel": "high"
     },
     {
       "stepNumber": 7,
-      "title": "Hold at 140°F",
-      "instruction": "Rest skewers 2 minutes. Transfer to hotel pans, cover loosely, hold at 140°F up to 12 minutes max.",
-      "minutes": 3,
+      "title": "Shower with basil and fried shallots",
+      "instruction": "Pile the skewers on platters and scatter the torn Thai basil and fried shallots over while the shrimp are hot — the heat blooms the basil into fragrance, and the shallots only stay crunchy if they land at service. Lime wedges on the side; about 8 oz of shrimp per firefighter.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
-      "title": "Serve with herbs",
-      "instruction": "Scatter cilantro and green onions at the line. About 8 oz shrimp per firefighter.",
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the shrimp skewers — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the shrimp skewers and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Never marinate shrimp over 30 minutes—lime turns them mushy.",
-    "Flat skewer layout beats stacked shrimp for even char.",
-    "140°F hold max—shrimp tighten up fast above that."
+    "Set a timer on the marinade — lime acid ceviches the surface past 30 minutes and the texture never recovers.",
+    "Palm sugar glaze sets hard as it cools; 20 seconds back over low flame loosens it before brushing.",
+    "No kaffir lime leaves? Double the lime zest into the glaze — different perfume, same lift.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Honey sriracha shrimp skewers with lime and cilantro.",
-    "Coconut rice or quick noodle salad on the side."
+    "Main: palm sugar lime shrimp skewers with Thai basil and fried shallots",
+    "Sides: coconut rice, quick cucumber salad",
+    "Condiments: lime wedges, reserved glaze as a dip",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Pull shrimp for Thai-style lettuce wraps.",
-    "Chop into fried rice with extra sriracha."
+    "Cool the shrimp skewers in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Leftover shrimp eat better cold than reheated — pull them for lettuce wraps or toss into fried rice off the heat at the end."
   ],
-  "whyCrewsLikeIt": "Shrimp skewers cook in under 10 minutes—ideal when the tone might drop. They hold covered at 140°F briefly and taste best with fresh lime at service.",
-  "mealPrepNotes": "Marinate shrimp 20–30 minutes max—acid toughens longer soaks. Grill high 450°F, 2 minutes per side. Hold covered at 140°F up to 12 minutes. Glaze at service if needed.",
+  "whyCrewsLikeIt": "Ten minutes of fire from grate to platter, and the sweet-hot lacquer with crunchy fried shallots makes these vanish faster than any kebab night — the kind of cook you can still start when a tone feels likely.",
+  "substitutions": [
+    "Honey swaps 1:1 for palm sugar with a squeeze of sriracha for heat — that's the classic honey-sriracha version of this same skewer.",
+    "Any fish sauce is nam pla — use whatever bottle the pantry has.",
+    "Jumbo (21/25) shrimp work fine; drop to 90 seconds per side and watch the 145°F mark.",
+    "One serrano stands in for two bird chilies at about half the heat."
+  ],
+  "mealPrepNotes": "The glaze holds a week refrigerated — make it ahead and reserve some clean for dipping. Marinate 20–30 minutes max, thread flat, grill 2 minutes a side at 450°F+, glaze in the final minute. Hold covered no more than 12 minutes or the shrimp tighten.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 523,
+    "calories": 540,
     "protein": 50,
-    "carbs": 9,
-    "fats": 30,
+    "carbs": 14,
+    "fats": 28,
     "label": "per serving (hall portion)",
     "source": "estimated"
   },
@@ -203,7 +234,9 @@
     "bbq",
     "firehall",
     "thai glazed shrimp kebab",
-    "sweet heat shrimp grill"
+    "sweet heat shrimp grill",
+    "palm sugar shrimp glaze",
+    "thai shrimp skewers grill"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -212,6 +245,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.431Z",
+  "generatedAt": "2026-07-23T21:00:00.000Z",
   "contentVersion": 2
 }

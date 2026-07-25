@@ -38,81 +38,81 @@
   ],
   "ingredients": [
     {
-      "name": "Canned Tuna",
+      "name": "canned tuna",
       "quantity": "48",
-      "unit": "Oz",
+      "unit": "oz",
       "notes": "in water, drained and pressed dry",
       "group": "Salad"
     },
     {
-      "name": "Mayonnaise",
+      "name": "mayonnaise",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Salad"
     },
     {
-      "name": "Celery Stalks",
+      "name": "celery stalks",
       "quantity": "4",
       "unit": "count",
       "notes": "finely diced",
       "group": "Salad"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "finely diced",
       "group": "Salad"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Salad"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Salad"
     },
     {
-      "name": "Marbled Rye Bread",
+      "name": "marbled rye bread",
       "quantity": "16",
       "unit": "slices",
       "group": "Bread"
     },
     {
-      "name": "Sharp Cheddar Cheese",
+      "name": "sharp cheddar cheese",
       "quantity": "1.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "grated or 16 slices",
       "group": "Cheese"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "softened",
       "group": "Toast"
     },
     {
-      "name": "Kosher Salt And Black Pepper",
+      "name": "kosher salt and black pepper",
       "quantity": "1",
       "unit": "batch",
       "group": "Seasoning"
     },
     {
-      "name": "Paprika",
+      "name": "paprika",
       "quantity": "1",
-      "unit": "Tsp",
+      "unit": "tsp",
       "notes": "optional dusting before broil",
       "group": "Finish"
     },
     {
-      "name": "Dill Pickles",
+      "name": "dill pickles",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "sliced, for the line",
       "group": "Sides"
     }
@@ -176,10 +176,19 @@
     "protein": 32,
     "carbs": 28,
     "fats": 26,
-    "label": "~480 cal/serving · 32g protein · 3g fiber (est.)"
+    "label": "~480 cal/serving · 32g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
-  "heroImageAlt": "Best Tuna Melt for the Hall (Diner Style) — crew-sized firehall meal",
+  "heroImageAlt": "Best Tuna Melt for the Hall (Diner Style) — american sandwich plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/best-tuna-melt-for-the-hall.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/best-tuna-melt-for-the-hall.jpg",
   "railImage": "/images/rails/hall-expansion/best-tuna-melt-for-the-hall.jpg",
@@ -192,12 +201,12 @@
     "diner tuna melt rye"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-sloppy-joe-feed",
+    "classic-patty-melt-for-the-crew",
+    "hall-blt-sandwich-feed",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "https://www.americastestkitchen.com/recipes/16853-diner-style-sheet-pan-tuna-melts",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

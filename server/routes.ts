@@ -92,7 +92,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { GOLDEN_CATALOG_PUBLIC_DIR } from "./golden-100/page-store.js";
 import { hallCatalogExploreCards } from "./meal-catalog/search-golden.js";
-import { buildRobotsTxt, buildSitemapXml, resolvePublicSiteOrigin } from "./seo/sitemap.js";
+import { buildRobotsTxt, buildSitemapXml, pathShouldNoindex, readStaticSitemapFallback, resolvePublicSiteOrigin } from "./seo/sitemap.js";
 import {
   readEditorialArticle,
   readEditorialIndex,
@@ -195,6 +195,9 @@ import { registerHallCanteenPaymentsRoutes } from "./hall-canteen-payments/route
 import { registerHallNotesRoutes } from "./hall-notes/routes.js";
 import { registerShiftReminderRoutes } from "./shift-reminder/routes.js";
 import { registerHallAnalyticsRoutes } from "./hall-analytics/routes.js";
+import { registerHallBoardRoutes } from "./hall-board/routes.js";
+import { registerHallLogbookRoutes } from "./hall-logbook/routes.js";
+import { initHallEventStore } from "./hall-events/store.js";
 import { initHallMembershipStore } from "./hall-membership/store.js";
 import { registerBillingRoutes } from "./billing/routes.js";
 import { initBillingStore } from "./billing/store.js";
@@ -308,6 +311,14 @@ export async function registerRoutes(
 
   app.use(cookieParser());
 
+  /** Crawlability: keep authenticated / app shells out of the index. */
+  app.use((req: Request, res: Response, next: NextFunction) => {
+    if (pathShouldNoindex(req.path)) {
+      res.setHeader("X-Robots-Tag", "noindex, nofollow");
+    }
+    next();
+  });
+
   app.use("/api/admin", requireAdmin);
 
   app.use((req: Request, res: Response, next: NextFunction) => {
@@ -338,6 +349,9 @@ export async function registerRoutes(
   registerHallNotesRoutes(app);
   registerShiftReminderRoutes(app);
   registerHallAnalyticsRoutes(app);
+  registerHallBoardRoutes(app);
+  registerHallLogbookRoutes(app);
+  void initHallEventStore();
   registerBillingRoutes(app);
   registerAdminUsersRoutes(app);
   registerGroceryDealsRoutes(app);
@@ -2166,21 +2180,45 @@ export async function registerRoutes(
   });
 
   app.get("/sitemap.xml", (req: Request, res: Response) => {
-    const origin = resolvePublicSiteOrigin(
-      req.get("host") ?? undefined,
-      req.get("x-forwarded-proto") ?? undefined,
-    );
-    res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
-    res.type("application/xml").send(buildSitemapXml(origin));
+    try {
+      const origin = resolvePublicSiteOrigin(
+        req.get("host") ?? undefined,
+        req.get("x-forwarded-proto") ?? undefined,
+      );
+      const xml = buildSitemapXml(origin);
+      res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+      res.setHeader("X-Content-Type-Options", "nosniff");
+      return res.type("application/xml").status(200).send(xml);
+    } catch (err: unknown) {
+      logError("seo", "sitemap.xml generation failed", err);
+      const fallback = readStaticSitemapFallback();
+      if (fallback) {
+        res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=3600");
+        res.setHeader("X-Content-Type-Options", "nosniff");
+        res.setHeader("X-Sitemap-Source", "static-fallback");
+        return res.type("application/xml").status(200).send(fallback);
+      }
+      return res.status(500).type("text/plain").send("Sitemap temporarily unavailable");
+    }
   });
 
   app.get("/robots.txt", (req: Request, res: Response) => {
-    const origin = resolvePublicSiteOrigin(
-      req.get("host") ?? undefined,
-      req.get("x-forwarded-proto") ?? undefined,
-    );
-    res.setHeader("Cache-Control", "public, max-age=86400");
-    res.type("text/plain").send(buildRobotsTxt(origin));
+    try {
+      const origin = resolvePublicSiteOrigin(
+        req.get("host") ?? undefined,
+        req.get("x-forwarded-proto") ?? undefined,
+      );
+      res.setHeader("Cache-Control", "public, max-age=86400");
+      return res.type("text/plain").status(200).send(buildRobotsTxt(origin));
+    } catch (err: unknown) {
+      logError("seo", "robots.txt generation failed", err);
+      return res
+        .status(200)
+        .type("text/plain")
+        .send(
+          `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /vote/\nDisallow: /me\nDisallow: /hall\nSitemap: https://www.firehallmeals.com/sitemap.xml\n`,
+        );
+    }
   });
 
   app.get("/api/content/guides", async (_req: Request, res: Response) => {

@@ -23,15 +23,22 @@ import {
   recordEmailLead,
   syncAllLeadConversions,
 } from "../server/admin-users/leads-store.js";
+import {
+  bindFounderLeadsDb,
+  exportFounderLeadsCsv,
+  listFounderLeads,
+} from "../server/admin-users/founder-leads.js";
 
 const MIGRATIONS = [
   "014_user_accounts.sql",
   "015_hall_membership.sql",
   "016_billing.sql",
+  "018_hall_shopping_lists.sql",
   "021_hall_analytics.sql",
   "022_hall_identity.sql",
   "023_hall_pro_subscription.sql",
   "025_admin_users_leads.sql",
+  "039_founder_leads_meta.sql",
 ].map((name) =>
   fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8"),
 );
@@ -46,6 +53,7 @@ async function main(): Promise<void> {
   bindBillingDb(db);
   bindAdminUsersDb(db);
   bindAdminLeadsDb(db);
+  bindFounderLeadsDb(db);
 
   recordEmailLead({ email: "lead@firehall.test", source: "homepage", klaviyo_synced: true });
   recordEmailLead({ email: "lead@firehall.test", source: "generator" });
@@ -58,6 +66,14 @@ async function main(): Promise<void> {
   const converted = leads.find((l) => l.email === "lead@firehall.test" && l.source === "homepage");
   assert.ok(converted?.converted_to_user);
   assert.equal(converted?.converted_user_id, user.user_id);
+
+  const founder = listFounderLeads({ q: "lead@firehall.test" });
+  assert.equal(founder.total, 1, "duplicate emails should merge into one founder lead");
+  assert.ok(founder.leads[0]?.account_created);
+  assert.ok(founder.leads[0]?.sources.includes("homepage"));
+  assert.ok(founder.leads[0]?.sources.includes("generator"));
+  assert.ok(founder.analytics.total_emails >= 1);
+  assert.ok(exportFounderLeadsCsv().includes("lead@firehall.test"));
 
   const captain = upsertEmailUser("captain@firehall.test").user;
   createHall(captain.user_id, {

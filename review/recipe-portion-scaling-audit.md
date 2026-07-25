@@ -1,6 +1,6 @@
 # Recipe portion scaling audit
 
-- Pages scanned: **314**
+- Pages scanned: **351**
 - Recipes corrected: **1**
 - Ingredient fixes: **1**
 - Mode: **audit**
@@ -9,4 +9,4 @@
 
 | Recipe | Crew | Old | New | Reason |
 | --- | ---: | --- | --- | --- |
-| maple-cured-salmon-plank | 8 | 5 Lb | 3.5 Lb | Protein capped from 10 oz to 7 oz per firefighter (salmon) |
+| maple-cured-salmon-plank | 8 | 5 lb | 3.5 lb | Protein capped from 10 oz to 7 oz per firefighter (salmon) |

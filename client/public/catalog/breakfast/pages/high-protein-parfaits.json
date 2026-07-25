@@ -14,40 +14,40 @@
     "no-cook",
     "granola"
   ],
-  "crewSize": 6,
-  "baseServings": 6,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 12,
   "cookTime": 5,
   "totalTime": 17,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Greek Yogurt",
-      "quantity": "48 oz",
+      "name": "Greek yogurt",
+      "quantity": "64",
       "notes": "plain, 2% or full-fat"
     },
     {
-      "name": "Granola",
-      "quantity": "4 cups",
+      "name": "granola",
+      "quantity": "5.3",
       "notes": "sturdy, not dust-fine"
     },
     {
-      "name": "Mixed Berries",
-      "quantity": "4 cups",
+      "name": "mixed berries",
+      "quantity": "5.3",
       "notes": "fresh or thawed"
     },
     {
-      "name": "Honey Or Maple Syrup",
-      "quantity": "1/2 cup"
+      "name": "honey or maple syrup",
+      "quantity": "5/8"
     },
     {
-      "name": "Chia Seeds Or Ground Flax",
-      "quantity": "1/2 cup",
+      "name": "chia seeds or ground flax",
+      "quantity": "5/8",
       "notes": "optional protein boost"
     },
     {
-      "name": "Vanilla Extract",
-      "quantity": "1 tsp",
+      "name": "vanilla extract",
+      "quantity": "1.3",
       "optional": true
     }
   ],
@@ -114,8 +114,8 @@
   "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
   "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
   "imageAlt": "Wide firehall crew platter of High-Protein Yogurt Parfaits beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.993Z",
-  "updatedAt": "2026-06-04T20:48:24.993Z",
+  "publishedAt": "2026-07-17T20:15:27.732Z",
+  "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 5,
   "seoTitle": "High-Protein Yogurt Parfaits | Firehall Breakfast",
   "collectionTier": "performance"

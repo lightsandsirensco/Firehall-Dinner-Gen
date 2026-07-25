@@ -1,24 +1,24 @@
 {
-  "generatedAt": "2026-05-30T20:45:18.157Z",
+  "generatedAt": "2026-07-24T02:32:42.842Z",
   "origin": "https://www.firehallmeals.com",
   "liveFetch": false,
   "phase1": {
-    "totalUrlsAudited": 362,
+    "totalUrlsAudited": 444,
     "duplicateLocs": 0
   },
   "phase2": {
     "collections": {
-      "golden100": 100,
-      "performanceMeals": 50,
-      "hallExpansion": 56,
+      "golden100": 104,
+      "performanceMeals": 45,
+      "hallExpansion": 115,
       "pizzaNight": 20,
-      "breakfast": 42,
+      "breakfast": 62,
       "smoothies": 10,
-      "approvedCatalog": 250,
-      "curatedCollections": 262
+      "approvedCatalog": 299,
+      "curatedCollections": 313
     },
-    "totalRecipeUrls": 270,
-    "recipesInSitemap": 270,
+    "totalRecipeUrls": 348,
+    "recipesInSitemap": 348,
     "recipesMissingFromSitemap": 0,
     "recipesMissingSlugs": []
   },
@@ -40,13 +40,15 @@
     "structuredDataIssues": 0
   },
   "phase7": {
-    "imageSeoIssues": 0
+    "imageSeoIssues": 10
   },
   "phase8": {
     "keywordTargets": {
       "firefighter meals": [
         "/",
+        "/firefighter-dinner-ideas",
         "/firefighter-meals",
+        "/firehouse-meals",
         "/healthy-firefighter-meals"
       ],
       "firefighter recipes": [
@@ -57,15 +59,20 @@
       ],
       "firehall meals": [
         "/",
+        "/crew-meals",
         "/fire-station-meals",
         "/firefighter-bbq-recipes",
         "/firefighter-breakfast-recipes",
+        "/firefighter-dinner-ideas",
         "/firefighter-meals",
         "/firefighter-recipes",
+        "/firehouse-meals",
         "/firehouse-recipes",
         "/healthy-firefighter-meals"
       ],
-      "firehouse meals": [],
+      "firehouse meals": [
+        "/firehouse-meals"
+      ],
       "fire station meals": [
         "/fire-station-meals",
         "/firefighter-meals"
@@ -84,24 +91,98 @@
         "/guides/firefighter-breakfast-ideas",
         "/guides/firehall-breakfast-and-brunch"
       ],
-      "firefighter dinner ideas": [],
+      "firefighter dinner ideas": [
+        "/firefighter-dinner-ideas"
+      ],
       "meals for firefighters": [
+        "/crew-meals",
         "/firefighter-meals"
       ],
       "meals for first responders": [],
       "shift worker meals": []
     },
     "missingKeywordPages": [
-      "firehouse meals",
-      "firefighter dinner ideas",
       "meals for first responders",
       "shift worker meals"
     ]
   },
   "phase9": {
-    "finalSitemapUrlCount": 362,
+    "finalSitemapUrlCount": 444,
     "invalidUrlsRemoved": 0
   },
-  "issues": [],
-  "pass": true
+  "issues": [
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "french-onion-soup-for-the-hall"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "spaghetti-aglio-e-olio-for-the-hall"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "classic-patty-melt-for-the-crew"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "best-tuna-melt-for-the-hall"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "hall-blt-sandwich-feed"
+    },
+    {
+      "phase": "recipes",
+      "code": "duplicate_title",
+      "message": "Duplicate title with greek-chicken-bowls",
+      "slug": "firehall-greek-chicken-bowls"
+    },
+    {
+      "phase": "recipes",
+      "code": "duplicate_meta_title",
+      "message": "Duplicate meta title with greek-chicken-bowls",
+      "slug": "firehall-greek-chicken-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "bagel-sandwich-line"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "hash-brown-breakfast-casserole"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "overnight-oat-bar-crew"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "sheet-pan-eggs-sausage-crew"
+    }
+  ],
+  "pass": false
 }

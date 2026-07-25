@@ -7,16 +7,16 @@
   "subtitle": "Melty, crispy, line-friendly",
   "category": "quick_shift_meals",
   "cuisine": "mexican",
-  "description": "Melty, crispy, line-friendly. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Cumin-chili seared thighs and charred peppers folded into jack and cheddar, griddled until the tortilla shatters. Cheese goes down first and last so every wedge holds together on the line.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 35,
+  "cookTime": 30,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 596,
-  "protein": 60,
-  "carbs": 6,
-  "fats": 39,
+  "calories": 1020,
+  "protein": 74,
+  "carbs": 52,
+  "fats": 54,
   "tags": [
     "protein:chicken",
     "format:handheld",
@@ -26,113 +26,208 @@
     "golden_100"
   ],
   "equipment": [
+    "Flat-top griddle or two 12-inch skillets",
+    "Wide spatula",
+    "Pizza cutter or chef's knife",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Ground Beef",
+      "name": "Boneless Skinless Chicken Thighs",
       "quantity": "4",
       "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Hoagie Rolls",
-      "quantity": "8",
+      "name": "Large Flour Tortillas (12-inch)",
+      "quantity": "16",
       "unit": "count",
-      "group": "Buns"
+      "group": "Build"
     },
     {
-      "name": "Provolone Slices",
-      "quantity": "12",
-      "unit": "count",
+      "name": "Monterey Jack (shredded)",
+      "quantity": "16",
+      "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Marinara Sauce",
-      "quantity": "2",
-      "unit": "Cups",
-      "group": "Sauce"
+      "name": "Sharp Cheddar (shredded)",
+      "quantity": "16",
+      "unit": "Oz",
+      "group": "Cheese"
     },
     {
-      "name": "Yellow Onion",
-      "quantity": "1",
+      "name": "Red Bell Peppers (sliced thin)",
+      "quantity": "3",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Yellow Onions (sliced thin)",
+      "quantity": "2",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic Cloves",
-      "quantity": "4",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "name": "Chili Powder",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Ground Cumin",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Neutral Oil",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Main"
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": "1.5",
+      "unit": "Cups",
+      "group": "Serve"
+    },
+    {
+      "name": "Salsa",
+      "quantity": "2",
+      "unit": "Cups",
+      "group": "Serve"
+    },
+    {
+      "name": "Limes (cut into wedges)",
+      "quantity": "3",
+      "group": "Serve"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook and sauce filling",
-      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates.",
-      "minutes": 30,
-      "heatLevel": "medium-low"
+      "title": "Season the thighs and slice the vegetables",
+      "instruction": "Pat the chicken thighs very dry — surface moisture is the enemy of browning — then season both sides with the chili powder, cumin, and kosher salt. Slice the red bell peppers and yellow onions into thin strips, and toss the shredded Monterey Jack and sharp cheddar together in one bowl: jack brings the stretch, cheddar brings the flavor, and neither does the job alone.",
+      "minutes": 15,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Toast buns",
-      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired.",
-      "minutes": 6,
-      "heatLevel": "medium"
+      "title": "Sear the chicken thighs to 165°F",
+      "instruction": "Heat 2 tbsp neutral oil on the griddle or skillets over medium-high until shimmering. Lay the chicken thighs down without crowding and leave them alone 4–5 minutes until the underside is deeply browned — flipping early tears the crust off. Flip and cook 4–5 minutes more until an instant-read thermometer reads 165°F at the thickest point. Move to a cutting board to rest.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Build the sandwich line",
-      "instruction": "Chicken Quesadillas on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
-      "minutes": 8,
-      "heatLevel": "low"
+      "title": "Char the peppers and onions in the drippings",
+      "instruction": "Add the last spoon of neutral oil to the same hot surface and spread the peppers and onions out in one layer. Cook 5–6 minutes, tossing only twice, until the edges blister and char — constant stirring keeps them pale and watery. A little blackening here is flavor, not a mistake. Scrape them into a bowl, drippings and all.",
+      "minutes": 7,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
-      "title": "Hold for late calls",
-      "instruction": "Keep backup sandwiches foil-wrapped at 200°F. Slice hoagies in half for easier grabbing — crew eats with one hand when tones are quiet.",
+      "title": "Dice the meat and build the filling",
+      "instruction": "Dice the rested thighs into ½-inch pieces — resting first keeps the juice in the meat instead of on the board. Fold the diced meat through the charred vegetables with a squeeze of lime, and taste one piece: this is the last easy moment to adjust salt before everything is sealed inside a tortilla.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Layer cheese first and last so wedges hold",
+      "instruction": "For each quesadilla, lay a flour tortilla flat and scatter a thin layer of the cheese blend edge to edge, then filling, then more cheese, then the second tortilla. Cheese on both faces melts into glue that holds every wedge together when it's cut. Keep the filling layer thin — an overstuffed quesadilla splits at the seams and dumps its insides on the griddle.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Griddle until the tortilla shatters",
+      "instruction": "Wipe the cooking surface, drop to medium, and toast each quesadilla 2–3 minutes per side, pressing gently with the wide spatula, until the tortilla is deep golden with brown spots and the edges hiss with melted cheese. Too-high heat burns the outside before the middle melts; too low turns the tortilla leathery instead of crisp. Flip with confidence — one fast motion, hand on top.",
+      "minutes": 15,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Rest two minutes, then cut into wedges",
+      "instruction": "Let each quesadilla sit 2 minutes on a sheet tray before cutting — straight off the heat the cheese pours out like lava; two minutes later it slices clean. Cut into six wedges with a pizza cutter. Hold finished trays uncovered in a 200°F warm spot; covering them steams the crust soft in minutes.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Set the topping bar and serve hot",
+      "instruction": "Stack the wedges points-out on trays so the crew can grab one-handed, and set out sour cream, salsa, and lime wedges in separate bowls. Send trays out as they come off the heat instead of waiting for one big batch — a quesadilla is at its best for about ten minutes and everyone knows it.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the quesadillas — hold at 140°F in a warm cabinet or 200°F oven, but know a held quesadilla goes rubbery fast, so don't stack a big batch waiting on a call. Keep the sour cream and salsa bowls refrigerated, not sitting out at the topping bar. On return, spot-check the filling is hot, then griddle a fresh batch rather than serving ones that have gone soft.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool chicken quesadillas and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Prep all mise en place before the bell — this meal wins on organization, not speed hacks.",
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Thighs beat breasts here — they stay juicy through a sear and a reheat on the griddle, and dry chicken is the number-one quesadilla killer.",
+    "Shred cheese off the block if there's time; pre-shredded is coated in starch that makes the melt grainy instead of stretchy.",
+    "Cheese against both tortillas, filling in the middle — that sandwich structure is why some quesadillas hold together and others fall apart.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Chicken Quesadillas with sides in separate pans so the crew can mix portions.",
-    "Line up Chicken Quesadillas on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Griddled chicken quesadillas cut into wedges",
+    "Sides: salsa and sour cream bowls, lime wedges",
+    "Condiments: hot sauce from the hall fridge for whoever wants heat",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
+    "Cool chicken quesadillas in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Revive day-two wedges in a dry skillet over medium 2–3 minutes per side — the microwave turns the tortilla to a wet napkin.",
+    "Extra filling keeps 3 days and makes next-shift rice bowls or breakfast wraps without touching the griddle."
   ],
-  "whyCrewsLikeIt": "Melty, crispy, line-friendly. A hall pick for tight shifts — one line, real portions, no drama at the stove.",
-  "mealPrepNotes": "Minimal prep — chop aromatics before shift change so you can cook as soon as the board quiets.",
+  "whyCrewsLikeIt": "Crispy tortilla, molten cheese pull, and real seared thigh meat inside — wedges move off the tray faster than anything else on a quick-turn shift night.",
+  "mealPrepNotes": "Slice the peppers and onions and mix the two cheeses before shift change — once the griddle is hot this whole dinner is a 30-minute run.",
   "substitutions": [
-    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+    "Chicken breasts work if that's what the freezer has — pull them at 160°F and let carryover finish to 165°F, or they'll be dry inside the quesadilla.",
+    "Rotisserie chicken shortcut: skip the sear, toss 2.5 lb pulled meat with the spices and a splash of water before building.",
+    "Pepper jack in place of Monterey Jack turns the heat up one notch without changing the melt.",
+    "Corn tortillas make smaller, crispier quesadillas — use two per person and watch them; they brown faster than flour."
   ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 596,
-    "protein": 60,
-    "carbs": 6,
-    "fats": 39,
+    "calories": 1020,
+    "protein": 74,
+    "carbs": 52,
+    "fats": 54,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -156,6 +251,7 @@
     "handheld",
     "quick",
     "chicken quesadillas dinner",
+    "crispy griddled quesadillas",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -168,6 +264,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.270Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

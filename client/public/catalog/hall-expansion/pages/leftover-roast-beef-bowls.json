@@ -1,0 +1,209 @@
+{
+  "slug": "leftover-roast-beef-bowls",
+  "title": "Leftover Roast Beef Bowls",
+  "displayTitle": "Leftover Roast Beef Bowls",
+  "seoTitle": "Leftover Roast Beef Bowls | Firefighter Meal",
+  "shortDescription": "Smart roast-beef remix with gravy and vegetables",
+  "subtitle": "Smart roast-beef remix with gravy and vegetables",
+  "category": "hall_expansion",
+  "cuisine": "Canadian",
+  "description": "Thin roast beef is warmed gently with gravy over mashed potatoes, peas, and carrots.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 650,
+  "protein": 42,
+  "carbs": 62,
+  "fats": 25,
+  "tags": [
+    "protein:beef",
+    "format:bowls",
+    "category:crew_feeders",
+    "bowls",
+    "leftovers",
+    "budget",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "stockpot",
+    "steamer basket",
+    "potato masher",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "cooked roast beef",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "potatoes",
+      "quantity": "8",
+      "unit": "lb"
+    },
+    {
+      "name": "beef gravy",
+      "quantity": "6.4",
+      "unit": "cups"
+    },
+    {
+      "name": "frozen peas",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "carrots",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "butter",
+      "quantity": "3/8",
+      "unit": "lb"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Boil potatoes",
+      "instruction": "Cover cubed potatoes with cold salted water and simmer until a fork slides in easily.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Warm gravy",
+      "instruction": "Heat gravy in a wide pot, whisking the bottom so it does not scorch.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Slice beef",
+      "instruction": "Slice cold roast beef thinly across the grain for tender bites.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Steam carrots",
+      "instruction": "Steam carrots until just tender, checking that they are not turning mushy.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Mash potatoes",
+      "instruction": "Drain potatoes well, then mash with warm milk and butter so they stay fluffy.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Add peas",
+      "instruction": "Stir frozen peas into the carrots for the final 3 minutes of steaming.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Warm beef gently",
+      "instruction": "Submerge beef slices in simmering gravy; boiling hard will make leftovers dry.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Check temperature",
+      "instruction": "Heat the beef and gravy through to 165°F before holding.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold stations",
+      "instruction": "Cover mashed potatoes and vegetables and keep hot foods above 140°F.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Build bowls",
+      "instruction": "Spoon potatoes, vegetables, beef, and gravy into deep bowls for a tidy serving.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Cooked roast beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Cooked roast beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Add horseradish to gravy for adults who want heat.",
+    "Use leftover prime rib only at a gentle simmer.",
+    "Save vegetable scraps for stock."
+  ],
+  "tonightSpread": [
+    "Main: Roast beef and gravy bowls",
+    "Sides: dinner rolls, green salad",
+    "Condiments: horseradish, black pepper, ketchup",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Cooked roast beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Use any remaining beef in hash tomorrow."
+  ],
+  "whyCrewsLikeIt": "It protects expensive leftover beef from overcooking and feeds a crew quickly.",
+  "mealPrepNotes": "Make-ahead: dice vegetables and make gravy 2 days ahead. Storage: refrigerate for 3 days. Reheating: heat beef and gravy to 165°F before serving.",
+  "substitutions": [
+    "Use turkey and poultry gravy.",
+    "Use instant mashed potatoes when rushed."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 650,
+    "protein": 42,
+    "carbs": 62,
+    "fats": 25,
+    "label": "~650 cal/serving · 42g protein · 8g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+  "heroImageAlt": "Leftover Roast Beef Bowls — Canadian bowls plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/leftover-roast-beef-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/leftover-roast-beef-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/leftover-roast-beef-bowls.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "leftover roast beef bowls",
+    "roast beef crew dinner",
+    "firehall leftover meal",
+    "beef gravy potato bowls"
+  ],
+  "relatedSlugs": [
+    "peanut-chicken-rice-bowls",
+    "firehall-gyro-bowls",
+    "salmon-rice-bowls-crew",
+    "korean-turkey-rice-bowls"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

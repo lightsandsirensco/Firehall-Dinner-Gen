@@ -15,58 +15,58 @@
     "handheld",
     "make-ahead"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 18,
   "cookTime": 15,
   "totalTime": 33,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "16",
+      "name": "large eggs",
+      "quantity": "13",
       "notes": "soft-scrambled",
       "group": "Fillings"
     },
     {
-      "name": "Lean Turkey Breakfast Sausage",
-      "quantity": "1 1/2 lb",
+      "name": "lean turkey breakfast sausage",
+      "quantity": "1/2",
       "notes": "browned and crumbled",
       "group": "Fillings"
     },
     {
-      "name": "Baby Spinach",
-      "quantity": "10 oz",
+      "name": "baby spinach",
+      "quantity": "8",
       "notes": "wilted and squeezed dry",
       "group": "Fillings"
     },
     {
-      "name": "Crumbled Feta",
-      "quantity": "1 cup",
+      "name": "crumbled feta",
+      "quantity": "3/4",
       "notes": "or goat cheese",
       "group": "Fillings"
     },
     {
-      "name": "10-Inch Whole-Wheat Tortillas",
-      "quantity": "10",
+      "name": "10-inch whole-wheat tortillas",
+      "quantity": "8",
       "notes": "warmed",
       "group": "Build"
     },
     {
-      "name": "Salsa Verde",
-      "quantity": "1/2 cup",
+      "name": "salsa verde",
+      "quantity": "3/8",
       "notes": "drained, spread thin",
       "group": "Build"
     },
     {
-      "name": "Avocado",
-      "quantity": "1",
+      "name": "avocado",
+      "quantity": "3/4",
       "notes": "sliced, optional",
       "group": "Build"
     },
     {
-      "name": "Foil",
-      "quantity": "10 sheets",
+      "name": "foil",
+      "quantity": "8",
       "notes": "for wrapping to-go portions",
       "group": "Hold"
     }
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/hall-breakfast-wraps.jpg",
   "thumbImage": "/images/thumbs/breakfast/hall-breakfast-wraps.jpg",
   "imageAlt": "Hall breakfast wraps cut in half showing eggs, turkey sausage, and spinach",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Hall Breakfast Wraps | Firehall Breakfast",
   "collectionTier": "healthier_hall"

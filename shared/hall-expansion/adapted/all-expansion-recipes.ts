@@ -4,6 +4,8 @@ import { BATCH_250_RECIPES } from "./batch-250.js";
 import { PHASE5_DISTINCT_RECIPES } from "./batch-phase5-distinct.js";
 import { BATCH_B_SANDWICH_RECIPES } from "./batch-b-sandwiches.js";
 import { BATCH_HANDHELD_WRAP_RECIPES } from "./batch-handheld-wraps.js";
+import { BATCH_BOWL_CLASSICS_RECIPES } from "./batch-bowl-classics.js";
+import { BATCH_WAVE1_EXPANSION_RECIPES } from "./batch-wave1-expansion.js";
 
 const SMOKER_RECIPES: ExpansionRecipeDef[] = [
   def({
@@ -1848,4 +1850,6 @@ export const HALL_EXPANSION_ADAPTED_RECIPES: ExpansionRecipeDef[] = [
   ...PHASE5_DISTINCT_RECIPES,
   ...BATCH_B_SANDWICH_RECIPES,
   ...BATCH_HANDHELD_WRAP_RECIPES,
+  ...BATCH_BOWL_CLASSICS_RECIPES,
+  ...BATCH_WAVE1_EXPANSION_RECIPES,
 ];

@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Romaine Lettuce Hearts",
+      "name": "romaine lettuce hearts",
       "quantity": "4",
       "unit": "heads",
       "notes": "chopped",
       "group": "Base"
     },
     {
-      "name": "Chicken Breast",
+      "name": "chicken breast",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Protein"
     },
     {
-      "name": "Thick-Cut Bacon",
+      "name": "thick-cut bacon",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Protein"
     },
     {
-      "name": "Hard-Boiled Eggs",
+      "name": "hard-boiled eggs",
       "quantity": "6",
       "unit": "whole",
       "notes": "quartered",
       "group": "Protein"
     },
     {
-      "name": "Ripe Avocados",
+      "name": "ripe avocados",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "halved",
       "group": "Vegetables"
     },
     {
-      "name": "Crumbled Blue Cheese",
+      "name": "crumbled blue cheese",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Cheese"
     },
     {
-      "name": "Red Wine Vinegar",
+      "name": "red wine vinegar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Dressing"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Dressing"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Dressing"
     }
   ],
@@ -161,10 +161,19 @@
     "protein": 38,
     "carbs": 12,
     "fats": 26,
-    "label": "~420 cal/serving · 38g protein · 6g fiber (est.)"
+    "label": "~420 cal/serving · 38g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/station-cobb-salad.jpg",
-  "heroImageAlt": "Station Cobb Salad — crew-sized firehall meal",
+  "heroImageAlt": "Station Cobb Salad — american salad plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/station-cobb-salad.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/station-cobb-salad.jpg",
   "railImage": "/images/rails/hall-expansion/station-cobb-salad.jpg",
@@ -176,12 +185,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
+    "warm-spinach-chicken-salad",
     "loaded-potato-skins",
     "game-day-pizza-sliders",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "pretzel-bite-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

@@ -37,75 +37,75 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless, Skinless Chicken Breasts",
+      "name": "boneless, skinless chicken breasts",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Chicken"
     },
     {
-      "name": "Plain Greek Yogurt",
+      "name": "plain Greek yogurt",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "marinade",
       "group": "Marinade"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "2",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Marinade"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "count",
       "notes": "minced",
       "group": "Marinade"
     },
     {
-      "name": "Pita Breads",
+      "name": "pita breads",
       "quantity": "10",
       "unit": "count",
       "notes": "pocket or flat",
       "group": "Pita"
     },
     {
-      "name": "English Cucumber",
+      "name": "English cucumber",
       "quantity": "1",
       "unit": "count",
       "notes": "diced",
       "group": "Veg"
     },
     {
-      "name": "Tomatoes",
+      "name": "tomatoes",
       "quantity": "3",
       "unit": "large",
       "notes": "diced",
       "group": "Veg"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "thinly sliced",
       "group": "Veg"
     },
     {
-      "name": "Tzatziki",
+      "name": "tzatziki",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Crumbled Feta",
+      "name": "crumbled feta",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "optional",
       "group": "Line"
     }
@@ -169,10 +169,19 @@
     "protein": 40,
     "carbs": 44,
     "fats": 14,
-    "label": "~480 cal/serving · 40g protein · 3g fiber (est.)"
+    "label": "~480 cal/serving · 40g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
-  "heroImageAlt": "Greek Chicken Pitas — crew-sized firehall meal",
+  "heroImageAlt": "Greek Chicken Pitas — greek handheld plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/greek-chicken-pitas.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/greek-chicken-pitas.jpg",
   "railImage": "/images/rails/hall-expansion/greek-chicken-pitas.jpg",
@@ -184,12 +193,12 @@
     "chicken souvlaki pita firehall"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "bbq-meatball-skewers",
+    "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
+    "buffalo-chicken-wraps"
   ],
   "sourceUrl": "https://www.seriouseats.com/chicken-souvlaki-recipe",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

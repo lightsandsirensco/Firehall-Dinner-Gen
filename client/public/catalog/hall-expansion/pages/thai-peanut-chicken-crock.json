@@ -1,0 +1,207 @@
+{
+  "slug": "thai-peanut-chicken-crock",
+  "title": "Thai Peanut Chicken Crock",
+  "displayTitle": "Thai Peanut Chicken Crock",
+  "seoTitle": "Thai Peanut Chicken Crock | Firefighter Meal",
+  "shortDescription": "Slow-cooked peanut chicken with rice and bright vegetables",
+  "subtitle": "Slow-cooked peanut chicken with rice and bright vegetables",
+  "category": "hall_expansion",
+  "cuisine": "Thai-inspired",
+  "description": "Chicken thighs simmer in coconut-peanut sauce and are served with rice, lime, and crunchy vegetables.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 390,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 740,
+  "protein": 43,
+  "carbs": 67,
+  "fats": 35,
+  "tags": [
+    "protein:chicken",
+    "format:slow_cooker",
+    "category:crew_feeders",
+    "slow_cooker",
+    "bowls",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "slow cooker",
+    "rice cooker",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken thighs",
+      "quantity": "4.8",
+      "unit": "lb"
+    },
+    {
+      "name": "peanut butter",
+      "quantity": "1 1/4",
+      "unit": "cups"
+    },
+    {
+      "name": "coconut milk",
+      "quantity": "3",
+      "unit": "cans"
+    },
+    {
+      "name": "rice",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "red cabbage",
+      "quantity": "2",
+      "unit": "heads"
+    },
+    {
+      "name": "lime",
+      "quantity": "4.8",
+      "unit": "each"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Morning start",
+      "instruction": "Place chicken thighs in the slow cooker, keeping the raw-chicken package away from ready-to-eat vegetables.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Whisk sauce",
+      "instruction": "Whisk peanut butter, coconut milk, curry paste, soy sauce, and lime juice until smooth.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook low",
+      "instruction": "Pour sauce over chicken, cover, and cook on low for 6 to 7 hours.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Start rice",
+      "instruction": "Near dinner, cook rinsed rice covered so it is fresh when chicken is ready.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Check chicken",
+      "instruction": "Check a thick thigh has reached 165°F before shredding or chopping it.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Shred chicken",
+      "instruction": "Shred chicken in the sauce with two forks; do not remove all the cooking liquid.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Adjust sauce",
+      "instruction": "Stir in hot water a little at a time if the peanut sauce is thicker than gravy.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Prep cabbage",
+      "instruction": "Thinly shred cabbage and toss with lime and a pinch of salt just before serving.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold hot",
+      "instruction": "Keep chicken on warm above 140°F and keep cabbage chilled until bowls are built.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve bowls",
+      "instruction": "Portion rice, peanut chicken, cabbage, and lime wedges into each bowl.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Chicken thighs — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Chicken thighs and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use sunflower butter when peanut allergies require it.",
+    "Keep curry paste modest and offer heat separately.",
+    "Coconut milk may look separated; stir it smooth."
+  ],
+  "tonightSpread": [
+    "Main: Thai peanut chicken bowls",
+    "Sides: cucumber salad, mango slices",
+    "Condiments: lime wedges, chili crisp, crushed peanuts",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Chicken thighs in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Use leftover sauce on noodles."
+  ],
+  "whyCrewsLikeIt": "The flavour develops while the crew works, while the vegetables remain fresh until dinner.",
+  "mealPrepNotes": "Make-ahead: whisk sauce and shred vegetables 2 days ahead. Storage: refrigerate 3 days. Reheating: heat chicken to 165°F.",
+  "substitutions": [
+    "Use chickpeas for chicken.",
+    "Use almond butter for peanut butter."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 740,
+    "protein": 43,
+    "carbs": 67,
+    "fats": 35,
+    "label": "~740 cal/serving · 43g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+  "heroImageAlt": "Thai Peanut Chicken Crock — Thai-inspired slow_cooker plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/thai-peanut-chicken-crock.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
+  "railImage": "/images/rails/hall-expansion/thai-peanut-chicken-crock.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "Thai peanut chicken slow cooker crowd",
+    "crockpot peanut chicken bowls",
+    "firehall slow cooker bowls",
+    "Thai chicken meal for ten"
+  ],
+  "relatedSlugs": [
+    "mississippi-pot-roast-crew",
+    "white-chicken-chili-crock",
+    "italian-beef-slow-cooker",
+    "salsa-verde-chicken-crock"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

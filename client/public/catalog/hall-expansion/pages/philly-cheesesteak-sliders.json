@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Ribeye Steak",
+      "name": "ribeye steak",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "thin-sliced",
       "group": "Main"
     },
     {
-      "name": "Slider Buns",
+      "name": "slider buns",
       "quantity": "16",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "Provolone Cheese",
+      "name": "provolone cheese",
       "quantity": "10",
       "unit": "slices",
       "group": "Main"
     },
     {
-      "name": "Bell Peppers",
+      "name": "bell peppers",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "Yellow Onions",
+      "name": "yellow onions",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Cook"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Beef Broth",
+      "name": "beef broth",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Au jus"
     },
     {
-      "name": "Worcestershire Sauce",
+      "name": "Worcestershire sauce",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Au jus"
     }
   ],
@@ -160,10 +160,19 @@
     "protein": 28,
     "carbs": 32,
     "fats": 24,
-    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)"
+    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
-  "heroImageAlt": "Philly Cheesesteak Sliders — crew-sized firehall meal",
+  "heroImageAlt": "Philly Cheesesteak Sliders — american sheet_pan plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/philly-cheesesteak-sliders.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/philly-cheesesteak-sliders.jpg",
   "railImage": "/images/rails/hall-expansion/philly-cheesesteak-sliders.jpg",
@@ -177,10 +186,10 @@
   "relatedSlugs": [
     "loaded-potato-skins",
     "game-day-pizza-sliders",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "cheesy-beef-nacho-bake",
+    "sheet-pan-meatball-marinara"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "north african",
   "description": "Ground lamb mixes with urfa pepper, fennel, and ras el hanout, forms around flat skewers, and grills until charred and 165°F. Serve with preserved-lemon yogurt and grilled naan.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
@@ -40,69 +40,69 @@
   "ingredients": [
     {
       "name": "Ground Lamb",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
       "group": "Main"
     },
     {
       "name": "Urfa Biber",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "Ground Fennel Seed",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "Ras El Hanout",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tsp",
       "group": "Merguez spice"
     },
     {
       "name": "Ground Cinnamon",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Tsp",
       "group": "Merguez spice"
     },
     {
       "name": "Shallots",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "grated and drained",
       "group": "Merguez spice"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "group": "Merguez spice"
     },
     {
       "name": "Greek Yogurt",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups",
       "group": "Sauce"
     },
     {
       "name": "Preserved Lemon",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "notes": "minced rind",
       "group": "Sauce"
     },
     {
       "name": "Naan Bread",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "Pomegranate Seeds",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Garnish"
     }

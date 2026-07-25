@@ -1,0 +1,150 @@
+{
+  "slug": "bagel-sandwich-line",
+  "title": "Bagel Sandwich Line",
+  "subtitle": "Build-your-own bagel sandwiches with eggs, cheese, and proteins for staggered crews.",
+  "description": "A firefighter hall breakfast line that lets every crew member build a hot bagel sandwich without waiting for individual orders. Egg sheets, cheese, and warm proteins stay organized in hotel pans so morning service continues even when the crew arrives in waves.",
+  "filters": [
+    "breakfast_sandwiches",
+    "feed_a_crew",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "bagels",
+    "sandwiches",
+    "egg-sheet",
+    "build-your-own",
+    "handheld"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 20,
+  "cookTime": 25,
+  "totalTime": 45,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "bagels",
+      "quantity": "9.6",
+      "notes": "assorted, sliced",
+      "group": "Bagels"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "notes": "whisked with 1/2 cup milk",
+      "group": "Egg sheet"
+    },
+    {
+      "name": "breakfast sausage patties",
+      "quantity": "8",
+      "notes": "or Canadian bacon slices",
+      "group": "Protein"
+    },
+    {
+      "name": "cooked bacon",
+      "quantity": "8",
+      "notes": "optional second protein",
+      "group": "Protein"
+    },
+    {
+      "name": "cheddar, Swiss, or American cheese",
+      "quantity": "9.6",
+      "group": "Cheese"
+    },
+    {
+      "name": "cream cheese",
+      "quantity": "6.4",
+      "notes": "plus sliced tomato, spinach, and hot sauce",
+      "group": "Toppings"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "3/4",
+      "notes": "plus black pepper for eggs",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and prep the egg pan",
+      "instruction": "Heat oven to 350°F. Line a rimmed quarter-sheet pan with parchment and spray it well. The parchment overhang is a beginner-friendly handle for lifting the cooked egg sheet out cleanly.",
+      "minutes": 5,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bake the egg sheet",
+      "instruction": "Whisk eggs, milk, salt, and pepper and pour into the prepared pan. Bake 12–14 minutes until just set and 165°F in the center. Stop before it browns; overbaked egg sheets become rubbery in held sandwiches.",
+      "minutes": 14,
+      "tempF": 350
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm proteins and toast bagels",
+      "instruction": "Heat sausage patties to 165°F and crisp bacon if using. Toast bagel halves cut-side up at 325°F for 5–7 minutes. Keep toasted bagels uncovered so trapped steam does not soften them.",
+      "minutes": 10,
+      "tempF": 325
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cut the egg portions",
+      "instruction": "Lift the egg sheet onto a board and cut into 10 to 12 squares with a knife wiped between cuts. Stack cheese on the hot egg squares so it begins melting before the line opens.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 5,
+      "title": "Set the sandwich line",
+      "instruction": "Arrange bagels, eggs, warm sausage, bacon, cheese, cream cheese, vegetables, and sauces in order. Put tongs in each protein pan and label hot versus cold toppings so service stays safe and fast.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold components for staggered arrivals",
+      "instruction": "Hold egg squares and proteins covered in a 200°F oven for up to 20 minutes; keep bagels and cold toppings outside the oven. Replenish small batches rather than building all sandwiches early, or bread turns soggy.",
+      "minutes": 5,
+      "tempF": 200
+    }
+  ],
+  "nutrition": {
+    "calories": 936,
+    "protein": 52,
+    "carbs": 5,
+    "fat": 79,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Bake one egg sheet while another cook toasts bagels and warms sausage so the line opens all at once.",
+    "Keep hot proteins above 140°F and cold tomato, spinach, and cream cheese below 40°F during extended service.",
+    "For a call, cover the hot hotel pan and leave sandwiches unassembled; crews can build fresh when they return."
+  ],
+  "cleanupNotes": [
+    "Lift and discard the parchment egg liner before washing the sheet pan; it removes nearly all baked-on egg.",
+    "Wipe toaster crumbs and cream-cheese smears immediately so the breakfast line can convert quickly to lunch prep."
+  ],
+  "leftovers": [
+    "Refrigerate egg and meat components separately; reheat protein and eggs to 165°F before rebuilding sandwiches.",
+    "Use leftover bagels for bagel chips or breakfast strata rather than refrigerating assembled sandwiches."
+  ],
+  "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
+  "thumbImage": "/images/thumbs/breakfast/bagel-sandwich-line.jpg",
+  "imageAlt": "Build-your-own bagel sandwich line with egg squares, cheese, sausage, bacon, and toppings",
+  "publishedAt": "2026-07-17T20:15:27.731Z",
+  "updatedAt": "2026-07-17T20:15:27.731Z",
+  "readMinutes": 7,
+  "seoTitle": "Bagel Sandwich Line | Firehall Breakfast"
+}

@@ -1,7 +1,6 @@
 import { useLocation } from "wouter";
 import { Building2, User } from "lucide-react";
 import { AppTopBar } from "@/components/app-shell/app-top-bar";
-import { OnboardingSteps } from "@/components/onboarding/onboarding-steps";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth/context";
 import { PERSONAL_ONBOARDING, HALL_LINKED } from "@/lib/brand-copy";
@@ -17,6 +16,7 @@ import {
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 
+/** Lightweight hall question — one decision, then momentum. */
 export default function OnboardingHallPage() {
   const { user, profile, halls } = useAuth();
   const [, navigate] = useLocation();
@@ -28,22 +28,20 @@ export default function OnboardingHallPage() {
     trackPersonalOnboardingHallChoice(worksAtFirehall);
 
     if (worksAtFirehall) {
-      navigate("/hall/join?onboarding=1");
+      navigate("/hall/join");
       return;
     }
 
     markPersonalOnboardingCompleted(user.user_id, signals);
     trackPersonalOnboardingCompleted("personal");
-    navigate("/home");
+    navigate("/tonight");
   };
 
   return (
     <div className={cn(app.page, "bg-background")} data-testid="onboarding-hall-page">
-      <AppTopBar title={PERSONAL_ONBOARDING.hallTitle} />
+      <AppTopBar title="Quick question" workspace="meals" />
 
       <main className={cn(app.main, "mx-auto max-w-lg px-4 py-4 pb-safe-nav sm:max-w-xl space-y-6")}>
-        <OnboardingSteps current="hall_question" />
-
         <header className="space-y-2 px-0.5">
           <h1 className="font-heading text-2xl tracking-wide">{PERSONAL_ONBOARDING.hallTitle}</h1>
           <p className="text-sm text-muted-foreground leading-relaxed">

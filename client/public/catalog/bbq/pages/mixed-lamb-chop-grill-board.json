@@ -4,19 +4,19 @@
   "displayTitle": "Za'atar Loin and Shoulder Lamb Board",
   "seoTitle": "Za'atar Loin and Shoulder Lamb Board | Firehall BBQ",
   "shortDescription": "Mixed lamb chop board—two cuts, one platter, hall steakhouse energy",
-  "subtitle": "Herb-rubbed loin and shoulder chops, rosemary board, and char for ten",
+  "subtitle": "Za'atar-crusted loin and shoulder chops with labneh, pickled turnips, and warm pita",
   "category": "bbq_grill_nights",
   "cuisine": "mediterranean",
-  "description": "Lamb loin and shoulder chops get rosemary-garlic rub, grill to 135°F, and arrange on a board with charred lemon, olives, and whipped feta.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Loin and shoulder chops under a za'atar-sumac crust, grilled over a two-zone fire and pulled at 135°F, then boarded over Aleppo labneh with pickled turnips, mint, warm pita, and a pomegranate molasses drizzle.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 760,
+  "protein": 58,
+  "carbs": 34,
+  "fats": 44,
   "tags": [
     "protein:lamb",
     "format:smokehouse_board",
@@ -30,25 +30,26 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "flat-top griddle",
+    "gas or charcoal grill (two-zone)",
     "instant-read thermometer",
-    "cutting board",
+    "large serving board or sheet pan",
     "hotel pans",
-    "sharp knife"
+    "basting brush",
+    "tongs"
   ],
   "ingredients": [
     {
       "name": "Lamb Loin Chops",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
-      "notes": "about 3 lb",
+      "notes": "about 3 lb, 1 to 1 1/4 inch thick",
       "group": "Main"
     },
     {
       "name": "Lamb Shoulder Chops",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "pieces",
-      "notes": "about 3 lb",
+      "notes": "about 3 lb, blade or arm cut",
       "group": "Main"
     },
     {
@@ -64,34 +65,48 @@
       "group": "Rub"
     },
     {
-      "name": "Pomegranate Molasses",
+      "name": "Kosher Salt",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Olive Oil",
       "quantity": "3",
       "unit": "Tbsp",
       "group": "Rub"
     },
     {
+      "name": "Pomegranate Molasses",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Finish"
+    },
+    {
       "name": "Labneh",
-      "quantity": "2",
+      "quantity": "1 1/2",
       "unit": "Cups",
       "group": "Board"
     },
     {
       "name": "Pickled Turnips",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Cups",
+      "notes": "drained",
       "group": "Board"
     },
     {
       "name": "Fresh Mint",
-      "quantity": "0.33",
+      "quantity": "1/2",
       "unit": "Cup",
-      "notes": "chopped",
+      "notes": "leaves picked",
       "group": "Board"
     },
     {
-      "name": "Grilled Pita Wedges",
-      "quantity": "12",
-      "unit": "pieces",
+      "name": "Pita Breads",
+      "quantity": "8",
+      "unit": "whole",
+      "notes": "cut into wedges after toasting",
       "group": "Service"
     },
     {
@@ -104,82 +119,111 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Rub lamb chops",
-      "instruction": "Combine rosemary, garlic, olive oil, lemon zest, and salt. Rub all chops and rest 1 hour at room temp.",
+      "title": "Mix the za'atar rub and coat both cuts",
+      "instruction": "Stir 3 tbsp za'atar, 2 tbsp sumac, and 1 tbsp kosher salt with enough olive oil to make a loose paste — about 3 tbsp. Massage it over the lamb loin and shoulder chops on every face and let them sit at room temperature 40–45 minutes. The salt needs that time to travel past the surface, and chops that go over the fire cold-centered finish gray at the edge before the middle catches up. The surface should look tacky, not wet.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Whip feta spread",
-      "instruction": "Blend feta with olive oil and lemon juice until smooth. Hold refrigerated until board assembly.",
-      "minutes": 8,
+      "title": "Season the labneh and stage the board",
+      "instruction": "Spread the labneh in a wide bowl, stir in a drizzle of olive oil and half the Aleppo pepper, and hold it cold. Drain the pickled turnips, pick the mint leaves, and set both next to the board with the pomegranate molasses. A chop board eats in minutes once meat lands, so every cold element gets staged before the fire lights — hunting jars while the meat rests is how boards go out lukewarm.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Heat grill zones",
-      "instruction": "Preheat grill with hot zone at 475°F and medium zone at 425°F.",
+      "title": "Build a two-zone fire",
+      "instruction": "Set the grill up two-zone: one side high at 450–475°F at grate level, the other at 350–375°F. The loin cut wants fast direct heat to crust before its small eye overcooks; the thicker, tougher shoulder cut needs the gentler zone so its connective tissue softens before the za'atar scorches. Scrape and oil the grates — a spiced crust welds itself to dirty steel.",
       "minutes": 10,
-      "heatLevel": "medium"
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
-      "title": "Grill loin chops",
-      "instruction": "Grill loin chops over hot zone 3–4 minutes per side until 130°F internal.",
+      "title": "Grill the loin chops hot and fast",
+      "instruction": "Lay the lamb loin chops over the hot zone and leave them 3–4 minutes per side — moving them early tears the crust you just built. You want deep brown faces with char on the fat cap. Pull them at 135°F on an instant-read thermometer; carryover during the rest walks them toward the 145°F safe mark while the centers stay rosy. Crowding the grate drops the heat and the chops steam instead of sear.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 5,
-      "title": "Grill shoulder chops",
-      "instruction": "Grill shoulder chops over medium zone 5–6 minutes per side until 135°F internal.",
+      "title": "Work the shoulder chops over the medium zone",
+      "instruction": "Shoulder chops carry more fat and connective tissue than loin, so run them over the 350–375°F side 5–6 minutes per side. Rendering fat will flare — shift the chops with tongs, don't fight the flame. Take the lamb shoulder chops to 145°F internal; a touch past the loin is right for this cut, because those extra degrees render the chew out of the blade. They should bend slightly at the bone, never flop.",
       "minutes": 14,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 6,
-      "title": "Char lemons",
-      "instruction": "Grill lemon halves cut-side down 2 minutes at 450°F.",
-      "minutes": 3,
-      "heatLevel": "high"
+      "title": "Glaze the chops and toast the pita",
+      "instruction": "In the final minute, brush every chop on both sides with pomegranate molasses — its sugars blacken fast, so it goes on late or not at all. While the glaze sets, lay the pita breads over the medium zone 30–45 seconds per side until puffed and marked, then cut them into wedges. Warm pita folds around meat; cold pita cracks.",
+      "minutes": 5,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 7,
-      "title": "Rest and hold",
-      "instruction": "Rest all chops 5 minutes. Hold covered at 170°F in hotel pans until board assembly.",
+      "title": "Rest the meat and verify temps",
+      "instruction": "Pull everything to a rack or warm platter and rest 5–8 minutes so the juices redistribute — cut early and they flood the board instead of staying in the meat. While it rests, spot-check the thickest shoulder chop with an instant-read thermometer: 145°F after resting is the number. Save every drop of resting juice; it gets poured back over at the build.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 8,
-      "title": "Board for ten",
-      "instruction": "Arrange mixed chops on board with whipped feta, olives, and charred lemon. Two chops per firefighter.",
+      "title": "Build the board over the labneh",
+      "instruction": "Swoosh the Aleppo labneh across the board first so the meat sits on something rich. Alternate loin and shoulder chops on top, scatter the pickled turnips and torn mint, dust with the remaining sumac and Aleppo pepper, and tuck warm pita wedges down the sides. Pour the resting juices over the meat and ribbon on any leftover pomegranate molasses — two chops per firefighter, one of each cut.",
       "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the lamb chops — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the lamb chops and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Cook loin and shoulder separately—they need different heat and time.",
-    "135°F pull with rest delivers pink loin and juicy shoulder.",
-    "Whipped feta at room temp spreads easier on the board."
+    "Loin and shoulder are different animals — run them on separate zones and separate timers, never side by side on the hot grate.",
+    "Pomegranate molasses goes on in the last minute only; its sugars blacken long before the meat gains anything.",
+    "No labneh in the case? Drain full-fat Greek yogurt in a coffee filter for 20 minutes and season it the same way.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Mixed lamb chop board with whipped feta and olives.",
-    "Orzo salad with lemon and herbs."
+    "Main: za'atar lamb loin and shoulder chops over Aleppo labneh",
+    "Sides: warm pita wedges, pickled turnips, fresh mint",
+    "Condiments: pomegranate molasses, extra sumac and Aleppo pepper",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Slice leftover chops for lamb pita wraps.",
-    "Chop into Mediterranean grain bowls."
+    "Cool the lamb chops in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Slice cold chops thin and stuff into pita with leftover labneh and turnips — better eating than a reheated whole chop.",
+    "Labneh and pickled turnips keep sealed for days; mint doesn't — pick fresh next shift."
   ],
-  "whyCrewsLikeIt": "Mixed chop boards feel special without slow cooking. Loin and shoulder eat differently on one board, hold sliced at 170°F, and beat another generic kebab platter.",
-  "mealPrepNotes": "Rub chops 1 hour ahead. Grill loin hot 475°F, 3–4 minutes per side; shoulder medium 425°F, 5–6 minutes per side. Hold covered at 170°F up to 30 minutes.",
+  "whyCrewsLikeIt": "Two cuts on one board ends the argument — rosy loin for the steak crowd, charred-fat shoulder for everyone chasing flavor over tenderness — and the labneh, turnips, and mint cut the richness so nobody fades halfway through.",
+  "substitutions": [
+    "Greek yogurt drained 20 minutes in a coffee filter swaps for labneh — looser, so spread it thicker.",
+    "No pomegranate molasses? Simmer balsamic with a spoon of honey until syrupy for the same sweet-sour hit.",
+    "All shoulder chops keeps the cost down — give every chop the medium zone and the full 5–6 minutes per side to 145°F.",
+    "Lemon squeezed over the finished board covers the sour note if sumac is missing."
+  ],
+  "mealPrepNotes": "Rub the chops up to 4 hours ahead and refrigerate; pull them 45 minutes before grilling. Labneh, turnips, and mint stage cold. Loin runs the hot zone, shoulder the medium zone — pull both at temp and glaze in the last minute.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
+    "calories": 760,
+    "protein": 58,
+    "carbs": 34,
+    "fats": 44,
     "label": "per serving (hall portion)",
     "source": "estimated"
   },
@@ -201,7 +245,9 @@
     "firehall",
     "mixed lamb chop board",
     "mediterranean lamb grill",
-    "herb lamb loin shoulder"
+    "herb lamb loin shoulder",
+    "za'atar lamb chops",
+    "lamb board with labneh"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -210,6 +256,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.438Z",
+  "generatedAt": "2026-07-23T21:00:00.000Z",
   "contentVersion": 2
 }

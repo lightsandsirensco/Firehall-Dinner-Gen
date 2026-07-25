@@ -7,6 +7,7 @@ import {
   HALL_CANTEEN_CATEGORY_EMOJI,
   HALL_CANTEEN_STATUS_LABELS,
   isBeingPickedUpStatus,
+  normalizeCanteenCategory,
   pickingUpMessage,
 } from "@shared/hall-canteen/types";
 
@@ -67,7 +68,7 @@ export function HallStapleRow({
   onRelease,
   onRemove,
 }: HallStapleRowProps) {
-  const emoji = HALL_CANTEEN_CATEGORY_EMOJI[item.category] ?? "➕";
+  const emoji = HALL_CANTEEN_CATEGORY_EMOJI[normalizeCanteenCategory(item.category)] ?? "📦";
   const claimed = isBeingPickedUpStatus(item.status);
   const displayName = item.picked_up_by_display_name ?? "Crew member";
 

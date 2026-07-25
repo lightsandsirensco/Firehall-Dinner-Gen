@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "portuguese",
   "description": "Portuguese linguica grills until split and charred, served on platters with piri-piri grilled onions, roasted peppers, and crusty rolls.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "medium",
@@ -39,66 +39,66 @@
   "ingredients": [
     {
       "name": "Portuguese Linguica",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "Lb",
       "notes": "about 12 links",
       "group": "Main"
     },
     {
       "name": "Red Onions",
-      "quantity": "3",
+      "quantity": "2",
       "unit": "whole",
       "notes": "thick rings",
       "group": "Grill"
     },
     {
       "name": "Piri-Piri Sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Grill"
     },
     {
       "name": "Red Bell Peppers",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "quartered",
       "group": "Grill"
     },
     {
       "name": "Olive Oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Grill"
     },
     {
       "name": "Garlic Cloves",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Seasoning"
     },
     {
       "name": "Smoked Paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
       "name": "Crusty Rolls",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "Fresh Parsley",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "chopped",
       "group": "Garnish"
     },
     {
       "name": "Whole-Grain Mustard",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Service"
     }

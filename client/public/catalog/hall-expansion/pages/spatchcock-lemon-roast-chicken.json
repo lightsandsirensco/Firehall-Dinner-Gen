@@ -37,66 +37,66 @@
   ],
   "ingredients": [
     {
-      "name": "Whole Chickens",
+      "name": "whole chickens",
       "quantity": "2",
       "unit": "whole",
       "notes": "about 5 lb each",
       "group": "Main"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "softened",
       "group": "Butter"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "2",
       "unit": "whole",
       "notes": "zested and juiced",
       "group": "Butter"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "7",
       "unit": "cloves",
       "notes": "minced",
       "group": "Butter"
     },
     {
-      "name": "Fresh Thyme",
+      "name": "fresh thyme",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Butter"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "quartered",
       "group": "Roast"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "3",
       "unit": "whole",
       "notes": "chunked",
@@ -162,10 +162,19 @@
     "protein": 40,
     "carbs": 8,
     "fats": 26,
-    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)"
+    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
-  "heroImageAlt": "Spatchcock Lemon Roast Chicken — crew-sized firehall meal",
+  "heroImageAlt": "Spatchcock Lemon Roast Chicken — american roast plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
   "railImage": "/images/rails/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
@@ -183,6 +192,6 @@
     "pasta-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

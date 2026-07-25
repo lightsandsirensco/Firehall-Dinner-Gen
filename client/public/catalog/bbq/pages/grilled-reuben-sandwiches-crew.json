@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Thick-cut corned beef grills on the flat-top until charred, stacks on rye with sauerkraut, Swiss, and Thousand Island, and presses until melty and crisp.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
@@ -39,52 +39,52 @@
   "ingredients": [
     {
       "name": "Corned Beef",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "Lb",
       "notes": "cooked, thick-sliced",
       "group": "Main"
     },
     {
       "name": "Marbled Rye Bread",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices",
       "group": "Reuben"
     },
     {
       "name": "Swiss Cheese",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices",
       "group": "Reuben"
     },
     {
       "name": "Sauerkraut",
-      "quantity": "3",
+      "quantity": "2.4",
       "unit": "Cups",
       "notes": "drained and warmed",
       "group": "Reuben"
     },
     {
       "name": "Thousand Island Dressing",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Reuben"
     },
     {
       "name": "Butter",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "softened",
       "group": "Griddle"
     },
     {
       "name": "Caraway Seeds",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Seasoning"
     },
     {
       "name": "Pickles",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups",
       "notes": "dill chips for side",
       "group": "Service"

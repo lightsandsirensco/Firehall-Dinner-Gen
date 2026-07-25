@@ -38,73 +38,73 @@
   ],
   "ingredients": [
     {
-      "name": "Beef Brisket Flat",
+      "name": "beef brisket flat",
       "quantity": "4.8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "trimmed",
       "group": "Main"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Cure"
     },
     {
-      "name": "Coriander Seeds",
+      "name": "coriander seeds",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "toasted and cracked",
       "group": "Cure"
     },
     {
-      "name": "Black Peppercorns",
+      "name": "black peppercorns",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "cracked",
       "group": "Cure"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Cure"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Cure"
     },
     {
-      "name": "Beef Broth",
+      "name": "beef broth",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "for steaming",
       "group": "Service"
     },
     {
-      "name": "Rye Bread",
+      "name": "rye bread",
       "quantity": "17",
       "unit": "slices",
       "group": "Service"
     },
     {
-      "name": "Yellow Mustard",
+      "name": "yellow mustard",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Service"
     },
     {
-      "name": "Dill Pickle Spears",
+      "name": "dill pickle spears",
       "quantity": "16",
       "unit": "spears",
       "group": "Service"
     },
     {
-      "name": "Coleslaw",
+      "name": "coleslaw",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "prepared or quick-made",
       "group": "Service"
     }
@@ -168,10 +168,19 @@
     "protein": 42,
     "carbs": 38,
     "fats": 22,
-    "label": "~520 cal/serving · 42g protein · 3g fiber (est.)"
+    "label": "~520 cal/serving · 42g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/montreal-smoked-meat-platter.jpg",
-  "heroImageAlt": "Montreal Smoked Meat Platter — crew-sized firehall meal",
+  "heroImageAlt": "Montreal Smoked Meat Platter — canadian platter plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/montreal-smoked-meat-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/montreal-smoked-meat-platter.jpg",
   "railImage": "/images/rails/hall-expansion/montreal-smoked-meat-platter.jpg",
@@ -183,12 +192,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "firehall-donair-platter",
+    "classic-poutine-feed-crew",
+    "peri-peri-chicken-platter",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

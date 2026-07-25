@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Wide Egg Noodles",
+      "name": "wide egg noodles",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Aromatics"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "3",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Celery Stalks",
+      "name": "celery stalks",
       "quantity": "3",
       "unit": "stalks",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "6.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Broth"
     },
     {
-      "name": "Fresh Thyme",
+      "name": "fresh thyme",
       "quantity": "3",
       "unit": "sprigs",
       "group": "Herbs"
     },
     {
-      "name": "Bay Leaves",
+      "name": "bay leaves",
       "quantity": "2",
       "unit": "whole",
       "group": "Herbs"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -162,10 +162,19 @@
     "protein": 28,
     "carbs": 36,
     "fats": 10,
-    "label": "~340 cal/serving · 28g protein · 3g fiber (est.)"
+    "label": "~340 cal/serving · 28g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/hall-chicken-noodle-soup.jpg",
-  "heroImageAlt": "Hall Chicken Noodle Soup — crew-sized firehall meal",
+  "heroImageAlt": "Hall Chicken Noodle Soup — american soup plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/hall-chicken-noodle-soup.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/hall-chicken-noodle-soup.jpg",
   "railImage": "/images/rails/hall-expansion/hall-chicken-noodle-soup.jpg",
@@ -177,12 +186,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "green-chile-chicken-stew",
+    "malaysian-laksa-soup",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

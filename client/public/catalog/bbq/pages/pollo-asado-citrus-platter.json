@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "yucatecan",
   "description": "Chicken leg quarters marinate in sour orange, recado rojo, and annatto, griddle until skin crisps and 175°F, and serve with charred jicama and habanero salsa.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 30,
   "prepTime": 40,
   "difficulty": "medium",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "Chicken Leg Quarters",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "notes": "about 6 lb",
       "group": "Main"
     },
     {
       "name": "Sour Orange Juice",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Recado marinade"
     },
     {
       "name": "Recado Rojo Paste",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Recado marinade"
     },
     {
       "name": "Annatto Seeds",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "notes": "toasted and ground",
       "group": "Recado marinade"
     },
     {
       "name": "Rendered Chicken Fat",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Recado marinade"
     },
     {
       "name": "Ground Allspice",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Recado marinade"
     },
     {
       "name": "Epazote Leaves",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Recado marinade"
     },
     {
       "name": "Jicama Sticks",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Lb",
       "notes": "for charring",
       "group": "Griddle"
     },
     {
       "name": "Habanero Salsa",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Cups",
       "group": "Garnish"
     },
     {
       "name": "Hand-Pressed Corn Tortillas",
-      "quantity": "24",
+      "quantity": "19.2",
       "unit": "pieces",
       "group": "Service"
     }

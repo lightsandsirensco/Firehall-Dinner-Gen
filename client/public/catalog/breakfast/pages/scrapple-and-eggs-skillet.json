@@ -23,48 +23,48 @@
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Scrapple Loaf",
+      "name": "scrapple loaf",
       "quantity": "2 lb",
       "notes": "cut into 1/2-inch slices",
       "group": "Scrapple"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "8",
       "group": "Protein"
     },
     {
-      "name": "White Bread",
+      "name": "white bread",
       "quantity": "8 slices",
       "notes": "cut into triangles",
       "group": "Toast"
     },
     {
-      "name": "Vegetable Oil",
+      "name": "vegetable oil",
       "quantity": "3 tbsp",
       "notes": "for scrapple, plus butter",
       "group": "Fat"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1/2 tsp",
       "notes": "scrapple is seasoned—taste before salting",
       "group": "Seasoning"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "4 tbsp",
       "notes": "for toast and eggs",
       "group": "Finish"
     },
     {
-      "name": "Apple Butter",
+      "name": "apple butter",
       "quantity": "1/2 cup",
       "notes": "for serving",
       "group": "Optional"
     },
     {
-      "name": "Maple Syrup",
+      "name": "maple syrup",
       "quantity": "1/4 cup",
       "notes": "Pennsylvania sweet-savory tradition",
       "group": "Optional"
@@ -138,13 +138,10 @@
   ],
   "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
   "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
-  "imageAlt": "Wide firehall cast-iron skillet breakfast with crispy scrapple and fried eggs on a crew prep table, family-style platter",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T21:55:57.889Z",
+  "imageAlt": "Crisp scrapple slices with fried eggs and buttered toast points",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 7,
   "seoTitle": "Scrapple and Eggs Skillet | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "heroImageAlt": "Wide firehall cast-iron skillet breakfast with crispy scrapple and fried eggs on a crew prep table, family-style platter",
-  "mobileImage": "/images/mobile/breakfast/scrapple-and-eggs-skillet.jpg",
-  "railImage": "/images/rails/breakfast/scrapple-and-eggs-skillet.jpg"
+  "collectionTier": "firehall_classic"
 }

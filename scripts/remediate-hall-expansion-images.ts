@@ -116,7 +116,9 @@ function proteinCompatible(recipeProtein: string, donorProtein: string): boolean
   if (!want || want === "any" || want === "mixed" || want === "pantry") return true;
   if (want === got) return true;
   if (want === "turkey" && got === "chicken") return true;
-  if (want === "seafood" && (got === "fish" || got === "seafood")) return true;
+  if ((want === "seafood" || want === "shrimp") && (got === "fish" || got === "seafood" || got === "shrimp")) {
+    return true;
+  }
   if (want === "vegetarian" && got === "vegetarian") return true;
   return false;
 }

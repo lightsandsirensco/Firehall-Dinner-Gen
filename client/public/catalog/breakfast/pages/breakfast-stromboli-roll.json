@@ -23,49 +23,49 @@
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Pizza Dough",
+      "name": "pizza dough",
       "quantity": "2 lb",
       "notes": "room temperature",
       "group": "Dough"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "12",
       "notes": "soft-scrambled and cooled slightly",
       "group": "Filling"
     },
     {
-      "name": "Deli Ham",
+      "name": "deli ham",
       "quantity": "1 1/2 lb",
       "notes": "thin slices",
       "group": "Filling"
     },
     {
-      "name": "Shredded Mozzarella",
+      "name": "shredded mozzarella",
       "quantity": "2 cups",
       "notes": "low moisture",
       "group": "Filling"
     },
     {
-      "name": "Roasted Red Pepper",
+      "name": "roasted red pepper",
       "quantity": "1",
       "notes": "sliced, or sautéed bell pepper",
       "group": "Filling"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2 tbsp",
       "notes": "for brushing",
       "group": "Finish"
     },
     {
-      "name": "Grated Parmesan",
+      "name": "grated Parmesan",
       "quantity": "1/2 cup",
       "notes": "plus flaky salt",
       "group": "Finish"
     },
     {
-      "name": "Marinara Sauce",
+      "name": "marinara sauce",
       "quantity": "1 cup",
       "notes": "warmed for dipping",
       "group": "Serve"
@@ -142,8 +142,8 @@
   "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
   "imageAlt": "Golden breakfast stromboli sliced with ham, eggs, and melted cheese",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T20:48:24.991Z",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Breakfast Stromboli Roll | Firehall Breakfast",
   "collectionTier": "firehall_classic"

@@ -12,44 +12,44 @@
     "one-pot",
     "topping-bar"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 10,
   "cookTime": 18,
   "totalTime": 28,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Rolled Oats",
-      "quantity": "6 cups"
+      "name": "rolled oats",
+      "quantity": "4.8"
     },
     {
-      "name": "Water Or Broth",
-      "quantity": "12 cups",
+      "name": "water or broth",
+      "quantity": "9.6",
       "notes": "half broth for savory"
     },
     {
-      "name": "Kosher Salt",
-      "quantity": "2 tsp"
+      "name": "kosher salt",
+      "quantity": "1.6"
     },
     {
-      "name": "Butter",
-      "quantity": "3 tbsp"
+      "name": "butter",
+      "quantity": "2.4"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "1 cup",
+      "name": "shredded cheddar",
+      "quantity": "3/4",
       "notes": "topping bar"
     },
     {
-      "name": "Soft-Cooked Eggs",
-      "quantity": "6",
+      "name": "soft-cooked eggs",
+      "quantity": "5",
       "notes": "for topping",
       "optional": true
     },
     {
-      "name": "Green Onions",
-      "quantity": "1/2 cup",
+      "name": "green onions",
+      "quantity": "1/2",
       "notes": "sliced",
       "optional": true
     }
@@ -117,8 +117,8 @@
   "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
   "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
   "imageAlt": "Wide firehall crew platter of Big-Pot Savory Oats beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.993Z",
-  "updatedAt": "2026-06-04T20:48:24.993Z",
+  "publishedAt": "2026-07-17T20:15:27.732Z",
+  "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "Big-Pot Savory Oats | Firehall Breakfast",
   "collectionTier": "performance"

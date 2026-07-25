@@ -23,48 +23,48 @@
   "difficulty": "hard",
   "ingredients": [
     {
-      "name": "Large Egg Yolks",
+      "name": "large egg yolks",
       "quantity": "8",
       "group": "Hollandaise"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "1 lb",
       "notes": "melted and hot",
       "group": "Hollandaise"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "3 tbsp",
       "notes": "fresh, plus zest",
       "group": "Hollandaise"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "1 tsp",
       "notes": "helps emulsify",
       "group": "Hollandaise"
     },
     {
-      "name": "English Muffins",
+      "name": "English muffins",
       "quantity": "8",
       "notes": "split and toasted",
       "group": "Build"
     },
     {
-      "name": "Canadian Bacon Slices",
+      "name": "Canadian bacon slices",
       "quantity": "16",
       "notes": "warmed in a dry skillet",
       "group": "Build"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "8",
       "notes": "very fresh for poaching",
       "group": "Protein"
     },
     {
-      "name": "White Vinegar",
+      "name": "white vinegar",
       "quantity": "2 tbsp",
       "notes": "for poaching water, plus chives",
       "group": "Finish"
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/eggs-benedict-hall-style.jpg",
   "thumbImage": "/images/thumbs/breakfast/eggs-benedict-hall-style.jpg",
   "imageAlt": "Eggs Benedict with poached eggs, Canadian bacon, and hollandaise on English muffins",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T20:48:24.991Z",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 9,
   "seoTitle": "Eggs Benedict Hall Style | Firehall Breakfast",
   "collectionTier": "firehall_classic"

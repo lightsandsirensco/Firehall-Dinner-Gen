@@ -1,0 +1,260 @@
+{
+  "slug": "bbq-pulled-pork-bowls",
+  "title": "BBQ Pulled Pork Bowls",
+  "displayTitle": "BBQ Pulled Pork Bowls",
+  "seoTitle": "BBQ Pulled Pork Bowls | Firefighter Meal",
+  "shortDescription": "Slow-braised pulled pork with rice, slaw, pickles, and crispy onions",
+  "subtitle": "Slow-braised pulled pork with rice, slaw, pickles, and crispy onions",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Slow-cooked pulled pork over rice with coleslaw, corn, pickles, crispy onions, cheddar, and barbecue sauce.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 240,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 720,
+  "protein": 45,
+  "carbs": 70,
+  "fats": 30,
+  "tags": [
+    "protein:pork",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "pork",
+    "comfort",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Dutch oven or roasting pan",
+    "Two forks or meat claws",
+    "Rice pot",
+    "Instant-read thermometer",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "pork shoulder",
+      "quantity": "5.6",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "barbecue sauce",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Braise"
+    },
+    {
+      "name": "onions",
+      "quantity": "2.4",
+      "unit": "each",
+      "group": "Braise"
+    },
+    {
+      "name": "rice",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "coleslaw mix",
+      "quantity": "2.4",
+      "unit": "lb",
+      "group": "Cold bar"
+    },
+    {
+      "name": "corn",
+      "quantity": "3.2",
+      "unit": "cups",
+      "group": "Vegetables"
+    },
+    {
+      "name": "pickle chips",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "crispy onions",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Finish"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season the pork and set up the braise",
+      "instruction": "Heat the oven to 325°F. Pat the pork shoulder dry, then rub it hard with salt, pepper, garlic powder, paprika, and a light coat of oil on every side. Slice onions into thick half-moons and scatter them in the bottom of a Dutch oven or deep roasting pan with 3 cups chicken broth. Dry meat browns better — skip the paper towels and you get steamed gray pork. Target oven/smoker temperature: 325°F.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Braise until fork-tender",
+      "instruction": "Nestle the seasoned shoulder on the onions, cover tightly with a lid or heavy foil, and braise 3 1/2 to 4 hours. Check at the 3-hour mark: a fork should slide through with almost no resistance and the bone (if present) should wiggle free. Internal temp will be well past 190°F when it shreds easily — do not pull it at 165°F thinking it is done; that is still tough for shoulder. Target oven/smoker temperature: 325°F.",
+      "minutes": 240,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the rice during the final hour",
+      "instruction": "About 45 minutes before you plan to shred, rinse 3 cups rice and cook it covered with 5 1/2 cups salted water on low for 18 minutes. Rest 10 minutes, then fluff. Start rice too early and it dries out in the warmer; start too late and you are staring at pork with nothing under it.",
+      "minutes": 28,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Shred the pork in its juices",
+      "instruction": "Transfer the hot shoulder to a rimmed sheet pan. Skim the fat off the braising liquid with a ladle, then shred the pork with two forks or meat claws into bite-size strands. Toss the shreds with enough reserved juices to look glossy, then fold in barbecue sauce a cup at a time until coated but not swimming. Shredding on a cutting board without a rim loses half the good juice on the counter.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Warm the corn and dress the slaw",
+      "instruction": "Heat corn in a skillet over medium for 4–5 minutes until hot through with a few browned spots. Toss coleslaw mix with dressing just before service — 10 minutes max in the fridge after dressing — so it stays crisp instead of wilting into a soggy pile. Hold pickles, cheddar, and crispy onions cold and dry.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Set up the BBQ sauce station",
+      "instruction": "Warm a squeeze bottle or small pot of extra barbecue sauce over low heat so it loosens for drizzling. Taste the sauced pork — if it tastes flat, add a splash of apple cider vinegar or more sauce, not more salt. Keep crispy onions in a sealed container until the last second or humidity turns them soft.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold the pork hot and moist",
+      "instruction": "Move shredded pork into a shallow hotel pan, nestle it with a ladle of braising juices, cover, and hold at 200°F. Deep stockpots dry out the top layer while the bottom steams — shallow pans hold better. Keep rice covered separately so it does not soak up all the BBQ sauce smell and turn pink. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Build the pulled pork bowls",
+      "instruction": "Scoop rice into each bowl, then pile on a generous ladle of pulled pork. Add a spoonful of corn beside the pork, not on top of it. Leave a clear space for the cold toppings — dumping everything in one mound makes the slaw wilt on contact.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Add crunch and cheese",
+      "instruction": "Top each bowl with a handful of dressed slaw, pickle chips, shredded cheddar, and a handful of crispy onions. Drizzle a little extra warm barbecue sauce over the pork. Crispy onions go last — bury them under sauce and they turn to mush before the bowl hits the table.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve family-style with extras",
+      "instruction": "Set bowls at the pass with extra sauce, pickles, and a sealed container of crispy onions for seconds. Tell the crew the pork holds hot for late arrivals. Do not leave the slaw bowl sitting next to the steam table or it collapses into cabbage soup.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the pulled pork — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Don't dress the coleslaw yet if you haven't already — hold it, the pickles, cheddar, and crispy onions cold and dry in the fridge. On return, spot-check the pork at a safe internal temp, then dress the slaw fresh so it stays crisp instead of wilting.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool pulled pork and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: A pork shoulder is done by tenderness, not a timer — wait until a fork slides through with almost no fight.",
+    "Rookie tip: Skim the braising liquid before saucing so pork tastes rich, not greasy.",
+    "Rookie tip: Shred in a rimmed pan to capture every drop of juice.",
+    "Prep tip: Keep crispy onions sealed until the line opens.",
+    "Use a shallow hotel pan for better hot holding than a deep stockpot."
+  ],
+  "tonightSpread": [
+    "Main: BBQ pulled pork bowls",
+    "Sides: Cornbread, watermelon wedges",
+    "Condiments: Barbecue sauce, pickle chips, crispy onions",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool pulled pork in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Pile pork onto buns with slaw for next-day sandwiches.",
+    "Freeze cooled pulled pork in its juices for up to two months."
+  ],
+  "whyCrewsLikeIt": "The pork is call-friendly, crowd-pleasing comfort food, and the cold crunchy toppings keep it from eating like a heavy sandwich.",
+  "mealPrepNotes": "Make-ahead: braise and shred pork up to two days early in its juices. Storage: refrigerate pork, rice, corn, slaw, and toppings separately for 3 days. Reheating: cover pork with braising juices and heat to 165°F; make slaw and add crispy onions only at service.",
+  "substitutions": [
+    "Use pulled chicken for pork.",
+    "Use brown rice or mashed potatoes.",
+    "Use store-bought slaw dressing.",
+    "Use pepper jack instead of cheddar."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 720,
+    "protein": 45,
+    "carbs": 70,
+    "fats": 30,
+    "label": "~720 cal/serving · 45g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+  "heroImageAlt": "BBQ Pulled Pork Bowls — american bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/bbq-pulled-pork-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/bbq-pulled-pork-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "bbq pulled pork bowls",
+    "pulled pork rice bowl",
+    "firehall barbecue dinner",
+    "slow cooked pork for 10",
+    "comfort food crew dinner",
+    "coleslaw pork bowl",
+    "meal prep pulled pork",
+    "barbecue bowl recipe"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

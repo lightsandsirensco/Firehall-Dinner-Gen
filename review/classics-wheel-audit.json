@@ -1,23 +1,12 @@
 {
-  "generatedAt": "2026-06-04T20:53:34.945Z",
+  "generatedAt": "2026-07-24T02:18:14.539Z",
   "wheelSegmentCount": 10,
   "pass": true,
   "passCount": 10,
   "failCount": 0,
-  "fixMode": true,
-  "fixImagesMode": true,
-  "pagesFixed": [
-    "chicken-parm",
-    "steak-tacos",
-    "pulled-pork",
-    "smash-burgers",
-    "big-chili",
-    "chicken-caesar",
-    "jerk-chicken",
-    "beef-dip",
-    "bbq-chicken-mac-and-cheese",
-    "steak-sandwiches"
-  ],
+  "fixMode": false,
+  "fixImagesMode": false,
+  "pagesFixed": [],
   "heroFixesApplied": [],
   "duplicateHeroGroups": [],
   "catalogOnlyClassics": [
@@ -72,7 +61,7 @@
     },
     {
       "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches",
+      "title": "Carolina Pulled Pork",
       "pass": true,
       "imageAccuracyScore": 100,
       "recipeDetailScore": 100,
@@ -191,7 +180,7 @@
     },
     {
       "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches",
+      "title": "Philly-Style Cheesesteaks",
       "pass": true,
       "imageAccuracyScore": 100,
       "recipeDetailScore": 100,

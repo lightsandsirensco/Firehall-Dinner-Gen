@@ -3,5 +3,12 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
 
 Sitemap: https://www.firehallmeals.com/sitemap.xml

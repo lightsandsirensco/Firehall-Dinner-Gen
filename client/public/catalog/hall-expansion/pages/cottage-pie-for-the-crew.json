@@ -38,72 +38,72 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef",
+      "name": "ground beef",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Filling"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Filling"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Filling"
     },
     {
-      "name": "Frozen Peas",
+      "name": "frozen peas",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Filling"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Filling"
     },
     {
-      "name": "Beef Broth",
+      "name": "beef broth",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Filling"
     },
     {
-      "name": "Worcestershire Sauce",
+      "name": "Worcestershire sauce",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Filling"
     },
     {
-      "name": "Russet Potatoes",
+      "name": "russet potatoes",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "peeled and cubed",
       "group": "Topping"
     },
     {
-      "name": "Butter",
+      "name": "butter",
       "quantity": "5.1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Topping"
     },
     {
-      "name": "Whole Milk",
+      "name": "whole milk",
       "quantity": "5/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Topping"
     },
     {
-      "name": "Cheddar Cheese",
+      "name": "cheddar cheese",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "grated",
       "group": "Topping"
     }
@@ -167,10 +167,19 @@
     "protein": 32,
     "carbs": 48,
     "fats": 24,
-    "label": "~520 cal/serving · 32g protein · 5g fiber (est.)"
+    "label": "~520 cal/serving · 32g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/cottage-pie-for-the-crew.jpg",
-  "heroImageAlt": "Cottage Pie for the Crew — crew-sized firehall meal",
+  "heroImageAlt": "Cottage Pie for the Crew — british bake plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/cottage-pie-for-the-crew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/cottage-pie-for-the-crew.jpg",
   "railImage": "/images/rails/hall-expansion/cottage-pie-for-the-crew.jpg",
@@ -182,12 +191,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "tourtiere-for-the-crew",
     "shawarma-bar-night",
     "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-burger-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

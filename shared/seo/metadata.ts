@@ -176,11 +176,23 @@ export function buildAboutSeo(): PageSeoConfig {
   return {
     title: `About Firehall Meals | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      "Practical crew dinners, guides, and tools built for station kitchens — not home-cooking blogs.",
+      "Firehall Meals is built by firefighters for station kitchens — crew-sized recipes, shift-tested dinners, and tools that end the what's-for-dinner debate.",
     ),
     canonicalPath: "/about",
     ogType: "website",
     keywords: [...SEO_TARGET_KEYWORDS],
+  };
+}
+
+export function buildHowWeTestRecipesSeo(): PageSeoConfig {
+  return {
+    title: `How We Test Recipes | ${SEO_SITE_NAME}`,
+    description: clipDescription(
+      "How Firehall Meals tests firefighter recipes for real fire halls — crew sizing for 2–20, beginner-friendly steps, and shift cooking that holds between calls.",
+    ),
+    canonicalPath: "/how-we-test-recipes",
+    ogType: "website",
+    keywords: [...SEO_TARGET_KEYWORDS, "how we test recipes", "firehall recipe standards"],
   };
 }
 
@@ -298,6 +310,21 @@ export function buildGuideArticleSeo(article: EditorialArticle): PageSeoConfig {
 }
 
 export function buildSeoLandingPageSeo(page: SeoLandingPageDef): PageSeoConfig {
+  return {
+    title: page.title,
+    description: clipDescription(page.description),
+    canonicalPath: page.path,
+    ogType: "website",
+    keywords: page.keywords,
+  };
+}
+
+export function buildProductSeoPageSeo(page: {
+  title: string;
+  description: string;
+  path: string;
+  keywords: string[];
+}): PageSeoConfig {
   return {
     title: page.title,
     description: clipDescription(page.description),

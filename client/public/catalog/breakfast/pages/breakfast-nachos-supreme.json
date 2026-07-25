@@ -15,58 +15,58 @@
     "sheet-pan",
     "shareable"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 15,
   "totalTime": 30,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Large Bags Tortilla Chips",
+      "name": "large bags tortilla chips",
       "quantity": "2",
       "notes": "thick restaurant-style",
       "group": "Base"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "14",
+      "name": "large eggs",
+      "quantity": "11",
       "notes": "soft-scrambled",
       "group": "Protein"
     },
     {
-      "name": "Bacon",
-      "quantity": "1 lb",
+      "name": "bacon",
+      "quantity": "3/4",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "3 cups",
+      "name": "shredded cheddar",
+      "quantity": "2.4",
       "notes": "and 2 cups shredded Monterey Jack",
       "group": "Cheese"
     },
     {
-      "name": "Nacho Cheese Sauce",
-      "quantity": "1 1/2 cups",
+      "name": "nacho cheese sauce",
+      "quantity": "3/8",
       "notes": "warmed",
       "group": "Cheese"
     },
     {
-      "name": "Pico De Gallo",
-      "quantity": "1 1/2 cups",
+      "name": "pico de gallo",
+      "quantity": "3/8",
       "notes": "drained well",
       "group": "Toppings"
     },
     {
-      "name": "Avocados",
+      "name": "avocados",
       "quantity": "2",
       "notes": "diced, added after broil",
       "group": "Toppings"
     },
     {
-      "name": "Sour Cream",
-      "quantity": "1/2 cup",
+      "name": "sour cream",
+      "quantity": "3/8",
       "notes": "crema, and sliced jalapeños",
       "group": "Finish"
     }
@@ -142,8 +142,8 @@
   "heroImage": "/images/breakfast/breakfast-nachos-supreme.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-nachos-supreme.jpg",
   "imageAlt": "Breakfast nachos supreme loaded with eggs, bacon, melted cheese, and pico",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Breakfast Nachos Supreme | Firehall Breakfast",
   "collectionTier": "firehall_classic"
