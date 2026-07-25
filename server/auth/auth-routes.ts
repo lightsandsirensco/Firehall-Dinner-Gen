@@ -14,11 +14,11 @@ import {
   upsertEmailUser,
   upsertOAuthUser,
 } from "./auth-store.js";
-import { sendMagicLinkEmail } from "./magic-link-mail.js";
+import { sendMagicLinkEmail, getMagicLinkMailStatus, MAGIC_LINK_EXPIRY_MINUTES } from "./magic-link-mail.js";
 import { verifyAppleIdToken, verifyGoogleIdToken } from "./oauth-verify.js";
 import { attachAuthUser, requireAuth, type AuthedRequest } from "./auth-middleware.js";
 import { requireCsrf } from "../csrf.js";
-import { enforceEmailRateLimit } from "../email-rate-limit.js";
+import { checkEmailRateLimit, recordEmailRateLimit } from "../email-rate-limit.js";
 import { logError } from "../logger.js";
 import {
   magicLinkRequestSchema,
@@ -85,8 +85,11 @@ export function registerAuthRoutes(app: Express): void {
   app.use(attachAuthUser);
 
   app.get("/api/auth/config", async (_req: Request, res: Response) => {
+    const mail = getMagicLinkMailStatus();
     return res.json({
       magic_link: true,
+      email_configured: mail.configured,
+      magic_link_expires_minutes: mail.expires_minutes,
       google: Boolean(process.env.GOOGLE_CLIENT_ID?.trim()),
       apple: Boolean(process.env.APPLE_CLIENT_ID?.trim()),
     });
@@ -114,28 +117,44 @@ export function registerAuthRoutes(app: Express): void {
         return res.status(400).json({ message: "Enter a valid email address" });
       }
 
-      if (!enforceEmailRateLimit(req, res, parsed.data.email)) return;
+      const rate = checkEmailRateLimit(req, parsed.data.email);
+      if (!rate.allowed) {
+        trackAuthEvent(req, "magic_link_failed", { error: "rate_limited" });
+        return res.status(429).json({
+          message: rate.message,
+          retry_after_seconds: rate.retryAfterSeconds,
+        });
+      }
 
       const returnTo = sanitizeReturnToPath(parsed.data.return_to);
       const { rawToken } = createMagicLink(parsed.data.email, returnTo);
-      const mail = await sendMagicLinkEmail(parsed.data.email, rawToken);
+      const forwarded = String(req.headers["x-forwarded-proto"] ?? "").split(",")[0]?.trim();
+      const mail = await sendMagicLinkEmail(parsed.data.email, rawToken, {
+        reqHost: req.get("host") ?? undefined,
+        forwardedProto: forwarded || undefined,
+      });
 
       if (mail.sent) {
+        recordEmailRateLimit(req, parsed.data.email);
         trackAuthEvent(req, "magic_link_sent", {
           return_to: returnTo ?? "",
+          provider: mail.provider,
         });
         return res.json({
           ok: true,
           sent: true,
+          expires_in_minutes: MAGIC_LINK_EXPIRY_MINUTES,
           message: "Check your email for a sign-in link.",
         });
       }
 
       if ("mode" in mail && mail.mode === "development") {
+        recordEmailRateLimit(req, parsed.data.email);
         return res.json({
           ok: true,
           sent: false,
           dev_link: mail.devLink,
+          expires_in_minutes: MAGIC_LINK_EXPIRY_MINUTES,
           message: "Development mode: use the sign-in link below.",
         });
       }
@@ -143,6 +162,7 @@ export function registerAuthRoutes(app: Express): void {
       if ("error" in mail) {
         trackAuthEvent(req, "magic_link_failed", {
           error: mail.error,
+          hint: mail.hint ?? "",
         });
         if (mail.error === "not_configured") {
           return res.status(503).json({ message: mail.message });
@@ -176,7 +196,12 @@ export function registerAuthRoutes(app: Express): void {
         if (consumed.reason === "expired" || consumed.reason === "used") {
           trackAuthEvent(req, "magic_link_expired", { reason: consumed.reason });
         }
-        const errorParam = consumed.reason === "expired" ? "expired_link" : "invalid_link";
+        const errorParam =
+          consumed.reason === "expired"
+            ? "expired_link"
+            : consumed.reason === "used"
+              ? "used_link"
+              : "invalid_link";
         return res.redirect(`/me/profile?error=${errorParam}`);
       }
 

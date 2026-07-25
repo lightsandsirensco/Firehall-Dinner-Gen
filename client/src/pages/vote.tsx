@@ -4,9 +4,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Flame, Clock, Trophy, Check, Vote as VoteIcon, Lock, Timer, Users, ChevronRight } from "lucide-react";
+import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { HeroHeader } from "@/components/hero-header";
 import type { HallVoteResponse, HallVoteOption } from "@shared/schema";
 import { trackHallVoteSubmitted } from "@/lib/analytics";
+import { useNoIndex } from "@/lib/seo/use-noindex";
+import { app } from "@/lib/design-tokens";
+import { cn } from "@/lib/utils";
 
 function VoteBar({ option, totalVotes, isWinner, isUserVote }: {
   option: HallVoteOption;
@@ -56,6 +60,7 @@ function VoteBar({ option, totalVotes, isWinner, isUserVote }: {
 }
 
 export default function VotePage() {
+  useNoIndex();
   const { voteId } = useParams<{ voteId: string }>();
   const [vote, setVote] = useState<HallVoteResponse | null>(null);
   const [loading, setLoading] = useState(true);
@@ -163,10 +168,13 @@ export default function VotePage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center">
-        <div className="text-center space-y-3">
-          <Flame className="w-10 h-10 mx-auto animate-pulse" style={{ color: "#C62828" }} />
-          <p className="text-muted-foreground text-sm">Loading vote...</p>
+      <div className={cn(app.page, "bg-background")}>
+        <AppTopBar title="Vote" parentHref="/tonight" parentLabel="Tonight" />
+        <div className="flex flex-1 items-center justify-center py-16">
+          <div className="text-center space-y-3">
+            <Flame className="w-10 h-10 mx-auto animate-pulse text-primary" />
+            <p className="text-muted-foreground text-sm">Loading vote...</p>
+          </div>
         </div>
       </div>
     );
@@ -174,17 +182,19 @@ export default function VotePage() {
 
   if (error && !vote) {
     return (
-      <div className="min-h-screen bg-background flex items-center justify-center p-4">
-        <div className="text-center space-y-4 max-w-sm">
-          <Flame className="w-10 h-10 mx-auto" style={{ color: "#C62828" }} />
+      <div className={cn(app.page, "bg-background")}>
+        <AppTopBar title="Vote" parentHref="/tonight" parentLabel="Tonight" />
+        <main className={cn(app.main, "mx-auto max-w-sm px-4 py-12 text-center space-y-4")}>
+          <Flame className="w-10 h-10 mx-auto text-primary" />
           <h1 className="font-heading text-3xl tracking-wide text-foreground">VOTE NOT FOUND</h1>
           <p className="text-sm text-muted-foreground">{error}</p>
-          <Link href="/generator">
-            <Button variant="outline" className="font-heading tracking-wider" data-testid="button-back-home">
-              BACK TO MEALS
-            </Button>
-          </Link>
-        </div>
+          <Button asChild variant="outline" className="font-heading tracking-wider" data-testid="button-back-tonight">
+            <Link href="/tonight">Back to Tonight</Link>
+          </Button>
+          <Button asChild variant="ghost" className="w-full">
+            <Link href="/hall">Manage hall</Link>
+          </Button>
+        </main>
       </div>
     );
   }
@@ -201,26 +211,12 @@ export default function VotePage() {
     : undefined;
 
   return (
-    <div className="min-h-screen bg-background">
-      <header className="bg-background/95 backdrop-blur-sm border-b border-border/40 sticky top-0 z-50">
-        <div className="max-w-lg mx-auto px-4 py-3">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Flame className="w-6 h-6" style={{ color: "#C62828" }} />
-              <span className="font-heading text-base leading-none tracking-wide text-foreground">FIREHALL MEALS</span>
-            </div>
-            <Link href="/generator">
-              <span className="text-xs text-muted-foreground hover:text-foreground transition-colors cursor-pointer flex items-center gap-1">
-                Generator <ChevronRight className="w-3 h-3" />
-              </span>
-            </Link>
-          </div>
-        </div>
-      </header>
+    <div className={cn(app.page, "bg-background")}>
+      <AppTopBar title="Vote" parentHref="/tonight" parentLabel="Tonight" />
 
       <HeroHeader title="Hall Vote" subtitle="Vote on tonight's crew meal" />
 
-      <main className="max-w-lg mx-auto px-4 py-6 space-y-5">
+      <main className={cn(app.main, "mx-auto max-w-lg px-4 py-6 space-y-5 pb-safe-nav")}>
         <div className="text-center space-y-2">
           <div className="flex items-center justify-center gap-2">
             <VoteIcon className="w-5 h-5 text-primary" />
@@ -336,7 +332,16 @@ export default function VotePage() {
           </div>
         )}
 
-        <footer className="text-center pt-4">
+        <footer className="text-center pt-4 space-y-3">
+          <Button asChild className="w-full min-h-11" data-testid="vote-back-hall">
+            <Link href="/tonight">← Back to Tonight</Link>
+          </Button>
+          <Link
+            href="/hall"
+            className="inline-flex min-h-8 items-center text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline"
+          >
+            Manage the hall
+          </Link>
           <p className="text-[10px] text-muted-foreground/40">
             Powered by{" "}
             <a href="https://www.lightsandsirensco.com" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground/60 transition-colors">

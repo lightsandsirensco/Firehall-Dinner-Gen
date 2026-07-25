@@ -1,0 +1,208 @@
+{
+  "slug": "grilled-flank-fajita-bar",
+  "title": "Grilled Flank Fajita Bar",
+  "displayTitle": "Grilled Flank Fajita Bar",
+  "seoTitle": "Grilled Flank Fajita Bar | Firefighter Meal",
+  "shortDescription": "Charred steak, peppers, tortillas, and fresh toppings",
+  "subtitle": "Charred steak, peppers, tortillas, and fresh toppings",
+  "category": "hall_expansion",
+  "cuisine": "Mexican-inspired",
+  "description": "Marinated flank steak is grilled, rested, sliced thin, and paired with peppers, onions, and tortillas.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 30,
+  "difficulty": "medium",
+  "calories": 690,
+  "protein": 46,
+  "carbs": 60,
+  "fats": 28,
+  "tags": [
+    "protein:beef",
+    "format:grill",
+    "category:smoker_recipes",
+    "bbq",
+    "taco_night",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "grill",
+    "grill basket",
+    "tongs",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "flank steak",
+      "quantity": "5",
+      "unit": "lb"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "9.6",
+      "unit": "each"
+    },
+    {
+      "name": "onions",
+      "quantity": "4.8",
+      "unit": "each"
+    },
+    {
+      "name": "flour tortillas",
+      "quantity": "24",
+      "unit": "each"
+    },
+    {
+      "name": "lime",
+      "quantity": "6.4",
+      "unit": "each"
+    },
+    {
+      "name": "fajita seasoning",
+      "quantity": "3/4",
+      "unit": "cup"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate steak",
+      "instruction": "Rub flank steak with oil, lime, and fajita seasoning, then refrigerate it covered overnight.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Preheat grill",
+      "instruction": "Heat a clean grill to high and oil the grates with a folded paper towel held by tongs.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Slice vegetables",
+      "instruction": "Cut peppers and onions into wide strips so they do not fall through the grates.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Grill vegetables",
+      "instruction": "Cook vegetables in a grill basket, stirring until softened with charred edges.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Grill steak",
+      "instruction": "Grill steak over high heat, turning once, until it reaches your safe target of at least 145°F.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest steak",
+      "instruction": "Place steak on a board for 8 minutes so juices redistribute before slicing.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Slice correctly",
+      "instruction": "Find the grain and slice thinly across it; slicing with the grain makes flank steak chewy.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Warm tortillas",
+      "instruction": "Wrap tortillas in foil and warm at 200°F or on an indirect grill zone.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold safely",
+      "instruction": "Keep steak and vegetables above 140°F, covering loosely so they do not steam soggy.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Open fajita bar",
+      "instruction": "Serve sliced steak, vegetables, tortillas, lime, and chilled toppings in separate pans.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Flank steak — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Flank steak and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Do not pierce steak while grilling.",
+    "Use skirt steak if flank is unavailable.",
+    "Label raw and cooked steak trays clearly."
+  ],
+  "tonightSpread": [
+    "Main: Grilled flank steak fajitas",
+    "Sides: black beans, Mexican rice",
+    "Condiments: salsa, sour cream, guacamole",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Flank steak in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Make steak-and-egg breakfast burritos."
+  ],
+  "whyCrewsLikeIt": "The grill handles the main cooking while a simple topping bar feeds people at different times.",
+  "mealPrepNotes": "Make-ahead: marinate steak up to 24 hours and slice vegetables 1 day ahead. Storage: refrigerate for 3 days. Reheating: heat steak to 165°F if reheating leftovers.",
+  "substitutions": [
+    "Use skirt steak for flank steak.",
+    "Use corn tortillas for flour tortillas."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 690,
+    "protein": 46,
+    "carbs": 60,
+    "fats": 28,
+    "label": "~690 cal/serving · 46g protein · 8g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+  "heroImageAlt": "Grilled Flank Fajita Bar — Mexican-inspired grill plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/grilled-flank-fajita-bar.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/grilled-flank-fajita-bar.jpg",
+  "railImage": "/images/rails/hall-expansion/grilled-flank-fajita-bar.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "grilled flank steak fajitas crowd",
+    "fajita bar for ten",
+    "firehall grill dinner",
+    "BBQ steak taco bar"
+  ],
+  "relatedSlugs": [
+    "applewood-pork-shoulder-steaks",
+    "maple-cured-salmon-plank",
+    "korean-bulgogi-grill-night",
+    "smoked-turkey-breast"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

@@ -37,66 +37,66 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "about 12 pieces",
       "group": "Main"
     },
     {
-      "name": "Long-Grain White Rice",
+      "name": "long-grain white rice",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Main"
     },
     {
-      "name": "Cajun Seasoning",
+      "name": "Cajun seasoning",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Trinity"
     },
     {
-      "name": "Green Bell Pepper",
+      "name": "green bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced",
       "group": "Trinity"
     },
     {
-      "name": "Celery Stalks",
+      "name": "celery stalks",
       "quantity": "2",
       "unit": "stalks",
       "notes": "diced",
       "group": "Trinity"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Trinity"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Liquid"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Liquid"
     },
     {
-      "name": "Green Onions",
+      "name": "green onions",
       "quantity": "5",
       "unit": "whole",
       "notes": "sliced",
@@ -162,10 +162,19 @@
     "protein": 34,
     "carbs": 52,
     "fats": 16,
-    "label": "~480 cal/serving · 34g protein · 3g fiber (est.)"
+    "label": "~480 cal/serving · 34g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
-  "heroImageAlt": "Cajun Chicken and Rice Skillet — crew-sized firehall meal",
+  "heroImageAlt": "Cajun Chicken and Rice Skillet — cajun skillet plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/cajun-chicken-rice-skillet.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/cajun-chicken-rice-skillet.jpg",
   "railImage": "/images/rails/hall-expansion/cajun-chicken-rice-skillet.jpg",
@@ -177,12 +186,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "cast-iron-chicken-fajitas",
+    "pepper-steak-onions",
+    "enchilada-beef-skillet",
+    "kielbasa-cabbage-potato-skillet"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

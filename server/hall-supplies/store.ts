@@ -58,32 +58,41 @@ function mapStatusToLegacy(status: string): HallSupplyStatus {
 
 
 
+function mapCategoryToLegacy(category: string): HallSupplyItem["category"] {
+  switch (category) {
+    case "coffee_beverages":
+    case "coffee_drinks":
+      return "coffee_drinks";
+    case "breakfast":
+    case "bread":
+      return "bread";
+    case "condiments":
+    case "spices":
+      return "condiments";
+    case "pantry":
+    case "staples":
+    case "frozen":
+    case "refrigerated":
+    case "snacks":
+      return "staples";
+    default:
+      return "custom";
+  }
+}
+
 function mapItemToLegacy(item: HallCanteenItem): HallSupplyItem {
-
   return {
-
     supply_id: item.item_id,
-
     hall_id: item.hall_id,
-
     name: item.name,
-
-    category: item.category,
-
+    category: mapCategoryToLegacy(item.category),
     status: mapStatusToLegacy(item.status),
-
     is_default: item.is_default,
-
     sort_order: item.sort_order,
-
     last_updated_by_user_id: null,
-
     created_at: item.created_at,
-
     updated_at: item.updated_at,
-
   };
-
 }
 
 

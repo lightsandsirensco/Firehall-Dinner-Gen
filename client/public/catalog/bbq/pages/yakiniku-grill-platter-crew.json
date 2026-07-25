@@ -3,20 +3,20 @@
   "title": "Tokyo Tare Ribeye Yakiniku Board",
   "displayTitle": "Tokyo Tare Ribeye Yakiniku Board",
   "seoTitle": "Tokyo Tare Ribeye Yakiniku Board | Firehall BBQ",
-  "shortDescription": "Yakiniku platter night—thin-sliced ribeye, tare char, hall portions for ten",
-  "subtitle": "Japanese BBQ sliced ribeye, tare glaze, and grilled shishito for ten",
+  "shortDescription": "Yakiniku platter night—thin-sliced ribeye, apple-shoyu tare, fast waves off screaming heat",
+  "subtitle": "Japanese BBQ sliced ribeye, tare glaze, and grilled shishito for the crew",
   "category": "bbq_grill_nights",
   "cuisine": "japanese",
-  "description": "Ribeye slices marinate in sweet soy tare, grill quickly over high heat to 130°F, and pile on platters with grilled shishito peppers and steamed rice.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Paper-thin ribeye in a classic apple-and-shoyu tare — soy, sake, hon-mirin, brown sugar, grated fruit — blasted over 500°F heat in fast waves and piled on short-grain rice with blistered shishito and yuzu kosho.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 980,
+  "protein": 62,
+  "carbs": 58,
+  "fats": 50,
   "tags": [
     "protein:beef",
     "format:smokehouse_board",
@@ -30,43 +30,52 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "flat-top griddle",
-    "instant-read thermometer",
-    "sharp knife",
-    "cutting board",
-    "hotel pans",
-    "tongs"
+    "Gas or charcoal grill (hottest setting)",
+    "Small saucepan",
+    "Long slicing knife",
+    "Cutting board",
+    "Sheet pans",
+    "Hotel pans",
+    "Instant-read thermometer",
+    "Tongs"
   ],
   "ingredients": [
     {
       "name": "Ribeye Steak",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
       "notes": "partially frozen for thin slicing",
       "group": "Main"
     },
     {
       "name": "Shoyu",
-      "quantity": "0.33",
+      "quantity": "1",
       "unit": "Cup",
       "group": "Tare"
     },
     {
       "name": "Sake",
-      "quantity": "0.33",
+      "quantity": "1/2",
       "unit": "Cup",
       "group": "Tare"
     },
     {
       "name": "Hon-Mirin",
-      "quantity": "0.25",
+      "quantity": "1/2",
       "unit": "Cup",
       "group": "Tare"
     },
     {
-      "name": "Grated Apple",
-      "quantity": "0.5",
-      "unit": "Cup",
+      "name": "Brown Sugar",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Tare"
+    },
+    {
+      "name": "Fuji Apples",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "peeled and finely grated",
       "group": "Tare"
     },
     {
@@ -77,14 +86,25 @@
       "group": "Tare"
     },
     {
+      "name": "Garlic Cloves",
+      "quantity": "6",
+      "group": "Tare"
+    },
+    {
+      "name": "Toasted Sesame Oil",
+      "quantity": "1 1/2",
+      "unit": "Tbsp",
+      "group": "Tare"
+    },
+    {
       "name": "Shishito Peppers",
-      "quantity": "2",
+      "quantity": "1.5",
       "unit": "Lb",
       "group": "Grill"
     },
     {
       "name": "Shiso Leaves",
-      "quantity": "20",
+      "quantity": "16",
       "unit": "whole",
       "group": "Finish"
     },
@@ -95,8 +115,14 @@
       "group": "Finish"
     },
     {
+      "name": "Toasted Sesame Seeds",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Finish"
+    },
+    {
       "name": "Steamed Short-Grain Rice",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "Cups",
       "notes": "cooked",
       "group": "Service"
@@ -105,82 +131,111 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Slice ribeye thin",
-      "instruction": "Partially freeze ribeye 30 minutes. Slice paper-thin against the grain. Keep slices separated on sheet pans.",
+      "title": "Simmer and cool the tare",
+      "instruction": "Combine the shoyu, sake, hon-mirin, and brown sugar in a small saucepan and simmer 8–10 minutes until it reduces slightly and coats the back of a spoon. Kill the heat and stir in the grated apple, ginger, garlic, and toasted sesame oil. Cool completely — warm tare starts curing the thin slices on contact and turns them gray. The grated fruit is the classic move: sweetness plus enzymes that tenderize without turning anything mushy.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Slice the ribeye paper-thin",
+      "instruction": "Freeze the ribeye 30–40 minutes until the edges are firm but the center still gives — warm meat smears under the knife instead of slicing. Cut against the grain into 1/8-inch sheets using long, full draws with your sharpest knife, never a sawing motion. Lay the slices in a single layer on sheet pans as you go; a warm pile welds itself together. Thin and even is the whole game — thick slices chew like jerky at yakiniku speed.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
-      "title": "Build tare marinade",
-      "instruction": "Simmer soy, mirin, sake, brown sugar, ginger, and garlic until glossy. Cool completely before adding beef.",
-      "minutes": 12,
-      "heatLevel": ""
-    },
-    {
       "stepNumber": 3,
-      "title": "Marinate beef slices",
-      "instruction": "Toss sliced ribeye with half the tare for 30 minutes refrigerated. Reserve remaining tare for service.",
-      "minutes": 10,
+      "title": "Marinate the slices briefly",
+      "instruction": "Toss the ribeye slices with half the cooled tare and refrigerate 30 minutes — no longer. Paper-thin cuts drink marinade fast, and past the half-hour mark the shoyu cures the surface salty and soft. Reserve the other half of the tare untouched for the table; anything that touched raw meat stays at the grill.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Heat grill screaming hot",
-      "instruction": "Preheat grill to high, 500°F. Clean and oil grates—yakiniku needs maximum heat.",
+      "title": "Stage the rice and the wrap station",
+      "instruction": "Get the short-grain rice steaming so it lands hot at service — about 1 cup cooked per firefighter. While it cooks, stack the shiso leaves, spoon the yuzu kosho into two small bowls, and set out the toasted sesame seeds. Yakiniku service moves in fast waves; anything not staged before the first batch hits the grates gets forgotten.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Fire the grates to their ceiling",
+      "instruction": "Preheat the grill as hot as it goes — a 500°F-plus surface. Scrub the grates clean and wipe them with an oiled towel right before cooking. Sugar-heavy tare needs violent heat to caramelize before the slice overcooks; at 400°F you get boiled meat sitting in soy juice instead of lacquered char.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
-      "title": "Grill beef in batches",
-      "instruction": "Grill beef slices 60–90 seconds per side until charred edges and 125–130°F. Work in small batches to avoid steaming.",
+      "stepNumber": 6,
+      "title": "Grill the slices in fast waves",
+      "instruction": "Lay slices flat in a single layer, a dozen at a time, and leave them alone 60–90 seconds until the edges char and the tare caramelizes to glossy mahogany. Flip once for 30–45 seconds and pull. Paper-thin cuts blow past the 145°F whole-muscle safe mark almost instantly, so cook by color — a gray, steaming pile means the grates are crowded. Spot-check the first batch with an instant-read if any slices came out thick.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
-      "title": "Grill shishito",
-      "instruction": "Grill shishito peppers over 450°F heat until blistered, 4–5 minutes total. Toss with pinch of salt.",
+      "stepNumber": 7,
+      "title": "Blister the shishito peppers",
+      "instruction": "Throw the shishito peppers over the same high heat and roll them with tongs 3–4 minutes until the skins blister black in spots and the flesh slumps. Hit them with a pinch of flaky salt straight off the grates. About one in ten runs hot — warn the crew; that lottery is half the fun.",
       "minutes": 5,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 7,
-      "title": "Hold sliced beef",
-      "instruction": "Rest beef 3 minutes. Pile into hotel pans, cover with foil, hold at 170°F. Spoon reserved tare at service.",
-      "minutes": 5,
-      "heatLevel": ""
+      "stepNumber": 8,
+      "title": "Stack the platters and pour the tare",
+      "instruction": "Mound the rice on platters, shingle the grilled slices over top, and pile the shishito alongside. Scatter toasted sesame seeds, tuck in whole shiso leaves for wrapping bites, and set the yuzu kosho within reach — a rice-grain-sized dab per bite is plenty. Warm the reserved tare 1–2 minutes and pour it into small bowls for dipping; it wakes up any glaze that dulled during the hold.",
+      "minutes": 8,
+      "heatLevel": "low"
     },
     {
-      "stepNumber": 8,
-      "title": "Platter for ten",
-      "instruction": "Family-style platters with beef, shishito, rice, and sesame. About 8 oz beef per firefighter.",
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover grilled beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool grilled beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Partially frozen ribeye slices cleaner—warm steak shreds on the board.",
-    "Small batches only; piled slices steam instead of charring.",
-    "Reserved tare at the line wakes glaze that dulls during hold."
+    "Slice half-frozen and against the grain, always — with-grain slices turn to bubble gum over high heat.",
+    "Grate the apple on the fine side of a box grater; chunks scorch on the grates while puree melts into the tare.",
+    "If the tare tastes flat, it wants another splash of shoyu, not more sugar — the apple already carries the sweetness.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Yakiniku ribeye platter with shishito and steamed rice.",
-    "Quick miso soup cups if available."
+    "Main: Tare-glazed ribeye yakiniku with blistered shishito",
+    "Sides: steamed short-grain rice, shiso leaves for wrapping",
+    "Condiments: reserved warm tare, yuzu kosho, toasted sesame seeds",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Beef slices become yakiniku donburi bowls.",
-    "Roll into onigiri with leftover rice."
+    "Cool grilled beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Day-two move: yakiniku donburi — flash the meat in a screaming-hot pan with a spoon of tare and pile over fresh rice.",
+    "Roll leftover rice into onigiri and keep them sealed so they don't dry into gravel."
   ],
-  "whyCrewsLikeIt": "Yakiniku is interactive and fast—thin beef cooks in seconds and holds sliced at 170°F with tare spooned at service. Different lane from teriyaki skewers or bulgogi.",
-  "mealPrepNotes": "Slice beef paper-thin. Marinate 30 minutes max. Grill batches at 500°F, 60–90 seconds per side. Hold sliced beef covered at 170°F up to 25 minutes. Tare at service.",
+  "whyCrewsLikeIt": "Thin-sliced meat that cooks in 90 seconds and a sweet-salty tare with real depth — the platter empties faster than any brisket night, and one dab of yuzu kosho turns skeptics into converts.",
+  "mealPrepNotes": "Simmer and cool the tare and slice the ribeye up to a day ahead. Marinate only 30 minutes before cooking. Cook in fast waves at 500°F, 60–90 seconds per side; hold covered at 140°F or above for no more than 30 minutes.",
+  "substitutions": [
+    "Sirloin cap or flank swaps for ribeye and saves money — same half-frozen slicing, slightly leaner chew.",
+    "No sake? Dry sherry works 1:1. For a no-alcohol tare, use water plus an extra tablespoon of grated apple — thinner, still balanced.",
+    "Yuzu kosho lives at Asian markets; a mash of lime zest, minced serrano, and salt gets you 80% of the way there.",
+    "Asparagus segments or whole scallions stand in for shishito peppers when the store is out."
+  ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
+    "calories": 980,
+    "protein": 62,
+    "carbs": 58,
+    "fats": 50,
     "label": "per serving (hall portion)",
     "source": "estimated"
   },
@@ -202,7 +257,8 @@
     "firehall",
     "yakiniku grill platter",
     "japanese bbq ribeye",
-    "tare glazed beef"
+    "tare glazed beef",
+    "apple shoyu tare marinade"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -211,6 +267,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.433Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

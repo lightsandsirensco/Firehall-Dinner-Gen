@@ -7,7 +7,7 @@
   "subtitle": "Spicy lemongrass beef and pork noodle soup for ten",
   "category": "hall_expansion",
   "cuisine": "vietnamese",
-  "description": "Beef shank and pork hock simmer with lemongrass, chili, and shrimp paste into a fiery aromatic broth. Serve over round rice noodles with thin beef, blood cake if available, herbs, and lime.",
+  "description": "Beef shank and pork hock simmer with charred onion and a smashed-lemongrass bundle, finished with fermented shrimp paste and chili oil for the fiery Hue-style broth. Paper-thin raw slices cook under the ladle, and every bowl gets torn herbs and lime at the table.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 180,
@@ -31,85 +31,93 @@
   ],
   "equipment": [
     "Large stockpot",
-    "Strainer",
-    "Sharp knife",
-    "Bowls",
+    "Fine-mesh strainer and skimmer",
+    "Sharp slicing knife",
+    "Separate pot for noodles",
+    "Instant-read thermometer",
     "Ladle"
   ],
   "ingredients": [
     {
-      "name": "Beef Shank",
+      "name": "beef shank",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Broth"
     },
     {
-      "name": "Pork Hock",
+      "name": "pork hock",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Broth"
     },
     {
-      "name": "Lemongrass Stalks",
+      "name": "lemongrass stalks",
       "quantity": "6",
       "unit": "stalks",
-      "notes": "smashed",
+      "notes": "smashed and tied in a bundle",
       "group": "Broth"
     },
     {
-      "name": "Shrimp Paste",
+      "name": "shrimp paste",
       "quantity": "1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Broth"
     },
     {
-      "name": "Chili Oil",
+      "name": "chili oil",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Broth"
     },
     {
-      "name": "Beef Eye Round",
+      "name": "beef eye round",
       "quantity": "1.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced paper-thin",
       "group": "Protein"
     },
     {
-      "name": "Round Rice Noodles",
+      "name": "round rice noodles",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
+      "notes": "thick bun bo hue cut",
       "group": "Noodles"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "halved and charred",
       "group": "Broth"
     },
     {
-      "name": "Fish Sauce",
-      "quantity": "3",
-      "unit": "Tbsp",
+      "name": "fish sauce",
+      "quantity": "1/4",
+      "unit": "cup",
       "group": "Seasoning"
     },
     {
-      "name": "Thai Basil",
-      "quantity": "2",
-      "unit": "Cups",
-      "notes": "leaves",
-      "group": "Herbs"
-    },
-    {
-      "name": "Mint",
+      "name": "granulated sugar",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Thai basil",
+      "quantity": "2",
+      "unit": "cups",
       "notes": "leaves",
       "group": "Herbs"
     },
     {
-      "name": "Lime",
+      "name": "mint",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "leaves",
+      "group": "Herbs"
+    },
+    {
+      "name": "lime",
       "quantity": "4",
       "unit": "whole",
       "notes": "cut into wedges",
@@ -119,55 +127,119 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Start the broth",
-      "instruction": "Cover beef shank and pork hock with water. Add lemongrass, charred onion, and shrimp paste. Simmer 2.5–3 hours, skimming often.",
-      "minutes": 165,
-      "heatLevel": ""
+      "title": "Char the onions, bundle the lemongrass",
+      "instruction": "Halve the yellow onions and char them cut-side down in a dry skillet over high heat, 4–5 minutes, until blackened in spots — that char reads as depth in the finished broth, not burn. Smash the lemongrass stalks with the back of a knife until they split and smell like citrus, fold each in half, and tie them into a bundle so they flavor the pot without shredding into fibers.",
+      "minutes": 10,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 2,
-      "title": "Season boldly",
-      "instruction": "Remove solids, strain broth if desired. Season with fish sauce and chili oil until broth is spicy, salty, and aromatic.",
+      "title": "Blanch the shank and hock",
+      "instruction": "Cover the shank and hock with cold water and bring to a hard boil for 8–10 minutes — gray scum will foam up fast. Dump the pot, rinse each piece under running water, and scrub the pot before refilling. Skipping the blanch is why homemade batches turn cloudy and gamey; two minutes of extra work buys a clean, clear pot.",
       "minutes": 15,
-      "heatLevel": ""
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Shred braised meat",
-      "instruction": "Pull tender meat from shank and hock, slice or shred, and hold warm.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Simmer the broth low and slow",
+      "instruction": "Refill with about 6 quarts of fresh water, add the lemongrass bundle and charred onion halves, and hold at a gentle simmer — unlike ramen's rolling boil, this broth wants to stay clear, so keep the bubbles small and skim the surface every 20 minutes. Simmer 2.5–3 hours, until the shank gives easily when poked with a fork.",
+      "minutes": 165,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Prep noodles and herbs",
-      "instruction": "Cook rice noodles, rinse, and divide into bowls. Plate basil, mint, and limes at the line.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Bloom the shrimp paste",
+      "instruction": "Whisk the shrimp paste with a ladle of warm broth in a bowl until it fully dissolves, about a minute, then stir it back into the pot along with the chili oil. It smells aggressive in the jar and transforms in the pot — that fermented funk is the signature of Hue-style broth, and nothing else gets you there. The surface should take on a red-orange sheen from the oil.",
+      "minutes": 5,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 5,
-      "title": "Build bowls",
-      "instruction": "Top noodles with shredded braised meats and raw beef slices. Ladle boiling broth over to cook raw beef. Serve with herbs and lime.",
+      "title": "Pull and slice the braised meats",
+      "instruction": "When a fork twists into the shank with no resistance — an instant-read will show around 200°F, far past any safety line — lift the shank and hock onto a tray. Rest 15 minutes so they firm up enough to cut, then slice the shank thin across the grain and pick the hock meat off the bone in chunks. Hold everything warm under a ladle of broth so it doesn't dry out.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Season the broth boldly",
+      "instruction": "Stir in the fish sauce and sugar, then taste from a spoon: it should land spicy, salty, and lemongrass-fragrant in that order. Add fish sauce a tablespoon at a time and re-taste after each — you can't take it back out. Fish the lemongrass bundle and onion halves out before service so nobody ladles a stalk into a bowl.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Slice the eye round paper-thin",
+      "instruction": "Freeze the beef eye round 30 minutes until the edges firm up, then slice across the grain as thin as your knife allows — the slices need to be thin enough to turn rosy in seconds under hot broth. Lay them flat in a single layer on a tray, cover, and refrigerate until the moment bowls are built.",
+      "minutes": 35,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Cook the rice noodles",
+      "instruction": "Boil the round rice noodles per the package — usually 7–9 minutes for the thick cut — then rinse briefly under warm water to knock off the surface starch and divide among deep bowls. Rinsing is correct for rice noodles even though it's a crime against Italian pasta; skip it and they seize into a brick.",
+      "minutes": 12,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Set the herb plate",
+      "instruction": "Pile the Thai basil and mint in loose bunches on a platter, cut the limes into wedges, and stage them with extra chili oil at the end of the line. This soup gets finished at the table — every firefighter tears herbs and squeezes lime into their own bowl, and that fresh hit against the rich broth is the whole experience. Wash and spin the herbs dry 10 minutes ahead so they don't wilt.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Build bowls under a full bubble",
+      "instruction": "Bring the broth back to a hard, rolling bubble. Top each noodle bowl with sliced shank, hock meat, and a layer of the raw eye round slices, then ladle the bubbling broth directly over them — the thin slices turn rosy and cooked through in 10–15 seconds, past their 145°F mark by the time the bowl lands. Serve immediately with the herb plate and lime.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the broth and meats — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the broth and meats and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Freeze beef eye round 30 minutes for easier thin slicing.",
-    "Annatto oil adds classic red color if you have it.",
-    "Warn the hall—this is spicier than most station soups."
+    "Freeze the eye round before slicing — a firm edge is the difference between paper-thin and mangled.",
+    "A spoonful of annatto seeds bloomed in the chili oil gives the classic red-orange sheen if the pantry has them.",
+    "Warn the crew: this bowl runs hotter than most station soups, and the chili oil rides the surface of the first sip.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Bun bo hue with herb plate, lime, and extra chili oil.",
-    "Vietnamese pickles for acid between spicy spoonfuls."
+    "Main: Bun bo hue with sliced shank, hock meat, and rare eye round",
+    "Sides: Vietnamese pickled vegetables for acid between spicy spoonfuls",
+    "Condiments: herb plate, lime wedges, extra chili oil",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Broth improves next day—skim fat cap before reheating.",
-    "Shredded meats become banh mi filling with pickles and mayo."
+    "Cool the broth and meats in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "The broth improves overnight — lift the fat cap before reheating and bring it fully back to a bubble.",
+    "Keep raw eye round slices separate, use within a day, or flash them in a hot pan for banh mi filling."
   ],
-  "whyCrewsLikeIt": "Bun bo hue brings real heat and depth—crews who think pho is too mild will respect this bowl. It is soup with attitude, perfect for cold nights when the hall needs something that punches back.",
-  "mealPrepNotes": "Broth takes time but mostly unattended. Skim diligently. Shrimp paste smells strong but transforms the broth—do not skip. Herbs should be washed and piled high before service.",
+  "whyCrewsLikeIt": "Real heat and lemongrass depth — the crew members who call pho too mild respect this bowl, and the table goes quiet for the first five minutes.",
+  "mealPrepNotes": "The broth is mostly unattended — start it early and skim on a timer. Shrimp paste smells strong in the jar and transforms in the pot; do not skip it. Herbs washed and piled high before service.",
+  "substitutions": [
+    "No shrimp paste is a real loss, but 2 extra tablespoons of fish sauce plus a teaspoon of miso gets within range.",
+    "Beef chuck stands in for shank — it shreds softer and gives up a little of the classic bounce.",
+    "Smoked ham hock covers for fresh pork hock; ease off the fish sauce since it brings its own salt.",
+    "Thin pho noodles work in a pinch, but the thick round cut is worth hunting down — it carries the broth better."
+  ],
   "spiceLevel": "hot",
   "cleanupDifficulty": "heavy",
   "nutrition": {
@@ -175,10 +247,19 @@
     "protein": 40,
     "carbs": 50,
     "fats": 16,
-    "label": "~520 cal/serving · 40g protein · 2g fiber (est.)"
+    "label": "~520 cal/serving · 40g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/bun-bo-hue-noodle-soup.jpg",
-  "heroImageAlt": "Bun Bo Hue Noodle Soup — crew-sized firehall meal",
+  "heroImageAlt": "Bun Bo Hue Noodle Soup — vietnamese bowl plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/bun-bo-hue-noodle-soup.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/bun-bo-hue-noodle-soup.jpg",
   "railImage": "/images/rails/hall-expansion/bun-bo-hue-noodle-soup.jpg",
@@ -187,15 +268,17 @@
   "popularityWeight": 7.8,
   "searchTerms": [
     "bun bo hue noodle soup",
-    "crew feeders"
+    "crew feeders",
+    "spicy lemongrass beef noodle soup",
+    "vietnamese soup night"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-23T20:58:00.000Z",
   "contentVersion": 2
 }

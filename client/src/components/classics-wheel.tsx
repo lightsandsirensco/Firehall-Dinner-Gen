@@ -16,7 +16,6 @@ import {
 import { pickWheelLandLine, pickWheelIntro, pickWheelSuspense } from "@/lib/wheel-personality";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
 import { MealShareCard, shareMealNative } from "@/components/share/meal-share-card";
-import { Share2 } from "lucide-react";
 import { trackWheelRecipeOpen } from "@/lib/analytics";
 import { MealHeroImage } from "@/components/meal-hero-image";
 import { cn } from "@/lib/utils";
@@ -349,32 +348,15 @@ export function WheelReveal({
                 {classic.cuisine}
               </span>
             </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+            <div className="grid grid-cols-1 gap-2.5">
               <button
                 type="button"
                 onClick={onCook}
-                className="col-span-1 sm:col-span-2 inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground font-heading tracking-wider uppercase text-sm py-3.5 px-4 min-h-[52px] hover:bg-primary/90 active:scale-[0.98] transition-all touch-manipulation"
+                className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground font-heading tracking-wider uppercase text-sm py-3.5 px-4 min-h-[52px] hover:bg-primary/90 active:scale-[0.98] transition-all touch-manipulation"
                 data-testid="button-wheel-cook"
               >
                 <Flame className="w-4 h-4" />
-                View recipe
-              </button>
-              <button
-                type="button"
-                onClick={handleShare}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-primary/30 bg-primary/10 text-primary font-medium text-sm py-3 px-3 min-h-11 hover:bg-primary/20 transition-colors touch-manipulation active:scale-[0.98]"
-                data-testid="button-wheel-share"
-              >
-                <Share2 className="w-4 h-4" />
-                Share pick
-              </button>
-              <button
-                type="button"
-                onClick={onExplore}
-                className="inline-flex items-center justify-center gap-2 rounded-lg border border-border/50 bg-muted/40 text-foreground font-medium text-sm py-3 px-3 min-h-11 hover:bg-muted/70 transition-colors touch-manipulation active:scale-[0.98]"
-                data-testid="button-wheel-explore"
-              >
-                Similar meals
+                Cook this one
               </button>
               <button
                 type="button"
@@ -384,18 +366,32 @@ export function WheelReveal({
               >
                 Spin again
               </button>
-              <button
-                type="button"
-                onClick={onTogglePin}
-                className={`inline-flex items-center justify-center gap-2 rounded-lg border text-sm py-3 px-3 min-h-11 transition-colors touch-manipulation sm:col-span-2 ${
-                  pinned
-                    ? "border-primary/40 bg-primary/15 text-primary"
-                    : "border-border/50 bg-transparent text-muted-foreground hover:text-foreground"
-                }`}
-                data-testid="button-wheel-pin"
-              >
-                {pinned ? "Pinned to hall board" : "Pin this classic"}
-              </button>
+              <div className="flex flex-wrap justify-center gap-x-4 gap-y-1 pt-1">
+                <button
+                  type="button"
+                  onClick={handleShare}
+                  className="text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline min-h-8"
+                  data-testid="button-wheel-share"
+                >
+                  Share
+                </button>
+                <button
+                  type="button"
+                  onClick={onExplore}
+                  className="text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline min-h-8"
+                  data-testid="button-wheel-explore"
+                >
+                  Similar meals
+                </button>
+                <button
+                  type="button"
+                  onClick={onTogglePin}
+                  className="text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline min-h-8"
+                  data-testid="button-wheel-pin"
+                >
+                  {pinned ? "Pinned" : "Pin classic"}
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -15,57 +15,57 @@
     "sausage",
     "beans"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 35,
   "totalTime": 50,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Thick-Cut Bacon",
-      "quantity": "2 lb",
+      "name": "thick-cut bacon",
+      "quantity": "1.6",
       "notes": "lay flat",
       "group": "Meats"
     },
     {
-      "name": "Pork Sausages",
-      "quantity": "2 lb",
+      "name": "pork sausages",
+      "quantity": "2",
       "notes": "10 links",
       "group": "Meats"
     },
     {
-      "name": "Roma Tomatoes",
-      "quantity": "5",
+      "name": "Roma tomatoes",
+      "quantity": "4",
       "notes": "halved",
       "group": "Veg"
     },
     {
-      "name": "Cremini Mushrooms",
-      "quantity": "1 lb",
+      "name": "cremini mushrooms",
+      "quantity": "3/4",
       "notes": "whole or halved",
       "group": "Veg"
     },
     {
-      "name": "Baked Beans",
-      "quantity": "2 cans",
+      "name": "baked beans",
+      "quantity": "1.6",
       "notes": "15 oz, warmed separately",
       "group": "Beans"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "10",
+      "name": "large eggs",
+      "quantity": "8",
       "group": "Protein"
     },
     {
-      "name": "White Bread",
-      "quantity": "10 slices",
+      "name": "white bread",
+      "quantity": "8",
       "notes": "for toast",
       "group": "Bread"
     },
     {
-      "name": "Olive Oil",
-      "quantity": "3 tbsp",
+      "name": "olive oil",
+      "quantity": "2.4",
       "notes": "plus butter for eggs",
       "group": "Fat"
     }
@@ -142,8 +142,8 @@
   "heroImage": "/images/breakfast/sheet-pan-full-english.jpg",
   "thumbImage": "/images/thumbs/breakfast/sheet-pan-full-english.jpg",
   "imageAlt": "Sheet pan full English breakfast with bacon, sausage, beans, and fried eggs",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T20:48:24.991Z",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Sheet Pan Full English | Firehall Breakfast",
   "collectionTier": "firehall_classic"

@@ -1,500 +1,15 @@
 {
-  "generatedAt": "2026-05-31T23:46:21.720Z",
+  "generatedAt": "2026-07-23T20:52:50.814Z",
   "mode": "fix",
   "canonicalBase": 8,
-  "pagesScanned": 376,
-  "pagesNormalized": 171,
+  "pagesScanned": 406,
+  "pagesNormalized": 81,
   "byOldBase": {
-    "6": 4,
-    "8": 10,
-    "9": 4,
-    "10": 145,
-    "12": 8
+    "6": 2,
+    "10": 72,
+    "12": 7
   },
   "rows": [
-    {
-      "slug": "applewood-pork-shoulder-steaks",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\applewood-pork-shoulder-steaks.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "bbq-meatball-skewers",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\bbq-meatball-skewers.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "build-your-own-pho-bar",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\build-your-own-pho-bar.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "burrito-bowl-bar-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\burrito-bowl-bar-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "cajun-chicken-rice-skillet",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\cajun-chicken-rice-skillet.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "cast-iron-chicken-fajitas",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\cast-iron-chicken-fajitas.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "cheesy-beef-nacho-bake",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\cheesy-beef-nacho-bake.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "cheesy-chicken-broccoli-rice",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\cheesy-chicken-broccoli-rice.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "chicken-cacciatore-crew",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\chicken-cacciatore-crew.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "chicken-paprikash-hall",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\chicken-paprikash-hall.json",
-      "oldBase": 9,
-      "oldCrew": 9,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "chicken-wing-bar-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\chicken-wing-bar-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "classic-poutine-feed-crew",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\classic-poutine-feed-crew.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "cottage-pie-for-the-crew",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\cottage-pie-for-the-crew.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "creamy-chicken-penne-alfredo",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\creamy-chicken-penne-alfredo.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "dutch-oven-pot-roast",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\dutch-oven-pot-roast.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "enchilada-beef-skillet",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\enchilada-beef-skillet.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "fajita-bar-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\fajita-bar-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "firehall-charcuterie-board",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\firehall-charcuterie-board.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "firehall-donair-platter",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\firehall-donair-platter.json",
-      "oldBase": 9,
-      "oldCrew": 9,
-      "ingredientCount": 12
-    },
-    {
-      "slug": "game-day-pizza-sliders",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\game-day-pizza-sliders.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "ginger-soy-chicken-rice-bowls",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\ginger-soy-chicken-rice-bowls.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "green-chile-chicken-stew",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\green-chile-chicken-stew.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "hall-burger-bar",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\hall-burger-bar.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "hall-chicken-noodle-soup",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\hall-chicken-noodle-soup.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "hall-sloppy-joe-feed",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\hall-sloppy-joe-feed.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "hickory-turkey-legs",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\hickory-turkey-legs.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "honey-mustard-oven-chicken-thighs",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\honey-mustard-oven-chicken-thighs.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "hungarian-goulash-crew",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\hungarian-goulash-crew.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "jalapeno-popper-dip",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\jalapeno-popper-dip.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "kielbasa-cabbage-potato-skillet",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\kielbasa-cabbage-potato-skillet.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "korean-bulgogi-grill-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\korean-bulgogi-grill-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "lamb-kofta-skewer-platter",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\lamb-kofta-skewer-platter.json",
-      "oldBase": 9,
-      "oldCrew": 9,
-      "ingredientCount": 12
-    },
-    {
-      "slug": "loaded-nacho-bar-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\loaded-nacho-bar-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "loaded-potato-skins",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\loaded-potato-skins.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "malaysian-laksa-soup",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\malaysian-laksa-soup.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 12
-    },
-    {
-      "slug": "mediterranean-chicken-farro-bowls",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\mediterranean-chicken-farro-bowls.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "mediterranean-feast-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\mediterranean-feast-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "mesquite-chuck-roast",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\mesquite-chuck-roast.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "miso-ramen-bar",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\miso-ramen-bar.json",
-      "oldBase": 9,
-      "oldCrew": 9,
-      "ingredientCount": 12
-    },
-    {
-      "slug": "molasses-bourbon-pork-ribs",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\molasses-bourbon-pork-ribs.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "montreal-smoked-meat-platter",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\montreal-smoked-meat-platter.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "moroccan-chicken-kebab-platter",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\moroccan-chicken-kebab-platter.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 12
-    },
-    {
-      "slug": "mostaccioli-sausage-bake",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\mostaccioli-sausage-bake.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "mushroom-swiss-steak-pan",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\mushroom-swiss-steak-pan.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "paprika-roasted-chicken-quarters",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\paprika-roasted-chicken-quarters.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "pasta-bar-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\pasta-bar-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "pellet-smoked-chicken-quarters",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\pellet-smoked-chicken-quarters.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "pepper-steak-onions",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\pepper-steak-onions.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "peri-peri-chicken-platter",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\peri-peri-chicken-platter.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "philly-cheesesteak-sliders",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\philly-cheesesteak-sliders.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "pork-belly-burnt-ends",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\pork-belly-burnt-ends.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "pretzel-bite-platter",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\pretzel-bite-platter.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "rice-bowl-bar-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\rice-bowl-bar-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "rigatoni-meat-sauce-batch",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\rigatoni-meat-sauce-batch.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "sandwich-board-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\sandwich-board-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "shawarma-bar-night",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\shawarma-bar-night.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "sheet-pan-meatball-marinara",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\sheet-pan-meatball-marinara.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "smoked-corned-beef",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\smoked-corned-beef.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "smoked-meatloaf",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\smoked-meatloaf.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "smoked-queso-fundido",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\smoked-queso-fundido.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "smoked-sausage-platter",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\smoked-sausage-platter.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "smoked-tri-tip",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\smoked-tri-tip.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "smoked-turkey-breast",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\smoked-turkey-breast.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "soft-pretzel-dogs",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\soft-pretzel-dogs.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "spatchcock-lemon-roast-chicken",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\spatchcock-lemon-roast-chicken.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "station-cobb-salad",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\station-cobb-salad.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
-    },
-    {
-      "slug": "tonkotsu-ramen-crew",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\tonkotsu-ramen-crew.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 12
-    },
-    {
-      "slug": "tourtiere-for-the-crew",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\tourtiere-for-the-crew.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
-      "slug": "wonton-noodle-soup-crew",
-      "file": "client\\public\\catalog\\hall-expansion\\pages\\wonton-noodle-soup-crew.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
     {
       "slug": "apple-cinnamon-baked-oatmeal",
       "file": "client\\public\\catalog\\breakfast\\pages\\apple-cinnamon-baked-oatmeal.json",
@@ -503,25 +18,18 @@
       "ingredientCount": 8
     },
     {
-      "slug": "bacon-egg-hash-skillet",
-      "file": "client\\public\\catalog\\breakfast\\pages\\bacon-egg-hash-skillet.json",
-      "oldBase": 6,
-      "oldCrew": 6,
-      "ingredientCount": 7
-    },
-    {
-      "slug": "bacon-hash-burritos",
-      "file": "client\\public\\catalog\\breakfast\\pages\\bacon-hash-burritos.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 9
-    },
-    {
       "slug": "bagel-lox-breakfast-board",
       "file": "client\\public\\catalog\\breakfast\\pages\\bagel-lox-breakfast-board.json",
       "oldBase": 10,
       "oldCrew": 10,
       "ingredientCount": 8
+    },
+    {
+      "slug": "bagel-sandwich-line",
+      "file": "client\\public\\catalog\\breakfast\\pages\\bagel-sandwich-line.json",
+      "oldBase": 10,
+      "oldCrew": 10,
+      "ingredientCount": 7
     },
     {
       "slug": "big-pot-savory-oats",
@@ -650,18 +158,11 @@
       "ingredientCount": 8
     },
     {
-      "slug": "ham-cheddar-egg-bake",
-      "file": "client\\public\\catalog\\breakfast\\pages\\ham-cheddar-egg-bake.json",
+      "slug": "hash-brown-breakfast-casserole",
+      "file": "client\\public\\catalog\\breakfast\\pages\\hash-brown-breakfast-casserole.json",
       "oldBase": 10,
       "oldCrew": 10,
-      "ingredientCount": 7
-    },
-    {
-      "slug": "ham-pepper-skillet",
-      "file": "client\\public\\catalog\\breakfast\\pages\\ham-pepper-skillet.json",
-      "oldBase": 6,
-      "oldCrew": 6,
-      "ingredientCount": 7
+      "ingredientCount": 8
     },
     {
       "slug": "high-protein-parfaits",
@@ -689,6 +190,13 @@
       "file": "client\\public\\catalog\\breakfast\\pages\\overnight-french-toast-bake.json",
       "oldBase": 12,
       "oldCrew": 12,
+      "ingredientCount": 8
+    },
+    {
+      "slug": "overnight-oat-bar-crew",
+      "file": "client\\public\\catalog\\breakfast\\pages\\overnight-oat-bar-crew.json",
+      "oldBase": 10,
+      "oldCrew": 10,
       "ingredientCount": 8
     },
     {
@@ -727,6 +235,13 @@
       "ingredientCount": 8
     },
     {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-eggs-sausage-crew.json",
+      "oldBase": 10,
+      "oldCrew": 10,
+      "ingredientCount": 7
+    },
+    {
       "slug": "sheet-pan-full-english",
       "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-full-english.json",
       "oldBase": 10,
@@ -748,32 +263,11 @@
       "ingredientCount": 8
     },
     {
-      "slug": "turkey-sausage-egg-bake",
-      "file": "client\\public\\catalog\\breakfast\\pages\\turkey-sausage-egg-bake.json",
-      "oldBase": 12,
-      "oldCrew": 12,
-      "ingredientCount": 7
-    },
-    {
-      "slug": "alabama-white-sauce-pulled-pork",
-      "file": "client\\public\\catalog\\bbq\\pages\\alabama-white-sauce-pulled-pork.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 13
-    },
-    {
       "slug": "andouille-po-boy-rolls-crew",
       "file": "client\\public\\catalog\\bbq\\pages\\andouille-po-boy-rolls-crew.json",
       "oldBase": 10,
       "oldCrew": 10,
       "ingredientCount": 10
-    },
-    {
-      "slug": "bbq-bacon-cheddar-burgers",
-      "file": "client\\public\\catalog\\bbq\\pages\\bbq-bacon-cheddar-burgers.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 14
     },
     {
       "slug": "brisket-style-beef-sandwiches-au-jus",
@@ -795,13 +289,6 @@
       "oldBase": 10,
       "oldCrew": 10,
       "ingredientCount": 10
-    },
-    {
-      "slug": "carolina-vinegar-pulled-pork",
-      "file": "client\\public\\catalog\\bbq\\pages\\carolina-vinegar-pulled-pork.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 16
     },
     {
       "slug": "cast-iron-steak-fajita-sizzlers",
@@ -846,13 +333,6 @@
       "ingredientCount": 12
     },
     {
-      "slug": "firehall-double-smash-burgers-bbq",
-      "file": "client\\public\\catalog\\bbq\\pages\\firehall-double-smash-burgers-bbq.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 11
-    },
-    {
       "slug": "firehall-hibachi-mixed-grill-crew",
       "file": "client\\public\\catalog\\bbq\\pages\\firehall-hibachi-mixed-grill-crew.json",
       "oldBase": 10,
@@ -872,13 +352,6 @@
       "oldBase": 10,
       "oldCrew": 10,
       "ingredientCount": 9
-    },
-    {
-      "slug": "garlic-butter-shrimp-skewers",
-      "file": "client\\public\\catalog\\bbq\\pages\\garlic-butter-shrimp-skewers.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 10
     },
     {
       "slug": "gochujang-beef-skewers-crew",
@@ -958,13 +431,6 @@
       "ingredientCount": 9
     },
     {
-      "slug": "kansas-city-pulled-pork-sandwiches",
-      "file": "client\\public\\catalog\\bbq\\pages\\kansas-city-pulled-pork-sandwiches.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 13
-    },
-    {
       "slug": "lamb-merguez-skewers-crew",
       "file": "client\\public\\catalog\\bbq\\pages\\lamb-merguez-skewers-crew.json",
       "oldBase": 10,
@@ -986,13 +452,6 @@
       "ingredientCount": 10
     },
     {
-      "slug": "memphis-dry-rub-pulled-pork",
-      "file": "client\\public\\catalog\\bbq\\pages\\memphis-dry-rub-pulled-pork.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 15
-    },
-    {
       "slug": "mixed-lamb-chop-grill-board",
       "file": "client\\public\\catalog\\bbq\\pages\\mixed-lamb-chop-grill-board.json",
       "oldBase": 10,
@@ -1005,20 +464,6 @@
       "oldBase": 10,
       "oldCrew": 10,
       "ingredientCount": 10
-    },
-    {
-      "slug": "overnight-smoked-brisket-hold",
-      "file": "client\\public\\catalog\\bbq\\pages\\overnight-smoked-brisket-hold.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 8
-    },
-    {
-      "slug": "pepper-smoked-brisket-flat",
-      "file": "client\\public\\catalog\\bbq\\pages\\pepper-smoked-brisket-flat.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 9
     },
     {
       "slug": "pollo-asado-citrus-platter",
@@ -1126,88 +571,11 @@
       "ingredientCount": 9
     },
     {
-      "slug": "texas-smoked-pulled-pork-shoulder",
-      "file": "client\\public\\catalog\\bbq\\pages\\texas-smoked-pulled-pork-shoulder.json",
-      "oldBase": 10,
-      "oldCrew": 10,
-      "ingredientCount": 9
-    },
-    {
       "slug": "yakiniku-grill-platter-crew",
       "file": "client\\public\\catalog\\bbq\\pages\\yakiniku-grill-platter-crew.json",
       "oldBase": 10,
       "oldCrew": 10,
       "ingredientCount": 10
-    },
-    {
-      "slug": "blueberry-almond",
-      "file": "client\\public\\catalog\\smoothies\\pages\\blueberry-almond.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 6
-    },
-    {
-      "slug": "chocolate-banana-recovery",
-      "file": "client\\public\\catalog\\smoothies\\pages\\chocolate-banana-recovery.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 7
-    },
-    {
-      "slug": "citrus-ginger",
-      "file": "client\\public\\catalog\\smoothies\\pages\\citrus-ginger.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 6
-    },
-    {
-      "slug": "green-pineapple",
-      "file": "client\\public\\catalog\\smoothies\\pages\\green-pineapple.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 6
-    },
-    {
-      "slug": "mixed-berry-protein",
-      "file": "client\\public\\catalog\\smoothies\\pages\\mixed-berry-protein.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 6
-    },
-    {
-      "slug": "mocha-protein",
-      "file": "client\\public\\catalog\\smoothies\\pages\\mocha-protein.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 7
-    },
-    {
-      "slug": "peanut-butter-banana-recovery",
-      "file": "client\\public\\catalog\\smoothies\\pages\\peanut-butter-banana-recovery.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 6
-    },
-    {
-      "slug": "strawberry-oat-breakfast",
-      "file": "client\\public\\catalog\\smoothies\\pages\\strawberry-oat-breakfast.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 7
-    },
-    {
-      "slug": "strawberry-spinach",
-      "file": "client\\public\\catalog\\smoothies\\pages\\strawberry-spinach.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 6
-    },
-    {
-      "slug": "tropical-mango-greek",
-      "file": "client\\public\\catalog\\smoothies\\pages\\tropical-mango-greek.json",
-      "oldBase": 8,
-      "oldCrew": 8,
-      "ingredientCount": 6
     }
   ]
 }

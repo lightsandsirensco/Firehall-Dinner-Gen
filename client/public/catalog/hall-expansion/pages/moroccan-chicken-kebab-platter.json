@@ -38,80 +38,80 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
+      "name": "boneless chicken thighs",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into chunks",
       "group": "Main"
     },
     {
-      "name": "Fresh Cilantro",
+      "name": "fresh cilantro",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "packed",
       "group": "Chermoula"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Chermoula"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "group": "Chermoula"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "1 3/4",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Chermoula"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Chermoula"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Chermoula"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Chermoula"
     },
     {
-      "name": "Couscous",
+      "name": "couscous",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry",
       "group": "Base"
     },
     {
-      "name": "Green Olives",
+      "name": "green olives",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "pitted",
       "group": "Garnish"
     },
     {
-      "name": "Preserved Lemon",
+      "name": "preserved lemon",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "minced",
       "group": "Garnish"
     },
     {
-      "name": "Harissa",
+      "name": "harissa",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for serving",
       "group": "Garnish"
     }
@@ -175,10 +175,19 @@
     "protein": 36,
     "carbs": 38,
     "fats": 18,
-    "label": "~450 cal/serving · 36g protein · 3g fiber (est.)"
+    "label": "~450 cal/serving · 36g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",
-  "heroImageAlt": "Moroccan Chicken Kebab Platter — crew-sized firehall meal",
+  "heroImageAlt": "Moroccan Chicken Kebab Platter — moroccan skewer plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/moroccan-chicken-kebab-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/moroccan-chicken-kebab-platter.jpg",
   "railImage": "/images/rails/hall-expansion/moroccan-chicken-kebab-platter.jpg",
@@ -190,12 +199,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "lamb-kofta-skewer-platter",
+    "lebanese-chicken-shish-platter",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

@@ -39,64 +39,64 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (80/20)",
+      "name": "ground beef (80/20)",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Breadcrumbs",
+      "name": "breadcrumbs",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Main"
     },
     {
-      "name": "Eggs",
+      "name": "eggs",
       "quantity": "2",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "finely diced",
       "group": "Main"
     },
     {
-      "name": "Worcestershire Sauce",
+      "name": "Worcestershire sauce",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Main"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Ketchup",
+      "name": "ketchup",
       "quantity": "5/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Apple Cider Vinegar",
+      "name": "apple cider vinegar",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Glaze"
     }
   ],
@@ -159,10 +159,19 @@
     "protein": 32,
     "carbs": 22,
     "fats": 24,
-    "label": "~420 cal/serving · 32g protein · 1g fiber (est.)"
+    "label": "~420 cal/serving · 32g protein · 1g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-meatloaf.jpg",
-  "heroImageAlt": "Smoked Meatloaf with Glaze — crew-sized firehall meal",
+  "heroImageAlt": "Smoked Meatloaf with Glaze — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/smoked-meatloaf.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/smoked-meatloaf.jpg",
   "railImage": "/images/rails/hall-expansion/smoked-meatloaf.jpg",
@@ -180,6 +189,6 @@
     "smoked-queso-fundido"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.929Z",
+  "generatedAt": "2026-07-17T20:15:12.768Z",
   "contentVersion": 2
 }

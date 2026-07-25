@@ -12,44 +12,44 @@
     "easy-cleanup",
     "eggs"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 30,
   "totalTime": 45,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Yukon Gold Potatoes",
-      "quantity": "3.5 lb",
+      "name": "Yukon gold potatoes",
+      "quantity": "3",
       "notes": "diced 1/2-inch"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "14"
+      "name": "large eggs",
+      "quantity": "11"
     },
     {
-      "name": "Breakfast Sausage",
-      "quantity": "2 lb",
+      "name": "breakfast sausage",
+      "quantity": "2",
       "notes": "browned and crumbled"
     },
     {
-      "name": "Yellow Onion",
-      "quantity": "1",
+      "name": "yellow onion",
+      "quantity": "3/4",
       "notes": "diced"
     },
     {
-      "name": "Bell Peppers",
-      "quantity": "1–2",
+      "name": "bell peppers",
+      "quantity": "3/4",
       "notes": "diced"
     },
     {
-      "name": "Olive Oil Or Bacon Fat",
-      "quantity": "2 tbsp"
+      "name": "olive oil or bacon fat",
+      "quantity": "1.6"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "1–2 cups",
+      "name": "shredded cheddar",
+      "quantity": "3/4",
       "notes": "optional finish"
     }
   ],
@@ -118,8 +118,8 @@
   "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
   "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
   "imageAlt": "Wide firehall crew platter of Sheet Pan Breakfast Hash beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.993Z",
-  "updatedAt": "2026-06-04T20:48:24.993Z",
+  "publishedAt": "2026-07-17T20:15:27.732Z",
+  "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "Sheet Pan Breakfast Hash | Firehall Breakfast",
   "collectionTier": "firehall_classic"

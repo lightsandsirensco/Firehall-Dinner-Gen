@@ -3,14 +3,14 @@
   "title": "Cast Iron Skirt Steak Sizzlers",
   "displayTitle": "Cast Iron Skirt Steak Sizzlers",
   "seoTitle": "Cast Iron Skirt Steak Sizzlers | Firehall BBQ",
-  "shortDescription": "Steak fajita sizzlers—cast-iron scream, pepper char, not chicken fajita repeat",
-  "subtitle": "Guajillo skirt steak strips, blistered poblanos, and sizzling iron for ten",
+  "shortDescription": "Steak fajita sizzlers—guajillo-citrus marinade, hard sear, roaring cast iron at the table",
+  "subtitle": "Guajillo skirt steak, blistered poblanos, and roaring cast iron for the crew",
   "category": "bbq_grill_nights",
   "cuisine": "tex-mex",
-  "description": "Flank steak strips marinate in lime-cumin, sear on the griddle with peppers and onions, and serve on screaming-hot cast-iron sizzlers with tortillas.",
-  "crewSize": 10,
-  "baseServings": 10,
-  "cookTime": 20,
+  "description": "Whole skirt steak in a blended guajillo-citrus marinade, seared hard on a 450°F flat-top, sliced against the grain, and sent out roaring on preheated cast-iron sizzle platters with charred poblanos and warm corn tortillas.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
   "prepTime": 35,
   "difficulty": "medium",
   "calories": 1019,
@@ -30,25 +30,27 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "griddle or flat-top",
-    "cast iron sizzle platters",
-    "instant-read thermometer",
-    "tongs",
-    "hotel pans"
+    "Flat-top griddle or large cast-iron pans",
+    "Cast-iron sizzle platters",
+    "Blender",
+    "Instant-read thermometer",
+    "Tongs",
+    "Hotel pans",
+    "Dry hot pads"
   ],
   "ingredients": [
     {
       "name": "Skirt Steak",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
-      "notes": "cut into strips",
+      "notes": "trimmed, left in whole grill-length pieces",
       "group": "Main"
     },
     {
       "name": "Dried Guajillo Chiles",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
-      "notes": "rehydrated and blended",
+      "notes": "stemmed and seeded",
       "group": "Marinade"
     },
     {
@@ -58,23 +60,27 @@
       "group": "Marinade"
     },
     {
-      "name": "Poblano Peppers",
-      "quantity": "6",
+      "name": "Fresh Limes",
+      "quantity": "3",
       "unit": "whole",
-      "notes": "striped",
-      "group": "Sizzler veg"
-    },
-    {
-      "name": "Red Onions",
-      "quantity": "2",
-      "unit": "whole",
-      "notes": "wedges",
-      "group": "Sizzler veg"
+      "notes": "juiced",
+      "group": "Marinade"
     },
     {
       "name": "Orange Juice",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "Garlic Cloves",
+      "quantity": "6",
+      "group": "Marinade"
+    },
+    {
+      "name": "Ground Cumin",
+      "quantity": "1",
+      "unit": "Tbsp",
       "group": "Marinade"
     },
     {
@@ -84,6 +90,20 @@
       "group": "Marinade"
     },
     {
+      "name": "Poblano Peppers",
+      "quantity": "5",
+      "unit": "whole",
+      "notes": "cut into strips",
+      "group": "Sizzler veg"
+    },
+    {
+      "name": "Red Onions",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "cut into wedges",
+      "group": "Sizzler veg"
+    },
+    {
       "name": "Corn Tortillas",
       "quantity": "24",
       "unit": "pieces",
@@ -91,14 +111,14 @@
     },
     {
       "name": "Queso Fresco",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "notes": "crumbled",
       "group": "Garnish"
     },
     {
       "name": "Pickled Red Onions",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Garnish"
     }
@@ -106,76 +126,119 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Marinate steak strips",
-      "instruction": "Toss flank strips with lime juice, cumin, chili powder, garlic, and salt. Marinate 2–4 hours refrigerated.",
-      "minutes": 15,
-      "heatLevel": ""
+      "title": "Toast and soak the guajillos",
+      "instruction": "Toast the stemmed guajillos in a dry skillet over medium heat, pressing flat, 30–45 seconds per side until they smell like raisins — never darker, or the whole marinade turns bitter. Cover with hot water and soak 15 minutes until fully pliable; softening first is what keeps the blend smooth instead of gritty.",
+      "minutes": 8,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 2,
-      "title": "Prep peppers and onions",
-      "instruction": "Cut peppers and onions into uniform strips. Keep veg dry for griddle char.",
-      "minutes": 12,
+      "title": "Blend the guajillo-citrus marinade",
+      "instruction": "Blend the soaked guajillos with the orange juice, the juice of the fresh limes, garlic, ancho chili powder, ground cumin, Mexican oregano, and a tablespoon of salt until completely smooth, about 1 minute. It should look like brick-red paint and taste bright and pushy — the citrus tenderizes while the chiles build the crust color.",
+      "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Heat griddle hot",
-      "instruction": "Preheat griddle to 450°F. Film with oil.",
+      "title": "Marinate the skirt steak whole",
+      "instruction": "Coat the whole skirt steak pieces in the marinade and refrigerate 2–4 hours — never pre-cut into strips, which bleed their juices onto the iron and boil instead of crusting. Past 4 hours the citrus starts turning the surface mealy, so set a timer, not a vibe.",
       "minutes": 10,
-      "heatLevel": "high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Sear steak batches",
-      "instruction": "Sear steak strips in single layers 2–3 minutes per side until charred and 130°F. Rest and hold at 170°F.",
+      "title": "Cut the poblanos and red onions",
+      "instruction": "Cut the poblano peppers into 1/2-inch strips and the red onions into thick wedges that hold together with a bit of root end. Pat everything bone dry with towels — wet vegetables dump water on the hot iron and steam gray instead of blistering.",
       "minutes": 12,
-      "heatLevel": "high"
+      "heatLevel": ""
     },
     {
       "stepNumber": 5,
-      "title": "Char veg",
-      "instruction": "Griddle peppers and onions at 425°F until charred and tender, 8–10 minutes. Hold with steak at 170°F.",
+      "title": "Rip the flat-top to 450°F",
+      "instruction": "Heat the flat-top or cast-iron pans to a legitimate 450°F and film with a high-smoke-point oil — you want the first wisp of smoke before anything lands. Anything cooler and the marinade juices pool and simmer; the hard crust that makes fajitas is built in the first 90 seconds of contact.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 6,
-      "title": "Heat sizzle platters",
-      "instruction": "Preheat cast-iron sizzlers on griddle or in oven to 400°F for service.",
-      "minutes": 10,
+      "title": "Sear the steak hard, in batches",
+      "instruction": "Scrape excess marinade off the steak and lay the pieces down flat, in batches, 3–4 minutes per side without moving them, until a deep brown crust forms. Pull at 130–135°F on an instant-read at the thickest point for medium-rare — USDA's whole-muscle number is 145°F, and carryover plus the hot sizzle plates closes that gap on every slice you send.",
+      "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 7,
-      "title": "Sizzle at service",
-      "instruction": "Add oil to hot irons, pile steak and veg, serve immediately while sizzling. Warn crew—handles stay hot.",
-      "minutes": 5,
+      "title": "Char the poblanos and onions in the drippings",
+      "instruction": "Pile the poblano strips and red onion wedges onto the same hot surface in the leftover drippings and cook 8–10 minutes, turning only every 2–3 minutes, until blistered dark at the edges and tender-crisp inside. Constant stirring is the classic mistake — the char only builds where the vegetable sits still against the iron.",
+      "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 8,
-      "title": "Tonight's line",
-      "instruction": "Serve with warm tortillas, cilantro, and lime. About 8 oz steak per firefighter.",
+      "title": "Rest, find the grain, slice thin",
+      "instruction": "Rest the steak 5 minutes so the juices settle instead of flooding the platter. Skirt's grain runs across the width of the piece — slice against it, 1/4 inch thick on a slight bias. Get this backwards and every bite chews like rope; get it right and skirt eats more tender than strip.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Heat the sizzle platters, warm the tortillas",
+      "instruction": "Slide the cast-iron sizzle platters into a 450°F oven for 10 minutes while you slice. Stack the corn tortillas in foil packs of 12 and warm them alongside for the last 5 minutes — cold tortillas crack the second they fold. Handle the platters with dry hot pads only; a damp towel flashes to steam.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Sizzle and send it",
+      "instruction": "Drizzle a little oil on each screaming platter, pile on sliced meat and charred vegetables, and squeeze a lime wedge over as it roars — that sound and smoke cloud is the whole show, so move fast while the iron is loud. Send with warm tortillas, crumbled queso fresco, and pickled red onions, and warn the crew about the handles every single trip.",
+      "minutes": 6,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover sliced steak and peppers — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool steak and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Single-layer searing only—crowded strips steam instead of char.",
-    "130°F pull for flank; carryover hits perfect medium-rare.",
-    "Hot sizzle platters need hot pads on the line every time."
+    "Marinate whole pieces and slice after cooking — pre-cut strips dump their juices on the iron and boil gray.",
+    "Skirt's grain runs across the width; slicing against it means short cuts across the long side of the piece.",
+    "Pull at 130–135°F, always — the roaring sizzle plate keeps cooking every slice you send out.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Cast iron steak fajita sizzlers with tortillas.",
-    "Guacamole and sour cream on the side."
+    "Main: Guajillo skirt steak fajita sizzlers",
+    "Sides: warm corn tortillas, charred poblanos and red onions",
+    "Condiments: queso fresco, pickled red onions, lime wedges",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Steak fajita quesadillas on griddle.",
-    "Chop into fajita breakfast burritos."
+    "Cool steak in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Day-two steak and peppers flash-reheat on a hot flat-top for quesadillas or breakfast tacos with eggs.",
+    "Keep tortillas in their own bag — stored against hot fillings they turn to paste overnight."
   ],
-  "whyCrewsLikeIt": "Steak fajitas on cast iron deliver theater and aroma. Strips sear fast, hold at 170°F in pans, and sizzle again at service with a hot iron.",
-  "mealPrepNotes": "Marinate steak 2–4 hours. Sear on griddle at 450°F in batches. Hold meat and veg at 170°F. Reheat cast irons to 400°F at service for sizzle.",
+  "whyCrewsLikeIt": "The platters hit the table roaring with smoke and lime, and skirt steak sliced right against the grain out-eats cuts twice its price — fajita night with actual theater.",
+  "mealPrepNotes": "Marinate whole skirt pieces 2–4 hours. Sear at 450°F, pull at 130–135°F, rest, then slice against the grain. Hold meat and vegetables at 140°F or above; reheat sizzle platters in a 450°F oven right before service.",
+  "substitutions": [
+    "Flank steak swaps for skirt — it's thicker, so give it 4–5 minutes per side to the same pull temperature.",
+    "No dried guajillos? Bloom 2 extra tablespoons of ancho chili powder into the citrus — less fruit, still solid.",
+    "Flour tortillas hold together better for big-handed builds; warm them the same way.",
+    "Pineapple juice can replace the orange juice — it tenderizes faster, so cap the marinade at 2 hours."
+  ],
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1019,
@@ -201,8 +264,9 @@
     "sizzler plate",
     "bbq",
     "firehall",
-    "flank steak fajita griddle",
-    "sizzling fajita platter"
+    "skirt steak fajita griddle",
+    "sizzling fajita platter",
+    "guajillo steak marinade"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -211,6 +275,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.448Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

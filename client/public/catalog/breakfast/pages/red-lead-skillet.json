@@ -23,48 +23,48 @@
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Sirloin Or Flank Steak",
+      "name": "sirloin or flank steak",
       "quantity": "2 lb",
       "notes": "sliced thin against the grain",
       "group": "Protein"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "14",
       "group": "Protein"
     },
     {
-      "name": "Bell Peppers",
+      "name": "bell peppers",
       "quantity": "3",
       "notes": "mixed colors, sliced",
       "group": "Veg"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "1",
       "notes": "sliced thin",
       "group": "Veg"
     },
     {
-      "name": "Yukon Gold Potatoes",
+      "name": "Yukon gold potatoes",
       "quantity": "3.5 lb",
       "notes": "diced 1/2-inch",
       "group": "Veg"
     },
     {
-      "name": "Steak Seasoning",
+      "name": "steak seasoning",
       "quantity": "3 tbsp",
       "notes": "or equal parts salt, pepper, garlic powder",
       "group": "Seasoning"
     },
     {
-      "name": "Vegetable Oil",
+      "name": "vegetable oil",
       "quantity": "3 tbsp",
       "notes": "plus butter for finishing",
       "group": "Fat"
     },
     {
-      "name": "Shredded Pepper Jack",
+      "name": "shredded pepper jack",
       "quantity": "1 1/2 cups",
       "notes": "optional melt on top",
       "group": "Finish"
@@ -139,8 +139,8 @@
   "heroImage": "/images/breakfast/red-lead-skillet.jpg",
   "thumbImage": "/images/thumbs/breakfast/red-lead-skillet.jpg",
   "imageAlt": "Cast-iron skillet with seared steak, peppers, and sunny-side eggs for the crew",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Red Lead Skillet | Firehall Breakfast",
   "collectionTier": "firehall_classic"

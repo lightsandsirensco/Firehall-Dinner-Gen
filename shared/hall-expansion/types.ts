@@ -4,7 +4,7 @@ import type {
   GoldenRecipePageStep,
 } from "../golden-100/recipe-page-schema.js";
 
-export const HALL_EXPANSION_COUNT = 83;
+export const HALL_EXPANSION_COUNT = 116;
 export const HALL_EXPANSION_SET_TAG = "hall_expansion_74";
 export const HALL_EXPANSION_PAGE_CATEGORY = "hall_expansion";
 
@@ -41,6 +41,8 @@ export type ExpansionRecipeDef = {
   spiceLevel?: GoldenRecipePage["spiceLevel"];
   cleanupDifficulty?: GoldenRecipePage["cleanupDifficulty"];
   searchTerms?: string[];
+  /** Shown on recipe page as Substitutions (optional). */
+  substitutions?: string[];
   /** Tier 1 inspiration URL (structure only). */
   sourceUrl?: string;
 };

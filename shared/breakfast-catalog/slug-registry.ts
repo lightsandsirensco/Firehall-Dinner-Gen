@@ -3,6 +3,8 @@
  */
 import { NEW_BREAKFAST_PAGES } from "../breakfast-expansion/new-breakfast-pages.js";
 import { BATCH_25_BREAKFAST_PAGES } from "../breakfast-expansion/batch-25-breakfast-pages.js";
+import { BATCH_A_BREAKFAST_PAGES } from "../breakfast-expansion/batch-a-breakfast-pages.js";
+import { BATCH_WAVE1_BREAKFAST_PAGES } from "../breakfast-expansion/batch-wave1-breakfast-pages.js";
 
 /** Original 22 breakfast seeds (pre-expansion). */
 export const BASE_BREAKFAST_CATALOG_SLUGS = [
@@ -59,6 +61,8 @@ export const BREAKFAST_CATALOG_SLUGS = [
   ...BASE_BREAKFAST_CATALOG_SLUGS,
   ...NEW_BREAKFAST_PAGES.map((p) => p.slug),
   ...BATCH_25_BREAKFAST_PAGES.map((p) => p.slug),
+  ...BATCH_A_BREAKFAST_PAGES.map((p) => p.slug),
+  ...BATCH_WAVE1_BREAKFAST_PAGES.map((p) => p.slug),
 ] as const;
 
 export const BREAKFAST_SLUG_SET = new Set<string>(BREAKFAST_CATALOG_SLUGS);

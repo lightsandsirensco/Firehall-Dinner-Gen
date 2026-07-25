@@ -39,64 +39,64 @@
   ],
   "ingredients": [
     {
-      "name": "Kielbasa Links",
+      "name": "kielbasa links",
       "quantity": "8",
       "unit": "links",
       "group": "Sausage"
     },
     {
-      "name": "Andouille Sausage",
+      "name": "andouille sausage",
       "quantity": "8",
       "unit": "links",
       "group": "Sausage"
     },
     {
-      "name": "Sweet Italian Sausage",
+      "name": "sweet Italian sausage",
       "quantity": "8",
       "unit": "links",
       "group": "Sausage"
     },
     {
-      "name": "Bell Peppers",
+      "name": "bell peppers",
       "quantity": "3",
       "unit": "whole",
       "notes": "mixed colors, sliced",
       "group": "Veg"
     },
     {
-      "name": "Yellow Onions",
+      "name": "yellow onions",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Veg"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Sauerkraut",
+      "name": "sauerkraut",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "drained",
       "group": "Toppings"
     },
     {
-      "name": "Sub Rolls",
+      "name": "sub rolls",
       "quantity": "8",
       "unit": "whole",
       "group": "Serve"
@@ -161,10 +161,19 @@
     "protein": 22,
     "carbs": 28,
     "fats": 32,
-    "label": "~480 cal/serving · 22g protein · 3g fiber (est.)"
+    "label": "~480 cal/serving · 22g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-sausage-platter.jpg",
-  "heroImageAlt": "Smoked Sausage Platter — crew-sized firehall meal",
+  "heroImageAlt": "Smoked Sausage Platter — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/smoked-sausage-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/smoked-sausage-platter.jpg",
   "railImage": "/images/rails/hall-expansion/smoked-sausage-platter.jpg",
@@ -182,6 +191,6 @@
     "smoked-queso-fundido"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.929Z",
+  "generatedAt": "2026-07-17T20:15:12.768Z",
   "contentVersion": 2
 }

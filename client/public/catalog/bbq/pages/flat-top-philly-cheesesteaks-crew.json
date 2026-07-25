@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Ribeye slices freeze partially and chop fine, griddle with onions until charred, melt provolone, and pile on toasted hoagie rolls for ten cheesesteaks.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 30,
   "difficulty": "medium",
@@ -39,57 +39,57 @@
   "ingredients": [
     {
       "name": "Ribeye Steak",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
       "notes": "partially frozen for chopping",
       "group": "Main"
     },
     {
       "name": "Cooper Sharp Cheese",
-      "quantity": "20",
+      "quantity": "17",
       "unit": "slices",
       "group": "Philly"
     },
     {
       "name": "Amoroso Hoagie Rolls",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Philly"
     },
     {
       "name": "Spanish Onions",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "whole",
       "notes": "thin-sliced",
       "group": "Philly"
     },
     {
       "name": "Beef Tallow",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Griddle"
     },
     {
       "name": "Kitchen Bouquet",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Seasoning"
     },
     {
       "name": "Dried Basil",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Seasoning"
     },
     {
       "name": "Ground White Pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Seasoning"
     },
     {
       "name": "Long Hot Peppers",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "whole",
       "notes": "optional",
       "group": "Service"

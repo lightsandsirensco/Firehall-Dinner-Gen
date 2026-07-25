@@ -2,6 +2,8 @@ import type { AuthCapabilities, AuthMeResponse } from "@shared/auth/types";
 
 export interface AuthConfig {
   magic_link: boolean;
+  email_configured?: boolean;
+  magic_link_expires_minutes?: number;
   google: boolean;
   apple: boolean;
 }

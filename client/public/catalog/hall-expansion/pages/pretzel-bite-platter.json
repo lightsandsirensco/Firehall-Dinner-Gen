@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Soft Pretzel Bites",
+      "name": "soft pretzel bites",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "frozen or fresh",
       "group": "Main"
     },
     {
-      "name": "Sharp Cheddar Cheese",
+      "name": "sharp cheddar cheese",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "shredded",
       "group": "Beer cheese"
     },
     {
-      "name": "Cream Cheese",
+      "name": "cream cheese",
       "quantity": "6.4",
-      "unit": "Oz",
+      "unit": "oz",
       "group": "Beer cheese"
     },
     {
-      "name": "Lager Beer",
+      "name": "lager beer",
       "quantity": "9.6",
-      "unit": "Oz",
+      "unit": "oz",
       "group": "Beer cheese"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Beer cheese"
     },
     {
-      "name": "Worcestershire Sauce",
+      "name": "Worcestershire sauce",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Beer cheese"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Beer cheese"
     },
     {
-      "name": "Honey Mustard",
+      "name": "honey mustard",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Dip"
     },
     {
-      "name": "Coarse Salt",
+      "name": "coarse salt",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "for sprinkling",
       "group": "Main"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "3.4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "melted",
       "group": "Main"
     }
@@ -161,10 +161,19 @@
     "protein": 16,
     "carbs": 52,
     "fats": 20,
-    "label": "~460 cal/serving · 16g protein · 2g fiber (est.)"
+    "label": "~460 cal/serving · 16g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/pretzel-bite-platter.jpg",
-  "heroImageAlt": "Pretzel Bite Platter with Beer Cheese — crew-sized firehall meal",
+  "heroImageAlt": "Pretzel Bite Platter with Beer Cheese — american bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/pretzel-bite-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/pretzel-bite-platter.jpg",
   "railImage": "/images/rails/hall-expansion/pretzel-bite-platter.jpg",
@@ -176,12 +185,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
-    "loaded-potato-skins",
-    "game-day-pizza-sliders",
     "jalapeno-popper-dip",
-    "philly-cheesesteak-sliders"
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

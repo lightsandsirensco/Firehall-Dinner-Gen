@@ -11,6 +11,7 @@ import { SMOOTHIE_CATALOG_PUBLIC_DIR } from "../fuel-catalog/page-store.js";
 import { SEO_CANONICAL_ORIGIN } from "../../shared/seo/constants.js";
 import { normalizePublicSiteOrigin } from "../../shared/seo/urls.js";
 import { allSeoLandingPagePaths } from "../../shared/seo/landing-pages-data.js";
+import { allProductSeoPagePaths } from "../../shared/seo/product-pages-data.js";
 import { EDITORIAL_PUBLIC_DIR } from "../editorial/page-store.js";
 import { PIZZA_NIGHT_CATALOG_PUBLIC_DIR } from "../pizza-night/page-store.js";
 import { guidePath } from "../../shared/editorial/content-schema.js";
@@ -67,10 +68,16 @@ const STATIC_PATHS: Array<{ path: string; changefreq: string; priority: string }
   { path: "/breakfast", changefreq: "weekly", priority: "0.8" },
   { path: "/firefighter-red-lead-recipe", changefreq: "monthly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.5" },
+  { path: "/how-we-test-recipes", changefreq: "monthly", priority: "0.55" },
   ...allSeoLandingPagePaths().map((path) => ({
     path,
     changefreq: "weekly",
     priority: "0.9",
+  })),
+  ...allProductSeoPagePaths().map((path) => ({
+    path,
+    changefreq: "weekly",
+    priority: "0.85",
   })),
 ];
 
@@ -118,7 +125,7 @@ function readGuideSlugs(): Array<{ slug: string; publishedAt?: string }> {
 }
 
 function xmlEscape(s: string): string {
-  return s
+  return String(s ?? "")
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;")
@@ -294,7 +301,58 @@ Allow: /
 Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
 
 Sitemap: ${base}/sitemap.xml
 `;
+}
+
+/** Paths that must never be indexed (app shells, auth, admin, APIs). */
+export const NOINDEX_PATH_PREFIXES = [
+  "/admin",
+  "/api",
+  "/vote",
+  "/me",
+  "/hall",
+  "/halls",
+  "/settings",
+  "/profile",
+  "/tonight",
+  "/onboarding",
+  "/account",
+  "/plans",
+  "/favorites",
+] as const;
+
+export function pathShouldNoindex(pathname: string): boolean {
+  const p = (pathname || "/").toLowerCase().split("?")[0] || "/";
+  return NOINDEX_PATH_PREFIXES.some(
+    (prefix) => p === prefix || p.startsWith(`${prefix}/`),
+  );
+}
+
+/** Best-effort static sitemap fallback when dynamic generation fails. */
+export function readStaticSitemapFallback(): string | null {
+  const candidates = [
+    path.join(process.cwd(), "client", "public", "sitemap.xml"),
+    path.join(process.cwd(), "dist", "public", "sitemap.xml"),
+    path.join(process.cwd(), "dist", "sitemap.xml"),
+  ];
+  for (const file of candidates) {
+    try {
+      if (fs.existsSync(file)) {
+        const xml = fs.readFileSync(file, "utf8");
+        if (xml.includes("<urlset") && xml.includes("<loc>")) return xml;
+      }
+    } catch {
+      /* try next */
+    }
+  }
+  return null;
 }

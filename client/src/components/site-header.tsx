@@ -10,6 +10,7 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
+import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { hapticLight } from "@/lib/haptics";
@@ -21,6 +22,7 @@ import {
   HALL_FAVORITES_CHANGED_EVENT,
 } from "@/lib/hall-favorites-store";
 import { useAuth } from "@/lib/auth/context";
+import { HOME, TONIGHT, shouldShowAppShell } from "@/lib/app-nav";
 
 export type SiteHeaderActivePage =
   | "home"
@@ -41,11 +43,49 @@ interface SiteHeaderProps {
   favCount?: number;
 }
 
+/** Map marketing header keys → app chrome when public shell is visible. */
+function appChromeForPage(activePage: SiteHeaderActivePage): {
+  title: string;
+  parentHref?: string;
+  parentLabel?: string;
+} {
+  switch (activePage) {
+    case "generator":
+      return { title: "Pick", parentHref: TONIGHT, parentLabel: "Tonight" };
+    case "wheel":
+      return { title: "Wheel", parentHref: TONIGHT, parentLabel: "Tonight" };
+    case "explore":
+      return { title: "Explore" };
+    case "guides":
+      return { title: "Ideas", parentHref: "/explore", parentLabel: "Explore" };
+    case "pizza":
+      return { title: "Pizza", parentHref: "/explore", parentLabel: "Explore" };
+    case "smoothies":
+      return { title: "Smoothies", parentHref: "/explore", parentLabel: "Explore" };
+    case "breakfast":
+    case "performance":
+      return { title: "Breakfast", parentHref: "/explore", parentLabel: "Explore" };
+    case "favorites":
+      return { title: "Favorites", parentHref: "/me", parentLabel: "Me" };
+    case "hall":
+      return { title: "Hall" };
+    case "home":
+      return { title: "Home" };
+    case "faq":
+      return { title: "FAQ", parentHref: "/explore", parentLabel: "Explore" };
+    default:
+      return { title: "Explore" };
+  }
+}
+
 export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [, navigate] = useLocation();
+  const [location, navigate] = useLocation();
   const { authenticated, openSignIn } = useAuth();
   const [badgeCount, setBadgeCount] = useState(() => favCount ?? getHallFavoritesCount());
+  const inAppShell = shouldShowAppShell(location);
+  // The logo and "Home" nav item always go to the one true Home — the landing page.
+  const homeHref = HOME;
 
   useEffect(() => {
     const sync = () => setBadgeCount(getHallFavoritesCount());
@@ -58,8 +98,21 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
     if (favCount != null) setBadgeCount(favCount);
   }, [favCount]);
 
+  /** Inside the app shell: one chrome only — brand → Home, crumbs, Home chip. No duplicate marketing nav. */
+  if (inAppShell) {
+    const chrome = appChromeForPage(activePage);
+    return (
+      <AppTopBar
+        title={chrome.title}
+        parentHref={chrome.parentHref}
+        parentLabel={chrome.parentLabel}
+        workspace="meals"
+      />
+    );
+  }
+
   const navItems: Array<{ key: SiteHeaderActivePage; label: string; href: string }> = [
-    { key: "home", label: NAV.home, href: "/" },
+    { key: "home", label: NAV.home, href: homeHref },
     { key: "generator", label: NAV.generator, href: "/generator" },
     { key: "explore", label: NAV.explore, href: "/explore" },
     { key: "wheel", label: NAV.wheel, href: "/wheel" },
@@ -101,9 +154,10 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
           data-testid="nav-links"
         >
           <Link
-            href="/"
+            href={homeHref}
             className="flex items-center gap-2 shrink-0 group min-h-10 min-w-0"
             data-testid="nav-logo"
+            aria-label={`${BRAND_NAME} — Home`}
           >
             {brand}
           </Link>

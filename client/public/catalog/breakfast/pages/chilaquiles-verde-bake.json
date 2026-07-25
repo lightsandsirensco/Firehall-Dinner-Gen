@@ -15,57 +15,57 @@
     "eggs",
     "bake"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 20,
   "cookTime": 30,
   "totalTime": 50,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Tomatillos",
-      "quantity": "2 lb",
+      "name": "tomatillos",
+      "quantity": "1.6",
       "notes": "husked and rinsed",
       "group": "Salsa"
     },
     {
-      "name": "White Onion",
-      "quantity": "1",
+      "name": "white onion",
+      "quantity": "3/4",
       "notes": "quartered",
       "group": "Salsa"
     },
     {
-      "name": "Jalapeños",
-      "quantity": "4",
+      "name": "jalapeños",
+      "quantity": "3.2",
       "notes": "stemmed, seeds optional",
       "group": "Salsa"
     },
     {
-      "name": "Chicken Broth",
-      "quantity": "1 cup",
+      "name": "chicken broth",
+      "quantity": "3/4",
       "notes": "low-sodium",
       "group": "Salsa"
     },
     {
-      "name": "Thick Tortilla Chips",
-      "quantity": "16 cups",
+      "name": "thick tortilla chips",
+      "quantity": "13",
       "notes": "restaurant-style, not thin",
       "group": "Build"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "10",
+      "name": "large eggs",
+      "quantity": "8",
       "group": "Protein"
     },
     {
-      "name": "Mexican Crema",
-      "quantity": "1 cup",
+      "name": "Mexican crema",
+      "quantity": "3/4",
       "notes": "or thinned sour cream",
       "group": "Finish"
     },
     {
-      "name": "Cotija Cheese",
-      "quantity": "1 cup",
+      "name": "cotija cheese",
+      "quantity": "3/4",
       "notes": "crumbled, plus cilantro and radish slices",
       "group": "Finish"
     }
@@ -142,8 +142,8 @@
   "heroImage": "/images/breakfast/chilaquiles-verde-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/chilaquiles-verde-bake.jpg",
   "imageAlt": "Baked chilaquiles verde with eggs, crema, and cotija in a hotel pan",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T20:48:24.991Z",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Chilaquiles Verde Bake | Firehall Breakfast",
   "collectionTier": "firehall_classic"

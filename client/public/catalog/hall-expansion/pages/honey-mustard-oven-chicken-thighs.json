@@ -37,64 +37,64 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "about 16 pieces",
       "group": "Main"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Honey",
+      "name": "honey",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Apple Cider Vinegar",
+      "name": "apple cider vinegar",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Glaze"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -158,10 +158,19 @@
     "protein": 36,
     "carbs": 12,
     "fats": 22,
-    "label": "~390 cal/serving · 36g protein · 0g fiber (est.)"
+    "label": "~390 cal/serving · 36g protein · 0g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
-  "heroImageAlt": "Honey Mustard Baked Chicken Thighs — crew-sized firehall meal",
+  "heroImageAlt": "Honey Mustard Baked Chicken Thighs — american baked plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
   "railImage": "/images/rails/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
@@ -173,12 +182,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "paprika-roasted-chicken-quarters",
     "shawarma-bar-night",
     "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-burger-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

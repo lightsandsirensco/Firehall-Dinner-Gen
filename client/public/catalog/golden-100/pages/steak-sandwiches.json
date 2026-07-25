@@ -1,231 +1,221 @@
 {
   "slug": "steak-sandwiches",
-  "title": "Steak Sandwiches",
-  "displayTitle": "Steak Sandwiches",
-  "seoTitle": "Steak Sandwiches | Firefighter Meal",
-  "shortDescription": "Thin-sliced steak, toasted roll, hall classic",
-  "subtitle": "Thin-sliced steak, toasted roll, hall classic",
+  "title": "Philly-Style Cheesesteaks",
+  "displayTitle": "Philly-Style Cheesesteaks",
+  "seoTitle": "Philly-Style Cheesesteaks | Firefighter Meal",
+  "shortDescription": "Chopped ribeye, melted provolone, soft hoagie",
+  "subtitle": "Chopped ribeye, melted provolone, soft hoagie",
   "category": "firehall_classics",
   "cuisine": "american",
-  "description": "Grill marks, melted cheese, sandwich line. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Philadelphia-style cheesesteaks for the hall: shaved ribeye chopped on the flat-top, sweet onions, and provolone melted straight into the meat so it binds every bite on a soft hoagie. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 60,
+  "cookTime": 45,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 120,
-  "carbs": 85,
-  "fats": 90,
+  "calories": 950,
+  "protein": 60,
+  "carbs": 60,
+  "fats": 52,
   "tags": [
     "protein:beef",
     "format:sandwich",
     "category:firehall_classics",
-    "beef",
     "handheld",
+    "beef",
     "golden_100"
   ],
   "equipment": [
+    "Flat-top griddle or two large cast-iron skillets",
+    "Two stiff metal spatulas or bench scrapers",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Sirloin Or Flank Steak",
-      "quantity": "5.3",
-      "unit": "Lb"
+      "name": "Ribeye, Shaved Or Sliced Paper-Thin",
+      "quantity": "6",
+      "unit": "Lb",
+      "notes": "partially freeze 30 min, until firm but not frozen solid, for easy slicing; sirloin works on a budget",
+      "group": "Main"
     },
     {
-      "name": "Sub Rolls / Ciabatta",
-      "quantity": "24"
+      "name": "Yellow Onions, Thinly Sliced",
+      "quantity": "4",
+      "unit": "large",
+      "group": "Main"
     },
     {
-      "name": "Butter",
-      "quantity": "1.3",
-      "unit": "Lb"
+      "name": "Provolone Slices",
+      "quantity": "24",
+      "unit": "count",
+      "notes": "deli provolone or white American — the melty kind",
+      "group": "Cheese"
     },
     {
-      "name": "Garlic",
-      "quantity": "10.7",
-      "unit": "cloves"
+      "name": "Soft Hoagie Rolls Or Brioche Buns",
+      "quantity": "16",
+      "unit": "count",
+      "notes": "long Amoroso-style hoagies are classic; soft round brioche rolls work too — just never a crusty baguette",
+      "group": "Buns"
+    },
+    {
+      "name": "Neutral High-Heat Oil",
+      "quantity": "4",
+      "unit": "Tbsp",
+      "group": "Cooking"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "1.5",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Green Bell Peppers, Sliced",
+      "quantity": "3",
+      "unit": "count",
+      "notes": "optional — 'wit peppers'",
+      "group": "Optional",
+      "optional": true
+    },
+    {
+      "name": "White Mushrooms, Sliced",
+      "quantity": "1",
+      "unit": "Lb",
+      "notes": "optional",
+      "group": "Optional",
+      "optional": true
     },
     {
       "name": "Frozen Steak Fries",
-      "quantity": "5.3",
-      "unit": "Lb"
-    },
-    {
-      "name": "Romaine Hearts",
-      "quantity": "5.3",
-      "unit": "bags"
-    },
-    {
-      "name": "Caesar Dressing",
-      "quantity": "2.7",
-      "unit": "Cups"
-    },
-    {
-      "name": "Croutons",
-      "quantity": "2.7",
-      "unit": "Cups"
-    },
-    {
-      "name": "Parmesan",
-      "quantity": "1.3",
-      "unit": "Cups"
-    },
-    {
-      "name": "Bell Peppers & Zucchini",
-      "quantity": "8",
-      "unit": "Lb"
-    },
-    {
-      "name": "Olive Oil",
-      "quantity": "0.7",
-      "unit": "Cup"
-    },
-    {
-      "name": "Yellow Onions",
-      "quantity": "5.3"
-    },
-    {
-      "name": "Mushrooms",
-      "quantity": "2.7",
-      "unit": "Lb"
-    },
-    {
-      "name": "Provolone Cheese",
-      "quantity": "24",
-      "unit": "slices"
-    },
-    {
-      "name": "Horseradish",
-      "quantity": "0.7",
-      "unit": "Cup"
-    },
-    {
-      "name": "Mayonnaise",
-      "quantity": "2.7",
-      "unit": "Cups"
-    },
-    {
-      "name": "Frozen Onion Rings",
-      "quantity": "2.7",
-      "unit": "bags"
+      "quantity": "4",
+      "unit": "Lb",
+      "notes": "optional side",
+      "group": "Side",
+      "optional": true
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Season and temper the steak",
-      "instruction": "Pat sirloin or flank steaks dry; salt and pepper generously. Let sit at room temperature 20 minutes while ovens and grill heat — cold centers overcook the exterior before the middle warms.",
-      "minutes": 20,
+      "title": "Chill and shave the ribeye",
+      "instruction": "Partially freeze the ribeye for 30 minutes, until firm but not frozen solid, then shave or slice it paper-thin against the grain — thin is what makes a cheesesteak tender instead of chewy. If your grocer or butcher sells pre-shaved ribeye, buy it and skip this. Keep the meat cold until the griddle is ripping hot.",
+      "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Roast the vegetables",
-      "instruction": "Toss bell peppers and zucchini with olive oil, salt, and minced garlic. Spread on sheet pans; roast at 425°F 22 minutes until charred edges show and centers are tender. Hold warm in foil.",
-      "minutes": 22,
-      "heatLevel": "high"
+      "title": "Sweat the onions low and slow",
+      "instruction": "Slice onions thin. Cook in 1 tbsp oil over medium 12–15 minutes, stirring, until soft, golden, and sweet — not raw-sharp and not burnt. Push to the cool side of the griddle or pull to a pan and hold warm. Sweet onions are the balance against the salty beef and cheese.",
+      "minutes": 15,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Grill steak to temp",
-      "instruction": "Grill over high heat (450°F surface) 3–5 minutes per side until 130–140°F for medium — flank needs a hard sear then brief finish; sirloin takes even heat. Rest 8 minutes tented with foil.",
-      "minutes": 12,
-      "heatLevel": "high"
+      "title": "Optional peppers and mushrooms",
+      "instruction": "For a 'wit peppers' or mushroom crew, sauté the sliced bell peppers and mushrooms in a little oil over medium-high until soft and lightly charred, 8–10 minutes. Season with a pinch of salt and hold warm alongside the onions. Skip entirely for a purist build.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
-      "title": "Slice against the grain",
-      "instruction": "Slice rested steak thin at a sharp angle against the grain — short muscle fibers, not long chewy lines. Hold loosely covered at 140°F in a hotel pan with a spoon of butter melted over top.",
-      "minutes": 10,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Bake garlic fries",
-      "instruction": "Spread frozen fries in a single layer. Bake at 425°F 20–22 minutes until crisp; toss hot fries with melted butter and minced garlic. Season with salt immediately; hold in a warm pan.",
-      "minutes": 22,
+      "title": "Sear the ribeye hard, in batches",
+      "instruction": "Get the flat-top or cast iron screaming hot and film with oil. Lay the shaved ribeye down in batches — a crowded surface steams the meat gray instead of browning it. Season with salt and pepper. Let it catch color 60–90 seconds before you touch it.",
+      "minutes": 8,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 6,
-      "title": "Sauté onions and mushrooms",
-      "instruction": "Cook sliced onions over medium-high until golden, then add mushrooms until browned and moisture evaporates. Hold warm for the toppings bar with a pinch of salt.",
-      "minutes": 10,
+      "stepNumber": 5,
+      "title": "Chop and pile the meat",
+      "instruction": "Work the beef with two stiff spatulas or bench scrapers, chopping it into short shreds as it browns to an internal temp of 145°F or above. Fold the warm onions (and peppers/mushrooms if using) into the meat and gather it into portion-sized piles on the griddle — about 6 oz of meat per sandwich.",
+      "minutes": 6,
       "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Melt the cheese into the meat",
+      "instruction": "Lay provolone over each pile — about 1.5 slices per sandwich — and let the residual heat melt it into the beef so the cheese binds the shreds together. That melt-in, not melt-on, is the whole trick to a real cheesesteak. Cover with a lid or foil tent for 30 seconds to speed it if the griddle has cooled.",
+      "minutes": 4,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 7,
-      "title": "Build Caesar and horseradish aioli",
-      "instruction": "Toss romaine with Caesar dressing, croutons, and parmesan — dress lightly so leaves stay crisp. Whisk horseradish into mayonnaise for aioli; keep both cold on ice until service.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Warm the hoagie rolls",
+      "instruction": "Split soft hoagie rolls most of the way through and warm them cut-side down on the griddle just until barely toasted and warm — soft, not crunchy. A crusty roll fights the filling; a warm soft roll cradles it.",
+      "minutes": 4,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 8,
-      "title": "Toast buns and melt provolone",
-      "instruction": "Split sub rolls and toast cut-side down until golden. Pile sliced steak on toasted bottoms, lay provolone over top, and broil 1–2 minutes until cheese laces the edges. Finish with onions, mushrooms, and aioli.",
-      "minutes": 12,
-      "heatLevel": "medium-high"
+      "title": "Bake steak fries (optional)",
+      "instruction": "Spread frozen steak fries in a single layer on sheet pans. Bake at 425°F 22–25 minutes until deeply golden with an audible crunch when shaken. Salt immediately out of the oven; hold in a warm oven with the door cracked.",
+      "minutes": 25,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 9,
-      "title": "Run the toppings bar",
-      "instruction": "Set steak sandwiches, garlic fries, Caesar salad, roasted vegetables, onions, mushrooms, aioli, and extra provolone in a row. Crew builds their own stack — hot steak center, cold Caesar at the far end.",
+      "title": "Scoop, fill, and run the line",
+      "instruction": "Use the spatulas to scoop each cheese-bound pile straight into a warm roll — flip it in so the cheese side lands against the bread. Set fries on a separate tray so steam doesn't sog the rolls, and call the crew while the cheese is still molten.",
       "minutes": 8,
       "heatLevel": "low"
     },
     {
       "stepNumber": 10,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover sliced steak — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "instruction": "If tones drop mid-cook, scrape the chopped ribeye into a hotel pan, cover, and hold at 140°F or above in a warm cabinet or 200°F oven — the thin meat dries fast, so ladle a spoon of its own juices over top and don't hold past 30 minutes without re-saucing. Melt cheese and fill rolls to order when you're back so the bread never goes soggy.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 11,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool sliced steak and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool the chopped cheesesteak meat in shallow hotel pans within two hours — deep pans hold heat too long. Label with the date; reheat to 165°F on a hot griddle with a splash of water before second shift. Store rolls separately and fill fresh so they don't turn to paste.",
       "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Slice steak thin after the rest — crew eats better and portions stretch.",
-    "Toast buns hard enough to hold juice without falling apart.",
-    "Keep Caesar and aioli on ice until the line opens.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Partially freeze the ribeye for 30–45 minutes, until firm but not frozen solid, before slicing — paper-thin meat is the difference between tender and chewy.",
+    "Melt the provolone into the meat pile, not onto the finished sandwich — melted-in cheese glues the shreds together the way a real cheesesteak should.",
+    "Keep the griddle ripping hot and work in batches; a crowded surface steams the beef gray instead of browning it.",
+    "Warm the rolls soft, never crunchy — a crusty roll pushes the filling out the back on the first bite.",
+    "Sirloin sliced thin is a fine budget swap for ribeye; season a little harder since it's leaner."
   ],
   "tonightSpread": [
-    "Main: Steak sandwiches with melted provolone",
-    "Sides: garlic fries, Caesar salad, roasted peppers and zucchini",
-    "Condiments: sautéed onions, mushrooms, horseradish aioli, extra provolone",
+    "Main: Philly-style cheesesteaks with provolone melted into the meat",
+    "Sides: steak fries, sweet griddled onions",
+    "Condiments: optional peppers and mushrooms, extra provolone, hot cherry peppers",
     "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
     "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool sliced steak in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
-    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
-    "Store buns separately — assemble fresh; toasted rolls go soggy overnight."
+    "Cool the chopped cheesesteak meat in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store rolls separately and fill fresh — toasted rolls go soggy overnight.",
+    "Reheat the meat on a hot griddle with a splash of water so it steams back to juicy instead of drying out."
   ],
-  "whyCrewsLikeIt": "Thin-sliced steak, toasted roll, hall classic. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "substitutions": [],
+  "whyCrewsLikeIt": "Chopped ribeye, melted provolone, soft hoagie — the Philly build every crew recognizes. One griddle, real portions, no drama at the stove.",
+  "substitutions": [
+    "Ribeye ↔ thin-sliced sirloin — leaner and cheaper; season a little harder.",
+    "Provolone ↔ white American for a smoother melt, or warmed cheese sauce for a Whiz-style build.",
+    "No flat-top? Two large cast-iron skillets over high heat do the same job in batches."
+  ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 120,
-    "carbs": 85,
-    "fats": 90,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 950,
+    "protein": 60,
+    "carbs": 60,
+    "fats": 52,
+    "label": "per serving (hall portion, 2 sandwiches)",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -241,7 +231,7 @@
     }
   },
   "heroImage": "/images/golden-100/steak-sandwiches.jpg",
-  "heroImageAlt": "Wide firehall crew platter of Steak Sandwiches on a station prep table, family-style serving",
+  "heroImageAlt": "Firehall sheet tray stacked with chopped ribeye cheesesteaks, melted provolone, and onions on soft toasted rolls",
   "mobileImage": "/images/mobile/steak-sandwiches.jpg",
   "thumbImage": "/images/thumbs/steak-sandwiches.jpg",
   "railImage": "/images/rails/steak-sandwiches.jpg",
@@ -249,7 +239,9 @@
   "firefighterScore": 100,
   "popularityWeight": 3.6,
   "searchTerms": [
+    "philly cheesesteak",
     "steak sandwiches",
+    "cheesesteak",
     "american",
     "beef",
     "sandwich",
@@ -267,6 +259,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "steak-sandwiches",
-  "generatedAt": "2026-06-04T20:53:34.909Z",
-  "contentVersion": 4
+  "generatedAt": "2026-07-23T21:40:00.000Z",
+  "contentVersion": 5
 }

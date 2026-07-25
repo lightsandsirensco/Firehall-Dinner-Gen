@@ -7,16 +7,16 @@
   "subtitle": "Saucy meatballs, melted provolone",
   "category": "firehall_classics",
   "cuisine": "italian",
-  "description": "Saucy meatballs, melted provolone. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Beef and Italian sausage meatballs built on a bread-and-milk panade so they stay tender, roasted hard at 450°F, then simmered in marinara and buried under broiled provolone on toasted hoagies.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 55,
-  "prepTime": 20,
+  "prepTime": 25,
   "difficulty": "medium",
-  "calories": 596,
-  "protein": 60,
-  "carbs": 6,
-  "fats": 39,
+  "calories": 1050,
+  "protein": 58,
+  "carbs": 72,
+  "fats": 52,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -26,109 +26,215 @@
     "golden_100"
   ],
   "equipment": [
-    "Large sheet trays",
+    "Two rimmed sheet trays",
+    "Large mixing bowl",
+    "Wide pot or deep sauté pan for the sauce",
     "Instant-read thermometer",
+    "Serrated knife",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Ground Beef",
-      "quantity": "4",
+      "name": "Ground Beef (80/20)",
+      "quantity": "3",
       "unit": "Lb",
-      "group": "Main"
+      "group": "Meatballs"
+    },
+    {
+      "name": "Ground Italian Sausage",
+      "quantity": "1",
+      "unit": "Lb",
+      "group": "Meatballs"
+    },
+    {
+      "name": "White Sandwich Bread (torn into pieces)",
+      "quantity": "4",
+      "unit": "slices",
+      "group": "Meatballs"
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": "0.75",
+      "unit": "Cup",
+      "group": "Meatballs"
+    },
+    {
+      "name": "Grated Parmesan",
+      "quantity": "1",
+      "unit": "Cup",
+      "group": "Meatballs"
+    },
+    {
+      "name": "Large Eggs",
+      "quantity": "2",
+      "group": "Meatballs"
+    },
+    {
+      "name": "Garlic Cloves (minced)",
+      "quantity": "6",
+      "unit": "cloves",
+      "group": "Meatballs"
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Meatballs"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Meatballs"
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": "2",
+      "unit": "Tsp",
+      "group": "Meatballs"
+    },
+    {
+      "name": "Marinara Sauce",
+      "quantity": "2",
+      "unit": "jars (24 oz)",
+      "group": "Sauce"
     },
     {
       "name": "Hoagie Rolls",
       "quantity": "8",
       "unit": "count",
-      "group": "Buns"
+      "group": "Build"
     },
     {
       "name": "Provolone Slices",
-      "quantity": "12",
+      "quantity": "16",
       "unit": "count",
-      "group": "Cheese"
+      "group": "Build"
     },
     {
-      "name": "Marinara Sauce",
-      "quantity": "2",
-      "unit": "Cups",
-      "group": "Sauce"
-    },
-    {
-      "name": "Yellow Onion",
-      "quantity": "1",
-      "unit": "large",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Garlic Cloves",
+      "name": "Unsalted Butter (softened)",
       "quantity": "4",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "unit": "Tbsp",
+      "group": "Build"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook and sauce filling",
-      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates.",
-      "minutes": 30,
-      "heatLevel": "medium-low"
+      "title": "Mash the panade first",
+      "instruction": "Tear the white sandwich bread into the big bowl, pour the whole milk over it, and mash with a fork 2–3 minutes until it's a smooth paste with no dry spots. This panade is the tenderness insurance: the starch traps juice inside the meat as it cooks. Skip it and you get the dense rubber meatballs every hall has suffered through at least once.",
+      "minutes": 5,
+      "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Toast buns",
-      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired.",
-      "minutes": 6,
-      "heatLevel": "medium"
+      "title": "Season the panade, then fold in the meat",
+      "instruction": "Whisk the grated parmesan, eggs, minced garlic, dried oregano, kosher salt, and black pepper into the panade until even — seasoning the paste first means no overmixing later just to distribute salt. Add the ground beef and Italian sausage and fold with your fingertips only until no streaks remain, about 45 seconds. The mix should look shaggy, not smooth; a smooth, packed mix springs back like a rubber ball and eats like one too.",
+      "minutes": 8,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Build the sandwich line",
-      "instruction": "Meatball Hoagies on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
-      "minutes": 8,
-      "heatLevel": "low"
+      "title": "Roll 24 even meatballs with wet hands",
+      "instruction": "Wet your hands and roll the mix into 24 meatballs about the size of a golf ball, spacing them on the two sheet trays as you go — wet palms keep the mix from sticking so you can roll gently instead of packing them tight. Re-wet every few. Even sizing matters more than round perfection: same size means they all hit temperature within a minute of each other.",
+      "minutes": 12,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Hold for late calls",
-      "instruction": "Keep backup sandwiches foil-wrapped at 200°F. Slice hoagies in half for easier grabbing — crew eats with one hand when tones are quiet.",
+      "title": "Roast hot at 450°F until browned and 160°F inside",
+      "instruction": "Roast the trays at 450°F for 15–18 minutes until the tops are deeply browned and the trays are sizzling. Browning in the oven builds the crust a batch this size could never get from pan-frying, with zero splatter and no babysitting. Check the fattest meatball with an instant-read thermometer — 160°F is the safe number for anything made from ground meat, and the panade keeps them juicy at it.",
+      "minutes": 18,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Marry the meatballs and marinara",
+      "instruction": "While the trays are in the oven, bring the marinara to a gentle bubble in the wide pot. Transfer the browned meatballs in, along with any brown drippings you can scrape off the trays — that's concentrated flavor, not mess. Let everything bubble together gently 10 minutes so the sauce seasons the meatballs and the drippings deepen the sauce. Keep it lazy; a hard rolling pot batters them apart.",
+      "minutes": 12,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Butter and toast the hoagie rolls",
+      "instruction": "Split the hoagie rolls without cutting all the way through — the hinge is what holds a saucy sandwich shut. Spread the cut faces with the softened butter and toast on a tray at 450°F for 3–4 minutes until golden at the edges. That toasted crust is the moisture barrier standing between you and a bottom that drops its meatballs in someone's lap.",
+      "minutes": 6,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Load, cheese, and run them under the broiler",
+      "instruction": "Line the toasted rolls up on trays and load each with three meatballs and a modest spoon of sauce — flooding the roll now undoes the toasting you just did. Lay two provolone slices over the top of each and slide the trays under the broiler 1–2 minutes until the cheese melts, droops over the sides, and browns in spots. Watch the whole time; the jump from golden to scorched takes seconds.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Cut, tray, and call the crew",
+      "instruction": "Give the sandwiches 2 minutes for the cheese to set, then cut each in half with the serrated knife and stand the halves cut-side up on trays so nothing spills. Put the pot of extra sauce on the counter with a ladle for the dippers. These hold about 15 minutes before the bread starts losing the fight, so ring the bell now.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover meatballs — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool meatballs and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts."
+    "The panade is non-negotiable — bread and milk mashed to a paste is the difference between tender meatballs and hockey pucks.",
+    "Fold the meat with fingertips until it just holds together; the mix should look shaggy. Smooth and packed means dense and bouncy.",
+    "Roast, don't pan-fry — 450°F browns 24 meatballs at once with no splatter, and the tray drippings belong in the sauce.",
+    "Sauce goes on light at build time — the pot on the counter with a ladle keeps the bread alive and the dippers happy.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Meatball Hoagies with sides in separate pans so the crew can mix portions.",
-    "Line up Meatball Hoagies on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run."
+    "Main: Meatball hoagies with broiled provolone",
+    "Sides: whatever green salad the hall fridge offers, chips in a bowl",
+    "Condiments: extra marinara in the pot with a ladle, chili flakes and extra parmesan",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Store components separate — assemble fresh; buns go soggy overnight."
+    "Cool meatballs in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Never store built sandwiches — keep meatballs in their sauce and rolls in the bag, and day two builds as good as day one.",
+    "Leftover meatballs and sauce over pasta is a full second dinner; reheat covered on the stove with a splash of water."
   ],
-  "whyCrewsLikeIt": "Saucy meatballs, melted provolone. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "substitutions": [],
+  "whyCrewsLikeIt": "Three tender meatballs under a blanket of browned provolone on a buttered crusty roll — the sandwich half the crew requests by name on grocery day.",
+  "substitutions": [
+    "All ground beef works if sausage is out — add an extra ½ teaspoon each of salt and oregano to cover the seasoning the sausage was carrying.",
+    "Ground turkey swaps for the beef at the same 160°F pull — keep the full panade or it goes dry fast.",
+    "Mozzarella slices melt milder and stretchier than provolone if that's what's in the walk-in.",
+    "Gluten-free: swap the bread and rolls for GF versions and check the sausage label — the panade works the same."
+  ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 596,
-    "protein": 60,
-    "carbs": 6,
-    "fats": 39,
+    "calories": 1050,
+    "protein": 58,
+    "carbs": 72,
+    "fats": 52,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -153,6 +259,7 @@
     "trending",
     "handheld",
     "meatball sub hoagie dinner",
+    "meatball sub with provolone",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -165,6 +272,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.142Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

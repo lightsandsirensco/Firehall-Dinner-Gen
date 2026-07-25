@@ -23,49 +23,49 @@
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Stone-Ground Grits",
+      "name": "stone-ground grits",
       "quantity": "2 cups",
       "notes": "not instant",
       "group": "Grits"
     },
     {
-      "name": "Whole Milk",
+      "name": "whole milk",
       "quantity": "8 cups",
       "notes": "plus 2 cups water",
       "group": "Grits"
     },
     {
-      "name": "Sharp Cheddar",
+      "name": "sharp cheddar",
       "quantity": "2 cups",
       "notes": "shredded",
       "group": "Grits"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "4 tbsp",
       "notes": "for finishing grits",
       "group": "Grits"
     },
     {
-      "name": "Large Shrimp",
+      "name": "large shrimp",
       "quantity": "2 lb",
       "notes": "peeled and deveined",
       "group": "Shrimp"
     },
     {
-      "name": "Andouille Sausage",
+      "name": "andouille sausage",
       "quantity": "8 oz",
       "notes": "sliced into coins",
       "group": "Shrimp"
     },
     {
-      "name": "Cajun Seasoning",
+      "name": "Cajun seasoning",
       "quantity": "2 tbsp",
       "notes": "plus salt and pepper",
       "group": "Seasoning"
     },
     {
-      "name": "Scallions",
+      "name": "scallions",
       "quantity": "1/2 cup",
       "notes": "sliced, plus lemon wedges",
       "group": "Finish"
@@ -139,13 +139,10 @@
   ],
   "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
   "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
-  "imageAlt": "Wide firehall breakfast platter: creamy stone-ground grits with sautéed shrimp piled on top on a station prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T21:56:38.619Z",
+  "imageAlt": "Creamy grits topped with Cajun shrimp and andouille for the crew",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Shrimp and Grits Breakfast | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "heroImageAlt": "Wide firehall breakfast platter: creamy stone-ground grits with sautéed shrimp piled on top on a station prep table, family-style",
-  "mobileImage": "/images/mobile/breakfast/shrimp-and-grits-breakfast.jpg",
-  "railImage": "/images/rails/breakfast/shrimp-and-grits-breakfast.jpg"
+  "collectionTier": "firehall_classic"
 }

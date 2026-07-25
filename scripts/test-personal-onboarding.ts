@@ -84,11 +84,11 @@ function main(): void {
   assert.equal(isPersonalOnboardingComplete(personalComplete, false), true);
   assert.equal(isPersonalOnboardingComplete(defaultPersonalOnboardingProgress(), false), false);
 
-  assert.equal(onboardingPathForStep("generate_meal"), "/generator?onboarding=1");
-  assert.equal(onboardingPathForStep("profile"), "/me/profile?onboarding=1");
-  assert.equal(onboardingPathForStep("hall_question"), "/onboarding/hall");
-  assert.equal(onboardingPathForStep("connect_hall"), "/hall/join?onboarding=1");
-  assert.equal(onboardingPathForStep("completed"), "/home");
+  assert.equal(onboardingPathForStep("generate_meal"), "/tonight");
+  assert.equal(onboardingPathForStep("profile"), "/tonight");
+  assert.equal(onboardingPathForStep("hall_question"), "/tonight");
+  assert.equal(onboardingPathForStep("connect_hall"), "/tonight");
+  assert.equal(onboardingPathForStep("completed"), "/tonight");
 
   console.log("[test-personal-onboarding] OK");
 }

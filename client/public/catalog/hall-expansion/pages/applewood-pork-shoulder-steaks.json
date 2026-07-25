@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Pork Shoulder",
+      "name": "boneless pork shoulder",
       "quantity": "4.8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into 10 steaks",
       "group": "Main"
     },
     {
-      "name": "Apple Cider",
+      "name": "apple cider",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Marinade"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "smashed",
       "group": "Marinade"
     },
     {
-      "name": "Fresh Rosemary",
+      "name": "fresh rosemary",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "chopped",
       "group": "Marinade"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Glaze"
     },
     {
-      "name": "Apple Cider Vinegar",
+      "name": "apple cider vinegar",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Glaze"
     }
   ],
@@ -160,10 +160,19 @@
     "protein": 44,
     "carbs": 14,
     "fats": 26,
-    "label": "~460 cal/serving · 44g protein · 0g fiber (est.)"
+    "label": "~460 cal/serving · 44g protein · 0g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/applewood-pork-shoulder-steaks.jpg",
-  "heroImageAlt": "Applewood Grilled Pork Shoulder Steaks — crew-sized firehall meal",
+  "heroImageAlt": "Applewood Grilled Pork Shoulder Steaks — american grill plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/applewood-pork-shoulder-steaks.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/applewood-pork-shoulder-steaks.jpg",
   "railImage": "/images/rails/hall-expansion/applewood-pork-shoulder-steaks.jpg",
@@ -175,12 +184,12 @@
     "smoker recipes"
   ],
   "relatedSlugs": [
-    "smoked-turkey-breast",
-    "smoked-meatloaf",
-    "pork-belly-burnt-ends",
-    "smoked-sausage-platter"
+    "maple-cured-salmon-plank",
+    "korean-bulgogi-grill-night",
+    "grilled-flank-fajita-bar",
+    "smoked-turkey-breast"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

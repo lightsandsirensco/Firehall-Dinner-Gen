@@ -15,57 +15,57 @@
     "make-ahead",
     "bake"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 50,
   "totalTime": 75,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Day-Old Bread",
-      "quantity": "1 lb",
+      "name": "day-old bread",
+      "quantity": "3/4",
       "notes": "cubed into 1-inch pieces",
       "group": "Base"
     },
     {
-      "name": "Breakfast Sausage",
-      "quantity": "2 lb",
+      "name": "breakfast sausage",
+      "quantity": "2",
       "notes": "browned and crumbled",
       "group": "Protein"
     },
     {
-      "name": "Shredded Sharp Cheddar",
-      "quantity": "3 cups",
+      "name": "shredded sharp cheddar",
+      "quantity": "2.4",
       "notes": "divided",
       "group": "Cheese"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "12",
+      "name": "large eggs",
+      "quantity": "10",
       "group": "Egg mix"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "3 cups",
+      "name": "whole milk",
+      "quantity": "2.4",
       "notes": "or half-and-half",
       "group": "Egg mix"
     },
     {
-      "name": "Dry Mustard",
-      "quantity": "1 tsp",
+      "name": "dry mustard",
+      "quantity": "3/4",
       "notes": "plus salt, pepper, and pinch nutmeg",
       "group": "Seasoning"
     },
     {
-      "name": "Sautéed Onion",
-      "quantity": "1 cup",
+      "name": "sautéed onion",
+      "quantity": "3/4",
       "notes": "optional layer",
       "group": "Optional"
     },
     {
-      "name": "Sliced Green Onions",
-      "quantity": "1/2 cup",
+      "name": "sliced green onions",
+      "quantity": "1/2",
       "notes": "plus hot sauce at the line",
       "group": "Finish"
     }
@@ -139,8 +139,8 @@
   "heroImage": "/images/breakfast/overnight-sausage-strata.jpg",
   "thumbImage": "/images/thumbs/breakfast/overnight-sausage-strata.jpg",
   "imageAlt": "Overnight sausage strata baked golden with melted cheddar",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T20:48:24.991Z",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Overnight Sausage Strata | Firehall Breakfast",
   "collectionTier": "firehall_classic"

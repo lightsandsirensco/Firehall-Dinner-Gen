@@ -1,0 +1,260 @@
+{
+  "slug": "mediterranean-beef-bowls",
+  "title": "Mediterranean Beef Bowls",
+  "displayTitle": "Mediterranean Beef Bowls",
+  "seoTitle": "Mediterranean Beef Bowls | Firefighter Meal",
+  "shortDescription": "Spiced beef, lemon rice, hummus, feta, and cool vegetables",
+  "subtitle": "Spiced beef, lemon rice, hummus, feta, and cool vegetables",
+  "category": "hall_expansion",
+  "cuisine": "mediterranean",
+  "description": "Spiced beef over lemon rice with cucumbers, tomatoes, pickled onions, olives, hummus, feta, and tzatziki.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 640,
+  "protein": 40,
+  "carbs": 65,
+  "fats": 25,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "beef",
+    "healthy",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large skillet",
+    "Rice pot",
+    "Mixing bowls",
+    "Instant-read thermometer",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef",
+      "quantity": "2.8",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "lemon rice",
+      "quantity": "2.4",
+      "unit": "cups",
+      "notes": "uncooked rice",
+      "group": "Base"
+    },
+    {
+      "name": "cumin",
+      "quantity": "1 3/4",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "cucumbers",
+      "quantity": "1.6",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "tomatoes",
+      "quantity": "4.8",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "pickled red onions",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "olives",
+      "quantity": "1 1/4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "hummus",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "feta",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "tzatziki",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Chop the cold Mediterranean bar",
+      "instruction": "Dice cucumbers and tomatoes into bite-size pieces, drain pickled onions and olives, and crumble feta into a cold pan. Spoon hummus and tzatziki into separate bowls and keep them iced. Measure cumin, coriander, paprika, and minced garlic beside the stove before any meat hits the pan — scrambling for spices mid-browning is how you burn a batch.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Make the lemon rice",
+      "instruction": "Rinse 3 cups rice until mostly clear. Simmer covered with 5 1/2 cups salted water on low for 18 minutes, then rest 10 minutes off heat. Fluff, then fold in lemon zest, lemon juice, chopped parsley, and a drizzle of olive oil. Add the lemon while the rice is still hot but off the burner — boiling lemon juice for 18 minutes kills the bright flavor.",
+      "minutes": 28,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Heat the skillet for the beef",
+      "instruction": "Set a 14-inch skillet over medium-high for 2 minutes until a wisp of smoke shows. Break the ground beef into loose chunks on a sheet pan so it hits the pan in pieces, not one frozen brick. A cold, crowded skillet steams the beef gray — wait for real heat.",
+      "minutes": 3,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brown and spice the beef",
+      "instruction": "Add beef to the hot skillet and leave it 90 seconds before breaking it up. Cook 8–10 minutes, stirring occasionally, until no pink remains and browned bits stick to the pan. Drain excess fat, then stir in cumin, coriander, paprika, garlic, and a splash of broth. Simmer 2–3 minutes until the spices coat every crumble. Check 160°F. Skip the fat drain and the bowl tastes greasy instead of spiced.",
+      "minutes": 14,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Optional crispy chickpeas",
+      "instruction": "If you want extra crunch, toss drained chickpeas with oil, salt, and paprika on a sheet pan and roast at 425°F for 15 minutes until the edges crisp. Hold them separate from the beef so they stay crunchy. Skip this step on a busy night — the cold bar already carries the texture. Target oven/smoker temperature: 425°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Stage hummus and tzatziki for swiping",
+      "instruction": "Dip a spoon or #24 disher in warm water, then portion hummus into a serving bowl so it scoops clean. Give tzatziki a quick stir — if it looks watery, pour off the thin liquid on top before serving. Keep both cold; warm hummus thickens into paste and warm tzatziki can separate.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold the beef and rice hot",
+      "instruction": "Transfer spiced beef and lemon rice into covered hotel pans and hold at 200°F, above 140°F. Taste a spoonful of beef with rice and adjust salt — olives and feta are salty, so go light until you taste the full bite. Uncovered rice dries into a crust before the last firefighter eats. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Assemble the Mediterranean bowls",
+      "instruction": "Scoop lemon rice into each bowl, then ladle spiced beef beside it (not dumped in the center so toppings have room). Leave clear zones for hummus and vegetables. Stirring everything together in the kitchen looks neat but turns the bowl into beige mush.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Swipe sauces and pile the cold toppings",
+      "instruction": "Use the back of a spoon to swipe hummus on one side of the bowl and tzatziki on the other — do not stir them into the rice. Top with cucumbers, tomatoes, pickled onions, olives, and feta. Finish with parsley. Separate sauce swipes look restaurant-quality and keep the cool dairy from melting into the beef.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Send bowls with warm pita if you have it",
+      "instruction": "Set bowls at the pass with extra tzatziki, lemon wedges, and warm pita on the side if the hall has it. Call out that olives and feta are already salty so nobody dumps salt on a finished bowl. Refill cold toppings in small pans — a giant bowl of diced tomato leaks juice all over the table.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the Mediterranean ground beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep both the tzatziki and hummus cold — warm hummus thickens into paste and warm tzatziki can separate. On return, spot-check the beef at a safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Mediterranean ground beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Drain excess fat before spices go in or the flavor will taste greasy.",
+    "Rookie tip: Taste olives and feta before salting the whole bowl — they bring plenty of salt.",
+    "Prep tip: Use pre-pickled onions when the line needs to move fast.",
+    "Rookie tip: Hummus is easiest to portion with a disher dipped in warm water.",
+    "Swipe hummus and tzatziki separately instead of stirring them into the rice."
+  ],
+  "tonightSpread": [
+    "Main: Mediterranean beef bowls",
+    "Sides: Warm pita, lemony greens",
+    "Condiments: Hummus, tzatziki, harissa",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Mediterranean ground beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Turn leftover beef and hummus into pita wraps with fresh vegetables."
+  ],
+  "whyCrewsLikeIt": "A flavorful beef base stretches across rice and vegetables, with hummus and tzatziki making every bowl feel substantial.",
+  "mealPrepNotes": "Make-ahead: cook the beef, pickle onions, and make lemon rice up to one day early. Storage: refrigerate beef, rice, vegetables, hummus, and tzatziki separately for 3 days. Reheating: heat beef and rice to 165°F with a splash of water; add cold toppings after.",
+  "substitutions": [
+    "Use ground lamb or turkey.",
+    "Use couscous instead of rice.",
+    "Use dairy-free tzatziki.",
+    "Use roasted peppers for olives."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 640,
+    "protein": 40,
+    "carbs": 65,
+    "fats": 25,
+    "label": "~640 cal/serving · 40g protein · 10g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+  "heroImageAlt": "Mediterranean Beef Bowls — mediterranean bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/mediterranean-beef-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/mediterranean-beef-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/mediterranean-beef-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "mediterranean beef bowls",
+    "ground beef hummus bowl",
+    "lemon rice beef bowl",
+    "firehall mediterranean dinner",
+    "healthy beef meal prep",
+    "feta tzatziki bowl",
+    "crew dinner for 10",
+    "spiced beef rice bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

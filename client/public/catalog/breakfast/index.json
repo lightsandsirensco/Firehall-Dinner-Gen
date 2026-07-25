@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-06-04T20:48:24.993Z",
-  "recipeCount": 58,
+  "generatedAt": "2026-07-17T20:15:27.732Z",
+  "recipeCount": 62,
   "collection": "primary",
   "recipes": [
     {
@@ -24,8 +24,30 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
       "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "healthier_hall"
+    },
+    {
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "subtitle": "Build-your-own bagel sandwiches with eggs, cheese, and proteins for staggered crews.",
+      "description": "A firefighter hall breakfast line that lets every crew member build a hot bagel sandwich without waiting for individual orders. Egg sheets, cheese, and warm proteins stay organized in hotel pans so morning service continues even when the crew arrives in waves.",
+      "filters": [
+        "breakfast_sandwiches",
+        "feed_a_crew",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "bagels",
+        "sandwiches",
+        "egg-sheet",
+        "build-your-own",
+        "handheld"
+      ],
+      "totalTime": 45,
+      "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
+      "thumbImage": "/images/thumbs/breakfast/bagel-sandwich-line.jpg",
+      "publishedAt": "2026-07-17T20:15:27.731Z"
     },
     {
       "slug": "baked-oatmeal-mixed-berries",
@@ -47,7 +69,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
       "thumbImage": "/images/thumbs/breakfast/baked-oatmeal-mixed-berries.jpg",
-      "publishedAt": "2026-06-04T20:48:24.992Z"
+      "publishedAt": "2026-07-17T20:15:27.730Z"
     },
     {
       "slug": "bbq-breakfast-hash",
@@ -67,7 +89,7 @@
       "totalTime": 43,
       "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -90,7 +112,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/belgian-waffle-platter.jpg",
       "thumbImage": "/images/thumbs/breakfast/belgian-waffle-platter.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -113,7 +135,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/biscuit-french-toast-sliders.jpg",
       "thumbImage": "/images/thumbs/breakfast/biscuit-french-toast-sliders.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -136,7 +158,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/breakfast-crunchwraps.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-crunchwraps.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -158,7 +180,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -181,7 +203,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/breakfast-fried-rice-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-fried-rice-crew.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -204,7 +226,7 @@
       "totalTime": 30,
       "heroImage": "/images/breakfast/breakfast-nachos-supreme.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-nachos-supreme.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -227,7 +249,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/breakfast-poutine.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-poutine.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -250,7 +272,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/breakfast-quesadillas.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-quesadillas.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -271,7 +293,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -294,7 +316,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/breakfast-sliders.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-sliders.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -317,7 +339,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -336,7 +358,7 @@
       "totalTime": 30,
       "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
       "thumbImage": "/images/thumbs/breakfast/buttermilk-pancakes.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -357,7 +379,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/cast-iron-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/cast-iron-breakfast-skillet.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -380,7 +402,7 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/chicken-and-waffles-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/chicken-and-waffles-crew.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -403,7 +425,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/chilaquiles-verde-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/chilaquiles-verde-bake.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -426,7 +448,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/chorizo-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-hash.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -449,7 +471,7 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -472,7 +494,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/corned-beef-hash-breakfast.jpg",
       "thumbImage": "/images/thumbs/breakfast/corned-beef-hash-breakfast.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -495,7 +517,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
       "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -518,7 +540,7 @@
       "totalTime": 43,
       "heroImage": "/images/breakfast/cowboy-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/cowboy-breakfast-skillet.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -538,7 +560,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/crew-french-toast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/crew-french-toast-bake.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -560,7 +582,7 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/denver-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/denver-breakfast-casserole.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -583,7 +605,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/eggs-benedict-hall-style.jpg",
       "thumbImage": "/images/thumbs/breakfast/eggs-benedict-hall-style.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -606,7 +628,7 @@
       "totalTime": 65,
       "heroImage": "/images/breakfast/farmers-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/farmers-breakfast-casserole.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -629,7 +651,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/fire-captain-omelette-bar.jpg",
       "thumbImage": "/images/thumbs/breakfast/fire-captain-omelette-bar.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "healthier_hall"
     },
     {
@@ -652,7 +674,7 @@
       "totalTime": 48,
       "heroImage": "/images/breakfast/firehall-breakfast-pizza.jpg",
       "thumbImage": "/images/thumbs/breakfast/firehall-breakfast-pizza.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -675,7 +697,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/german-potato-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/german-potato-breakfast-skillet.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -698,7 +720,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/green-chile-breakfast-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/green-chile-breakfast-burritos.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -719,7 +741,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -742,7 +764,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/hall-breakfast-wraps.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-breakfast-wraps.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "healthier_hall"
     },
     {
@@ -765,8 +787,30 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
+    },
+    {
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "subtitle": "A cheese, egg, hash brown, and breakfast meat bake that holds for late eaters.",
+      "description": "This hall-ready hash brown breakfast casserole layers crisp-edged potatoes, eggs, cheese, and breakfast meat in a deep pan. It is built for firefighter crews whose morning meal may be interrupted, because clean squares hold better than made-to-order eggs.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "casserole",
+        "hash-browns",
+        "eggs",
+        "sausage",
+        "make-ahead"
+      ],
+      "totalTime": 70,
+      "heroImage": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+      "thumbImage": "/images/thumbs/breakfast/hash-brown-breakfast-casserole.jpg",
+      "publishedAt": "2026-07-17T20:15:27.731Z"
     },
     {
       "slug": "huevos-rancheros-crew",
@@ -788,7 +832,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/huevos-rancheros-crew.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -811,7 +855,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/irish-breakfast-fry-up.jpg",
       "thumbImage": "/images/thumbs/breakfast/irish-breakfast-fry-up.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -834,7 +878,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
       "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -857,7 +901,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
       "thumbImage": "/images/thumbs/breakfast/lumberjack-breakfast-platter.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -880,7 +924,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/maple-sausage-pinwheels.jpg",
       "thumbImage": "/images/thumbs/breakfast/maple-sausage-pinwheels.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -903,7 +947,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/menemen-for-the-crew.jpg",
-      "publishedAt": "2026-06-04T20:48:24.992Z"
+      "publishedAt": "2026-07-17T20:15:27.730Z"
     },
     {
       "slug": "migas-for-the-crew",
@@ -925,7 +969,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/migas-for-the-crew.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -947,7 +991,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -969,8 +1013,30 @@
       "totalTime": 65,
       "heroImage": "/images/breakfast/overnight-french-toast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-french-toast-bake.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "healthier_hall"
+    },
+    {
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "subtitle": "Scoop-and-go overnight oats with toppings for a staggered morning hall service.",
+      "description": "This firefighter breakfast oat bar is assembled the night before, then set out as a scoop-and-go station with fruit, nuts, and nut butter. It is ideal for a hall crew that needs a filling morning option without turning on the stove after a late call.",
+      "filters": [
+        "healthy_breakfasts",
+        "feed_a_crew",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "overnight-oats",
+        "oat-bar",
+        "make-ahead",
+        "healthy",
+        "scoop-and-go"
+      ],
+      "totalTime": 20,
+      "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/overnight-oat-bar-crew.jpg",
+      "publishedAt": "2026-07-17T20:15:27.731Z"
     },
     {
       "slug": "overnight-sausage-strata",
@@ -992,7 +1058,7 @@
       "totalTime": 75,
       "heroImage": "/images/breakfast/overnight-sausage-strata.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-sausage-strata.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1012,7 +1078,7 @@
       "totalTime": 22,
       "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
       "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1035,7 +1101,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/red-lead-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/red-lead-skillet.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1055,7 +1121,7 @@
       "totalTime": 27,
       "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1078,7 +1144,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1101,7 +1167,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
       "thumbImage": "/images/thumbs/breakfast/shakshuka-for-the-hall.jpg",
-      "publishedAt": "2026-06-04T20:48:24.992Z"
+      "publishedAt": "2026-07-17T20:15:27.730Z"
     },
     {
       "slug": "sheet-pan-breakfast-hash",
@@ -1120,7 +1186,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1143,7 +1209,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
-      "publishedAt": "2026-06-04T20:48:24.990Z",
+      "publishedAt": "2026-07-17T20:15:27.729Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1166,8 +1232,30 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/sheet-pan-full-english.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-full-english.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
+    },
+    {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "subtitle": "Roasted peppers, browned sausage, and baked eggs for a 8–10 person hall breakfast.",
+      "description": "This firefighter-friendly sheet-pan breakfast roasts peppers and onions beside browned sausage, then bakes eggs right on top. It gives the hall a hot, hearty tray with a short service window and no griddle traffic.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "quick_breakfasts"
+      ],
+      "tags": [
+        "sheet-pan",
+        "eggs",
+        "sausage",
+        "peppers",
+        "one-pan"
+      ],
+      "totalTime": 45,
+      "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "publishedAt": "2026-07-17T20:15:27.731Z"
     },
     {
       "slug": "shrimp-and-grits-breakfast",
@@ -1189,7 +1277,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
       "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1212,7 +1300,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/smoked-salmon-benedit.jpg",
       "thumbImage": "/images/thumbs/breakfast/smoked-salmon-benedit.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "healthier_hall"
     },
     {
@@ -1233,7 +1321,7 @@
       "totalTime": 58,
       "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1256,7 +1344,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/tater-tot-breakfast-casserole.jpg",
-      "publishedAt": "2026-06-04T20:48:24.991Z",
+      "publishedAt": "2026-07-17T20:15:27.730Z",
       "collectionTier": "firehall_classic"
     },
     {
@@ -1277,7 +1365,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/turkey-sausage-burritos.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "healthier_hall"
     },
     {
@@ -1298,7 +1386,7 @@
       "totalTime": 34,
       "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/veggie-egg-burritos.jpg",
-      "publishedAt": "2026-06-04T20:48:24.993Z",
+      "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "healthier_hall"
     }
   ]

@@ -404,27 +404,36 @@ function buildUserActivityTimeline(userId: string, email: string): AdminUserActi
 
 export function updateAdminUserMeta(
   userId: string,
-  patch: { internal_notes?: string; is_pilot_lead?: boolean },
+  patch: { internal_notes?: string; is_pilot_lead?: boolean; is_test_account?: boolean },
 ): void {
   const d = getDb();
   const exists = d.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(userId);
   if (!exists) throw new Error("User not found");
 
   const current = d
-    .prepare(`SELECT internal_notes, is_pilot_lead FROM admin_user_meta WHERE user_id = ?`)
-    .get(userId) as { internal_notes: string; is_pilot_lead: number } | undefined;
+    .prepare(`SELECT internal_notes, is_pilot_lead, is_test_account FROM admin_user_meta WHERE user_id = ?`)
+    .get(userId) as
+    | { internal_notes: string; is_pilot_lead: number; is_test_account: number }
+    | undefined;
 
   const notes = patch.internal_notes ?? current?.internal_notes ?? "";
   const pilot = patch.is_pilot_lead != null ? (patch.is_pilot_lead ? 1 : 0) : (current?.is_pilot_lead ?? 0);
+  const test =
+    patch.is_test_account != null
+      ? patch.is_test_account
+        ? 1
+        : 0
+      : (current?.is_test_account ?? 0);
 
   d.prepare(
-    `INSERT INTO admin_user_meta (user_id, internal_notes, is_pilot_lead, updated_at)
-     VALUES (?, ?, ?, datetime('now'))
+    `INSERT INTO admin_user_meta (user_id, internal_notes, is_pilot_lead, is_test_account, updated_at)
+     VALUES (?, ?, ?, ?, datetime('now'))
      ON CONFLICT(user_id) DO UPDATE SET
        internal_notes = excluded.internal_notes,
        is_pilot_lead = excluded.is_pilot_lead,
+       is_test_account = excluded.is_test_account,
        updated_at = datetime('now')`,
-  ).run(userId, notes, pilot);
+  ).run(userId, notes, pilot, test);
 }
 
 export function exportUsersCsv(filter: AdminUserFilter = "all"): string {

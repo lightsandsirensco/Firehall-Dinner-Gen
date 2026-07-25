@@ -38,65 +38,65 @@
   ],
   "ingredients": [
     {
-      "name": "Tri-Tip Roast",
+      "name": "tri-tip roast",
       "quantity": "4.8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "2 roasts",
       "group": "Main"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "coarse",
       "group": "Rub"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Chimichurri"
     },
     {
-      "name": "Red Wine Vinegar",
+      "name": "red wine vinegar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Chimichurri"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Chimichurri"
     },
     {
-      "name": "Crusty Bread",
+      "name": "crusty bread",
       "quantity": "2",
       "unit": "loaves",
       "notes": "grilled",
@@ -162,10 +162,19 @@
     "protein": 42,
     "carbs": 14,
     "fats": 20,
-    "label": "~390 cal/serving · 42g protein · 1g fiber (est.)"
+    "label": "~390 cal/serving · 42g protein · 1g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-tri-tip.jpg",
-  "heroImageAlt": "Smoked Tri-Tip Roast — crew-sized firehall meal",
+  "heroImageAlt": "Smoked Tri-Tip Roast — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/smoked-tri-tip.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/smoked-tri-tip.jpg",
   "railImage": "/images/rails/hall-expansion/smoked-tri-tip.jpg",
@@ -183,6 +192,6 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.929Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

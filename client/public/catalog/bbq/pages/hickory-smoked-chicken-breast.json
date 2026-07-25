@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic smoked chicken breast technique (Weber, Traeger): boneless breasts get a quick brine, smoke over hickory at 275°F to 165°F, and finish with herb butter for a crew-friendly protein tray.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 60,
   "prepTime": 20,
   "difficulty": "medium",
@@ -39,58 +39,58 @@
   "ingredients": [
     {
       "name": "Boneless Skinless Chicken Breasts",
-      "quantity": "6",
+      "quantity": "4.8",
       "unit": "Lb",
       "notes": "about 10 pieces, even thickness"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "for brine"
     },
     {
       "name": "Brown Sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "notes": "for brine"
     },
     {
       "name": "Water",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "Cups",
       "notes": "for brine"
     },
     {
       "name": "Smoked Paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Garlic Powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp"
     },
     {
       "name": "Black Pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp"
     },
     {
       "name": "Unsalted Butter",
-      "quantity": "6",
+      "quantity": "5.1",
       "unit": "Tbsp",
       "notes": "softened"
     },
     {
       "name": "Fresh Parsley",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "chopped"
     },
     {
       "name": "Lemon Juice",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     }
   ],

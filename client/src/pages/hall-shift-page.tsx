@@ -1,13 +1,9 @@
 import { Link, useRoute } from "wouter";
-import { SiteHeader } from "@/components/site-header";
-import { SiteFooter } from "@/components/site-footer";
+import { HallShell } from "@/components/hall/hall-shell";
 import { ShiftDashboard } from "@/components/shift-dashboard/shift-dashboard";
 import { HallPermissionGate } from "@/components/hall-membership/hall-permission-gate";
-import { useHallFavorites } from "@/hooks/use-hall-favorites";
 import { useAuth } from "@/lib/auth/context";
 import { HALL_LINKED } from "@/lib/brand-copy";
-import { app } from "@/lib/design-tokens";
-import { cn } from "@/lib/utils";
 
 function ShiftFeatureLocked() {
   return (
@@ -28,27 +24,20 @@ export default function HallShiftPage() {
   const hallId = params?.hallId ?? "";
   const shiftId = params?.shiftId ?? "";
   const { authenticated } = useAuth();
-  const { count: favoriteCount } = useHallFavorites();
 
   return (
-    <div className={cn(app.page, "bg-background")}>
-      <SiteHeader activePage="hall" favCount={favoriteCount} />
-
-      <main className={cn(app.main, "py-3 sm:py-5 pb-safe-nav max-w-lg mx-auto px-4 sm:max-w-xl")}>
-        <HallPermissionGate
-          permission="view_hall_dashboard"
-          allowGuest
-          fallback={authenticated ? <ShiftFeatureLocked /> : null}
-        >
-          {hallId && shiftId ? (
-            <ShiftDashboard hallId={hallId} shiftId={shiftId} />
-          ) : (
-            <p className="text-sm text-muted-foreground text-center py-8">Invalid shift link.</p>
-          )}
-        </HallPermissionGate>
-      </main>
-
-      <SiteFooter variant="compact" pbSafe />
-    </div>
+    <HallShell title="Shift" testId="hall-shift-page">
+      <HallPermissionGate
+        permission="view_hall_dashboard"
+        allowGuest
+        fallback={authenticated ? <ShiftFeatureLocked /> : null}
+      >
+        {hallId && shiftId ? (
+          <ShiftDashboard hallId={hallId} shiftId={shiftId} />
+        ) : (
+          <p className="text-sm text-muted-foreground text-center py-8">Invalid shift link.</p>
+        )}
+      </HallPermissionGate>
+    </HallShell>
   );
 }

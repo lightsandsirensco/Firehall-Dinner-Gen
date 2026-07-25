@@ -48,6 +48,22 @@ async function main(): Promise<void> {
   assert.ok(dev.devLink.includes("token-dev"));
 
   restoreEnv();
+  process.env.NODE_ENV = "development";
+  delete process.env.RESEND_API_KEY;
+  delete process.env.SMTP_HOST;
+  delete process.env.PUBLIC_SITE_URL;
+  delete process.env.SITE_URL;
+  delete process.env.REPLIT_DEPLOYMENT_URL;
+  process.env.APP_BASE_URL = "https://firehallmeals.com";
+  const mod4 = await loadMailModule();
+  const appBaseLink = mod4.buildMagicLinkUrl("token-app-base");
+  assert.equal(
+    appBaseLink,
+    "https://www.firehallmeals.com/api/auth/verify-magic?token=token-app-base",
+    "APP_BASE_URL apex normalizes to www",
+  );
+
+  restoreEnv();
   console.log("[test-magic-link-mail] OK");
 }
 

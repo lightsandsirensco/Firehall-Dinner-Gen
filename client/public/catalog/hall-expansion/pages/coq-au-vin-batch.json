@@ -38,76 +38,76 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Legs And Thighs",
+      "name": "chicken legs and thighs",
       "quantity": "6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "bone-in",
       "group": "Main"
     },
     {
-      "name": "Thick-Cut Bacon",
+      "name": "thick-cut bacon",
       "quantity": "1",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into lardons",
       "group": "Braise"
     },
     {
-      "name": "Cremini Mushrooms",
+      "name": "cremini mushrooms",
       "quantity": "1.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "quartered",
       "group": "Braise"
     },
     {
-      "name": "Pearl Onions",
+      "name": "pearl onions",
       "quantity": "1",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "peeled",
       "group": "Braise"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "smashed",
       "group": "Braise"
     },
     {
-      "name": "Red Wine",
+      "name": "red wine",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry",
       "group": "Braise"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Braise"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Braise"
     },
     {
-      "name": "Fresh Thyme",
+      "name": "fresh thyme",
       "quantity": "4",
       "unit": "sprigs",
       "group": "Herbs"
     },
     {
-      "name": "Yukon Gold Potatoes",
+      "name": "Yukon Gold potatoes",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "halved",
       "group": "Side"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -171,10 +171,19 @@
     "protein": 40,
     "carbs": 32,
     "fats": 22,
-    "label": "~510 cal/serving · 40g protein · 3g fiber (est.)"
+    "label": "~510 cal/serving · 40g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/coq-au-vin-batch.jpg",
-  "heroImageAlt": "Coq au Vin Batch — crew-sized firehall meal",
+  "heroImageAlt": "Coq au Vin Batch — french braise plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/coq-au-vin-batch.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/coq-au-vin-batch.jpg",
   "railImage": "/images/rails/hall-expansion/coq-au-vin-batch.jpg",
@@ -186,12 +195,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "dutch-oven-pot-roast",
+    "chicken-cacciatore-crew",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

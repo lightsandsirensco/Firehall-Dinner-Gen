@@ -17,11 +17,12 @@ export const BRAND_CREDIT = {
 } as const;
 
 export const CTA = {
-  findDinner: "Find a Meal",
+  /** Canonical dinner CTA — use everywhere on the pick path */
+  findDinner: "Pick Tonight's Meal",
   pickDinner: "Pick Tonight's Meal",
   pickTonight: "Pick Tonight's Meal",
-  hallMatch: "Hall Match",
-  crewMealPicker: "Crew Meal Picker",
+  hallMatch: "Pick Tonight's Meal",
+  crewMealPicker: "Pick Tonight's Meal",
   spinWheel: "Spin the Wheel",
   exploreMeals: "Browse Recipes",
   viewRecipes: "All recipes",
@@ -50,16 +51,16 @@ export const HALL_VOTE = {
 export const HALL_LINKED = {
   connect: "Connect to Hall",
   join: "Join Hall",
-  linked: "Linked Hall",
-  linkedHalls: "Linked halls",
+  linked: "Hall",
+  linkedHalls: "Your halls",
   create: "Create Hall",
-  manage: "Manage linked hall",
-  switch: "Switch linked hall",
-  active: "Linked hall",
+  manage: "Manage hall",
+  switch: "Switch hall",
+  active: "Active hall",
   noLink: "No hall linked",
   noLinkBody: "Join with a code or create one when your crew wants to collaborate.",
   signInToConnect: "Sign in to connect to a hall.",
-  crewTools: "Crew collaboration",
+  crewTools: "Crew tools",
 } as const;
 
 export const HALL_ONBOARDING = {
@@ -68,26 +69,26 @@ export const HALL_ONBOARDING = {
   welcomeTitle: "You're connected",
   welcomeTagline: "You're linked to your crew.",
   welcomeBody: "Use shared vote, shopping list, meal history, and staples with your crew.",
-  startDinner: "Go to Tonight",
-  viewHallHome: "View linked hall",
+  startDinner: "Open Hall Home",
+  viewHallHome: "View Hall",
   signInPrompt: "Sign in to join or create a hall.",
   haveCode: "Hall or invite code",
 } as const;
 
 export const PERSONAL_ONBOARDING = {
-  welcomeTitle: "Welcome — let's pick dinner",
-  welcomeBody: "Under two minutes to your first meal. We'll save it and set up your profile, then you can link a hall if you want.",
+  welcomeTitle: "Welcome",
+  welcomeBody: "Pick dinner in under a minute — connect a hall anytime if you cook with a crew.",
   generateTitle: "Generate your first meal",
   generateBody: "Tap Pick Tonight — filters are pre-set for a fast first pick.",
-  saveTitle: "Save your first meal",
-  saveBody: "Tap Save on the recipe card so it stays in your list across devices.",
-  profileTitle: "Build your profile",
-  profileBody: "Add your name and preferences — saves sync and picks get smarter.",
-  hallTitle: "Do you work at a fire hall?",
-  hallBody: "Linking a hall is optional. Connect when you want shared votes, shopping lists, and crew meal history.",
-  hallYesHint: "Free to join — crew collaboration tools",
-  hallNoLabel: "No — use it personally",
-  hallNoHint: "Keep picking meals on your own. You can connect a hall anytime.",
+  saveTitle: "Save a meal you like",
+  saveBody: "Tap Save so it stays in Saved across devices.",
+  profileTitle: "Add your name",
+  profileBody: "Optional — helps sync and crew picks.",
+  hallTitle: "Do you cook at a fire hall?",
+  hallBody: "Optional next step — shared board, shopping list, and staples when your crew is ready.",
+  hallYesHint: "Free to join — crew collaboration",
+  hallNoLabel: "Just picking meals for now",
+  hallNoHint: "Keep picking meals. Connect a hall anytime.",
   connectSkip: "Continue without connecting",
   connectTitle: "Connect to your hall",
   connectBody: "Enter a crew code or invite link. Skip if you're not ready.",
@@ -144,29 +145,27 @@ export const COOK_MODE = {
 } as const;
 
 export const GENERATOR = {
-  headline: "Pick tonight's meal for the crew.",
+  headline: "What's for dinner tonight?",
   headlineWithMeal: "Tonight's pick",
-  subline:
-    "Set crew size, protein, and time — Hall Match finds a curated, hall-tested recipe from our catalog.",
-  sublineFocus: "Shuffle or tweak your picks below.",
+  subline: "Crew size and protein — tap once. Under a minute to a hall-tested recipe.",
+  sublineFocus: "Cook this one, or shuffle for another match.",
   loading: "Finding a match…",
   loadingAlt: "Trying another match…",
   emptyTitle: "Ready when you are",
-  emptyBody:
-    "Set the crew, tap Pick Tonight's Meal, or browse firefighter recipes if you want to look around first.",
-  emptyHint: "More controls below if you want to narrow it down.",
-  wheelLink: "Can't decide? Try the Classics Wheel →",
+  emptyBody: "Tap Pick Tonight's Meal — crew-sized, hall-tested, ready to cook.",
+  emptyHint: "Need to tweak? Expand options below.",
+  wheelLink: "Can't decide? Spin the Classics Wheel →",
 } as const;
 
 export const HOME = {
   /** Visible hero — kitchen-table voice; one problem, one fix. */
   heroEyebrow: "Built by firefighters • For every shift",
   heroHeadline: 'End the "What\'s for Dinner?" Debate.',
-  heroLead: "Pick a meal, let the crew vote, and get cooking.",
+  heroLead: "Pick tonight's meal in under a minute — then cook.",
   heroPunchlines: ["No recipe blogs.", "No group chat.", "No arguing."] as const,
-  heroPrimaryCta: "Find Tonight's Meal",
+  heroPrimaryCta: "Pick Tonight's Meal",
   heroSecondaryCta: "Can't Decide? Spin the Wheel",
-  heroTrustLine: "Free to use. Connect to your hall when you're ready.",
+  heroTrustLine: "Free to use. Built for crew-sized dinners.",
   /** @deprecated Use heroLead + heroPunchlines */
   heroSubheadline:
     "Pick a meal, let the crew vote, and get cooking.",
@@ -270,7 +269,7 @@ export const HOME = {
 
 export const NAV = {
   home: "Home",
-  generator: "Find a Meal",
+  generator: "Pick Tonight",
   explore: "Browse Recipes",
   ideas: "Hall Ideas",
   wheel: "Classics Wheel",
@@ -283,25 +282,75 @@ export const NAV = {
 } as const;
 
 export const APP_HOME = {
-  subtitle: "Your shift meals — pick, cook, and save.",
+  title: "Firehall Meals",
+  shiftEyebrow: "Tonight's dinner",
+  shiftStart: "What's for dinner?",
+  subtitleGuest: "Open around 4 — lock dinner, then cook.",
+  subtitleMember: "Every shift starts here — lock dinner, vote, shop, cook.",
+  subtitleHall: "Dinner window — lock the meal, then finish the run.",
+  ritualWindowHint: "Between now and dinner — decide, vote if needed, shop, cook.",
+  ritualHabitHint: "Open Home every shift · Decide → Vote → Shop → Cook",
+  returnTomorrowOpen:
+    "Tomorrow: open Home again when dinner isn't decided yet — same ritual, new shift.",
+  returnTomorrowLocked:
+    "Tomorrow the slate resets — open Home to lock the next shift's dinner.",
+  welcomeNew: "Welcome — pick dinner first",
+  welcomeReturning: "Welcome back",
+  nextUp: "What to do next",
+  nextGenerate: "Pick tonight's meal",
+  nextGenerateHint: "Under a minute — crew-sized match",
+  nextSave: "Save a meal you like",
+  nextSaveHint: "Keeps it on Saved across devices",
+  nextProfile: "Add your name",
+  nextProfileHint: "Helps sync and crew picks",
+  nextHallQuestion: "Do you cook at a fire hall?",
+  nextHallQuestionHint: "Optional — after you've picked dinner a few times",
+  nextConnectHall: "Join or create a Hall",
+  nextConnectHallHint: "Shared board, shopping, and staples",
+  nextDismiss: "I'll explore on my own",
+  resumeTitle: "Cook again",
+  hallTonight: "Tonight at the hall",
+  hallAlerts: "Needs attention",
+  hallShopping: "Shopping run",
+  mealsWorkspace: "What's for dinner",
+  mealsWorkspaceHint: "Pick, explore, wheel, and saved meals",
+  hallWorkspace: "At the hall",
+  hallWorkspaceHint: "Board, dinner, shopping, staples, and tools",
+  openHallOps: "Manage the hall",
+  tryHallOps: "Connect your hall",
+  tryHallOpsHint: "Optional — after dinner is decided",
+  manageHall: "Manage the hall",
+  manageHallHint: "Board, shopping, canteen, dues, and log",
+  inspireTitle: "Other ways to decide",
+  browseMeals: "Browse the catalog",
+  browseMealsHint: "When you want to look around",
+  openHall: "Manage the hall",
+  openHallHint: "After dinner is locked",
+  keepPickingMeals: "Keep picking meals",
+  nextStepMeals: "Next: pick meals",
+  nextStepHall: "Next: hall",
+  lifecycleHint: "Pick → cook → done",
   recentlyViewed: "Recently viewed",
   continueCooking: "Continue cooking",
   savedMeals: "Saved meals",
   savedMealsCount: (n: number) => `${n} saved meal${n === 1 ? "" : "s"}`,
   savedMealsEmpty: "Save recipes you want to cook again",
   proteinDealsHint: "Protein on sale near your station",
+  undecidedHint: "Tap below — under a minute to a crew-sized pick.",
 } as const;
 
 export const HALL_EMPTY = {
-  title: "Hall",
-  subtitle: "Optional crew collaboration — your personal meals work without a link.",
+  title: "Connect your hall",
+  subtitle: "Join with a crew code — Home stays your command center; Hall is where you manage the work.",
   joinTitle: "Join Hall",
   joinDescription: "Enter a crew code or scan the fridge QR",
   createTitle: "Create Hall",
-  createDescription: "Start a link for shared vote, list, history, and staples",
-  createSignIn: "Sign in to create a hall link for your crew",
-  learnTitle: "Connect to Hall",
-  learnDescription: "Hall Vote, shared shopping, meal history, and staples",
+  createDescription: "Start a link for board, shopping, history, and staples",
+  createSignIn: "Sign in to create a hall for your crew",
+  learnTitle: "How the hall workflow works",
+  learnDescription: "Home surfaces what needs attention — Hall is where you manage it",
+  browseMeals: "Back to Home",
+  browseMealsHint: "Every shift starts at Home — connect a hall whenever the crew is ready",
 } as const;
 
 export const HALL_PRO = {
@@ -342,7 +391,7 @@ export const HALL_FEATURES = {
 
 export const ME_HISTORY = {
   title: "Meal History",
-  subtitle: "Meals you generated, cooked, and spun on the wheel.",
+  subtitle: "Your last picks — tap to cook again tonight.",
 } as const;
 
 export const ME_SETTINGS = {
@@ -405,7 +454,7 @@ export const HALL_IDENTITY = {
 } as const;
 
 export const HALL_DASHBOARD = {
-  title: "Linked Hall",
+  title: "Hall",
   myHall: "My Hall",
   subtitle: "Crew collaboration — vote, shop, and track meals together.",
   tagline: "Connected to your crew",
@@ -503,8 +552,8 @@ export const SHIFT_DASHBOARD = {
   emptyWheelHistory: "Spin the wheel on a shift night to build history.",
   emptyRecentVotes: "Start a hall vote so the crew can pick dinner together.",
   emptyShoppingList: "No items on the hall grocery run yet.",
-  backToHall: "Linked Hall",
-  hallSettings: "Manage linked hall",
+  backToHall: "Hall",
+  hallSettings: "Manage hall",
   stats: {
     mealsThisMonth: "Meals this month",
     votesThisMonth: "Votes this month",
@@ -523,17 +572,17 @@ export const SHIFT_DASHBOARD = {
 } as const;
 
 export const HALL_CANTEEN = {
-  title: "Hall Staples",
-  subtitle: "What does the crew need to pick up for the hall?",
-  backToHall: "Linked Hall",
+  title: "Canteen Manager",
+  subtitle: "Report shortages in two taps. One Canteen Manager runs the weekly order and Costco handoff.",
+  backToHall: "Hall",
   needsAttention: "Need Anything?",
-  viewCanteen: "View Hall Staples",
-  viewList: "View Hall Staples",
+  viewCanteen: "View Canteen",
+  viewList: "View Canteen",
   markRestocked: "Mark Restocked",
   imBuyingThis: "I'm Buying This",
-  shoppingThisWeek: "Shopping This Week",
-  shoppingThisWeekSubtitle: "Recurring kitchen staples to pick up — not tonight's meal list.",
-  shoppingThisWeekEmpty: "Nothing to pick up this week — all staples look good.",
+  shoppingThisWeek: "This Week’s Order",
+  shoppingThisWeekSubtitle: "Shared weekly staple order — not tonight's meal list.",
+  shoppingThisWeekEmpty: "Nothing in this week’s order yet.",
   purchased: "Purchased",
   buyingToday: "Buying today",
   pickingUp: (name: string) => `${name} is picking this up.`,
@@ -578,7 +627,7 @@ export const HALL_HISTORY = {
   recentlyCooked: "Recently Cooked",
   cookAgain: "Cook Again",
   seeAll: "See meal history",
-  repeatWarning: "You made this recently — consider rotating the menu.",
+  repeatWarning: "Crew had this recently — still fine to cook if you want it.",
   profileHallName: "Station label",
   profileShift: "Shift label",
   profileCrewSize: "Default crew size",
@@ -617,7 +666,7 @@ export const HALL_OF_FAME = {
 
 export const HALL_FAVORITES = {
   title: "Saved Meals",
-  subtitle: "Recipes you save for yourself — not the same as crew collaboration.",
+  subtitle: "Meals you want again — tap to cook tonight.",
   ourClassics: "Pinned classics",
   classicsHint: "Pin up to 10 recipes you cook often on shift.",
   mostCooked: "Most cooked",
@@ -630,7 +679,7 @@ export const HALL_FAVORITES = {
   classicsFull: "Pinned classics are full (10 max). Remove one to add another.",
   emptyClassics: "Pin the meals you rotate — jerk chicken, BBQ mac, steak sandwiches, and the rest.",
   savedDinners: "Saved dinners",
-  savedDinnersHint: "One-off picks from Find a Meal.",
+  savedDinnersHint: "Tap Cook again for tonight.",
   deviceNote: "Saved on this device. Sign in to sync across phones.",
 } as const;
 
@@ -653,7 +702,7 @@ export const CLASSICS_WHEEL = {
   ],
   subtitle: "The firehall kitchen-table gamble.",
   eyebrow: "Crew tradition",
-  hint: "Tap Spin or the center button. What lands is what you cook.",
+  hint: "Tap Spin — lands in about 5 seconds. What lands is what you cook.",
   suspense: "Still spinning…",
   browseLink: "Rather browse? Explore firefighter recipes →",
   shareCta: "Share tonight's pick",

@@ -53,10 +53,15 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
       <div className="max-w-[1400px] mx-auto px-page py-12 sm:py-14">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr] lg:gap-16">
           <div>
-            <div className="flex items-center gap-2">
+            <Link
+              href="/"
+              className="inline-flex items-center gap-2 hover:opacity-90 transition-opacity"
+              data-testid="footer-logo"
+              aria-label={`${BRAND_NAME} — Home`}
+            >
               <Flame className="w-5 h-5 text-primary" aria-hidden />
               <p className="font-heading text-lg tracking-wide text-foreground">{BRAND_NAME}</p>
-            </div>
+            </Link>
             <p className="mt-2 text-[10px] uppercase tracking-[0.28em] text-muted-foreground/70">
               {BRAND_TAGLINE}
             </p>

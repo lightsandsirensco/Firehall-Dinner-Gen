@@ -37,65 +37,65 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Leg Quarters",
+      "name": "chicken leg quarters",
       "quantity": "4.8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "about 12 pieces",
       "group": "Main"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Sweet Paprika",
+      "name": "sweet paprika",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Onion Powder",
+      "name": "onion powder",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Rub"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Rub"
     },
     {
-      "name": "Lemon Wedges",
+      "name": "lemon wedges",
       "quantity": "3",
       "unit": "whole",
       "notes": "for serving",
       "group": "Finish"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     }
@@ -159,10 +159,19 @@
     "protein": 38,
     "carbs": 4,
     "fats": 28,
-    "label": "~410 cal/serving · 38g protein · 0g fiber (est.)"
+    "label": "~410 cal/serving · 38g protein · 0g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/paprika-roasted-chicken-quarters.jpg",
-  "heroImageAlt": "Paprika Roasted Chicken Quarters — crew-sized firehall meal",
+  "heroImageAlt": "Paprika Roasted Chicken Quarters — american baked plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/paprika-roasted-chicken-quarters.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/paprika-roasted-chicken-quarters.jpg",
   "railImage": "/images/rails/hall-expansion/paprika-roasted-chicken-quarters.jpg",
@@ -174,12 +183,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "honey-mustard-oven-chicken-thighs",
     "shawarma-bar-night",
     "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "hall-burger-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

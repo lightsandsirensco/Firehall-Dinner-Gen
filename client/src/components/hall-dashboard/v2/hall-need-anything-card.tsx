@@ -73,9 +73,7 @@ export function HallNeedAnythingCard({ activeHallId, className }: HallNeedAnythi
 
   const listHref = "/hall/canteen";
   const title =
-    attentionCount > 0
-      ? `${HALL_DASHBOARD.needAnything.replace("?", "")} (${attentionCount})`
-      : HALL_DASHBOARD.needAnything;
+    attentionCount > 0 ? `Is anything urgent? (${attentionCount})` : "Is anything urgent?";
 
   return (
     <HallDashboardSection

@@ -38,64 +38,64 @@
   ],
   "ingredients": [
     {
-      "name": "Corned Beef Brisket Flat",
+      "name": "corned beef brisket flat",
       "quantity": "6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "about 12 oz raw per firefighter",
       "group": "Main"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Whole-Grain Mustard",
+      "name": "whole-grain mustard",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Apple Cider Vinegar",
+      "name": "apple cider vinegar",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Glaze"
     },
     {
-      "name": "Guinness Or Dark Beer",
+      "name": "guinness or dark beer",
       "quantity": "9.6",
-      "unit": "Oz",
+      "unit": "oz",
       "notes": "for wrap",
       "group": "Cook"
     },
     {
-      "name": "Green Cabbage",
+      "name": "green cabbage",
       "quantity": "2",
       "unit": "heads",
       "notes": "quartered",
       "group": "Side"
     },
     {
-      "name": "Baby Potatoes",
+      "name": "baby potatoes",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Side"
     },
     {
-      "name": "Caraway Seeds",
+      "name": "caraway seeds",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Side"
     },
     {
-      "name": "Rye Bread",
+      "name": "rye bread",
       "quantity": "17",
       "unit": "slices",
       "group": "Serve"
     },
     {
-      "name": "Swiss Cheese",
+      "name": "swiss cheese",
       "quantity": "8",
       "unit": "slices",
       "group": "Serve"
@@ -160,10 +160,19 @@
     "protein": 36,
     "carbs": 34,
     "fats": 28,
-    "label": "~530 cal/serving · 36g protein · 4g fiber (est.)"
+    "label": "~530 cal/serving · 36g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-corned-beef.jpg",
-  "heroImageAlt": "Smoked Corned Beef Brisket — crew-sized firehall meal",
+  "heroImageAlt": "Smoked Corned Beef Brisket — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/smoked-corned-beef.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/smoked-corned-beef.jpg",
   "railImage": "/images/rails/hall-expansion/smoked-corned-beef.jpg",
@@ -181,6 +190,6 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.929Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

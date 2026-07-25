@@ -1,17 +1,17 @@
 # Expansion Production Audit
 
-Generated: **2026-05-30T21:22:59.474Z**
+Generated: **2026-07-17T20:16:45.463Z**
 
 ## Summary
 
 | Metric | Value |
 |--------|------:|
-| Recipes audited | 76 |
-| Heroes on disk | 76 |
-| Thumbs on disk | 76 |
-| Errors | 8 |
-| Warnings | 102 |
-| **Production readiness** | **95%** |
+| Recipes audited | 135 |
+| Heroes on disk | 132 |
+| Thumbs on disk | 132 |
+| Errors | 23 |
+| Warnings | 124 |
+| **Production readiness** | **89%** |
 
 ## Inventory
 
@@ -19,7 +19,6 @@ Generated: **2026-05-30T21:22:59.474Z**
 |--------|------|----------|-------|-----------|
 | Smoked Turkey Breast for the Crew | `smoked-turkey-breast` | smoker_recipes | ✓ | ✓ |
 | Smoked Meatloaf with Glaze | `smoked-meatloaf` | smoker_recipes | ✓ | ✓ |
-| Smoked Mac and Cheese | `smoked-mac-and-cheese` | smoker_recipes | ✓ | ✓ |
 | Pork Belly Burnt Ends | `pork-belly-burnt-ends` | smoker_recipes | ✓ | ✓ |
 | Smoked Sausage Platter | `smoked-sausage-platter` | smoker_recipes | ✓ | ✓ |
 | Smoked Queso Fundido | `smoked-queso-fundido` | smoker_recipes | ✓ | ✓ |
@@ -50,7 +49,6 @@ Generated: **2026-05-30T21:22:59.474Z**
 | Mesquite Smoked Chuck Roast | `mesquite-chuck-roast` | smoker_recipes | ✓ | ✓ |
 | Molasses Bourbon Pork Ribs | `molasses-bourbon-pork-ribs` | smoker_recipes | ✓ | ✓ |
 | Applewood Grilled Pork Shoulder Steaks | `applewood-pork-shoulder-steaks` | smoker_recipes | ✓ | ✓ |
-| Pepper-Crusted Smoked Brisket Flat | `pepper-smoked-brisket-flat` | smoker_recipes | ✓ | ✓ |
 | Honey Mustard Baked Chicken Thighs | `honey-mustard-oven-chicken-thighs` | crew_feeders | ✓ | ✓ |
 | Spatchcock Lemon Roast Chicken | `spatchcock-lemon-roast-chicken` | crew_feeders | ✓ | ✓ |
 | Cajun Chicken and Rice Skillet | `cajun-chicken-rice-skillet` | crew_feeders | ✓ | ✓ |
@@ -73,6 +71,67 @@ Generated: **2026-05-30T21:22:59.474Z**
 | Cheesy Chicken Broccoli Rice | `cheesy-chicken-broccoli-rice` | crew_feeders | ✓ | ✓ |
 | Sheet Pan Meatball Marinara Feed | `sheet-pan-meatball-marinara` | crew_feeders | ✓ | ✓ |
 | Hall Sloppy Joe Feed | `hall-sloppy-joe-feed` | crew_feeders | ✓ | ✓ |
+| Montreal Smoked Meat Platter | `montreal-smoked-meat-platter` | crew_feeders | ✓ | ✓ |
+| Tourtière for the Crew | `tourtiere-for-the-crew` | crew_feeders | ✓ | ✓ |
+| Firehall Donair Platter | `firehall-donair-platter` | crew_feeders | ✓ | ✓ |
+| Maple-Cured Salmon Plank | `maple-cured-salmon-plank` | crew_feeders | ✓ | ✓ |
+| Classic Poutine Feed for the Crew | `classic-poutine-feed-crew` | crew_feeders | ✓ | ✓ |
+| Cottage Pie for the Crew | `cottage-pie-for-the-crew` | crew_feeders | ✓ | ✓ |
+| Chicken Paprikash for the Hall | `chicken-paprikash-hall` | crew_feeders | ✓ | ✓ |
+| Chicken Cacciatore for the Crew | `chicken-cacciatore-crew` | crew_feeders | ✓ | ✓ |
+| Coq au Vin Batch | `coq-au-vin-batch` | crew_feeders | ✓ | ✓ |
+| Hungarian Goulash for the Crew | `hungarian-goulash-crew` | crew_feeders | ✓ | ✓ |
+| Tonkotsu Ramen for the Crew | `tonkotsu-ramen-crew` | crew_feeders | ✓ | ✓ |
+| Miso Ramen Bar | `miso-ramen-bar` | crew_feeders | ✓ | ✓ |
+| Malaysian Laksa Soup | `malaysian-laksa-soup` | crew_feeders | ✓ | ✓ |
+| Bun Bo Hue Noodle Soup | `bun-bo-hue-noodle-soup` | crew_feeders | ✓ | ✓ |
+| Wonton Noodle Soup for the Crew | `wonton-noodle-soup-crew` | crew_feeders | ✓ | ✓ |
+| Peri Peri Chicken Platter | `peri-peri-chicken-platter` | crew_feeders | ✓ | ✓ |
+| Korean Bulgogi Grill Night | `korean-bulgogi-grill-night` | crew_feeders | ✓ | ✓ |
+| Lamb Kofta Skewer Platter | `lamb-kofta-skewer-platter` | crew_feeders | ✓ | ✓ |
+| Moroccan Chicken Kebab Platter | `moroccan-chicken-kebab-platter` | crew_feeders | ✓ | ✓ |
+| Lebanese Chicken Shish Platter | `lebanese-chicken-shish-platter` | crew_feeders | ✓ | ✓ |
+| Classic Patty Melt for the Crew | `classic-patty-melt-for-the-crew` | crew_feeders | ✗ | ✓ |
+| Best Tuna Melt for the Hall (Diner Style) | `best-tuna-melt-for-the-hall` | crew_feeders | ✗ | ✓ |
+| Hall BLT Sandwich Feed | `hall-blt-sandwich-feed` | crew_feeders | ✗ | ✓ |
+| Buffalo Chicken Wraps | `buffalo-chicken-wraps` | crew_feeders | ✓ | ✓ |
+| Greek Chicken Pitas | `greek-chicken-pitas` | crew_feeders | ✓ | ✓ |
+| Beef Gyros | `beef-gyros-for-the-hall` | crew_feeders | ✓ | ✓ |
+| Chicken Shawarma Pitas | `chicken-shawarma-pitas` | crew_feeders | ✓ | ✓ |
+| Sausage & Peppers on Buns | `sausage-peppers-on-buns` | crew_feeders | ✓ | ✓ |
+| Firehall Taco Bowls | `firehall-taco-bowls` | crew_feeders | ✓ | ✓ |
+| Buffalo Chicken Sweet Potato Bowls | `buffalo-chicken-sweet-potato-bowls` | crew_feeders | ✓ | ✓ |
+| Greek Chicken Bowls | `firehall-greek-chicken-bowls` | crew_feeders | ✓ | ✓ |
+| Teriyaki Chicken Rice Bowls | `teriyaki-chicken-rice-bowls` | crew_feeders | ✓ | ✓ |
+| Korean Beef Bowls | `firehall-korean-beef-bowls` | crew_feeders | ✓ | ✓ |
+| Cajun Shrimp Rice Bowls | `cajun-shrimp-rice-bowls` | crew_feeders | ✓ | ✓ |
+| Southwest Steak Bowls | `southwest-steak-bowls` | crew_feeders | ✓ | ✓ |
+| BBQ Pulled Pork Bowls | `bbq-pulled-pork-bowls` | crew_feeders | ✓ | ✓ |
+| Mediterranean Beef Bowls | `mediterranean-beef-bowls` | crew_feeders | ✓ | ✓ |
+| Chipotle Chicken Burrito Bowls | `chipotle-chicken-burrito-bowls` | crew_feeders | ✓ | ✓ |
+| Turkey Taco Bowls | `turkey-taco-bowls` | crew_feeders | ✓ | ✓ |
+| Peanut Chicken Rice Bowls | `peanut-chicken-rice-bowls` | crew_feeders | ✓ | ✓ |
+| Firehall Gyro Bowls | `firehall-gyro-bowls` | crew_feeders | ✓ | ✓ |
+| Egg Roll in a Bowl for the Crew | `egg-roll-in-a-bowl-crew` | crew_feeders | ✓ | ✓ |
+| Salmon Rice Bowls for the Crew | `salmon-rice-bowls-crew` | crew_feeders | ✓ | ✓ |
+| Korean Turkey Rice Bowls | `korean-turkey-rice-bowls` | crew_feeders | ✓ | ✓ |
+| Leftover Roast Beef Bowls | `leftover-roast-beef-bowls` | crew_feeders | ✓ | ✓ |
+| Mississippi Pot Roast for the Crew | `mississippi-pot-roast-crew` | crew_feeders | ✓ | ✓ |
+| White Chicken Chili Crock | `white-chicken-chili-crock` | crew_feeders | ✓ | ✓ |
+| Italian Beef Slow Cooker Sandwiches | `italian-beef-slow-cooker` | crew_feeders | ✓ | ✓ |
+| Salsa Verde Chicken Crock | `salsa-verde-chicken-crock` | crew_feeders | ✓ | ✓ |
+| Loaded Baked Potato Soup Crock | `loaded-baked-potato-soup-crock` | crew_feeders | ✓ | ✓ |
+| Thai Peanut Chicken Crock | `thai-peanut-chicken-crock` | crew_feeders | ✓ | ✓ |
+| Burnt Ends Chili for the Crew | `burnt-ends-chili-crew` | smoker_recipes | ✓ | ✓ |
+| Smoker Nachos for the Crew | `smoker-nachos-crew` | smoker_recipes | ✓ | ✓ |
+| Weeknight BBQ Ribs for the Crew | `weeknight-bbq-ribs-crew` | smoker_recipes | ✓ | ✓ |
+| Grilled Flank Fajita Bar | `grilled-flank-fajita-bar` | smoker_recipes | ✓ | ✓ |
+| Costco Rotisserie Chicken Remix | `costco-rotisserie-remix` | crew_feeders | ✓ | ✓ |
+| Chicken Thigh Stretch Dinner | `chicken-thigh-stretch-dinner` | crew_feeders | ✓ | ✓ |
+| Pasta e Fagioli for the Hall | `pasta-e-fagioli-hall` | crew_feeders | ✓ | ✓ |
+| Dirty Rice Crew Skillet | `dirty-rice-crew-skillet` | crew_feeders | ✓ | ✓ |
+| Sausage Gnocchi Skillet | `sausage-gnocchi-skillet` | crew_feeders | ✓ | ✓ |
+| Spanish Rice Chicken One Pot | `spanish-rice-chicken-one-pot` | crew_feeders | ✓ | ✓ |
 | Red Lead Skillet | `red-lead-skillet` | firehall_breakfasts | ✓ | ✓ |
 | Firehall Breakfast Pizza | `firehall-breakfast-pizza` | firehall_breakfasts | ✓ | ✓ |
 | Breakfast Enchiladas for the Crew | `breakfast-enchiladas` | firehall_breakfasts | ✓ | ✓ |
@@ -80,10 +139,10 @@ Generated: **2026-05-30T21:22:59.474Z**
 | Denver Breakfast Casserole | `denver-breakfast-casserole` | firehall_breakfasts | ✓ | ✓ |
 | Breakfast Sliders | `breakfast-sliders` | firehall_breakfasts | ✓ | ✓ |
 | Breakfast Quesadillas | `breakfast-quesadillas` | firehall_breakfasts | ✓ | ✓ |
-| Protein French Toast | `protein-french-toast` | firehall_breakfasts | ✓ | ✓ |
+| Protein French Toast | `protein-french-toast` | firehall_breakfasts | ✓ | ✗ |
 | Breakfast Poutine | `breakfast-poutine` | firehall_breakfasts | ✓ | ✓ |
 | Monte Cristo Sandwiches | `monte-cristo-sandwiches` | firehall_breakfasts | ✓ | ✓ |
-| Apple Cinnamon Baked Oatmeal | `apple-cinnamon-baked-oatmeal` | firehall_breakfasts | ✓ | ✓ |
+| Apple Cinnamon Baked Oatmeal | `apple-cinnamon-baked-oatmeal` | firehall_breakfasts | ✓ | ✗ |
 | Cowboy Breakfast Skillet | `cowboy-breakfast-skillet` | firehall_breakfasts | ✓ | ✓ |
 | Hall Breakfast Wraps | `hall-breakfast-wraps` | firehall_breakfasts | ✓ | ✓ |
 | Sheet Pan Breakfast Sandwiches | `sheet-pan-breakfast-sandwiches` | firehall_breakfasts | ✓ | ✓ |
@@ -104,6 +163,21 @@ Generated: **2026-05-30T21:22:59.474Z**
 - **rigatoni-meat-sauce-batch** [content/no_temperature]: no oven/grill/internal temperature cues in steps
 - **kielbasa-cabbage-potato-skillet** [content/no_temperature]: no oven/grill/internal temperature cues in steps
 - **kielbasa-cabbage-potato-skillet** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **hungarian-goulash-crew** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **hungarian-goulash-crew** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **tonkotsu-ramen-crew** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **tonkotsu-ramen-crew** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **miso-ramen-bar** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **miso-ramen-bar** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **bun-bo-hue-noodle-soup** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **bun-bo-hue-noodle-soup** [content/no_temperature]: no oven/grill/internal temperature cues in steps
+- **chicken-caesar-wraps** [inventory/missing_page]: Page not built
+- **firehall-greek-chicken-bowls** [inventory/title_collision]: Title collision with greek-chicken-bowls
+- **protein-french-toast** [inventory/missing_index]: Not in breakfast index
+- **apple-cinnamon-baked-oatmeal** [inventory/missing_index]: Not in breakfast index
+- **classic-patty-melt-for-the-crew** [image/missing_hero]: Hero missing: /images/hall-expansion/classic-patty-melt-for-the-crew.jpg
+- **best-tuna-melt-for-the-hall** [image/missing_hero]: Hero missing: /images/hall-expansion/best-tuna-melt-for-the-hall.jpg
+- **hall-blt-sandwich-feed** [image/missing_hero]: Hero missing: /images/hall-expansion/hall-blt-sandwich-feed.jpg
 
 ## Warnings (top 30)
 
@@ -120,22 +194,22 @@ Generated: **2026-05-30T21:22:59.474Z**
 - **mediterranean-chicken-farro-bowls** [content/weak_title]: robotic_title
 - **kielbasa-cabbage-potato-skillet** [content/weak_title]: robotic_title
 - **sheet-pan-meatball-marinara** [content/weak_title]: robotic_title
-- **red-lead-skillet** [content/orphan_ingredient]: Ingredient may be unused in steps: sirloin or flank steak
-- **red-lead-skillet** [content/orphan_ingredient]: Ingredient may be unused in steps: large eggs
-- **red-lead-skillet** [content/orphan_ingredient]: Ingredient may be unused in steps: Yukon gold potatoes
-- **firehall-breakfast-pizza** [content/orphan_ingredient]: Ingredient may be unused in steps: store-bought pizza dough balls
-- **firehall-breakfast-pizza** [content/orphan_ingredient]: Ingredient may be unused in steps: country gravy
-- **firehall-breakfast-pizza** [content/orphan_ingredient]: Ingredient may be unused in steps: shredded mozzarella
-- **firehall-breakfast-pizza** [content/orphan_ingredient]: Ingredient may be unused in steps: breakfast sausage
-- **firehall-breakfast-pizza** [content/orphan_ingredient]: Ingredient may be unused in steps: shredded cheddar
-- **breakfast-enchiladas** [content/orphan_ingredient]: Ingredient may be unused in steps: Mexican chorizo
-- **breakfast-enchiladas** [content/orphan_ingredient]: Ingredient may be unused in steps: shredded Monterey Jack
-- **breakfast-enchiladas** [content/orphan_ingredient]: Ingredient may be unused in steps: 8-inch flour tortillas
-- **breakfast-enchiladas** [content/orphan_ingredient]: Ingredient may be unused in steps: green enchilada sauce
-- **breakfast-enchiladas** [content/orphan_ingredient]: Ingredient may be unused in steps: sour cream
-- **breakfast-enchiladas** [content/orphan_ingredient]: Ingredient may be unused in steps: cilantro
-- **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: large eggs
-- **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: breakfast sausage
-- **breakfast-crunchwraps** [content/orphan_ingredient]: Ingredient may be unused in steps: frozen hash browns
+- **tonkotsu-ramen-crew** [content/vague_wording]: step 3 uses vague phrasing
+- **wonton-noodle-soup-crew** [content/vague_wording]: step 3 uses vague phrasing
+- **korean-bulgogi-grill-night** [content/weak_title]: robotic_title
+- **greek-chicken-pitas** [content/weak_title]: robotic_title
+- **firehall-taco-bowls** [content/weak_title]: title_taco_no_tortilla; title_taco_format_mismatch
+- **firehall-greek-chicken-bowls** [content/weak_title]: robotic_title
+- **firehall-korean-beef-bowls** [content/weak_title]: robotic_title
+- **mediterranean-beef-bowls** [content/weak_title]: robotic_title
+- **chipotle-chicken-burrito-bowls** [content/weak_title]: title_taco_no_tortilla
+- **turkey-taco-bowls** [content/weak_title]: title_taco_no_tortilla; title_taco_format_mismatch
+- **korean-turkey-rice-bowls** [content/weak_title]: robotic_title
+- **italian-beef-slow-cooker** [content/weak_title]: robotic_title
+- **thai-peanut-chicken-crock** [content/weak_title]: robotic_title
+- **smoker-nachos-crew** [content/weak_title]: title_taco_no_tortilla
+- **grilled-flank-fajita-bar** [content/weak_title]: title_taco_no_tortilla
+- **pasta-e-fagioli-hall** [content/weak_title]: title_pasta_no_pasta
+- **dirty-rice-crew-skillet** [content/weak_title]: robotic_title
 
-_…and 72 more warnings_
+_…and 94 more warnings_

@@ -95,6 +95,8 @@ export const breakfastRecipePageSchema = z.object({
   stationWorkflow: z.array(z.string().trim().min(12).max(240)).min(3).max(10),
   cleanupNotes: z.array(z.string().trim().min(12).max(240)).min(2).max(8),
   leftovers: z.array(z.string().trim().min(12).max(240)).min(2).max(8),
+  equipment: z.array(z.string().trim().min(2).max(120)).max(12).optional(),
+  tonightSpread: z.array(z.string().trim().min(4).max(240)).max(8).optional(),
 
   heroImage: z.string().trim().max(240),
   thumbImage: z.string().trim().max(240),

@@ -123,7 +123,7 @@ export function HomeHero() {
                 "text-sm font-medium text-foreground/80 hover:text-foreground",
               )}
             >
-              <Link href="/home" data-testid="home-cta-app">
+              <Link href="/tonight" data-testid="home-cta-app">
                 <Sparkles className="w-4 h-4 mr-2 inline" aria-hidden />
                 Open app
               </Link>

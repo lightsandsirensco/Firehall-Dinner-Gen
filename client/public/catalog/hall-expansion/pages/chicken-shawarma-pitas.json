@@ -36,91 +36,91 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless, Skinless Chicken Thighs",
+      "name": "boneless, skinless chicken thighs",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Chicken"
     },
     {
-      "name": "Plain Yogurt",
+      "name": "plain yogurt",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Marinade"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "2",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Shawarma spice"
     },
     {
-      "name": "Ground Coriander",
+      "name": "ground coriander",
       "quantity": "2",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Shawarma spice"
     },
     {
-      "name": "Turmeric",
+      "name": "turmeric",
       "quantity": "1",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Shawarma spice"
     },
     {
-      "name": "Paprika",
+      "name": "paprika",
       "quantity": "1",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Shawarma spice"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "count",
       "notes": "minced",
       "group": "Marinade"
     },
     {
-      "name": "Pita Breads",
+      "name": "pita breads",
       "quantity": "10",
       "unit": "count",
       "group": "Pita"
     },
     {
-      "name": "Pickled Vegetables",
+      "name": "pickled vegetables",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "turnip, cabbage, or pickled onion",
       "group": "Pickles"
     },
     {
-      "name": "Tomatoes",
+      "name": "tomatoes",
       "quantity": "2",
       "unit": "large",
       "notes": "diced",
       "group": "Veg"
     },
     {
-      "name": "Tahini",
+      "name": "tahini",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Garlic sauce"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "2",
       "unit": "count",
       "notes": "for sauce",
       "group": "Garlic sauce"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "for sauce",
       "group": "Garlic sauce"
     }
@@ -184,10 +184,19 @@
     "protein": 38,
     "carbs": 46,
     "fats": 18,
-    "label": "~510 cal/serving · 38g protein · 3g fiber (est.)"
+    "label": "~510 cal/serving · 38g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
-  "heroImageAlt": "Chicken Shawarma Pitas — crew-sized firehall meal",
+  "heroImageAlt": "Chicken Shawarma Pitas — middle eastern handheld plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/chicken-shawarma-pitas.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/chicken-shawarma-pitas.jpg",
   "railImage": "/images/rails/hall-expansion/chicken-shawarma-pitas.jpg",
@@ -199,12 +208,12 @@
     "shawarma wrap firehall"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "bbq-meatball-skewers",
+    "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
+    "buffalo-chicken-wraps"
   ],
   "sourceUrl": "https://www.seriouseats.com/shawarma-recipe",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

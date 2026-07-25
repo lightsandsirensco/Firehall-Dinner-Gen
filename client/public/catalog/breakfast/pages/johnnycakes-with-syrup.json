@@ -23,49 +23,49 @@
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Fine Stone-Ground Cornmeal",
+      "name": "fine stone-ground cornmeal",
       "quantity": "2 cups",
       "notes": "white or yellow",
       "group": "Batter"
     },
     {
-      "name": "Boiling Water",
+      "name": "boiling water",
       "quantity": "2 cups",
       "notes": "to scald cornmeal",
       "group": "Batter"
     },
     {
-      "name": "Whole Milk",
+      "name": "whole milk",
       "quantity": "1 cup",
       "notes": "room temperature",
       "group": "Batter"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "2",
       "notes": "beaten",
       "group": "Batter"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "3 tbsp",
       "notes": "melted, plus more for griddle",
       "group": "Batter"
     },
     {
-      "name": "Granulated Sugar",
+      "name": "granulated sugar",
       "quantity": "2 tbsp",
       "notes": "plus 1 tsp salt",
       "group": "Batter"
     },
     {
-      "name": "Maple Syrup",
+      "name": "maple syrup",
       "quantity": "2 cups",
       "notes": "warmed",
       "group": "Serve"
     },
     {
-      "name": "Whipped Butter",
+      "name": "whipped butter",
       "quantity": "1/2 cup",
       "notes": "plus optional bacon on the side",
       "group": "Serve"
@@ -139,13 +139,10 @@
   ],
   "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
   "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
-  "imageAlt": "Wide firehall platter of golden johnnycakes with butter and maple syrup on a crew breakfast prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T21:54:32.929Z",
+  "imageAlt": "Golden johnnycakes with whipped butter and warm maple syrup",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 6,
   "seoTitle": "Johnnycakes with Maple Syrup | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "heroImageAlt": "Wide firehall platter of golden johnnycakes with butter and maple syrup on a crew breakfast prep table, family-style",
-  "mobileImage": "/images/mobile/breakfast/johnnycakes-with-syrup.jpg",
-  "railImage": "/images/rails/breakfast/johnnycakes-with-syrup.jpg"
+  "collectionTier": "firehall_classic"
 }

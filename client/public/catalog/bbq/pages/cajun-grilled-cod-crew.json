@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "cajun",
   "description": "Cod fillets coat in Cajun blackening spice, grill in cast-iron griddle inserts until charred and 145°F, and serve with cool remoulade and lemon.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 14,
   "prepTime": 25,
   "difficulty": "medium",
@@ -39,62 +39,62 @@
   "ingredients": [
     {
       "name": "Cod Fillets",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "Lb",
       "notes": "about 10 fillets",
       "group": "Main"
     },
     {
       "name": "Cajun Blackening Spice",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Blackening"
     },
     {
       "name": "Smoked Paprika",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Blackening"
     },
     {
       "name": "Garlic Powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Blackening"
     },
     {
       "name": "Mayonnaise",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Remoulade"
     },
     {
       "name": "Creole Mustard",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "group": "Remoulade"
     },
     {
       "name": "Sweet Pickle Relish",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "group": "Remoulade"
     },
     {
       "name": "Cayenne Pepper",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Tsp",
       "group": "Remoulade"
     },
     {
       "name": "Clarified Butter",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Grill"
     },
     {
       "name": "Lemon Wedges",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Service"
     }

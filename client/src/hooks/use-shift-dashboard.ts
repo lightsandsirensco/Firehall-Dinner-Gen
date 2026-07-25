@@ -86,7 +86,7 @@ export function useShiftDashboard(hallId: string, shiftId: string) {
       shiftId,
       shift,
       shiftName,
-      hallName: detail?.hall.hall_name ?? "Linked Hall",
+      hallName: detail?.hall.hall_name ?? "Hall",
       crewSize,
       shiftMembers,
       memberCount: shiftMembers.length,

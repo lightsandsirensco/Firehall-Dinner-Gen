@@ -1,0 +1,208 @@
+{
+  "slug": "smoker-nachos-crew",
+  "title": "Smoker Nachos for the Crew",
+  "displayTitle": "Smoker Nachos for the Crew",
+  "seoTitle": "Smoker Nachos for the Crew | Firefighter Meal",
+  "shortDescription": "Layered chips, pulled pork, beans, and melted cheese",
+  "subtitle": "Layered chips, pulled pork, beans, and melted cheese",
+  "category": "hall_expansion",
+  "cuisine": "BBQ",
+  "description": "Sturdy tortilla chips are layered with pulled pork, beans, cheese, and toppings on smoker-safe pans.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 830,
+  "protein": 41,
+  "carbs": 72,
+  "fats": 43,
+  "tags": [
+    "protein:pork",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "game_day",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "smoker",
+    "sheet pans",
+    "wide spatula",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "pulled pork",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "tortilla chips",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "shredded cheese",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "black beans",
+      "quantity": "5",
+      "unit": "cans"
+    },
+    {
+      "name": "salsa",
+      "quantity": "3.2",
+      "unit": "cups"
+    },
+    {
+      "name": "jalapeños",
+      "quantity": "3/4",
+      "unit": "jar"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat smoker",
+      "instruction": "Preheat smoker to 350°F so cheese melts quickly instead of drying out the chips.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Warm pork",
+      "instruction": "Heat pulled pork with a little barbecue sauce until it reaches 165°F before it goes on chips.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Drain beans",
+      "instruction": "Rinse and drain beans well; wet beans make nachos soggy.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Line pans",
+      "instruction": "Line rimmed sheet pans with foil for easy removal and to keep chips from sticking.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Make first layer",
+      "instruction": "Spread chips in one even layer, leaving no deep piles that block the heat.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Add fillings",
+      "instruction": "Scatter pork, beans, and cheese across every chip instead of concentrating toppings in the centre.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Smoke trays",
+      "instruction": "Smoke trays until cheese is fully melted, checking after 8 minutes so chip edges do not burn.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Add cold toppings",
+      "instruction": "Add salsa, jalapeños, onion, and cilantro only after trays leave the smoker.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold wisely",
+      "instruction": "Serve immediately; if delayed, keep pork above 140°F separately and build fresh trays.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve portions",
+      "instruction": "Cut or scoop nachos from the tray with a wide spatula, including toppings in each portion.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the pulled pork — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the salsa and sour cream refrigerated until you're back — they go on only after a fresh tray comes out of the smoker, never before. On return, spot-check the pork at a safe internal temp, then build and finish a fresh tray so the chips don't go soggy waiting.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Pulled pork and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Build two shallow layers rather than one overloaded tray.",
+    "Use pickled jalapeños for even heat.",
+    "Keep sour cream cold until serving."
+  ],
+  "tonightSpread": [
+    "Main: Smoked pulled-pork nachos",
+    "Sides: corn salad, guacamole",
+    "Condiments: sour cream, salsa, barbecue sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Pulled pork in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Turn leftover pork and beans into quesadillas."
+  ],
+  "whyCrewsLikeIt": "It is a crowd-pleasing use for leftover pork, with trays that can be refreshed in batches.",
+  "mealPrepNotes": "Make-ahead: shred pork and portion toppings 1 day ahead. Storage: refrigerate toppings separately for 3 days. Reheating: heat pork to 165°F before layering.",
+  "substitutions": [
+    "Use shredded chicken for pork.",
+    "Use tortilla strips for chips."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "heavy",
+  "nutrition": {
+    "calories": 830,
+    "protein": 41,
+    "carbs": 72,
+    "fats": 43,
+    "label": "~830 cal/serving · 41g protein · 9g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/smoker-nachos-crew.jpg",
+  "heroImageAlt": "Smoker Nachos for the Crew — BBQ smoker plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/smoker-nachos-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/smoker-nachos-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/smoker-nachos-crew.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "smoker nachos for a crowd",
+    "pulled pork nachos smoker",
+    "BBQ game day firehall",
+    "smoked nacho trays"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "pork-belly-burnt-ends",
+    "smoked-sausage-platter"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

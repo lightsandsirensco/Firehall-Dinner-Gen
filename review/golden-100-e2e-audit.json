@@ -1,40 +1,148 @@
 {
-  "generatedAt": "2026-05-28T20:56:15.487Z",
-  "pass": 79,
-  "fail": 0,
+  "generatedAt": "2026-07-24T02:21:19.979Z",
+  "pass": 75,
+  "fail": 11,
   "warn": 21,
-  "total": 100,
+  "total": 104,
   "issues": [
     {
-      "slug": "steak-tacos",
+      "slug": "__index__",
+      "severity": "fail",
+      "code": "index_invalid",
+      "message": "index.json recipes length=104 (expected 100)",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\index.json",
+      "fix": "Regenerate Golden 100 index.json."
+    },
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_pasta_no_pasta",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\30-minute-pasta-e-fagioli-for-the-hall.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "severity": "fail",
+      "code": "heroImage_missing_local_file",
+      "message": "heroImage points to missing file (/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg)",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\images\\golden-100\\30-minute-pasta-e-fagioli-for-the-hall.jpg",
+      "fix": "Generate or add the image under client/public/images/ (run catalog:generate-images)."
+    },
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "severity": "fail",
+      "code": "thumbImage_missing_local_file",
+      "message": "thumbImage points to missing file (/images/thumbs/30-minute-pasta-e-fagioli-for-the-hall.jpg)",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\images\\thumbs\\30-minute-pasta-e-fagioli-for-the-hall.jpg",
+      "fix": "Generate or add the image under client/public/images/ (run catalog:generate-images)."
+    },
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
+    },
+    {
+      "slug": "beef-barley-soup",
+      "severity": "fail",
+      "code": "page_few_steps",
+      "message": "fewer than 4 instruction steps for crew cooking",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\beef-barley-soup.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "breakfast-burrito-bar",
       "severity": "warn",
       "code": "page_weak_title",
       "message": "title_taco_no_tortilla",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\steak-tacos.json",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\breakfast-burrito-bar.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
-      "slug": "loaded-nacho-skillet",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\loaded-nacho-skillet.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
-    },
-    {
-      "slug": "hall-taco-bar",
+      "slug": "chicken-quesadillas",
       "severity": "warn",
       "code": "page_weak_title",
       "message": "title_taco_no_tortilla",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\hall-taco-bar.json",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\chicken-quesadillas.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
-      "slug": "philly-cheesesteak-skillet",
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
+    },
+    {
+      "slug": "chorizo-breakfast-tacos",
       "severity": "warn",
       "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\philly-cheesesteak-skillet.json",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\chorizo-breakfast-tacos.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "enchilada-casserole",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\enchilada-casserole.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title; generic_opener",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\fast-philly-skillet.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_pasta_no_pasta",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\five-ingredient-pasta.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "four-step-chicken-piccata",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
+    },
+    {
+      "slug": "french-onion-soup-for-the-hall",
+      "severity": "fail",
+      "code": "heroImage_missing_local_file",
+      "message": "heroImage points to missing file (/images/golden-100/french-onion-soup-for-the-hall.jpg)",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\images\\golden-100\\french-onion-soup-for-the-hall.jpg",
+      "fix": "Generate or add the image under client/public/images/ (run catalog:generate-images)."
+    },
+    {
+      "slug": "french-onion-soup-for-the-hall",
+      "severity": "fail",
+      "code": "thumbImage_missing_local_file",
+      "message": "thumbImage points to missing file (/images/thumbs/french-onion-soup-for-the-hall.jpg)",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\images\\thumbs\\french-onion-soup-for-the-hall.jpg",
+      "fix": "Generate or add the image under client/public/images/ (run catalog:generate-images)."
+    },
+    {
+      "slug": "french-onion-soup-for-the-hall",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
+    },
+    {
+      "slug": "game-day-nachos",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\game-day-nachos.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
@@ -46,11 +154,27 @@
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
-      "slug": "sheet-pan-fajitas",
+      "slug": "hall-taco-bar",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\hall-taco-bar.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "jambalaya",
       "severity": "warn",
       "code": "page_weak_title",
       "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\sheet-pan-fajitas.json",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\jambalaya.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "loaded-nacho-skillet",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title; title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\loaded-nacho-skillet.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
@@ -62,67 +186,110 @@
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
-      "slug": "sheet-pan-sausage-peppers",
+      "slug": "pasta-e-ceci-for-the-hall",
       "severity": "warn",
       "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\sheet-pan-sausage-peppers.json",
+      "message": "title_pasta_no_pasta",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\pasta-e-ceci-for-the-hall.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
-      "slug": "skillet-chicken-alfredo",
+      "slug": "pasta-e-ceci-for-the-hall",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
+    },
+    {
+      "slug": "performance-burrito-bowls",
       "severity": "warn",
       "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\skillet-chicken-alfredo.json",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\performance-burrito-bowls.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
-      "slug": "beef-broccoli",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "generic_opener",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\beef-broccoli.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
-    },
-    {
-      "slug": "fast-philly-skillet",
+      "slug": "philly-cheesesteak-skillet",
       "severity": "warn",
       "code": "page_weak_title",
       "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\fast-philly-skillet.json",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\philly-cheesesteak-skillet.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
       "slug": "pork-carnitas-tacos",
       "severity": "warn",
       "code": "page_weak_title",
-      "message": "generic_opener; title_taco_no_tortilla",
+      "message": "title_taco_no_tortilla",
       "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\pork-carnitas-tacos.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
-      "slug": "meat-lovers-sheet-pizza",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\meat-lovers-sheet-pizza.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
+      "slug": "red-beans-and-rice-for-the-hall",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
     },
     {
-      "slug": "bacon-egg-hash",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\bacon-egg-hash.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
-    },
-    {
-      "slug": "chorizo-breakfast-tacos",
+      "slug": "sheet-pan-fajitas",
       "severity": "warn",
       "code": "page_weak_title",
       "message": "title_taco_no_tortilla",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\chorizo-breakfast-tacos.json",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\sheet-pan-fajitas.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "robotic_title",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\sheet-pan-parmesan-dijon-chicken-thigh-dinner.json",
+      "fix": "Regenerate page copy or manually edit weak steps/title."
+    },
+    {
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
+    },
+    {
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "severity": "fail",
+      "code": "heroImage_missing_local_file",
+      "message": "heroImage points to missing file (/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg)",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\images\\golden-100\\spaghetti-aglio-e-olio-for-the-hall.jpg",
+      "fix": "Generate or add the image under client/public/images/ (run catalog:generate-images)."
+    },
+    {
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "severity": "fail",
+      "code": "thumbImage_missing_local_file",
+      "message": "thumbImage points to missing file (/images/thumbs/spaghetti-aglio-e-olio-for-the-hall.jpg)",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\images\\thumbs\\spaghetti-aglio-e-olio-for-the-hall.jpg",
+      "fix": "Generate or add the image under client/public/images/ (run catalog:generate-images)."
+    },
+    {
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
+    },
+    {
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
+    },
+    {
+      "slug": "steak-tacos",
+      "severity": "warn",
+      "code": "page_weak_title",
+      "message": "title_taco_no_tortilla",
+      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\steak-tacos.json",
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
@@ -134,44 +301,11 @@
       "fix": "Regenerate page copy or manually edit weak steps/title."
     },
     {
-      "slug": "bulgogi-bowls",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\bulgogi-bowls.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
-    },
-    {
-      "slug": "street-corn-chicken",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\street-corn-chicken.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
-    },
-    {
-      "slug": "sheet-pan-meal-prep",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\sheet-pan-meal-prep.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
-    },
-    {
-      "slug": "one-pot-chicken-rice",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "robotic_title",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\one-pot-chicken-rice.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
-    },
-    {
-      "slug": "five-ingredient-pasta",
-      "severity": "warn",
-      "code": "page_weak_title",
-      "message": "title_pasta_no_pasta",
-      "path": "C:\\Users\\Mike\\OneDrive\\Desktop\\Firehall-Dinner-Gen\\client\\public\\catalog\\golden-100\\pages\\five-ingredient-pasta.json",
-      "fix": "Regenerate page copy or manually edit weak steps/title."
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "severity": "fail",
+      "code": "db_not_seeded",
+      "message": "slug not present in curated_recipes",
+      "fix": "Seed curated DB for this slug (golden-100 seeding step)."
     }
   ]
 }

@@ -7,16 +7,16 @@
   "subtitle": "Chip mountain for the whole couch",
   "category": "game_day_watch_party",
   "cuisine": "mexican",
-  "description": "Chip mountain for the whole couch. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Two sheet pans layered in double decks — chips, cheese, and seasoned beef twice over — baked at 450°F and finished under the broiler. Cold toppings land after the oven, so the chips stay loud to the last row.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 1373,
-  "protein": 68,
-  "carbs": 129,
-  "fats": 67,
+  "calories": 1150,
+  "protein": 62,
+  "carbs": 105,
+  "fats": 58,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -27,14 +27,16 @@
   ],
   "equipment": [
     "Large cast iron skillet or Dutch oven",
-    "Large sheet trays",
+    "Two full-size sheet pans",
+    "Colander for draining beans",
+    "Serving bowls for toppings",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
       "name": "Restaurant-Style Tortilla Chips",
-      "quantity": "4",
+      "quantity": "3",
       "unit": "Lb",
       "group": "Base"
     },
@@ -52,12 +54,18 @@
     },
     {
       "name": "Shredded Mexican Cheese Blend",
-      "quantity": "20",
+      "quantity": "24",
       "unit": "Oz",
       "group": "Cheese"
     },
     {
-      "name": "Pickled Jalapeños, Sliced",
+      "name": "Black Beans (drained and rinsed)",
+      "quantity": "2",
+      "unit": "cans (15 oz)",
+      "group": "Main"
+    },
+    {
+      "name": "Pickled Jalapeños (sliced)",
       "quantity": "2",
       "unit": "Cups",
       "group": "Toppings"
@@ -73,65 +81,118 @@
       "quantity": "2",
       "unit": "Cups",
       "group": "Toppings"
+    },
+    {
+      "name": "Scallions (sliced thin)",
+      "quantity": "1",
+      "unit": "bunch",
+      "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Brown the beef",
-      "instruction": "Brown ground beef in a large skillet over medium-high, breaking it into fine crumbles. Drain excess grease — wet beef makes soggy chips. Stir in taco seasoning and ½ cup water; simmer 5 minutes until saucy.",
-      "minutes": 15,
-      "heatLevel": "medium-high"
-    },
-    {
-      "stepNumber": 2,
-      "title": "Build chip trays",
-      "instruction": "Spread chips in a single layer on two full-size sheet pans — double layers steam instead of crisp. Scatter half the cheese over chips.",
-      "minutes": 10,
+      "title": "Stage the toppings before anything hits heat",
+      "instruction": "Set a rack in the upper third of the oven and heat it to 450°F. Drain and rinse the black beans in the colander, spoon the pico de gallo, sour cream, and pickled jalapeños into serving bowls, and slice the scallions. Nachos move fast at the end — the meat won't wait for you to find the can opener, so the whole topping bar gets built now.",
+      "minutes": 12,
       "heatLevel": ""
     },
     {
+      "stepNumber": 2,
+      "title": "Brown the ground beef to 160°F and drain it",
+      "instruction": "Cook the ground beef in the skillet over medium-high heat 8–10 minutes, breaking it into fine crumbles with the spoon — big chunks roll off chips; fine crumbles ride every scoop. Cook until no pink remains and an instant-read thermometer shows 160°F. Then the step most cooks skip: tilt the pan and spoon off the grease. Wet, greasy crumbles are the number-one cause of soggy nachos.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
       "stepNumber": 3,
-      "title": "Melt and load",
-      "instruction": "Broil at 450°F 3–4 minutes until cheese bubbles at the edges. Pull pans, add seasoned beef, remaining cheese, and jalapeños. Broil 2 more minutes until cheese is fully melted.",
+      "title": "Bloom the taco seasoning and fold in the beans",
+      "instruction": "Stir the taco seasoning into the drained crumbles with ½ cup water and let it bubble 3–4 minutes until the liquid cooks down to a glossy coating — the brief sizzle in the pan wakes up the dried spices the way water alone never does. Fold in the black beans and give them 2 minutes to heat through. The mix should look saucy but leave no puddle behind a dragged spoon.",
+      "minutes": 6,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build two decks, thin layers on both pans",
+      "instruction": "Spread half the tortilla chips across the two sheet pans in a single layer — piled chips steam and bend instead of staying crisp. Scatter a third of the cheese blend, then half the meat-and-bean mix. Repeat with the remaining chips, another third of cheese, the rest of the mix, and the last of the cheese on top. Every chip should touch cheese somewhere; cheese is the glue and the moisture barrier.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake at 450°F, then flash under the broiler",
+      "instruction": "Bake the pans 5–6 minutes at 450°F until the cheese is fully melted and bubbling at the edges, then switch to the broiler for 60–90 seconds until brown spots freckle the surface. Stand there and watch — under a broiler, nachos go from spotted gold to burnt in about 20 seconds. Rotate the pans if one side colors faster.",
       "minutes": 8,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
-      "title": "Serve immediately",
-      "instruction": "Top with pico and sour cream at the table — not before, or chips wilt. Loaded Game Day Nachos die fast; make a second tray when the first is half gone.",
+      "stepNumber": 6,
+      "title": "Load the cold toppings after the oven, never before",
+      "instruction": "Straight out of the oven, scatter the pickled jalapeños across the hot cheese so they warm through, then follow with spoonfuls of pico de gallo, dollops of sour cream in a grid so every quadrant gets one, and a shower of scallions. Wet toppings baked on turn the middle of the pan to mush — after the oven, they read fresh and cold against the hot cheese instead.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Serve in the pan and fire the second tray on cue",
+      "instruction": "Drop the first pan in the middle of the crew with a stack of small plates — nachos have about a 15-minute window before the cheese sets and the bottom layer softens. Hold the second built pan unbaked, and slide it into the oven when the first is half gone; 8 minutes later the refill lands hot instead of sad.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the seasoned beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the pico de gallo and sour cream refrigerated until you're back — they only go on after the tray comes out of the oven, never before. On return, spot-check the beef at a safe internal temp, then rebuild and bake a fresh tray so the chips don't go soggy waiting.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool seasoned beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts."
+    "Thick restaurant-style chips only — thin chips collapse under hot toppings, and nobody fights for the soggy quadrant.",
+    "Drain the crumbles like you mean it — grease left in the pan ends up in the chips within five minutes of the oven.",
+    "Bake to melt, broil to brown — the broiler alone burns the top before the middle cheese melts.",
+    "Hold the second pan built-but-unbaked and fire it when the first is half gone; a fresh hot tray beats one giant cold one.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Label every topping bowl — rookies grab faster when they can read the line.",
-    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
-    "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
-    "Build a long snack board: mains down the center, dips and chips at both ends.",
-    "Use disposable boats for handhelds so cleanup stays under five minutes after the game.",
-    "Line up Game Day Nachos on the main counter with serving spoons — firefighters grab fast between calls."
+    "Main: Double-decked beef and black bean nachos, served in the pans",
+    "Sides: pico de gallo, sour cream, and pickled jalapeño bowls down the counter",
+    "Condiments: hot sauce lineup from the hall fridge",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
+    "Cool seasoned beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Built nachos don't keep — save the meat-and-bean mix on its own and it becomes tomorrow's tacos, burritos, or loaded fries.",
+    "Keep the chip bag clipped shut and build fresh; day-two reheated chips are a lost cause."
   ],
-  "whyCrewsLikeIt": "Chip mountain for the whole couch. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "substitutions": [],
-  "spiceLevel": "mild",
+  "whyCrewsLikeIt": "A whole sheet pan lands in the middle of the couch with brown-spotted cheese on every chip — the double-deck build means the last scoop is as loaded as the first.",
+  "substitutions": [
+    "Ground turkey swaps 1:1 — brown it to 160°F in 2 tbsp oil since it runs lean, and season a touch heavier.",
+    "Tortilla scoops instead of flat chips hold more and snap less — same layering, same oven time.",
+    "No pico at the store? Dice tomatoes and white onion with lime juice and salt — five minutes, close enough.",
+    "Swap one can of black beans for refried dolloped between layers — it hugs the chips like cheese does."
+  ],
+  "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1373,
-    "protein": 68,
-    "carbs": 129,
-    "fats": 67,
+    "calories": 1150,
+    "protein": 62,
+    "carbs": 105,
+    "fats": 58,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -162,6 +223,7 @@
     "game day",
     "handheld",
     "loaded nachos ground beef",
+    "sheet pan nachos",
     "game_day",
     "golden_100"
   ],
@@ -175,6 +237,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.346Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

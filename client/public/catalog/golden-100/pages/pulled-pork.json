@@ -1,22 +1,22 @@
 {
   "slug": "pulled-pork",
-  "title": "Pulled Pork Sandwiches",
-  "displayTitle": "Pulled Pork Sandwiches",
-  "seoTitle": "Pulled Pork Sandwiches | Firefighter Meal",
-  "shortDescription": "Slow-smoked pull, soft buns, fast line",
-  "subtitle": "Slow-smoked pull, soft buns, fast line",
+  "title": "Carolina-Style Pulled Pork Sandwiches",
+  "displayTitle": "Carolina-Style Pulled Pork",
+  "seoTitle": "Carolina Pulled Pork Sandwiches | Firefighter Meal",
+  "shortDescription": "Vinegar-mopped pull, slaw, soft buns",
+  "subtitle": "Vinegar-mopped pull, slaw, soft buns",
   "category": "firehall_classics",
   "cuisine": "american",
-  "description": "Sandwich line for the whole hall. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Carolina-style pulled pork for the whole hall: dry-rubbed shoulder cooked low and slow, then pulled and tossed with a thin cider-vinegar-and-pepper finishing sauce that cuts the richness — piled on soft buns with cold slaw and pickles. Thick BBQ sauce stays on the side for the Kansas City crowd. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 525,
   "prepTime": 45,
   "difficulty": "hard",
-  "calories": 1400,
-  "protein": 94,
-  "carbs": 144,
-  "fats": 70,
+  "calories": 1005,
+  "protein": 60,
+  "carbs": 90,
+  "fats": 45,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -90,14 +90,23 @@
     },
     {
       "name": "Apple Cider Vinegar",
+      "quantity": "1.5",
+      "unit": "Cups",
+      "notes": "base of the Carolina finishing sauce",
+      "group": "Vinegar sauce"
+    },
+    {
+      "name": "Red Pepper Flakes",
       "quantity": "1",
-      "unit": "Cup",
-      "group": "Finishing"
+      "unit": "Tbsp",
+      "notes": "with a pinch of sugar and salt for the vinegar sauce",
+      "group": "Vinegar sauce"
     },
     {
       "name": "BBQ Sauce",
       "quantity": "3",
       "unit": "Cups",
+      "notes": "served on the side, not mixed in",
       "group": "Finishing"
     },
     {
@@ -143,14 +152,14 @@
     {
       "stepNumber": 2,
       "title": "Low-and-slow cook",
-      "instruction": "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until pork probes tender at 203°F and shreds with a fork. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
+      "instruction": "Roast at 275°F in a covered roaster or run a slow cooker on low 8–10 hours until the pork probes tender at an internal temp of 203°F and shreds with a fork — well past the 145°F safe point, collagen needs the extra heat to melt. Add a splash of water if the pan looks dry halfway through — you want steam, not a dry roast.",
       "minutes": 480,
       "heatLevel": "low"
     },
     {
       "stepNumber": 3,
-      "title": "Rest and shred",
-      "instruction": "Rest pork covered 30 minutes — juices redistribute. Shred with two forks, discarding large fat chunks. Toss with apple cider vinegar first, then fold in BBQ sauce to taste. Keep some sauce on the side for the line.",
+      "title": "Rest, shred, and mop with vinegar sauce",
+      "instruction": "Rest pork covered 30 minutes — juices redistribute. Shred with two forks, discarding large fat chunks. Stir the apple cider vinegar with the red pepper flakes, a pinch of sugar, and salt to make a thin Carolina finishing sauce, then toss it through the pulled pork until it tastes bright and just barely wet — not drowned. That vinegar-pepper mop is the Carolina signature; keep the thick BBQ sauce on the side for anyone who wants it sweeter.",
       "minutes": 30,
       "heatLevel": "low"
     },
@@ -178,7 +187,7 @@
     {
       "stepNumber": 7,
       "title": "Build pulled pork sandwiches",
-      "instruction": "Crew piles pork on buns and tops with slaw and pickles. This is BBQ pulled pork — soft buns and tangy slaw, not Italian subs. Keep extra sauce on the line for crews who want more smoke.",
+      "instruction": "Crew piles pork on buns and tops with slaw and pickles. This is BBQ pulled pork — soft buns and tangy slaw, not Italian subs. Carolina fans swipe yellow mustard on the bottom bun first; keep extra sauce on the line for anyone who wants it wetter.",
       "minutes": 10,
       "heatLevel": "low"
     },
@@ -192,7 +201,7 @@
     {
       "stepNumber": 9,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover shredded pork — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "instruction": "Pulled pork is one of the most call-proof meals on the wheel — the shoulder holds for hours. If tones drop, cover the shredded pork with a ladle of its own juices and hold at 140°F or above in a warm cabinet or 200°F oven; keep slaw cold and separate. On return, bring the pork back to 165°F, re-toss with a splash of the vinegar sauce so it isn't dry, and reopen the line.",
       "minutes": 5,
       "heatLevel": "low"
     },
@@ -205,18 +214,16 @@
     }
   ],
   "proTips": [
-    "Pull pork at 203°F when it shreds with a fork — rushing the roast gives tough sandwiches.",
-    "Toss with vinegar before BBQ sauce so the pull tastes bright, not one-note sweet.",
-    "Keep slaw cold on ice — hot pork plus cold slaw is the hall move.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Pull the pork at 203°F when it shreds with a fork — rushing the roast gives tough sandwiches.",
+    "Mop with the thin cider-vinegar-pepper sauce, not thick BBQ — the acid cuts the fat and is what makes it read Carolina instead of generic.",
+    "Keep slaw cold on ice and pile it right on the sandwich — hot pork plus cold, crunchy slaw is the whole Carolina move.",
+    "Reserve a cup of the defatted cooking juices to loosen the pork on hold; it dries out fast once shredded.",
+    "Leave the ¼-inch fat cap on the shoulder while it cooks — it bastes the meat and renders down by the time it's tender."
   ],
   "tonightSpread": [
-    "Main: BBQ pulled pork",
+    "Main: Carolina vinegar pulled pork",
     "Sides: soft buns, tangy coleslaw",
-    "Condiments: pickle chips, extra BBQ sauce, yellow mustard",
+    "Condiments: pickle chips, extra vinegar sauce, thick BBQ sauce on the side, yellow mustard",
     "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
     "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
@@ -225,17 +232,21 @@
     "Store cold sides separately — hot and cold stacked overnight ruins texture.",
     "Reheat pork with a splash of apple cider vinegar and broth so it stays saucy, not dry."
   ],
-  "whyCrewsLikeIt": "Slow-smoked pull, soft buns, fast line. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "substitutions": [],
+  "whyCrewsLikeIt": "Low-and-slow pull with a bright vinegar mop, soft buns, and cold slaw — the Carolina build that beats one-note sweet pork. One line, real portions, no drama at the stove.",
+  "substitutions": [
+    "No time for the oven? A slow cooker on low 8–10 hours gets the same fork-tender pull.",
+    "Western/Lexington crowd? Stir a few spoons of ketchup and brown sugar into the vinegar sauce for a thicker, milder finish.",
+    "Brioche ↔ kaiser rolls — both hold up to the juicy pull; toast lightly so they don't collapse."
+  ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 94,
-    "carbs": 144,
-    "fats": 70,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 1005,
+    "protein": 60,
+    "carbs": 90,
+    "fats": 45,
+    "label": "per serving (hall portion, with buns + slaw)",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -261,6 +272,8 @@
   "searchTerms": [
     "pulled pork sandwiches",
     "pulled pork",
+    "carolina pulled pork",
+    "vinegar bbq",
     "american",
     "pork",
     "sandwich",
@@ -279,6 +292,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "pulled-pork",
-  "generatedAt": "2026-06-04T20:53:34.881Z",
-  "contentVersion": 4
+  "generatedAt": "2026-07-23T21:40:00.000Z",
+  "contentVersion": 5
 }

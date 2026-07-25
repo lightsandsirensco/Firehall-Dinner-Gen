@@ -15,58 +15,58 @@
     "classic",
     "comfort"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 10,
   "cookTime": 25,
   "totalTime": 35,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Large Refrigerated Biscuits",
-      "quantity": "12",
+      "name": "large refrigerated biscuits",
+      "quantity": "8",
       "notes": "or scratch-baked equivalents",
       "group": "Biscuits"
     },
     {
-      "name": "Butter",
-      "quantity": "2 tbsp",
+      "name": "butter",
+      "quantity": "1.3",
       "notes": "melted for brushing tops",
       "group": "Biscuits"
     },
     {
-      "name": "Breakfast Sausage",
-      "quantity": "2 lb",
+      "name": "breakfast sausage",
+      "quantity": "1",
       "notes": "bulk or casings removed",
       "group": "Gravy"
     },
     {
-      "name": "All-Purpose Flour",
-      "quantity": "1/2 cup",
+      "name": "all-purpose flour",
+      "quantity": "3/8",
       "notes": "whisked into rendered fat",
       "group": "Gravy"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "5 cups",
+      "name": "whole milk",
+      "quantity": "3.3",
       "notes": "warmed slightly for smoother whisking",
       "group": "Gravy"
     },
     {
-      "name": "Black Pepper",
-      "quantity": "2 tsp",
+      "name": "black pepper",
+      "quantity": "1",
       "notes": "freshly ground, plus salt to taste",
       "group": "Seasoning"
     },
     {
-      "name": "Poultry Seasoning",
-      "quantity": "1/2 tsp",
+      "name": "poultry seasoning",
+      "quantity": "3/8",
       "notes": "optional depth",
       "group": "Seasoning"
     },
     {
-      "name": "Chopped Parsley",
-      "quantity": "1/4 cup",
+      "name": "chopped parsley",
+      "quantity": "1/8",
       "notes": "and hot sauce at the line",
       "group": "Serve"
     }
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
   "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
   "imageAlt": "Split biscuits smothered in peppery sausage gravy on a firehall breakfast plate",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Hall Sausage Biscuits & Gravy | Firehall Breakfast",
   "collectionTier": "firehall_classic"

@@ -31,11 +31,19 @@ export const SEO_TARGET_KEYWORDS = [
   "firehall dinner ideas",
 ] as const;
 
-/** Homepage title — personal value first; SEO keywords preserved. */
+/**
+ * Homepage title — keep in sync with `client/index.html` to avoid
+ * pre-JS / post-hydration title drift for crawlers.
+ */
 export const SEO_DEFAULT_TITLE =
-  "Firefighter Meal App — Pick Dinner, Save Recipes | Firehall Meals";
+  "Firefighter Meals & Firehall Recipes | Firehall Meals";
 
+/** Homepage meta description — keep in sync with `client/index.html`. */
 export const SEO_DEFAULT_DESCRIPTION =
+  "Crew-sized firefighter meals for the fire hall and fire station. Browse hundreds of shift-tested recipes, meal ideas, and tools built by firefighters.";
+
+/** Marketing count still used in body copy / landings — not the homepage meta. */
+export const SEO_DEFAULT_DESCRIPTION_WITH_COUNT =
   `Pick shift dinners in seconds, save meals you love, and cook with crew-sized recipes from ${formatMarketingRecipeCount(APPROVED_CATALOG_TOTAL)} firefighter-tested meals. Free for firefighters — connect your hall for shared planning when your crew is ready. Built by firefighters.`;
 
 /** Visible homepage H1 (legacy; hero uses HOME.heroHeadline). */

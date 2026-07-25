@@ -15,58 +15,58 @@
     "crescent",
     "handheld"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Breakfast Sausage",
-      "quantity": "1 1/2 lb",
+      "name": "breakfast sausage",
+      "quantity": "1/2",
       "notes": "browned and crumbled fine",
       "group": "Filling"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "1 1/2 cups",
+      "name": "shredded cheddar",
+      "quantity": "3/8",
       "notes": "mixed into warm sausage",
       "group": "Filling"
     },
     {
-      "name": "Maple Syrup",
-      "quantity": "3 tbsp",
+      "name": "maple syrup",
+      "quantity": "2.4",
       "notes": "stirred into sausage off heat",
       "group": "Filling"
     },
     {
-      "name": "8-Count Crescent Roll Tubes",
+      "name": "8-count crescent roll tubes",
       "quantity": "2",
       "notes": "or seamless dough sheets",
       "group": "Dough"
     },
     {
-      "name": "Butter",
-      "quantity": "1/4 cup",
+      "name": "butter",
+      "quantity": "1/4",
       "notes": "melted",
       "group": "Glaze"
     },
     {
-      "name": "Maple Syrup",
-      "quantity": "2 tbsp",
+      "name": "maple syrup",
+      "quantity": "1.6",
       "notes": "for brushing before bake",
       "group": "Glaze"
     },
     {
-      "name": "Black Pepper",
-      "quantity": "1/2 tsp",
+      "name": "black pepper",
+      "quantity": "1/2",
       "notes": "in sausage mix",
       "group": "Seasoning"
     },
     {
-      "name": "Everything Bagel Seasoning",
-      "quantity": "1 tbsp",
+      "name": "everything bagel seasoning",
+      "quantity": "3/4",
       "notes": "optional on top",
       "group": "Finish"
     }
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/maple-sausage-pinwheels.jpg",
   "thumbImage": "/images/thumbs/breakfast/maple-sausage-pinwheels.jpg",
   "imageAlt": "Golden maple sausage pinwheels on a sheet pan fresh from the oven",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Maple Sausage Pinwheels | Firehall Breakfast",
   "collectionTier": "firehall_classic"

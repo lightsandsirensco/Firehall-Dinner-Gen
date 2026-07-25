@@ -15,57 +15,57 @@
     "bake",
     "midwest"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 40,
   "totalTime": 55,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Frozen Tater Tots",
-      "quantity": "3 lb",
+      "name": "frozen tater tots",
+      "quantity": "2.4",
       "notes": "straight from freezer",
       "group": "Base"
     },
     {
-      "name": "Bacon",
-      "quantity": "1 1/2 lb",
+      "name": "bacon",
+      "quantity": "3/8",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "12",
+      "name": "large eggs",
+      "quantity": "10",
       "notes": "lightly beaten",
       "group": "Egg mix"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "1 1/2 cups",
+      "name": "whole milk",
+      "quantity": "3/8",
       "group": "Egg mix"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "3 cups",
+      "name": "shredded cheddar",
+      "quantity": "2.4",
       "notes": "divided",
       "group": "Cheese"
     },
     {
-      "name": "Garlic Powder",
-      "quantity": "1 tsp",
+      "name": "garlic powder",
+      "quantity": "3/4",
       "notes": "plus salt and pepper",
       "group": "Seasoning"
     },
     {
-      "name": "Sliced Green Onions",
-      "quantity": "1/2 cup",
+      "name": "sliced green onions",
+      "quantity": "1/2",
       "notes": "plus ranch or hot sauce",
       "group": "Finish"
     },
     {
-      "name": "Diced Bell Pepper",
-      "quantity": "1 cup",
+      "name": "diced bell pepper",
+      "quantity": "3/4",
       "notes": "sautéed soft, optional layer",
       "group": "Optional"
     }
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
   "thumbImage": "/images/thumbs/breakfast/tater-tot-breakfast-casserole.jpg",
   "imageAlt": "Tater tot breakfast casserole with bacon, eggs, and melted cheddar",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T20:48:24.991Z",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 7,
   "seoTitle": "Tater Tot Breakfast Casserole | Firehall Breakfast",
   "collectionTier": "firehall_classic"

@@ -14,57 +14,57 @@
     "casserole",
     "brioche"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 20,
   "cookTime": 45,
   "totalTime": 65,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Brioche Or Challah",
-      "quantity": "2 loaves",
+      "name": "brioche or challah",
+      "quantity": "1.3",
       "notes": "cubed into 1-inch pieces",
       "group": "Base"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "12",
+      "name": "large eggs",
+      "quantity": "8",
       "group": "Custard"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "4 cups",
+      "name": "whole milk",
+      "quantity": "2.7",
       "notes": "or half-and-half",
       "group": "Custard"
     },
     {
-      "name": "Maple Syrup",
-      "quantity": "1/2 cup",
+      "name": "maple syrup",
+      "quantity": "3/8",
       "notes": "plus extra for serving",
       "group": "Custard"
     },
     {
-      "name": "Vanilla Extract",
-      "quantity": "2 tsp",
+      "name": "vanilla extract",
+      "quantity": "1.3",
       "notes": "and 1 tbsp cinnamon",
       "group": "Custard"
     },
     {
-      "name": "Brown Sugar",
-      "quantity": "1/2 cup",
+      "name": "brown sugar",
+      "quantity": "3/8",
       "notes": "sprinkled before baking",
       "group": "Topping"
     },
     {
-      "name": "Chopped Pecans",
-      "quantity": "1/2 cup",
+      "name": "chopped pecans",
+      "quantity": "3/8",
       "notes": "optional crunch",
       "group": "Topping"
     },
     {
-      "name": "Powdered Sugar",
-      "quantity": "1/4 cup",
+      "name": "powdered sugar",
+      "quantity": "1/8",
       "notes": "and fresh berries at the line",
       "group": "Finish"
     }
@@ -139,8 +139,8 @@
   "heroImage": "/images/breakfast/overnight-french-toast-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/overnight-french-toast-bake.jpg",
   "imageAlt": "Golden overnight French toast bake cut into squares with berries and maple",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Overnight French Toast Bake | Firehall Breakfast",
   "collectionTier": "healthier_hall"

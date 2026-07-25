@@ -27,6 +27,8 @@ export const BILLING_FEATURES = [
   "protein_deals",
   /** Hall Pro — track canteen dues for hall members */
   "canteen_payment_tracker",
+  /** Hall Pro — canteen order history, recurring reviews, CSV, product URLs */
+  "canteen_manager_pro",
   /** Firefighter Plus — user-scoped (not implemented as plan_id yet) */
   "unlimited_meal_planning",
   "unlimited_saved_meals",
@@ -56,6 +58,7 @@ export const HALL_PRO_FEATURES = [
   "advanced_hall_vote",
   "hall_grocery_planning",
   "canteen_payment_tracker",
+  "canteen_manager_pro",
 ] as const satisfies readonly BillingFeature[];
 
 export type HallProFeature = (typeof HALL_PRO_FEATURES)[number];

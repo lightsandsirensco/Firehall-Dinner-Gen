@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "indian",
   "description": "Lamb loin chops marinate in tandoori yogurt spice, grill over high heat to 135°F, and serve on platters with mint-cilantro chutney and charred lemon.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 22,
   "prepTime": 45,
   "difficulty": "medium",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "Lamb Loin Chops",
-      "quantity": "20",
+      "quantity": "16",
       "unit": "pieces",
       "notes": "about 5.5 lb total",
       "group": "Main"
     },
     {
       "name": "Kashmiri Chili Powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "group": "Tandoori"
     },
     {
       "name": "Fenugreek Leaves",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "notes": "dried",
       "group": "Tandoori"
     },
     {
       "name": "Mustard Oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "group": "Tandoori"
     },
     {
       "name": "Greek Yogurt",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups",
       "group": "Tandoori"
     },
     {
       "name": "Gram Flour",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "group": "Tandoori"
     },
     {
       "name": "Fresh Ginger",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "notes": "grated",
       "group": "Tandoori"
     },
     {
       "name": "Pomegranate Molasses",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "group": "Finish"
     },
     {
       "name": "Mint-Coriander Chutney",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Cups",
       "group": "Chutney"
     },
     {
       "name": "Pickled Red Onion",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Garnish"
     }

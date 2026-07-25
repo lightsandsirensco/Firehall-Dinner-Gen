@@ -7,16 +7,16 @@
   "subtitle": "Double pot, triple appetite",
   "category": "big_crew_feeders",
   "cuisine": "american",
-  "description": "Viral comfort-food hall night. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Competition-style loaded red — toasted-ancho puree, hard-browned chuck, cocoa and coffee for depth, kidney and pinto beans, and a masa finish. Not a bean-free Texas red; this is the loaded firehouse bowl built to feed a crew. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 75,
+  "cookTime": 80,
   "prepTime": 25,
   "difficulty": "hard",
-  "calories": 1400,
-  "protein": 120,
+  "calories": 1200,
+  "protein": 85,
   "carbs": 72,
-  "fats": 90,
+  "fats": 65,
   "tags": [
     "protein:beef",
     "format:soup_chili",
@@ -26,16 +26,27 @@
     "golden_100"
   ],
   "equipment": [
-    "8-quart stock pot",
+    "12-quart stock pot (or split between two 8-quart pots)",
+    "Blender",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (80/20)",
+      "name": "Ground Beef Chuck (80/20)",
       "quantity": "5.3",
       "unit": "Lb"
+    },
+    {
+      "name": "Dried Ancho Chiles",
+      "quantity": "6",
+      "unit": "whole"
+    },
+    {
+      "name": "Chipotles In Adobo (minced, with sauce)",
+      "quantity": "4",
+      "unit": "Tbsp"
     },
     {
       "name": "Yellow Onions",
@@ -43,22 +54,33 @@
       "unit": "large"
     },
     {
-      "name": "Bell Peppers (mixed)",
-      "quantity": "4"
-    },
-    {
       "name": "Garlic Cloves",
-      "quantity": "10.7"
+      "quantity": "12"
     },
     {
-      "name": "Fire-Roasted Diced Tomatoes",
-      "quantity": "4",
-      "unit": "cans (14 oz)"
+      "name": "Chili Powder",
+      "quantity": "2.5",
+      "unit": "Tbsp"
     },
     {
-      "name": "Crushed Fire-Roasted Tomatoes",
-      "quantity": "2.7",
-      "unit": "cans (28 oz)"
+      "name": "Ground Cumin",
+      "quantity": "1.5",
+      "unit": "Tbsp"
+    },
+    {
+      "name": "Smoked Paprika",
+      "quantity": "1.5",
+      "unit": "Tbsp"
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": "2.5",
+      "unit": "Tsp"
+    },
+    {
+      "name": "Unsweetened Cocoa Powder",
+      "quantity": "1.5",
+      "unit": "Tbsp"
     },
     {
       "name": "Tomato Paste",
@@ -66,58 +88,68 @@
       "unit": "Tbsp"
     },
     {
+      "name": "Crushed Fire-Roasted Tomatoes",
+      "quantity": "2",
+      "unit": "cans (28 oz)"
+    },
+    {
+      "name": "Dark Lager Or Brewed Coffee",
+      "quantity": "1.5",
+      "unit": "Cups"
+    },
+    {
       "name": "Beef Broth",
-      "quantity": "5.3",
+      "quantity": "4",
       "unit": "Cups"
     },
     {
       "name": "Kidney Beans",
-      "quantity": "4",
-      "unit": "cans"
+      "quantity": "2",
+      "unit": "cans (15 oz)"
     },
     {
-      "name": "Chili Powder",
-      "quantity": "4",
-      "unit": "Tbsp"
+      "name": "Pinto Beans",
+      "quantity": "2",
+      "unit": "cans (15 oz)"
     },
     {
-      "name": "Smoked Paprika",
-      "quantity": "2.7",
-      "unit": "Tbsp"
-    },
-    {
-      "name": "Ground Cumin",
-      "quantity": "2.7",
-      "unit": "Tsp"
-    },
-    {
-      "name": "Dried Oregano",
-      "quantity": "1.3",
-      "unit": "Tsp"
-    },
-    {
-      "name": "Chipotle In Adobo",
-      "quantity": "2.7",
-      "unit": "tbsp sauce"
-    },
-    {
-      "name": "Brown Sugar",
-      "quantity": "1.3",
+      "name": "Soy Sauce",
+      "quantity": "1.5",
       "unit": "Tbsp"
     },
     {
       "name": "Worcestershire Sauce",
-      "quantity": "2.7",
+      "quantity": "1.5",
+      "unit": "Tbsp"
+    },
+    {
+      "name": "Masa Harina",
+      "quantity": "4",
+      "unit": "Tbsp"
+    },
+    {
+      "name": "Apple Cider Vinegar",
+      "quantity": "2",
+      "unit": "Tbsp"
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": "1.5",
+      "unit": "Tbsp"
+    },
+    {
+      "name": "Hot Sauce",
+      "quantity": "1.5",
       "unit": "Tbsp"
     },
     {
       "name": "Italian Bread Or Baguettes",
-      "quantity": "5.3",
+      "quantity": "4",
       "unit": "loaves"
     },
     {
       "name": "Unsalted Butter (softened)",
-      "quantity": "1.3",
+      "quantity": "1",
       "unit": "Cups"
     },
     {
@@ -131,81 +163,93 @@
       "unit": "Oz"
     },
     {
-      "name": "Fresh Jalapeños",
-      "quantity": "5.3"
+      "name": "Fresh Jalapeño Peppers",
+      "quantity": "5"
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": "1",
+      "unit": "bunch"
     },
     {
       "name": "Sour Cream",
-      "quantity": "2.7",
+      "quantity": "2.5",
       "unit": "Cups"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep the pots and garlic bread station",
-      "instruction": "Dice onions and peppers ¼ inch. Mince garlic. Drain beans. Open tomatoes. Set out your largest stock pot and a sheet pan for garlic bread — chili splatters, so keep a lid nearby.",
+      "title": "Toast the anchos and blend the chile base",
+      "instruction": "Tear dried ancho chiles open; discard stems and seeds. Toast in the dry stock pot over medium heat, pressing flat, 30–45 seconds per side until they smell like raisins and toast — never scorching, which turns them bitter. Add 2 cups of broth and simmer 5 minutes until the chiles are fully pliable — softening first is what keeps the puree silky instead of gritty. Blend with the chipotles in adobo until completely smooth, about 1 minute. This puree is the backbone: fresh-toasted chiles carry the deep fruit and smoky depth that jarred chili powder lost on the shelf.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Prep the station",
+      "instruction": "Dice onions ¼ inch and mince garlic. Drain and rinse kidney and pinto beans. Open the crushed tomatoes. Measure chili powder, cumin, smoked paprika, oregano, and cocoa powder into one bowl — they hit hot fat together and burn if you're hunting jars. Line two sheet pans for garlic bread; chili moves fast once heat starts.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
-      "title": "Brown the meat in batches",
-      "instruction": "Heat oil in the pot over medium-high until it shimmers. Add ground beef in two batches — don't crowd. Break into crumbles and cook until deeply browned with no pink (160°F+). Drain excess grease if the pot looks oily.",
-      "minutes": 12,
+      "stepNumber": 3,
+      "title": "Brown the beef hard, in batches",
+      "instruction": "Heat 2 tbsp oil over medium-high until shimmering. Add ground chuck in two or three batches — press flat and leave untouched 3–4 minutes so a deep brown crust forms before breaking into crumbles. Browning builds the roasty backbone; a crowded pot steams the meat gray. Cook each batch until no pink remains (160°F). Transfer to a bowl and pour off all but 2 tbsp fat, keeping the browned fond in the pot.",
+      "minutes": 15,
       "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 3,
-      "title": "Bloom spices and build the base",
-      "instruction": "Add onions and peppers; cook 6–8 minutes until edges soften. Stir in garlic, chili powder, smoked paprika, and cumin 45 seconds until fragrant. Add tomato paste and brown sugar; cook 1 minute until the paste darkens.",
+      "stepNumber": 4,
+      "title": "Soften onions and bloom the spices",
+      "instruction": "Drop to medium. Cook onions with a pinch of salt 6–8 minutes, scraping fond, until soft with golden edges. Stir in garlic 30 seconds. Add the spice bowl — chili powder, cumin, smoked paprika, oregano, cocoa — into the fat and stir 45–60 seconds until toasty. Spices are fat-soluble; blooming in hot fat pulls out flavor water never touches. Stir in tomato paste and brown sugar; cook 1 minute until brick red.",
       "minutes": 10,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 4,
-      "title": "Simmer the chili until it coats a spoon",
-      "instruction": "Pour in crushed tomatoes, diced tomatoes, broth, and beans. Simmer uncovered 35–40 minutes at a gentle bubble, stirring every 10 minutes. Ready when a drag through the pot leaves a clear trail. Season with salt and Worcestershire.",
-      "minutes": 40,
-      "heatLevel": "medium-low"
-    },
-    {
       "stepNumber": 5,
-      "title": "Mix garlic butter for the bread",
-      "instruction": "While chili simmers, beat softened butter with minced garlic, parsley, and a pinch of salt until fluffy. Halve baguettes lengthwise and spread edge to edge — bare edges burn before the center melts.",
-      "minutes": 8,
-      "heatLevel": ""
+      "title": "Deglaze and build the pot",
+      "instruction": "Pour in the beer or coffee and scrape the bottom clean — that roasty note backs up the chiles like it does in competition pots. Simmer 2 minutes to cook off the raw edge. Stir in the ancho-chipotle puree, crushed tomatoes, remaining broth, soy sauce, and Worcestershire, then return the browned meat and its juices.",
+      "minutes": 5,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 6,
-      "title": "Bake cheesy garlic bread",
-      "instruction": "Top buttered bread with shredded cheddar and mozzarella. Bake at 400°F 10–12 minutes until cheese bubbles and edges are deep gold. Hold under loose foil — sealed foil steams crisp crust soft.",
-      "minutes": 12,
-      "heatLevel": "high"
+      "title": "Simmer low, then add the beans",
+      "instruction": "Drop to a lazy simmer — small bubbles, never a boil, which turns the meat grainy. Cook uncovered 25 minutes, stirring every 10. Stir in kidney and pinto beans and simmer 20 more — added late, they season through without blowing out. Ready when a spoon drag leaves a trail that closes slowly.",
+      "minutes": 45,
+      "heatLevel": "medium-low"
     },
     {
       "stepNumber": 7,
-      "title": "Set the topping bar",
-      "instruction": "Portion shredded cheddar, diced onion, jalapeños, sour cream, and cilantro into labeled bowls. Keep cold toppings on ice — hot chili plus warm toppings is the hall move.",
-      "minutes": 8,
+      "title": "Thicken with masa and finish with acid",
+      "instruction": "Whisk masa harina with ½ cup warm water into a slurry; stir in and simmer 3–4 minutes until glossy and thick — masa adds sweet corn depth, not just body. Kill the heat, then stir in cider vinegar and hot sauce and taste for salt. Long simmers dull brightness; finishing acid snaps every layer back into focus.",
+      "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 8,
-      "title": "Ladle and serve the line",
-      "instruction": "Ladle chili into bowls or a hotel pan for family style. Slice garlic bread on a bias and set on a separate tray so steam does not sog the crust. Call the crew while it's hot — first bowl is always the best.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Bake the cheesy garlic bread",
+      "instruction": "While the pot simmers, mash softened butter with minced garlic and a pinch of salt. Halve loaves lengthwise, spread butter edge to edge — bare edges burn before the center melts. Top with cheddar and mozzarella. Bake at 425°F 10–12 minutes until cheese bubbles with golden spots. Hold under loose foil — sealed foil steams crisp crust soft.",
+      "minutes": 12,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 9,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover beef chili — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
-      "minutes": 5,
+      "title": "Set the topping bar and serve the line",
+      "instruction": "Portion sour cream, shredded cheddar, sliced jalapeños, cilantro, and diced onion into labeled bowls on ice — the bar lets every firefighter set their own heat. Ladle deep bowls, slice bread into thick sticks on a separate tray so steam does not sog the crust, and call the crew while it's hot.",
+      "minutes": 8,
       "heatLevel": "low"
     },
     {
       "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "Chili is the most forgiving pot on the wheel — it only gets better held. If tones drop, cover the pot and cut to the lowest simmer or pull it off heat entirely; on return, bring it back to 165°F, stir in a splash of broth if it tightened, and re-check the salt and acid before the line reopens. Pull the garlic bread out first so it doesn't scorch while you're gone.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
       "title": "Pack down leftovers safely",
       "instruction": "Cool beef chili and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
@@ -213,16 +257,14 @@
     }
   ],
   "proTips": [
-    "If chili tastes flat, add ½ tsp more smoked paprika and a pinch of salt — not more sugar.",
-    "Hold garlic bread under loose foil on the counter; cut open only when the line forms.",
-    "Simmer until a drag through the pot leaves a clear trail — soup-thin chili won't coat fries or bread.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "If chili tastes flat at the end, reach for cider vinegar and salt, not more chili powder — flat almost always means it needs acid.",
+    "Day-two chili beats day-one; the ancho base keeps marrying overnight. Reheat to 165°F with a splash of broth.",
+    "No dried anchos at the store? Bloom 3 extra tbsp chili powder in the fat — less depth, still a solid pot.",
+    "Simmer until a drag through the pot leaves a trail that closes slowly — soup-thin chili won't stand up to toppings or bread.",
+    "Brown the chuck hard and in batches; a crowded pot steams the meat gray and you lose the roasty fond the whole pot is built on."
   ],
   "tonightSpread": [
-    "Main: Firehouse smoked beef chili",
+    "Main: Ancho-chipotle beef chili",
     "Sides: cheesy garlic bread sticks, sour cream topping bar",
     "Condiments: shredded cheddar, diced onion, fresh jalapeños, cilantro",
     "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
@@ -231,22 +273,25 @@
   "leftovers": [
     "Cool beef chili in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
     "Store cold sides separately — hot and cold stacked overnight ruins texture.",
-    "Reheat chili on the stove with a splash of broth — it thickens overnight.",
+    "Reheat chili on the stove with a splash of broth — the masa thickens it overnight.",
     "Day-old garlic bread rebakes 5 minutes at 400°F; never store bread sealed with hot chili."
   ],
-  "whyCrewsLikeIt": "Double pot, triple appetite. A hall pick for big-appetite nights — one line, real portions, no drama at the stove.",
+  "whyCrewsLikeIt": "Double pot, triple appetite. Real toasted-chile depth instead of dusty powder — the pot crews argue over who takes the leftovers home.",
   "substitutions": [
-    "Ground turkey swaps 1:1 for beef in chili if the crew wants leaner."
+    "Ground turkey swaps 1:1 for beef; brown in 2 extra tbsp oil since it runs lean.",
+    "Dried anchos live in the Mexican aisle of most grocery stores — Costco doesn't always stock them. None around? Bloom 3 extra tbsp chili powder in the fat at the spice step — less depth, still solid.",
+    "Fish sauce swaps 1:1 for soy sauce if the hall pantry has it — deeper umami, zero fishiness in the finished pot.",
+    "Skip the beer: equal brewed coffee or broth keeps the roasty note without alcohol."
   ],
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 120,
+    "calories": 1200,
+    "protein": 85,
     "carbs": 72,
-    "fats": 90,
+    "fats": 65,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -277,6 +322,8 @@
     "soup chili",
     "hearty",
     "large batch beef chili",
+    "competition style chili",
+    "ancho beef chili",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -289,6 +336,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:53:34.889Z",
-  "contentVersion": 4
+  "generatedAt": "2026-07-23T21:40:00.000Z",
+  "contentVersion": 5
 }

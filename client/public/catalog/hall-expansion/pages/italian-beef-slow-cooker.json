@@ -1,0 +1,208 @@
+{
+  "slug": "italian-beef-slow-cooker",
+  "title": "Italian Beef Slow Cooker Sandwiches",
+  "displayTitle": "Italian Beef Slow Cooker Sandwiches",
+  "seoTitle": "Italian Beef Slow Cooker Sandwiches | Firefighter Meal",
+  "shortDescription": "Juicy shredded beef with peppers on sturdy rolls",
+  "subtitle": "Juicy shredded beef with peppers on sturdy rolls",
+  "category": "hall_expansion",
+  "cuisine": "Italian-American",
+  "description": "Chuck roast cooks in peppery Italian jus, then gets piled onto rolls with sweet or hot peppers.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 480,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 760,
+  "protein": 49,
+  "carbs": 61,
+  "fats": 34,
+  "tags": [
+    "protein:beef",
+    "format:slow_cooker",
+    "category:crew_feeders",
+    "slow_cooker",
+    "game_day",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "slow cooker",
+    "skillet",
+    "sheet pans",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chuck roast",
+      "quantity": "8",
+      "unit": "lb"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "8",
+      "unit": "cups"
+    },
+    {
+      "name": "Italian seasoning",
+      "quantity": "3/8",
+      "unit": "cup"
+    },
+    {
+      "name": "giardiniera",
+      "quantity": "2",
+      "unit": "jars"
+    },
+    {
+      "name": "hoagie rolls",
+      "quantity": "9.6",
+      "unit": "each"
+    },
+    {
+      "name": "provolone",
+      "quantity": "1.6",
+      "unit": "lb"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Morning start",
+      "instruction": "Place chuck roast in the slow cooker with broth, Italian seasoning, garlic, and pepper.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook covered",
+      "instruction": "Cook on low for 8 hours, leaving the lid closed to maintain a steady braise.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Slice peppers",
+      "instruction": "Slice bell peppers and onions for a sweet topping, keeping them refrigerated until cooking.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sauté peppers",
+      "instruction": "Sauté peppers and onions until soft and lightly browned, not blackened.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Test roast",
+      "instruction": "Test with forks; the roast should pull apart easily after the long cook.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Shred beef",
+      "instruction": "Shred beef on a rimmed tray, then return it to the hot jus to stay moist.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Heat to safe temp",
+      "instruction": "Stir and verify the shredded beef reaches 165°F before changing the cooker to warm.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Toast rolls",
+      "instruction": "Toast split rolls at 200°F just until dry on the cut side so they resist the jus.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for calls",
+      "instruction": "Keep beef submerged in jus above 140°F and hold cheese cold until serving.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Build sandwiches",
+      "instruction": "Pile beef on rolls, add peppers or giardiniera, and top with provolone.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Chuck roast — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Chuck roast and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use a slotted spoon so rolls do not collapse.",
+    "Offer jus in cups for dipping.",
+    "Keep hot giardiniera clearly labelled."
+  ],
+  "tonightSpread": [
+    "Main: Italian beef sandwiches",
+    "Sides: potato wedges, Italian salad",
+    "Condiments: giardiniera, banana peppers, extra jus",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Chuck roast in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Use beef and jus for loaded fries."
+  ],
+  "whyCrewsLikeIt": "The beef improves on warm and guests can build sandwiches without slowing the kitchen.",
+  "mealPrepNotes": "Make-ahead: start beef the day before if needed. Storage: refrigerate beef in jus for 3 days. Reheating: heat beef to 165°F.",
+  "substitutions": [
+    "Use brisket for chuck roast.",
+    "Use mozzarella for provolone."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 760,
+    "protein": 49,
+    "carbs": 61,
+    "fats": 34,
+    "label": "~760 cal/serving · 49g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+  "heroImageAlt": "Italian Beef Slow Cooker Sandwiches — Italian-American slow_cooker plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/italian-beef-slow-cooker.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/italian-beef-slow-cooker.jpg",
+  "railImage": "/images/rails/hall-expansion/italian-beef-slow-cooker.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "Italian beef slow cooker crowd",
+    "slow cooker beef sandwiches",
+    "firehall sandwich dinner",
+    "Chicago beef recipe ten people"
+  ],
+  "relatedSlugs": [
+    "mississippi-pot-roast-crew",
+    "white-chicken-chili-crock",
+    "salsa-verde-chicken-crock",
+    "loaded-baked-potato-soup-crock"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

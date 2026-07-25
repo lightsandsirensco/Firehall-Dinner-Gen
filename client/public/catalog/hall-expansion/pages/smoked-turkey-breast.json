@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Turkey Breast Halves",
+      "name": "bone-in turkey breast halves",
       "quantity": "1.6",
       "unit": "halves",
       "notes": "about 6 lb total",
       "group": "Main"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Brine"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Brine"
     },
     {
-      "name": "Fresh Thyme",
+      "name": "fresh thyme",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "chopped",
       "group": "Brine"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "smashed",
       "group": "Brine"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "coarse",
       "group": "Rub"
     },
     {
-      "name": "Whole-Grain Mustard",
+      "name": "whole-grain mustard",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Cranberry Sauce",
+      "name": "cranberry sauce",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     }
   ],
@@ -161,10 +161,19 @@
     "protein": 48,
     "carbs": 12,
     "fats": 9,
-    "label": "~320 cal/serving · 48g protein · 1g fiber (est.)"
+    "label": "~320 cal/serving · 48g protein · 1g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-turkey-breast.jpg",
-  "heroImageAlt": "Smoked Turkey Breast for the Crew — crew-sized firehall meal",
+  "heroImageAlt": "Smoked Turkey Breast for the Crew — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/smoked-turkey-breast.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/smoked-turkey-breast.jpg",
   "railImage": "/images/rails/hall-expansion/smoked-turkey-breast.jpg",
@@ -182,6 +191,6 @@
     "smoked-queso-fundido"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.928Z",
+  "generatedAt": "2026-07-17T20:15:12.767Z",
   "contentVersion": 2
 }

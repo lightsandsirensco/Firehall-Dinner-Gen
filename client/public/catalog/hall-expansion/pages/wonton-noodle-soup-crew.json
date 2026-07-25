@@ -38,74 +38,74 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Pork",
+      "name": "ground pork",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Wonton"
     },
     {
-      "name": "Shrimp",
+      "name": "shrimp",
       "quantity": "3/8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "finely chopped",
       "group": "Wonton"
     },
     {
-      "name": "Wonton Wrappers",
+      "name": "wonton wrappers",
       "quantity": "48",
       "unit": "wrappers",
       "group": "Wonton"
     },
     {
-      "name": "Green Onions",
+      "name": "green onions",
       "quantity": "3",
       "unit": "whole",
       "notes": "minced",
       "group": "Wonton"
     },
     {
-      "name": "Sesame Oil",
+      "name": "sesame oil",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Wonton"
     },
     {
-      "name": "Soy Sauce",
+      "name": "soy sauce",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Wonton"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "6.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Broth"
     },
     {
-      "name": "Ginger",
+      "name": "ginger",
       "quantity": "1.6",
       "unit": "inches",
       "notes": "sliced",
       "group": "Broth"
     },
     {
-      "name": "Egg Noodles",
+      "name": "egg noodles",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "fresh if possible",
       "group": "Noodles"
     },
     {
-      "name": "Baby Bok Choy",
+      "name": "baby bok choy",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "halved",
       "group": "Vegetable"
     },
     {
-      "name": "White Pepper",
+      "name": "white pepper",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     }
   ],
@@ -168,10 +168,19 @@
     "protein": 28,
     "carbs": 48,
     "fats": 14,
-    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)"
+    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
-  "heroImageAlt": "Wonton Noodle Soup for the Crew — crew-sized firehall meal",
+  "heroImageAlt": "Wonton Noodle Soup for the Crew — chinese bowl plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/wonton-noodle-soup-crew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/wonton-noodle-soup-crew.jpg",
   "railImage": "/images/rails/hall-expansion/wonton-noodle-soup-crew.jpg",
@@ -183,12 +192,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

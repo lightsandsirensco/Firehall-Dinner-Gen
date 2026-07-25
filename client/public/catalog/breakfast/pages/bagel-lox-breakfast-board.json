@@ -2,7 +2,7 @@
   "slug": "bagel-lox-breakfast-board",
   "title": "Bagel and Lox Breakfast Board",
   "subtitle": "Toasted bagels with lox, cream cheese, capers, and fixings for ten.",
-  "description": "Toasted bagels with lox, cream cheese, capers, and fixings laid out for self-serve. A lighter hall breakfast that still feels like a treat when the budget allows.",
+  "description": "A deli-counter board done right: bagels toasted crisp and held warm, smoked salmon folded in ribbons on a chilled platter, two schmears, and the classic fixings — capers, shaved red onion, tomato, cucumber, lemon. Lighter than a hot line and almost no stove time.",
   "filters": [
     "feed_a_crew",
     "quick_breakfasts",
@@ -15,57 +15,62 @@
     "deli",
     "board"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 10,
   "totalTime": 35,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Bagels",
-      "quantity": "10",
+      "name": "bagels",
+      "quantity": "8",
       "notes": "assorted flavors, split",
       "group": "Base"
     },
     {
-      "name": "Smoked Salmon Lox",
-      "quantity": "2 lb",
+      "name": "smoked salmon lox",
+      "quantity": "1.5",
+      "unit": "lb",
       "notes": "sliced thin",
       "group": "Fish"
     },
     {
-      "name": "Cream Cheese",
-      "quantity": "2 cups",
+      "name": "cream cheese",
+      "quantity": "24",
+      "unit": "oz",
       "notes": "plain and scallion whipped",
       "group": "Spread"
     },
     {
-      "name": "Whipped Butter",
-      "quantity": "1/2 cup",
+      "name": "whipped butter",
+      "quantity": "1/2",
+      "unit": "cup",
       "notes": "optional for plain bagels",
-      "group": "Spread"
+      "group": "Spread",
+      "optional": true
     },
     {
-      "name": "Capers",
-      "quantity": "1/2 cup",
+      "name": "capers",
+      "quantity": "1/2",
+      "unit": "cup",
       "notes": "drained",
       "group": "Fixings"
     },
     {
-      "name": "Red Onions",
+      "name": "red onions",
       "quantity": "2",
       "notes": "thinly sliced",
       "group": "Fixings"
     },
     {
-      "name": "Roma Tomatoes",
-      "quantity": "4",
+      "name": "Roma tomatoes",
+      "quantity": "3",
       "notes": "sliced",
       "group": "Fixings"
     },
     {
-      "name": "English Cucumbers",
+      "name": "English cucumbers",
       "quantity": "2",
       "notes": "sliced thin, plus lemon wedges",
       "group": "Fixings"
@@ -74,34 +79,64 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Prep all fixings",
-      "instruction": "Slice onion, tomato, and cucumber and arrange in separate bowls on ice or cold trays. Drain capers and portion cream cheese into ramekins. Keep lox refrigerated until the board goes out.",
-      "minutes": 15
+      "title": "Chill the platter and stage the cold chain",
+      "instruction": "Put the serving platter and fixing bowls in the freezer or on ice while you prep — smoked salmon warms fast on a room-temperature board, and a cold platter buys you a full service window. Keep the lox in the fridge until the last possible minute; fish out of refrigeration is on a two-hour clock, less if the kitchen runs hot.",
+      "minutes": 3
     },
     {
       "stepNumber": 2,
+      "title": "Slice and tame the fixings",
+      "instruction": "Slice the red onions paper-thin and soak them in ice water for 10 minutes while you work — the soak pulls the harsh sulfur bite so the onion reads sweet and crisp instead of steamrolling the fish. Slice Roma tomatoes and English cucumbers thin, and cut the lemon into wedges. Salt the tomato slices lightly and set them on paper towels so they season and shed water instead of soaking the board.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 3,
+      "title": "Portion the schmears",
+      "instruction": "Scoop the plain and scallion cream cheese into separate ramekins and rough up the tops with a spoon so a knife drags cleanly — a cold solid brick tears warm bagels. Set out the whipped butter in its own ramekin for the crew members who skip fish. Drain the capers and portion them into a small bowl with a spoon.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 4,
       "title": "Toast the bagels",
-      "instruction": "Split bagels and toast on sheet pans at 350°F until edges are crisp, about 6 minutes. Hold in a warm oven uncovered at 200°F—do not stack or they steam soft.",
+      "instruction": "Split the bagels and toast cut-side up on sheet pans at 350°F for about 6 minutes, until the cut faces are golden and the edges crisp. Hold them uncovered in a 200°F oven — stacked or covered bagels steam soft in minutes, and a limp bagel folds under the weight of the build.",
       "minutes": 8,
       "tempF": 350
     },
     {
-      "stepNumber": 3,
-      "title": "Arrange the board",
-      "instruction": "Center lox on a large chilled platter folded in overlapping layers. Surround with ramekins of cream cheese, capers, onion, tomato, cucumber, and lemon wedges.",
-      "minutes": 8
-    },
-    {
-      "stepNumber": 4,
-      "title": "Set the line",
-      "instruction": "Place toasted bagels in a warm basket at the line with tongs. Post a simple build order: schmear, lox, capers, onion, tomato.",
-      "minutes": 5
-    },
-    {
       "stepNumber": 5,
-      "title": "Serve and refresh",
-      "instruction": "Serve immediately as a self-serve board. Refresh lox and cold fixings on ice if service runs longer than 30 minutes to keep fish food-safe.",
+      "title": "Lay the smoked salmon",
+      "instruction": "Pull the chilled platter and fold the smoked salmon lox into loose overlapping ribbons down the center — folded, not laid flat, so each firefighter can lift a portion with a fork without shredding the whole layer. Ribbons also make a pound and a half read generous across the board.",
       "minutes": 5
+    },
+    {
+      "stepNumber": 6,
+      "title": "Build the board around the fish",
+      "instruction": "Surround the salmon with the ramekins of cream cheese and whipped butter, then the drained onions, salted tomatoes, cucumbers, capers, and lemon wedges in their own zones. Keep wet items (tomato, onion) away from the platter edge where they drip. The geography matters: schmear nearest the bagels, fish in the middle, garnishes last, so the line moves in build order.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 7,
+      "title": "Stage the bagel basket and post the build order",
+      "instruction": "Move the warm bagels to a towel-lined basket at the head of the line with tongs. Post the classic build order where the crew can see it: schmear first (it glues everything down), then lox, capers, onion, tomato, cucumber, and a squeeze of lemon over the top.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 8,
+      "title": "Serve and hold the cold chain",
+      "instruction": "Open the line and watch the clock. If service runs past 30 minutes, rotate the fish platter and cut fixings back onto ice — anything above 40°F is burning its safe window. Refresh the bagel basket from the 200°F oven in small batches so late arrivals get crisp bagels, not the steamed bottom of the pile.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-prep or mid-service: get the smoked salmon and cold fixings back into the fridge or onto fresh ice immediately — cured fish must never sit above 40°F for more than 30 minutes cumulative on a busy morning. Log time off ice with a grease pencil on the platter wrap. Kill the warming oven. On return, check that the fish still feels fridge-cold before reopening the line; when in doubt, throw it out.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Wrap remaining smoked salmon tightly and refrigerate within two hours of first plating — label with date and use within 24 hours in scrambled eggs or on toast; never re-serve fish that sat out past its window. Store cut fixings in separate covered containers so the onion doesn't perfume everything, and bag the bagels loosely at room temperature.",
+      "minutes": 10
     }
   ],
   "nutrition": {
@@ -126,27 +161,46 @@
     }
   },
   "stationWorkflow": [
-    "Keep lox on ice until the moment the board hits the table—room temp fish is a food-safety issue.",
-    "Toast bagels in two sheet pan batches so all ten finish crisp at the same time.",
-    "Assign one crew member to restock fixings while another manages bagel refills."
+    "Keep lox on ice until the moment the board hits the table — room temp fish is a food-safety issue.",
+    "Toast bagels in two sheet pan batches so all of them finish crisp at the same time.",
+    "Ice-water soak on the red onion is non-negotiable — raw onion bite buries the fish.",
+    "Assign one crew member to restock fixings while another manages bagel refills.",
+    "Keep a backup batch of toasted bagels holding at 200°F for firefighters returning from a run — never serve the picked-over basket to late crew.",
+    "Taste the tomato slices for salt before the board goes out — hall palates run salty after long shifts.",
+    "Log time off ice with a grease pencil when tones drop mid-service; cold-chain math is easy to lose track of.",
+    "Spot-check that the fish platter still feels fridge-cold before reopening the line after a call."
   ],
   "cleanupNotes": [
-    "Discard any lox held above 40°F for more than 2 hours—do not save for later shifts.",
+    "Discard any lox held above 40°F for more than 2 hours — do not save for later shifts.",
     "Wash onion and caper boards separately from bagel crumbs to avoid cross-smells."
   ],
   "leftovers": [
-    "Unused cream cheese and capers keep; repurpose lox in scrambled eggs within 24 hours if chilled.",
+    "Wrap leftover smoked salmon within two hours of plating; label with date and use within 24 hours — cured fish is not a reheat item.",
+    "Store cold fixings separately in covered containers — stacked wet vegetables ruin each other's texture overnight.",
+    "Unused cream cheese and capers keep for a week; fold leftover lox into scrambled eggs the next morning.",
     "Day-old bagels make excellent French toast sticks with cinnamon sugar."
+  ],
+  "equipment": [
+    "Large serving platter (chilled)",
+    "Sheet pans",
+    "Ramekins and small bowls",
+    "Towel-lined bagel basket with tongs",
+    "Sharp slicing knife",
+    "Ice trays for the cold fixings"
+  ],
+  "tonightSpread": [
+    "Main: toasted bagels with smoked salmon lox and two schmears",
+    "Sides: sliced tomato, cucumber, shaved red onion",
+    "Condiments: capers, lemon wedges, whipped butter",
+    "Set the warm bagel basket at the head of the line; fish and cold fixings on ice at the far end.",
+    "Keep a backup batch of toasted bagels at 200°F for firefighters returning from a run."
   ],
   "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
   "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
-  "imageAlt": "Wide firehall breakfast board with bagels, cream cheese, smoked salmon lox, capers, and red onion on a crew prep table, family-style platter",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T21:52:25.179Z",
+  "imageAlt": "Bagel and lox breakfast board with cream cheese, capers, and fresh fixings",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-23T21:15:00.000Z",
   "readMinutes": 6,
   "seoTitle": "Bagel and Lox Breakfast Board | Firehall Breakfast",
-  "collectionTier": "healthier_hall",
-  "heroImageAlt": "Wide firehall breakfast board with bagels, cream cheese, smoked salmon lox, capers, and red onion on a crew prep table, family-style platter",
-  "mobileImage": "/images/mobile/breakfast/bagel-lox-breakfast-board.jpg",
-  "railImage": "/images/rails/breakfast/bagel-lox-breakfast-board.jpg"
+  "collectionTier": "healthier_hall"
 }

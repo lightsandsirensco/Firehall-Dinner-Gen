@@ -5,14 +5,16 @@ import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 
 interface RecipeInternalLinksProps {
   clusters: RecipeLinkCluster[];
+  pillar?: { href: string; label: string };
+  guide?: { href: string; label: string };
   className?: string;
 }
 
 /**
  * Editorial internal link clusters — compact text links grouped by topical relevance.
  */
-export function RecipeInternalLinks({ clusters, className }: RecipeInternalLinksProps) {
-  if (clusters.length === 0) return null;
+export function RecipeInternalLinks({ clusters, pillar, guide, className }: RecipeInternalLinksProps) {
+  if (clusters.length === 0 && !pillar && !guide) return null;
 
   return (
     <section
@@ -28,6 +30,34 @@ export function RecipeInternalLinks({ clusters, className }: RecipeInternalLinks
         </p>
       </div>
 
+      {(pillar || guide) && (
+        <nav
+          aria-label="Related guides and meal hubs"
+          className="rounded-2xl border border-border/25 bg-muted/10 p-4 sm:p-5"
+        >
+          <h3 className="text-sm font-semibold text-foreground">Keep exploring</h3>
+          <ul className="mt-3 space-y-2">
+            {pillar ? (
+              <li>
+                <Link href={pillar.href} className="text-sm text-primary hover:underline underline-offset-2">
+                  {pillar.label}
+                </Link>
+                <span className="text-xs text-muted-foreground"> — meal hub for this style of dinner</span>
+              </li>
+            ) : null}
+            {guide ? (
+              <li>
+                <Link href={guide.href} className="text-sm text-primary hover:underline underline-offset-2">
+                  {guide.label}
+                </Link>
+                <span className="text-xs text-muted-foreground"> — station cooking guide</span>
+              </li>
+            ) : null}
+          </ul>
+        </nav>
+      )}
+
+      {clusters.length > 0 ? (
       <div className="grid gap-6 sm:grid-cols-2">
         {clusters.map((group) => (
           <nav
@@ -53,14 +83,15 @@ export function RecipeInternalLinks({ clusters, className }: RecipeInternalLinks
           </nav>
         ))}
       </div>
+      ) : null}
 
       <p className="text-xs text-muted-foreground">
         <Link href="/explore" className="text-primary hover:underline">
           Browse all firefighter meals
         </Link>
         {" · "}
-        <Link href="/explore" className="text-primary hover:underline">
-          Explore by category
+        <Link href="/generator" className="text-primary hover:underline">
+          Find a meal for tonight
         </Link>
       </p>
     </section>

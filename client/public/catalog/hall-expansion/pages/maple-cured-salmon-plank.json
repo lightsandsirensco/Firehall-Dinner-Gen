@@ -38,73 +38,73 @@
   ],
   "ingredients": [
     {
-      "name": "Salmon Fillets",
+      "name": "salmon fillets",
       "quantity": "5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "skin-on, portioned",
       "group": "Main"
     },
     {
-      "name": "Maple Syrup",
+      "name": "maple syrup",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Brine"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Brine"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Glaze"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Glaze"
     },
     {
-      "name": "Soy Sauce",
+      "name": "soy sauce",
       "quantity": "1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Glaze"
     },
     {
-      "name": "Cedar Grilling Planks",
+      "name": "cedar grilling planks",
       "quantity": "4",
       "unit": "planks",
       "notes": "soaked",
       "group": "Grill"
     },
     {
-      "name": "Greek Yogurt",
+      "name": "Greek yogurt",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Fresh Dill",
+      "name": "fresh dill",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Sauce"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "2",
       "unit": "whole",
       "notes": "zested and juiced",
       "group": "Sauce"
     },
     {
-      "name": "Asparagus",
+      "name": "asparagus",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "trimmed",
       "group": "Side"
     }
@@ -168,10 +168,19 @@
     "protein": 40,
     "carbs": 18,
     "fats": 22,
-    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)"
+    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
-  "heroImageAlt": "Maple-Cured Salmon Plank — crew-sized firehall meal",
+  "heroImageAlt": "Maple-Cured Salmon Plank — canadian grill plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/maple-cured-salmon-plank.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/maple-cured-salmon-plank.jpg",
   "railImage": "/images/rails/hall-expansion/maple-cured-salmon-plank.jpg",
@@ -183,12 +192,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "applewood-pork-shoulder-steaks",
+    "korean-bulgogi-grill-night",
+    "grilled-flank-fajita-bar",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

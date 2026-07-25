@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Mexican Chorizo",
+      "name": "Mexican chorizo",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "casings removed",
       "group": "Main"
     },
     {
-      "name": "Oaxaca Cheese",
+      "name": "Oaxaca cheese",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
-      "name": "Monterey Jack Cheese",
+      "name": "Monterey Jack cheese",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
-      "name": "Cream Cheese",
+      "name": "cream cheese",
       "quantity": "6.4",
-      "unit": "Oz",
+      "unit": "oz",
       "group": "Cheese"
     },
     {
-      "name": "Poblano Peppers",
+      "name": "poblano peppers",
       "quantity": "2",
       "unit": "whole",
       "notes": "roasted, diced",
       "group": "Veg"
     },
     {
-      "name": "White Onion",
+      "name": "white onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Veg"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Veg"
     },
     {
-      "name": "Heavy Cream",
+      "name": "heavy cream",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Sauce"
     },
     {
-      "name": "Tortilla Chips",
+      "name": "tortilla chips",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Serve"
     },
     {
-      "name": "Flour Tortillas",
+      "name": "flour tortillas",
       "quantity": "10",
       "unit": "whole",
       "notes": "warmed",
@@ -164,10 +164,19 @@
     "protein": 26,
     "carbs": 22,
     "fats": 40,
-    "label": "~540 cal/serving · 26g protein · 2g fiber (est.)"
+    "label": "~540 cal/serving · 26g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/smoked-queso-fundido.jpg",
-  "heroImageAlt": "Smoked Queso Fundido — crew-sized firehall meal",
+  "heroImageAlt": "Smoked Queso Fundido — mexican smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/smoked-queso-fundido.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/smoked-queso-fundido.jpg",
   "railImage": "/images/rails/hall-expansion/smoked-queso-fundido.jpg",
@@ -185,6 +194,6 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.929Z",
+  "generatedAt": "2026-07-17T20:15:12.768Z",
   "contentVersion": 2
 }

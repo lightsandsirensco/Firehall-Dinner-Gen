@@ -14,55 +14,55 @@
     "griddle",
     "diner"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 20,
   "cookTime": 25,
   "totalTime": 45,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Thick White Bread Slices",
-      "quantity": "20",
+      "name": "thick white bread slices",
+      "quantity": "16",
       "notes": "crusts trimmed optional",
       "group": "Sandwich"
     },
     {
-      "name": "Sliced Deli Ham",
-      "quantity": "1 lb",
+      "name": "sliced deli ham",
+      "quantity": "3/4",
       "group": "Sandwich"
     },
     {
-      "name": "Sliced Deli Turkey",
-      "quantity": "1 lb",
+      "name": "sliced deli turkey",
+      "quantity": "3/4",
       "group": "Sandwich"
     },
     {
-      "name": "Swiss Cheese",
-      "quantity": "10 slices",
+      "name": "Swiss cheese",
+      "quantity": "8",
       "group": "Sandwich"
     },
     {
-      "name": "Dijon Mustard",
-      "quantity": "3 tbsp",
+      "name": "Dijon mustard",
+      "quantity": "2.4",
       "notes": "spread thin on half the slices",
       "group": "Sandwich"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "6",
+      "name": "large eggs",
+      "quantity": "5",
       "notes": "whisked with 1 cup milk and pinch of salt",
       "group": "Batter"
     },
     {
-      "name": "Butter",
-      "quantity": "4 tbsp",
+      "name": "butter",
+      "quantity": "3.2",
       "notes": "for griddling in batches",
       "group": "Cook"
     },
     {
-      "name": "Powdered Sugar",
-      "quantity": "1/4 cup",
+      "name": "powdered sugar",
+      "quantity": "1/4",
       "notes": "plus raspberry jam for dipping",
       "group": "Finish"
     }
@@ -136,8 +136,8 @@
   "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
   "imageAlt": "Golden Monte Cristo sandwiches dusted with powdered sugar and served with jam",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Monte Cristo Sandwiches | Firehall Breakfast",
   "collectionTier": "firehall_classic"

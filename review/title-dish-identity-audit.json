@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-06-27T19:41:51.845Z",
+  "generatedAt": "2026-07-24T02:19:54.948Z",
   "totals": {
-    "audited": 331,
-    "passed": 331,
+    "audited": 371,
+    "passed": 371,
     "failed": 0
   },
   "failedRecipes": [],
@@ -38,6 +38,12 @@
       "pass": true
     },
     {
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
       "slug": "mediterranean-baked-fish-tray",
       "title": "Baked Cod Tray",
       "kind": "performance_meal",
@@ -53,6 +59,12 @@
       "slug": "mostaccioli-sausage-bake",
       "title": "Baked Mostaccioli with Sausage",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -134,9 +146,9 @@
       "pass": true
     },
     {
-      "slug": "big-chili",
-      "title": "Firehall Chili",
-      "kind": "hall_classic",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -314,6 +326,12 @@
       "pass": true
     },
     {
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "buffalo-chicken-wraps",
       "title": "Buffalo Chicken Wraps",
       "kind": "hall_expansion",
@@ -334,6 +352,12 @@
     {
       "slug": "bun-bo-hue-noodle-soup",
       "title": "Bun Bo Hue Noodle Soup",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -368,6 +392,12 @@
       "pass": true
     },
     {
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "grilled-cod-lemon-packets",
       "title": "Caper-Butter Cod Foil Packets",
       "kind": "bbq_catalog",
@@ -377,6 +407,12 @@
       "slug": "caprese-chicken-bake",
       "title": "Caprese Chicken Bake",
       "kind": "performance_meal",
+      "pass": true
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Carolina-Style Pulled Pork",
+      "kind": "hall_classic",
       "pass": true
     },
     {
@@ -536,6 +572,12 @@
       "pass": true
     },
     {
+      "slug": "chicken-thigh-stretch-dinner",
+      "title": "Chicken Thigh Stretch Dinner",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
       "title": "Chicken Thighs with Sweet Potato and Spinach",
       "kind": "performance_meal",
@@ -569,6 +611,18 @@
       "slug": "chili-mac",
       "title": "Chili Mac Skillet",
       "kind": "firehall_catalog",
+      "pass": true
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "kind": "hall_classic",
+      "pass": true
+    },
+    {
+      "slug": "chipotle-chicken-burrito-bowls",
+      "title": "Chipotle Chicken Burrito Bowls",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -638,6 +692,12 @@
       "pass": true
     },
     {
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
       "kind": "hall_expansion",
@@ -680,6 +740,12 @@
       "pass": true
     },
     {
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "smash-burgers",
       "title": "Double Smash Burgers",
       "kind": "hall_classic",
@@ -688,6 +754,12 @@
     {
       "slug": "dutch-oven-pot-roast",
       "title": "Dutch Oven Pot Roast",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -746,8 +818,26 @@
       "pass": true
     },
     {
+      "slug": "big-chili",
+      "title": "Firehall Chili",
+      "kind": "hall_classic",
+      "pass": true
+    },
+    {
       "slug": "firehall-donair-platter",
       "title": "Firehall Donair Platter",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehall-gyro-bowls",
+      "title": "Firehall Gyro Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -824,6 +914,12 @@
       "pass": true
     },
     {
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "greek-chicken-pitas",
       "title": "Greek Chicken Pitas",
       "kind": "hall_expansion",
@@ -839,6 +935,12 @@
       "slug": "green-pineapple",
       "title": "Green Pineapple Smoothie",
       "kind": "smoothie",
+      "pass": true
+    },
+    {
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -893,6 +995,12 @@
       "slug": "hall-sloppy-joe-feed",
       "title": "Hall Sloppy Joe Feed",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -992,6 +1100,12 @@
       "pass": true
     },
     {
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "jalapeno-cheddar-smoked-sausages",
       "title": "Jalapeño Cheddar Smoked Sausages",
       "kind": "bbq_catalog",
@@ -1034,8 +1148,20 @@
       "pass": true
     },
     {
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "korean-bulgogi-grill-night",
       "title": "Korean Bulgogi Grill Night",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -1048,6 +1174,12 @@
     {
       "slug": "lebanese-chicken-shish-platter",
       "title": "Lebanese Chicken Shish Platter",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -1103,6 +1235,12 @@
       "slug": "portuguese-linguica-grill-platter",
       "title": "Lisbon Piri-Piri Linguica Spread",
       "kind": "bbq_catalog",
+      "pass": true
+    },
+    {
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -1178,6 +1316,12 @@
       "pass": true
     },
     {
+      "slug": "mediterranean-beef-bowls",
+      "title": "Mediterranean Beef Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "mediterranean-chicken-farro-bowls",
       "title": "Mediterranean Chicken Farro Bowls",
       "kind": "hall_expansion",
@@ -1202,6 +1346,12 @@
       "pass": true
     },
     {
+      "slug": "menemen-for-the-crew",
+      "title": "Menemen for the Crew",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
       "slug": "mesquite-chuck-roast",
       "title": "Mesquite Smoked Chuck Roast",
       "kind": "hall_expansion",
@@ -1216,6 +1366,12 @@
     {
       "slug": "miso-ramen-bar",
       "title": "Miso Ramen Bar",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -1304,6 +1460,12 @@
       "pass": true
     },
     {
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
       "slug": "overnight-sausage-strata",
       "title": "Overnight Sausage Strata",
       "kind": "breakfast_catalog",
@@ -1346,9 +1508,21 @@
       "pass": true
     },
     {
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "peanut-butter-banana-recovery",
       "title": "Peanut Butter Banana Recovery Shake",
       "kind": "smoothie",
+      "pass": true
+    },
+    {
+      "slug": "peanut-chicken-rice-bowls",
+      "title": "Peanut Chicken Rice Bowls",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -1406,6 +1580,12 @@
       "pass": true
     },
     {
+      "slug": "steak-sandwiches",
+      "title": "Philly-Style Cheesesteaks",
+      "kind": "hall_classic",
+      "pass": true
+    },
+    {
       "slug": "grilled-peach-burrata-salad",
       "title": "Pistachio Peach and Burrata Salad",
       "kind": "bbq_catalog",
@@ -1448,12 +1628,6 @@
       "pass": true
     },
     {
-      "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches",
-      "kind": "hall_classic",
-      "pass": true
-    },
-    {
       "slug": "quick-egg-tacos",
       "title": "Quick Egg Tacos",
       "kind": "breakfast_catalog",
@@ -1492,6 +1666,18 @@
     {
       "slug": "rigatoni-meat-sauce-batch",
       "title": "Rigatoni with Meat Sauce",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -1538,6 +1724,12 @@
       "pass": true
     },
     {
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "sausage-peppers-onions",
       "title": "Sausage Peppers and Onions",
       "kind": "firehall_catalog",
@@ -1559,6 +1751,12 @@
       "slug": "gochujang-beef-skewers-crew",
       "title": "Seoul Chili Pear Beef Cubes",
       "kind": "bbq_catalog",
+      "pass": true
+    },
+    {
+      "slug": "shakshuka-for-the-hall",
+      "title": "Shakshuka for the Hall",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -1601,6 +1799,12 @@
       "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
       "title": "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner",
       "kind": "firehall_catalog",
+      "pass": true
+    },
+    {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -1718,6 +1922,12 @@
       "pass": true
     },
     {
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "soft-pretzel-dogs",
       "title": "Soft Pretzel Hot Dogs",
       "kind": "hall_expansion",
@@ -1730,9 +1940,21 @@
       "pass": true
     },
     {
+      "slug": "southwest-steak-bowls",
+      "title": "Southwest Steak Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "spaghetti-aglio-e-olio-for-the-hall",
       "title": "Spaghetti Aglio e Olio for the Hall",
       "kind": "firehall_catalog",
+      "pass": true
+    },
+    {
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -1751,18 +1973,6 @@
       "slug": "station-cobb-salad",
       "title": "Station Cobb Salad",
       "kind": "hall_expansion",
-      "pass": true
-    },
-    {
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches",
-      "kind": "hall_classic",
-      "pass": true
-    },
-    {
-      "slug": "steak-tacos",
-      "title": "Steak Tacos",
-      "kind": "hall_classic",
       "pass": true
     },
     {
@@ -1826,6 +2036,12 @@
       "pass": true
     },
     {
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "teriyaki-salmon-grill",
       "title": "Teriyaki Salmon",
       "kind": "firehall_catalog",
@@ -1847,6 +2063,12 @@
       "slug": "thai-basil-chicken",
       "title": "Thai Basil Chicken",
       "kind": "firehall_catalog",
+      "pass": true
+    },
+    {
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -1916,6 +2138,12 @@
       "pass": true
     },
     {
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "turkey-taco-skillet",
       "title": "Turkey Taco Skillet",
       "kind": "performance_meal",
@@ -1946,6 +2174,12 @@
       "pass": true
     },
     {
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "white-bean-kale-soup",
       "title": "White Bean and Kale Soup",
       "kind": "performance_meal",
@@ -1955,6 +2189,12 @@
       "slug": "white-bean-chicken-chili",
       "title": "White Bean Chicken Chili",
       "kind": "performance_meal",
+      "pass": true
+    },
+    {
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "kind": "hall_expansion",
       "pass": true
     },
     {

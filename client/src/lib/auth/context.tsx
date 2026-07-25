@@ -22,6 +22,7 @@ import {
   clearAuthReturnTo,
   readAuthReturnTo,
 } from "@/lib/auth/return-to";
+import { postLoginDestination } from "@/lib/auth/post-login-destination";
 
 interface AuthContextValue {
   loading: boolean;
@@ -86,10 +87,24 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       }
       setSignInOpen(false);
 
-      const destination = authReturnTo ?? readAuthReturnTo();
+      const returnTo = authReturnTo ?? readAuthReturnTo();
       clearAuthReturnTo();
       setAuthReturnTo(null);
-      if (destination && destination !== window.location.pathname + window.location.search) {
+
+      let hasHall = false;
+      try {
+        const mePayload = await fetchAuthMe();
+        hasHall = Boolean(mePayload.authenticated && (mePayload.halls?.length ?? 0) > 0);
+      } catch {
+        /* fall through to home */
+      }
+
+      const destination = postLoginDestination({
+        hasHall,
+        authReturnTo: returnTo,
+        isNew,
+      });
+      if (destination !== window.location.pathname + window.location.search) {
         navigate(destination);
       }
     },

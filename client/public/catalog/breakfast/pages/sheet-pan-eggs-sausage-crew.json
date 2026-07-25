@@ -1,0 +1,150 @@
+{
+  "slug": "sheet-pan-eggs-sausage-crew",
+  "title": "Sheet-Pan Eggs & Sausage",
+  "subtitle": "Roasted peppers, browned sausage, and baked eggs for a 8–10 person hall breakfast.",
+  "description": "This firefighter-friendly sheet-pan breakfast roasts peppers and onions beside browned sausage, then bakes eggs right on top. It gives the hall a hot, hearty tray with a short service window and no griddle traffic.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "quick_breakfasts"
+  ],
+  "tags": [
+    "sheet-pan",
+    "eggs",
+    "sausage",
+    "peppers",
+    "one-pan"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 30,
+  "totalTime": 45,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "breakfast sausage",
+      "quantity": "2",
+      "notes": "bulk or casings removed",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "group": "Protein"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "2",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "notes": "sliced thin",
+      "group": "Vegetables"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "1.6",
+      "notes": "plus kosher salt, black pepper, and smoked paprika",
+      "group": "Seasoning"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "1.6",
+      "notes": "optional, for the last few minutes",
+      "group": "Finish"
+    },
+    {
+      "name": "bottle hot sauce",
+      "quantity": "3/4",
+      "notes": "and toast or tortillas for the line",
+      "group": "Serve"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven and prep pans",
+      "instruction": "Heat oven to 425°F. Line two rimmed half-sheet pans with parchment or foil and oil lightly. Two pans give vegetables room to roast; crowding makes them steam and turn soft.",
+      "minutes": 5,
+      "tempF": 425
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the sausage",
+      "instruction": "Cook sausage in a large skillet over medium-high, breaking it into small crumbles until no pink remains and it reaches 165°F. Drain excess fat, but leave one tablespoon in the pan for flavor.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast peppers and onions",
+      "instruction": "Toss peppers and onions with oil, salt, pepper, and smoked paprika. Spread across the pans and roast 12–15 minutes until edges brown. Rotate pans halfway; pale vegetables mean the oven was too cool or the pan was crowded.",
+      "minutes": 15,
+      "tempF": 425
+    },
+    {
+      "stepNumber": 4,
+      "title": "Add sausage and eggs",
+      "instruction": "Lower oven to 400°F. Divide sausage over the vegetables, then make 18 small wells and crack in eggs. Keep eggs separated so beginner cooks can portion cleanly; if an egg spills, nudge it back with a spoon before baking.",
+      "minutes": 12,
+      "tempF": 400
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until safely set",
+      "instruction": "Bake 8–12 minutes until whites are fully opaque and reach 165°F; yolks can stay soft if the crew prefers. Add cheddar for the final 2 minutes. Do not overbake—rubbery yolks are the usual failure mode.",
+      "minutes": 10,
+      "tempF": 400
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve or hold for calls",
+      "instruction": "Serve directly from the sheet pans with toast, tortillas, and hot sauce. For a short call hold, cover loosely and keep at 200°F for up to 15 minutes; uncovered eggs dry out and covered eggs lose roasted texture.",
+      "minutes": 5
+    }
+  ],
+  "nutrition": {
+    "calories": 533,
+    "protein": 29,
+    "carbs": 6,
+    "fat": 44,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Brown sausage while the oven preheats and vegetables roast so the final egg bake is the only last-minute step.",
+    "Set one pan at each end of the hall line to prevent a bottleneck when both rigs return at once.",
+    "If a call interrupts service, hold at 200°F no longer than 15 minutes; cook a fresh small egg batch if the delay runs longer."
+  ],
+  "cleanupNotes": [
+    "Discard parchment or foil after service and soak the sausage skillet immediately to prevent rendered fat from setting.",
+    "Wipe egg drips from sheet-pan rims while warm; baked egg protein is much harder to remove cold."
+  ],
+  "leftovers": [
+    "Refrigerate portions within 2 hours and reheat sausage and egg portions to 165°F before serving.",
+    "Chop cold leftovers into breakfast burrito filling with fresh cheese and salsa."
+  ],
+  "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+  "thumbImage": "/images/thumbs/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+  "imageAlt": "Sheet-pan breakfast with baked eggs, browned sausage, roasted peppers, and onions",
+  "publishedAt": "2026-07-17T20:15:27.731Z",
+  "updatedAt": "2026-07-17T20:15:27.731Z",
+  "readMinutes": 7,
+  "seoTitle": "Sheet-Pan Eggs & Sausage | Firehall Breakfast"
+}

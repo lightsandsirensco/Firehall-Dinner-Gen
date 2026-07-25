@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Breast",
+      "name": "chicken breast",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced into strips",
       "group": "Main"
     },
     {
-      "name": "Lime Juice",
+      "name": "lime juice",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Chili Powder",
+      "name": "chili powder",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Marinade"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Marinade"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Marinade"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Green Bell Pepper",
+      "name": "green bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Vegetables"
     },
     {
-      "name": "Flour Tortillas",
+      "name": "flour tortillas",
       "quantity": "16",
       "unit": "whole",
       "notes": "8-inch",
@@ -163,10 +163,19 @@
     "protein": 36,
     "carbs": 32,
     "fats": 12,
-    "label": "~380 cal/serving · 36g protein · 4g fiber (est.)"
+    "label": "~380 cal/serving · 36g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
-  "heroImageAlt": "Cast Iron Chicken Fajitas — crew-sized firehall meal",
+  "heroImageAlt": "Cast Iron Chicken Fajitas — mexican skillet plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/cast-iron-chicken-fajitas.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/cast-iron-chicken-fajitas.jpg",
   "railImage": "/images/rails/hall-expansion/cast-iron-chicken-fajitas.jpg",
@@ -178,12 +187,12 @@
     "game day recipes"
   ],
   "relatedSlugs": [
-    "loaded-potato-skins",
-    "game-day-pizza-sliders",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "cajun-chicken-rice-skillet",
+    "pepper-steak-onions",
+    "enchilada-beef-skillet",
+    "kielbasa-cabbage-potato-skillet"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

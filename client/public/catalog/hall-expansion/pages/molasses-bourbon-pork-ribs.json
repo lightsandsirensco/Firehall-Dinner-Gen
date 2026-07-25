@@ -38,64 +38,64 @@
   ],
   "ingredients": [
     {
-      "name": "St. Louis Pork Ribs",
+      "name": "St. Louis pork ribs",
       "quantity": "3.2",
       "unit": "racks",
       "notes": "about 8 lb total",
       "group": "Main"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Rub"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Molasses",
+      "name": "molasses",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Bourbon",
+      "name": "bourbon",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "BBQ Sauce",
+      "name": "BBQ sauce",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Apple Juice",
+      "name": "apple juice",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for spritz and wrap",
       "group": "Glaze"
     }
@@ -159,10 +159,19 @@
     "protein": 38,
     "carbs": 28,
     "fats": 36,
-    "label": "~580 cal/serving · 38g protein · 1g fiber (est.)"
+    "label": "~580 cal/serving · 38g protein · 1g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
-  "heroImageAlt": "Molasses Bourbon Pork Ribs — crew-sized firehall meal",
+  "heroImageAlt": "Molasses Bourbon Pork Ribs — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/molasses-bourbon-pork-ribs.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/molasses-bourbon-pork-ribs.jpg",
   "railImage": "/images/rails/hall-expansion/molasses-bourbon-pork-ribs.jpg",
@@ -180,6 +189,6 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

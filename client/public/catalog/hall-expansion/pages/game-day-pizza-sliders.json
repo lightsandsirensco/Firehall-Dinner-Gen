@@ -38,68 +38,68 @@
   ],
   "ingredients": [
     {
-      "name": "Hawaiian Sweet Rolls",
+      "name": "Hawaiian sweet rolls",
       "quantity": "2",
       "unit": "packages",
       "notes": "12 rolls each",
       "group": "Main"
     },
     {
-      "name": "Pepperoni Slices",
+      "name": "pepperoni slices",
       "quantity": "6.4",
-      "unit": "Oz",
+      "unit": "oz",
       "group": "Filling"
     },
     {
-      "name": "Mozzarella Cheese",
+      "name": "mozzarella cheese",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "shredded",
       "group": "Filling"
     },
     {
-      "name": "Pizza Sauce",
+      "name": "pizza sauce",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Filling"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "melted",
       "group": "Topping"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced",
       "group": "Topping"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Topping"
     },
     {
-      "name": "Parmesan Cheese",
+      "name": "Parmesan cheese",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "grated",
       "group": "Topping"
     },
     {
-      "name": "Red Pepper Flakes",
+      "name": "red pepper flakes",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Topping"
     },
     {
-      "name": "Marinara Sauce",
+      "name": "marinara sauce",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "warm, for dipping",
       "group": "Serve"
     }
@@ -163,10 +163,19 @@
     "protein": 18,
     "carbs": 42,
     "fats": 20,
-    "label": "~420 cal/serving · 18g protein · 2g fiber (est.)"
+    "label": "~420 cal/serving · 18g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/game-day-pizza-sliders.jpg",
-  "heroImageAlt": "Game Day Pizza Sliders — crew-sized firehall meal",
+  "heroImageAlt": "Game Day Pizza Sliders — italian-american sheet_pan plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/game-day-pizza-sliders.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/game-day-pizza-sliders.jpg",
   "railImage": "/images/rails/hall-expansion/game-day-pizza-sliders.jpg",
@@ -179,11 +188,11 @@
   ],
   "relatedSlugs": [
     "loaded-potato-skins",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip",
-    "philly-cheesesteak-sliders"
+    "philly-cheesesteak-sliders",
+    "cheesy-beef-nacho-bake",
+    "sheet-pan-meatball-marinara"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.929Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

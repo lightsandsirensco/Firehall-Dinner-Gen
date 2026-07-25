@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Tomatillos",
+      "name": "tomatillos",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "husked and halved",
       "group": "Base"
     },
     {
-      "name": "Canned Green Chiles",
+      "name": "canned green chiles",
       "quantity": "2",
       "unit": "cans",
       "notes": "4 oz each",
       "group": "Base"
     },
     {
-      "name": "Cannellini Beans",
+      "name": "cannellini beans",
       "quantity": "2",
       "unit": "cans",
       "notes": "15 oz each, drained",
       "group": "Base"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "3/4",
       "unit": "whole",
       "notes": "diced",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "1 3/4",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "4.8",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Liquid"
     },
     {
-      "name": "Fresh Cilantro",
+      "name": "fresh cilantro",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
-      "name": "Lime",
+      "name": "lime",
       "quantity": "2",
       "unit": "whole",
       "notes": "wedged",
@@ -164,10 +164,19 @@
     "protein": 32,
     "carbs": 34,
     "fats": 12,
-    "label": "~360 cal/serving · 32g protein · 8g fiber (est.)"
+    "label": "~360 cal/serving · 32g protein · 8g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/green-chile-chicken-stew.jpg",
-  "heroImageAlt": "Green Chile Chicken Stew — crew-sized firehall meal",
+  "heroImageAlt": "Green Chile Chicken Stew — southwestern soup plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/green-chile-chicken-stew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/green-chile-chicken-stew.jpg",
   "railImage": "/images/rails/hall-expansion/green-chile-chicken-stew.jpg",
@@ -179,12 +188,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "hall-chicken-noodle-soup",
+    "malaysian-laksa-soup",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

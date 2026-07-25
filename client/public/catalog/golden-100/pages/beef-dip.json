@@ -13,10 +13,10 @@
   "cookTime": 210,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 692,
-  "protein": 59,
-  "carbs": 0,
-  "fats": 49,
+  "calories": 1050,
+  "protein": 62,
+  "carbs": 95,
+  "fats": 48,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -26,8 +26,10 @@
     "golden_100"
   ],
   "equipment": [
+    "Dutch oven (7-quart or larger)",
     "Large sheet trays",
     "Instant-read thermometer",
+    "Fat separator",
     "Aluminum foil"
   ],
   "ingredients": [
@@ -127,29 +129,29 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Season the roast beef",
-      "instruction": "Pat chuck roast or sirloin tip dry; rub all over with kosher salt and black pepper. Let sit at room temperature 30 minutes while the oven heats — cold centers extend cook time and dry the exterior.",
+      "title": "Season and temper the chuck",
+      "instruction": "Pat the chuck (or sirloin tip) dry; rub all over with kosher salt and black pepper. Let it sit at room temperature 30 minutes while the kitchen preheats — a cold center extends the cook and dries out the exterior before the middle catches up.",
       "minutes": 30,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Sear and roast the beef",
-      "instruction": "Sear the roast in a hot Dutch oven with oil until deeply browned on all sides. Add beef broth, onion halves, and garlic; cover and roast at 325°F 2½–3 hours until fork-tender and 200°F internal. Rest covered 20 minutes — juices stay in the meat for thin slicing.",
+      "instruction": "Sear the roast in a hot Dutch oven with oil 3–4 minutes per side until deeply browned all over — that crust is the backbone of the au jus. Add beef broth, halved yellow onions, and smashed garlic; cover and roast at 325°F for 2½–3 hours until fork-tender, well past the 145°F internal temp safe minimum and up around 200°F where collagen melts into gelatin. Rest covered 20 minutes so juices stay in the meat for thin slicing.",
       "minutes": 180,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
       "title": "Build the au jus",
-      "instruction": "Strain pan juices into a fat separator; skim most of the fat. Simmer defatted juices with a splash of Worcestershire and soy 10 minutes until deeply savory. Taste for salt — au jus should taste like concentrated beef broth, not plain water. Hold hot in a deep cambro for dipping.",
+      "instruction": "Strain pan juices into a fat separator; skim most of the fat. Simmer the defatted juices with the Worcestershire sauce and soy sauce 10 minutes until deeply savory — the soy adds glutamate depth without tasting Asian. Taste for salt: au jus should taste like concentrated roast drippings, not dishwater. Hold hot in a deep cambro for dipping.",
       "minutes": 15,
       "heatLevel": "medium-low"
     },
     {
       "stepNumber": 4,
       "title": "Slice beef paper-thin",
-      "instruction": "Slice rested roast across the grain as thin as possible — a sharp slicer or steady knife hand matters. Pile sliced beef in a hotel pan with a ladle of au jus spooned over to keep moist. Cover loosely with foil at 140°F until service.",
+      "instruction": "Slice the rested meat across the grain as thin as possible — a sharp slicer or steady knife hand matters, and thick slices chew like rope. Pile sliced beef in a hotel pan with a ladle of au jus spooned over to keep it moist. Cover loosely with foil and hold at 140°F until service.",
       "minutes": 15,
       "heatLevel": "low"
     },
@@ -191,7 +193,7 @@
     {
       "stepNumber": 10,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover sliced roast beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "instruction": "This one is built for calls — the sliced beef sits happily in its own hot au jus. If tones drop, submerge the sliced beef in the jus and hold the whole cambro at 140°F or above; the meat only gets more tender. On return, bring the jus back to a simmer, confirm the beef reads 165°F, and toast rolls fresh so they still survive a full dunk.",
       "minutes": 5,
       "heatLevel": "low"
     },
@@ -204,13 +206,11 @@
     }
   ],
   "proTips": [
-    "Slice beef only after a full rest — rushing guarantees dry dip sandwiches.",
+    "Slice beef only after a full rest, and cut it as thin as you can — thick slices chew like rope in a dip sandwich.",
     "Keep au jus hot in a deep cambro with a ladle — cold jus is the fastest way to lose hall cred.",
     "Toast rolls hard enough to survive a full dunk without disintegrating.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Skim the fat off the jus with a separator so it tastes like concentrated roast, not greasy broth.",
+    "Set the jus cups so the sandwich comes up halfway when dunked — that's the ratio that makes it a dip, not a soggy mess."
   ],
   "tonightSpread": [
     "Main: Beef dip sandwiches with hot au jus",
@@ -224,23 +224,28 @@
     "Store cold sides separately — hot and cold stacked overnight ruins texture.",
     "Reheat au jus separately and simmer sliced beef in jus 3 minutes until 165°F before second shift."
   ],
-  "whyCrewsLikeIt": "Au jus dip energy without the fuss. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "substitutions": [],
+  "whyCrewsLikeIt": "Au jus dip energy without the fuss — thin roast beef on a toasted roll with hot jus for dunking. Fitting for the wheel: by Philippe's own telling, the L.A. original of the French dip was made for a firefighter who loved a roll dropped in the drippings. One line, real portions, no drama at the stove.",
+  "substitutions": [
+    "No chuck at the store? Sirloin tip or bottom round works — slice even thinner since leaner cuts read tougher.",
+    "Swap provolone for Swiss or skip cheese entirely for the classic dip-only build.",
+    "No fat separator: chill strained juices 10 minutes in the freezer and spoon the fat off the top.",
+    "Optional upgrade: stir 1 tsp better-than-bouillon into the jus if the roast ran lean on drippings."
+  ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 692,
-    "protein": 59,
-    "carbs": 0,
-    "fats": 49,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 1050,
+    "protein": 62,
+    "carbs": 95,
+    "fats": 48,
+    "label": "per serving (hall portion, with rolls + fries)",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -277,6 +282,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "beef-dip",
-  "generatedAt": "2026-06-04T20:53:34.900Z",
-  "contentVersion": 4
+  "generatedAt": "2026-07-23T21:40:00.000Z",
+  "contentVersion": 5
 }

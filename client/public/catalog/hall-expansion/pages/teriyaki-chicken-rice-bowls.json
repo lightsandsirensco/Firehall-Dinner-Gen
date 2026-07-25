@@ -1,0 +1,266 @@
+{
+  "slug": "teriyaki-chicken-rice-bowls",
+  "title": "Teriyaki Chicken Rice Bowls",
+  "displayTitle": "Teriyaki Chicken Rice Bowls",
+  "seoTitle": "Teriyaki Chicken Rice Bowls | Firefighter Meal",
+  "shortDescription": "Glossy teriyaki chicken with rice and crisp vegetables",
+  "subtitle": "Glossy teriyaki chicken with rice and crisp vegetables",
+  "category": "hall_expansion",
+  "cuisine": "japanese",
+  "description": "Jasmine rice with homemade teriyaki chicken, broccoli, carrots, snap peas, edamame, and sesame.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 610,
+  "protein": 42,
+  "carbs": 69,
+  "fats": 18,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "chicken",
+    "healthy",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Rice pot",
+    "Two large skillets or woks",
+    "Saucepan",
+    "Instant-read thermometer",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken thighs",
+      "quantity": "3.2",
+      "unit": "lb",
+      "notes": "cubed",
+      "group": "Protein"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "5/8",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "3/8",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "ginger",
+      "quantity": "1 3/4",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "broccoli",
+      "quantity": "1.6",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "carrots",
+      "quantity": "1 1/4",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "snap peas",
+      "quantity": "1 1/4",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "edamame",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Vegetables"
+    },
+    {
+      "name": "sesame seeds",
+      "quantity": "1/4",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "green onions",
+      "quantity": "3/4",
+      "unit": "cup",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cut and stage teriyaki ingredients",
+      "instruction": "Cube thighs to 1-inch pieces, cut carrots into thin matchsticks, separate broccoli florets, and trim snap peas. Whisk soy, brown sugar, ginger, garlic, cornstarch, and water in a cold bowl. Keep edamame and green onions ready beside the stove; thick carrot coins will still be raw when peas go limp.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Steam the jasmine rice",
+      "instruction": "Rinse rice, bring it and measured salted water to a boil in a lidded pot, then simmer low 15 minutes. Rest it covered 10 minutes before fluffing. Do not peek while it cooks: escaping steam leaves a hard center and tempts you to add water too late.",
+      "minutes": 25,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Prepare chicken for a hard sear",
+      "instruction": "Pat chicken dry and season lightly with pepper; the teriyaki supplies plenty of salt. Heat a wide skillet over medium-high until oil shimmers and set a clean hotel pan nearby. Wet chicken cools the skillet and produces pale pieces, so blot it before it touches the oil.",
+      "minutes": 5,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Brown the teriyaki chicken",
+      "instruction": "Sear chicken 8–10 minutes, turning after a crust forms, until browned and 165°F in the largest piece. Move it to the hotel pan before sauce goes in. Chicken left in the skillet while the sweet glaze reduces will overcook before the sauce thickens.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Stir-fry the vegetables",
+      "instruction": "Use a second wok over high heat: cook carrots 3 minutes, add broccoli and snap peas for 4 minutes, then edamame for the final minute. Toss until bright with browned edges and no puddle in the pan. Vegetables that leak water need more pan space, not more heat.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Reduce the teriyaki glaze",
+      "instruction": "Pour the sauce into the emptied chicken skillet over medium heat and whisk 2–3 minutes until it coats a spoon. Return chicken and turn until glossy. Do not walk away once it bubbles; sugar moves from syrupy to burnt quickly on a hot flat-top.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold the hot bowl pans",
+      "instruction": "Cover rice, glazed chicken, and vegetables in separate hotel pans above 140°F. Stir a spoonful of glaze through chicken before holding so the pieces do not dry at the edges. Keep sesame and onion cold and dry; steam from a hot pan makes both lose their fresh crunch. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Portion the rice bowls",
+      "instruction": "Scoop jasmine rice into each bowl, lay chicken across the center, and add vegetables alongside in distinct sections. Spoon only a little extra glaze over the chicken. Pooling sauce beneath the rice makes the bottom mushy by the time the last bowl reaches the table.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Garnish the teriyaki bowls",
+      "instruction": "Sprinkle sesame seeds and green onions over the chicken, then offer chili crisp separately at the end of the line. Toasted sesame belongs on last; folding it into hot rice hides both its aroma and its crunch.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve the teriyaki supper",
+      "instruction": "Set bowls on the pass with mandarin segments and reserve covered hot pans for late crews. Put extra glaze in a small warm pitcher, not directly over every bowl. This keeps sweetness adjustable and keeps the service table from getting sticky.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover teriyaki chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool teriyaki chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Cut carrots thinner than snap peas so they finish in the same pan.",
+    "Rookie tip: Keep teriyaki below a hard boil once it thickens or the sugar scorches fast.",
+    "Use thighs for the best hold quality when dinner gets delayed.",
+    "Prep tip: Toast sesame seeds in a dry pan while the rice rests.",
+    "Rookie tip: Sauce the chicken off the main sear heat so the glaze stays glossy, not burnt."
+  ],
+  "tonightSpread": [
+    "Main: Teriyaki chicken rice bowls",
+    "Sides: Mandarin orange segments, miso soup cups",
+    "Condiments: Chili crisp, extra teriyaki, sesame seeds",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool teriyaki chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Fry the rice and vegetables the next day with a scrambled egg."
+  ],
+  "whyCrewsLikeIt": "It is familiar takeout comfort with controlled sweetness, a lot of vegetables, and fast bowl-line service.",
+  "mealPrepNotes": "Make-ahead: whisk teriyaki sauce and cut vegetables a day ahead. Storage: refrigerate chicken, rice, and vegetables separately for 3 days. Reheating: sprinkle rice with water, cover, and heat rice and chicken to 165°F; add sesame after reheating.",
+  "substitutions": [
+    "Use chicken breast for thighs.",
+    "Use bottled low-sodium teriyaki sauce.",
+    "Use frozen stir-fry vegetables.",
+    "Use brown rice instead of jasmine rice."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 610,
+    "protein": 42,
+    "carbs": 69,
+    "fats": 18,
+    "label": "~610 cal/serving · 42g protein · 8g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+  "heroImageAlt": "Teriyaki Chicken Rice Bowls — japanese bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "teriyaki chicken rice bowls",
+    "homemade teriyaki chicken",
+    "firehall asian dinner",
+    "chicken stir fry bowls",
+    "healthy chicken rice bowl",
+    "crew meal teriyaki",
+    "edamame rice bowl",
+    "meal prep teriyaki chicken"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

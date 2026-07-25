@@ -15,58 +15,58 @@
     "eggs",
     "station"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 20,
   "totalTime": 45,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "24",
+      "name": "large eggs",
+      "quantity": "19",
       "notes": "beaten in batches of 3 per omelette",
       "group": "Eggs"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "1/2 cup",
+      "name": "whole milk",
+      "quantity": "3/8",
       "notes": "whisked into beaten eggs",
       "group": "Eggs"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "2 cups",
+      "name": "shredded cheddar",
+      "quantity": "1.6",
       "notes": "and 2 cups shredded mozzarella",
       "group": "Fillings"
     },
     {
-      "name": "Diced Ham",
-      "quantity": "2 cups",
+      "name": "diced ham",
+      "quantity": "1.6",
       "notes": "and 1 lb cooked crumbled bacon",
       "group": "Fillings"
     },
     {
-      "name": "Sautéed Mushrooms",
-      "quantity": "2 cups",
+      "name": "sautéed mushrooms",
+      "quantity": "1.6",
       "notes": "and 1 cup diced bell peppers",
       "group": "Fillings"
     },
     {
-      "name": "Diced Tomatoes",
-      "quantity": "1 cup",
+      "name": "diced tomatoes",
+      "quantity": "3/4",
       "notes": "drained, plus 1 cup spinach",
       "group": "Fillings"
     },
     {
-      "name": "Butter",
-      "quantity": "4 tbsp",
+      "name": "butter",
+      "quantity": "3.2",
       "notes": "for pans, plus oil as needed",
       "group": "Fat"
     },
     {
-      "name": "Salsa And Hot Sauce",
-      "quantity": "1/2 cup",
+      "name": "salsa and hot sauce",
+      "quantity": "3/8",
       "notes": "at the line",
       "group": "Serve"
     }
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/fire-captain-omelette-bar.jpg",
   "thumbImage": "/images/thumbs/breakfast/fire-captain-omelette-bar.jpg",
   "imageAlt": "Fire captain omelette bar with fillings and folded omelettes on warm plates",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 9,
   "seoTitle": "Fire Captain Omelette Bar | Firehall Breakfast",
   "collectionTier": "healthier_hall"

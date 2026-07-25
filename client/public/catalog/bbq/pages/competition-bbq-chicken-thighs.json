@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "american",
   "description": "Adapted from classic competition chicken thigh tradition (Traeger, Meat Church): bone-in thighs get trimmed and squared, rubbed, smoked at 275°F, glazed, and finished until skin bites and meat hits 175°F.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "medium",
@@ -40,58 +40,58 @@
   "ingredients": [
     {
       "name": "Bone-In Chicken Thighs",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "notes": "about 6 lb, skin-on"
     },
     {
       "name": "Kosher Salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Brown Sugar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp"
     },
     {
       "name": "Smoked Paprika",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Garlic Powder",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Onion Powder",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp"
     },
     {
       "name": "Cayenne",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp"
     },
     {
       "name": "Honey",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup"
     },
     {
       "name": "BBQ Sauce",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup"
     },
     {
       "name": "Apple Cider Vinegar",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp"
     },
     {
       "name": "Butter",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp"
     }
   ],

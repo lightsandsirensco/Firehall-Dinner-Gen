@@ -19,6 +19,8 @@ import {
   canCompleteShoppingList,
   canContributeToShoppingList,
 } from "../../shared/hall-shopping-list/types.js";
+import { emitHallEvent } from "../hall-events/store.js";
+import { HallEventTypes } from "../../shared/hall-events/types.js";
 
 let db: SqliteDatabase;
 
@@ -424,6 +426,15 @@ export function completeShoppingList(
   d.prepare(
     `UPDATE hall_shopping_lists SET status = 'completed', completed_at = ?, updated_at = ? WHERE list_id = ?`,
   ).run(now, now, list.list_id);
+
+  emitHallEvent({
+    hall_id: hallId,
+    event_type: HallEventTypes.SHOPPING_RUN_COMPLETED,
+    actor_user_id: userId,
+    aggregate_type: "shopping_list",
+    aggregate_id: list.list_id,
+    payload: { list_id: list.list_id },
+  });
 
   const refreshed = d.prepare(`SELECT * FROM hall_shopping_lists WHERE list_id = ?`).get(list.list_id) as Record<
     string,

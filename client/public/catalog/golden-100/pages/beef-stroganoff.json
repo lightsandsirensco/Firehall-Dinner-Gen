@@ -7,16 +7,16 @@
   "subtitle": "Silky sauce, wide noodles",
   "category": "comfort_food",
   "cuisine": "russian",
-  "description": "Silky sauce, wide noodles. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Seared sirloin strips and hard-browned cremini in a Worcestershire-Dijon gravy, finished with tempered sour cream so the sauce never breaks. Classic technique sized for a full crew over buttered wide noodles.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 65,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 1177,
-  "protein": 68,
-  "carbs": 101,
-  "fats": 57,
+  "calories": 1250,
+  "protein": 78,
+  "carbs": 98,
+  "fats": 62,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -26,15 +26,18 @@
     "golden_100"
   ],
   "equipment": [
-    "8-quart stock pot",
-    "Large sheet trays",
+    "14-inch heavy skillet or wide sauté pan (or split between two)",
+    "8-quart pot for noodles",
+    "Colander",
+    "Mixing bowl for tempering",
     "Instant-read thermometer",
+    "Shallow hotel pans",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Beef Sirloin Or Chuck, Sliced Thin",
-      "quantity": "3",
+      "name": "Beef Sirloin (sliced thin across the grain)",
+      "quantity": "4",
       "unit": "Lb",
       "group": "Main"
     },
@@ -45,46 +48,45 @@
       "group": "Pasta"
     },
     {
-      "name": "Cremini Mushrooms, Sliced",
-      "quantity": "1.5",
+      "name": "Cremini Mushrooms (sliced thick)",
+      "quantity": "2",
       "unit": "Lb",
       "group": "Aromatics"
     },
     {
-      "name": "Yellow Onion, Sliced",
+      "name": "Yellow Onions (sliced)",
       "quantity": "2",
       "unit": "large",
       "group": "Aromatics"
     },
     {
-      "name": "Garlic Cloves, Minced",
+      "name": "Garlic Cloves (minced)",
       "quantity": "6",
       "unit": "cloves",
       "group": "Aromatics"
     },
     {
       "name": "Unsalted Butter",
-      "quantity": "4",
+      "quantity": "6",
       "unit": "Tbsp",
       "group": "Sauce"
     },
     {
       "name": "All-Purpose Flour",
-      "quantity": "3",
+      "quantity": "4",
       "unit": "Tbsp",
       "group": "Sauce"
     },
     {
       "name": "Beef Broth",
-      "quantity": "4",
+      "quantity": "5",
       "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Sour Cream",
+      "name": "Sour Cream (full-fat, room temperature)",
       "quantity": "2",
       "unit": "Cups",
-      "notes": "room temperature",
       "group": "Sauce"
     },
     {
@@ -118,7 +120,7 @@
       "group": "Seasoning"
     },
     {
-      "name": "Fresh Parsley, Chopped",
+      "name": "Fresh Parsley (chopped)",
       "quantity": "0.5",
       "unit": "Cup",
       "group": "Finish"
@@ -127,73 +129,121 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Slice beef and prep mushrooms",
-      "instruction": "Slice beef across the grain into thin strips. Pat dry and season with salt, pepper, and paprika. Slice mushrooms and onion — uniform pieces cook evenly in one pan.",
-      "minutes": 15,
+      "title": "Slice the sirloin and set up the pans",
+      "instruction": "Slice sirloin ¼ inch thick across the grain — cutting across the muscle fibers is what keeps quick-cooked strips tender instead of chewy. Pat the strips very dry, then season with kosher salt, black pepper, and smoked paprika. Slice cremini mushrooms thick and yellow onions thin, mince the garlic, and pull the sour cream out now so it loses its fridge chill — cold dairy hitting a hot pan is how stroganoff curdles.",
+      "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Sear beef in batches",
-      "instruction": "Melt 2 tbsp butter in a large skillet over high heat. Sear beef in a single layer 2 minutes per side until browned but still pink inside. Transfer to a plate — do not crowd or you steam instead of sear.",
+      "title": "Sear the beef hard, in three batches",
+      "instruction": "Melt 2 tbsp butter in the skillet over high heat until the foam dies down. Sear the beef strips in three batches in a single layer, 60–90 seconds per side, until deeply browned outside and still pink in the middle — they finish in the sauce later and land at a safe 145°F. A crowded pan steams the strips gray and leaks their juices. Transfer each batch to a bowl with its drippings.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Cook mushrooms and onions",
-      "instruction": "Add remaining butter to the pan. Cook mushrooms and onions over medium heat 10–12 minutes until deeply browned and moisture evaporates. Stir in garlic 30 seconds until fragrant.",
-      "minutes": 12,
-      "heatLevel": "medium"
+      "title": "Brown the mushrooms until the pan goes quiet",
+      "instruction": "Drop to medium-high and add the cremini mushrooms with a pinch of salt to the same pan. Cook 8–10 minutes, stirring only occasionally, until their water cooks off and the edges turn deep brown — the loud sizzle fading to a quiet crackle is your cue the browning has started. Stirring constantly keeps them wet and rubbery instead of browned and meaty.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
-      "title": "Build the stroganoff sauce",
-      "instruction": "Sprinkle flour over vegetables; cook 1 minute. Whisk in beef broth and Worcestershire; simmer 5 minutes until thickened. Remove from heat, stir in Dijon, then fold in sour cream — boiling curdles sour cream.",
-      "minutes": 12,
-      "heatLevel": "medium-low"
+      "title": "Soften the onions and bloom the paprika",
+      "instruction": "Add 2 tbsp butter and the sliced yellow onions with a pinch of salt. Cook 5–6 minutes on medium until soft with golden edges, scraping up the browned crust from the pan bottom. Stir in garlic for 30 seconds, then the smoked paprika for 30 seconds more — paprika is fat-soluble and scorches fast, so it goes in late and gets stirred constantly until fragrant.",
+      "minutes": 8,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 5,
-      "title": "Return beef and simmer gently",
-      "instruction": "Return beef and any juices to the pan. Simmer 5–8 minutes on low until beef is tender and sauce coats a spoon. Taste for salt — beef broth varies.",
+      "title": "Build the gravy base",
+      "instruction": "Add the last 2 tbsp butter, sprinkle the flour over the vegetables, and stir 1 minute to cook off the raw taste. Whisk in the broth about a cup at a time, letting each addition smooth out before the next — dumping it all at once guarantees lumps. Add the Worcestershire and simmer 5–6 minutes until the gravy coats the back of a spoon and a finger swipe holds a clean line.",
       "minutes": 8,
-      "heatLevel": "low"
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 6,
-      "title": "Boil noodles and serve",
-      "instruction": "Boil egg noodles in salted water until tender; drain well. Toss noodles with stroganoff on sheet trays or serve noodles first with sauce ladled over. Finish with parsley.",
-      "minutes": 12,
-      "heatLevel": "medium"
+      "title": "Boil the egg noodles",
+      "instruction": "While the gravy simmers, boil the wide egg noodles in heavily salted water 6–8 minutes until just tender with a slight bite — they soften more under hot sauce on the tray. Scoop out a cup of the starchy water, drain the noodles, and toss with a knob of butter so they don't weld together while they wait.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Temper the sour cream so it never breaks",
+      "instruction": "Kill the heat under the gravy. Whisk the sour cream in a bowl, then whisk in hot gravy one ladle at a time until the bowl feels warm — raising the dairy's temperature gradually keeps it from curdling on contact. Stir the warmed mixture back into the pan with the Dijon mustard. From this point the sauce never gets hotter than a bare shimmer; a rolling bubble is what turns silky stroganoff grainy.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Marry the meat and sauce over low heat",
+      "instruction": "Return the strips and every drop of their collected juices to the pan. Warm gently 3–4 minutes on low, stirring, until an instant-read thermometer in the thickest strip reads 145°F — hot through, still tender, never boiled. Taste the sauce and adjust with salt and a crack of pepper; broth brands vary wildly in salt.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Sauce the noodles and call the crew",
+      "instruction": "Spread the buttered noodles in hotel pans and ladle the stroganoff over the top, loosening with splashes of the reserved noodle water if it tightens up. Shower with chopped parsley and cracked black pepper — the fresh bite cuts through all that richness. Serve within 15 minutes; the noodles drink the gravy the longer they sit.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover beef stroganoff — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool beef stroganoff and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
-    "Taste for salt at the end — hall palates run salty after long shifts."
+    "Freeze the sirloin 20 minutes before slicing — firm meat cuts into thin, even strips instead of ragged chunks.",
+    "Sour cream straight from the fridge curdles on contact with hot gravy — room temperature plus tempering is the whole secret to a silky finish.",
+    "Mushrooms are browned when the pan goes quiet — the loud sizzle is water leaving; flavor starts after it stops.",
+    "If the finished sauce tastes flat, it wants Dijon and a splash of Worcestershire before it wants more salt.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Serve wide egg noodles with stroganoff sauce ladled over — sour cream sauce stays separate from any tomato pan.",
-    "Keep extra parsley and black pepper at the line; mushrooms should be visible in every scoop."
+    "Main: Beef stroganoff with seared sirloin and browned cremini",
+    "Sides: buttered wide egg noodles, chopped parsley and cracked pepper at the line",
+    "Condiments: extra sour cream for the crew that likes it extra rich",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Add a splash of stock or water when reheating — thick sauces tighten in the fridge."
+    "Cool beef stroganoff in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Keep sauce and noodles in separate pans if you can — noodles drink the gravy overnight and turn to paste.",
+    "Reheat gently on the stove with a splash of broth, never at a hard bubble — day-two sour cream breaks even faster than day-one."
   ],
-  "whyCrewsLikeIt": "Silky sauce, wide noodles. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "whyCrewsLikeIt": "Steakhouse flavor out of one skillet — hard-seared beef, deep mushroom gravy, and a mountain of buttered noodles that disappears before the dishes hit the sink.",
   "substitutions": [
-    "Any short pasta shape works — penne, rigatoni, or spaghetti."
+    "Ground beef swaps for sirloin in a pinch — brown it hard to 160°F and drain; it eats more like hamburger gravy but the flavor holds.",
+    "Full-fat Greek yogurt stands in for sour cream measure-for-measure — temper it even more carefully, it breaks faster.",
+    "White button mushrooms work if cremini are gone — brown them harder to make up for the milder flavor.",
+    "No noodles? Serve over mashed potatoes or steamed rice; thin the gravy with an extra ½ cup broth so it pours."
   ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1177,
-    "protein": 68,
-    "carbs": 101,
-    "fats": 57,
+    "calories": 1250,
+    "protein": 78,
+    "carbs": 98,
+    "fats": 62,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -223,6 +273,8 @@
     "pasta",
     "comfort",
     "beef stroganoff egg noodles",
+    "classic beef stroganoff",
+    "sour cream mushroom gravy",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -235,6 +287,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.193Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

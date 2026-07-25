@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Ripe peach halves grill until caramelized, serve on arugula with burrata, prosciutto crisps, basil, and balsamic reduction for ten.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 12,
   "prepTime": 15,
   "difficulty": "medium",
@@ -39,66 +39,66 @@
   "ingredients": [
     {
       "name": "Ripe Peaches",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "notes": "halved and pitted",
       "group": "Main"
     },
     {
       "name": "Burrata Cheese",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Lb",
       "notes": "about 10 balls",
       "group": "Salad"
     },
     {
       "name": "Baby Arugula",
-      "quantity": "8",
+      "quantity": "6.4",
       "unit": "Cups",
       "group": "Salad"
     },
     {
       "name": "Prosciutto Di Parma",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Lb",
       "notes": "crisped",
       "group": "Salad"
     },
     {
       "name": "Pistachios",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
       "name": "Prosecco Reduction",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Finish"
     },
     {
       "name": "Peach Nectar",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "group": "Grill"
     },
     {
       "name": "Fresh Mint",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "torn",
       "group": "Finish"
     },
     {
       "name": "Maldon Salt",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Seasoning"
     },
     {
       "name": "Lavender Honey",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "group": "Grill"
     }

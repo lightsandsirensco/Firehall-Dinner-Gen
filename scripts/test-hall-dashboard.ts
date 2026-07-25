@@ -9,7 +9,7 @@ import { ANALYTICS_EVENT_TYPES } from "../shared/analytics/events.js";
 function main(): void {
   assert.ok(ANALYTICS_EVENT_TYPES.includes("hall_dashboard_viewed"));
 
-  assert.equal(HALL_DASHBOARD.title, "Linked Hall");
+  assert.equal(HALL_DASHBOARD.title, "Hall");
   assert.equal(HALL_DASHBOARD.myHall, "My Hall");
   assert.equal(HALL_IDENTITY.myHall, "My Hall");
   assert.equal(HALL_IDENTITY.stationNotSet, "Station not set");

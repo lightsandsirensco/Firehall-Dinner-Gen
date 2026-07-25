@@ -3,20 +3,20 @@
   "title": "Sun-Dried Tomato Pesto Panini Press",
   "displayTitle": "Sun-Dried Tomato Pesto Panini Press",
   "seoTitle": "Sun-Dried Tomato Pesto Panini Press | Firehall BBQ",
-  "shortDescription": "Pesto panini night—grilled chicken, pressed ciabatta, hall sandwich service",
-  "subtitle": "Charred chicken breast, basil pesto, and pressed ciabatta for ten",
+  "shortDescription": "Pesto panini night—grilled chicken, pressed focaccia, crackling crust for the crew",
+  "subtitle": "Grilled chicken, sun-dried tomato pesto, and pressed focaccia for the crew",
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
-  "description": "Marinated chicken breasts grill to 165°F, slice, and stack on ciabatta with basil pesto, roasted red peppers, and provolone. Press on the griddle until crisp.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Balsamic-shallot marinated chicken grilled to 165°F, sliced on the bias, and pressed into focaccia with sun-dried tomato pesto and drained buffalo mozzarella until the crust crackles.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 25,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 971,
-  "protein": 95,
-  "carbs": 1,
-  "fats": 63,
+  "calories": 940,
+  "protein": 70,
+  "carbs": 52,
+  "fats": 44,
   "tags": [
     "protein:chicken",
     "format:hoagie_press",
@@ -30,50 +30,52 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "flat-top griddle",
-    "griddle or flat-top",
-    "panini press or heavy spatula",
-    "instant-read thermometer",
-    "cutting board"
+    "Gas or charcoal grill",
+    "Flat-top griddle or two heavy cast-iron pans",
+    "Panini weight or heavy sheet pan",
+    "Meat mallet",
+    "Instant-read thermometer",
+    "Cutting board",
+    "Tongs"
   ],
   "ingredients": [
     {
       "name": "Chicken Breast",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
-      "notes": "about 10 breasts",
+      "notes": "8 large breasts, pounded even",
       "group": "Main"
     },
     {
       "name": "Sun-Dried Tomato Pesto",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Cups",
       "group": "Panini"
     },
     {
       "name": "Focaccia Loaves",
-      "quantity": "5",
+      "quantity": "4",
       "unit": "whole",
-      "notes": "split into 10 sandwiches",
+      "notes": "each split into 2 sandwiches",
       "group": "Panini"
     },
     {
       "name": "Buffalo Mozzarella",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Lb",
-      "notes": "sliced",
+      "notes": "sliced and pressed dry",
       "group": "Panini"
     },
     {
       "name": "Oil-Packed Sun-Dried Tomatoes",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "notes": "drained and sliced",
       "group": "Panini"
     },
     {
       "name": "Grapeseed Oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Marinade"
     },
@@ -91,14 +93,19 @@
       "group": "Marinade"
     },
     {
-      "name": "Peppered Arugula",
+      "name": "Garlic Cloves",
       "quantity": "4",
+      "group": "Marinade"
+    },
+    {
+      "name": "Peppered Arugula",
+      "quantity": "3",
       "unit": "Cups",
       "group": "Finish"
     },
     {
       "name": "Clarified Butter",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "for pressing",
       "group": "Griddle"
@@ -107,82 +114,111 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Marinate chicken",
-      "instruction": "Pound breasts even. Marinate in olive oil, lemon juice, garlic, and salt at least 1 hour.",
+      "title": "Pound and marinate the chicken",
+      "instruction": "Pound the chicken breasts between plastic wrap to an even 3/4 inch — the thin tail of an unpounded breast dries out long before the thick end is safe. Whisk the grapeseed oil, white balsamic vinegar, minced shallots, garlic, and a tablespoon of salt, then toss with the chicken. Refrigerate 1–2 hours; past 4, the vinegar starts turning the surface mealy.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Grill chicken",
-      "instruction": "Grill breasts at 425°F 6–7 minutes per side until 165°F internal. Rest 5 minutes and slice.",
-      "minutes": 18,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 3,
-      "title": "Hold sliced chicken",
-      "instruction": "Hold sliced chicken covered at 170°F in hotel pans until sandwich build.",
-      "minutes": 5,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 4,
-      "title": "Heat griddle",
-      "instruction": "Preheat griddle or flat-top to 375°F. Butter outer sides of ciabatta splits.",
-      "minutes": 8,
-      "heatLevel": "medium"
-    },
-    {
-      "stepNumber": 5,
-      "title": "Build panini",
-      "instruction": "Layer pesto, chicken slices, roasted pepper, provolone, and arugula on ciabatta.",
+      "title": "Press the mozzarella dry",
+      "instruction": "Slice the buffalo mozzarella 1/4 inch thick and press it between paper towels with a sheet pan on top while you work — buffalo mozzarella carries a lot of whey, and one wet slice steams the crust soggy from the inside. Slice the drained sun-dried tomatoes into ribbons and wash and dry the peppered arugula.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
+      "stepNumber": 3,
+      "title": "Grill the chicken to 165°F",
+      "instruction": "Grill the breasts over medium-high, about 450°F at the grate, 5–6 minutes per side, and leave them alone until they release — tearing them off early rips the crust away. They're finished at 165°F on an instant-read at the thickest point, with deep golden bar marks and clear juices. Crowding the grate drops the heat and trades char for steam.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Rest, then slice on the bias",
+      "instruction": "Rest the chicken 5 minutes on a cutting board so the juices redistribute instead of flooding the bread, then slice 1/2 inch thick on the bias. Bias slices lie flat and stack without sliding — thick chunks punch through the top of the sandwich under the weight of the press.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Split and paint the focaccia",
+      "instruction": "Split each focaccia loaf horizontally and cut into sandwich squares — two per loaf, eight total. Spoon the sun-dried tomato pesto onto both cut faces and take it edge to edge; a dry rim is the first thing a tired crew notices. Go heavier than looks reasonable — the press mutes it.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
       "stepNumber": 6,
-      "title": "Press on griddle",
-      "instruction": "Press sandwiches on griddle 3 minutes per side until bread is crisp and cheese melts.",
+      "title": "Build every sandwich before the press",
+      "instruction": "Layer each sandwich: mozzarella on the bottom face, sliced chicken, sun-dried tomato ribbons, more mozzarella, then the top. Cheese on both faces glues the sandwich shut as it melts. Add the peppered arugula now if the crew likes it wilted and mellow; hold it for after the press if they want pepper and crunch.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Heat the flat-top, butter the outsides",
+      "instruction": "Preheat the flat-top or two heavy pans to 375°F — a water drop should skitter and dance, not vanish instantly. Brush the outside faces of every sandwich with clarified butter; whole butter's milk solids scorch black at pressing temperatures, while clarified goes deep, even gold.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Press until the crust crackles",
+      "instruction": "Press the sandwiches 3–4 minutes per side under a panini weight or a heavy sheet pan with cans stacked on top. You want a deep golden, crackling crust with cheese just creeping out the seams. The chicken inside already hit 165°F, so the press has one job: crisp and melt. If the surface races past golden toward black, drop it to 350°F.",
       "minutes": 12,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 7,
-      "title": "Hold wrapped",
-      "instruction": "Hold finished panini wrapped in foil at 170°F up to 20 minutes.",
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover grilled chicken and panini — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
-      "heatLevel": ""
+      "heatLevel": "low"
     },
     {
-      "stepNumber": 8,
-      "title": "Line for ten",
-      "instruction": "One panini per firefighter. Cut diagonal for service if desired.",
-      "minutes": 5,
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool grilled chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Pound chicken even—thick spots dry while thin edges burn.",
-    "Butter outer bread, not the griddle, for even crisp.",
-    "Arugula after press if crew wants crunch; before press if they want wilted greens."
+    "Pound to an even 3/4 inch every time — uniform thickness does more for juicy chicken than any marinade.",
+    "Press the buffalo mozzarella dry or skip it — wet cheese turns the middle of the sandwich to soup.",
+    "Re-crisp held panini 2 minutes per side on a dry flat-top; foil-wrapped holding softens the crust.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Grilled chicken pesto panini with arugula.",
-    "Tomato soup shooters or simple chips."
+    "Main: Pressed chicken and sun-dried tomato pesto panini",
+    "Sides: tomato soup cups, kettle chips",
+    "Condiments: extra pesto, red pepper flakes",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Slice panini into croutons for salad.",
-    "Chop chicken into pesto pasta next shift."
+    "Cool grilled chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Re-crisp day-two panini 4–5 minutes per side on a dry 350°F flat-top — the microwave turns them to sponges.",
+    "Extra sliced chicken becomes pesto pasta or a chopped salad next shift."
   ],
-  "whyCrewsLikeIt": "Panini press on the griddle turns sandwich night into an event. Chicken holds sliced at 170°F; sandwiches build fast when crew sits down.",
-  "mealPrepNotes": "Grill chicken at 425°F to 165°F, rest and slice. Hold sliced chicken at 170°F up to 30 minutes. Press panini to order or in batches at 375°F, 3 minutes each.",
+  "whyCrewsLikeIt": "A crackling pressed crust, real grilled chicken instead of deli meat, and pesto that soaks into the focaccia — sandwich night that actually smells like the grill.",
+  "mealPrepNotes": "Marinate the chicken up to 4 hours ahead and grill to 165°F before the crew sits down. Hold sliced chicken covered at 140°F or above up to 30 minutes. Press sandwiches in batches at 375°F, 3–4 minutes per side.",
+  "substitutions": [
+    "Low-moisture provolone or fresh mozzarella swaps for buffalo mozzarella and is far more forgiving on moisture.",
+    "Basil pesto works 1:1 if sun-dried tomato pesto is out — brighter and less sweet.",
+    "Ciabatta stands in for focaccia; it presses thinner and crispier.",
+    "No clarified butter? Olive oil browns clean at 375°F, or make your own by melting butter and skimming the foam."
+  ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 971,
-    "protein": 95,
-    "carbs": 1,
-    "fats": 63,
+    "calories": 940,
+    "protein": 70,
+    "carbs": 52,
+    "fats": 44,
     "label": "per serving (hall portion)",
     "source": "estimated"
   },
@@ -203,8 +239,9 @@
     "bbq",
     "firehall",
     "grilled chicken pesto panini",
-    "ciabatta chicken press",
-    "italian panini crew"
+    "focaccia chicken press",
+    "italian panini crew",
+    "pressed focaccia sandwich"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -213,6 +250,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.444Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

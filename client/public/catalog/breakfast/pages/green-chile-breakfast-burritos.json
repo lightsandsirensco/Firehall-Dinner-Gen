@@ -15,58 +15,58 @@
     "bacon",
     "handheld"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 25,
   "cookTime": 25,
   "totalTime": 50,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "18",
+      "name": "large eggs",
+      "quantity": "14",
       "notes": "soft-scrambled",
       "group": "Filling"
     },
     {
-      "name": "Bacon",
-      "quantity": "2 lb",
+      "name": "bacon",
+      "quantity": "1.6",
       "notes": "cooked crisp and crumbled",
       "group": "Filling"
     },
     {
-      "name": "Diced Breakfast Potatoes",
-      "quantity": "4 cups",
+      "name": "diced breakfast potatoes",
+      "quantity": "3",
       "notes": "crisped on the griddle",
       "group": "Filling"
     },
     {
-      "name": "Shredded Cheddar",
-      "quantity": "3 cups",
+      "name": "shredded cheddar",
+      "quantity": "2.4",
       "notes": "sharp or medium",
       "group": "Filling"
     },
     {
-      "name": "Roasted Green Chile Sauce",
-      "quantity": "3 cups",
+      "name": "roasted green chile sauce",
+      "quantity": "2.4",
       "notes": "Hatch-style, mild or hot",
       "group": "Sauce"
     },
     {
-      "name": "Large Flour Tortillas",
-      "quantity": "10",
+      "name": "large flour tortillas",
+      "quantity": "8",
       "notes": "12-inch, warmed",
       "group": "Build"
     },
     {
-      "name": "Sour Cream",
-      "quantity": "1 cup",
+      "name": "sour cream",
+      "quantity": "3/4",
       "notes": "for the line",
       "group": "Finish"
     },
     {
-      "name": "Cilantro",
-      "quantity": "1/2 cup",
+      "name": "cilantro",
+      "quantity": "3/8",
       "notes": "chopped, plus lime wedges",
       "group": "Finish"
     }
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/green-chile-breakfast-burritos.jpg",
   "thumbImage": "/images/thumbs/breakfast/green-chile-breakfast-burritos.jpg",
   "imageAlt": "Green chile breakfast burritos with eggs, bacon, and potatoes for the crew",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T20:48:24.991Z",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Green Chile Breakfast Burritos | Firehall Breakfast",
   "collectionTier": "firehall_classic"

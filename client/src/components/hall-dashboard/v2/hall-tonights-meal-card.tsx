@@ -44,7 +44,7 @@ export function HallTonightsMealCard({ entry, className }: HallTonightsMealCardP
           <h2 className="font-heading text-base tracking-wide">{HALL_DASHBOARD.tonight}</h2>
         </div>
         <Link
-          href="/tonight"
+          href="/hall#hall-tonight"
           className="text-xs font-semibold text-primary inline-flex items-center gap-0.5 shrink-0 min-h-11 px-2 touch-manipulation"
         >
           Open hub

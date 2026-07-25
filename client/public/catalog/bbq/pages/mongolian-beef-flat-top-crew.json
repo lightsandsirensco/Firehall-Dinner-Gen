@@ -7,9 +7,9 @@
   "subtitle": "Crisp flank strips, sweet-savory sauce, and scallions for ten",
   "category": "bbq_grill_nights",
   "cuisine": "chinese-american",
-  "description": "Flank steak strips coat in cornstarch, sear crisp on the griddle, and toss with sweet-savory Mongolian sauce and scallions. Served over steamed rice.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "description": "Flank steak sliced thin, dredged in cornstarch, and seared crisp on a ripping-hot flat-top, then tossed with a soy–brown sugar glaze, charred scallions, and a splash of black vinegar. The takeout classic, sized for a full crew.",
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
@@ -30,150 +30,194 @@
     "firehall_bbq_30"
   ],
   "equipment": [
-    "griddle or flat-top",
-    "metal spatulas",
-    "instant-read thermometer",
-    "hotel pans",
-    "mixing bowls"
+    "Griddle or flat-top",
+    "Metal spatulas",
+    "Instant-read thermometer",
+    "Hotel pans",
+    "Mixing bowls",
+    "Heavy pot with tight lid (for rice)"
   ],
   "ingredients": [
     {
       "name": "Flank Steak",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
       "notes": "thin-sliced against grain",
       "group": "Main"
     },
     {
       "name": "Cornstarch",
-      "quantity": "0.33",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Crisp coat"
     },
     {
-      "name": "Coconut Aminos",
-      "quantity": "0.5",
+      "name": "Low-Sodium Soy Sauce",
+      "quantity": "1",
       "unit": "Cup",
       "group": "Mongolian sauce"
     },
     {
       "name": "Dark Brown Sugar",
-      "quantity": "0.33",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Mongolian sauce"
     },
     {
-      "name": "Chinese Black Vinegar",
+      "name": "Shaoxing Wine",
       "quantity": "3",
       "unit": "Tbsp",
       "group": "Mongolian sauce"
     },
     {
+      "name": "Fresh Ginger",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "notes": "minced",
+      "group": "Mongolian sauce"
+    },
+    {
+      "name": "Garlic Cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Mongolian sauce"
+    },
+    {
       "name": "Dried Thai Chilies",
-      "quantity": "6",
+      "quantity": "5",
       "unit": "whole",
       "group": "Mongolian sauce"
     },
     {
-      "name": "Shaoxing Wine",
-      "quantity": "2",
+      "name": "Chinese Black Vinegar",
+      "quantity": "1.5",
       "unit": "Tbsp",
-      "group": "Mongolian sauce"
+      "group": "Finish"
     },
     {
-      "name": "Garlic Chives",
-      "quantity": "2",
+      "name": "Scallions",
+      "quantity": "3",
       "unit": "bunches",
-      "notes": "cut into 2-inch pieces",
+      "notes": "cut into 2-inch batons",
       "group": "Finish"
     },
     {
       "name": "Peanut Oil",
-      "quantity": "0.33",
+      "quantity": "1/3",
       "unit": "Cup",
       "group": "Griddle"
     },
     {
       "name": "Jasmine Rice",
-      "quantity": "10",
+      "quantity": "4",
       "unit": "Cups",
-      "notes": "cooked",
+      "notes": "dry",
       "group": "Service"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Slice and coat flank",
-      "instruction": "Slice flank thin against the grain. Toss with cornstarch until lightly coated. Shake off excess.",
+      "title": "Slice the flank thin and set the dredge",
+      "instruction": "Chill the flank steak in the freezer 20 minutes so it firms up, then slice ¼ inch thick against the grain — find the long muscle lines and cut across them, or every strip eats chewy. Toss the slices with the Shaoxing wine and 2 tablespoons of the soy sauce, rest 10 minutes, then toss with cornstarch until every piece wears a thin, tacky coat. That crust is what crisps on the hot metal and later grabs the sauce.",
       "minutes": 20,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Build Mongolian sauce",
-      "instruction": "Whisk soy, brown sugar, hoisin, garlic, and ginger until smooth. Hold warm at 140°F.",
+      "title": "Start the jasmine rice early",
+      "instruction": "Rinse the jasmine rice until the water runs nearly clear — surface starch is what turns a pot gummy. Add 5 cups water and a pinch of salt, bring to a boil, then cover and drop to low for 12 minutes. Kill the heat and let it steam 10 more without lifting the lid; peeking dumps the steam that finishes the top layer.",
+      "minutes": 18,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stir the sauce and stage the aromatics",
+      "instruction": "Whisk the remaining soy sauce, dark brown sugar, and 1 cup water until the sugar fully dissolves. Mince the ginger and garlic, tear the dried Thai chilies in half, and cut the scallions into 2-inch batons. Line everything up in bowls next to the flat-top — once the sauce hits hot metal it reduces in about 2 minutes, and there is no time to hunt for a cutting board.",
       "minutes": 8,
       "heatLevel": ""
     },
     {
-      "stepNumber": 3,
-      "title": "Heat griddle hot",
-      "instruction": "Preheat griddle to 450°F. Add oil in thin film.",
+      "stepNumber": 4,
+      "title": "Get the griddle ripping hot",
+      "instruction": "Preheat the griddle on high 8–10 minutes to about 450°F — a drop of water should skitter and vanish within 2 seconds. Wipe on a thin film of peanut oil just before the first batch goes down; oil added too early smokes out and turns gummy. A surface that is not fully hot is the number-one reason the cornstarch crust comes out pale and soggy instead of crisp.",
       "minutes": 10,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 4,
-      "title": "Sear beef batches",
-      "instruction": "Sear flank strips in single layers 2 minutes per side until crisp and 130°F. Work in batches. Hold at 170°F.",
+      "stepNumber": 5,
+      "title": "Sear the beef in single layers",
+      "instruction": "Lay the flank strips flat in a single layer and leave them alone 2 minutes so a deep brown crust forms before you flip; move them early and the coating tears off. Flip and cook 1–2 minutes more until the edges crisp and the thickest strips read 145°F on an instant-read thermometer. Work in three or four batches — a crowded surface steams the meat gray. Pull each finished batch to a sheet pan.",
       "minutes": 12,
       "heatLevel": "high"
     },
     {
-      "stepNumber": 5,
-      "title": "Griddle scallions",
-      "instruction": "Quickly griddle green onion pieces 1–2 minutes until lightly charred.",
-      "minutes": 3,
-      "heatLevel": "high"
-    },
-    {
       "stepNumber": 6,
-      "title": "Sauce toss at service",
-      "instruction": "Toss crisp beef with warm Mongolian sauce and scallions at the line—not during long hold.",
+      "title": "Bloom the aromatics and reduce the sauce",
+      "instruction": "Drop to medium, add the ginger, garlic, and torn Thai chilies to the oiled surface, and stir 30–45 seconds until fragrant but not browned — scorched garlic turns the whole batch bitter. Pour on the soy–sugar mixture and let it bubble 2–3 minutes until it reduces to a syrup thick enough that a spatula drag leaves a visible trail.",
       "minutes": 5,
-      "heatLevel": ""
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 7,
-      "title": "Hold sauced beef",
-      "instruction": "If needed, hold sauced beef covered at 170°F up to 15 minutes max.",
+      "title": "Toss strips, scallions, and vinegar at the finish",
+      "instruction": "Return the seared strips and any juices, add the scallion batons, and toss 60–90 seconds until every piece is glossy and the scallions turn bright green but still have snap. Kill the heat and hit the pile with the Chinese black vinegar — a long sweet glaze needs that acid snap or the tray eats flat by the third bite.",
+      "minutes": 3,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Build the trays over rice",
+      "instruction": "Fluff the rice with a fork and spread it into hotel pans, then pile the glazed strips and scallions over top so the sauce seeps down into the grains. Portion about 8 oz of meat per firefighter, and scatter any extra crisp scallion ends over the trays before you call the crew.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
-      "stepNumber": 8,
-      "title": "Platter for ten",
-      "instruction": "Serve Mongolian beef over steamed rice. About 8 oz beef per firefighter.",
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the Mongolian beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Mongolian beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Cornstarch coat is the crisp secret—don't skip or oversaturate.",
-    "Single-layer searing only; crowded beef steams and greys.",
-    "Sauce toss at service keeps crust from going soggy in hold."
+    "Freeze the flank 20 minutes before slicing — a firm steak cuts into even ¼-inch strips instead of ragged shreds.",
+    "Dredge in cornstarch right before the sear; coated strips that sit around turn gummy and never crisp.",
+    "If the glaze over-reduces into candy, whisk in a splash of hot water to bring it back to a pourable syrup.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Mongolian beef flat top with steamed rice.",
-    "Quick cucumber salad with rice vinegar."
+    "Main: Crispy Mongolian beef with charred scallions",
+    "Sides: steamed jasmine rice, quick cucumber salad with rice vinegar",
+    "Condiments: extra dried chilies, toasted sesame seeds if the pantry has them",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Mongolian beef lettuce wraps next shift.",
-    "Chop into fried rice with extra scallions."
+    "Cool Mongolian beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Re-crisp leftover strips in a hot dry skillet 2–3 minutes instead of the microwave — steam kills the crust.",
+    "Chop day-two leftovers into fried rice with extra scallions and a knob of ginger."
   ],
-  "whyCrewsLikeIt": "Mongolian beef is a flat-top classic that isn't stir-fry night in a wok. Cornstarch crust survives hold at 170°F better than naked beef strips.",
-  "mealPrepNotes": "Slice flank thin against grain. Sear in batches at 450°F—do not crowd. Sauce toss at service. Hold beef covered at 170°F up to 25 minutes.",
+  "whyCrewsLikeIt": "Takeout-counter crunch without the wok — the cornstarch crust stays crisp under a glossy sweet-savory glaze, and the sauce toss happens at service so nothing goes soggy while the crew lines up.",
+  "substitutions": [
+    "Sirloin or skirt steak swaps 1:1 for flank — skirt cooks even faster, so pull it at the first sign of crisp edges.",
+    "No Shaoxing wine? Dry sherry matches closest; a splash of chicken broth works in a pinch with slightly less depth.",
+    "Coconut aminos swap 1:1 for soy sauce (gluten-free) — they run sweeter, so cut the brown sugar by a third.",
+    "No Chinese black vinegar? Rice vinegar plus a pinch of sugar lands in the same neighborhood."
+  ],
+  "mealPrepNotes": "Slice flank thin against the grain and dredge just before searing. Sear in single layers at 450°F — never crowd the surface. Sauce toss happens at service; hold seared strips dry and covered up to 25 minutes.",
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1400,
@@ -201,7 +245,8 @@
     "firehall",
     "mongolian beef flat top",
     "griddled flank mongolian",
-    "crisp mongolian beef crew"
+    "crisp mongolian beef crew",
+    "takeout style mongolian beef"
   ],
   "relatedSlugs": [
     "carolina-vinegar-pulled-pork",
@@ -210,6 +255,6 @@
     "brisket-style-beef-sandwiches-au-jus"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
-  "generatedAt": "2026-06-04T20:47:49.453Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-23T21:10:00.000Z",
+  "contentVersion": 3
 }

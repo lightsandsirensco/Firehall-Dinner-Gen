@@ -1,0 +1,207 @@
+{
+  "slug": "salsa-verde-chicken-crock",
+  "title": "Salsa Verde Chicken Crock",
+  "displayTitle": "Salsa Verde Chicken Crock",
+  "seoTitle": "Salsa Verde Chicken Crock | Firefighter Meal",
+  "shortDescription": "Tender green-chile chicken for tacos and bowls",
+  "subtitle": "Tender green-chile chicken for tacos and bowls",
+  "category": "hall_expansion",
+  "cuisine": "Mexican-inspired",
+  "description": "Chicken cooks gently in salsa verde with beans and corn, then shreds for tacos or rice bowls.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 390,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 620,
+  "protein": 44,
+  "carbs": 62,
+  "fats": 19,
+  "tags": [
+    "protein:chicken",
+    "format:slow_cooker",
+    "category:crew_feeders",
+    "slow_cooker",
+    "taco_night",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "slow cooker",
+    "foil",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken thighs",
+      "quantity": "4.8",
+      "unit": "lb"
+    },
+    {
+      "name": "salsa verde",
+      "quantity": "4.8",
+      "unit": "cups"
+    },
+    {
+      "name": "black beans",
+      "quantity": "5",
+      "unit": "cans"
+    },
+    {
+      "name": "corn",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "tortillas",
+      "quantity": "24",
+      "unit": "each"
+    },
+    {
+      "name": "limes",
+      "quantity": "4.8",
+      "unit": "each"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Morning start",
+      "instruction": "Add chicken thighs and salsa verde to the slow cooker, keeping raw chicken away from toppings.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook low",
+      "instruction": "Cover and cook on low for 6 to 7 hours without opening the lid repeatedly.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm beans",
+      "instruction": "Rinse beans and stir them in for the final hour so they do not break apart.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Check temperature",
+      "instruction": "Check the thickest thigh reaches 165°F before removing it to shred.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Shred chicken",
+      "instruction": "Shred chicken with two forks and return it to the salsa so each piece stays juicy.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Add corn",
+      "instruction": "Stir in corn and cook until it is hot throughout, about 10 minutes.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Taste salsa",
+      "instruction": "Taste the sauce and add lime juice; add salt only after tasting the salsa verde.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Warm tortillas",
+      "instruction": "Wrap tortillas in foil and warm at 200°F until flexible, not crisp.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold safely",
+      "instruction": "Keep chicken on warm above 140°F and keep cheese and sour cream cold.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve bar",
+      "instruction": "Offer chicken in tortillas or bowls with beans, corn, lime, and toppings.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the chicken thighs — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the cheese and sour cream cold the whole time — they don't belong anywhere near that hold cabinet. On return, spot-check the chicken at a safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Chicken thighs and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use thighs because they stay tender on warm.",
+    "Keep mild and hot salsa separate.",
+    "Drain excess sauce for less messy tacos."
+  ],
+  "tonightSpread": [
+    "Main: Salsa verde shredded chicken",
+    "Sides: cilantro rice, tortilla chips",
+    "Condiments: sour cream, jalapeños, cotija",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Chicken thighs in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Bake leftovers into green enchiladas."
+  ],
+  "whyCrewsLikeIt": "It has a hands-off morning start and adapts to whatever tortillas or rice are on hand.",
+  "mealPrepNotes": "Make-ahead: portion toppings one day ahead. Storage: refrigerate chicken 3 days. Reheating: heat chicken to 165°F.",
+  "substitutions": [
+    "Use chicken breasts for thighs.",
+    "Use pinto beans for black beans."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 620,
+    "protein": 44,
+    "carbs": 62,
+    "fats": 19,
+    "label": "~620 cal/serving · 44g protein · 10g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+  "heroImageAlt": "Salsa Verde Chicken Crock — Mexican-inspired slow_cooker plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/salsa-verde-chicken-crock.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/salsa-verde-chicken-crock.jpg",
+  "railImage": "/images/rails/hall-expansion/salsa-verde-chicken-crock.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "salsa verde chicken slow cooker crowd",
+    "crockpot taco night firehall",
+    "slow cooker chicken tacos ten",
+    "green chile chicken bowls"
+  ],
+  "relatedSlugs": [
+    "mississippi-pot-roast-crew",
+    "white-chicken-chili-crock",
+    "italian-beef-slow-cooker",
+    "loaded-baked-potato-soup-crock"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

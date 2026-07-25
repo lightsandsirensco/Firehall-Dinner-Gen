@@ -1,0 +1,207 @@
+{
+  "slug": "sausage-gnocchi-skillet",
+  "title": "Sausage Gnocchi Skillet",
+  "displayTitle": "Sausage Gnocchi Skillet",
+  "seoTitle": "Sausage Gnocchi Skillet | Firefighter Meal",
+  "shortDescription": "Creamy tomato gnocchi with sausage and spinach",
+  "subtitle": "Creamy tomato gnocchi with sausage and spinach",
+  "category": "hall_expansion",
+  "cuisine": "Italian-American",
+  "description": "Italian sausage, pillowy gnocchi, tomato sauce, spinach, and mozzarella cook into a quick crew dinner.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 760,
+  "protein": 35,
+  "carbs": 75,
+  "fats": 35,
+  "tags": [
+    "protein:sausage",
+    "format:skillet",
+    "category:crew_feeders",
+    "one_pot",
+    "weeknight",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "deep skillet with lid",
+    "thermometer",
+    "wide spoon"
+  ],
+  "ingredients": [
+    {
+      "name": "Italian sausage",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "shelf-stable gnocchi",
+      "quantity": "4.8",
+      "unit": "lb"
+    },
+    {
+      "name": "marinara sauce",
+      "quantity": "9.6",
+      "unit": "cups"
+    },
+    {
+      "name": "spinach",
+      "quantity": "1.6",
+      "unit": "lb"
+    },
+    {
+      "name": "mozzarella",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "onions",
+      "quantity": "1.6",
+      "unit": "each"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat skillet",
+      "instruction": "Heat a deep skillet over medium-high so sausage browns before the sauce is added.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown sausage",
+      "instruction": "Cook sausage, breaking it into bite-size pieces until browned and no pink remains.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Check sausage",
+      "instruction": "Confirm sausage reaches 165°F with a thermometer before continuing.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Soften onion",
+      "instruction": "Add onion and cook until translucent, scraping any browned sausage bits into the pan.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Add sauce",
+      "instruction": "Pour in marinara and a little water, then bring it to a gentle simmer.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Cook gnocchi",
+      "instruction": "Stir gnocchi into sauce and simmer until tender; stir often so it does not stick.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Wilt spinach",
+      "instruction": "Add spinach in handfuls and fold until it wilts into the hot sauce.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Melt cheese",
+      "instruction": "Scatter mozzarella over the top, cover, and let residual steam melt it without scorching.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold safely",
+      "instruction": "Keep the skillet covered above 140°F; loosen with hot water if gnocchi thickens.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Spoon servings",
+      "instruction": "Serve immediately with a wide spoon so each portion includes sausage, gnocchi, and sauce.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Italian sausage — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Italian sausage and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use two skillets for faster service.",
+    "Do not boil gnocchi aggressively or it can break.",
+    "Add red pepper flakes individually."
+  ],
+  "tonightSpread": [
+    "Main: Creamy sausage gnocchi skillet",
+    "Sides: garlic bread, Italian salad",
+    "Condiments: parmesan, red pepper flakes, basil",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Italian sausage in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Bake leftovers with extra mozzarella."
+  ],
+  "whyCrewsLikeIt": "It is fast enough for a weeknight and needs only one skillet plus a side salad.",
+  "mealPrepNotes": "Make-ahead: slice sausage and grate cheese 1 day ahead. Storage: refrigerate 3 days. Reheating: heat sausage and sauce to 165°F.",
+  "substitutions": [
+    "Use turkey sausage for pork sausage.",
+    "Use kale for spinach."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 760,
+    "protein": 35,
+    "carbs": 75,
+    "fats": 35,
+    "label": "~760 cal/serving · 35g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+  "heroImageAlt": "Sausage Gnocchi Skillet — Italian-American skillet plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/sausage-gnocchi-skillet.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/sausage-gnocchi-skillet.jpg",
+  "railImage": "/images/rails/hall-expansion/sausage-gnocchi-skillet.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "sausage gnocchi skillet crowd",
+    "one pot gnocchi dinner ten",
+    "Italian sausage firehall meal",
+    "weeknight crew skillet"
+  ],
+  "relatedSlugs": [
+    "cajun-chicken-rice-skillet",
+    "cast-iron-chicken-fajitas",
+    "pepper-steak-onions",
+    "enchilada-beef-skillet"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

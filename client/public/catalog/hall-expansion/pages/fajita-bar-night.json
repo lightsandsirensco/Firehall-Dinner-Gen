@@ -38,67 +38,67 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Breast",
+      "name": "chicken breast",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "thin-sliced",
       "group": "Main"
     },
     {
-      "name": "Bell Peppers",
+      "name": "bell peppers",
       "quantity": "3",
       "unit": "whole",
       "notes": "mixed colors, sliced",
       "group": "Veg"
     },
     {
-      "name": "Yellow Onions",
+      "name": "yellow onions",
       "quantity": "2",
       "unit": "whole",
       "notes": "sliced",
       "group": "Veg"
     },
     {
-      "name": "Fajita Seasoning",
+      "name": "fajita seasoning",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Lime Juice",
+      "name": "lime juice",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Marinade"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Cook"
     },
     {
-      "name": "Flour Tortillas",
+      "name": "flour tortillas",
       "quantity": "16",
       "unit": "whole",
       "notes": "warm",
       "group": "Bar"
     },
     {
-      "name": "Shredded Cheddar",
+      "name": "shredded cheddar",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Sour Cream",
+      "name": "sour cream",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Guacamole",
+      "name": "guacamole",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     }
   ],
@@ -161,10 +161,19 @@
     "protein": 38,
     "carbs": 32,
     "fats": 18,
-    "label": "~450 cal/serving · 38g protein · 4g fiber (est.)"
+    "label": "~450 cal/serving · 38g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/fajita-bar-night.jpg",
-  "heroImageAlt": "Fajita Bar Night — crew-sized firehall meal",
+  "heroImageAlt": "Fajita Bar Night — mexican bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/fajita-bar-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/fajita-bar-night.jpg",
   "railImage": "/images/rails/hall-expansion/fajita-bar-night.jpg",
@@ -176,12 +185,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night",
-    "rice-bowl-bar-night"
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

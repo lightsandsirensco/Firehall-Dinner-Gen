@@ -15,57 +15,57 @@
     "sausage",
     "batch-cook"
   ],
-  "crewSize": 12,
-  "baseServings": 12,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "24-Count Slider Roll Package",
-      "quantity": "1",
+      "name": "24-count slider roll package",
+      "quantity": "3/4",
       "notes": "connected, not separated",
       "group": "Build"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "14",
+      "name": "large eggs",
+      "quantity": "9",
       "notes": "whisked with 2 tbsp milk",
       "group": "Egg layer"
     },
     {
-      "name": "Kosher Salt",
-      "quantity": "1/2 tsp",
+      "name": "kosher salt",
+      "quantity": "3/8",
       "notes": "and black pepper",
       "group": "Egg layer"
     },
     {
-      "name": "Pre-Cooked Sausage Patties",
-      "quantity": "12",
+      "name": "pre-cooked sausage patties",
+      "quantity": "8",
       "notes": "thin, fit slider size",
       "group": "Protein"
     },
     {
-      "name": "American Or Cheddar Cheese",
-      "quantity": "12 slices",
+      "name": "American or cheddar cheese",
+      "quantity": "8",
       "group": "Protein"
     },
     {
-      "name": "Butter",
-      "quantity": "3 tbsp",
+      "name": "butter",
+      "quantity": "2",
       "notes": "melted for brushing tops",
       "group": "Finish"
     },
     {
-      "name": "Everything Bagel Seasoning",
-      "quantity": "1 tsp",
+      "name": "everything bagel seasoning",
+      "quantity": "5/8",
       "notes": "optional",
       "group": "Finish"
     },
     {
-      "name": "Hot Sauce Or Ketchup",
-      "quantity": "1/2 cup",
+      "name": "hot sauce or ketchup",
+      "quantity": "3/8",
       "notes": "at the line",
       "group": "Serve"
     }
@@ -142,8 +142,8 @@
   "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
   "imageAlt": "Sheet pan of pull-apart breakfast slider sandwiches with egg and sausage",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Sheet Pan Breakfast Sandwiches | Firehall Breakfast",
   "collectionTier": "firehall_classic"

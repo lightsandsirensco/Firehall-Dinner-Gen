@@ -61,11 +61,16 @@ export function buildHallExpansionRecipePage(
     "firefighter_meal",
   ];
 
-  const relatedSlugs = HALL_EXPANSION_ADAPTED_RECIPES.filter(
-    (r) => r.slug !== recipe.slug && r.category === recipe.category,
-  )
-    .slice(0, 4)
-    .map((r) => r.slug);
+  const relatedFromFormat = HALL_EXPANSION_ADAPTED_RECIPES.filter(
+    (r) => r.slug !== recipe.slug && r.mealFormat === recipe.mealFormat,
+  );
+  const relatedFromCategory = HALL_EXPANSION_ADAPTED_RECIPES.filter(
+    (r) =>
+      r.slug !== recipe.slug &&
+      r.category === recipe.category &&
+      !relatedFromFormat.some((x) => x.slug === r.slug),
+  );
+  const relatedSlugs = [...relatedFromFormat, ...relatedFromCategory].slice(0, 4).map((r) => r.slug);
 
   return {
     slug: recipe.slug,
@@ -91,10 +96,11 @@ export function buildHallExpansionRecipePage(
     ingredients,
     steps: recipe.steps,
     proTips: recipe.proTips.slice(0, 8),
-    tonightSpread: recipe.tonightSpread,
-    leftovers: recipe.leftovers,
+    tonightSpread: recipe.tonightSpread.slice(0, 6),
+    leftovers: recipe.leftovers.slice(0, 5),
     whyCrewsLikeIt: recipe.whyCrewsLikeIt,
     mealPrepNotes: recipe.mealPrepNotes.slice(0, 500),
+    substitutions: recipe.substitutions?.slice(0, 8),
     spiceLevel: recipe.spiceLevel,
     cleanupDifficulty: recipe.cleanupDifficulty,
     nutrition: {
@@ -103,9 +109,18 @@ export function buildHallExpansionRecipePage(
       carbs: n.carbs,
       fats: n.fats,
       label: `~${n.calories} cal/serving · ${n.protein}g protein · ${fiber}g fiber (est.)`,
+      source: "estimated" as const,
+      filterFlags: {
+        highProtein: n.protein >= 30,
+        under700Calories: n.calories < 700,
+        under30gFat: n.fats < 30,
+        highCarb: n.carbs >= 50,
+        lowCarb: n.carbs < 30,
+        mealPrepFriendly: true,
+      },
     },
     heroImage: images.heroImage,
-    heroImageAlt: `${recipe.title} — crew-sized firehall meal`,
+    heroImageAlt: `${recipe.title} — ${recipe.cuisine} ${recipe.mealFormat} plated for a firehall crew`,
     mobileImage: images.mobileImage,
     thumbImage: images.thumbImage,
     railImage: images.railImage,

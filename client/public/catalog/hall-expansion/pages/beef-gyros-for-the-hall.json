@@ -35,68 +35,68 @@
   ],
   "ingredients": [
     {
-      "name": "Beef Skirt Or Sirloin Steak",
+      "name": "beef skirt or sirloin steak",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Beef"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Beef"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "2",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "1",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Paprika",
+      "name": "paprika",
       "quantity": "1",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Spice"
     },
     {
-      "name": "Kosher Salt And Black Pepper",
+      "name": "kosher salt and black pepper",
       "quantity": "1",
       "unit": "batch",
       "group": "Spice"
     },
     {
-      "name": "Pita Breads",
+      "name": "pita breads",
       "quantity": "10",
       "unit": "count",
       "group": "Pita"
     },
     {
-      "name": "Tzatziki",
+      "name": "tzatziki",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Tomatoes",
+      "name": "tomatoes",
       "quantity": "3",
       "unit": "large",
       "notes": "diced",
       "group": "Veg"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "1",
       "unit": "count",
       "notes": "thinly sliced",
@@ -162,10 +162,19 @@
     "protein": 38,
     "carbs": 40,
     "fats": 26,
-    "label": "~560 cal/serving · 38g protein · 2g fiber (est.)"
+    "label": "~560 cal/serving · 38g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
-  "heroImageAlt": "Beef Gyros — crew-sized firehall meal",
+  "heroImageAlt": "Beef Gyros — greek handheld plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/beef-gyros-for-the-hall.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/beef-gyros-for-the-hall.jpg",
   "railImage": "/images/rails/hall-expansion/beef-gyros-for-the-hall.jpg",
@@ -177,12 +186,12 @@
     "gyro pita crew"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "bbq-meatball-skewers",
+    "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
+    "buffalo-chicken-wraps"
   ],
   "sourceUrl": "https://www.seriouseats.com/gyros-recipe",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

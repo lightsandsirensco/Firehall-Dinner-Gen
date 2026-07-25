@@ -1,0 +1,207 @@
+{
+  "slug": "peanut-chicken-rice-bowls",
+  "title": "Peanut Chicken Rice Bowls",
+  "displayTitle": "Peanut Chicken Rice Bowls",
+  "seoTitle": "Peanut Chicken Rice Bowls | Firefighter Meal",
+  "shortDescription": "Saucy chicken, crunchy vegetables, and rice for ten",
+  "subtitle": "Saucy chicken, crunchy vegetables, and rice for ten",
+  "category": "hall_expansion",
+  "cuisine": "Thai-inspired",
+  "description": "Tender chicken, jasmine rice, cabbage, carrots, and peanut sauce make a filling build-your-own bowl.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 690,
+  "protein": 42,
+  "carbs": 72,
+  "fats": 27,
+  "tags": [
+    "protein:chicken",
+    "format:bowls",
+    "category:crew_feeders",
+    "bowls",
+    "weeknight",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "rice cooker or stockpot",
+    "wide skillet",
+    "instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "peanut butter",
+      "quantity": "1 1/4",
+      "unit": "cups"
+    },
+    {
+      "name": "shredded cabbage",
+      "quantity": "2",
+      "unit": "heads"
+    },
+    {
+      "name": "carrots",
+      "quantity": "1.6",
+      "unit": "lb"
+    },
+    {
+      "name": "lime",
+      "quantity": "3.2",
+      "unit": "each"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Rinse rice",
+      "instruction": "Rinse rice until the water is less cloudy, then cook with water in a covered pot.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Whisk sauce",
+      "instruction": "Whisk peanut butter, soy sauce, lime juice, warm water, and chili sauce until pourable.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cut chicken",
+      "instruction": "Cut thighs into bite-size pieces so they cook evenly; wash hands and board afterward.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Heat pan",
+      "instruction": "Heat a wide skillet over medium-high until a drop of water sizzles, then add oil.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Brown chicken",
+      "instruction": "Cook chicken in batches without crowding, turning until browned and 165°F in the thickest piece.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Cook vegetables",
+      "instruction": "Stir cabbage and carrots in the hot pan for 3 minutes so they soften but remain crisp.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Sauce chicken",
+      "instruction": "Return chicken to the skillet and toss with half the peanut sauce; loosen with water if it clumps.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Fluff rice",
+      "instruction": "Rest cooked rice covered for 5 minutes, then fluff gently with a fork.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Check heat",
+      "instruction": "Hold chicken above 140°F and keep cold toppings below 40°F until the meal break.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Build bowls",
+      "instruction": "Spoon rice into bowls, add sauced chicken and vegetables, then drizzle remaining sauce.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Chicken thighs — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Chicken thighs and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Thin peanut sauce with hot water, not oil.",
+    "Keep lime wedges separate for bright flavour.",
+    "Use sunflower butter for a peanut-free crew."
+  ],
+  "tonightSpread": [
+    "Main: Peanut chicken bowls",
+    "Sides: cucumber salad, orange wedges",
+    "Condiments: lime wedges, chili crisp, crushed peanuts",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Chicken thighs in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Turn leftovers into cold noodle salad."
+  ],
+  "whyCrewsLikeIt": "The sauce can be made ahead and the toppings hold well for staggered dinner breaks.",
+  "mealPrepNotes": "Make-ahead: cook rice and sauce up to 2 days ahead. Storage: refrigerate components separately for 3 days. Reheating: heat chicken to 165°F before serving.",
+  "substitutions": [
+    "Use tofu or chickpeas for chicken.",
+    "Use brown rice or cauliflower rice."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 690,
+    "protein": 42,
+    "carbs": 72,
+    "fats": 27,
+    "label": "~690 cal/serving · 42g protein · 7g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+  "heroImageAlt": "Peanut Chicken Rice Bowls — Thai-inspired bowls plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/peanut-chicken-rice-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/peanut-chicken-rice-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/peanut-chicken-rice-bowls.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "peanut chicken rice bowls",
+    "firehall chicken bowls",
+    "Thai chicken crew dinner",
+    "peanut sauce meal prep"
+  ],
+  "relatedSlugs": [
+    "firehall-gyro-bowls",
+    "salmon-rice-bowls-crew",
+    "korean-turkey-rice-bowls",
+    "leftover-roast-beef-bowls"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

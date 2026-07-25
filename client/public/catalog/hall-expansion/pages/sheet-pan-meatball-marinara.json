@@ -38,66 +38,66 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (80/20)",
+      "name": "ground beef (80/20)",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Breadcrumbs",
+      "name": "breadcrumbs",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Main"
     },
     {
-      "name": "Eggs",
+      "name": "eggs",
       "quantity": "2",
       "unit": "whole",
       "group": "Main"
     },
     {
-      "name": "Grated Parmesan",
+      "name": "grated Parmesan",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Main"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced",
       "group": "Main"
     },
     {
-      "name": "Marinara Sauce",
+      "name": "marinara sauce",
       "quantity": "6.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Spaghetti",
+      "name": "spaghetti",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Base"
     },
     {
-      "name": "Fresh Basil",
+      "name": "fresh basil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
-      "name": "Sub Rolls",
+      "name": "sub rolls",
       "quantity": "8",
       "unit": "rolls",
       "notes": "optional for sandwiches",
       "group": "Service"
     },
     {
-      "name": "Shredded Mozzarella",
+      "name": "shredded mozzarella",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "optional for subs",
       "group": "Service"
     }
@@ -161,10 +161,19 @@
     "protein": 42,
     "carbs": 52,
     "fats": 24,
-    "label": "~580 cal/serving · 42g protein · 4g fiber (est.)"
+    "label": "~580 cal/serving · 42g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
-  "heroImageAlt": "Sheet Pan Meatball Marinara Feed — crew-sized firehall meal",
+  "heroImageAlt": "Sheet Pan Meatball Marinara Feed — italian sheet_pan plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/sheet-pan-meatball-marinara.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/sheet-pan-meatball-marinara.jpg",
   "railImage": "/images/rails/hall-expansion/sheet-pan-meatball-marinara.jpg",
@@ -176,12 +185,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "philly-cheesesteak-sliders",
+    "cheesy-beef-nacho-bake"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

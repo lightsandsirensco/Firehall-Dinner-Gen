@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "mexican",
   "description": "Corn grills until charred, kernels cut into cups, and topped with epazote crema, queso fresco, Tajín, and crushed totopos at service.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 20,
   "prepTime": 20,
   "difficulty": "medium",
@@ -39,64 +39,64 @@
   "ingredients": [
     {
       "name": "Corn On The Cob",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "ears",
       "group": "Main"
     },
     {
       "name": "Mexican Crema",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Epazote crema"
     },
     {
       "name": "Fresh Epazote",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "chopped",
       "group": "Epazote crema"
     },
     {
       "name": "Queso Fresco",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Cups",
       "notes": "crumbled",
       "group": "Topping"
     },
     {
       "name": "Tajín Seasoning",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "group": "Topping"
     },
     {
       "name": "Crushed Totopos",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Cups",
       "group": "Topping"
     },
     {
       "name": "Chipotle Mayo",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Topping"
     },
     {
       "name": "Fresh Cilantro",
-      "quantity": "0.33",
+      "quantity": "1/4",
       "unit": "Cup",
       "notes": "chopped",
       "group": "Topping"
     },
     {
       "name": "Lime Wedges",
-      "quantity": "10",
+      "quantity": "8",
       "unit": "whole",
       "group": "Service"
     },
     {
       "name": "Avocado Oil",
-      "quantity": "3",
+      "quantity": "2.6",
       "unit": "Tbsp",
       "group": "Grill"
     }

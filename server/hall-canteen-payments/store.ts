@@ -18,6 +18,8 @@ import {
   CANTEEN_PAYMENT_FREQUENCY_LABELS,
   CANTEEN_PAYMENT_STATUS_LABELS,
 } from "../../shared/hall-canteen-payments/types.js";
+import { emitHallEvent } from "../hall-events/store.js";
+import { HallEventTypes } from "../../shared/hall-events/types.js";
 
 let db: Database | null = null;
 
@@ -220,6 +222,19 @@ export function markCanteenMemberPaid(
       (history_id, hall_id, user_id, paid_at, marked_by_user_id, due_date_at_payment, frequency)
      VALUES (?, ?, ?, datetime('now'), ?, ?, ?)`,
   ).run(randomUUID(), hallId, targetUserId, actorUserId, dueDateAtPayment, frequency);
+
+  emitHallEvent({
+    hall_id: hallId,
+    event_type: HallEventTypes.PAYMENT_RECEIVED,
+    actor_user_id: actorUserId,
+    aggregate_type: "dues_member",
+    aggregate_id: targetUserId,
+    payload: {
+      member_name: memberDisplayName(hallId, targetUserId),
+      frequency,
+      due_date_at_payment: dueDateAtPayment,
+    },
+  });
 
   return getCanteenPaymentsPayload(hallId, actorUserId);
 }

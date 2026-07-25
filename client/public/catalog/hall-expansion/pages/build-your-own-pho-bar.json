@@ -39,64 +39,64 @@
   ],
   "ingredients": [
     {
-      "name": "Beef Broth",
+      "name": "beef broth",
       "quantity": "1 1/4",
       "unit": "gallons",
       "group": "Broth"
     },
     {
-      "name": "Star Anise",
+      "name": "star anise",
       "quantity": "3",
       "unit": "whole",
       "group": "Broth"
     },
     {
-      "name": "Cinnamon Stick",
+      "name": "cinnamon stick",
       "quantity": "3/4",
       "unit": "whole",
       "group": "Broth"
     },
     {
-      "name": "Fresh Ginger",
+      "name": "fresh ginger",
       "quantity": "2.4",
       "unit": "inches",
       "notes": "charred, sliced",
       "group": "Broth"
     },
     {
-      "name": "Rice Noodles",
+      "name": "rice noodles",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Noodles"
     },
     {
-      "name": "Sirloin Steak",
+      "name": "sirloin steak",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "thin-sliced frozen",
       "group": "Protein"
     },
     {
-      "name": "Bean Sprouts",
+      "name": "bean sprouts",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Thai Basil",
+      "name": "Thai basil",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Green Onions",
+      "name": "green onions",
       "quantity": "3/4",
       "unit": "bunch",
       "notes": "sliced",
       "group": "Bar"
     },
     {
-      "name": "Hoisin And Sriracha",
+      "name": "hoisin and sriracha",
       "quantity": "3/8",
       "unit": "cup each",
       "group": "Sauce"
@@ -161,10 +161,19 @@
     "protein": 28,
     "carbs": 48,
     "fats": 12,
-    "label": "~420 cal/serving · 28g protein · 3g fiber (est.)"
+    "label": "~420 cal/serving · 28g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/build-your-own-pho-bar.jpg",
-  "heroImageAlt": "Build-Your-Own Pho Bar — crew-sized firehall meal",
+  "heroImageAlt": "Build-Your-Own Pho Bar — vietnamese bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/build-your-own-pho-bar.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/build-your-own-pho-bar.jpg",
   "railImage": "/images/rails/hall-expansion/build-your-own-pho-bar.jpg",
@@ -176,12 +185,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

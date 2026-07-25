@@ -50,14 +50,16 @@ import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildRecipePageSeo } from "@shared/seo/metadata";
 
 import {
-
+  approvalScoreToRatingValue,
   buildBreadcrumbListSchema,
-
+  buildOrganizationSchema,
   buildRecipeSchema,
-
+  buildWebSiteSchema,
   type BreadcrumbItem,
-
 } from "@shared/seo/schema";
+import { buildRecipeAuthorityLinks } from "@shared/seo/recipe-authority-links";
+import { CREW_RATING_MIN_VOTES_TO_SHOW_COUNT } from "@shared/recipe-crew-ratings/constants";
+import { crewRatingQueryKey, fetchRecipeCrewRating } from "@/lib/recipe-crew-ratings-api";
 
 import type { GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
@@ -444,21 +446,34 @@ export default function GoldenRecipePageView() {
 
   );
 
-
+  const { data: ratingView } = useQuery({
+    queryKey: crewRatingQueryKey(slug || ""),
+    queryFn: () => fetchRecipeCrewRating(slug!),
+    enabled: Boolean(slug),
+    staleTime: 60_000,
+  });
 
   const seoJsonLd = useMemo(() => {
 
     if (!page) return undefined;
 
+    const aggregate =
+      ratingView &&
+      ratingView.approvalScore != null &&
+      ratingView.totalVotes >= CREW_RATING_MIN_VOTES_TO_SHOW_COUNT
+        ? {
+            ratingValue: approvalScoreToRatingValue(ratingView.approvalScore),
+            ratingCount: ratingView.totalVotes,
+          }
+        : undefined;
+
     return [
-
-      buildRecipeSchema(origin, page),
-
+      buildOrganizationSchema(origin),
+      buildWebSiteSchema(origin),
+      buildRecipeSchema(origin, page, aggregate ? { aggregateRating: aggregate } : undefined),
       buildBreadcrumbListSchema(origin, breadcrumbs),
-
     ];
-
-  }, [page, origin, breadcrumbs]);
+  }, [page, origin, breadcrumbs, ratingView]);
 
 
 
@@ -476,6 +491,11 @@ export default function GoldenRecipePageView() {
     if (!entry) return [];
     return buildRecipeLinkClusters(entry, catalog.recipes, { equipment: page.equipment });
   }, [page, catalog?.recipes]);
+
+  const authorityLinks = useMemo(
+    () => (page ? buildRecipeAuthorityLinks(page) : null),
+    [page],
+  );
 
   const relatedQueries = useQuery({
 
@@ -927,9 +947,14 @@ export default function GoldenRecipePageView() {
 
 
 
-            <RecipeInternalLinks clusters={linkClusters} className="mt-4" />
+            <RecipeInternalLinks
+              clusters={linkClusters}
+              pillar={authorityLinks?.pillar}
+              guide={authorityLinks?.guide}
+              className="mt-4"
+            />
 
-
+            <InternalLinkHub title="More firefighter meal hubs" className="mt-8" />
 
             {page.classicSlug && (
 

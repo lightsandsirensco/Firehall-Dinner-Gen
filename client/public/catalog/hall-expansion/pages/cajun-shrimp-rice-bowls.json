@@ -1,0 +1,265 @@
+{
+  "slug": "cajun-shrimp-rice-bowls",
+  "title": "Cajun Shrimp Rice Bowls",
+  "displayTitle": "Cajun Shrimp Rice Bowls",
+  "seoTitle": "Cajun Shrimp Rice Bowls | Firefighter Meal",
+  "shortDescription": "Cajun shrimp, seasoned rice, vegetables, and creamy lime sauce",
+  "subtitle": "Cajun shrimp, seasoned rice, vegetables, and creamy lime sauce",
+  "category": "hall_expansion",
+  "cuisine": "cajun",
+  "description": "Seasoned rice topped with Cajun shrimp, peppers, corn, black beans, avocado, tomatoes, cilantro, and creamy lime sauce.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 520,
+  "protein": 38,
+  "carbs": 61,
+  "fats": 15,
+  "tags": [
+    "protein:shrimp",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "seafood",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Rice pot",
+    "Two large skillets",
+    "Instant-read thermometer",
+    "Hotel pans",
+    "Squeeze bottles"
+  ],
+  "ingredients": [
+    {
+      "name": "large shrimp",
+      "quantity": "3.2",
+      "unit": "lb",
+      "notes": "peeled and deveined",
+      "group": "Protein"
+    },
+    {
+      "name": "Cajun seasoning",
+      "quantity": "2.6",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "rice",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "bell peppers",
+      "quantity": "4",
+      "unit": "each",
+      "group": "Vegetables"
+    },
+    {
+      "name": "corn",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Vegetables"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "group": "Vegetables"
+    },
+    {
+      "name": "avocados",
+      "quantity": "3.2",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "tomatoes",
+      "quantity": "4",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "cilantro",
+      "quantity": "3/8",
+      "unit": "cup",
+      "group": "Finish"
+    },
+    {
+      "name": "lime",
+      "quantity": "4.8",
+      "unit": "each",
+      "group": "Sauce"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "1 1/4",
+      "unit": "cups",
+      "group": "Sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Stage shrimp and vegetables",
+      "instruction": "Pat shrimp dry, slice peppers, dice tomatoes, cube avocado, drain beans, and whisk sour cream with lime in a cold bowl. Keep shrimp refrigerated until the skillet is ready; warm shrimp shed water and will never sear cleanly.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook Cajun rice",
+      "instruction": "Toast rice in oil in a covered pot for 2 minutes, add salted water and a pinch of Cajun seasoning, then simmer low until tender. Rest covered 10 minutes and fluff. Too much spice in the base competes with the shrimp.",
+      "minutes": 25,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season the shrimp",
+      "instruction": "Toss cold, dry shrimp with oil and Cajun seasoning immediately before cooking. Heat a wide skillet over medium-high until shimmering. Do not salt them early; salt draws moisture out and leaves you with steamed seafood.",
+      "minutes": 4,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sear the Cajun shrimp",
+      "instruction": "Cook shrimp in one layer 1–2 minutes per side until opaque, loosely C-shaped, and 145°F. Move them to a warm pan at once. Tight O-shaped shrimp are overcooked, so a minute too long matters more here than with chicken.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Sauté peppers, corn, and beans",
+      "instruction": "Cook peppers in a second skillet over medium-high for 4 minutes until browned at edges; add corn for 2 minutes, then beans just to heat. Add beans last because their liquid erases the char you worked for.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Finish lime sauce",
+      "instruction": "Whisk lime juice into sour cream with a splash of water until it drizzles easily, then keep it chilled. Taste before salting; Cajun seasoning is already salty. Heating this sauce causes it to split, so it belongs nowhere near the hot pans.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold the hot components",
+      "instruction": "Cover rice, shrimp, and vegetables separately above 140°F, but never leave shrimp there longer than necessary. Stage avocado, tomato, cilantro, and lime on ice. Shrimp buried under a lid too long keeps cooking in its own steam. Target oven/smoker temperature: 200°F.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Build the Cajun bowls",
+      "instruction": "Scoop rice into bowls, add peppers, corn, and beans, then arrange shrimp over the middle. Put tomatoes and avocado on the cool side. Hiding shrimp beneath the base makes portions uneven and encourages people to dig through the bowl.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Garnish with lime and cilantro",
+      "instruction": "Drizzle creamy lime sauce over shrimp, scatter cilantro, and place a lime wedge on each bowl. Add sauce after the shrimp so the spice remains visible and bright. Do not drown the bowl; it should taste Cajun, not like sour cream.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve the shrimp bowls",
+      "instruction": "Carry bowls to the pass promptly with hot sauce optional and keep only a small shrimp backup warm. Shrimp are at their best right off the skillet; replenish the line in short rounds instead of holding a full pan for half an hour.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the Cajun shrimp — hold at 140°F in a warm cabinet or 200°F oven, but check it often; shrimp overcooks and turns rubbery fast even held gently. Keep the lime sour cream sauce chilled and away from any heat source — it splits the moment it gets warm. On return, spot-check the shrimp is still tender and safe before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Cajun shrimp and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Dry shrimp with paper towel or the pan will steam instead of sear.",
+    "Rookie tip: Cook shrimp in batches — a crowded skillet makes rubbery seafood.",
+    "Rookie tip: Pull shrimp as soon as they turn opaque and C-shaped; a tight O means overcooked.",
+    "Prep tip: Keep Cajun seasoning on the side for crews with different heat tolerance.",
+    "Use ripe but firm avocado so it survives the line."
+  ],
+  "tonightSpread": [
+    "Main: Cajun shrimp rice bowls",
+    "Sides: Cornbread, simple green salad",
+    "Condiments: Creamy lime sauce, hot sauce, lime wedges",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Cajun shrimp in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Use shrimp within two days in cold rice salad or quick tacos."
+  ],
+  "whyCrewsLikeIt": "Shrimp cooks in minutes, so this makes a colorful, lighter dinner that is still built for ten.",
+  "mealPrepNotes": "Make-ahead: mix spice blend and lime sauce, and chop vegetables one day ahead. Storage: refrigerate shrimp and rice separately for up to 2 days; cold toppings keep 2–3 days. Reheating: warm shrimp gently to 145°F, not longer, and heat rice to 165°F before rebuilding.",
+  "substitutions": [
+    "Use chicken breast for shrimp.",
+    "Use frozen pepper strips.",
+    "Use Greek yogurt instead of sour cream.",
+    "Use kidney beans for black beans."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 520,
+    "protein": 38,
+    "carbs": 61,
+    "fats": 15,
+    "label": "~520 cal/serving · 38g protein · 11g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+  "heroImageAlt": "Cajun Shrimp Rice Bowls — cajun bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "cajun shrimp rice bowls",
+    "shrimp bowl dinner",
+    "firehall seafood dinner",
+    "cajun crew meal",
+    "black bean shrimp bowl",
+    "creamy lime shrimp bowl",
+    "healthy shrimp meal prep",
+    "shrimp dinner for 10"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

@@ -38,80 +38,80 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Breast",
+      "name": "chicken breast",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Greek Yogurt",
+      "name": "Greek yogurt",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "8",
       "unit": "cloves",
       "notes": "minced",
       "group": "Marinade"
     },
     {
-      "name": "Paprika",
+      "name": "paprika",
       "quantity": "1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Marinade"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "for toum",
       "group": "Sauce"
     },
     {
-      "name": "Neutral Oil",
+      "name": "neutral oil",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for toum",
       "group": "Sauce"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "for toum",
       "group": "Sauce"
     },
     {
-      "name": "Bulgur Wheat",
+      "name": "bulgur wheat",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fine",
       "group": "Tabbouleh"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "finely chopped",
       "group": "Tabbouleh"
     },
     {
-      "name": "Pita Bread",
+      "name": "pita bread",
       "quantity": "12",
       "unit": "rounds",
       "notes": "warmed",
@@ -177,10 +177,19 @@
     "protein": 40,
     "carbs": 32,
     "fats": 16,
-    "label": "~420 cal/serving · 40g protein · 3g fiber (est.)"
+    "label": "~420 cal/serving · 40g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
-  "heroImageAlt": "Lebanese Chicken Shish Platter — crew-sized firehall meal",
+  "heroImageAlt": "Lebanese Chicken Shish Platter — lebanese skewer plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/lebanese-chicken-shish-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/lebanese-chicken-shish-platter.jpg",
   "railImage": "/images/rails/hall-expansion/lebanese-chicken-shish-platter.jpg",
@@ -192,12 +201,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "lamb-kofta-skewer-platter",
+    "moroccan-chicken-kebab-platter",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

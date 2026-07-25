@@ -39,65 +39,65 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (85/15)",
+      "name": "ground beef (85/15)",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Protein"
     },
     {
-      "name": "Taco Seasoning",
+      "name": "taco seasoning",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Protein"
     },
     {
-      "name": "Tortilla Chips",
+      "name": "tortilla chips",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sturdy restaurant style",
       "group": "Base"
     },
     {
-      "name": "Queso Dip",
+      "name": "queso dip",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Cheese"
     },
     {
-      "name": "Shredded Cheddar",
+      "name": "shredded cheddar",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Cheese"
     },
     {
-      "name": "Black Beans",
+      "name": "black beans",
       "quantity": "2",
       "unit": "cans",
       "notes": "15 oz, drained, warmed",
       "group": "Bar"
     },
     {
-      "name": "Jalapeño Slices",
+      "name": "jalapeño slices",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Bar"
     },
     {
-      "name": "Pico De Gallo",
+      "name": "pico de gallo",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Sour Cream",
+      "name": "sour cream",
       "quantity": "1 1/4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Guacamole",
+      "name": "guacamole",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     }
   ],
@@ -126,7 +126,7 @@
     {
       "stepNumber": 4,
       "title": "Set the nacho bar",
-      "instruction": "Line up warm chip pans, beef, queso, cheddar, beans, jalapeños, pico, sour cream, and guacamole with serving spoons and clear labels.",
+      "instruction": "Line up the warm chip pans, beef, queso, cheddar, and beans on one side, with jalapeños, pico, sour cream, and guacamole staged separately on ice — labeled and within reach, but off that heat.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -160,10 +160,19 @@
     "protein": 28,
     "carbs": 44,
     "fats": 34,
-    "label": "~580 cal/serving · 28g protein · 6g fiber (est.)"
+    "label": "~580 cal/serving · 28g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
-  "heroImageAlt": "Loaded Nacho Bar Night — crew-sized firehall meal",
+  "heroImageAlt": "Loaded Nacho Bar Night — mexican-american bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/loaded-nacho-bar-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/loaded-nacho-bar-night.jpg",
   "railImage": "/images/rails/hall-expansion/loaded-nacho-bar-night.jpg",
@@ -175,12 +184,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

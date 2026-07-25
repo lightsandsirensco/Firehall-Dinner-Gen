@@ -7,16 +7,16 @@
   "subtitle": "Sticky bark, fall-off-bone ribs",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Sticky bark, fall-off-bone ribs. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "St. Louis racks smoked 3-2-1 at 250°F — paprika-forward Memphis rub, apple juice spritz, foil wrap for tenderness, then a dry bark set and a finishing dust of reserved rub. Sauce stays on the side, where Memphis keeps it.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 330,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 232,
-  "protein": 15,
-  "carbs": 15,
-  "fats": 13,
+  "calories": 1050,
+  "protein": 62,
+  "carbs": 18,
+  "fats": 76,
   "tags": [
     "protein:pork",
     "format:grill",
@@ -25,127 +25,224 @@
     "golden_100"
   ],
   "equipment": [
-    "Grill or flat-top",
-    "Tongs",
-    "Heat-resistant gloves",
+    "Smoker or kettle grill set up for indirect heat",
+    "Hickory or oak wood chunks",
+    "Spray bottle for spritzing",
+    "Heavy-duty aluminum foil",
+    "Tongs and heat-resistant gloves",
     "Large sheet trays",
-    "Instant-read thermometer",
-    "Aluminum foil"
+    "Instant-read thermometer"
   ],
   "ingredients": [
     {
-      "name": "St. Louis Spare Ribs",
-      "quantity": "6",
+      "name": "St. Louis Spare Ribs (about 3 lb per rack)",
+      "quantity": "4",
       "unit": "racks",
-      "notes": "about 3 lb each",
       "group": "Main"
     },
     {
       "name": "Brown Sugar",
-      "quantity": "0.5",
+      "quantity": "0.75",
       "unit": "Cup",
       "group": "Rub"
     },
     {
       "name": "Paprika",
-      "quantity": "3",
+      "quantity": "6",
       "unit": "Tbsp",
       "group": "Rub"
     },
     {
       "name": "Garlic Powder",
-      "quantity": "1",
+      "quantity": "2",
       "unit": "Tbsp",
       "group": "Rub"
     },
     {
       "name": "Onion Powder",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Chili Powder",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Dry Mustard",
       "quantity": "1",
       "unit": "Tbsp",
       "group": "Rub"
     },
     {
       "name": "Cayenne",
-      "quantity": "1",
+      "quantity": "1.5",
       "unit": "Tsp",
       "group": "Rub"
     },
     {
       "name": "Kosher Salt",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Rub"
+    },
+    {
+      "name": "Black Pepper",
       "quantity": "2",
       "unit": "Tbsp",
       "group": "Rub"
+    },
+    {
+      "name": "Yellow Mustard (thin binder layer)",
+      "quantity": "0.5",
+      "unit": "Cup",
+      "group": "Main"
+    },
+    {
+      "name": "Apple Juice (spritz and wrap)",
+      "quantity": "2",
+      "unit": "Cups",
+      "group": "Main"
+    },
+    {
+      "name": "BBQ Sauce (for the side, warmed)",
+      "quantity": "2",
+      "unit": "Cups",
+      "group": "Serve",
+      "optional": true
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Remove membrane",
-      "instruction": "Peel the silverskin off the bone side with a paper towel grip — it will not soften in smoke. Mix dry rub and coat both sides. Rest 30 minutes at room temp.",
-      "minutes": 25,
+      "title": "Peel the membrane and square the racks",
+      "instruction": "Flip each rack bone-side up and work a butter knife under the silverskin membrane at one end, then grip it with a paper towel and peel it off in one sheet — it never softens in smoke and blocks the rub from the underside. Trim any flaps or loose fat that would burn over 5+ hours. Pat every rack dry so the binder grips.",
+      "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Smoke 3-2-1 style",
-      "instruction": "Smoke at 250°F meat-side up for 3 hours. Spritz with apple juice if bark looks dry. Wrap in foil with a splash of juice for 2 hours. Unwrap, sauce if desired, finish 1 hour to set bark. Ribs bend without breaking when done.",
+      "title": "Mix the Memphis rub and hold some back",
+      "instruction": "Whisk together the brown sugar, paprika, garlic powder, onion powder, chili powder, dry mustard, cayenne, kosher salt, and black pepper until no sugar lumps remain — lumps turn into scorched spots on the bark. Set aside a half cup in a clean shaker before any of it touches raw meat; that reserved rub is the Memphis finishing dust that goes on right before serving.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Bind and season the racks",
+      "instruction": "Smear a thin layer of yellow mustard over both sides of each rack — you will not taste it; it just glues the rub down. Season generously on all sides and edges, pressing the rub in rather than rubbing, which balls it up. Let the racks sit 30 minutes at room temperature until the rub looks wet and darkened — that means it has dissolved into the surface and will set into bark instead of falling off.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Run the smoker steady at 250°F",
+      "instruction": "Set up the smoker or kettle for indirect heat and stabilize at 250°F before anything goes on — chasing temperature with food on the grate is how bark scorches. Add two or three hickory or oak chunks; thin blue smoke is the goal, not billowing white, which tastes like an ashtray. Fill the spray bottle with apple juice and stage it by the pit.",
+      "minutes": 25,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Smoke 3 hours, spritzing after the first",
+      "instruction": "Lay the racks meat-side up with space between them and hold 250°F for 3 hours. Leave the lid shut the first hour so the bark starts to set, then spritz with apple juice every 45 minutes wherever the surface looks dry or dark — the moisture keeps the sugar from burning and helps smoke stick. By hour three the racks should be deep mahogany and the rub set so it doesn't smear when touched.",
       "minutes": 180,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 3,
-      "title": "Slice and serve",
-      "instruction": "Rest 10 minutes, slice between bones. Memphis dry rub ribs should have sticky bark and pull clean — not mush. Serve on trays; hold backup rack at 180°F.",
-      "minutes": 15,
+      "stepNumber": 6,
+      "title": "Wrap in foil with a splash of juice for 2 hours",
+      "instruction": "Lay each rack meat-side down on a double sheet of heavy foil, add a splash of apple juice, and seal tight so no steam escapes. Return to the 250°F pit for 2 hours — inside the wrap, the trapped steam pushes the tough connective tissue past the point where it melts into gelatin. Handle wrapped racks with two hands and gloves; this is when they get tender enough to break.",
+      "minutes": 120,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 4,
-      "title": "Hold for late eaters",
-      "instruction": "Wrap cut ribs in foil on a sheet tray at 180°F up to 30 minutes. Spritz apple juice if edges look dry before the second tray goes out.",
+      "stepNumber": 7,
+      "title": "Unwrap and set the bark for the final hour",
+      "instruction": "Open the foil carefully — the escaping steam will fog your glasses — and slide the racks back on the grate meat-side up for a final hour at 250°F. This dry stretch tightens the surface back into proper bark after the wrap softened it. Memphis style rides dry: no glaze here. If the edges look pale, nudge closer to the heat for the last 20 minutes.",
+      "minutes": 60,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Bend test and probe for doneness",
+      "instruction": "Pick a rack up from one end with tongs: done ribs bend to about 45 degrees and the bark cracks across the surface without the rack breaking. Confirm with an instant-read thermometer between the bones — you want an internal temperature of 195–203°F, and the probe should slide in like it's going into warm butter. If there's any rubbery resistance, give it 20 more minutes and test again.",
+      "minutes": 10,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Rest, slice, and dust Memphis-style",
+      "instruction": "Rest the racks 15 minutes loosely tented on sheet trays so the juices settle instead of running out at the first cut. Flip bone-side up — the bones map the cuts — and slice between them with one long stroke per rib. Dust the cut ribs with the reserved rub from the shaker while they're still glistening; the heat blooms the spices one last time. Set warmed BBQ sauce on the side for whoever wants it.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover ribs — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool ribs and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Judge doneness by feel, not the clock — every rack and every pit runs different; the bend test and a butter-soft probe never lie.",
+    "Reserve the finishing rub before any touches raw meat — the fresh dust on hot ribs is the signature Memphis move and it doubles as a food-safety habit.",
+    "Thin blue smoke, not white billows — if the fire is smoldering dirty, crack the vents and let it burn clean before the racks go on.",
+    "Baby back racks run smaller: shorten the stages to roughly 2 hours smoke, 1.5 wrapped, 30 minutes to set the bark.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat."
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Memphis Dry Rub Ribs with sides in separate pans so the crew can mix portions.",
-    "Line up Memphis Dry Rub Ribs on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run.",
-    "Slice proteins on a cutting board at the end of the line so everyone sees the smoke ring and char.",
-    "Set sauce and pickles on the side — sauced meat holds better on the backup tray."
+    "Main: Memphis dry-rub spare ribs with a finishing dust of rub",
+    "Sides: white bread, dill pickles, and slaw if the hall fridge has it",
+    "Condiments: warmed BBQ sauce on the side — dry ribs, wet crew choice",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
+    "Cool ribs in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat wrapped in foil with a splash of apple juice at 300°F for 20–25 minutes — dry heat alone turns day-two ribs to jerky.",
+    "Strip leftover rib meat off the bone for next-shift sandwiches or beans — it reheats faster and stays juicier than whole ribs."
   ],
-  "whyCrewsLikeIt": "Sticky bark, fall-off-bone ribs. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
-  "substitutions": [],
-  "spiceLevel": "mild",
+  "whyCrewsLikeIt": "Real bark, clean bone pull, and a rub that does the talking — racks come off the pit looking like a rib joint's, and sauce-on-the-side ends the wet-versus-dry argument before it starts.",
+  "substitutions": [
+    "Baby back ribs swap in fine — they're leaner and smaller, so run about 2 hours smoke, 1.5 wrapped, 30 minutes bark set.",
+    "No smoker? Run the same 3-2-1 stages in a 275°F oven on wire racks; the smoked paprika in the rub carries more of the load.",
+    "Out of apple juice: spritz with half water, half cider vinegar — slightly sharper bark, same burn protection.",
+    "No dry mustard in the pantry? Skip it and add an extra teaspoon of black pepper; the rub stays balanced."
+  ],
+  "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 232,
-    "protein": 15,
-    "carbs": 15,
-    "fats": 13,
+    "calories": 1050,
+    "protein": 62,
+    "carbs": 18,
+    "fats": 76,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
+      "highProtein": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -164,6 +261,8 @@
     "grill",
     "bbq",
     "memphis dry rub pork ribs",
+    "3-2-1 ribs",
+    "smoked spare ribs",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -176,6 +275,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.149Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

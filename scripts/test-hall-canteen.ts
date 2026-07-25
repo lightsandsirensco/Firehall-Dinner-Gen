@@ -25,6 +25,7 @@ import {
   reportCanteenItem,
   setCanteenItemStatus,
 } from "../server/hall-canteen/store.js";
+import { bindHallEventDb } from "../server/hall-events/store.js";
 import {
   bindHallNotesDb,
   createHallNote,
@@ -52,6 +53,9 @@ const MIGRATIONS = [
   "032_canteen_staples_trim.sql",
   "034_hall_notes.sql",
   "035_canteen_pickup_claims.sql",
+  "037_canteen_payment_tracker.sql",
+  "040_canteen_manager_v2.sql",
+  "041_hall_ops_foundation.sql",
 ].map((name) =>
   fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8"),
 );
@@ -71,6 +75,7 @@ async function main(): Promise<void> {
   bindHallMembershipDb(db);
   bindBillingDb(db);
   bindHallCanteenDb(db);
+  bindHallEventDb(db);
   bindHallNotesDb(db);
 
   const captain = upsertEmailUser("captain@firehall.test").user;
@@ -94,6 +99,20 @@ async function main(): Promise<void> {
   assert.equal(seeded!.items.length, 20);
   assert.equal(seeded!.can_update, true);
   assert.equal(seeded!.can_manage_list, true);
+  assert.ok(seeded!.counts);
+  assert.equal(seeded!.counts.out, 0);
+  assert.equal(seeded!.counts.running_low, 0);
+  assert.equal(seeded!.active_staple_count, 20);
+  assert.equal(seeded!.staple_limit, 25);
+  assert.equal(seeded!.is_hall_pro, false);
+  assert.ok(Array.isArray(seeded!.suggestions));
+  assert.ok(seeded!.current_order);
+  assert.ok(Array.isArray(seeded!.manager_notes));
+  assert.ok(Array.isArray(seeded!.activity));
+  assert.equal(seeded!.items[0]?.report_count, 0);
+  assert.ok(seeded!.items.every((i) => i.reorder_qty >= 1));
+  assert.ok(seeded!.items.some((i) => i.category === "coffee_beverages"));
+  assert.ok(seeded!.items.some((i) => i.category === "breakfast"));
 
   const coffee = seeded!.items.find((i) => i.name === "Coffee");
   assert.ok(coffee);
@@ -101,6 +120,8 @@ async function main(): Promise<void> {
   const memberUpdate = setCanteenItemStatus(hallId, memberB.user_id, coffee!.item_id, "out");
   assert.ok(memberUpdate);
   assert.equal(memberUpdate!.payload.needs_attention_count, 1);
+  assert.equal(memberUpdate!.payload.counts.out, 1);
+  assert.ok((memberUpdate!.payload.current_order?.items.length ?? 0) >= 1);
   assert.equal(getShoppingThisWeekItems(memberUpdate!.payload).length, 1);
   assert.equal(getShoppingThisWeekItems(memberUpdate!.payload)[0]?.name, "Coffee");
 

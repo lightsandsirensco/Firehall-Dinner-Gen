@@ -37,7 +37,7 @@ function main(): void {
   assert.equal(SHIFT_DASHBOARD.currentShoppingList, "Current Shopping List");
   assert.equal(SHIFT_DASHBOARD.actions.createVote, "Create Hall Vote");
   assert.equal(SHIFT_DASHBOARD.actions.reportCanteen, "Hall Staples");
-  assert.equal(SHIFT_DASHBOARD.backToHall, "Linked Hall");
+  assert.equal(SHIFT_DASHBOARD.backToHall, "Hall");
   assert.equal(SHIFT_DASHBOARD.stats.longestMealStreak, "Longest meal streak");
 
   const shiftName = "A Shift";

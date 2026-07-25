@@ -57,7 +57,7 @@ export default function PizzaNight() {
       <AppPageHeader
         variant="feed"
         title="Pizza Night"
-        subtitle={`${PIZZA_NIGHT_COUNT} curated hall pies — stretch, top, bake, and feed the crew. No filters, just pizza.`}
+        subtitle={`${PIZZA_NIGHT_COUNT} hall pies — fastest cooks first. Tap one and start cooking.`}
       />
 
       <main className={cn(app.mainFeed, "pb-10 pt-2 sm:pb-14")}>

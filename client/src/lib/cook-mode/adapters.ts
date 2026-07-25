@@ -1,6 +1,8 @@
 import type { GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
+import type { ClientRecipeResponse } from "@shared/schema";
 import type { MeasurementSystem } from "@shared/measurements";
 import {
+  formatClientIngredientQty,
   formatIngredientAmount,
   formatRecipeIngredientName,
   formatTemperaturesInText,
@@ -8,6 +10,38 @@ import {
 import type { ExploreRecipeDetail } from "@/lib/explore-api";
 import { buildHoldingPanelNotes } from "./holding-notes";
 import type { CookModeRecipe } from "./types";
+
+/** Generator / saved-meal results → cook mode (existing steps only). */
+export function clientRecipeToCookMode(
+  recipe: ClientRecipeResponse,
+  measurementSystem: MeasurementSystem,
+  crewSize: number,
+): CookModeRecipe {
+  const steps = (recipe.steps ?? []).map((s) => ({
+    stepNumber: s.n,
+    title: s.title?.trim() || `Step ${s.n}`,
+    instruction: formatTemperaturesInText(s.instructions, measurementSystem),
+    minutes: s.minutes || undefined,
+    heatLevel: s.heat || undefined,
+  }));
+
+  const proTips = (recipe.pro_tips ?? []).map((t) =>
+    formatTemperaturesInText(t, measurementSystem),
+  );
+
+  return {
+    title: recipe.title,
+    crewSize,
+    ingredients: (recipe.ingredients ?? []).map((ing) => ({
+      name: formatRecipeIngredientName(ing.name),
+      amount: formatClientIngredientQty(ing.qty, ing.unit, measurementSystem) || undefined,
+      group: ing.category || undefined,
+    })),
+    steps,
+    proTips,
+    holdingGuidance: buildHoldingPanelNotes(steps, proTips),
+  };
+}
 
 type ScaledCatalogIngredient = {
   name: string;

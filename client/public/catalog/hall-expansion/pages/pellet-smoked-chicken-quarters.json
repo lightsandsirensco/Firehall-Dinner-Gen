@@ -38,63 +38,63 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Leg Quarters",
+      "name": "chicken leg quarters",
       "quantity": "8",
       "unit": "pieces",
       "notes": "about 5 lb",
       "group": "Main"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Brine"
     },
     {
-      "name": "Brown Sugar",
+      "name": "brown sugar",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Onion Powder",
+      "name": "onion powder",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Chili Powder",
+      "name": "chili powder",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "BBQ Sauce",
+      "name": "BBQ sauce",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Baked Beans",
+      "name": "baked beans",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz, warmed",
       "group": "Side"
     },
     {
-      "name": "Cornbread",
+      "name": "cornbread",
       "quantity": "8",
       "unit": "pieces",
       "group": "Side"
@@ -159,10 +159,19 @@
     "protein": 38,
     "carbs": 28,
     "fats": 22,
-    "label": "~450 cal/serving · 38g protein · 3g fiber (est.)"
+    "label": "~450 cal/serving · 38g protein · 3g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
-  "heroImageAlt": "Pellet Smoked Chicken Quarters — crew-sized firehall meal",
+  "heroImageAlt": "Pellet Smoked Chicken Quarters — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/pellet-smoked-chicken-quarters.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/pellet-smoked-chicken-quarters.jpg",
   "railImage": "/images/rails/hall-expansion/pellet-smoked-chicken-quarters.jpg",
@@ -180,6 +189,6 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.929Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

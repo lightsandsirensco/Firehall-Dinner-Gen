@@ -15,58 +15,58 @@
     "eggs",
     "indulgent"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 15,
   "cookTime": 30,
   "totalTime": 45,
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Frozen Straight-Cut Fries",
-      "quantity": "4 lb",
+      "name": "frozen straight-cut fries",
+      "quantity": "3.2",
       "notes": "or hand-cut russets",
       "group": "Base"
     },
     {
-      "name": "Vegetable Oil",
-      "quantity": "2 tbsp",
+      "name": "vegetable oil",
+      "quantity": "1.6",
       "notes": "for roasting",
       "group": "Base"
     },
     {
-      "name": "Breakfast Sausage",
-      "quantity": "1 lb",
+      "name": "breakfast sausage",
+      "quantity": "3/4",
       "notes": "browned for gravy",
       "group": "Gravy"
     },
     {
-      "name": "All-Purpose Flour",
-      "quantity": "1/4 cup",
+      "name": "all-purpose flour",
+      "quantity": "1/4",
       "notes": "whisked into sausage fat",
       "group": "Gravy"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "3 cups",
+      "name": "whole milk",
+      "quantity": "2.4",
       "notes": "plus salt and black pepper",
       "group": "Gravy"
     },
     {
-      "name": "Large Eggs",
-      "quantity": "12",
+      "name": "large eggs",
+      "quantity": "10",
       "notes": "fried sunny-side up",
       "group": "Toppings"
     },
     {
-      "name": "Cheese Curds",
-      "quantity": "1 1/2 lb",
+      "name": "cheese curds",
+      "quantity": "3/8",
       "notes": "or cubed mozzarella if curds unavailable",
       "group": "Toppings"
     },
     {
-      "name": "Green Onions",
-      "quantity": "1/4 cup",
+      "name": "green onions",
+      "quantity": "1/4",
       "notes": "sliced, and hot sauce at the line",
       "group": "Finish"
     }
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/breakfast-poutine.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-poutine.jpg",
   "imageAlt": "Breakfast poutine with crispy fries, sausage gravy, cheese curds, and fried egg",
-  "publishedAt": "2026-06-04T20:48:24.990Z",
-  "updatedAt": "2026-06-04T20:48:24.990Z",
+  "publishedAt": "2026-07-17T20:15:27.729Z",
+  "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Breakfast Poutine | Firehall Breakfast",
   "collectionTier": "firehall_classic"

@@ -37,66 +37,66 @@
   ],
   "ingredients": [
     {
-      "name": "Mostaccioli Pasta",
+      "name": "mostaccioli pasta",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Hot Italian Sausage",
+      "name": "hot Italian sausage",
       "quantity": "2.4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "casings removed",
       "group": "Main"
     },
     {
-      "name": "Marinara Sauce",
+      "name": "marinara sauce",
       "quantity": "4.8",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Sauce"
     },
     {
-      "name": "Whole-Milk Ricotta",
+      "name": "whole-milk ricotta",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Cheese"
     },
     {
-      "name": "Shredded Mozzarella",
+      "name": "shredded mozzarella",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Cheese"
     },
     {
-      "name": "Grated Parmesan",
+      "name": "grated Parmesan",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Cheese"
     },
     {
-      "name": "Egg",
+      "name": "egg",
       "quantity": "3/4",
       "unit": "whole",
       "group": "Cheese"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced",
       "group": "Aromatics"
     },
     {
-      "name": "Fresh Basil",
+      "name": "fresh basil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Finish"
     },
     {
-      "name": "Red Pepper Flakes",
+      "name": "red pepper flakes",
       "quantity": "7/8",
-      "unit": "Tsp",
+      "unit": "tsp",
       "group": "Seasoning"
     }
   ],
@@ -159,10 +159,19 @@
     "protein": 32,
     "carbs": 52,
     "fats": 28,
-    "label": "~580 cal/serving · 32g protein · 4g fiber (est.)"
+    "label": "~580 cal/serving · 32g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
-  "heroImageAlt": "Baked Mostaccioli with Sausage — crew-sized firehall meal",
+  "heroImageAlt": "Baked Mostaccioli with Sausage — italian pasta plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/mostaccioli-sausage-bake.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/mostaccioli-sausage-bake.jpg",
   "railImage": "/images/rails/hall-expansion/mostaccioli-sausage-bake.jpg",
@@ -174,12 +183,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "mushroom-swiss-steak-pan",
+    "creamy-chicken-penne-alfredo",
+    "rigatoni-meat-sauce-batch",
+    "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

@@ -38,64 +38,64 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Beef Chuck Roast",
+      "name": "boneless beef chuck roast",
       "quantity": "4.8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "two 3 lb roasts",
       "group": "Main"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Coarse Black Pepper",
+      "name": "coarse black pepper",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Onion Powder",
+      "name": "onion powder",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "7/8",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Rub"
     },
     {
-      "name": "Yellow Mustard",
+      "name": "yellow mustard",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "as binder",
       "group": "Rub"
     },
     {
-      "name": "Beef Broth",
+      "name": "beef broth",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "for holding",
       "group": "Service"
     },
     {
-      "name": "Apple Cider Vinegar",
+      "name": "apple cider vinegar",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Service"
     },
     {
-      "name": "Soft Potato Rolls",
+      "name": "soft potato rolls",
       "quantity": "13",
       "unit": "rolls",
       "group": "Service"
@@ -160,10 +160,19 @@
     "protein": 42,
     "carbs": 18,
     "fats": 20,
-    "label": "~410 cal/serving · 42g protein · 1g fiber (est.)"
+    "label": "~410 cal/serving · 42g protein · 1g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/mesquite-chuck-roast.jpg",
-  "heroImageAlt": "Mesquite Smoked Chuck Roast — crew-sized firehall meal",
+  "heroImageAlt": "Mesquite Smoked Chuck Roast — american smoker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/mesquite-chuck-roast.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/mesquite-chuck-roast.jpg",
   "railImage": "/images/rails/hall-expansion/mesquite-chuck-roast.jpg",
@@ -181,6 +190,6 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

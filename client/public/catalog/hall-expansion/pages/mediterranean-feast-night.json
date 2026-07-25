@@ -38,63 +38,63 @@
   ],
   "ingredients": [
     {
-      "name": "Chicken Thighs",
+      "name": "chicken thighs",
       "quantity": "3.2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "boneless",
       "group": "Main"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Marinade"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Marinade"
     },
     {
-      "name": "Hummus",
+      "name": "hummus",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Tzatziki",
+      "name": "tzatziki",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Tabbouleh Salad",
+      "name": "tabbouleh salad",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Feta Cheese",
+      "name": "feta cheese",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "crumbled",
       "group": "Bar"
     },
     {
-      "name": "Kalamata Olives",
+      "name": "Kalamata olives",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Bar"
     },
     {
-      "name": "Pita Bread",
+      "name": "pita bread",
       "quantity": "9.6",
       "unit": "pieces",
       "notes": "warm",
@@ -160,10 +160,19 @@
     "protein": 34,
     "carbs": 36,
     "fats": 20,
-    "label": "~460 cal/serving · 34g protein · 6g fiber (est.)"
+    "label": "~460 cal/serving · 34g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/mediterranean-feast-night.jpg",
-  "heroImageAlt": "Mediterranean Feast Night — crew-sized firehall meal",
+  "heroImageAlt": "Mediterranean Feast Night — mediterranean bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/mediterranean-feast-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/mediterranean-feast-night.jpg",
   "railImage": "/images/rails/hall-expansion/mediterranean-feast-night.jpg",
@@ -175,12 +184,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "pretzel-bite-platter",
+    "jalapeno-popper-dip",
+    "chicken-wing-bar-night",
+    "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.770Z",
   "contentVersion": 2
 }

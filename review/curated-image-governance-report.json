@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-06-27T19:41:24.399Z",
+  "generatedAt": "2026-07-17T19:16:30.123Z",
   "threshold": 72,
   "totals": {
-    "recipes": 677,
-    "hallCatalog": 225,
-    "exploreCurated": 452,
-    "failed": 70,
+    "recipes": 697,
+    "hallCatalog": 235,
+    "exploreCurated": 462,
+    "failed": 74,
     "buildBlockers": 0,
-    "duplicateHeroPaths": 212
+    "duplicateHeroPaths": 224
   },
   "duplicateHeroPaths": [
     {
@@ -125,6 +125,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "slugs": [
+        "bbq-pulled-pork-bowls",
+        "bbq-pulled-pork-bowls"
+      ]
+    },
+    {
       "hero": "/images/golden-100/big-chili.jpg",
       "slugs": [
         "big-chili",
@@ -151,6 +158,13 @@
       "slugs": [
         "beef-dip",
         "beef-dip"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/enchilada-beef-skillet.jpg",
+      "slugs": [
+        "enchilada-beef-skillet",
+        "enchilada-beef-skillet"
       ]
     },
     {
@@ -218,6 +232,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "slugs": [
+        "buffalo-chicken-sweet-potato-bowls",
+        "buffalo-chicken-sweet-potato-bowls"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
       "slugs": [
         "buffalo-chicken-wraps",
@@ -271,6 +292,13 @@
       "slugs": [
         "cajun-chicken-rice-skillet",
         "cajun-chicken-rice-skillet"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "slugs": [
+        "cajun-shrimp-rice-bowls",
+        "cajun-shrimp-rice-bowls"
       ]
     },
     {
@@ -470,6 +498,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "slugs": [
+        "chipotle-chicken-burrito-bowls",
+        "chipotle-chicken-burrito-bowls"
+      ]
+    },
+    {
       "hero": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",
       "slugs": [
         "chipotle-lime-chicken-tacos",
@@ -568,6 +603,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "slugs": [
+        "firehall-taco-bowls",
+        "firehall-taco-bowls"
+      ]
+    },
+    {
       "hero": "/images/golden-100/crispy-fish-taco-night.jpg",
       "slugs": [
         "crispy-fish-taco-night",
@@ -631,6 +673,13 @@
       "slugs": [
         "greek-chicken-bowls",
         "greek-chicken-bowls"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "slugs": [
+        "firehall-greek-chicken-bowls",
+        "firehall-greek-chicken-bowls"
       ]
     },
     {
@@ -771,6 +820,13 @@
       "slugs": [
         "kielbasa-cabbage-potato-skillet",
         "kielbasa-cabbage-potato-skillet"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "slugs": [
+        "firehall-korean-beef-bowls",
+        "firehall-korean-beef-bowls"
       ]
     },
     {
@@ -920,6 +976,13 @@
       "slugs": [
         "meatloaf-mashed",
         "meatloaf-mashed"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+      "slugs": [
+        "mediterranean-beef-bowls",
+        "mediterranean-beef-bowls"
       ]
     },
     {
@@ -1315,6 +1378,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/southwest-steak-bowls.jpg",
+      "slugs": [
+        "southwest-steak-bowls",
+        "southwest-steak-bowls"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
       "slugs": [
         "spatchcock-lemon-roast-chicken",
@@ -1368,6 +1438,13 @@
       "slugs": [
         "teriyaki-donburi",
         "teriyaki-donburi"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "slugs": [
+        "teriyaki-chicken-rice-bowls",
+        "teriyaki-chicken-rice-bowls"
       ]
     },
     {
@@ -1462,6 +1539,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
+      "slugs": [
+        "warm-spinach-chicken-salad",
+        "warm-spinach-chicken-salad"
+      ]
+    },
+    {
       "hero": "/images/golden-100/white-bean-kale-soup.jpg",
       "slugs": [
         "white-bean-kale-soup",
@@ -1512,6 +1596,27 @@
     }
   ],
   "failedRecipes": [
+    {
+      "source": "hall_catalog",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "protein": "pork",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"pulled-pork\" forbidden for \"BBQ Pulled Pork Bowls\" — queue AI regeneration with title-locked sides"
+        }
+      ]
+    },
     {
       "source": "hall_catalog",
       "slug": "bun-bo-hue-noodle-soup",
@@ -1666,6 +1771,32 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-taco-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehall-taco-bowls.jpg",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Firehall Taco Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts taco but meal requires bowl (Firehall Taco Bowls)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "lemon-salmon-orzo-skillet",
       "title": "Lemon Salmon Orzo",
       "protein": "salmon",
@@ -1775,6 +1906,37 @@
           "code": "protein_mismatch",
           "severity": "critical",
           "message": "image protein cues (pork) do not match beef"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "protein": "pork",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"pulled-pork\" forbidden for \"BBQ Pulled Pork Bowls\" — queue AI regeneration with title-locked sides"
         }
       ]
     },
@@ -2451,6 +2613,42 @@
           "code": "format_mismatch",
           "severity": "critical",
           "message": "image depicts breakfast but meal is breakfast (Eggs Benedict Hall Style)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-taco-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Firehall Taco Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts taco but meal requires bowl (Firehall Taco Bowls)"
         }
       ]
     },
@@ -3937,6 +4135,27 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "protein": "pork",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"pulled-pork\" forbidden for \"BBQ Pulled Pork Bowls\" — queue AI regeneration with title-locked sides"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
       "protein": "beef",
@@ -4147,6 +4366,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "buffalo-chicken-wraps",
       "title": "Buffalo Chicken Wraps",
       "protein": "chicken",
@@ -4278,6 +4512,21 @@
       "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/cajun-chicken-rice-skillet.jpg",
       "mobileImage": "/images/mobile/hall-expansion/cajun-chicken-rice-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "protein": "shrimp",
+      "mealFormat": "bowl",
+      "cuisine": "cajun",
+      "heroImage": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/cajun-shrimp-rice-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4755,6 +5004,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "chipotle-chicken-burrito-bowls",
+      "title": "Chipotle Chicken Burrito Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "chipotle-lime-chicken-tacos",
       "title": "Chipotle Lime Chicken Tacos",
       "protein": "chicken",
@@ -4965,6 +5229,32 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-taco-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehall-taco-bowls.jpg",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Firehall Taco Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts taco but meal requires bowl (Firehall Taco Bowls)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "crispy-fish-taco-night",
       "title": "Fish Tacos",
       "protein": "fish",
@@ -5123,6 +5413,21 @@
       "heroImage": "/images/golden-100/greek-chicken-bowls.jpg",
       "thumbImage": "/images/thumbs/greek-chicken-bowls.jpg",
       "mobileImage": "/images/mobile/greek-chicken-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehall-greek-chicken-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5429,6 +5734,21 @@
       "heroImage": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
       "mobileImage": "/images/mobile/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "korean",
+      "heroImage": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehall-korean-beef-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5755,6 +6075,21 @@
       "heroImage": "/images/golden-100/meatloaf-mashed.jpg",
       "thumbImage": "/images/thumbs/meatloaf-mashed.jpg",
       "mobileImage": "/images/mobile/meatloaf-mashed.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "mediterranean-beef-bowls",
+      "title": "Mediterranean Beef Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "mediterranean",
+      "heroImage": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/mediterranean-beef-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/mediterranean-beef-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -6653,6 +6988,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "southwest-steak-bowls",
+      "title": "Southwest Steak Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "southwestern",
+      "heroImage": "/images/hall-expansion/southwest-steak-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/southwest-steak-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/southwest-steak-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "spaghetti-aglio-e-olio-for-the-hall",
       "title": "Spaghetti Aglio e Olio for the Hall",
       "protein": "vegetarian",
@@ -6811,6 +7161,21 @@
       "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
       "thumbImage": "/images/thumbs/teriyaki-donburi.jpg",
       "mobileImage": "/images/mobile/teriyaki-donburi.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "japanese",
+      "heroImage": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -7515,6 +7880,37 @@
     },
     {
       "source": "explore_curated",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "protein": "pork",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"pulled-pork\" forbidden for \"BBQ Pulled Pork Bowls\" — queue AI regeneration with title-locked sides"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "bacon-egg-hash",
       "title": "Bacon Egg Hash Brown Skillet",
       "protein": "pork",
@@ -7914,8 +8310,8 @@
       "protein": "beef",
       "mealFormat": "skillet",
       "cuisine": "mexican",
-      "heroImage": "/images/golden-100/enchilada-beef-skillet.jpg",
-      "thumbImage": "/images/thumbs/enchilada-beef-skillet.jpg",
+      "heroImage": "/images/hall-expansion/enchilada-beef-skillet.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/enchilada-beef-skillet.jpg",
       "mobileImage": "/images/mobile/enchilada-beef-skillet.jpg",
       "mismatchConfidence": 45,
       "pass": true,
@@ -8699,6 +9095,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "buffalo-chicken-wraps",
       "title": "Buffalo Chicken Wraps",
       "protein": "chicken",
@@ -8949,6 +9371,32 @@
           "severity": "warning",
           "message": "missing thumbnail image"
         },
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "protein": "seafood",
+      "mealFormat": "bowl",
+      "cuisine": "cajun",
+      "heroImage": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
         {
           "code": "missing_locked_mobile",
           "severity": "warning",
@@ -9784,6 +10232,32 @@
           "severity": "warning",
           "message": "missing thumbnail image"
         },
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "chipotle-chicken-burrito-bowls",
+      "title": "Chipotle Chicken Burrito Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
         {
           "code": "missing_locked_mobile",
           "severity": "warning",
@@ -11155,6 +11629,42 @@
     },
     {
       "source": "explore_curated",
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-taco-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Firehall Taco Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts taco but meal requires bowl (Firehall Taco Bowls)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "fish-pie-with-fresh-and-smoked-salmon",
       "title": "Fish Pie With Fresh and Smoked Salmon",
       "protein": "fish",
@@ -11542,6 +12052,32 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "explore_curated",
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -13115,6 +13651,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "korean-beef-rice-bowls",
       "title": "Korean Beef Rice Bowls",
       "protein": "beef",
@@ -13917,6 +14479,32 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "explore_curated",
+      "slug": "mediterranean-beef-bowls",
+      "title": "Mediterranean Beef Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "mediterranean",
+      "heroImage": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/mediterranean-beef-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -16734,6 +17322,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "southwest-steak-bowls",
+      "title": "Southwest Steak Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/southwest-steak-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/southwest-steak-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "spaghetti-with-pesto-trapanese",
       "title": "Spaghetti With Pesto Trapanese",
       "protein": "vegetarian",
@@ -17130,6 +17744,32 @@
           "severity": "warning",
           "message": "missing thumbnail image"
         },
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "japanese",
+      "heroImage": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
         {
           "code": "missing_locked_mobile",
           "severity": "warning",
@@ -17704,8 +18344,8 @@
       "protein": "chicken",
       "mealFormat": "salad",
       "cuisine": "american",
-      "heroImage": "/images/golden-100/warm-spinach-chicken-salad.jpg",
-      "thumbImage": "/images/thumbs/warm-spinach-chicken-salad.jpg",
+      "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/warm-spinach-chicken-salad.jpg",
       "mobileImage": "/images/mobile/warm-spinach-chicken-salad.jpg",
       "mismatchConfidence": 45,
       "pass": true,

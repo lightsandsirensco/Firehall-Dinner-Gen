@@ -7,16 +7,16 @@
   "subtitle": "Smoke-kissed salmon without the mess",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Smoke-kissed salmon without the mess. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Skin-on fillets on toasted cedar over a two-zone fire, brushed late with a brown sugar–soy–Dijon glaze so the sugar never scorches. The plank does the work: gentle heat, cedar smoke, and zero fish stuck to the grates.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
-  "difficulty": "hard",
-  "calories": 367,
-  "protein": 38,
-  "carbs": 3,
-  "fats": 20,
+  "cookTime": 25,
+  "prepTime": 75,
+  "difficulty": "medium",
+  "calories": 380,
+  "protein": 36,
+  "carbs": 8,
+  "fats": 22,
   "tags": [
     "protein:seafood",
     "format:grill",
@@ -26,30 +26,31 @@
     "golden_100"
   ],
   "equipment": [
-    "Grill or flat-top",
-    "Tongs",
-    "Heat-resistant gloves",
+    "Grill set up for two-zone heat",
+    "3 cedar planks (grilling grade)",
+    "Basting brush",
+    "Tongs and heat-resistant gloves",
+    "Wide spatula",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Salmon Fillets, Skin On",
+      "name": "Salmon Fillets (skin-on)",
       "quantity": "3",
       "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Cedar Plank",
-      "quantity": "1",
+      "name": "Cedar Planks (soaked at least 1 hour)",
+      "quantity": "3",
       "unit": "count",
-      "notes": "soaked 1 hour",
       "group": "Equipment"
     },
     {
       "name": "Brown Sugar",
-      "quantity": "2",
+      "quantity": "3",
       "unit": "Tbsp",
       "group": "Glaze"
     },
@@ -60,72 +61,165 @@
       "group": "Glaze"
     },
     {
-      "name": "Fresh Ginger, Grated",
+      "name": "Dijon Mustard",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Glaze"
+    },
+    {
+      "name": "Fresh Ginger (grated)",
       "quantity": "1",
       "unit": "Tbsp",
       "group": "Glaze"
+    },
+    {
+      "name": "Garlic Cloves (grated)",
+      "quantity": "3",
+      "unit": "cloves",
+      "group": "Glaze"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "2",
+      "unit": "Tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": "1",
+      "unit": "Tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Lemons (cut into wedges)",
+      "quantity": "2",
+      "group": "Serve"
+    },
+    {
+      "name": "Scallions (sliced thin)",
+      "quantity": "1",
+      "unit": "bunch",
+      "group": "Serve"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Soak plank and prep fish",
-      "instruction": "Soak cedar plank 1 hour. Pat salmon dry. Mix glaze. Score skin lightly so it doesn't curl.",
+      "title": "Sink the cedar planks for a full hour",
+      "instruction": "Submerge the cedar planks in water and weigh them down with a heavy pan — they float, and any part that stays dry will catch fire instead of smoldering. Give them a minimum of 1 hour; start the soak before any other prep. A properly soaked plank steams and smokes gently under the fillets, which is the entire trick of this cook.",
       "minutes": 60,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Grill on the plank",
-      "instruction": "Grill indirect at 375°F on the plank 12–18 minutes until salmon flakes at 125–130°F in the thickest part (medium). Skin may stick — that's fine; serve flesh side up.",
+      "title": "Stir the brown sugar–soy glaze",
+      "instruction": "Whisk the brown sugar, soy sauce, Dijon mustard, grated ginger, and grated garlic in a small bowl until the sugar fully dissolves, about 1 minute — undissolved sugar burns in grainy specks on the surface. It should fall off the whisk in a slow ribbon. Set it by the grill with the basting brush; it goes on late in the cook, not early.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Check the fillets for pin bones and season",
+      "instruction": "Run your fingers against the grain of the salmon fillets and pull any pin bones with pliers or your thumbnail and a paper towel — one missed bone ends up in somebody's bite. Pat the fillets very dry, then season the flesh side with the kosher salt and black pepper. Leave them on a tray while the fire comes up; 15 minutes off the fridge chill helps them cook evenly edge to center.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build a two-zone fire at 375°F",
+      "instruction": "Set the grill up two-zone — burners on one side, or coals banked to one half — and stabilize the lid thermometer at 375°F before anything goes on. The hot side is only for toasting the planks; the cook happens on the cool side, where cedar smolders instead of igniting. If it's running over 400°F, shut it down a notch and wait; patience here saves the planks.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Toast the planks until they crackle",
+      "instruction": "Shake off the soaked planks and lay them over direct heat 2–3 minutes until they crackle and release a light stream of smoke, then flip them toasted-side up and slide them to the indirect side. That first char wakes up the cedar oils — skip it and you get steam with barely any wood flavor. Keep a spray bottle of water nearby for any edge that flames.",
+      "minutes": 4,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Plank the fillets and grill indirect to 145°F",
+      "instruction": "Lay the salmon skin-side down on the toasted face of each plank, close the lid, and cook over the indirect zone 12–18 minutes depending on thickness. Grill until the thickest part reads 145°F on an instant-read thermometer — the flesh turns opaque and flakes when pressed. If white beads of albumin are pushing out fast, the fire is too hot; slide the planks further from the heat.",
       "minutes": 16,
       "heatLevel": "medium"
     },
     {
-      "stepNumber": 3,
-      "title": "Glaze and serve",
-      "instruction": "Brush glaze in the last 3 minutes. Rest 2 minutes. Serve from plank or transfer with a wide spatula. Hold backup fillets at 160°F max — salmon toughens fast.",
+      "stepNumber": 7,
+      "title": "Brush the glaze on in the last 5 minutes",
+      "instruction": "When the fillets are about three-quarters done — opaque at the edges, still translucent in the center seam — brush the glaze generously over the tops and close the lid for the final 4–5 minutes so it sets into a lacquer. Any earlier and the sugar blackens before the middle finishes. One more thin coat right as they come off gives the tray its shine.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Confirm temp and rest on the plank",
+      "instruction": "Double-check the thickest fillet with the instant-read thermometer — 145°F at the center is the safe number for salmon, and carryover on the hot plank holds it there. Rest 3–4 minutes right on the cedar; the flesh firms up and the juices settle so portions lift clean off the skin with the wide spatula.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Serve straight off the cedar",
+      "instruction": "Set the planks on sheet trays and carry them to the counter whole — the wood is the serving board and it keeps the fish warm 10 extra minutes. Scatter the sliced scallions over the top and ring the trays with lemon wedges. Don't tent tightly with foil; trapped steam turns that glazed surface from lacquered to soggy in minutes.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover salmon — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
-      "stepNumber": 4,
-      "title": "Portion for the hall",
-      "instruction": "Break fillets into portions on trays. Keep skin on for transport — crew can peel if they want. Do not cover tightly or fish steams.",
-      "minutes": 3,
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool salmon and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Buy grilling-grade cedar planks from the BBQ aisle, never lumber-yard cedar — construction wood is often treated and not food-safe.",
+    "Soaked planks are reusable if they're not charred through: scrub, dry, and they're good for one more cook.",
+    "White albumin beading out fast means the heat is too high — move the planks further from the fire and the fillets stay silky.",
+    "Glaze late, always — sugar on the surface for the whole cook means a blackened crust before the center is safe.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat."
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate Cedar Plank Salmon with sides in separate pans so the crew can mix portions.",
-    "Line up Cedar Plank Salmon on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run.",
-    "Slice proteins on a cutting board at the end of the line so everyone sees the smoke ring and char.",
-    "Set sauce and pickles on the side — sauced meat holds better on the backup tray."
+    "Main: Cedar plank salmon with brown sugar–soy glaze, served on the planks",
+    "Sides: rice or roasted potatoes from the hall rotation, something green and crunchy",
+    "Condiments: lemon wedges and sliced scallions down the line",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Slice cold protein thin for next-day wraps or salads — faster reheat, less dry-out."
+    "Cool salmon in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Day-two fillets are better cold than reheated — flake over greens or into wraps; a second hard cook dries them out.",
+    "If you do reheat, go gentle: covered pan, splash of water, low heat until just warmed through."
   ],
-  "whyCrewsLikeIt": "Smoke-kissed salmon without the mess. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "whyCrewsLikeIt": "Smoky glazed fillets that never stick to the grates, and the planks come to the table as serving boards — big cookout flavor with almost nothing to scrub afterward.",
   "substitutions": [
-    "Frozen shrimp is fine — thaw under cold running water and pat very dry."
+    "Steelhead trout swaps 1:1 for salmon — same cook time, slightly milder, usually cheaper at the fish counter.",
+    "No planks anywhere? Grill skin-side down on well-oiled grates over the indirect zone — you lose the cedar note but the glaze and gentle heat still deliver.",
+    "Maple syrup stands in for brown sugar in the glaze — thinner, so reduce it in a small pan 2 minutes first.",
+    "Rainy night: the planked fillets run the same 12–18 minutes in a 375°F oven, and the kitchen smells like a campfire."
   ],
   "spiceLevel": "mild",
-  "cleanupDifficulty": "medium",
+  "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 367,
-    "protein": 38,
-    "carbs": 3,
-    "fats": 20,
+    "calories": 380,
+    "protein": 36,
+    "carbs": 8,
+    "fats": 22,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -156,6 +250,7 @@
     "bbq",
     "healthy",
     "cedar plank grilled salmon",
+    "brown sugar glazed salmon",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -168,6 +263,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.166Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

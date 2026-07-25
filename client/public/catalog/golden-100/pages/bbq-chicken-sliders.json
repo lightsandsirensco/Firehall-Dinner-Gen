@@ -7,16 +7,16 @@
   "subtitle": "Sweet-smoky sliders for a hungry line",
   "category": "bbq_grill_nights",
   "cuisine": "american",
-  "description": "Sweet-smoky sliders for a hungry line. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
+  "description": "Thighs simmered right in doctored BBQ sauce until they shred, piled on butter-toasted Hawaiian rolls with vinegar slaw and pickles. The braising liquid becomes the sauce, so nothing gets poured down the drain.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
-  "difficulty": "hard",
-  "calories": 596,
-  "protein": 60,
-  "carbs": 6,
-  "fats": 39,
+  "cookTime": 60,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 950,
+  "protein": 62,
+  "carbs": 78,
+  "fats": 38,
   "tags": [
     "protein:chicken",
     "format:sandwich",
@@ -26,118 +26,210 @@
     "golden_100"
   ],
   "equipment": [
-    "Grill or flat-top",
-    "Tongs",
-    "Heat-resistant gloves",
-    "Large sheet trays",
+    "Dutch oven or wide heavy pot with lid",
+    "Two forks or a stand mixer with paddle for shredding",
+    "Griddle or sheet trays for toasting rolls",
+    "Slotted spoon",
+    "Large mixing bowl",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Ground Beef",
+      "name": "Boneless Skinless Chicken Thighs",
       "quantity": "4",
       "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Hoagie Rolls",
-      "quantity": "8",
-      "unit": "count",
+      "name": "Slider Rolls (Hawaiian-style, 12-count pack)",
+      "quantity": "2",
+      "unit": "packs",
       "group": "Buns"
     },
     {
-      "name": "Provolone Slices",
-      "quantity": "12",
-      "unit": "count",
-      "group": "Cheese"
-    },
-    {
-      "name": "Marinara Sauce",
-      "quantity": "2",
+      "name": "BBQ Sauce",
+      "quantity": "3",
       "unit": "Cups",
       "group": "Sauce"
     },
     {
-      "name": "Yellow Onion",
+      "name": "Chicken Broth",
       "quantity": "1",
-      "unit": "large",
-      "group": "Aromatics"
+      "unit": "Cup",
+      "group": "Sauce"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "Apple Cider Vinegar",
+      "quantity": "3",
+      "unit": "Tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": "2",
+      "unit": "Tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "Smoked Paprika",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Garlic Powder",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Coleslaw Mix (bagged)",
+      "quantity": "2",
+      "unit": "bags (14 oz)",
+      "group": "Slaw"
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": "0.75",
+      "unit": "Cup",
+      "group": "Slaw"
+    },
+    {
+      "name": "Dill Pickle Chips",
+      "quantity": "2",
+      "unit": "Cups",
+      "group": "Build"
+    },
+    {
+      "name": "Unsalted Butter (melted)",
       "quantity": "4",
-      "unit": "cloves",
-      "group": "Aromatics"
+      "unit": "Tbsp",
+      "group": "Buns"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Cook and sauce filling",
-      "instruction": "Slow-cook or simmer filling until shreddable (pork 203°F, meatballs cooked through). Simmer in sauce 15 minutes so flavor penetrates.",
+      "title": "Season the thighs while the pot heats",
+      "instruction": "Pat the chicken thighs dry and season all over with the smoked paprika, garlic powder, and kosher salt — seasoning the meat itself, not just the sauce, is why the shred tastes like BBQ all the way through instead of sauce-coated plain meat. Set the heavy pot over medium heat while you work.",
+      "minutes": 10,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Simmer the thighs in sauce until they shred",
+      "instruction": "Nestle the thighs into the pot with 2 cups of the BBQ sauce and the chicken broth, cover, and hold a gentle simmer — small lazy bubbles, never a hard boil, which seizes the meat tight. Cook 25–30 minutes: the thighs pass the safe 165°F mark early, but keep going until an instant-read thermometer shows about 190°F, where the connective tissue melts and a fork twists through with no resistance.",
       "minutes": 30,
       "heatLevel": "medium-low"
     },
     {
-      "stepNumber": 2,
-      "title": "Toast buns",
-      "instruction": "Toast split buns on a dry griddle until golden. Melt cheese on top if desired.",
-      "minutes": 6,
-      "heatLevel": "medium"
-    },
-    {
       "stepNumber": 3,
-      "title": "Build the sandwich line",
-      "instruction": "BBQ Chicken Sliders on sheet trays: bottom bun, meat, sauce, cheese, top bun. Serve immediately; hold wrapped sandwiches at 200°F up to 20 minutes.",
+      "title": "Shred the meat while it's hot",
+      "instruction": "Lift the thighs to a sheet tray with the slotted spoon and pull them apart with two forks into rough, bite-size shreds — or drop them in the stand mixer with the paddle for 20 seconds on low. Shred while hot; the meat lets go easily now and drinks sauce back up, where cooled meat fights the forks and stays dry.",
       "minutes": 8,
-      "heatLevel": "low"
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Hold for late calls",
-      "instruction": "Keep backup sandwiches foil-wrapped at 200°F. Slice hoagies in half for easier grabbing — crew eats with one hand when tones are quiet.",
+      "title": "Reduce the pot liquid into the real sauce",
+      "instruction": "Turn the pot to medium-high and let the braising liquid bubble hard 5–8 minutes with the last cup of BBQ sauce, the apple cider vinegar, and the brown sugar, until it coats a spoon and a swipe across the back holds a line. The vinegar cuts the sweetness so the third slider tastes as good as the first. Fold the shredded meat back in and drop the heat to its lowest setting.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Toss the vinegar slaw and chill it",
+      "instruction": "In the big bowl, toss the coleslaw mix with the mayonnaise, a splash of cider vinegar, and a pinch of salt until every shred is coated but not soupy. Park it in the fridge until build time — at least 10 minutes takes the raw edge off the cabbage, and cold crunchy slaw against hot meat is the whole point of this sandwich.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Butter and toast the rolls",
+      "instruction": "Split the slider rolls, keeping each 12-pack sheet connected — they toast and move as one piece. Brush the cut faces with melted butter and toast on the griddle or under a 400°F oven for 3–4 minutes until golden at the edges. That toasted face is a moisture barrier; skip it and the first saucy scoop soaks the bread into mush.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Build the sliders bottom-up",
+      "instruction": "Lift the meat with the slotted spoon so excess sauce drains back into the pot — the number-one slider mistake is drowning the bun. Layer each roll with a solid pinch of meat, two dill pickle chips, and a small mound of slaw, then cap it. Work in full sheets of 12 on trays; it goes five times faster than one sandwich at a time.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Send trays out while the buns are crisp",
+      "instruction": "Serve within 10 minutes of building — these have about a 20-minute window before the slaw wilts warm and the bottom bun gives up. Keep the pot of extra meat on the lowest heat with a lid so the second and third rounds go out just as hot as the first tray did.",
       "minutes": 5,
       "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the pulled chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the vinegar slaw in the fridge, not on the counter — it's already dressed and needs to stay cold and crisp, not sit next to a warm pan. On return, spot-check the chicken at a safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool pulled chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
     }
   ],
   "proTips": [
-    "Keep a backup tray warm in the oven for late calls — nothing worse than cold plates after a run.",
+    "Thighs, not breasts — breast meat shreds into dry strings in a braise; thighs stay juicy through the simmer, the hold, and the reheat.",
+    "Take the meat well past 165°F to about 190°F before shredding — that's where thigh collagen turns to gelatin and the forks glide.",
+    "If the pot sauce tastes flat at the end, it wants another splash of cider vinegar before it wants more sugar or salt.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
     "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Rest grilled proteins 5–8 minutes under foil before slicing — juices stay in the meat.",
-    "Pull chicken at 160°F and let carryover hit 165°F — dry breast ruins crew morale."
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Plate BBQ Chicken Sliders with sides in separate pans so the crew can mix portions.",
-    "Line up BBQ Chicken Sliders on the main counter with serving spoons — firefighters grab fast between calls.",
-    "Keep a backup tray warm in the oven at 200°F for late arrivals after a run.",
-    "Slice proteins on a cutting board at the end of the line so everyone sees the smoke ring and char.",
-    "Set sauce and pickles on the side — sauced meat holds better on the backup tray."
+    "Main: BBQ pulled chicken sliders on toasted Hawaiian rolls",
+    "Sides: vinegar slaw, dill pickle chips, kettle chips if the pantry has them",
+    "Condiments: extra warmed BBQ sauce for the double-dippers",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift.",
-    "Store components separate — assemble fresh; buns go soggy overnight."
+    "Cool pulled chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Never store built sliders — keep meat, slaw, and rolls separate and the second shift eats as well as the first.",
+    "Reheat the meat in a covered pan with a splash of broth or water; day-two sauce thickens and scorches fast over bare heat."
   ],
-  "whyCrewsLikeIt": "Sweet-smoky sliders for a hungry line. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
+  "whyCrewsLikeIt": "Three-bite sandwiches with hot saucy meat, cold crunchy slaw, and a buttered crisp bun — a tray of 24 disappears before the second sheet finishes toasting.",
   "substitutions": [
-    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+    "Rotisserie shortcut: fold 2.5 lb pulled rotisserie meat into the reduced sauce and skip the simmer — dinner lands in 25 minutes.",
+    "Regular burger buns work if slider rolls are gone — makes 8 full-size sandwiches; toast them the same way.",
+    "Greek yogurt swaps 1:1 for the mayonnaise in the slaw — tangier, lighter, and nobody has ever noticed.",
+    "No cider vinegar? White vinegar plus an extra pinch of brown sugar lands close enough."
   ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 596,
-    "protein": 60,
-    "carbs": 6,
-    "fats": 39,
+    "calories": 950,
+    "protein": 62,
+    "carbs": 78,
+    "fats": 38,
     "label": "per serving (hall portion)",
-    "source": "calculated",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -162,6 +254,7 @@
     "bbq",
     "handheld",
     "bbq pulled chicken sliders",
+    "pulled chicken hawaiian rolls",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -174,6 +267,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.156Z",
+  "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2
 }

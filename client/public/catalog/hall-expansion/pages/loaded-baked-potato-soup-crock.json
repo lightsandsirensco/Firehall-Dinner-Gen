@@ -1,0 +1,208 @@
+{
+  "slug": "loaded-baked-potato-soup-crock",
+  "title": "Loaded Baked Potato Soup Crock",
+  "displayTitle": "Loaded Baked Potato Soup Crock",
+  "seoTitle": "Loaded Baked Potato Soup Crock | Firefighter Meal",
+  "shortDescription": "Creamy potato soup with bacon and cheese toppings",
+  "subtitle": "Creamy potato soup with bacon and cheese toppings",
+  "category": "hall_expansion",
+  "cuisine": "American",
+  "description": "Potatoes, broth, bacon, cheese, and sour cream become thick, comforting soup in the slow cooker.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 420,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 680,
+  "protein": 26,
+  "carbs": 64,
+  "fats": 36,
+  "tags": [
+    "protein:bacon",
+    "format:slow_cooker",
+    "category:crew_feeders",
+    "slow_cooker",
+    "budget",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "slow cooker",
+    "sheet pans",
+    "potato masher",
+    "ladle"
+  ],
+  "ingredients": [
+    {
+      "name": "russet potatoes",
+      "quantity": "9.6",
+      "unit": "lb"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "11.2",
+      "unit": "cups"
+    },
+    {
+      "name": "bacon",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "sour cream",
+      "quantity": "3.2",
+      "unit": "cups"
+    },
+    {
+      "name": "green onions",
+      "quantity": "2",
+      "unit": "bunches"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Morning start",
+      "instruction": "Add peeled potato cubes, broth, onion, and seasonings to the slow cooker.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook covered",
+      "instruction": "Cook on low for 7 hours until potatoes crush easily against the side with a spoon.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook bacon",
+      "instruction": "Bake bacon on lined pans until crisp, then drain it well and crumble after cooling.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Mash potatoes",
+      "instruction": "Mash about half the potatoes in the cooker; leave some chunks for baked-potato texture.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Make slurry",
+      "instruction": "Whisk cornstarch with cold water until smooth so it will not form lumps in soup.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Thicken soup",
+      "instruction": "Stir slurry into simmering soup and cook until it lightly coats a spoon.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Add dairy",
+      "instruction": "Lower heat, then stir in sour cream and cheese gradually so the soup does not split.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Check heat",
+      "instruction": "Warm soup back to 165°F while stirring the bottom to prevent scorching.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold safely",
+      "instruction": "Keep the cooker on warm and confirm soup stays above 140°F during service.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Load bowls",
+      "instruction": "Ladle soup and top with bacon, cheddar, green onions, and extra sour cream.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the soup — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the reserved garnish sour cream and bacon refrigerated separately from the crock — they get spooned on fresh at serving, not held warm in the pot. On return, bring the soup back to 165°F, stirring gently so it doesn't split, before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Bacon and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Add dairy after potatoes are tender.",
+    "Use an immersion blender only for a smoother soup.",
+    "Serve toppings with separate spoons."
+  ],
+  "tonightSpread": [
+    "Main: Loaded baked potato soup",
+    "Sides: crusty bread, green salad",
+    "Condiments: bacon, cheddar, chives",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Bacon in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Use leftovers as a casserole sauce."
+  ],
+  "whyCrewsLikeIt": "It is inexpensive, familiar, and easy to keep hot for a delayed dinner.",
+  "mealPrepNotes": "Make-ahead: cook bacon and chop potatoes 1 day ahead. Storage: refrigerate 3 days. Reheating: bring soup to 165°F while stirring.",
+  "substitutions": [
+    "Use turkey bacon for bacon.",
+    "Use Greek yogurt for sour cream."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 680,
+    "protein": 26,
+    "carbs": 64,
+    "fats": 36,
+    "label": "~680 cal/serving · 26g protein · 7g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+  "heroImageAlt": "Loaded Baked Potato Soup Crock — American slow_cooker plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+  "railImage": "/images/rails/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "loaded baked potato soup crockpot crowd",
+    "slow cooker potato soup firehall",
+    "crockpot soup for ten",
+    "bacon cheddar potato soup"
+  ],
+  "relatedSlugs": [
+    "mississippi-pot-roast-crew",
+    "white-chicken-chili-crock",
+    "italian-beef-slow-cooker",
+    "salsa-verde-chicken-crock"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

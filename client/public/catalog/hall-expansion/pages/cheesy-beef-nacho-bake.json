@@ -39,68 +39,68 @@
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (85/15)",
+      "name": "ground beef (85/15)",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Taco Seasoning",
+      "name": "taco seasoning",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Main"
     },
     {
-      "name": "Tortilla Chips",
+      "name": "tortilla chips",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sturdy style",
       "group": "Main"
     },
     {
-      "name": "Black Beans",
+      "name": "black beans",
       "quantity": "2",
       "unit": "cans",
       "notes": "15 oz, drained",
       "group": "Main"
     },
     {
-      "name": "Cheddar Cheese",
+      "name": "cheddar cheese",
       "quantity": "3/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
-      "name": "Monterey Jack Cheese",
+      "name": "Monterey Jack cheese",
       "quantity": "3/8",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "shredded",
       "group": "Cheese"
     },
     {
-      "name": "Jalapeño Peppers",
+      "name": "jalapeño peppers",
       "quantity": "3",
       "unit": "whole",
       "notes": "sliced",
       "group": "Main"
     },
     {
-      "name": "Salsa",
+      "name": "salsa",
       "quantity": "1.6",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Topping"
     },
     {
-      "name": "Sour Cream",
+      "name": "sour cream",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Topping"
     },
     {
-      "name": "Fresh Cilantro",
+      "name": "fresh cilantro",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Topping"
     }
@@ -164,10 +164,19 @@
     "protein": 32,
     "carbs": 42,
     "fats": 30,
-    "label": "~560 cal/serving · 32g protein · 6g fiber (est.)"
+    "label": "~560 cal/serving · 32g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
-  "heroImageAlt": "Cheesy Beef Nacho Bake — crew-sized firehall meal",
+  "heroImageAlt": "Cheesy Beef Nacho Bake — mexican-american sheet_pan plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/cheesy-beef-nacho-bake.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/cheesy-beef-nacho-bake.jpg",
   "railImage": "/images/rails/hall-expansion/cheesy-beef-nacho-bake.jpg",
@@ -181,10 +190,10 @@
   "relatedSlugs": [
     "loaded-potato-skins",
     "game-day-pizza-sliders",
-    "pretzel-bite-platter",
-    "jalapeno-popper-dip"
+    "philly-cheesesteak-sliders",
+    "sheet-pan-meatball-marinara"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.930Z",
+  "generatedAt": "2026-07-17T20:15:12.769Z",
   "contentVersion": 2
 }

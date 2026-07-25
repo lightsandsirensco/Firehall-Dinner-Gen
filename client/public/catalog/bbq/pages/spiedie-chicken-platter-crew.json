@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "upstate new york",
   "description": "Chicken breast cubes marinate in white-wine mint-sage spiedie bath, griddle on skewers until charred and 165°F, and serve with Martin's potato rolls for soaking.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
@@ -39,57 +39,57 @@
   "ingredients": [
     {
       "name": "Chicken Breast",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
       "name": "Canola Oil",
-      "quantity": "1",
+      "quantity": "3/4",
       "unit": "Cup",
       "group": "Spiedie marinade"
     },
     {
       "name": "Distilled White Vinegar",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Spiedie marinade"
     },
     {
       "name": "Riesling Wine",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Spiedie marinade"
     },
     {
       "name": "Fresh Mint Leaves",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "notes": "chopped",
       "group": "Spiedie marinade"
     },
     {
       "name": "Dried Sage",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Spiedie marinade"
     },
     {
       "name": "Dried Rosemary",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tbsp",
       "group": "Spiedie marinade"
     },
     {
       "name": "Martin's Potato Rolls",
-      "quantity": "12",
+      "quantity": "9.6",
       "unit": "pieces",
       "group": "Service"
     },
     {
       "name": "Maldon Salt",
-      "quantity": "2",
+      "quantity": "1 3/4",
       "unit": "Tbsp",
       "group": "Spiedie marinade"
     }

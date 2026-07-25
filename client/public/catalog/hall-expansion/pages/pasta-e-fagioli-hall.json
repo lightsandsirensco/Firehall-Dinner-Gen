@@ -1,0 +1,266 @@
+{
+  "slug": "pasta-e-fagioli-hall",
+  "title": "Pasta e Fagioli for the Hall",
+  "displayTitle": "Pasta e Fagioli for the Hall",
+  "seoTitle": "Pasta e Fagioli for the Hall | Firefighter Meal",
+  "shortDescription": "Big-pot Italian bean, beef, and pasta soup",
+  "subtitle": "Big-pot Italian bean, beef, and pasta soup",
+  "category": "hall_expansion",
+  "cuisine": "Italian",
+  "description": "Hard-browned ground beef, a slow soffritto, and a parmesan rind melting into the pot — then ditalini cooked right in the soup so it drinks up the broth. One stockpot, built in layers the way Italian grandmothers and test kitchens both insist on.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 45,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 560,
+  "protein": 35,
+  "carbs": 55,
+  "fats": 19,
+  "tags": [
+    "protein:beef",
+    "format:one_pot",
+    "category:crew_feeders",
+    "budget",
+    "one_pot",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large stockpot (12-quart)",
+    "Ladle",
+    "Chef knife",
+    "Can opener",
+    "Wooden spoon",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef",
+      "quantity": "3.2",
+      "unit": "lb"
+    },
+    {
+      "name": "ditalini pasta",
+      "quantity": "1.2",
+      "unit": "lb"
+    },
+    {
+      "name": "cannellini beans",
+      "quantity": "4",
+      "unit": "cans (15 oz)"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "3",
+      "unit": "cans (15 oz)"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "12",
+      "unit": "cups"
+    },
+    {
+      "name": "carrots",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "diced small"
+    },
+    {
+      "name": "yellow onions",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "celery stalks",
+      "quantity": "4",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "notes": "minced"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "tomato paste",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Italian seasoning",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "parmesan rind",
+      "quantity": "1",
+      "unit": "piece",
+      "notes": "plus 2 cups grated parmesan for serving"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "1/2",
+      "unit": "cup",
+      "notes": "chopped"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Dice the soffritto and open the cans",
+      "instruction": "Dice the yellow onions, carrots, and celery stalks into small, even ¼-inch pieces — this trio is the soffritto, the flavor base of the whole pot, and even dice means it softens uniformly instead of half-crunchy. Mince the garlic cloves. Open the cannellini beans (drain and rinse two cans, leave two undrained for body) and the crushed tomatoes. Cut the parmesan rind off the wedge if it is still attached. Budget about 15 minutes so nothing waits once the heat is on.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the beef hard in the dry pot",
+      "instruction": "Heat 1 tbsp olive oil in the stockpot over medium-high until shimmering. Add the ground beef in two batches, pressing each flat and leaving it untouched 3–4 minutes so a deep brown crust forms before you break it into crumbles — a crowded pot steams the meat gray and the soup tastes boiled instead of built. Cook until no pink remains and an instant-read thermometer reads 160°F. Transfer to a bowl and pour off all but 2 tbsp of fat, keeping the browned fond in the pot.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Sweat the soffritto until sweet",
+      "instruction": "Drop to medium and add the remaining olive oil. Cook the onions, carrots, and celery with a big pinch of salt for 7–8 minutes, stirring and scraping the fond, until the onion turns translucent and the whole pot smells sweet — rushing this stage leaves the soup tasting raw and thin no matter how long it simmers later.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Bloom the garlic, paste, and herbs",
+      "instruction": "Stir in the minced garlic, tomato paste, and Italian seasoning and cook 60–90 seconds, stirring constantly, until the paste darkens from bright red to brick — caramelizing the paste in fat converts its raw tin taste into deep savory sweetness. If it starts catching on the bottom, that is flavor; just keep it moving so it does not scorch.",
+      "minutes": 2,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the pot with tomatoes, beans, and rind",
+      "instruction": "Pour in the crushed tomatoes, all the cannellini beans, and the broth, scraping the bottom clean as the liquid goes in. Return the browned meat and its juices, then drop in the parmesan rind — it melts slowly over the next half hour and seasons the broth with a nutty depth no grated cheese can match. Stir everything together over medium heat until steaming, about 3 minutes.",
+      "minutes": 4,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Simmer the base low and slow",
+      "instruction": "Bring the pot to a lazy simmer — small bubbles around the edge, never a rolling boil, which blows the beans apart and cooks the liquid off too fast. Simmer uncovered 20 minutes, stirring every 5 so the rind does not weld to the bottom. The broth should darken slightly and taste rounder at the end than the start.",
+      "minutes": 20,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Cook the ditalini right in the soup",
+      "instruction": "Stir in the ditalini and hold a gentle simmer 10–11 minutes, stirring every 2–3 minutes so the pasta does not stick to the bottom in a starchy raft. Cooking the ditalini in the soup instead of a separate pot lets it drink broth instead of water — that is where the flavor difference lives. Taste a piece: tender with a slight chew at the center means done.",
+      "minutes": 11,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Adjust the texture and season the pot",
+      "instruction": "The ditalini keeps swelling for several minutes after it is tender, so judge thickness now: it should be a thick spoon-coating soup, not a stew you can stand a fork in. Thin with a cup or two of hot water or broth if needed, then fish out the spent parmesan rind. Taste and season with salt and black pepper in stages — the rind and canned goods carry salt, so add, stir 30 seconds, taste again.",
+      "minutes": 4,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Ladle bowls and finish at the table",
+      "instruction": "Ladle into deep bowls and top each with a handful of grated parmesan, a scatter of chopped parsley, and a thin drizzle of olive oil — the raw oil carries a peppery brightness the cooked pot lost. Put red pepper flakes on the line for the heat-seekers. Serve within 10 minutes; the pasta drinks broth the whole time it sits.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the beef and bean soup — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the beef and bean soup and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "The parmesan rind is the quiet hero — keep a bag of spent rinds in the hall freezer and drop one into any tomato or bean pot.",
+    "If the soup will hold more than 30 minutes before service, cook the ditalini in a separate pot of salted water and add it bowl by bowl — pasta held in broth turns to mush.",
+    "Leave two cans of beans undrained: the starchy can liquid thickens the broth naturally, no flour needed.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+  ],
+  "tonightSpread": [
+    "Main: Pasta e fagioli with parmesan and parsley",
+    "Sides: garlic bread, Caesar salad",
+    "Condiments: grated parmesan, red pepper flakes, olive oil",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool the beef and bean soup in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "The pasta swells overnight into more of a stew — thin with broth or water when reheating and re-taste for salt.",
+    "Freezing? Freeze the base without pasta and cook fresh ditalini on the reheat — frozen pasta thaws to paste."
+  ],
+  "whyCrewsLikeIt": "Cheap, huge, and better than it has any right to be — the parmesan rind and browned beef make a grocery-store bean soup taste like it simmered all day. Forgiving if the meal gets interrupted.",
+  "mealPrepNotes": "Make-ahead: build the soup base up to 2 days ahead and cook the ditalini fresh at dinner. Storage: refrigerate 3 days. Reheating: bring to 165°F with extra broth to loosen.",
+  "substitutions": [
+    "Ground turkey swaps 1:1 for the ground beef — brown it in 2 extra tbsp olive oil since it runs lean, and still take it to 165°F.",
+    "No ditalini? Elbows or small shells cook in the same window; break spaghetti into 1-inch pieces as a last resort.",
+    "No parmesan rind on hand? Stir 2 extra tbsp tomato paste in at the bloom step and finish bowls heavier on grated parmesan — less depth, still a solid pot.",
+    "Kidney or great northern beans stand in for cannellini can for can with no other change."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 560,
+    "protein": 35,
+    "carbs": 55,
+    "fats": 19,
+    "label": "~560 cal/serving · 35g protein · 12g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+  "heroImageAlt": "Pasta e Fagioli for the Hall — Italian one_pot plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/pasta-e-fagioli-hall.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/pasta-e-fagioli-hall.jpg",
+  "railImage": "/images/rails/hall-expansion/pasta-e-fagioli-hall.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "pasta e fagioli crowd",
+    "Italian bean soup for ten",
+    "budget firehall soup",
+    "one pot beef pasta soup",
+    "parmesan rind bean soup",
+    "ditalini beef soup"
+  ],
+  "relatedSlugs": [
+    "cheesy-chicken-broccoli-rice",
+    "spanish-rice-chicken-one-pot",
+    "shawarma-bar-night",
+    "fajita-bar-night"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-23T21:15:00.000Z",
+  "contentVersion": 2
+}

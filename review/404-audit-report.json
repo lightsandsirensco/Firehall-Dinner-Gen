@@ -1,27 +1,289 @@
 {
-  "generatedAt": "2026-06-02T14:47:26.805Z",
+  "generatedAt": "2026-07-24T02:32:38.417Z",
   "httpBase": null,
-  "totalUrlsTested": 382,
-  "ok": 379,
+  "totalUrlsTested": 543,
+  "ok": 506,
   "redirects": 3,
-  "notFound": 0,
+  "notFound": 34,
   "assetMissing": 0,
-  "brokenInternalLinks": [],
-  "brokenImages": 0,
+  "brokenInternalLinks": [
+    {
+      "href": "/tonight",
+      "sources": [
+        "client\\src\\App.tsx",
+        "client\\src\\pages\\hall-detail-page.tsx",
+        "client\\src\\pages\\hall-features-page.tsx",
+        "client\\src\\pages\\hall-welcome-page.tsx",
+        "client\\src\\pages\\me-page.tsx",
+        "client\\src\\pages\\vote.tsx",
+        "client\\src\\components\\home\\home-hero.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-dashboard-v2.tsx",
+        "client\\src\\components\\hall\\hall-empty-state.tsx",
+        "client\\src\\components\\hall\\hall-shell.tsx",
+        "client\\src\\components\\app-shell\\me-subpage-shell.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/me/profile",
+      "sources": [
+        "client\\src\\App.tsx",
+        "client\\src\\pages\\hall-features-page.tsx",
+        "client\\src\\pages\\me-page.tsx",
+        "client\\src\\pages\\me-settings-page.tsx",
+        "client\\src\\components\\hall-membership\\hall-platform-banner.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-identity-header.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/me/saved",
+      "sources": [
+        "client\\src\\App.tsx",
+        "client\\src\\pages\\me-page.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-last-meals-section.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/me/subscription",
+      "sources": [
+        "client\\src\\App.tsx",
+        "client\\src\\pages\\me-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/history",
+      "sources": [
+        "client\\src\\App.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-dashboard-actions.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-dashboard-v2.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/join",
+      "sources": [
+        "client\\src\\App.tsx",
+        "client\\src\\pages\\account-page.tsx",
+        "client\\src\\pages\\hall-canteen-page.tsx",
+        "client\\src\\pages\\hall-dues-page.tsx",
+        "client\\src\\pages\\hall-features-page.tsx",
+        "client\\src\\pages\\hall-logbook-page.tsx",
+        "client\\src\\pages\\hall-shift-page.tsx",
+        "client\\src\\components\\shift-dashboard\\shift-dashboard.tsx",
+        "client\\src\\components\\home\\home-hall-vote.tsx",
+        "client\\src\\components\\hall-membership\\hall-platform-banner.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-identity-header.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/protein-deals/setup",
+      "sources": [
+        "client\\src\\App.tsx",
+        "client\\src\\pages\\hall-protein-deals-page.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-protein-deals-card.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/protein-deals",
+      "sources": [
+        "client\\src\\App.tsx",
+        "client\\src\\pages\\hall-deals-setup-page.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-dashboard-v2.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/how-we-test-recipes",
+      "sources": [
+        "client\\src\\pages\\about.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/plans",
+      "sources": [
+        "client\\src\\pages\\admin-billing.tsx",
+        "client\\src\\pages\\hall-features-page.tsx",
+        "client\\src\\components\\billing\\paywall-gate.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/admin/signups",
+      "sources": [
+        "client\\src\\pages\\admin-leads.tsx",
+        "client\\src\\pages\\admin.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/admin/users",
+      "sources": [
+        "client\\src\\pages\\admin-leads.tsx",
+        "client\\src\\pages\\admin-user-detail.tsx",
+        "client\\src\\pages\\admin.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/admin/leads",
+      "sources": [
+        "client\\src\\pages\\admin-signups-page.tsx",
+        "client\\src\\pages\\admin-users.tsx",
+        "client\\src\\pages\\admin.tsx",
+        "client\\src\\components\\admin\\signup-detail-drawer.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/admin/billing",
+      "sources": [
+        "client\\src\\pages\\admin.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/admin/deals",
+      "sources": [
+        "client\\src\\pages\\admin.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/admin/errors",
+      "sources": [
+        "client\\src\\pages\\admin.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/admin/growth",
+      "sources": [
+        "client\\src\\pages\\admin.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/canteen",
+      "sources": [
+        "client\\src\\pages\\hall-detail-page.tsx",
+        "client\\src\\components\\shift-dashboard\\shift-dashboard-actions.tsx",
+        "client\\src\\components\\hall-supplies\\hall-supplies-panel.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-dashboard-actions.tsx",
+        "client\\src\\components\\hall-dashboard\\v2\\hall-dashboard-v2.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/firefighter-dinner-vote",
+      "sources": [
+        "client\\src\\pages\\hall-features-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/fire-hall-grocery-list",
+      "sources": [
+        "client\\src\\pages\\hall-features-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/canteen-manager",
+      "sources": [
+        "client\\src\\pages\\hall-features-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall-meal-planner",
+      "sources": [
+        "client\\src\\pages\\hall-features-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/crew-grocery-budget",
+      "sources": [
+        "client\\src\\pages\\hall-features-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/me/history",
+      "sources": [
+        "client\\src\\pages\\hall-history-page.tsx",
+        "client\\src\\pages\\me-page.tsx",
+        "client\\src\\components\\hall-history\\recently-cooked-strip.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/account",
+      "sources": [
+        "client\\src\\pages\\hall-join-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/me/settings",
+      "sources": [
+        "client\\src\\pages\\me-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/settings",
+      "sources": [
+        "client\\src\\pages\\me-settings-page.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/features",
+      "sources": [
+        "client\\src\\components\\home\\home-hall-vote.tsx",
+        "client\\src\\components\\hall\\hall-empty-state.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/dues",
+      "sources": [
+        "client\\src\\components\\hall-dashboard\\v2\\hall-dashboard-v2.tsx"
+      ],
+      "reason": "no matching route"
+    },
+    {
+      "href": "/hall/logbook",
+      "sources": [
+        "client\\src\\components\\hall-dashboard\\v2\\hall-dashboard-v2.tsx"
+      ],
+      "reason": "no matching route"
+    }
+  ],
+  "brokenImages": 79,
   "wheelImageIssues": [],
-  "recipePageIssues": 0,
-  "sitemapUrlCount": 309,
-  "sitemapFailures": 0,
-  "orphanRecipes": 53,
-  "notLinkedFromNav": 224,
+  "recipePageIssues": 77,
+  "sitemapUrlCount": 444,
+  "sitemapFailures": 10,
+  "orphanRecipes": 55,
+  "notLinkedFromNav": 299,
   "guidesNotInSitemap": 0,
   "recipesNotInSitemap": [
     "chili-lime-grilled-tilapia",
     "andouille-po-boy-rolls-crew",
     "spiedie-chicken-platter-crew",
+    "cajun-grilled-cod-crew",
     "loaded-ranch-potato-salad-crew",
     "blueberry-almond",
     "brisket-style-beef-sandwiches-au-jus",
+    "grilled-cod-lemon-packets",
     "cast-iron-steak-fajita-sizzlers",
     "chocolate-banana-recovery",
     "citrus-ginger",
@@ -43,9 +305,7 @@
     "mixed-berry-protein",
     "mocha-protein",
     "firehall-antipasto-pasta-salad",
-    "lamb-merguez-skewers-crew",
-    "honey-sriracha-shrimp-skewers",
-    "peanut-butter-banana-recovery"
+    "lamb-merguez-skewers-crew"
   ],
   "legacyResults": [
     {
@@ -79,18 +339,602 @@
       "pass": true
     }
   ],
-  "integrityPct": 92.1,
-  "hardFailureCount": 0,
-  "notFoundPaths": [],
+  "integrityPct": 44.1,
+  "hardFailureCount": 230,
+  "notFoundPaths": [
+    "/how-we-test-recipes",
+    "/hall-meal-planner",
+    "/firefighter-dinner-vote",
+    "/fire-hall-pantry",
+    "/canteen-manager",
+    "/cost-per-plate-calculator",
+    "/fire-hall-grocery-list",
+    "/fire-station-kitchen-inventory",
+    "/firefighter-meal-calendar",
+    "/crew-grocery-budget",
+    "/tonight",
+    "/me/profile",
+    "/me/saved",
+    "/me/subscription",
+    "/hall/history",
+    "/hall/join",
+    "/hall/protein-deals/setup",
+    "/hall/protein-deals",
+    "/plans",
+    "/admin/signups",
+    "/admin/users",
+    "/admin/leads",
+    "/admin/billing",
+    "/admin/deals",
+    "/admin/errors",
+    "/admin/growth",
+    "/hall/canteen",
+    "/me/history",
+    "/account",
+    "/me/settings",
+    "/hall/settings",
+    "/hall/features",
+    "/hall/dues",
+    "/hall/logbook"
+  ],
   "assetMissingPaths": [],
-  "recipeIssues": [],
+  "recipeIssues": [
+    {
+      "slug": "chili-lime-grilled-tilapia",
+      "route": "/recipes/chili-lime-grilled-tilapia",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "andouille-po-boy-rolls-crew",
+      "route": "/recipes/andouille-po-boy-rolls-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "mediterranean-baked-fish-tray",
+      "route": "/recipes/mediterranean-baked-fish-tray",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "herb-baked-salmon-tray",
+      "route": "/recipes/herb-baked-salmon-tray",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "baked-turkey-meatball-marinara",
+      "route": "/recipes/baked-turkey-meatball-marinara",
+      "issues": [
+        "broken_related:lean-turkey-bean-chili"
+      ]
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "route": "/recipes/crock-barbacoa-chicken",
+      "issues": [
+        "broken_related:lean-turkey-bean-chili",
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "bbq-meatball-skewers",
+      "route": "/recipes/bbq-meatball-skewers",
+      "issues": [
+        "broken_related:chicken-caesar-wraps"
+      ]
+    },
+    {
+      "slug": "beef-gyros-for-the-hall",
+      "route": "/recipes/beef-gyros-for-the-hall",
+      "issues": [
+        "broken_related:chicken-caesar-wraps"
+      ]
+    },
+    {
+      "slug": "korean-beef-rice-bowls",
+      "route": "/recipes/korean-beef-rice-bowls",
+      "issues": [
+        "broken_related:lean-beef-broccoli-rice"
+      ]
+    },
+    {
+      "slug": "spiedie-chicken-platter-crew",
+      "route": "/recipes/spiedie-chicken-platter-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "cajun-grilled-cod-crew",
+      "route": "/recipes/cajun-grilled-cod-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "loaded-ranch-potato-salad-crew",
+      "route": "/recipes/loaded-ranch-potato-salad-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "brisket-style-beef-sandwiches-au-jus",
+      "route": "/recipes/brisket-style-beef-sandwiches-au-jus",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "buffalo-chicken-wraps",
+      "route": "/recipes/buffalo-chicken-wraps",
+      "issues": [
+        "broken_related:chicken-caesar-wraps"
+      ]
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "route": "/recipes/cajun-chicken-rice-bowl",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "grilled-cod-lemon-packets",
+      "route": "/recipes/grilled-cod-lemon-packets",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "caprese-chicken-bake",
+      "route": "/recipes/caprese-chicken-bake",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "route": "/recipes/cast-iron-steak-fajita-sizzlers",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "spanish-chicken-chorizo-rice",
+      "route": "/recipes/spanish-chicken-chorizo-rice",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "chicken-enchilada-skillet-light",
+      "route": "/recipes/chicken-enchilada-skillet-light",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "asian-chicken-lettuce-cups",
+      "route": "/recipes/asian-chicken-lettuce-cups",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "chicken-shawarma-pitas",
+      "route": "/recipes/chicken-shawarma-pitas",
+      "issues": [
+        "broken_related:chicken-caesar-wraps"
+      ]
+    },
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "route": "/recipes/boneless-chicken-thighs-sweet-potato-spinach",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "chipotle-lime-chicken-tacos",
+      "route": "/recipes/chipotle-lime-chicken-tacos",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "route": "/recipes/flat-top-philly-cheesesteaks-crew",
+      "issues": [
+        "missing_nutrition",
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "firehall-street-elote-cups",
+      "route": "/recipes/firehall-street-elote-cups",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "firehall-burnt-ends-platter",
+      "route": "/recipes/firehall-burnt-ends-platter",
+      "issues": [
+        "broken_related:pepper-smoked-brisket-flat"
+      ]
+    },
+    {
+      "slug": "griddle-smash-sausage-peppers",
+      "route": "/recipes/griddle-smash-sausage-peppers",
+      "issues": [
+        "missing_nutrition",
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "greek-chicken-pitas",
+      "route": "/recipes/greek-chicken-pitas",
+      "issues": [
+        "broken_related:chicken-caesar-wraps"
+      ]
+    },
+    {
+      "slug": "grilled-reuben-sandwiches-crew",
+      "route": "/recipes/grilled-reuben-sandwiches-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "caprese-steak-skewers-crew",
+      "route": "/recipes/caprese-steak-skewers-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "route": "/recipes/honey-garlic-chicken-rice-bowls",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "honey-lime-chicken-tray",
+      "route": "/recipes/honey-lime-chicken-tray",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "route": "/recipes/hot-honey-grilled-sausage-peppers",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "hummus-chicken-platter",
+      "route": "/recipes/hummus-chicken-platter",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "pork-satay-skewers-crew",
+      "route": "/recipes/pork-satay-skewers-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "jalapeno-cheddar-smoked-sausages",
+      "route": "/recipes/jalapeno-cheddar-smoked-sausages",
+      "issues": [
+        "broken_related:firehall-double-smash-burgers-bbq"
+      ]
+    },
+    {
+      "slug": "tandoori-lamb-chop-platter",
+      "route": "/recipes/tandoori-lamb-chop-platter",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "greek-lemon-chicken-potatoes",
+      "route": "/recipes/greek-lemon-chicken-potatoes",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "lemon-chicken-orzo-soup",
+      "route": "/recipes/lemon-chicken-orzo-soup",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "lemon-garlic-chicken-tray",
+      "route": "/recipes/lemon-garlic-chicken-tray",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "portuguese-linguica-grill-platter",
+      "route": "/recipes/portuguese-linguica-grill-platter",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "maple-mustard-salmon-tray",
+      "route": "/recipes/maple-mustard-salmon-tray",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "moroccan-chicken-chickpea-tray",
+      "route": "/recipes/moroccan-chicken-chickpea-tray",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "firehall-antipasto-pasta-salad",
+      "route": "/recipes/firehall-antipasto-pasta-salad",
+      "issues": [
+        "missing_nutrition",
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "lamb-merguez-skewers-crew",
+      "route": "/recipes/lamb-merguez-skewers-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "honey-sriracha-shrimp-skewers",
+      "route": "/recipes/honey-sriracha-shrimp-skewers",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "maple-bourbon-grilled-trout",
+      "route": "/recipes/maple-bourbon-grilled-trout",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "pesto-tomato-chicken-tray",
+      "route": "/recipes/pesto-tomato-chicken-tray",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "grilled-peach-burrata-salad",
+      "route": "/recipes/grilled-peach-burrata-salad",
+      "issues": [
+        "missing_nutrition",
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "pressed-cuban-sandwiches-crew",
+      "route": "/recipes/pressed-cuban-sandwiches-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "salsa-verde-crock-chicken",
+      "route": "/recipes/salsa-verde-crock-chicken",
+      "issues": [
+        "broken_related:lean-turkey-bean-chili",
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "sausage-peppers-on-buns",
+      "route": "/recipes/sausage-peppers-on-buns",
+      "issues": [
+        "broken_related:chicken-caesar-wraps"
+      ]
+    },
+    {
+      "slug": "mongolian-beef-flat-top-crew",
+      "route": "/recipes/mongolian-beef-flat-top-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "gochujang-beef-skewers-crew",
+      "route": "/recipes/gochujang-beef-skewers-crew",
+      "issues": [
+        "missing_nutrition",
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "shawarma-chicken-rice-bowls",
+      "route": "/recipes/shawarma-chicken-rice-bowls",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "charred-broccolini-lemon-tray",
+      "route": "/recipes/charred-broccolini-lemon-tray",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "smoked-baked-beans-crew",
+      "route": "/recipes/smoked-baked-beans-crew",
+      "issues": [
+        "broken_related:kansas-city-pulled-pork-sandwiches"
+      ]
+    },
+    {
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "route": "/recipes/smoked-chicken-quarters-white-sauce",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "smoked-mac-and-cheese-crew",
+      "route": "/recipes/smoked-mac-and-cheese-crew",
+      "issues": [
+        "broken_related:kansas-city-pulled-pork-sandwiches"
+      ]
+    },
+    {
+      "slug": "smoked-potato-salad-tray",
+      "route": "/recipes/smoked-potato-salad-tray",
+      "issues": [
+        "broken_related:alabama-white-sauce-pulled-pork"
+      ]
+    },
+    {
+      "slug": "soft-pretzel-dogs",
+      "route": "/recipes/soft-pretzel-dogs",
+      "issues": [
+        "broken_related:chicken-caesar-wraps"
+      ]
+    },
+    {
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "route": "/recipes/grilled-chicken-pesto-panini-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "tabbouleh-chicken-bowls",
+      "route": "/recipes/tabbouleh-chicken-bowls",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "route": "/recipes/firehall-hibachi-mixed-grill-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "texas-central-brisket-crew",
+      "route": "/recipes/texas-central-brisket-crew",
+      "issues": [
+        "broken_related:pepper-smoked-brisket-flat"
+      ]
+    },
+    {
+      "slug": "yakiniku-grill-platter-crew",
+      "route": "/recipes/yakiniku-grill-platter-crew",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "turkey-lettuce-wrap-night",
+      "route": "/recipes/turkey-lettuce-wrap-night",
+      "issues": [
+        "broken_related:lean-turkey-bean-chili"
+      ]
+    },
+    {
+      "slug": "turkey-shepherds-sweet-potato",
+      "route": "/recipes/turkey-shepherds-sweet-potato",
+      "issues": [
+        "broken_related:lean-turkey-bean-chili"
+      ]
+    },
+    {
+      "slug": "turkey-sweet-potato-chili",
+      "route": "/recipes/turkey-sweet-potato-chili",
+      "issues": [
+        "broken_related:lean-turkey-bean-chili"
+      ]
+    },
+    {
+      "slug": "turkey-taco-skillet",
+      "route": "/recipes/turkey-taco-skillet",
+      "issues": [
+        "broken_related:lean-turkey-bean-chili"
+      ]
+    },
+    {
+      "slug": "turkey-zoodle-bolognese",
+      "route": "/recipes/turkey-zoodle-bolognese",
+      "issues": [
+        "broken_related:lean-turkey-bean-chili"
+      ]
+    },
+    {
+      "slug": "white-bean-chicken-chili",
+      "route": "/recipes/white-bean-chicken-chili",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "yogurt-marinated-grill-chicken",
+      "route": "/recipes/yogurt-marinated-grill-chicken",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "pollo-asado-citrus-platter",
+      "route": "/recipes/pollo-asado-citrus-platter",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    },
+    {
+      "slug": "zaatar-roasted-chicken-thighs",
+      "route": "/recipes/zaatar-roasted-chicken-thighs",
+      "issues": [
+        "broken_related:sheet-pan-chicken-fajitas-lite"
+      ]
+    },
+    {
+      "slug": "mixed-lamb-chop-grill-board",
+      "route": "/recipes/mixed-lamb-chop-grill-board",
+      "issues": [
+        "broken_related:carolina-vinegar-pulled-pork"
+      ]
+    }
+  ],
   "orphanRecipeSlugs": [
     "chili-lime-grilled-tilapia",
     "andouille-po-boy-rolls-crew",
     "spiedie-chicken-platter-crew",
+    "cajun-grilled-cod-crew",
     "loaded-ranch-potato-salad-crew",
     "blueberry-almond",
     "brisket-style-beef-sandwiches-au-jus",
+    "grilled-cod-lemon-packets",
     "cast-iron-steak-fajita-sizzlers",
     "chocolate-banana-recovery",
     "citrus-ginger",
@@ -132,9 +976,7 @@
     "strawberry-oat-breakfast",
     "strawberry-spinach",
     "grilled-chicken-pesto-panini-crew",
-    "firehall-hibachi-mixed-grill-crew",
-    "texas-central-brisket-crew",
-    "yakiniku-grill-platter-crew"
+    "firehall-hibachi-mixed-grill-crew"
   ],
   "consoleErrorsNote": "Browser console/React runtime errors require Playwright (not installed). Static audit covers routes, JSON, and assets.",
   "mobileNote": "Mobile viewport crawl requires Playwright. Static checks: explore-mobile audit patterns + mobile image paths on catalog entries."

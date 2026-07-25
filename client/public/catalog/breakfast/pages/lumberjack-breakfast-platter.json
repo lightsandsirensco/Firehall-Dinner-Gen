@@ -23,49 +23,49 @@
   "difficulty": "medium",
   "ingredients": [
     {
-      "name": "Pancake Mix",
+      "name": "pancake mix",
       "quantity": "4 cups",
       "notes": "prepared per package for 24 silver-dollar cakes",
       "group": "Pancakes"
     },
     {
-      "name": "Whole Milk",
+      "name": "whole milk",
       "quantity": "3 cups",
       "notes": "for batter",
       "group": "Pancakes"
     },
     {
-      "name": "Thick-Cut Bacon",
+      "name": "thick-cut bacon",
       "quantity": "2 lb",
       "notes": "16 slices",
       "group": "Meats"
     },
     {
-      "name": "Pork Sausage Links",
+      "name": "pork sausage links",
       "quantity": "2 lb",
       "notes": "16 links",
       "group": "Meats"
     },
     {
-      "name": "Frozen Hash Browns",
+      "name": "frozen hash browns",
       "quantity": "2 lb",
       "notes": "shredded, crisped on griddle",
       "group": "Hash"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "8",
       "notes": "fried or scrambled to order",
       "group": "Protein"
     },
     {
-      "name": "Maple Syrup",
+      "name": "maple syrup",
       "quantity": "2 cups",
       "notes": "warmed",
       "group": "Serve"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "1/2 cup",
       "notes": "for pancakes and griddle",
       "group": "Serve"
@@ -140,13 +140,10 @@
   ],
   "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
   "thumbImage": "/images/thumbs/breakfast/lumberjack-breakfast-platter.jpg",
-  "imageAlt": "Wide firehall breakfast platter: pancake stack zone, scrambled-egg zone, bacon strips, sausage, and hash browns — each component separate on the crew line, f…",
-  "publishedAt": "2026-06-04T20:48:24.991Z",
-  "updatedAt": "2026-06-04T21:55:13.534Z",
+  "imageAlt": "Lumberjack breakfast platter with pancakes, bacon, sausage, hash browns, and eggs",
+  "publishedAt": "2026-07-17T20:15:27.730Z",
+  "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 9,
   "seoTitle": "Lumberjack Breakfast Platter | Firehall Breakfast",
-  "collectionTier": "firehall_classic",
-  "heroImageAlt": "Wide firehall breakfast platter: pancake stack zone, scrambled-egg zone, bacon strips, sausage, and hash browns — each component separate on the crew line, f…",
-  "mobileImage": "/images/mobile/breakfast/lumberjack-breakfast-platter.jpg",
-  "railImage": "/images/rails/breakfast/lumberjack-breakfast-platter.jpg"
+  "collectionTier": "firehall_classic"
 }

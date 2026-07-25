@@ -116,6 +116,10 @@ const MIGRATION_035 = fs.readFileSync(
   path.join(process.cwd(), "server", "db", "migrations", "035_canteen_pickup_claims.sql"),
   "utf8",
 );
+const MIGRATION_040 = fs.readFileSync(
+  path.join(process.cwd(), "server", "db", "migrations", "040_canteen_manager_v2.sql"),
+  "utf8",
+);
 
 
 
@@ -156,6 +160,7 @@ async function main(): Promise<void> {
   db.exec(MIGRATION_031);
   db.exec(MIGRATION_032);
   db.exec(MIGRATION_035);
+  db.exec(MIGRATION_040);
 
   bindAuthDb(db);
 

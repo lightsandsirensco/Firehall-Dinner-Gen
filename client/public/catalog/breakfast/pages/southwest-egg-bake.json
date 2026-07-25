@@ -13,45 +13,45 @@
     "salsa",
     "pepper-jack"
   ],
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "prepTime": 20,
   "cookTime": 38,
   "totalTime": 58,
   "difficulty": "easy",
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "14"
+      "name": "large eggs",
+      "quantity": "11"
     },
     {
-      "name": "Whole Milk",
-      "quantity": "3 cups",
+      "name": "whole milk",
+      "quantity": "2.4",
       "notes": "or half-and-half for richer"
     },
     {
-      "name": "Turkey Sausage Or Lean Pork Sausage",
-      "quantity": "2 lb",
+      "name": "turkey sausage or lean pork sausage",
+      "quantity": "2",
       "notes": "browned"
     },
     {
-      "name": "Onion",
-      "quantity": "1",
+      "name": "onion",
+      "quantity": "3/4",
       "notes": "diced"
     },
     {
-      "name": "Baby Spinach",
-      "quantity": "8–10 oz",
+      "name": "baby spinach",
+      "quantity": "6.4",
       "notes": "or chopped kale, sautéed and squeezed dry"
     },
     {
-      "name": "Shredded Cheese",
-      "quantity": "3 cups",
+      "name": "shredded cheese",
+      "quantity": "2.4",
       "notes": "cheddar + mozzarella works well"
     },
     {
-      "name": "Loaf Day-Old Bread",
-      "quantity": "1",
+      "name": "loaf day-old bread",
+      "quantity": "3/4",
       "notes": "cubed (optional), turns it into a strata",
       "optional": true
     }
@@ -127,8 +127,8 @@
   "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
   "imageAlt": "Wide firehall crew platter of Southwest Egg Bake beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-06-04T20:48:24.993Z",
-  "updatedAt": "2026-06-04T20:48:24.993Z",
+  "publishedAt": "2026-07-17T20:15:27.732Z",
+  "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "Southwest Egg Bake | Firehall Breakfast",
   "collectionTier": "firehall_classic"

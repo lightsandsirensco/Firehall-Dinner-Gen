@@ -13,15 +13,15 @@
   "cookTime": 70,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 120,
-  "carbs": 69,
-  "fats": 88,
+  "calories": 1120,
+  "protein": 72,
+  "carbs": 60,
+  "fats": 65,
   "tags": [
     "protein:chicken",
     "format:salad",
     "category:firehall_classics",
-    "healthy",
+    "hearty",
     "chicken",
     "golden_100"
   ],
@@ -54,6 +54,21 @@
       "quantity": "2",
       "unit": "Cups",
       "group": "Salad"
+    },
+    {
+      "name": "Anchovy Paste",
+      "quantity": "1",
+      "unit": "Tbsp",
+      "notes": "upgrade to doctor jarred dressing; or 4 minced fillets",
+      "group": "Dressing upgrade",
+      "optional": true
+    },
+    {
+      "name": "Fresh Garlic Cloves",
+      "quantity": "2",
+      "unit": "cloves",
+      "notes": "grated into the dressing",
+      "group": "Dressing upgrade"
     },
     {
       "name": "Parmesan, Shaved",
@@ -121,14 +136,14 @@
     {
       "stepNumber": 1,
       "title": "Prep romaine and dressing station",
-      "instruction": "Chop romaine hearts into bite-sized pieces; wash and spin dry — wet lettuce rejects dressing. Shave parmesan into a bowl. Set Caesar dressing, croutons, and lemon wedges in labeled containers before any heat goes on.",
+      "instruction": "Chop romaine hearts into bite-sized pieces; wash and spin dry — wet lettuce rejects dressing. Shave parmesan into a bowl. Doctor the Caesar dressing to hall-signature level: whisk in 1 tbsp anchovy paste (or 4 minced fillets), 2 cloves grated fresh garlic, the juice of 1 lemon, and a handful of the shaved parmesan — that garlicky, salty, anchovy backbone is what separates a real Caesar from bottled. Set dressing, croutons, and lemon wedges in labeled containers before any heat goes on.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
       "title": "Crisp the bacon",
-      "instruction": "Lay thick-cut bacon on sheet pans in a single layer. Bake at 400°F 15–18 minutes until shatter-crisp and deep mahogany. Drain on paper towels; crumble when cool. Hold warm in a dry pan — wet bacon steams the salad.",
+      "instruction": "Lay thick-cut bacon on sheet pans in a single layer. Bake at 400°F 15–18 minutes until shatter-crisp and deep mahogany — bacon clears its 145°F internal temp point long before it crisps, so here you cook for texture, not safety. Drain on paper towels; crumble when cool. Hold warm in a dry pan — wet bacon steams the salad.",
       "minutes": 18,
       "heatLevel": "high"
     },
@@ -184,7 +199,7 @@
     {
       "stepNumber": 10,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover grilled chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "instruction": "Keep the salad un-dressed until the crew is actually at the line — dressed romaine wilts in minutes and won't survive a call. If tones drop, cover the grilled chicken and hold it at 140°F or above in a warm cabinet; keep romaine, dressing, croutons, and bacon cold and separate. On return, re-check the chicken hits 165°F, then toss and plate fresh so nothing is soggy.",
       "minutes": 5,
       "heatLevel": "low"
     },
@@ -197,13 +212,11 @@
     }
   ],
   "proTips": [
-    "Slice chicken thick and against the grain so it feels like a main, not a garnish.",
-    "Dress each bowl to order — soggy Caesar kills the vibe.",
+    "Doctor the jarred dressing with anchovy paste, fresh garlic, lemon, and real parmesan — that's the whole difference between a hall Caesar and a memorable one.",
+    "Slice chicken thick and against the grain so it eats like a main, not a garnish.",
+    "Dress each bowl to order — soggy Caesar kills the vibe, and pre-dressed romaine won't survive a call.",
     "Pull chicken at 160°F and let carryover hit 165°F during rest — dry breast ruins crew morale.",
-    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
-    "Taste for salt at the end — hall palates run salty after long shifts.",
-    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
-    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
+    "Toast the croutons all the way through the center; a soft core turns to mush the second it meets dressing."
   ],
   "tonightSpread": [
     "Main: Grilled chicken Caesar",
@@ -218,17 +231,19 @@
   ],
   "whyCrewsLikeIt": "Crispy chicken, real parmesan, crew salad night. A hall pick for regular dinner nights — one line, real portions, no drama at the stove.",
   "substitutions": [
-    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top)."
+    "Chicken thighs ↔ breasts (thighs forgive overcooking on the flat-top).",
+    "No anchovy paste? A dash of Worcestershire or fish sauce brings the same savory backbone to the dressing.",
+    "Kale or a romaine-kale mix holds up longer on a buffet line than romaine alone."
   ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 120,
-    "carbs": 69,
-    "fats": 88,
-    "label": "per serving (hall portion)",
-    "source": "calculated",
+    "calories": 1120,
+    "protein": 72,
+    "carbs": 60,
+    "fats": 65,
+    "label": "per serving (hall portion, with bacon + garlic bread)",
+    "source": "estimated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -244,7 +259,7 @@
     }
   },
   "heroImage": "/images/golden-100/chicken-caesar.jpg",
-  "heroImageAlt": "Wide firehall bowl of Chicken Caesar Salad with chopped romaine, diced grilled chicken mixed through, croutons, and parmesan on a prep table",
+  "heroImageAlt": "Wide firehall bowl of Chicken Caesar Salad with chopped romaine, sliced grilled chicken laid on top, croutons, bacon, and shaved parmesan on a prep table",
   "mobileImage": "/images/mobile/chicken-caesar.jpg",
   "thumbImage": "/images/thumbs/chicken-caesar.jpg",
   "railImage": "/images/rails/chicken-caesar.jpg",
@@ -257,7 +272,6 @@
     "american",
     "chicken",
     "salad",
-    "healthy",
     "golden_100"
   ],
   "relatedSlugs": [
@@ -271,6 +285,6 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "classicSlug": "chicken-caesar",
-  "generatedAt": "2026-06-04T20:53:34.893Z",
-  "contentVersion": 4
+  "generatedAt": "2026-07-23T21:40:00.000Z",
+  "contentVersion": 5
 }

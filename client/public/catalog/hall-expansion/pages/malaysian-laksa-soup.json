@@ -38,81 +38,81 @@
   ],
   "ingredients": [
     {
-      "name": "Vegetable Oil",
+      "name": "vegetable oil",
       "quantity": "2.6",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Base"
     },
     {
-      "name": "Laksa Paste",
+      "name": "laksa paste",
       "quantity": "3/8",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "store-bought or homemade",
       "group": "Base"
     },
     {
-      "name": "Coconut Milk",
+      "name": "coconut milk",
       "quantity": "2",
       "unit": "cans",
       "notes": "13.5 oz each",
       "group": "Base"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "3.2",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Base"
     },
     {
-      "name": "Chicken Breast",
+      "name": "chicken breast",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced thin",
       "group": "Protein"
     },
     {
-      "name": "Large Shrimp",
+      "name": "large shrimp",
       "quantity": "1.6",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "peeled and deveined",
       "group": "Protein"
     },
     {
-      "name": "Rice Noodles",
+      "name": "rice noodles",
       "quantity": "1 1/4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "thick",
       "group": "Noodles"
     },
     {
-      "name": "Fish Sauce",
+      "name": "fish sauce",
       "quantity": "1 3/4",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Seasoning"
     },
     {
-      "name": "Lime Juice",
+      "name": "lime juice",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "group": "Finish"
     },
     {
-      "name": "Bean Sprouts",
+      "name": "bean sprouts",
       "quantity": "2.4",
-      "unit": "Cups",
+      "unit": "cups",
       "group": "Garnish"
     },
     {
-      "name": "Fresh Cilantro",
+      "name": "fresh cilantro",
       "quantity": "3/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped",
       "group": "Garnish"
     },
     {
-      "name": "Sambal Oelek",
+      "name": "sambal oelek",
       "quantity": "1/4",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for serving",
       "group": "Garnish"
     }
@@ -197,10 +197,19 @@
     "protein": 36,
     "carbs": 46,
     "fats": 18,
-    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)"
+    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/malaysian-laksa-soup.jpg",
-  "heroImageAlt": "Malaysian Laksa Soup — crew-sized firehall meal",
+  "heroImageAlt": "Malaysian Laksa Soup — malaysian soup plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/malaysian-laksa-soup.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/malaysian-laksa-soup.jpg",
   "railImage": "/images/rails/hall-expansion/malaysian-laksa-soup.jpg",
@@ -212,12 +221,12 @@
     "crew feeders"
   ],
   "relatedSlugs": [
+    "hall-chicken-noodle-soup",
+    "green-chile-chicken-stew",
     "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
   "contentVersion": 2
 }

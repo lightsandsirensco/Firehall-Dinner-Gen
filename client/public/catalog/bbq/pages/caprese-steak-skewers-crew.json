@@ -8,8 +8,8 @@
   "category": "bbq_grill_nights",
   "cuisine": "italian-american",
   "description": "Sirloin cubes marinate in balsamic and basil, grill with cherry tomatoes on skewers to 145°F, and finish with fresh mozzarella pearls and balsamic reduction.",
-  "crewSize": 10,
-  "baseServings": 10,
+  "crewSize": 8,
+  "baseServings": 8,
   "cookTime": 14,
   "prepTime": 30,
   "difficulty": "medium",
@@ -39,63 +39,63 @@
   "ingredients": [
     {
       "name": "Sirloin Steak",
-      "quantity": "5.5",
+      "quantity": "4.4",
       "unit": "Lb",
       "notes": "cut into 1.5-inch cubes",
       "group": "Main"
     },
     {
       "name": "Aged Balsamic Vinegar",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Marinade"
     },
     {
       "name": "Sun-Dried Tomato Oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Marinade"
     },
     {
       "name": "Fresh Basil Leaves",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Marinade"
     },
     {
       "name": "Heirloom Cherry Tomatoes",
-      "quantity": "2",
+      "quantity": "1.6",
       "unit": "Lb",
       "group": "Skewers"
     },
     {
       "name": "Buffalo Mozzarella Balls",
-      "quantity": "1.5",
+      "quantity": "1 1/4",
       "unit": "Lb",
       "notes": "cold at service",
       "group": "Finish"
     },
     {
       "name": "Saba Balsamic Syrup",
-      "quantity": "0.5",
+      "quantity": "3/8",
       "unit": "Cup",
       "group": "Finish"
     },
     {
       "name": "Maldon Salt",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Seasoning"
     },
     {
       "name": "Tellicherry Pepper",
-      "quantity": "1",
+      "quantity": "7/8",
       "unit": "Tsp",
       "group": "Seasoning"
     },
     {
       "name": "Basil Oil",
-      "quantity": "0.25",
+      "quantity": "1/4",
       "unit": "Cup",
       "group": "Finish"
     }

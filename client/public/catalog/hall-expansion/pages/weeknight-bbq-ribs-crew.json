@@ -1,0 +1,208 @@
+{
+  "slug": "weeknight-bbq-ribs-crew",
+  "title": "Weeknight BBQ Ribs for the Crew",
+  "displayTitle": "Weeknight BBQ Ribs for the Crew",
+  "seoTitle": "Weeknight BBQ Ribs for the Crew | Firefighter Meal",
+  "shortDescription": "Fast-finished ribs with a smoker shortcut",
+  "subtitle": "Fast-finished ribs with a smoker shortcut",
+  "category": "hall_expansion",
+  "cuisine": "BBQ",
+  "description": "St. Louis ribs get a dry rub, smoke, and a covered finish before barbecue sauce is set.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 210,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 860,
+  "protein": 46,
+  "carbs": 61,
+  "fats": 49,
+  "tags": [
+    "protein:pork",
+    "format:smoker",
+    "category:smoker_recipes",
+    "bbq",
+    "weeknight",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "smoker",
+    "foil",
+    "probe thermometer",
+    "sharp knife"
+  ],
+  "ingredients": [
+    {
+      "name": "St. Louis ribs",
+      "quantity": "8",
+      "unit": "racks"
+    },
+    {
+      "name": "barbecue rub",
+      "quantity": "1 1/4",
+      "unit": "cups"
+    },
+    {
+      "name": "barbecue sauce",
+      "quantity": "3.2",
+      "unit": "cups"
+    },
+    {
+      "name": "apple juice",
+      "quantity": "1.6",
+      "unit": "cups"
+    },
+    {
+      "name": "corn",
+      "quantity": "8",
+      "unit": "ears"
+    },
+    {
+      "name": "potatoes",
+      "quantity": "8",
+      "unit": "lb"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat smoker",
+      "instruction": "Preheat smoker to 275°F and stabilize the temperature before ribs go on.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Remove membranes",
+      "instruction": "Pull the membrane from the bone side with a paper towel so rub can season both sides.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Apply rub",
+      "instruction": "Coat ribs evenly with barbecue rub, pressing it on without making a thick paste.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Smoke ribs",
+      "instruction": "Place racks bone-side down and smoke for 90 minutes, keeping the lid closed.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Wrap racks",
+      "instruction": "Wrap each rack tightly with a splash of apple juice; loose foil leaks steam and dries ribs.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Finish tender",
+      "instruction": "Return wrapped ribs to smoker until a toothpick slides between bones with little resistance.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Check food safety",
+      "instruction": "Ribs are safe above 145°F, but tenderness usually arrives near 195°F; verify with a probe.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Glaze ribs",
+      "instruction": "Unwrap carefully, brush with sauce, and smoke uncovered 10 minutes to set the glaze.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold warm",
+      "instruction": "Cover ribs loosely and hold above 140°F; do not stack them tightly or the glaze smears.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Cut and serve",
+      "instruction": "Slice between bones with a sharp knife and serve with potatoes and corn.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Pork ribs — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Pork ribs and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Choose similarly sized racks for even timing.",
+    "Do not rely on time alone; use the toothpick test.",
+    "Keep sauce warm for a smoother glaze."
+  ],
+  "tonightSpread": [
+    "Main: Weeknight smoked BBQ ribs",
+    "Sides: smoked corn, potato salad",
+    "Condiments: barbecue sauce, pickles, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Pork ribs in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Pull remaining rib meat for fried rice."
+  ],
+  "whyCrewsLikeIt": "The wrap phase protects tenderness and makes timing more reliable than an all-day rib cook.",
+  "mealPrepNotes": "Make-ahead: remove membranes and season ribs overnight. Storage: refrigerate cooked ribs for 3 days. Reheating: heat ribs to 165°F.",
+  "substitutions": [
+    "Use baby back ribs for St. Louis ribs.",
+    "Use cola for apple juice."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "heavy",
+  "nutrition": {
+    "calories": 860,
+    "protein": 46,
+    "carbs": 61,
+    "fats": 49,
+    "label": "~860 cal/serving · 46g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+  "heroImageAlt": "Weeknight BBQ Ribs for the Crew — BBQ smoker plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "weeknight BBQ ribs smoker",
+    "ribs for ten people",
+    "firehall smoker dinner",
+    "fast smoked St Louis ribs"
+  ],
+  "relatedSlugs": [
+    "smoked-turkey-breast",
+    "smoked-meatloaf",
+    "pork-belly-burnt-ends",
+    "smoked-sausage-platter"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

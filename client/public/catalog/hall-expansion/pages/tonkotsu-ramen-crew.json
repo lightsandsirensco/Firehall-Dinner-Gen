@@ -7,16 +7,16 @@
   "subtitle": "Rich pork-and-chicken broth with noodles and toppings for ten",
   "category": "hall_expansion",
   "cuisine": "japanese",
-  "description": "Pork bones and chicken backs simmer for hours into a creamy white broth, then serve over springy ramen noodles with chashu pork, soft eggs, nori, and scallions. Set up a topping bar so crews build their own bowls.",
+  "description": "Pork neck bones and chicken backs blanched clean, then boiled hard for five to six hours until the broth turns milky white — an honest all-day project, with a pressure-cooker shortcut spelled out for shorter shifts. Chashu belly, marinated eggs, and a staged topping line finish the bowls.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 240,
+  "cookTime": 360,
   "prepTime": 45,
   "difficulty": "hard",
-  "calories": 580,
-  "protein": 32,
-  "carbs": 52,
-  "fats": 28,
+  "calories": 640,
+  "protein": 34,
+  "carbs": 54,
+  "fats": 32,
   "tags": [
     "protein:pork",
     "format:bowl",
@@ -30,157 +30,238 @@
     "firefighter_meal"
   ],
   "equipment": [
-    "Large stockpot",
+    "16-quart stockpot (biggest the hall owns)",
     "Second pot for chashu",
-    "Noodle baskets",
-    "Ladle",
-    "Sheet pans"
+    "Fine-mesh strainer",
+    "Separate pot for noodles",
+    "Instant-read thermometer",
+    "Butcher's twine"
   ],
   "ingredients": [
     {
-      "name": "Pork Neck Bones",
-      "quantity": "3.2",
-      "unit": "Lb",
+      "name": "pork neck bones",
+      "quantity": "4",
+      "unit": "lb",
       "group": "Broth"
     },
     {
-      "name": "Chicken Backs",
-      "quantity": "1.6",
-      "unit": "Lb",
+      "name": "chicken backs",
+      "quantity": "2",
+      "unit": "lb",
       "group": "Broth"
     },
     {
-      "name": "Ginger",
-      "quantity": "2.4",
+      "name": "ginger",
+      "quantity": "3",
       "unit": "inches",
       "notes": "smashed",
       "group": "Broth"
     },
     {
-      "name": "Garlic Cloves",
-      "quantity": "7",
+      "name": "garlic cloves",
+      "quantity": "8",
       "unit": "cloves",
       "notes": "smashed",
       "group": "Broth"
     },
     {
-      "name": "Soy Sauce",
-      "quantity": "3/8",
-      "unit": "Cup",
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "halved, skin on",
+      "group": "Broth"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "1/2",
+      "unit": "cup",
       "group": "Tare"
     },
     {
-      "name": "Mirin",
-      "quantity": "1/4",
-      "unit": "Cup",
+      "name": "mirin",
+      "quantity": "1/3",
+      "unit": "cup",
       "group": "Tare"
     },
     {
-      "name": "Pork Belly",
-      "quantity": "1.6",
-      "unit": "Lb",
+      "name": "pork belly",
+      "quantity": "2",
+      "unit": "lb",
       "notes": "for chashu",
       "group": "Topping"
     },
     {
-      "name": "Ramen Noodles",
-      "quantity": "1.6",
-      "unit": "Lb",
+      "name": "ramen noodles",
+      "quantity": "2",
+      "unit": "lb",
       "notes": "fresh or dried",
       "group": "Noodles"
     },
     {
-      "name": "Soft-Boiled Eggs",
+      "name": "large eggs",
       "quantity": "8",
-      "unit": "eggs",
-      "notes": "peeled and halved",
+      "unit": "whole",
+      "notes": "soft-boiled and marinated",
       "group": "Topping"
     },
     {
-      "name": "Nori Sheets",
+      "name": "nori sheets",
       "quantity": "8",
       "unit": "sheets",
       "notes": "cut in half",
       "group": "Topping"
     },
     {
-      "name": "Green Onions",
-      "quantity": "3/4",
+      "name": "green onions",
+      "quantity": "1",
       "unit": "bunch",
-      "notes": "sliced",
+      "notes": "sliced thin",
       "group": "Topping"
     },
     {
-      "name": "Corn Kernels",
-      "quantity": "1.6",
-      "unit": "Cups",
-      "notes": "steamed",
+      "name": "corn kernels",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "warmed at service",
       "group": "Topping"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Blanch and start broth",
-      "instruction": "Blanch pork and chicken bones 5 minutes, rinse, then cover with fresh water in a large stockpot. Add ginger and garlic. Simmer vigorously 4 hours, skimming often.",
-      "minutes": 240,
+      "title": "Rinse and load the bones",
+      "instruction": "Rinse the pork neck bones and chicken backs under cold water for a minute or two and load them into your largest stockpot, covered by two inches of cold water. Bones straight from the pack carry blood and bone dust that cloud a broth and turn it sour-smelling — the rinse now and the blanch next are what keep tonkotsu white instead of gray.",
+      "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Braise chashu pork",
-      "instruction": "Roll pork belly, tie, and braise in soy, mirin, and water 2 hours until tender. Cool and slice thin.",
-      "minutes": 120,
-      "heatLevel": ""
+      "title": "Blanch hard, dump, and scrub",
+      "instruction": "Bring the pot to a hard boil and hold it 10 minutes — gray-brown scum will foam up fast. Dump the entire pot into the sink, rinse every bone under running water, and scrub the pot clean before reloading. It feels wasteful; it is the single most important move in the recipe. There's no internal temp target on a blanch — you're purging impurities, not cooking anything through.",
+      "minutes": 15,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Season the broth",
-      "instruction": "Strain broth if you want smoother body. Whisk soy and mirin tare into broth to taste—salty, rich, and milky white.",
+      "title": "Run a hard rolling boil for hours",
+      "instruction": "Refill with fresh water two inches over the bones, add the smashed ginger, garlic cloves, and halved yellow onion, and bring to a true rolling boil — the opposite of a French stock. The violent boil is what emulsifies collagen and fat into the milky white body tonkotsu is named for; a lazy simmer gives you thin, clear broth. Hold the boil 5–6 hours, topping up with hot water every 45 minutes so the bones stay covered. Done means opaque, ivory, and sticky on your lips. This is the honest cost of real tonkotsu — start it right after breakfast, or use the pressure-cooker shortcut in the substitutions.",
+      "minutes": 330,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Braise the chashu pork belly",
+      "instruction": "Roll the pork belly into a log, tie it with twine at one-inch intervals, and nestle it in a second pot with the soy sauce, mirin, and enough water to come halfway up. Cover loosely and keep at a bare simmer 2–2.5 hours, turning every 30 minutes. The pork clears its 145°F safe mark inside the first half hour — you're going far past that, until a skewer slides in with zero resistance, about 195°F on an instant-read, when the fat turns silky instead of chewy. Cool it in the liquid, then slice into quarter-inch rounds.",
+      "minutes": 150,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Soft-boil and marinate the eggs",
+      "instruction": "Lower the eggs into boiling water for exactly 6.5 minutes, then straight into an ice bath — that timing sets the white while the yolk stays jammy. Peel them under water, then soak in a cup of the cooled chashu braising liquid at least an hour. Halve just before service; a seasoned edge with a molten center is the topping the crew notices first.",
+      "minutes": 15,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Strain the broth and check its body",
+      "instruction": "Pull the spent bones with tongs and strain the broth through a fine-mesh strainer into a clean pot. You should have 12–14 cups of ivory, lip-sticky liquid; if it tastes thin, reduce it hard for 20 minutes to concentrate. Don't salt it yet — the seasoning comes from the tare in each bowl, which keeps the batch flexible for different appetites.",
+      "minutes": 20,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Portion the tare and stage toppings",
+      "instruction": "Mix the leftover chashu braising liquid with a splash more soy sauce to make the tare, and spoon 2 tablespoons into the bottom of every serving bowl. Slice the green onions thin, halve the nori sheets, warm the corn, and lay out chashu slices and marinated eggs in labeled pans. Bowl service moves in a two-minute window — anything not staged now stalls the whole line.",
       "minutes": 15,
       "heatLevel": ""
     },
     {
-      "stepNumber": 4,
-      "title": "Prep the bar",
-      "instruction": "Arrange chashu, eggs, nori, scallions, and corn in labeled pans. Heat broth to a rolling simmer in a large pot or tilt skillet.",
-      "minutes": 20,
-      "heatLevel": ""
+      "stepNumber": 8,
+      "title": "Crisp the chashu edges",
+      "instruction": "For crews that like texture, lay the chashu slices in a dry skillet over medium-high heat 45–60 seconds per side until the fat blisters and browns at the edges. It's already fully cooked from the braise — this isn't an internal temp mission, just the upgrade that separates good bowls from the ones people talk about next shift.",
+      "minutes": 5,
+      "heatLevel": "medium-high"
     },
     {
-      "stepNumber": 5,
-      "title": "Build bowls",
-      "instruction": "Cook noodles per package, drain, and divide into bowls. Ladle hot broth over noodles, top with chashu and garnishes, and serve immediately.",
+      "stepNumber": 9,
+      "title": "Cook noodles hard and to order",
+      "instruction": "Cook the ramen noodles in a separate pot of unsalted water at a full rolling bubble, in two or three batches, pulling them 30 seconds under the package time. Drain with a real shake — clinging water dilutes the bowl. Never cook noodles in the broth itself; their starch muddies six hours of work in about three minutes.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 10,
+      "title": "Build bowls hot and fast",
+      "instruction": "Reheat the broth until the surface trembles and steams, then ladle 1.5 cups over the tare in each bowl. Drop in a nest of noodles, then fan chashu, egg halves, nori, green onions, and corn on top. Run the empty bowls under hot tap water first — cold ceramic knocks the broth down 20 degrees before it reaches the table.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover the chashu and broth — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool the chashu and broth and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
   ],
   "proTips": [
-    "A tablespoon of chicken fat whisked in at service adds extra gloss.",
-    "Do not add noodles to the hold pot—they swell and ruin texture.",
-    "Sesame seeds and bamboo shoots upgrade the bar without much extra work."
+    "A rolling boil, not a simmer, is the whole trick — the moment the surface calms down, the broth stops going white.",
+    "Whisk a spoonful of the chilled fat cap back into the pot at service for gloss and richness.",
+    "Warm the serving bowls with hot tap water before ladling — cold ceramic pulls the broth out of the steaming zone before it hits the table.",
+    "Keep a backup tray at 200°F for firefighters returning from a run — never serve picked-over pans to late crew.",
+    "Taste for salt at the end — hall palates run salty after long shifts.",
+    "Log hold times on the pan with a grease pencil when tones drop mid-service.",
+    "Spot-check proteins with an instant-read thermometer before reopening the line after a call."
   ],
   "tonightSpread": [
-    "Tonkotsu ramen bowls with full topping bar and chili oil.",
-    "Quick cucumber pickles for crunch between rich sips."
+    "Main: Tonkotsu ramen with chashu, marinated eggs, and nori",
+    "Sides: quick cucumber pickles for acid between rich sips",
+    "Condiments: chili oil, extra green onions, white pepper",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
   ],
   "leftovers": [
-    "Broth freezes well for a second ramen night later in the month.",
-    "Chashu slices reheat gently in broth for rice topping—not a bowl format, just smart reuse."
+    "Cool the chashu and broth in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Broth freezes flat in gallon bags for a second ramen night — it comes back to full body over a hard reheat.",
+    "Never store noodles in the broth; cook them fresh each time or they bloat to mush overnight."
   ],
-  "whyCrewsLikeIt": "Ramen night feels like a reward shift. The broth does the heavy lifting overnight, and bowl service moves fast when noodles and toppings are lined up like a firehouse assembly station.",
-  "mealPrepNotes": "Start broth the day before. Blanch bones first for cleaner flavor. Soft-boil eggs 6.5 minutes, ice bath, peel ahead. Cook noodles to order or in small batches so they do not turn mushy.",
+  "whyCrewsLikeIt": "Ramen night feels like a reward shift — six hours of boiling turns cheap bones into broth with real weight, and service moves fast because every topping is staged before the first noodle drops.",
+  "mealPrepNotes": "Start the broth right after breakfast — it needs five to six hours at a boil. Chashu and eggs can be made the day before; both improve overnight in their liquid. Cook noodles only at service.",
+  "substitutions": [
+    "Shortcut method: pressure-cook the blanched bones 90 minutes, then 20 more at a hard lid-off bubble to emulsify — most of the body in a quarter of the time. Tell the crew it's the fast version.",
+    "No pork neck bones? Trotters or femur bones from the butcher carry even more collagen; chicken backs alone make a lighter paitan-style bowl.",
+    "Dried ramen from the Asian aisle beats spaghetti every time — the alkaline noodle is what stands up to this broth.",
+    "No mirin? Dissolve 2 tablespoons sugar in 1/4 cup water with a splash of rice vinegar for the chashu braise."
+  ],
   "spiceLevel": "mild",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 580,
-    "protein": 32,
-    "carbs": 52,
-    "fats": 28,
-    "label": "~580 cal/serving · 32g protein · 2g fiber (est.)"
+    "calories": 640,
+    "protein": 34,
+    "carbs": 54,
+    "fats": 32,
+    "label": "~640 cal/serving · 34g protein · 2g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
   },
   "heroImage": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
-  "heroImageAlt": "Tonkotsu Ramen for the Crew — crew-sized firehall meal",
+  "heroImageAlt": "Tonkotsu Ramen for the Crew — japanese bowl plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/tonkotsu-ramen-crew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/tonkotsu-ramen-crew.jpg",
   "railImage": "/images/rails/hall-expansion/tonkotsu-ramen-crew.jpg",
@@ -189,15 +270,17 @@
   "popularityWeight": 7.8,
   "searchTerms": [
     "tonkotsu ramen for the crew",
-    "crew feeders"
+    "crew feeders",
+    "milky pork bone broth",
+    "big batch ramen night"
   ],
   "relatedSlugs": [
-    "shawarma-bar-night",
-    "fajita-bar-night",
-    "hall-burger-bar",
-    "pasta-bar-night"
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "miso-ramen-bar",
+    "bun-bo-hue-noodle-soup"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:47:21.931Z",
+  "generatedAt": "2026-07-23T20:58:00.000Z",
   "contentVersion": 2
 }

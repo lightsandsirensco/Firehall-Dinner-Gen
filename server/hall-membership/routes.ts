@@ -99,7 +99,7 @@ export function registerHallMembershipRoutes(app: Express): void {
 
       const input = parsed.success
         ? parsed.data
-        : { hall_name: legacy?.data?.name ?? "Linked Hall" };
+        : { hall_name: legacy?.data?.name ?? "Hall" };
 
       const detail = createHall(req._authUserId!, input);
       trackHallEvent(req, "hall_created", {

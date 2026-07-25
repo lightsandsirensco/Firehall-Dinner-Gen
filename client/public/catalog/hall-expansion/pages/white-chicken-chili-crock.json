@@ -1,0 +1,207 @@
+{
+  "slug": "white-chicken-chili-crock",
+  "title": "White Chicken Chili Crock",
+  "displayTitle": "White Chicken Chili Crock",
+  "seoTitle": "White Chicken Chili Crock | Firefighter Meal",
+  "shortDescription": "Creamy bean-and-chicken chili for ten",
+  "subtitle": "Creamy bean-and-chicken chili for ten",
+  "category": "hall_expansion",
+  "cuisine": "Southwestern",
+  "description": "Chicken, white beans, green chiles, corn, and a creamy broth cook into a filling chili.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 420,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 590,
+  "protein": 43,
+  "carbs": 52,
+  "fats": 21,
+  "tags": [
+    "protein:chicken",
+    "format:slow_cooker",
+    "category:crew_feeders",
+    "slow_cooker",
+    "budget",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "slow cooker",
+    "ladle",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breasts",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "white beans",
+      "quantity": "6",
+      "unit": "cans"
+    },
+    {
+      "name": "green chiles",
+      "quantity": "3",
+      "unit": "cans"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "9.6",
+      "unit": "cups"
+    },
+    {
+      "name": "corn",
+      "quantity": "2.4",
+      "unit": "lb"
+    },
+    {
+      "name": "cream cheese",
+      "quantity": "1.6",
+      "unit": "lb"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Morning start",
+      "instruction": "Place chicken in the slow cooker with beans, green chiles, broth, cumin, and onion.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Set heat",
+      "instruction": "Cover and cook on low for 7 hours; keep the cooker plugged into a stable outlet.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Check chicken",
+      "instruction": "At dinner time, check the thickest breast has reached at least 165°F before shredding.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Shred chicken",
+      "instruction": "Lift chicken to a clean tray, shred it with forks, and return it to the hot chili.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Add corn",
+      "instruction": "Stir in frozen corn so it heats through without becoming dull and soft.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Melt cream cheese",
+      "instruction": "Add cubed cream cheese and stir every few minutes until no white lumps remain.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Adjust thickness",
+      "instruction": "Mash one cup of beans against the pot wall if the chili needs more body.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Taste carefully",
+      "instruction": "Taste only with a clean spoon, then add salt or lime without over-salting canned beans.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold chili",
+      "instruction": "Switch to warm after it is steaming hot; verify it stays above 140°F.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Serve bowls",
+      "instruction": "Ladle chili into bowls and let crew add cheese, cilantro, chips, and lime.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Chicken breasts — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Chicken breasts and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Keep dairy out until the final hour.",
+    "Use two ladles so toppings stay separate.",
+    "Thin with hot broth, not cold water."
+  ],
+  "tonightSpread": [
+    "Main: White chicken chili",
+    "Sides: tortilla chips, cornbread",
+    "Condiments: shredded cheese, cilantro, lime wedges",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Chicken breasts in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Use leftovers as enchilada filling."
+  ],
+  "whyCrewsLikeIt": "It is economical, holds well, and toppings make it work for different appetites.",
+  "mealPrepNotes": "Make-ahead: measure spices and drain beans the night before. Storage: refrigerate 3 days. Reheating: bring chili and chicken to 165°F.",
+  "substitutions": [
+    "Use turkey breast for chicken.",
+    "Use coconut milk for cream cheese."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 590,
+    "protein": 43,
+    "carbs": 52,
+    "fats": 21,
+    "label": "~590 cal/serving · 43g protein · 11g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+  "heroImageAlt": "White Chicken Chili Crock — Southwestern slow_cooker plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/white-chicken-chili-crock.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
+  "railImage": "/images/rails/hall-expansion/white-chicken-chili-crock.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "white chicken chili slow cooker crowd",
+    "crockpot chicken chili firehall",
+    "slow cooker dinner for ten",
+    "creamy white bean chili"
+  ],
+  "relatedSlugs": [
+    "mississippi-pot-roast-crew",
+    "italian-beef-slow-cooker",
+    "salsa-verde-chicken-crock",
+    "loaded-baked-potato-soup-crock"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "contentVersion": 2
+}

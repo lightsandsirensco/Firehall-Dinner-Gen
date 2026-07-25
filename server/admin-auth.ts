@@ -43,7 +43,7 @@ export function requireAdmin(req: Request, res: Response, next: NextFunction): v
     (typeof query === "string" ? query : "");
 
   if (!provided || provided !== secret) {
-    res.status(401).json({ message: "Unauthorized" });
+    res.status(403).json({ message: "Forbidden — admin only" });
     return;
   }
 

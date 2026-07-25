@@ -1,0 +1,273 @@
+{
+  "slug": "buffalo-chicken-sweet-potato-bowls",
+  "title": "Buffalo Chicken Sweet Potato Bowls",
+  "displayTitle": "Buffalo Chicken Sweet Potato Bowls",
+  "seoTitle": "Buffalo Chicken Sweet Potato Bowls | Firefighter Meal",
+  "shortDescription": "Roasted sweet potatoes, buffalo chicken, and cool ranch toppings",
+  "subtitle": "Roasted sweet potatoes, buffalo chicken, and cool ranch toppings",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Roasted sweet potato and broccoli bowls topped with buffalo chicken, cucumber, carrots, tomatoes, avocado, blue cheese, ranch, and green onions.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 560,
+  "protein": 43,
+  "carbs": 47,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "chicken",
+    "healthy",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Two sheet pans",
+    "Large skillet",
+    "Mixing bowls",
+    "Instant-read thermometer",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breast",
+      "quantity": "2.8",
+      "unit": "lb",
+      "notes": "bite-size pieces",
+      "group": "Protein"
+    },
+    {
+      "name": "buffalo sauce",
+      "quantity": "1",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "sweet potatoes",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "3/4-inch cubes",
+      "group": "Base"
+    },
+    {
+      "name": "broccoli florets",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "1/4",
+      "unit": "cup",
+      "group": "Roast"
+    },
+    {
+      "name": "cucumber",
+      "quantity": "1.6",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "shredded carrots",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "avocados",
+      "quantity": "3.2",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "blue cheese",
+      "quantity": "1 1/4",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "ranch dressing",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "green onions",
+      "quantity": "3/4",
+      "unit": "cup",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cube and stage the bowl ingredients",
+      "instruction": "Heat the oven to 425°F. Cut sweet potatoes into honest 3/4-inch cubes, broccoli into bite-size florets, and chicken into 1-inch pieces. Slice cucumber, halve tomatoes, and hold avocado, ranch, and blue cheese cold. Uneven potatoes are a rookie trap: the tiny pieces burn while big ones are still hard. Target oven/smoker temperature: 425°F.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roast the sweet potato base",
+      "instruction": "Toss potatoes with oil, salt, pepper, and garlic powder on two sheet pans, leaving space around every piece. Roast 22–25 minutes, turning at 15 minutes, until browned at the corners and fork-tender. A crowded pan gives you steamed orange cubes, so use a third pan if needed. Target oven/smoker temperature: 425°F.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season the chicken",
+      "instruction": "Toss chicken with salt, pepper, and garlic powder in a bowl while the potatoes roast. Keep buffalo sauce in a measuring cup beside the stove instead of marinating in it; the sauce burns before chicken cooks. Dry any wet pieces with paper towel so they brown rather than boil.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sear the buffalo chicken",
+      "instruction": "Heat a wide skillet over medium-high until oil shimmers, then cook chicken 7–9 minutes, turning once browned, until the thickest piece reaches 165°F. Pull the skillet off heat and toss with buffalo sauce until glossy. Leaving sauce over the burner makes its butter solids scorch and taste bitter.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Roast the broccoli",
+      "instruction": "Toss broccoli with oil and salt on a clean sheet pan and roast 15–18 minutes beside the potatoes, turning once, until the tips are dark and stems are crisp-tender. Add it seven minutes after potatoes. Soft olive-colored broccoli means it sat too long in a crowded pan. Target oven/smoker temperature: 425°F.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Mix the cooling ranch drizzle",
+      "instruction": "Whisk ranch with a tablespoon of water in a cold bowl until it will ribbon from a spoon, then transfer it to a squeeze bottle. Crumble blue cheese into a separate dish and keep both over ice. Do not try thinning ranch in a hot saucepan; it separates and loses its clean tang.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold hot and cold components correctly",
+      "instruction": "Cover chicken, potatoes, and broccoli in separate hotel pans and hold them above 140°F in a 200°F oven. Set cucumber, carrots, tomatoes, avocado, ranch, and blue cheese at the cold end. Hot chicken touching avocado ahead of time turns it dull and greasy. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Layer the buffalo bowls",
+      "instruction": "Scoop sweet potatoes into each bowl first, add broccoli alongside, then lay a portion of buffalo chicken over the center. Arrange cucumber, carrots, and tomatoes around the hot food rather than underneath it. This order keeps vegetables crisp and prevents the buffalo sauce from staining every topping.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Add cold blue-cheese finish",
+      "instruction": "Top each bowl with avocado, blue cheese, green onions, and a light ranch zigzag. Put extra buffalo sauce at the end of the table for heat seekers. Ranch poured before the chicken disappears into the potatoes, so save it for this final pass.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Put out the buffalo supper",
+      "instruction": "Carry bowls to the pass with celery sticks nearby and keep the hot pans covered for second helpings. Tell the crew the blue cheese is optional before they reach the line. Refill avocado in small bowls from the refrigerator; a full pan left out warms and browns fast.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover buffalo chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool buffalo chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Cut potatoes to one size or half the pan will burn while the rest stays hard.",
+    "Keep blue cheese on the side for firefighters who prefer ranch only.",
+    "Use squeeze bottles for ranch and buffalo sauce to control portions.",
+    "Rookie tip: Wear gloves when tossing hot buffalo chicken at volume.",
+    "Prep tip: Keep sliced avocado covered with lime juice until the line is built."
+  ],
+  "tonightSpread": [
+    "Main: Buffalo chicken sweet potato bowls",
+    "Sides: Celery sticks, fresh fruit",
+    "Condiments: Ranch, extra buffalo sauce, blue cheese",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool buffalo chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Fold leftover chicken into wraps with fresh lettuce and ranch."
+  ],
+  "whyCrewsLikeIt": "It delivers wing-night flavor without frying, and sheet-pan vegetables cook while the chicken is on the stove.",
+  "mealPrepNotes": "Make-ahead: cube sweet potatoes, trim broccoli, and slice vegetables the day before. Storage: refrigerate hot components and cold toppings separately for 3 days; keep avocado and ranch separate. Reheating: heat chicken, sweet potato, and broccoli to 165°F, then add fresh toppings.",
+  "substitutions": [
+    "Use boneless thighs for chicken breast.",
+    "Use cauliflower instead of broccoli.",
+    "Use feta if blue cheese is unpopular.",
+    "Use Greek yogurt ranch for a lighter sauce."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 560,
+    "protein": 43,
+    "carbs": 47,
+    "fats": 22,
+    "label": "~560 cal/serving · 43g protein · 10g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+  "heroImageAlt": "Buffalo Chicken Sweet Potato Bowls — american bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "buffalo chicken sweet potato bowls",
+    "healthy buffalo chicken bowl",
+    "firehall buffalo dinner",
+    "high protein sweet potato bowl",
+    "buffalo chicken meal prep",
+    "crew dinner chicken bowls",
+    "broccoli chicken bowls",
+    "ranch buffalo bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

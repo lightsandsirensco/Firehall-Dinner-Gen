@@ -42,6 +42,7 @@ const ClassicsWheelPage = lazy(() => import("@/pages/classics-wheel"));
 const CuratedPackagePage = lazy(() => import("@/pages/curated-package"));
 const CatalogRecipePage = lazy(() => import("@/pages/catalog-recipe-page"));
 const AboutPage = lazy(() => import("@/pages/about"));
+const HowWeTestRecipesPage = lazy(() => import("@/pages/how-we-test-recipes"));
 const FaqPage = lazy(() => import("@/pages/faq"));
 const RecipesIndexPage = lazy(() => import("@/pages/explore-browse-redirect"));
 const GuidesIndexPage = lazy(() => import("@/pages/guides-index"));
@@ -56,12 +57,16 @@ const BreakfastPerformanceIndexPage = lazy(() => import("@/pages/breakfast-perfo
 const BreakfastRecipePage = lazy(() => import("@/pages/breakfast-recipe-page"));
 const PerformanceFuelRedirect = lazy(() => import("@/pages/performance-fuel-redirect"));
 const SeoLandingPage = lazy(() => import("@/pages/seo-landing-page"));
+const SeoProductPage = lazy(() => import("@/pages/seo-product-page"));
 const FirefighterRedLeadRecipePage = lazy(() => import("@/pages/firefighter-red-lead-recipe-page"));
 const TopRatedRecipesPage = lazy(() => import("@/pages/top-rated-recipes-page"));
 const HallOfFamePage = lazy(() => import("@/pages/hall-of-fame-page"));
 const HallHistoryPage = lazy(() => import("@/pages/hall-history-page"));
 const HallPage = lazy(() => import("@/pages/hall-page"));
 const HallCanteenPage = lazy(() => import("@/pages/hall-canteen-page"));
+const HallDuesPage = lazy(() => import("@/pages/hall-dues-page"));
+const HallLogbookPage = lazy(() => import("@/pages/hall-logbook-page"));
+const HallToolsPage = lazy(() => import("@/pages/hall-tools-page"));
 const HallJoinPage = lazy(() => import("@/pages/hall-join-page"));
 const HallWelcomePage = lazy(() => import("@/pages/hall-welcome-page"));
 const OnboardingHallPage = lazy(() => import("@/pages/onboarding-hall-page"));
@@ -77,8 +82,7 @@ const AdminDealsPage = lazy(() => import("@/pages/admin-deals"));
 const HallProteinDealsPage = lazy(() => import("@/pages/hall-protein-deals-page"));
 const HallProteinDealsSetupPage = lazy(() => import("@/pages/hall-deals-setup-page"));
 const HallShoppingListRedirect = lazy(() => import("@/pages/hall-shopping-list-redirect"));
-const AppHomePage = lazy(() => import("@/pages/app-home-page"));
-const TonightPage = lazy(() => import("@/pages/tonight-page"));
+const TonightDashboardPage = lazy(() => import("@/pages/app-home-page"));
 const MePage = lazy(() => import("@/pages/me-page"));
 const MeHistoryPage = lazy(() => import("@/pages/me-history-page"));
 const MeSettingsPage = lazy(() => import("@/pages/me-settings-page"));
@@ -92,9 +96,12 @@ function AppRoutes() {
   return (
     <Switch location={location}>
       <Route path="/" component={Home} />
-      <Route path="/home" component={AppHomePage} />
-      <Route path="/discover">{() => <Redirect to="/home" />}</Route>
-      <Route path="/tonight" component={TonightPage} />
+      <Route path="/tonight" component={TonightDashboardPage} />
+      {/* Legacy — the dashboard used to live at /home; the one true Home is "/" */}
+      <Route path="/home">{() => <Redirect to="/tonight" />}</Route>
+      <Route path="/discover">{() => <Redirect to="/tonight" />}</Route>
+      <Route path="/hall/more">{() => <Redirect to="/hall#hall-tools" />}</Route>
+      <Route path="/hall/tools" component={HallToolsPage} />
       <Route path="/me" component={MePage} />
       <Route path="/me/profile" component={AccountPage} />
       <Route path="/me/history" component={MeHistoryPage} />
@@ -113,7 +120,16 @@ function AppRoutes() {
       <Route path="/explore" component={ExplorePage} />
       <Route path="/categories/:categoryId" component={FirehallCategoryRedirect} />
       <Route path="/wheel" component={ClassicsWheelPage} />
-      <Route path="/classics-wheel">{() => <Redirect to="/wheel" />}</Route>
+      <Route path="/classics-wheel">{() => <SeoProductPage slug="classics-wheel" />}</Route>
+      <Route path="/hall-meal-planner">{() => <SeoProductPage slug="hall-meal-planner" />}</Route>
+      <Route path="/firefighter-dinner-vote">{() => <SeoProductPage slug="firefighter-dinner-vote" />}</Route>
+      <Route path="/fire-hall-pantry">{() => <SeoProductPage slug="fire-hall-pantry" />}</Route>
+      <Route path="/canteen-manager">{() => <SeoProductPage slug="canteen-manager" />}</Route>
+      <Route path="/cost-per-plate-calculator">{() => <SeoProductPage slug="cost-per-plate-calculator" />}</Route>
+      <Route path="/fire-hall-grocery-list">{() => <SeoProductPage slug="fire-hall-grocery-list" />}</Route>
+      <Route path="/fire-station-kitchen-inventory">{() => <SeoProductPage slug="fire-station-kitchen-inventory" />}</Route>
+      <Route path="/firefighter-meal-calendar">{() => <SeoProductPage slug="firefighter-meal-calendar" />}</Route>
+      <Route path="/crew-grocery-budget">{() => <SeoProductPage slug="crew-grocery-budget" />}</Route>
       <Route path="/package/:slug" component={CuratedPackagePage} />
       <Route path="/recipes" component={RecipesIndexPage} />
       <Route path="/top-rated-recipes" component={TopRatedRecipesPage} />
@@ -129,11 +145,15 @@ function AppRoutes() {
       <Route path="/firefighter-meals">{() => <SeoLandingPage slug="firefighter-meals" />}</Route>
       <Route path="/firefighter-recipes">{() => <SeoLandingPage slug="firefighter-recipes" />}</Route>
       <Route path="/firehouse-recipes">{() => <SeoLandingPage slug="firehouse-recipes" />}</Route>
+      <Route path="/firehouse-meals">{() => <SeoLandingPage slug="firehouse-meals" />}</Route>
+      <Route path="/firefighter-dinner-ideas">{() => <SeoLandingPage slug="firefighter-dinner-ideas" />}</Route>
+      <Route path="/crew-meals">{() => <SeoLandingPage slug="crew-meals" />}</Route>
       <Route path="/fire-station-meals">{() => <SeoLandingPage slug="fire-station-meals" />}</Route>
       <Route path="/healthy-firefighter-meals">{() => <SeoLandingPage slug="healthy-firefighter-meals" />}</Route>
       <Route path="/firefighter-breakfast-recipes">{() => <SeoLandingPage slug="firefighter-breakfast-recipes" />}</Route>
       <Route path="/firefighter-red-lead-recipe" component={FirefighterRedLeadRecipePage} />
       <Route path="/firefighter-bbq-recipes">{() => <SeoLandingPage slug="firefighter-bbq-recipes" />}</Route>
+      <Route path="/how-we-test-recipes" component={HowWeTestRecipesPage} />
       <Route path="/guides" component={GuidesIndexPage} />
       <Route path="/guides/topic/:clusterId" component={GuidesClusterPage} />
       <Route path="/guides/top-firehall-classics">
@@ -169,6 +189,8 @@ function AppRoutes() {
       <Route path="/hall/leaderboard">{() => <Redirect to="/hall" />}</Route>
       <Route path="/halls/:hallId" component={HallSettingsPage} />
       <Route path="/hall/canteen" component={HallCanteenPage} />
+      <Route path="/hall/dues" component={HallDuesPage} />
+      <Route path="/hall/logbook" component={HallLogbookPage} />
       <Route path="/hall/shopping-list" component={HallShoppingListRedirect} />
       <Route path="/hall/protein-deals/setup" component={HallProteinDealsSetupPage} />
       <Route path="/hall/protein-deals" component={HallProteinDealsPage} />

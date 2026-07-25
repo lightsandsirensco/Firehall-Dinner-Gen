@@ -7,6 +7,7 @@ export const HALL_PRO_FEATURE_LABELS: Record<HallProFeature, string> = {
   advanced_hall_vote: "Advanced Hall Vote",
   hall_grocery_planning: "Hall grocery planning",
   canteen_payment_tracker: "Canteen Payment Tracker",
+  canteen_manager_pro: "Canteen Manager Pro",
 };
 
 export const HALL_PRO_TAGLINE =

@@ -1,0 +1,264 @@
+{
+  "slug": "firehall-korean-beef-bowls",
+  "title": "Korean Beef Bowls",
+  "displayTitle": "Korean Beef Bowls",
+  "seoTitle": "Korean Beef Bowls | Firefighter Meal",
+  "shortDescription": "Sweet-savory beef, rice, vegetables, kimchi, and fried eggs",
+  "subtitle": "Sweet-savory beef, rice, vegetables, kimchi, and fried eggs",
+  "category": "hall_expansion",
+  "cuisine": "korean",
+  "description": "Jasmine rice with gochujang-soy beef, cucumber, carrot, spinach, kimchi, sesame, and a fried egg.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 630,
+  "protein": 39,
+  "carbs": 62,
+  "fats": 26,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "beef",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Rice pot",
+    "Large skillet",
+    "Nonstick egg skillet",
+    "Instant-read thermometer",
+    "Hotel pans"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef",
+      "quantity": "2.8",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "2.4",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "gochujang",
+      "quantity": "3/8",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "3/8",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "1/4",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "cucumbers",
+      "quantity": "1.6",
+      "unit": "each",
+      "group": "Cold bar"
+    },
+    {
+      "name": "carrots",
+      "quantity": "1 1/4",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "spinach",
+      "quantity": "1.6",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "kimchi",
+      "quantity": "1.6",
+      "unit": "cups",
+      "group": "Cold bar"
+    },
+    {
+      "name": "eggs",
+      "quantity": "8",
+      "unit": "each",
+      "group": "Finish"
+    },
+    {
+      "name": "sesame seeds",
+      "quantity": "1/4",
+      "unit": "cup",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the Korean bowl bar",
+      "instruction": "Cut carrots and cucumber into thin matchstick strips (julienne), rinse spinach, drain kimchi, and whisk gochujang, soy, sugar, garlic, and sesame oil in a bowl. Crack eggs into separate cups and stage sesame and onions. Drain kimchi well; its brine will turn a carefully cooked rice bowl into a wet, sour mess.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the rice",
+      "instruction": "Rinse jasmine rice, simmer it with salted water in a covered pot for 15 minutes, and let it stand 10 minutes off heat. Fluff with a fork and cover in a hotel pan. Stirring with a spoon breaks grains; use the quiet cooking time to finish the sauce and vegetables.",
+      "minutes": 25,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Set up the beef and sauce",
+      "instruction": "Break beef into loose chunks on a tray and place the gochujang mixture beside a hot 14-inch skillet. Preheat over medium-high until oil shimmers. Keep the exhaust on before sauce hits the pan; gochujang splashed into cold meat can smoke hard and catch a rookie by surprise.",
+      "minutes": 5,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Cook the Korean beef",
+      "instruction": "Brown beef 8–10 minutes, leaving it still for the first minute so a crust forms, until no pink remains and it reaches 160°F. Drain fat, add sauce, and simmer 2 minutes until sticky and glossy. If it looks dry, add a tablespoon of water; extra sesame oil just makes it greasy.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cook carrots and spinach",
+      "instruction": "Sauté carrots in a second skillet over medium-high for 3 minutes until flexible but still bright. Add spinach by handfuls for 1–2 minutes until barely wilted, then season with sesame oil. Dumping all spinach in at once makes a watery green heap instead of a clean topping.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Fry the eggs",
+      "instruction": "Heat a nonstick skillet over medium with a thin film of oil and fry eggs in batches 2–3 minutes until whites set and yolks still wobble. Move them to a warm tray, not a deep pan. High heat burns whites before they release, and stacking eggs destroys the yolks.",
+      "minutes": 12,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold and arrange components",
+      "instruction": "Cover rice, beef, carrots, and spinach separately at 140°F or above; keep cucumber and kimchi chilled. Taste beef with rice now and adjust salt only after sampling both. The kimchi is salty, so seasoning the hot pans blindly is an easy way to oversalt every serving. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Assemble Korean bowls",
+      "instruction": "Scoop rice first, add beef in the center, then place carrots and spinach on opposite sides. Nestle chilled cucumber and kimchi away from the hot beef. This keeps the fermented crunch sharp and lets firefighters mix the bowl themselves instead of receiving one soggy blend.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Crown with egg and sesame",
+      "instruction": "Slide one fried egg onto each bowl, scatter sesame and green onions over it, and offer extra gochujang on the side. Add the egg last while the yolk is intact. Pressing it under hot beef sets the yolk and removes the creamy payoff.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Send out Korean beef bowls",
+      "instruction": "Take bowls to the pass and keep a covered rice pan plus a small beef backup at 200°F for a delayed company. Use a clean spoon for kimchi refills. Cross-contaminating it with hot beef sauce shortens its clean, bright hold.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Korean ground beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Korean ground beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Start with half the gochujang and put extra on the line for heat seekers.",
+    "Rookie tip: Drain kimchi well before serving or the rice turns into a wet, sour mess.",
+    "Rookie tip: Use a nonstick skillet for eggs and wipe it between batches.",
+    "Prep tip: Keep cucumber cold until the last minute for real crunch.",
+    "Fry eggs only after the hot pans are ready so yolks stay soft."
+  ],
+  "tonightSpread": [
+    "Main: Korean beef bowls",
+    "Sides: Quick sesame cucumber salad, orange slices",
+    "Condiments: Kimchi, gochujang, sesame seeds",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Korean ground beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Use leftover beef in lettuce wraps with kimchi and rice."
+  ],
+  "whyCrewsLikeIt": "Ground beef cooks quickly, while the spicy-sweet sauce and egg make a practical bowl feel special.",
+  "mealPrepNotes": "Make-ahead: mix the gochujang sauce and shred vegetables one day ahead. Storage: refrigerate beef, rice, vegetables, and kimchi separately for 3 days. Reheating: heat beef and rice to 165°F; fry eggs fresh, and add kimchi and cucumber cold.",
+  "substitutions": [
+    "Use ground turkey for beef.",
+    "Use sriracha plus miso if gochujang is unavailable.",
+    "Skip eggs for a simpler line.",
+    "Use bagged slaw for carrots and spinach."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 630,
+    "protein": 39,
+    "carbs": 62,
+    "fats": 26,
+    "label": "~630 cal/serving · 39g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+  "heroImageAlt": "Korean Beef Bowls — korean bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehall-korean-beef-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehall-korean-beef-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/firehall-korean-beef-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 92,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "korean beef bowls",
+    "gochujang ground beef bowl",
+    "bibimbap inspired bowl",
+    "firehall korean dinner",
+    "ground beef rice bowl",
+    "kimchi beef bowl",
+    "crew dinner bowls",
+    "fried egg rice bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

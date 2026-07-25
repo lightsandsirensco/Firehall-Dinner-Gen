@@ -1,6 +1,6 @@
 # Measurement conversion audit
 
-Generated: 2026-06-27T19:41:50.866Z
+Generated: 2026-06-28T01:23:35.795Z
 
 | Metric | Value |
 |--------|-------|

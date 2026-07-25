@@ -1,4 +1,4 @@
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import { SiteHeader } from "@/components/site-header";
 import { AppPageHeader } from "@/components/mobile/app-page-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -60,8 +60,8 @@ export function ExploreDiscoveryPage() {
         <div className={cn(app.main, "py-4 pt-2")}>
           <AppPageHeader
             variant="feed"
-            title="Full Catalog"
-            subtitle={`Browse ${formatMarketingRecipeCount(recipeCount)} approved Firehall Meals recipes.`}
+            title="Explore"
+            subtitle="Tap a meal when you want to browse — or pick tonight in under a minute."
           />
         </div>
       </div>
@@ -70,7 +70,11 @@ export function ExploreDiscoveryPage() {
         <div className={cn(app.main, "py-4 px-page")}>
           <h1 className="font-heading text-2xl tracking-tight">Explore</h1>
           <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-            {formatMarketingRecipeCount(recipeCount)} hall-tested recipes
+            Browse hall-tested recipes. Can&apos;t decide?{" "}
+            <Link href="/generator" className="font-semibold text-primary hover:underline">
+              Pick Tonight&apos;s Meal
+            </Link>
+            .
           </p>
         </div>
       </div>

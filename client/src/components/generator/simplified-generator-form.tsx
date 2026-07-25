@@ -31,7 +31,6 @@ import {
 } from "lucide-react";
 import { CTA, GENERATOR } from "@/lib/brand-copy";
 import {
-  DIFFERENT_MEAL_LABEL,
   DIFFERENT_MEAL_LOADING,
   INITIAL_MEAL_LOADING,
 } from "@/lib/meal-outcome-copy";
@@ -318,7 +317,7 @@ export function SimplifiedGeneratorForm({
               ) : (
                 <Shuffle className="w-5 h-5 mr-2" />
               )}
-              {isLoading ? DIFFERENT_MEAL_LOADING : DIFFERENT_MEAL_LABEL}
+              {isLoading ? DIFFERENT_MEAL_LOADING : CTA.tryAnother}
             </Button>
             {(canGoBack || canGoForward) && (
               <div className="flex gap-2">
@@ -353,7 +352,7 @@ export function SimplifiedGeneratorForm({
   );
 }
 
-/** Mobile sticky bar — primary CTA only */
+/** Mobile sticky bar — pick first; after a result, shuffle is secondary (cook is on the card). */
 export function SimplifiedStickyGenerate({
   hasRecipe,
   isLoading,
@@ -374,11 +373,12 @@ export function SimplifiedStickyGenerate({
       ) : (
         <Button
           size="lg"
-          className="btn-tonight btn-generate w-full min-h-12 touch-manipulation"
+          variant="outline"
+          className="w-full min-h-12 touch-manipulation"
           onClick={onGenerateAnother}
           disabled={isLoading}
         >
-          {isLoading ? DIFFERENT_MEAL_LOADING : DIFFERENT_MEAL_LABEL}
+          {isLoading ? DIFFERENT_MEAL_LOADING : CTA.tryAnother}
         </Button>
       )}
     </div>

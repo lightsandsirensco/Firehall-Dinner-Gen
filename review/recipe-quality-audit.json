@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-06-04T20:46:07.815Z",
+  "generatedAt": "2026-07-25T13:04:49.154Z",
   "totals": {
-    "recipes": 335,
-    "pass": 10,
-    "fail": 325,
+    "recipes": 371,
+    "pass": 50,
+    "fail": 321,
     "byCategory": {
       "spelling_grammar": 18,
-      "ingredient_unused": 236,
+      "ingredient_unused": 147,
       "ingredient_missing": 0,
       "quantity_unrealistic": 0,
-      "temperature_missing": 12,
-      "internal_temp_missing": 151,
+      "temperature_missing": 8,
+      "internal_temp_missing": 143,
       "cook_time_unrealistic": 1,
-      "vague_step": 55,
-      "completeness": 791,
-      "authenticity": 25
+      "vague_step": 74,
+      "completeness": 746,
+      "authenticity": 21
     }
   },
   "rows": [
@@ -44,69 +44,19 @@
       "slug": "chili-lime-grilled-tilapia",
       "title": "Ancho-Tilapia with Charred Corn Salsa",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "vague_step",
-          "message": "Heat grill: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "rewrite needed: Rest briefly"
-        },
-        {
-          "category": "vague_step",
-          "message": "Hold at 140°F: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "completeness",
-          "message": "step 6 is generic or too short"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (103 words, min 280)"
-        },
-        {
-          "category": "completeness",
-          "message": "vague step: Rest briefly"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "andouille-po-boy-rolls-crew",
       "title": "Andouille Po Boy Rolls for the Crew",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: mayonnaise"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 2 (Split andouille) needs safe internal temp cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "rewrite needed: Hold sausage"
-        },
-        {
-          "category": "completeness",
-          "message": "step 4 is generic or too short"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (102 words, min 400)"
-        },
-        {
-          "category": "completeness",
-          "message": "vague step: Hold sausage"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "applewood-pork-shoulder-steaks",
@@ -130,39 +80,36 @@
       "slug": "bagel-lox-breakfast-board",
       "title": "Bagel and Lox Breakfast Board",
       "kind": "breakfast_catalog",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "kind": "breakfast_catalog",
       "pass": false,
-      "score": 44,
+      "score": 68,
       "issues": [
         {
-          "category": "ingredient_unused",
-          "message": "unused: smoked salmon lox"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: whipped butter"
-        },
-        {
-          "category": "vague_step",
-          "message": "rewrite needed: Set the line"
+          "category": "completeness",
+          "message": "only 6 steps (min 8 for this meal)"
         },
         {
           "category": "completeness",
-          "message": "step 4 uses template title: Set the line"
+          "message": "thin instructions (199 words, min 280)"
         },
         {
           "category": "completeness",
-          "message": "step 4 is generic or too short"
+          "message": "missing tonightSpread"
         },
         {
           "category": "completeness",
-          "message": "only 5 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (131 words, min 280)"
+          "message": "missing equipment"
         }
       ],
-      "issueCount": 7
+      "issueCount": 4
     },
     {
       "slug": "mediterranean-baked-fish-tray",
@@ -191,7 +138,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Sharp cheddar, shredded"
+          "message": "unused: Sharp Cheddar, Shredded"
         },
         {
           "category": "completeness",
@@ -226,6 +173,32 @@
         {
           "category": "completeness",
           "message": "thin instructions (106 words, min 400)"
+        }
+      ],
+      "issueCount": 4
+    },
+    {
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        {
+          "category": "completeness",
+          "message": "only 4 steps (min 8 for this meal)"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (148 words, min 400)"
+        },
+        {
+          "category": "completeness",
+          "message": "missing tonightSpread"
+        },
+        {
+          "category": "completeness",
+          "message": "missing equipment"
         }
       ],
       "issueCount": 4
@@ -297,11 +270,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Yellow onion, diced"
+          "message": "unused: Yellow Onion, Diced"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh basil, chopped"
+          "message": "unused: Fresh Basil, Chopped"
         },
         {
           "category": "internal_temp_missing",
@@ -327,7 +300,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: limes"
+          "message": "unused: Limes"
         },
         {
           "category": "internal_temp_missing",
@@ -353,7 +326,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Yellow onion, diced"
+          "message": "unused: Yellow Onion, Diced"
         },
         {
           "category": "internal_temp_missing",
@@ -413,7 +386,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Chuck or brisket point, cubed"
+          "message": "unused: Chuck Or Brisket Point, Cubed"
         },
         {
           "category": "completeness",
@@ -448,19 +421,10 @@
       "slug": "bbq-chicken-mac-and-cheese",
       "title": "BBQ Chicken Mac and Cheese",
       "kind": "hall_classic",
-      "pass": false,
-      "score": 84,
-      "issues": [
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Season the chicken) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Shred and sauce the chicken) needs safe internal temp cue"
-        }
-      ],
-      "issueCount": 2
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "bbq-chicken-pizza",
@@ -484,35 +448,10 @@
       "slug": "bbq-chicken-sliders",
       "title": "BBQ Chicken Sliders",
       "kind": "firehall_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Ground beef"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Yellow onion"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Garlic cloves"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Cook and sauce filling) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 4 steps (min 10 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (81 words, min 400)"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "bbq-meatball-skewers",
@@ -533,19 +472,19 @@
       "issueCount": 2
     },
     {
-      "slug": "big-chili",
-      "title": "Beef and Bean Chili",
-      "kind": "hall_classic",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "kind": "hall_expansion",
       "pass": false,
       "score": 84,
       "issues": [
         {
-          "category": "authenticity",
-          "message": "ai_wording: no heat"
+          "category": "internal_temp_missing",
+          "message": "step 1 (Season the pork and set up the braise) needs safe internal temp cue"
         },
         {
           "category": "internal_temp_missing",
-          "message": "step 5 (Simmer the chili (low, 35–40 min)) needs safe internal temp cue"
+          "message": "step 7 (Hold the pork hot and moist) needs safe internal temp cue"
         }
       ],
       "issueCount": 2
@@ -585,11 +524,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Carrots, diced"
+          "message": "unused: Carrots, Diced"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Celery, diced"
+          "message": "unused: Celery, Diced"
         },
         {
           "category": "completeness",
@@ -610,23 +549,10 @@
       "slug": "beef-dip",
       "title": "Beef Dip Sandwiches",
       "kind": "hall_classic",
-      "pass": false,
-      "score": 76,
-      "issues": [
-        {
-          "category": "completeness",
-          "message": "title promises a sauce but ingredients or steps lack sauce detail"
-        },
-        {
-          "category": "completeness",
-          "message": "only 4 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (115 words, min 400)"
-        }
-      ],
-      "issueCount": 3
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "enchilada-beef-skillet",
@@ -681,7 +607,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: green onions"
+          "message": "unused: Green Onions"
         },
         {
           "category": "internal_temp_missing",
@@ -702,43 +628,10 @@
       "slug": "beef-stroganoff",
       "title": "Beef Stroganoff",
       "kind": "firehall_catalog",
-      "pass": false,
-      "score": 36,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Cremini mushrooms, sliced"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Yellow onion, sliced"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Fresh parsley, chopped"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 2 (Sear beef in batches) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 4 (Build the stroganoff sauce) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 5 (Return beef and simmer gently) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 6 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (189 words, min 400)"
-        }
-      ],
-      "issueCount": 8
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "beer-can-chicken",
@@ -867,7 +760,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Dill pickles"
+          "message": "unused: Dill Pickles"
         },
         {
           "category": "completeness",
@@ -889,7 +782,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: mayonnaise"
+          "message": "unused: Mayonnaise"
         },
         {
           "category": "completeness",
@@ -907,7 +800,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: cod fillets"
+          "message": "unused: Cod Fillets"
         },
         {
           "category": "completeness",
@@ -933,15 +826,15 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: crumbled blue cheese"
+          "message": "unused: Crumbled Blue Cheese"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: fresh chives"
+          "message": "unused: Fresh Chives"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: watermelon radish"
+          "message": "unused: Watermelon Radish"
         },
         {
           "category": "completeness",
@@ -1182,7 +1075,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Shredded cheddar-mozzarella blend"
+          "message": "unused: Shredded Cheddar-Mozzarella Blend"
         },
         {
           "category": "internal_temp_missing",
@@ -1203,43 +1096,10 @@
       "slug": "breakfast-sliders",
       "title": "Breakfast Sliders",
       "kind": "breakfast_catalog",
-      "pass": false,
-      "score": 36,
-      "issues": [
-        {
-          "category": "authenticity",
-          "message": "ai_wording: until done"
-        },
-        {
-          "category": "spelling_grammar",
-          "message": "banned_phrase: \\buntil done\\b"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: everything bagel seasoning"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Heat the oven) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (124 words, min 280)"
-        },
-        {
-          "category": "completeness",
-          "message": "missing tonightSpread"
-        },
-        {
-          "category": "completeness",
-          "message": "missing equipment"
-        }
-      ],
-      "issueCount": 8
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "breakfast-stromboli-roll",
@@ -1312,6 +1172,28 @@
       "issueCount": 2
     },
     {
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 1 (Cube and stage the bowl ingredients) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 3 (Season the chicken) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold hot and cold components correctly) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 3
+    },
+    {
       "slug": "buffalo-chicken-wraps",
       "title": "Buffalo Chicken Wraps",
       "kind": "hall_expansion",
@@ -1381,35 +1263,36 @@
       "slug": "bun-bo-hue-noodle-soup",
       "title": "Bun Bo Hue Noodle Soup",
       "kind": "hall_expansion",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
+      "kind": "hall_expansion",
       "pass": false,
-      "score": 52,
+      "score": 68,
       "issues": [
         {
-          "category": "authenticity",
-          "message": "ai_wording: perfect for"
+          "category": "vague_step",
+          "message": "Smoke uncovered: missing time, heat, or doneness cue"
         },
         {
-          "category": "temperature_missing",
-          "message": "hot cooking steps lack oven/grill/surface temperature"
+          "category": "vague_step",
+          "message": "Simmer covered: missing time, heat, or doneness cue"
         },
         {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Start the broth) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "no oven/grill/internal temperature cues in steps"
+          "category": "vague_step",
+          "message": "Hold chili: missing time, heat, or doneness cue"
         },
         {
           "category": "completeness",
-          "message": "only 5 steps (min 10 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (92 words, min 400)"
+          "message": "thin instructions (261 words, min 400)"
         }
       ],
-      "issueCount": 6
+      "issueCount": 4
     },
     {
       "slug": "burrito-bowl-bar-night",
@@ -1534,46 +1417,35 @@
       "issueCount": 3
     },
     {
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 1 (Stage shrimp and vegetables) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 2 (Cook Cajun rice) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold the hot components) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 3
+    },
+    {
       "slug": "grilled-cod-lemon-packets",
       "title": "Caper-Butter Cod Foil Packets",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 36,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Atlantic cod fillets"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: fennel bulb"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Picholine olives"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: dry vermouth"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: fresh tarragon"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: fresh dill fronds"
-        },
-        {
-          "category": "vague_step",
-          "message": "Heat grill: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (110 words, min 280)"
-        }
-      ],
-      "issueCount": 8
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "caprese-chicken-bake",
@@ -1584,7 +1456,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: garlic cloves"
+          "message": "unused: Garlic Cloves"
         },
         {
           "category": "completeness",
@@ -1596,6 +1468,15 @@
         }
       ],
       "issueCount": 3
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Carolina-Style Pulled Pork",
+      "kind": "hall_classic",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "cast-iron-breakfast-skillet",
@@ -1661,73 +1542,19 @@
       "slug": "cast-iron-steak-fajita-sizzlers",
       "title": "Cast Iron Skirt Steak Sizzlers",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 44,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Mexican oregano"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 4 (Sear steak batches) needs safe internal temp cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "rewrite needed: Heat griddle hot"
-        },
-        {
-          "category": "vague_step",
-          "message": "Heat sizzle platters: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "completeness",
-          "message": "step 3 is generic or too short"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (114 words, min 400)"
-        },
-        {
-          "category": "completeness",
-          "message": "vague step: Heat griddle hot"
-        }
-      ],
-      "issueCount": 7
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "cedar-plank-salmon",
       "title": "Cedar Plank Salmon",
       "kind": "firehall_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Brown sugar"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Soy sauce"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Fresh ginger, grated"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 2 (Grill on the plank) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 4 steps (min 10 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (100 words, min 400)"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "cheesy-beef-nacho-bake",
@@ -1786,11 +1613,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Fettuccine or penne"
+          "message": "unused: Fettuccine Or Penne"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh parsley, chopped"
+          "message": "unused: Fresh Parsley, Chopped"
         },
         {
           "category": "completeness",
@@ -1812,11 +1639,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Mozzarella, shredded"
+          "message": "unused: Mozzarella, Shredded"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh parsley, chopped"
+          "message": "unused: Fresh Parsley, Chopped"
         },
         {
           "category": "internal_temp_missing",
@@ -1842,7 +1669,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: kosher salt"
+          "message": "unused: Kosher Salt"
         },
         {
           "category": "internal_temp_missing",
@@ -1890,11 +1717,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Yellow onion, diced"
+          "message": "unused: Yellow Onion, Diced"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh parsley, chopped"
+          "message": "unused: Fresh Parsley, Chopped"
         },
         {
           "category": "internal_temp_missing",
@@ -1993,37 +1820,10 @@
       "slug": "chicken-caesar",
       "title": "Chicken Caesar Salad",
       "kind": "hall_classic",
-      "pass": false,
-      "score": 92,
-      "issues": [
-        {
-          "category": "internal_temp_missing",
-          "message": "step 2 (Crisp the bacon) needs safe internal temp cue"
-        }
-      ],
-      "issueCount": 1
-    },
-    {
-      "slug": "chicken-caesar-wraps",
-      "title": "Chicken Caesar Wraps",
-      "kind": "hall_expansion",
-      "pass": false,
-      "score": 76,
-      "issues": [
-        {
-          "category": "internal_temp_missing",
-          "message": "step 4 (Roll the wraps) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (189 words, min 280)"
-        }
-      ],
-      "issueCount": 3
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "enchilada-casserole",
@@ -2034,11 +1834,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Shredded cheddar"
+          "message": "unused: Shredded Cheddar"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Black olives, sliced"
+          "message": "unused: Black Olives, Sliced"
         },
         {
           "category": "completeness",
@@ -2090,11 +1890,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Bell peppers, sliced"
+          "message": "unused: Bell Peppers, Sliced"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Red onion, sliced"
+          "message": "unused: Red Onion, Sliced"
         },
         {
           "category": "completeness",
@@ -2112,32 +1912,6 @@
       "issueCount": 5
     },
     {
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Chicken Fajitas",
-      "kind": "performance_meal",
-      "pass": false,
-      "score": 68,
-      "issues": [
-        {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Spread on sheet pans) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "title_taco_no_tortilla"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (108 words, min 280)"
-        }
-      ],
-      "issueCount": 4
-    },
-    {
       "slug": "asian-chicken-lettuce-cups",
       "title": "Chicken Lettuce Cups",
       "kind": "performance_meal",
@@ -2146,7 +1920,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: green onions"
+          "message": "unused: Green Onions"
         },
         {
           "category": "completeness",
@@ -2172,11 +1946,11 @@
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Bell peppers, sliced"
+          "message": "unused: Bell Peppers, Sliced"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Red onion, sliced"
+          "message": "unused: Red Onion, Sliced"
         },
         {
           "category": "completeness",
@@ -2215,27 +1989,10 @@
       "slug": "chicken-parm",
       "title": "Chicken Parmesan",
       "kind": "hall_classic",
-      "pass": false,
-      "score": 68,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Fresh mozzarella, sliced"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Fresh basil, torn"
-        },
-        {
-          "category": "completeness",
-          "message": "only 6 steps (min 10 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (222 words, min 400)"
-        }
-      ],
-      "issueCount": 4
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "chicken-pot-pie",
@@ -2250,7 +2007,7 @@
         },
         {
           "category": "completeness",
-          "message": "thin instructions (75 words, min 400)"
+          "message": "thin instructions (92 words, min 400)"
         }
       ],
       "issueCount": 2
@@ -2259,39 +2016,10 @@
       "slug": "chicken-quesadillas",
       "title": "Chicken Quesadillas",
       "kind": "firehall_catalog",
-      "pass": false,
-      "score": 44,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Ground beef"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Yellow onion"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Garlic cloves"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Cook and sauce filling) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "title_taco_no_tortilla"
-        },
-        {
-          "category": "completeness",
-          "message": "only 4 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (80 words, min 400)"
-        }
-      ],
-      "issueCount": 7
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "chicken-shawarma-pitas",
@@ -2334,6 +2062,28 @@
       "issueCount": 2
     },
     {
+      "slug": "chicken-thigh-stretch-dinner",
+      "title": "Chicken Thigh Stretch Dinner",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Heat oven: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Dry chickpeas: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (240 words, min 400)"
+        }
+      ],
+      "issueCount": 3
+    },
+    {
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
       "title": "Chicken Thighs with Sweet Potato and Spinach",
       "kind": "performance_meal",
@@ -2360,7 +2110,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Yellow onion, diced"
+          "message": "unused: Yellow Onion, Diced"
         },
         {
           "category": "internal_temp_missing",
@@ -2460,6 +2210,29 @@
         }
       ],
       "issueCount": 3
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "kind": "hall_classic",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
+      "slug": "chipotle-chicken-burrito-bowls",
+      "title": "Chipotle Chicken Burrito Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold the hot burrito components) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 1
     },
     {
       "slug": "chipotle-lime-chicken-tacos",
@@ -2706,6 +2479,24 @@
       "issueCount": 4
     },
     {
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 1 (Heat oven and stage pans) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 4 (Mix sauce) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 2
+    },
+    {
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
       "kind": "hall_expansion",
@@ -2810,15 +2601,15 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Chicken cutlets, pounded thin"
+          "message": "unused: Chicken Cutlets, Pounded Thin"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Eggs, beaten"
+          "message": "unused: Eggs, Beaten"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Parmesan, grated"
+          "message": "unused: Parmesan, Grated"
         },
         {
           "category": "completeness",
@@ -2884,26 +2675,22 @@
       "issueCount": 2
     },
     {
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "kind": "hall_expansion",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
       "slug": "smash-burgers",
       "title": "Double Smash Burgers",
       "kind": "hall_classic",
-      "pass": false,
-      "score": 76,
-      "issues": [
-        {
-          "category": "authenticity",
-          "message": "ai_wording: no heat"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Mayonnaise"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Neutral high-heat oil"
-        }
-      ],
-      "issueCount": 3
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "dutch-oven-pot-roast",
@@ -2923,6 +2710,28 @@
         {
           "category": "completeness",
           "message": "thin instructions (118 words, min 400)"
+        }
+      ],
+      "issueCount": 3
+    },
+    {
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Heat skillet: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Hold components: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (249 words, min 280)"
         }
       ],
       "issueCount": 3
@@ -2962,23 +2771,23 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: fresh epazote"
+          "message": "unused: Fresh Epazote"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: queso fresco"
+          "message": "unused: Queso Fresco"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Tajín seasoning"
+          "message": "unused: Tajín Seasoning"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: crushed totopos"
+          "message": "unused: Crushed Totopos"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: avocado oil"
+          "message": "unused: Avocado Oil"
         },
         {
           "category": "vague_step",
@@ -3034,11 +2843,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: fresh parsley"
+          "message": "unused: Fresh Parsley"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: fresh cilantro"
+          "message": "unused: Fresh Cilantro"
         },
         {
           "category": "completeness",
@@ -3194,6 +3003,15 @@
       "issueCount": 5
     },
     {
+      "slug": "big-chili",
+      "title": "Firehall Chili",
+      "kind": "hall_classic",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
       "slug": "firehall-donair-platter",
       "title": "Firehall Donair Platter",
       "kind": "hall_expansion",
@@ -3212,6 +3030,46 @@
       "issueCount": 2
     },
     {
+      "slug": "firehall-gyro-bowls",
+      "title": "Firehall Gyro Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 4 (Brown beef) needs safe internal temp cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Brown beef: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Season rice: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (256 words, min 400)"
+        }
+      ],
+      "issueCount": 4
+    },
+    {
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold the hot taco components) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 1
+    },
+    {
       "slug": "crispy-fish-taco-night",
       "title": "Fish Tacos",
       "kind": "performance_meal",
@@ -3220,7 +3078,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: large eggs"
+          "message": "unused: Large Eggs"
         },
         {
           "category": "completeness",
@@ -3303,35 +3161,10 @@
       "slug": "game-day-nachos",
       "title": "Game Day Nachos",
       "kind": "firehall_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Pickled jalapeños, sliced"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Brown the beef) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Melt and load) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "title_taco_no_tortilla"
-        },
-        {
-          "category": "completeness",
-          "message": "only 4 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (120 words, min 400)"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "game-day-pizza-sliders",
@@ -3400,44 +3233,6 @@
       "issueCount": 4
     },
     {
-      "slug": "garlic-butter-shrimp-skewers",
-      "title": "Garlic Tarragon Shrimp Skewers",
-      "kind": "bbq_catalog",
-      "pass": false,
-      "score": 44,
-      "issues": [
-        {
-          "category": "authenticity",
-          "message": "ai_wording: perfect for"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: micro arugula"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Heat grill hot) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 5 (Grill shrimp) needs safe internal temp cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "Prep shrimp: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "Heat grill hot: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (118 words, min 280)"
-        }
-      ],
-      "issueCount": 7
-    },
-    {
       "slug": "griddle-smash-sausage-peppers",
       "title": "Giardiniera Smash Sausage Hoagies",
       "kind": "bbq_catalog",
@@ -3446,11 +3241,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: giardiniera relish"
+          "message": "unused: Giardiniera Relish"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: beef tallow"
+          "message": "unused: Beef Tallow"
         },
         {
           "category": "vague_step",
@@ -3542,6 +3337,24 @@
       "issueCount": 3
     },
     {
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 3 (Ready the grill chicken) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold the Greek hot pans) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 2
+    },
+    {
       "slug": "greek-chicken-pitas",
       "title": "Greek Chicken Pitas",
       "kind": "hall_expansion",
@@ -3599,6 +3412,32 @@
       "issueCount": 0
     },
     {
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Grill vegetables: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Warm tortillas: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "title_taco_no_tortilla"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (259 words, min 400)"
+        }
+      ],
+      "issueCount": 4
+    },
+    {
       "slug": "grilled-pork-chops",
       "title": "Grilled Pork Chops",
       "kind": "firehall_catalog",
@@ -3607,15 +3446,15 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Brown sugar"
+          "message": "unused: Brown Sugar"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Soy sauce"
+          "message": "unused: Soy Sauce"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Garlic cloves, minced"
+          "message": "unused: Garlic Cloves, Minced"
         },
         {
           "category": "completeness",
@@ -3637,7 +3476,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: marbled rye bread"
+          "message": "unused: Marbled Rye Bread"
         },
         {
           "category": "internal_temp_missing",
@@ -3736,47 +3575,10 @@
       "slug": "hall-burger-bar",
       "title": "Hall Burger Bar",
       "kind": "hall_expansion",
-      "pass": false,
-      "score": 28,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: iceberg lettuce"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: beefsteak tomatoes"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: red onion"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: dill pickle chips"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: ketchup and mustard"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Prep toppings and bacon) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "title_burger_no_bun"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (134 words, min 280)"
-        }
-      ],
-      "issueCount": 9
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "hall-chicken-noodle-soup",
@@ -3841,6 +3643,15 @@
       "issueCount": 2
     },
     {
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "kind": "breakfast_catalog",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
       "slug": "caprese-steak-skewers-crew",
       "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
       "kind": "bbq_catalog",
@@ -3875,11 +3686,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh thyme"
+          "message": "unused: Fresh Thyme"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh rosemary"
+          "message": "unused: Fresh Rosemary"
         },
         {
           "category": "completeness",
@@ -3945,7 +3756,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: neutral oil"
+          "message": "unused: Neutral Oil"
         },
         {
           "category": "completeness",
@@ -3989,15 +3800,15 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Brown sugar"
+          "message": "unused: Brown Sugar"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Soy sauce"
+          "message": "unused: Soy Sauce"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Garlic cloves, minced"
+          "message": "unused: Garlic Cloves, Minced"
         },
         {
           "category": "completeness",
@@ -4063,7 +3874,7 @@
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: neutral oil"
+          "message": "unused: Neutral Oil"
         },
         {
           "category": "completeness",
@@ -4146,77 +3957,19 @@
       "slug": "hungarian-goulash-crew",
       "title": "Hungarian Goulash for the Crew",
       "kind": "hall_expansion",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "temperature_missing",
-          "message": "hot cooking steps lack oven/grill/surface temperature"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Simmer the stew) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 4 (Add potatoes) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "no oven/grill/internal temperature cues in steps"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 10 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (94 words, min 400)"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "pork-satay-skewers-crew",
       "title": "Indonesian Tamarind Pork Satay Batches",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 36,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: tamarind paste"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: galangal"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: coriander seeds"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Thai basil"
-        },
-        {
-          "category": "vague_step",
-          "message": "rewrite needed: Heat grill"
-        },
-        {
-          "category": "completeness",
-          "message": "step 4 is generic or too short"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (128 words, min 400)"
-        },
-        {
-          "category": "completeness",
-          "message": "vague step: Heat grill"
-        }
-      ],
-      "issueCount": 8
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "irish-breakfast-fry-up",
@@ -4249,6 +4002,36 @@
       "issueCount": 5
     },
     {
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Test roast: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Shred beef: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Build sandwiches: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "robotic_title"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (253 words, min 400)"
+        }
+      ],
+      "issueCount": 5
+    },
+    {
       "slug": "jalapeno-cheddar-smoked-sausages",
       "title": "Jalapeño Cheddar Smoked Sausages",
       "kind": "bbq_catalog",
@@ -4261,7 +4044,7 @@
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: neutral oil"
+          "message": "unused: Neutral Oil"
         },
         {
           "category": "completeness",
@@ -4318,19 +4101,10 @@
       "slug": "jerk-chicken",
       "title": "Jerk Chicken & Rice and Peas",
       "kind": "hall_classic",
-      "pass": false,
-      "score": 84,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Coleslaw mix"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (190 words, min 400)"
-        }
-      ],
-      "issueCount": 2
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "johnnycakes-with-syrup",
@@ -4367,19 +4141,19 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: fenugreek leaves"
+          "message": "unused: Fenugreek Leaves"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: mustard oil"
+          "message": "unused: Mustard Oil"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: gram flour"
+          "message": "unused: Gram Flour"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: pomegranate molasses"
+          "message": "unused: Pomegranate Molasses"
         },
         {
           "category": "internal_temp_missing",
@@ -4435,6 +4209,24 @@
       "issueCount": 5
     },
     {
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 3 (Set up the beef and sauce) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold and arrange components) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 2
+    },
+    {
       "slug": "korean-bulgogi-grill-night",
       "title": "Korean Bulgogi Grill Night",
       "kind": "hall_expansion",
@@ -4467,6 +4259,36 @@
         }
       ],
       "issueCount": 6
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Glaze meat) needs safe internal temp cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Mix glaze: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Heat skillet: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "robotic_title"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (241 words, min 280)"
+        }
+      ],
+      "issueCount": 5
     },
     {
       "slug": "lamb-kofta-skewer-platter",
@@ -4505,6 +4327,40 @@
       "issueCount": 2
     },
     {
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 52,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 3 (Slice beef) needs safe internal temp cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Warm gravy: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Slice beef: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Mash potatoes: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Warm beef gently: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (241 words, min 400)"
+        }
+      ],
+      "issueCount": 6
+    },
+    {
       "slug": "greek-lemon-chicken-potatoes",
       "title": "Lemon Chicken and Potatoes",
       "kind": "performance_meal",
@@ -4513,7 +4369,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: extra-virgin olive oil"
+          "message": "unused: Extra-Virgin Olive Oil"
         },
         {
           "category": "internal_temp_missing",
@@ -4600,35 +4456,10 @@
       "slug": "lemon-herb-salmon",
       "title": "Lemon Herb Salmon",
       "kind": "firehall_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Brown sugar"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Soy sauce"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Fresh ginger, grated"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 2 (Grill on the plank) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 4 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (100 words, min 400)"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "lemon-salmon-orzo-skillet",
@@ -4639,7 +4470,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: extra-virgin olive oil"
+          "message": "unused: Extra-Virgin Olive Oil"
         },
         {
           "category": "internal_temp_missing",
@@ -4717,6 +4548,28 @@
         }
       ],
       "issueCount": 4
+    },
+    {
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 3 (Cook bacon) needs safe internal temp cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Morning start: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (251 words, min 400)"
+        }
+      ],
+      "issueCount": 3
     },
     {
       "slug": "loaded-nacho-bar-night",
@@ -4962,35 +4815,10 @@
       "slug": "meatball-hoagies",
       "title": "Meatball Hoagies",
       "kind": "firehall_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Ground beef"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Yellow onion"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Garlic cloves"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Cook and sauce filling) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 4 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (80 words, min 400)"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "meatloaf-mashed",
@@ -5009,6 +4837,36 @@
         }
       ],
       "issueCount": 2
+    },
+    {
+      "slug": "mediterranean-beef-bowls",
+      "title": "Mediterranean Beef Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        {
+          "category": "spelling_grammar",
+          "message": "ai_phrase: restaurant_quality: AI phrase: restaurant-quality"
+        },
+        {
+          "category": "authenticity",
+          "message": "ai_wording: restaurant-quality"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 3 (Heat the skillet for the beef) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 5 (Optional crispy chickpeas) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold the beef and rice hot) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 5
     },
     {
       "slug": "mediterranean-chicken-farro-bowls",
@@ -5041,11 +4899,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Quinoa, uncooked"
+          "message": "unused: Quinoa, Uncooked"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Red onion, thinly sliced"
+          "message": "unused: Red Onion, Thinly Sliced"
         },
         {
           "category": "completeness",
@@ -5088,43 +4946,40 @@
       "slug": "memphis-dry-rub-ribs",
       "title": "Memphis Dry Rub Ribs",
       "kind": "firehall_catalog",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
+      "slug": "menemen-for-the-crew",
+      "title": "Menemen for the Crew",
+      "kind": "breakfast_catalog",
       "pass": false,
-      "score": 36,
+      "score": 60,
       "issues": [
         {
-          "category": "ingredient_unused",
-          "message": "unused: Brown sugar"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Paprika"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Garlic powder"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Onion powder"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Cayenne"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Kosher salt"
+          "category": "temperature_missing",
+          "message": "hot cooking steps lack oven/grill/surface temperature"
         },
         {
           "category": "completeness",
-          "message": "only 4 steps (min 10 for this meal)"
+          "message": "no oven/grill/internal temperature cues in steps"
         },
         {
           "category": "completeness",
-          "message": "thin instructions (131 words, min 400)"
+          "message": "only 4 steps (min 8 for this meal)"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (147 words, min 280)"
+        },
+        {
+          "category": "completeness",
+          "message": "missing tonightSpread"
         }
       ],
-      "issueCount": 8
+      "issueCount": 5
     },
     {
       "slug": "mesquite-chuck-roast",
@@ -5178,39 +5033,44 @@
       "slug": "miso-ramen-bar",
       "title": "Miso Ramen Bar",
       "kind": "hall_expansion",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
+      "kind": "hall_expansion",
       "pass": false,
-      "score": 44,
+      "score": 52,
       "issues": [
         {
-          "category": "ingredient_unused",
-          "message": "unused: green onions"
-        },
-        {
-          "category": "temperature_missing",
-          "message": "hot cooking steps lack oven/grill/surface temperature"
+          "category": "internal_temp_missing",
+          "message": "step 1 (Morning start) needs safe internal temp cue"
         },
         {
           "category": "internal_temp_missing",
-          "message": "step 1 (Simmer chicken broth) needs safe internal temp cue"
+          "message": "step 7 (Shred beef) needs safe internal temp cue"
         },
         {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Sear tofu) needs safe internal temp cue"
+          "category": "vague_step",
+          "message": "Test tenderness: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Shred beef: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Finish juices: missing time, heat, or doneness cue"
         },
         {
           "category": "completeness",
-          "message": "no oven/grill/internal temperature cues in steps"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 10 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (91 words, min 400)"
+          "message": "thin instructions (258 words, min 400)"
         }
       ],
-      "issueCount": 7
+      "issueCount": 6
     },
     {
       "slug": "mixed-berry-protein",
@@ -5349,7 +5209,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Couscous, dry"
+          "message": "unused: Couscous, Dry"
         },
         {
           "category": "completeness",
@@ -5371,19 +5231,19 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: eggplant"
+          "message": "unused: Eggplant"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: marinated artichoke hearts"
+          "message": "unused: Marinated Artichoke Hearts"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: mortadella"
+          "message": "unused: Mortadella"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: sun-dried tomatoes"
+          "message": "unused: Sun-Dried Tomatoes"
         },
         {
           "category": "ingredient_unused",
@@ -5412,35 +5272,10 @@
       "slug": "mushroom-swiss-steak-pan",
       "title": "Mushroom Swiss Steak Pan",
       "kind": "hall_expansion",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "temperature_missing",
-          "message": "hot cooking steps lack oven/grill/surface temperature"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Sear the beef) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Build the sauce) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "no oven/grill/internal temperature cues in steps"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (123 words, min 400)"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "loaded-nacho-skillet",
@@ -5535,6 +5370,32 @@
       "issueCount": 4
     },
     {
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        {
+          "category": "authenticity",
+          "message": "ai_wording: ideal for"
+        },
+        {
+          "category": "completeness",
+          "message": "only 6 steps (min 8 for this meal)"
+        },
+        {
+          "category": "completeness",
+          "message": "missing tonightSpread"
+        },
+        {
+          "category": "completeness",
+          "message": "missing equipment"
+        }
+      ],
+      "issueCount": 4
+    },
+    {
       "slug": "overnight-sausage-strata",
       "title": "Overnight Sausage Strata",
       "kind": "breakfast_catalog",
@@ -5582,51 +5443,10 @@
       "slug": "honey-sriracha-shrimp-skewers",
       "title": "Palm Sugar Lime Shrimp Skewers",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 20,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: nam pla"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: tamarind concentrate"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: shallots"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Thai bird chilies"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Thai basil"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: fried shallots"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: grapeseed oil"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 5 (Grill shrimp) needs safe internal temp cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "Heat grill hot: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (120 words, min 280)"
-        }
-      ],
-      "issueCount": 10
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "paprika-roasted-chicken-quarters",
@@ -5658,35 +5478,10 @@
       "slug": "parm-hero-subs",
       "title": "Parm Hero Subs",
       "kind": "firehall_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Ground beef"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Yellow onion"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Garlic cloves"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Cook and sauce filling) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 4 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (81 words, min 400)"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "pasta-bar-night",
@@ -5719,7 +5514,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Ditalini or small shells"
+          "message": "unused: Ditalini Or Small Shells"
         },
         {
           "category": "internal_temp_missing",
@@ -5741,6 +5536,15 @@
       "issueCount": 5
     },
     {
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "kind": "hall_expansion",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
+    },
+    {
       "slug": "peanut-butter-banana-recovery",
       "title": "Peanut Butter Banana Recovery Shake",
       "kind": "smoothie",
@@ -5750,54 +5554,27 @@
       "issueCount": 0
     },
     {
+      "slug": "peanut-chicken-rice-bowls",
+      "title": "Peanut Chicken Rice Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        {
+          "category": "completeness",
+          "message": "thin instructions (263 words, min 400)"
+        }
+      ],
+      "issueCount": 1
+    },
+    {
       "slug": "maple-bourbon-grilled-trout",
       "title": "Pecan Bourbon Whole Trout Board",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 20,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: fresh thyme"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: pecans"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: shallots"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: fresh sage"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: brown butter"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Heat grill) needs safe internal temp cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "rewrite needed: Heat grill"
-        },
-        {
-          "category": "completeness",
-          "message": "step 3 is generic or too short"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (110 words, min 280)"
-        },
-        {
-          "category": "completeness",
-          "message": "vague step: Heat grill"
-        }
-      ],
-      "issueCount": 10
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "pellet-smoked-chicken-quarters",
@@ -5830,34 +5607,14 @@
       "title": "Pepper Steak with Onions",
       "kind": "hall_expansion",
       "pass": false,
-      "score": 52,
+      "score": 92,
       "issues": [
         {
-          "category": "temperature_missing",
-          "message": "hot cooking steps lack oven/grill/surface temperature"
-        },
-        {
           "category": "internal_temp_missing",
-          "message": "step 1 (Marinate and prep rice) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 2 (Sear the beef) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "no oven/grill/internal temperature cues in steps"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (108 words, min 400)"
+          "message": "step 7 (Glaze the meat and finish off heat) needs safe internal temp cue"
         }
       ],
-      "issueCount": 6
+      "issueCount": 1
     },
     {
       "slug": "pepperoni-pizza-night",
@@ -5872,7 +5629,7 @@
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Grated parmesan"
+          "message": "unused: Grated Parmesan"
         },
         {
           "category": "completeness",
@@ -5912,7 +5669,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: garlic cloves"
+          "message": "unused: Garlic Cloves"
         },
         {
           "category": "internal_temp_missing",
@@ -5938,15 +5695,15 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Ground beef"
+          "message": "unused: Ground Beef"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Yellow onion"
+          "message": "unused: Yellow Onion"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Garlic cloves"
+          "message": "unused: Garlic Cloves"
         },
         {
           "category": "internal_temp_missing",
@@ -5972,11 +5729,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Bell peppers, sliced"
+          "message": "unused: Bell Peppers, Sliced"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Yellow onion, sliced"
+          "message": "unused: Yellow Onion, Sliced"
         },
         {
           "category": "internal_temp_missing",
@@ -6028,6 +5785,28 @@
       "issueCount": 5
     },
     {
+      "slug": "steak-sandwiches",
+      "title": "Philly-Style Cheesesteaks",
+      "kind": "hall_classic",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "authenticity",
+          "message": "ai_wording: run the line"
+        },
+        {
+          "category": "ingredient_unused",
+          "message": "unused: Neutral High-Heat Oil"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 8 (Bake steak fries (optional)) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 3
+    },
+    {
       "slug": "grilled-peach-burrata-salad",
       "title": "Pistachio Peach and Burrata Salad",
       "kind": "bbq_catalog",
@@ -6036,15 +5815,15 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: pistachios"
+          "message": "unused: Pistachios"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Prosecco reduction"
+          "message": "unused: Prosecco Reduction"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: fresh mint"
+          "message": "unused: Fresh Mint"
         },
         {
           "category": "vague_step",
@@ -6128,7 +5907,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: deli ham"
+          "message": "unused: Deli Ham"
         },
         {
           "category": "internal_temp_missing",
@@ -6192,36 +5971,6 @@
         }
       ],
       "issueCount": 3
-    },
-    {
-      "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches",
-      "kind": "hall_classic",
-      "pass": false,
-      "score": 60,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Yellow mustard"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 2 (Low-and-slow cook) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "step 3 uses vague phrasing"
-        },
-        {
-          "category": "completeness",
-          "message": "only 6 steps (min 10 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (213 words, min 400)"
-        }
-      ],
-      "issueCount": 5
     },
     {
       "slug": "quick-egg-tacos",
@@ -6332,7 +6081,7 @@
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: neutral oil"
+          "message": "unused: Neutral Oil"
         },
         {
           "category": "completeness",
@@ -6388,6 +6137,58 @@
         }
       ],
       "issueCount": 4
+    },
+    {
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        {
+          "category": "ingredient_unused",
+          "message": "unused: soy sauce"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 8 (Finish glaze) needs safe internal temp cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Heat oven: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Slice cucumbers: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (250 words, min 280)"
+        }
+      ],
+      "issueCount": 5
+    },
+    {
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "ingredient_unused",
+          "message": "unused: limes"
+        },
+        {
+          "category": "vague_step",
+          "message": "Check temperature: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (253 words, min 400)"
+        }
+      ],
+      "issueCount": 3
     },
     {
       "slug": "salsa-verde-crock-chicken",
@@ -6446,7 +6247,7 @@
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: neutral oil"
+          "message": "unused: Neutral Oil"
         },
         {
           "category": "completeness",
@@ -6486,11 +6287,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Bell peppers, sliced"
+          "message": "unused: Bell Peppers, Sliced"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Red onion, sliced"
+          "message": "unused: Red Onion, Sliced"
         },
         {
           "category": "completeness",
@@ -6502,24 +6303,6 @@
         }
       ],
       "issueCount": 4
-    },
-    {
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Sausage and Peppers",
-      "kind": "performance_meal",
-      "pass": false,
-      "score": 84,
-      "issues": [
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (94 words, min 280)"
-        }
-      ],
-      "issueCount": 2
     },
     {
       "slug": "sausage-egg-cheese-sandwiches",
@@ -6560,7 +6343,7 @@
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: All-purpose flour"
+          "message": "unused: All-Purpose Flour"
         },
         {
           "category": "internal_temp_missing",
@@ -6580,6 +6363,32 @@
         }
       ],
       "issueCount": 6
+    },
+    {
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Add sauce: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Wilt spinach: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "robotic_title"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (247 words, min 280)"
+        }
+      ],
+      "issueCount": 4
     },
     {
       "slug": "sausage-peppers-onions",
@@ -6611,35 +6420,10 @@
       "slug": "mongolian-beef-flat-top-crew",
       "title": "Scallion Crisp Mongolian Flank Tray",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: peanut oil"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 4 (Sear beef batches) needs safe internal temp cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "rewrite needed: Heat griddle hot"
-        },
-        {
-          "category": "completeness",
-          "message": "step 3 is generic or too short"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (108 words, min 400)"
-        },
-        {
-          "category": "completeness",
-          "message": "vague step: Heat griddle hot"
-        }
-      ],
-      "issueCount": 6
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "scrapple-and-eggs-skillet",
@@ -6680,23 +6464,53 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: boneless short rib"
+          "message": "unused: Boneless Short Rib"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: doenjang"
+          "message": "unused: Doenjang"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: daikon radish"
+          "message": "unused: Daikon Radish"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: shiitake mushrooms"
+          "message": "unused: Shiitake Mushrooms"
         },
         {
           "category": "completeness",
           "message": "thin instructions (129 words, min 400)"
+        }
+      ],
+      "issueCount": 5
+    },
+    {
+      "slug": "shakshuka-for-the-hall",
+      "title": "Shakshuka for the Hall",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 60,
+      "issues": [
+        {
+          "category": "temperature_missing",
+          "message": "hot cooking steps lack oven/grill/surface temperature"
+        },
+        {
+          "category": "completeness",
+          "message": "no oven/grill/internal temperature cues in steps"
+        },
+        {
+          "category": "completeness",
+          "message": "only 5 steps (min 8 for this meal)"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (194 words, min 400)"
+        },
+        {
+          "category": "completeness",
+          "message": "missing tonightSpread"
         }
       ],
       "issueCount": 5
@@ -6888,6 +6702,32 @@
       "issueCount": 6
     },
     {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "kind": "breakfast_catalog",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        {
+          "category": "completeness",
+          "message": "only 6 steps (min 8 for this meal)"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (213 words, min 280)"
+        },
+        {
+          "category": "completeness",
+          "message": "missing tonightSpread"
+        },
+        {
+          "category": "completeness",
+          "message": "missing equipment"
+        }
+      ],
+      "issueCount": 4
+    },
+    {
       "slug": "shepherds-pie",
       "title": "Shepherd's Pie",
       "kind": "firehall_catalog",
@@ -6948,7 +6788,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: extra-virgin olive oil"
+          "message": "unused: Extra-Virgin Olive Oil"
         },
         {
           "category": "internal_temp_missing",
@@ -6982,15 +6822,15 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: anchovy fillets"
+          "message": "unused: Anchovy Fillets"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: golden raisins"
+          "message": "unused: Golden Raisins"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: pine nuts"
+          "message": "unused: Pine Nuts"
         },
         {
           "category": "ingredient_unused",
@@ -7028,7 +6868,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Roma tomatoes, sliced"
+          "message": "unused: Roma Tomatoes, Sliced"
         },
         {
           "category": "completeness",
@@ -7098,7 +6938,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: mayonnaise"
+          "message": "unused: Mayonnaise"
         },
         {
           "category": "internal_temp_missing",
@@ -7216,11 +7056,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: neutral oil"
+          "message": "unused: Neutral Oil"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: mayonnaise"
+          "message": "unused: Mayonnaise"
         },
         {
           "category": "vague_step",
@@ -7360,7 +7200,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Chicken wings, split and tips trimmed"
+          "message": "unused: Chicken Wings, Split And Tips Trimmed"
         },
         {
           "category": "completeness",
@@ -7372,6 +7212,32 @@
         }
       ],
       "issueCount": 3
+    },
+    {
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Drain beans: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Add cold toppings: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "title_taco_no_tortilla"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (257 words, min 400)"
+        }
+      ],
+      "issueCount": 4
     },
     {
       "slug": "soft-pretzel-dogs",
@@ -7418,6 +7284,32 @@
       "issueCount": 4
     },
     {
+      "slug": "southwest-steak-bowls",
+      "title": "Southwest Steak Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 68,
+      "issues": [
+        {
+          "category": "ingredient_unused",
+          "message": "unused: limes"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 3 (Get the grill screaming hot) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 5 (Char the peppers and corn) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 10 (Serve while the steak is still warm) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 4
+    },
+    {
       "slug": "spaghetti-aglio-e-olio-for-the-hall",
       "title": "Spaghetti Aglio e Olio for the Hall",
       "kind": "firehall_catalog",
@@ -7434,6 +7326,28 @@
         }
       ],
       "issueCount": 2
+    },
+    {
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Add peas and hold: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "robotic_title"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (259 words, min 400)"
+        }
+      ],
+      "issueCount": 3
     },
     {
       "slug": "spatchcock-lemon-roast-chicken",
@@ -7492,66 +7406,6 @@
         }
       ],
       "issueCount": 3
-    },
-    {
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches",
-      "kind": "hall_classic",
-      "pass": false,
-      "score": 52,
-      "issues": [
-        {
-          "category": "authenticity",
-          "message": "ai_wording: no heat"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Mayonnaise"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Season & rest steak (no heat, 10 min)) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 3 (Grill steak (high, 12 min)) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "only 7 steps (min 8 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (123 words, min 400)"
-        }
-      ],
-      "issueCount": 6
-    },
-    {
-      "slug": "steak-tacos",
-      "title": "Steak Tacos",
-      "kind": "hall_classic",
-      "pass": false,
-      "score": 68,
-      "issues": [
-        {
-          "category": "authenticity",
-          "message": "ai_wording: no heat"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Limes"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Neutral oil (high heat)"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 4 (Sear steak hard (high, 8–10 min)) needs safe internal temp cue"
-        }
-      ],
-      "issueCount": 4
     },
     {
       "slug": "strawberry-oat-breakfast",
@@ -7619,43 +7473,10 @@
       "slug": "grilled-chicken-pesto-panini-crew",
       "title": "Sun-Dried Tomato Pesto Panini Press",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 36,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: focaccia loaves"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: buffalo mozzarella"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: oil-packed sun-dried tomatoes"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: grapeseed oil"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: white balsamic vinegar"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: shallots"
-        },
-        {
-          "category": "vague_step",
-          "message": "Heat griddle: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (104 words, min 400)"
-        }
-      ],
-      "issueCount": 8
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "tabbouleh-chicken-bowls",
@@ -7780,6 +7601,24 @@
       "issueCount": 3
     },
     {
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 84,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 3 (Prepare chicken for a hard sear) needs safe internal temp cue"
+        },
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold the hot bowl pans) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 2
+    },
+    {
       "slug": "teriyaki-salmon-grill",
       "title": "Teriyaki Salmon",
       "kind": "firehall_catalog",
@@ -7788,15 +7627,15 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Brown sugar"
+          "message": "unused: Brown Sugar"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Soy sauce"
+          "message": "unused: Soy Sauce"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh ginger, grated"
+          "message": "unused: Fresh Ginger, Grated"
         },
         {
           "category": "internal_temp_missing",
@@ -7844,11 +7683,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Garlic powder"
+          "message": "unused: Garlic Powder"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Apple cider vinegar"
+          "message": "unused: Apple Cider Vinegar"
         },
         {
           "category": "completeness",
@@ -7884,50 +7723,35 @@
       "issueCount": 3
     },
     {
-      "slug": "yakiniku-grill-platter-crew",
-      "title": "Tokyo Tare Ribeye Yakiniku Board",
-      "kind": "bbq_catalog",
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "kind": "hall_expansion",
       "pass": false,
-      "score": 28,
+      "score": 76,
       "issues": [
         {
-          "category": "ingredient_unused",
-          "message": "unused: shoyu"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: hon-mirin"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: grated apple"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: shiso leaves"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: yuzu kosho"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 2 (Build tare marinade) needs safe internal temp cue"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 5 (Grill beef in batches) needs safe internal temp cue"
-        },
-        {
           "category": "vague_step",
-          "message": "Heat grill screaming hot: missing time, heat, or doneness cue"
+          "message": "Check chicken: missing time, heat, or doneness cue"
         },
         {
           "category": "completeness",
-          "message": "thin instructions (128 words, min 400)"
+          "message": "robotic_title"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (255 words, min 400)"
         }
       ],
-      "issueCount": 9
+      "issueCount": 3
+    },
+    {
+      "slug": "yakiniku-grill-platter-crew",
+      "title": "Tokyo Tare Ribeye Yakiniku Board",
+      "kind": "bbq_catalog",
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "tomato-soup-grilled-cheese-croutons",
@@ -7951,43 +7775,10 @@
       "slug": "tonkotsu-ramen-crew",
       "title": "Tonkotsu Ramen for the Crew",
       "kind": "hall_expansion",
-      "pass": false,
-      "score": 36,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: soy sauce"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: green onions"
-        },
-        {
-          "category": "temperature_missing",
-          "message": "hot cooking steps lack oven/grill/surface temperature"
-        },
-        {
-          "category": "internal_temp_missing",
-          "message": "step 1 (Blanch and start broth) needs safe internal temp cue"
-        },
-        {
-          "category": "completeness",
-          "message": "step 3 uses vague phrasing"
-        },
-        {
-          "category": "completeness",
-          "message": "no oven/grill/internal temperature cues in steps"
-        },
-        {
-          "category": "completeness",
-          "message": "only 5 steps (min 10 for this meal)"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (111 words, min 400)"
-        }
-      ],
-      "issueCount": 8
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     },
     {
       "slug": "tourtiere-for-the-crew",
@@ -8029,7 +7820,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Kidney beans, drained"
+          "message": "unused: Kidney Beans, Drained"
         },
         {
           "category": "internal_temp_missing",
@@ -8055,7 +7846,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: green onions"
+          "message": "unused: Green Onions"
         },
         {
           "category": "internal_temp_missing",
@@ -8081,11 +7872,11 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh zucchini, spiralized"
+          "message": "unused: Fresh Zucchini, Spiralized"
         },
         {
           "category": "ingredient_unused",
-          "message": "unused: Fresh basil, torn"
+          "message": "unused: Fresh Basil, Torn"
         },
         {
           "category": "vague_step",
@@ -8167,6 +7958,20 @@
         }
       ],
       "issueCount": 2
+    },
+    {
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 92,
+      "issues": [
+        {
+          "category": "internal_temp_missing",
+          "message": "step 7 (Hold hot turkey components) needs safe internal temp cue"
+        }
+      ],
+      "issueCount": 1
     },
     {
       "slug": "turkey-taco-skillet",
@@ -8287,6 +8092,28 @@
       "issueCount": 5
     },
     {
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Smoke ribs: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Cut and serve: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (259 words, min 400)"
+        }
+      ],
+      "issueCount": 3
+    },
+    {
       "slug": "white-bean-kale-soup",
       "title": "White Bean and Kale Soup",
       "kind": "performance_meal",
@@ -8322,6 +8149,28 @@
         {
           "category": "completeness",
           "message": "thin instructions (114 words, min 400)"
+        }
+      ],
+      "issueCount": 3
+    },
+    {
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "kind": "hall_expansion",
+      "pass": false,
+      "score": 76,
+      "issues": [
+        {
+          "category": "vague_step",
+          "message": "Melt cream cheese: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "vague_step",
+          "message": "Serve bowls: missing time, heat, or doneness cue"
+        },
+        {
+          "category": "completeness",
+          "message": "thin instructions (258 words, min 400)"
         }
       ],
       "issueCount": 3
@@ -8413,7 +8262,7 @@
       "issues": [
         {
           "category": "ingredient_unused",
-          "message": "unused: jicama sticks"
+          "message": "unused: Jicama Sticks"
         },
         {
           "category": "internal_temp_missing",
@@ -8456,63 +8305,10 @@
       "slug": "mixed-lamb-chop-grill-board",
       "title": "Za'atar Loin and Shoulder Lamb Board",
       "kind": "bbq_catalog",
-      "pass": false,
-      "score": 0,
-      "issues": [
-        {
-          "category": "ingredient_unused",
-          "message": "unused: za'atar"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: sumac"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: pomegranate molasses"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: labneh"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: pickled turnips"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: fresh mint"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: grilled pita wedges"
-        },
-        {
-          "category": "ingredient_unused",
-          "message": "unused: Aleppo pepper"
-        },
-        {
-          "category": "vague_step",
-          "message": "Heat grill zones: missing time, heat, or doneness cue"
-        },
-        {
-          "category": "vague_step",
-          "message": "rewrite needed: Char lemons"
-        },
-        {
-          "category": "completeness",
-          "message": "step 6 is generic or too short"
-        },
-        {
-          "category": "completeness",
-          "message": "thin instructions (112 words, min 400)"
-        },
-        {
-          "category": "completeness",
-          "message": "vague step: Char lemons"
-        }
-      ],
-      "issueCount": 13
+      "pass": true,
+      "score": 100,
+      "issues": [],
+      "issueCount": 0
     }
   ]
 }

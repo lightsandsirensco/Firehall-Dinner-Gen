@@ -1,0 +1,208 @@
+{
+  "slug": "salmon-rice-bowls-crew",
+  "title": "Salmon Rice Bowls for the Crew",
+  "displayTitle": "Salmon Rice Bowls for the Crew",
+  "seoTitle": "Salmon Rice Bowls for the Crew | Firefighter Meal",
+  "shortDescription": "Roasted salmon with rice, cucumbers, and sesame dressing",
+  "subtitle": "Roasted salmon with rice, cucumbers, and sesame dressing",
+  "category": "hall_expansion",
+  "cuisine": "Japanese-inspired",
+  "description": "Soy-glazed salmon, rice, cucumbers, avocado, and a sesame drizzle make a bright crew meal.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 720,
+  "protein": 43,
+  "carbs": 70,
+  "fats": 29,
+  "tags": [
+    "protein:salmon",
+    "format:bowls",
+    "category:crew_feeders",
+    "bowls",
+    "healthy",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "sheet pans",
+    "rice cooker",
+    "fish spatula",
+    "thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "salmon fillets",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "sushi rice",
+      "quantity": "4",
+      "unit": "cups"
+    },
+    {
+      "name": "cucumbers",
+      "quantity": "3.2",
+      "unit": "each"
+    },
+    {
+      "name": "avocados",
+      "quantity": "4.8",
+      "unit": "each"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "5/8",
+      "unit": "cup"
+    },
+    {
+      "name": "sesame dressing",
+      "quantity": "1.6",
+      "unit": "cups"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat oven",
+      "instruction": "Heat oven to 400°F and line sheet pans so the salmon does not stick.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook rice",
+      "instruction": "Rinse sushi rice and cook it covered; do not lift the lid during the steaming time.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Portion salmon",
+      "instruction": "Check fillets for pin bones and arrange them skin-side down with space between pieces.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Glaze fish",
+      "instruction": "Brush salmon with soy, honey, and ginger glaze, saving clean glaze for the end.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Roast salmon",
+      "instruction": "Roast until the thickest fillet flakes and reaches 145°F; avoid drying thin tail pieces.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Slice cucumbers",
+      "instruction": "Slice cucumbers thinly and toss with rice vinegar and a pinch of salt.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Prepare avocado",
+      "instruction": "Cut avocado just before service and cover tightly so it does not brown.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Finish glaze",
+      "instruction": "Simmer reserved untouched glaze for 1 minute, then brush a light coat over cooked salmon.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 9,
+      "title": "Hold safely",
+      "instruction": "Keep cooked salmon covered above 140°F; never leave fish at room temperature.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 10,
+      "title": "Build bowls",
+      "instruction": "Portion rice, salmon, cucumber, avocado, and sesame dressing into each bowl.",
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 11,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Salmon fillets — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 12,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool Salmon fillets and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Use frozen salmon thawed under refrigeration.",
+    "Keep skin on during roasting for easier handling.",
+    "Offer nori strips separately."
+  ],
+  "tonightSpread": [
+    "Main: Sesame salmon rice bowls",
+    "Sides: miso soup, seaweed salad",
+    "Condiments: sriracha mayo, nori strips, pickled ginger",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool Salmon fillets in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Flake leftover salmon into fried rice."
+  ],
+  "whyCrewsLikeIt": "The salmon roasts hands-off while rice and cold toppings are organized.",
+  "mealPrepNotes": "Make-ahead: mix dressing and slice vegetables 1 day ahead. Storage: refrigerate salmon 2 days. Reheating: reheat salmon to 165°F if serving hot leftovers.",
+  "substitutions": [
+    "Use steelhead trout for salmon.",
+    "Use edamame instead of avocado."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 720,
+    "protein": 43,
+    "carbs": 70,
+    "fats": 29,
+    "label": "~720 cal/serving · 43g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+  "heroImageAlt": "Salmon Rice Bowls for the Crew — Japanese-inspired bowls plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/salmon-rice-bowls-crew.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/salmon-rice-bowls-crew.jpg",
+  "railImage": "/images/rails/hall-expansion/salmon-rice-bowls-crew.jpg",
+  "realismScore": 98,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "salmon rice bowls for a crowd",
+    "sheet pan salmon crew dinner",
+    "healthy firehall seafood",
+    "sesame salmon bowls"
+  ],
+  "relatedSlugs": [
+    "peanut-chicken-rice-bowls",
+    "firehall-gyro-bowls",
+    "korean-turkey-rice-bowls",
+    "leftover-roast-beef-bowls"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "contentVersion": 2
+}

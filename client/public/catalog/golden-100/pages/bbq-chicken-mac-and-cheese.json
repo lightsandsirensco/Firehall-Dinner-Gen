@@ -7,7 +7,7 @@
   "subtitle": "Shredded BBQ chicken baked into creamy mac — hall comfort tray",
   "category": "comfort_food",
   "cuisine": "american",
-  "description": "Shredded BBQ chicken baked into creamy mac — hall comfort tray",
+  "description": "Shredded BBQ chicken folded into a creamy cheddar-and-mozzarella béchamel mac, then baked with a BBQ-sauce glaze that caramelizes on top. Quick shredded thighs, not an eight-hour shoulder — a hall comfort tray for a hungry shift. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 65,
@@ -136,7 +136,7 @@
     {
       "stepNumber": 1,
       "title": "Season the chicken",
-      "instruction": "Pat chicken thighs dry. Mix smoked paprika, garlic powder, onion powder, salt, and pepper; coat all sides. Let sit 10 minutes while the oven preheats to 375°F — seasoned chicken browns better than wet, pale thighs.",
+      "instruction": "Pat chicken thighs dry. Mix smoked paprika, garlic powder, onion powder, salt, and pepper; coat all sides. Let sit 10 minutes while the kitchen preheats to 375°F — seasoned chicken browns better than wet, pale thighs.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -150,7 +150,7 @@
     {
       "stepNumber": 3,
       "title": "Shred and sauce the chicken",
-      "instruction": "Rest chicken 8 minutes, then shred with two forks — you want pulled strands, not cubes. Toss with about 1 cup of the BBQ sauce until glossy (reserve the rest for drizzling before bake). This is BBQ chicken mac, not pulled pork mac: no pork shoulder, no eight-hour smoke.",
+      "instruction": "Rest chicken 8 minutes, then shred with two forks — you want pulled strands, not cubes. Toss with about 1 cup of the BBQ sauce until glossy (reserve the rest for drizzling later). This is BBQ chicken mac — quick shredded thighs, not an eight-hour shoulder project.",
       "minutes": 12,
       "heatLevel": "low"
     },
@@ -200,13 +200,6 @@
       "stepNumber": 10,
       "title": "Serve and garnish",
       "instruction": "Rest 5 minutes so scoops hold together. Portion about 1.5 cups mac and cheese plus a generous scoop of BBQ chicken per firefighter (~6 oz cooked chicken each). Top with crispy fried onions and green onions at the line, not baked in. Serve with a spatula from the hotel pan — hearty, not eating-contest piles.",
-      "minutes": 5,
-      "heatLevel": "low"
-    },
-    {
-      "stepNumber": 11,
-      "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover BBQ chicken mac — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -288,6 +281,6 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:53:34.904Z",
-  "contentVersion": 4
+  "generatedAt": "2026-07-23T21:40:00.000Z",
+  "contentVersion": 5
 }
