@@ -160,6 +160,7 @@ export type RedLeadLeadMagnetPayload = z.infer<typeof redLeadLeadMagnetSchema>;
 
 export const homepageSubscribeSchema = z.object({
   email: emailAddressSchema,
+  source: z.enum(["homepage", "hall_private_beta"]).optional(),
 });
 
 export type HomepageSubscribePayload = z.infer<typeof homepageSubscribeSchema>;

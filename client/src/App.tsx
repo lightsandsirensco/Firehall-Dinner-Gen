@@ -16,7 +16,6 @@ import { HallMembershipProvider } from "@/lib/hall-membership/context";
 import { CloudSyncProvider } from "@/lib/sync/provider";
 import { SignInSheet } from "@/components/auth/sign-in-sheet";
 import { AuthCompleteHandler } from "@/components/auth/auth-complete-handler";
-import { HallActivationGate } from "@/components/hall-activation/hall-activation-gate";
 import { OnboardingGate } from "@/components/onboarding/onboarding-gate";
 import { MeasurementSystemProvider } from "@/lib/measurement-preference";
 import { HallFeedbackShell } from "@/components/hall-feedback/hall-feedback-shell";
@@ -61,16 +60,8 @@ const SeoProductPage = lazy(() => import("@/pages/seo-product-page"));
 const FirefighterRedLeadRecipePage = lazy(() => import("@/pages/firefighter-red-lead-recipe-page"));
 const TopRatedRecipesPage = lazy(() => import("@/pages/top-rated-recipes-page"));
 const HallOfFamePage = lazy(() => import("@/pages/hall-of-fame-page"));
-const HallHistoryPage = lazy(() => import("@/pages/hall-history-page"));
-const HallPage = lazy(() => import("@/pages/hall-page"));
-const HallCanteenPage = lazy(() => import("@/pages/hall-canteen-page"));
-const HallDuesPage = lazy(() => import("@/pages/hall-dues-page"));
-const HallLogbookPage = lazy(() => import("@/pages/hall-logbook-page"));
-const HallToolsPage = lazy(() => import("@/pages/hall-tools-page"));
-const HallJoinPage = lazy(() => import("@/pages/hall-join-page"));
-const HallWelcomePage = lazy(() => import("@/pages/hall-welcome-page"));
+const HallPrivateBetaPage = lazy(() => import("@/pages/hall-private-beta-page"));
 const OnboardingHallPage = lazy(() => import("@/pages/onboarding-hall-page"));
-const HallShiftPage = lazy(() => import("@/pages/hall-shift-page"));
 const AccountPage = lazy(() => import("@/pages/account-page"));
 const PlansPage = lazy(() => import("@/pages/plans-page"));
 const AdminBillingPage = lazy(() => import("@/pages/admin-billing"));
@@ -79,15 +70,10 @@ const AdminSignupsPage = lazy(() => import("@/pages/admin-signups-page"));
 const AdminUserDetailPage = lazy(() => import("@/pages/admin-user-detail"));
 const AdminLeadsPage = lazy(() => import("@/pages/admin-leads"));
 const AdminDealsPage = lazy(() => import("@/pages/admin-deals"));
-const HallProteinDealsPage = lazy(() => import("@/pages/hall-protein-deals-page"));
-const HallProteinDealsSetupPage = lazy(() => import("@/pages/hall-deals-setup-page"));
-const HallShoppingListRedirect = lazy(() => import("@/pages/hall-shopping-list-redirect"));
 const TonightDashboardPage = lazy(() => import("@/pages/app-home-page"));
 const MePage = lazy(() => import("@/pages/me-page"));
 const MeHistoryPage = lazy(() => import("@/pages/me-history-page"));
 const MeSettingsPage = lazy(() => import("@/pages/me-settings-page"));
-const HallFeaturesPage = lazy(() => import("@/pages/hall-features-page"));
-const HallSettingsPage = lazy(() => import("@/pages/hall-settings-page"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function AppRoutes() {
@@ -100,8 +86,8 @@ function AppRoutes() {
       {/* Legacy — the dashboard used to live at /home; the one true Home is "/" */}
       <Route path="/home">{() => <Redirect to="/tonight" />}</Route>
       <Route path="/discover">{() => <Redirect to="/tonight" />}</Route>
-      <Route path="/hall/more">{() => <Redirect to="/hall#hall-tools" />}</Route>
-      <Route path="/hall/tools" component={HallToolsPage} />
+      <Route path="/hall/more">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/tools">{() => <Redirect to="/hall" />}</Route>
       <Route path="/me" component={MePage} />
       <Route path="/me/profile" component={AccountPage} />
       <Route path="/me/history" component={MeHistoryPage} />
@@ -109,8 +95,8 @@ function AppRoutes() {
       <Route path="/profile">{() => <Redirect to="/me/profile" />}</Route>
       <Route path="/me/saved" component={FavoritesPage} />
       <Route path="/me/subscription" component={PlansPage} />
-      <Route path="/hall/settings" component={HallSettingsPage} />
-      <Route path="/hall/history" component={HallHistoryPage} />
+      <Route path="/hall/settings">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/history">{() => <Redirect to="/hall" />}</Route>
       <Route path="/onboarding/hall" component={OnboardingHallPage} />
       <Route path="/generator" component={Generator} />
       <Route path="/faq" component={FaqPage} />
@@ -183,24 +169,24 @@ function AppRoutes() {
       <Route path="/favorites">{() => <Redirect to="/me/saved" />}</Route>
       <Route path="/account">{() => <Redirect to="/me/profile" />}</Route>
       <Route path="/plans">{() => <Redirect to="/me/subscription" />}</Route>
-      <Route path="/hall-history">{() => <Redirect to="/hall/history" />}</Route>
-      <Route path="/hall-program">{() => <Redirect to="/hall/join" />}</Route>
+      <Route path="/hall-history">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall-program">{() => <Redirect to="/hall" />}</Route>
       <Route path="/hall/activity">{() => <Redirect to="/hall" />}</Route>
       <Route path="/hall/leaderboard">{() => <Redirect to="/hall" />}</Route>
-      <Route path="/halls/:hallId" component={HallSettingsPage} />
-      <Route path="/hall/canteen" component={HallCanteenPage} />
-      <Route path="/hall/dues" component={HallDuesPage} />
-      <Route path="/hall/logbook" component={HallLogbookPage} />
-      <Route path="/hall/shopping-list" component={HallShoppingListRedirect} />
-      <Route path="/hall/protein-deals/setup" component={HallProteinDealsSetupPage} />
-      <Route path="/hall/protein-deals" component={HallProteinDealsPage} />
-      <Route path="/hall/deals/setup">{() => <Redirect to="/hall/protein-deals/setup" />}</Route>
-      <Route path="/hall/deals">{() => <Redirect to="/hall/protein-deals" />}</Route>
-      <Route path="/hall/join" component={HallJoinPage} />
-      <Route path="/hall/welcome" component={HallWelcomePage} />
-      <Route path="/hall/features" component={HallFeaturesPage} />
-      <Route path="/hall/:hallId/shift/:shiftId" component={HallShiftPage} />
-      <Route path="/hall" component={HallPage} />
+      <Route path="/halls/:hallId">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/canteen">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/dues">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/logbook">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/shopping-list">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/protein-deals/setup">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/protein-deals">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/deals/setup">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/deals">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/join">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/welcome">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/features">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall/:hallId/shift/:shiftId">{() => <Redirect to="/hall" />}</Route>
+      <Route path="/hall" component={HallPrivateBetaPage} />
       <Route path="*" component={NotFound} />
     </Switch>
   );
@@ -247,7 +233,6 @@ function App() {
                 <AuthCompleteHandler />
                 <SignInSheet />
                 <OnboardingGate />
-                <HallActivationGate />
                 <HallFeedbackShell />
               </TooltipProvider>
             </HallFeedbackProvider>

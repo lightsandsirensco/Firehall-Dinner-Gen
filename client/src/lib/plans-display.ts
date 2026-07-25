@@ -1,30 +1,7 @@
-import type { LucideIcon } from "lucide-react";
-import { MalteseCross } from "@/components/icons/maltese-cross";
-import {
-  BarChart3,
-  Bell,
-  BookOpen,
-  CalendarDays,
-  Cloud,
-  Coffee,
-  Heart,
-  History,
-  Layers,
-  RotateCw,
-  ShoppingCart,
-  ShoppingBag,
-  Sparkles,
-  Tag,
-  Users,
-  Vote,
-  Wallet,
-  Warehouse,
-} from "lucide-react";
 import type { PlanId } from "@shared/billing/types";
 
 export interface PlanFeatureItem {
   label: string;
-  icon: LucideIcon;
 }
 
 export type PlanCtaKind = "link" | "upgrade" | "disabled";
@@ -36,33 +13,34 @@ export interface PlanPresentation {
   pricePeriod?: string;
   tagline: string;
   features: PlanFeatureItem[];
-  footer: string;
   ctaLabel: string;
   ctaKind: PlanCtaKind;
   ctaHref?: string;
   badge?: string;
   recommended?: boolean;
-  comingSoon?: boolean;
 }
 
 export const PLANS_PAGE = {
   title: "Choose Your Plan",
-  subtitle:
-    "Whether you're cooking for yourself or your entire crew, Firehall Meals has a plan for you.",
+  subtitle: "Simple pricing. No surprises.",
 } as const;
 
-export const PLAN_PRESENTATIONS: Record<PlanId, PlanPresentation> = {
+/**
+ * Only Free and Firefighter Plus are sold here. Hall Pro is hall-scoped
+ * (not self-serve) and its features are behind the Hall Operations private
+ * beta, so it's left off this page rather than advertised as available.
+ */
+export const PLAN_PRESENTATIONS: Record<Exclude<PlanId, "hall_pro">, PlanPresentation> = {
   guest: {
     planId: "guest",
     title: "Free",
     price: "$0",
-    tagline: "Start cooking tonight—no account required.",
+    tagline: "Everything you need to start cooking tonight.",
     features: [
-      { label: "Meal Generator", icon: Sparkles },
-      { label: "Classics Wheel", icon: RotateCw },
-      { label: "Browse Recipes", icon: BookOpen },
+      { label: "Meal generator" },
+      { label: "Classics wheel" },
+      { label: "Browse the recipe library" },
     ],
-    footer: "Perfect for trying Firehall Meals.",
     ctaLabel: "Get Started",
     ctaKind: "link",
     ctaHref: "/generator",
@@ -72,46 +50,18 @@ export const PLAN_PRESENTATIONS: Record<PlanId, PlanPresentation> = {
     title: "Firefighter Plus",
     price: "$4.99",
     pricePeriod: "/month",
-    tagline: "Everything in Free, plus tools built for firefighters.",
-    badge: "Most popular",
+    tagline: "Everything in Free, plus the tools built for your shift.",
+    badge: "Most Popular",
     features: [
-      { label: "Sync meals across all your devices", icon: Cloud },
-      { label: "Save favorite meals", icon: Heart },
-      { label: "Personal meal history", icon: History },
-      { label: "Grocery lists", icon: ShoppingBag },
-      { label: "Shift reminders", icon: Bell },
-      { label: "Join your fire hall", icon: Users },
-      { label: "Participate in hall voting", icon: Vote },
-      { label: "View your hall canteen", icon: Coffee },
-      { label: "Weekly protein deals", icon: Tag },
+      { label: "Sync meals across every device" },
+      { label: "Save your favorite meals" },
+      { label: "Personal meal history" },
+      { label: "Grocery lists" },
+      { label: "Shift reminders" },
     ],
-    footer: "Save time, stay organized, and spend less on groceries.",
     ctaLabel: "Start Free Trial",
     ctaKind: "upgrade",
     recommended: true,
-  },
-  hall_pro: {
-    planId: "hall_pro",
-    title: "Hall Pro",
-    price: "Contact Us",
-    tagline:
-      "Built for entire fire halls. Manage meals, canteen operations, and crew collaboration from one place.",
-    badge: "Coming soon",
-    features: [
-      { label: "Everything in Firefighter Plus", icon: Layers },
-      { label: "Shared shopping lists", icon: ShoppingCart },
-      { label: "Shared meal history", icon: History },
-      { label: "Crew meal planning", icon: CalendarDays },
-      { label: "Canteen management", icon: Warehouse },
-      { label: "Canteen payment tracker", icon: Wallet },
-      { label: "Hall analytics", icon: BarChart3 },
-      { label: "Exclusive firefighter partner discounts", icon: Tag },
-      { label: "Captain administration tools", icon: MalteseCross },
-    ],
-    footer: "Designed for entire fire halls.",
-    ctaLabel: "Coming Soon",
-    ctaKind: "disabled",
-    comingSoon: true,
   },
 };
 

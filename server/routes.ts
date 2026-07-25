@@ -1761,7 +1761,8 @@ export async function registerRoutes(
         });
       }
 
-      const { email } = parsed.data;
+      const { email, source } = parsed.data;
+      const leadSource = source ?? "homepage";
 
       if (!enforceEmailRateLimit(req, res, email)) return;
 
@@ -1773,7 +1774,7 @@ export async function registerRoutes(
 
       const results = await Promise.allSettled([
         subscribeToList(email),
-        trackHomepageSubscriber(email, { source: "homepage" }),
+        trackHomepageSubscriber(email, { source: leadSource }),
       ]);
 
       const subscribeFailed = results[0].status === "rejected";
@@ -1798,8 +1799,8 @@ export async function registerRoutes(
 
       void captureEmailLead({
         email,
-        source: "homepage",
-        signup_form: "homepage-subscribe",
+        source: leadSource,
+        signup_form: leadSource === "hall_private_beta" ? "hall-private-beta-waitlist" : "homepage-subscribe",
         klaviyo_synced: !subscribeFailed,
       });
 
@@ -1810,7 +1811,7 @@ export async function registerRoutes(
       log(
         `[email] homepage subscribe sent ${formatLogFields({
           email: maskEmail(email),
-          source: "homepage",
+          source: leadSource,
         })}`,
         "email",
       );

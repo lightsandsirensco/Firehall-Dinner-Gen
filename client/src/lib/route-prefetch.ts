@@ -11,7 +11,7 @@ const loaders: Record<Prefetchable, () => Promise<unknown>> = {
   "/generator": () => import("@/pages/generator"),
   "/explore": () => import("@/pages/explore"),
   "/pizza": () => import("@/pages/pizza-night"),
-  "/hall": () => import("@/pages/hall-page"),
+  "/hall": () => import("@/pages/hall-private-beta-page"),
   "/wheel": () => import("@/pages/classics-wheel"),
 };
 

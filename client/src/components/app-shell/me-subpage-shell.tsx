@@ -12,6 +12,8 @@ interface MeSubpageShellProps {
   children: ReactNode;
   testId?: string;
   centeredHeader?: boolean;
+  /** Hide the trailing "Back to Tonight" exit link — use when the page already has one obvious primary action. */
+  hideWorkflowExit?: boolean;
 }
 
 /** Profile sub-pages — Me parent + always escape to Tonight. */
@@ -21,6 +23,7 @@ export function MeSubpageShell({
   children,
   testId,
   centeredHeader,
+  hideWorkflowExit,
 }: MeSubpageShellProps) {
   useNoIndex();
 
@@ -35,12 +38,14 @@ export function MeSubpageShell({
           ) : null}
         </header>
         {children}
-        <WorkflowExit
-          href="/tonight"
-          label="← Back to Tonight"
-          hint="Done here?"
-          testId="me-subpage-exit"
-        />
+        {!hideWorkflowExit && (
+          <WorkflowExit
+            href="/tonight"
+            label="← Back to Tonight"
+            hint="Done here?"
+            testId="me-subpage-exit"
+          />
+        )}
       </main>
       <SiteFooter variant="compact" pbSafe />
     </div>
