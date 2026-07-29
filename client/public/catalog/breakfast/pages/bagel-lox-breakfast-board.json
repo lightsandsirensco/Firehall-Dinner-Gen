@@ -30,30 +30,26 @@
     },
     {
       "name": "smoked salmon lox",
-      "quantity": "1.5",
-      "unit": "lb",
+      "quantity": "1.6 lb",
       "notes": "sliced thin",
       "group": "Fish"
     },
     {
       "name": "cream cheese",
-      "quantity": "24",
-      "unit": "oz",
+      "quantity": "1.6 cups",
       "notes": "plain and scallion whipped",
       "group": "Spread"
     },
     {
       "name": "whipped butter",
-      "quantity": "1/2",
-      "unit": "cup",
+      "quantity": "3/8 cup",
       "notes": "optional for plain bagels",
       "group": "Spread",
       "optional": true
     },
     {
       "name": "capers",
-      "quantity": "1/2",
-      "unit": "cup",
+      "quantity": "3/8 cup",
       "notes": "drained",
       "group": "Fixings"
     },
@@ -71,7 +67,7 @@
     },
     {
       "name": "English cucumbers",
-      "quantity": "2",
+      "quantity": "1.6",
       "notes": "sliced thin, plus lemon wedges",
       "group": "Fixings"
     }
@@ -140,18 +136,19 @@
     }
   ],
   "nutrition": {
-    "calories": 426,
-    "protein": 23,
-    "carbs": 2,
-    "fat": 36,
-    "label": "per serving (hall portion)",
+    "calories": 639,
+    "protein": 34,
+    "carbs": 61,
+    "fat": 28,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -202,5 +199,58 @@
   "updatedAt": "2026-07-23T21:15:00.000Z",
   "readMinutes": 6,
   "seoTitle": "Bagel and Lox Breakfast Board | Firehall Breakfast",
-  "collectionTier": "healthier_hall"
+  "collectionTier": "healthier_hall",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "bagels",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "smoked salmon lox",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "cream cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "whipped butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

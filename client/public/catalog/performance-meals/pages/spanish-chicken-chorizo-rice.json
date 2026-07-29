@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 545,
-  "protein": 38,
-  "carbs": 52,
-  "fats": 22,
+  "calories": 834,
+  "protein": 71,
+  "carbs": 67,
+  "fats": 29,
   "tags": [
     "protein:chicken",
     "format:one_pot",
@@ -33,71 +33,71 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "12",
       "unit": "pieces",
       "notes": "about 4.5 lb"
     },
     {
-      "name": "Spanish Chorizo",
+      "name": "Spanish chorizo",
       "quantity": "12",
-      "unit": "Oz",
+      "unit": "oz",
       "notes": "sliced into coins"
     },
     {
-      "name": "Short-Grain Rice",
+      "name": "short-grain rice",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "bomba or arborio"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "diced"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "5",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "low sodium"
     },
     {
-      "name": "Saffron Threads",
+      "name": "saffron threads",
       "quantity": "0.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Frozen Peas",
+      "name": "frozen peas",
       "quantity": "1.5",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -155,11 +155,26 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 545,
-    "protein": 38,
-    "carbs": 52,
-    "fats": 22,
-    "label": "~545 cal/serving · 38g protein · 4g fiber (est.)"
+    "calories": 834,
+    "protein": 71,
+    "carbs": 67,
+    "fats": 29,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
   "heroImageAlt": "Wide firehall crew platter of Chicken and Chorizo Rice on a station prep table, family-style serving",
@@ -186,6 +201,52 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.677Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Spanish chorizo",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

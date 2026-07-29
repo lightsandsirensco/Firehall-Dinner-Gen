@@ -113,12 +113,13 @@
     }
   ],
   "nutrition": {
-    "calories": 438,
-    "protein": 16,
-    "carbs": 77,
-    "fat": 11,
-    "label": "per serving (hall portion)",
+    "calories": 575,
+    "protein": 18,
+    "carbs": 95,
+    "fat": 16,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -129,7 +130,7 @@
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -152,5 +153,64 @@
   "publishedAt": "2026-07-17T20:15:27.730Z",
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 7,
-  "seoTitle": "Baked Oatmeal with Mixed Berries | Firehall Breakfast"
+  "seoTitle": "Baked Oatmeal with Mixed Berries | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cups quick oats",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "cups whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "cup melted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cups Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free oats."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

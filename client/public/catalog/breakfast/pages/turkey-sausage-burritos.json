@@ -105,22 +105,23 @@
     }
   ],
   "nutrition": {
-    "calories": 582,
-    "protein": 25,
-    "carbs": 74,
-    "fat": 20,
-    "label": "per serving (hall portion)",
+    "calories": 874,
+    "protein": 42,
+    "carbs": 76,
+    "fat": 44,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -145,5 +146,68 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 7,
   "seoTitle": "Turkey Sausage Breakfast Burritos | Firehall Breakfast",
-  "collectionTier": "healthier_hall"
+  "collectionTier": "healthier_hall",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "shredded cheddar or pepper jack",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "breakfast sausage or chorizo",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "10-inch flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

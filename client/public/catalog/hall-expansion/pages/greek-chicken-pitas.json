@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 480,
-  "protein": 40,
+  "calories": 611,
+  "protein": 68,
   "carbs": 44,
-  "fats": 14,
+  "fats": 17,
   "tags": [
     "protein:chicken",
     "format:handheld",
@@ -165,12 +165,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 40,
+    "calories": 611,
+    "protein": 68,
     "carbs": 44,
-    "fats": 14,
-    "label": "~480 cal/serving · 40g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "fats": 17,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -178,6 +179,11 @@
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
@@ -200,5 +206,58 @@
   ],
   "sourceUrl": "https://www.seriouseats.com/chicken-souvlaki-recipe",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "plain Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "pita breads",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "tzatziki",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "crumbled feta",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 590,
-  "protein": 43,
-  "carbs": 54,
-  "fats": 22,
+  "calories": 722,
+  "protein": 72,
+  "carbs": 57,
+  "fats": 21,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -221,19 +221,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 590,
-    "protein": 43,
-    "carbs": 54,
-    "fats": 22,
-    "label": "~590 cal/serving · 43g protein · 7g fiber (est.)",
-    "source": "estimated",
+    "calories": 722,
+    "protein": 72,
+    "carbs": 57,
+    "fats": 21,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
@@ -262,5 +268,40 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "feta",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "tzatziki",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

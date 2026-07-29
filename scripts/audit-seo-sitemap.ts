@@ -145,12 +145,13 @@ function pageJsonPathForSlug(slug: string, collection: string): string | null {
     breakfast: `catalog/breakfast/pages/${slug}.json`,
     smoothie: `catalog/smoothies/pages/${slug}.json`,
     pizza: `catalog/pizza-night/pages/${slug}.json`,
+    bbq: `catalog/bbq/pages/${slug}.json`,
   };
   return map[collection] ?? null;
 }
 
 function resolveRecipePagePath(slug: string): string | null {
-  for (const collection of ["pizza", "golden", "performance", "expansion", "breakfast", "smoothie"]) {
+  for (const collection of ["pizza", "golden", "performance", "expansion", "breakfast", "smoothie", "bbq"]) {
     const rel = pageJsonPathForSlug(slug, collection);
     if (rel && fs.existsSync(path.join(PUBLIC, rel))) return rel;
   }
@@ -310,6 +311,7 @@ function collectIndexableRecipePaths(origin: string): Map<string, { slug: string
     ["pizza", path.join(PUBLIC, "catalog", "pizza-night"), (s) => approvedCatalogRecipePath(s)],
     ["breakfast", path.join(PUBLIC, "catalog", "breakfast"), (s) => approvedCatalogRecipePath(s)],
     ["smoothie", path.join(PUBLIC, "catalog", "smoothies"), (s) => smoothieRecipePath(s)],
+    ["bbq", path.join(PUBLIC, "catalog", "bbq"), (s) => approvedCatalogRecipePath(s)],
   ];
 
   for (const [collection, dir, pathFn] of catalogs) {
@@ -396,6 +398,7 @@ async function main(): Promise<void> {
   const breakfast = catalogSlugs(path.join(PUBLIC, "catalog", "breakfast"));
   const smoothies = catalogSlugs(path.join(PUBLIC, "catalog", "smoothies"));
   const pizza = catalogSlugs(path.join(PUBLIC, "catalog", "pizza-night"));
+  const bbq = catalogSlugs(path.join(PUBLIC, "catalog", "bbq"));
   const approved = buildApprovedCatalog();
 
   const guidesIndex = readJson<{ articles?: EditorialArticle[] }>(
@@ -660,7 +663,7 @@ async function main(): Promise<void> {
   const missingKeywordPages = TARGET_KEYWORDS.filter((kw) => keywordReport[kw].length === 0);
 
   const totalRecipes =
-    golden.length + performance.length + expansion.length + breakfast.length + smoothies.length + pizza.length;
+    golden.length + performance.length + expansion.length + breakfast.length + smoothies.length + pizza.length + bbq.length;
   const uniqueRecipeUrls = recipePaths.size;
 
   const report = {
@@ -680,6 +683,7 @@ async function main(): Promise<void> {
         pizzaNight: pizza.length,
         breakfast: breakfast.length,
         smoothies: smoothies.length,
+        bbq: bbq.length,
         approvedCatalog: approved.recipeCount,
         curatedCollections: approved.recipeCount + pizza.filter((p) => !approved.recipes.some((r) => r.slug === p.slug)).length,
       },
@@ -735,6 +739,7 @@ Generated: ${report.generatedAt}
 - Pizza Night: ${pizza.length}
 - Breakfast: ${breakfast.length}
 - Smoothies: ${smoothies.length}
+- BBQ: ${bbq.length}
 - Approved catalog: ${approved.recipeCount}
 
 ## Keyword opportunities

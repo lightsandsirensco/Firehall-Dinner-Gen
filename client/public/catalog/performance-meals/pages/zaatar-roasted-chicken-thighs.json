@@ -13,10 +13,10 @@
   "cookTime": 38,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 475,
-  "protein": 40,
-  "carbs": 8,
-  "fats": 32,
+  "calories": 541,
+  "protein": 72,
+  "carbs": 11,
+  "fats": 22,
   "tags": [
     "protein:chicken",
     "format:roast",
@@ -33,53 +33,53 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "16",
       "unit": "pieces",
       "notes": "about 6 lb"
     },
     {
-      "name": "Za'atar Spice Blend",
+      "name": "za'atar spice blend",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.5",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "4",
       "unit": "whole",
       "notes": "juiced and wedged"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "3",
       "unit": "large",
       "notes": "thick slices"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "smashed"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     }
   ],
@@ -126,8 +126,8 @@
     "Leftover za'atar oil works as salad dressing next day."
   ],
   "tonightSpread": [
-    "Roasted thighs with charred onions, straight off the tray.",
-    "Warm pita on the side, with hummus or tzatziki kept cold if the hall has it."
+    "Cucumber yogurt sauce.",
+    "Warm pita and hummus."
   ],
   "leftovers": [
     "Slice into wraps with tahini drizzle.",
@@ -138,11 +138,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 475,
-    "protein": 40,
-    "carbs": 8,
-    "fats": 32,
-    "label": "~475 cal/serving · 40g protein · 2g fiber (est.)"
+    "calories": 541,
+    "protein": 72,
+    "carbs": 11,
+    "fats": 22,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/zaatar-roasted-chicken-thighs.jpg",
   "heroImageAlt": "Wide firehall crew platter of Za'atar Chicken Thighs on a station prep table, family-style serving",
@@ -169,6 +184,35 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.668Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "za'atar spice blend",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

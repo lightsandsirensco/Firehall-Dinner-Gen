@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 460,
-  "protein": 16,
-  "carbs": 52,
-  "fats": 20,
+  "calories": 924,
+  "protein": 29,
+  "carbs": 126,
+  "fats": 33,
   "tags": [
     "protein:vegetarian",
     "format:bar_line",
@@ -157,19 +157,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 460,
-    "protein": 16,
-    "carbs": 52,
-    "fats": 20,
-    "label": "~460 cal/serving · 16g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 924,
+    "protein": 29,
+    "carbs": 126,
+    "fats": 33,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/pretzel-bite-platter.jpg",
@@ -192,5 +198,77 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "soft pretzel bites",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "sharp cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cream cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "lager beer",
+        "allergens": [
+          "gluten",
+          "alcohol"
+        ]
+      },
+      {
+        "name": "Worcestershire sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free beer or non-alcoholic broth instead. Use a certified gluten-free Worcestershire sauce."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute non-alcoholic beer or broth."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

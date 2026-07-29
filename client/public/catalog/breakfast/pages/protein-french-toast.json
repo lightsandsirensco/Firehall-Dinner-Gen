@@ -143,5 +143,70 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Protein French Toast | Firehall Breakfast",
-  "collectionTier": "performance"
+  "collectionTier": "performance",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "cottage cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "thick-cut bread slices",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

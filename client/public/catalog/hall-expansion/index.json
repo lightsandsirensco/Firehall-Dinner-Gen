@@ -33,7 +33,24 @@
       "searchTerms": [
         "smoked turkey breast for the crew",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "smoked-meatloaf",
@@ -65,7 +82,30 @@
       "searchTerms": [
         "smoked meatloaf with glaze",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free Worcestershire sauce."
+          }
+        ]
+      }
     },
     {
       "slug": "pork-belly-burnt-ends",
@@ -96,7 +136,30 @@
       "searchTerms": [
         "pork belly burnt ends",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-sausage-platter",
@@ -128,7 +191,30 @@
       "searchTerms": [
         "smoked sausage platter",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-queso-fundido",
@@ -159,7 +245,35 @@
       "searchTerms": [
         "smoked queso fundido",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "hickory-turkey-legs",
@@ -191,7 +305,24 @@
       "searchTerms": [
         "hickory smoked turkey legs",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "smoked-tri-tip",
@@ -222,7 +353,30 @@
       "searchTerms": [
         "smoked tri-tip roast",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-corned-beef",
@@ -253,7 +407,35 @@
       "searchTerms": [
         "smoked corned beef brisket",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Confirm corn tortillas are used, or substitute a certified gluten-free wrap. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "pellet-smoked-chicken-quarters",
@@ -284,7 +466,30 @@
       "searchTerms": [
         "pellet smoked chicken quarters",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "loaded-potato-skins",
@@ -315,7 +520,24 @@
       "searchTerms": [
         "loaded potato skins",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "game-day-pizza-sliders",
@@ -346,7 +568,35 @@
       "searchTerms": [
         "game day pizza sliders",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "pretzel-bite-platter",
@@ -377,7 +627,35 @@
       "searchTerms": [
         "pretzel bite platter with beer cheese",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free beer or non-alcoholic broth instead. Use a certified gluten-free Worcestershire sauce."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute non-alcoholic beer or broth."
+          }
+        ]
+      }
     },
     {
       "slug": "jalapeno-popper-dip",
@@ -408,7 +686,35 @@
       "searchTerms": [
         "jalapeño popper dip",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "philly-cheesesteak-sliders",
@@ -439,7 +745,35 @@
       "searchTerms": [
         "philly cheesesteak sliders",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "chicken-wing-bar-night",
@@ -470,7 +804,30 @@
       "searchTerms": [
         "chicken wing bar night",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "bbq-meatball-skewers",
@@ -502,7 +859,30 @@
       "searchTerms": [
         "bbq meatball skewers",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+          }
+        ]
+      }
     },
     {
       "slug": "soft-pretzel-dogs",
@@ -533,7 +913,35 @@
       "searchTerms": [
         "soft pretzel hot dogs",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-charcuterie-board",
@@ -564,7 +972,30 @@
       "searchTerms": [
         "firehall charcuterie board",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "cheesy-beef-nacho-bake",
@@ -596,7 +1027,30 @@
       "searchTerms": [
         "cheesy beef nacho bake",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "shawarma-bar-night",
@@ -627,7 +1081,30 @@
       "searchTerms": [
         "shawarma bar night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "fajita-bar-night",
@@ -658,7 +1135,30 @@
       "searchTerms": [
         "fajita bar night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use certified gluten-free tortillas or corn tortillas."
+          }
+        ]
+      }
     },
     {
       "slug": "hall-burger-bar",
@@ -689,7 +1189,35 @@
       "searchTerms": [
         "hall burger bar",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "pasta-bar-night",
@@ -720,7 +1248,35 @@
       "searchTerms": [
         "pasta bar night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "treeNuts",
+            "label": "Nut-Free Adaptable",
+            "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+          }
+        ]
+      }
     },
     {
       "slug": "rice-bowl-bar-night",
@@ -752,7 +1308,35 @@
       "searchTerms": [
         "rice bowl bar night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free teriyaki sauce made with tamari. Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "sandwich-board-night",
@@ -783,7 +1367,40 @@
       "searchTerms": [
         "sandwich board night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "mediterranean-feast-night",
@@ -814,7 +1431,30 @@
       "searchTerms": [
         "mediterranean feast night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Substitute quinoa or rice. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "burrito-bowl-bar-night",
@@ -846,7 +1486,35 @@
       "searchTerms": [
         "burrito bowl bar night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "loaded-nacho-bar-night",
@@ -878,7 +1546,30 @@
       "searchTerms": [
         "loaded nacho bar night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "build-your-own-pho-bar",
@@ -910,7 +1601,30 @@
       "searchTerms": [
         "build-your-own pho bar",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free hoisin or a tamari-based substitute."
+          }
+        ]
+      }
     },
     {
       "slug": "mesquite-chuck-roast",
@@ -941,7 +1655,30 @@
       "searchTerms": [
         "mesquite smoked chuck roast",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "molasses-bourbon-pork-ribs",
@@ -972,7 +1709,30 @@
       "searchTerms": [
         "molasses bourbon pork ribs",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "applewood-pork-shoulder-steaks",
@@ -1003,7 +1763,24 @@
       "searchTerms": [
         "applewood grilled pork shoulder steaks",
         "smoker recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "honey-mustard-oven-chicken-thighs",
@@ -1033,7 +1810,24 @@
       "searchTerms": [
         "honey mustard baked chicken thighs",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "spatchcock-lemon-roast-chicken",
@@ -1063,7 +1857,30 @@
       "searchTerms": [
         "spatchcock lemon roast chicken",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "cajun-chicken-rice-skillet",
@@ -1093,7 +1910,30 @@
       "searchTerms": [
         "cajun chicken and rice skillet",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "paprika-roasted-chicken-quarters",
@@ -1123,7 +1963,24 @@
       "searchTerms": [
         "paprika roasted chicken quarters",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "cast-iron-chicken-fajitas",
@@ -1154,7 +2011,30 @@
       "searchTerms": [
         "cast iron chicken fajitas",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          }
+        ]
+      }
     },
     {
       "slug": "mushroom-swiss-steak-pan",
@@ -1185,7 +2065,30 @@
       "searchTerms": [
         "mushroom swiss steak pan",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "pepper-steak-onions",
@@ -1215,7 +2118,35 @@
       "searchTerms": [
         "pepper steak with onions",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "dutch-oven-pot-roast",
@@ -1246,7 +2177,30 @@
       "searchTerms": [
         "dutch oven pot roast",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use a 1:1 gluten-free all-purpose flour blend."
+          }
+        ]
+      }
     },
     {
       "slug": "enchilada-beef-skillet",
@@ -1277,7 +2231,30 @@
       "searchTerms": [
         "beef enchilada skillet",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          }
+        ]
+      }
     },
     {
       "slug": "mostaccioli-sausage-bake",
@@ -1307,7 +2284,35 @@
       "searchTerms": [
         "baked mostaccioli with sausage",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "creamy-chicken-penne-alfredo",
@@ -1338,7 +2343,30 @@
       "searchTerms": [
         "creamy chicken penne alfredo",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta."
+          }
+        ]
+      }
     },
     {
       "slug": "rigatoni-meat-sauce-batch",
@@ -1369,7 +2397,40 @@
       "searchTerms": [
         "rigatoni with meat sauce",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta/noodle alternative."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "station-cobb-salad",
@@ -1400,7 +2461,30 @@
       "searchTerms": [
         "station cobb salad",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "warm-spinach-chicken-salad",
@@ -1431,7 +2515,24 @@
       "searchTerms": [
         "warm spinach chicken salad",
         "game day recipes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "hall-chicken-noodle-soup",
@@ -1462,7 +2563,30 @@
       "searchTerms": [
         "hall chicken noodle soup",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "green-chile-chicken-stew",
@@ -1493,7 +2617,30 @@
       "searchTerms": [
         "green chile chicken stew",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "ginger-soy-chicken-rice-bowls",
@@ -1524,7 +2671,35 @@
       "searchTerms": [
         "ginger soy chicken rice bowls",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "mediterranean-chicken-farro-bowls",
@@ -1555,7 +2730,35 @@
       "searchTerms": [
         "mediterranean chicken farro bowls",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Substitute quinoa or rice."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "kielbasa-cabbage-potato-skillet",
@@ -1585,7 +2788,30 @@
       "searchTerms": [
         "kielbasa cabbage potato skillet",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "cheesy-chicken-broccoli-rice",
@@ -1616,7 +2842,35 @@
       "searchTerms": [
         "cheesy chicken broccoli rice",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "sheet-pan-meatball-marinara",
@@ -1647,7 +2901,35 @@
       "searchTerms": [
         "sheet pan meatball marinara feed",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "hall-sloppy-joe-feed",
@@ -1679,7 +2961,30 @@
       "searchTerms": [
         "hall sloppy joe feed",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "montreal-smoked-meat-platter",
@@ -1710,7 +3015,30 @@
       "searchTerms": [
         "montreal smoked meat platter",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "tourtiere-for-the-crew",
@@ -1741,7 +3069,30 @@
       "searchTerms": [
         "tourtière for the crew",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-donair-platter",
@@ -1772,7 +3123,35 @@
       "searchTerms": [
         "firehall donair platter",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+          }
+        ]
+      }
     },
     {
       "slug": "maple-cured-salmon-plank",
@@ -1803,7 +3182,35 @@
       "searchTerms": [
         "maple-cured salmon plank",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "classic-poutine-feed-crew",
@@ -1834,7 +3241,35 @@
       "searchTerms": [
         "classic poutine feed for the crew",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free Worcestershire sauce."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "cottage-pie-for-the-crew",
@@ -1865,7 +3300,35 @@
       "searchTerms": [
         "cottage pie for the crew",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "chicken-paprikash-hall",
@@ -1896,7 +3359,30 @@
       "searchTerms": [
         "chicken paprikash for the hall",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta."
+          }
+        ]
+      }
     },
     {
       "slug": "chicken-cacciatore-crew",
@@ -1927,7 +3413,30 @@
       "searchTerms": [
         "chicken cacciatore for the crew",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "coq-au-vin-batch",
@@ -1958,7 +3467,35 @@
       "searchTerms": [
         "coq au vin batch",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "hungarian-goulash-crew",
@@ -1989,7 +3526,30 @@
       "searchTerms": [
         "hungarian goulash for the crew",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "tonkotsu-ramen-crew",
@@ -2020,7 +3580,35 @@
       "searchTerms": [
         "tonkotsu ramen for the crew",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use rice noodles or a certified gluten-free ramen substitute."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "miso-ramen-bar",
@@ -2051,7 +3639,30 @@
       "searchTerms": [
         "miso ramen bar",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free gochujang/miso. Use rice noodles or a certified gluten-free ramen substitute."
+          }
+        ]
+      }
     },
     {
       "slug": "malaysian-laksa-soup",
@@ -2082,7 +3693,30 @@
       "searchTerms": [
         "malaysian laksa soup",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "bun-bo-hue-noodle-soup",
@@ -2113,7 +3747,24 @@
       "searchTerms": [
         "bun bo hue noodle soup",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "wonton-noodle-soup-crew",
@@ -2144,7 +3795,35 @@
       "searchTerms": [
         "wonton noodle soup for the crew",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "peri-peri-chicken-platter",
@@ -2175,7 +3854,24 @@
       "searchTerms": [
         "peri peri chicken platter",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "korean-bulgogi-grill-night",
@@ -2206,7 +3902,24 @@
       "searchTerms": [
         "korean bulgogi grill night",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "lamb-kofta-skewer-platter",
@@ -2237,7 +3950,30 @@
       "searchTerms": [
         "lamb kofta skewer platter",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "moroccan-chicken-kebab-platter",
@@ -2268,7 +4004,30 @@
       "searchTerms": [
         "moroccan chicken kebab platter",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta/noodle alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "lebanese-chicken-shish-platter",
@@ -2299,7 +4058,30 @@
       "searchTerms": [
         "lebanese chicken shish platter",
         "crew feeders"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Substitute quinoa or rice. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "classic-patty-melt-for-the-crew",
@@ -2331,7 +4113,35 @@
         "patty melt firehall",
         "diner patty melt crew",
         "rye swiss patty melt"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free Worcestershire sauce."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "best-tuna-melt-for-the-hall",
@@ -2363,7 +4173,40 @@
         "tuna melt sheet pan",
         "hall tuna melt",
         "diner tuna melt rye"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "hall-blt-sandwich-feed",
@@ -2394,7 +4237,40 @@
         "BLT sandwich crew",
         "hall BLT feed",
         "bacon lettuce tomato batch"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "buffalo-chicken-wraps",
@@ -2425,7 +4301,30 @@
       "searchTerms": [
         "buffalo chicken wrap",
         "buffalo wrap fire station"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use certified gluten-free tortillas or corn tortillas."
+          }
+        ]
+      }
     },
     {
       "slug": "greek-chicken-pitas",
@@ -2456,7 +4355,30 @@
       "searchTerms": [
         "greek chicken pita",
         "chicken souvlaki pita firehall"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "beef-gyros-for-the-hall",
@@ -2486,7 +4408,30 @@
       "searchTerms": [
         "beef gyro firehall",
         "gyro pita crew"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "chicken-shawarma-pitas",
@@ -2517,7 +4462,30 @@
       "searchTerms": [
         "chicken shawarma pita",
         "shawarma wrap firehall"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "sausage-peppers-on-buns",
@@ -2547,7 +4515,40 @@
       "searchTerms": [
         "sausage and peppers sandwich",
         "italian sausage hoagie firehall"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-taco-bowls",
@@ -2584,7 +4585,30 @@
         "build your own taco bowl",
         "firefighter dinner ideas",
         "meal prep taco bowls"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "buffalo-chicken-sweet-potato-bowls",
@@ -2621,7 +4645,24 @@
         "crew dinner chicken bowls",
         "broccoli chicken bowls",
         "ranch buffalo bowl"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "firehall-greek-chicken-bowls",
@@ -2658,7 +4699,24 @@
         "mediterranean chicken bowl",
         "meal prep greek bowls",
         "chicken dinner for 10"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "teriyaki-chicken-rice-bowls",
@@ -2695,7 +4753,30 @@
         "crew meal teriyaki",
         "edamame rice bowl",
         "meal prep teriyaki chicken"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-korean-beef-bowls",
@@ -2731,7 +4812,30 @@
         "kimchi beef bowl",
         "crew dinner bowls",
         "fried egg rice bowl"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free gochujang/miso. Use tamari (check soy-free brands separately) or coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "cajun-shrimp-rice-bowls",
@@ -2767,7 +4871,30 @@
         "creamy lime shrimp bowl",
         "healthy shrimp meal prep",
         "shrimp dinner for 10"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "southwest-steak-bowls",
@@ -2804,7 +4931,24 @@
         "southwestern crew meal",
         "flank steak meal prep",
         "cilantro lime steak bowl"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "bbq-pulled-pork-bowls",
@@ -2841,7 +4985,35 @@
         "coleslaw pork bowl",
         "meal prep pulled pork",
         "barbecue bowl recipe"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "mediterranean-beef-bowls",
@@ -2878,7 +5050,24 @@
         "feta tzatziki bowl",
         "crew dinner for 10",
         "spiced beef rice bowl"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "chipotle-chicken-burrito-bowls",
@@ -2915,7 +5104,24 @@
         "chipotle chicken meal prep",
         "black bean chicken bowl",
         "cilantro lime rice burrito bowl"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "turkey-taco-bowls",
@@ -2949,7 +5155,30 @@
         "ground turkey firehall dinner",
         "healthy taco bowls",
         "crew turkey dinner"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "peanut-chicken-rice-bowls",
@@ -2980,7 +5209,24 @@
         "firehall chicken bowls",
         "Thai chicken crew dinner",
         "peanut sauce meal prep"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "firehall-gyro-bowls",
@@ -3011,7 +5257,24 @@
         "Greek beef rice bowls",
         "firehall gyro dinner",
         "ground beef meal for ten"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "egg-roll-in-a-bowl-crew",
@@ -3043,7 +5306,35 @@
         "ground pork cabbage crew meal",
         "one pan firehall dinner",
         "budget bowl recipe"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "salmon-rice-bowls-crew",
@@ -3074,7 +5365,35 @@
         "sheet pan salmon crew dinner",
         "healthy firehall seafood",
         "sesame salmon bowls"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "korean-turkey-rice-bowls",
@@ -3105,7 +5424,30 @@
         "ground turkey firehall dinner",
         "gochujang meal for ten",
         "budget Korean bowls"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free gochujang/miso."
+          }
+        ]
+      }
     },
     {
       "slug": "leftover-roast-beef-bowls",
@@ -3137,7 +5479,30 @@
         "roast beef crew dinner",
         "firehall leftover meal",
         "beef gravy potato bowls"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
+          }
+        ]
+      }
     },
     {
       "slug": "mississippi-pot-roast-crew",
@@ -3168,7 +5533,30 @@
         "slow cooker firehall roast",
         "pepperoncini chuck roast",
         "crock pot meal for ten"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "white-chicken-chili-crock",
@@ -3199,7 +5587,30 @@
         "crockpot chicken chili firehall",
         "slow cooker dinner for ten",
         "creamy white bean chili"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "italian-beef-slow-cooker",
@@ -3230,7 +5641,35 @@
         "slow cooker beef sandwiches",
         "firehall sandwich dinner",
         "Chicago beef recipe ten people"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "salsa-verde-chicken-crock",
@@ -3261,7 +5700,30 @@
         "crockpot taco night firehall",
         "slow cooker chicken tacos ten",
         "green chile chicken bowls"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Confirm corn tortillas are used, or substitute a certified gluten-free wrap."
+          }
+        ]
+      }
     },
     {
       "slug": "loaded-baked-potato-soup-crock",
@@ -3292,7 +5754,30 @@
         "slow cooker potato soup firehall",
         "crockpot soup for ten",
         "bacon cheddar potato soup"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "thai-peanut-chicken-crock",
@@ -3323,7 +5808,24 @@
         "crockpot peanut chicken bowls",
         "firehall slow cooker bowls",
         "Thai chicken meal for ten"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "burnt-ends-chili-crew",
@@ -3354,7 +5856,30 @@
         "smoker chili for a crowd",
         "BBQ firehall chili",
         "brisket chili ten people"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "smoker-nachos-crew",
@@ -3385,7 +5910,30 @@
         "pulled pork nachos smoker",
         "BBQ game day firehall",
         "smoked nacho trays"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "weeknight-bbq-ribs-crew",
@@ -3416,7 +5964,30 @@
         "ribs for ten people",
         "firehall smoker dinner",
         "fast smoked St Louis ribs"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free rub or build your own from confirmed gluten-free spices."
+          }
+        ]
+      }
     },
     {
       "slug": "grilled-flank-fajita-bar",
@@ -3447,7 +6018,30 @@
         "fajita bar for ten",
         "firehall grill dinner",
         "BBQ steak taco bar"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "costco-rotisserie-remix",
@@ -3480,7 +6074,30 @@
         "Costco chicken crew meal",
         "budget chicken rice bake",
         "firehall casserole"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
+          }
+        ]
+      }
     },
     {
       "slug": "chicken-thigh-stretch-dinner",
@@ -3511,7 +6128,24 @@
         "sheet pan chicken firehall",
         "chicken thighs meal for ten",
         "cheap crew dinner"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "pasta-e-fagioli-hall",
@@ -3542,7 +6176,35 @@
         "Italian bean soup for ten",
         "budget firehall soup",
         "one pot beef pasta soup"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "dirty-rice-crew-skillet",
@@ -3573,7 +6235,35 @@
         "Cajun rice crew dinner",
         "one pot sausage rice ten",
         "budget firehall skillet"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "sausage-gnocchi-skillet",
@@ -3604,7 +6294,40 @@
         "one pot gnocchi dinner ten",
         "Italian sausage firehall meal",
         "weeknight crew skillet"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta/noodle alternative."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "spanish-rice-chicken-one-pot",
@@ -3635,7 +6358,30 @@
         "one pot chicken rice for ten",
         "budget firehall chicken dinner",
         "skillet chicken and rice"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     }
   ]
 }

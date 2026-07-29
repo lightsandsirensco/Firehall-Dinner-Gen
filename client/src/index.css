@@ -66,6 +66,8 @@ html, body {
   --chart-3: 188 95% 55%;
   --chart-4: 280 75% 55%;
   --chart-5: 148 70% 55%;
+  --success: 148 55% 38%;
+  --success-foreground: 0 0% 98%;
   --font-sans: 'Inter', sans-serif;
   --font-serif: Georgia, serif;
   --font-mono: Menlo, monospace;
@@ -150,6 +152,8 @@ html, body {
   --chart-3: 188 95% 68%;
   --chart-4: 280 75% 68%;
   --chart-5: 148 70% 65%;
+  --success: 148 60% 46%;
+  --success-foreground: 0 0% 98%;
   --shadow-2xs: 0 1px 2px 0 hsl(0 0% 0% / 0.30);
   --shadow-xs: 0 1px 3px 0 hsl(0 0% 0% / 0.40);
   --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.45), 0 1px 3px -1px hsl(0 0% 0% / 0.30);
@@ -499,6 +503,7 @@ html, body {
     .page-enter,
     .meal-reveal,
     .success-pop,
+    .fade-up,
     .stagger-fade > * {
       animation: none !important;
     }
@@ -507,11 +512,13 @@ html, body {
     }
   }
 
+  /* Same shimmer recipe as .premium-skeleton (client/src/index.css bottom) — kept as one alias
+   * so every loading surface in the app shares one motion/opacity language. */
   .skeleton-shimmer {
     background: linear-gradient(
       90deg,
       hsl(var(--muted)) 25%,
-      hsl(var(--muted-foreground) / 0.1) 50%,
+      hsl(var(--muted-foreground) / 0.08) 50%,
       hsl(var(--muted)) 75%
     );
     background-size: 200% 100%;
@@ -617,11 +624,6 @@ html, body {
   100% { background-position: 200% 0; }
 }
 
-@keyframes save-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.7; }
-}
-
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
@@ -652,10 +654,6 @@ html, body {
   background: linear-gradient(90deg, hsl(var(--muted)) 25%, hsl(var(--muted-foreground) / 0.08) 50%, hsl(var(--muted)) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.8s ease-in-out infinite;
-}
-
-.save-confirmed {
-  animation: save-pulse 0.4s ease-in-out;
 }
 
 .fade-up {
@@ -696,13 +694,6 @@ html, body {
     linear-gradient(180deg, hsl(var(--elevate-1)), transparent 40%);
 }
 
-.hall-metallic-border {
-  border: 1px solid hsl(var(--border) / 0.5);
-  box-shadow:
-    inset 0 1px 0 hsl(0 0% 100% / 0.04),
-    0 4px 24px -8px hsl(0 0% 0% / 0.55);
-}
-
 .wheel-stage {
   filter: drop-shadow(0 24px 48px hsl(0 0% 0% / 0.65));
 }
@@ -714,4 +705,15 @@ html, body {
 
 .wheel-celebrate-glow {
   animation: wheel-celebrate 1.8s ease-in-out infinite;
+}
+
+/* Looping/decorative animations that live outside the @layer block above —
+   keep them still for users who've asked the OS for reduced motion. */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-shimmer,
+  .premium-skeleton,
+  .explore-refresh-hint,
+  .wheel-celebrate-glow {
+    animation: none !important;
+  }
 }

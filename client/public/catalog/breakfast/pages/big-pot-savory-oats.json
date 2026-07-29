@@ -21,24 +21,24 @@
   "ingredients": [
     {
       "name": "rolled oats",
-      "quantity": "4.8"
+      "quantity": "4.8 cups"
     },
     {
       "name": "water or broth",
-      "quantity": "9.6",
+      "quantity": "9.6 cups",
       "notes": "half broth for savory"
     },
     {
       "name": "kosher salt",
-      "quantity": "1.6"
+      "quantity": "1 3/4 tsp"
     },
     {
       "name": "butter",
-      "quantity": "2.4"
+      "quantity": "2.6 tbsp"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "topping bar"
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "name": "green onions",
-      "quantity": "1/2",
+      "quantity": "3/8 cup",
       "notes": "sliced",
       "optional": true
     }
@@ -81,12 +81,13 @@
     }
   ],
   "nutrition": {
-    "calories": 306,
+    "calories": 305,
     "protein": 14,
     "carbs": 35,
     "fat": 12,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -121,5 +122,69 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "Big-Pot Savory Oats | Firehall Breakfast",
-  "collectionTier": "performance"
+  "collectionTier": "performance",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "rolled oats",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "water or broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "soft-cooked eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free oats. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -217,5 +217,63 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-05-30T03:45:01.596Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Bread flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Brick cheese or mild cheddar, shredded",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Cup-and-char pepperoni",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

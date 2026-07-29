@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 950,
-  "protein": 60,
-  "carbs": 60,
-  "fats": 52,
+  "calories": 1380,
+  "protein": 103,
+  "carbs": 39,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -210,17 +210,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 950,
-    "protein": 60,
-    "carbs": 60,
-    "fats": 52,
-    "label": "per serving (hall portion, 2 sandwiches)",
-    "source": "estimated",
+    "calories": 1380,
+    "protein": 103,
+    "carbs": 39,
+    "fats": 90,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -260,5 +261,57 @@
   "sourceUrl": "",
   "classicSlug": "steak-sandwiches",
   "generatedAt": "2026-07-23T21:40:00.000Z",
-  "contentVersion": 5
+  "contentVersion": 5,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Provolone Slices",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Soft Hoagie Rolls Or Brioche Buns",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Frozen Steak Fries",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

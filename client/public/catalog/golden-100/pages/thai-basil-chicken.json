@@ -13,9 +13,9 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 823,
-  "protein": 53,
-  "carbs": 81,
+  "calories": 846,
+  "protein": 54,
+  "carbs": 86,
   "fats": 29,
   "tags": [
     "protein:chicken",
@@ -192,12 +192,13 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 823,
-    "protein": 53,
-    "carbs": 81,
+    "calories": 846,
+    "protein": 54,
+    "carbs": 86,
     "fats": 29,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -241,5 +242,59 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.332Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Oyster Sauce",
+        "allergens": [
+          "gluten",
+          "shellfish"
+        ]
+      },
+      {
+        "name": "Soy Sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "Fish Sauce",
+        "allergens": [
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

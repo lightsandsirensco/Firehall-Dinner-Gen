@@ -199,5 +199,68 @@
   "sourceName": "America's Test Kitchen",
   "sourceUrl": "https://www.americastestkitchen.com/recipes/4555-easy-chicken-piccata",
   "generatedAt": "2026-06-04T20:45:42.216Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Low-Sodium Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Dry White Wine",
+        "allergens": [
+          "alcohol"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute broth plus a splash of vinegar for the acidity."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

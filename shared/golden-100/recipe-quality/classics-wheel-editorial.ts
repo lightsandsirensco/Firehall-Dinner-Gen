@@ -21,7 +21,7 @@ export const LEFTOVERS_PACK_DOWN_STEP = (
 ): GoldenRecipePageStep => ({
   stepNumber,
   title: "Pack down leftovers safely",
-  instruction: `Cool ${proteinLabel} and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.`,
+  instruction: `Cool ${proteinLabel} and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.`,
   minutes: 10,
   heatLevel: "",
 });

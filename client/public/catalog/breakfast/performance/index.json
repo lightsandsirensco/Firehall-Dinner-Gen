@@ -24,7 +24,35 @@
       "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
       "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "performance"
+      "collectionTier": "performance",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "big-pot-savory-oats",
@@ -44,7 +72,35 @@
       "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
       "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "performance"
+      "collectionTier": "performance",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "high-protein-parfaits",
@@ -66,7 +122,24 @@
       "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
       "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "performance"
+      "collectionTier": "performance",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "protein-french-toast",
@@ -89,7 +162,30 @@
       "heroImage": "/images/breakfast/protein-french-toast.jpg",
       "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "performance"
+      "collectionTier": "performance",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "protein-pancake-tray",
@@ -109,7 +205,35 @@
       "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
       "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "performance"
+      "collectionTier": "performance",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pancake/baking mix."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
+          }
+        ]
+      }
     }
   ]
 }

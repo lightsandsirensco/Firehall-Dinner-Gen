@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 420,
-  "protein": 40,
-  "carbs": 18,
-  "fats": 22,
+  "calories": 716,
+  "protein": 68,
+  "carbs": 25,
+  "fats": 36,
   "tags": [
     "protein:salmon",
     "format:grill",
@@ -164,19 +164,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 420,
-    "protein": 40,
-    "carbs": 18,
-    "fats": 22,
-    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 716,
+    "protein": 68,
+    "carbs": 25,
+    "fats": 36,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
@@ -199,5 +205,58 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "salmon fillets",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

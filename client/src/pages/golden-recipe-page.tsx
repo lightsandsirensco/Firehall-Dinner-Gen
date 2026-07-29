@@ -4,7 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import { Link, useRoute } from "wouter";
 
-import { Clock, Users, ChefHat, Loader2, List } from "lucide-react";
+import { Clock, Users, ChefHat, List, ShoppingCart, Check } from "lucide-react";
 
 import { SiteHeader } from "@/components/site-header";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
@@ -65,10 +65,14 @@ import type { GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
 import { MealTrustBadges } from "@/components/trust/meal-trust-badges";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
+import { DietaryBadges } from "@/components/trust/dietary-badges";
 import { CrewSizePicker } from "@/components/crew-size-picker";
 import { ShoppingListModal } from "@/components/shopping-list-modal";
 import { useCrewScaling } from "@/hooks/use-crew-scaling";
 import { buildShoppingListFromCatalogIngredients } from "@/lib/shopping-list";
+import { useShoppingSession } from "@/hooks/use-shopping-session";
+import { getRecipeBaseServings } from "@shared/recipe/crew-scaling-config";
+import { useToast } from "@/hooks/use-toast";
 import {
   formatIngredientAmount,
   formatRecipeIngredientName,
@@ -77,6 +81,7 @@ import {
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import { trackRecipeView } from "@/lib/analytics";
+import { dedupeAgainstShownCopy } from "@shared/text/dedupe-lead-sentence";
 
 
 
@@ -96,7 +101,7 @@ function RelatedCard({ slug, title, thumb }: { slug: string; title: string; thum
 
       <Link href={`/recipes/${slug}`} className="group block h-full">
 
-        <article className="rounded-2xl overflow-hidden bg-card/40 ring-1 ring-border/20 hover:ring-primary/30 transition-all h-full">
+        <article className={cn(app.cardCinematic, "bg-card/40 group-hover:ring-primary/20 h-full")}>
 
           <div className="aspect-[4/5] bg-zinc-950 overflow-hidden">
 
@@ -150,7 +155,7 @@ function RecipeHero({ page }: { page: GoldenRecipePage & { heroVerified?: boolea
       <div className="relative -mx-page overflow-hidden bg-zinc-950 sm:mx-0 sm:rounded-3xl sm:ring-1 sm:ring-border/30">
         <RecipePageHeroImage
           src={src}
-          alt={buildRecipeHeroAlt(page.title)}
+          alt={page.heroImageAlt?.trim() || buildRecipeHeroAlt(page.title)}
           title={page.title}
           debugId={{ context: "golden-hero", slug: page.slug, title: page.title }}
         />
@@ -390,6 +395,9 @@ export default function GoldenRecipePageView() {
 
   const [favCount, setFavCount] = useState(() => getHallFavoritesCount());
   const [shoppingOpen, setShoppingOpen] = useState(false);
+  const [addedToMyList, setAddedToMyList] = useState(false);
+  const { addRecipe: addRecipeToMyShoppingList } = useShoppingSession();
+  const { toast } = useToast();
   const autoCookMode = useMemo(
     () => new URLSearchParams(window.location.search).get("cook") === "1",
     [],
@@ -497,43 +505,52 @@ export default function GoldenRecipePageView() {
     [page],
   );
 
-  const relatedQueries = useQuery({
+  // Related recipes are resolved from the catalog index we've already
+  // fetched (below) instead of issuing up to 6 extra JSON requests per page
+  // load. Only slugs missing from that index (e.g. a pizza-night recipe not
+  // present in the merged hall index) fall back to an individual fetch.
+  type RelatedRecipe = { slug: string; title: string; thumb: string };
 
-    queryKey: ["golden-recipe-related", slug, page?.relatedSlugs],
+  const relatedFromCatalog = useMemo<Array<RelatedRecipe | null>>(() => {
+    if (!page?.relatedSlugs?.length) return [];
+    const bySlug = new Map((catalog?.recipes ?? []).map((r) => [r.slug, r]));
+    return page.relatedSlugs.slice(0, 6).map((s) => {
+      const entry = bySlug.get(s);
+      return entry ? { slug: entry.slug, title: entry.title, thumb: entry.thumbImage } : null;
+    });
+  }, [page, catalog?.recipes]);
 
+  const missingRelatedSlugs = useMemo(
+    () =>
+      relatedFromCatalog
+        .map((r, i) => (r === null ? page?.relatedSlugs?.[i] : null))
+        .filter((s): s is string => Boolean(s)),
+    [relatedFromCatalog, page?.relatedSlugs],
+  );
+
+  const missingRelatedQuery = useQuery({
+    queryKey: ["golden-recipe-related-missing", slug, missingRelatedSlugs],
     queryFn: async () => {
-
-      if (!page?.relatedSlugs?.length) return [];
-
       const results = await Promise.all(
-
-        page.relatedSlugs.slice(0, 6).map(async (s) => {
-
+        missingRelatedSlugs.map(async (s) => {
           try {
-
             const p = await fetchGoldenRecipePage(s);
-
             return { slug: p.slug, title: p.title, thumb: p.thumbImage };
-
           } catch {
-
-            return { slug: s, title: s.replace(/-/g, " "), thumb: golden100HeroPath(s) };
-
+            return null;
           }
-
         }),
-
       );
-
-      return results;
-
+      return results.filter((r): r is RelatedRecipe => r !== null);
     },
-
-    enabled: !!page?.relatedSlugs?.length,
-
+    enabled: missingRelatedSlugs.length > 0,
     staleTime: Infinity,
-
   });
+
+  const relatedRecipes = useMemo<RelatedRecipe[]>(() => {
+    const resolved = relatedFromCatalog.filter((r): r is RelatedRecipe => r !== null);
+    return [...resolved, ...(missingRelatedQuery.data ?? [])];
+  }, [relatedFromCatalog, missingRelatedQuery.data]);
 
 
 
@@ -547,7 +564,30 @@ export default function GoldenRecipePageView() {
     });
   }, [page?.slug, page?.title]);
 
+  useEffect(() => {
+    setAddedToMyList(false);
+  }, [page?.slug]);
+
   const { crewSize, setCrewSize, scaledIngredients, displayCookTime } = useCrewScaling(page);
+
+  const handleAddToMyShoppingList = () => {
+    if (!page) return;
+    addRecipeToMyShoppingList(
+      {
+        slug: page.slug,
+        title: page.title,
+        recipePath: approvedCatalogRecipePath(page.slug),
+        baseServings: getRecipeBaseServings(page),
+        ingredients: page.ingredients,
+      },
+      crewSize,
+    );
+    setAddedToMyList(true);
+    toast({
+      title: "Added to your shopping list",
+      description: `${page.title} ingredients are grouped and combined at /me/shopping-list.`,
+    });
+  };
   const [measurementSystem] = useMeasurementSystem();
 
   const shoppingList = useMemo(
@@ -563,8 +603,8 @@ export default function GoldenRecipePageView() {
 
   const voteRecipes = useMemo(() => {
     if (!page) return [];
-    return catalogVoteOptions(page, relatedQueries.data ?? []);
-  }, [page, relatedQueries.data]);
+    return catalogVoteOptions(page, relatedRecipes);
+  }, [page, relatedRecipes]);
 
   const cookModeRecipe = useMemo(() => {
     if (!page || scaledIngredients.length === 0) return null;
@@ -590,6 +630,27 @@ export default function GoldenRecipePageView() {
     ];
   }, [page, crewSize, displayCookTime]);
 
+  // The catalog's `shortDescription` field is identical to `subtitle` for
+  // every recipe (already shown in the hero, just above), so falling back to
+  // it here would repeat the exact same sentence twice on every recipe page.
+  // Prefer the longer, distinct `description` field for the lead paragraph.
+  const leadParagraph = useMemo(() => {
+    if (!page) return "";
+    const short = page.shortDescription?.trim();
+    const subtitle = page.subtitle?.trim().toLowerCase();
+    if (short && short.toLowerCase() !== subtitle) return short;
+    return page.description;
+  }, [page]);
+
+  // `whyCrewsLikeIt` frequently restates the subtitle/lead as a leading
+  // phrase (e.g. "Double pot, triple appetite. Real toasted-chile depth…")
+  // — show only the part that adds something new, or hide it entirely if
+  // it's a full duplicate.
+  const whyCrewsLikeIt = useMemo(
+    () => (page ? dedupeAgainstShownCopy(page.whyCrewsLikeIt, page.subtitle, leadParagraph) : undefined),
+    [page, leadParagraph],
+  );
+
 
 
   return (
@@ -607,24 +668,69 @@ export default function GoldenRecipePageView() {
 
 
         {isLoading && (
-
-          <div className="flex justify-center py-24" aria-busy="true" aria-live="polite">
-
-            <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
-
+          <div className={app.sectionGap} aria-busy="true" aria-live="polite">
             <span className="sr-only">Loading recipe</span>
-
+            <div className="aspect-[4/3] sm:aspect-[16/9] rounded-2xl sm:rounded-3xl skeleton-shimmer" />
+            <div className="space-y-3">
+              <div className="h-8 sm:h-10 w-3/4 rounded-lg skeleton-shimmer" />
+              <div className="h-4 w-1/2 rounded skeleton-shimmer" />
+              <div className="flex gap-2 pt-1">
+                <div className="h-7 w-20 rounded-full skeleton-shimmer" />
+                <div className="h-7 w-24 rounded-full skeleton-shimmer" />
+                <div className="h-7 w-16 rounded-full skeleton-shimmer" />
+              </div>
+            </div>
+            <div className="space-y-2">
+              <div className="h-5 w-32 rounded skeleton-shimmer" />
+              <div className="h-4 w-full rounded skeleton-shimmer" />
+              <div className="h-4 w-full rounded skeleton-shimmer" />
+              <div className="h-4 w-2/3 rounded skeleton-shimmer" />
+            </div>
           </div>
-
         )}
 
 
 
         {error && (
 
-          <div className={cn(app.panel, "p-6 text-destructive text-sm")} role="alert">
+          <div className="flex flex-col items-center text-center py-10 fade-up" role="alert" aria-live="assertive">
 
-            {(error as Error).message || "Recipe not found"}
+            <div className="w-20 h-20 rounded-full bg-destructive/10 flex items-center justify-center mb-6 relative">
+              <div className="absolute inset-0 rounded-full bg-destructive/5 animate-ping motion-reduce:animate-none" style={{ animationDuration: "3s" }} />
+              <ChefHat className="w-10 h-10 text-destructive/60" aria-hidden />
+            </div>
+
+            <h2 className={cn(app.titleSection, "mb-2")}>We couldn't find that recipe</h2>
+
+            <p className="mt-1 text-sm text-muted-foreground max-w-sm mx-auto leading-relaxed">
+
+              It may have been renamed or retired. Browse the full catalog or grab a meal for tonight instead.
+
+            </p>
+
+            <div className="mt-6 flex flex-wrap justify-center gap-3">
+
+              <Link href="/explore">
+
+                <Button variant="default" className="min-h-11" data-testid="button-recipe-not-found-explore">
+
+                  Browse recipes
+
+                </Button>
+
+              </Link>
+
+              <Link href="/generator">
+
+                <Button variant="outline" className="min-h-11" data-testid="button-recipe-not-found-generator">
+
+                  Get a meal for tonight
+
+                </Button>
+
+              </Link>
+
+            </div>
 
           </div>
 
@@ -634,7 +740,7 @@ export default function GoldenRecipePageView() {
 
         {page && (
 
-          <article className={app.sectionGap}>
+          <article className={cn(app.sectionGap, app.mealReveal)}>
 
             <RecipeHero page={page} />
 
@@ -690,6 +796,19 @@ export default function GoldenRecipePageView() {
                 <List className="w-4 h-4" aria-hidden />
                 Shopping list ({crewSize} crew)
               </Button>
+              <Button
+                variant="outline"
+                className="min-h-11 gap-2"
+                onClick={handleAddToMyShoppingList}
+                data-testid="button-recipe-add-to-my-list"
+              >
+                {addedToMyList ? (
+                  <Check className="w-4 h-4" aria-hidden />
+                ) : (
+                  <ShoppingCart className="w-4 h-4" aria-hidden />
+                )}
+                {addedToMyList ? "On my list" : "Add to my list"}
+              </Button>
               <StartCookingButton
                 recipe={cookModeRecipe}
                 recipeSlug={page.slug}
@@ -709,14 +828,14 @@ export default function GoldenRecipePageView() {
               />
             )}
 
-            <p className={cn(app.lead, "max-w-2xl")}>{page.shortDescription || page.description}</p>
+            <p className={cn(app.lead, "max-w-2xl")}>{leadParagraph}</p>
 
             <RecipeCrewRatingPanel slug={page.slug} category={page.category} className="max-w-2xl" />
 
-            {page.whyCrewsLikeIt && (
+            {whyCrewsLikeIt && (
               <p className="text-[15px] text-muted-foreground max-w-2xl leading-relaxed">
                 <span className="text-foreground font-medium">Why crews like it: </span>
-                {page.whyCrewsLikeIt}
+                {whyCrewsLikeIt}
               </p>
             )}
 
@@ -727,7 +846,7 @@ export default function GoldenRecipePageView() {
                     {ingredientGroups.length > 1 && (
                       <h3 className="text-sm font-semibold text-foreground/90 mb-2">{group}</h3>
                     )}
-                    <ul className="space-y-0 divide-y divide-border/30">
+                    <ul className="space-y-0 divide-y divide-border/25">
                       {items.map((ing, i) => (
                         <li
                           key={`${ing.name}-${i}`}
@@ -903,6 +1022,8 @@ export default function GoldenRecipePageView() {
               className="max-w-2xl"
             />
 
+            <DietaryBadges dietary={page.dietary} className="max-w-2xl" />
+
             {page.equipment.length > 0 && (
 
               <div className="flex flex-wrap gap-2">
@@ -923,7 +1044,7 @@ export default function GoldenRecipePageView() {
 
 
 
-            {relatedQueries.data && relatedQueries.data.length > 0 && (
+            {relatedRecipes.length > 0 && (
 
               <RecipeSection title="Related firefighter meals" id="recipe-related">
 
@@ -931,7 +1052,7 @@ export default function GoldenRecipePageView() {
 
                   <ul className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
 
-                    {relatedQueries.data.map((r) => (
+                    {relatedRecipes.map((r) => (
 
                       <RelatedCard key={r.slug} slug={r.slug} title={r.title} thumb={r.thumb} />
 
@@ -960,7 +1081,7 @@ export default function GoldenRecipePageView() {
 
               <Link href={`/package/${page.classicSlug}`}>
 
-                <Button className="btn-tonight w-full">Open crew package</Button>
+                <Button className="btn-tonight btn-generate active:scale-[0.98] transition-transform touch-manipulation w-full">Open crew package</Button>
 
               </Link>
 

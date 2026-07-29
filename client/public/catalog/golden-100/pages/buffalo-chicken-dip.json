@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 313,
-  "protein": 11,
-  "carbs": 4,
-  "fats": 28,
+  "calories": 660,
+  "protein": 44,
+  "carbs": 6,
+  "fats": 51,
   "tags": [
     "protein:chicken",
     "format:bake",
@@ -115,22 +115,23 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 313,
-    "protein": 11,
-    "carbs": 4,
-    "fats": 28,
-    "label": "per serving (hall portion)",
+    "calories": 660,
+    "protein": 44,
+    "carbs": 6,
+    "fats": 51,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -165,5 +166,46 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.347Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 5,
+    "totalCount": 5,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Cream Cheese, Softened",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Ranch Dressing",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Shredded Cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

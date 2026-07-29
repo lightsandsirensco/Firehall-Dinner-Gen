@@ -13,10 +13,10 @@
   "cookTime": 15,
   "prepTime": 15,
   "difficulty": "medium",
-  "calories": 128,
-  "protein": 4,
-  "carbs": 13,
-  "fats": 8,
+  "calories": 148,
+  "protein": 5,
+  "carbs": 14,
+  "fats": 9,
   "tags": [
     "protein:vegetarian",
     "format:brassica_tray",
@@ -171,12 +171,26 @@
   "mealPrepNotes": "Grill broccolini medium-high 425°F in batches, 6–8 minutes. Hold wrapped at 170°F up to 25 minutes. Lemon oil and parmesan at service.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 128,
-    "protein": 4,
-    "carbs": 13,
-    "fats": 8,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 148,
+    "protein": 5,
+    "carbs": 14,
+    "fats": 9,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/charred-broccolini-lemon-tray.jpg",
   "heroImageAlt": "Sicilian Anchovy Broccolini Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -205,5 +219,52 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.459Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Anchovy Fillets",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "Pine Nuts",
+        "allergens": [
+          "treeNuts"
+        ]
+      },
+      {
+        "name": "Pecorino Romano",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": false,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

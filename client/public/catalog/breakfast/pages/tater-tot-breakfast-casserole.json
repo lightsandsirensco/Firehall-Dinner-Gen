@@ -24,13 +24,13 @@
   "ingredients": [
     {
       "name": "frozen tater tots",
-      "quantity": "2.4",
+      "quantity": "2.4 lb",
       "notes": "straight from freezer",
       "group": "Base"
     },
     {
       "name": "bacon",
-      "quantity": "3/8",
+      "quantity": "1 1/4 lb",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
@@ -42,30 +42,30 @@
     },
     {
       "name": "whole milk",
-      "quantity": "3/8",
+      "quantity": "1 1/4 cups",
       "group": "Egg mix"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "garlic powder",
-      "quantity": "3/4",
+      "quantity": "7/8 tsp",
       "notes": "plus salt and pepper",
       "group": "Seasoning"
     },
     {
       "name": "sliced green onions",
-      "quantity": "1/2",
+      "quantity": "3/8 cup",
       "notes": "plus ranch or hot sauce",
       "group": "Finish"
     },
     {
       "name": "diced bell pepper",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "sautéed soft, optional layer",
       "group": "Optional"
     }
@@ -105,22 +105,23 @@
     }
   ],
   "nutrition": {
-    "calories": 276,
-    "protein": 20,
-    "carbs": 2,
-    "fat": 21,
-    "label": "per serving (hall portion)",
+    "calories": 871,
+    "protein": 47,
+    "carbs": 35,
+    "fat": 59,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -145,5 +146,69 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 7,
   "seoTitle": "Tater Tot Breakfast Casserole | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "frozen tater tots",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

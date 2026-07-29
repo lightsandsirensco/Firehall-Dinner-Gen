@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 352,
-  "protein": 12,
-  "carbs": 37,
-  "fats": 19,
+  "calories": 511,
+  "protein": 23,
+  "carbs": 65,
+  "fats": 20,
   "tags": [
     "protein:vegetarian",
     "format:pasta",
@@ -169,17 +169,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 352,
-    "protein": 12,
-    "carbs": 37,
-    "fats": 19,
-    "label": "per serving (hall portion)",
+    "calories": 511,
+    "protein": 23,
+    "carbs": 65,
+    "fats": 20,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -220,5 +221,57 @@
   "sourceName": "Serious Eats",
   "sourceUrl": "https://www.seriouseats.com/pasta-e-ceci-roman-pasta-and-chickpeas-recipe",
   "generatedAt": "2026-06-04T20:45:42.245Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Ditalini Or Small Shells",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Low-Sodium Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Parmesan Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -115,7 +115,7 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
         trackPersonalOnboardingStepCompleted("profile");
         onOnboardingSaved?.();
       }
-      toast({ title: onboarding ? "Profile saved — one more step" : "Profile saved" });
+      toast({ title: onboarding ? "Profile saved — one more step" : "Profile saved", variant: "success" });
     } catch {
       toast({
         title: "Could not save profile",

@@ -284,7 +284,7 @@ export const batch03: PerformanceAdaptedRecipe[] = [
     mealPrepNotes:
       "Make hummus smooth in a food processor ahead. Slice chicken against the grain for tender bites.",
     stationWorkflow: [
-      "Spread hummus in a large shallow hotel pan for maximum scoop surface.",
+      "Spread hummus in a large shallow baking dish for maximum scoop surface.",
       "Arrange chicken in overlapping rows so portions look generous at the line.",
       "Keep pita wrapped in foil in low oven until service.",
     ],
@@ -346,7 +346,7 @@ export const batch03: PerformanceAdaptedRecipe[] = [
       "Chicken and hummus wrap with extra cucumber.",
       "Hummus dip with raw veg for next-shift snack.",
     ],
-    equipment: ["Food processor", "Half-sheet pan", "Large serving platter or hotel pan"],
+    equipment: ["Food processor", "Half-sheet pan", "Large serving platter or baking dish"],
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
   }),
@@ -723,7 +723,7 @@ export const batch03: PerformanceAdaptedRecipe[] = [
     stationWorkflow: [
       "Poach chicken in broth for maximum flavor—do not use plain water.",
       "Stir lemon juice off heat so broth stays bright, not curdled-looking.",
-      "Keep orzo in a separate hotel pan and add per bowl for best texture.",
+      "Keep orzo in a separate baking dish and add per bowl for best texture.",
     ],
     ingredients: [
       { name: "boneless chicken breasts", quantity: 2, unit: "lb" },

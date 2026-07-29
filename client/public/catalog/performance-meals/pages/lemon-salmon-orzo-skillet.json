@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 18,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 38,
-  "carbs": 48,
-  "fats": 20,
+  "calories": 867,
+  "protein": 60,
+  "carbs": 70,
+  "fats": 36,
   "tags": [
     "protein:salmon",
     "format:pasta",
@@ -33,66 +33,66 @@
   ],
   "ingredients": [
     {
-      "name": "Salmon Fillets",
+      "name": "salmon fillets",
       "quantity": "3.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "6 oz portions, skin-on"
     },
     {
-      "name": "Orzo Pasta",
+      "name": "orzo pasta",
       "quantity": "1.5",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Fresh Spinach",
+      "name": "fresh spinach",
       "quantity": "8",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "packed"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "3",
       "unit": "whole",
       "notes": "zested and juiced"
     },
     {
-      "name": "Capers",
+      "name": "capers",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "drained"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "5",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "low sodium"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Parmesan Cheese",
+      "name": "Parmesan cheese",
       "quantity": "0.75",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "grated"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "0.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -150,11 +150,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 38,
-    "carbs": 48,
-    "fats": 20,
-    "label": "~520 cal/serving · 38g protein · 4g fiber (est.)"
+    "calories": 867,
+    "protein": 60,
+    "carbs": 70,
+    "fats": 36,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
   "heroImageAlt": "Wide firehall crew platter of Lemon Salmon Orzo on a station prep table, family-style serving",
@@ -181,6 +196,64 @@
     "lentil-mushroom-bolognese",
     "turkey-zoodle-bolognese"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.669Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "salmon fillets",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "orzo pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -306,7 +306,7 @@ export const BBQ_30_RECIPES: BbqRecipe[] = [
       "Finishing with a clean sauce gives punch without raw-meat risk.",
     ],
     tonightSpread: [
-      "Pulled pork in a hotel pan with ladle, buns stacked, slaw + pickles on ice.",
+      "Pulled pork in a baking dish with ladle, buns stacked, slaw + pickles on ice.",
       "Optional: set out mustard and hot sauce so everyone can tune their sandwich.",
     ],
     leftovers: [

@@ -1,0 +1,325 @@
+{
+  "generatedAt": "2026-07-27T18:14:55.325Z",
+  "dryRun": false,
+  "ok": 30,
+  "fail": 11,
+  "results": [
+    {
+      "slug": "costco-rotisserie-remix",
+      "collection": "hall-expansion",
+      "sharedWith": "chicken-parm",
+      "action": "generated",
+      "bytes": 1623285,
+      "heuristicOk": true
+    },
+    {
+      "slug": "bbq-pulled-pork-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "pulled-pork",
+      "action": "generated",
+      "bytes": 1565486,
+      "heuristicOk": true
+    },
+    {
+      "slug": "mississippi-pot-roast-crew",
+      "collection": "hall-expansion",
+      "sharedWith": "pulled-pork",
+      "action": "generated",
+      "bytes": 1644334,
+      "heuristicOk": true
+    },
+    {
+      "slug": "weeknight-bbq-ribs-crew",
+      "collection": "hall-expansion",
+      "sharedWith": "pulled-pork",
+      "action": "generated",
+      "bytes": 1652914,
+      "heuristicOk": true
+    },
+    {
+      "slug": "italian-beef-slow-cooker",
+      "collection": "hall-expansion",
+      "sharedWith": "beef-dip",
+      "action": "generated",
+      "bytes": 1622125,
+      "heuristicOk": true
+    },
+    {
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "bbq-chicken-bowls",
+      "action": "generated",
+      "bytes": 1659007,
+      "heuristicOk": true
+    },
+    {
+      "slug": "salsa-verde-chicken-crock",
+      "collection": "hall-expansion",
+      "sharedWith": "bbq-chicken-bowls",
+      "action": "generated",
+      "bytes": 1678396,
+      "heuristicOk": true
+    },
+    {
+      "slug": "chicken-thigh-stretch-dinner",
+      "collection": "hall-expansion",
+      "sharedWith": "bbq-chicken-bowls",
+      "action": "generated",
+      "bytes": 1646284,
+      "heuristicOk": true
+    },
+    {
+      "slug": "four-step-chicken-piccata",
+      "collection": "golden-100",
+      "sharedWith": "crispy-chicken-cutlets",
+      "action": "generated",
+      "bytes": 1684230,
+      "heuristicOk": true
+    },
+    {
+      "slug": "firehall-taco-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "loaded-nacho-skillet",
+      "action": "generated",
+      "bytes": 1604693,
+      "heuristicOk": true
+    },
+    {
+      "slug": "turkey-taco-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "loaded-nacho-skillet",
+      "action": "generated",
+      "bytes": 1538922,
+      "heuristicOk": true
+    },
+    {
+      "slug": "smoker-nachos-crew",
+      "collection": "hall-expansion",
+      "sharedWith": "loaded-nacho-skillet",
+      "action": "generated",
+      "bytes": 1697951,
+      "heuristicOk": true
+    },
+    {
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "collection": "golden-100",
+      "sharedWith": "cedar-plank-salmon",
+      "action": "generated",
+      "bytes": 1629439,
+      "heuristicOk": true
+    },
+    {
+      "slug": "southwest-steak-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "flank-chimichurri",
+      "action": "generated",
+      "bytes": 1606556,
+      "heuristicOk": true
+    },
+    {
+      "slug": "leftover-roast-beef-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "flank-chimichurri",
+      "action": "generated",
+      "bytes": 1650169,
+      "heuristicOk": true
+    },
+    {
+      "slug": "sausage-gnocchi-skillet",
+      "collection": "hall-expansion",
+      "sharedWith": "meatloaf-mashed",
+      "action": "generated",
+      "bytes": 1692858,
+      "heuristicOk": true
+    },
+    {
+      "slug": "mediterranean-beef-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "loaded-baked-potato-bar",
+      "action": "generated",
+      "bytes": 1529220,
+      "heuristicOk": true
+    },
+    {
+      "slug": "loaded-baked-potato-soup-crock",
+      "collection": "hall-expansion",
+      "sharedWith": "loaded-baked-potato-bar",
+      "action": "generated",
+      "bytes": 1547120,
+      "heuristicOk": true
+    },
+    {
+      "slug": "firehall-greek-chicken-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "greek-chicken-bowls",
+      "action": "generated",
+      "bytes": 1667224,
+      "heuristicOk": true
+    },
+    {
+      "slug": "firehall-gyro-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "greek-chicken-bowls",
+      "action": "generated",
+      "bytes": 1532536,
+      "heuristicOk": true
+    },
+    {
+      "slug": "grilled-flank-fajita-bar",
+      "collection": "hall-expansion",
+      "sharedWith": "sheet-pan-fajitas",
+      "action": "generated",
+      "bytes": 1564270,
+      "heuristicOk": true
+    },
+    {
+      "slug": "spanish-rice-chicken-one-pot",
+      "collection": "hall-expansion",
+      "sharedWith": "sheet-pan-fajitas",
+      "action": "generated",
+      "bytes": 1550711,
+      "heuristicOk": true
+    },
+    {
+      "slug": "chipotle-chicken-burrito-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "performance-burrito-bowls",
+      "action": "generated",
+      "bytes": 1637079,
+      "heuristicOk": true
+    },
+    {
+      "slug": "cajun-shrimp-rice-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "garlic-butter-shrimp",
+      "action": "generated",
+      "bytes": 1640709,
+      "heuristicOk": true
+    },
+    {
+      "slug": "salmon-rice-bowls-crew",
+      "collection": "hall-expansion",
+      "sharedWith": "garlic-butter-shrimp",
+      "action": "generated",
+      "bytes": 1721330,
+      "heuristicOk": true
+    },
+    {
+      "slug": "dirty-rice-crew-skillet",
+      "collection": "hall-expansion",
+      "sharedWith": "garlic-butter-shrimp",
+      "action": "generated",
+      "bytes": 1601083,
+      "heuristicOk": true
+    },
+    {
+      "slug": "sheet-pan-meal-prep",
+      "collection": "golden-100",
+      "sharedWith": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "action": "generated",
+      "bytes": 1636312,
+      "heuristicOk": true
+    },
+    {
+      "slug": "buttermilk-pancakes",
+      "collection": "breakfast",
+      "sharedWith": "bbq-chicken-pizza",
+      "action": "generated",
+      "bytes": 1651332,
+      "heuristicOk": true
+    },
+    {
+      "slug": "french-toast-casserole",
+      "collection": "golden-100",
+      "sharedWith": "breakfast-sausage-pizza",
+      "action": "generated",
+      "bytes": 1618334,
+      "heuristicOk": true
+    },
+    {
+      "slug": "pancake-short-stack",
+      "collection": "golden-100",
+      "sharedWith": "chicken-alfredo-bake",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "white-chicken-chili-crock",
+      "collection": "hall-expansion",
+      "sharedWith": "big-chili",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "burnt-ends-chili-crew",
+      "collection": "hall-expansion",
+      "sharedWith": "big-chili",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "pasta-e-fagioli-hall",
+      "collection": "hall-expansion",
+      "sharedWith": "big-chili",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "firehall-korean-beef-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "bulgogi-bowls",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "egg-roll-in-a-bowl-crew",
+      "collection": "hall-expansion",
+      "sharedWith": "bulgogi-bowls",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "bulgogi-bowls",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "teriyaki-chicken-rice-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "teriyaki-donburi",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "peanut-chicken-rice-bowls",
+      "collection": "hall-expansion",
+      "sharedWith": "teriyaki-donburi",
+      "action": "generated",
+      "bytes": 1642363,
+      "heuristicOk": true
+    },
+    {
+      "slug": "thai-peanut-chicken-crock",
+      "collection": "hall-expansion",
+      "sharedWith": "teriyaki-donburi",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "shakshuka-for-the-hall",
+      "collection": "breakfast",
+      "sharedWith": "huevos-rancheros-crew",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    },
+    {
+      "slug": "migas-for-the-crew",
+      "collection": "breakfast",
+      "sharedWith": "menemen-for-the-crew",
+      "action": "error",
+      "error": "OpenAI Images API failed: 400 Billing hard limit has been reached."
+    }
+  ]
+}

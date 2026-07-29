@@ -1,4 +1,5 @@
 import { Component, type ReactNode } from "react";
+import { Flame } from "lucide-react";
 
 interface Props {
   children: ReactNode;
@@ -41,47 +42,25 @@ export class ErrorBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       return (
         <div
-          style={{
-            minHeight: "100vh",
-            backgroundColor: "#141414",
-            color: "#ededed",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            justifyContent: "center",
-            fontFamily: "Inter, sans-serif",
-            padding: "2rem",
-            textAlign: "center",
-          }}
+          role="alert"
+          aria-live="assertive"
+          className="min-h-screen min-h-[100dvh] bg-background text-foreground flex flex-col items-center justify-center px-8 py-16 text-center font-sans"
         >
-          <h1
-            style={{
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "2rem",
-              color: "#e53935",
-              marginBottom: "1rem",
-            }}
-          >
+          <div className="w-20 h-20 rounded-full bg-destructive/10 flex items-center justify-center mb-6 relative">
+            <div className="absolute inset-0 rounded-full bg-destructive/5 animate-ping motion-reduce:animate-none" style={{ animationDuration: "3s" }} />
+            <Flame className="w-10 h-10 text-destructive/70" aria-hidden />
+          </div>
+          <h1 className="font-heading text-2xl sm:text-3xl tracking-tight mb-2">
             Something went wrong
           </h1>
-          <p style={{ color: "#999", marginBottom: "1.5rem", maxWidth: "400px" }}>
-            The app encountered an unexpected error. Please try refreshing the page.
+          <p className="text-muted-foreground text-sm sm:text-base max-w-sm leading-relaxed mb-6">
+            The app hit an unexpected snag. Refreshing usually clears it right up.
           </p>
           <button
             onClick={() => window.location.reload()}
-            style={{
-              backgroundColor: "#e53935",
-              color: "#fff",
-              border: "none",
-              padding: "0.75rem 2rem",
-              borderRadius: "0.375rem",
-              cursor: "pointer",
-              fontFamily: "'Bebas Neue', sans-serif",
-              fontSize: "1.1rem",
-              letterSpacing: "0.05em",
-            }}
+            className="min-h-11 rounded-md bg-primary text-primary-foreground border border-primary-border px-8 font-heading uppercase tracking-wide text-base hover-elevate active-elevate-2"
           >
-            Refresh Page
+            Refresh page
           </button>
         </div>
       );

@@ -42,24 +42,24 @@
     },
     {
       "name": "cooked bacon",
-      "quantity": "8",
+      "quantity": "8 slices",
       "notes": "optional second protein",
       "group": "Protein"
     },
     {
       "name": "cheddar, Swiss, or American cheese",
-      "quantity": "9.6",
+      "quantity": "10 slices",
       "group": "Cheese"
     },
     {
       "name": "cream cheese",
-      "quantity": "6.4",
+      "quantity": "6.4 oz",
       "notes": "plus sliced tomato, spinach, and hot sauce",
       "group": "Toppings"
     },
     {
       "name": "kosher salt",
-      "quantity": "3/4",
+      "quantity": "7/8 tsp",
       "notes": "plus black pepper for eggs",
       "group": "Seasoning"
     }
@@ -107,18 +107,19 @@
     }
   ],
   "nutrition": {
-    "calories": 936,
-    "protein": 52,
-    "carbs": 5,
-    "fat": 79,
-    "label": "per serving (hall portion)",
+    "calories": 983,
+    "protein": 51,
+    "carbs": 68,
+    "fat": 57,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -146,5 +147,70 @@
   "publishedAt": "2026-07-17T20:15:27.731Z",
   "updatedAt": "2026-07-17T20:15:27.731Z",
   "readMinutes": 7,
-  "seoTitle": "Bagel Sandwich Line | Firehall Breakfast"
+  "seoTitle": "Bagel Sandwich Line | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "bagels",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "breakfast sausage patties",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "cooked bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "cheddar, Swiss, or American cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cream cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

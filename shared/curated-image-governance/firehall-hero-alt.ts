@@ -18,7 +18,7 @@ export function buildFirehallHeroImageAlt(title: string, spread?: string[]): str
     return base.length > 160 ? `${base.slice(0, 157)}…` : base;
   }
   if (/\bpasta\s+e\s+ceci\b|\bchickpea/i.test(t)) {
-    const base = `Wide firehall hotel pan of creamy pasta e ceci with visible chickpeas and ditalini pasta on a crew prep table, family-style`;
+    const base = `Wide baking dish of creamy pasta e ceci with visible chickpeas and ditalini pasta on a crew prep table, family-style`;
     return base.length > 160 ? `${base.slice(0, 157)}…` : base;
   }
   if (/\bcajun\b.*\brice\b.*\bbowl\b|\bcajun chicken rice\b/.test(t)) {

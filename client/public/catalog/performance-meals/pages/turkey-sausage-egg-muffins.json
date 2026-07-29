@@ -13,10 +13,10 @@
   "cookTime": 22,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 195,
-  "protein": 18,
-  "carbs": 4,
-  "fats": 11,
+  "calories": 581,
+  "protein": 40,
+  "carbs": 6,
+  "fats": 44,
   "tags": [
     "protein:turkey",
     "format:breakfast",
@@ -34,60 +34,60 @@
   ],
   "ingredients": [
     {
-      "name": "Lean Turkey Breakfast Sausage",
+      "name": "lean turkey breakfast sausage",
       "quantity": "1.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "casings removed"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "18",
       "unit": "whole"
     },
     {
-      "name": "Egg Whites",
+      "name": "egg whites",
       "quantity": "2",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Fresh Spinach",
+      "name": "fresh spinach",
       "quantity": "4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "chopped"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "1",
       "unit": "large",
       "notes": "finely diced"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "medium",
       "notes": "finely diced"
     },
     {
-      "name": "Sharp Cheddar Cheese",
+      "name": "sharp cheddar cheese",
       "quantity": "1.5",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "shredded"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "0.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -145,11 +145,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 195,
-    "protein": 18,
-    "carbs": 4,
-    "fats": 11,
-    "label": "~195 cal/serving · 18g protein · 1g fiber (est.)"
+    "calories": 581,
+    "protein": 40,
+    "carbs": 6,
+    "fats": 44,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/turkey-sausage-egg-muffins.jpg",
   "heroImageAlt": "Wide firehall crew platter of Turkey Sausage Egg Muffins on a station prep table, family-style serving",
@@ -175,6 +190,64 @@
     "turkey-lettuce-wrap-night",
     "turkey-zoodle-bolognese"
   ],
-  "generatedAt": "2026-06-04T20:47:19.354Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.642Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "lean turkey breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "egg whites",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "sharp cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

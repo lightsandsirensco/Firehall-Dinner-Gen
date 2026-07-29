@@ -38,12 +38,12 @@ export default function PlansPage() {
       const result = await selectPlan(planId);
       if (!result.ok) {
         if (result.reason === "sign_in_required") return;
-        toast({ title: "Could not start trial", variant: "destructive" });
+        toast({ title: "Could not switch plans", variant: "destructive" });
         return;
       }
       toast({
-        title: "Your free trial has started",
-        description: "Firefighter Plus is now active on your account.",
+        title: "Firefighter Plus is now active",
+        description: result.body?.message ?? "No charge during preview.",
       });
     } finally {
       setSelecting(null);

@@ -18,8 +18,8 @@
   "crewSize": 8,
   "baseServings": 8,
   "prepTime": 15,
-  "cookTime": 20,
-  "totalTime": 35,
+  "cookTime": 25,
+  "totalTime": 40,
   "difficulty": "easy",
   "ingredients": [
     {
@@ -50,6 +50,12 @@
       "group": "Custard"
     },
     {
+      "name": "breakfast sausage patties",
+      "quantity": "8",
+      "notes": "fully cooked to 165°F internal",
+      "group": "Sausage"
+    },
+    {
       "name": "unsalted butter",
       "quantity": "3 tbsp",
       "notes": "for griddle",
@@ -77,47 +83,54 @@
     },
     {
       "stepNumber": 2,
+      "title": "Cook the sausage patties",
+      "instruction": "While the custard rests, cook the sausage patties in a skillet over medium heat, 3–4 minutes per side, until they reach 165°F internal and no pink remains. Move to a paper-towel-lined plate and tent with foil to keep warm.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
       "title": "Split and dip biscuits",
       "instruction": "Split biscuits horizontally. Dip cut sides in custard 3 seconds per side—do not soak or they fall apart. Let excess drip off before hitting the griddle.",
       "minutes": 8
     },
     {
-      "stepNumber": 3,
+      "stepNumber": 4,
       "title": "Griddle until golden",
       "instruction": "Heat a griddle over medium and melt butter until foaming. Cook dipped biscuit halves cut-side down 3–4 minutes until deep golden, flip, and cook 2–3 minutes more until centers reach 165°F.",
       "minutes": 12
     },
     {
-      "stepNumber": 4,
+      "stepNumber": 5,
       "title": "Glaze and assemble",
-      "instruction": "Brush warm maple butter on the griddle side of each half. Sandwich halves back together so glaze faces out. Hold briefly on the griddle to set the glaze.",
+      "instruction": "Brush warm maple butter on the griddle side of each half. Lay one sausage patty on the bottom half, then sandwich with the top half so glaze faces out. Hold briefly on the griddle to set the glaze and rewarm the sausage.",
       "minutes": 5
     },
     {
-      "stepNumber": 5,
+      "stepNumber": 6,
       "title": "Serve warm",
-      "instruction": "Serve two sliders per plate with optional powdered sugar and berries. Serve immediately while biscuit edges stay crisp and centers are custard-soft.",
+      "instruction": "Serve one slider per plate with optional powdered sugar and berries. Serve immediately while biscuit edges stay crisp and centers are custard-soft.",
       "minutes": 3
     }
   ],
   "nutrition": {
-    "calories": 227,
-    "protein": 5,
-    "carbs": 35,
-    "fat": 8,
-    "label": "per serving (hall portion)",
+    "calories": 798,
+    "protein": 29,
+    "carbs": 73,
+    "fat": 44,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -141,5 +154,81 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 6,
   "seoTitle": "Biscuit French Toast Sliders | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large buttermilk biscuits",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "vanilla extract",
+        "allergens": [
+          "alcohol"
+        ]
+      },
+      {
+        "name": "breakfast sausage patties",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "maple syrup",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -81,14 +81,15 @@
     }
   ],
   "nutrition": {
-    "calories": 371,
-    "protein": 18,
+    "calories": 553,
+    "protein": 39,
     "carbs": 43,
-    "fat": 14,
-    "label": "per serving (hall portion)",
+    "fat": 24,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
@@ -96,9 +97,9 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
     }
   },
   "stationWorkflow": [
@@ -121,5 +122,52 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "BBQ Breakfast Hash | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "pulled pork or brisket",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

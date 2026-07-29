@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 79,
-  "carbs": 160,
-  "fats": 53,
+  "calories": 1234,
+  "protein": 74,
+  "carbs": 107,
+  "fats": 55,
   "tags": [
     "protein:beef",
     "format:wok_flat_top",
@@ -220,12 +220,26 @@
   "mealPrepNotes": "Slice flank thin against the grain and dredge just before searing. Sear in single layers at 450°F — never crowd the surface. Sauce toss happens at service; hold seared strips dry and covered up to 25 minutes.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 79,
-    "carbs": 160,
-    "fats": 53,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 1234,
+    "protein": 74,
+    "carbs": 107,
+    "fats": 55,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/mongolian-beef-flat-top-crew.jpg",
   "heroImageAlt": "Scallion Crisp Mongolian Flank Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -256,5 +270,57 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-07-23T21:10:00.000Z",
-  "contentVersion": 3
+  "contentVersion": 3,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Low-Sodium Soy Sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "Shaoxing Wine",
+        "allergens": [
+          "alcohol"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute broth plus a splash of vinegar for the acidity."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

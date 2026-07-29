@@ -39,6 +39,7 @@
       content="Crew-sized firefighter meals for the fire hall and fire station. Browse hundreds of shift-tested recipes, meal ideas, and tools built by firefighters."
     />
     <meta name="twitter:image" content="https://www.firehallmeals.com/images/golden-100/chicken-parm.jpg" />
+    <meta name="twitter:site" content="@firehallmeals" />
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYT598M5KT"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -48,10 +49,32 @@
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!--
+      Non-render-blocking Google Fonts load: `media="print"` makes the browser
+      fetch the stylesheet without gating first paint on it, then the `onload`
+      swap flips it to `all` once it's ready. `&display=swap` still applies so
+      text renders in a fallback font in the meantime instead of staying
+      invisible. <noscript> covers browsers/bots that don't run the onload JS.
+    -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
       rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
     />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+    <!-- LCP element on "/" — the marketing homepage hero image (see client/src/components/home/home-constants.ts) -->
+    <link rel="preload" as="image" href="/images/brand/home-hero-firetruck.jpg" fetchpriority="high" />
   </head>
   <body>
     <div id="root"></div>

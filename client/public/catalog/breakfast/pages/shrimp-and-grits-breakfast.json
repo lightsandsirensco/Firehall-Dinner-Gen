@@ -104,18 +104,19 @@
     }
   ],
   "nutrition": {
-    "calories": 636,
-    "protein": 43,
-    "carbs": 14,
-    "fat": 44,
-    "label": "per serving (hall portion)",
+    "calories": 789,
+    "protein": 49,
+    "carbs": 45,
+    "fat": 45,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -144,5 +145,80 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Shrimp and Grits Breakfast | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sharp cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large shrimp",
+        "allergens": [
+          "shellfish"
+        ]
+      },
+      {
+        "name": "andouille sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Cajun seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": false,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

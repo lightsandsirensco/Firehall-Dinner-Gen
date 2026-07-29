@@ -10,11 +10,15 @@ import { inferBusyLevelFromTime } from "./busy-level.js";
 export const CREW_SIZE_BUCKETS = ["2-4", "5-8", "9-12", "12+"] as const;
 export type CrewSizeBucketUi = (typeof CREW_SIZE_BUCKETS)[number];
 
-/** Representative crew_size sent to the API for scaling */
+/**
+ * Representative crew_size sent to the API for scaling.
+ * Always the top of the selected range — under-scaling leaves part of a real
+ * crew short on food, which is worse than a few extra portions.
+ */
 export const CREW_BUCKET_TO_SIZE: Record<CrewSizeBucketUi, number> = {
   "2-4": 4,
-  "5-8": 6,
-  "9-12": 10,
+  "5-8": 8,
+  "9-12": 12,
   "12+": 14,
 };
 

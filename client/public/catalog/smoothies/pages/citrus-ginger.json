@@ -78,13 +78,13 @@
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
+    "calories": 53,
+    "protein": 1,
+    "carbs": 13,
     "fats": 0,
     "highlights": "Nutrition estimate coming soon",
     "label": "Estimated per serving",
-    "source": "unavailable",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -98,7 +98,7 @@
       "lighterOption": true,
       "performanceMeal": true
     },
-    "estimateAvailable": false
+    "estimateAvailable": true
   },
   "substitutions": [
     "Bottled 100% orange juice (1.5 cups) replaces fresh oranges in a pinch.",
@@ -153,5 +153,27 @@
     "ice bath pan"
   ],
   "baseServings": 8,
-  "crewSize": 8
+  "crewSize": 8,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": true
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

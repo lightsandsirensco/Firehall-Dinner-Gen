@@ -7,6 +7,7 @@ import {
   FIREHALL_CATEGORY_IDS,
   type FirehallCategoryId,
 } from "./firehall-categories.js";
+import { DIETARY_FILTER_KEYS, type DietaryFilterKey } from "./dietary/schema.js";
 
 export const BROWSE_CANONICAL_PATH = "/explore";
 
@@ -21,6 +22,7 @@ export interface ExploreBrowseFilterPatch {
   highProtein?: boolean;
   lowCleanup?: boolean;
   search?: string;
+  dietary?: DietaryFilterKey[];
 }
 
 export function isFirehallCategoryId(id: string): id is FirehallCategoryId {
@@ -101,6 +103,13 @@ export function parseExploreBrowseSearch(search: string): ExploreBrowseFilterPat
   const searchText = params.get("q") ?? params.get("search");
   if (searchText) patch.search = searchText;
 
+  const dietary = params.get("dietary");
+  if (dietary) {
+    const known = new Set<string>(DIETARY_FILTER_KEYS);
+    const parsed = dietary.split(",").filter((k) => known.has(k)) as DietaryFilterKey[];
+    if (parsed.length > 0) patch.dietary = parsed;
+  }
+
   return patch;
 }
 
@@ -112,6 +121,7 @@ export function buildExploreBrowseSearch(input: {
   highProtein: boolean;
   lowCleanup: boolean;
   searchQuery: string;
+  dietary?: DietaryFilterKey[];
 }): string {
   const params = new URLSearchParams();
 
@@ -122,6 +132,7 @@ export function buildExploreBrowseSearch(input: {
   if (input.highProtein) params.set("highProtein", "1");
   if (input.lowCleanup) params.set("lowCleanup", "1");
   if (input.searchQuery.trim()) params.set("q", input.searchQuery.trim());
+  if (input.dietary && input.dietary.length > 0) params.set("dietary", input.dietary.join(","));
 
   const qs = params.toString();
   return qs ? `?${qs}` : "";

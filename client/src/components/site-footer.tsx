@@ -47,7 +47,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
 
   return (
     <footer
-      className={cn("border-t border-border/20 bg-[hsl(0_0%_5%)]", pbSafe && "pb-safe-nav", className)}
+      className={cn("border-t border-border/20 bg-background", pbSafe && "pb-safe-nav", className)}
       data-testid="site-footer-full"
     >
       <div className="max-w-[1400px] mx-auto px-page py-12 sm:py-14">

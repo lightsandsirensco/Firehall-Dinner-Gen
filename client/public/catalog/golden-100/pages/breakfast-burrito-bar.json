@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 1261,
-  "protein": 63,
-  "carbs": 120,
-  "fats": 60,
+  "calories": 1400,
+  "protein": 70,
+  "carbs": 103,
+  "fats": 78,
   "tags": [
     "protein:pork",
     "format:handheld",
@@ -32,63 +32,95 @@
   ],
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "18",
+      "name": "Large eggs",
+      "quantity": "24",
       "unit": "count",
       "group": "Main"
     },
     {
-      "name": "Buttermilk",
+      "name": "Breakfast sausage or chorizo",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Fillings"
+    },
+    {
+      "name": "Frozen hash browns",
       "quantity": "4",
-      "unit": "Cups",
-      "group": "Batter"
+      "unit": "lb",
+      "group": "Fillings"
     },
     {
-      "name": "All-Purpose Flour",
-      "quantity": "4",
-      "unit": "Cups",
-      "group": "Batter"
-    },
-    {
-      "name": "Thick-Cut Bacon",
+      "name": "Yellow onion, diced",
       "quantity": "2",
-      "unit": "Lb",
-      "group": "Side"
+      "unit": "count",
+      "group": "Fillings"
     },
     {
-      "name": "Maple Syrup",
+      "name": "Bell peppers, diced",
+      "quantity": "3",
+      "unit": "count",
+      "group": "Fillings"
+    },
+    {
+      "name": "Shredded cheddar or pepper jack",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "10-inch flour tortillas",
+      "quantity": "20",
+      "unit": "count",
+      "group": "Build"
+    },
+    {
+      "name": "Salsa or pico de gallo",
       "quantity": "2",
-      "unit": "Cups",
-      "group": "Serve"
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "Hot sauce",
+      "quantity": "1",
+      "unit": "count",
+      "group": "Toppings",
+      "optional": true
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Mix batter gently",
-      "instruction": "Whisk dry and wet separately; combine until just mixed. Lumps are fine — over-mixing makes tough pancakes.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Crisp the hash browns",
+      "instruction": "Heat a large griddle or two skillets over medium-high. Spread hash browns in an even layer, pressing down with a spatula; let brown 8–10 minutes before flipping in sections.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Bake bacon, hold oven",
-      "instruction": "Bake bacon at 400°F on sheet pans 15–18 minutes until crisp. Set oven to 200°F to hold finished pancakes and eggs.",
-      "minutes": 18,
-      "heatLevel": "high"
+      "title": "Brown the sausage and vegetables",
+      "instruction": "In a separate pan, brown sausage or chorizo, breaking it into crumbles. Add onion and peppers; cook until softened and the sausage is fully cooked through. Drain excess fat.",
+      "minutes": 14,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Griddle in batches",
-      "instruction": "Griddle at 375°F: pancakes 2–3 minutes per side until golden; eggs if serving scrambled in batches. Common mistake: heat too high — outside burns before center sets.",
-      "minutes": 20,
+      "title": "Scramble the eggs",
+      "instruction": "Whisk eggs with a pinch of salt. Scramble gently over medium heat until just set; fold in half the cheese off heat so it melts without turning rubbery.",
+      "minutes": 10,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Serve the line",
-      "instruction": "Breakfast Burrito Bar does not wait — call the crew as batches finish. Syrup and butter on the table; backup tray in the 200°F oven.",
-      "minutes": 5,
+      "title": "Set up the burrito bar",
+      "instruction": "Warm tortillas wrapped in foil in a low oven. Lay out hash browns, sausage mix, eggs, remaining cheese, salsa, and hot sauce in separate pans so the crew builds their own.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Roll and hold",
+      "instruction": "Fill and roll burritos, tucking in the sides first, then rolling forward tight. Hold finished burritos seam-side down on a sheet pan in a 200°F oven so the line stays hot as people filter through.",
+      "minutes": 8,
       "heatLevel": "low"
     }
   ],
@@ -98,7 +130,7 @@
   ],
   "tonightSpread": [
     "Label every topping bowl — rookies grab faster when they can read the line.",
-    "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+    "Keep hot bases (potatoes, chips) in lidded containers at 200°F and cold toppings on ice if service runs long.",
     "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
     "Keep hot items on one side of the table and cold on the other — eggs stay hot, fruit stays cold.",
     "Line up Breakfast Burrito Bar on the main counter with serving spoons — firefighters grab fast between calls.",
@@ -113,12 +145,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1261,
-    "protein": 63,
-    "carbs": 120,
-    "fats": 60,
-    "label": "per serving (hall portion)",
+    "calories": 1400,
+    "protein": 70,
+    "carbs": 103,
+    "fats": 78,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -160,6 +193,69 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.325Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:33:03.251Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Breakfast sausage or chorizo",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Shredded cheddar or pepper jack",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "10-inch flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

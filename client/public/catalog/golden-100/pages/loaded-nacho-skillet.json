@@ -176,5 +176,51 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.138Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Taco Seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Shredded Cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

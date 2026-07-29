@@ -31,17 +31,17 @@
     },
     {
       "name": "breakfast sausage patties or links",
-      "quantity": "2",
+      "quantity": "1.6 lb",
       "notes": "cooked through"
     },
     {
       "name": "sliced cheese",
-      "quantity": "1.6",
+      "quantity": "1.6 cups",
       "notes": "American or cheddar"
     },
     {
       "name": "butter",
-      "quantity": "3.2",
+      "quantity": "3.4 tbsp",
       "notes": "for toasting buns"
     },
     {
@@ -77,12 +77,13 @@
     }
   ],
   "nutrition": {
-    "calories": 660,
-    "protein": 28,
-    "carbs": 45,
-    "fat": 40,
-    "label": "per serving (hall portion)",
+    "calories": 565,
+    "protein": 30,
+    "carbs": 26,
+    "fat": 38,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -117,5 +118,74 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 5,
   "seoTitle": "Breakfast Sandwich Trays | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "English muffins or brioche buns",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "breakfast sausage patties or links",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "sliced cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

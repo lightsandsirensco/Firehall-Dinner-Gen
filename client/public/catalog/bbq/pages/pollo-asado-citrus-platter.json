@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 579,
-  "protein": 51,
-  "carbs": 60,
-  "fats": 14,
+  "calories": 397,
+  "protein": 46,
+  "carbs": 36,
+  "fats": 7,
   "tags": [
     "protein:chicken",
     "format:smokehouse_board",
@@ -176,12 +176,26 @@
   "mealPrepNotes": "Marinate 4–12 hours. Griddle medium 400°F skin-side down first, 35 minutes total. Hold covered at 170°F up to 40 minutes. Jicama chars last 6 minutes.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 579,
-    "protein": 51,
-    "carbs": 60,
-    "fats": 14,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 397,
+    "protein": 46,
+    "carbs": 36,
+    "fats": 7,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/smoker-catalog/pollo-asado-citrus-platter.jpg",
   "heroImageAlt": "Yucatán Achiote Pollo Asado Spread — crew-sized BBQ spread with visible smoke and bark",
@@ -211,5 +225,27 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.437Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

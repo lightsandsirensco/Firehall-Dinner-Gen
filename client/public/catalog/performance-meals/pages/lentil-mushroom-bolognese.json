@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 420,
-  "protein": 20,
-  "carbs": 68,
-  "fats": 10,
+  "calories": 616,
+  "protein": 26,
+  "carbs": 112,
+  "fats": 8,
   "tags": [
     "protein:plant",
     "format:pasta",
@@ -34,72 +34,72 @@
   ],
   "ingredients": [
     {
-      "name": "Green Lentils",
+      "name": "green lentils",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry, rinsed"
     },
     {
-      "name": "Cremini Mushrooms",
+      "name": "cremini mushrooms",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "finely chopped"
     },
     {
-      "name": "Whole-Wheat Spaghetti",
+      "name": "whole-wheat spaghetti",
       "quantity": "2",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Crushed Tomatoes",
+      "name": "crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "finely diced"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "2",
       "unit": "whole",
       "notes": "finely diced"
     },
     {
-      "name": "Celery Stalks",
+      "name": "celery stalks",
       "quantity": "2",
       "unit": "whole",
       "notes": "finely diced"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Dry Red Wine",
+      "name": "dry red wine",
       "quantity": "1",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Vegetable Broth",
+      "name": "vegetable broth",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "low sodium"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     }
   ],
   "steps": [
@@ -153,15 +153,30 @@
     "Lasagna layers with ricotta and sauce."
   ],
   "whyCrewsLikeIt": "Meaty texture without meat. Budget-friendly and fiber-rich for crews trying to eat more plants.",
-  "mealPrepNotes": "Pulse mushrooms in food processor for fine crumb texture. Cook lentils separately if using pre-cooked. Station: Brown mushrooms in batches—crowded mushrooms steam instead of caramelize. Station: Simmer sauce wide and uncovered so it reduces to thick ragu consistency. Station: Toss pasta with sauce in largest pot or hotel pan for even coating.",
+  "mealPrepNotes": "Pulse mushrooms in food processor for fine crumb texture. Cook lentils separately if using pre-cooked. Station: Brown mushrooms in batches—crowded mushrooms steam instead of caramelize. Station: Simmer sauce wide and uncovered so it reduces to thick ragu consistency. Station: Toss pasta with sauce in largest pot or baking dish for even coating.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 420,
-    "protein": 20,
-    "carbs": 68,
-    "fats": 10,
-    "label": "~420 cal/serving · 20g protein · 14g fiber (est.)"
+    "calories": 616,
+    "protein": 26,
+    "carbs": 112,
+    "fats": 8,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/lentil-mushroom-bolognese.jpg",
   "heroImageAlt": "Wide firehall crew platter of Lentil Bolognese on a station prep table, family-style serving",
@@ -188,6 +203,58 @@
     "white-bean-kale-soup",
     "turkey-zoodle-bolognese"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.679Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "whole-wheat spaghetti",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "dry red wine",
+        "allergens": [
+          "alcohol"
+        ]
+      },
+      {
+        "name": "vegetable broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": true
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute broth plus a splash of vinegar for the acidity."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

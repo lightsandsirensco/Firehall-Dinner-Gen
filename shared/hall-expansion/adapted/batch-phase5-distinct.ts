@@ -17,7 +17,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "Smoked meat night feels like a hall field trip to the old neighborhood. Sliced thin and piled high, it feeds fast between tones and satisfies the crew that wants real sandwich meat, not deli turkey from a plastic sleeve.",
     mealPrepNotes:
-      "Cure brisket up to 48 hours ahead for deeper flavor. Steam sliced meat in hotel pans with a splash of broth so it stays moist on the hold line. Slice against the grain as thin as your knife skills allow.",
+      "Cure brisket up to 48 hours ahead for deeper flavor. Steam sliced meat in baking dishes with a splash of broth so it stays moist on the hold line. Slice against the grain as thin as your knife skills allow.",
     stationWorkflow: [
       "Weigh brisket before curing so salt ratios stay consistent across batches.",
       "Rest roasted brisket wrapped in foil at least 30 minutes before slicing—rushing this step costs you juice.",
@@ -44,7 +44,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       step(1, "Cure the brisket", "Mix salt, cracked coriander, pepper, garlic powder, and brown sugar. Coat brisket evenly, wrap tight, and refrigerate 24–48 hours, flipping once.", { minutes: 20 }),
       step(2, "Roast low and slow", "Rinse cure lightly, pat dry, and roast uncovered at 275°F fat-side up until probe-tender at 203°F internal, about 4–5 hours.", { minutes: 270, tempF: 275 }),
       step(3, "Rest and chill slightly", "Wrap brisket in foil and rest 30 minutes. Chill 1 hour if you want cleaner slices—warm meat still works for service night.", { minutes: 30 }),
-      step(4, "Slice and steam", "Slice against the grain as thin as possible. Layer in hotel pans with a splash of warm broth, cover, and steam or hold at 165°F until service.", { minutes: 20 }),
+      step(4, "Slice and steam", "Slice against the grain as thin as possible. Layer in baking dishes with a splash of warm broth, cover, and steam or hold at 165°F until service.", { minutes: 20 }),
       step(5, "Build the platter line", "Fan sliced meat on platters with rye, mustard, pickles, and coleslaw. Let crew stack their own sandwiches or plate open-face for speed.", { minutes: 10 }),
     ],
     proTips: [
@@ -60,7 +60,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       "Chop and griddle with onions for smoked meat hash with fried eggs.",
       "Layer into grilled cheese with Swiss for a hall-style melt.",
     ],
-    equipment: ["Roasting pan", "Instant-read thermometer", "Hotel pans", "Sharp slicer knife", "Cutting board"],
+    equipment: ["Roasting pan", "Instant-read thermometer", "baking dishes", "Sharp slicer knife", "Cutting board"],
     nutrition: { calories: 520, protein: 42, carbs: 38, fats: 22, fiber: 3 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -277,8 +277,8 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       "Par-fry potatoes earlier in the day and finish-fry at service. Gravy must be hot enough to soften curds but not so hot it breaks them to mush. Work in batches so fries stay crisp.",
     stationWorkflow: [
       "Salt fries immediately out of the second fry so seasoning sticks.",
-      "Hold gravy in a bain-marie at 180°F—too cool and curds never melt right.",
-      "Assemble to order or in small hotel pans max—soggy poutine kills morale.",
+      "Hold gravy in a pot set over low heat at 180°F—too cool and curds never melt right.",
+      "Assemble to order or in small baking dishes max—soggy poutine kills morale.",
     ],
     prepMinutes: 35,
     cookMinutes: 40,
@@ -593,7 +593,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "Goulash is cold-weather hall fuel. It is hearty without being greasy, spices are warm not blow-your-head-off, and one pot feeds everyone including the probie who always takes seconds.",
     mealPrepNotes:
-      "Cut beef uniform for even cooking. Stew tastes better the next day. Hold at 165°F in hotel pans with a thin broth layer so meat does not dry.",
+      "Cut beef uniform for even cooking. Stew tastes better the next day. Hold at 165°F in baking dishes with a thin broth layer so meat does not dry.",
     stationWorkflow: [
       "Brown beef in batches—do not skip this step or stew tastes flat.",
       "Add paprika off high heat so it blooms without scorching.",
@@ -636,7 +636,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       "Thicken with a little flour and wrap in pastry for goulash hand pies.",
       "Serve over spaetzle if you have egg noodles gone.",
     ],
-    equipment: ["Dutch oven", "Wooden spoon", "Ladle", "Cutting board", "Hotel pan"],
+    equipment: ["Dutch oven", "Wooden spoon", "Ladle", "Cutting board", "baking dish"],
     nutrition: { calories: 480, protein: 38, carbs: 34, fats: 20, fiber: 4 },
     spiceLevel: "mild",
     cleanupDifficulty: "easy",
@@ -750,7 +750,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       step(1, "Simmer chicken broth", "Poach chicken thighs in broth with ginger and garlic 25 minutes until cooked through. Remove chicken, shred, and reserve.", { minutes: 25 }),
       step(2, "Finish miso base", "Keep broth at a gentle simmer. Remove from heat, whisk white and red miso until dissolved, then return to low heat without boiling.", { minutes: 10 }),
       step(3, "Sear tofu", "Pat tofu dry, sear in oil until golden on multiple sides. Hold warm with shredded chicken.", { minutes: 12 }),
-      step(4, "Set the bar", "Line up sprouts, corn, eggs, scallions, tofu, and chicken in hotel pans. Keep broth hot in a large pot.", { minutes: 15 }),
+      step(4, "Set the bar", "Line up sprouts, corn, eggs, scallions, tofu, and chicken in baking dishes. Keep broth hot in a large pot.", { minutes: 15 }),
       step(5, "Assemble bowls", "Cook noodles, divide into bowls, ladle miso broth over, and let crews pick toppings.", { minutes: 10 }),
     ],
     proTips: [
@@ -766,7 +766,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       "Broth reheats gently—do not boil or miso flavor dulls.",
       "Shredded chicken becomes lettuce wraps with miso dressing.",
     ],
-    equipment: ["Large pot", "Skillet", "Noodle baskets", "Hotel pans", "Whisk"],
+    equipment: ["Large pot", "Skillet", "Noodle baskets", "baking dishes", "Whisk"],
     nutrition: { calories: 460, protein: 34, carbs: 48, fats: 14, fiber: 3 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -833,13 +833,13 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       step(
         4,
         "Poach chicken breast",
-        "Slide in 2 lb thin-sliced chicken breast. Return to a gentle simmer and cook 8–10 minutes until chicken is opaque white throughout and reads 165°F in the thickest piece. Transfer chicken to a hotel pan, shred or slice, and cover loosely.",
+        "Slide in 2 lb thin-sliced chicken breast. Return to a gentle simmer and cook 8–10 minutes until chicken is opaque white throughout and reads 165°F in the thickest piece. Transfer chicken to a baking dish, shred or slice, and cover loosely.",
         { minutes: 10, tempF: 165 },
       ),
       step(
         5,
         "Cook and cool rice noodles",
-        "Soak or boil 1.5 lb thick rice noodles per package until tender but still springy. Drain, rinse under cold water to stop cooking, toss with a few drops of oil, and portion into bowls or a labeled hotel pan for the line.",
+        "Soak or boil 1.5 lb thick rice noodles per package until tender but still springy. Drain, rinse under cold water to stop cooking, toss with a few drops of oil, and portion into bowls or a labeled baking dish for the line.",
         { minutes: 10 },
       ),
       step(
@@ -851,7 +851,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       step(
         7,
         "Brighten with lime and hold",
-        "Remove the pot from heat. Stir in 1/4 cup lime juice and taste once more—the broth should finish bright and slightly tangy. For holding, keep broth in the pot or a hotel pan at 170°F max; do not boil while holding or coconut fat may split.",
+        "Remove the pot from heat. Stir in 1/4 cup lime juice and taste once more—the broth should finish bright and slightly tangy. For holding, keep broth in the pot or a baking dish at 170°F max; do not boil while holding or coconut fat may split.",
         { minutes: 3, tempF: 170 },
       ),
       step(
@@ -874,7 +874,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
       "Reheat broth and chicken gently to 165°F—never boil or coconut fat splits. Poach fresh shrimp in the reheated broth for 2–3 minutes at service.",
       "Extra laksa paste freezes in ice cube trays for quick future batches.",
     ],
-    equipment: ["Large pot", "Ladle", "Tongs", "Bowls", "Hotel pans"],
+    equipment: ["Large pot", "Ladle", "Tongs", "Bowls", "baking dishes"],
     nutrition: { calories: 490, protein: 36, carbs: 46, fats: 18, fiber: 2 },
     spiceLevel: "medium",
     cleanupDifficulty: "medium",

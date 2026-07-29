@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 680,
-  "protein": 18,
-  "carbs": 72,
-  "fats": 36,
+  "calories": 810,
+  "protein": 32,
+  "carbs": 68,
+  "fats": 46,
   "tags": [
     "protein:beef",
     "format:platter",
@@ -156,19 +156,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 680,
-    "protein": 18,
-    "carbs": 72,
-    "fats": 36,
-    "label": "~680 cal/serving · 18g protein · 5g fiber (est.)",
-    "source": "estimated",
+    "calories": 810,
+    "protein": 32,
+    "carbs": 68,
+    "fats": 46,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/classic-poutine-feed-crew.jpg",
@@ -191,5 +197,70 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "beef drippings or butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "all-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Worcestershire sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      },
+      {
+        "name": "cheese curds",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free Worcestershire sauce."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

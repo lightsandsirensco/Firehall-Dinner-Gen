@@ -10,13 +10,13 @@
   "description": "Marinated skewers, pita-ready. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 131,
-  "prepTime": 26,
+  "cookTime": 55,
+  "prepTime": 20,
   "difficulty": "medium",
-  "calories": 501,
-  "protein": 88,
-  "carbs": 0,
-  "fats": 14,
+  "calories": 841,
+  "protein": 60,
+  "carbs": 56,
+  "fats": 41,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -35,70 +35,119 @@
   ],
   "ingredients": [
     {
-      "name": "Whole Chicken Or Bone-In Thighs",
-      "quantity": "5",
-      "unit": "Lb",
+      "name": "Boneless chicken thighs, cubed",
+      "quantity": "4",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Beer Can",
+      "name": "Fresh lemon juice",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "Garlic cloves, minced",
+      "quantity": "6",
+      "unit": "count",
+      "group": "Marinade"
+    },
+    {
+      "name": "Dried oregano",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "Plain Greek yogurt",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Tzatziki"
+    },
+    {
+      "name": "English cucumber, grated and squeezed dry",
       "quantity": "1",
       "unit": "count",
-      "notes": "room temp, half full",
-      "group": "Roast"
+      "group": "Tzatziki"
     },
     {
-      "name": "Jerk Or Poultry Rub",
-      "quantity": "3",
-      "unit": "Tbsp",
-      "group": "Seasoning"
-    },
-    {
-      "name": "Kosher Salt",
+      "name": "Fresh dill, chopped",
       "quantity": "2",
-      "unit": "Tbsp",
-      "group": "Seasoning"
+      "unit": "tbsp",
+      "group": "Tzatziki"
     },
     {
-      "name": "Lime Juice",
-      "quantity": "3",
-      "unit": "Tbsp",
-      "group": "Finish"
+      "name": "Pita bread",
+      "quantity": "12",
+      "unit": "count",
+      "group": "Build"
     },
     {
-      "name": "Vegetable Oil",
+      "name": "Cherry tomatoes, halved",
       "quantity": "2",
-      "unit": "Tbsp",
-      "group": "Seasoning"
+      "unit": "pints",
+      "group": "Build"
+    },
+    {
+      "name": "Red onion, thinly sliced",
+      "quantity": "1",
+      "unit": "count",
+      "group": "Build"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Season under the skin",
-      "instruction": "Dry chicken thoroughly. Season under skin and in cavity. For beer-can method: open a room-temp beer, set can in cavity, stand bird on indirect zone.",
-      "minutes": 15,
+      "title": "Marinate the chicken",
+      "instruction": "Cube chicken thighs into 1½-inch pieces. Whisk lemon juice, olive oil, garlic, oregano, and salt; toss with chicken. Marinate at least 30 minutes, up to 4 hours, in the fridge.",
+      "minutes": 35,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Grill indirect then crisp",
-      "instruction": "Run grill 375°F indirect with lid down until thickest part reads 165°F (60–75 minutes for a whole bird). Move to direct heat 5 minutes to crisp skin. Juices should run clear, not pink.",
-      "minutes": 70,
-      "heatLevel": "medium"
+      "title": "Skewer and heat the grill",
+      "instruction": "Thread marinated chicken onto skewers, leaving small gaps between pieces so every side gets heat. Heat a grill or large grill pan to medium-high.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
-      "title": "Rest and portion",
-      "instruction": "Rest 10 minutes before carving. Chicken Souvlaki stays juicier if you don't slice immediately. Hold quarters on sheet trays at 180°F for late eaters.",
+      "title": "Grill the skewers",
+      "instruction": "Grill skewers 10–12 minutes, turning every few minutes, until deeply charred on the edges and the thickest piece reads 165°F.",
       "minutes": 12,
-      "heatLevel": "low"
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
-      "title": "Carve for the line",
-      "instruction": "Quarter birds or slice thighs. Serve on sheet trays with pan juices — backup bird stays whole in a 180°F oven up to 25 minutes.",
+      "title": "Mix the tzatziki",
+      "instruction": "Stir Greek yogurt, grated cucumber (squeezed dry in a towel), dill, a squeeze of lemon, and a pinch of salt into a cool, tangy sauce. Keep chilled until service.",
+      "minutes": 10,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Warm the pita and build the line",
+      "instruction": "Warm pitas briefly on the grill or in a dry skillet, about 30 seconds per side. Set out skewers, warm pita, tzatziki, tomatoes, and red onion so the crew builds their own wraps.",
       "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop, pull skewers off direct heat and hold on the cool side of the grill or in a 200°F oven. Tzatziki and cold toppings hold fine on ice for a stretch.",
+      "minutes": 5,
       "heatLevel": "low"
     }
   ],
@@ -127,24 +176,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 501,
-    "protein": 88,
-    "carbs": 0,
-    "fats": 14,
+    "calories": 841,
+    "protein": 60,
+    "carbs": 56,
+    "fats": 41,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/chicken-souvlaki.jpg",
@@ -174,6 +223,47 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.237Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:33:03.239Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Plain Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Pita bread",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

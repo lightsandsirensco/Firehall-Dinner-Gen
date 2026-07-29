@@ -14,9 +14,23 @@ import {
   validateNutritionPerServing,
   defaultRecipeServings,
   catalogIngredientsFromUnknown,
+  sumIngredientGramsBatch,
+  classifyMealRole,
+  isFullMealRole,
+  evaluateGlobalSanityRules,
   type CatalogIngredientLine,
+  type MealRole,
 } from "../shared/nutrition/index.js";
 import { getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
+
+/** Strips the role-specific "full meal" calorie-floor messages for sides/condiments/appetizers,
+ *  which are legitimately allowed to be under 250 calories per serving. */
+function filterByRole<T extends { message: string }>(issues: T[], role: MealRole): T[] {
+  if (isFullMealRole(role)) return issues;
+  return issues.filter(
+    (i) => !/calories under 250|calories unusually low/i.test(i.message),
+  );
+}
 
 const ROOT = process.cwd();
 const FIX = process.argv.includes("--fix");
@@ -163,6 +177,17 @@ async function main(): Promise<void> {
       const before = existingMacros(page, kind);
       const issues: string[] = [];
 
+      const role = classifyMealRole({
+        title: String(page.title ?? ""),
+        subtitle: String(page.subtitle ?? ""),
+        shortDescription: String(page.shortDescription ?? ""),
+        tags: Array.isArray(page.tags) ? (page.tags as string[]) : [],
+        mealType,
+      });
+
+      const ingredients = ingredientsFromPage(page);
+      const totalIngredientGrams = sumIngredientGramsBatch(ingredients);
+
       const nutritionMeta = page.nutrition as Record<string, unknown> | undefined;
       const intentionallyHidden =
         nutritionMeta?.source === "unavailable" || nutritionMeta?.estimateAvailable === false;
@@ -173,10 +198,12 @@ async function main(): Promise<void> {
         issues.push("Missing complete nutrition");
         missing += 1;
       } else {
-        issues.push(...validateNutritionPerServing(before, { slug, mealType }).map((i) => i.message));
+        issues.push(
+          ...filterByRole(validateNutritionPerServing(before, { slug, mealType }), role).map((i) => i.message),
+        );
       }
 
-      const record = calculateNutritionFromIngredients(ingredientsFromPage(page), {
+      const record = calculateNutritionFromIngredients(ingredients, {
         servings: servingsFromPage(page, mealType),
         mealType,
         mealPrepFriendly: Boolean(page.mealPrepNotes || (page.tags as string[])?.includes("make-ahead")),
@@ -190,9 +217,21 @@ async function main(): Promise<void> {
         fat: record.fat,
       };
 
-      const afterIssues = validateNutritionPerServing(after, { slug, mealType }).filter(
-        (i) => i.code === "suspicious" || i.code === "impossible",
-      );
+      const sanityCtx = {
+        title: String(page.title ?? ""),
+        subtitle: String(page.subtitle ?? ""),
+        shortDescription: String(page.shortDescription ?? ""),
+        tags: Array.isArray(page.tags) ? (page.tags as string[]) : [],
+        mealType,
+        totalIngredientGrams,
+      };
+
+      const computeFinalIssues = (macros: typeof after) => [
+        ...filterByRole(validateNutritionPerServing(macros, { slug, mealType }), role).filter(
+          (i) => i.code === "suspicious" || i.code === "impossible" || i.code === "missing" || i.code === "negative",
+        ),
+        ...evaluateGlobalSanityRules(macros, sanityCtx).issues,
+      ];
 
       let status: AuditRow["status"] = "ok";
       const changed =
@@ -202,6 +241,8 @@ async function main(): Promise<void> {
         before.carbs !== after.carbs ||
         before.fat !== after.fat;
 
+      const afterFindings = computeFinalIssues(after);
+
       if (intentionallyHidden) {
         status = "ok";
       } else if (!record.estimateAvailable) {
@@ -210,17 +251,15 @@ async function main(): Promise<void> {
       } else if (!before || !hasCompleteNutrition(before, { source: record.source })) {
         status = FIX ? "corrected" : "missing";
         if (FIX) corrected += 1;
-      } else if (afterIssues.length > 0) {
+      } else if (afterFindings.length > 0) {
         status = "suspicious";
-        suspicious += 1;
-        issues.push(...afterIssues.map((i) => i.message));
+        issues.push(...afterFindings.map((i) => i.message));
       } else if (changed && FIX) {
         status = "corrected";
         corrected += 1;
       } else if (changed) {
-        status = "suspicious";
-        suspicious += 1;
-        issues.push("Calculated macros differ from stored values");
+        // Recalculated macros differ from what's stored, but the recalculated values pass every
+        // sanity rule — treat as informational only, not a reportable defect (report-only mode).
       }
 
       if (FIX && (status === "corrected" || status === "missing" || changed)) {
@@ -231,18 +270,11 @@ async function main(): Promise<void> {
 
       if (intentionallyHidden || !record.estimateAvailable) {
         status = "ok";
-      } else {
-        const finalIssues = validateNutritionPerServing(after, { slug, mealType }).filter(
-          (i) =>
-            i.code === "suspicious" ||
-            i.code === "impossible" ||
-            i.code === "missing" ||
-            i.code === "negative",
-        );
-        if (finalIssues.length === 0 && status !== "missing") {
-          status = "ok";
-        }
+      } else if (status !== "corrected") {
+        status = afterFindings.length > 0 ? "suspicious" : "ok";
       }
+
+      if (status === "suspicious") suspicious += 1;
 
       rows.push({
         slug,

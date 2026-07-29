@@ -1,0 +1,269 @@
+{
+  "slug": "kung-pao-chicken-rice-bowls",
+  "title": "Kung Pao Chicken & Rice Bowls",
+  "displayTitle": "Kung Pao Chicken & Rice Bowls",
+  "seoTitle": "Kung Pao Chicken & Rice Bowls | Firefighter Meal",
+  "shortDescription": "Braised chicken thighs in a tangy soy-vinegar kung pao sauce with peanuts and scallions over rice",
+  "subtitle": "Braised chicken thighs in a tangy soy-vinegar kung pao sauce with peanuts and scallions over rice",
+  "category": "healthy_performance",
+  "cuisine": "Sichuan/Chinese",
+  "description": "Chicken thigh chunks braise directly in a tangy soy-vinegar-chili kung pao sauce with garlic and ginger until tender and glossy, served over rice with roasted peanuts and scallions scattered on fresh at the table for crunch.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 789,
+  "protein": 50,
+  "carbs": 66,
+  "fats": 35,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large skillet or wok",
+    "Rice pot"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless, skinless chicken thighs",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "cut into 1.5-inch chunks"
+    },
+    {
+      "name": "cornstarch",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "dried red chilies",
+      "quantity": "8",
+      "unit": "whole"
+    },
+    {
+      "name": "Sichuan peppercorns",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "optional"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "minced"
+    },
+    {
+      "name": "roasted unsalted peanuts",
+      "quantity": "1",
+      "unit": "cup"
+    },
+    {
+      "name": "black vinegar or rice vinegar",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "sugar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "0.75",
+      "unit": "cup",
+      "notes": "low sodium"
+    },
+    {
+      "name": "scallions",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "cut into 1-inch pieces"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the rice",
+      "instruction": "Rinse and cook jasmine rice per package directions; fluff and hold covered while the braise comes together.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the chicken",
+      "instruction": "Heat 2 tbsp oil in a large skillet or wok over medium-high. Add chicken chunks and brown 5–6 minutes until golden outside—it will finish cooking in the braise.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Bloom chilies and aromatics",
+      "instruction": "Push chicken to one side, add remaining oil, dried chilies, and Sichuan peppercorns; stir 30 seconds until fragrant and the oil turns red. Add garlic and ginger, stir 20 seconds more.",
+      "minutes": 2,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Braise in the sauce",
+      "instruction": "Whisk soy sauce, vinegar, sugar, cornstarch, and broth; pour over the chicken. Bring to a simmer, cover, and cook 12–15 minutes until chicken is tender and the sauce has thickened and turned glossy.",
+      "minutes": 15,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with peanuts and scallions",
+      "instruction": "Off heat, stir in peanuts and scallions right before serving so they stay crunchy, not soft. Serve over rice.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "The dried chilies are for aroma, not necessarily for eating—warn the crew not to bite into them whole.",
+    "Cashews work as a substitute if peanuts aren't on hand.",
+    "This braises hands-off—no need to watch it every second the way a wok stir-fry demands."
+  ],
+  "tonightSpread": [
+    "Steamed jasmine rice.",
+    "Quick cucumber salad with rice vinegar."
+  ],
+  "leftovers": [
+    "Reheats beautifully on the stove or microwave—braised thighs don't turn rubbery the way stir-fried breast can.",
+    "Chop into fried rice with leftover jasmine rice."
+  ],
+  "whyCrewsLikeIt": "All the sweet-tangy-savory kung pao flavor the crew already loves, minus the flash-wok timing pressure—this one simmers, holds, and reheats like a real braise. Peanuts added fresh at the end keep the crunch nobody expects from a healthy dinner.",
+  "mealPrepNotes": "This braises hands-off once it's going—stir occasionally but there's no wok-timing pressure. Add peanuts only at serving so they stay crunchy. Station: Brown the chicken first for flavor, then let the sauce actually simmer—this is a braise, not a flash stir-fry. Station: Add peanuts and scallions fresh at serving, not during cooking, so they don't go soft sitting in the sauce. Station: If a call interrupts mid-simmer, cover and hold on low—kung pao only gets better with extra time.",
+  "spiceLevel": "hot",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 789,
+    "protein": 50,
+    "carbs": 66,
+    "fats": 35,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Kung Pao Chicken & Rice Bowls on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "kung pao chicken & rice bowls",
+    "kung pao chicken rice bowls",
+    "chicken",
+    "Sichuan/Chinese",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "korean-beef-rice-bowls",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.702Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "roasted unsalted peanuts",
+        "allergens": [
+          "peanuts"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

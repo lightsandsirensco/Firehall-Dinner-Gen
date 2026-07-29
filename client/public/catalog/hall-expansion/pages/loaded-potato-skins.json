@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 18,
-  "carbs": 38,
-  "fats": 28,
+  "calories": 1178,
+  "protein": 57,
+  "carbs": 53,
+  "fats": 81,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -157,19 +157,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 480,
-    "protein": 18,
-    "carbs": 38,
-    "fats": 28,
-    "label": "~480 cal/serving · 18g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 1178,
+    "protein": 57,
+    "carbs": 53,
+    "fats": 81,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/loaded-potato-skins.jpg",
@@ -192,5 +198,52 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "sharp cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -359,7 +359,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
   });
 
   return (
-    <div className={cn(app.sectionGap, "meal-reveal motion-reduce:animate-none animate-in fade-in slide-in-from-bottom-3 duration-500")}>
+    <div className={cn(app.sectionGap, "meal-reveal motion-reduce:animate-none")}>
       {recipe.hero_image && recipe.hero_image_status === "ready" ? (
         <MealHeroImage
           src={recipe.hero_image}
@@ -387,7 +387,8 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           ) : (
             <div className="absolute inset-0 bg-gradient-to-br from-zinc-900 via-zinc-950 to-black" />
           )}
-          <div className="absolute inset-0 bg-black/25 animate-pulse pointer-events-none" />
+          <div className="absolute inset-0 bg-black/25 pointer-events-none" />
+          <div className="absolute inset-0 opacity-40 skeleton-shimmer pointer-events-none" />
         </div>
       ) : fallbackHero ? (
         <MealHeroImage
@@ -474,12 +475,14 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           )}
         </div>
 
-        <RecipeMeasurementBar>
-          <p className="text-sm text-muted-foreground">
-            Crew size:{" "}
-            <span className="font-medium text-foreground">{crewSize} firefighters</span>
-          </p>
-        </RecipeMeasurementBar>
+        <div className="my-4">
+          <RecipeMeasurementBar>
+            <p className="text-sm text-muted-foreground">
+              Crew size:{" "}
+              <span className="font-medium text-foreground">{crewSize} firefighters</span>
+            </p>
+          </RecipeMeasurementBar>
+        </div>
 
         <div className="space-y-2">
           {cookModeRecipe.steps.length > 0 ? (
@@ -669,7 +672,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <button
             type="button"
             onClick={toggleProTips}
-            className="flex items-center gap-2 text-sm text-muted-foreground -mt-2 mb-1"
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors -mt-2 mb-1"
             data-testid="button-toggle-pro-tips"
           >
             <ChevronDown
@@ -714,8 +717,8 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <CardContent className="p-5 space-y-4">
             <div className="flex items-center gap-2">
               <Leaf className="w-5 h-5 text-green-500" />
-              <h3 className="font-heading text-lg tracking-wider uppercase text-green-600 dark:text-green-400">
-                Veg Option (1 Serving)
+              <h3 className="font-heading text-xl tracking-tight text-green-600 dark:text-green-400">
+                Veg Option <span className="text-sm font-sans font-normal tracking-normal text-muted-foreground normal-case">(1 serving)</span>
               </h3>
             </div>
 
@@ -727,7 +730,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">
+              <h4 className={cn(app.sectionLabel, "mb-2")}>
                 Additional Ingredients
               </h4>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-2" data-testid="veg-ingredients">
@@ -758,7 +761,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </div>
 
             <div>
-              <h4 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">
+              <h4 className={cn(app.sectionLabel, "mb-2")}>
                 Steps
               </h4>
               <ol className="space-y-2" data-testid="veg-steps">

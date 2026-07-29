@@ -30,19 +30,19 @@
     },
     {
       "name": "olive oil",
-      "quantity": "1.3",
+      "quantity": "1 1/2 tbsp",
       "notes": "for stretching and pan",
       "group": "Base"
     },
     {
       "name": "country gravy",
-      "quantity": "5/8",
+      "quantity": "5/8 cup",
       "notes": "jarred or leftover, warmed",
       "group": "Sauce"
     },
     {
       "name": "shredded mozzarella",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "mixed into gravy for white sauce",
       "group": "Sauce"
     },
@@ -54,19 +54,19 @@
     },
     {
       "name": "breakfast sausage",
-      "quantity": "1",
+      "quantity": "1.3 lb",
       "notes": "browned and crumbled, drained",
       "group": "Toppings"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2",
+      "quantity": "2 cups",
       "notes": "sharp or medium",
       "group": "Toppings"
     },
     {
       "name": "sliced green onions",
-      "quantity": "1/4",
+      "quantity": "3/8 cup",
       "notes": "and hot sauce at the line",
       "group": "Finish"
     }
@@ -107,22 +107,23 @@
     }
   ],
   "nutrition": {
-    "calories": 533,
-    "protein": 28,
-    "carbs": 11,
-    "fat": 42,
-    "label": "per serving (hall portion)",
+    "calories": 899,
+    "protein": 43,
+    "carbs": 77,
+    "fat": 45,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -147,5 +148,76 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Firehall Breakfast Pizza | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "store-bought pizza dough balls",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "country gravy",
+        "allergens": [
+          "gluten",
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded mozzarella",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pizza crust. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -143,5 +143,69 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 7,
   "seoTitle": "Belgian Waffle Platter | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "all-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "mixed berries",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

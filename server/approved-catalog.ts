@@ -26,6 +26,8 @@ import { readBreakfastCatalogIndexFromDisk } from "./breakfast-catalog/catalog.j
 import { readBbqCatalogIndexFromDisk } from "./bbq-catalog/catalog.js";
 import type { BreakfastIndexEntry } from "../shared/breakfast-schema.js";
 import { CATALOG_ASSET_REVISION } from "../shared/meal-catalog/asset-revision.js";
+import { classifyRecipeDietary } from "../shared/dietary/classify-recipe.js";
+import type { DietarySummary } from "../shared/dietary/schema.js";
 
 const SMOOTHIE_COOK_MINUTES = 5;
 
@@ -126,6 +128,7 @@ function mealEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEnt
     traitBadges,
     isSmoothie: false,
     ...flags,
+    dietarySummary: entry.dietarySummary,
   };
 }
 
@@ -139,6 +142,12 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
   const catalogBadge: ApprovedCatalogEntry["catalogBadge"] = isHighProtein
     ? "High Protein"
     : "Quick Shift Meal";
+  const dietaryResult = classifyRecipeDietary(item.ingredients);
+  const dietarySummary: DietarySummary = {
+    confidence: dietaryResult.confidence,
+    flags: dietaryResult.flags,
+    adaptable: dietaryResult.adaptable,
+  };
 
   return {
     slug,
@@ -168,6 +177,7 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
     isBbqGrill: false,
     isHighProtein,
     isLowCleanup: true,
+    dietarySummary,
   };
 }
 
@@ -219,6 +229,7 @@ function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEn
     isBbqGrill: entry.filters.includes("bbq_breakfast"),
     isHighProtein,
     isLowCleanup: entry.totalTime <= 45,
+    dietarySummary: entry.dietarySummary,
   };
 }
 
@@ -266,6 +277,7 @@ function bbqEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEntr
     isBbqGrill: true,
     isHighProtein: tagHay.includes("high_protein") || tagHay.includes("beef") || tagHay.includes("protein"),
     isLowCleanup: entry.cookTime <= 60 && !tagHay.includes("heavy"),
+    dietarySummary: entry.dietarySummary,
   };
 }
 

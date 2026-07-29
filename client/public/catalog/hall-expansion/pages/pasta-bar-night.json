@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 520,
-  "protein": 16,
-  "carbs": 68,
-  "fats": 20,
+  "calories": 1006,
+  "protein": 33,
+  "carbs": 132,
+  "fats": 38,
   "tags": [
     "protein:vegetarian",
     "format:bar_line",
@@ -156,19 +156,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 520,
-    "protein": 16,
-    "carbs": 68,
-    "fats": 20,
-    "label": "~520 cal/serving · 16g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 1006,
+    "protein": 33,
+    "carbs": 132,
+    "fats": 38,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/pasta-bar-night.jpg",
@@ -191,5 +197,82 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "penne pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "heavy cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "basil pesto",
+        "allergens": [
+          "dairy",
+          "treeNuts"
+        ]
+      },
+      {
+        "name": "French bread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "mozzarella cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": false,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "treeNuts",
+        "label": "Nut-Free Adaptable",
+        "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

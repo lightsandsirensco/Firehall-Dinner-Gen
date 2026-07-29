@@ -959,7 +959,7 @@ function buildChili(def: GoldenRecipeDefinition, scale: number): { ingredients: 
         stepNumber: 5,
         title: "Hold for the hall",
         instruction:
-          "Keep on low or in a cambro for late eaters. Topping bar: cheese, onion, jalapeños, sour cream. First bowl is best; stir before each refill.",
+          "Keep on low or in a lidded container for late eaters. Topping bar: cheese, onion, jalapeños, sour cream. First bowl is best; stir before each refill.",
         minutes: 5,
         heatLevel: "low",
       },
@@ -1508,7 +1508,7 @@ function buildOnePot(def: GoldenRecipeDefinition, scale: number): { ingredients:
         stepNumber: 4,
         title: "Serve from the pot",
         instruction:
-          "Serve straight from the Dutch oven or transfer to a cambro on warm. Scrape the fond from the bottom — that's free flavor.",
+          "Serve straight from the Dutch oven or transfer to a lidded container on warm. Scrape the fond from the bottom — that's free flavor.",
         minutes: 5,
         heatLevel: "low",
       },

@@ -13,10 +13,10 @@
   "cookTime": 28,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 510,
-  "protein": 38,
-  "carbs": 48,
-  "fats": 18,
+  "calories": 826,
+  "protein": 56,
+  "carbs": 66,
+  "fats": 35,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -34,72 +34,72 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
+      "name": "boneless chicken thighs",
       "quantity": "4",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Basmati Rice",
+      "name": "basmati rice",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "uncooked"
     },
     {
-      "name": "Greek Yogurt",
+      "name": "Greek yogurt",
       "quantity": "2",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "English Cucumber",
+      "name": "English cucumber",
       "quantity": "1",
       "unit": "whole",
       "notes": "grated, drained"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Ground Coriander",
+      "name": "ground coriander",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Ground Turmeric",
+      "name": "ground turmeric",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "8",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "halved"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "1",
       "unit": "large",
       "notes": "thinly sliced"
@@ -160,11 +160,26 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 510,
-    "protein": 38,
-    "carbs": 48,
-    "fats": 18,
-    "label": "~510 cal/serving · 38g protein · 3g fiber (est.)"
+    "calories": 826,
+    "protein": 56,
+    "carbs": 66,
+    "fats": 35,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/shawarma-chicken-rice-bowls.jpg",
   "heroImageAlt": "Wide firehall crew platter of Shawarma Chicken Bowls on a station prep table, family-style serving",
@@ -191,6 +206,35 @@
     "korean-beef-rice-bowls",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.655Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

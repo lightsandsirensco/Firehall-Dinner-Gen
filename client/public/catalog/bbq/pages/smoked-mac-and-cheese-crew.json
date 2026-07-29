@@ -13,10 +13,10 @@
   "cookTime": 75,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 729,
-  "protein": 26,
-  "carbs": 84,
-  "fats": 32,
+  "calories": 809,
+  "protein": 31,
+  "carbs": 85,
+  "fats": 38,
   "tags": [
     "protein:vegetarian",
     "format:side",
@@ -169,12 +169,26 @@
   "mealPrepNotes": "Build sauce and par-cook pasta ahead. Assemble in foil pans. Smoke 30 minutes, then hold covered at 170°F. Stir before service if top dries.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 729,
-    "protein": 26,
-    "carbs": 84,
-    "fats": 32,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 809,
+    "protein": 31,
+    "carbs": 85,
+    "fats": 38,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/smoked-mac-and-cheese-crew.jpg",
   "heroImageAlt": "Smoked Mac and Cheese for the Crew — crew-sized BBQ spread with visible smoke and bark",
@@ -204,5 +218,88 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.423Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Elbow Macaroni",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Whole Milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Heavy Cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Sharp Cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Gruyère",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Smoked Gouda",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Panko Breadcrumbs",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

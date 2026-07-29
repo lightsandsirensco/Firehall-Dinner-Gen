@@ -1,0 +1,262 @@
+{
+  "slug": "herb-marinated-flank-steak-chimichurri-farro",
+  "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+  "displayTitle": "Herb-Marinated Flank Steak with Chimichurri Farro",
+  "seoTitle": "Herb-Marinated Flank Steak with Chimichurri Farro | Firefighter Meal",
+  "shortDescription": "Rosemary-thyme reverse-seared steak sliced over chimichurri-tossed farro",
+  "subtitle": "Rosemary-thyme reverse-seared steak sliced over chimichurri-tossed farro",
+  "category": "healthy_performance",
+  "cuisine": "Argentinian/American Grill",
+  "description": "Flank steak marinates in garlic, rosemary, and thyme, sears hard in a cast iron skillet for a deep crust, then finishes in the oven to temperature and rests before slicing over nutty farro tossed through with a bright parsley-garlic chimichurri.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 940,
+  "protein": 61,
+  "carbs": 41,
+  "fats": 58,
+  "tags": [
+    "protein:beef",
+    "format:skillet",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Oven-safe cast iron skillet",
+    "Medium pot"
+  ],
+  "ingredients": [
+    {
+      "name": "flank steak",
+      "quantity": "3.5",
+      "unit": "lb"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "10",
+      "unit": "cloves",
+      "notes": "minced, divided"
+    },
+    {
+      "name": "fresh rosemary",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "chopped, divided"
+    },
+    {
+      "name": "fresh thyme",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "chopped"
+    },
+    {
+      "name": "red wine vinegar",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "divided"
+    },
+    {
+      "name": "farro",
+      "quantity": "2.5",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "packed, finely chopped"
+    },
+    {
+      "name": "fresh oregano",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "chopped"
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "extra-virgin olive oil",
+      "quantity": "0.75",
+      "unit": "cup",
+      "notes": "divided"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "5",
+      "unit": "cups",
+      "notes": "low sodium, for cooking farro"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate the steak",
+      "instruction": "Whisk half the garlic, rosemary, thyme, 2 tbsp vinegar, 3 tbsp oil, salt, and pepper. Coat steak and marinate at least 2 hours, up to overnight refrigerated.",
+      "minutes": 120,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the farro",
+      "instruction": "Rinse farro and simmer in chicken broth 25–30 minutes until tender with a slight chew, not mushy. Drain any excess liquid.",
+      "minutes": 30,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Make the chimichurri",
+      "instruction": "Combine parsley, oregano, remaining garlic, red pepper flakes, remaining vinegar, and remaining oil. Whisk until combined—chimichurri should be loose and pourable, not a thick paste.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sear the steak",
+      "instruction": "Preheat the oven to 400°F. Pat steak dry. Sear in a hot, oven-safe cast iron skillet over high heat 2–3 minutes per side until a deep, dark crust forms.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish in the oven and rest",
+      "instruction": "Transfer the skillet directly to the oven and roast 8–10 minutes until internal temp reads 130–135°F for medium. Rest 10 full minutes tented in foil—this reverse-sear method is far more forgiving than direct grilling if timing slips.",
+      "minutes": 18,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Toss farro and plate",
+      "instruction": "Toss warm farro with about half the chimichurri until evenly coated. Slice steak thin against the grain and serve over the farro with remaining chimichurri spooned on top.",
+      "minutes": 8,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "The sear-then-oven method means you can pull the steak at any point in the oven phase and it'll still turn out great—much more forgiving than a grill.",
+    "Pearled farro cooks faster than whole farro if you're short on time—check the package for exact timing.",
+    "Leftover chimichurri is excellent on eggs, grilled chicken, or roasted vegetables."
+  ],
+  "tonightSpread": [
+    "Grilled or toasted bread with olive oil.",
+    "Simple green salad."
+  ],
+  "leftovers": [
+    "Reheat farro with a splash of broth to loosen it back up.",
+    "Slice cold leftover steak thin over the farro for a fast next-day lunch bowl."
+  ],
+  "whyCrewsLikeIt": "Real steakhouse crust and flavor without needing a grill running or watching it every second—sear, oven, rest is a professional technique that's far more forgiving if a call pulls someone away mid-cook.",
+  "mealPrepNotes": "Marinate the steak the night before. Farro and chimichurri both hold and improve made a day ahead. Station: Make a double batch of chimichurri—toss half through the farro and save the rest to spoon over the steak. Station: Sear hard for the crust, then finish in the oven—if a call interrupts during the oven phase, pull the pan, tent it, and it holds far better than steak left on a grill. Station: Rest the steak the full 10 minutes; slicing early loses all the juice onto the cutting board.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 940,
+    "protein": 61,
+    "carbs": 41,
+    "fats": 58,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter: sliced flank steak with bright green chimichurri sauce beside roasted potatoes on a station prep table, family-style",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "herb-marinated flank steak with chimichurri farro",
+    "herb marinated flank steak chimichurri farro",
+    "beef",
+    "Argentinian/American Grill",
+    "skillet",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "korean-beef-rice-bowls",
+    "turkey-taco-skillet",
+    "lean-beef-broccoli-rice",
+    "chicken-enchilada-skillet-light",
+    "thai-basil-ground-beef-skillet",
+    "southwest-beef-sweet-potato-skillet"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.698Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "farro",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Substitute quinoa or rice. Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

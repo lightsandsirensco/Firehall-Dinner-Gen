@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 510,
-  "protein": 16,
-  "carbs": 24,
-  "fats": 40,
+  "calories": 1050,
+  "protein": 39,
+  "carbs": 81,
+  "fats": 63,
   "tags": [
     "protein:pork",
     "format:bar_line",
@@ -158,19 +158,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 510,
-    "protein": 16,
-    "carbs": 24,
-    "fats": 40,
-    "label": "~510 cal/serving · 16g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 1050,
+    "protein": 39,
+    "carbs": 81,
+    "fats": 63,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/jalapeno-popper-dip.jpg",
@@ -193,5 +199,75 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cream cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "sharp cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cooked bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "baguette",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

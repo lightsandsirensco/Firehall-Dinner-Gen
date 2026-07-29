@@ -13,10 +13,10 @@
   "cookTime": 180,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 259,
-  "protein": 14,
-  "carbs": 16,
-  "fats": 15,
+  "calories": 488,
+  "protein": 28,
+  "carbs": 58,
+  "fats": 17,
   "tags": [
     "protein:vegetarian",
     "format:side",
@@ -164,12 +164,26 @@
   "mealPrepNotes": "Simmer base on the stove, then transfer to foil pans on the smoker. Hold covered at 170°F up to 3 hours. Stir before service.",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 259,
-    "protein": 14,
-    "carbs": 16,
-    "fats": 15,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 488,
+    "protein": 28,
+    "carbs": 58,
+    "fats": 17,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/smoked-baked-beans-crew.jpg",
   "heroImageAlt": "Smoked Baked Beans for the Crew — crew-sized BBQ spread with visible smoke and bark",
@@ -199,5 +213,47 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.424Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Worcestershire Sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free Worcestershire sauce."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

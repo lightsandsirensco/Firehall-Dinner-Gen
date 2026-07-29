@@ -13,10 +13,10 @@
   "cookTime": 75,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 450,
-  "protein": 38,
-  "carbs": 28,
-  "fats": 22,
+  "calories": 413,
+  "protein": 39,
+  "carbs": 40,
+  "fats": 10,
   "tags": [
     "protein:chicken",
     "format:smoker",
@@ -155,19 +155,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 450,
-    "protein": 38,
-    "carbs": 28,
-    "fats": 22,
-    "label": "~450 cal/serving · 38g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 413,
+    "protein": 39,
+    "carbs": 40,
+    "fats": 10,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
@@ -190,5 +196,40 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cornbread",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

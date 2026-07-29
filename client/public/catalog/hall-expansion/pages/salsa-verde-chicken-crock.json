@@ -13,10 +13,10 @@
   "cookTime": 390,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 620,
-  "protein": 44,
-  "carbs": 62,
-  "fats": 19,
+  "calories": 1249,
+  "protein": 116,
+  "carbs": 146,
+  "fats": 23,
   "tags": [
     "protein:chicken",
     "format:slow_cooker",
@@ -166,19 +166,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 620,
-    "protein": 44,
-    "carbs": 62,
-    "fats": 19,
-    "label": "~620 cal/serving · 44g protein · 10g fiber (est.)",
-    "source": "estimated",
+    "calories": 1249,
+    "protein": 116,
+    "carbs": 146,
+    "fats": 23,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
@@ -203,5 +209,40 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.772Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Confirm corn tortillas are used, or substitute a certified gluten-free wrap."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

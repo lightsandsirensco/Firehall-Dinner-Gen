@@ -24,7 +24,7 @@
   "ingredients": [
     {
       "name": "tomatillos",
-      "quantity": "1.6",
+      "quantity": "1.6 lb",
       "notes": "husked and rinsed",
       "group": "Salsa"
     },
@@ -42,13 +42,13 @@
     },
     {
       "name": "chicken broth",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "low-sodium",
       "group": "Salsa"
     },
     {
       "name": "thick tortilla chips",
-      "quantity": "13",
+      "quantity": "12.8 cups",
       "notes": "restaurant-style, not thin",
       "group": "Build"
     },
@@ -59,13 +59,13 @@
     },
     {
       "name": "Mexican crema",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "or thinned sour cream",
       "group": "Finish"
     },
     {
       "name": "cotija cheese",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "crumbled, plus cilantro and radish slices",
       "group": "Finish"
     }
@@ -106,15 +106,16 @@
     }
   ],
   "nutrition": {
-    "calories": 680,
-    "protein": 22,
+    "calories": 711,
+    "protein": 25,
     "carbs": 102,
-    "fat": 20,
-    "label": "per serving (hall portion)",
+    "fat": 23,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
@@ -146,5 +147,58 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Chilaquiles Verde Bake | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Mexican crema",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cotija cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

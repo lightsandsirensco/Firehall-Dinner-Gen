@@ -129,17 +129,18 @@
     }
   ],
   "nutrition": {
-    "calories": 432,
-    "protein": 26,
-    "carbs": 52,
-    "fat": 16,
-    "label": "per serving (hall portion)",
+    "calories": 420,
+    "protein": 25,
+    "carbs": 46,
+    "fat": 17,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -168,5 +169,46 @@
   "publishedAt": "2026-07-17T20:15:27.730Z",
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
-  "seoTitle": "Shakshuka for the Hall | Firehall Breakfast"
+  "seoTitle": "Shakshuka for the Hall | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "cups crumbled feta",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

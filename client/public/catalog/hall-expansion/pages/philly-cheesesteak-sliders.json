@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 440,
-  "protein": 28,
-  "carbs": 32,
-  "fats": 24,
+  "calories": 873,
+  "protein": 56,
+  "carbs": 60,
+  "fats": 44,
   "tags": [
     "protein:beef",
     "format:sheet_pan",
@@ -156,19 +156,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 440,
-    "protein": 28,
-    "carbs": 32,
-    "fats": 24,
-    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 873,
+    "protein": 56,
+    "carbs": 60,
+    "fats": 44,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
@@ -191,5 +197,64 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "slider buns",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "provolone cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Worcestershire sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

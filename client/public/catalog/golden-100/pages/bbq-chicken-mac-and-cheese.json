@@ -13,10 +13,10 @@
   "cookTime": 65,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 820,
-  "protein": 54,
-  "carbs": 62,
-  "fats": 30,
+  "calories": 1386,
+  "protein": 83,
+  "carbs": 106,
+  "fats": 68,
   "tags": [
     "protein:chicken",
     "format:bake",
@@ -233,12 +233,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 820,
-    "protein": 54,
-    "carbs": 62,
-    "fats": 30,
-    "label": "per serving (hall portion)",
+    "calories": 1386,
+    "protein": 83,
+    "carbs": 106,
+    "fats": 68,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -282,5 +283,75 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-07-23T21:40:00.000Z",
-  "contentVersion": 5
+  "contentVersion": 5,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 15,
+    "totalCount": 15,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Dry Elbow Macaroni",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Whole Milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Sharp Cheddar, Shredded",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Mozzarella, Shredded",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

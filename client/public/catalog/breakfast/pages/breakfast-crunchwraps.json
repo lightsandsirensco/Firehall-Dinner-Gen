@@ -30,19 +30,19 @@
     },
     {
       "name": "breakfast sausage",
-      "quantity": "1/2",
+      "quantity": "1 1/4 lb",
       "notes": "browned and crumbled",
       "group": "Fillings"
     },
     {
       "name": "frozen hash browns",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "crisped on the griddle",
       "group": "Fillings"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "1.6",
+      "quantity": "1.6 cups",
       "notes": "plus slices for sealing",
       "group": "Fillings"
     },
@@ -60,13 +60,13 @@
     },
     {
       "name": "nacho cheese sauce",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "warm, not boiling",
       "group": "Build"
     },
     {
       "name": "sour cream",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "and salsa for the line",
       "group": "Finish"
     }
@@ -104,16 +104,17 @@
     }
   ],
   "nutrition": {
-    "calories": 423,
-    "protein": 21,
-    "carbs": 31,
-    "fat": 24,
-    "label": "per serving (hall portion)",
+    "calories": 625,
+    "protein": 32,
+    "carbs": 32,
+    "fat": 41,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
@@ -144,5 +145,75 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Breakfast Crunchwraps | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "12-inch flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "nacho cheese sauce",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

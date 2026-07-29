@@ -13,10 +13,10 @@
   "cookTime": 525,
   "prepTime": 45,
   "difficulty": "hard",
-  "calories": 1005,
-  "protein": 60,
-  "carbs": 90,
-  "fats": 45,
+  "calories": 1400,
+  "protein": 82,
+  "carbs": 124,
+  "fats": 61,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -241,12 +241,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1005,
-    "protein": 60,
-    "carbs": 90,
-    "fats": 45,
-    "label": "per serving (hall portion, with buns + slaw)",
-    "source": "estimated",
+    "calories": 1400,
+    "protein": 82,
+    "carbs": 124,
+    "fats": 61,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -293,5 +294,57 @@
   "sourceUrl": "",
   "classicSlug": "pulled-pork",
   "generatedAt": "2026-07-23T21:40:00.000Z",
-  "contentVersion": 5
+  "contentVersion": 5,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 17,
+    "totalCount": 17,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Boneless Pork Shoulder (butt)",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Brioche Buns Or Kaiser Rolls",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

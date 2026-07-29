@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 485,
-  "protein": 42,
-  "carbs": 28,
-  "fats": 24,
+  "calories": 685,
+  "protein": 77,
+  "carbs": 42,
+  "fats": 23,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -34,54 +34,54 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "16",
       "unit": "pieces",
       "notes": "skin-on, about 6 lb total"
     },
     {
-      "name": "Baby Yukon Gold Potatoes",
+      "name": "baby Yukon gold potatoes",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "halved"
     },
     {
-      "name": "Broccoli Crowns",
+      "name": "broccoli crowns",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into florets"
     },
     {
-      "name": "Fresh Lemons",
+      "name": "fresh lemons",
       "quantity": "4",
       "unit": "whole",
       "notes": "zested and juiced"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "12",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.5",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "freshly cracked"
     }
   ],
@@ -128,7 +128,7 @@
     "Add lemon slices only for the last 10 minutes so they caramelize, not burn."
   ],
   "tonightSpread": [
-    "Warm whole-wheat pita for scooping pan juices, with tzatziki kept cold on the side if the hall has it.",
+    "Warm whole-wheat pita with tzatziki for scooping pan juices.",
     "Simple arugula salad with shaved parmesan and lemon vinaigrette."
   ],
   "leftovers": [
@@ -143,11 +143,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 485,
-    "protein": 42,
-    "carbs": 28,
-    "fats": 24,
-    "label": "~485 cal/serving · 42g protein · 5g fiber (est.)"
+    "calories": 685,
+    "protein": 77,
+    "carbs": 42,
+    "fats": 23,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/lemon-garlic-chicken-tray.jpg",
   "heroImageAlt": "Wide firehall crew platter of Lemon Garlic Chicken Tray on a station prep table, family-style serving",
@@ -173,6 +188,28 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-06-04T20:47:19.354Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.630Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -103,18 +103,19 @@
     }
   ],
   "nutrition": {
-    "calories": 828,
-    "protein": 53,
-    "carbs": 19,
-    "fat": 59,
-    "label": "per serving (hall portion)",
+    "calories": 1100,
+    "protein": 66,
+    "carbs": 26,
+    "fat": 82,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -143,5 +144,75 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 9,
   "seoTitle": "Irish Breakfast Fry-Up | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Irish back bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "pork breakfast sausages",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "black pudding",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Irish soda bread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

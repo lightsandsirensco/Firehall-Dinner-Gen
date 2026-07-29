@@ -151,7 +151,7 @@ function expandInstruction(
   if (isSmoothie && needsTemperature(body)) {
     body = `${body} Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long.`;
   } else if (isColdPrep && needsTemperature(body)) {
-    body = `${body} Keep finished cold items below 41°F if they sit more than 30 minutes — nest the hotel pan on ice at the line.`;
+    body = `${body} Keep finished cold items below 41°F if they sit more than 30 minutes — nest the serving bowl in a bigger bowl of ice at the line.`;
   } else if (/bake|roast|oven|grill|smoke|sear|fry|simmer|boil|griddle|skillet|sauté|saute/i.test(blob)) {
     if (needsTemperature(body)) {
       if (/bake|roast|oven/i.test(blob)) {
@@ -171,7 +171,7 @@ function expandInstruction(
     if (mins && mins > 0) {
       body = `${body} Plan about ${mins} minutes for this step at crew scale.`;
     } else if (stepIndex === 0) {
-      body = `${body} Allow 10–15 minutes for mise en place before heat goes on.`;
+      body = `${body} Allow 10–15 minutes to prep and measure everything before heat goes on.`;
     }
   }
 
@@ -184,13 +184,13 @@ function expandInstruction(
   }
 
   if (body.split(/\s+/).length < 55) {
-    if (!/hotel pans before they hit the line/i.test(body)) {
+    if (!/baking dishes before they hit the line/i.test(body)) {
       body = `${body} Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early.`;
     }
   }
 
-  if (isGenericStep({ title, instruction: body }) && !/hotel pans before they hit the line/i.test(body)) {
-    body = `${body} Label hotel pans before they hit the line so the crew knows what's hot, what's holding, and what's backup for second wave.`;
+  if (isGenericStep({ title, instruction: body }) && !/baking dishes before they hit the line/i.test(body)) {
+    body = `${body} Label the baking dishes before they hit the line so the crew knows what's hot, what's holding, and what's backup for second wave.`;
   }
 
   return body.trim();
@@ -211,7 +211,7 @@ function insertPaddingSteps(
     {
       stepNumber: 0,
       title: "Gather ingredients and equipment",
-      instruction: `Line up every ingredient for ${title} in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on.`,
+      instruction: `Line up every ingredient for ${title} in the order you will cook — measure spices into small bowls, trim proteins on a dedicated board, and set tongs, thermometers, and baking dishes within arm's reach before any heat goes on.`,
       minutes: 12,
       heatLevel: "",
     },
@@ -239,14 +239,14 @@ function insertPaddingSteps(
     {
       stepNumber: 0,
       title: "Portion and open the line",
-      instruction: `Portion ${title} onto sheet trays or hotel pans for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.`,
+      instruction: `Portion ${title} onto sheet trays or large baking dishes for family-style service. Stack plates, forks, and napkins at the end of the line so late-arriving crew can self-serve without bottlenecking the cook.`,
       minutes: 8,
       heatLevel: "",
     },
     {
       stepNumber: 0,
       title: "Scale for larger halls",
-      instruction: `When cooking for more than ${page.crewSize} firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — duplicate mise en place if you double batches.`,
+      instruction: `When cooking for more than ${page.crewSize} firefighters, split into two pans halfway through so the bottom layer does not overcook while the top waits — double all your prepped ingredients if you double batches.`,
       minutes: 5,
       heatLevel: "",
     },
@@ -258,7 +258,7 @@ function insertPaddingSteps(
       out.push({
         stepNumber: 0,
         title: "Final quality check before service",
-        instruction: `Walk the line once before opening service for ${title} — confirm hotel pans are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.`,
+        instruction: `Walk the line once before opening service for ${title} — confirm baking dishes are labeled, backup trays are in the 200°F oven, and thermometers are calibrated. Rookies should ask a senior cook to spot-check the first portion.`,
         minutes: 4,
         heatLevel: "",
       });
@@ -485,7 +485,7 @@ function ensureEditorialSections(
   }
 
   if (!page.mealPrepNotes?.trim()) {
-    patch.mealPrepNotes = `Prep mise en place before the shift — ${page.title} runs smoother when proteins are trimmed, spices are pre-measured, and hotel pans are labeled before the first tone.`;
+    patch.mealPrepNotes = `Prep everything before the shift — ${page.title} runs smoother when proteins are trimmed, spices are pre-measured, and baking dishes are labeled before the first tone.`;
   }
 
   return patch;

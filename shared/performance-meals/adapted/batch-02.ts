@@ -660,7 +660,7 @@ export const batch02: PerformanceAdaptedRecipe[] = [
       "Cook brown rice ahead—it takes longer than white. Mix glaze in advance.",
     stationWorkflow: [
       "Roast salmon on parchment for easy release and quick pan cleanup.",
-      "Keep edamame warm in a small hotel pan separate from rice to avoid sogginess.",
+      "Keep edamame warm in a small baking dish separate from rice to avoid sogginess.",
       "Glaze salmon twice—mid-cook and final 2 minutes—for shiny lacquered finish.",
     ],
     ingredients: [

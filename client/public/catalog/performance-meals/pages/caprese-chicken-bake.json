@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 385,
-  "protein": 42,
-  "carbs": 12,
-  "fats": 18,
+  "calories": 795,
+  "protein": 93,
+  "carbs": 7,
+  "fats": 42,
   "tags": [
     "protein:chicken",
     "format:bake",
@@ -33,59 +33,59 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Breasts",
+      "name": "boneless chicken breasts",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "pounded even"
     },
     {
-      "name": "Grape Tomatoes",
+      "name": "grape tomatoes",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "halved"
     },
     {
-      "name": "Fresh Mozzarella",
+      "name": "fresh mozzarella",
       "quantity": "1.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "sliced or torn"
     },
     {
-      "name": "Fresh Basil",
+      "name": "fresh basil",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "torn"
     },
     {
-      "name": "Balsamic Vinegar",
+      "name": "balsamic vinegar",
       "quantity": "1",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Dried Italian Seasoning",
+      "name": "dried Italian seasoning",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -143,11 +143,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 385,
-    "protein": 42,
-    "carbs": 12,
-    "fats": 18,
-    "label": "~385 cal/serving · 42g protein · 2g fiber (est.)"
+    "calories": 795,
+    "protein": 93,
+    "carbs": 7,
+    "fats": 42,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/caprese-chicken-bake.jpg",
   "heroImageAlt": "Wide firehall crew platter of Caprese Chicken Bake on a station prep table, family-style serving",
@@ -173,6 +188,41 @@
     "white-bean-chicken-chili",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.674Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "fresh mozzarella",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

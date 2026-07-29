@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 510,
-  "protein": 34,
-  "carbs": 36,
-  "fats": 28,
+  "calories": 738,
+  "protein": 50,
+  "carbs": 33,
+  "fats": 46,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -158,19 +158,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 510,
-    "protein": 34,
-    "carbs": 36,
-    "fats": 28,
-    "label": "~510 cal/serving · 34g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 738,
+    "protein": 50,
+    "carbs": 33,
+    "fats": 46,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/enchilada-beef-skillet.jpg",
@@ -193,5 +199,52 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "shredded cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

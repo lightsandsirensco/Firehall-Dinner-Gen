@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 445,
-  "protein": 38,
-  "carbs": 42,
-  "fats": 16,
+  "calories": 574,
+  "protein": 61,
+  "carbs": 46,
+  "fats": 17,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -33,70 +33,70 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Breasts",
+      "name": "boneless chicken breasts",
       "quantity": "2.5",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Corn Tortillas",
+      "name": "corn tortillas",
       "quantity": "12",
       "unit": "whole",
       "notes": "cut into strips"
     },
     {
-      "name": "Red Enchilada Sauce",
+      "name": "red enchilada sauce",
       "quantity": "4",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Black Beans",
+      "name": "black beans",
       "quantity": "2",
       "unit": "cans",
       "notes": "15 oz, drained"
     },
     {
-      "name": "Frozen Corn",
+      "name": "frozen corn",
       "quantity": "2",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "diced"
     },
     {
-      "name": "Green Chiles",
+      "name": "green chiles",
       "quantity": "1",
       "unit": "can",
       "notes": "4 oz, diced"
     },
     {
-      "name": "Monterey Jack Cheese",
+      "name": "Monterey Jack cheese",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "shredded"
     },
     {
-      "name": "Chili Powder",
+      "name": "chili powder",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -154,11 +154,26 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 445,
-    "protein": 38,
-    "carbs": 42,
-    "fats": 16,
-    "label": "~445 cal/serving · 38g protein · 8g fiber (est.)"
+    "calories": 574,
+    "protein": 61,
+    "carbs": 46,
+    "fats": 17,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
   "heroImageAlt": "Wide firehall crew platter of Chicken Enchilada Skillet on a station prep table, family-style serving",
@@ -185,6 +200,41 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.680Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Monterey Jack cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

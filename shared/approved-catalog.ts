@@ -16,6 +16,7 @@ import {
   type ExploreCatalogImageKind,
 } from "./explore-image-paths.js";
 import { CATALOG_ASSET_REVISION } from "./meal-catalog/asset-revision.js";
+import type { DietarySummary } from "./dietary/schema.js";
 
 export type ApprovedCatalogKind = ExploreCatalogImageKind;
 
@@ -49,6 +50,8 @@ export interface ApprovedCatalogEntry {
   isBbqGrill: boolean;
   isHighProtein: boolean;
   isLowCleanup: boolean;
+  /** Food-safety dietary/allergen classification — undefined only for legacy entries that predate the audit. */
+  dietarySummary?: DietarySummary;
 }
 
 export interface ApprovedCatalogResponse {

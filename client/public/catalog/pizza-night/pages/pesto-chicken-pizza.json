@@ -198,5 +198,65 @@
     "honey-soppressata-pizza"
   ],
   "generatedAt": "2026-05-30T03:45:01.613Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pizza dough balls (15 oz)",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Basil pesto",
+        "allergens": [
+          "dairy",
+          "treeNuts"
+        ]
+      },
+      {
+        "name": "Fresh mozzarella, torn",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Grated parmesan",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Pine nuts, toasted",
+        "allergens": [
+          "treeNuts"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": false,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pizza crust."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

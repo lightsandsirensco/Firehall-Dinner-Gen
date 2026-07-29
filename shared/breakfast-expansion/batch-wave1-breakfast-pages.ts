@@ -82,7 +82,7 @@ export const BATCH_WAVE1_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { group: "Seasoning", quantity: "1 tsp", name: "garlic powder", notes: "plus salt, black pepper, and paprika" },
     ],
     steps: [
-      { stepNumber: 1, title: "Heat oven and dry hash browns", tempF: 375, minutes: 5, instruction: "Heat oven to 375°F and grease a deep 9x13 pan or small hotel pan. Squeeze thawed hash browns firmly in a clean towel; wet potatoes are the main reason this casserole gets a soggy bottom." },
+      { stepNumber: 1, title: "Heat oven and dry hash browns", tempF: 375, minutes: 5, instruction: "Heat oven to 375°F and Grease a deep 9x13 baking dish. Squeeze thawed hash browns firmly in a clean towel; wet potatoes are the main reason this casserole gets a soggy bottom." },
       { stepNumber: 2, title: "Build the potato crust", tempF: 375, minutes: 18, instruction: "Mix hash browns with melted butter, garlic powder, salt, and pepper. Press into the pan in an even layer and bake 15–18 minutes until edges begin to brown. This par-bake keeps the base from tasting boiled." },
       { stepNumber: 3, title: "Cook the filling", minutes: 10, instruction: "Brown sausage to 165°F, or warm cooked ham, then drain well. Sauté onion until soft. Spread meat, onion, and two cups of cheese over the hot potato crust; greasy meat will make pools in the finished bake." },
       { stepNumber: 4, title: "Whisk and pour custard", minutes: 5, instruction: "Whisk eggs, milk, paprika, salt, and pepper until smooth. Pour slowly over the filling, pausing to let it settle into corners. Do not stir after pouring or the potato layer will break apart." },
@@ -115,7 +115,7 @@ export const BATCH_WAVE1_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     title: "Bagel Sandwich Line",
     subtitle: "Build-your-own bagel sandwiches with eggs, cheese, and proteins for staggered crews.",
     description:
-      "A firefighter hall breakfast line that lets every crew member build a hot bagel sandwich without waiting for individual orders. Egg sheets, cheese, and warm proteins stay organized in hotel pans so morning service continues even when the crew arrives in waves.",
+      "A firefighter hall breakfast line that lets every crew member build a hot bagel sandwich without waiting for individual orders. Egg sheets, cheese, and warm proteins stay organized in baking dishes so morning service continues even when the crew arrives in waves.",
     filters: ["breakfast_sandwiches", "feed_a_crew", "quick_breakfasts"],
     tags: ["bagels", "sandwiches", "egg-sheet", "build-your-own", "handheld"],
     crewSize: 10,
@@ -144,7 +144,7 @@ export const BATCH_WAVE1_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     stationWorkflow: [
       "Bake one egg sheet while another cook toasts bagels and warms sausage so the line opens all at once.",
       "Keep hot proteins above 140°F and cold tomato, spinach, and cream cheese below 40°F during extended service.",
-      "For a call, cover the hot hotel pan and leave sandwiches unassembled; crews can build fresh when they return.",
+      "For a call, cover the hot baking dish and leave sandwiches unassembled; crews can build fresh when they return.",
     ],
     cleanupNotes: [
       "Lift and discard the parchment egg liner before washing the sheet pan; it removes nearly all baked-on egg.",

@@ -1,14 +1,14 @@
 # Nutrition & Ingredient Integrity Audit
 
-Generated: 2026-06-02T13:09:40.311Z
+Generated: 2026-07-27T14:50:34.443Z
 
 ## Executive summary
 
 | Metric | Count |
 | --- | ---: |
-| Recipes scanned | 356 |
-| Nutrition OK | 318 |
-| Nutrition issues | 25 |
+| Recipes scanned | 386 |
+| Nutrition OK | 254 |
+| Nutrition issues | 0 |
 | Title-as-ingredient | 0 |
 | Bundle / composition issues | 1 |
 | Crew scaling issues | 0 |
@@ -17,44 +17,87 @@ Generated: 2026-06-02T13:09:40.311Z
 
 | Recipe | Calories | Protein | Carbs | Fat | Servings | Status |
 | --- | ---: | ---: | ---: | ---: | ---: | --- |
-| grilled-corn-cotija | 208 | 4g | 26g | 12g | 8 | **suspicious** |
-| mediterranean-chickpea | 248 | 10g | 33g | 9g | 8 | **suspicious** |
-| memphis-dry-rub-ribs | 232 | 15g | 15g | 13g | 8 | **suspicious** |
+| baked-ziti | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| batch-lasagna | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| bbq-brisket-burnt-ends | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| beef-dip | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| beef-stroganoff | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| big-chili | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| breakfast-burrito-bar | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| breakfast-sausage-pizza | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| butter-chicken | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chicken-alfredo-bake | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chicken-caesar | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chicken-parm | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chicken-quesadillas | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chicken-tikka-masala | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chicken-tortilla-soup-for-the-hall | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chili-mac | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chorizo-breakfast-tacos | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| detroit-style-pizza | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| enchilada-casserole | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| french-onion-soup-for-the-hall | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| french-toast-casserole | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| game-day-nachos | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| grilled-corn-cotija | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| hall-taco-bar | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| honey-soppressata-pizza | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| jerk-chicken | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| loaded-baked-potato-bar | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| loaded-nacho-skillet | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| loaded-potato-feed | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| mac-and-cheese-bake | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| margherita-pizza | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| meat-lovers-sheet-pizza | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| meatloaf-mashed | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| mediterranean-chickpea | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| memphis-dry-rub-ribs | 0 | 0g | 0g | 0g | 8 | **hidden** |
 | moroccan-meatballs | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| smoked-wings-white-sauce | 204 | 1g | 4g | 21g | 8 | **suspicious** |
-| asian-chicken-lettuce-cups | 80 | 2g | 5g | 4g | 8 | **suspicious** |
+| pancake-short-stack | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| parm-hero-subs | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| pepperoni-pizza-night | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| pulled-pork | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| red-beans-and-rice-for-the-hall | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| sausage-egg-bake | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| skillet-chicken-alfredo | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| slider-bar | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| smash-burgers | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| smoked-wings-white-sauce | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| spaghetti-aglio-e-olio-for-the-hall | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| steak-sandwiches | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| steak-tacos | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| tomato-soup-grilled-cheese-croutons | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| white-garlic-chicken-pizza | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| asian-chicken-lettuce-cups | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| blackened-cod-taco-night | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| chipotle-lime-chicken-tacos | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| crispy-fish-taco-night | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| bbq-pulled-pork-bowls | 0 | 0g | 0g | 0g | 8 | **hidden** |
 | bun-bo-hue-noodle-soup | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| chicken-wing-bar-night | 216 | 3g | 33g | 9g | 8 | **suspicious** |
+| chicken-wing-bar-night | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| classic-patty-melt-for-the-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| classic-poutine-feed-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| creamy-chicken-penne-alfredo | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| dirty-rice-crew-skillet | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| egg-roll-in-a-bowl-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
 | firehall-charcuterie-board | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| hickory-turkey-legs | 175 | 3g | 27g | 8g | 8 | **suspicious** |
-| kielbasa-cabbage-potato-skillet | 119 | 3g | 25g | 0g | 8 | **suspicious** |
-| molasses-bourbon-pork-ribs | 185 | 8g | 23g | 7g | 8 | **suspicious** |
-| pork-belly-burnt-ends | 155 | 1g | 28g | 5g | 8 | **suspicious** |
-| smoked-turkey-breast | 101 | 4g | 8g | 6g | 8 | **suspicious** |
-| soft-pretzel-dogs | 118 | 7g | 2g | 9g | 8 | **suspicious** |
-| spatchcock-lemon-roast-chicken | 123 | 1g | 7g | 11g | 8 | **suspicious** |
-| tonkotsu-ramen-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| tourtiere-for-the-crew | 153 | 13g | 9g | 8g | 8 | **suspicious** |
-| bagel-lox-breakfast-board | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| biscuit-french-toast-sliders | 227 | 5g | 35g | 8g | 8 | **suspicious** |
-| crew-french-toast-bake | 211 | 13g | 17g | 11g | 8 | **suspicious** |
-| hall-sausage-biscuits-gravy | 208 | 4g | 8g | 18g | 8 | **suspicious** |
-| lumberjack-breakfast-platter | 1100 | 72g | 140g | 90g | 8 | **suspicious** |
-| maple-sausage-pinwheels | 236 | 3g | 46g | 6g | 8 | **suspicious** |
-| overnight-french-toast-bake | 131 | 8g | 12g | 6g | 8 | **suspicious** |
-| charred-broccolini-lemon-tray | 125 | 4g | 13g | 8g | 8 | **suspicious** |
-| firehall-antipasto-pasta-salad | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| firehall-street-elote-cups | 185 | 4g | 26g | 10g | 8 | **suspicious** |
-| flat-top-philly-cheesesteaks-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| gochujang-beef-skewers-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| griddle-smash-sausage-peppers | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| grilled-peach-burrata-salad | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| mixed-lamb-chop-grill-board | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| pork-satay-skewers-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
-| smoked-bbq-chicken-wings-tray | 118 | 1g | 18g | 5g | 8 | **suspicious** |
-| smoked-picanha-steak-platter | 138 | 2g | 10g | 10g | 8 | **suspicious** |
-| tandoori-lamb-chop-platter | 80 | 5g | 6g | 3g | 8 | **suspicious** |
-| yakiniku-grill-platter-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| firehall-gyro-bowls | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| firehall-taco-bowls | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| grilled-flank-fajita-bar | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| hall-blt-sandwich-feed | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| hall-burger-bar | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| hickory-turkey-legs | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| italian-beef-slow-cooker | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| kielbasa-cabbage-potato-skillet | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| korean-turkey-rice-bowls | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| loaded-baked-potato-soup-crock | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| loaded-potato-skins | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| mesquite-chuck-roast | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| mississippi-pot-roast-crew | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| molasses-bourbon-pork-ribs | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| mostaccioli-sausage-bake | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| mushroom-swiss-steak-pan | 0 | 0g | 0g | 0g | 8 | **hidden** |
+| _All recipes pass nutrition validation_ | | | | | | ok |
 
 ## Phase 2–3 — Bundles & composition
 

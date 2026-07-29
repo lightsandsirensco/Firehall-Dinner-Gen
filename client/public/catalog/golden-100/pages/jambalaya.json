@@ -13,9 +13,9 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 599,
-  "protein": 32,
-  "carbs": 41,
+  "calories": 635,
+  "protein": 38,
+  "carbs": 45,
   "fats": 33,
   "tags": [
     "protein:mixed",
@@ -119,14 +119,15 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 599,
-    "protein": 32,
-    "carbs": 41,
+    "calories": 635,
+    "protein": 38,
+    "carbs": 45,
     "fats": 33,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
@@ -134,7 +135,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -167,5 +168,57 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.318Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Andouille Sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Cajun Seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

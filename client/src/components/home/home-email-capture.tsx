@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
+import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 import {
   setAnalyticsUserId,
   trackHomepageCaptureSubmit,
@@ -76,22 +78,19 @@ export function HomeEmailCapture() {
   return (
     <section
       ref={sectionRef}
-      className="border-y border-amber-500/20 bg-gradient-to-br from-amber-950/25 via-card/20 to-background"
+      className="border-y border-border/20 bg-gradient-to-br from-primary/[0.06] via-card/20 to-background"
       aria-labelledby="home-email-capture-heading"
       data-testid="home-email-capture"
     >
-      <div className="max-w-[1400px] mx-auto px-page py-14 sm:py-16">
-        <div className="mx-auto max-w-2xl text-center">
-          <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-amber-500/15 text-amber-400">
-            <Mail className="h-5 w-5" aria-hidden />
+      <div className={cn(app.main, app.sectionY)}>
+        <div className="mx-auto max-w-2xl text-center fade-up motion-reduce:animate-none">
+          <div className="mx-auto mb-4 flex h-11 w-11 items-center justify-center rounded-xl bg-primary/10 ring-1 ring-primary/15">
+            <Mail className="h-5 w-5 text-primary" aria-hidden />
           </div>
-          <h2
-            id="home-email-capture-heading"
-            className="font-heading text-2xl sm:text-3xl tracking-tight text-foreground"
-          >
+          <h2 id="home-email-capture-heading" className={app.titleSection}>
             {HOME.emailCaptureTitle}
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg mx-auto">
+          <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-lg mx-auto">
             {HOME.emailCaptureLead}
           </p>
         </div>
@@ -99,10 +98,10 @@ export function HomeEmailCapture() {
         <div className="mx-auto mt-8 max-w-xl">
           {status === "success" ? (
             <div
-              className="flex items-start justify-center gap-3 rounded-xl border border-green-500/20 bg-green-500/5 px-4 py-4"
+              className="flex items-start justify-center gap-3 rounded-xl border border-[hsl(var(--success)/0.25)] bg-[hsl(var(--success)/0.08)] px-4 py-4 success-pop"
               data-testid="home-email-capture-success"
             >
-              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-green-500" aria-hidden />
+              <CheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--success))]" aria-hidden />
               <p className="font-medium text-foreground text-left">You&apos;re subscribed.</p>
             </div>
           ) : (

@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 208,
-  "protein": 4,
-  "carbs": 26,
-  "fats": 12,
+  "calories": 292,
+  "protein": 11,
+  "carbs": 27,
+  "fats": 18,
   "tags": [
     "protein:vegetarian",
     "format:grill",
@@ -116,12 +116,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 208,
-    "protein": 4,
-    "carbs": 26,
-    "fats": 12,
-    "label": "per serving (hall portion)",
+    "calories": 292,
+    "protein": 11,
+    "carbs": 27,
+    "fats": 18,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -165,5 +166,51 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.173Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 5,
+    "totalCount": 5,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Cotija Cheese, Crumbled",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

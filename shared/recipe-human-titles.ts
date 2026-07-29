@@ -80,7 +80,7 @@ export const HUMAN_RECIPE_TITLES: Record<string, string> = {
   "moroccan-chicken-chickpea-tray": "Moroccan Chicken and Chickpeas",
   "grilled-shrimp-quinoa-bowls": "Shrimp and Quinoa Bowls",
   "boneless-chicken-thighs-sweet-potato-spinach": "Chicken Thighs with Sweet Potato and Spinach",
-  "italian-sausage-veg-sheet-pan": "Sausage and Peppers",
+  "italian-sausage-veg-sheet-pan": "Sausage, Peppers & Zucchini Sheet Pan",
   "cottage-cheese-protein-pasta": "Protein Pasta Bake",
   "lemon-garlic-chicken-tray": "Lemon Garlic Chicken Tray",
   "herb-baked-salmon-tray": "Baked Salmon Tray",

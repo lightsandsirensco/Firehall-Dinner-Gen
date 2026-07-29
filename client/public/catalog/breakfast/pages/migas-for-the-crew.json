@@ -103,18 +103,19 @@
     }
   ],
   "nutrition": {
-    "calories": 442,
+    "calories": 378,
     "protein": 19,
-    "carbs": 38,
-    "fat": 25,
-    "label": "per serving (hall portion)",
+    "carbs": 24,
+    "fat": 24,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -143,5 +144,46 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 7,
   "seoTitle": "Migas for the Crew | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "queso fresco",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

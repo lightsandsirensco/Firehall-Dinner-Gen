@@ -34,15 +34,16 @@ export function BottomTabBar() {
               href={tab.href}
               onClick={() => hapticLight()}
               className={cn(
-                "flex min-h-[52px] min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 text-[10px] font-semibold transition-colors touch-manipulation sm:text-[11px]",
+                "flex min-h-[52px] min-w-0 flex-1 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 text-[10px] font-semibold transition-all duration-200 ease-out touch-manipulation sm:text-[11px]",
+                "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
                 active
-                  ? "text-primary"
+                  ? "text-primary bg-primary/10"
                   : "text-muted-foreground hover:text-foreground",
               )}
               data-testid={tab.testId}
               aria-current={active ? "page" : undefined}
             >
-              <Icon className={cn("h-5 w-5", active && "scale-105")} aria-hidden />
+              <Icon className={cn("h-5 w-5 transition-transform duration-200 ease-out", active && "scale-110")} aria-hidden />
               <span className="truncate max-w-full">{tab.label}</span>
             </Link>
           );

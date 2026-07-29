@@ -104,12 +104,13 @@
     }
   ],
   "nutrition": {
-    "calories": 842,
-    "protein": 56,
-    "carbs": 4,
-    "fat": 68,
-    "label": "per serving (hall portion)",
+    "calories": 922,
+    "protein": 58,
+    "carbs": 19,
+    "fat": 69,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -144,5 +145,69 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 9,
   "seoTitle": "Eggs Benedict Hall Style | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large egg yolks",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "English muffins",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Canadian bacon slices",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

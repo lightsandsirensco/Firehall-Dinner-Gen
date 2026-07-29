@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 560,
-  "protein": 42,
-  "carbs": 50,
-  "fats": 24,
+  "calories": 1083,
+  "protein": 62,
+  "carbs": 72,
+  "fats": 60,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -155,19 +155,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 560,
-    "protein": 42,
-    "carbs": 50,
-    "fats": 24,
-    "label": "~560 cal/serving · 42g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 1083,
+    "protein": 62,
+    "carbs": 72,
+    "fats": 60,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
@@ -190,5 +196,58 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "penne pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "heavy cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "grated Parmesan",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

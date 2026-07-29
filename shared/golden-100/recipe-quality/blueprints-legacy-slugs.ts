@@ -98,7 +98,7 @@ function chiliSteps(title: string, turkey: boolean): Step[] {
       stepNumber: 5,
       title: "Hold and serve the hall",
       instruction:
-        "Keep on low (or transfer to a cambro) for late eaters. Set a topping bar: shredded cheese, diced onion, jalapeños, sour cream. Call the crew while it's hot — chili holds well but the first bowl is always the best.",
+        "Keep on low (or transfer to a lidded container) for late eaters. Set a topping bar: shredded cheese, diced onion, jalapeños, sour cream. Call the crew while it's hot — chili holds well but the first bowl is always the best.",
       minutes: 5,
       heatLevel: "low",
     },
@@ -134,7 +134,7 @@ function pastaGarlicButterSteps(title: string, _scale: number): Step[] {
       stepNumber: 4,
       title: "Serve immediately",
       instruction:
-        "Serve straight from the pot or transfer to a warm tray lined with foil. Top with parsley and extra Parmesan. This dish does not hold well on a steam table — call the crew as soon as it is tossed.",
+        "Serve straight from the pot or transfer to a warm tray lined with foil. Top with parsley and extra Parmesan. This dish doesn't hold up well if it sits around waiting to be served — call the crew as soon as it is tossed.",
       minutes: 2,
       heatLevel: "",
     },

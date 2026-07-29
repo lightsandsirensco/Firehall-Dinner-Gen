@@ -13,10 +13,10 @@
   "cookTime": 28,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 420,
-  "protein": 38,
-  "carbs": 32,
-  "fats": 16,
+  "calories": 552,
+  "protein": 48,
+  "carbs": 26,
+  "fats": 27,
   "tags": [
     "protein:turkey",
     "format:bake",
@@ -33,78 +33,78 @@
   ],
   "ingredients": [
     {
-      "name": "Lean Ground Turkey",
+      "name": "lean ground turkey",
       "quantity": "3",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Plain Breadcrumbs",
+      "name": "plain breadcrumbs",
       "quantity": "1.5",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Parmesan Cheese",
+      "name": "Parmesan cheese",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "grated"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "3",
       "unit": "whole"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Crushed Tomatoes",
+      "name": "crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz",
       "group": "Marinara sauce"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "group": "Marinara sauce"
     },
     {
-      "name": "Fresh Basil Leaves",
+      "name": "fresh basil leaves",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "torn",
       "group": "Marinara sauce"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "finely diced"
     },
     {
-      "name": "Dried Italian Seasoning",
+      "name": "dried Italian seasoning",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "2",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -158,15 +158,30 @@
     "Meatball soup: slice and simmer in chicken broth with orzo."
   ],
   "whyCrewsLikeIt": "Comfort food that feels like Sunday dinner. Baking keeps grease down and makes portioning predictable for eight hungry firefighters.",
-  "mealPrepNotes": "Roll meatballs uniform golf-ball size for even baking. Sauce can simmer 2 hours ahead on low and hold. Station: Bake meatballs on parchment so they release cleanly and brown on all sides with one flip. Station: Simmer sauce in the widest pot on the range for fast meatball absorption. Station: Hold sauced meatballs in a hotel pan at 165°F—do not boil or turkey dries out.",
+  "mealPrepNotes": "Roll meatballs uniform golf-ball size for even baking. Sauce can simmer 2 hours ahead on low and hold. Station: Bake meatballs on parchment so they release cleanly and brown on all sides with one flip. Station: Simmer sauce in the widest pot on the range for fast meatball absorption. Station: Hold sauced meatballs in a baking dish at 165°F—do not boil or turkey dries out.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 420,
-    "protein": 38,
-    "carbs": 32,
-    "fats": 16,
-    "label": "~420 cal/serving · 38g protein · 5g fiber (est.)"
+    "calories": 552,
+    "protein": 48,
+    "carbs": 26,
+    "fats": 27,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
   "heroImageAlt": "Wide firehall crew platter of Baked Turkey Meatball Marinara on a station prep table, family-style serving",
@@ -192,6 +207,58 @@
     "turkey-lettuce-wrap-night",
     "caprese-chicken-bake"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.645Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "plain breadcrumbs",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

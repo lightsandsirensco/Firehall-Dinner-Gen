@@ -1,4 +1,21 @@
-import type { SocialProofAttribution } from "./types.js";
+import type { SocialProofAttribution, SocialProofStats } from "./types.js";
+
+/**
+ * Minimum real count before a stat is credible enough to show on a
+ * marketing surface. A raw "7 meals generated" reads as "nobody uses this"
+ * — worse than showing nothing. Below this bar we simply don't brag yet.
+ */
+const MIN_CREDIBLE_SOCIAL_PROOF_COUNT = 50;
+
+/** True once at least one stat has real volume worth putting in front of a visitor. */
+export function hasCredibleSocialProofStats(stats: SocialProofStats | undefined | null): boolean {
+  if (!stats) return false;
+  return (
+    stats.meals_generated >= MIN_CREDIBLE_SOCIAL_PROOF_COUNT ||
+    stats.hall_votes >= MIN_CREDIBLE_SOCIAL_PROOF_COUNT ||
+    stats.recipes_saved >= MIN_CREDIBLE_SOCIAL_PROOF_COUNT
+  );
+}
 
 /** Compact public count — never shows exact zero on marketing surfaces. */
 export function formatSocialProofCount(value: number): string {

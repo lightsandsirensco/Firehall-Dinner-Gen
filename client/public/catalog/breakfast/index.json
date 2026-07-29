@@ -25,7 +25,30 @@
       "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
       "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "healthier_hall"
+      "collectionTier": "healthier_hall",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "bagel-sandwich-line",
@@ -47,7 +70,30 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
       "thumbImage": "/images/thumbs/breakfast/bagel-sandwich-line.jpg",
-      "publishedAt": "2026-07-17T20:15:27.731Z"
+      "publishedAt": "2026-07-17T20:15:27.731Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "baked-oatmeal-mixed-berries",
@@ -69,7 +115,30 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
       "thumbImage": "/images/thumbs/breakfast/baked-oatmeal-mixed-berries.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z"
+      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats."
+          }
+        ]
+      }
     },
     {
       "slug": "bbq-breakfast-hash",
@@ -90,7 +159,30 @@
       "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "belgian-waffle-platter",
@@ -113,7 +205,35 @@
       "heroImage": "/images/breakfast/belgian-waffle-platter.jpg",
       "thumbImage": "/images/thumbs/breakfast/belgian-waffle-platter.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a 1:1 gluten-free all-purpose flour blend."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "biscuit-french-toast-sliders",
@@ -132,11 +252,39 @@
         "griddle",
         "maple"
       ],
-      "totalTime": 35,
+      "totalTime": 40,
       "heroImage": "/images/breakfast/biscuit-french-toast-sliders.jpg",
       "thumbImage": "/images/thumbs/breakfast/biscuit-french-toast-sliders.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-crunchwraps",
@@ -159,7 +307,35 @@
       "heroImage": "/images/breakfast/breakfast-crunchwraps.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-crunchwraps.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-enchiladas",
@@ -181,7 +357,35 @@
       "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-fried-rice-crew",
@@ -204,7 +408,35 @@
       "heroImage": "/images/breakfast/breakfast-fried-rice-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-fried-rice-crew.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-nachos-supreme",
@@ -227,7 +459,24 @@
       "heroImage": "/images/breakfast/breakfast-nachos-supreme.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-nachos-supreme.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "breakfast-poutine",
@@ -250,7 +499,40 @@
       "heroImage": "/images/breakfast/breakfast-poutine.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-poutine.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes. Use a 1:1 gluten-free all-purpose flour blend."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-quesadillas",
@@ -273,7 +555,35 @@
       "heroImage": "/images/breakfast/breakfast-quesadillas.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-quesadillas.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-sandwich-trays",
@@ -294,7 +604,40 @@
       "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-sliders",
@@ -317,7 +660,40 @@
       "heroImage": "/images/breakfast/breakfast-sliders.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-sliders.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-stromboli-roll",
@@ -340,7 +716,35 @@
       "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pizza crust."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "buttermilk-pancakes",
@@ -359,7 +763,35 @@
       "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
       "thumbImage": "/images/thumbs/breakfast/buttermilk-pancakes.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pancake/baking mix."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
+          }
+        ]
+      }
     },
     {
       "slug": "cast-iron-breakfast-skillet",
@@ -380,7 +812,35 @@
       "heroImage": "/images/breakfast/cast-iron-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/cast-iron-breakfast-skillet.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "chicken-and-waffles-crew",
@@ -403,7 +863,35 @@
       "heroImage": "/images/breakfast/chicken-and-waffles-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/chicken-and-waffles-crew.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free pancake/baking mix."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "chilaquiles-verde-bake",
@@ -426,7 +914,30 @@
       "heroImage": "/images/breakfast/chilaquiles-verde-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/chilaquiles-verde-bake.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "chorizo-breakfast-hash",
@@ -449,7 +960,35 @@
       "heroImage": "/images/breakfast/chorizo-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-hash.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "club-sandwich-breakfast-bake",
@@ -472,7 +1011,30 @@
       "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "corned-beef-hash-breakfast",
@@ -495,7 +1057,24 @@
       "heroImage": "/images/breakfast/corned-beef-hash-breakfast.jpg",
       "thumbImage": "/images/thumbs/breakfast/corned-beef-hash-breakfast.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "country-fried-steak-eggs",
@@ -518,7 +1097,35 @@
       "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
       "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a 1:1 gluten-free all-purpose flour blend."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+          }
+        ]
+      }
     },
     {
       "slug": "cowboy-breakfast-skillet",
@@ -541,7 +1148,35 @@
       "heroImage": "/images/breakfast/cowboy-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/cowboy-breakfast-skillet.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "crew-french-toast-bake",
@@ -561,7 +1196,35 @@
       "heroImage": "/images/breakfast/crew-french-toast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/crew-french-toast-bake.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "denver-breakfast-casserole",
@@ -583,7 +1246,35 @@
       "heroImage": "/images/breakfast/denver-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/denver-breakfast-casserole.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "eggs-benedict-hall-style",
@@ -606,7 +1297,35 @@
       "heroImage": "/images/breakfast/eggs-benedict-hall-style.jpg",
       "thumbImage": "/images/thumbs/breakfast/eggs-benedict-hall-style.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "farmers-breakfast-casserole",
@@ -629,7 +1348,35 @@
       "heroImage": "/images/breakfast/farmers-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/farmers-breakfast-casserole.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "fire-captain-omelette-bar",
@@ -652,7 +1399,30 @@
       "heroImage": "/images/breakfast/fire-captain-omelette-bar.jpg",
       "thumbImage": "/images/thumbs/breakfast/fire-captain-omelette-bar.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "healthier_hall"
+      "collectionTier": "healthier_hall",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-breakfast-pizza",
@@ -675,7 +1445,35 @@
       "heroImage": "/images/breakfast/firehall-breakfast-pizza.jpg",
       "thumbImage": "/images/thumbs/breakfast/firehall-breakfast-pizza.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pizza crust. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "german-potato-breakfast-skillet",
@@ -698,7 +1496,24 @@
       "heroImage": "/images/breakfast/german-potato-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/german-potato-breakfast-skillet.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "green-chile-breakfast-burritos",
@@ -721,7 +1536,30 @@
       "heroImage": "/images/breakfast/green-chile-breakfast-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/green-chile-breakfast-burritos.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          }
+        ]
+      }
     },
     {
       "slug": "hall-breakfast-burritos",
@@ -742,7 +1580,40 @@
       "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "hall-breakfast-wraps",
@@ -765,7 +1636,40 @@
       "heroImage": "/images/breakfast/hall-breakfast-wraps.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-breakfast-wraps.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "healthier_hall"
+      "collectionTier": "healthier_hall",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Confirm corn tortillas are used, or substitute a certified gluten-free wrap."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "hall-sausage-biscuits-gravy",
@@ -788,7 +1692,40 @@
       "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a 1:1 gluten-free all-purpose flour blend. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "hash-brown-breakfast-casserole",
@@ -810,7 +1747,35 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/hash-brown-breakfast-casserole.jpg",
-      "publishedAt": "2026-07-17T20:15:27.731Z"
+      "publishedAt": "2026-07-17T20:15:27.731Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "huevos-rancheros-crew",
@@ -833,7 +1798,30 @@
       "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/huevos-rancheros-crew.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "irish-breakfast-fry-up",
@@ -856,7 +1844,35 @@
       "heroImage": "/images/breakfast/irish-breakfast-fry-up.jpg",
       "thumbImage": "/images/thumbs/breakfast/irish-breakfast-fry-up.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "johnnycakes-with-syrup",
@@ -879,7 +1895,30 @@
       "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
       "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "lumberjack-breakfast-platter",
@@ -902,7 +1941,35 @@
       "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
       "thumbImage": "/images/thumbs/breakfast/lumberjack-breakfast-platter.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pancake/baking mix."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "maple-sausage-pinwheels",
@@ -925,7 +1992,40 @@
       "heroImage": "/images/breakfast/maple-sausage-pinwheels.jpg",
       "thumbImage": "/images/thumbs/breakfast/maple-sausage-pinwheels.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "menemen-for-the-crew",
@@ -947,7 +2047,24 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/menemen-for-the-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z"
+      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "migas-for-the-crew",
@@ -970,7 +2087,30 @@
       "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/migas-for-the-crew.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "monte-cristo-sandwiches",
@@ -992,7 +2132,35 @@
       "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "overnight-french-toast-bake",
@@ -1014,7 +2182,35 @@
       "heroImage": "/images/breakfast/overnight-french-toast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-french-toast-bake.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "healthier_hall"
+      "collectionTier": "healthier_hall",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+          }
+        ]
+      }
     },
     {
       "slug": "overnight-oat-bar-crew",
@@ -1036,7 +2232,24 @@
       "totalTime": 20,
       "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-oat-bar-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.731Z"
+      "publishedAt": "2026-07-17T20:15:27.731Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "overnight-sausage-strata",
@@ -1059,7 +2272,40 @@
       "heroImage": "/images/breakfast/overnight-sausage-strata.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-sausage-strata.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "quick-egg-tacos",
@@ -1079,7 +2325,30 @@
       "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
       "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          }
+        ]
+      }
     },
     {
       "slug": "red-lead-skillet",
@@ -1102,7 +2371,30 @@
       "heroImage": "/images/breakfast/red-lead-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/red-lead-skillet.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "sausage-egg-cheese-sandwiches",
@@ -1122,7 +2414,40 @@
       "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "scrapple-and-eggs-skillet",
@@ -1145,7 +2470,35 @@
       "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "shakshuka-for-the-hall",
@@ -1167,7 +2520,30 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
       "thumbImage": "/images/thumbs/breakfast/shakshuka-for-the-hall.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z"
+      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "sheet-pan-breakfast-hash",
@@ -1187,7 +2563,35 @@
       "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "sheet-pan-breakfast-sandwiches",
@@ -1210,7 +2614,40 @@
       "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
       "publishedAt": "2026-07-17T20:15:27.729Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "sheet-pan-full-english",
@@ -1233,7 +2670,30 @@
       "heroImage": "/images/breakfast/sheet-pan-full-english.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-full-english.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "sheet-pan-eggs-sausage-crew",
@@ -1255,7 +2715,40 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-eggs-sausage-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.731Z"
+      "publishedAt": "2026-07-17T20:15:27.731Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Confirm corn tortillas are used, or substitute a certified gluten-free wrap."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "shrimp-and-grits-breakfast",
@@ -1278,7 +2771,40 @@
       "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
       "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-salmon-benedit",
@@ -1301,7 +2827,35 @@
       "heroImage": "/images/breakfast/smoked-salmon-benedit.jpg",
       "thumbImage": "/images/thumbs/breakfast/smoked-salmon-benedit.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "healthier_hall"
+      "collectionTier": "healthier_hall",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "southwest-egg-bake",
@@ -1322,7 +2876,35 @@
       "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "tater-tot-breakfast-casserole",
@@ -1345,7 +2927,35 @@
       "heroImage": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/tater-tot-breakfast-casserole.jpg",
       "publishedAt": "2026-07-17T20:15:27.730Z",
-      "collectionTier": "firehall_classic"
+      "collectionTier": "firehall_classic",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-sausage-burritos",
@@ -1366,7 +2976,40 @@
       "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/turkey-sausage-burritos.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "healthier_hall"
+      "collectionTier": "healthier_hall",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "veggie-egg-burritos",
@@ -1387,7 +3030,35 @@
       "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/veggie-egg-burritos.jpg",
       "publishedAt": "2026-07-17T20:15:27.732Z",
-      "collectionTier": "healthier_hall"
+      "collectionTier": "healthier_hall",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     }
   ]
 }

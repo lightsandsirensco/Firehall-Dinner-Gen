@@ -24,13 +24,13 @@
   "ingredients": [
     {
       "name": "thick-cut bacon",
-      "quantity": "1.6",
+      "quantity": "1.6 lb",
       "notes": "lay flat",
       "group": "Meats"
     },
     {
       "name": "pork sausages",
-      "quantity": "2",
+      "quantity": "1.6 lb",
       "notes": "10 links",
       "group": "Meats"
     },
@@ -42,13 +42,13 @@
     },
     {
       "name": "cremini mushrooms",
-      "quantity": "3/4",
+      "quantity": "3/4 lb",
       "notes": "whole or halved",
       "group": "Veg"
     },
     {
       "name": "baked beans",
-      "quantity": "1.6",
+      "quantity": "2 cans",
       "notes": "15 oz, warmed separately",
       "group": "Beans"
     },
@@ -59,13 +59,13 @@
     },
     {
       "name": "white bread",
-      "quantity": "8",
+      "quantity": "8 slices",
       "notes": "for toast",
       "group": "Bread"
     },
     {
       "name": "olive oil",
-      "quantity": "2.4",
+      "quantity": "2.6 tbsp",
       "notes": "plus butter for eggs",
       "group": "Fat"
     }
@@ -106,15 +106,16 @@
     }
   ],
   "nutrition": {
-    "calories": 689,
-    "protein": 44,
-    "carbs": 18,
-    "fat": 48,
-    "label": "per serving (hall portion)",
+    "calories": 998,
+    "protein": 61,
+    "carbs": 22,
+    "fat": 73,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
@@ -146,5 +147,58 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Sheet Pan Full English | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "thick-cut bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "pork sausages",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "white bread",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

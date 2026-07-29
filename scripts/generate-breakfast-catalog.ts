@@ -18,6 +18,7 @@ import { getBreakfastGovernanceMap } from "../shared/breakfast-catalog/governanc
 import { isPerformanceBreakfastSlug } from "../shared/breakfast-catalog/governance-types.js";
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
 
 type Kind =
   | "burritos"
@@ -95,7 +96,7 @@ function commonStationNotes(): { stationWorkflow: string[]; cleanupNotes: string
   return {
     stationWorkflow: [
       "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
-      "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+      "Set a warm holding zone (oven at 200°F, food covered) so staggered eaters still get a hot plate.",
       "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered.",
     ],
     cleanupNotes: [
@@ -418,6 +419,21 @@ const SEEDS: Seed[] = [
   { slug: "high-protein-parfaits", title: "High-Protein Yogurt Parfaits", kind: "yogurt_parfaits", filters: ["quick_breakfasts", "healthy_breakfasts", "high_protein"], tags: ["yogurt", "parfaits", "no-cook", "granola"], crewSize: 6, difficulty: "easy", minutes: { prep: 12, cook: 0 } },
 ];
 
+/**
+ * Looks up the original (pre-scale) ingredient list + base crew size for an algorithmically
+ * generated breakfast recipe (one defined via SEEDS + build(), not a hand-authored expansion
+ * page). Used by scripts/repair-breakfast-ingredient-units.ts to recompute correctly-scaled
+ * quantities without duplicating the switch-case ingredient logic above.
+ */
+export function getAlgorithmicBreakfastSource(
+  slug: string,
+): { baseServings: number; ingredients: BreakfastRecipePage["ingredients"] } | null {
+  const seed = SEEDS.find((s) => s.slug === slug);
+  if (!seed) return null;
+  const page = build(seed);
+  return { baseServings: seed.crewSize, ingredients: page.ingredients };
+}
+
 async function main(): Promise<void> {
   const basePages: BreakfastRecipePage[] = SEEDS.filter((seed) => !PHASE5_REMOVED_SLUGS.has(seed.slug)).map(
     (seed) => build(seed),
@@ -500,9 +516,14 @@ async function main(): Promise<void> {
   );
 }
 
-main().catch((e) => {
-  // eslint-disable-next-line no-console
-  console.error(e);
-  process.exit(1);
-});
+// Guarded so other scripts can import getAlgorithmicBreakfastSource() without triggering a
+// full (destructive) catalog rewrite as a side effect of the import.
+const isDirectRun = fileURLToPath(import.meta.url) === path.resolve(process.argv[1] ?? "");
+if (isDirectRun) {
+  main().catch((e) => {
+    // eslint-disable-next-line no-console
+    console.error(e);
+    process.exit(1);
+  });
+}
 

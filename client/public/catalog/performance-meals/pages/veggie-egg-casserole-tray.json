@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 245,
-  "protein": 16,
-  "carbs": 8,
-  "fats": 17,
+  "calories": 386,
+  "protein": 27,
+  "carbs": 12,
+  "fats": 26,
   "tags": [
     "protein:egg",
     "format:breakfast",
@@ -28,76 +28,76 @@
     "healthy"
   ],
   "equipment": [
-    "Deep hotel pan",
+    "Deep baking dish",
     "Large skillet",
     "Whisk"
   ],
   "ingredients": [
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "24",
       "unit": "whole"
     },
     {
-      "name": "Milk",
+      "name": "milk",
       "quantity": "1.5",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "2% or whole"
     },
     {
-      "name": "Fresh Spinach",
+      "name": "fresh spinach",
       "quantity": "6",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "chopped, squeezed dry"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "diced"
     },
     {
-      "name": "Feta Cheese",
+      "name": "feta cheese",
       "quantity": "1.5",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "crumbled"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "All-Purpose Flour",
+      "name": "all-purpose flour",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Baking Powder",
+      "name": "baking powder",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "0.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -125,7 +125,7 @@
     {
       "stepNumber": 4,
       "title": "Bake casserole",
-      "instruction": "Pour into greased deep hotel pan. Bake 32–38 minutes until center is set, puffed, and knife inserted in middle comes out clean.",
+      "instruction": "Pour into greased deep baking dish. Bake 32–38 minutes until center is set, puffed, and knife inserted in middle comes out clean.",
       "minutes": 35,
       "heatLevel": "medium"
     },
@@ -151,15 +151,30 @@
     "Freeze individually wrapped for backup shift breakfasts."
   ],
   "whyCrewsLikeIt": "Grab a square and go. High protein start without frying eggs to order during a busy turnover.",
-  "mealPrepNotes": "Bake night before and reheat morning of. Cut into 12 squares for easy portions. Station: Use a 4-inch deep hotel pan for even bake and clean slicing. Station: Squeeze spinach dry—excess moisture makes a soggy casserole center. Station: Rest pan 10 minutes before cutting so squares hold their shape.",
+  "mealPrepNotes": "Bake night before and reheat morning of. Cut into 12 squares for easy portions. Station: Use a 4-inch deep baking dish for even bake and clean slicing. Station: Squeeze spinach dry—excess moisture makes a soggy casserole center. Station: Rest pan 10 minutes before cutting so squares hold their shape.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 245,
-    "protein": 16,
-    "carbs": 8,
-    "fats": 17,
-    "label": "~245 cal/serving · 16g protein · 2g fiber (est.)"
+    "calories": 386,
+    "protein": 27,
+    "carbs": 12,
+    "fats": 26,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/veggie-egg-casserole-tray.jpg",
   "heroImageAlt": "Wide firehall crew platter of Veggie Egg Casserole on a station prep table, family-style serving",
@@ -181,6 +196,64 @@
   "relatedSlugs": [
     "turkey-sausage-egg-muffins"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.686Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "all-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

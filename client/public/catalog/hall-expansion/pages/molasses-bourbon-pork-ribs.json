@@ -13,10 +13,10 @@
   "cookTime": 300,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 580,
-  "protein": 38,
+  "calories": 1348,
+  "protein": 102,
   "carbs": 28,
-  "fats": 36,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -155,19 +155,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 38,
+    "calories": 1348,
+    "protein": 102,
     "carbs": 28,
-    "fats": 36,
-    "label": "~580 cal/serving · 38g protein · 1g fiber (est.)",
-    "source": "estimated",
+    "fats": 90,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
@@ -190,5 +196,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "St. Louis pork ribs",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "bourbon",
+        "allergens": [
+          "alcohol"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute broth plus a splash of vinegar for the acidity."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

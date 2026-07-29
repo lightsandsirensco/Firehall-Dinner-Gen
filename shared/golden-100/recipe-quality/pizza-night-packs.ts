@@ -977,7 +977,7 @@ export const PIZZA_NIGHT_PACKS: Record<string, PackBuilder> = {
       step(
         6,
         "Cold toppings and cut",
-        "Rest 2 minutes. Top with lettuce, pico, crushed chips, and sour cream in stripes. Cut 8 slices per pie and serve immediately — this pie does not hold well on a steam table.",
+        "Rest 2 minutes. Top with lettuce, pico, crushed chips, and sour cream in stripes. Cut 8 slices per pie and serve immediately — this pie doesn't hold up well if it sits around waiting to be served.",
         5,
         "low",
       ),

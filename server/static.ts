@@ -1,6 +1,9 @@
 import express, { type Express, type Request, type Response } from "express";
 import fs from "fs";
 import path from "path";
+import { matchRecipeSlug, injectRecipeSeoIntoHtml } from "./seo/recipe-html-injection.js";
+import { injectGenericPageSeoIntoHtml } from "./seo/generic-page-injection.js";
+import { resolvePublicSiteOrigin } from "./seo/sitemap.js";
 
 /** Vite emits hashed filenames — safe for long-term CDN/browser cache */
 function isImmutableBuildAsset(filePath: string): boolean {
@@ -53,18 +56,37 @@ export function serveStatic(app: Express) {
     }),
   );
 
+  const indexHtmlPath = path.resolve(distPath, "index.html");
+
   app.use("/{*path}", (req: Request, res: Response) => {
-    const p = req.path.toLowerCase();
+    // Inside an `app.use("/{*path}", …)` mount the wildcard consumes the
+    // whole path, so `req.path`/`req.url` get rebased to "/" — use
+    // `req.originalUrl` (unaffected by mount-point rebasing) instead.
+    const fullPath = req.originalUrl.split("?")[0] || "/";
+    const p = fullPath.toLowerCase();
     if (p === "/sitemap.xml" || p === "/robots.txt") {
       return res.status(404).type("text/plain").send("Not found — configure SEO routes before static fallback.");
     }
     if (/\.(jpg|jpeg|png|webp|gif|svg|ico|woff2?|css|js|map|xml|json)$/i.test(p)) {
       if (p.endsWith(".json")) {
-        return res.status(404).json({ message: "Catalog asset not found", path: req.path });
+        return res.status(404).json({ message: "Catalog asset not found", path: fullPath });
       }
       return res.status(404).end();
     }
     res.setHeader("Cache-Control", "no-cache");
-    res.sendFile(path.resolve(distPath, "index.html"));
+
+    const recipeSlug = matchRecipeSlug(fullPath);
+    try {
+      const template = fs.readFileSync(indexHtmlPath, "utf-8");
+      const origin = resolvePublicSiteOrigin(req.get("host"), req.get("x-forwarded-proto") ?? undefined);
+      const page = recipeSlug
+        ? injectRecipeSeoIntoHtml(template, origin, recipeSlug)
+        : injectGenericPageSeoIntoHtml(template, origin, fullPath);
+      return res.type("text/html").send(page);
+    } catch {
+      // Fall through to the plain static shell if injection fails for any reason.
+    }
+
+    res.sendFile(indexHtmlPath);
   });
 }

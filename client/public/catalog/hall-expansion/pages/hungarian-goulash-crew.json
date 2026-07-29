@@ -13,10 +13,10 @@
   "cookTime": 120,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 500,
-  "protein": 40,
-  "carbs": 36,
-  "fats": 22,
+  "calories": 909,
+  "protein": 64,
+  "carbs": 61,
+  "fats": 47,
   "tags": [
     "protein:beef",
     "format:stew",
@@ -225,19 +225,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 500,
-    "protein": 40,
-    "carbs": 36,
-    "fats": 22,
-    "label": "~500 cal/serving · 40g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 909,
+    "protein": 64,
+    "carbs": 61,
+    "fats": 47,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/hungarian-goulash-crew.jpg",
@@ -262,5 +268,52 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-23T20:58:00.000Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "rye bread",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

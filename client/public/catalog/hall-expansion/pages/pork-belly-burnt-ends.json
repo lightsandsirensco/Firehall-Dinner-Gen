@@ -13,10 +13,10 @@
   "cookTime": 240,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 580,
-  "protein": 18,
-  "carbs": 24,
-  "fats": 48,
+  "calories": 946,
+  "protein": 16,
+  "carbs": 17,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -155,19 +155,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 18,
-    "carbs": 24,
-    "fats": 48,
-    "label": "~580 cal/serving · 18g protein · 0g fiber (est.)",
-    "source": "estimated",
+    "calories": 946,
+    "protein": 16,
+    "carbs": 17,
+    "fats": 90,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
@@ -190,5 +196,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.768Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "skinless pork belly",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1065,
-  "protein": 70,
-  "carbs": 95,
-  "fats": 45,
+  "calories": 1400,
+  "protein": 103,
+  "carbs": 92,
+  "fats": 67,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -219,12 +219,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1065,
-    "protein": 70,
-    "carbs": 95,
-    "fats": 45,
-    "label": "per serving (hall portion, with pasta + garlic bread)",
-    "source": "estimated",
+    "calories": 1400,
+    "protein": 103,
+    "carbs": 92,
+    "fats": 67,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -269,5 +270,81 @@
   "sourceUrl": "",
   "classicSlug": "chicken-parm",
   "generatedAt": "2026-07-23T21:40:00.000Z",
-  "contentVersion": 5
+  "contentVersion": 5,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Large Eggs, Beaten",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Italian Seasoned Breadcrumbs",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Grated Parmesan Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Fresh Mozzarella, Sliced",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Provolone Slices",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Spaghetti",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

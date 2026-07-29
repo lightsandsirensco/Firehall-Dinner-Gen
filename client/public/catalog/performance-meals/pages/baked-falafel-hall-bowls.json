@@ -13,10 +13,10 @@
   "cookTime": 28,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 485,
-  "protein": 18,
-  "carbs": 62,
-  "fats": 20,
+  "calories": 644,
+  "protein": 17,
+  "carbs": 89,
+  "fats": 26,
   "tags": [
     "protein:vegetarian",
     "format:bowl",
@@ -34,86 +34,86 @@
   ],
   "ingredients": [
     {
-      "name": "Dried Chickpeas",
+      "name": "dried chickpeas",
       "quantity": "1.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "soaked overnight, drained"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "packed"
     },
     {
-      "name": "Fresh Cilantro",
+      "name": "fresh cilantro",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "packed"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "rough chopped"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Ground Coriander",
+      "name": "ground coriander",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Baking Powder",
+      "name": "baking powder",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Long-Grain Rice",
+      "name": "long-grain rice",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "uncooked"
     },
     {
-      "name": "Tahini",
+      "name": "tahini",
       "quantity": "0.75",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "0.5",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "2",
       "unit": "pints",
       "notes": "halved"
     },
     {
-      "name": "English Cucumbers",
+      "name": "English cucumbers",
       "quantity": "3",
       "unit": "whole",
       "notes": "diced"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for brushing trays"
     }
   ],
@@ -179,11 +179,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 485,
-    "protein": 18,
-    "carbs": 62,
-    "fats": 20,
-    "label": "~485 cal/serving · 18g protein · 12g fiber (est.)"
+    "calories": 644,
+    "protein": 17,
+    "carbs": 89,
+    "fats": 26,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/baked-falafel-hall-bowls.jpg",
   "heroImageAlt": "Wide firehall crew platter of Falafel Bowls on a station prep table, family-style serving",
@@ -210,6 +225,35 @@
     "tabbouleh-chicken-bowls",
     "cajun-chicken-rice-bowl"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.690Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 15,
+    "totalCount": 15,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "tahini",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": true
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

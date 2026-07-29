@@ -256,5 +256,81 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "https://www.seriouseats.com/easy-chicken-and-dumplings-recipe",
   "generatedAt": "2026-06-04T20:45:42.212Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 17,
+    "totalCount": 17,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Low-Sodium Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Whole Milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Large Eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

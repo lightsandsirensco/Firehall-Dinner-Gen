@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { CheckCircle2, Loader2, Mail } from "lucide-react";
+import { CheckCircle2, Flame, Loader2, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -70,8 +70,9 @@ export function HallPrivateBetaNotice({
       data-testid="hall-private-beta-notice"
     >
       <div className="space-y-2">
-        <p className={cn("font-heading tracking-wide", compact ? "text-lg" : "text-2xl sm:text-3xl")}>
-          🚒 Hall Operations
+        <p className={cn("font-heading tracking-wide flex items-center justify-center gap-2", compact ? "text-lg" : "text-2xl sm:text-3xl")}>
+          <Flame className={cn("text-primary shrink-0", compact ? "h-4 w-4" : "h-6 w-6 sm:h-7 sm:w-7")} aria-hidden />
+          Hall Operations
         </p>
         <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
           Private Beta
@@ -91,10 +92,10 @@ export function HallPrivateBetaNotice({
       <div className="mx-auto max-w-sm space-y-3">
         {status === "success" ? (
           <div
-            className="flex items-start gap-3 rounded-xl border border-green-500/20 bg-green-500/5 px-4 py-3 text-left"
+            className="flex items-start gap-3 rounded-xl border border-[hsl(var(--success)/0.25)] bg-[hsl(var(--success)/0.08)] px-4 py-3 text-left success-pop"
             role="status"
           >
-            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-green-500" aria-hidden />
+            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--success))]" aria-hidden />
             <p className="text-sm font-medium text-foreground">You're on the list — we'll be in touch.</p>
           </div>
         ) : showForm ? (

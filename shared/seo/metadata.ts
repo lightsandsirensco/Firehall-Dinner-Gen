@@ -18,6 +18,7 @@ import {
   SEO_TARGET_KEYWORDS,
 } from "./constants.js";
 import { absoluteImageUrl, normalizePath, recipePath } from "./urls.js";
+import { dedupeAgainstShownCopy } from "../text/dedupe-lead-sentence.js";
 
 export interface PageSeoConfig {
   title: string;
@@ -36,6 +37,17 @@ function clipDescription(text: string, max = 160): string {
   const cut = t.slice(0, max - 1);
   const lastSpace = cut.lastIndexOf(" ");
   return (lastSpace > 80 ? cut.slice(0, lastSpace) : cut).trim() + "…";
+}
+
+/** Join description sentence fragments, ensuring each ends with punctuation. */
+function joinSentences(parts: Array<string | undefined>): string {
+  return parts
+    .filter((p): p is string => Boolean(p && p.trim()))
+    .map((p) => {
+      const t = p.trim();
+      return /[.!?…]$/.test(t) ? t : `${t}.`;
+    })
+    .join(" ");
 }
 
 function titleWithBrand(pageTitle: string): string {
@@ -91,6 +103,18 @@ export function buildExploreSeo(recipeCount = APPROVED_CATALOG_TOTAL): PageSeoCo
     canonicalPath: "/explore",
     ogType: "website",
     keywords: [...SEO_TARGET_KEYWORDS, "firefighter recipe catalog", "firehouse recipe collection"],
+  };
+}
+
+export function buildPizzaNightSeo(pizzaCount: number): PageSeoConfig {
+  return {
+    title: `Pizza Night | ${SEO_SITE_NAME}`,
+    description: clipDescription(
+      `Browse ${pizzaCount} hall-tested pizza recipes — crew-sized pies with oven temps, topping order, and step-by-step instructions.`,
+    ),
+    canonicalPath: "/pizza",
+    ogType: "website",
+    keywords: [...SEO_TARGET_KEYWORDS, "firehouse pizza night", "crew pizza recipes"],
   };
 }
 
@@ -172,6 +196,30 @@ export function buildFirehallCategorySeo(categoryId: FirehallCategoryId, recipeC
   };
 }
 
+export function buildWheelSeo(): PageSeoConfig {
+  return {
+    title: `Classics Wheel — Spin for Tonight's Firehall Dinner | ${SEO_SITE_NAME}`,
+    description: clipDescription(
+      "Spin the Classics Wheel to pick tonight's firehall dinner from ten hall-tested crew favorites — no more what's-for-dinner debate.",
+    ),
+    canonicalPath: "/wheel",
+    ogType: "website",
+    keywords: [...SEO_TARGET_KEYWORDS, "classics wheel", "dinner picker", "what's for dinner"],
+  };
+}
+
+export function buildFamiliesSeo(): PageSeoConfig {
+  return {
+    title: `Recipe Families | ${SEO_SITE_NAME}`,
+    description: clipDescription(
+      "Recipe families group close firefighter meal variants so crews can compare and pick the version that fits the shift — browse by situation on Firehall Meals.",
+    ),
+    canonicalPath: "/families",
+    ogType: "website",
+    keywords: [...SEO_TARGET_KEYWORDS, "recipe families", "firefighter meal variants"],
+  };
+}
+
 export function buildAboutSeo(): PageSeoConfig {
   return {
     title: `About Firehall Meals | ${SEO_SITE_NAME}`,
@@ -211,16 +259,22 @@ export function buildHallProgramSeo(): PageSeoConfig {
 export function buildRecipePageSeo(page: GoldenRecipePage, origin: string): PageSeoConfig {
   const category = (page.category ?? "crew_favorites").replace(/_/g, " ");
   const displayTitle = page.displayTitle || page.title;
+
+  // `shortDescription` and `subtitle` are identical for every recipe in the
+  // catalog, and `whyCrewsLikeIt` frequently repeats them (often as a
+  // duplicated leading phrase) — dedupe so the meta description (what shows
+  // in a Google search snippet) doesn't read as the same sentence twice.
+  const lead = page.shortDescription?.trim() || page.subtitle?.trim();
+  const why = dedupeAgainstShownCopy(page.whyCrewsLikeIt, lead);
+
   const description = clipDescription(
-    [
-      page.shortDescription?.trim() || page.subtitle?.trim(),
-      page.whyCrewsLikeIt?.trim(),
+    joinSentences([
+      lead || page.description?.trim(),
+      why,
       page.cookTime
         ? `About ${page.cookTime} minutes · ${page.difficulty} · sized for ${page.crewSize} at the table.`
         : undefined,
-    ]
-      .filter(Boolean)
-      .join(" "),
+    ]),
   );
 
   const title = titleWithBrand(page.seoTitle?.replace(/\s*\|\s*Firefighter Meal\s*$/i, "") || displayTitle);

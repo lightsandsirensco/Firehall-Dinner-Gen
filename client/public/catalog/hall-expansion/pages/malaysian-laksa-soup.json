@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 490,
-  "protein": 36,
-  "carbs": 46,
-  "fats": 18,
+  "calories": 515,
+  "protein": 53,
+  "carbs": 20,
+  "fats": 22,
   "tags": [
     "protein:shrimp",
     "format:soup",
@@ -193,19 +193,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 490,
-    "protein": 36,
-    "carbs": 46,
-    "fats": 18,
-    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 515,
+    "protein": 53,
+    "carbs": 20,
+    "fats": 22,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/malaysian-laksa-soup.jpg",
@@ -228,5 +234,58 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "laksa paste",
+        "allergens": [
+          "shellfish"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large shrimp",
+        "allergens": [
+          "shellfish"
+        ]
+      },
+      {
+        "name": "fish sauce",
+        "allergens": [
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

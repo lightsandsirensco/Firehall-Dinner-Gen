@@ -1,0 +1,239 @@
+{
+  "slug": "southwest-beef-sweet-potato-skillet",
+  "title": "Southwest Beef & Sweet Potato Skillet",
+  "displayTitle": "Southwest Beef & Sweet Potato Skillet",
+  "seoTitle": "Southwest Beef & Sweet Potato Skillet | Firefighter Meal",
+  "shortDescription": "Chili-spiced ground beef with roasted sweet potato, black beans, and corn",
+  "subtitle": "Chili-spiced ground beef with roasted sweet potato, black beans, and corn",
+  "category": "healthy_performance",
+  "cuisine": "Southwest",
+  "description": "Ground beef browns with Southwest spices, then simmers in one skillet with roasted sweet potato cubes, black beans, and corn until everything is tender and coated in a smoky chili-tomato sauce.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 878,
+  "protein": 63,
+  "carbs": 63,
+  "fats": 46,
+  "tags": [
+    "protein:beef",
+    "format:skillet",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large skillet",
+    "Half-sheet pan"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground beef",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "90/10"
+    },
+    {
+      "name": "sweet potatoes",
+      "quantity": "2.5",
+      "unit": "lb",
+      "notes": "peeled, ½-inch cubes"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "15 oz, drained and rinsed"
+    },
+    {
+      "name": "frozen corn",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "diced tomatoes with green chiles",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "10 oz"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "avocado",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "sliced, for serving"
+    },
+    {
+      "name": "lime",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "cut into wedges"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Roast the sweet potato",
+      "instruction": "Toss sweet potato cubes with 2 tbsp oil and 1 tsp salt. Roast at 425°F 22–25 minutes, flipping once, until fork-tender and caramelized at the edges.",
+      "minutes": 25,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef and onion in remaining oil over medium-high 8–10 minutes, breaking into crumbles, until no pink remains and onion is soft.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Bloom the spices",
+      "instruction": "Add garlic, chili powder, cumin, and smoked paprika to the beef; cook 1 minute until fragrant and the spices coat every piece of meat.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer the skillet",
+      "instruction": "Stir in diced tomatoes with chiles, black beans, and corn. Simmer 8–10 minutes uncovered until slightly thickened and everything is heated through.",
+      "minutes": 10,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Fold in sweet potato and serve",
+      "instruction": "Gently fold roasted sweet potato into the skillet so it doesn't break apart. Taste for salt, then serve with avocado slices and lime wedges at the line.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Roasting the sweet potato separately keeps it from turning to mush in the skillet.",
+    "A dollop of Greek yogurt works as a lighter stand-in for sour cream.",
+    "Shredded pepper jack on top adds a nice melt without much extra effort."
+  ],
+  "tonightSpread": [
+    "Sliced avocado and lime.",
+    "Shredded cheese and cilantro for topping."
+  ],
+  "leftovers": [
+    "Wrap into burritos with rice for a fast next-day lunch.",
+    "Reheats well covered in the microwave—add a splash of water if it looks dry."
+  ],
+  "whyCrewsLikeIt": "Naturally sweet and savory without feeling like a diet dish. Beans and sweet potato mean it holds and reheats better than a plain beef skillet.",
+  "mealPrepNotes": "Cube sweet potatoes small (½ inch) so they roast in the same time it takes to brown the beef. Station: Roast sweet potato on a sheet pan while the beef browns on the stove—two things happening at once saves real time. Station: Don't skip draining the beans—extra liquid waters down the skillet. Station: Top station: avocado, lime wedges, cilantro, shredded cheese, sour cream.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 878,
+    "protein": 63,
+    "carbs": 63,
+    "fats": 46,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Southwest Beef & Sweet Potato Skillet on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "southwest beef & sweet potato skillet",
+    "southwest beef sweet potato skillet",
+    "beef",
+    "Southwest",
+    "skillet",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "korean-beef-rice-bowls",
+    "turkey-taco-skillet",
+    "lean-beef-broccoli-rice",
+    "chicken-enchilada-skillet-light",
+    "thai-basil-ground-beef-skillet",
+    "beef-birria-with-consomme"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.692Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

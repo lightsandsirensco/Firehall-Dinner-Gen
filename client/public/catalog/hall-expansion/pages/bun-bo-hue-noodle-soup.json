@@ -13,10 +13,10 @@
   "cookTime": 180,
   "prepTime": 40,
   "difficulty": "hard",
-  "calories": 520,
-  "protein": 40,
-  "carbs": 50,
-  "fats": 16,
+  "calories": 846,
+  "protein": 69,
+  "carbs": 37,
+  "fats": 49,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -243,19 +243,25 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 520,
-    "protein": 40,
-    "carbs": 50,
-    "fats": 16,
-    "label": "~520 cal/serving · 40g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 846,
+    "protein": 69,
+    "carbs": 37,
+    "fats": 49,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/bun-bo-hue-noodle-soup.jpg",
@@ -280,5 +286,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-23T20:58:00.000Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "pork hock",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shrimp paste",
+        "allergens": [
+          "shellfish"
+        ]
+      },
+      {
+        "name": "fish sauce",
+        "allergens": [
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

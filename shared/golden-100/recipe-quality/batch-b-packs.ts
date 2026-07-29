@@ -145,7 +145,7 @@ export const BATCH_B_GOLDEN_PACKS: Record<string, PackBuilder> = {
       step(
         4,
         "Cook rice and hold components",
-        "While beans finish, cook rice in salted water per package directions — fluffy separate grains hold up on the line better than sticky rice. Keep beans on the lowest heat. For late crews, hold beans and rice in separate covered hotel pans at 165°F up to 90 minutes.",
+        "While beans finish, cook rice in salted water per package directions — fluffy separate grains hold up on the line better than sticky rice. Keep beans on the lowest heat. For late crews, hold beans and rice in separate covered baking dishes at 165°F up to 90 minutes.",
         25,
         "low",
       ),

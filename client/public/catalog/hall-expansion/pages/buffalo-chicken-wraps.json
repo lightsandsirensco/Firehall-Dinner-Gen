@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 540,
-  "protein": 36,
-  "carbs": 42,
-  "fats": 24,
+  "calories": 720,
+  "protein": 42,
+  "carbs": 36,
+  "fats": 44,
   "tags": [
     "protein:chicken",
     "format:handheld",
@@ -151,19 +151,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 540,
-    "protein": 36,
-    "carbs": 42,
-    "fats": 24,
-    "label": "~540 cal/serving · 36g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 720,
+    "protein": 42,
+    "carbs": 36,
+    "fats": 44,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
@@ -186,5 +192,64 @@
   ],
   "sourceUrl": "https://www.seriouseats.com/buffalo-chicken-wing-recipe",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "low-sodium chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "ranch dressing",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "crumbled blue cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use certified gluten-free tortillas or corn tortillas."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

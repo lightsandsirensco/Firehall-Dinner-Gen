@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 343,
-  "protein": 8,
-  "carbs": 63,
-  "fats": 6,
+  "calories": 575,
+  "protein": 22,
+  "carbs": 65,
+  "fats": 25,
   "tags": [
     "protein:pork",
     "format:ranch_spud_tray",
@@ -176,12 +176,26 @@
   "mealPrepNotes": "Parboil fingerlings ahead. Char on grill 400°F. Fold dressing cold—hold tray refrigerated up to 24 hours or at 140°F 60 minutes max.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 343,
-    "protein": 8,
-    "carbs": 63,
-    "fats": 6,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 575,
+    "protein": 22,
+    "carbs": 65,
+    "fats": 25,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/loaded-ranch-potato-salad-crew.jpg",
   "heroImageAlt": "Blue Cheese Fingerling Ranch Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -211,5 +225,64 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.455Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pancetta",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Crumbled Blue Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Buttermilk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Sour Cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Ranch Seasoning Blend",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

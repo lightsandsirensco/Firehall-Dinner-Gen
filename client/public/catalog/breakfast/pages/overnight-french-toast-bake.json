@@ -23,7 +23,7 @@
   "ingredients": [
     {
       "name": "brioche or challah",
-      "quantity": "1.3",
+      "quantity": "1 loaves",
       "notes": "cubed into 1-inch pieces",
       "group": "Base"
     },
@@ -34,37 +34,37 @@
     },
     {
       "name": "whole milk",
-      "quantity": "2.7",
+      "quantity": "2.7 cups",
       "notes": "or half-and-half",
       "group": "Custard"
     },
     {
       "name": "maple syrup",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "plus extra for serving",
       "group": "Custard"
     },
     {
       "name": "vanilla extract",
-      "quantity": "1.3",
+      "quantity": "1 1/2 tsp",
       "notes": "and 1 tbsp cinnamon",
       "group": "Custard"
     },
     {
       "name": "brown sugar",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "sprinkled before baking",
       "group": "Topping"
     },
     {
       "name": "chopped pecans",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "optional crunch",
       "group": "Topping"
     },
     {
       "name": "powdered sugar",
-      "quantity": "1/8",
+      "quantity": "1/8 cup",
       "notes": "and fresh berries at the line",
       "group": "Finish"
     }
@@ -103,17 +103,18 @@
     }
   ],
   "nutrition": {
-    "calories": 213,
-    "protein": 9,
-    "carbs": 28,
-    "fat": 8,
-    "label": "per serving (hall portion)",
+    "calories": 398,
+    "protein": 15,
+    "carbs": 58,
+    "fat": 13,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
@@ -143,5 +144,69 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Overnight French Toast Bake | Firehall Breakfast",
-  "collectionTier": "healthier_hall"
+  "collectionTier": "healthier_hall",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "brioche or challah",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "vanilla extract",
+        "allergens": [
+          "alcohol"
+        ]
+      },
+      {
+        "name": "chopped pecans",
+        "allergens": [
+          "treeNuts"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": false,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

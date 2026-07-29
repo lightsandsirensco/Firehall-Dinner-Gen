@@ -2,39 +2,22 @@
  * Manual hall-expansion hero donors — TEMPORARY ONLY.
  * Empty after global firehall photo replacement (2026-05).
  * Re-add entries only with `temporary: true` intent and remove after regen.
+ *
+ * Sprint 1.5 (2026-07-27): 25 of the 33 flagged duplicates were regenerated
+ * with unique AI photography via `scripts/fix-duplicate-hero-images.ts` and
+ * removed from this table. The remaining 8 are still pending — the OpenAI
+ * account hit its billing hard limit mid-batch. Re-run
+ * `npx tsx scripts/fix-duplicate-hero-images.ts` (no --slugs filter needed,
+ * it re-derives targets from the hash audit) once billing is restored, then
+ * remove each fixed entry below.
  */
 export const HALL_EXPANSION_IMAGE_DONOR_OVERRIDES: Record<string, string> = {
-  "firehall-taco-bowls": "loaded-nacho-skillet",
-  "buffalo-chicken-sweet-potato-bowls": "bbq-chicken-bowls",
-  "firehall-greek-chicken-bowls": "greek-chicken-bowls",
-  "teriyaki-chicken-rice-bowls": "teriyaki-donburi",
-  "firehall-korean-beef-bowls": "bulgogi-bowls",
-  "cajun-shrimp-rice-bowls": "garlic-butter-shrimp",
-  "southwest-steak-bowls": "flank-chimichurri",
-  "bbq-pulled-pork-bowls": "pulled-pork",
-  "mediterranean-beef-bowls": "loaded-baked-potato-bar",
-  "chipotle-chicken-burrito-bowls": "performance-burrito-bowls",
-  "turkey-taco-bowls": "loaded-nacho-skillet",
-  "peanut-chicken-rice-bowls": "teriyaki-donburi",
-  "firehall-gyro-bowls": "greek-chicken-bowls",
-  "egg-roll-in-a-bowl-crew": "bulgogi-bowls",
-  "salmon-rice-bowls-crew": "garlic-butter-shrimp",
-  "korean-turkey-rice-bowls": "bulgogi-bowls",
-  "leftover-roast-beef-bowls": "flank-chimichurri",
-  "mississippi-pot-roast-crew": "pulled-pork",
   "white-chicken-chili-crock": "big-chili",
-  "italian-beef-slow-cooker": "beef-dip",
-  "salsa-verde-chicken-crock": "bbq-chicken-bowls",
-  "loaded-baked-potato-soup-crock": "loaded-baked-potato-bar",
-  "thai-peanut-chicken-crock": "teriyaki-donburi",
   "burnt-ends-chili-crew": "big-chili",
-  "smoker-nachos-crew": "loaded-nacho-skillet",
-  "weeknight-bbq-ribs-crew": "pulled-pork",
-  "grilled-flank-fajita-bar": "sheet-pan-fajitas",
-  "costco-rotisserie-remix": "chicken-parm",
-  "chicken-thigh-stretch-dinner": "bbq-chicken-bowls",
   "pasta-e-fagioli-hall": "big-chili",
-  "dirty-rice-crew-skillet": "garlic-butter-shrimp",
-  "sausage-gnocchi-skillet": "meatloaf-mashed",
-  "spanish-rice-chicken-one-pot": "sheet-pan-fajitas",
+  "firehall-korean-beef-bowls": "bulgogi-bowls",
+  "egg-roll-in-a-bowl-crew": "bulgogi-bowls",
+  "korean-turkey-rice-bowls": "bulgogi-bowls",
+  "teriyaki-chicken-rice-bowls": "teriyaki-donburi",
+  "thai-peanut-chicken-crock": "teriyaki-donburi",
 };

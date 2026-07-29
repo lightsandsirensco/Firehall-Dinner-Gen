@@ -24,19 +24,19 @@
   "ingredients": [
     {
       "name": "frozen shredded hash browns",
-      "quantity": "1.6",
+      "quantity": "1.6 lb",
       "notes": "thawed and squeezed dry",
       "group": "Base"
     },
     {
       "name": "melted butter",
-      "quantity": "3.2",
+      "quantity": "3.4 tbsp",
       "notes": "plus spray for the pan",
       "group": "Base"
     },
     {
       "name": "breakfast sausage or diced ham",
-      "quantity": "1/2",
+      "quantity": "1 1/4 lb",
       "notes": "cooked and drained",
       "group": "Protein"
     },
@@ -47,13 +47,13 @@
     },
     {
       "name": "whole milk",
-      "quantity": "1.6",
+      "quantity": "1.6 cups",
       "notes": "or half-and-half",
       "group": "Custard"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "divided",
       "group": "Cheese"
     },
@@ -65,7 +65,7 @@
     },
     {
       "name": "garlic powder",
-      "quantity": "3/4",
+      "quantity": "7/8 tsp",
       "notes": "plus salt, black pepper, and paprika",
       "group": "Seasoning"
     }
@@ -137,22 +137,23 @@
     }
   ],
   "nutrition": {
-    "calories": 421,
-    "protein": 23,
-    "carbs": 20,
-    "fat": 28,
-    "label": "per serving (hall portion)",
+    "calories": 632,
+    "protein": 35,
+    "carbs": 22,
+    "fat": 45,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -197,5 +198,69 @@
   "publishedAt": "2026-07-17T20:15:27.731Z",
   "updatedAt": "2026-07-23T21:15:00.000Z",
   "readMinutes": 8,
-  "seoTitle": "Hash Brown Breakfast Casserole | Firehall Breakfast"
+  "seoTitle": "Hash Brown Breakfast Casserole | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "melted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "breakfast sausage or diced ham",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

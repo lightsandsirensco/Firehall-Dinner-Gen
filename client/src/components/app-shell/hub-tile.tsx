@@ -32,7 +32,9 @@ function HubTileBody({
       <div className="min-w-0 flex-1">
         <p className={cn("font-semibold leading-snug", secondary && "text-sm")}>{title}</p>
         {description ? (
-          <p className="mt-0.5 text-sm text-muted-foreground line-clamp-2">{description}</p>
+          <p className={cn("mt-0.5 text-sm text-muted-foreground line-clamp-2", secondary && "text-xs")}>
+            {description}
+          </p>
         ) : null}
       </div>
       <ChevronRight className="h-4 w-4 shrink-0 text-muted-foreground" aria-hidden />
@@ -42,10 +44,11 @@ function HubTileBody({
 
 const tileClass = (secondary?: boolean) =>
   cn(
-    "flex min-h-[72px] w-full items-center gap-3 rounded-2xl border px-4 py-3.5 transition-colors touch-manipulation active:scale-[0.99] text-left",
-    secondary
-      ? "border-border/35 bg-muted/15 hover:bg-muted/25"
-      : "border-border/45 bg-card/50 hover:border-primary/30 hover:bg-primary/5",
+    "flex min-h-[72px] w-full items-center gap-3 rounded-2xl border px-4 py-3.5 text-left",
+    "transition-transform duration-200 ease-out touch-manipulation active:scale-[0.98]",
+    "hover-elevate active-elevate-2",
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    secondary ? "border-border/35 bg-muted/15" : "border-border/45 bg-card/50",
   );
 
 export function HubTile({ href, onClick, icon: Icon, title, description, secondary, testId }: HubTileProps) {

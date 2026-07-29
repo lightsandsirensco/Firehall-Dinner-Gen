@@ -3,11 +3,24 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import path from "path";
 import runtimeErrorOverlay from "@replit/vite-plugin-runtime-error-modal";
+import { visualizer } from "rollup-plugin-visualizer";
 
 export default defineConfig({
   plugins: [
     react(),
     runtimeErrorOverlay(),
+    // `ANALYZE=true npm run build` writes dist/public/stats.html with a
+    // gzip/brotli-sized treemap of every chunk — inert otherwise.
+    ...(process.env.ANALYZE === "true"
+      ? [
+          visualizer({
+            filename: path.resolve(import.meta.dirname, "dist/public/stats.html"),
+            gzipSize: true,
+            brotliSize: true,
+            template: "treemap",
+          }),
+        ]
+      : []),
     VitePWA({
       registerType: "autoUpdate",
       injectRegister: null,

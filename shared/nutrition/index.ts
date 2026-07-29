@@ -5,3 +5,5 @@ export * from "./ingredient-database.js";
 export * from "./servings.js";
 export * from "./per-serving-audit.js";
 export * from "./verified-per-serving.js";
+export * from "./meal-role.js";
+export * from "./sanity-rules.js";

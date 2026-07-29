@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import type { SocialProofTestimonial } from "@shared/social-proof/types";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -26,16 +26,6 @@ function usePrefersReducedMotion(): boolean {
   return reducedMotion;
 }
 
-function StarRating() {
-  return (
-    <div className="flex items-center gap-0.5" aria-hidden>
-      {Array.from({ length: 5 }, (_, index) => (
-        <Star key={index} className="h-4 w-4 fill-amber-400 text-amber-400" />
-      ))}
-    </div>
-  );
-}
-
 function TestimonialCard({ item }: { item: SocialProofTestimonial }) {
   const { attribution } = item;
   const attributionLabel = [attribution.name, attribution.role].filter(Boolean).join(", ");
@@ -45,8 +35,7 @@ function TestimonialCard({ item }: { item: SocialProofTestimonial }) {
       className="flex h-full flex-col rounded-2xl border border-white/10 bg-zinc-950/70 p-5 shadow-lg shadow-black/20 sm:p-6"
       data-testid={`testimonial-${item.id}`}
     >
-      <div className="sr-only">5 out of 5 stars</div>
-      <StarRating />
+      <Quote className="h-5 w-5 text-primary/60" aria-hidden />
       <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-zinc-100 sm:text-[0.9375rem] sm:leading-relaxed">
         &ldquo;{item.quote}&rdquo;
       </blockquote>

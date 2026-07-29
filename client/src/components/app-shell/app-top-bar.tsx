@@ -53,11 +53,11 @@ export function AppTopBar({
         <div className="flex min-w-0 flex-1 items-center gap-1.5 sm:gap-2">
           <Link
             href={HOME}
-            className="flex min-h-10 shrink-0 items-center gap-1.5 rounded-lg px-1 py-1 touch-manipulation hover:bg-muted/40"
+            className="group flex min-h-11 shrink-0 items-center gap-1.5 rounded-lg px-1 py-1 touch-manipulation hover-elevate"
             data-testid="app-top-logo"
             aria-label={`${BRAND_NAME} — Home`}
           >
-            <Flame className="h-5 w-5 text-primary" aria-hidden />
+            <Flame className="h-5 w-5 text-primary transition-transform group-active:scale-95" aria-hidden />
             <span className="font-heading text-base tracking-wide sm:text-lg">{BRAND_NAME}</span>
           </Link>
 
@@ -68,7 +68,7 @@ export function AppTopBar({
               </span>
               <Link
                 href={parentHref}
-                className="min-h-10 shrink-0 truncate rounded-lg px-1.5 py-2 text-sm font-semibold text-muted-foreground hover:text-foreground touch-manipulation"
+                className="min-h-11 shrink-0 truncate rounded-lg px-1.5 py-2 text-sm font-semibold text-muted-foreground hover:text-foreground touch-manipulation"
                 data-testid="app-top-parent"
               >
                 {parentLabel}
@@ -82,7 +82,7 @@ export function AppTopBar({
                 /
               </span>
               <span
-                className="truncate text-sm font-semibold text-foreground sm:text-base"
+                className="truncate text-sm font-semibold text-primary sm:text-base"
                 data-testid="app-top-section"
               >
                 {sectionTitle}
@@ -94,7 +94,7 @@ export function AppTopBar({
         {!onTonight ? (
           <Link
             href={TONIGHT}
-            className="inline-flex min-h-10 shrink-0 items-center gap-1 rounded-xl border border-primary/35 bg-primary/10 px-3 text-xs font-semibold text-foreground touch-manipulation hover:bg-primary/15"
+            className="inline-flex min-h-11 shrink-0 items-center gap-1 rounded-xl border border-primary/35 bg-primary/10 px-3 text-xs font-semibold text-foreground touch-manipulation hover-elevate active-elevate-2"
             data-testid="app-top-tonight"
             aria-label="Go to Tonight — your shift's meal planning"
           >

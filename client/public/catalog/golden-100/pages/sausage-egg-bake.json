@@ -10,13 +10,13 @@
   "description": "Morning feed after night shift. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 90,
-  "prepTime": 30,
+  "cookTime": 188,
+  "prepTime": 38,
   "difficulty": "hard",
-  "calories": 1261,
-  "protein": 63,
-  "carbs": 120,
-  "fats": 60,
+  "calories": 1136,
+  "protein": 67,
+  "carbs": 39,
+  "fats": 79,
   "tags": [
     "protein:pork",
     "format:bake",
@@ -32,63 +32,95 @@
   ],
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "18",
+      "name": "Breakfast sausage, casings removed",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Large eggs",
+      "quantity": "20",
       "unit": "count",
       "group": "Main"
     },
     {
-      "name": "Buttermilk",
-      "quantity": "4",
-      "unit": "Cups",
-      "group": "Batter"
-    },
-    {
-      "name": "All-Purpose Flour",
-      "quantity": "4",
-      "unit": "Cups",
-      "group": "Batter"
-    },
-    {
-      "name": "Thick-Cut Bacon",
+      "name": "Whole milk",
       "quantity": "2",
-      "unit": "Lb",
-      "group": "Side"
+      "unit": "cups",
+      "group": "Custard"
     },
     {
-      "name": "Maple Syrup",
-      "quantity": "2",
-      "unit": "Cups",
-      "group": "Serve"
+      "name": "Frozen hash browns, thawed",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Base"
+    },
+    {
+      "name": "Shredded cheddar",
+      "quantity": "4",
+      "unit": "cups",
+      "group": "Cheese"
+    },
+    {
+      "name": "Yellow onion, diced",
+      "quantity": "1",
+      "unit": "count",
+      "group": "Aromatics"
+    },
+    {
+      "name": "Dry mustard powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Mix batter gently",
-      "instruction": "Whisk dry and wet separately; combine until just mixed. Lumps are fine — over-mixing makes tough pancakes.",
+      "title": "Brown the sausage",
+      "instruction": "Cook sausage in a large skillet over medium-high, breaking it into small crumbles, 8–10 minutes until fully browned. Drain well and let cool slightly.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Layer the base",
+      "instruction": "Spread thawed hash browns across the bottom of two greased baking dishes. Scatter browned sausage and diced onion evenly over the top.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
-      "stepNumber": 2,
-      "title": "Bake bacon, hold oven",
-      "instruction": "Bake bacon at 400°F on sheet pans 15–18 minutes until crisp. Set oven to 200°F to hold finished pancakes and eggs.",
-      "minutes": 18,
-      "heatLevel": "high"
-    },
-    {
       "stepNumber": 3,
-      "title": "Griddle in batches",
-      "instruction": "Griddle at 375°F: pancakes 2–3 minutes per side until golden; eggs if serving scrambled in batches. Common mistake: heat too high — outside burns before center sets.",
-      "minutes": 20,
-      "heatLevel": "medium"
+      "title": "Whisk and pour the custard",
+      "instruction": "Whisk eggs, milk, dry mustard, and salt until smooth. Pour evenly over the hash browns and sausage; sprinkle cheddar over the top.",
+      "minutes": 8,
+      "heatLevel": ""
     },
     {
       "stepNumber": 4,
-      "title": "Serve the line",
-      "instruction": "Sausage Egg Bake does not wait — call the crew as batches finish. Syrup and butter on the table; backup tray in the 200°F oven.",
-      "minutes": 5,
+      "title": "Rest before baking",
+      "instruction": "Cover and refrigerate at least 1 hour, overnight works well, so the hash browns soften and the flavors settle.",
+      "minutes": 60,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until set",
+      "instruction": "Bake uncovered at 350°F for 45–55 minutes until the center is fully set with no jiggle and the top is golden. Internal temperature should read at least 160°F.",
+      "minutes": 50,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and portion",
+      "instruction": "Rest 10 minutes before cutting into squares — this keeps portions clean instead of falling apart on the spatula.",
+      "minutes": 10,
       "heatLevel": "low"
     }
   ],
@@ -113,17 +145,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1261,
-    "protein": 63,
-    "carbs": 120,
-    "fats": 60,
+    "calories": 1136,
+    "protein": 67,
+    "carbs": 39,
+    "fats": 79,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -161,6 +193,64 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.316Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:33:03.248Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Breakfast sausage, casings removed",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

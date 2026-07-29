@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 754,
-  "protein": 45,
-  "carbs": 79,
-  "fats": 28,
+  "calories": 529,
+  "protein": 39,
+  "carbs": 49,
+  "fats": 20,
   "tags": [
     "protein:pork",
     "format:tacos",
@@ -119,24 +119,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 754,
-    "protein": 45,
-    "carbs": 79,
-    "fats": 28,
-    "label": "per serving (hall portion)",
+    "calories": 529,
+    "protein": 39,
+    "carbs": 49,
+    "fats": 20,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
@@ -168,5 +169,27 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.268Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

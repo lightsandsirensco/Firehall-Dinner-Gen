@@ -76,13 +76,13 @@
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
+    "calories": 118,
+    "protein": 5,
+    "carbs": 18,
+    "fats": 3,
     "highlights": "Nutrition estimate coming soon",
     "label": "Estimated per serving",
-    "source": "unavailable",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -96,7 +96,7 @@
       "lighterOption": true,
       "performanceMeal": true
     },
-    "estimateAvailable": false
+    "estimateAvailable": true
   },
   "substitutions": [
     "Frozen mixed berries replace strawberries.",
@@ -151,5 +151,40 @@
   ],
   "baseServings": 8,
   "crewSize": 8,
-  "heroImageAlt": "Strawberry Spinach Smoothie — wide family-style firehall platter showing spinach on a crew prep table"
+  "heroImageAlt": "Strawberry Spinach Smoothie — wide family-style firehall platter showing spinach on a crew prep table",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "plain Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

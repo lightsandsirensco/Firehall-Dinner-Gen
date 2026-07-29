@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 248,
-  "protein": 10,
-  "carbs": 33,
-  "fats": 9,
+  "calories": 662,
+  "protein": 29,
+  "carbs": 71,
+  "fats": 32,
   "tags": [
     "protein:vegetarian",
     "format:bowl",
@@ -126,23 +126,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 248,
-    "protein": 10,
-    "carbs": 33,
-    "fats": 9,
-    "label": "per serving (hall portion)",
+    "calories": 662,
+    "protein": 29,
+    "carbs": 71,
+    "fats": 32,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -175,5 +176,46 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.243Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Feta Cheese, Crumbled",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Lemon-Tahini Dressing",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

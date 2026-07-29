@@ -251,7 +251,7 @@ export const BATCH_B_SANDWICH_RECIPES: ExpansionRecipeDef[] = [
       step(
         4,
         "Build BLTs on toasted bread",
-        "Spread mayo on both inner faces of every toast slice. For batch build: layer lettuce, tomato seasoned with salt and pepper, then 3 bacon strips per sandwich. For self-serve, lay bacon, lettuce, and tomato in hotel pans so the crew assembles clear BLTs with visible layers.",
+        "Spread mayo on both inner faces of every toast slice. For batch build: layer lettuce, tomato seasoned with salt and pepper, then 3 bacon strips per sandwich. For self-serve, lay bacon, lettuce, and tomato in baking dishes so the crew assembles clear BLTs with visible layers.",
         { minutes: 10 },
       ),
       step(

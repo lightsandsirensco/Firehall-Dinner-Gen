@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 18,
   "difficulty": "easy",
-  "calories": 320,
-  "protein": 34,
+  "calories": 635,
+  "protein": 54,
   "carbs": 10,
-  "fats": 16,
+  "fats": 40,
   "tags": [
     "protein:fish",
     "format:sheet_pan",
@@ -33,67 +33,67 @@
   ],
   "ingredients": [
     {
-      "name": "Cod Fillets",
+      "name": "cod fillets",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "6 oz portions"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "halved"
     },
     {
-      "name": "Kalamata Olives",
+      "name": "Kalamata olives",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "pitted, halved"
     },
     {
-      "name": "Capers",
+      "name": "capers",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "drained"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "8",
       "unit": "cloves",
       "notes": "sliced"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "1",
       "unit": "large",
       "notes": "thinly sliced"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "2",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "2",
       "unit": "whole",
       "notes": "juiced and sliced"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -151,11 +151,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 320,
-    "protein": 34,
+    "calories": 635,
+    "protein": 54,
     "carbs": 10,
-    "fats": 16,
-    "label": "~320 cal/serving · 34g protein · 3g fiber (est.)"
+    "fats": 40,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
   "heroImageAlt": "Wide firehall crew platter of Baked Cod Tray on a station prep table, family-style serving",
@@ -182,6 +197,35 @@
     "honey-lime-chicken-tray",
     "moroccan-chicken-chickpea-tray"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.662Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cod fillets",
+        "allergens": [
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 580,
-  "protein": 42,
-  "carbs": 60,
-  "fats": 18,
+  "calories": 1039,
+  "protein": 62,
+  "carbs": 97,
+  "fats": 44,
   "tags": [
     "protein:turkey",
     "format:bowl",
@@ -225,19 +225,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 580,
-    "protein": 42,
-    "carbs": 60,
-    "fats": 18,
-    "label": "~580 cal/serving · 42g protein · 11g fiber (est.)",
-    "source": "estimated",
+    "calories": 1039,
+    "protein": 62,
+    "carbs": 97,
+    "fats": 44,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
@@ -262,5 +268,52 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "taco seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

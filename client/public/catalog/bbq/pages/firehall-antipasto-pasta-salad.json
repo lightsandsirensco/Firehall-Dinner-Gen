@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 0,
-  "protein": 0,
-  "carbs": 0,
-  "fats": 0,
+  "calories": 524,
+  "protein": 21,
+  "carbs": 71,
+  "fats": 16,
   "tags": [
     "protein:pork",
     "format:antipasto_tray",
@@ -181,12 +181,26 @@
   "mealPrepNotes": "Grill veg at 400°F while pasta boils. Chill salad at least 30 minutes before service. Holds refrigerated 48 hours—pull from cooler before plating.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 524,
+    "protein": 21,
+    "carbs": 71,
+    "fats": 16,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/firehall-antipasto-pasta-salad.jpg",
   "heroImageAlt": "Mortadella Farfalle Antipasto Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -215,5 +229,68 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.456Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Farfalle Pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Mortadella",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Pecorino Romano",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Red Wine Vinaigrette",
+        "allergens": [
+          "alcohol"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute broth plus a splash of vinegar for the acidity."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

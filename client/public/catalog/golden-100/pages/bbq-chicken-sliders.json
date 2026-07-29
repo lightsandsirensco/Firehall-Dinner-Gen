@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 950,
-  "protein": 62,
-  "carbs": 78,
-  "fats": 38,
+  "calories": 825,
+  "protein": 47,
+  "carbs": 53,
+  "fats": 45,
   "tags": [
     "protein:chicken",
     "format:sandwich",
@@ -218,12 +218,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 950,
-    "protein": 62,
-    "carbs": 78,
-    "fats": 38,
-    "label": "per serving (hall portion)",
-    "source": "estimated",
+    "calories": 825,
+    "protein": 47,
+    "carbs": 53,
+    "fats": 45,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -268,5 +269,51 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-07-23T21:05:00.000Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "low",
+    "matchedCount": 12,
+    "totalCount": 13,
+    "uncertainIngredients": [
+      {
+        "name": "Slider Rolls (Hawaiian-style, 12-count pack)",
+        "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
+      }
+    ],
+    "flaggedIngredients": [
+      {
+        "name": "Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Unsalted Butter (melted)",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": false,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

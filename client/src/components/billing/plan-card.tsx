@@ -40,13 +40,11 @@ export function PlanCard({ plan, currentPlanId, onSelect, selecting, disabled }:
         <p className="text-sm leading-relaxed text-muted-foreground">{presentation.tagline}</p>
       </div>
 
-      <p className="mt-8 font-heading text-5xl leading-none tracking-wide text-foreground">
-        {presentation.price}
-        {presentation.pricePeriod ? (
-          <span className="ml-1 font-sans text-base font-normal text-muted-foreground">
-            {presentation.pricePeriod}
-          </span>
-        ) : null}
+      <p className="mt-8 font-heading text-4xl leading-none tracking-wide text-foreground sm:text-5xl">
+        {/* Price label is server/DB-driven so it always reflects real billing state
+            (e.g. "Free during preview" pre-launch, real pricing once Stripe is live) —
+            never hardcode a price the backend isn't actually charging. */}
+        {plan.price_label || presentation.price}
       </p>
 
       <ul className="mt-8 flex-1 space-y-4">

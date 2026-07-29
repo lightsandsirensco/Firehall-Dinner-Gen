@@ -13,10 +13,10 @@
   "cookTime": 120,
   "prepTime": 40,
   "difficulty": "hard",
-  "calories": 420,
-  "protein": 28,
-  "carbs": 48,
-  "fats": 12,
+  "calories": 352,
+  "protein": 26,
+  "carbs": 23,
+  "fats": 17,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -157,19 +157,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 420,
-    "protein": 28,
-    "carbs": 48,
-    "fats": 12,
-    "label": "~420 cal/serving · 28g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 352,
+    "protein": 26,
+    "carbs": 23,
+    "fats": 17,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/build-your-own-pho-bar.jpg",
@@ -192,5 +198,47 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "hoisin and sriracha",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free hoisin or a tamari-based substitute."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

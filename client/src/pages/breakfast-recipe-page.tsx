@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils";
 import { RecipeBrandStrip } from "@/components/brand/recipe-brand-strip";
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
+import { DietaryBadges } from "@/components/trust/dietary-badges";
 import { SiteFooter } from "@/components/site-footer";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
@@ -226,6 +227,8 @@ export default function BreakfastRecipePage() {
               }
               className="mt-6"
             />
+
+            <DietaryBadges dietary={page.dietary} className="mt-4" />
 
             <p className="mt-6 text-[15px] sm:text-[16px] leading-relaxed text-foreground/90 max-w-3xl">
               {page.description}

@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 560,
-  "protein": 32,
-  "carbs": 42,
-  "fats": 30,
+  "calories": 838,
+  "protein": 52,
+  "carbs": 50,
+  "fats": 49,
   "tags": [
     "protein:beef",
     "format:sheet_pan",
@@ -160,19 +160,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 560,
-    "protein": 32,
-    "carbs": 42,
-    "fats": 30,
-    "label": "~560 cal/serving · 32g protein · 6g fiber (est.)",
-    "source": "estimated",
+    "calories": 838,
+    "protein": 52,
+    "carbs": 50,
+    "fats": 49,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
@@ -195,5 +201,58 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "taco seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Monterey Jack cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

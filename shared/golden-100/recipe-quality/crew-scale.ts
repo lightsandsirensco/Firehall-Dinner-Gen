@@ -25,19 +25,71 @@ const COUNT_UNITS =
 const COUNT_NAME_HINT =
   /\b(onions?|eggs?|limes?|lemons?|garlic|cloves?|potatoes?|tomatoes?|peppers?|avocados?|apples?|bananas?|tortillas?|buns?|rolls?|links?|patties?|sausages?|breasts?|thighs?|drumsticks?|heads?|bunches?|stalks?|wedges?|slices?|cans?|jars?|bottles?|packages?|bags?)\b/i;
 
-function parseQuantity(qty: string | undefined): number {
-  if (!qty?.trim()) return 0;
-  const cleaned = qty.replace(/[¼]/g, "0.25").replace(/[½]/g, "0.5").replace(/[¾]/g, "0.75");
-  const mixed = cleaned.trim().match(/^(\d+)\s+(\d+)\/(\d+)$/);
+export interface ParsedQuantity {
+  amount: number;
+  /** Trailing unit text embedded in the quantity string (e.g. "lb" from "3.5 lb"), "" if none. */
+  unitText: string;
+  /** Upper bound for range quantities like "1–2" or "8–10 oz" (undefined if not a range). */
+  rangeEnd?: number;
+}
+
+/**
+ * Parses a free-text quantity string into a numeric amount plus any trailing unit text.
+ *
+ * Recipes commonly embed the unit directly in `quantity` (e.g. "1 1/2 lb", "3.5 lb", "1/2 cup")
+ * rather than storing it in the separate `unit` field. The previous implementation extracted
+ * only the leading number and silently discarded everything after it — permanently losing the
+ * unit the moment a recipe got rescaled (see scaleGoldenIngredients). It also mis-parsed mixed
+ * fractions with a trailing unit (e.g. "1 1/2 lb" naively split on "/" and returned 0.5 instead
+ * of 1.5). This version captures both the correct amount AND the trailing unit text so callers
+ * can reassemble a complete, correctly-scaled quantity.
+ */
+export function parseQuantityAndUnit(qty: string | undefined): ParsedQuantity {
+  if (!qty?.trim()) return { amount: 0, unitText: "" };
+  const cleaned = qty.replace(/[¼]/g, "0.25").replace(/[½]/g, "0.5").replace(/[¾]/g, "0.75").trim();
+
+  // Range with optional trailing unit: "1–2", "8-10 oz". Without this, the generic numeric
+  // regex below would grab only the first number and misparse the dash + second number as
+  // bogus "unit text" (e.g. "1–2" → amount 1, unitText "–2"), corrupting the quantity on scale.
+  const range = cleaned.match(/^(\d*\.?\d+)\s*[–-]\s*(\d*\.?\d+)\s*([a-zA-Z].*)?$/);
+  if (range) {
+    const start = parseFloat(range[1]);
+    const end = parseFloat(range[2]);
+    return {
+      amount: Number.isFinite(start) ? start : 0,
+      unitText: (range[3] ?? "").trim(),
+      rangeEnd: Number.isFinite(end) ? end : undefined,
+    };
+  }
+
+  // Mixed fraction with optional trailing unit: "1 1/2 lb", "1 1/2"
+  const mixed = cleaned.match(/^(\d+)\s+(\d+)\/(\d+)\s*(.*)$/);
   if (mixed) {
-    return parseInt(mixed[1], 10) + parseInt(mixed[2], 10) / parseInt(mixed[3], 10);
+    const den = parseInt(mixed[3], 10);
+    const amount = parseInt(mixed[1], 10) + (den ? parseInt(mixed[2], 10) / den : 0);
+    return { amount, unitText: mixed[4].trim() };
   }
-  if (cleaned.includes("/")) {
-    const [a, b] = cleaned.split("/").map((x) => parseFloat(x.trim()));
-    if (a && b) return a / b;
+
+  // Simple fraction with optional trailing unit: "1/2 cup", "3/4"
+  const frac = cleaned.match(/^(\d+)\/(\d+)\s*(.*)$/);
+  if (frac) {
+    const den = parseInt(frac[2], 10);
+    const amount = den ? parseInt(frac[1], 10) / den : 0;
+    return { amount, unitText: frac[3].trim() };
   }
-  const n = parseFloat(cleaned);
-  return Number.isFinite(n) ? n : 0;
+
+  // Decimal/integer with optional trailing unit: "3.5 lb", "2 cups", "2.4"
+  const num = cleaned.match(/^(\d*\.?\d+)\s*(.*)$/);
+  if (num) {
+    const amount = parseFloat(num[1]);
+    return { amount: Number.isFinite(amount) ? amount : 0, unitText: num[2].trim() };
+  }
+
+  return { amount: 0, unitText: "" };
+}
+
+function parseQuantity(qty: string | undefined): number {
+  return parseQuantityAndUnit(qty).amount;
 }
 
 export function formatScaledQuantity(n: number): string {
@@ -68,10 +120,9 @@ function scaleFactor(baseServings: number, targetCrew: number, unit?: string): n
   return raw;
 }
 
-function isCountBased(ing: GoldenRecipePageIngredient): boolean {
-  const unit = ing.unit?.trim() ?? "";
-  if (unit && COUNT_UNITS.test(unit)) return true;
-  if (!unit && ing.quantity?.trim() && COUNT_NAME_HINT.test(ing.name)) return true;
+function isCountBased(ing: GoldenRecipePageIngredient, effectiveUnit: string): boolean {
+  if (effectiveUnit && COUNT_UNITS.test(effectiveUnit)) return true;
+  if (!effectiveUnit && ing.quantity?.trim() && COUNT_NAME_HINT.test(ing.name)) return true;
   return false;
 }
 
@@ -94,19 +145,40 @@ export function scaleGoldenIngredients(
   }
 
   const scaled = ingredients.map((ing) => {
-    const qty = parseQuantity(ing.quantity);
-    if (qty <= 0) return { ...ing };
+    const parsed = parseQuantityAndUnit(ing.quantity);
+    if (parsed.amount <= 0) return { ...ing };
 
-    const factor = scaleFactor(baseServings, targetCrew, ing.unit);
-    let scaledQty = qty * factor;
+    // The unit may live in the dedicated `unit` field OR be embedded as trailing text in
+    // `quantity` (e.g. "3.5 lb"). Whichever is present is authoritative for scaling behavior;
+    // if it came from the quantity text it must be reattached after scaling or it's lost.
+    const explicitUnit = ing.unit?.trim() ?? "";
+    const effectiveUnit = explicitUnit || parsed.unitText;
 
-    if (isCountBased(ing)) {
+    const factor = scaleFactor(baseServings, targetCrew, effectiveUnit);
+    let scaledQty = parsed.amount * factor;
+    let scaledRangeEnd = parsed.rangeEnd != null ? parsed.rangeEnd * factor : undefined;
+
+    if (isCountBased(ing, effectiveUnit)) {
       scaledQty = roundCountQuantity(scaledQty);
+      if (scaledRangeEnd != null) scaledRangeEnd = roundCountQuantity(scaledRangeEnd);
+    }
+
+    const formatted = formatScaledQuantity(scaledQty);
+    if (!formatted) return { ...ing };
+
+    let nextQuantity = !explicitUnit && parsed.unitText ? `${formatted} ${parsed.unitText}` : formatted;
+    if (scaledRangeEnd != null) {
+      const formattedEnd = formatScaledQuantity(Math.max(scaledRangeEnd, scaledQty));
+      if (formattedEnd) {
+        nextQuantity = !explicitUnit && parsed.unitText
+          ? `${formatted}\u2013${formattedEnd} ${parsed.unitText}`
+          : `${formatted}\u2013${formattedEnd}`;
+      }
     }
 
     return {
       ...ing,
-      quantity: formatScaledQuantity(scaledQty) || ing.quantity,
+      quantity: nextQuantity,
     };
   });
 

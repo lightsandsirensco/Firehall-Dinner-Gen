@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 410,
-  "protein": 40,
-  "carbs": 32,
-  "fats": 14,
+  "calories": 555,
+  "protein": 67,
+  "carbs": 33,
+  "fats": 17,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -33,67 +33,67 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Breasts",
+      "name": "boneless chicken breasts",
       "quantity": "3.5",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Fine Bulgur",
+      "name": "fine bulgur",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "finely chopped"
     },
     {
-      "name": "Fresh Mint",
+      "name": "fresh mint",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "finely chopped"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "diced small"
     },
     {
-      "name": "English Cucumber",
+      "name": "English cucumber",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced small"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Green Onions",
+      "name": "green onions",
       "quantity": "6",
       "unit": "whole",
       "notes": "sliced"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -151,11 +151,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 410,
-    "protein": 40,
-    "carbs": 32,
-    "fats": 14,
-    "label": "~410 cal/serving · 40g protein · 7g fiber (est.)"
+    "calories": 555,
+    "protein": 67,
+    "carbs": 33,
+    "fats": 17,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/tabbouleh-chicken-bowls.jpg",
   "heroImageAlt": "Wide firehall crew platter of Tabbouleh Chicken Bowls on a station prep table, family-style serving",
@@ -181,6 +196,41 @@
     "korean-beef-rice-bowls",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.667Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "fine bulgur",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Substitute quinoa or rice."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

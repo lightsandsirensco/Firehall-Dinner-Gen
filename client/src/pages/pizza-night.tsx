@@ -10,6 +10,7 @@ import { PIZZA_NIGHT_COUNT } from "@shared/pizza-night/manifest";
 import { usePageSeo } from "@/lib/seo/use-page-seo";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema } from "@shared/seo/schema";
+import { buildPizzaNightSeo } from "@shared/seo/metadata";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { useMemo } from "react";
@@ -19,15 +20,7 @@ export default function PizzaNight() {
   const favCount = getSavedCount();
   const origin = getSiteOrigin();
 
-  const pizzaSeo = useMemo(
-    () => ({
-      title: "Pizza Night | Firehall Meals",
-      description: `Browse ${PIZZA_NIGHT_COUNT} hall-tested pizza recipes — crew-sized pies with oven temps, topping order, and step-by-step instructions.`,
-      canonicalPath: "/pizza",
-      ogType: "website" as const,
-    }),
-    [],
-  );
+  const pizzaSeo = useMemo(() => buildPizzaNightSeo(PIZZA_NIGHT_COUNT), []);
 
   const pizzaJsonLd = useMemo(
     () => [

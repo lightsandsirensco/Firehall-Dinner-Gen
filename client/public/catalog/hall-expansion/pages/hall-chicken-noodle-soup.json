@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 340,
-  "protein": 28,
-  "carbs": 36,
-  "fats": 10,
+  "calories": 506,
+  "protein": 65,
+  "carbs": 38,
+  "fats": 8,
   "tags": [
     "protein:chicken",
     "format:soup",
@@ -158,19 +158,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 340,
-    "protein": 28,
-    "carbs": 36,
-    "fats": 10,
-    "label": "~340 cal/serving · 28g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 506,
+    "protein": 65,
+    "carbs": 38,
+    "fats": 8,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/hall-chicken-noodle-soup.jpg",
@@ -193,5 +199,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "wide egg noodles",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 380,
-  "protein": 36,
-  "carbs": 32,
-  "fats": 12,
+  "calories": 683,
+  "protein": 65,
+  "carbs": 56,
+  "fats": 21,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -159,19 +159,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 380,
-    "protein": 36,
-    "carbs": 32,
-    "fats": 12,
-    "label": "~380 cal/serving · 36g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 683,
+    "protein": 65,
+    "carbs": 56,
+    "fats": 21,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
@@ -194,5 +200,40 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

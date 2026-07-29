@@ -13,9 +13,9 @@
   "cookTime": 95,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 1069,
-  "protein": 88,
-  "carbs": 42,
+  "calories": 1400,
+  "protein": 94,
+  "carbs": 115,
   "fats": 59,
   "tags": [
     "protein:chicken",
@@ -183,17 +183,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1069,
-    "protein": 88,
-    "carbs": 42,
+    "calories": 1400,
+    "protein": 94,
+    "carbs": 115,
     "fats": 59,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -231,5 +232,76 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.292Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pizza Dough Balls (15 Oz)",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Whole Milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "All-Purpose Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Grated Parmesan",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Fresh Mozzarella, Torn",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Ricotta, Dollops",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -24,19 +24,19 @@
   "ingredients": [
     {
       "name": "sandwich bread",
-      "quantity": "12.8",
+      "quantity": "13 slices",
       "notes": "toasted until crisp",
       "group": "Bread"
     },
     {
       "name": "deli turkey",
-      "quantity": "3/8",
+      "quantity": "1 1/4 lb",
       "notes": "sliced thick",
       "group": "Protein"
     },
     {
       "name": "bacon",
-      "quantity": "3/4",
+      "quantity": "3/4 lb",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
@@ -53,18 +53,18 @@
     },
     {
       "name": "whole milk",
-      "quantity": "3/4",
+      "quantity": "2 cups",
       "group": "Egg mix"
     },
     {
       "name": "shredded Swiss",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "mayonnaise",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "light spread on bread, plus lettuce after bake",
       "group": "Finish"
     }
@@ -104,22 +104,23 @@
     }
   ],
   "nutrition": {
-    "calories": 543,
-    "protein": 30,
-    "carbs": 25,
-    "fat": 35,
-    "label": "per serving (hall portion)",
+    "calories": 635,
+    "protein": 43,
+    "carbs": 31,
+    "fat": 37,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -144,5 +145,70 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Club Sandwich Breakfast Bake | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "sandwich bread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded Swiss",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

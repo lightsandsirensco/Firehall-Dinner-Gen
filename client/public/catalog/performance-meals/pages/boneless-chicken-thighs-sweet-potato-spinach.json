@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 485,
-  "protein": 42,
-  "carbs": 32,
-  "fats": 22,
+  "calories": 625,
+  "protein": 49,
+  "carbs": 38,
+  "fats": 30,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -34,59 +34,59 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
+      "name": "boneless chicken thighs",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "trimmed, patted dry"
     },
     {
-      "name": "Sweet Potatoes",
+      "name": "sweet potatoes",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "peeled, cut into 1-inch wedges"
     },
     {
-      "name": "Fresh Spinach",
+      "name": "fresh spinach",
       "quantity": "8",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "packed"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "2",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "2",
       "unit": "whole",
       "notes": "cut into wedges"
     },
     {
-      "name": "Red Pepper Flakes",
+      "name": "red pepper flakes",
       "quantity": "0.5",
-      "unit": "Tsp",
+      "unit": "tsp",
       "notes": "optional"
     }
   ],
@@ -145,11 +145,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 485,
-    "protein": 42,
-    "carbs": 32,
-    "fats": 22,
-    "label": "~485 cal/serving · 42g protein · 6g fiber (est.)"
+    "calories": 625,
+    "protein": 49,
+    "carbs": 38,
+    "fats": 30,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
   "heroImageAlt": "Wide firehall crew platter of Chicken Thighs with Sweet Potato and Spinach on a station prep table, family-style serving",
@@ -176,6 +191,28 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.676Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -1,9 +1,11 @@
 import { useMemo, useState } from "react";
 import { useQuery } from "@tanstack/react-query";
-import { Clock } from "lucide-react";
+import { Clock, RefreshCw } from "lucide-react";
 import type { GoldenCatalogIndexEntry } from "@shared/golden-100/recipe-page-schema";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
 import { FoodImage } from "@/components/mobile/food-image";
+import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { RecipeGridSkeleton } from "@/components/mobile/loading-skeletons";
 import { fetchPizzaNightCatalog, pizzaNightCatalogQueryKey } from "@/lib/pizza-night-api";
 
@@ -22,7 +24,8 @@ function PizzaCatalogCard({
     <article
       className={cn(
         "group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl bg-card/30 ring-1 ring-border/15",
-        "transition-all hover:ring-primary/25 hover:shadow-lg hover:shadow-black/10",
+        "transition-transform duration-150 ease-out touch-manipulation active:scale-[0.98]",
+        "hover:ring-primary/25 hover:shadow-lg hover:shadow-black/10",
       )}
       onClick={onClick}
       role="button"
@@ -52,9 +55,7 @@ function PizzaCatalogCard({
             }}
           />
         ) : (
-          <div className="flex h-full w-full items-center justify-center bg-zinc-950 px-3 text-center text-xs text-muted-foreground">
-            {entry.title}
-          </div>
+          <MissingRecipeImagePlaceholder title={entry.title} />
         )}
       </div>
 
@@ -101,8 +102,14 @@ export function PizzaNightCatalog({
 
   if (isError || entries.length === 0) {
     return (
-      <div className="px-page py-12 text-center text-sm text-muted-foreground">
-        Pizza catalog is unavailable. Try refreshing the page.
+      <div className="px-page py-16 text-center">
+        <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-muted/40">
+          <RefreshCw className="h-6 w-6 text-muted-foreground/70" aria-hidden />
+        </div>
+        <p className="text-sm text-muted-foreground">Pizza catalog is unavailable right now.</p>
+        <Button variant="outline" className="mt-4 min-h-11" onClick={() => window.location.reload()}>
+          Try again
+        </Button>
       </div>
     );
   }

@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 380,
-  "protein": 28,
-  "carbs": 22,
-  "fats": 20,
+  "calories": 508,
+  "protein": 41,
+  "carbs": 33,
+  "fats": 26,
   "tags": [
     "protein:beef",
     "format:handheld",
@@ -154,19 +154,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 380,
-    "protein": 28,
-    "carbs": 22,
-    "fats": 20,
-    "label": "~380 cal/serving · 28g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 508,
+    "protein": 41,
+    "carbs": 33,
+    "fats": 26,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/bbq-meatball-skewers.jpg",
@@ -189,5 +195,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "breadcrumbs",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

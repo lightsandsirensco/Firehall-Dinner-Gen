@@ -453,7 +453,7 @@ export const BATCH_HANDHELD_WRAP_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "Hoagie feed is fast to eat and scales to fourteen easily. Skillet sausage and peppers already exist in the catalog as a plated dinner; this is the sandwich version crews grab with one hand.",
     mealPrepNotes:
-      "Poke sausages before roasting so they do not burst. Hoagies can be split and toasted 5 minutes in the oven. Hold sausage and pepper mix in a hotel pan at 165°F; assemble buns to order if calls interrupt.",
+      "Poke sausages before roasting so they do not burst. Hoagies can be split and toasted 5 minutes in the oven. Hold sausage and pepper mix in a baking dish at 165°F; assemble buns to order if calls interrupt.",
     stationWorkflow: [
       "Use red, yellow, and orange peppers for visual pop in photos.",
       "Split buns and toast cut-side up for structure when piled with sausage.",

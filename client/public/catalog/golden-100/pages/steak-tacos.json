@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1120,
-  "protein": 72,
-  "carbs": 95,
-  "fats": 50,
+  "calories": 1400,
+  "protein": 67,
+  "carbs": 93,
+  "fats": 87,
   "tags": [
     "protein:beef",
     "format:tacos",
@@ -235,12 +235,13 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1120,
-    "protein": 72,
-    "carbs": 95,
-    "fats": 50,
-    "label": "per serving (hall portion, ~6 tacos)",
-    "source": "estimated",
+    "calories": 1400,
+    "protein": 67,
+    "carbs": 93,
+    "fats": 87,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -286,5 +287,40 @@
   "sourceUrl": "",
   "classicSlug": "steak-tacos",
   "generatedAt": "2026-07-23T21:40:00.000Z",
-  "contentVersion": 5
+  "contentVersion": 5,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 21,
+    "totalCount": 21,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Cotija Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Sour Cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

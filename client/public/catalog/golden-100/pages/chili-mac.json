@@ -13,9 +13,9 @@
   "cookTime": 55,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 1333,
-  "protein": 81,
-  "carbs": 92,
+  "calories": 1368,
+  "protein": 82,
+  "carbs": 100,
   "fats": 73,
   "tags": [
     "protein:beef",
@@ -212,19 +212,20 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 1333,
-    "protein": 81,
-    "carbs": 92,
+    "calories": 1368,
+    "protein": 82,
+    "carbs": 100,
     "fats": 73,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -262,5 +263,58 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.273Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 19,
+    "totalCount": 19,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Elbow Macaroni",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Beef Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Shredded Cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Sour Cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

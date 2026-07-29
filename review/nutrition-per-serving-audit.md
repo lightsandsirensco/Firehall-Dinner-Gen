@@ -1,14 +1,14 @@
 # Nutrition Per-Serving Audit
 
-Generated: 2026-07-24T02:19:52.726Z
-Mode: **audit**
+Generated: 2026-07-27T14:49:21.636Z
+Mode: **fix**
 
 ## Summary
 
 | Metric | Count |
 |--------|------:|
 | Recipes audited | 371 |
-| Recipes fixed (this run) | 0 |
+| Recipes fixed (this run) | 300 |
 | Hidden (estimate coming soon) | 128 |
 | Suspicious remaining | 0 |
 | Batch totals corrected | 0 |

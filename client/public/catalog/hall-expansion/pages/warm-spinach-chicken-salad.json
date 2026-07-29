@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 380,
-  "protein": 34,
-  "carbs": 8,
-  "fats": 24,
+  "calories": 511,
+  "protein": 48,
+  "carbs": 7,
+  "fats": 32,
   "tags": [
     "protein:chicken",
     "format:salad",
@@ -156,19 +156,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 380,
-    "protein": 34,
-    "carbs": 8,
-    "fats": 24,
-    "label": "~380 cal/serving · 34g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 511,
+    "protein": 48,
+    "carbs": 7,
+    "fats": 32,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
@@ -191,5 +197,40 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "thick-cut bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "hard-boiled eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

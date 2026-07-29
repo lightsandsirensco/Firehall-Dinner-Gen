@@ -13,10 +13,10 @@
   "cookTime": 10,
   "prepTime": 35,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 28,
-  "carbs": 42,
-  "fats": 22,
+  "calories": 1293,
+  "protein": 84,
+  "carbs": 94,
+  "fats": 63,
   "tags": [
     "protein:mixed",
     "format:bar_line",
@@ -157,19 +157,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 28,
-    "carbs": 42,
-    "fats": 22,
-    "label": "~480 cal/serving · 28g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 1293,
+    "protein": 84,
+    "carbs": 94,
+    "fats": 63,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/sandwich-board-night.jpg",
@@ -192,5 +198,80 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "sliced ham",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "provolone cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Swiss cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sub rolls",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

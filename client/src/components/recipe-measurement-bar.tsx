@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 import { MeasurementUnitToggle } from "@/components/measurement-unit-toggle";
 
 type RecipeMeasurementBarProps = {
@@ -14,10 +15,7 @@ type RecipeMeasurementBarProps = {
 export function RecipeMeasurementBar({ className, children }: RecipeMeasurementBarProps) {
   return (
     <div
-      className={cn(
-        "rounded-2xl border border-border/30 bg-card/25 p-4 sm:p-5 space-y-4",
-        className,
-      )}
+      className={cn(app.panel, "p-4 sm:p-5 space-y-4", className)}
       data-testid="recipe-measurement-bar"
     >
       {children}

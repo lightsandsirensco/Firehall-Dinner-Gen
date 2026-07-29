@@ -208,5 +208,64 @@
     "taco-pizza"
   ],
   "generatedAt": "2026-05-30T03:45:01.591Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pizza dough balls (15 oz)",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Unsalted butter, melted",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Ranch dressing",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Low-moisture mozzarella, shredded",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Blue cheese crumbles",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pizza crust."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

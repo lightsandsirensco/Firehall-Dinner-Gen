@@ -15,9 +15,8 @@ import {
   buildExplorePackageUrl,
   buildRecipeUrl,
   getDefaultWheelClassic,
-  isClassicPinned,
-  toggleClassicPin,
 } from "@/lib/firehall-classics-wheel";
+import { addHallFavorite, isHallFavorite, removeHallFavorite } from "@/lib/hall-favorites-store";
 import { AnimatePresence, motion } from "framer-motion";
 import { hapticSuccess } from "@/lib/haptics";
 import { CLASSICS_WHEEL } from "@/lib/brand-copy";
@@ -71,7 +70,7 @@ export default function ClassicsWheelPage() {
     recordWheelStreakSpin();
     setWinner(classic);
     setWinnerIndex(idx >= 0 ? idx : null);
-    setPinned(isClassicPinned(classic.slug));
+    setPinned(isHallFavorite(classic.slug));
     setPhase("reveal");
   }, []);
 
@@ -99,7 +98,18 @@ export default function ClassicsWheelPage() {
 
   const handleTogglePin = useCallback(() => {
     if (!winner) return;
-    setPinned(toggleClassicPin(winner.slug));
+    if (isHallFavorite(winner.slug)) {
+      removeHallFavorite(winner.slug);
+      setPinned(false);
+      return;
+    }
+    const result = addHallFavorite({
+      slug: winner.slug,
+      title: winner.title,
+      recipePath: buildRecipeUrl(winner),
+      source: "classics_wheel",
+    });
+    setPinned(result.ok || result.reason === "duplicate");
   }, [winner]);
 
   const wheelVoteRecipes = useMemo(

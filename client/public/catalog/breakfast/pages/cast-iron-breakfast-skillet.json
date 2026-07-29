@@ -82,23 +82,24 @@
     }
   ],
   "nutrition": {
-    "calories": 412,
-    "protein": 22,
-    "carbs": 49,
-    "fat": 15,
-    "label": "per serving (hall portion)",
+    "calories": 658,
+    "protein": 36,
+    "carbs": 50,
+    "fat": 35,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
+      "highProtein": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -122,5 +123,63 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "Cast Iron Breakfast Skillet | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "breakfast sausage or diced ham",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

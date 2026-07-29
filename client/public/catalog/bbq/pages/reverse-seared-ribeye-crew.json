@@ -13,10 +13,10 @@
   "cookTime": 75,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 373,
-  "protein": 23,
-  "carbs": 9,
-  "fats": 28,
+  "calories": 1081,
+  "protein": 90,
+  "carbs": 7,
+  "fats": 76,
   "tags": [
     "protein:beef",
     "format:grill",
@@ -162,12 +162,26 @@
   "mealPrepNotes": "Season early. Smoke in batches if smoker space is tight. Sear to order if possible; otherwise hold tented at 170°F max 20 minutes.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 373,
-    "protein": 23,
-    "carbs": 9,
-    "fats": 28,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 1081,
+    "protein": 90,
+    "carbs": 7,
+    "fats": 76,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/reverse-seared-ribeye-crew.jpg",
   "heroImageAlt": "Reverse-Seared Ribeye for the Crew — crew-sized BBQ spread with visible smoke and bark",
@@ -197,5 +211,40 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.419Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

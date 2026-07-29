@@ -62,7 +62,7 @@ export default function FavoritesPage() {
       {meals.length > 0 ? (
         <section aria-labelledby="saved-dinners-heading" className="space-y-3">
           <div>
-            <h2 id="saved-dinners-heading" className="font-heading text-lg">
+            <h2 id="saved-dinners-heading" className={app.titleCard}>
               {HALL_FAVORITES.savedDinners}
             </h2>
             <p className="text-sm text-muted-foreground leading-relaxed">
@@ -95,7 +95,7 @@ export default function FavoritesPage() {
 
       {hallClassicCount > 0 ? (
         <section className="space-y-2 pt-2">
-          <h2 className="px-0.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+          <h2 className={cn(app.eyebrowMuted, "px-0.5")}>
             {HALL_FAVORITES.ourClassics}
           </h2>
           <OurHallClassicsSection source="hall_favorites_page" />

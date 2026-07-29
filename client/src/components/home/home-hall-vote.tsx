@@ -1,9 +1,11 @@
+import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 import { HallPrivateBetaNotice } from "@/components/hall/hall-private-beta-notice";
 
 export function HomeHallVote() {
   return (
     <section
-      className="max-w-[1400px] mx-auto px-page py-10 sm:py-14"
+      className={cn(app.main, app.sectionY)}
       aria-labelledby="home-hall-section-heading"
       data-testid="home-hall-section"
     >

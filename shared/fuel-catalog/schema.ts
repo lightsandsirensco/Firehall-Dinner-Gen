@@ -4,6 +4,7 @@
 
 import { z } from "zod";
 import { smoothieTaxonomySchema } from "./smoothies/taxonomy.js";
+import { recipeDietaryProfileSchema, dietarySummarySchema } from "../dietary/schema.js";
 
 const slugSchema = z
   .string()
@@ -75,6 +76,7 @@ export const fuelRecipePageSchema = z.object({
   catalogSet: z.literal("fuel_smoothie"),
   generatedAt: z.string().trim().max(40),
   contentVersion: z.number().int().min(1).max(99),
+  dietary: recipeDietaryProfileSchema.optional(),
 });
 
 export const fuelCatalogIndexSchema = z.object({
@@ -94,6 +96,7 @@ export const fuelCatalogIndexSchema = z.object({
       thumbImage: z.string(),
       calories: z.number().int(),
       protein: z.number().int(),
+      dietarySummary: dietarySummarySchema.optional(),
     }),
   ),
 });

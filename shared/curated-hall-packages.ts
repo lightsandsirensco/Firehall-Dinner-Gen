@@ -887,7 +887,7 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
     macros: { calories: 820, protein_g: 54, carbs_g: 62, fat_g: 30 },
     plate: {
       display_title: "BBQ Chicken Mac and Cheese — Hall Comfort Tray",
-      main: [{ name: "BBQ chicken mac bake", amount: "hotel pan (8 servings)", role: "main" }],
+      main: [{ name: "BBQ chicken mac bake", amount: "baking dish (8 servings)", role: "main" }],
       sides: [{ name: "Garlic bread", amount: "2 loaves", role: "starch" }],
       optional: [
         { name: "Extra BBQ sauce", amount: "for the line", role: "optional" },
@@ -907,7 +907,7 @@ const CURATED_HALL_PACKAGES_RAW: CuratedPackageInput[] = [
       { title: "Shred BBQ chicken (medium, 25 min)", heat: "medium", minutes: 25, instructions: "Bake or grill thighs to 165°F; shred and toss with half the BBQ sauce." },
       { title: "Boil mac (rolling boil, 10 min)", heat: "high", minutes: 10, instructions: "Cook pasta al dente; drain well." },
       { title: "Make cheese sauce (medium, 12 min)", heat: "medium", minutes: 12, instructions: "Roux, whisk in milk, melt cheddar and mozzarella until smooth." },
-      { title: "Assemble tray (no heat, 8 min)", heat: "none", minutes: 8, instructions: "Fold mac, sauce, and chicken into hotel pan; top with cheese and remaining BBQ." },
+      { title: "Assemble tray (no heat, 8 min)", heat: "none", minutes: 8, instructions: "Fold mac, sauce, and chicken into baking dish; top with cheese and remaining BBQ." },
       { title: "Bake and serve (375°F, 20 min)", heat: "high", minutes: 20, instructions: "Bake until bubbling and golden; rest 5 min before the line." },
     ],
     whyItFits: "Comfort-tray night — smoky BBQ chicken in creamy mac, one pan feeds the whole hall.",

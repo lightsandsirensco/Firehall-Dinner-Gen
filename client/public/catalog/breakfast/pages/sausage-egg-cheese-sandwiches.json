@@ -76,18 +76,19 @@
     }
   ],
   "nutrition": {
-    "calories": 436,
-    "protein": 20,
-    "carbs": 41,
-    "fat": 21,
-    "label": "per serving (hall portion)",
+    "calories": 571,
+    "protein": 31,
+    "carbs": 24,
+    "fat": 39,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -116,5 +117,74 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 5,
   "seoTitle": "Sausage Egg & Cheese Sandwiches | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "English muffins or brioche buns",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "breakfast sausage patties or links",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "sliced cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

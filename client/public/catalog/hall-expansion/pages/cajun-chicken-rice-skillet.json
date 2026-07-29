@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 34,
+  "calories": 549,
+  "protein": 63,
   "carbs": 52,
-  "fats": 16,
+  "fats": 8,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -158,12 +158,13 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 34,
+    "calories": 549,
+    "protein": 63,
     "carbs": 52,
-    "fats": 16,
-    "label": "~480 cal/serving · 34g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "fats": 8,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -171,6 +172,11 @@
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
@@ -193,5 +199,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Cajun seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

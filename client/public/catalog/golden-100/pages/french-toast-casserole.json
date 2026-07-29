@@ -10,13 +10,13 @@
   "description": "Feed the hall before the bell. Sized for a full crew, with timing that still works when the kitchen gets interrupted.",
   "crewSize": 8,
   "baseServings": 8,
-  "cookTime": 55,
-  "prepTime": 20,
+  "cookTime": 173,
+  "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1261,
-  "protein": 63,
-  "carbs": 120,
-  "fats": 60,
+  "calories": 1158,
+  "protein": 30,
+  "carbs": 180,
+  "fats": 38,
   "tags": [
     "protein:vegetarian",
     "format:bake",
@@ -31,63 +31,100 @@
   ],
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "18",
+      "name": "Thick-sliced brioche or Texas toast, cubed",
+      "quantity": "3",
+      "unit": "lb",
+      "group": "Base"
+    },
+    {
+      "name": "Large eggs",
+      "quantity": "16",
       "unit": "count",
-      "group": "Main"
+      "group": "Custard"
     },
     {
-      "name": "Buttermilk",
+      "name": "Whole milk",
       "quantity": "4",
-      "unit": "Cups",
-      "group": "Batter"
+      "unit": "cups",
+      "group": "Custard"
     },
     {
-      "name": "All-Purpose Flour",
-      "quantity": "4",
-      "unit": "Cups",
-      "group": "Batter"
+      "name": "Heavy cream",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Custard"
     },
     {
-      "name": "Thick-Cut Bacon",
+      "name": "Granulated sugar",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Custard"
+    },
+    {
+      "name": "Ground cinnamon",
       "quantity": "2",
-      "unit": "Lb",
-      "group": "Side"
+      "unit": "tbsp",
+      "group": "Custard"
     },
     {
-      "name": "Maple Syrup",
+      "name": "Vanilla extract",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "tbsp",
+      "group": "Custard"
+    },
+    {
+      "name": "Unsalted butter, melted",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Topping"
+    },
+    {
+      "name": "Brown sugar",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Topping"
+    },
+    {
+      "name": "Maple syrup",
+      "quantity": "2",
+      "unit": "cups",
       "group": "Serve"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Mix batter gently",
-      "instruction": "Whisk dry and wet separately; combine until just mixed. Lumps are fine — over-mixing makes tough pancakes.",
+      "title": "Layer the bread",
+      "instruction": "Cube bread into 1-inch pieces — day-old bread works best since it soaks without turning to mush. Spread evenly across two greased baking dishes.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Bake bacon, hold oven",
-      "instruction": "Bake bacon at 400°F on sheet pans 15–18 minutes until crisp. Set oven to 200°F to hold finished pancakes and eggs.",
-      "minutes": 18,
-      "heatLevel": "high"
+      "title": "Whisk the custard",
+      "instruction": "Whisk eggs, milk, cream, sugar, cinnamon, and vanilla until fully combined. Pour evenly over the bread, pressing cubes down so every piece soaks.",
+      "minutes": 8,
+      "heatLevel": ""
     },
     {
       "stepNumber": 3,
-      "title": "Griddle in batches",
-      "instruction": "Griddle at 375°F: pancakes 2–3 minutes per side until golden; eggs if serving scrambled in batches. Common mistake: heat too high — outside burns before center sets.",
-      "minutes": 20,
-      "heatLevel": "medium"
+      "title": "Rest before baking",
+      "instruction": "Cover and refrigerate at least 1 hour, overnight is best, so the bread fully absorbs the custard — this is what keeps the center soft instead of dry.",
+      "minutes": 60,
+      "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Serve the line",
-      "instruction": "French Toast Casserole does not wait — call the crew as batches finish. Syrup and butter on the table; backup tray in the 200°F oven.",
-      "minutes": 5,
+      "title": "Bake until set",
+      "instruction": "Bake uncovered at 350°F for 45–50 minutes until the center is puffed and springs back and the edges are deep golden. A knife inserted in the center should come out clean.",
+      "minutes": 50,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest, top, and serve",
+      "instruction": "Rest 10 minutes before cutting into squares. Brush with melted butter and a scatter of brown sugar. Serve warm with maple syrup on the side.",
+      "minutes": 10,
       "heatLevel": "low"
     }
   ],
@@ -110,14 +147,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1261,
-    "protein": 63,
-    "carbs": 120,
-    "fats": 60,
-    "label": "per serving (hall portion)",
+    "calories": 1158,
+    "protein": 30,
+    "carbs": 180,
+    "fats": 38,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
@@ -125,7 +163,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -157,6 +195,64 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.328Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:33:03.256Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "low",
+    "matchedCount": 9,
+    "totalCount": 10,
+    "uncertainIngredients": [
+      {
+        "name": "Thick-sliced brioche or Texas toast, cubed",
+        "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
+      }
+    ],
+    "flaggedIngredients": [
+      {
+        "name": "Large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Heavy cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Vanilla extract",
+        "allergens": [
+          "alcohol"
+        ]
+      },
+      {
+        "name": "Unsalted butter, melted",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": false,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

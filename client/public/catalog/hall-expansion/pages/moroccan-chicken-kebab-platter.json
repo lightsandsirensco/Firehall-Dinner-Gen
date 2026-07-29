@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 450,
-  "protein": 36,
-  "carbs": 38,
-  "fats": 18,
+  "calories": 621,
+  "protein": 45,
+  "carbs": 42,
+  "fats": 28,
   "tags": [
     "protein:chicken",
     "format:skewer",
@@ -171,12 +171,13 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 450,
-    "protein": 36,
-    "carbs": 38,
-    "fats": 18,
-    "label": "~450 cal/serving · 36g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 621,
+    "protein": 45,
+    "carbs": 42,
+    "fats": 28,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -184,6 +185,11 @@
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",
@@ -206,5 +212,40 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "couscous",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta/noodle alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

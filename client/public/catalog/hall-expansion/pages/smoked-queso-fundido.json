@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 540,
-  "protein": 26,
-  "carbs": 22,
-  "fats": 40,
+  "calories": 1165,
+  "protein": 46,
+  "carbs": 84,
+  "fats": 72,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -160,19 +160,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 540,
-    "protein": 26,
-    "carbs": 22,
-    "fats": 40,
-    "label": "~540 cal/serving · 26g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 1165,
+    "protein": 46,
+    "carbs": 84,
+    "fats": 72,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/smoked-queso-fundido.jpg",
@@ -195,5 +201,75 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.768Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Mexican chorizo",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Oaxaca cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Monterey Jack cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cream cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "heavy cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

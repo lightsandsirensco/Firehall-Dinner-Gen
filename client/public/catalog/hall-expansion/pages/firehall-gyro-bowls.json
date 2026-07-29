@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 640,
-  "protein": 39,
-  "carbs": 68,
-  "fats": 23,
+  "calories": 1065,
+  "protein": 73,
+  "carbs": 91,
+  "fats": 47,
   "tags": [
     "protein:beef",
     "format:bowls",
@@ -166,19 +166,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 640,
-    "protein": 39,
-    "carbs": 68,
-    "fats": 23,
-    "label": "~640 cal/serving · 39g protein · 5g fiber (est.)",
-    "source": "estimated",
+    "calories": 1065,
+    "protein": 73,
+    "carbs": 91,
+    "fats": 47,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/firehall-gyro-bowls.jpg",
@@ -203,5 +209,34 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "tzatziki",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

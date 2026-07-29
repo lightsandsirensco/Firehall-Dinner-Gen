@@ -14,9 +14,9 @@
   "prepTime": 25,
   "difficulty": "medium",
   "calories": 1400,
-  "protein": 105,
-  "carbs": 38,
-  "fats": 90,
+  "protein": 78,
+  "carbs": 75,
+  "fats": 86,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -163,16 +163,17 @@
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1400,
-    "protein": 105,
-    "carbs": 38,
-    "fats": 90,
-    "label": "per serving (hall portion)",
+    "protein": 78,
+    "carbs": 75,
+    "fats": 86,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -211,5 +212,81 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.295Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pizza Dough Balls (15 Oz)",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Low-Moisture Mozzarella, Shredded",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Pepperoni Slices",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Italian Sausage, Cooked Crumbles",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Canadian Bacon, Diced",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Bacon, Cooked And Crumbled",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Grated Parmesan",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pizza crust."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

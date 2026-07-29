@@ -23,7 +23,7 @@ const SMOKER_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "Turkey breast feels lighter than brisket but still reads as a special smoke night. It slices fast on the line, portions evenly, and reheats without turning stringy when held properly.",
     mealPrepNotes:
-      "Brine breasts up to 24 hours ahead in labeled cambros. Pat completely dry before smoking so the skin sets instead of steaming. Hold sliced turkey at 165°F max in a covered hotel pan with a splash of broth.",
+      "Brine breasts up to 24 hours ahead in labeled lidded containers. Pat completely dry before smoking so the skin sets instead of steaming. Hold sliced turkey at 165°F max in a covered baking dish with a splash of broth.",
     stationWorkflow: [
       "Slice against the grain on a dedicated cutting board with a sharp slicer knife for even portions.",
       "Keep glaze in a squeeze bottle and brush only during the final 15 minutes of the cook.",
@@ -58,14 +58,14 @@ const SMOKER_RECIPES: ExpansionRecipeDef[] = [
       "Save pan drippings, skim fat, and whisk into the glaze for a richer service sauce.",
     ],
     tonightSpread: [
-      "Sliced turkey on a hotel pan with extra glaze, soft rolls, and quick pickles on the side.",
+      "Sliced turkey on a baking dish with extra glaze, soft rolls, and quick pickles on the side.",
       "Simple green salad with lemon vinaigrette to cut the richness of the smoked glaze.",
     ],
     leftovers: [
       "Chop into smoked turkey club sandwiches with bacon and sharp cheddar.",
       "Dice and fold into a creamy turkey tetrazzini bake for the next shift lunch.",
     ],
-    equipment: ["Pellet or offset smoker", "Instant-read thermometer", "Hotel pans", "Aluminum foil", "Basting brush"],
+    equipment: ["Pellet or offset smoker", "Instant-read thermometer", "baking dishes", "Aluminum foil", "Basting brush"],
     nutrition: { calories: 320, protein: 48, carbs: 12, fats: 9, fiber: 1 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -506,7 +506,7 @@ const SMOKER_RECIPES: ExpansionRecipeDef[] = [
       "Chop into corned beef hash with fried eggs for post-shift breakfast.",
       "Layer into grilled cheese with sauerkraut and swiss for quick Reuben melts.",
     ],
-    equipment: ["Smoker", "Heavy-duty foil", "Instant-read thermometer", "Slicing knife", "Hotel pans"],
+    equipment: ["Smoker", "Heavy-duty foil", "Instant-read thermometer", "Slicing knife", "baking dishes"],
     nutrition: { calories: 530, protein: 36, carbs: 34, fats: 28, fiber: 4 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -1225,7 +1225,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "Shawarma bar night feels like takeout but costs a fraction and scales cleanly. Warm spiced chicken smells incredible in the hall and the DIY format means no one gets stuck with toppings they hate.",
     mealPrepNotes:
-      "Marinate chicken up to 24 hours. Prep all bar toppings in labeled hotel pans the night before. Slice chicken just before service and hold at 165°F in a covered pan with a splash of lemon juice.",
+      "Marinate chicken up to 24 hours. Prep all bar toppings in labeled baking dishes the night before. Slice chicken just before service and hold at 165°F in a covered pan with a splash of lemon juice.",
     stationWorkflow: [
       "Lay out the bar in order of assembly: bread, protein, sauces, crunchy toppings, herbs.",
       "Keep hot chicken on the far side of cold toppings so steam does not wilt the vegetables.",
@@ -1250,7 +1250,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     steps: [
       step(1, "Marinate the chicken", "Whisk olive oil, lemon juice, cumin, paprika, turmeric, garlic, and 2 tbsp salt. Coat thighs and marinate at least 2 hours or overnight for deepest flavor penetration.", { minutes: 15 }),
       step(2, "Roast the chicken", "Arrange thighs on oiled sheet pans skin-side up. Roast at 425°F for 25–30 minutes until charred at edges and internal temp reaches 175°F in the thickest piece.", { minutes: 30, tempF: 425 }),
-      step(3, "Rest and slice thin", "Rest chicken 10 minutes, then slice as thin as possible against the grain. Pile into a hotel pan and tent with foil for holding at the bar.", { minutes: 15 }),
+      step(3, "Rest and slice thin", "Rest chicken 10 minutes, then slice as thin as possible against the grain. Pile into a baking dish and tent with foil for holding at the bar.", { minutes: 15 }),
       step(4, "Set the shawarma bar", "Warm flatbread wrapped in towels. Arrange sliced chicken, tahini, pickles, diced tomatoes, sliced onions, and fresh parsley in separate labeled pans along the line.", { minutes: 15 }),
       step(5, "Service and replenish", "Call the meal and demonstrate one wrap build. Replenish chicken and bread from backup pans kept warm in a low oven throughout the meal.", { minutes: 10 }),
     ],
@@ -1267,7 +1267,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Chop chicken into a grain bowl with leftover bar toppings and lemon dressing.",
       "Stuff into pita with feta for a cold lunch wrap the next shift.",
     ],
-    equipment: ["Sheet pans", "Hotel pans", "Instant-read thermometer", "Sharp slicing knife", "Serving spoons"],
+    equipment: ["Sheet pans", "baking dishes", "Instant-read thermometer", "Sharp slicing knife", "Serving spoons"],
     nutrition: { calories: 480, protein: 36, carbs: 38, fats: 20, fiber: 4 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -1330,7 +1330,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Chop into breakfast burritos with scrambled eggs and hot sauce.",
       "Simmer with broth and tortillas into a quick fajita soup.",
     ],
-    equipment: ["Griddle or cast-iron skillet", "Cast-iron platters", "Trivets", "Hotel pans", "Instant-read thermometer"],
+    equipment: ["Griddle or cast-iron skillet", "Cast-iron platters", "Trivets", "baking dishes", "Instant-read thermometer"],
     nutrition: { calories: 450, protein: 38, carbs: 32, fats: 18, fiber: 4 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -1351,7 +1351,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "Burger bar night is democratic—pickles but no onions, double bacon, triple cheese, all acceptable. Smash technique delivers diner-quality crust in minutes on a flat-top or cast-iron.",
     mealPrepNotes:
-      "Form loose 3-ounce beef balls ahead and refrigerate on a sheet pan. Pre-slice all toppings into hotel pans. Cook bacon in the oven on racks while burgers smash on the griddle.",
+      "Form loose 3-ounce beef balls ahead and refrigerate on a sheet pan. Pre-slice all toppings into baking dishes. Cook bacon in the oven on racks while burgers smash on the griddle.",
     stationWorkflow: [
       "Smash patties within 30 seconds of hitting the griddle—delay means steam not crust.",
       "Toast buns cut-side down on the griddle during the last minute of patty cooking.",
@@ -1374,7 +1374,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       ing("kosher salt", "2", { unit: "tbsp", group: "Seasoning" }),
     ],
     steps: [
-      step(1, "Prep toppings and bacon", "Cook bacon on a wire rack at 400°F until crisp, about 18 minutes. Slice and arrange all burger bar toppings in labeled hotel pans while bacon cooks.", { minutes: 20, tempF: 400 }),
+      step(1, "Prep toppings and bacon", "Cook bacon on a wire rack at 400°F until crisp, about 18 minutes. Slice and arrange all burger bar toppings in labeled baking dishes while bacon cooks.", { minutes: 20, tempF: 400 }),
       step(2, "Form beef balls", "Divide beef into loose 3-ounce balls without compacting—tight balls resist smashing and cook unevenly. Season the griddle surface lightly with salt.", { minutes: 10 }),
       step(3, "Smash and sear patties", "Heat griddle ripping hot. Place balls on surface, smash flat with a sturdy spatula within 10 seconds, and sear 2 minutes until deep brown crust forms on the bottom.", { minutes: 8 }),
       step(4, "Flip, cheese, and finish", "Scrape and flip patties, add cheese, and cook 1 minute until cheese melts and internal temp reaches 160°F. Toast buns on the griddle during the last minute.", { minutes: 5 }),
@@ -1393,7 +1393,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Chop patties into a cheeseburger mac bake with pasta and cheddar.",
       "Crumble cold patties over salad for a hearty lunch bowl.",
     ],
-    equipment: ["Griddle or cast-iron skillet", "Sturdy spatula", "Hotel pans", "Wire rack", "Instant-read thermometer"],
+    equipment: ["Griddle or cast-iron skillet", "Sturdy spatula", "baking dishes", "Wire rack", "Instant-read thermometer"],
     nutrition: { calories: 620, protein: 34, carbs: 36, fats: 38, fiber: 2 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -1410,7 +1410,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     explorePools: ["bar_line", "pasta", "comfort", "hall_expansion"],
     hookLine: "Pasta night where red, white, and pesto lovers all leave happy",
     description:
-      "A large batch of penne stays hot in a hotel pan while three sauces—marinara, Alfredo, and pesto—sit ready for crew to mix and match. Grated cheese, chili flakes, and garlic bread complete the bar.",
+      "A large batch of penne stays hot in a baking dish while three sauces—marinara, Alfredo, and pesto—sit ready for crew to mix and match. Grated cheese, chili flakes, and garlic bread complete the bar.",
     whyCrewsLikeIt:
       "Pasta bar night is cheap, filling, and forgiving of late arrivals—sauce stays hot and pasta reheats well. Everyone customizes without cooking separate entrees for picky eaters.",
     mealPrepNotes:
@@ -1437,7 +1437,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       ing("red pepper flakes", "2", { unit: "tbsp", group: "Bar" }),
     ],
     steps: [
-      step(1, "Cook the pasta", "Boil penne in well-salted water until just shy of al dente, about 9 minutes. Drain, toss with 2 tbsp olive oil, and hold covered in a hotel pan with a splash of reserved pasta water.", { minutes: 15 }),
+      step(1, "Cook the pasta", "Boil penne in well-salted water until just shy of al dente, about 9 minutes. Drain, toss with 2 tbsp olive oil, and hold covered in a baking dish with a splash of reserved pasta water.", { minutes: 15 }),
       step(2, "Make Alfredo sauce", "Simmer cream with butter and minced garlic 3 minutes. Whisk in Parmesan until smooth and thick enough to coat a spoon. Keep warm on lowest heat.", { minutes: 10 }),
       step(3, "Warm all sauces", "Heat marinara and pesto separately in saucepans until simmering. Stir Alfredo occasionally so it does not break. Verify all sauces reach 165°F for safe holding.", { minutes: 10 }),
       step(4, "Prepare garlic bread", "Split French bread, spread with butter and minced garlic, top with mozzarella, and bake at 375°F until golden and cheese melts, about 10 minutes.", { minutes: 12, tempF: 375 }),
@@ -1456,7 +1456,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Bake sauced pasta with extra cheese into a next-day casserole.",
       "Toss cold pasta with olive oil, veggies, and feta for a lunch salad.",
     ],
-    equipment: ["Large stock pot", "Hotel pans", "Saucepans", "Ladles", "Sheet pan"],
+    equipment: ["Large stock pot", "baking dishes", "Saucepans", "Ladles", "Sheet pan"],
     nutrition: { calories: 520, protein: 16, carbs: 68, fats: 20, fiber: 4 },
     spiceLevel: "mild",
     cleanupDifficulty: "easy",
@@ -1479,7 +1479,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     mealPrepNotes:
       "Cook rice in a rice cooker and hold on warm. Roast vegetables on sheet pans ahead. Teriyaki chicken can be grilled or baked and sliced before service.",
     stationWorkflow: [
-      "Keep rice in a hotel pan with a damp towel over the top to prevent drying on hold.",
+      "Keep rice in a baking dish with a damp towel over the top to prevent drying on hold.",
       "Arrange toppings from wet to dry left to right so the line does not cross-contaminate.",
       "Offer half-rice/half-greens base for crews wanting lighter bowls without a separate menu.",
     ],
@@ -1503,7 +1503,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       step(1, "Cook the rice", "Rinse jasmine rice and cook with 4.5 cups water in a rice cooker or covered pot until fluffy. Fluff with a fork and hold covered with a damp towel until service.", { minutes: 25 }),
       step(2, "Prepare teriyaki chicken", "Season thighs with salt and pepper. Bake at 425°F for 22–25 minutes until internal temp reaches 175°F. Glaze with teriyaki during last 5 minutes, then slice.", { minutes: 28, tempF: 425 }),
       step(3, "Roast vegetables", "Toss broccoli and carrots with oil and salt. Roast at 425°F on sheet pans 18–20 minutes until tender and lightly charred at the edges.", { minutes: 20, tempF: 425 }),
-      step(4, "Prep the bowl bar", "Arrange rice, sliced chicken, roasted veg, edamame, pickled ginger, sesame seeds, sriracha mayo, and soy sauce in labeled hotel pans along the line.", { minutes: 15 }),
+      step(4, "Prep the bowl bar", "Arrange rice, sliced chicken, roasted veg, edamame, pickled ginger, sesame seeds, sriracha mayo, and soy sauce in labeled baking dishes along the line.", { minutes: 15 }),
       step(5, "Service and guide builds", "Suggest a base build: rice, chicken, veg, edamame, sauce, sesame. Let crew customize from there while you replenish hot components from backup pans.", { minutes: 10 }),
     ],
     proTips: [
@@ -1519,7 +1519,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Fry rice with leftover components and scrambled eggs for breakfast.",
       "Pack bowls in containers for members heading out on early shift.",
     ],
-    equipment: ["Rice cooker", "Sheet pans", "Hotel pans", "Instant-read thermometer", "Serving spoons"],
+    equipment: ["Rice cooker", "Sheet pans", "baking dishes", "Instant-read thermometer", "Serving spoons"],
     nutrition: { calories: 490, protein: 32, carbs: 58, fats: 14, fiber: 5 },
     spiceLevel: "mild",
     cleanupDifficulty: "easy",
@@ -1563,7 +1563,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       ing("lettuce and tomato", "1", { unit: "tray each", notes: "prepped", group: "Produce" }),
     ],
     steps: [
-      step(1, "Slice and arrange proteins", "Fan sliced turkey, ham, and roast beef in separate rows on the board or in hotel pans. Fold rather than stack flat so slices lift easily without tearing.", { minutes: 15 }),
+      step(1, "Slice and arrange proteins", "Fan sliced turkey, ham, and roast beef in separate rows on the board or in baking dishes. Fold rather than stack flat so slices lift easily without tearing.", { minutes: 15 }),
       step(2, "Prep cheeses and produce", "Arrange provolone, cheddar, and Swiss alongside meats. Set lettuce, tomato, and onion in produce pans with tongs for easy grabbing.", { minutes: 10 }),
       step(3, "Warm the rolls", "Split sub rolls and warm cut-side up at 325°F for 5–6 minutes until soft inside and lightly crisp at the edges. Wrap in towels until the board opens.", { minutes: 8, tempF: 325 }),
       step(4, "Set spreads and condiments", "Fill squeeze bottles and ramekins with mayo, mustard, oil-vinegar, pickles, and pepperoncini. Place salt and pepper grinders at the end of the line.", { minutes: 8 }),
@@ -1582,7 +1582,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Chop meats and cheese into a breakfast scramble with peppers.",
       "Layer into pressed panini the next day with leftover spreads.",
     ],
-    equipment: ["Cutting board", "Hotel pans", "Squeeze bottles", "Sheet pan", "Tongs"],
+    equipment: ["Cutting board", "baking dishes", "Squeeze bottles", "Sheet pan", "Tongs"],
     nutrition: { calories: 480, protein: 28, carbs: 42, fats: 22, fiber: 3 },
     spiceLevel: "mild",
     cleanupDifficulty: "easy",
@@ -1627,7 +1627,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     ],
     steps: [
       step(1, "Marinate and grill chicken", "Marinate thighs in lemon, olive oil, oregano, garlic, and salt 2–24 hours. Grill over medium-high heat 6–7 minutes per side until internal temp reaches 175°F and char marks appear.", { minutes: 25 }),
-      step(2, "Rest and slice chicken", "Rest grilled chicken 10 minutes, then slice into strips. Hold in a hotel pan at 165°F with a light drizzle of olive oil to prevent drying.", { minutes: 15 }),
+      step(2, "Rest and slice chicken", "Rest grilled chicken 10 minutes, then slice into strips. Hold in a baking dish at 165°F with a light drizzle of olive oil to prevent drying.", { minutes: 15 }),
       step(3, "Prep cold mezze components", "Portion hummus, tzatziki, tabbouleh, feta, and olives into separate bowls. Garnish hummus with paprika and olive oil drizzle for visual appeal.", { minutes: 15 }),
       step(4, "Warm pita and set the bar", "Wrap pita in foil and warm at 350°F for 8 minutes. Arrange all components along the line with serving spoons and label each dish clearly.", { minutes: 10, tempF: 350 }),
       step(5, "Guide plate builds", "Suggest a sample plate: hummus, chicken, tabbouleh, feta, olives, pita. Encourage wraps or bowls and replenish warm pita from the oven as needed.", { minutes: 10 }),
@@ -1645,7 +1645,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Wrap chicken and dips into lunch pitas with extra tabbouleh.",
       "Stir leftover components into a lemony grain salad for tomorrow.",
     ],
-    equipment: ["Grill or grill pan", "Hotel pans", "Serving bowls", "Instant-read thermometer", "Sheet pan"],
+    equipment: ["Grill or grill pan", "baking dishes", "Serving bowls", "Instant-read thermometer", "Sheet pan"],
     nutrition: { calories: 460, protein: 34, carbs: 36, fats: 20, fiber: 6 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -1691,7 +1691,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     steps: [
       step(1, "Slow-cook carnitas", "Season pork with cumin, salt, and pepper. Braise with orange juice and lime covered at 300°F until tender and internal temp reaches 195°F, about 3 hours. Shred with forks.", { minutes: 180, tempF: 300 }),
       step(2, "Crisp for service", "Spread shredded carnitas on sheet pans and broil 5 minutes until edges crisp and brown. Verify held temp stays above 165°F before placing at the bar.", { minutes: 8 }),
-      step(3, "Prepare rice and beans", "Cook rice and finish with lime juice and chopped cilantro. Season black beans with cumin and garlic. Keep both hot in hotel pans on the line.", { minutes: 30 }),
+      step(3, "Prepare rice and beans", "Cook rice and finish with lime juice and chopped cilantro. Season black beans with cumin and garlic. Keep both hot in baking dishes on the line.", { minutes: 30 }),
       step(4, "Set the bowl bar", "Arrange rice, carnitas, beans, corn salsa, lettuce, cheese, sour cream, and hot sauce in order. Warm tortillas wrapped in foil as an optional wrap upgrade.", { minutes: 15 }),
       step(5, "Service and portion guidance", "Suggest starting with rice, protein, beans, salsa, then cold toppings. Replenish crisped carnitas from backup pans under the broiler as needed.", { minutes: 10 }),
     ],
@@ -1708,7 +1708,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Carnitas freeze well—re-crisp and reuse on taco night next week.",
       "Mix leftover bowl components into a baked enchilada casserole.",
     ],
-    equipment: ["Dutch oven or roasting pan", "Sheet pans", "Hotel pans", "Instant-read thermometer", "Broiler"],
+    equipment: ["Dutch oven or roasting pan", "Sheet pans", "baking dishes", "Instant-read thermometer", "Broiler"],
     nutrition: { calories: 540, protein: 32, carbs: 52, fats: 22, fiber: 8 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -1753,7 +1753,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     ],
     steps: [
       step(1, "Brown the beef", "Cook ground beef over medium-high heat, breaking into fine crumbles until no pink remains. Drain fat, add taco seasoning and 0.25 cup water, and simmer until coated and thick.", { minutes: 12 }),
-      step(2, "Warm queso and beans", "Heat queso in a slow cooker on warm, stirring occasionally. Season and warm black beans in a separate hotel pan. Verify both reach 165°F for safe holding.", { minutes: 10 }),
+      step(2, "Warm queso and beans", "Heat queso in a slow cooker on warm, stirring occasionally. Season and warm black beans in a separate baking dish. Verify both reach 165°F for safe holding.", { minutes: 10 }),
       step(3, "Prep chip bases", "Spread chips in single layers on sheet pans and warm at 250°F while the bar sets up. Chips should feel hot to touch but not brown.", { minutes: 8, tempF: 250 }),
       step(4, "Set the nacho bar", "Line up warm chip pans, beef, queso, cheddar, beans, jalapeños, pico, sour cream, and guacamole with serving spoons and clear labels.", { minutes: 12 }),
       step(5, "Build and broil to order", "Crew tops their chip base at the line. Run finished plates under the broiler 1–2 minutes to melt cheddar if desired, then add cold toppings after.",
@@ -1772,7 +1772,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Layer leftover toppings into a nacho casserole bake with fresh chips on top.",
       "Beef and beans become tomorrow's taco filling with minimal extra work.",
     ],
-    equipment: ["Slow cooker", "Sheet pans", "Hotel pans", "Broiler", "Large skillet"],
+    equipment: ["Slow cooker", "Sheet pans", "baking dishes", "Broiler", "Large skillet"],
     nutrition: { calories: 580, protein: 28, carbs: 44, fats: 34, fiber: 6 },
     spiceLevel: "medium",
     cleanupDifficulty: "medium",
@@ -1817,7 +1817,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
     ],
     steps: [
       step(1, "Build aromatic broth", "Char ginger and onion under broiler 5 minutes. Simmer broth with star anise, cinnamon, ginger, and onion 90 minutes. Strain and keep at a bare simmer at 200°F for service.", { minutes: 100 }),
-      step(2, "Prep proteins and noodles", "Slice partially frozen sirloin paper-thin across the grain. Cook rice noodles per package, rinse, toss with oil, and hold warm in a hotel pan.", { minutes: 20 }),
+      step(2, "Prep proteins and noodles", "Slice partially frozen sirloin paper-thin across the grain. Cook rice noodles per package, rinse, toss with oil, and hold warm in a baking dish.", { minutes: 20 }),
       step(3, "Set the pho bar", "Arrange noodles, raw beef slices, bean sprouts, basil, cilantro, lime wedges, and green onions in separate pans. Place hoisin, sriracha, and fish sauce at the end.", { minutes: 15 }),
       step(4, "Assemble bowls to order", "Portion noodles into bowls, top with raw beef slices, and ladle boiling broth over top—the hot broth cooks beef to medium-rare in the bowl. Verify broth reads 190°F when ladled.", { minutes: 5 }),
       step(5, "Finish with herbs and serve", "Crew adds sprouts, herbs, lime, and hoisin or sriracha as each person prefers. Serve immediately while broth is steaming—pho does not hold well once noodles and beef are in the bowl.", { minutes: 5 }),
@@ -1835,7 +1835,7 @@ const CREW_FEEDER_RECIPES: ExpansionRecipeDef[] = [
       "Broth freezes excellently—reheat and run pho bar again with fresh noodles.",
       "Slice leftover beef into stir-fry with the bean sprouts and green onions.",
     ],
-    equipment: ["Large stock pot", "Strainer", "Hotel pans", "Ladle", "Sharp slicing knife"],
+    equipment: ["Large stock pot", "Strainer", "baking dishes", "Ladle", "Sharp slicing knife"],
     nutrition: { calories: 420, protein: 28, carbs: 48, fats: 12, fiber: 3 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",

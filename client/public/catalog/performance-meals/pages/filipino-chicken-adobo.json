@@ -1,0 +1,245 @@
+{
+  "slug": "filipino-chicken-adobo",
+  "title": "Filipino-Style Chicken Adobo",
+  "displayTitle": "Filipino-Style Chicken Adobo",
+  "seoTitle": "Filipino-Style Chicken Adobo | Firefighter Meal",
+  "shortDescription": "Soy-vinegar braised chicken thighs with garlic and bay leaf over rice",
+  "subtitle": "Soy-vinegar braised chicken thighs with garlic and bay leaf over rice",
+  "category": "healthy_performance",
+  "cuisine": "Filipino",
+  "description": "Chicken thighs braise in a tangy soy-vinegar-garlic sauce with bay leaf and black peppercorns until fall-apart tender, then get served over rice with the reduced pan sauce spooned on top.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 723,
+  "protein": 52,
+  "carbs": 62,
+  "fats": 27,
+  "tags": [
+    "protein:chicken",
+    "format:one_pot",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large Dutch oven or deep skillet",
+    "Rice pot"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless, skinless chicken thighs",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.75",
+      "unit": "cup"
+    },
+    {
+      "name": "apple cider vinegar",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "12",
+      "unit": "cloves",
+      "notes": "smashed"
+    },
+    {
+      "name": "bay leaves",
+      "quantity": "4",
+      "unit": "whole"
+    },
+    {
+      "name": "whole black peppercorns",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "low sodium"
+    },
+    {
+      "name": "long-grain white rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "scallions",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "sliced, for garnish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate briefly",
+      "instruction": "Combine chicken, soy sauce, vinegar, garlic, bay leaves, and peppercorns in a bowl. Marinate 15–30 minutes at room temperature while you prep everything else.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sear the chicken",
+      "instruction": "Remove chicken from marinade, reserving the liquid. Sear in oil over medium-high 3–4 minutes per side until lightly browned—it will finish cooking in the braise.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Braise until tender",
+      "instruction": "Pour reserved marinade and broth over chicken, add brown sugar, bring to a simmer. Cover and cook 20–25 minutes until chicken is fork-tender and reads 165°F.",
+      "minutes": 25,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Reduce the sauce",
+      "instruction": "Uncover, remove chicken, and simmer sauce 5–8 minutes until thickened and glossy enough to coat the back of a spoon. Return chicken to the pan to coat.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve over rice",
+      "instruction": "Cook rice according to package directions while the sauce reduces. Serve chicken and sauce over rice, topped with sliced scallions.",
+      "minutes": 20,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Adobo tastes even better the next day—make it ahead if your schedule allows.",
+    "A hard-boiled egg simmered in the sauce for the last 10 minutes is a classic Filipino addition.",
+    "Crisp up leftover chicken skin-on in a hot pan for adobo flakes over rice."
+  ],
+  "tonightSpread": [
+    "Steamed white rice.",
+    "Quick pickled cucumber on the side."
+  ],
+  "leftovers": [
+    "Shred leftover chicken into fried rice with the extra sauce.",
+    "Reheats beautifully—sauce may need a splash of water to loosen."
+  ],
+  "whyCrewsLikeIt": "Salty-sour-savory in a way nothing else on the menu tastes like. One pot, minimal prep, and it holds through call interruptions better than almost anything else in the collection.",
+  "mealPrepNotes": "Do not stir too often while it simmers—let the sauce reduce undisturbed so it thickens properly. Station: Use real cane vinegar or apple cider vinegar—white vinegar alone tastes harsh and flat. Station: Let the sauce reduce uncovered at the end; a thin, watery adobo is a common mistake. Station: Hold covered at 165°F if calls interrupt—adobo actually improves with extra time in the sauce.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 723,
+    "protein": 52,
+    "carbs": 62,
+    "fats": 27,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Filipino-Style Chicken Adobo on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "filipino-style chicken adobo",
+    "filipino chicken adobo",
+    "chicken",
+    "Filipino",
+    "one pot",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.700Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

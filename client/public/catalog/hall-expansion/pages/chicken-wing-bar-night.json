@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 490,
-  "protein": 36,
-  "carbs": 14,
-  "fats": 34,
+  "calories": 907,
+  "protein": 107,
+  "carbs": 33,
+  "fats": 37,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -163,19 +163,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 490,
-    "protein": 36,
-    "carbs": 14,
-    "fats": 34,
-    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 907,
+    "protein": 107,
+    "carbs": 33,
+    "fats": 37,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/chicken-wing-bar-night.jpg",
@@ -198,5 +204,40 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

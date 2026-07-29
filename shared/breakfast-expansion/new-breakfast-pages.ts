@@ -93,7 +93,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     stationWorkflow: [
       "One cook runs the oven rotation while another scrambles eggs and browns sausage in parallel.",
       "Par-bake both crusts together, then build one pizza at a time so the second crust doesn't over-proof on the counter.",
-      "Cut on the sheet pan at the line and slide squares onto a warm hotel pan for self-serve portions.",
+      "Cut on the sheet pan at the line and slide squares onto a warm baking dish for self-serve portions.",
     ],
     cleanupNotes: [
       "Line sheet pans with parchment for easier release and faster scrub-down after cheese bakes on.",
@@ -136,7 +136,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { group: "Finish", quantity: "1/2 cup", name: "cilantro", notes: "chopped, plus lime wedges" },
     ],
     steps: [
-      { stepNumber: 1, title: "Heat the oven", tempF: 375, minutes: 0, instruction: "Heat oven to 375°F. Grease a deep 9x13 pan or two smaller hotel pans. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing." },
+      { stepNumber: 1, title: "Heat the oven", tempF: 375, minutes: 0, instruction: "Heat oven to 375°F. Grease a deep 9x13 baking dish, or two smaller baking dishes. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing." },
       { stepNumber: 2, title: "Cook the filling", minutes: 15, instruction: "Brown chorizo in a large skillet, drain fat, then add soft-scrambled eggs and half the Jack cheese. Mix gently—the eggs should stay fluffy, not mashed." },
       { stepNumber: 3, title: "Roll the enchiladas", minutes: 12, instruction: "Spread a thin layer of sauce in the pan. Fill each tortilla with a generous scoop of filling, roll tight, and place seam-side down in a snug single layer." },
       { stepNumber: 4, title: "Sauce and cheese", minutes: 5, instruction: "Pour remaining sauce evenly over the rolls. Top with remaining Jack and cotija. Cover with foil for the first half of baking to keep tortillas soft." },
@@ -296,7 +296,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { stepNumber: 2, title: "Slice the roll block", minutes: 5, instruction: "Without separating individual rolls, slice the connected block horizontally into tops and bottoms. Keep the shape intact so assembly stays fast." },
       { stepNumber: 3, title: "Layer the sliders", minutes: 10, instruction: "Place bottom halves on the pan. Add sausage, egg, and cheese to each roll. Cap with tops and press gently so stacks stay level." },
       { stepNumber: 4, title: "Glaze and bake", tempF: 350, minutes: 18, instruction: "Whisk melted butter, maple syrup, and Dijon. Brush generously over roll tops. Bake until cheese melts and tops turn golden and sticky." },
-      { stepNumber: 5, title: "Rest and pull apart", minutes: 5, instruction: "Rest 5 minutes, then cut along roll seams with a sharp knife or bench scraper. Serve warm from the pan or transfer to a hotel pan for the line." },
+      { stepNumber: 5, title: "Rest and pull apart", minutes: 5, instruction: "Rest 5 minutes, then cut along roll seams with a sharp knife or bench scraper. Serve warm from the pan or transfer to a baking dish for the line." },
     ],
     stationWorkflow: [
       "Cook all sausage and egg sheets before touching the rolls—cold protein slows the bake and steams the bread.",
@@ -353,7 +353,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     stationWorkflow: [
       "Griddle two quesadillas at a time while a second cook builds the next pair—never stack uncooked folds.",
       "Use a flat press or second spatula to maximize crust contact; pale quesadillas mean cold centers.",
-      "Cut on a dedicated board and slide wedges directly into a warm hotel pan for self-serve.",
+      "Cut on a dedicated board and slide wedges directly into a warm baking dish for self-serve.",
     ],
     cleanupNotes: [
       "Wipe the griddle between batches with a damp towel and tongs to prevent burnt cheese buildup.",
@@ -396,7 +396,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { group: "Serve", quantity: "1/2 cup", name: "Greek yogurt", notes: "optional dollop at the line" },
     ],
     steps: [
-      { stepNumber: 1, title: "Blend the batter", minutes: 5, instruction: "Blend cottage cheese, eggs, milk, vanilla, cinnamon, and maple until completely smooth—no curds. Pour into a shallow hotel pan for fast dipping." },
+      { stepNumber: 1, title: "Blend the batter", minutes: 5, instruction: "Blend cottage cheese, eggs, milk, vanilla, cinnamon, and maple until completely smooth—no curds. Pour into a shallow baking dish for fast dipping." },
       { stepNumber: 2, title: "Heat the griddle", minutes: 3, instruction: "Heat a large griddle or cast iron over medium. Add butter until foaming but not brown. Work in batches so slices aren't crowded." },
       { stepNumber: 3, title: "Soak and griddle", minutes: 15, instruction: "Dip bread 3–4 seconds per side—don't oversaturate or centers stay raw. Griddle 3 minutes per side until deep golden and custard sets; adjust heat if browning too fast." },
       { stepNumber: 4, title: "Hold warm", minutes: 0, instruction: "Transfer finished slices to a wire rack on a sheet pan in a 200°F oven. Uncovered keeps the crust; cover only if holding longer than 20 minutes." },
@@ -451,7 +451,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { stepNumber: 1, title: "Crisp the fries", tempF: 425, minutes: 25, instruction: "Heat oven to 425°F. Spread fries on sheet pans in a single layer with oil and salt. Roast until deeply golden and crisp—soft fries kill poutine." },
       { stepNumber: 2, title: "Make sausage gravy", minutes: 10, instruction: "Brown sausage, sprinkle flour over the fat, and cook 1 minute. Whisk in milk gradually, simmer until thick enough to coat a spoon. Season aggressively with black pepper." },
       { stepNumber: 3, title: "Fry the eggs", minutes: 8, instruction: "Fry eggs sunny-side up in batches with crisp edges on the whites. Hold on a warm tray—yolks should stay runny for the full poutine experience." },
-      { stepNumber: 4, title: "Assemble on trays", minutes: 5, instruction: "Pile hot fries on hotel pans or plates. Scatter cheese curds, ladle hot gravy to partially melt them, then crown each portion with a fried egg." },
+      { stepNumber: 4, title: "Assemble on trays", minutes: 5, instruction: "Pile hot fries on baking dishes or plates. Scatter cheese curds, ladle hot gravy to partially melt them, then crown each portion with a fried egg." },
       { stepNumber: 5, title: "Serve immediately", minutes: 0, instruction: "Finish with green onion and hot sauce at the line. Poutine waits for no one—serve the moment eggs hit the fries." },
     ],
     stationWorkflow: [
@@ -712,7 +712,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { stepNumber: 2, title: "Bake the egg sheet", tempF: 350, minutes: 12, instruction: "Whisk eggs with milk, salt, and pepper. Pour into a parchment-lined quarter sheet pan to roughly slider dimensions. Bake until just set—don't overbake or eggs turn rubbery." },
       { stepNumber: 3, title: "Trim and assemble", minutes: 8, instruction: "Trim egg sheet to fit the roll block. Place bottom halves on a lined sheet pan, add sausage, egg sheet, cheese, and top halves. Press gently to align seams." },
       { stepNumber: 4, title: "Final bake", tempF: 350, minutes: 10, instruction: "Brush tops with melted butter and optional everything seasoning. Bake until cheese melts and tops turn lightly golden." },
-      { stepNumber: 5, title: "Cut and serve", minutes: 5, instruction: "Rest 5 minutes, then cut along roll seams with a sharp knife. Serve warm from the pan or transfer to a hotel pan for the line." },
+      { stepNumber: 5, title: "Cut and serve", minutes: 5, instruction: "Rest 5 minutes, then cut along roll seams with a sharp knife. Serve warm from the pan or transfer to a baking dish for the line." },
     ],
     stationWorkflow: [
       "Measure the roll block before baking the egg sheet—trim once, not twice, for clean sandwich edges.",
@@ -916,7 +916,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { group: "Serve", quantity: "1/2 cup", name: "salsa and hot sauce", notes: "at the line" },
     ],
     steps: [
-      { stepNumber: 1, title: "Prep the filling line", minutes: 20, instruction: "Set all fillings in labeled hotel pans with spoons. Sauté mushrooms and peppers ahead; drain tomatoes well. Beat eggs with milk in a pitcher for fast pours." },
+      { stepNumber: 1, title: "Prep the filling line", minutes: 20, instruction: "Set all fillings in labeled baking dishes with spoons. Sauté mushrooms and peppers ahead; drain tomatoes well. Beat eggs with milk in a pitcher for fast pours." },
       { stepNumber: 2, title: "Heat two pans", minutes: 3, instruction: "Heat two nonstick skillets over medium. Add a knob of butter until foaming but not brown. Work one omelette per pan for steady throughput." },
       { stepNumber: 3, title: "Cook and fill", minutes: 12, instruction: "Pour 3-egg portion into each pan, swirl to coat, and let set briefly. Add chosen fillings to one half when the top looks mostly set but still glossy." },
       { stepNumber: 4, title: "Fold and plate", minutes: 8, instruction: "Fold omelettes in half with a spatula and slide onto warm plates. Wipe pans quickly between batches if residue builds." },
@@ -1024,7 +1024,7 @@ export const NEW_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { stepNumber: 2, title: "Roll the dough", minutes: 8, instruction: "Press crescent dough into two rectangles, sealing seams. Spread sausage filling evenly, roll tight into logs, and pinch seams closed." },
       { stepNumber: 3, title: "Slice pinwheels", minutes: 5, instruction: "Cut each log into 8–10 pinwheels with a sharp serrated knife. Place cut-side up on parchment-lined sheet pans with space between each spiral." },
       { stepNumber: 4, title: "Glaze and bake", tempF: 375, minutes: 18, instruction: "Brush tops with melted butter and maple syrup. Bake at 375°F until golden, puffed, and sausage reaches 165°F in the center." },
-      { stepNumber: 5, title: "Cool slightly and serve", minutes: 5, instruction: "Rest 5 minutes so filling sets—hot maple cheese burns tongues. Serve from sheet pans or stack in a warm hotel pan for grab-and-go." },
+      { stepNumber: 5, title: "Cool slightly and serve", minutes: 5, instruction: "Rest 5 minutes so filling sets—hot maple cheese burns tongues. Serve from sheet pans or stack in a warm baking dish for grab-and-go." },
     ],
     stationWorkflow: [
       "Chill rolled logs 10 minutes before slicing if dough gets soft—clean spirals need a firm log.",

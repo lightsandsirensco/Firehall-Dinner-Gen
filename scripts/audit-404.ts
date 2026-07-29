@@ -117,6 +117,60 @@ const STATIC_EXACT = new Set<string>([
   "/guides/topic/firehall-dinners",
   "/guides/topic/firefighter-nutrition",
   "/guides/topic/station-cooking",
+  // Consumer routes (client/src/App.tsx) not otherwise matched by a rule
+  // below — kept here so the audit doesn't flag real routes as 404s.
+  "/tonight",
+  "/home",
+  "/discover",
+  "/me",
+  "/me/profile",
+  "/me/history",
+  "/me/settings",
+  "/me/saved",
+  "/me/shopping-list",
+  "/me/pantry",
+  "/me/subscription",
+  "/profile",
+  "/account",
+  "/plans",
+  "/onboarding/hall",
+  "/how-we-test-recipes",
+  "/hall-meal-planner",
+  "/firefighter-dinner-vote",
+  "/fire-hall-pantry",
+  "/canteen-manager",
+  "/cost-per-plate-calculator",
+  "/fire-hall-grocery-list",
+  "/fire-station-kitchen-inventory",
+  "/firefighter-meal-calendar",
+  "/crew-grocery-budget",
+  "/admin/errors",
+  "/admin/growth",
+  "/admin/billing",
+  "/admin/signups",
+  "/admin/users",
+  "/admin/leads",
+  "/admin/deals",
+  // `/hall/*` sub-routes all redirect to `/hall` while Hall Operations is
+  // gated to private beta (see HallPrivateBetaPage) — real routes, not 404s.
+  "/hall/more",
+  "/hall/tools",
+  "/hall/settings",
+  "/hall/history",
+  "/hall-program",
+  "/hall/activity",
+  "/hall/leaderboard",
+  "/hall/canteen",
+  "/hall/dues",
+  "/hall/logbook",
+  "/hall/shopping-list",
+  "/hall/protein-deals/setup",
+  "/hall/protein-deals",
+  "/hall/deals/setup",
+  "/hall/deals",
+  "/hall/join",
+  "/hall/welcome",
+  "/hall/features",
 ]);
 
 const PACKAGE_SLUGS = new Set(CURATED_HALL_PACKAGES.map((p) => p.slug));
@@ -252,6 +306,10 @@ function resolvePath(pathname: string): ResolveResult {
 
   const vote = p.match(/^\/vote\/([^/]+)$/);
   if (vote) return { status: "ok", reason: "dynamic vote page" };
+
+  if (/^\/admin\/users\/[^/]+$/.test(p)) return { status: "ok", reason: "admin user detail" };
+  if (/^\/halls\/[^/]+$/.test(p)) return { status: "redirect", redirectTo: "/hall", reason: "legacy hall detail (Hall gated to private beta)" };
+  if (/^\/hall\/[^/]+\/shift\/[^/]+$/.test(p)) return { status: "redirect", redirectTo: "/hall", reason: "legacy shift dashboard (Hall gated to private beta)" };
 
   return { status: "not_found", reason: "no matching route" };
 }

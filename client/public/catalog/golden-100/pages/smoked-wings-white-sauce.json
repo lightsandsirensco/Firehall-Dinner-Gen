@@ -13,10 +13,10 @@
   "cookTime": 116,
   "prepTime": 23,
   "difficulty": "hard",
-  "calories": 204,
-  "protein": 1,
-  "carbs": 4,
-  "fats": 21,
+  "calories": 779,
+  "protein": 87,
+  "carbs": 3,
+  "fats": 44,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -178,22 +178,23 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 204,
-    "protein": 1,
-    "carbs": 4,
-    "fats": 21,
-    "label": "per serving (hall portion)",
+    "calories": 779,
+    "protein": 87,
+    "carbs": 3,
+    "fats": 44,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -229,5 +230,52 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.161Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Worcestershire Sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free Worcestershire sauce."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "old-fashioned rolled oats",
-      "quantity": "4",
+      "quantity": "4 cups",
       "notes": "not instant or steel-cut",
       "group": "Oat base"
     },
     {
       "name": "milk",
-      "quantity": "4",
+      "quantity": "4 cups",
       "notes": "dairy or unsweetened oat milk",
       "group": "Oat base"
     },
     {
       "name": "plain Greek yogurt",
-      "quantity": "1.6",
+      "quantity": "1.6 cups",
       "notes": "for extra protein",
       "group": "Oat base"
     },
     {
       "name": "chia seeds",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "for thickening",
       "group": "Oat base"
     },
     {
       "name": "maple syrup",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "adjust to taste",
       "group": "Sweetener"
     },
     {
       "name": "mixed berries",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "fresh or thawed and drained",
       "group": "Toppings"
     },
     {
       "name": "chopped nuts or granola",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "keep dry until service",
       "group": "Toppings"
     },
     {
       "name": "peanut or almond butter",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "plus cinnamon and sliced bananas",
       "group": "Toppings"
     }
@@ -110,12 +110,13 @@
     }
   ],
   "nutrition": {
-    "calories": 507,
-    "protein": 22,
-    "carbs": 60,
-    "fat": 22,
-    "label": "per serving (hall portion)",
+    "calories": 548,
+    "protein": 23,
+    "carbs": 66,
+    "fat": 24,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -149,5 +150,52 @@
   "publishedAt": "2026-07-17T20:15:27.731Z",
   "updatedAt": "2026-07-17T20:15:27.731Z",
   "readMinutes": 6,
-  "seoTitle": "Overnight Oat Bar for the Crew | Firehall Breakfast"
+  "seoTitle": "Overnight Oat Bar for the Crew | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "old-fashioned rolled oats",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "plain Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "chopped nuts or granola",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "peanut or almond butter",
+        "allergens": [
+          "treeNuts"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": false,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

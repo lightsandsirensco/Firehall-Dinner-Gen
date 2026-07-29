@@ -14,7 +14,24 @@
       "heroImage": "/images/smoothies/mixed-berry-protein.jpg",
       "thumbImage": "/images/thumbs/mixed-berry-protein.jpg",
       "calories": 280,
-      "protein": 22
+      "protein": 22,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "peanut-butter-banana-recovery",
@@ -25,7 +42,24 @@
       "heroImage": "/images/smoothies/peanut-butter-banana-recovery.jpg",
       "thumbImage": "/images/thumbs/peanut-butter-banana-recovery.jpg",
       "calories": 340,
-      "protein": 16
+      "protein": 16,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "tropical-mango-greek",
@@ -36,7 +70,24 @@
       "heroImage": "/images/smoothies/tropical-mango-greek.jpg",
       "thumbImage": "/images/thumbs/tropical-mango-greek.jpg",
       "calories": 260,
-      "protein": 18
+      "protein": 18,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "green-pineapple",
@@ -47,7 +98,24 @@
       "heroImage": "/images/smoothies/green-pineapple.jpg",
       "thumbImage": "/images/thumbs/green-pineapple.jpg",
       "calories": 180,
-      "protein": 15
+      "protein": 15,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "strawberry-oat-breakfast",
@@ -58,7 +126,30 @@
       "heroImage": "/images/smoothies/strawberry-oat-breakfast.jpg",
       "thumbImage": "/images/thumbs/strawberry-oat-breakfast.jpg",
       "calories": 310,
-      "protein": 20
+      "protein": 20,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats."
+          }
+        ]
+      }
     },
     {
       "slug": "mocha-protein",
@@ -69,7 +160,24 @@
       "heroImage": "/images/smoothies/mocha-protein.jpg",
       "thumbImage": "/images/thumbs/mocha-protein.jpg",
       "calories": 220,
-      "protein": 18
+      "protein": 18,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "blueberry-almond",
@@ -80,7 +188,30 @@
       "heroImage": "/images/smoothies/blueberry-almond.jpg",
       "thumbImage": "/images/thumbs/blueberry-almond.jpg",
       "calories": 290,
-      "protein": 17
+      "protein": 17,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats."
+          }
+        ]
+      }
     },
     {
       "slug": "chocolate-banana-recovery",
@@ -91,7 +222,24 @@
       "heroImage": "/images/smoothies/chocolate-banana-recovery.jpg",
       "thumbImage": "/images/thumbs/chocolate-banana-recovery.jpg",
       "calories": 320,
-      "protein": 18
+      "protein": 18,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "citrus-ginger",
@@ -102,7 +250,24 @@
       "heroImage": "/images/smoothies/citrus-ginger.jpg",
       "thumbImage": "/images/thumbs/citrus-ginger.jpg",
       "calories": 160,
-      "protein": 15
+      "protein": 15,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "strawberry-spinach",
@@ -113,7 +278,24 @@
       "heroImage": "/images/smoothies/strawberry-spinach.jpg",
       "thumbImage": "/images/thumbs/strawberry-spinach.jpg",
       "calories": 250,
-      "protein": 16
+      "protein": 16,
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     }
   ]
 }

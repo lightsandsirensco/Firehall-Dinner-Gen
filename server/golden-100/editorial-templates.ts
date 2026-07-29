@@ -66,7 +66,7 @@ function formatSpread(format: string, title: string): string[] {
     case "bar":
       return [
         "Label every topping bowl — rookies grab faster when they can read the line.",
-        "Keep hot bases (potatoes, chips) in cambros at 200°F and cold toppings on ice if service runs long.",
+        "Keep hot bases (potatoes, chips) in lidded containers at 200°F and cold toppings on ice if service runs long.",
         "Put forks, napkins, and a trash can at the end of the bar — self-serve feeds get messy fast.",
       ];
     case "pizza":
@@ -91,7 +91,7 @@ const SLUG_TONIGHT_SPREAD: Record<string, string[]> = {
     "Cutlets go out whole when possible so cheese pulls look like Chicken Parm, not pasta night.",
   ],
   "pulled-pork": [
-    "Pile shredded pork in a deep hotel pan with warm buns stacked beside — BBQ sandwich line, not sub shop night.",
+    "Pile shredded pork in a deep baking dish with warm buns stacked beside — BBQ sandwich line, not sub shop night.",
     "Set coleslaw, pickles, and extra BBQ sauce in separate bowls so buns do not go soggy.",
     "Keep pork covered at 180°F; add vinegar splash before refills so the pull stays moist.",
   ],
@@ -117,11 +117,11 @@ const SLUG_TONIGHT_SPREAD: Record<string, string[]> = {
     "Keep extra parsley and black pepper at the line; mushrooms should be visible in every scoop.",
   ],
   "mac-and-cheese-bake": [
-    "Scoop baked mac from hotel pans with a spatula so the breadcrumb lid stays intact.",
+    "Scoop baked mac from baking dishes with a spatula so the breadcrumb lid stays intact.",
     "Keep backup pan warming at 200°F — mac tightens as it holds; splash milk when reheating.",
   ],
   "bbq-chicken-mac-and-cheese": [
-    "Scoop from the corner of the hotel pan so every serving shows shredded BBQ chicken under the cheese pull — not plain mac.",
+    "Scoop from the corner of the baking dish so every serving shows shredded BBQ chicken under the cheese pull — not plain mac.",
     "Drizzle extra warmed BBQ sauce over the tray at the line for crews who want more smoke; keep sauce in a squeeze bottle, not mixed into the whole pan.",
     "Keep a backup tray at 200°F with foil vented — mac sets fast; loosen with a splash of milk before the second pan hits the line.",
     "Serve with green onions and crispy fried onions in side bowls so crunch stays crisp through the meal.",
@@ -137,7 +137,7 @@ const SLUG_TONIGHT_SPREAD: Record<string, string[]> = {
   "pad-thai": [
     "Tonight's Spread: Firehall Pad Thai on sheet trays with lime wedges, crushed peanuts, sliced green onions, and chili flakes in separate bowls so each firefighter seasons their own plate.",
     "Suggested sides: Asian cucumber salad with rice vinegar and sesame, store-bought spring rolls warmed in the oven, and edamame sprinkled with flaky salt.",
-    "Keep noodles in a warm hotel pan at 180°F and proteins separate until the line opens — pad thai sogs if it sits sauced too long.",
+    "Keep noodles in a warm baking dish at 180°F and proteins separate until the line opens — pad thai sogs if it sits sauced too long.",
     "Put a cutting board at the end of the line with extra limes and peanuts for people who want crunch after a long call.",
   ],
 };
@@ -151,7 +151,7 @@ const SLUG_PRO_TIPS: Record<string, string[]> = {
     "If tones drop mid-bake, note the time on the pan with a grease pencil and finish when you return; covered trays hold 15 minutes without drying out.",
   ],
   "pad-thai": [
-    "Call Interruption Plan: If tones drop while noodles soak, leave them in the water — they will not turn to mush in twenty minutes. If tones drop after chicken or eggs are cooked, transfer proteins to a hotel pan at 165°F under foil and kill the wok burner. When you return, drain noodles, reheat the wok on high, and finish the toss in one pass — sauced noodles wait poorly, but held chicken is fine for fifteen minutes.",
+    "Call Interruption Plan: If tones drop while noodles soak, leave them in the water — they will not turn to mush in twenty minutes. If tones drop after chicken or eggs are cooked, transfer proteins to a baking dish at 165°F under foil and kill the wok burner. When you return, drain noodles, reheat the wok on high, and finish the toss in one pass — sauced noodles wait poorly, but held chicken is fine for fifteen minutes.",
     "Soak noodles in water that is hot from the tap but not boiling — boiling water makes pad thai noodles fall apart before they hit the wok.",
     "Taste the sauce before it goes in the pan: it should hit sweet first, then salty, then a sharp tamarind tang — adjust fish sauce or sugar one teaspoon at a time.",
     "Push cooked chicken and eggs to the side of the wok before noodles go in — crowding drops wok temperature and you get steamed noodles instead of char.",
@@ -161,7 +161,7 @@ const SLUG_PRO_TIPS: Record<string, string[]> = {
 
 const SLUG_LEFTOVERS: Record<string, string[]> = {
   "bbq-chicken-mac-and-cheese": [
-    "Cool in shallow hotel pan lids within two hours — deep mac stays in the danger zone too long to cool safely.",
+    "Cool in shallow baking dish lids within two hours — deep mac stays in the danger zone too long to cool safely.",
     "Reheat covered at 325°F until the center hits 165°F, then uncover 5 minutes to re-crisp the top; stir once halfway so chicken heats evenly.",
     "Add a splash of milk and a spoon of BBQ sauce when reheating — refrigerated mac tightens and the sauce looks dull without refresh.",
     "Store crispy fried onions separately — add after reheat so the tray does not go soggy on shift two.",
@@ -286,10 +286,10 @@ export function buildEquipmentList(def: GoldenRecipeDefinition): string[] {
     extra.push("Flat griddle or cast iron", "Small dome lids for melting cheese");
   }
   if (def.slug === "chicken-parm") {
-    extra.push("Large skillets for frying", "Wire cooling racks", "Hotel pans for baking");
+    extra.push("Large skillets for frying", "Wire cooling racks", "baking dishes for baking");
   }
   if (def.slug === "mac-and-cheese-bake" || def.slug === "chili-mac") {
-    extra.push("8-quart stock pot", "Hotel pans or large baking dishes");
+    extra.push("8-quart stock pot", "large baking dishes");
   }
   if (def.slug === "one-pot-chicken-rice") {
     extra.push("Large Dutch oven with tight lid");

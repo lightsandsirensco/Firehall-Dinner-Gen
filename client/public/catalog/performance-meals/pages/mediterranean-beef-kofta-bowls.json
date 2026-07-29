@@ -1,0 +1,283 @@
+{
+  "slug": "mediterranean-beef-kofta-bowls",
+  "title": "Mediterranean Beef Kofta Bowls",
+  "displayTitle": "Mediterranean Beef Kofta Bowls",
+  "seoTitle": "Mediterranean Beef Kofta Bowls | Firefighter Meal",
+  "shortDescription": "Sheet-pan baked cumin-spiced beef kofta over rice pilaf with tahini-garlic sauce",
+  "subtitle": "Sheet-pan baked cumin-spiced beef kofta over rice pilaf with tahini-garlic sauce",
+  "category": "healthy_performance",
+  "cuisine": "Middle Eastern",
+  "description": "Ground beef mixes with cumin, coriander, allspice, and grated onion, shapes into oblong kofta directly on a sheet pan, and roasts hot until deeply browned, served over toasted rice pilaf with a tahini-garlic sauce and a fresh tomato-cucumber salad.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 22,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 909,
+  "protein": 56,
+  "carbs": 71,
+  "fats": 47,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Half-sheet pan",
+    "Wire rack (optional)",
+    "Medium pot"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground beef",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "90/10"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "grated and squeezed dry"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced, divided"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "finely chopped, divided"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground coriander",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "ground allspice",
+      "quantity": "1",
+      "unit": "tsp"
+    },
+    {
+      "name": "basmati rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "toasted vermicelli noodles",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "broken, or crushed angel hair"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "4.5",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "tahini",
+      "quantity": "0.75",
+      "unit": "cup"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "fresh, divided"
+    },
+    {
+      "name": "Roma tomatoes",
+      "quantity": "4",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "English cucumber",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Mix and shape the kofta",
+      "instruction": "Combine beef, grated onion, half the garlic, half the parsley, cumin, coriander, allspice, and 1 tsp salt. Mix gently and shape into oblong logs directly on a parchment-lined sheet pan—no skewers needed. Chill 20 minutes to firm up.",
+      "minutes": 25,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Toast and cook the rice pilaf",
+      "instruction": "Toast vermicelli in 1 tbsp oil until golden, add rinsed rice and stir 1 minute to coat. Add broth and a pinch of salt, bring to a boil, cover, and simmer 15–18 minutes until tender and fluffy.",
+      "minutes": 20,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Whisk the tahini sauce",
+      "instruction": "Whisk tahini with remaining garlic, half the lemon juice, and cold water 1 tbsp at a time until pourable and smooth—it will seize before it smooths out, keep whisking.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Toss the tomato-cucumber salad",
+      "instruction": "Combine diced tomato, cucumber, remaining parsley, remaining lemon juice, and remaining oil with a pinch of salt. Salad should taste bright and fresh, not soggy.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Roast the kofta",
+      "instruction": "Roast at 425°F for 18–20 minutes, flipping once, until deeply browned outside and 160°F at the center. Oven heat is far more forgiving than a grill grate—kofta won't dry out if the timing slips a few minutes.",
+      "minutes": 20,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Build the bowls",
+      "instruction": "Portion rice pilaf, top with kofta, a generous scoop of tomato-cucumber salad, and a drizzle of tahini sauce. Kofta should be smoky-edged and juicy inside.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "A finish under the broiler for the last 2 minutes adds real char if you want a grill-like crust.",
+    "A pinch of cinnamon in the meat mix is traditional and adds real depth without tasting sweet.",
+    "Reheat leftover kofta in a 350°F oven rather than the microwave to keep the edges from turning rubbery."
+  ],
+  "tonightSpread": [
+    "Warm pita on the side.",
+    "Extra tahini sauce for drizzling."
+  ],
+  "leftovers": [
+    "Chop kofta and toss into the rice pilaf for a fast next-day bowl—they reheat cleanly in the oven.",
+    "Tahini sauce keeps 5 days refrigerated—thin with water before reusing."
+  ],
+  "whyCrewsLikeIt": "Warm-spiced and smoky-edged straight from the oven, not another meatball. Tahini sauce is a totally different flavor lane from tzatziki, so it never feels like a repeat night—and the whole batch bakes hands-off on one pan.",
+  "mealPrepNotes": "Shape kofta ahead and refrigerate on the sheet pan—they hold their shape better going into a hot oven cold. Station: Squeeze the grated onion dry before mixing it in, or the kofta mixture will be too loose to hold its shape on the pan. Station: Roast on a wire rack over the sheet pan if you have one, so kofta brown on all sides, not just the bottom. Station: The pan can hold in a turned-down oven (200°F) if a call interrupts—kofta stay juicy far longer than they would on an unattended grill.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 909,
+    "protein": 56,
+    "carbs": 71,
+    "fats": 47,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Mediterranean Beef Kofta Bowls on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "mediterranean beef kofta bowls",
+    "beef",
+    "Middle Eastern",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "honey-garlic-chicken-rice-bowls",
+    "korean-beef-rice-bowls",
+    "shawarma-chicken-rice-bowls",
+    "maple-soy-salmon-bowls",
+    "tabbouleh-chicken-bowls",
+    "lean-beef-broccoli-rice"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.695Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 16,
+    "totalCount": 16,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "toasted vermicelli noodles",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "tahini",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta/noodle alternative. Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

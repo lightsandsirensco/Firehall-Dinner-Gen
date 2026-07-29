@@ -125,7 +125,7 @@ export default function AdminIngestionPage() {
                 {row.draft.heroImage && (
                   <img
                     src={row.draft.heroImage}
-                    alt=""
+                    alt={row.draft.title}
                     className="w-20 h-20 rounded-lg object-cover shrink-0 bg-muted"
                     loading="lazy"
                   />

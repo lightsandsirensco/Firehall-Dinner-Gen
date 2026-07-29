@@ -1,24 +1,25 @@
 {
-  "generatedAt": "2026-07-24T02:32:42.842Z",
+  "generatedAt": "2026-07-29T13:59:35.552Z",
   "origin": "https://www.firehallmeals.com",
   "liveFetch": false,
   "phase1": {
-    "totalUrlsAudited": 444,
+    "totalUrlsAudited": 515,
     "duplicateLocs": 0
   },
   "phase2": {
     "collections": {
       "golden100": 104,
-      "performanceMeals": 45,
+      "performanceMeals": 71,
       "hallExpansion": 115,
       "pizzaNight": 20,
       "breakfast": 62,
       "smoothies": 10,
-      "approvedCatalog": 299,
-      "curatedCollections": 313
+      "bbq": 45,
+      "approvedCatalog": 355,
+      "curatedCollections": 367
     },
-    "totalRecipeUrls": 348,
-    "recipesInSitemap": 348,
+    "totalRecipeUrls": 419,
+    "recipesInSitemap": 419,
     "recipesMissingFromSitemap": 0,
     "recipesMissingSlugs": []
   },
@@ -37,10 +38,10 @@
     "sitemapDeclaration": "https://www.firehallmeals.com/sitemap.xml"
   },
   "phase6": {
-    "structuredDataIssues": 0
+    "structuredDataIssues": 26
   },
   "phase7": {
-    "imageSeoIssues": 10
+    "imageSeoIssues": 52
   },
   "phase8": {
     "keywordTargets": {
@@ -107,45 +108,501 @@
     ]
   },
   "phase9": {
-    "finalSitemapUrlCount": 444,
+    "finalSitemapUrlCount": 515,
     "invalidUrlsRemoved": 0
   },
   "issues": [
     {
-      "phase": "images",
-      "code": "missing_hero",
-      "message": "Hero image file missing",
-      "slug": "30-minute-pasta-e-fagioli-for-the-hall"
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "beef-birria-with-consomme"
     },
     {
       "phase": "images",
       "code": "missing_hero",
       "message": "Hero image file missing",
-      "slug": "french-onion-soup-for-the-hall"
+      "slug": "beef-birria-with-consomme"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "beef-birria-with-consomme"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "cajun-chicken-dirty-rice-bowls"
     },
     {
       "phase": "images",
       "code": "missing_hero",
       "message": "Hero image file missing",
-      "slug": "spaghetti-aglio-e-olio-for-the-hall"
+      "slug": "cajun-chicken-dirty-rice-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "cajun-chicken-dirty-rice-bowls"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "chicken-marsala-lightened"
     },
     {
       "phase": "images",
       "code": "missing_hero",
       "message": "Hero image file missing",
-      "slug": "classic-patty-melt-for-the-crew"
+      "slug": "chicken-marsala-lightened"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "chicken-marsala-lightened"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "cuban-beef-picadillo-bowls"
     },
     {
       "phase": "images",
       "code": "missing_hero",
       "message": "Hero image file missing",
-      "slug": "best-tuna-melt-for-the-hall"
+      "slug": "cuban-beef-picadillo-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "cuban-beef-picadillo-bowls"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "filipino-chicken-adobo"
     },
     {
       "phase": "images",
       "code": "missing_hero",
       "message": "Hero image file missing",
-      "slug": "hall-blt-sandwich-feed"
+      "slug": "filipino-chicken-adobo"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "filipino-chicken-adobo"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "general-tsos-baked-chicken"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "general-tsos-baked-chicken"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "general-tsos-baked-chicken"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "herb-marinated-flank-steak-chimichurri-farro"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "herb-marinated-flank-steak-chimichurri-farro"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "herb-marinated-flank-steak-chimichurri-farro"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "high-protein-chicken-fried-rice"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "high-protein-chicken-fried-rice"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "high-protein-chicken-fried-rice"
+    },
+    {
+      "phase": "recipes",
+      "code": "duplicate_title",
+      "message": "Duplicate title with sheet-pan-sausage-peppers",
+      "slug": "italian-sausage-veg-sheet-pan"
+    },
+    {
+      "phase": "recipes",
+      "code": "duplicate_meta_title",
+      "message": "Duplicate meta title with sheet-pan-sausage-peppers",
+      "slug": "italian-sausage-veg-sheet-pan"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "italian-sausage-veg-sheet-pan"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "italian-sausage-veg-sheet-pan"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "italian-sausage-veg-sheet-pan"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "kung-pao-chicken-rice-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "kung-pao-chicken-rice-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "kung-pao-chicken-rice-bowls"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "lean-beef-broccoli-rice"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "lean-beef-broccoli-rice"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "lean-beef-broccoli-rice"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "lean-turkey-bean-chili"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "lean-turkey-bean-chili"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "lean-turkey-bean-chili"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "mediterranean-beef-kofta-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "mediterranean-beef-kofta-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "mediterranean-beef-kofta-bowls"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "mediterranean-chicken-white-bean-skillet"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "mediterranean-chicken-white-bean-skillet"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "mediterranean-chicken-white-bean-skillet"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "peruvian-sheet-pan-chicken-aji-verde"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "peruvian-sheet-pan-chicken-aji-verde"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "peruvian-sheet-pan-chicken-aji-verde"
+    },
+    {
+      "phase": "recipes",
+      "code": "duplicate_title",
+      "message": "Duplicate title with sheet-pan-fajitas",
+      "slug": "sheet-pan-chicken-fajitas-lite"
+    },
+    {
+      "phase": "recipes",
+      "code": "duplicate_meta_title",
+      "message": "Duplicate meta title with sheet-pan-fajitas",
+      "slug": "sheet-pan-chicken-fajitas-lite"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "sheet-pan-chicken-fajitas-lite"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "sheet-pan-chicken-fajitas-lite"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "sheet-pan-chicken-fajitas-lite"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "southwest-beef-sweet-potato-skillet"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "southwest-beef-sweet-potato-skillet"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "southwest-beef-sweet-potato-skillet"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "thai-basil-ground-beef-skillet"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "thai-basil-ground-beef-skillet"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "thai-basil-ground-beef-skillet"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "trinidadian-curry-chicken-potatoes"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "trinidadian-curry-chicken-potatoes"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "trinidadian-curry-chicken-potatoes"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "turkey-quinoa-stuffed-peppers"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "turkey-quinoa-stuffed-peppers"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "turkey-quinoa-stuffed-peppers"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "unstuffed-cabbage-roll-skillet"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "unstuffed-cabbage-roll-skillet"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "unstuffed-cabbage-roll-skillet"
+    },
+    {
+      "phase": "structured-data",
+      "code": "recipe_schema_missing",
+      "message": "Missing image",
+      "slug": "vietnamese-caramel-braised-chicken-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "missing_hero",
+      "message": "Hero image file missing",
+      "slug": "vietnamese-caramel-braised-chicken-bowls"
+    },
+    {
+      "phase": "images",
+      "code": "schema_image_missing",
+      "message": "Recipe schema missing image",
+      "slug": "vietnamese-caramel-braised-chicken-bowls"
     },
     {
       "phase": "recipes",
@@ -158,30 +615,6 @@
       "code": "duplicate_meta_title",
       "message": "Duplicate meta title with greek-chicken-bowls",
       "slug": "firehall-greek-chicken-bowls"
-    },
-    {
-      "phase": "images",
-      "code": "missing_hero",
-      "message": "Hero image file missing",
-      "slug": "bagel-sandwich-line"
-    },
-    {
-      "phase": "images",
-      "code": "missing_hero",
-      "message": "Hero image file missing",
-      "slug": "hash-brown-breakfast-casserole"
-    },
-    {
-      "phase": "images",
-      "code": "missing_hero",
-      "message": "Hero image file missing",
-      "slug": "overnight-oat-bar-crew"
-    },
-    {
-      "phase": "images",
-      "code": "missing_hero",
-      "message": "Hero image file missing",
-      "slug": "sheet-pan-eggs-sausage-crew"
     }
   ],
   "pass": false

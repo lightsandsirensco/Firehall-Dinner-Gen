@@ -186,7 +186,7 @@ export const RED_LEAD_SAUCE_FIREHALL_TIPS = [
 ] as const;
 
 export const RED_LEAD_TRADITIONAL_SIDES = [
-  { name: "Eggs", detail: "Scrambled in a hotel pan or fried to order — cooked on their own, not in the sauce." },
+  { name: "Eggs", detail: "Scrambled in a large baking dish or fried to order — cooked on their own, not in the sauce." },
   { name: "Bacon", detail: "Sheet pan at 400°F (205°C) until crisp. Refill the platter." },
   { name: "Breakfast sausage", detail: "Links in the oven or bulk crumbled on the griddle." },
   { name: "Toast", detail: "Thick bread, butter on the table." },

@@ -13,10 +13,10 @@
   "cookTime": 12,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 365,
-  "protein": 30,
-  "carbs": 32,
-  "fats": 14,
+  "calories": 809,
+  "protein": 54,
+  "carbs": 55,
+  "fats": 42,
   "tags": [
     "protein:fish",
     "format:tacos",
@@ -33,69 +33,69 @@
   ],
   "ingredients": [
     {
-      "name": "Cod Fillets",
+      "name": "cod fillets",
       "quantity": "3.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "1-inch thick"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Onion Powder",
+      "name": "onion powder",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Dried Thyme",
+      "name": "dried thyme",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Cayenne Pepper",
+      "name": "cayenne pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Green Cabbage",
+      "name": "green cabbage",
       "quantity": "1",
       "unit": "head",
       "notes": "shredded fine"
     },
     {
-      "name": "Avocado",
+      "name": "avocado",
       "quantity": "3",
       "unit": "whole",
       "notes": "ripe"
     },
     {
-      "name": "Greek Yogurt",
+      "name": "Greek yogurt",
       "quantity": "1",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Lime Juice",
+      "name": "lime juice",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Corn Tortillas",
+      "name": "corn tortillas",
       "quantity": "24",
       "unit": "whole",
       "notes": "6-inch"
     },
     {
-      "name": "Vegetable Oil",
+      "name": "vegetable oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     }
   ],
   "steps": [
@@ -153,11 +153,26 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 365,
-    "protein": 30,
-    "carbs": 32,
-    "fats": 14,
-    "label": "~365 cal/serving · 30g protein · 6g fiber (est.)"
+    "calories": 809,
+    "protein": 54,
+    "carbs": 55,
+    "fats": 42,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/blackened-cod-taco-night.jpg",
   "heroImageAlt": "Wide firehall crew platter of Blackened Cod Tacos on a station prep table, family-style serving",
@@ -181,6 +196,41 @@
     "mediterranean-baked-fish-tray",
     "chipotle-lime-chicken-tacos"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.675Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cod fillets",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

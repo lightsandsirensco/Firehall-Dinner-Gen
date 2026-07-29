@@ -13,10 +13,10 @@
   "cookTime": 22,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 445,
-  "protein": 42,
-  "carbs": 38,
-  "fats": 16,
+  "calories": 716,
+  "protein": 85,
+  "carbs": 32,
+  "fats": 27,
   "tags": [
     "protein:chicken",
     "format:plated",
@@ -30,74 +30,74 @@
   "equipment": [
     "Food processor",
     "Half-sheet pan",
-    "Large serving platter or hotel pan"
+    "Large serving platter or baking dish"
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Breasts",
+      "name": "boneless chicken breasts",
       "quantity": "4",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Canned Chickpeas",
+      "name": "canned chickpeas",
       "quantity": "3",
       "unit": "cans",
       "notes": "15 oz, drained"
     },
     {
-      "name": "Tahini",
+      "name": "tahini",
       "quantity": "0.5",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "8",
       "unit": "cloves",
       "notes": "4 for hummus, 4 minced"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "2",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "English Cucumber",
+      "name": "English cucumber",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "halved"
     },
     {
-      "name": "Kalamata Olives",
+      "name": "Kalamata olives",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "pitted"
     },
     {
-      "name": "Whole-Wheat Pita",
+      "name": "whole-wheat pita",
       "quantity": "12",
       "unit": "rounds"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     }
   ],
   "steps": [
@@ -151,15 +151,30 @@
     "Hummus dip with raw veg for next-shift snack."
   ],
   "whyCrewsLikeIt": "Interactive platter format feels special but scales easily. High protein from chicken with fiber from hummus and veg.",
-  "mealPrepNotes": "Make hummus smooth in a food processor ahead. Slice chicken against the grain for tender bites. Station: Spread hummus in a large shallow hotel pan for maximum scoop surface. Station: Arrange chicken in overlapping rows so portions look generous at the line. Station: Keep pita wrapped in foil in low oven until service.",
+  "mealPrepNotes": "Make hummus smooth in a food processor ahead. Slice chicken against the grain for tender bites. Station: Spread hummus in a large shallow baking dish for maximum scoop surface. Station: Arrange chicken in overlapping rows so portions look generous at the line. Station: Keep pita wrapped in foil in low oven until service.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 445,
-    "protein": 42,
-    "carbs": 38,
-    "fats": 16,
-    "label": "~445 cal/serving · 42g protein · 8g fiber (est.)"
+    "calories": 716,
+    "protein": 85,
+    "carbs": 32,
+    "fats": 27,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/hummus-chicken-platter.jpg",
   "heroImageAlt": "Wide firehall crew platter of Hummus Chicken Platter on a station prep table, family-style serving",
@@ -185,6 +200,47 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.665Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "tahini",
+        "allergens": [
+          "sesame"
+        ]
+      },
+      {
+        "name": "whole-wheat pita",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

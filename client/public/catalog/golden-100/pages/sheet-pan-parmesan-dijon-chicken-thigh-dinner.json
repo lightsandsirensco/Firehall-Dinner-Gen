@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 529,
-  "protein": 40,
-  "carbs": 44,
-  "fats": 20,
+  "calories": 637,
+  "protein": 56,
+  "carbs": 52,
+  "fats": 22,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -154,23 +154,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 529,
-    "protein": 40,
-    "carbs": 44,
-    "fats": 20,
-    "label": "per serving (hall portion)",
+    "calories": 637,
+    "protein": 56,
+    "carbs": 52,
+    "fats": 22,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": true
     }
   },
@@ -204,5 +205,57 @@
   "sourceName": "America's Test Kitchen",
   "sourceUrl": "https://www.americastestkitchen.com/recipes/8522-baked-mustard-chicken",
   "generatedAt": "2026-06-04T20:45:42.279Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Panko Bread Crumbs",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Grated Parmesan Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

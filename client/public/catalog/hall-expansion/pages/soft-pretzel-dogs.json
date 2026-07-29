@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 490,
-  "protein": 16,
-  "carbs": 52,
-  "fats": 24,
+  "calories": 557,
+  "protein": 20,
+  "carbs": 66,
+  "fats": 23,
   "tags": [
     "protein:pork",
     "format:handheld",
@@ -158,12 +158,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 490,
-    "protein": 16,
-    "carbs": 52,
-    "fats": 24,
-    "label": "~490 cal/serving · 16g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 557,
+    "protein": 20,
+    "carbs": 66,
+    "fats": 23,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -171,6 +172,11 @@
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/soft-pretzel-dogs.jpg",
@@ -193,5 +199,57 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "pretzel dough",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "egg",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "cheddar cheese sauce",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

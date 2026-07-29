@@ -14,7 +14,7 @@ import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 import { hapticLight } from "@/lib/haptics";
-import { BRAND_NAME, CTA, HALL_LINKED, NAV } from "@/lib/brand-copy";
+import { BRAND_NAME, CTA, NAV } from "@/lib/brand-copy";
 import { LightsAndSirensMobilePanel } from "@/components/brand/lights-and-sirens-mobile-panel";
 import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
 import {
@@ -130,7 +130,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
     cn(
       "text-sm font-medium px-3 py-2 rounded-lg min-h-10 inline-flex items-center transition-colors",
       active
-        ? "text-foreground bg-muted/50"
+        ? "text-foreground bg-primary/12"
         : "text-muted-foreground hover:text-foreground hover:bg-white/[0.04]",
     );
 
@@ -176,6 +176,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                   key={item.key}
                   className={linkClass(true)}
                   data-testid={`nav-link-${item.key}-active`}
+                  aria-current="page"
                 >
                   {item.label}
                 </span>
@@ -204,22 +205,23 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
               <span className="hidden lg:inline">{authenticated ? "Account" : "Sign in"}</span>
             </button>
 
-            {activePage === "hall" || activePage === "favorites" ? (
+            {activePage === "favorites" ? (
               <span
                 className={cn(linkClass(true), "gap-1.5")}
-                data-testid="nav-link-hall-active"
+                data-testid="nav-link-favorites-active"
+                aria-current="page"
               >
                 <Heart className="w-3.5 h-3.5" />
-                {NAV.hall}
+                {NAV.saved}
               </span>
             ) : (
               <Link
-                href="/hall"
+                href="/favorites"
                 className={cn(linkClass(false), "gap-1.5")}
-                data-testid="nav-link-hall"
+                data-testid="nav-link-favorites"
               >
                 <Heart className="w-3.5 h-3.5" />
-                {NAV.hall}
+                {NAV.saved}
                 {badgeCount > 0 && (
                   <Badge
                     variant="secondary"
@@ -233,7 +235,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
             )}
 
             {activePage !== "generator" && (
-              <Button asChild size="sm" className="font-heading tracking-wide text-xs uppercase">
+              <Button asChild variant="cta" size="sm" className="text-xs">
                 <Link href="/generator" data-testid="nav-cta-generator">
                   {CTA.findDinner}
                 </Link>
@@ -243,19 +245,23 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
 
           <div className="flex md:hidden items-center gap-0.5 shrink-0">
             {activePage !== "generator" && (
-              <Button asChild size="sm" className="h-9 px-3 text-[11px] font-heading uppercase tracking-wide">
+              <Button asChild variant="cta" size="sm" className="h-9 px-3 text-[11px]">
                 <Link href="/generator" data-testid="nav-cta-generator-mobile">
                   {CTA.findDinner}
                 </Link>
               </Button>
             )}
 
-            {activePage !== "hall" && activePage !== "favorites" && (
+            {activePage !== "favorites" && (
               <Link
-                href="/hall"
+                href="/favorites"
                 className="relative flex items-center justify-center min-h-11 min-w-11 rounded-lg hover:bg-muted/40 touch-manipulation"
-                data-testid="nav-link-hall-mobile"
-                aria-label={HALL_LINKED.linked}
+                data-testid="nav-link-favorites-mobile"
+                aria-label={
+                  badgeCount > 0
+                    ? `${NAV.saved} — ${badgeCount} new`
+                    : NAV.saved
+                }
               >
                 <Heart className="w-5 h-5 text-muted-foreground" />
                 {badgeCount > 0 && (
@@ -300,6 +306,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                             : "text-foreground hover:bg-muted/50",
                         )}
                         data-testid={`nav-mobile-${item.key}`}
+                        aria-current={isActive ? "page" : undefined}
                       >
                         {item.label}
                       </button>
@@ -324,17 +331,18 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                   </button>
                   <button
                     type="button"
-                    onClick={() => go("/hall")}
+                    onClick={() => go("/favorites")}
                     className={cn(
                       "w-full text-left rounded-xl px-4 py-3.5 text-base font-medium min-h-[52px] touch-manipulation flex items-center gap-2",
-                      activePage === "hall" || activePage === "favorites"
+                      activePage === "favorites"
                         ? "bg-primary/12 text-foreground"
                         : "text-foreground hover:bg-muted/50",
                     )}
-                    data-testid="nav-mobile-hall"
+                    data-testid="nav-mobile-favorites"
+                    aria-current={activePage === "favorites" ? "page" : undefined}
                   >
                     <Heart className="w-4 h-4" />
-                    {NAV.hall}
+                    {NAV.saved}
                     {badgeCount > 0 && (
                       <Badge variant="secondary" className="ml-auto text-[10px]">
                         {badgeCount}
@@ -343,7 +351,8 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                   </button>
                   {activePage !== "generator" && (
                     <Button
-                      className="mt-4 w-full font-heading uppercase tracking-wide"
+                      variant="cta"
+                      className="mt-4 w-full"
                       onClick={() => go("/generator")}
                       data-testid="nav-mobile-cta-generator"
                     >

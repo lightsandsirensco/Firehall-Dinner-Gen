@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 80,
-  "protein": 1,
-  "carbs": 4,
-  "fats": 6,
+  "calories": 936,
+  "protein": 45,
+  "carbs": 13,
+  "fats": 75,
   "tags": [
     "protein:pork",
     "format:smokehouse_board",
@@ -178,12 +178,26 @@
   "mealPrepNotes": "Score sausage lightly. Grill medium 400°F, 12–15 minutes turning often. Hold sliced sausage covered at 170°F up to 45 minutes. Onions grill alongside.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 80,
-    "protein": 1,
-    "carbs": 4,
-    "fats": 6,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 936,
+    "protein": 45,
+    "carbs": 13,
+    "fats": 75,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/portuguese-linguica-grill-platter.jpg",
   "heroImageAlt": "Lisbon Piri-Piri Linguica Spread — crew-sized BBQ spread with visible smoke and bark",
@@ -213,5 +227,46 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.435Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Portuguese Linguica",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Crusty Rolls",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

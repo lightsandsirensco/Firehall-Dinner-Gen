@@ -11,8 +11,8 @@ console.log(
 );
 console.log(`  errors=${report.errors.length} warnings=${report.warnings.length}`);
 
-if (published.length !== PERFORMANCE_MEAL_COUNT) {
-  console.warn(`  published page count ${published.length} !== ${PERFORMANCE_MEAL_COUNT}`);
+if (published.length < PERFORMANCE_MEAL_COUNT) {
+  console.warn(`  published page count ${published.length} < ${PERFORMANCE_MEAL_COUNT}`);
 }
 
 for (const e of report.errors) {

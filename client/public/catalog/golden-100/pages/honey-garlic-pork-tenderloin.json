@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 567,
-  "protein": 62,
-  "carbs": 4,
-  "fats": 32,
+  "calories": 765,
+  "protein": 67,
+  "carbs": 43,
+  "fats": 36,
   "tags": [
     "protein:pork",
     "format:grill",
@@ -34,62 +34,87 @@
   ],
   "ingredients": [
     {
-      "name": "Pork Chops Or Tenderloin",
+      "name": "Pork tenderloin",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Brown Sugar",
-      "quantity": "2",
-      "unit": "Tbsp",
+      "name": "Honey",
+      "quantity": "0.5",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Soy Sauce",
-      "quantity": "3",
-      "unit": "Tbsp",
+      "name": "Soy sauce",
+      "quantity": "0.3",
+      "unit": "cup",
       "group": "Glaze"
     },
     {
-      "name": "Garlic Cloves, Minced",
-      "quantity": "4",
-      "unit": "cloves",
+      "name": "Garlic cloves, minced",
+      "quantity": "6",
+      "unit": "count",
       "group": "Glaze"
     },
     {
-      "name": "Kosher Salt",
+      "name": "Fresh ginger, grated",
       "quantity": "1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
+      "group": "Glaze"
+    },
+    {
+      "name": "Dijon mustard",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Glaze"
+    },
+    {
+      "name": "Kosher salt",
+      "quantity": "1",
+      "unit": "tbsp",
       "group": "Seasoning"
+    },
+    {
+      "name": "Vegetable oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sear"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Brine or season",
-      "instruction": "Pat pork dry. Salt 30 minutes ahead. Whisk glaze ingredients. Chops should be 1–1½ inches thick for even cooking.",
-      "minutes": 30,
-      "heatLevel": ""
-    },
-    {
-      "stepNumber": 2,
-      "title": "Grill to 145°F",
-      "instruction": "Grill over medium-high 4–5 minutes per side until 140°F, then glaze and cook 1 minute per side until 145°F. Tenderloin: sear all sides, finish indirect to 145°F. Meat should spring back lightly.",
-      "minutes": 18,
+      "title": "Season and sear",
+      "instruction": "Pat tenderloins dry; season with salt. Sear in a hot oiled skillet or on the grill 2–3 minutes per side until deeply browned on all sides.",
+      "minutes": 12,
       "heatLevel": "medium-high"
     },
     {
+      "stepNumber": 2,
+      "title": "Whisk the glaze",
+      "instruction": "Whisk honey, soy sauce, garlic, ginger, and Dijon mustard until smooth.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
       "stepNumber": 3,
-      "title": "Rest and slice",
-      "instruction": "Rest 5 minutes. Slice tenderloin on a bias. Hold chops on warm trays — pork dries out above 160°F, so don't overcook while waiting for the crew.",
-      "minutes": 8,
-      "heatLevel": "low"
+      "title": "Finish with the glaze",
+      "instruction": "Move tenderloins to indirect heat or a 400°F oven. Brush generously with glaze every few minutes, turning, until internal temperature reaches 145°F, about 15–18 minutes.",
+      "minutes": 18,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Glaze and hold",
-      "instruction": "Brush any remaining glaze over slices. Keep backup chops on a rack at 180°F — stacked pork steams and loses crust.",
+      "title": "Rest and slice",
+      "instruction": "Rest tenderloins 5 minutes before slicing into medallions — resting keeps the glaze from washing off and the juices in the meat.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Reduce extra glaze and serve",
+      "instruction": "Simmer any remaining glaze in a small pot 2–3 minutes until slightly thickened; spoon over sliced pork at the line.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -116,18 +141,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 567,
-    "protein": 62,
-    "carbs": 4,
-    "fats": 32,
+    "calories": 765,
+    "protein": 67,
+    "carbs": 43,
+    "fats": 36,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -163,6 +188,53 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.168Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:33:03.231Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pork tenderloin",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

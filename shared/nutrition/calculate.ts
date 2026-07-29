@@ -1,5 +1,5 @@
 import { findIngredientProfile } from "./ingredient-database.js";
-import { gramsFromAmount, parseCatalogIngredientAmount } from "./parse-ingredient.js";
+import { extractLeadingUnitFromName, gramsFromAmount, parseCatalogIngredientAmount } from "./parse-ingredient.js";
 import type {
   CatalogIngredientLine,
   NutritionBadgeCandidates,
@@ -52,16 +52,46 @@ function roundMacros(m: RecipeNutritionPerServing): RecipeNutritionPerServing {
   };
 }
 
+/**
+ * Caps absurd single-serving totals while keeping calories mathematically consistent with
+ * the macros (calories ≈ protein*4 + carbs*4 + fat*9). Clamping each field independently
+ * (the previous behavior) breaks that identity whenever one macro hits its ceiling before
+ * the others — e.g. a huge multi-protein breakfast platter had calories clamped from ~1800
+ * down to 1100 while protein/carbs were left alone, producing a label that no longer matched
+ * its own macros. A single uniform scale factor (the tightest of the four ceilings) preserves
+ * the ratio between all four numbers. Also drops the old hard 80-calorie floor, which was
+ * silently masking real ingredient-matching failures (near-zero results) instead of letting
+ * the "suspicious"/"impossible" sanity checks in validate.ts surface them for a real fix.
+ */
 function clampPerServing(
   macros: RecipeNutritionPerServing,
   mealType?: "dinner" | "breakfast" | "smoothie",
 ): RecipeNutritionPerServing {
   const maxCal = mealType === "smoothie" ? 900 : mealType === "breakfast" ? 1100 : 1400;
+  const maxProtein = 120;
+  const maxCarbs = 180;
+  const maxFat = 90;
+
+  const nonNegative = {
+    calories: Math.max(0, macros.calories),
+    protein: Math.max(0, macros.protein),
+    carbs: Math.max(0, macros.carbs),
+    fat: Math.max(0, macros.fat),
+  };
+
+  const scale = Math.min(
+    1,
+    nonNegative.calories > 0 ? maxCal / nonNegative.calories : 1,
+    nonNegative.protein > maxProtein ? maxProtein / nonNegative.protein : 1,
+    nonNegative.carbs > maxCarbs ? maxCarbs / nonNegative.carbs : 1,
+    nonNegative.fat > maxFat ? maxFat / nonNegative.fat : 1,
+  );
+
   return {
-    calories: Math.min(maxCal, Math.max(80, macros.calories)),
-    protein: Math.min(120, Math.max(0, macros.protein)),
-    carbs: Math.min(180, Math.max(0, macros.carbs)),
-    fat: Math.min(90, Math.max(0, macros.fat)),
+    calories: nonNegative.calories * scale,
+    protein: nonNegative.protein * scale,
+    carbs: nonNegative.carbs * scale,
+    fat: nonNegative.fat * scale,
   };
 }
 
@@ -80,7 +110,13 @@ export function calculateNutritionFromIngredients(
 
   for (const ing of ingredients) {
     if (ing.optional) continue;
-    const profile = findIngredientProfile(ing.name);
+
+    // Recover a unit hidden as a leading word in the name (e.g. "tbsp tomato paste") so both
+    // the ingredient lookup and the gram conversion see the clean ingredient name + real unit.
+    const nameUnit = ing.unit?.trim() ? null : extractLeadingUnitFromName(ing.name);
+    const lookupName = nameUnit?.unit ? nameUnit.cleanedName : ing.name;
+
+    const profile = findIngredientProfile(lookupName);
     if (!profile) continue;
     if (profile.calories === 0 && profile.protein === 0 && profile.carbs === 0 && profile.fat === 0) {
       matched += 1;
@@ -88,7 +124,11 @@ export function calculateNutritionFromIngredients(
     }
 
     const parsed = parseCatalogIngredientAmount(ing);
-    const grams = gramsFromAmount(parsed.quantity, parsed.unit, profile.unitGrams);
+    const effectiveUnit = parsed.unit || nameUnit?.unit || "";
+    // Weight hints ("about 3 lb per rack") sometimes live in the ingredient name
+    // itself (e.g. parenthetical) rather than a separate notes field.
+    const weightHintText = [ing.notes, ing.name].filter(Boolean).join(" ");
+    const grams = gramsFromAmount(parsed.quantity, effectiveUnit, profile.unitGrams, weightHintText);
     if (!grams || grams <= 0) continue;
 
     const factor = grams / 100;
@@ -129,7 +169,7 @@ export function calculateNutritionFromIngredients(
   let estimateAvailable = source !== "unavailable";
 
   if (estimateAvailable) {
-    perServing = clampPerServing(roundMacros(perServing), options.mealType);
+    perServing = roundMacros(clampPerServing(roundMacros(perServing), options.mealType));
     const weakMatch = matched < Math.max(3, Math.ceil(total * 0.5));
     if (
       source === "calculated" &&
@@ -164,6 +204,29 @@ export function calculateNutritionFromIngredients(
       ? deriveBadgeCandidates(perServing, options.mealType)
       : { highProtein: false, lighterOption: false, performanceMeal: false },
   };
+}
+
+/**
+ * Sums the total batch weight (grams, not per-serving) of all matched non-optional
+ * ingredients. Used by the "meal over 700g of ingredients reporting under 250 calories"
+ * global sanity rule — a large, heavy recipe reporting tiny calories is a strong signal
+ * that a major ingredient failed to match the nutrition database.
+ */
+export function sumIngredientGramsBatch(ingredients: CatalogIngredientLine[]): number {
+  let totalGrams = 0;
+  for (const ing of ingredients) {
+    if (ing.optional) continue;
+    const nameUnit = ing.unit?.trim() ? null : extractLeadingUnitFromName(ing.name);
+    const lookupName = nameUnit?.unit ? nameUnit.cleanedName : ing.name;
+    const profile = findIngredientProfile(lookupName);
+    if (!profile) continue;
+    const parsed = parseCatalogIngredientAmount(ing);
+    const effectiveUnit = parsed.unit || nameUnit?.unit || "";
+    const weightHintText = [ing.notes, ing.name].filter(Boolean).join(" ");
+    const grams = gramsFromAmount(parsed.quantity, effectiveUnit, profile.unitGrams, weightHintText);
+    if (grams && grams > 0) totalGrams += grams;
+  }
+  return totalGrams;
 }
 
 export function toGoldenNutritionBlock(record: RecipeNutritionRecord) {

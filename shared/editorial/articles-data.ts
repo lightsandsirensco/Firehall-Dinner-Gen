@@ -216,7 +216,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         id: "sides",
         heading: "Sides that do not fight the grill",
         paragraphs: [
-          "Coleslaw, corn, beans, and simple potatoes travel well on a BBQ line. Mac and cheese can hold warm in a hotel pan; green salads wilt — plate them last or keep dressing separate.",
+          "Coleslaw, corn, beans, and simple potatoes travel well on a BBQ line. Mac and cheese can hold warm in a covered baking dish; green salads wilt — plate them last or keep dressing separate.",
           "Put sauces and buns on the end of the line so the protein stays hot and people build sandwiches without blocking the grill.",
         ],
         tips: [
@@ -406,7 +406,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
           "If the walk-in has six pans labeled 'chili' with no dates, someone will eat the wrong one and someone else will throw out good food. Tape, marker, date — same night you put it away.",
         ],
         tips: [
-          "Shallow hotel pans cool faster than deep buckets — food safety and fridge space.",
+          "Shallow baking dishes cool faster than deep buckets — food safety and fridge space.",
           "Sauce in a squeeze bottle beats re-scooping from a pot that crusted overnight.",
         ],
       },
@@ -415,7 +415,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         heading: "Reheat like you mean it",
         paragraphs: [
           "Add splash of water or broth to rice and pasta before the microwave. Finish under the broiler or on the flat-top when you need texture back. The oven at 350°F is the hall's unsung hero for batch reheat.",
-          "Pulled pork mac reheats better if pork and mac stay separate until service — combine on the line so the pasta does not turn to paste in the cambro.",
+          "Pulled pork mac reheats better if pork and mac stay separate until service — combine on the line so the pasta does not turn to paste in the serving container.",
         ],
       },
       {

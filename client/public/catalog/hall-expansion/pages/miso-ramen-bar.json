@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 480,
-  "protein": 36,
-  "carbs": 50,
-  "fats": 16,
+  "calories": 657,
+  "protein": 64,
+  "carbs": 44,
+  "fats": 23,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -236,12 +236,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 480,
-    "protein": 36,
-    "carbs": 50,
-    "fats": 16,
-    "label": "~480 cal/serving · 36g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 657,
+    "protein": 64,
+    "carbs": 44,
+    "fats": 23,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -249,6 +250,11 @@
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/miso-ramen-bar.jpg",
@@ -273,5 +279,72 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-23T20:58:00.000Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "white miso paste",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "red miso paste",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "firm tofu",
+        "allergens": [
+          "soy"
+        ]
+      },
+      {
+        "name": "ramen noodles",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free gochujang/miso. Use rice noodles or a certified gluten-free ramen substitute."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

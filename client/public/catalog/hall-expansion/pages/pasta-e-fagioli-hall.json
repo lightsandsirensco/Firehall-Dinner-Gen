@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 560,
-  "protein": 35,
-  "carbs": 55,
-  "fats": 19,
+  "calories": 1080,
+  "protein": 75,
+  "carbs": 103,
+  "fats": 43,
   "tags": [
     "protein:beef",
     "format:one_pot",
@@ -223,19 +223,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 560,
-    "protein": 35,
-    "carbs": 55,
-    "fats": 19,
-    "label": "~560 cal/serving · 35g protein · 12g fiber (est.)",
-    "source": "estimated",
+    "calories": 1080,
+    "protein": 75,
+    "carbs": 103,
+    "fats": 43,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
@@ -262,5 +268,63 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-23T21:15:00.000Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "ditalini pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Italian seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "parmesan rind",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -161,7 +161,7 @@ export const HOME = {
   /** Visible hero — kitchen-table voice; one problem, one fix. */
   heroEyebrow: "Built by firefighters • For every shift",
   heroHeadline: 'End the "What\'s for Dinner?" Debate.',
-  heroLead: "Pick tonight's meal in under a minute — then cook.",
+  heroLead: "Great meals for home, the hall, and every shift in between.",
   heroPunchlines: ["No recipe blogs.", "No group chat.", "No arguing."] as const,
   heroPrimaryCta: "Pick Tonight's Meal",
   heroSecondaryCta: "Can't Decide? Spin the Wheel",
@@ -227,8 +227,8 @@ export const HOME = {
       body: "Cook solo on your shift, or link your hall when the crew wants to plan together.",
     },
     {
-      title: "Connect your hall when ready",
-      body: "Optional — shared votes, lists, staples, and meal history when your crew is set up.",
+      title: "Hall Operations — private beta",
+      body: "Shared votes, lists, staples, and meal history for the whole crew. In testing with a small number of fire stations now.",
     },
   ],
   hallSectionTitle: "Cooking with your crew?",
@@ -271,7 +271,7 @@ export const NAV = {
   home: "Home",
   generator: "Pick Tonight",
   explore: "Browse Recipes",
-  ideas: "Hall Ideas",
+  ideas: "Cooking Guides",
   wheel: "Classics Wheel",
   pizza: "Pizza Night",
   faq: "FAQ",

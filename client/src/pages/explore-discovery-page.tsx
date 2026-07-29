@@ -67,9 +67,17 @@ export function ExploreDiscoveryPage() {
       </div>
 
       <div className="md:hidden border-b border-border/20 bg-muted/15">
+        <div className={cn(app.main, "pt-2")}>
+          <SeoBreadcrumbs
+            items={[
+              { name: "Home", path: "/" },
+              { name: "Explore", path: "/explore" },
+            ]}
+          />
+        </div>
         <div className={cn(app.main, "py-4 px-page")}>
-          <h1 className="font-heading text-2xl tracking-tight">Explore</h1>
-          <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+          <h1 className={app.titlePage}>Explore</h1>
+          <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
             Browse hall-tested recipes. Can&apos;t decide?{" "}
             <Link href="/generator" className="font-semibold text-primary hover:underline">
               Pick Tonight&apos;s Meal
@@ -80,7 +88,8 @@ export function ExploreDiscoveryPage() {
       </div>
 
       <main className={cn(app.mainFeed, "pb-10 pt-3 md:pt-2 sm:pb-14")}>
-        <h1 className="sr-only">Explore firehall recipes</h1>
+        {/* Single page <h1> lives in the responsive header above (mobile block
+            or AppPageHeader on desktop) — do not add another one here. */}
         <ExploreErrorBoundary>
           <ExploreCatalogBrowser
             totalRecipeCount={recipeCount}

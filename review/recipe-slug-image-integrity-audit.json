@@ -1,0 +1,32 @@
+{
+  "generatedAt": "2026-07-29T13:35:55.339Z",
+  "totalRecipes": 427,
+  "issueCount": 5,
+  "issues": [
+    {
+      "collection": "breakfast",
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "issue": "page file exists but is not referenced in index.json"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "big-pot-savory-oats",
+      "issue": "page file exists but is not referenced in index.json"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "high-protein-parfaits",
+      "issue": "page file exists but is not referenced in index.json"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "protein-french-toast",
+      "issue": "page file exists but is not referenced in index.json"
+    },
+    {
+      "collection": "breakfast",
+      "slug": "protein-pancake-tray",
+      "issue": "page file exists but is not referenced in index.json"
+    }
+  ]
+}

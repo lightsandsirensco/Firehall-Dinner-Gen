@@ -156,7 +156,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("hall-taco-bar", "Hall Taco Bar Night", "Everyone builds — reduces waste."),
       meal("jambalaya", "Cajun Jambalaya for the Hall", "One pot, loud flavor, full table."),
       meal("loaded-potato-feed", "Loaded Potato Feed", "Self-serve spuds — customizable."),
-      meal("pulled-pork", "Pulled Pork Sandwiches", "Hold in cambro — fast service."),
+      meal("pulled-pork", "Pulled Pork Sandwiches", "Hold in a covered container — fast service."),
     ],
     faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
     relatedArticleSlugs: REL.crew,
@@ -375,7 +375,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     practicalAdvice: [
       "Brown meat when you can — color still matters in slow cookers.",
       "Do not overfill — two medium pots beat one overflowing.",
-      "Transfer to cambro for service — easier than scooping from ceramic insert on the line.",
+      "Transfer to a large serving container for service — easier than scooping from the ceramic insert on the line.",
     ],
     sections: [
       {
@@ -762,7 +762,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       "Breakfast at the hall is a logistics problem disguised as a meal. Crew members eat across ninety minutes — some before rig checks, some after a run, some while the coffee pot is already on its second cycle. Firefighter breakfast ideas that actually work are build-your-own lines and sheet-pan bakes, not a short-order griddle with one cook drowning in custom orders.",
     practicalAdvice: [
       "Cook sausage and bacon on sheet pans in the oven — less splatter, more even crisp, and the flat-top stays free for eggs.",
-      "Keep tortillas in a warmer or covered cambro, not a stack in the microwave.",
+      "Keep tortillas in a warmer or covered dish, not a stack in the microwave.",
       "Assign coffee owner and dish crew before anyone cracks an egg — breakfast chaos is half food and half who forgot the pot.",
       "Hold pancakes and egg bakes warm at 200°F with foil vented — dry heat beats a lid that steams everything soggy.",
     ],
@@ -772,10 +772,10 @@ export const SEO_TRAFFIC_ARTICLES = [
         heading: "Line formats beat plated breakfast",
         paragraphs: [
           "Burrito bars, sausage egg bakes, pancake trays in the oven, and chorizo taco lines all scale past eight people without plating eight individual orders. Each person builds when they show up, which is how mornings actually run on shift.",
-          "Put proteins, eggs, cheese, salsa, and hot sauce on the counter in hotel pans. Keep cold toppings on ice if you are running late into summer shifts. The line should take thirty seconds per person, not a conversation with the cook.",
+          "Put proteins, eggs, cheese, salsa, and hot sauce on the counter in baking dishes. Keep cold toppings on ice if you are running late into summer shifts. The line should take thirty seconds per person, not a conversation with the cook.",
         ],
         tips: [
-          "Pre-scramble eggs for burritos in a hotel pan — faster than cooking to order.",
+          "Pre-scramble eggs for burritos in a large baking dish — faster than cooking to order.",
           "Slice fruit or open yogurt cups only if you have spare hands — do not let sides derail the hot food.",
         ],
       },
@@ -807,7 +807,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       {
         question: "What do you cook when half the crew already ate?",
         answer:
-          "Hold the bake or burrito components warm and let late arrivals build a plate. A second wave of scrambled eggs in a hotel pan beats cooking a fresh full breakfast for two people.",
+          "Hold the bake or burrito components warm and let late arrivals build a plate. A second wave of scrambled eggs in a baking dish beats cooking a fresh full breakfast for two people.",
       },
       {
         question: "What if crew size or time changes this morning?",
@@ -924,8 +924,8 @@ export const SEO_TRAFFIC_ARTICLES = [
       "Cleanup drives what halls cook more than cookbooks admit. One-pot firehall meals trade a little browning glamour for dishes that fit in one sink. On busy nights, that trade is always worth it.",
     practicalAdvice: [
       "Brown in the pot before liquid — always.",
-      "Deglaze with stock or water — free flavor.",
-      "Serve from the pot or one cambro — not twelve individual pans.",
+      "Add a splash of stock or water to the hot pan and scrape up the browned bits stuck to the bottom — free flavor.",
+      "Serve from the pot or one large container — not twelve individual pans.",
     ],
     sections: [
       {

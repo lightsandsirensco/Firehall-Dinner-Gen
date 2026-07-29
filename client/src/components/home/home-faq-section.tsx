@@ -5,19 +5,18 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 import { HOME_FAQ_ITEMS } from "@/lib/seo/home-faq";
 import { CTA, HOME } from "@/lib/brand-copy";
 
 export function HomeFaqSection() {
   return (
     <section
-      className="max-w-[1400px] mx-auto px-page py-10 sm:py-16"
+      className={cn(app.main, app.sectionY)}
       aria-labelledby="home-faq-heading"
     >
-      <h2
-        id="home-faq-heading"
-        className="font-heading text-xl sm:text-2xl tracking-tight text-foreground"
-      >
+      <h2 id="home-faq-heading" className={app.titleSection}>
         {HOME.faqTitle}
       </h2>
 

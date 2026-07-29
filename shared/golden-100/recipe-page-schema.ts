@@ -3,6 +3,7 @@
  */
 
 import { z } from "zod";
+import { recipeDietaryProfileSchema, dietarySummarySchema } from "../dietary/schema.js";
 
 const slugSchema = z
   .string()
@@ -102,6 +103,7 @@ export const goldenRecipePageSchema = z.object({
   classicSlug: z.string().trim().max(120).optional(),
   generatedAt: z.string().trim().max(40),
   contentVersion: z.number().int().min(1).max(99),
+  dietary: recipeDietaryProfileSchema.optional(),
 });
 
 export type GoldenRecipePage = z.infer<typeof goldenRecipePageSchema>;
@@ -126,6 +128,7 @@ export interface GoldenCatalogIndexEntry {
   firefighterScore: number;
   popularityWeight: number;
   searchTerms: string[];
+  dietarySummary?: import("../dietary/schema.js").DietarySummary;
 }
 
 export const goldenCatalogIndexSchema = z.object({
@@ -150,6 +153,7 @@ export const goldenCatalogIndexSchema = z.object({
       firefighterScore: z.number().int(),
       popularityWeight: z.number(),
       searchTerms: z.array(z.string()),
+      dietarySummary: dietarySummarySchema.optional(),
     }),
   ),
 });

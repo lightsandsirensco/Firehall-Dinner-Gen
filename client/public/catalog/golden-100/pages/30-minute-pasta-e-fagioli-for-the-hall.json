@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 12,
   "difficulty": "easy",
-  "calories": 440,
-  "protein": 17,
-  "carbs": 58,
-  "fats": 16,
+  "calories": 559,
+  "protein": 25,
+  "carbs": 80,
+  "fats": 17,
   "tags": [
     "protein:vegetarian",
     "format:pasta",
@@ -173,23 +173,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 440,
-    "protein": 17,
-    "carbs": 58,
-    "fats": 16,
-    "label": "per serving (hall portion)",
+    "calories": 559,
+    "protein": 25,
+    "carbs": 80,
+    "fats": 17,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -224,5 +225,63 @@
   "sourceName": "Serious Eats",
   "sourceUrl": "https://www.seriouseats.com/30-minute-pasta-and-kidney-bean-soup-pasta-e-fagioli-recipe",
   "generatedAt": "2026-06-04T20:45:42.281Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Ditalini Or Small Shells",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Low-Sodium Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Parmesan Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Crusty Bread",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -1,0 +1,250 @@
+{
+  "slug": "cuban-beef-picadillo-bowls",
+  "title": "Cuban-Style Beef Picadillo Bowls",
+  "displayTitle": "Cuban-Style Beef Picadillo Bowls",
+  "seoTitle": "Cuban-Style Beef Picadillo Bowls | Firefighter Meal",
+  "shortDescription": "Sweet-savory ground beef with olives and raisins over rice and black beans",
+  "subtitle": "Sweet-savory ground beef with olives and raisins over rice and black beans",
+  "category": "healthy_performance",
+  "cuisine": "Cuban",
+  "description": "Ground beef simmers with tomato sauce, green olives, raisins, and warm cumin-oregano spice until thick and glossy, served over rice with black beans for a completely different Latin flavor profile.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 862,
+  "protein": 58,
+  "carbs": 79,
+  "fats": 36,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large skillet or Dutch oven",
+    "Rice pot"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground beef",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "90/10"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "green bell pepper",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "tomato sauce",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "green olives",
+      "quantity": "0.75",
+      "unit": "cup",
+      "notes": "pitted, roughly chopped"
+    },
+    {
+      "name": "raisins",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "capers",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "drained"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "bay leaf",
+      "quantity": "1",
+      "unit": "whole"
+    },
+    {
+      "name": "red wine vinegar",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "15 oz, drained and rinsed"
+    },
+    {
+      "name": "long-grain white rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the rice",
+      "instruction": "Rinse rice and cook per package directions with a pinch of salt; fluff and hold covered.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef, onion, and bell pepper in oil over medium-high 8–10 minutes, breaking into crumbles, until no pink remains and vegetables have softened.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Bloom the spices",
+      "instruction": "Add garlic, cumin, and oregano; cook 1 minute until fragrant. This step is what keeps picadillo from tasting like plain taco meat.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer the picadillo",
+      "instruction": "Stir in tomato sauce, olives, raisins, capers, bay leaf, and vinegar. Simmer uncovered 15–18 minutes until thickened and glossy, stirring occasionally so it doesn't stick.",
+      "minutes": 18,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Warm beans and build bowls",
+      "instruction": "Warm black beans in a small pot. Remove bay leaf from picadillo. Layer rice, beans, and picadillo in bowls—sauce should be thick enough to hold its shape on the rice.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Taste before adding extra salt—olives and capers already bring plenty.",
+    "A pinch of cinnamon is a traditional addition that deepens the warm spice notes.",
+    "Sliced avocado on top is not traditional but the crew won't complain."
+  ],
+  "tonightSpread": [
+    "Fried or baked plantains if available.",
+    "Simple green salad."
+  ],
+  "leftovers": [
+    "Picadillo freezes beautifully for up to 3 months.",
+    "Stuff into empanada dough or a baked potato for a next-day twist."
+  ],
+  "whyCrewsLikeIt": "Sweet raisins against salty olives is an unexpected combo that wins people over on the first bite. Nothing else on the menu tastes like this.",
+  "mealPrepNotes": "Mince olives and measure raisins ahead—once the beef is browned, this comes together fast as a one-pan simmer. Station: Don't skip the raisins even if it sounds strange—they melt into the sauce and balance the briny olives perfectly. Station: Mix black beans into the rice or serve on the side—either works for the crew. Station: Simmer uncovered near the end so the sauce thickens instead of staying soupy.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 862,
+    "protein": 58,
+    "carbs": 79,
+    "fats": 36,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Cuban-Style Beef Picadillo Bowls on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "cuban-style beef picadillo bowls",
+    "cuban beef picadillo bowls",
+    "beef",
+    "Cuban",
+    "bowl",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "honey-garlic-chicken-rice-bowls",
+    "korean-beef-rice-bowls",
+    "shawarma-chicken-rice-bowls",
+    "maple-soy-salmon-bowls",
+    "tabbouleh-chicken-bowls",
+    "lean-beef-broccoli-rice"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.696Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 16,
+    "totalCount": 16,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

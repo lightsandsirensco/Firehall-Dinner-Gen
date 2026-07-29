@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 1122,
-  "protein": 72,
-  "carbs": 72,
-  "fats": 62,
+  "calories": 897,
+  "protein": 65,
+  "carbs": 42,
+  "fats": 54,
   "tags": [
     "protein:chicken",
     "format:plated_main",
@@ -116,17 +116,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1122,
-    "protein": 72,
-    "carbs": 72,
-    "fats": 62,
-    "label": "per serving (hall portion)",
+    "calories": 897,
+    "protein": 65,
+    "carbs": 42,
+    "fats": 54,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -165,5 +166,40 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.314Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 5,
+    "totalCount": 5,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Shredded Cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

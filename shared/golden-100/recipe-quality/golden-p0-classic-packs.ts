@@ -85,7 +85,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(
         5,
         "Top with cheese and bake",
-        "Lay fried cutlets in buttered hotel pans. Spoon marinara over each, then shingle the sliced fresh mozzarella and provolone on top. Bake at 425°F 12–15 minutes until cheese bubbles and edges brown. Rest 3 minutes before serving — molten cheese burns rookies.",
+        "Lay fried cutlets in buttered baking dishes. Spoon marinara over each, then shingle the sliced fresh mozzarella and provolone on top. Bake at 425°F 12–15 minutes until cheese bubbles and edges brown. Rest 3 minutes before serving — molten cheese burns rookies.",
         15,
         "high",
       ),
@@ -175,7 +175,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(
         9,
         "Plate hot chicken over salad",
-        "Lay warm sliced chicken over the dressed romaine in hotel pans or individual bowls. Finish with remaining parmesan, bacon, and a lemon squeeze at the table. Garlic bread and fries go on separate trays.",
+        "Lay warm sliced chicken over the dressed romaine in baking dishes or individual bowls. Finish with remaining parmesan, bacon, and a lemon squeeze at the table. Garlic bread and fries go on separate trays.",
         5,
         "low",
       ),
@@ -301,7 +301,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(
         4,
         "Pan up and add topping",
-        "Transfer to buttered hotel pans. Mix panko with melted butter and parmesan; scatter evenly over the top for a crunchy lid.",
+        "Transfer to buttered baking dishes. Mix panko with melted butter and parmesan; scatter evenly over the top for a crunchy lid.",
         10,
       ),
       step(
@@ -506,7 +506,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(
         5,
         "Warm buns and set the line",
-        "Split buns and warm in a 300°F oven 5 minutes wrapped in foil. Set pork in a deep hotel pan, buns stacked beside, slaw and pickles in separate bowls.",
+        "Split buns and warm in a 300°F oven 5 minutes wrapped in foil. Set pork in a deep baking dish, buns stacked beside, slaw and pickles in separate bowls.",
         10,
         "medium",
       ),
@@ -808,7 +808,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       ),
       step(
         4,
-        "Layer in hotel pans",
+        "Assemble the layers",
         "Spread half the meat sauce, then half the pasta, dollops of ricotta, and half the mozzarella. Repeat layers. Top with remaining sauce, mozzarella, and parmesan.",
         12,
       ),
@@ -874,7 +874,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(
         4,
         "Combine and pan up",
-        "Fold shredded BBQ pork into mac and cheese. Transfer to buttered hotel pans; top with optional panko.",
+        "Fold shredded BBQ pork into mac and cheese. Transfer to buttered baking dishes; top with optional panko.",
         10,
       ),
       step(
@@ -973,7 +973,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
       step(1, "Brown meat sauce", "Brown beef and sausage with onion and garlic. Add crushed tomatoes and marinara; simmer 20 minutes until thick. Season with Italian seasoning, salt, and pepper.", 25, "medium-high"),
       step(2, "Mix ricotta filling", "Stir ricotta with eggs, half the parmesan, salt, and pepper until smooth.", 10),
       step(3, "Cook lasagna sheets", "Boil lasagna noodles in salted water until pliable; drain and lay flat on oiled sheet pans so they do not stick.", 12, "high"),
-      step(4, "Layer in hotel pans", "Spread meat sauce, noodles, ricotta dollops, mozzarella, and repeat. Finish with sauce and cheese on top — batch lasagna is layered, not tossed in a pot.", 20),
+      step(4, "Assemble the layers", "Spread meat sauce, noodles, ricotta dollops, mozzarella, and repeat. Finish with sauce and cheese on top — batch lasagna is layered, not tossed in a pot.", 20),
       step(5, "Bake covered then brown", "Bake covered at 375°F 45 minutes, then uncover and bake 15–20 minutes until bubbling and golden.", 60, "medium"),
       step(6, "Rest and cut squares", "Rest 15 minutes before cutting so layers hold. Serve squares from the pan for crew portions.", 15, "low"),
     ],
@@ -1005,7 +1005,7 @@ export const GOLDEN_P0_CLASSIC_PACKS: Record<string, PackBuilder> = {
         "high",
       ),
       step(3, "Make alfredo sauce", "Melt butter; cook garlic 30 seconds. Add cream and simmer; whisk in parmesan until silky. No crushed tomatoes — this is alfredo.", 12, "medium"),
-      step(4, "Combine and pan up", "Toss pasta and chicken with alfredo. Transfer to buttered hotel pans; top with mozzarella.", 10),
+      step(4, "Combine and pan up", "Toss pasta and chicken with alfredo. Transfer to buttered baking dishes; top with mozzarella.", 10),
       step(5, "Bake until bubbling", "Bake at 375°F 20–25 minutes until cheese browns at edges.", 25, "medium"),
       step(6, "Serve Chicken Alfredo Bake", "Rest 5 minutes; scoop portions with a spatula. Finish with parsley.", 5, "low"),
     ],

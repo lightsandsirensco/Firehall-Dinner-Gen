@@ -13,10 +13,10 @@
   "cookTime": 240,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 720,
-  "protein": 45,
-  "carbs": 70,
-  "fats": 30,
+  "calories": 1303,
+  "protein": 100,
+  "carbs": 99,
+  "fats": 54,
   "tags": [
     "protein:pork",
     "format:bowl",
@@ -215,12 +215,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 720,
-    "protein": 45,
-    "carbs": 70,
-    "fats": 30,
-    "label": "~720 cal/serving · 45g protein · 6g fiber (est.)",
-    "source": "estimated",
+    "calories": 1303,
+    "protein": 100,
+    "carbs": 99,
+    "fats": 54,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -228,6 +229,11 @@
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
@@ -256,5 +262,57 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "pork shoulder",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -16,6 +16,7 @@ import { useAuth } from "@/lib/auth/context";
 import { useHallFeature } from "@/lib/billing/hooks";
 import { addRecipeToHallShoppingList } from "@/lib/hall-shopping-list/api";
 import { useToast } from "@/hooks/use-toast";
+import { cn } from "@/lib/utils";
 
 interface ShoppingListModalProps {
   open: boolean;
@@ -136,13 +137,24 @@ export function ShoppingListModal({
   const [emailError, setEmailError] = useState("");
   const [hallAddBusy, setHallAddBusy] = useState(false);
   const [hallAddDone, setHallAddDone] = useState(false);
+  const [checkedItems, setCheckedItems] = useState<Set<string>>(new Set());
 
   const canAddToHallList = authenticated && Boolean(activeHallId) && canUseSharedList;
+
+  const toggleChecked = (key: string) => {
+    setCheckedItems((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  };
 
   useEffect(() => {
     if (!open) return;
     trackShoppingListOpen({ recipeTitle, generatorType });
     setHallAddDone(false);
+    setCheckedItems(new Set());
   }, [open, recipeTitle, generatorType]);
 
   const handleAddToHallList = async () => {
@@ -266,7 +278,7 @@ export function ShoppingListModal({
     <Dialog open={open} onOpenChange={handleClose}>
       <DialogContent className="sm:max-w-[520px] max-h-[85vh] flex flex-col" data-testid="modal-shopping-list">
         <DialogHeader>
-          <DialogTitle className="font-heading text-2xl tracking-wide text-foreground flex items-center gap-2">
+          <DialogTitle className="flex items-center gap-2">
             <ShoppingCart className="w-5 h-5 text-primary" />
             Shopping List
           </DialogTitle>
@@ -275,8 +287,8 @@ export function ShoppingListModal({
 
         {emailView ? (
           emailStatus === "success" ? (
-            <div className="flex flex-col items-center gap-3 py-6" data-testid="shopping-email-success">
-              <CheckCircle className="w-12 h-12 text-green-500" />
+            <div className="flex flex-col items-center gap-3 py-6 fade-up" data-testid="shopping-email-success">
+              <CheckCircle className="w-12 h-12 text-[hsl(var(--success))] success-pop" />
               <p className="text-lg font-heading tracking-wide text-foreground">Shopping list sent!</p>
             </div>
           ) : (
@@ -337,7 +349,7 @@ export function ShoppingListModal({
                   {hallAddBusy ? (
                     <Loader2 className="w-4 h-4 mr-2 animate-spin" />
                   ) : hallAddDone ? (
-                    <Check className="w-4 h-4 mr-2" />
+                    <Check className="w-4 h-4 mr-2 success-pop" />
                   ) : (
                     <Users className="w-4 h-4 mr-2" />
                   )}
@@ -345,7 +357,7 @@ export function ShoppingListModal({
                 </Button>
               ) : null}
               <Button variant="outline" onClick={handleCopy} data-testid="button-shopping-copy">
-                {copied ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
+                {copied ? <Check className="w-4 h-4 mr-2 success-pop" /> : <Copy className="w-4 h-4 mr-2" />}
                 {copied ? "Copied" : "Copy List"}
               </Button>
               <Button variant="outline" onClick={handlePrint} data-testid="button-shopping-print">
@@ -398,15 +410,32 @@ export function ShoppingListModal({
               {shoppingList.sections.map((section, si) => (
                 <div key={si} data-testid={`shopping-section-${si}`}>
                   <h3 className="text-xs uppercase tracking-wider text-muted-foreground font-medium mb-2">{section.title}</h3>
-                  <div className="space-y-1">
-                    {section.items.map((item, ii) => (
-                      <div key={ii} className="flex items-baseline gap-2 text-sm" data-testid={`shopping-item-${si}-${ii}`}>
-                        <span className="text-muted-foreground/50 text-xs flex-shrink-0">&#9744;</span>
-                        <span className="font-medium text-foreground">{item.name}</span>
-                        {item.amount && <span className="text-muted-foreground">— {item.amount}</span>}
-                        {item.notes && <span className="text-xs text-muted-foreground/70">({item.notes})</span>}
-                      </div>
-                    ))}
+                  <div className="space-y-0.5">
+                    {section.items.map((item, ii) => {
+                      const itemKey = `${si}-${ii}`;
+                      const checked = checkedItems.has(itemKey);
+                      return (
+                        <button
+                          key={ii}
+                          type="button"
+                          onClick={() => toggleChecked(itemKey)}
+                          className="flex w-full items-baseline gap-2 rounded-md px-1.5 py-1 -mx-1.5 text-left text-sm hover-elevate touch-manipulation"
+                          data-testid={`shopping-item-${si}-${ii}`}
+                          aria-pressed={checked}
+                        >
+                          {checked ? (
+                            <Check className="w-3.5 h-3.5 text-primary flex-shrink-0 translate-y-px success-pop" />
+                          ) : (
+                            <span className="text-muted-foreground/50 text-xs flex-shrink-0">&#9744;</span>
+                          )}
+                          <span className={cn("font-medium text-foreground transition-opacity", checked && "opacity-50 line-through")}>
+                            {item.name}
+                          </span>
+                          {item.amount && <span className={cn("text-muted-foreground", checked && "opacity-50")}>— {item.amount}</span>}
+                          {item.notes && <span className={cn("text-xs text-muted-foreground/70", checked && "opacity-50")}>({item.notes})</span>}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               ))}
@@ -417,15 +446,32 @@ export function ShoppingListModal({
                     <Leaf className="w-3.5 h-3.5 text-green-500" />
                     <h3 className="text-xs uppercase tracking-wider text-green-600 dark:text-green-400 font-medium">Veg Option (1 Serving)</h3>
                   </div>
-                  <div className="space-y-1">
-                    {shoppingList.veg_option.items.map((item, i) => (
-                      <div key={i} className="flex items-baseline gap-2 text-sm" data-testid={`shopping-veg-item-${i}`}>
-                        <span className="text-green-500/50 text-xs flex-shrink-0">&#9744;</span>
-                        <span className="font-medium text-foreground">{item.name}</span>
-                        {item.amount && <span className="text-muted-foreground">— {item.amount}</span>}
-                        {item.notes && <span className="text-xs text-muted-foreground/70">({item.notes})</span>}
-                      </div>
-                    ))}
+                  <div className="space-y-0.5">
+                    {shoppingList.veg_option.items.map((item, i) => {
+                      const itemKey = `veg-${i}`;
+                      const checked = checkedItems.has(itemKey);
+                      return (
+                        <button
+                          key={i}
+                          type="button"
+                          onClick={() => toggleChecked(itemKey)}
+                          className="flex w-full items-baseline gap-2 rounded-md px-1.5 py-1 -mx-1.5 text-left text-sm hover-elevate touch-manipulation"
+                          data-testid={`shopping-veg-item-${i}`}
+                          aria-pressed={checked}
+                        >
+                          {checked ? (
+                            <Check className="w-3.5 h-3.5 text-green-500 flex-shrink-0 translate-y-px success-pop" />
+                          ) : (
+                            <span className="text-green-500/50 text-xs flex-shrink-0">&#9744;</span>
+                          )}
+                          <span className={cn("font-medium text-foreground transition-opacity", checked && "opacity-50 line-through")}>
+                            {item.name}
+                          </span>
+                          {item.amount && <span className={cn("text-muted-foreground", checked && "opacity-50")}>— {item.amount}</span>}
+                          {item.notes && <span className={cn("text-xs text-muted-foreground/70", checked && "opacity-50")}>({item.notes})</span>}
+                        </button>
+                      );
+                    })}
                   </div>
                 </div>
               )}

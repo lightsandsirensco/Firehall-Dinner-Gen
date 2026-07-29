@@ -335,7 +335,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
     spoonacularTitle: "BBQ Chicken Mac and Cheese",
     heroImagePath: "/images/golden-100/bbq-chicken-mac-and-cheese.jpg",
     imageAlt:
-      "Creamy baked mac and cheese with shredded BBQ chicken, melted cheddar and mozzarella, and BBQ sauce glaze in a firehall hotel pan",
+      "Creamy baked mac and cheese with shredded BBQ chicken, melted cheddar and mozzarella, and BBQ sauce glaze in a firehall baking dish",
     imageKeywords: [
       "bbq",
       "barbecue",
@@ -345,7 +345,7 @@ export const CLASSIC_HALL_MEALS: ClassicHallMealMeta[] = [
       "baked",
       "shredded",
       "creamy",
-      "hotel pan",
+      "baking dish",
     ],
     cuisine: "American",
     mealFormat: "bake",

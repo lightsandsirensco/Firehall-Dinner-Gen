@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 610,
-  "protein": 38,
-  "carbs": 76,
-  "fats": 17,
+  "calories": 825,
+  "protein": 61,
+  "carbs": 96,
+  "fats": 20,
   "tags": [
     "protein:turkey",
     "format:bowls",
@@ -166,19 +166,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 610,
-    "protein": 38,
-    "carbs": 76,
-    "fats": 17,
-    "label": "~610 cal/serving · 38g protein · 5g fiber (est.)",
-    "source": "estimated",
+    "calories": 825,
+    "protein": 61,
+    "carbs": 96,
+    "fats": 20,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
@@ -203,5 +209,41 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.772Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "gochujang",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free gochujang/miso."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -4,6 +4,7 @@ import {
   type ApprovedCatalogCookTimeBucket,
   type ApprovedCatalogPrimaryFilter,
 } from "@shared/approved-catalog";
+import { DIETARY_FILTER_KEYS, DIETARY_FILTER_LABELS } from "@shared/dietary/schema";
 import { FilterChip, FilterChipScroller } from "@/components/mobile/filter-chips";
 import { Button } from "@/components/ui/button";
 import {
@@ -54,6 +55,8 @@ export interface ExploreCatalogFiltersProps {
   onSortChange: (sort: CatalogSortMode) => void;
   onReset: () => void;
   layout?: "inline" | "sheet";
+  /** False once the selected sort has no real crew data yet — shows a fallback note. */
+  sortHasSignal?: boolean;
 }
 
 export function ExploreCatalogFilters({
@@ -64,6 +67,7 @@ export function ExploreCatalogFilters({
   onSortChange,
   onReset,
   layout = "inline",
+  sortHasSignal = true,
 }: ExploreCatalogFiltersProps) {
   const setFilters = onFiltersChange;
   const stackClass = layout === "sheet" ? "space-y-5" : "space-y-4";
@@ -87,6 +91,11 @@ export function ExploreCatalogFilters({
             ))}
           </SelectContent>
         </Select>
+        {sort !== "curated" && !sortHasSignal ? (
+          <span className="block font-normal normal-case text-muted-foreground/80">
+            Not enough crew votes yet — showing our curated order.
+          </span>
+        ) : null}
       </label>
 
       <FilterChipScroller>
@@ -240,6 +249,39 @@ export function ExploreCatalogFilters({
         </FilterChip>
       </FilterChipScroller>
 
+      <div className="space-y-1.5">
+        <p className="text-xs font-medium text-muted-foreground">
+          Dietary
+          <span className="ml-1.5 font-normal normal-case text-muted-foreground/70">
+            (only verified recipes shown — see recipe page for adaptable swaps)
+          </span>
+        </p>
+        <FilterChipScroller>
+          {DIETARY_FILTER_KEYS.map((key) => {
+            const active = filters.dietary.includes(key);
+            return (
+              <FilterChip
+                key={key}
+                active={active}
+                onClick={() => {
+                  const next = active
+                    ? filters.dietary.filter((k) => k !== key)
+                    : [...filters.dietary, key];
+                  setFilters({ ...filters, dietary: next });
+                  trackExploreFilter({
+                    filter_key: `dietary:${key}`,
+                    filter_label: DIETARY_FILTER_LABELS[key],
+                  });
+                }}
+                testId={`explore-catalog-dietary-${key}`}
+              >
+                {DIETARY_FILTER_LABELS[key]}
+              </FilterChip>
+            );
+          })}
+        </FilterChipScroller>
+      </div>
+
       {hasActiveApprovedCatalogFilters(filters) && (
         <div className="flex justify-end">
           <Button
@@ -266,5 +308,6 @@ export function countActiveCatalogFilters(filters: ApprovedCatalogFilterState): 
   if (filters.cookTime !== "all") n++;
   if (filters.highProtein) n++;
   if (filters.lowCleanup) n++;
+  n += filters.dietary.length;
   return n;
 }

@@ -48,29 +48,25 @@
     },
     {
       "name": "butter",
-      "quantity": "6",
-      "unit": "Tbsp",
+      "quantity": "3/8 cup",
       "notes": "melted",
       "group": "Glaze"
     },
     {
       "name": "maple syrup",
-      "quantity": "3",
-      "unit": "Tbsp",
+      "quantity": "2.6 tbsp",
       "notes": "plus extra for drizzling",
       "group": "Glaze"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "1",
-      "unit": "Tbsp",
+      "quantity": "7/8 tsp",
       "notes": "whisked into glaze",
       "group": "Glaze"
     },
     {
       "name": "everything bagel seasoning",
-      "quantity": "1",
-      "unit": "Tbsp",
+      "quantity": "7/8 tbsp",
       "notes": "optional crunch on top",
       "group": "Finish",
       "optional": true
@@ -141,12 +137,13 @@
     }
   ],
   "nutrition": {
-    "calories": 937,
-    "protein": 46,
-    "carbs": 10,
-    "fat": 79,
-    "label": "per serving (hall portion)",
+    "calories": 1100,
+    "protein": 62,
+    "carbs": 14,
+    "fat": 89,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -202,5 +199,80 @@
   "updatedAt": "2026-07-23T21:15:00.000Z",
   "readMinutes": 7,
   "seoTitle": "Breakfast Sliders | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "packages Hawaiian sweet rolls",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "breakfast sausage patties",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "cheddar cheese slices",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "everything bagel seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

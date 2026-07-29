@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 50,
   "difficulty": "medium",
-  "calories": 440,
-  "protein": 28,
-  "carbs": 48,
-  "fats": 14,
+  "calories": 692,
+  "protein": 37,
+  "carbs": 91,
+  "fats": 19,
   "tags": [
     "protein:pork",
     "format:bowl",
@@ -164,19 +164,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 440,
-    "protein": 28,
-    "carbs": 48,
-    "fats": 14,
-    "label": "~440 cal/serving · 28g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 692,
+    "protein": 37,
+    "carbs": 91,
+    "fats": 19,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
@@ -199,5 +205,76 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "ground pork",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shrimp",
+        "allergens": [
+          "shellfish"
+        ]
+      },
+      {
+        "name": "wonton wrappers",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "egg noodles",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

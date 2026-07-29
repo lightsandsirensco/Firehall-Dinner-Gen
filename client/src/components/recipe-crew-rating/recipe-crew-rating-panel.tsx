@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from "react";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 import {
   castRecipeCrewRatingVote,
   crewRatingQueryKey,
@@ -77,10 +78,7 @@ export function RecipeCrewRatingPanel({ slug, category, className }: RecipeCrewR
 
   return (
     <section
-      className={cn(
-        "rounded-2xl border border-border/25 bg-card/30 p-5 sm:p-6 space-y-4",
-        className,
-      )}
+      className={cn(app.panel, "p-5 sm:p-6 space-y-4", className)}
       aria-label="Crew rating"
       data-testid="recipe-crew-rating-panel"
     >

@@ -1,0 +1,26 @@
+# Firehall Meals
+
+> Firehall Meals is a meal-planning app for firefighters — crew-sized recipes, shift-tested dinners, and tools built for station kitchens where the tones can drop mid-prep.
+
+Firehall Meals publishes hundreds of firefighter meal recipes (dinners, BBQ/smoker, breakfast, smoothies, pizza night, and healthy/performance meals) plus guides on feeding a crew, along with planning tools like the Classics Wheel and a hall meal planner. Content is written for real fire station kitchens: crew scaling from 2–20+, beginner-friendly steps, and instructions that hold up when a call interrupts dinner.
+
+## Docs
+
+- [Sitemap](https://www.firehallmeals.com/sitemap.xml): Full list of indexable recipe, guide, and landing page URLs
+- [About](https://www.firehallmeals.com/about): Who Firehall Meals is built for and how recipes are tested
+- [How We Test Recipes](https://www.firehallmeals.com/how-we-test-recipes): Recipe testing and quality methodology
+- [FAQ](https://www.firehallmeals.com/faq): Common questions about firefighter meals and using the app
+
+## Recipe collections
+
+- [Explore all recipes](https://www.firehallmeals.com/explore): Full searchable recipe catalog
+- [BBQ & Smoker](https://www.firehallmeals.com/firefighter-bbq-recipes): Smoker and BBQ firefighter recipes
+- [Breakfast](https://www.firehallmeals.com/breakfast): Firefighter breakfast and shift-fuel recipes
+- [Smoothies](https://www.firehallmeals.com/smoothies): Healthy smoothies for firefighters
+- [Pizza Night](https://www.firehallmeals.com/pizza): Firehall pizza night recipes
+- [Guides](https://www.firehallmeals.com/guides): Articles on feeding a crew, shift nutrition, and station cooking
+
+## Notes
+
+- Recipe pages include structured `Recipe` data (ingredients, instructions, times, nutrition) via schema.org JSON-LD.
+- Account pages, admin tooling, and API routes (`/me`, `/admin`, `/api/`, `/hall`, `/vote/`, `/settings`, `/profile`) are private and excluded from indexing — see `/robots.txt`.

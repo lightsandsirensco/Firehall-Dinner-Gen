@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 620,
-  "protein": 28,
-  "carbs": 48,
-  "fats": 34,
+  "calories": 1400,
+  "protein": 67,
+  "carbs": 97,
+  "fats": 82,
   "tags": [
     "protein:pork",
     "format:handheld",
@@ -142,19 +142,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 620,
-    "protein": 28,
-    "carbs": 48,
-    "fats": 34,
-    "label": "~620 cal/serving · 28g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 1400,
+    "protein": 67,
+    "carbs": 97,
+    "fats": 82,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
@@ -177,5 +183,62 @@
   ],
   "sourceUrl": "https://www.americastestkitchen.com/recipes/6831-sausage-peppers-and-onions",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Italian sausage links",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "hoagie or sub rolls",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "provolone cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

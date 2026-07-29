@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 380,
-  "protein": 32,
-  "carbs": 38,
-  "fats": 12,
+  "calories": 880,
+  "protein": 61,
+  "carbs": 85,
+  "fats": 32,
   "tags": [
     "protein:fish",
     "format:tacos",
@@ -34,69 +34,69 @@
   ],
   "ingredients": [
     {
-      "name": "Cod Fillets",
+      "name": "cod fillets",
       "quantity": "3.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "1-inch thick portions"
     },
     {
-      "name": "Panko Breadcrumbs",
+      "name": "panko breadcrumbs",
       "quantity": "2",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "All-Purpose Flour",
+      "name": "all-purpose flour",
       "quantity": "1",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "3",
       "unit": "whole",
       "notes": "beaten"
     },
     {
-      "name": "Green Cabbage",
+      "name": "green cabbage",
       "quantity": "1",
       "unit": "head",
       "notes": "shredded fine"
     },
     {
-      "name": "Greek Yogurt",
+      "name": "Greek yogurt",
       "quantity": "1",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Lime Juice",
+      "name": "lime juice",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Corn Tortillas",
+      "name": "corn tortillas",
       "quantity": "24",
       "unit": "whole",
       "notes": "6-inch"
     },
     {
-      "name": "Pico De Gallo",
+      "name": "pico de gallo",
       "quantity": "2",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Chili Powder",
+      "name": "chili powder",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Garlic Powder",
+      "name": "garlic powder",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -154,11 +154,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 380,
-    "protein": 32,
-    "carbs": 38,
-    "fats": 12,
-    "label": "~380 cal/serving · 32g protein · 5g fiber (est.)"
+    "calories": 880,
+    "protein": 61,
+    "carbs": 85,
+    "fats": 32,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/crispy-fish-taco-night.jpg",
   "heroImageAlt": "Wide firehall crew platter of Fish Tacos on a station prep table, family-style serving",
@@ -182,6 +197,65 @@
     "blackened-cod-taco-night",
     "chipotle-lime-chicken-tacos"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.652Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cod fillets",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "panko breadcrumbs",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "all-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a 1:1 gluten-free all-purpose flour blend."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

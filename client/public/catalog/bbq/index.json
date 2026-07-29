@@ -38,7 +38,30 @@
         "grill",
         "bbq",
         "firehall"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-chicken-quarters-white-sauce",
@@ -73,7 +96,30 @@
         "American",
         "bbq",
         "firehall"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "brisket-style-beef-sandwiches-au-jus",
@@ -109,7 +155,30 @@
         "sandwich",
         "bbq",
         "firehall"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "hot-honey-grilled-sausage-peppers",
@@ -145,7 +214,35 @@
         "sandwich",
         "bbq",
         "firehall"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "texas-central-brisket-crew",
@@ -184,7 +281,30 @@
         "central texas",
         "packer brisket",
         "post oak"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-burnt-ends-platter",
@@ -222,7 +342,35 @@
         "kansas city",
         "brisket point",
         "sticky glaze"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "competition-bbq-chicken-thighs",
@@ -261,7 +409,30 @@
         "bbq chicken thighs",
         "glazed thighs",
         "275 smoke"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-bbq-chicken-wings-tray",
@@ -300,7 +471,24 @@
         "bbq wings",
         "crispy wings",
         "wing tray"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "hickory-smoked-chicken-breast",
@@ -339,7 +527,30 @@
         "hickory chicken",
         "brined breast",
         "275 smoke"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "santa-maria-tri-tip-roast",
@@ -379,7 +590,30 @@
         "california tri tip",
         "oak smoked",
         "tri tip roast"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use certified gluten-free tortillas or corn tortillas."
+          }
+        ]
+      }
     },
     {
       "slug": "reverse-seared-ribeye-crew",
@@ -419,7 +653,30 @@
         "smoked steak",
         "compound butter",
         "130 medium rare"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-picanha-steak-platter",
@@ -458,7 +715,24 @@
         "brazilian steak",
         "fat cap",
         "chimichurri"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "jalapeno-cheddar-smoked-sausages",
@@ -498,7 +772,30 @@
         "smoked sausage",
         "grilled peppers",
         "275 smoke"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-mac-and-cheese-crew",
@@ -538,7 +835,30 @@
         "bbq side",
         "three cheese mac",
         "275 smoke"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-baked-beans-crew",
@@ -578,7 +898,30 @@
         "bbq beans",
         "molasses beans",
         "pit beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free Worcestershire sauce."
+          }
+        ]
+      }
     },
     {
       "slug": "smoked-potato-salad-tray",
@@ -617,7 +960,24 @@
         "bbq side",
         "mustard potato salad",
         "cold side"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "lamb-merguez-skewers-crew",
@@ -656,7 +1016,30 @@
         "lamb merguez skewers",
         "north african lamb kebab",
         "merguez grill"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "pork-satay-skewers-crew",
@@ -695,7 +1078,30 @@
         "pork satay skewers",
         "indonesian peanut pork",
         "coconut satay grill"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari or a certified gluten-free soy sauce alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "gochujang-beef-skewers-crew",
@@ -734,7 +1140,24 @@
         "gochujang beef skewers",
         "korean chili beef kebab",
         "sirloin gochujang grill"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "caprese-steak-skewers-crew",
@@ -773,7 +1196,30 @@
         "caprese steak skewers",
         "balsamic sirloin kebab",
         "italian steak tomato skewers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "honey-sriracha-shrimp-skewers",
@@ -811,7 +1257,24 @@
         "firehall",
         "thai glazed shrimp kebab",
         "sweet heat shrimp grill"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "yakiniku-grill-platter-crew",
@@ -850,7 +1313,30 @@
         "yakiniku grill platter",
         "japanese bbq ribeye",
         "tare glazed beef"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari or a certified gluten-free soy sauce alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "tandoori-lamb-chop-platter",
@@ -889,7 +1375,30 @@
         "tandoori lamb chops",
         "indian grilled lamb platter",
         "yogurt lamb grill"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a 1:1 gluten-free all-purpose flour blend."
+          }
+        ]
+      }
     },
     {
       "slug": "portuguese-linguica-grill-platter",
@@ -928,7 +1437,30 @@
         "portuguese linguica grill",
         "piri piri sausage platter",
         "linguica peppers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "spiedie-chicken-platter-crew",
@@ -967,7 +1499,30 @@
         "spiedie chicken platter",
         "binghamton spiedies",
         "italian marinade chicken grill"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "pollo-asado-citrus-platter",
@@ -1006,7 +1561,24 @@
         "pollo asado citrus",
         "achiote grilled chicken",
         "mexican orange chicken platter"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "mixed-lamb-chop-grill-board",
@@ -1045,7 +1617,30 @@
         "mixed lamb chop board",
         "mediterranean lamb grill",
         "herb lamb loin shoulder"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "maple-bourbon-grilled-trout",
@@ -1083,7 +1678,35 @@
         "firehall",
         "whole trout grill",
         "bourbon glazed trout"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "cajun-grilled-cod-crew",
@@ -1122,7 +1745,40 @@
         "cajun grilled cod",
         "blackened cod grill",
         "remoulade cod crew"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "grilled-cod-lemon-packets",
@@ -1160,7 +1816,40 @@
         "firehall",
         "foil packet cod grill",
         "caper butter cod"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "chili-lime-grilled-tilapia",
@@ -1198,7 +1887,24 @@
         "firehall",
         "mexican tilapia grill",
         "corn salsa tilapia"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "grilled-chicken-pesto-panini-crew",
@@ -1237,7 +1943,35 @@
         "grilled chicken pesto panini",
         "ciabatta chicken press",
         "italian panini crew"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          },
+          {
+            "flag": "treeNuts",
+            "label": "Nut-Free Adaptable",
+            "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+          }
+        ]
+      }
     },
     {
       "slug": "pressed-cuban-sandwiches-crew",
@@ -1275,7 +2009,35 @@
         "firehall",
         "cuban sandwich griddle",
         "mojo roast pork cuban"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "grilled-reuben-sandwiches-crew",
@@ -1314,7 +2076,30 @@
         "grilled reuben sandwiches",
         "corned beef reuben griddle",
         "reuben crew press"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          }
+        ]
+      }
     },
     {
       "slug": "andouille-po-boy-rolls-crew",
@@ -1353,7 +2138,45 @@
         "andouille po boy rolls",
         "cajun sausage po boy",
         "grilled andouille sandwich"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "cast-iron-steak-fajita-sizzlers",
@@ -1391,7 +2214,30 @@
         "firehall",
         "flank steak fajita griddle",
         "sizzling fajita platter"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-hibachi-mixed-grill-crew",
@@ -1430,7 +2276,35 @@
         "firehall hibachi mixed grill",
         "shrimp pork belly griddle",
         "ginger sauce hibachi"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "flat-top-philly-cheesesteaks-crew",
@@ -1469,7 +2343,35 @@
         "flat top philly cheesesteaks",
         "griddled ribeye hoagie",
         "philly cheesesteak crew"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free browning/seasoning sauce."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "griddle-smash-sausage-peppers",
@@ -1507,7 +2409,40 @@
         "firehall",
         "smashed italian sausage",
         "flat top sausage hoagie"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "mongolian-beef-flat-top-crew",
@@ -1546,7 +2481,40 @@
         "mongolian beef flat top",
         "griddled flank mongolian",
         "crisp mongolian beef crew"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-street-elote-cups",
@@ -1584,7 +2552,30 @@
         "firehall",
         "grilled corn cups",
         "elote crema cotija"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "loaded-ranch-potato-salad-crew",
@@ -1623,7 +2614,30 @@
         "loaded ranch potato salad",
         "grilled potato salad bacon",
         "ranch potato salad tray"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "firehall-antipasto-pasta-salad",
@@ -1661,7 +2675,40 @@
         "firehall",
         "grilled veg antipasto pasta",
         "salami pasta salad tray"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "grilled-peach-burrata-salad",
@@ -1699,7 +2746,35 @@
         "firehall",
         "peach arugula burrata",
         "grilled stone fruit salad"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "charred-broccolini-lemon-tray",
@@ -1737,7 +2812,30 @@
         "firehall",
         "grilled broccolini parmesan",
         "firehall broccolini side"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     }
   ]
 }

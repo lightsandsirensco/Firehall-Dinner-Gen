@@ -2,6 +2,7 @@
  * Firehall Breakfast — dedicated catalog (separate from dinner systems).
  */
 import { z } from "zod";
+import { recipeDietaryProfileSchema, dietarySummarySchema } from "./dietary/schema.js";
 
 const slugSchema = z
   .string()
@@ -107,6 +108,7 @@ export const breakfastRecipePageSchema = z.object({
   readMinutes: z.number().int().min(3).max(20),
   seoTitle: z.string().trim().max(80).optional(),
   collectionTier: breakfastCollectionTierSchema.optional(),
+  dietary: recipeDietaryProfileSchema.optional(),
 });
 
 export type BreakfastRecipePage = z.infer<typeof breakfastRecipePageSchema>;
@@ -123,6 +125,7 @@ export const breakfastIndexEntrySchema = z.object({
   thumbImage: z.string(),
   publishedAt: z.string(),
   collectionTier: breakfastCollectionTierSchema.optional(),
+  dietarySummary: dietarySummarySchema.optional(),
 });
 export type BreakfastIndexEntry = z.infer<typeof breakfastIndexEntrySchema>;
 

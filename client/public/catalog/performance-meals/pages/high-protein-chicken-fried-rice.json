@@ -1,0 +1,252 @@
+{
+  "slug": "high-protein-chicken-fried-rice",
+  "title": "High-Protein Chicken Fried Rice",
+  "displayTitle": "High-Protein Chicken Fried Rice",
+  "seoTitle": "High-Protein Chicken Fried Rice | Firefighter Meal",
+  "shortDescription": "Wok-fried rice with diced chicken, scrambled egg, and vegetables",
+  "subtitle": "Wok-fried rice with diced chicken, scrambled egg, and vegetables",
+  "category": "healthy_performance",
+  "cuisine": "Chinese-American",
+  "description": "Day-old jasmine rice fries hot and fast in a wok with diced chicken, scrambled egg, peas, and carrots, seasoned simply with soy sauce and sesame oil so every grain stays separate and slightly crisp.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 15,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 826,
+  "protein": 69,
+  "carbs": 83,
+  "fats": 22,
+  "tags": [
+    "protein:chicken",
+    "format:skillet",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Wok or large skillet"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless, skinless chicken breast",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "diced small"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "cooked and refrigerated overnight"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "8",
+      "unit": "whole",
+      "notes": "beaten"
+    },
+    {
+      "name": "frozen peas and carrots",
+      "quantity": "2",
+      "unit": "cups"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "medium",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "toasted sesame oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "white pepper",
+      "quantity": "0.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "scallions",
+      "quantity": "5",
+      "unit": "whole",
+      "notes": "sliced"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "4",
+      "unit": "tbsp",
+      "notes": "divided"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "1.5",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Scramble the eggs",
+      "instruction": "Heat 1 tbsp oil in a wok over medium-high. Pour in beaten eggs, scramble 1–2 minutes until just set but still soft. Remove to a plate.",
+      "minutes": 3,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the chicken",
+      "instruction": "Add 1 tbsp oil to the wok. Season chicken with salt, cook 5–6 minutes, stirring occasionally, until browned and cooked through. Remove to the plate with the eggs.",
+      "minutes": 6,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the vegetables",
+      "instruction": "Add onion to the wok, cook 3 minutes until softened. Add garlic and peas and carrots, cook 2 minutes until heated through and fragrant.",
+      "minutes": 5,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fry the rice",
+      "instruction": "Push vegetables to one side, add remaining oil, then add cold rice, breaking up clumps with a spatula. Stir-fry 4–5 minutes, tossing frequently, until rice is heated through and slightly crisp in spots.",
+      "minutes": 6,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Combine and finish",
+      "instruction": "Return chicken and egg to the wok, add soy sauce, sesame oil, and white pepper. Toss 1–2 minutes until everything is evenly combined and glossy. Stir in scallions off heat.",
+      "minutes": 3,
+      "heatLevel": "high"
+    }
+  ],
+  "proTips": [
+    "Day-old rice really does matter—fresh rice is too moist and clumps together in the wok.",
+    "A splash of oyster sauce added with the soy sauce deepens the savory flavor.",
+    "Diced ham or leftover cooked chicken both work in place of raw chicken for a fast pantry-clean-out version."
+  ],
+  "tonightSpread": [
+    "Extra scallions.",
+    "Soy sauce and chili oil at the line."
+  ],
+  "leftovers": [
+    "Reheats well in a hot skillet—microwave can leave it gummy.",
+    "Great cold the next day straight from the fridge for a quick lunch."
+  ],
+  "whyCrewsLikeIt": "Genuinely different structurally from every other rice or noodle dish on the menu—it's fried rice, not a bowl or stir-fry over rice. Built on cold, day-old rice, which is exactly what makes it one of the best make-ahead and reheat dishes in the collection.",
+  "mealPrepNotes": "Cook rice the day before and refrigerate uncovered—cold, dried-out rice fries up separate and crisp, while fresh warm rice turns mushy and clumps. Station: Scramble the eggs separately first and set aside—adding raw egg straight to the rice makes it gummy. Station: Keep the wok hot throughout; a cool pan is the number one reason fried rice turns soggy. Station: Break up any rice clumps with the back of a spatula before adding sauce.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 826,
+    "protein": 69,
+    "carbs": 83,
+    "fats": 22,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of High-Protein Chicken Fried Rice on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "high-protein chicken fried rice",
+    "high protein chicken fried rice",
+    "chicken",
+    "Chinese-American",
+    "skillet",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.707Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

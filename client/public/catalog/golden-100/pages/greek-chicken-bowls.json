@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 636,
-  "protein": 43,
-  "carbs": 59,
-  "fats": 24,
+  "calories": 702,
+  "protein": 46,
+  "carbs": 64,
+  "fats": 27,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -129,15 +129,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 636,
-    "protein": 43,
-    "carbs": 59,
-    "fats": 24,
-    "label": "per serving (hall portion)",
+    "calories": 702,
+    "protein": 46,
+    "carbs": 64,
+    "fats": 27,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
@@ -146,7 +147,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/greek-chicken-bowls.jpg",
@@ -177,5 +178,52 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.229Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Greek Seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Feta Cheese, Crumbled",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Tzatziki Sauce",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

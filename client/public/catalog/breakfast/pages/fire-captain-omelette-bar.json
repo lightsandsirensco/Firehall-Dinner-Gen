@@ -30,43 +30,43 @@
     },
     {
       "name": "whole milk",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "whisked into beaten eggs",
       "group": "Eggs"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "1.6",
+      "quantity": "1.6 cups",
       "notes": "and 2 cups shredded mozzarella",
       "group": "Fillings"
     },
     {
       "name": "diced ham",
-      "quantity": "1.6",
+      "quantity": "1.6 cups",
       "notes": "and 1 lb cooked crumbled bacon",
       "group": "Fillings"
     },
     {
       "name": "sautéed mushrooms",
-      "quantity": "1.6",
+      "quantity": "1.6 cups",
       "notes": "and 1 cup diced bell peppers",
       "group": "Fillings"
     },
     {
       "name": "diced tomatoes",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "drained, plus 1 cup spinach",
       "group": "Fillings"
     },
     {
       "name": "butter",
-      "quantity": "3.2",
+      "quantity": "3.4 tbsp",
       "notes": "for pans, plus oil as needed",
       "group": "Fat"
     },
     {
       "name": "salsa and hot sauce",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "at the line",
       "group": "Serve"
     }
@@ -104,12 +104,13 @@
     }
   ],
   "nutrition": {
-    "calories": 352,
+    "calories": 360,
     "protein": 27,
-    "carbs": 3,
+    "carbs": 5,
     "fat": 26,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -144,5 +145,64 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 9,
   "seoTitle": "Fire Captain Omelette Bar | Firehall Breakfast",
-  "collectionTier": "healthier_hall"
+  "collectionTier": "healthier_hall",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "diced ham",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

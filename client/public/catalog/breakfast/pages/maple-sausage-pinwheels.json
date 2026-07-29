@@ -24,19 +24,19 @@
   "ingredients": [
     {
       "name": "breakfast sausage",
-      "quantity": "1/2",
+      "quantity": "1 1/4 lb",
       "notes": "browned and crumbled fine",
       "group": "Filling"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "3/8",
+      "quantity": "1 1/4 cups",
       "notes": "mixed into warm sausage",
       "group": "Filling"
     },
     {
       "name": "maple syrup",
-      "quantity": "2.4",
+      "quantity": "1 3/4 tbsp",
       "notes": "stirred into sausage off heat",
       "group": "Filling"
     },
@@ -48,25 +48,25 @@
     },
     {
       "name": "butter",
-      "quantity": "1/4",
+      "quantity": "1/4 cup",
       "notes": "melted",
       "group": "Glaze"
     },
     {
       "name": "maple syrup",
-      "quantity": "1.6",
+      "quantity": "1 3/4 tbsp",
       "notes": "for brushing before bake",
       "group": "Glaze"
     },
     {
       "name": "black pepper",
-      "quantity": "1/2",
+      "quantity": "3/8 tsp",
       "notes": "in sausage mix",
       "group": "Seasoning"
     },
     {
       "name": "everything bagel seasoning",
-      "quantity": "3/4",
+      "quantity": "7/8 tbsp",
       "notes": "optional on top",
       "group": "Finish"
     }
@@ -105,23 +105,24 @@
     }
   ],
   "nutrition": {
-    "calories": 131,
-    "protein": 3,
-    "carbs": 9,
-    "fat": 9,
-    "label": "per serving (hall portion)",
+    "calories": 383,
+    "protein": 17,
+    "carbs": 10,
+    "fat": 31,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -145,5 +146,74 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Maple Sausage Pinwheels | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "8-count crescent roll tubes",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "everything bagel seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

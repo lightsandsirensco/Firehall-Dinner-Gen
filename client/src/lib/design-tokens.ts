@@ -8,7 +8,7 @@ export const app = {
   mainFeed: "max-w-[1320px] mx-auto px-page",
   mainDetail: "max-w-[720px] mx-auto px-page",
 
-  sectionY: "py-8 sm:py-12",
+  sectionY: "py-10 sm:py-14",
   sectionGap: "space-y-8 sm:space-y-12",
   stagger: "stagger-fade motion-reduce:[&>*]:!animate-none",
   mealReveal: "meal-reveal motion-reduce:animate-none",
@@ -27,6 +27,10 @@ export const app = {
   titleMeal:
     "font-heading text-[1.75rem] sm:text-3xl leading-[1.1] tracking-tight text-foreground",
 
+  /** Card-level headings — one step below `titleMeal`. Never mix card titles with section titles. */
+  titleCard:
+    "font-heading text-base sm:text-lg leading-snug tracking-tight text-foreground",
+
   lead: "text-base sm:text-lg text-muted-foreground leading-relaxed font-normal",
   subtitle: "text-sm sm:text-base text-muted-foreground leading-relaxed",
   label: "text-xs font-medium text-muted-foreground tracking-wide",
@@ -34,6 +38,13 @@ export const app = {
 
   eyebrowMuted:
     "text-[10px] font-semibold uppercase tracking-[0.22em] text-muted-foreground/70",
+
+  /** Brand-tinted eyebrow — for hero/marketing moments that want a punch of primary color. */
+  eyebrowAccent:
+    "text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/90",
+
+  /** Small uppercase "section label" above a card/list group (distinct from eyebrowMuted, which sits above page/section titles). */
+  sectionLabel: "text-xs font-medium uppercase tracking-wider text-muted-foreground",
 
   /** @deprecated use eyebrowMuted */
   eyebrow:

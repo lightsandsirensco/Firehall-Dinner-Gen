@@ -13,10 +13,10 @@
   "cookTime": 75,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 480,
-  "protein": 22,
-  "carbs": 28,
-  "fats": 32,
+  "calories": 1229,
+  "protein": 57,
+  "carbs": 81,
+  "fats": 74,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -157,19 +157,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 480,
-    "protein": 22,
-    "carbs": 28,
-    "fats": 32,
-    "label": "~480 cal/serving · 22g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 1229,
+    "protein": 57,
+    "carbs": 81,
+    "fats": 74,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/smoked-sausage-platter.jpg",
@@ -192,5 +198,58 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.768Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "kielbasa links",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "andouille sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "sweet Italian sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "sub rolls",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

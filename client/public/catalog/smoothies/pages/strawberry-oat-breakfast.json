@@ -80,13 +80,13 @@
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
+    "calories": 154,
+    "protein": 7,
+    "carbs": 23,
+    "fats": 4,
     "highlights": "Nutrition estimate coming soon",
     "label": "Estimated per serving",
-    "source": "unavailable",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -100,7 +100,7 @@
       "lighterOption": true,
       "performanceMeal": true
     },
-    "estimateAvailable": false
+    "estimateAvailable": true
   },
   "substitutions": [
     "Use a frozen banana instead of some strawberries for extra thickness.",
@@ -152,5 +152,58 @@
     "ice bath pan"
   ],
   "baseServings": 8,
-  "crewSize": 8
+  "crewSize": 8,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "rolled oats",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "plain Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "vanilla extract",
+        "allergens": [
+          "alcohol"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free oats."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

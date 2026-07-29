@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 543,
-  "protein": 56,
-  "carbs": 37,
-  "fats": 17,
+  "calories": 607,
+  "protein": 59,
+  "carbs": 51,
+  "fats": 18,
   "tags": [
     "protein:turkey",
     "format:soup_chili",
@@ -187,23 +187,24 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 543,
-    "protein": 56,
-    "carbs": 37,
-    "fats": 17,
-    "label": "per serving (hall portion)",
+    "calories": 607,
+    "protein": 59,
+    "carbs": 51,
+    "fats": 18,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": true
     }
   },
@@ -236,5 +237,47 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.232Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 15,
+    "totalCount": 15,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Beef Or Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Worcestershire Sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

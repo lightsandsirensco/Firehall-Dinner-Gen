@@ -44,7 +44,7 @@ export function CrewSizePicker({
               onClick={() => onChange(n)}
               className={cn(
                 app.pill,
-                "min-h-11 sm:min-h-9 cursor-pointer transition-colors touch-manipulation",
+                "min-h-11 sm:min-h-9 cursor-pointer transition-colors hover-elevate active-elevate-2 tap-scale touch-manipulation",
                 crewSize === n && "bg-primary/20 ring-1 ring-primary/40 text-foreground font-medium",
               )}
               aria-pressed={crewSize === n}
@@ -69,7 +69,7 @@ export function CrewSizePicker({
             onClick={() => onChange(n)}
             className={cn(
               app.pill,
-              "min-h-11 sm:min-h-9 cursor-pointer transition-colors touch-manipulation",
+              "min-h-11 sm:min-h-9 cursor-pointer transition-colors hover-elevate active-elevate-2 tap-scale touch-manipulation",
               crewSize === n && "bg-primary/20 ring-1 ring-primary/40 text-foreground",
             )}
             aria-pressed={crewSize === n}

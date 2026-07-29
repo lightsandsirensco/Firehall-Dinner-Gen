@@ -14,6 +14,7 @@ import {
 import { trackHallFavoriteRemoved } from "@/lib/analytics";
 import { useHallDashboard } from "@/hooks/use-hall-dashboard";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 /**
  * Hall — deeper ops. Home answers "what needs attention?";
@@ -35,9 +36,9 @@ export function HallDashboardV2({ className }: { className?: string }) {
         testId="hall-back-tonight"
       />
 
-      <header className="space-y-1 px-0.5">
-        <h1 className="font-heading text-2xl tracking-wide">Manage the hall</h1>
-        <p className="text-sm text-muted-foreground leading-relaxed">
+      <header className="space-y-1.5 px-0.5">
+        <h1 className={app.titlePage}>Manage the hall</h1>
+        <p className={app.subtitle}>
           Board, shopping, canteen, and records — dinner decisions stay on Tonight.
         </p>
         <p className="text-xs text-muted-foreground">
@@ -75,66 +76,65 @@ export function HallDashboardV2({ className }: { className?: string }) {
       <HallNeedAnythingCard activeHallId={data.activeHallId} />
 
       <section className="space-y-2" aria-labelledby="hall-manage-jobs" id="hall-tools">
-        <h2
-          id="hall-manage-jobs"
-          className="px-0.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground"
-        >
+        <h2 id="hall-manage-jobs" className={cn(app.eyebrowMuted, "px-0.5")}>
           Manage
         </h2>
-        <HubTile
-          href={shoppingHref}
-          icon={ShoppingCart}
-          title="Shopping list"
-          description="Full list and grocery runner"
-          testId="hall-manage-shop"
-        />
-        <HubTile
-          href="/hall/canteen"
-          icon={ListChecks}
-          title="Canteen"
-          description="What's low or out"
-          testId="hall-manage-canteen"
-        />
-        <HubTile
-          href="/hall/dues"
-          icon={Wallet}
-          title="Dues"
-          description="Who's paid this month"
-          secondary
-          testId="hall-manage-dues"
-        />
-        <HubTile
-          href="/hall/logbook"
-          icon={BookOpen}
-          title="Logbook"
-          description="What happened in the hall"
-          secondary
-          testId="hall-manage-log"
-        />
-        <HubTile
-          href="/hall/history"
-          icon={History}
-          title="Meal history"
-          description="What the crew cooked"
-          secondary
-          testId="hall-manage-history"
-        />
-        <HubTile
-          href="/hall/protein-deals"
-          icon={Tag}
-          title="Protein deals"
-          description="Sales near your station"
-          secondary
-          testId="hall-manage-deals"
-        />
-        <HubTile
-          href={settingsHref}
-          icon={Settings}
-          title="Hall settings"
-          description="Members, invites, and hall profile"
-          secondary
-          testId="hall-manage-settings"
-        />
+        <div className={cn("space-y-2", app.stagger)}>
+          <HubTile
+            href={shoppingHref}
+            icon={ShoppingCart}
+            title="Shopping list"
+            description="Full list and grocery runner"
+            testId="hall-manage-shop"
+          />
+          <HubTile
+            href="/hall/canteen"
+            icon={ListChecks}
+            title="Canteen"
+            description="What's low or out"
+            testId="hall-manage-canteen"
+          />
+          <HubTile
+            href="/hall/dues"
+            icon={Wallet}
+            title="Dues"
+            description="Who's paid this month"
+            secondary
+            testId="hall-manage-dues"
+          />
+          <HubTile
+            href="/hall/logbook"
+            icon={BookOpen}
+            title="Logbook"
+            description="What happened in the hall"
+            secondary
+            testId="hall-manage-log"
+          />
+          <HubTile
+            href="/hall/history"
+            icon={History}
+            title="Meal history"
+            description="What the crew cooked"
+            secondary
+            testId="hall-manage-history"
+          />
+          <HubTile
+            href="/hall/protein-deals"
+            icon={Tag}
+            title="Protein deals"
+            description="Sales near your station"
+            secondary
+            testId="hall-manage-deals"
+          />
+          <HubTile
+            href={settingsHref}
+            icon={Settings}
+            title="Hall settings"
+            description="Members, invites, and hall profile"
+            secondary
+            testId="hall-manage-settings"
+          />
+        </div>
       </section>
 
       <HallLastMealsSection

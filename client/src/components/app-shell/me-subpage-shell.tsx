@@ -30,11 +30,11 @@ export function MeSubpageShell({
   return (
     <div className={cn(app.page, "bg-background")} data-testid={testId}>
       <AppTopBar title={title} parentHref="/me" parentLabel="Me" />
-      <main className={cn(app.main, app.mobileScreen)}>
-        <header className={cn("space-y-2 px-0.5", centeredHeader && "text-center mx-auto max-w-2xl")}>
-          <h1 className="font-heading text-2xl tracking-wide sm:text-3xl">{title}</h1>
+      <main className={cn(app.main, app.mobileScreen, "page-enter motion-reduce:animate-none")}>
+        <header className={cn("space-y-1.5 px-0.5", centeredHeader && "text-center mx-auto max-w-2xl")}>
+          <h1 className={app.titleSection}>{title}</h1>
           {subtitle ? (
-            <p className="text-sm text-muted-foreground leading-relaxed sm:text-base">{subtitle}</p>
+            <p className={app.subtitle}>{subtitle}</p>
           ) : null}
         </header>
         {children}

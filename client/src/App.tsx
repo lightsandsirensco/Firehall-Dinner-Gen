@@ -23,6 +23,7 @@ import { PwaInstallPrompt } from "@/components/pwa/pwa-install-prompt";
 import { PwaOfflineBanner } from "@/components/pwa/pwa-offline-banner";
 import { RouteLoadingFallback } from "@/components/route-loading-fallback";
 import { PageTransition } from "@/components/page-transition";
+import { SkipToContent } from "@/components/skip-to-content";
 import Home from "@/pages/home";
 const Generator = lazy(() => import("@/pages/generator"));
 const AdminGolden100Page = lazy(() => import("@/pages/admin-golden-100"));
@@ -74,6 +75,8 @@ const TonightDashboardPage = lazy(() => import("@/pages/app-home-page"));
 const MePage = lazy(() => import("@/pages/me-page"));
 const MeHistoryPage = lazy(() => import("@/pages/me-history-page"));
 const MeSettingsPage = lazy(() => import("@/pages/me-settings-page"));
+const MeShoppingListPage = lazy(() => import("@/pages/me-shopping-list-page"));
+const MePantryPage = lazy(() => import("@/pages/me-pantry-page"));
 const NotFound = lazy(() => import("@/pages/not-found"));
 
 function AppRoutes() {
@@ -94,6 +97,8 @@ function AppRoutes() {
       <Route path="/me/settings" component={MeSettingsPage} />
       <Route path="/profile">{() => <Redirect to="/me/profile" />}</Route>
       <Route path="/me/saved" component={FavoritesPage} />
+      <Route path="/me/shopping-list" component={MeShoppingListPage} />
+      <Route path="/me/pantry" component={MePantryPage} />
       <Route path="/me/subscription" component={PlansPage} />
       <Route path="/hall/settings">{() => <Redirect to="/hall" />}</Route>
       <Route path="/hall/history">{() => <Redirect to="/hall" />}</Route>
@@ -226,6 +231,7 @@ function App() {
             <HallMembershipProvider>
             <HallFeedbackProvider>
               <TooltipProvider>
+                <SkipToContent />
                 <Toaster />
                 <PwaOfflineBanner />
                 <Router />

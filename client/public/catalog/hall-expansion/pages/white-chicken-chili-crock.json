@@ -13,10 +13,10 @@
   "cookTime": 420,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 590,
-  "protein": 43,
-  "carbs": 52,
-  "fats": 21,
+  "calories": 1106,
+  "protein": 102,
+  "carbs": 79,
+  "fats": 43,
   "tags": [
     "protein:chicken",
     "format:slow_cooker",
@@ -166,19 +166,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 590,
-    "protein": 43,
-    "carbs": 52,
-    "fats": 21,
-    "label": "~590 cal/serving · 43g protein · 11g fiber (est.)",
-    "source": "estimated",
+    "calories": 1106,
+    "protein": 102,
+    "carbs": 79,
+    "fats": 43,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
@@ -203,5 +209,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.772Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "cream cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

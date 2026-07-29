@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 591,
-  "protein": 41,
-  "carbs": 63,
-  "fats": 18,
+  "calories": 654,
+  "protein": 43,
+  "carbs": 74,
+  "fats": 19,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -121,12 +121,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 591,
-    "protein": 41,
-    "carbs": 63,
-    "fats": 18,
-    "label": "per serving (hall portion)",
+    "calories": 654,
+    "protein": 43,
+    "carbs": 74,
+    "fats": 19,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -138,7 +139,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
@@ -170,5 +171,47 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.343Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Teriyaki Sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "Sesame Seeds",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free teriyaki sauce made with tamari."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

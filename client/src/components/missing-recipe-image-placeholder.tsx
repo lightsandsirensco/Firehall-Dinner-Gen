@@ -18,15 +18,27 @@ export function MissingRecipeImagePlaceholder({
     <div
       className={cn(
         "relative flex h-full w-full flex-col items-center justify-center gap-2 overflow-hidden bg-gradient-to-br from-zinc-900 via-zinc-950 to-black",
-        variant === "detail" && "min-h-[240px]",
+        variant === "detail" && "min-h-[240px] gap-3",
         className,
       )}
     >
-      <Flame className="h-9 w-9 text-primary/30" aria-hidden />
-      <p className="px-3 text-center text-[11px] font-medium uppercase tracking-wide text-white/45">
+      <Flame className={cn("text-primary/40", variant === "detail" ? "h-14 w-14" : "h-9 w-9")} aria-hidden />
+      <p
+        className={cn(
+          "px-3 text-center font-medium uppercase tracking-wide text-white/60",
+          variant === "detail" ? "text-xs" : "text-[11px]",
+        )}
+      >
         {MISSING_RECIPE_IMAGE_LABEL}
       </p>
-      <p className="line-clamp-2 px-3 text-center text-[11px] font-medium text-white/50">{title}</p>
+      <p
+        className={cn(
+          "line-clamp-2 px-3 text-center font-medium text-white/70",
+          variant === "detail" ? "text-sm" : "text-[11px]",
+        )}
+      >
+        {title}
+      </p>
     </div>
   );
 }

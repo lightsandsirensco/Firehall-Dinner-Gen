@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 430,
-  "protein": 38,
-  "carbs": 12,
-  "fats": 26,
+  "calories": 586,
+  "protein": 86,
+  "carbs": 11,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:platter",
@@ -166,12 +166,13 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 430,
-    "protein": 38,
-    "carbs": 12,
-    "fats": 26,
-    "label": "~430 cal/serving · 38g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 586,
+    "protein": 86,
+    "carbs": 11,
+    "fats": 20,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -179,6 +180,11 @@
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
@@ -201,5 +207,27 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

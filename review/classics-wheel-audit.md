@@ -1,6 +1,6 @@
 # Classics Wheel full audit
 
-Generated: 2026-07-24T02:18:14.539Z
+Generated: 2026-07-29T13:36:12.636Z
 
 - **Wheel segments:** 10
 - **Pass:** 10/10
@@ -17,7 +17,7 @@ These hall classics exist in the **catalog only** — they are **not** one of th
 ## Recipes
 
 - `chicken-parm` — **Chicken Parmesan** — pass — img=100 detail=100 realism=100
-- `steak-tacos` — **Steak Tacos** — pass — img=100 detail=100 realism=95
+- `steak-tacos` — **Chimichurri Steak Tacos** — pass — img=100 detail=100 realism=95
 - `pulled-pork` — **Carolina Pulled Pork** — pass — img=100 detail=100 realism=98
 - `smash-burgers` — **Double Smash Burgers** — pass — img=100 detail=100 realism=100
 - `big-chili` — **Firehall Chili** — pass — img=100 detail=100 realism=100

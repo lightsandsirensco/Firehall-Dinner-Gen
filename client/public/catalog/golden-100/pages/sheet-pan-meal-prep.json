@@ -13,10 +13,10 @@
   "cookTime": 100,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 424,
-  "protein": 35,
-  "carbs": 11,
-  "fats": 26,
+  "calories": 1138,
+  "protein": 86,
+  "carbs": 154,
+  "fats": 18,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -34,70 +34,84 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
-      "quantity": "3",
-      "unit": "Lb",
+      "name": "Boneless chicken breasts",
+      "quantity": "4",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Bell Peppers, Sliced",
-      "quantity": "4",
-      "unit": "count",
-      "group": "Veg"
-    },
-    {
-      "name": "Red Onion, Sliced",
-      "quantity": "2",
-      "unit": "large",
-      "group": "Veg"
-    },
-    {
-      "name": "Olive Oil",
-      "quantity": "0.3",
-      "unit": "Cup",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Fajita Seasoning",
+      "name": "Sweet potatoes, cubed",
       "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "lb",
+      "group": "Veg"
+    },
+    {
+      "name": "Broccoli florets",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Veg"
+    },
+    {
+      "name": "Olive oil",
+      "quantity": "0.3",
+      "unit": "cup",
       "group": "Seasoning"
     },
     {
-      "name": "Lime",
-      "quantity": "4",
-      "unit": "count",
-      "group": "Finish"
+      "name": "Garlic powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Long-grain rice, cooked",
+      "quantity": "6",
+      "unit": "cups",
+      "notes": "cooked separately",
+      "group": "Base"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Heat oven and prep pans",
-      "instruction": "Preheat 425°F. Toss chicken and veg with oil and seasoning on two rimmed pans — single layer only or you'll steam.",
-      "minutes": 12,
+      "title": "Prep and season",
+      "instruction": "Cube chicken breasts and sweet potatoes into even 1-inch pieces. Toss chicken, sweet potatoes, and broccoli separately with olive oil, garlic powder, smoked paprika, and salt.",
+      "minutes": 15,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Roast until charred",
-      "instruction": "Roast 18–22 minutes, swap racks halfway, until chicken reads 165°F and peppers have blistered edges.",
-      "minutes": 22,
+      "title": "Roast in stages",
+      "instruction": "Spread sweet potatoes on one sheet pan and roast at 425°F for 10 minutes before adding chicken and broccoli to a second pan — sweet potatoes need a head start to cook through.",
+      "minutes": 10,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Serve family-style",
-      "instruction": "Pile Chicken Meal Prep Trays onto trays. Hold backup pan foil-covered at 200°F. Squeeze lime at the line if using.",
-      "minutes": 5,
-      "heatLevel": "low"
+      "title": "Finish roasting",
+      "instruction": "Roast both pans another 18–20 minutes, swapping racks halfway, until chicken reads 165°F and vegetables are tender with browned edges.",
+      "minutes": 20,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
-      "title": "Batch the next pan",
-      "instruction": "While the crew eats, start a second batch on clean pans if you're feeding stragglers. Scrape burned bits — they smoke up the hall.",
-      "minutes": 10,
+      "title": "Portion into containers",
+      "instruction": "Divide cooked rice, roasted chicken, sweet potatoes, and broccoli evenly across meal prep containers — about 1 cup rice and 6 oz chicken per container.",
+      "minutes": 12,
       "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cool and label",
+      "instruction": "Let containers cool uncovered 15–20 minutes before sealing lids, then refrigerate. Label with the date; reheat covered to 165°F before eating.",
+      "minutes": 20,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -124,18 +138,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 424,
-    "protein": 35,
-    "carbs": 11,
-    "fats": 26,
+    "calories": 1138,
+    "protein": 86,
+    "carbs": 154,
+    "fats": 18,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
@@ -173,6 +187,28 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.354Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:33:03.264Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

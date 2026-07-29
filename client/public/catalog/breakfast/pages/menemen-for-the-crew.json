@@ -96,23 +96,24 @@
     }
   ],
   "nutrition": {
-    "calories": 273,
-    "protein": 15,
-    "carbs": 10,
-    "fat": 20,
-    "label": "per serving (hall portion)",
+    "calories": 348,
+    "protein": 14,
+    "carbs": 6,
+    "fat": 31,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -135,5 +136,34 @@
   "publishedAt": "2026-07-17T20:15:27.730Z",
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 7,
-  "seoTitle": "Menemen for the Crew | Firehall Breakfast"
+  "seoTitle": "Menemen for the Crew | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

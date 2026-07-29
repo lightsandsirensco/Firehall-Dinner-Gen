@@ -13,10 +13,10 @@
   "cookTime": 210,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1050,
-  "protein": 62,
-  "carbs": 95,
-  "fats": 48,
+  "calories": 1400,
+  "protein": 96,
+  "carbs": 80,
+  "fats": 78,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -234,12 +234,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1050,
-    "protein": 62,
-    "carbs": 95,
-    "fats": 48,
-    "label": "per serving (hall portion, with rolls + fries)",
-    "source": "estimated",
+    "calories": 1400,
+    "protein": 96,
+    "carbs": 80,
+    "fats": 78,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -283,5 +284,99 @@
   "sourceUrl": "",
   "classicSlug": "beef-dip",
   "generatedAt": "2026-07-23T21:40:00.000Z",
-  "contentVersion": 5
+  "contentVersion": 5,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 15,
+    "totalCount": 15,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Low-Sodium Beef Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Worcestershire Sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      },
+      {
+        "name": "Soy Sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "Hoagie Rolls",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Provolone Slices",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Frozen Steak Fries",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

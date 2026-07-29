@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 690,
-  "protein": 42,
-  "carbs": 72,
-  "fats": 27,
+  "calories": 968,
+  "protein": 62,
+  "carbs": 90,
+  "fats": 40,
   "tags": [
     "protein:chicken",
     "format:bowls",
@@ -166,19 +166,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 690,
-    "protein": 42,
-    "carbs": 72,
-    "fats": 27,
-    "label": "~690 cal/serving · 42g protein · 7g fiber (est.)",
-    "source": "estimated",
+    "calories": 968,
+    "protein": 62,
+    "carbs": 90,
+    "fats": 40,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
@@ -203,5 +209,34 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "peanut butter",
+        "allergens": [
+          "peanuts"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": false,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

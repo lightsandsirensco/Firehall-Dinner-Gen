@@ -13,10 +13,10 @@
   "cookTime": 360,
   "prepTime": 45,
   "difficulty": "hard",
-  "calories": 640,
-  "protein": 34,
-  "carbs": 54,
-  "fats": 32,
+  "calories": 956,
+  "protein": 27,
+  "carbs": 46,
+  "fats": 74,
   "tags": [
     "protein:pork",
     "format:bowl",
@@ -245,19 +245,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 640,
-    "protein": 34,
-    "carbs": 54,
-    "fats": 32,
-    "label": "~640 cal/serving · 34g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 956,
+    "protein": 27,
+    "carbs": 46,
+    "fats": 74,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
-      "under700Calories": true,
+      "highProtein": false,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
@@ -282,5 +288,76 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-23T20:58:00.000Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "pork neck bones",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "mirin",
+        "allergens": [
+          "alcohol"
+        ]
+      },
+      {
+        "name": "pork belly",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "ramen noodles",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use rice noodles or a certified gluten-free ramen substitute."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -30,43 +30,43 @@
     },
     {
       "name": "butter",
-      "quantity": "1.3",
+      "quantity": "1 1/2 tbsp",
       "notes": "melted for brushing tops",
       "group": "Biscuits"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "1",
+      "quantity": "1.3 lb",
       "notes": "bulk or casings removed",
       "group": "Gravy"
     },
     {
       "name": "all-purpose flour",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "whisked into rendered fat",
       "group": "Gravy"
     },
     {
       "name": "whole milk",
-      "quantity": "3.3",
+      "quantity": "3.3 cups",
       "notes": "warmed slightly for smoother whisking",
       "group": "Gravy"
     },
     {
       "name": "black pepper",
-      "quantity": "1",
+      "quantity": "1 1/2 tsp",
       "notes": "freshly ground, plus salt to taste",
       "group": "Seasoning"
     },
     {
       "name": "poultry seasoning",
-      "quantity": "3/8",
+      "quantity": "3/8 tsp",
       "notes": "optional depth",
       "group": "Seasoning"
     },
     {
       "name": "chopped parsley",
-      "quantity": "1/8",
+      "quantity": "1/8 cup",
       "notes": "and hot sauce at the line",
       "group": "Serve"
     }
@@ -105,18 +105,19 @@
     }
   ],
   "nutrition": {
-    "calories": 326,
-    "protein": 13,
-    "carbs": 10,
-    "fat": 26,
-    "label": "per serving (hall portion)",
+    "calories": 566,
+    "protein": 22,
+    "carbs": 45,
+    "fat": 33,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -145,5 +146,80 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Hall Sausage Biscuits & Gravy | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large refrigerated biscuits",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "all-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "poultry seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a 1:1 gluten-free all-purpose flour blend. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

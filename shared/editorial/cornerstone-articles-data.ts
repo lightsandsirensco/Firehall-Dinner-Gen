@@ -164,7 +164,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         id: "crew-size",
         heading: "Crew-size and interruption math",
         paragraphs: [
-          "Plan for everyone on duty plus one floater from a neighboring rig. Batch meals need a deep pot or two hotel pans — not a home-sized Dutch oven pretending it is enough.",
+          "Plan for everyone on duty plus one floater from a neighboring rig. Batch meals need a deep pot or two large baking dishes — not a home-sized Dutch oven pretending it is enough.",
           "If you expect calls during dinner, avoid meals with a thirty-second finish window. Choose food that waits: pulled pork, baked pasta, rice bowls with protein held separately.",
         ],
       },
@@ -270,7 +270,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
       meal(
         "sausage-egg-bake",
         "1. Sausage and Egg Bake",
-        "Senior-cook eggs, sausage, and cheese in one hotel pan — the post-call showpiece.",
+        "Senior-cook eggs, sausage, and cheese in one large baking dish — the post-call showpiece.",
       ),
       meal(
         "breakfast-burrito-bar",

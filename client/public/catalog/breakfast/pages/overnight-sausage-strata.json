@@ -24,19 +24,19 @@
   "ingredients": [
     {
       "name": "day-old bread",
-      "quantity": "3/4",
+      "quantity": "3/4 lb",
       "notes": "cubed into 1-inch pieces",
       "group": "Base"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "2",
+      "quantity": "1.6 lb",
       "notes": "browned and crumbled",
       "group": "Protein"
     },
     {
       "name": "shredded sharp cheddar",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "divided",
       "group": "Cheese"
     },
@@ -47,25 +47,25 @@
     },
     {
       "name": "whole milk",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "or half-and-half",
       "group": "Egg mix"
     },
     {
       "name": "dry mustard",
-      "quantity": "3/4",
+      "quantity": "7/8 tsp",
       "notes": "plus salt, pepper, and pinch nutmeg",
       "group": "Seasoning"
     },
     {
       "name": "sautéed onion",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "optional layer",
       "group": "Optional"
     },
     {
       "name": "sliced green onions",
-      "quantity": "1/2",
+      "quantity": "3/8 cup",
       "notes": "plus hot sauce at the line",
       "group": "Finish"
     }
@@ -103,14 +103,15 @@
     }
   ],
   "nutrition": {
-    "calories": 667,
-    "protein": 34,
-    "carbs": 30,
+    "calories": 686,
+    "protein": 39,
+    "carbs": 29,
     "fat": 46,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
@@ -118,7 +119,7 @@
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -143,5 +144,74 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Overnight Sausage Strata | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "day-old bread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded sharp cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

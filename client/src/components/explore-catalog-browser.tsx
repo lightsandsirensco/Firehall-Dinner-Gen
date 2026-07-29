@@ -1,7 +1,7 @@
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useLocation } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { Clock, SlidersHorizontal } from "lucide-react";
+import { Clock, Flame, SlidersHorizontal, AlertTriangle } from "lucide-react";
 import {
   approvedCatalogRecipePath,
   type ApprovedCatalogGridEntry,
@@ -58,7 +58,28 @@ function applyBrowsePatch(
     cookTime: patch.cookTime ?? base.cookTime,
     highProtein: patch.highProtein ?? base.highProtein,
     lowCleanup: patch.lowCleanup ?? base.lowCleanup,
+    dietary: patch.dietary ?? base.dietary,
   };
+}
+
+function sortMetricForMode(
+  sort: CatalogSortMode,
+  entry: RecipeRatingSortMap[string] | undefined,
+): number {
+  if (sort === "most_popular" || sort === "most_votes") return entry?.totalVotes ?? 0;
+  if (sort === "highest_rated") return entry?.approvalScore ?? 0;
+  if (sort === "trending") return entry?.trendingScore ?? 0;
+  return 0;
+}
+
+/** True once at least one visible recipe has real signal for this sort mode. */
+function sortModeHasSignal(
+  rows: ApprovedCatalogGridEntry[],
+  sort: CatalogSortMode,
+  sortMap: RecipeRatingSortMap | undefined,
+): boolean {
+  if (sort === "curated" || !sortMap) return true;
+  return rows.some((row) => sortMetricForMode(sort, sortMap[row.slug]) > 0);
 }
 
 function sortCatalogEntries(
@@ -66,7 +87,7 @@ function sortCatalogEntries(
   sort: CatalogSortMode,
   sortMap: RecipeRatingSortMap | undefined,
 ): ApprovedCatalogGridEntry[] {
-  if (sort === "curated" || !sortMap) {
+  if (sort === "curated" || !sortMap || !sortModeHasSignal(rows, sort, sortMap)) {
     return [...rows].sort((a, b) => a.title.localeCompare(b.title));
   }
   const score = (slug: string) => sortMap[slug];
@@ -114,6 +135,7 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
     <article
       className={cn(
         "group flex h-full cursor-pointer flex-col overflow-hidden rounded-xl bg-card/30 ring-1 ring-border/15",
+        "transition-transform duration-150 ease-out touch-manipulation active:scale-[0.98]",
         "md:rounded-2xl md:hover:ring-primary/25",
       )}
       onClick={onClick}
@@ -135,7 +157,7 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
         {showImage ? (
           <img
             src={imageSrc}
-            alt=""
+            alt={entry.title}
             width={EXPLORE_CARD_IMG_WIDTH}
             height={EXPLORE_CARD_IMG_HEIGHT}
             loading="lazy"
@@ -157,7 +179,7 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
       </div>
 
       <div className="flex flex-1 flex-col gap-0.5 p-2 md:gap-1.5 md:p-3">
-        <h3 className="line-clamp-2 text-xs font-medium leading-snug md:text-sm md:group-hover:text-primary">
+        <h3 className="line-clamp-2 font-heading text-xs font-medium leading-snug md:text-sm md:group-hover:text-primary">
           {entry.title}
         </h3>
         <p className="mt-auto flex items-center gap-1 text-[10px] capitalize text-muted-foreground md:gap-1.5 md:text-xs">
@@ -202,7 +224,7 @@ function CatalogRecipeGrid({
         Showing {visibleRecipes.length} of {filteredCount} recipes
       </p>
       <ul
-        className="explore-mobile-grid grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4 lg:gap-4"
+        className="explore-mobile-grid grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4 lg:gap-4 stagger-fade motion-reduce:[&>*]:!animate-none"
         data-testid="explore-catalog-grid"
       >
         {visibleRecipes.map((entry) => (
@@ -296,6 +318,7 @@ export function ExploreCatalogBrowser({
       highProtein: filters.highProtein,
       lowCleanup: filters.lowCleanup,
       searchQuery,
+      dietary: filters.dietary,
     });
     const next = `/explore${qs}`;
     if (location !== next) {
@@ -329,6 +352,11 @@ export function ExploreCatalogBrowser({
     }
     return sortCatalogEntries(rows, sort, sortMap);
   }, [data?.recipes, filters, sort, sortMap, searchQuery]);
+
+  const sortHasSignal = useMemo(
+    () => sortModeHasSignal(filterApprovedCatalogEntries(data?.recipes ?? [], filters), sort, sortMap),
+    [data?.recipes, filters, sort, sortMap],
+  );
 
   useEffect(() => {
     setVisibleCount(pageSize);
@@ -375,6 +403,7 @@ export function ExploreCatalogBrowser({
       onSortChange={setSort}
       onReset={resetFilters}
       layout={isMobile ? "sheet" : "inline"}
+      sortHasSignal={sortHasSignal}
     />
   );
 
@@ -387,8 +416,12 @@ export function ExploreCatalogBrowser({
       )}
 
       {error && !isLoading && (
-        <div className="py-16 text-center" data-testid="explore-catalog-error">
-          <p className="text-sm text-destructive">{(error as Error).message}</p>
+        <div className="py-16 text-center fade-up" data-testid="explore-catalog-error">
+          <div className="relative mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-destructive/10">
+            <div className="absolute inset-0 rounded-full bg-destructive/5 animate-ping motion-reduce:animate-none" style={{ animationDuration: "3s" }} />
+            <AlertTriangle className="h-6 w-6 text-destructive/70" aria-hidden />
+          </div>
+          <p className="text-sm text-muted-foreground">{(error as Error).message}</p>
           <Button variant="outline" className="mt-4 min-h-11" onClick={() => refetch()}>
             Try again
           </Button>
@@ -409,7 +442,11 @@ export function ExploreCatalogBrowser({
             />
           ) : (
             <div className="py-16 text-center" data-testid="explore-catalog-empty">
-              <p className="font-medium text-foreground">No meals match these filters</p>
+              <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-muted/40">
+                <Flame className="h-6 w-6 text-muted-foreground/70" aria-hidden />
+              </div>
+              <p className="font-medium text-foreground">Nothing's matching that search</p>
+              <p className="mt-1 text-sm text-muted-foreground">Try clearing a filter or two.</p>
               <Button variant="outline" className="mt-4 min-h-11" onClick={resetFilters}>
                 Clear filters
               </Button>
@@ -473,7 +510,7 @@ export function ExploreCatalogBrowser({
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
             placeholder="Search by name, protein, tag…"
-            className="min-h-11 w-full rounded-xl border border-border/30 bg-background px-3 text-sm text-foreground"
+            className="min-h-11 w-full rounded-xl border border-border/30 bg-background px-3.5 text-sm text-foreground"
             data-testid="explore-catalog-search-desktop"
             autoComplete="off"
           />

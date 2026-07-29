@@ -226,5 +226,69 @@
     "detroit-style-pizza"
   ],
   "generatedAt": "2026-05-30T03:45:01.612Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pizza dough balls (15 oz)",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Buttermilk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "All-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Low-moisture mozzarella, shredded",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "White bread slices, toasted and crumbled",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

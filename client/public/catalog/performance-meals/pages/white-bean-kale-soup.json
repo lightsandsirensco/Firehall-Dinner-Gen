@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 285,
-  "protein": 14,
-  "carbs": 42,
-  "fats": 8,
+  "calories": 325,
+  "protein": 19,
+  "carbs": 40,
+  "fats": 11,
   "tags": [
     "protein:plant",
     "format:soup",
@@ -33,73 +33,73 @@
   ],
   "ingredients": [
     {
-      "name": "Cannellini Beans",
+      "name": "cannellini beans",
       "quantity": "4",
       "unit": "cans",
       "notes": "15 oz, drained"
     },
     {
-      "name": "Lacinato Kale",
+      "name": "lacinato kale",
       "quantity": "1",
       "unit": "bunch",
       "notes": "stemmed, chopped"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "diced"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced"
     },
     {
-      "name": "Celery Stalks",
+      "name": "celery stalks",
       "quantity": "3",
       "unit": "whole",
       "notes": "diced"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "8",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Vegetable Broth",
+      "name": "vegetable broth",
       "quantity": "8",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "low sodium"
     },
     {
-      "name": "Fresh Rosemary",
+      "name": "fresh rosemary",
       "quantity": "2",
       "unit": "sprigs"
     },
     {
-      "name": "Parmesan Rind",
+      "name": "Parmesan rind",
       "quantity": "1",
       "unit": "piece",
       "notes": "2-inch chunk"
     },
     {
-      "name": "Crushed Tomatoes",
+      "name": "crushed tomatoes",
       "quantity": "1",
       "unit": "can",
       "notes": "14.5 oz"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -157,11 +157,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 285,
-    "protein": 14,
-    "carbs": 42,
-    "fats": 8,
-    "label": "~285 cal/serving · 14g protein · 12g fiber (est.)"
+    "calories": 325,
+    "protein": 19,
+    "carbs": 40,
+    "fats": 11,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/white-bean-kale-soup.jpg",
   "heroImageAlt": "Wide firehall crew platter of White Bean and Kale Soup on a station prep table, family-style serving",
@@ -186,6 +201,52 @@
     "lemon-chicken-orzo-soup",
     "lentil-mushroom-bolognese"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.670Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "vegetable broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Parmesan rind",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

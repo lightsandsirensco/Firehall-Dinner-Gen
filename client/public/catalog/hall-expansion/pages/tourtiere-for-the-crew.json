@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 580,
-  "protein": 28,
-  "carbs": 42,
-  "fats": 34,
+  "calories": 710,
+  "protein": 40,
+  "carbs": 37,
+  "fats": 45,
   "tags": [
     "protein:pork",
     "format:bake",
@@ -164,19 +164,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 28,
-    "carbs": 42,
-    "fats": 34,
-    "label": "~580 cal/serving · 28g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 710,
+    "protein": 40,
+    "carbs": 37,
+    "fats": 45,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/tourtiere-for-the-crew.jpg",
@@ -199,5 +205,58 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "ground pork",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "pie crust",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "egg",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

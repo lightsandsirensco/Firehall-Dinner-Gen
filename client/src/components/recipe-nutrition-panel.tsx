@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 export interface RecipeNutritionPanelProps {
   calories: number;
@@ -62,17 +63,11 @@ export function RecipeNutritionPanel({
   if (!showEstimate) {
     return (
       <section
-        className={cn(
-          "rounded-2xl border border-border/20 bg-card/20 p-4 sm:p-5 print:border print:bg-white",
-          className,
-        )}
+        className={cn(app.panel, "p-4 sm:p-5 print:border print:bg-white", className)}
         aria-labelledby="recipe-nutrition-heading"
         data-testid="recipe-nutrition-unavailable"
       >
-        <h2
-          id="recipe-nutrition-heading"
-          className="font-heading text-sm uppercase tracking-widest text-muted-foreground"
-        >
+        <h2 id="recipe-nutrition-heading" className={app.sectionLabel}>
           Nutrition
         </h2>
         <p className="mt-3 text-sm text-muted-foreground">Nutrition estimate coming soon.</p>
@@ -82,17 +77,11 @@ export function RecipeNutritionPanel({
 
   return (
     <section
-      className={cn(
-        "rounded-2xl border border-border/20 bg-card/20 p-4 sm:p-5 print:border print:bg-white",
-        className,
-      )}
+      className={cn(app.panel, "p-4 sm:p-5 print:border print:bg-white", className)}
       aria-labelledby="recipe-nutrition-heading"
       data-testid="recipe-nutrition-panel"
     >
-      <h2
-        id="recipe-nutrition-heading"
-        className="font-heading text-sm uppercase tracking-widest text-muted-foreground"
-      >
+      <h2 id="recipe-nutrition-heading" className={app.sectionLabel}>
         Nutrition
       </h2>
       <p className="mt-1 text-xs text-muted-foreground">Estimated per serving</p>

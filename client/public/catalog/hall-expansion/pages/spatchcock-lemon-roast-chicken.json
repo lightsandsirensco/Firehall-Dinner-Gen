@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 420,
-  "protein": 40,
-  "carbs": 8,
-  "fats": 26,
+  "calories": 718,
+  "protein": 120,
+  "carbs": 5,
+  "fats": 21,
   "tags": [
     "protein:chicken",
     "format:roast",
@@ -158,19 +158,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 420,
-    "protein": 40,
-    "carbs": 8,
-    "fats": 26,
-    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 718,
+    "protein": 120,
+    "carbs": 5,
+    "fats": 21,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
@@ -193,5 +199,40 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

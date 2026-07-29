@@ -140,9 +140,25 @@ function toLastmod(iso?: string): string {
 }
 
 const BREAKFAST_CATALOG_PUBLIC_DIR = path.join(process.cwd(), "client", "public", "catalog", "breakfast");
+const BBQ_CATALOG_PUBLIC_DIR = path.join(process.cwd(), "client", "public", "catalog", "bbq");
 
 function readBreakfastSlugs(): Array<{ slug: string; generatedAt?: string }> {
   const indexFile = path.join(BREAKFAST_CATALOG_PUBLIC_DIR, "index.json");
+  if (!fs.existsSync(indexFile)) return [];
+  try {
+    const index = JSON.parse(fs.readFileSync(indexFile, "utf8")) as {
+      generatedAt?: string;
+      recipes?: Array<{ slug: string }>;
+    };
+    const generatedAt = index.generatedAt;
+    return (index.recipes ?? []).map((r) => ({ slug: r.slug, generatedAt }));
+  } catch {
+    return [];
+  }
+}
+
+function readBbqSlugs(): Array<{ slug: string; generatedAt?: string }> {
+  const indexFile = path.join(BBQ_CATALOG_PUBLIC_DIR, "index.json");
   if (!fs.existsSync(indexFile)) return [];
   try {
     const index = JSON.parse(fs.readFileSync(indexFile, "utf8")) as {
@@ -276,6 +292,15 @@ export function buildSitemapXml(origin: string): string {
     });
   }
 
+  for (const { slug, generatedAt } of readBbqSlugs()) {
+    addEntry({
+      path: approvedCatalogRecipePath(slug),
+      lastmod: generatedAt,
+      changefreq: "monthly",
+      priority: "0.8",
+    });
+  }
+
   for (const { slug, publishedAt } of readGuideSlugs()) {
     addEntry({
       path: guidePath(slug),
@@ -294,11 +319,25 @@ ${urls.join("\n")}
 `;
 }
 
+/** AI crawlers explicitly allowed the same public content as everyone else (see /llms.txt). */
+const AI_CRAWLER_USER_AGENTS = [
+  "GPTBot",
+  "ChatGPT-User",
+  "OAI-SearchBot",
+  "Google-Extended",
+  "GoogleOther",
+  "CCBot",
+  "anthropic-ai",
+  "ClaudeBot",
+  "Claude-Web",
+  "PerplexityBot",
+  "Applebot-Extended",
+  "Bytespider",
+];
+
 export function buildRobotsTxt(origin: string): string {
   const base = origin.replace(/\/+$/, "");
-  return `User-agent: *
-Allow: /
-Disallow: /admin
+  const disallowBlock = `Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
@@ -308,6 +347,17 @@ Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
 Disallow: /onboarding/
+Disallow: /favorites`;
+
+  const aiBlocks = AI_CRAWLER_USER_AGENTS.map(
+    (agent) => `User-agent: ${agent}\nAllow: /\n${disallowBlock}`,
+  ).join("\n\n");
+
+  return `User-agent: *
+Allow: /
+${disallowBlock}
+
+${aiBlocks}
 
 Sitemap: ${base}/sitemap.xml
 `;

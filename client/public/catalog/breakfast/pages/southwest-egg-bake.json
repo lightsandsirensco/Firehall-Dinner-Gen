@@ -26,12 +26,12 @@
     },
     {
       "name": "whole milk",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "or half-and-half for richer"
     },
     {
       "name": "turkey sausage or lean pork sausage",
-      "quantity": "2",
+      "quantity": "1.6 lb",
       "notes": "browned"
     },
     {
@@ -41,12 +41,12 @@
     },
     {
       "name": "baby spinach",
-      "quantity": "6.4",
+      "quantity": "6.4–8 oz",
       "notes": "or chopped kale, sautéed and squeezed dry"
     },
     {
       "name": "shredded cheese",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "cheddar + mozzarella works well"
     },
     {
@@ -91,12 +91,13 @@
     }
   ],
   "nutrition": {
-    "calories": 456,
+    "calories": 454,
     "protein": 42,
     "carbs": 8,
     "fat": 28,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -131,5 +132,63 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "Southwest Egg Bake | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "loaf day-old bread",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

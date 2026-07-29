@@ -1,18 +1,29 @@
-import { useEffect, useMemo } from "react";
+import { useMemo } from "react";
 import { Link } from "wouter";
 import { SiteHeader } from "@/components/site-header";
 import { getSavedCount } from "@/lib/saved-meals";
+import { usePageSeo } from "@/lib/seo/use-page-seo";
+import { getSiteOrigin } from "@/lib/seo/site-origin";
+import { buildFamiliesSeo } from "@shared/seo/metadata";
+import { buildBreadcrumbListSchema, buildOrganizationSchema, buildWebSiteSchema } from "@shared/seo/schema";
 
 export default function FamiliesIndexPage() {
   const favCount = useMemo(() => getSavedCount(), []);
+  const origin = getSiteOrigin();
 
-  useEffect(() => {
-    const prev = document.title;
-    document.title = "Recipe Families | Firehall Meals";
-    return () => {
-      document.title = prev || "Firehall Meals";
-    };
-  }, []);
+  const seoConfig = useMemo(() => buildFamiliesSeo(), []);
+  const jsonLd = useMemo(
+    () => [
+      buildOrganizationSchema(origin),
+      buildWebSiteSchema(origin),
+      buildBreadcrumbListSchema(origin, [
+        { name: "Home", path: "/" },
+        { name: "Recipe families", path: seoConfig.canonicalPath },
+      ]),
+    ],
+    [origin, seoConfig.canonicalPath],
+  );
+  usePageSeo(seoConfig, jsonLd);
 
   return (
     <div className="page-shell min-h-screen min-h-[100dvh] bg-background">

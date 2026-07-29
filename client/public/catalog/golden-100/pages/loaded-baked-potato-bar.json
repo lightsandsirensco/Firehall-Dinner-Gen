@@ -13,9 +13,9 @@
   "cookTime": 125,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 70,
-  "carbs": 91,
+  "calories": 1296,
+  "protein": 62,
+  "carbs": 60,
   "fats": 90,
   "tags": [
     "protein:beef",
@@ -125,12 +125,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 70,
-    "carbs": 91,
+    "calories": 1296,
+    "protein": 62,
+    "carbs": 60,
     "fats": 90,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -174,5 +175,52 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.196Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Unsalted Butter, Softened",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Shredded Sharp Cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Thick-Cut Bacon, Cooked And Crumbled",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Sour Cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

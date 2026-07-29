@@ -5,6 +5,9 @@ import viteConfig from "../vite.config";
 import fs from "fs";
 import path from "path";
 import { nanoid } from "nanoid";
+import { matchRecipeSlug, injectRecipeSeoIntoHtml } from "./seo/recipe-html-injection.js";
+import { injectGenericPageSeoIntoHtml } from "./seo/generic-page-injection.js";
+import { resolvePublicSiteOrigin } from "./seo/sitemap.js";
 
 const CLIENT_PUBLIC = path.resolve(import.meta.dirname, "..", "client", "public");
 
@@ -47,10 +50,14 @@ export async function setupVite(server: Server, app: Express) {
   app.use(vite.middlewares);
 
   app.use("/{*path}", async (req, res, next) => {
-    if (req.path.startsWith("/images/") || req.path.startsWith("/assets/")) {
+    // Inside an `app.use("/{*path}", …)` mount the wildcard consumes the
+    // whole path, so `req.path` gets rebased to "/" — use `req.originalUrl`
+    // (unaffected by mount-point rebasing) for real path matching below.
+    const url = req.originalUrl;
+    const pathname = url.split("?")[0] || "/";
+    if (pathname.startsWith("/images/") || pathname.startsWith("/assets/")) {
       return next();
     }
-    const url = req.originalUrl;
 
     try {
       const clientTemplate = path.resolve(
@@ -66,7 +73,14 @@ export async function setupVite(server: Server, app: Express) {
         `src="/src/main.tsx"`,
         `src="/src/main.tsx?v=${nanoid()}"`,
       );
-      const page = await vite.transformIndexHtml(url, template);
+      let page = await vite.transformIndexHtml(url, template);
+      const recipeSlug = matchRecipeSlug(pathname);
+      const origin = resolvePublicSiteOrigin(req.get("host"), req.get("x-forwarded-proto") ?? undefined);
+      if (recipeSlug) {
+        page = injectRecipeSeoIntoHtml(page, origin, recipeSlug);
+      } else {
+        page = injectGenericPageSeoIntoHtml(page, origin, pathname);
+      }
       res.status(200).set({ "Content-Type": "text/html" }).end(page);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);

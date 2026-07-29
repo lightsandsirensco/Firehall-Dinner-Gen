@@ -13,10 +13,10 @@
   "cookTime": 28,
   "prepTime": 18,
   "difficulty": "easy",
-  "calories": 465,
-  "protein": 40,
-  "carbs": 10,
-  "fats": 30,
+  "calories": 463,
+  "protein": 73,
+  "carbs": 7,
+  "fats": 14,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -33,59 +33,59 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "16",
       "unit": "pieces",
       "notes": "about 6 lb"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "halved"
     },
     {
-      "name": "Zucchini",
+      "name": "zucchini",
       "quantity": "3",
       "unit": "large",
       "notes": "thick half-moons"
     },
     {
-      "name": "Basil Pesto",
+      "name": "basil pesto",
       "quantity": "1",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Parmesan Cheese",
+      "name": "Parmesan cheese",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "grated"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Fresh Basil",
+      "name": "fresh basil",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "for garnish"
     }
   ],
@@ -132,7 +132,7 @@
     "Sun-dried tomato pesto swap works if basil pesto is unavailable."
   ],
   "tonightSpread": [
-    "Creamy polenta in a hotel pan.",
+    "Creamy polenta in a baking dish.",
     "Arugula salad with lemon."
   ],
   "leftovers": [
@@ -144,11 +144,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 465,
-    "protein": 40,
-    "carbs": 10,
-    "fats": 30,
-    "label": "~465 cal/serving · 40g protein · 3g fiber (est.)"
+    "calories": 463,
+    "protein": 73,
+    "carbs": 7,
+    "fats": 14,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
   "heroImageAlt": "Wide firehall crew platter of Pesto Chicken Tray on a station prep table, family-style serving",
@@ -175,6 +190,48 @@
     "white-bean-chicken-chili",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.676Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "basil pesto",
+        "allergens": [
+          "dairy",
+          "treeNuts"
+        ]
+      },
+      {
+        "name": "Parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": false,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "treeNuts",
+        "label": "Nut-Free Adaptable",
+        "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

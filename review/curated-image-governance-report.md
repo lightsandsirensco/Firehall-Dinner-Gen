@@ -1,11 +1,11 @@
 # Curated image governance audit
 
-Generated: **2026-07-17T19:16:30.123Z**
+Generated: **2026-07-27T18:19:25.541Z**
 
-- Recipes audited: **697**
-- Failed governance: **74**
+- Recipes audited: **747**
+- Failed governance: **83**
 - Build blockers (≥72): **0**
-- Duplicate hero paths: **224**
+- Duplicate hero paths: **247**
 
 ## Build blockers
 
@@ -30,7 +30,6 @@ _None — images pass governance threshold._
 - `/images/golden-100/bbq-chicken-sliders.jpg` → bbq-chicken-sliders, bbq-chicken-sliders
 - `/images/hall-expansion/bbq-meatball-skewers.jpg` → bbq-meatball-skewers, bbq-meatball-skewers
 - `/images/hall-expansion/bbq-pulled-pork-bowls.jpg` → bbq-pulled-pork-bowls, bbq-pulled-pork-bowls
-- `/images/golden-100/big-chili.jpg` → big-chili, big-chili
 - `/images/golden-100/beef-broccoli.jpg` → beef-broccoli, beef-broccoli, sheet-pan-dinner-hanger-steak-with-mushrooms-and-carrots
 - `/images/golden-100/beef-barley-soup.jpg` → beef-barley-soup, beef-barley-soup
 - `/images/golden-100/beef-dip.jpg` → beef-dip, beef-dip
@@ -49,6 +48,7 @@ _None — images pass governance threshold._
 - `/images/hall-expansion/build-your-own-pho-bar.jpg` → build-your-own-pho-bar, build-your-own-pho-bar
 - `/images/golden-100/bulgogi-bowls.jpg` → bulgogi-bowls, bulgogi-bowls
 - `/images/hall-expansion/bun-bo-hue-noodle-soup.jpg` → bun-bo-hue-noodle-soup, bun-bo-hue-noodle-soup
+- `/images/hall-expansion/burnt-ends-chili-crew.jpg` → burnt-ends-chili-crew, burnt-ends-chili-crew
 - `/images/hall-expansion/burrito-bowl-bar-night.jpg` → burrito-bowl-bar-night, burrito-bowl-bar-night
 - `/images/golden-100/butter-chicken.jpg` → butter-chicken, butter-chicken
 - `/images/golden-100/cajun-chicken-rice-bowl.jpg` → cajun-chicken-rice-bowl, cajun-chicken-rice-bowl

@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 580,
-  "protein": 32,
-  "carbs": 52,
-  "fats": 28,
+  "calories": 1044,
+  "protein": 52,
+  "carbs": 84,
+  "fats": 55,
   "tags": [
     "protein:pork",
     "format:pasta",
@@ -155,19 +155,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 32,
-    "carbs": 52,
-    "fats": 28,
-    "label": "~580 cal/serving · 32g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 1044,
+    "protein": 52,
+    "carbs": 84,
+    "fats": 55,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
@@ -190,5 +196,75 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "mostaccioli pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "hot Italian sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "whole-milk ricotta",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded mozzarella",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "grated Parmesan",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "egg",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

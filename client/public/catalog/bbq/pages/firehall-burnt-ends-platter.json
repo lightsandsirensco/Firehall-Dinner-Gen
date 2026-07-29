@@ -13,10 +13,10 @@
   "cookTime": 420,
   "prepTime": 30,
   "difficulty": "hard",
-  "calories": 951,
-  "protein": 76,
-  "carbs": 52,
-  "fats": 51,
+  "calories": 945,
+  "protein": 75,
+  "carbs": 50,
+  "fats": 52,
   "tags": [
     "protein:beef",
     "format:bbq",
@@ -175,12 +175,26 @@
   "mealPrepNotes": "Smoke point early. Cube and glaze right before service or hold glazed cubes covered at 170°F up to 45 minutes. Re-crisp under broiler 2 minutes if they soften.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 951,
-    "protein": 76,
-    "carbs": 52,
-    "fats": 51,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 945,
+    "protein": 75,
+    "carbs": 50,
+    "fats": 52,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/firehall-burnt-ends-platter.jpg",
   "heroImageAlt": "Firehall Burnt Ends Platter — crew-sized BBQ spread with visible smoke and bark",
@@ -208,5 +222,51 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.413Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "White Bread",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

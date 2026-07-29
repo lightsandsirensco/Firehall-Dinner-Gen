@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 32,
-  "carbs": 48,
-  "fats": 22,
+  "calories": 613,
+  "protein": 50,
+  "carbs": 41,
+  "fats": 28,
   "tags": [
     "protein:lamb",
     "format:plated_main",
@@ -109,14 +109,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 32,
-    "carbs": 48,
-    "fats": 22,
-    "label": "per serving (hall portion)",
-    "source": "curated",
+    "calories": 613,
+    "protein": 50,
+    "carbs": 41,
+    "fats": 28,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
@@ -124,9 +125,9 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": true
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/moroccan-meatballs.jpg",
@@ -158,5 +159,40 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.342Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 5,
+    "totalCount": 5,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Couscous, Dry",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta/noodle alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

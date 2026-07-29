@@ -74,17 +74,31 @@ export function normalizeImagePath(path: string | undefined): string | undefined
 export function parseQuantityAmount(amount: string): { quantity?: number; unit: string } {
   const raw = (amount || "").trim();
   if (!raw) return { unit: "" };
-  const m = raw.match(/^([\d./]+)\s*(.*)$/);
-  if (!m) return { unit: "", quantity: undefined };
-  const numPart = m[1];
-  let quantity: number | undefined;
-  if (numPart.includes("/")) {
-    const [a, b] = numPart.split("/").map(Number);
-    if (b && !Number.isNaN(a) && !Number.isNaN(b)) quantity = a / b;
-  } else {
-    const n = parseFloat(numPart);
-    if (!Number.isNaN(n)) quantity = n;
+
+  // Mixed fraction with optional trailing unit: "1 1/4 lb", "1 1/2". The old single regex
+  // (`^([\d./]+)\s*(.*)$`) stopped at the first whitespace, so it captured only the leading
+  // whole number ("1") and dumped the fraction + unit ("1/4 lb") into the unit field verbatim.
+  // That bogus unit never matches a known conversion, silently collapsing ingredients like
+  // "1 1/4 lb breakfast sausage" down to a generic ~80g guess instead of ~567g.
+  const mixed = raw.match(/^(\d+)\s+(\d+)\/(\d+)\s*(.*)$/);
+  if (mixed) {
+    const den = parseInt(mixed[3], 10);
+    const quantity = parseInt(mixed[1], 10) + (den ? parseInt(mixed[2], 10) / den : 0);
+    return { quantity, unit: normalizeUnit(mixed[4]) };
   }
+
+  // Simple fraction with optional trailing unit: "1/2 cup", "3/4 tsp".
+  const frac = raw.match(/^(\d+)\/(\d+)\s*(.*)$/);
+  if (frac) {
+    const den = parseInt(frac[2], 10);
+    const quantity = den ? parseInt(frac[1], 10) / den : undefined;
+    return { quantity, unit: normalizeUnit(frac[3]) };
+  }
+
+  const m = raw.match(/^([\d.]+)\s*(.*)$/);
+  if (!m) return { unit: "", quantity: undefined };
+  const n = parseFloat(m[1]);
+  const quantity = Number.isNaN(n) ? undefined : n;
   return { quantity, unit: normalizeUnit(m[2]) };
 }
 

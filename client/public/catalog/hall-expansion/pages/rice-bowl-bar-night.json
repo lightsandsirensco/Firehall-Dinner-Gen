@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 490,
-  "protein": 32,
-  "carbs": 58,
-  "fats": 14,
+  "calories": 757,
+  "protein": 66,
+  "carbs": 64,
+  "fats": 25,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -158,19 +158,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 490,
-    "protein": 32,
-    "carbs": 58,
-    "fats": 14,
-    "label": "~490 cal/serving · 32g protein · 5g fiber (est.)",
-    "source": "estimated",
+    "calories": 757,
+    "protein": 66,
+    "carbs": 64,
+    "fats": 25,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/rice-bowl-bar-night.jpg",
@@ -193,5 +199,71 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "teriyaki sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "edamame",
+        "allergens": [
+          "soy"
+        ]
+      },
+      {
+        "name": "sesame seeds",
+        "allergens": [
+          "sesame"
+        ]
+      },
+      {
+        "name": "sriracha mayo",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free teriyaki sauce made with tamari. Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

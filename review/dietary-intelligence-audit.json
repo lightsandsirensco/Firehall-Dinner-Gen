@@ -1,0 +1,3313 @@
+{
+  "generatedAt": "2026-07-28T02:14:48.504Z",
+  "totalRecipes": 432,
+  "confidence": {
+    "high": 430,
+    "low": 2,
+    "highPercent": 99.5
+  },
+  "perFilter": {
+    "glutenFree": {
+      "qualifies": 119,
+      "excluded": 313
+    },
+    "dairyFree": {
+      "qualifies": 154,
+      "excluded": 278
+    },
+    "eggFree": {
+      "qualifies": 312,
+      "excluded": 120
+    },
+    "nutFree": {
+      "qualifies": 419,
+      "excluded": 13
+    },
+    "peanutFree": {
+      "qualifies": 421,
+      "excluded": 11
+    },
+    "soyFree": {
+      "qualifies": 387,
+      "excluded": 45
+    },
+    "shellfishFree": {
+      "qualifies": 416,
+      "excluded": 16
+    },
+    "fishFree": {
+      "qualifies": 383,
+      "excluded": 49
+    },
+    "porkFree": {
+      "qualifies": 311,
+      "excluded": 121
+    },
+    "vegetarian": {
+      "qualifies": 56,
+      "excluded": 376
+    },
+    "vegan": {
+      "qualifies": 6,
+      "excluded": 426
+    }
+  },
+  "recipesWithUncertainIngredients": [
+    {
+      "collection": "golden-100",
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "uncertainIngredients": [
+        {
+          "name": "Slider Rolls (Hawaiian-style, 12-count pack)",
+          "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
+        }
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "cedar-plank-salmon",
+      "title": "Cedar Plank Salmon",
+      "uncertainIngredients": [
+        {
+          "name": "Cedar Planks (soaked at least 1 hour)",
+          "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
+        }
+      ]
+    }
+  ],
+  "recipesRequiringSubstitutions": [
+    {
+      "collection": "golden-100",
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "title": "30-Minute Pasta e Fagioli for the Hall",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "batch-lasagna",
+      "title": "Batch Lasagna",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free rub or build your own from confirmed gluten-free spices."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "bbq-chicken-mac-and-cheese",
+      "title": "BBQ Chicken Mac and Cheese",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Substitute rice or a gluten-free grain."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "beef-broccoli",
+      "title": "Beef and Broccoli",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "beef-dip",
+      "title": "Beef Dip Sandwiches",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free beer or non-alcoholic broth instead. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Alcohol-Free Adaptable: Substitute non-alcoholic beer or broth."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "big-chili",
+      "title": "Firehall Chili",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free beer or brewed coffee instead. Use a certified gluten-free broth or bouillon. Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free bread/crust/wrapper alternative.",
+        "Soy-Free Adaptable: Use coconut aminos.",
+        "Alcohol-Free Adaptable: Substitute brewed coffee or broth."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "breakfast-burrito-bar",
+      "title": "Breakfast Burrito Bar",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "bulgogi-bowls",
+      "title": "Bulgogi Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chicken-parm",
+      "title": "Chicken Parmesan",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chicken-pot-pie",
+      "title": "Chicken Pot Pie",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bread/crust/wrapper alternative.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chicken-souvlaki",
+      "title": "Chicken Souvlaki",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free beer or non-alcoholic broth instead. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Alcohol-Free Adaptable: Substitute non-alcoholic beer or broth."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "title": "Chicken Tortilla Soup for the Hall",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "chorizo-breakfast-tacos",
+      "title": "Chorizo Breakfast Tacos",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "fast-philly-skillet",
+      "title": "Quick Philly Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "four-step-chicken-piccata",
+      "title": "Four-Step Chicken Piccata",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "french-onion-soup-for-the-hall",
+      "title": "French Onion Soup for the Hall",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "french-toast-casserole",
+      "title": "French Toast Casserole",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "game-day-nachos",
+      "title": "Game Day Nachos",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "garlic-butter-shrimp",
+      "title": "Garlic Butter Shrimp",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "grilled-corn-cotija",
+      "title": "Street Corn with Cotija",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "grilled-pork-chops",
+      "title": "Grilled Pork Chops",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "honey-garlic-pork-tenderloin",
+      "title": "Honey Garlic Pork Tenderloin",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "jambalaya",
+      "title": "Jambalaya",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "loaded-nacho-skillet",
+      "title": "Nacho Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "margherita-pizza",
+      "title": "Margherita Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "meatball-hoagies",
+      "title": "Meatball Hoagies",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "meatloaf-mashed",
+      "title": "Meatloaf and Mashed Potatoes",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "moroccan-meatballs",
+      "title": "Moroccan Lamb Meatballs",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "ny-strip-herb-butter",
+      "title": "NY Strip with Herb Butter",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "one-pot-chicken-rice",
+      "title": "Chicken and Rice",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "pancake-short-stack",
+      "title": "Pancake Short Stack",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "parm-hero-subs",
+      "title": "Parm Hero Subs",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "pasta-e-ceci-for-the-hall",
+      "title": "Pasta e Ceci (Pasta with Chickpeas)",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "pepperoni-pizza-night",
+      "title": "Pepperoni Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "pulled-pork",
+      "title": "Carolina-Style Pulled Pork Sandwiches",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "red-beans-and-rice-for-the-hall",
+      "title": "Red Beans and Rice for the Hall",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "sheet-pan-meal-prep",
+      "title": "Chicken Meal Prep Trays",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "title": "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sausage and Peppers",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "skillet-chicken-alfredo",
+      "title": "Chicken Alfredo",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "slider-bar",
+      "title": "Slider Bar",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White Sauce",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free Worcestershire sauce.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "title": "Spaghetti Aglio e Olio for the Hall",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "title": "Spicy Tomato Bisque with Grilled Brie Toast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "steak-sandwiches",
+      "title": "Philly-Style Cheesesteaks",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "street-corn-chicken",
+      "title": "Street Corn Chicken Bowls",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free teriyaki sauce made with tamari."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Salmon",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "texas-beef-ribs",
+      "title": "Texas-Style Beef Ribs",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "thai-basil-chicken",
+      "title": "Thai Basil Chicken",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "turkey-chili",
+      "title": "Turkey Chili",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "golden-100",
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "bbq-meatball-skewers",
+      "title": "BBQ Meatball Skewers",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "buffalo-chicken-wraps",
+      "title": "Buffalo Chicken Wraps",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use certified gluten-free tortillas or corn tortillas."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "build-your-own-pho-bar",
+      "title": "Build-Your-Own Pho Bar",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free hoisin or a tamari-based substitute."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "burrito-bowl-bar-night",
+      "title": "Burrito Bowl Bar Night",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "cajun-chicken-rice-skillet",
+      "title": "Cajun Chicken and Rice Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "cheesy-beef-nacho-bake",
+      "title": "Cheesy Beef Nacho Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "cheesy-chicken-broccoli-rice",
+      "title": "Cheesy Chicken Broccoli Rice",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "chicken-cacciatore-crew",
+      "title": "Chicken Cacciatore for the Crew",
+      "adaptable": [
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "chicken-paprikash-hall",
+      "title": "Chicken Paprikash for the Hall",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "chicken-shawarma-pitas",
+      "title": "Chicken Shawarma Pitas",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "chicken-wing-bar-night",
+      "title": "Chicken Wing Bar Night",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "classic-patty-melt-for-the-crew",
+      "title": "Classic Patty Melt for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free Worcestershire sauce.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "classic-poutine-feed-crew",
+      "title": "Classic Poutine Feed for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free Worcestershire sauce.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "coq-au-vin-batch",
+      "title": "Coq au Vin Batch",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "adaptable": [
+        "Gluten-Free Adaptable: Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "cottage-pie-for-the-crew",
+      "title": "Cottage Pie for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "creamy-chicken-penne-alfredo",
+      "title": "Creamy Chicken Penne Alfredo",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "dutch-oven-pot-roast",
+      "title": "Dutch Oven Pot Roast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use a 1:1 gluten-free all-purpose flour blend."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "enchilada-beef-skillet",
+      "title": "Beef Enchilada Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "fajita-bar-night",
+      "title": "Fajita Bar Night",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use certified gluten-free tortillas or corn tortillas."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "firehall-charcuterie-board",
+      "title": "Firehall Charcuterie Board",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "firehall-donair-platter",
+      "title": "Firehall Donair Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free gochujang/miso. Use tamari (check soy-free brands separately) or coconut aminos."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "title": "Ginger Soy Chicken Rice Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "green-chile-chicken-stew",
+      "title": "Green Chile Chicken Stew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "hall-burger-bar",
+      "title": "Hall Burger Bar",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "hall-chicken-noodle-soup",
+      "title": "Hall Chicken Noodle Soup",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "hall-sloppy-joe-feed",
+      "title": "Hall Sloppy Joe Feed",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "hungarian-goulash-crew",
+      "title": "Hungarian Goulash for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "jalapeno-popper-dip",
+      "title": "Jalapeño Popper Dip",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free gochujang/miso."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "lamb-kofta-skewer-platter",
+      "title": "Lamb Kofta Skewer Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "lebanese-chicken-shish-platter",
+      "title": "Lebanese Chicken Shish Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Substitute quinoa or rice. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "loaded-nacho-bar-night",
+      "title": "Loaded Nacho Bar Night",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "malaysian-laksa-soup",
+      "title": "Malaysian Laksa Soup",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "maple-cured-salmon-plank",
+      "title": "Maple-Cured Salmon Plank",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "mediterranean-chicken-farro-bowls",
+      "title": "Mediterranean Chicken Farro Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Substitute quinoa or rice.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "mediterranean-feast-night",
+      "title": "Mediterranean Feast Night",
+      "adaptable": [
+        "Gluten-Free Adaptable: Substitute quinoa or rice. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "mesquite-chuck-roast",
+      "title": "Mesquite Smoked Chuck Roast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "miso-ramen-bar",
+      "title": "Miso Ramen Bar",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free gochujang/miso. Use rice noodles or a certified gluten-free ramen substitute."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "molasses-bourbon-pork-ribs",
+      "title": "Molasses Bourbon Pork Ribs",
+      "adaptable": [
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "montreal-smoked-meat-platter",
+      "title": "Montreal Smoked Meat Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "moroccan-chicken-kebab-platter",
+      "title": "Moroccan Chicken Kebab Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "mostaccioli-sausage-bake",
+      "title": "Baked Mostaccioli with Sausage",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "mushroom-swiss-steak-pan",
+      "title": "Mushroom Swiss Steak Pan",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "pasta-bar-night",
+      "title": "Pasta Bar Night",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Nut-Free Adaptable: Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "pellet-smoked-chicken-quarters",
+      "title": "Pellet Smoked Chicken Quarters",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "pepper-steak-onions",
+      "title": "Pepper Steak with Onions",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "philly-cheesesteak-sliders",
+      "title": "Philly Cheesesteak Sliders",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "pork-belly-burnt-ends",
+      "title": "Pork Belly Burnt Ends",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "pretzel-bite-platter",
+      "title": "Pretzel Bite Platter with Beer Cheese",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free beer or non-alcoholic broth instead. Use a certified gluten-free Worcestershire sauce.",
+        "Alcohol-Free Adaptable: Substitute non-alcoholic beer or broth."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "rice-bowl-bar-night",
+      "title": "Rice Bowl Bar Night",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free teriyaki sauce made with tamari. Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "rigatoni-meat-sauce-batch",
+      "title": "Rigatoni with Meat Sauce",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
+      "adaptable": [
+        "Gluten-Free Adaptable: Confirm corn tortillas are used, or substitute a certified gluten-free wrap."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "sandwich-board-night",
+      "title": "Sandwich Board Night",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "sausage-peppers-on-buns",
+      "title": "Sausage & Peppers on Buns",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "shawarma-bar-night",
+      "title": "Shawarma Bar Night",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "sheet-pan-meatball-marinara",
+      "title": "Sheet Pan Meatball Marinara Feed",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta. Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "smoked-corned-beef",
+      "title": "Smoked Corned Beef Brisket",
+      "adaptable": [
+        "Gluten-Free Adaptable: Confirm corn tortillas are used, or substitute a certified gluten-free wrap. Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "smoked-meatloaf",
+      "title": "Smoked Meatloaf with Glaze",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free Worcestershire sauce."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "smoked-queso-fundido",
+      "title": "Smoked Queso Fundido",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "smoked-sausage-platter",
+      "title": "Smoked Sausage Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "smoked-tri-tip",
+      "title": "Smoked Tri-Tip Roast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "soft-pretzel-dogs",
+      "title": "Soft Pretzel Hot Dogs",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "spatchcock-lemon-roast-chicken",
+      "title": "Spatchcock Lemon Roast Chicken",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "station-cobb-salad",
+      "title": "Station Cobb Salad",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "tonkotsu-ramen-crew",
+      "title": "Tonkotsu Ramen for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use rice noodles or a certified gluten-free ramen substitute.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "tourtiere-for-the-crew",
+      "title": "Tourtière for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free rub or build your own from confirmed gluten-free spices."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "hall-expansion",
+      "slug": "wonton-noodle-soup-crew",
+      "title": "Wonton Noodle Soup for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative. Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "andouille-po-boy-rolls-crew",
+      "title": "Andouille Po Boy Rolls for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "brisket-style-beef-sandwiches-au-jus",
+      "title": "Brisket-Style Beef Sandwiches",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "caprese-steak-skewers-crew",
+      "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "title": "Cast Iron Skirt Steak Sizzlers",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "charred-broccolini-lemon-tray",
+      "title": "Sicilian Anchovy Broccolini Tray",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "competition-bbq-chicken-thighs",
+      "title": "Competition BBQ Chicken Thighs",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "firehall-antipasto-pasta-salad",
+      "title": "Mortadella Farfalle Antipasto Tray",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "firehall-burnt-ends-platter",
+      "title": "Firehall Burnt Ends Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "title": "Teppan Shrimp and Pork Belly Mixed Grill",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "firehall-street-elote-cups",
+      "title": "Epazote Esquites Street Cups",
+      "adaptable": [
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "title": "Cooper Sharp Chopped Ribeye Hoagies",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free browning/seasoning sauce.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "griddle-smash-sausage-peppers",
+      "title": "Giardiniera Smash Sausage Hoagies",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "title": "Sun-Dried Tomato Pesto Panini Press",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative.",
+        "Nut-Free Adaptable: Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "grilled-peach-burrata-salad",
+      "title": "Pistachio Peach and Burrata Salad",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "grilled-reuben-sandwiches-crew",
+      "title": "Grilled Reuben Sandwiches for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "hickory-smoked-chicken-breast",
+      "title": "Hickory Smoked Chicken Breast",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "honey-chipotle-chicken-thighs",
+      "title": "Honey Chipotle Grilled Chicken Thighs",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "title": "Hot Honey Grilled Sausage & Peppers",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "jalapeno-cheddar-smoked-sausages",
+      "title": "Jalapeño Cheddar Smoked Sausages",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "lamb-merguez-skewers-crew",
+      "title": "North African Urfa Lamb Merguez Logs",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "loaded-ranch-potato-salad-crew",
+      "title": "Blue Cheese Fingerling Ranch Tray",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "maple-bourbon-grilled-trout",
+      "title": "Pecan Bourbon Whole Trout Board",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "mixed-lamb-chop-grill-board",
+      "title": "Za'atar Loin and Shoulder Lamb Board",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "mongolian-beef-flat-top-crew",
+      "title": "Scallion Crisp Mongolian Flank Tray",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "pork-satay-skewers-crew",
+      "title": "Indonesian Tamarind Pork Satay Batches",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari or a certified gluten-free soy sauce alternative."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "portuguese-linguica-grill-platter",
+      "title": "Lisbon Piri-Piri Linguica Spread",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "pressed-cuban-sandwiches-crew",
+      "title": "Pressed Cuban Sandwiches for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "reverse-seared-ribeye-crew",
+      "title": "Reverse-Seared Ribeye for the Crew",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "santa-maria-tri-tip-roast",
+      "title": "Santa Maria Tri-Tip Roast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use certified gluten-free tortillas or corn tortillas."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "smoked-baked-beans-crew",
+      "title": "Smoked Baked Beans for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free Worcestershire sauce."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "title": "Smoked Chicken Quarters with White Sauce",
+      "adaptable": [
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "smoked-mac-and-cheese-crew",
+      "title": "Smoked Mac and Cheese for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "spiedie-chicken-platter-crew",
+      "title": "Binghamton White-Wine Spiedie Tray",
+      "adaptable": [
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "tandoori-lamb-chop-platter",
+      "title": "Kashmiri Mustard-Oil Lamb Chop Feast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "texas-central-brisket-crew",
+      "title": "Texas Central Brisket for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "bbq",
+      "slug": "yakiniku-grill-platter-crew",
+      "title": "Tokyo Tare Ribeye Yakiniku Board",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari or a certified gluten-free soy sauce alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Chicken Lettuce Cups",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "beef-birria-with-consomme",
+      "title": "Beef Birria with Consommé for Dipping",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken and Rice",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Chicken Enchilada Skillet",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "chicken-marsala-lightened",
+      "title": "Chicken Marsala (Lightened)",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Protein Pasta Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "crispy-fish-taco-night",
+      "title": "Fish Tacos",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a 1:1 gluten-free all-purpose flour blend."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "crock-barbacoa-chicken",
+      "title": "Barbacoa Chicken",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "filipino-chicken-adobo",
+      "title": "Filipino-Style Chicken Adobo",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "general-tsos-baked-chicken",
+      "title": "General Tso's-Style Baked Chicken",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Lemon Chicken and Potatoes",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Shrimp and Quinoa Bowls",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+      "adaptable": [
+        "Gluten-Free Adaptable: Substitute quinoa or rice. Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "high-protein-chicken-fried-rice",
+      "title": "High-Protein Chicken Fried Rice",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "italian-sausage-veg-sheet-pan",
+      "title": "Sausage and Peppers",
+      "adaptable": [
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "korean-beef-rice-bowls",
+      "title": "Beef Rice Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "kung-pao-chicken-rice-bowls",
+      "title": "Kung Pao Chicken & Rice Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "lean-beef-broccoli-rice",
+      "title": "Beef and Broccoli Rice",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "lean-turkey-bean-chili",
+      "title": "Lean Turkey and Bean Chili",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "lemon-chicken-orzo-soup",
+      "title": "Lemon Chicken Orzo Soup",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "lentil-mushroom-bolognese",
+      "title": "Lentil Bolognese",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "mediterranean-beef-kofta-bowls",
+      "title": "Mediterranean Beef Kofta Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative. Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "title": "Mediterranean Chicken & White Bean Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Egg-Free Adaptable: Use an egg-free/vegan mayonnaise.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Chicken Tray",
+      "adaptable": [
+        "Nut-Free Adaptable: Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "salsa-verde-crock-chicken",
+      "title": "Salsa Verde Crock Chicken",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Lentil and Kale Soup",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Chicken and Chorizo Rice",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "tabbouleh-chicken-bowls",
+      "title": "Tabbouleh Chicken Bowls",
+      "adaptable": [
+        "Gluten-Free Adaptable: Substitute quinoa or rice."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wraps",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "title": "Turkey Stuffed Peppers",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "turkey-sausage-egg-muffins",
+      "title": "Turkey Sausage Egg Muffins",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's Pie",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "title": "Unstuffed Cabbage Roll Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "performance-meals",
+      "slug": "white-bean-kale-soup",
+      "title": "White Bean and Kale Soup",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "title": "Apple Cinnamon Baked Oatmeal",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free oats.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "bagel-lox-breakfast-board",
+      "title": "Bagel and Lox Breakfast Board",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free oats."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "bbq-breakfast-hash",
+      "title": "BBQ Breakfast Hash",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "belgian-waffle-platter",
+      "title": "Belgian Waffle Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "big-pot-savory-oats",
+      "title": "Big-Pot Savory Oats",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free oats. Use a certified gluten-free broth or bouillon.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "biscuit-french-toast-sliders",
+      "title": "Biscuit French Toast Sliders",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-crunchwraps",
+      "title": "Breakfast Crunchwraps",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-enchiladas",
+      "title": "Breakfast Enchiladas for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-fried-rice-crew",
+      "title": "Breakfast Fried Rice for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.",
+        "Soy-Free Adaptable: Use coconut aminos."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-poutine",
+      "title": "Breakfast Poutine",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes. Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-quesadillas",
+      "title": "Breakfast Quesadillas",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-sandwich-trays",
+      "title": "Breakfast Sandwich Trays",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-sliders",
+      "title": "Breakfast Sliders",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "breakfast-stromboli-roll",
+      "title": "Breakfast Stromboli Roll",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "buttermilk-pancakes",
+      "title": "Buttermilk Pancakes for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pancake/baking mix.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "cast-iron-breakfast-skillet",
+      "title": "Cast Iron Breakfast Skillet",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "chicken-and-waffles-crew",
+      "title": "Chicken and Waffles for the Crew",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free pancake/baking mix.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "chilaquiles-verde-bake",
+      "title": "Chilaquiles Verde Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "chorizo-breakfast-hash",
+      "title": "Chorizo Breakfast Hash",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "club-sandwich-breakfast-bake",
+      "title": "Club Sandwich Breakfast Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "country-fried-steak-eggs",
+      "title": "Country Fried Steak and Eggs Breakfast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "cowboy-breakfast-skillet",
+      "title": "Cowboy Breakfast Skillet",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "crew-french-toast-bake",
+      "title": "Crew French Toast Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "denver-breakfast-casserole",
+      "title": "Denver Breakfast Casserole",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "eggs-benedict-hall-style",
+      "title": "Eggs Benedict Hall Style",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "farmers-breakfast-casserole",
+      "title": "Farmer's Breakfast Casserole",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "fire-captain-omelette-bar",
+      "title": "Fire Captain Omelette Bar",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "firehall-breakfast-pizza",
+      "title": "Firehall Breakfast Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "green-chile-breakfast-burritos",
+      "title": "Green Chile Breakfast Burritos",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "hall-breakfast-burritos",
+      "title": "Hall Breakfast Burritos",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "hall-breakfast-wraps",
+      "title": "Hall Breakfast Wraps",
+      "adaptable": [
+        "Gluten-Free Adaptable: Confirm corn tortillas are used, or substitute a certified gluten-free wrap.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "hall-sausage-biscuits-gravy",
+      "title": "Hall Sausage Biscuits & Gravy",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative. Use a 1:1 gluten-free all-purpose flour blend. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute).",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "huevos-rancheros-crew",
+      "title": "Huevos Rancheros for the Crew",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "irish-breakfast-fry-up",
+      "title": "Irish Breakfast Fry-Up",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "johnnycakes-with-syrup",
+      "title": "Johnnycakes with Maple Syrup",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "lumberjack-breakfast-platter",
+      "title": "Lumberjack Breakfast Platter",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pancake/baking mix.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "maple-sausage-pinwheels",
+      "title": "Maple Sausage Pinwheels",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "migas-for-the-crew",
+      "title": "Migas for the Crew",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "monte-cristo-sandwiches",
+      "title": "Monte Cristo Sandwiches",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "overnight-french-toast-bake",
+      "title": "Overnight French Toast Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "overnight-sausage-strata",
+      "title": "Overnight Sausage Strata",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute).",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "protein-french-toast",
+      "title": "Protein French Toast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "protein-pancake-tray",
+      "title": "Protein Pancake Tray",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pancake/baking mix.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "quick-egg-tacos",
+      "title": "Quick Egg Tacos",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "red-lead-skillet",
+      "title": "Red Lead Skillet",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "sausage-egg-cheese-sandwiches",
+      "title": "Sausage Egg & Cheese Sandwiches",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "scrapple-and-eggs-skillet",
+      "title": "Scrapple and Eggs Skillet",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "shakshuka-for-the-hall",
+      "title": "Shakshuka for the Hall",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "sheet-pan-breakfast-hash",
+      "title": "Sheet Pan Breakfast Hash",
+      "adaptable": [
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "title": "Sheet Pan Breakfast Sandwiches",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "adaptable": [
+        "Gluten-Free Adaptable: Confirm corn tortillas are used, or substitute a certified gluten-free wrap.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "sheet-pan-full-english",
+      "title": "Sheet Pan Full English",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "shrimp-and-grits-breakfast",
+      "title": "Shrimp and Grits Breakfast",
+      "adaptable": [
+        "Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "smoked-salmon-benedit",
+      "title": "Smoked Salmon Benedict",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "southwest-egg-bake",
+      "title": "Southwest Egg Bake",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "tater-tot-breakfast-casserole",
+      "title": "Tater Tot Breakfast Casserole",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "turkey-sausage-burritos",
+      "title": "Turkey Sausage Breakfast Burritos",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "veggie-egg-burritos",
+      "title": "Veggie Egg Burritos",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux.",
+        "Pork-Free Adaptable: Swap in chicken or turkey sausage."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "buffalo-chicken-pizza",
+      "title": "Buffalo Chicken Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "detroit-style-pizza",
+      "title": "Detroit-Style Pepperoni Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "firehall-supreme-pizza",
+      "title": "Firehall Supreme Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "four-cheese-white-pizza",
+      "title": "Four-Cheese White Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "hawaiian-pizza",
+      "title": "Hawaiian Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "jalapeno-popper-pizza",
+      "title": "Jalapeño Popper Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "margherita-pizza",
+      "title": "Fresh Margherita Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "meat-lovers-sheet-pizza",
+      "title": "Meat Lover's Sheet Pan Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "nashville-hot-chicken-pizza",
+      "title": "Nashville Hot Chicken Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free bun/bread and toast on a separate, clean surface.",
+        "Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "pesto-chicken-pizza",
+      "title": "Pesto Chicken Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "philly-cheesesteak-pizza",
+      "title": "Philly Cheesesteak Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Use a certified gluten-free Worcestershire sauce.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "sicilian-sheet-pizza",
+      "title": "Sicilian Sheet Pan Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "smoked-brisket-bbq-pizza",
+      "title": "Smoked Brisket BBQ Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "taco-pizza",
+      "title": "Taco Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "veggie-supreme-pizza",
+      "title": "Veggie Supreme Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust.",
+        "Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative."
+      ]
+    },
+    {
+      "collection": "pizza-night",
+      "slug": "white-garlic-chicken-pizza",
+      "title": "White Garlic Chicken Pizza",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend."
+      ]
+    },
+    {
+      "collection": "smoothies",
+      "slug": "blueberry-almond",
+      "title": "Blueberry Almond Smoothie",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free oats."
+      ]
+    },
+    {
+      "collection": "smoothies",
+      "slug": "strawberry-oat-breakfast",
+      "title": "Strawberry Oatmeal Breakfast Smoothie",
+      "adaptable": [
+        "Gluten-Free Adaptable: Use certified gluten-free oats."
+      ]
+    }
+  ],
+  "topFlaggedIngredients": [
+    {
+      "allergen": "egg",
+      "name": "large eggs",
+      "count": 80
+    },
+    {
+      "allergen": "dairy",
+      "name": "unsalted butter",
+      "count": 59
+    },
+    {
+      "allergen": "gluten",
+      "name": "chicken broth",
+      "count": 44
+    },
+    {
+      "allergen": "dairy",
+      "name": "whole milk",
+      "count": 31
+    },
+    {
+      "allergen": "gluten",
+      "name": "all-purpose flour",
+      "count": 30
+    },
+    {
+      "allergen": "gluten",
+      "name": "soy sauce",
+      "count": 29
+    },
+    {
+      "allergen": "soy",
+      "name": "soy sauce",
+      "count": 29
+    },
+    {
+      "allergen": "gluten",
+      "name": "beef broth",
+      "count": 28
+    },
+    {
+      "allergen": "dairy",
+      "name": "sour cream",
+      "count": 28
+    },
+    {
+      "allergen": "dairy",
+      "name": "grated parmesan",
+      "count": 25
+    },
+    {
+      "allergen": "dairy",
+      "name": "butter",
+      "count": 22
+    },
+    {
+      "allergen": "gluten",
+      "name": "pizza dough balls (15 oz)",
+      "count": 21
+    },
+    {
+      "allergen": "dairy",
+      "name": "shredded cheddar",
+      "count": 21
+    },
+    {
+      "allergen": "dairy",
+      "name": "low-moisture mozzarella, shredded",
+      "count": 20
+    },
+    {
+      "allergen": "egg",
+      "name": "mayonnaise",
+      "count": 20
+    },
+    {
+      "allergen": "gluten",
+      "name": "worcestershire sauce",
+      "count": 19
+    },
+    {
+      "allergen": "fish",
+      "name": "worcestershire sauce",
+      "count": 19
+    },
+    {
+      "allergen": "dairy",
+      "name": "plain greek yogurt",
+      "count": 17
+    },
+    {
+      "allergen": "pork",
+      "name": "thick-cut bacon",
+      "count": 12
+    },
+    {
+      "allergen": "dairy",
+      "name": "heavy cream",
+      "count": 11
+    },
+    {
+      "allergen": "pork",
+      "name": "bacon",
+      "count": 11
+    },
+    {
+      "allergen": "dairy",
+      "name": "cheddar cheese",
+      "count": 11
+    },
+    {
+      "allergen": "dairy",
+      "name": "greek yogurt",
+      "count": 11
+    },
+    {
+      "allergen": "gluten",
+      "name": "hoagie rolls",
+      "count": 10
+    },
+    {
+      "allergen": "dairy",
+      "name": "milk",
+      "count": 10
+    },
+    {
+      "allergen": "dairy",
+      "name": "parmesan cheese",
+      "count": 9
+    },
+    {
+      "allergen": "dairy",
+      "name": "provolone slices",
+      "count": 9
+    },
+    {
+      "allergen": "dairy",
+      "name": "buttermilk",
+      "count": 9
+    },
+    {
+      "allergen": "pork",
+      "name": "breakfast sausage",
+      "count": 9
+    },
+    {
+      "allergen": "dairy",
+      "name": "fresh mozzarella, torn",
+      "count": 8
+    }
+  ],
+  "qaNote": "Prior to this sprint, zero recipes carried any dietary/allergen tag anywhere in the catalog (see review/dietary-intelligence-audit.md for full audit context). Every entry below is newly generated by shared/dietary/classify-recipe.ts, not a correction of a prior tag."
+}

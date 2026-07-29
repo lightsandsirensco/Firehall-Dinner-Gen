@@ -15,7 +15,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
     description:
       "Beef chuck roasts get a simple salt-and-pepper crust, then smoke until probe-tender and sliceable. Rest, slice against the grain, and serve with quick pickles and soft rolls for a true smoke-night spread.",
     whyCrewsLikeIt:
-      "Chuck roast delivers rich beef smoke flavor on a station budget. It shreds or slices cleanly, holds warm in hotel pans, and feeds a full hall without babysitting a brisket all day.",
+      "Chuck roast delivers rich beef smoke flavor on a station budget. It shreds or slices cleanly, holds warm in baking dishes, and feeds a full hall without babysitting a brisket all day.",
     mealPrepNotes:
       "Season roasts the night before uncovered on a rack so the rub sets. Bring to room temperature 45 minutes before smoking. Hold sliced beef at 165°F max with a splash of beef broth.",
     stationWorkflow: [
@@ -52,14 +52,14 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       "If bark gets too dark before tenderness, drop smoker temp to 225°F and stay patient.",
     ],
     tonightSpread: [
-      "Sliced chuck on a hotel pan with soft rolls, dill pickles, and sliced raw onion.",
+      "Sliced chuck on a baking dish with soft rolls, dill pickles, and sliced raw onion.",
       "Quick coleslaw with vinegar dressing to cut the rich smoke and fat.",
     ],
     leftovers: [
       "Chop and simmer in BBQ sauce for fast smoked beef sandwiches the next shift.",
       "Dice into a hearty beef and barley soup with leftover broth.",
     ],
-    equipment: ["Pellet or offset smoker", "Instant-read thermometer", "Butcher paper", "Wire rack", "Hotel pans"],
+    equipment: ["Pellet or offset smoker", "Instant-read thermometer", "Butcher paper", "Wire rack", "baking dishes"],
     nutrition: { calories: 410, protein: 42, carbs: 18, fats: 20, fiber: 1 },
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
@@ -143,7 +143,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "Shoulder steaks give you pork BBQ flavor without a twelve-hour smoke commitment. They cook in under thirty minutes on the grill and portion cleanly for a hungry line.",
     mealPrepNotes:
-      "Slice steaks uniform—about 1 inch thick—so they finish together. Marinate up to 24 hours in labeled cambros. Glaze can simmer ahead and reheat on the side burner.",
+      "Slice steaks uniform—about 1 inch thick—so they finish together. Marinate up to 24 hours in labeled lidded containers. Glaze can simmer ahead and reheat on the side burner.",
     stationWorkflow: [
       "Pat steaks dry before grilling so marinade sugars caramelize instead of steaming.",
       "Move steaks to cooler zones if flare-ups threaten to char the exterior before center hits 145°F.",
@@ -296,7 +296,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       step(2, "Season under the skin", "Mix butter with lemon zest, juice, garlic, and thyme. Loosen breast skin and spread half the butter mix under skin on each bird. Season outside with salt, pepper, and olive oil.", { minutes: 15 }),
       step(3, "Roast on vegetables", "Scatter onion and carrots on two sheet pans. Place spatchcocked birds on top and roast at 425°F until thickest breast hits 165°F and skin is golden, about 50–60 minutes.", { minutes: 55, tempF: 425 }),
       step(4, "Rest before carving", "Tent birds with foil and rest 15 minutes so juices settle. Save pan juices and roasted vegetables for service.", { minutes: 15 }),
-      step(5, "Carve for the line", "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on hotel pans with pan juices spooned over.", { minutes: 10 }),
+      step(5, "Carve for the line", "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on baking dishes with pan juices spooned over.", { minutes: 10 }),
     ],
     proTips: [
       "Insert probe in the thickest part of the breast, not touching bone, for accurate reads.",
@@ -332,7 +332,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "One pan means fewer dishes after a busy day. Bold Cajun flavor reads as a proper meal, not a rookie rice packet, and the skillet format holds warm on the stove between calls.",
     mealPrepNotes:
-      "Dice trinity uniform so it cooks evenly. Use a large cast iron or hotel pan for ten portions. Keep hot sauce off to the side for heat-sensitive crew.",
+      "Dice trinity uniform so it cooks evenly. Use a large cast iron or baking dish for ten portions. Keep hot sauce off to the side for heat-sensitive crew.",
     stationWorkflow: [
       "Sear chicken in batches so skin browns instead of steaming in the pan.",
       "Toast rice in the fat 2 minutes before adding broth for nuttier flavor.",
@@ -359,7 +359,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       step(2, "Cook the trinity", "In the same pan, sauté onion, bell pepper, celery, and garlic 6–8 minutes until softened and lightly caramelized at the edges.", { minutes: 8 }),
       step(3, "Toast rice and build", "Stir in rice and remaining Cajun seasoning, toast 2 minutes, then add tomato paste and broth. Nestle seared chicken skin-side up into the rice.", { minutes: 5 }),
       step(4, "Simmer covered", "Cover and simmer on low 25–30 minutes until rice absorbs liquid and chicken reaches 165°F internal. Avoid stirring so rice stays fluffy.", { minutes: 28 }),
-      step(5, "Rest and serve", "Rest covered 5 minutes off heat. Fluff rice gently around chicken, scatter green onions, and serve straight from the skillet or transfer to a hotel pan.", { minutes: 5 }),
+      step(5, "Rest and serve", "Rest covered 5 minutes off heat. Fluff rice gently around chicken, scatter green onions, and serve straight from the skillet or transfer to a baking dish.", { minutes: 5 }),
     ],
     proTips: [
       "If rice looks dry before chicken finishes, add broth ¼ cup at a time—not water.",
@@ -374,7 +374,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       "Reheat covered with splash of broth for lunch bowls the next day.",
       "Stuff into bell pepper halves and bake for a quick round-two dinner.",
     ],
-    equipment: ["Large cast iron skillet or Dutch oven", "Instant-read thermometer", "Tight lid", "Wooden spoon", "Hotel pan"],
+    equipment: ["Large cast iron skillet or Dutch oven", "Instant-read thermometer", "Tight lid", "Wooden spoon", "baking dish"],
     nutrition: { calories: 480, protein: 34, carbs: 52, fats: 16, fiber: 3 },
     spiceLevel: "medium",
     cleanupDifficulty: "easy",
@@ -485,7 +485,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       step(2, "Sear the chicken", "Heat cast iron over high heat until smoking lightly. Sear chicken in batches 3–4 minutes until charred edges appear and internal temp reaches 165°F. Set aside.", { minutes: 12 }),
       step(3, "Char the vegetables", "Add remaining oil to the pan. Sear peppers and onions 4–5 minutes until blistered and tender-crisp with light char.", { minutes: 5 }),
       step(4, "Combine and season", "Return chicken to pan, toss with vegetables, and season with salt to taste. Squeeze half a lime over the mix.", { minutes: 2 }),
-      step(5, "Serve sizzling", "Warm tortillas wrapped in foil at 300°F for 10 minutes. Portion chicken and peppers into hot cast iron skillets or hotel pans and serve with fixings.", { minutes: 10, tempF: 300 }),
+      step(5, "Serve sizzling", "Warm tortillas wrapped in foil at 300°F for 10 minutes. Portion chicken and peppers into hot cast iron skillets or baking dishes and serve with fixings.", { minutes: 10, tempF: 300 }),
     ],
     proTips: [
       "Vent the kitchen—high-heat searing sets off alarms if you are not ready.",
@@ -710,7 +710,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
     whyCrewsLikeIt:
       "Enchilada flavor without rolling dozens of tortillas. One skillet bakes in the oven while you set up the rest of the meal, and it scoops fast when the tones drop.",
     mealPrepNotes:
-      "Use stale tortillas—they absorb sauce better. Brown beef hard for flavor. Assemble in an oven-safe skillet or transfer to hotel pans for baking.",
+      "Use stale tortillas—they absorb sauce better. Brown beef hard for flavor. Assemble in an oven-safe skillet or transfer to baking dishes for baking.",
     stationWorkflow: [
       "Drain excess fat after browning beef or the skillet turns greasy.",
       "Tear tortillas into strips instead of layering whole—easier to portion.",
@@ -742,11 +742,11 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
     proTips: [
       "Add a can of black beans for stretch and fiber without changing the vibe.",
       "Pickled jalapeños on the side beat cooking spice into the whole batch.",
-      "Two skillets bake faster than one deep hotel pan if your oven runs small.",
+      "Two skillets bake faster than one deep baking dish if your oven runs small.",
     ],
     tonightSpread: [
       "Skillet scoops with sour cream, cilantro, and shredded lettuce on the side.",
-      "Mexican rice in a hotel pan for crew who want a bigger plate.",
+      "Mexican rice in a baking dish for crew who want a bigger plate.",
     ],
     leftovers: [
       "Reheat covered at 350°F with extra sauce splashed on top.",
@@ -815,7 +815,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       "Reheat covered at 350°F with splash of water to loosen sauce.",
       "Pan-fry cold squares in oil for crispy-edged ziti bites.",
     ],
-    equipment: ["Large stock pot", "Hotel pan or baking dish", "Aluminum foil", "Mixing bowls", "Wooden spoon"],
+    equipment: ["Large stock pot", "baking dish or baking dish", "Aluminum foil", "Mixing bowls", "Wooden spoon"],
     nutrition: { calories: 580, protein: 32, carbs: 52, fats: 28, fiber: 4 },
     spiceLevel: "medium",
     cleanupDifficulty: "medium",
@@ -840,7 +840,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
     stationWorkflow: [
       "Sear chicken to 165°F internal, rest, then slice—do not cube before cooking.",
       "Toss pasta with sauce off direct heat so cheese stays smooth.",
-      "Hold sauced pasta in a hotel pan at 170°F max with a loose foil tent.",
+      "Hold sauced pasta in a baking dish at 170°F max with a loose foil tent.",
     ],
     prepMinutes: 25,
     cookMinutes: 30,
@@ -897,7 +897,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
     description:
       "Ground beef and pork simmer with onion, garlic, and crushed tomatoes until thick and rich. Toss with rigatoni and finish with Parmesan for a proper Italian-American hall feed.",
     whyCrewsLikeIt:
-      "Meat sauce is the pasta baseline everyone recognizes. It scales cheap, simmers while you handle other duties, and holds hot in a hotel pan for late eaters.",
+      "Meat sauce is the pasta baseline everyone recognizes. It scales cheap, simmers while you handle other duties, and holds hot in a baking dish for late eaters.",
     mealPrepNotes:
       "Simmer sauce at least 45 minutes for depth—longer is better. Salt pasta water heavily. Sauce and pasta can stay separate until service if holding.",
     stationWorkflow: [
@@ -926,7 +926,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       step(2, "Build the sauce", "Add garlic and tomato paste, cook 2 minutes. Pour in wine and simmer until mostly reduced, about 4 minutes.", { minutes: 6 }),
       step(3, "Simmer low", "Add crushed tomatoes and oregano. Simmer uncovered 40–45 minutes, stirring occasionally, until sauce thickens and oil pools at edges.", { minutes: 42 }),
       step(4, "Cook rigatoni", "Boil rigatoni in salted water until al dente, about 11 minutes. Drain and toss with a cup of sauce.", { minutes: 12 }),
-      step(5, "Serve family-style", "Portion pasta into bowls or hotel pan, top with remaining sauce and Parmesan. Serve with extra cheese at the line.", { minutes: 5 }),
+      step(5, "Serve family-style", "Portion pasta into bowls or baking dish, top with remaining sauce and Parmesan. Serve with extra cheese at the line.", { minutes: 5 }),
     ],
     proTips: [
       "A parmesan rind simmered in the sauce adds savory depth—fish it out before serving.",
@@ -1367,7 +1367,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       step(2, "Start the potatoes", "Add onion and potatoes to the pan with a splash of broth. Cover and cook 12 minutes, stirring once, until potatoes begin to soften.", { minutes: 12 }),
       step(3, "Add cabbage and steam", "Nestle cabbage wedges into the pan, add remaining broth, cover, and cook 15 minutes until cabbage wilts and potatoes pierce easily.", { minutes: 15 }),
       step(4, "Combine and season", "Return kielbasa, stir in garlic, mustard, vinegar, caraway, and pepper. Cook uncovered 5 minutes until liquid mostly reduces.", { minutes: 5 }),
-      step(5, "Serve from the skillet", "Taste for salt. Serve straight from the skillet or transfer to a hotel pan for buffet line.", { minutes: 3 }),
+      step(5, "Serve from the skillet", "Taste for salt. Serve straight from the skillet or transfer to a baking dish for buffet line.", { minutes: 3 }),
     ],
     proTips: [
       "Andouille or smoked turkey sausage works if kielbasa is not in the freezer.",
@@ -1382,7 +1382,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       "Chop and fry into a breakfast hash with eggs.",
       "Wrap in tortillas with sauerkraut for quick kielbasa tacos.",
     ],
-    equipment: ["Large skillet with lid", "Chef knife", "Wooden spoon", "Measuring cups", "Hotel pan"],
+    equipment: ["Large skillet with lid", "Chef knife", "Wooden spoon", "Measuring cups", "baking dish"],
     nutrition: { calories: 480, protein: 22, carbs: 38, fats: 28, fiber: 6 },
     spiceLevel: "mild",
     cleanupDifficulty: "easy",
@@ -1556,7 +1556,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       step(2, "Build the sauce", "Stir in ketchup, tomato paste, Worcestershire, vinegar, and brown sugar until combined.", { minutes: 3 }),
       step(3, "Simmer until thick", "Reduce heat and simmer uncovered 15–20 minutes, stirring often, until sauce mounds on a spoon and flavors meld.", { minutes: 18 }),
       step(4, "Toast the buns", "Split buns and toast cut-side down in a dry skillet or under broiler at 400°F until golden, about 3 minutes.", { minutes: 5, tempF: 400 }),
-      step(5, "Serve the line", "Hold beef warm at 165°F in a hotel pan. Crews build sandwiches with pickles and extra onion if desired. Serve with chips.", { minutes: 5 }),
+      step(5, "Serve the line", "Hold beef warm at 165°F in a baking dish. Crews build sandwiches with pickles and extra onion if desired. Serve with chips.", { minutes: 5 }),
     ],
     proTips: [
       "A tablespoon of mustard adds tang without making it taste like mustard.",
@@ -1571,7 +1571,7 @@ export const BATCH_250_RECIPES: ExpansionRecipeDef[] = [
       "Serve over baked potatoes with shredded cheese.",
       "Fold into a casserole with tater tots and cheddar for sloppy joe hot dish.",
     ],
-    equipment: ["Large Dutch oven", "Wooden spoon", "Sheet pan", "Hotel pan", "Spatula"],
+    equipment: ["Large Dutch oven", "Wooden spoon", "Sheet pan", "baking dish", "Spatula"],
     nutrition: { calories: 520, protein: 36, carbs: 42, fats: 24, fiber: 3 },
     spiceLevel: "mild",
     cleanupDifficulty: "easy",

@@ -13,10 +13,10 @@
   "cookTime": 210,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 540,
-  "protein": 44,
-  "carbs": 38,
-  "fats": 24,
+  "calories": 748,
+  "protein": 66,
+  "carbs": 37,
+  "fats": 40,
   "tags": [
     "protein:beef",
     "format:braise",
@@ -158,19 +158,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 540,
-    "protein": 44,
-    "carbs": 38,
-    "fats": 24,
-    "label": "~540 cal/serving · 44g protein · 5g fiber (est.)",
-    "source": "estimated",
+    "calories": 748,
+    "protein": 66,
+    "carbs": 37,
+    "fats": 40,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
@@ -193,5 +199,53 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Worcestershire sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      },
+      {
+        "name": "all-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use a 1:1 gluten-free all-purpose flour blend."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -30,11 +30,6 @@ export function LightsAndSirensCtaRow({ className, size = "default" }: LightsAnd
           {LIGHTS_COPY.shopCta}
         </a>
       </Button>
-      <Button asChild variant="outline" size={size === "sm" ? "sm" : "default"} className={btnClass}>
-        <a href={LIGHTS_AND_SIRENS.shop} target="_blank" rel="noopener noreferrer">
-          {LIGHTS_COPY.gearCta}
-        </a>
-      </Button>
     </div>
   );
 }

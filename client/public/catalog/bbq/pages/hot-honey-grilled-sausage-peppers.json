@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 354,
-  "protein": 10,
-  "carbs": 20,
-  "fats": 26,
+  "calories": 766,
+  "protein": 28,
+  "carbs": 93,
+  "fats": 31,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -153,12 +153,26 @@
   ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 354,
-    "protein": 10,
-    "carbs": 20,
-    "fats": 26,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 766,
+    "protein": 28,
+    "carbs": 93,
+    "fats": 31,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/hot-honey-grilled-sausage-peppers.jpg",
   "heroImageAlt": "Hot Honey Grilled Sausage & Peppers — crew-sized BBQ spread with visible smoke and bark",
@@ -185,5 +199,51 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.410Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Italian Sausage Links",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Sub Rolls",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

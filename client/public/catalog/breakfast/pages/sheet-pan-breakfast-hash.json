@@ -21,7 +21,7 @@
   "ingredients": [
     {
       "name": "Yukon gold potatoes",
-      "quantity": "3",
+      "quantity": "2.8 lb",
       "notes": "diced 1/2-inch"
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "name": "breakfast sausage",
-      "quantity": "2",
+      "quantity": "1.6 lb",
       "notes": "browned and crumbled"
     },
     {
@@ -40,16 +40,16 @@
     },
     {
       "name": "bell peppers",
-      "quantity": "3/4",
+      "quantity": "3/4–2",
       "notes": "diced"
     },
     {
       "name": "olive oil or bacon fat",
-      "quantity": "1.6"
+      "quantity": "1 3/4 tbsp"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "3/4",
+      "quantity": "3/4–1.6 cups",
       "notes": "optional finish"
     }
   ],
@@ -82,12 +82,13 @@
     }
   ],
   "nutrition": {
-    "calories": 562,
-    "protein": 25,
+    "calories": 582,
+    "protein": 31,
     "carbs": 31,
     "fat": 37,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -122,5 +123,57 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 6,
   "seoTitle": "Sheet Pan Breakfast Hash | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

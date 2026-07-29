@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 467,
+  "calories": 455,
   "protein": 9,
-  "carbs": 50,
-  "fats": 26,
+  "carbs": 49,
+  "fats": 25,
   "tags": [
     "protein:vegetarian",
     "format:side",
@@ -179,12 +179,26 @@
   "mealPrepNotes": "Smoke potatoes ahead—they need to cool before dressing. Keep finished salad cold on ice until service. Do not hold warm.",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 467,
+    "calories": 455,
     "protein": 9,
-    "carbs": 50,
-    "fats": 26,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "carbs": 49,
+    "fats": 25,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/smoked-potato-salad-tray.jpg",
   "heroImageAlt": "Smoked Potato Salad Tray — crew-sized BBQ spread with visible smoke and bark",
@@ -213,5 +227,40 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.425Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Hard-Boiled Eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

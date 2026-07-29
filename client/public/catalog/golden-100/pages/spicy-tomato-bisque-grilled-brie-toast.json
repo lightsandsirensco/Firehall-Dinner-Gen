@@ -13,9 +13,9 @@
   "cookTime": 50,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 545,
-  "protein": 13,
-  "carbs": 57,
+  "calories": 625,
+  "protein": 16,
+  "carbs": 74,
   "fats": 31,
   "tags": [
     "protein:vegetarian",
@@ -159,12 +159,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 545,
-    "protein": 13,
-    "carbs": 57,
+    "calories": 625,
+    "protein": 16,
+    "carbs": 74,
     "fats": 31,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -209,5 +210,64 @@
   "sourceName": "Serious Eats",
   "sourceUrl": "https://www.seriouseats.com/15-minute-creamy-tomato-soup-vegan-recipe",
   "generatedAt": "2026-06-04T20:45:42.220Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Heavy Cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Crusty Bread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Brie Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

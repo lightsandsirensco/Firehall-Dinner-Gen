@@ -1,22 +1,22 @@
 {
-  "generated_at": "2026-06-02T13:09:40.311Z",
+  "generated_at": "2026-07-27T14:50:34.443Z",
   "totals": {
-    "recipes_scanned": 356,
-    "nutrition_ok": 318,
-    "nutrition_hidden": 13,
-    "nutrition_issues": 25,
+    "recipes_scanned": 386,
+    "nutrition_ok": 254,
+    "nutrition_hidden": 132,
+    "nutrition_issues": 0,
     "title_as_ingredient": 0,
     "bundle_issues": 1,
     "crew_scaling_issues": 0
   },
   "nutrition_rows": [
     {
-      "recipe": "bacon-egg-hash",
+      "recipe": "30-minute-pasta-e-fagioli-for-the-hall",
       "catalog": "golden",
-      "calories": 1261,
-      "protein": 63,
-      "carbs": 120,
-      "fat": 60,
+      "calories": 440,
+      "protein": 17,
+      "carbs": 58,
+      "fat": 16,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -24,43 +24,60 @@
     {
       "recipe": "baked-ziti",
       "catalog": "golden",
-      "calories": 957,
-      "protein": 70,
-      "carbs": 17,
-      "fat": 69,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "batch-lasagna",
       "catalog": "golden",
-      "calories": 1348,
-      "protein": 64,
-      "carbs": 29,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "bbq-brisket-burnt-ends",
       "catalog": "golden",
-      "calories": 1109,
-      "protein": 89,
-      "carbs": 52,
-      "fat": 64,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "bbq-chicken-bowls",
+      "catalog": "golden",
+      "calories": 695,
+      "protein": 41,
+      "carbs": 89,
+      "fat": 18,
       "servings": 8,
       "status": "ok",
       "issues": []
     },
     {
-      "recipe": "bbq-chicken-bowls",
+      "recipe": "bbq-chicken-mac-and-cheese",
       "catalog": "golden",
-      "calories": 674,
-      "protein": 60,
-      "carbs": 89,
-      "fat": 8,
+      "calories": 820,
+      "protein": 54,
+      "carbs": 62,
+      "fat": 30,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -79,10 +96,10 @@
     {
       "recipe": "bbq-chicken-sliders",
       "catalog": "golden",
-      "calories": 596,
-      "protein": 60,
-      "carbs": 6,
-      "fat": 39,
+      "calories": 796,
+      "protein": 46,
+      "carbs": 48,
+      "fat": 45,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -90,10 +107,10 @@
     {
       "recipe": "beef-barley-soup",
       "catalog": "golden",
-      "calories": 587,
-      "protein": 52,
+      "calories": 442,
+      "protein": 61,
       "carbs": 28,
-      "fat": 31,
+      "fat": 8,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -112,24 +129,28 @@
     {
       "recipe": "beef-dip",
       "catalog": "golden",
-      "calories": 692,
-      "protein": 59,
+      "calories": 0,
+      "protein": 0,
       "carbs": 0,
-      "fat": 49,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "beef-stroganoff",
       "catalog": "golden",
-      "calories": 1177,
-      "protein": 68,
-      "carbs": 101,
-      "fat": 57,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "beer-can-chicken",
@@ -145,46 +166,41 @@
     {
       "recipe": "big-chili",
       "catalog": "golden",
-      "calories": 702,
-      "protein": 64,
-      "carbs": 37,
-      "fat": 35,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "biscuits-gravy",
-      "catalog": "golden",
-      "calories": 545,
-      "protein": 18,
-      "carbs": 14,
-      "fat": 46,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "breakfast-burrito-bar",
       "catalog": "golden",
-      "calories": 1261,
-      "protein": 63,
-      "carbs": 120,
-      "fat": 60,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "breakfast-sausage-pizza",
       "catalog": "golden",
-      "calories": 1388,
-      "protein": 63,
-      "carbs": 45,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "buffalo-chicken-dip",
@@ -211,32 +227,23 @@
     {
       "recipe": "butter-chicken",
       "catalog": "golden",
-      "calories": 712,
-      "protein": 61,
-      "carbs": 58,
-      "fat": 24,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "carolina-mustard-pork",
-      "catalog": "golden",
-      "calories": 1358,
-      "protein": 93,
-      "carbs": 93,
-      "fat": 65,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "cedar-plank-salmon",
       "catalog": "golden",
-      "calories": 367,
+      "calories": 376,
       "protein": 38,
-      "carbs": 3,
-      "fat": 20,
+      "carbs": 6,
+      "fat": 21,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -244,32 +251,36 @@
     {
       "recipe": "chicken-alfredo-bake",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 112,
-      "carbs": 91,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "chicken-caesar",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 120,
-      "carbs": 102,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "chicken-dumpling-soup",
       "catalog": "golden",
-      "calories": 578,
-      "protein": 64,
-      "carbs": 41,
-      "fat": 16,
+      "calories": 670,
+      "protein": 66,
+      "carbs": 55,
+      "fat": 20,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -277,21 +288,23 @@
     {
       "recipe": "chicken-parm",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 120,
-      "carbs": 156,
-      "fat": 63,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "chicken-pot-pie",
       "catalog": "golden",
-      "calories": 394,
-      "protein": 56,
+      "calories": 414,
+      "protein": 36,
       "carbs": 6,
-      "fat": 15,
+      "fat": 26,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -299,13 +312,15 @@
     {
       "recipe": "chicken-quesadillas",
       "catalog": "golden",
-      "calories": 596,
-      "protein": 60,
-      "carbs": 6,
-      "fat": 39,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "chicken-souvlaki",
@@ -321,46 +336,54 @@
     {
       "recipe": "chicken-tikka-masala",
       "catalog": "golden",
-      "calories": 699,
-      "protein": 64,
-      "carbs": 61,
-      "fat": 20,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
-      "recipe": "chili-garlic-bread",
+      "recipe": "chicken-tortilla-soup-for-the-hall",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 120,
-      "carbs": 72,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "chili-mac",
       "catalog": "golden",
-      "calories": 1315,
-      "protein": 80,
-      "carbs": 69,
-      "fat": 82,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "chorizo-breakfast-tacos",
       "catalog": "golden",
-      "calories": 1261,
-      "protein": 63,
-      "carbs": 120,
-      "fat": 60,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "creamy-tuscan-chicken",
@@ -387,24 +410,28 @@
     {
       "recipe": "detroit-style-pizza",
       "catalog": "golden",
-      "calories": 1131,
-      "protein": 48,
-      "carbs": 63,
-      "fat": 75,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "enchilada-casserole",
       "catalog": "golden",
-      "calories": 1122,
-      "protein": 72,
-      "carbs": 72,
-      "fat": 62,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "fast-philly-skillet",
@@ -440,26 +467,54 @@
       "issues": []
     },
     {
-      "recipe": "french-toast-casserole",
+      "recipe": "four-step-chicken-piccata",
       "catalog": "golden",
-      "calories": 1261,
-      "protein": 63,
-      "carbs": 120,
-      "fat": 60,
+      "calories": 667,
+      "protein": 77,
+      "carbs": 36,
+      "fat": 23,
       "servings": 8,
       "status": "ok",
       "issues": []
     },
     {
+      "recipe": "french-onion-soup-for-the-hall",
+      "catalog": "golden",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "french-toast-casserole",
+      "catalog": "golden",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
       "recipe": "game-day-nachos",
       "catalog": "golden",
-      "calories": 1373,
-      "protein": 68,
-      "carbs": 129,
-      "fat": 67,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "garlic-butter-shrimp",
@@ -486,10 +541,10 @@
     {
       "recipe": "greek-chicken-bowls",
       "catalog": "golden",
-      "calories": 616,
-      "protein": 62,
+      "calories": 636,
+      "protein": 43,
       "carbs": 59,
-      "fat": 13,
+      "fat": 24,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -497,14 +552,14 @@
     {
       "recipe": "grilled-corn-cotija",
       "catalog": "golden",
-      "calories": 208,
-      "protein": 4,
-      "carbs": 26,
-      "fat": 12,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (208)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -521,13 +576,15 @@
     {
       "recipe": "hall-taco-bar",
       "catalog": "golden",
-      "calories": 914,
-      "protein": 56,
-      "carbs": 79,
-      "fat": 42,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "herb-roasted-thighs",
@@ -554,21 +611,23 @@
     {
       "recipe": "honey-soppressata-pizza",
       "catalog": "golden",
-      "calories": 989,
-      "protein": 46,
-      "carbs": 45,
-      "fat": 69,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "jambalaya",
       "catalog": "golden",
-      "calories": 589,
-      "protein": 42,
+      "calories": 599,
+      "protein": 32,
       "carbs": 41,
-      "fat": 27,
+      "fat": 33,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -576,21 +635,23 @@
     {
       "recipe": "jerk-chicken",
       "catalog": "golden",
-      "calories": 1036,
-      "protein": 108,
-      "carbs": 120,
-      "fat": 13,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "lemon-herb-salmon",
       "catalog": "golden",
-      "calories": 367,
+      "calories": 484,
       "protein": 38,
       "carbs": 3,
-      "fat": 20,
+      "fat": 34,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -598,76 +659,88 @@
     {
       "recipe": "loaded-baked-potato-bar",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 70,
-      "carbs": 91,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "loaded-nacho-skillet",
       "catalog": "golden",
-      "calories": 972,
-      "protein": 62,
-      "carbs": 77,
-      "fat": 48,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "loaded-potato-feed",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 107,
-      "carbs": 152,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "mac-and-cheese-bake",
       "catalog": "golden",
-      "calories": 1358,
-      "protein": 60,
-      "carbs": 96,
-      "fat": 81,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "margherita-pizza",
       "catalog": "golden",
-      "calories": 945,
-      "protein": 39,
-      "carbs": 80,
-      "fat": 52,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "meat-lovers-sheet-pizza",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 105,
-      "carbs": 38,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "meatball-hoagies",
       "catalog": "golden",
-      "calories": 596,
-      "protein": 60,
-      "carbs": 6,
-      "fat": 39,
+      "calories": 787,
+      "protein": 59,
+      "carbs": 13,
+      "fat": 57,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -675,38 +748,40 @@
     {
       "recipe": "meatloaf-mashed",
       "catalog": "golden",
-      "calories": 1009,
-      "protein": 72,
-      "carbs": 69,
-      "fat": 51,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "mediterranean-chickpea",
       "catalog": "golden",
-      "calories": 248,
-      "protein": 10,
-      "carbs": 33,
-      "fat": 9,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (248)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
       "recipe": "memphis-dry-rub-ribs",
       "catalog": "golden",
-      "calories": 232,
-      "protein": 15,
-      "carbs": 15,
-      "fat": 13,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (232)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -747,10 +822,10 @@
     {
       "recipe": "pad-thai",
       "catalog": "golden",
-      "calories": 542,
-      "protein": 78,
+      "calories": 569,
+      "protein": 52,
       "carbs": 8,
-      "fat": 20,
+      "fat": 35,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -758,21 +833,36 @@
     {
       "recipe": "pancake-short-stack",
       "catalog": "golden",
-      "calories": 1261,
-      "protein": 63,
-      "carbs": 120,
-      "fat": 60,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "parm-hero-subs",
       "catalog": "golden",
-      "calories": 596,
-      "protein": 60,
-      "carbs": 6,
-      "fat": 39,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "pasta-e-ceci-for-the-hall",
+      "catalog": "golden",
+      "calories": 352,
+      "protein": 12,
+      "carbs": 37,
+      "fat": 19,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -780,21 +870,23 @@
     {
       "recipe": "pepperoni-pizza-night",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 68,
-      "carbs": 76,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "performance-burrito-bowls",
       "catalog": "golden",
-      "calories": 863,
-      "protein": 72,
-      "carbs": 117,
-      "fat": 11,
+      "calories": 723,
+      "protein": 69,
+      "carbs": 94,
+      "fat": 8,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -824,21 +916,10 @@
     {
       "recipe": "pork-carnitas-tacos",
       "catalog": "golden",
-      "calories": 733,
-      "protein": 64,
+      "calories": 754,
+      "protein": 45,
       "carbs": 79,
-      "fat": 17,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "pulled-pork-mac",
-      "catalog": "golden",
-      "calories": 1400,
-      "protein": 120,
-      "carbs": 136,
-      "fat": 90,
+      "fat": 28,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -846,24 +927,41 @@
     {
       "recipe": "pulled-pork",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 94,
-      "carbs": 144,
-      "fat": 70,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "red-beans-and-rice-for-the-hall",
+      "catalog": "golden",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "sausage-egg-bake",
       "catalog": "golden",
-      "calories": 1261,
-      "protein": 63,
-      "carbs": 120,
-      "fat": 60,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "sausage-peppers-onions",
@@ -879,10 +977,10 @@
     {
       "recipe": "sheet-pan-fajitas",
       "catalog": "golden",
-      "calories": 544,
-      "protein": 58,
-      "carbs": 35,
-      "fat": 18,
+      "calories": 424,
+      "protein": 35,
+      "carbs": 11,
+      "fat": 26,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -890,10 +988,21 @@
     {
       "recipe": "sheet-pan-meal-prep",
       "catalog": "golden",
-      "calories": 403,
-      "protein": 54,
+      "calories": 424,
+      "protein": 35,
       "carbs": 11,
-      "fat": 15,
+      "fat": 26,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "catalog": "golden",
+      "calories": 529,
+      "protein": 40,
+      "carbs": 44,
+      "fat": 20,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -901,10 +1010,10 @@
     {
       "recipe": "sheet-pan-sausage-peppers",
       "catalog": "golden",
-      "calories": 403,
-      "protein": 54,
+      "calories": 424,
+      "protein": 35,
       "carbs": 11,
-      "fat": 15,
+      "fat": 26,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -912,10 +1021,10 @@
     {
       "recipe": "shepherds-pie",
       "catalog": "golden",
-      "calories": 1232,
-      "protein": 79,
-      "carbs": 61,
-      "fat": 75,
+      "calories": 882,
+      "protein": 65,
+      "carbs": 55,
+      "fat": 45,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -923,89 +1032,112 @@
     {
       "recipe": "skillet-chicken-alfredo",
       "catalog": "golden",
-      "calories": 1228,
-      "protein": 77,
-      "carbs": 89,
-      "fat": 61,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "slider-bar",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 85,
-      "carbs": 144,
-      "fat": 80,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "smash-burgers",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 120,
-      "carbs": 43,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "smoked-brisket",
-      "catalog": "golden",
-      "calories": 873,
-      "protein": 90,
-      "carbs": 3,
-      "fat": 58,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "smoked-wings-white-sauce",
       "catalog": "golden",
-      "calories": 204,
-      "protein": 1,
-      "carbs": 4,
-      "fat": 21,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (204)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
+    },
+    {
+      "recipe": "spaghetti-aglio-e-olio-for-the-hall",
+      "catalog": "golden",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "spicy-tomato-bisque-grilled-brie-toast",
+      "catalog": "golden",
+      "calories": 545,
+      "protein": 13,
+      "carbs": 57,
+      "fat": 31,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
     },
     {
       "recipe": "steak-sandwiches",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 120,
-      "carbs": 85,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "steak-tacos",
       "catalog": "golden",
-      "calories": 1400,
-      "protein": 103,
-      "carbs": 180,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "street-corn-chicken",
       "catalog": "golden",
-      "calories": 693,
-      "protein": 60,
+      "calories": 713,
+      "protein": 41,
       "carbs": 72,
-      "fat": 18,
+      "fat": 29,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1022,23 +1154,12 @@
       "issues": []
     },
     {
-      "recipe": "sunday-chili-batch",
-      "catalog": "golden",
-      "calories": 702,
-      "protein": 64,
-      "carbs": 37,
-      "fat": 35,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
       "recipe": "teriyaki-donburi",
       "catalog": "golden",
-      "calories": 570,
-      "protein": 60,
+      "calories": 591,
+      "protein": 41,
       "carbs": 63,
-      "fat": 7,
+      "fat": 18,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1068,13 +1189,26 @@
     {
       "recipe": "thai-basil-chicken",
       "catalog": "golden",
-      "calories": 796,
-      "protein": 79,
+      "calories": 823,
+      "protein": 53,
       "carbs": 81,
-      "fat": 15,
+      "fat": 29,
       "servings": 8,
       "status": "ok",
       "issues": []
+    },
+    {
+      "recipe": "tomato-soup-grilled-cheese-croutons",
+      "catalog": "golden",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "turkey-burgers",
@@ -1112,25 +1246,27 @@
     {
       "recipe": "white-garlic-chicken-pizza",
       "catalog": "golden",
-      "calories": 1069,
-      "protein": 88,
-      "carbs": 42,
-      "fat": 59,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "asian-chicken-lettuce-cups",
       "catalog": "performance",
-      "calories": 80,
-      "protein": 2,
-      "carbs": 5,
-      "fat": 4,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (80)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -1158,21 +1294,23 @@
     {
       "recipe": "blackened-cod-taco-night",
       "catalog": "performance",
-      "calories": 1006,
-      "protein": 59,
-      "carbs": 79,
-      "fat": 50,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "boneless-chicken-thighs-sweet-potato-spinach",
       "catalog": "performance",
-      "calories": 582,
-      "protein": 75,
+      "calories": 610,
+      "protein": 49,
       "carbs": 33,
-      "fat": 15,
+      "fat": 30,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1180,10 +1318,10 @@
     {
       "recipe": "cajun-chicken-rice-bowl",
       "catalog": "performance",
-      "calories": 669,
-      "protein": 77,
+      "calories": 696,
+      "protein": 51,
       "carbs": 64,
-      "fat": 9,
+      "fat": 24,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1213,13 +1351,15 @@
     {
       "recipe": "chipotle-lime-chicken-tacos",
       "catalog": "performance",
-      "calories": 880,
-      "protein": 84,
-      "carbs": 73,
-      "fat": 26,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "cottage-cheese-protein-pasta",
@@ -1235,21 +1375,23 @@
     {
       "recipe": "crispy-fish-taco-night",
       "catalog": "performance",
-      "calories": 1077,
-      "protein": 66,
-      "carbs": 108,
-      "fat": 40,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "crock-barbacoa-chicken",
       "catalog": "performance",
-      "calories": 651,
-      "protein": 92,
+      "calories": 685,
+      "protein": 60,
       "carbs": 30,
-      "fat": 16,
+      "fat": 34,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1290,10 +1432,10 @@
     {
       "recipe": "honey-garlic-chicken-rice-bowls",
       "catalog": "performance",
-      "calories": 752,
-      "protein": 79,
+      "calories": 779,
+      "protein": 54,
       "carbs": 77,
-      "fat": 13,
+      "fat": 27,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1321,45 +1463,12 @@
       "issues": []
     },
     {
-      "recipe": "italian-sausage-veg-sheet-pan",
-      "catalog": "performance",
-      "calories": 634,
-      "protein": 23,
-      "carbs": 16,
-      "fat": 53,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
       "recipe": "korean-beef-rice-bowls",
       "catalog": "performance",
       "calories": 761,
       "protein": 51,
       "carbs": 64,
       "fat": 35,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "lean-beef-broccoli-rice",
-      "catalog": "performance",
-      "calories": 860,
-      "protein": 55,
-      "carbs": 66,
-      "fat": 42,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "lean-turkey-bean-chili",
-      "catalog": "performance",
-      "calories": 356,
-      "protein": 41,
-      "carbs": 12,
-      "fat": 15,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1477,10 +1586,10 @@
     {
       "recipe": "salsa-verde-crock-chicken",
       "catalog": "performance",
-      "calories": 526,
-      "protein": 90,
+      "calories": 560,
+      "protein": 58,
       "carbs": 11,
-      "fat": 11,
+      "fat": 29,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1488,21 +1597,10 @@
     {
       "recipe": "shawarma-chicken-rice-bowls",
       "catalog": "performance",
-      "calories": 792,
-      "protein": 82,
+      "calories": 819,
+      "protein": 56,
       "carbs": 64,
-      "fat": 21,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "sheet-pan-chicken-fajitas-lite",
-      "catalog": "performance",
-      "calories": 626,
-      "protein": 76,
-      "carbs": 37,
-      "fat": 18,
+      "fat": 35,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1552,17 +1650,6 @@
       "issues": []
     },
     {
-      "recipe": "turkey-quinoa-stuffed-peppers",
-      "catalog": "performance",
-      "calories": 519,
-      "protein": 38,
-      "carbs": 38,
-      "fat": 23,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
       "recipe": "turkey-sausage-egg-muffins",
       "catalog": "performance",
       "calories": 561,
@@ -1598,10 +1685,10 @@
     {
       "recipe": "turkey-taco-skillet",
       "catalog": "performance",
-      "calories": 608,
-      "protein": 50,
-      "carbs": 38,
-      "fat": 27,
+      "calories": 467,
+      "protein": 47,
+      "carbs": 14,
+      "fat": 24,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1695,6 +1782,63 @@
       "issues": []
     },
     {
+      "recipe": "bbq-pulled-pork-bowls",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "beef-gyros-for-the-hall",
+      "catalog": "hall-expansion",
+      "calories": 520,
+      "protein": 45,
+      "carbs": 3,
+      "fat": 36,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "best-tuna-melt-for-the-hall",
+      "catalog": "hall-expansion",
+      "calories": 806,
+      "protein": 28,
+      "carbs": 34,
+      "fat": 62,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "buffalo-chicken-sweet-potato-bowls",
+      "catalog": "hall-expansion",
+      "calories": 554,
+      "protein": 58,
+      "carbs": 50,
+      "fat": 13,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "buffalo-chicken-wraps",
+      "catalog": "hall-expansion",
+      "calories": 558,
+      "protein": 40,
+      "carbs": 34,
+      "fat": 28,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
       "recipe": "build-your-own-pho-bar",
       "catalog": "hall-expansion",
       "calories": 286,
@@ -1719,6 +1863,17 @@
       ]
     },
     {
+      "recipe": "burnt-ends-chili-crew",
+      "catalog": "hall-expansion",
+      "calories": 603,
+      "protein": 61,
+      "carbs": 4,
+      "fat": 40,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
       "recipe": "burrito-bowl-bar-night",
       "catalog": "hall-expansion",
       "calories": 883,
@@ -1736,6 +1891,17 @@
       "protein": 63,
       "carbs": 51,
       "fat": 8,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "cajun-shrimp-rice-bowls",
+      "catalog": "hall-expansion",
+      "calories": 551,
+      "protein": 44,
+      "carbs": 19,
+      "fat": 33,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1796,28 +1962,76 @@
       "issues": []
     },
     {
-      "recipe": "chicken-wing-bar-night",
+      "recipe": "chicken-shawarma-pitas",
       "catalog": "hall-expansion",
-      "calories": 216,
-      "protein": 3,
-      "carbs": 33,
+      "calories": 485,
+      "protein": 43,
+      "carbs": 36,
+      "fat": 19,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "chicken-thigh-stretch-dinner",
+      "catalog": "hall-expansion",
+      "calories": 763,
+      "protein": 81,
+      "carbs": 85,
       "fat": 9,
       "servings": 8,
-      "status": "suspicious",
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "chicken-wing-bar-night",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (216)"
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "chipotle-chicken-burrito-bowls",
+      "catalog": "hall-expansion",
+      "calories": 695,
+      "protein": 71,
+      "carbs": 23,
+      "fat": 34,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "classic-patty-melt-for-the-crew",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
       "recipe": "classic-poutine-feed-crew",
       "catalog": "hall-expansion",
-      "calories": 494,
-      "protein": 9,
-      "carbs": 66,
-      "fat": 22,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "coq-au-vin-batch",
@@ -1826,6 +2040,17 @@
       "protein": 29,
       "carbs": 44,
       "fat": 25,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "costco-rotisserie-remix",
+      "catalog": "hall-expansion",
+      "calories": 672,
+      "protein": 42,
+      "carbs": 19,
+      "fat": 49,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1844,13 +2069,28 @@
     {
       "recipe": "creamy-chicken-penne-alfredo",
       "catalog": "hall-expansion",
-      "calories": 1083,
-      "protein": 62,
-      "carbs": 72,
-      "fat": 60,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "dirty-rice-crew-skillet",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "dutch-oven-pot-roast",
@@ -1862,6 +2102,19 @@
       "servings": 8,
       "status": "ok",
       "issues": []
+    },
+    {
+      "recipe": "egg-roll-in-a-bowl-crew",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "enchilada-beef-skillet",
@@ -1910,6 +2163,54 @@
       "issues": []
     },
     {
+      "recipe": "firehall-greek-chicken-bowls",
+      "catalog": "hall-expansion",
+      "calories": 645,
+      "protein": 68,
+      "carbs": 50,
+      "fat": 17,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "firehall-gyro-bowls",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "firehall-korean-beef-bowls",
+      "catalog": "hall-expansion",
+      "calories": 740,
+      "protein": 57,
+      "carbs": 59,
+      "fat": 33,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "firehall-taco-bowls",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
       "recipe": "game-day-pizza-sliders",
       "catalog": "hall-expansion",
       "calories": 418,
@@ -1923,10 +2224,21 @@
     {
       "recipe": "ginger-soy-chicken-rice-bowls",
       "catalog": "hall-expansion",
-      "calories": 577,
-      "protein": 63,
+      "calories": 599,
+      "protein": 43,
       "carbs": 58,
-      "fat": 9,
+      "fat": 21,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "greek-chicken-pitas",
+      "catalog": "hall-expansion",
+      "calories": 442,
+      "protein": 62,
+      "carbs": 20,
+      "fat": 12,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -1943,15 +2255,43 @@
       "issues": []
     },
     {
+      "recipe": "grilled-flank-fajita-bar",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "hall-blt-sandwich-feed",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
       "recipe": "hall-burger-bar",
       "catalog": "hall-expansion",
-      "calories": 861,
-      "protein": 63,
-      "carbs": 39,
-      "fat": 51,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "hall-chicken-noodle-soup",
@@ -1978,14 +2318,14 @@
     {
       "recipe": "hickory-turkey-legs",
       "catalog": "hall-expansion",
-      "calories": 175,
-      "protein": 3,
-      "carbs": 27,
-      "fat": 8,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (175)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -2002,13 +2342,26 @@
     {
       "recipe": "hungarian-goulash-crew",
       "catalog": "hall-expansion",
-      "calories": 745,
-      "protein": 56,
-      "carbs": 41,
-      "fat": 41,
+      "calories": 879,
+      "protein": 63,
+      "carbs": 55,
+      "fat": 47,
       "servings": 8,
       "status": "ok",
       "issues": []
+    },
+    {
+      "recipe": "italian-beef-slow-cooker",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "jalapeno-popper-dip",
@@ -2024,14 +2377,14 @@
     {
       "recipe": "kielbasa-cabbage-potato-skillet",
       "catalog": "hall-expansion",
-      "calories": 119,
-      "protein": 3,
-      "carbs": 25,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
       "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (119)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -2044,6 +2397,19 @@
       "servings": 8,
       "status": "ok",
       "issues": []
+    },
+    {
+      "recipe": "korean-turkey-rice-bowls",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "lamb-kofta-skewer-platter",
@@ -2068,6 +2434,30 @@
       "issues": []
     },
     {
+      "recipe": "leftover-roast-beef-bowls",
+      "catalog": "hall-expansion",
+      "calories": 550,
+      "protein": 13,
+      "carbs": 87,
+      "fat": 18,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "loaded-baked-potato-soup-crock",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
       "recipe": "loaded-nacho-bar-night",
       "catalog": "hall-expansion",
       "calories": 723,
@@ -2081,13 +2471,15 @@
     {
       "recipe": "loaded-potato-skins",
       "catalog": "hall-expansion",
-      "calories": 1175,
-      "protein": 56,
-      "carbs": 53,
-      "fat": 81,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "malaysian-laksa-soup",
@@ -2107,6 +2499,17 @@
       "protein": 68,
       "carbs": 25,
       "fat": 36,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "mediterranean-beef-bowls",
+      "catalog": "hall-expansion",
+      "calories": 539,
+      "protein": 48,
+      "carbs": 6,
+      "fat": 37,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2136,36 +2539,51 @@
     {
       "recipe": "mesquite-chuck-roast",
       "catalog": "hall-expansion",
-      "calories": 912,
-      "protein": 77,
-      "carbs": 49,
-      "fat": 47,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "miso-ramen-bar",
       "catalog": "hall-expansion",
-      "calories": 390,
-      "protein": 58,
-      "carbs": 9,
-      "fat": 12,
+      "calories": 440,
+      "protein": 59,
+      "carbs": 15,
+      "fat": 16,
       "servings": 8,
       "status": "ok",
       "issues": []
     },
     {
+      "recipe": "mississippi-pot-roast-crew",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
       "recipe": "molasses-bourbon-pork-ribs",
       "catalog": "hall-expansion",
-      "calories": 185,
-      "protein": 8,
-      "carbs": 23,
-      "fat": 7,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (185)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -2182,10 +2600,10 @@
     {
       "recipe": "moroccan-chicken-kebab-platter",
       "catalog": "hall-expansion",
-      "calories": 404,
-      "protein": 58,
+      "calories": 426,
+      "protein": 38,
       "carbs": 2,
-      "fat": 16,
+      "fat": 28,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2193,24 +2611,28 @@
     {
       "recipe": "mostaccioli-sausage-bake",
       "catalog": "hall-expansion",
-      "calories": 1011,
-      "protein": 44,
-      "carbs": 84,
-      "fat": 55,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "mushroom-swiss-steak-pan",
       "catalog": "hall-expansion",
-      "calories": 879,
-      "protein": 52,
-      "carbs": 74,
-      "fat": 41,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "paprika-roasted-chicken-quarters",
@@ -2235,6 +2657,32 @@
       "issues": []
     },
     {
+      "recipe": "pasta-e-fagioli-hall",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "peanut-chicken-rice-bowls",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
       "recipe": "pellet-smoked-chicken-quarters",
       "catalog": "hall-expansion",
       "calories": 254,
@@ -2248,10 +2696,10 @@
     {
       "recipe": "pepper-steak-onions",
       "catalog": "hall-expansion",
-      "calories": 678,
+      "calories": 740,
       "protein": 48,
       "carbs": 53,
-      "fat": 29,
+      "fat": 36,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2281,14 +2729,14 @@
     {
       "recipe": "pork-belly-burnt-ends",
       "catalog": "hall-expansion",
-      "calories": 155,
-      "protein": 1,
-      "carbs": 28,
-      "fat": 5,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (155)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -2325,6 +2773,32 @@
       "issues": []
     },
     {
+      "recipe": "salmon-rice-bowls-crew",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "salsa-verde-chicken-crock",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
       "recipe": "sandwich-board-night",
       "catalog": "hall-expansion",
       "calories": 649,
@@ -2336,12 +2810,36 @@
       "issues": []
     },
     {
+      "recipe": "sausage-gnocchi-skillet",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "sausage-peppers-on-buns",
+      "catalog": "hall-expansion",
+      "calories": 749,
+      "protein": 28,
+      "carbs": 8,
+      "fat": 67,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
       "recipe": "shawarma-bar-night",
       "catalog": "hall-expansion",
-      "calories": 444,
-      "protein": 71,
+      "calories": 472,
+      "protein": 45,
       "carbs": 2,
-      "fat": 15,
+      "fat": 30,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2349,24 +2847,28 @@
     {
       "recipe": "sheet-pan-meatball-marinara",
       "catalog": "hall-expansion",
-      "calories": 1092,
-      "protein": 75,
-      "carbs": 98,
-      "fat": 46,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "smoked-corned-beef",
       "catalog": "hall-expansion",
-      "calories": 1400,
-      "protein": 118,
-      "carbs": 70,
-      "fat": 87,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "smoked-meatloaf",
@@ -2382,13 +2884,15 @@
     {
       "recipe": "smoked-queso-fundido",
       "catalog": "hall-expansion",
-      "calories": 1025,
-      "protein": 35,
-      "carbs": 82,
-      "fat": 62,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "smoked-sausage-platter",
@@ -2415,40 +2919,75 @@
     {
       "recipe": "smoked-turkey-breast",
       "catalog": "hall-expansion",
-      "calories": 101,
-      "protein": 4,
-      "carbs": 8,
-      "fat": 6,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (101)"
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "smoker-nachos-crew",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
       "recipe": "soft-pretzel-dogs",
       "catalog": "hall-expansion",
-      "calories": 118,
-      "protein": 7,
-      "carbs": 2,
-      "fat": 9,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (118)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
+    },
+    {
+      "recipe": "southwest-steak-bowls",
+      "catalog": "hall-expansion",
+      "calories": 818,
+      "protein": 69,
+      "carbs": 25,
+      "fat": 50,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "spanish-rice-chicken-one-pot",
+      "catalog": "hall-expansion",
+      "calories": 881,
+      "protein": 64,
+      "carbs": 81,
+      "fat": 29,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
     },
     {
       "recipe": "spatchcock-lemon-roast-chicken",
       "catalog": "hall-expansion",
-      "calories": 123,
-      "protein": 1,
-      "carbs": 7,
-      "fat": 11,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (123)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -2458,6 +2997,28 @@
       "protein": 57,
       "carbs": 4,
       "fat": 36,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "teriyaki-chicken-rice-bowls",
+      "catalog": "hall-expansion",
+      "calories": 599,
+      "protein": 65,
+      "carbs": 65,
+      "fat": 7,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "thai-peanut-chicken-crock",
+      "catalog": "hall-expansion",
+      "calories": 668,
+      "protein": 94,
+      "carbs": 11,
+      "fat": 27,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2478,23 +3039,58 @@
     {
       "recipe": "tourtiere-for-the-crew",
       "catalog": "hall-expansion",
-      "calories": 153,
-      "protein": 13,
-      "carbs": 9,
-      "fat": 8,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (153)"
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "turkey-taco-bowls",
+      "catalog": "hall-expansion",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
       "recipe": "warm-spinach-chicken-salad",
       "catalog": "hall-expansion",
-      "calories": 487,
-      "protein": 67,
+      "calories": 507,
+      "protein": 48,
       "carbs": 7,
-      "fat": 21,
+      "fat": 32,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "weeknight-bbq-ribs-crew",
+      "catalog": "hall-expansion",
+      "calories": 856,
+      "protein": 32,
+      "carbs": 142,
+      "fat": 19,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
+      "recipe": "white-chicken-chili-crock",
+      "catalog": "hall-expansion",
+      "calories": 845,
+      "protein": 84,
+      "carbs": 32,
+      "fat": 42,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2513,32 +3109,10 @@
     {
       "recipe": "apple-cinnamon-baked-oatmeal",
       "catalog": "breakfast",
-      "calories": 287,
-      "protein": 12,
-      "carbs": 49,
-      "fat": 6,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "bacon-egg-hash-skillet",
-      "catalog": "breakfast",
-      "calories": 341,
-      "protein": 20,
-      "carbs": 30,
-      "fat": 16,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "bacon-hash-burritos",
-      "catalog": "breakfast",
-      "calories": 561,
-      "protein": 26,
-      "carbs": 52,
-      "fat": 28,
+      "calories": 267,
+      "protein": 10,
+      "carbs": 44,
+      "fat": 7,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2555,6 +3129,30 @@
       "issues": [
         "Per-serving estimate withheld — UI shows coming soon"
       ]
+    },
+    {
+      "recipe": "bagel-sandwich-line",
+      "catalog": "breakfast",
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "baked-oatmeal-mixed-berries",
+      "catalog": "breakfast",
+      "calories": 438,
+      "protein": 16,
+      "carbs": 77,
+      "fat": 11,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
     },
     {
       "recipe": "bbq-breakfast-hash",
@@ -2581,10 +3179,10 @@
     {
       "recipe": "big-pot-savory-oats",
       "catalog": "breakfast",
-      "calories": 504,
+      "calories": 306,
       "protein": 14,
-      "carbs": 41,
-      "fat": 32,
+      "carbs": 35,
+      "fat": 12,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2592,14 +3190,14 @@
     {
       "recipe": "biscuit-french-toast-sliders",
       "catalog": "breakfast",
-      "calories": 227,
-      "protein": 5,
-      "carbs": 35,
-      "fat": 8,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (227)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -2627,13 +3225,15 @@
     {
       "recipe": "breakfast-fried-rice-crew",
       "catalog": "breakfast",
-      "calories": 901,
-      "protein": 38,
-      "carbs": 113,
-      "fat": 31,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "breakfast-nachos-supreme",
@@ -2682,13 +3282,15 @@
     {
       "recipe": "breakfast-sliders",
       "catalog": "breakfast",
-      "calories": 1100,
-      "protein": 54,
-      "carbs": 34,
-      "fat": 84,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "breakfast-stromboli-roll",
@@ -2726,13 +3328,15 @@
     {
       "recipe": "chicken-and-waffles-crew",
       "catalog": "breakfast",
-      "calories": 1046,
-      "protein": 80,
-      "carbs": 77,
-      "fat": 44,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "chilaquiles-verde-bake",
@@ -2741,17 +3345,6 @@
       "protein": 13,
       "carbs": 40,
       "fat": 11,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "chorizo-breakfast-burritos",
-      "catalog": "breakfast",
-      "calories": 582,
-      "protein": 25,
-      "carbs": 74,
-      "fat": 20,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -2792,13 +3385,15 @@
     {
       "recipe": "country-fried-steak-eggs",
       "catalog": "breakfast",
-      "calories": 940,
-      "protein": 63,
-      "carbs": 78,
-      "fat": 40,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "cowboy-breakfast-skillet",
@@ -2814,14 +3409,14 @@
     {
       "recipe": "crew-french-toast-bake",
       "catalog": "breakfast",
-      "calories": 211,
-      "protein": 13,
-      "carbs": 17,
-      "fat": 11,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (211)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -2926,34 +3521,23 @@
     {
       "recipe": "hall-sausage-biscuits-gravy",
       "catalog": "breakfast",
-      "calories": 208,
-      "protein": 4,
-      "carbs": 8,
-      "fat": 18,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (208)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
-      "recipe": "ham-cheddar-egg-bake",
+      "recipe": "hash-brown-breakfast-casserole",
       "catalog": "breakfast",
-      "calories": 304,
-      "protein": 25,
-      "carbs": 6,
-      "fat": 20,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "ham-pepper-skillet",
-      "catalog": "breakfast",
-      "calories": 341,
-      "protein": 20,
-      "carbs": 30,
-      "fat": 16,
+      "calories": 601,
+      "protein": 21,
+      "carbs": 12,
+      "fat": 53,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3005,28 +3589,39 @@
     {
       "recipe": "lumberjack-breakfast-platter",
       "catalog": "breakfast",
-      "calories": 1100,
-      "protein": 72,
-      "carbs": 140,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Macro calories (1658) diverge from label (1100)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
       "recipe": "maple-sausage-pinwheels",
       "catalog": "breakfast",
-      "calories": 236,
-      "protein": 3,
-      "carbs": 46,
-      "fat": 6,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (236)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
+    },
+    {
+      "recipe": "menemen-for-the-crew",
+      "catalog": "breakfast",
+      "calories": 273,
+      "protein": 15,
+      "carbs": 10,
+      "fat": 20,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
     },
     {
       "recipe": "migas-for-the-crew",
@@ -3042,26 +3637,39 @@
     {
       "recipe": "monte-cristo-sandwiches",
       "catalog": "breakfast",
-      "calories": 937,
-      "protein": 38,
-      "carbs": 36,
-      "fat": 72,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "overnight-french-toast-bake",
       "catalog": "breakfast",
-      "calories": 131,
-      "protein": 8,
-      "carbs": 12,
-      "fat": 6,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (131)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
+    },
+    {
+      "recipe": "overnight-oat-bar-crew",
+      "catalog": "breakfast",
+      "calories": 331,
+      "protein": 14,
+      "carbs": 46,
+      "fat": 11,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
     },
     {
       "recipe": "overnight-sausage-strata",
@@ -3141,6 +3749,17 @@
       "issues": []
     },
     {
+      "recipe": "shakshuka-for-the-hall",
+      "catalog": "breakfast",
+      "calories": 432,
+      "protein": 26,
+      "carbs": 52,
+      "fat": 16,
+      "servings": 8,
+      "status": "ok",
+      "issues": []
+    },
+    {
       "recipe": "sheet-pan-breakfast-hash",
       "catalog": "breakfast",
       "calories": 446,
@@ -3154,10 +3773,23 @@
     {
       "recipe": "sheet-pan-breakfast-sandwiches",
       "catalog": "breakfast",
-      "calories": 985,
-      "protein": 45,
-      "carbs": 8,
-      "fat": 86,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
+      "servings": 8,
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
+    },
+    {
+      "recipe": "sheet-pan-eggs-sausage-crew",
+      "catalog": "breakfast",
+      "calories": 470,
+      "protein": 20,
+      "carbs": 4,
+      "fat": 42,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3207,17 +3839,6 @@
       "issues": []
     },
     {
-      "recipe": "steakhouse-hash-skillet",
-      "catalog": "breakfast",
-      "calories": 714,
-      "protein": 50,
-      "carbs": 49,
-      "fat": 36,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
       "recipe": "tater-tot-breakfast-casserole",
       "catalog": "breakfast",
       "calories": 256,
@@ -3235,17 +3856,6 @@
       "protein": 25,
       "carbs": 74,
       "fat": 20,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "turkey-sausage-egg-bake",
-      "catalog": "breakfast",
-      "calories": 265,
-      "protein": 22,
-      "carbs": 6,
-      "fat": 18,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3372,37 +3982,17 @@
       "issues": []
     },
     {
-      "recipe": "alabama-white-sauce-pulled-pork",
-      "catalog": "bbq",
-      "calories": 944,
-      "protein": 68,
-      "carbs": 37,
-      "fat": 56,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
       "recipe": "andouille-po-boy-rolls-crew",
       "catalog": "bbq",
-      "calories": 951,
-      "protein": 31,
-      "carbs": 6,
-      "fat": 89,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "bbq-bacon-cheddar-burgers",
-      "catalog": "bbq",
-      "calories": 1400,
-      "protein": 108,
-      "carbs": 58,
-      "fat": 90,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "brisket-style-beef-sandwiches-au-jus",
@@ -3429,56 +4019,49 @@
     {
       "recipe": "caprese-steak-skewers-crew",
       "catalog": "bbq",
-      "calories": 1042,
-      "protein": 80,
-      "carbs": 4,
-      "fat": 77,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "carolina-vinegar-pulled-pork",
-      "catalog": "bbq",
-      "calories": 780,
-      "protein": 68,
-      "carbs": 43,
-      "fat": 36,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "cast-iron-steak-fajita-sizzlers",
       "catalog": "bbq",
-      "calories": 1020,
-      "protein": 74,
-      "carbs": 57,
-      "fat": 54,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "charred-broccolini-lemon-tray",
       "catalog": "bbq",
-      "calories": 125,
-      "protein": 4,
-      "carbs": 13,
-      "fat": 8,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (125)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
       "recipe": "chili-lime-grilled-tilapia",
       "catalog": "bbq",
-      "calories": 580,
-      "protein": 53,
-      "carbs": 15,
-      "fat": 34,
+      "calories": 568,
+      "protein": 54,
+      "carbs": 22,
+      "fat": 28,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3510,24 +4093,15 @@
     {
       "recipe": "firehall-burnt-ends-platter",
       "catalog": "bbq",
-      "calories": 946,
-      "protein": 75,
-      "carbs": 50,
-      "fat": 52,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "firehall-double-smash-burgers-bbq",
-      "catalog": "bbq",
-      "calories": 1400,
-      "protein": 107,
-      "carbs": 39,
-      "fat": 90,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "firehall-hibachi-mixed-grill-crew",
@@ -3543,14 +4117,14 @@
     {
       "recipe": "firehall-street-elote-cups",
       "catalog": "bbq",
-      "calories": 185,
-      "protein": 4,
-      "carbs": 26,
-      "fat": 10,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (185)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -3565,17 +4139,6 @@
       "issues": [
         "Per-serving estimate withheld — UI shows coming soon"
       ]
-    },
-    {
-      "recipe": "garlic-butter-shrimp-skewers",
-      "catalog": "bbq",
-      "calories": 586,
-      "protein": 50,
-      "carbs": 0,
-      "fat": 40,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
     },
     {
       "recipe": "gochujang-beef-skewers-crew",
@@ -3606,21 +4169,23 @@
     {
       "recipe": "grilled-chicken-pesto-panini-crew",
       "catalog": "bbq",
-      "calories": 935,
-      "protein": 92,
-      "carbs": 1,
-      "fat": 61,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "grilled-cod-lemon-packets",
       "catalog": "bbq",
-      "calories": 575,
+      "calories": 602,
       "protein": 52,
-      "carbs": 0,
-      "fat": 38,
+      "carbs": 1,
+      "fat": 41,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3641,13 +4206,15 @@
     {
       "recipe": "grilled-reuben-sandwiches-crew",
       "catalog": "bbq",
-      "calories": 905,
-      "protein": 48,
-      "carbs": 33,
-      "fat": 64,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "hickory-smoked-chicken-breast",
@@ -3663,10 +4230,10 @@
     {
       "recipe": "honey-chipotle-chicken-thighs",
       "catalog": "bbq",
-      "calories": 644,
-      "protein": 76,
+      "calories": 672,
+      "protein": 50,
       "carbs": 47,
-      "fat": 16,
+      "fat": 30,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3674,10 +4241,10 @@
     {
       "recipe": "honey-sriracha-shrimp-skewers",
       "catalog": "bbq",
-      "calories": 519,
+      "calories": 544,
       "protein": 50,
-      "carbs": 10,
-      "fat": 29,
+      "carbs": 13,
+      "fat": 31,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3700,17 +4267,6 @@
       "protein": 13,
       "carbs": 5,
       "fat": 29,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "kansas-city-pulled-pork-sandwiches",
-      "catalog": "bbq",
-      "calories": 788,
-      "protein": 69,
-      "carbs": 42,
-      "fat": 36,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3740,21 +4296,10 @@
     {
       "recipe": "maple-bourbon-grilled-trout",
       "catalog": "bbq",
-      "calories": 423,
+      "calories": 519,
       "protein": 38,
-      "carbs": 6,
-      "fat": 26,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "memphis-dry-rub-pulled-pork",
-      "catalog": "bbq",
-      "calories": 890,
-      "protein": 68,
-      "carbs": 52,
-      "fat": 44,
+      "carbs": 18,
+      "fat": 32,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3775,35 +4320,15 @@
     {
       "recipe": "mongolian-beef-flat-top-crew",
       "catalog": "bbq",
-      "calories": 1400,
-      "protein": 79,
-      "carbs": 161,
-      "fat": 53,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "overnight-smoked-brisket-hold",
-      "catalog": "bbq",
-      "calories": 580,
-      "protein": 60,
-      "carbs": 1,
-      "fat": 39,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
-    },
-    {
-      "recipe": "pepper-smoked-brisket-flat",
-      "catalog": "bbq",
-      "calories": 752,
-      "protein": 66,
-      "carbs": 33,
-      "fat": 41,
-      "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "pollo-asado-citrus-platter",
@@ -3832,24 +4357,28 @@
     {
       "recipe": "portuguese-linguica-grill-platter",
       "catalog": "bbq",
-      "calories": 905,
-      "protein": 34,
-      "carbs": 10,
-      "fat": 81,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "pressed-cuban-sandwiches-crew",
       "catalog": "bbq",
-      "calories": 1400,
-      "protein": 120,
-      "carbs": 13,
-      "fat": 90,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "reverse-seared-ribeye-crew",
@@ -3865,13 +4394,15 @@
     {
       "recipe": "santa-maria-tri-tip-roast",
       "catalog": "bbq",
-      "calories": 952,
-      "protein": 76,
-      "carbs": 33,
-      "fat": 55,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "ok",
-      "issues": []
+      "status": "hidden",
+      "issues": [
+        "Per-serving estimate withheld — UI shows coming soon"
+      ]
     },
     {
       "recipe": "smoked-baked-beans-crew",
@@ -3887,14 +4418,14 @@
     {
       "recipe": "smoked-bbq-chicken-wings-tray",
       "catalog": "bbq",
-      "calories": 118,
-      "protein": 1,
-      "carbs": 18,
-      "fat": 5,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (118)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -3911,10 +4442,10 @@
     {
       "recipe": "smoked-mac-and-cheese-crew",
       "catalog": "bbq",
-      "calories": 709,
-      "protein": 25,
-      "carbs": 60,
-      "fat": 41,
+      "calories": 728,
+      "protein": 26,
+      "carbs": 84,
+      "fat": 32,
       "servings": 8,
       "status": "ok",
       "issues": []
@@ -3922,14 +4453,14 @@
     {
       "recipe": "smoked-picanha-steak-platter",
       "catalog": "bbq",
-      "calories": 138,
-      "protein": 2,
-      "carbs": 10,
-      "fat": 10,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (138)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -3957,14 +4488,14 @@
     {
       "recipe": "tandoori-lamb-chop-platter",
       "catalog": "bbq",
-      "calories": 80,
-      "protein": 5,
-      "carbs": 6,
-      "fat": 3,
+      "calories": 0,
+      "protein": 0,
+      "carbs": 0,
+      "fat": 0,
       "servings": 8,
-      "status": "suspicious",
+      "status": "hidden",
       "issues": [
-        "Calories under 250 for full meal (80)"
+        "Per-serving estimate withheld — UI shows coming soon"
       ]
     },
     {
@@ -3979,28 +4510,15 @@
       "issues": []
     },
     {
-      "recipe": "texas-smoked-pulled-pork-shoulder",
+      "recipe": "yakiniku-grill-platter-crew",
       "catalog": "bbq",
-      "calories": 683,
-      "protein": 66,
-      "carbs": 25,
-      "fat": 33,
+      "calories": 846,
+      "protein": 70,
+      "carbs": 36,
+      "fat": 47,
       "servings": 8,
       "status": "ok",
       "issues": []
-    },
-    {
-      "recipe": "yakiniku-grill-platter-crew",
-      "catalog": "bbq",
-      "calories": 0,
-      "protein": 0,
-      "carbs": 0,
-      "fat": 0,
-      "servings": 8,
-      "status": "hidden",
-      "issues": [
-        "Per-serving estimate withheld — UI shows coming soon"
-      ]
     }
   ],
   "title_ingredient_issues": [],

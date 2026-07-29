@@ -9,6 +9,7 @@ import {
   getHallPhotoUrl,
 } from "@shared/hall-identity/display";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 interface HallIdentityHeaderProps {
   hallName: string;
@@ -77,7 +78,7 @@ export function HallIdentityHeader({
   return (
     <header
       className={cn(
-        "overflow-hidden rounded-2xl border border-primary/20 bg-card shadow-sm",
+        "overflow-hidden rounded-2xl sm:rounded-3xl ring-1 ring-white/[0.08] bg-card",
         className,
       )}
       data-testid="hall-dashboard-header"
@@ -86,7 +87,7 @@ export function HallIdentityHeader({
         {photoSrc ? (
           <img
             src={photoSrc}
-            alt=""
+            alt={`${hallName} hall photo`}
             className="h-full w-full object-cover"
             loading="eager"
             decoding="async"
@@ -96,7 +97,7 @@ export function HallIdentityHeader({
             <Building2 className="h-10 w-10 opacity-40" aria-hidden />
             <p className="text-xs font-medium">{HALL_IDENTITY.noHallPhoto}</p>
             {canManageSettings && settingsHref ? (
-              <Link href={settingsHref} className="text-xs text-primary hover:underline">
+              <Link href={settingsHref} className={cn(app.label, "text-primary hover:underline")}>
                 {HALL_IDENTITY.addIdentityInSettings}
               </Link>
             ) : null}
@@ -150,7 +151,7 @@ export function HallIdentityHeader({
               {HALL_IDENTITY.cityNotSet}
             </EmptyIdentityValue>
           )}
-          <h1 className="font-heading text-2xl sm:text-[1.75rem] tracking-wide text-foreground leading-tight pt-1">
+          <h1 className={cn(app.titleSection, "pt-1")}>
             {hallName}
           </h1>
         </div>
@@ -161,7 +162,11 @@ export function HallIdentityHeader({
               {HALL_IDENTITY.members}
             </dt>
             <dd className="font-semibold mt-0.5">
-              {identityLoading ? "…" : formatMemberCountLabel(memberCount)}
+              {identityLoading ? (
+                <span className="inline-block h-4 w-12 rounded skeleton-shimmer align-middle" aria-hidden />
+              ) : (
+                formatMemberCountLabel(memberCount)
+              )}
             </dd>
           </div>
           <div className="rounded-xl border border-border/40 bg-muted/20 px-3 py-2.5">
@@ -170,7 +175,7 @@ export function HallIdentityHeader({
             </dt>
             <dd className="font-semibold mt-0.5 leading-snug">
               {identityLoading ? (
-                "…"
+                <span className="inline-block h-4 w-20 rounded skeleton-shimmer align-middle" aria-hidden />
               ) : canteenManagerName ? (
                 canteenManagerName
               ) : (
@@ -179,7 +184,7 @@ export function HallIdentityHeader({
                     {HALL_IDENTITY.unassignedManager}
                   </span>
                   {canManageSettings && settingsHref ? (
-                    <Link href={settingsHref} className="block text-xs text-primary font-medium not-italic hover:underline">
+                    <Link href={settingsHref} className={cn(app.label, "block text-primary not-italic hover:underline")}>
                       {HALL_IDENTITY.assignManagerInSettings}
                     </Link>
                   ) : null}

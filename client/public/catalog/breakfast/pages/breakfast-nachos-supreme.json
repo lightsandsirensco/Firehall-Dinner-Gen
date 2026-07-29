@@ -36,25 +36,25 @@
     },
     {
       "name": "bacon",
-      "quantity": "3/4",
+      "quantity": "3/4 lb",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "and 2 cups shredded Monterey Jack",
       "group": "Cheese"
     },
     {
       "name": "nacho cheese sauce",
-      "quantity": "3/8",
+      "quantity": "1 1/4 cups",
       "notes": "warmed",
       "group": "Cheese"
     },
     {
       "name": "pico de gallo",
-      "quantity": "3/8",
+      "quantity": "1 1/4 cups",
       "notes": "drained well",
       "group": "Toppings"
     },
@@ -66,7 +66,7 @@
     },
     {
       "name": "sour cream",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "crema, and sliced jalapeños",
       "group": "Finish"
     }
@@ -106,12 +106,13 @@
     }
   ],
   "nutrition": {
-    "calories": 553,
+    "calories": 611,
     "protein": 36,
-    "carbs": 7,
-    "fat": 42,
-    "label": "per serving (hall portion)",
+    "carbs": 14,
+    "fat": 46,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -146,5 +147,58 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Breakfast Nachos Supreme | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "nacho cheese sauce",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

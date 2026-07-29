@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-17T19:16:30.123Z",
+  "generatedAt": "2026-07-27T18:19:25.541Z",
   "threshold": 72,
   "totals": {
-    "recipes": 697,
-    "hallCatalog": 235,
-    "exploreCurated": 462,
-    "failed": 74,
+    "recipes": 747,
+    "hallCatalog": 258,
+    "exploreCurated": 489,
+    "failed": 83,
     "buildBlockers": 0,
-    "duplicateHeroPaths": 224
+    "duplicateHeroPaths": 247
   },
   "duplicateHeroPaths": [
     {
@@ -129,13 +129,6 @@
       "slugs": [
         "bbq-pulled-pork-bowls",
         "bbq-pulled-pork-bowls"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/big-chili.jpg",
-      "slugs": [
-        "big-chili",
-        "big-chili"
       ]
     },
     {
@@ -267,6 +260,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+      "slugs": [
+        "burnt-ends-chili-crew",
+        "burnt-ends-chili-crew"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
       "slugs": [
         "burrito-bowl-bar-night",
@@ -306,6 +306,13 @@
       "slugs": [
         "caprese-chicken-bake",
         "caprese-chicken-bake"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/pulled-pork.jpg",
+      "slugs": [
+        "pulled-pork",
+        "pulled-pork"
       ]
     },
     {
@@ -477,6 +484,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "slugs": [
+        "chicken-thigh-stretch-dinner",
+        "chicken-thigh-stretch-dinner"
+      ]
+    },
+    {
       "hero": "/images/golden-100/chicken-tikka-masala.jpg",
       "slugs": [
         "chicken-tikka-masala",
@@ -533,6 +547,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+      "slugs": [
+        "costco-rotisserie-remix",
+        "costco-rotisserie-remix"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/cottage-pie-for-the-crew.jpg",
       "slugs": [
         "cottage-pie-for-the-crew",
@@ -561,6 +582,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "slugs": [
+        "dirty-rice-crew-skillet",
+        "dirty-rice-crew-skillet"
+      ]
+    },
+    {
       "hero": "/images/golden-100/smash-burgers.jpg",
       "slugs": [
         "smash-burgers",
@@ -572,6 +600,13 @@
       "slugs": [
         "dutch-oven-pot-roast",
         "dutch-oven-pot-roast"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "slugs": [
+        "egg-roll-in-a-bowl-crew",
+        "egg-roll-in-a-bowl-crew"
       ]
     },
     {
@@ -596,10 +631,24 @@
       ]
     },
     {
+      "hero": "/images/golden-100/big-chili.jpg",
+      "slugs": [
+        "big-chili",
+        "big-chili"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/firehall-donair-platter.jpg",
       "slugs": [
         "firehall-donair-platter",
         "firehall-donair-platter"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+      "slugs": [
+        "firehall-gyro-bowls",
+        "firehall-gyro-bowls"
       ]
     },
     {
@@ -669,17 +718,17 @@
       ]
     },
     {
-      "hero": "/images/golden-100/greek-chicken-bowls.jpg",
-      "slugs": [
-        "greek-chicken-bowls",
-        "greek-chicken-bowls"
-      ]
-    },
-    {
       "hero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
       "slugs": [
         "firehall-greek-chicken-bowls",
         "firehall-greek-chicken-bowls"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/greek-chicken-bowls.jpg",
+      "slugs": [
+        "greek-chicken-bowls",
+        "greek-chicken-bowls"
       ]
     },
     {
@@ -694,6 +743,13 @@
       "slugs": [
         "green-chile-chicken-stew",
         "green-chile-chicken-stew"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "slugs": [
+        "grilled-flank-fajita-bar",
+        "grilled-flank-fajita-bar"
       ]
     },
     {
@@ -795,6 +851,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+      "slugs": [
+        "italian-beef-slow-cooker",
+        "italian-beef-slow-cooker"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/jalapeno-popper-dip.jpg",
       "slugs": [
         "jalapeno-popper-dip",
@@ -837,6 +900,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "slugs": [
+        "korean-turkey-rice-bowls",
+        "korean-turkey-rice-bowls"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
       "slugs": [
         "lamb-kofta-skewer-platter",
@@ -848,6 +918,13 @@
       "slugs": [
         "lebanese-chicken-shish-platter",
         "lebanese-chicken-shish-platter"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "slugs": [
+        "leftover-roast-beef-bowls",
+        "leftover-roast-beef-bowls"
       ]
     },
     {
@@ -906,6 +983,13 @@
       "slugs": [
         "lentil-mushroom-bolognese",
         "lentil-mushroom-bolognese"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "slugs": [
+        "loaded-baked-potato-soup-crock",
+        "loaded-baked-potato-soup-crock"
       ]
     },
     {
@@ -1028,6 +1112,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "slugs": [
+        "mississippi-pot-roast-crew",
+        "mississippi-pot-roast-crew"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
       "slugs": [
         "molasses-bourbon-pork-ribs",
@@ -1112,6 +1203,20 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "slugs": [
+        "pasta-e-fagioli-hall",
+        "pasta-e-fagioli-hall"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "slugs": [
+        "peanut-chicken-rice-bowls",
+        "peanut-chicken-rice-bowls"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
       "slugs": [
         "pellet-smoked-chicken-quarters",
@@ -1168,6 +1273,13 @@
       ]
     },
     {
+      "hero": "/images/golden-100/steak-sandwiches.jpg",
+      "slugs": [
+        "steak-sandwiches",
+        "steak-sandwiches"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
       "slugs": [
         "pork-belly-burnt-ends",
@@ -1203,13 +1315,6 @@
       ]
     },
     {
-      "hero": "/images/golden-100/pulled-pork.jpg",
-      "slugs": [
-        "pulled-pork",
-        "pulled-pork"
-      ]
-    },
-    {
       "hero": "/images/golden-100/fast-philly-skillet.jpg",
       "slugs": [
         "fast-philly-skillet",
@@ -1235,6 +1340,20 @@
       "slugs": [
         "rigatoni-meat-sauce-batch",
         "rigatoni-meat-sauce-batch"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "slugs": [
+        "salmon-rice-bowls-crew",
+        "salmon-rice-bowls-crew"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "slugs": [
+        "salsa-verde-chicken-crock",
+        "salsa-verde-chicken-crock"
       ]
     },
     {
@@ -1270,6 +1389,13 @@
       "slugs": [
         "sausage-egg-bake",
         "sausage-egg-bake"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "slugs": [
+        "sausage-gnocchi-skillet",
+        "sausage-gnocchi-skillet"
       ]
     },
     {
@@ -1371,6 +1497,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/smoker-nachos-crew.jpg",
+      "slugs": [
+        "smoker-nachos-crew",
+        "smoker-nachos-crew"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/soft-pretzel-dogs.jpg",
       "slugs": [
         "soft-pretzel-dogs",
@@ -1385,6 +1518,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "slugs": [
+        "spanish-rice-chicken-one-pot",
+        "spanish-rice-chicken-one-pot"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
       "slugs": [
         "spatchcock-lemon-roast-chicken",
@@ -1396,13 +1536,6 @@
       "slugs": [
         "station-cobb-salad",
         "station-cobb-salad"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/steak-sandwiches.jpg",
-      "slugs": [
-        "steak-sandwiches",
-        "steak-sandwiches"
       ]
     },
     {
@@ -1469,6 +1602,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "slugs": [
+        "thai-peanut-chicken-crock",
+        "thai-peanut-chicken-crock"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
       "slugs": [
         "tonkotsu-ramen-crew",
@@ -1518,6 +1658,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "slugs": [
+        "turkey-taco-bowls",
+        "turkey-taco-bowls"
+      ]
+    },
+    {
       "hero": "/images/golden-100/turkey-taco-skillet.jpg",
       "slugs": [
         "turkey-taco-skillet",
@@ -1546,6 +1693,13 @@
       ]
     },
     {
+      "hero": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "slugs": [
+        "weeknight-bbq-ribs-crew",
+        "weeknight-bbq-ribs-crew"
+      ]
+    },
+    {
       "hero": "/images/golden-100/white-bean-kale-soup.jpg",
       "slugs": [
         "white-bean-kale-soup",
@@ -1557,6 +1711,13 @@
       "slugs": [
         "white-bean-chicken-chili",
         "white-bean-chicken-chili"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "slugs": [
+        "white-chicken-chili-crock",
+        "white-chicken-chili-crock"
       ]
     },
     {
@@ -1596,27 +1757,6 @@
     }
   ],
   "failedRecipes": [
-    {
-      "source": "hall_catalog",
-      "slug": "bbq-pulled-pork-bowls",
-      "title": "BBQ Pulled Pork Bowls",
-      "protein": "pork",
-      "mealFormat": "bowl",
-      "cuisine": "american",
-      "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
-      "mobileImage": "/images/mobile/hall-expansion/bbq-pulled-pork-bowls.jpg",
-      "mismatchConfidence": 98,
-      "pass": false,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"pulled-pork\" forbidden for \"BBQ Pulled Pork Bowls\" — queue AI regeneration with title-locked sides"
-        }
-      ]
-    },
     {
       "source": "hall_catalog",
       "slug": "bun-bo-hue-noodle-soup",
@@ -1823,6 +1963,27 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "protein": "sausage",
+      "mealFormat": "skillet",
+      "cuisine": "Italian-American",
+      "heroImage": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "mismatchConfidence": 90,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "protein_mismatch",
+          "severity": "critical",
+          "message": "image protein cues (pork) do not match sausage"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "smoked-corned-beef",
       "title": "Smoked Corned Beef Brisket",
       "protein": "beef",
@@ -1839,6 +2000,74 @@
           "code": "format_mismatch",
           "severity": "critical",
           "message": "image depicts grill but meal is grill (Smoked Corned Beef Brisket)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "Thai-inspired",
+      "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "protein": "turkey",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/turkey-taco-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/turkey-taco-bowls.jpg",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Turkey Taco Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts taco but meal requires bowl (Turkey Taco Bowls)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "Southwestern",
+      "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/white-chicken-chili-crock.jpg",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
         }
       ]
     },
@@ -1906,37 +2135,6 @@
           "code": "protein_mismatch",
           "severity": "critical",
           "message": "image protein cues (pork) do not match beef"
-        }
-      ]
-    },
-    {
-      "source": "explore_curated",
-      "slug": "bbq-pulled-pork-bowls",
-      "title": "BBQ Pulled Pork Bowls",
-      "protein": "pork",
-      "mealFormat": "bowl",
-      "cuisine": "american",
-      "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
-      "mobileImage": "",
-      "mismatchConfidence": 98,
-      "pass": false,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
-        {
-          "code": "unapproved_image",
-          "severity": "warning",
-          "message": "image not marked approved — treat as manual review"
-        },
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"pulled-pork\" forbidden for \"BBQ Pulled Pork Bowls\" — queue AI regeneration with title-locked sides"
         }
       ]
     },
@@ -2019,6 +2217,42 @@
           "code": "protein_mismatch",
           "severity": "critical",
           "message": "image protein cues (pork) do not match mixed"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
+      "thumbImage": "/images/thumbs/breakfast/bagel-sandwich-line.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Bagel Sandwich Line)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is sandwich (Bagel Sandwich Line)"
         }
       ]
     },
@@ -3181,6 +3415,42 @@
     },
     {
       "source": "explore_curated",
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "protein": "mixed",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/overnight-oat-bar-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Overnight Oat Bar for the Crew)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Overnight Oat Bar for the Crew)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "overnight-sausage-strata",
       "title": "Overnight Sausage Strata",
       "protein": "other",
@@ -3397,6 +3667,37 @@
     },
     {
       "source": "explore_curated",
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "protein": "other",
+      "mealFormat": "skillet",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 90,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "protein_mismatch",
+          "severity": "critical",
+          "message": "image protein cues (pork) do not match other"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "scrapple-and-eggs-skillet",
       "title": "Scrapple and Eggs Skillet",
       "protein": "other",
@@ -3495,6 +3796,47 @@
           "code": "format_mismatch",
           "severity": "critical",
           "message": "image depicts breakfast but meal is plated_main (Sheet Pan Full English)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 90,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Sheet-Pan Eggs & Sausage)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is breakfast (Sheet-Pan Eggs & Sausage)"
+        },
+        {
+          "code": "protein_mismatch",
+          "severity": "critical",
+          "message": "image protein cues (pork) do not match other"
         }
       ]
     },
@@ -3779,6 +4121,37 @@
     },
     {
       "source": "explore_curated",
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "turkey-sausage-egg-bake",
       "title": "Turkey Sausage Egg Bake",
       "protein": "other",
@@ -3815,6 +4188,42 @@
           "code": "protein_mismatch",
           "severity": "critical",
           "message": "image protein cues (pork, turkey) do not match other"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "protein": "turkey",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/turkey-taco-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Turkey Taco Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts taco but meal requires bowl (Turkey Taco Bowls)"
         }
       ]
     },
@@ -3872,6 +4281,37 @@
           "code": "plating_mismatch",
           "severity": "critical",
           "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
         }
       ]
     }
@@ -4143,27 +4583,6 @@
       "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
       "mobileImage": "/images/mobile/hall-expansion/bbq-pulled-pork-bowls.jpg",
-      "mismatchConfidence": 98,
-      "pass": false,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"pulled-pork\" forbidden for \"BBQ Pulled Pork Bowls\" — queue AI regeneration with title-locked sides"
-        }
-      ]
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "big-chili",
-      "title": "Beef and Bean Chili",
-      "protein": "beef",
-      "mealFormat": "soup_chili",
-      "cuisine": "american",
-      "heroImage": "/images/golden-100/big-chili.jpg",
-      "thumbImage": "/images/thumbs/big-chili.jpg",
-      "mobileImage": "/images/mobile/big-chili.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4205,7 +4624,7 @@
       "title": "Beef Dip Sandwiches",
       "protein": "beef",
       "mealFormat": "sandwich",
-      "cuisine": "american",
+      "cuisine": "canadian",
       "heroImage": "/images/golden-100/beef-dip.jpg",
       "thumbImage": "/images/thumbs/beef-dip.jpg",
       "mobileImage": "/images/mobile/beef-dip.jpg",
@@ -4447,6 +4866,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
+      "protein": "beef",
+      "mealFormat": "smoker",
+      "cuisine": "BBQ",
+      "heroImage": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/burnt-ends-chili-crew.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/burnt-ends-chili-crew.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "burrito-bowl-bar-night",
       "title": "Burrito Bowl Bar Night",
       "protein": "pork",
@@ -4542,6 +4976,21 @@
       "heroImage": "/images/golden-100/caprese-chicken-bake.jpg",
       "thumbImage": "/images/thumbs/caprese-chicken-bake.jpg",
       "mobileImage": "/images/mobile/caprese-chicken-bake.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "pulled-pork",
+      "title": "Carolina-Style Pulled Pork Sandwiches",
+      "protein": "pork",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/pulled-pork.jpg",
+      "thumbImage": "/images/thumbs/pulled-pork.jpg",
+      "mobileImage": "/images/mobile/pulled-pork.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4923,6 +5372,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "chicken-thigh-stretch-dinner",
+      "title": "Chicken Thigh Stretch Dinner",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "American",
+      "heroImage": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
       "title": "Chicken Thighs with Sweet Potato and Spinach",
       "protein": "chicken",
@@ -4997,6 +5461,21 @@
       "heroImage": "/images/golden-100/chili-mac.jpg",
       "thumbImage": "/images/thumbs/chili-mac.jpg",
       "mobileImage": "/images/mobile/chili-mac.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "protein": "beef",
+      "mealFormat": "tacos",
+      "cuisine": "mexican",
+      "heroImage": "/images/golden-100/steak-tacos.jpg",
+      "thumbImage": "/images/thumbs/steak-tacos.jpg",
+      "mobileImage": "/images/mobile/steak-tacos.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5079,6 +5558,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "protein": "chicken",
+      "mealFormat": "casserole",
+      "cuisine": "American",
+      "heroImage": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/costco-rotisserie-remix.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/costco-rotisserie-remix.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
       "protein": "beef",
@@ -5139,6 +5633,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "protein": "sausage and beef",
+      "mealFormat": "skillet",
+      "cuisine": "Cajun",
+      "heroImage": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "smash-burgers",
       "title": "Double Smash Burgers",
       "protein": "beef",
@@ -5162,6 +5671,21 @@
       "heroImage": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/dutch-oven-pot-roast.jpg",
       "mobileImage": "/images/mobile/hall-expansion/dutch-oven-pot-roast.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "protein": "pork",
+      "mealFormat": "skillet",
+      "cuisine": "Chinese-American",
+      "heroImage": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5214,6 +5738,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "big-chili",
+      "title": "Firehall Chili",
+      "protein": "beef",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/big-chili.jpg",
+      "thumbImage": "/images/thumbs/big-chili.jpg",
+      "mobileImage": "/images/mobile/big-chili.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "firehall-donair-platter",
       "title": "Firehall Donair Platter",
       "protein": "beef",
@@ -5222,6 +5761,21 @@
       "heroImage": "/images/hall-expansion/firehall-donair-platter.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/firehall-donair-platter.jpg",
       "mobileImage": "/images/mobile/hall-expansion/firehall-donair-platter.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "firehall-gyro-bowls",
+      "title": "Firehall Gyro Bowls",
+      "protein": "beef",
+      "mealFormat": "bowls",
+      "cuisine": "Greek",
+      "heroImage": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-gyro-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehall-gyro-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5405,6 +5959,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowl Bar for the Hall",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "greek-chicken-bowls",
       "title": "Greek Chicken Bowls",
       "protein": "chicken",
@@ -5413,21 +5982,6 @@
       "heroImage": "/images/golden-100/greek-chicken-bowls.jpg",
       "thumbImage": "/images/thumbs/greek-chicken-bowls.jpg",
       "mobileImage": "/images/mobile/greek-chicken-bowls.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "firehall-greek-chicken-bowls",
-      "title": "Greek Chicken Bowls",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cuisine": "greek",
-      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "mobileImage": "/images/mobile/hall-expansion/firehall-greek-chicken-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5458,6 +6012,21 @@
       "heroImage": "/images/hall-expansion/green-chile-chicken-stew.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/green-chile-chicken-stew.jpg",
       "mobileImage": "/images/mobile/hall-expansion/green-chile-chicken-stew.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cuisine": "Mexican-inspired",
+      "heroImage": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/grilled-flank-fajita-bar.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5681,6 +6250,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "protein": "beef",
+      "mealFormat": "slow_cooker",
+      "cuisine": "Italian-American",
+      "heroImage": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/italian-beef-slow-cooker.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/italian-beef-slow-cooker.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "jalapeno-popper-dip",
       "title": "Jalapeño Popper Dip",
       "protein": "pork",
@@ -5771,6 +6355,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "protein": "turkey",
+      "mealFormat": "bowls",
+      "cuisine": "Korean-inspired",
+      "heroImage": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "lamb-kofta-skewer-platter",
       "title": "Lamb Kofta Skewer Platter",
       "protein": "lamb",
@@ -5794,6 +6393,21 @@
       "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/lebanese-chicken-shish-platter.jpg",
       "mobileImage": "/images/mobile/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
+      "protein": "beef",
+      "mealFormat": "bowls",
+      "cuisine": "Canadian",
+      "heroImage": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/leftover-roast-beef-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5925,6 +6539,21 @@
       "heroImage": "/images/golden-100/lentil-mushroom-bolognese.jpg",
       "thumbImage": "/images/thumbs/lentil-mushroom-bolognese.jpg",
       "mobileImage": "/images/mobile/lentil-mushroom-bolognese.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "protein": "bacon",
+      "mealFormat": "slow_cooker",
+      "cuisine": "American",
+      "heroImage": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/loaded-baked-potato-soup-crock.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -6187,6 +6816,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
+      "protein": "beef",
+      "mealFormat": "slow_cooker",
+      "cuisine": "American",
+      "heroImage": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "molasses-bourbon-pork-ribs",
       "title": "Molasses Bourbon Pork Ribs",
       "protein": "pork",
@@ -6382,6 +7026,36 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "protein": "beef",
+      "mealFormat": "one_pot",
+      "cuisine": "Italian",
+      "heroImage": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "peanut-chicken-rice-bowls",
+      "title": "Peanut Chicken Rice Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowls",
+      "cuisine": "Thai-inspired",
+      "heroImage": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "pellet-smoked-chicken-quarters",
       "title": "Pellet Smoked Chicken Quarters",
       "protein": "chicken",
@@ -6502,6 +7176,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "steak-sandwiches",
+      "title": "Philly-Style Cheesesteaks",
+      "protein": "beef",
+      "mealFormat": "sandwich",
+      "cuisine": "american",
+      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+      "thumbImage": "/images/thumbs/steak-sandwiches.jpg",
+      "mobileImage": "/images/mobile/steak-sandwiches.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "pork-belly-burnt-ends",
       "title": "Pork Belly Burnt Ends",
       "protein": "pork",
@@ -6570,21 +7259,6 @@
       "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
       "thumbImage": "/images/thumbs/cottage-cheese-protein-pasta.jpg",
       "mobileImage": "/images/mobile/cottage-cheese-protein-pasta.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches",
-      "protein": "pork",
-      "mealFormat": "sandwich",
-      "cuisine": "american",
-      "heroImage": "/images/golden-100/pulled-pork.jpg",
-      "thumbImage": "/images/thumbs/pulled-pork.jpg",
-      "mobileImage": "/images/mobile/pulled-pork.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -6667,6 +7341,36 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "protein": "salmon",
+      "mealFormat": "bowls",
+      "cuisine": "Japanese-inspired",
+      "heroImage": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "Mexican-inspired",
+      "heroImage": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "salsa-verde-crock-chicken",
       "title": "Salsa Verde Crock Chicken",
       "protein": "chicken",
@@ -6739,6 +7443,27 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "protein": "sausage",
+      "mealFormat": "skillet",
+      "cuisine": "Italian-American",
+      "heroImage": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "mismatchConfidence": 90,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "protein_mismatch",
+          "severity": "critical",
+          "message": "image protein cues (pork) do not match sausage"
+        }
+      ]
     },
     {
       "source": "hall_catalog",
@@ -6973,6 +7698,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "protein": "pork",
+      "mealFormat": "smoker",
+      "cuisine": "BBQ",
+      "heroImage": "/images/hall-expansion/smoker-nachos-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/smoker-nachos-crew.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/smoker-nachos-crew.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "soft-pretzel-dogs",
       "title": "Soft Pretzel Hot Dogs",
       "protein": "pork",
@@ -7018,6 +7758,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "Spanish-inspired",
+      "heroImage": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "spatchcock-lemon-roast-chicken",
       "title": "Spatchcock Lemon Roast Chicken",
       "protein": "chicken",
@@ -7056,36 +7811,6 @@
       "heroImage": "/images/hall-expansion/station-cobb-salad.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/station-cobb-salad.jpg",
       "mobileImage": "/images/mobile/hall-expansion/station-cobb-salad.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches",
-      "protein": "beef",
-      "mealFormat": "sandwich",
-      "cuisine": "american",
-      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
-      "thumbImage": "/images/thumbs/steak-sandwiches.jpg",
-      "mobileImage": "/images/mobile/steak-sandwiches.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "steak-tacos",
-      "title": "Steak Tacos",
-      "protein": "beef",
-      "mealFormat": "tacos",
-      "cuisine": "mexican",
-      "heroImage": "/images/golden-100/steak-tacos.jpg",
-      "thumbImage": "/images/thumbs/steak-tacos.jpg",
-      "mobileImage": "/images/mobile/steak-tacos.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -7228,6 +7953,27 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "Thai-inspired",
+      "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "tomato-soup-grilled-cheese-croutons",
       "title": "Tomato Soup with Grilled Cheese Croutons",
       "protein": "vegetarian",
@@ -7348,6 +8094,32 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "protein": "turkey",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/turkey-taco-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/turkey-taco-bowls.jpg",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Turkey Taco Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts taco but meal requires bowl (Turkey Taco Bowls)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "turkey-taco-skillet",
       "title": "Turkey Taco Skillet",
       "protein": "turkey",
@@ -7408,6 +8180,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "protein": "pork",
+      "mealFormat": "smoker",
+      "cuisine": "BBQ",
+      "heroImage": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "white-bean-kale-soup",
       "title": "White Bean and Kale Soup",
       "protein": "plant",
@@ -7435,6 +8222,27 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "Southwestern",
+      "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/white-chicken-chili-crock.jpg",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
+        }
+      ]
     },
     {
       "source": "hall_catalog",
@@ -7888,8 +8696,8 @@
       "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/bbq-pulled-pork-bowls.jpg",
       "mobileImage": "",
-      "mismatchConfidence": 98,
-      "pass": false,
+      "mismatchConfidence": 45,
+      "pass": true,
       "needsManualReview": true,
       "mismatches": [
         {
@@ -7901,11 +8709,6 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
-        },
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"pulled-pork\" forbidden for \"BBQ Pulled Pork Bowls\" — queue AI regeneration with title-locked sides"
         }
       ]
     },
@@ -8020,6 +8823,42 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "explore_curated",
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
+      "thumbImage": "/images/thumbs/breakfast/bagel-sandwich-line.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Bagel Sandwich Line)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is sandwich (Bagel Sandwich Line)"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -9204,6 +10043,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
+      "protein": "beef",
+      "mealFormat": "smoker",
+      "cuisine": "bbq",
+      "heroImage": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/burnt-ends-chili-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "burrito-bowl-bar-night",
       "title": "Burrito Bowl Bar Night",
       "protein": "pork",
@@ -10019,6 +10884,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "chicken-thigh-stretch-dinner",
+      "title": "Chicken Thigh Stretch Dinner",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "chicken-tikka-masala",
       "title": "Chicken Tikka Masala",
       "protein": "chicken",
@@ -10705,6 +11596,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "protein": "chicken",
+      "mealFormat": "casserole",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/costco-rotisserie-remix.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "cottage-cheese-protein-pasta",
       "title": "Cottage Cheese Protein Pasta Bake",
       "protein": "mixed",
@@ -11135,6 +12052,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "protein": "other",
+      "mealFormat": "skillet",
+      "cuisine": "cajun",
+      "heroImage": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "smash-burgers",
       "title": "Double Smash Burgers",
       "protein": "beef",
@@ -11258,6 +12201,32 @@
           "code": "plating_mismatch",
           "severity": "critical",
           "message": "plated meal but hero suggests soup or stew"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "protein": "pork",
+      "mealFormat": "skillet",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
         }
       ]
     },
@@ -11579,6 +12548,32 @@
       "cuisine": "american",
       "heroImage": "/images/smoker-catalog/firehall-double-smash-burgers-bbq.jpg",
       "thumbImage": "/images/thumbs/smoker-catalog/firehall-double-smash-burgers-bbq.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "firehall-gyro-bowls",
+      "title": "Firehall Gyro Bowls",
+      "protein": "beef",
+      "mealFormat": "bowls",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-gyro-bowls.jpg",
       "mobileImage": "",
       "mismatchConfidence": 45,
       "pass": true,
@@ -12251,6 +13246,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "protein": "beef",
+      "mealFormat": "grill",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "flank-chimichurri",
       "title": "Grilled Flank Steak with Chimichurri",
       "protein": "beef",
@@ -12794,6 +13815,32 @@
           "code": "protein_mismatch",
           "severity": "critical",
           "message": "image protein cues (pork) do not match other"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+      "thumbImage": "/images/thumbs/breakfast/hash-brown-breakfast-casserole.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
         }
       ]
     },
@@ -13408,6 +14455,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "protein": "beef",
+      "mealFormat": "slow_cooker",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/italian-beef-slow-cooker.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "italian-style-baked-chicken-thighs",
       "title": "Italian Herb Baked Chicken Thighs",
       "protein": "chicken",
@@ -13785,6 +14858,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "protein": "turkey",
+      "mealFormat": "bowls",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "lamb-kofta-skewer-platter",
       "title": "Lamb Kofta Skewer Platter",
       "protein": "lamb",
@@ -13848,6 +14947,32 @@
       "cuisine": "other",
       "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
+      "protein": "beef",
+      "mealFormat": "bowls",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/leftover-roast-beef-bowls.jpg",
       "mobileImage": "",
       "mismatchConfidence": 45,
       "pass": true,
@@ -14071,6 +15196,32 @@
           "severity": "warning",
           "message": "missing thumbnail image"
         },
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "protein": "other",
+      "mealFormat": "slow_cooker",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
         {
           "code": "missing_locked_mobile",
           "severity": "warning",
@@ -14818,6 +15969,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
+      "protein": "beef",
+      "mealFormat": "slow_cooker",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "molasses-bourbon-pork-ribs",
       "title": "Molasses Bourbon Pork Ribs",
       "protein": "pork",
@@ -15137,6 +16314,42 @@
     },
     {
       "source": "explore_curated",
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "protein": "mixed",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/overnight-oat-bar-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 88,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Overnight Oat Bar for the Crew)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is plated_main (Overnight Oat Bar for the Crew)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "overnight-sausage-strata",
       "title": "Overnight Sausage Strata",
       "protein": "other",
@@ -15268,6 +16481,58 @@
       "cuisine": "italian",
       "heroImage": "/images/hall-expansion/pasta-bar-night.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/pasta-bar-night.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "protein": "beef",
+      "mealFormat": "one_pot",
+      "cuisine": "italian",
+      "heroImage": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "peanut-chicken-rice-bowls",
+      "title": "Peanut Chicken Rice Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowls",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/peanut-chicken-rice-bowls.jpg",
       "mobileImage": "",
       "mismatchConfidence": 45,
       "pass": true,
@@ -16030,6 +17295,58 @@
     },
     {
       "source": "explore_curated",
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "protein": "seafood",
+      "mealFormat": "bowls",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "salsa-verde-crock-chicken",
       "title": "Salsa Verde Crock Chicken",
       "protein": "chicken",
@@ -16221,6 +17538,37 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "protein": "other",
+      "mealFormat": "skillet",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 90,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "protein_mismatch",
+          "severity": "critical",
+          "message": "image protein cues (pork) do not match other"
         }
       ]
     },
@@ -16614,6 +17962,47 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "protein": "other",
+      "mealFormat": "crew_feed",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "thumbImage": "/images/thumbs/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 90,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Sheet-Pan Eggs & Sausage)"
+        },
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts breakfast but meal is breakfast (Sheet-Pan Eggs & Sausage)"
+        },
+        {
+          "code": "protein_mismatch",
+          "severity": "critical",
+          "message": "image protein cues (pork) do not match other"
         }
       ]
     },
@@ -17200,6 +18589,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "protein": "pork",
+      "mealFormat": "smoker",
+      "cuisine": "bbq",
+      "heroImage": "/images/hall-expansion/smoker-nachos-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/smoker-nachos-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "smoky-chicken-tacos",
       "title": "Smokey Chicken Tacos",
       "protein": "chicken",
@@ -17375,6 +18790,32 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "explore_curated",
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
     },
     {
       "source": "explore_curated",
@@ -17929,6 +19370,37 @@
     },
     {
       "source": "explore_curated",
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "the-best-chili-ever",
       "title": "The Best Chili Ever",
       "protein": "chicken",
@@ -18237,6 +19709,42 @@
     },
     {
       "source": "explore_curated",
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "protein": "turkey",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/turkey-taco-bowls.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Turkey Taco Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts taco but meal requires bowl (Turkey Taco Bowls)"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "turkey-taco-skillet",
       "title": "Turkey Taco Skillet",
       "protein": "turkey",
@@ -18360,6 +19868,32 @@
     },
     {
       "source": "explore_curated",
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "protein": "pork",
+      "mealFormat": "smoker",
+      "cuisine": "bbq",
+      "heroImage": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 45,
+      "pass": true,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        }
+      ]
+    },
+    {
+      "source": "explore_curated",
       "slug": "white-bean-chicken-chili",
       "title": "White Bean Chicken Chili",
       "protein": "chicken",
@@ -18414,6 +19948,37 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "explore_curated",
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cuisine": "other",
+      "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
+      "mobileImage": "",
+      "mismatchConfidence": 98,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "missing_locked_mobile",
+          "severity": "warning",
+          "message": "missing mobile crop image"
+        },
+        {
+          "code": "unapproved_image",
+          "severity": "warning",
+          "message": "image not marked approved — treat as manual review"
+        },
+        {
+          "code": "donor_image_forbidden",
+          "severity": "critical",
+          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
+        }
+      ]
     },
     {
       "source": "explore_curated",

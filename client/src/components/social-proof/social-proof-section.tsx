@@ -2,12 +2,14 @@ import { useQuery } from "@tanstack/react-query";
 import { SocialProofStatsRow } from "@/components/social-proof/social-proof-stats";
 import { Testimonials } from "@/components/social-proof/testimonials";
 import { fetchSocialProof, socialProofQueryKey } from "@/lib/social-proof-api";
+import { hasCredibleSocialProofStats } from "@shared/social-proof/format";
 import {
   SOCIAL_PROOF_HEADLINE,
   SOCIAL_PROOF_SUBHEADLINE,
   SOCIAL_PROOF_TESTIMONIALS,
 } from "@shared/social-proof/testimonials-data";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 interface SocialProofSectionProps {
   className?: string;
@@ -31,12 +33,9 @@ export function SocialProofSection({ className }: SocialProofSectionProps) {
       aria-labelledby="social-proof-heading"
       data-testid="social-proof-section"
     >
-      <div className="max-w-[1400px] mx-auto px-page py-10 sm:py-14 space-y-8">
+      <div className={cn(app.main, app.sectionY, "space-y-8")}>
         <div className="max-w-2xl">
-          <h2
-            id="social-proof-heading"
-            className="font-heading text-2xl sm:text-3xl leading-tight tracking-tight text-foreground text-balance"
-          >
+          <h2 id="social-proof-heading" className={cn(app.titleSection, "text-balance")}>
             {headline}
           </h2>
           <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
@@ -44,7 +43,7 @@ export function SocialProofSection({ className }: SocialProofSectionProps) {
           </p>
         </div>
 
-        {stats ? <SocialProofStatsRow stats={stats} /> : null}
+        {hasCredibleSocialProofStats(stats) ? <SocialProofStatsRow stats={stats!} /> : null}
 
         <Testimonials testimonials={testimonials} />
       </div>

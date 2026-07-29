@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 510,
-  "protein": 38,
-  "carbs": 46,
-  "fats": 18,
+  "calories": 675,
+  "protein": 49,
+  "carbs": 58,
+  "fats": 28,
   "tags": [
     "protein:chicken",
     "format:handheld",
@@ -180,19 +180,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 510,
-    "protein": 38,
-    "carbs": 46,
-    "fats": 18,
-    "label": "~510 cal/serving · 38g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 675,
+    "protein": 49,
+    "carbs": 58,
+    "fats": 28,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
@@ -215,5 +221,52 @@
   ],
   "sourceUrl": "https://www.seriouseats.com/shawarma-recipe",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "plain yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "pita breads",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "tahini",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

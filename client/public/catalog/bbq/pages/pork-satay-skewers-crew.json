@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 920,
-  "protein": 55,
-  "carbs": 50,
-  "fats": 48,
+  "calories": 1400,
+  "protein": 84,
+  "carbs": 156,
+  "fats": 46,
   "tags": [
     "protein:pork",
     "format:crew_kebab",
@@ -255,12 +255,26 @@
   ],
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 920,
-    "protein": 55,
-    "carbs": 50,
-    "fats": 48,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 1400,
+    "protein": 84,
+    "carbs": 156,
+    "fats": 46,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/pork-satay-skewers-crew.jpg",
   "heroImageAlt": "Indonesian Tamarind Pork Satay Batches — crew-sized BBQ spread with visible smoke and bark",
@@ -291,5 +305,59 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-07-23T21:05:00.000Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 16,
+    "totalCount": 16,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pork Shoulder",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Fish Sauce",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "Creamy Peanut Butter",
+        "allergens": [
+          "peanuts"
+        ]
+      },
+      {
+        "name": "Kecap Manis",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari or a certified gluten-free soy sauce alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

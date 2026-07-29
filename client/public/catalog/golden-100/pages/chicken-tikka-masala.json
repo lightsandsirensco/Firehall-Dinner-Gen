@@ -13,9 +13,9 @@
   "cookTime": 95,
   "prepTime": 45,
   "difficulty": "easy",
-  "calories": 1125,
-  "protein": 63,
-  "carbs": 96,
+  "calories": 1162,
+  "protein": 65,
+  "carbs": 104,
   "fats": 54,
   "tags": [
     "protein:chicken",
@@ -204,19 +204,20 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 1125,
-    "protein": 63,
-    "carbs": 96,
+    "calories": 1162,
+    "protein": 65,
+    "carbs": 104,
     "fats": 54,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
-      "mealPrepFriendly": false
+      "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
@@ -252,5 +253,40 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:48:23.767Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Plain Greek Yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Heavy Cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

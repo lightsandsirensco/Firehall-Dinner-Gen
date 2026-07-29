@@ -1,0 +1,257 @@
+{
+  "slug": "unstuffed-cabbage-roll-skillet",
+  "title": "Unstuffed Cabbage Roll Skillet",
+  "displayTitle": "Unstuffed Cabbage Roll Skillet",
+  "seoTitle": "Unstuffed Cabbage Roll Skillet | Firefighter Meal",
+  "shortDescription": "Ground beef, rice, and cabbage simmered in paprika-tomato sauce",
+  "subtitle": "Ground beef, rice, and cabbage simmered in paprika-tomato sauce",
+  "category": "healthy_performance",
+  "cuisine": "Eastern European",
+  "description": "Ground beef browns with onion and paprika, then simmers in one deep skillet with chopped cabbage, rice, and crushed tomatoes until the cabbage is tender and the rice has soaked up the sauce.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 722,
+  "protein": 55,
+  "carbs": 50,
+  "fats": 36,
+  "tags": [
+    "protein:beef",
+    "format:skillet",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large deep skillet or Dutch oven"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground beef",
+      "quantity": "3.25",
+      "unit": "lb",
+      "notes": "90/10"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "green cabbage",
+      "quantity": "1",
+      "unit": "large head",
+      "notes": "cored and chopped, about 3 lb"
+    },
+    {
+      "name": "long-grain white rice",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "uncooked"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "28 oz"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "5",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "sweet paprika",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "Worcestershire sauce",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "caraway seeds",
+      "quantity": "1",
+      "unit": "tsp",
+      "notes": "optional"
+    },
+    {
+      "name": "brown sugar",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef and onion in oil over medium-high 8–10 minutes, breaking into crumbles, until no pink remains and onion is soft and translucent.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bloom the spices",
+      "instruction": "Add garlic, paprika, and caraway seeds if using; cook 1 minute until fragrant and the paprika darkens slightly without burning.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Add cabbage and rice",
+      "instruction": "Stir in chopped cabbage a few handfuls at a time until it starts to wilt down and fit in the pan. Add rice, crushed tomatoes, broth, Worcestershire, brown sugar, salt, and pepper.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer until tender",
+      "instruction": "Bring to a simmer, cover, and cook 25–30 minutes, stirring occasionally, until rice is tender and cabbage has softened completely but still has a little bite.",
+      "minutes": 28,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve",
+      "instruction": "Let sit off heat 5 minutes to thicken slightly—sauce should coat a spoon, not be soupy. Taste and adjust salt before serving.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "If it looks dry partway through cooking, add a splash more broth—cabbage releases water at different rates.",
+    "A dollop of sour cream or plain Greek yogurt on top cuts the tomato acidity nicely.",
+    "Smoked paprika instead of sweet adds a nice campfire note if you want to switch it up."
+  ],
+  "tonightSpread": [
+    "Crusty rye bread.",
+    "Sour cream or plain yogurt for topping."
+  ],
+  "leftovers": [
+    "Reheats beautifully—flavor actually improves the next day.",
+    "Freezes well in portioned containers for up to 3 months."
+  ],
+  "whyCrewsLikeIt": "Tastes exactly like grandma's stuffed cabbage without an hour of rolling individual leaves. Hearty, saucy, and genuinely new flavor territory for the collection.",
+  "mealPrepNotes": "Chop the whole head of cabbage before starting—once the beef is browned, everything moves quickly in one pot. Station: Use a wide, deep skillet or Dutch oven—the cabbage volume looks like too much at first but wilts down fast. Station: Stir occasionally, not constantly, so the rice has time to actually absorb the sauce instead of staying crunchy. Station: A dollop of sour cream or plain yogurt on top cuts the acidity nicely at the line.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 722,
+    "protein": 55,
+    "carbs": 50,
+    "fats": 36,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Unstuffed Cabbage Roll Skillet on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "unstuffed cabbage roll skillet",
+    "beef",
+    "Eastern European",
+    "skillet",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "korean-beef-rice-bowls",
+    "turkey-taco-skillet",
+    "lean-beef-broccoli-rice",
+    "chicken-enchilada-skillet-light",
+    "thai-basil-ground-beef-skillet",
+    "southwest-beef-sweet-potato-skillet"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.696Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Worcestershire sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

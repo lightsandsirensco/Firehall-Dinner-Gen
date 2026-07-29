@@ -29,13 +29,13 @@
     },
     {
       "name": "Mexican chorizo",
-      "quantity": "3/8",
+      "quantity": "1 1/4 lb",
       "notes": "cooked and crumbled, fat drained",
       "group": "Filling"
     },
     {
       "name": "shredded Monterey Jack",
-      "quantity": "1.6",
+      "quantity": "1.6 cups",
       "notes": "divided for filling and top",
       "group": "Filling"
     },
@@ -47,25 +47,25 @@
     },
     {
       "name": "green enchilada sauce",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "jarred or homemade",
       "group": "Sauce"
     },
     {
       "name": "sour cream",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "whisked into half the sauce for creaminess",
       "group": "Sauce"
     },
     {
       "name": "cotija or feta",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "crumbled",
       "group": "Finish"
     },
     {
       "name": "cilantro",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "chopped, plus lime wedges",
       "group": "Finish"
     }
@@ -105,22 +105,23 @@
     }
   ],
   "nutrition": {
-    "calories": 505,
-    "protein": 25,
-    "carbs": 35,
-    "fat": 30,
-    "label": "per serving (hall portion)",
+    "calories": 792,
+    "protein": 41,
+    "carbs": 37,
+    "fat": 53,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -145,5 +146,75 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 9,
   "seoTitle": "Breakfast Enchiladas for the Crew | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Mexican chorizo",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded Monterey Jack",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "8-inch flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cotija or feta",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

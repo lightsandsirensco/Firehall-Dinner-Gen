@@ -13,9 +13,9 @@
   "cookTime": 85,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 1134,
-  "protein": 62,
-  "carbs": 95,
+  "calories": 1173,
+  "protein": 63,
+  "carbs": 103,
   "fats": 56,
   "tags": [
     "protein:chicken",
@@ -204,12 +204,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1134,
-    "protein": 62,
-    "carbs": 95,
+    "calories": 1173,
+    "protein": 63,
+    "carbs": 103,
     "fats": 56,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -252,5 +253,46 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:48:23.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Plain Greek Yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Heavy Cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

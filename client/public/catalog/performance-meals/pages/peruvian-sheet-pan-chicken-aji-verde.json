@@ -1,0 +1,267 @@
+{
+  "slug": "peruvian-sheet-pan-chicken-aji-verde",
+  "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+  "displayTitle": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+  "seoTitle": "Peruvian-Style Sheet-Pan Chicken with Aji Verde | Firefighter Meal",
+  "shortDescription": "Cumin-lime marinated chicken thighs and potatoes roasted together with a spicy green herb sauce",
+  "subtitle": "Cumin-lime marinated chicken thighs and potatoes roasted together with a spicy green herb sauce",
+  "category": "healthy_performance",
+  "cuisine": "Peruvian",
+  "description": "Chicken thighs marinate in soy sauce, lime, garlic, and cumin, then roast on a sheet pan alongside potato wedges until deeply browned and charred at the edges, served with a bright, spicy aji verde sauce made from cilantro, jalapeño, and lime.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 25,
+  "difficulty": "easy",
+  "calories": 678,
+  "protein": 50,
+  "carbs": 28,
+  "fats": 39,
+  "tags": [
+    "protein:chicken",
+    "format:sheet_pan",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Half-sheet pan",
+    "Blender"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "notes": "fresh, divided"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "10",
+      "unit": "cloves",
+      "notes": "divided"
+    },
+    {
+      "name": "ground cumin",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "packed"
+    },
+    {
+      "name": "jalapeño peppers",
+      "quantity": "2",
+      "unit": "whole",
+      "notes": "seeded"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "plain Greek yogurt",
+      "quantity": "0.25",
+      "unit": "cup"
+    },
+    {
+      "name": "red-skinned potatoes",
+      "quantity": "2.5",
+      "unit": "lb",
+      "notes": "quartered"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate the chicken",
+      "instruction": "Blend soy sauce, half the lime juice, half the garlic, cumin, paprika, and 2 tbsp oil. Coat chicken and marinate at least 2 hours, up to overnight refrigerated.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Blend the aji verde",
+      "instruction": "Blend cilantro, jalapeño, remaining garlic, remaining lime juice, mayonnaise, and yogurt until smooth and bright green. Thin with a splash of water if too thick to drizzle.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Arrange the sheet pan",
+      "instruction": "Toss potatoes with remaining oil and 1 tsp salt; spread on one side of a large sheet pan. Pat chicken dry from the marinade and arrange on the other side.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Roast together",
+      "instruction": "Roast at 425°F 30–35 minutes, flipping potatoes and chicken once, until chicken is deeply browned and reads 165°F throughout and potatoes are golden and fork-tender. One pan, no grill to babysit.",
+      "minutes": 35,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and serve",
+      "instruction": "Rest chicken 5 minutes. Serve with roasted potatoes and a generous drizzle of aji verde, extra sauce on the side.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Two jalapeños makes a medium sauce—use one for a milder crowd.",
+    "Aji verde also works great as a dip for the roasted potatoes on its own.",
+    "A wire rack on the sheet pan crisps the chicken skin-side texture on all sides if using skin-on thighs."
+  ],
+  "tonightSpread": [
+    "Roasted potato wedges.",
+    "Simple sliced tomato and onion salad."
+  ],
+  "leftovers": [
+    "Shred leftover chicken over rice with extra aji verde.",
+    "Aji verde keeps 4 days refrigerated—great on eggs or sandwiches too."
+  ],
+  "whyCrewsLikeIt": "The green sauce is the real star—crews end up putting it on everything on the plate. Roasting chicken and potatoes together on one pan means less to watch and far more forgiving timing than babysitting a grill.",
+  "mealPrepNotes": "Marinate at least 2 hours, ideally overnight—this is what makes the chicken taste like the real rotisserie version. Aji verde can be made a day ahead. Station: Pat chicken dry before it goes on the pan even though it's been marinating—wet chicken steams instead of browning. Station: Aji verde sauce keeps for days—make a double batch and use leftovers on eggs or sandwiches. Station: The sheet pan holds fine in a low oven if a call interrupts—unlike a grill, nothing dries out or burns unattended.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 678,
+    "protein": 50,
+    "carbs": 28,
+    "fats": 39,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Peruvian-Style Sheet-Pan Chicken with Aji Verde on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "peruvian-style sheet-pan chicken with aji verde",
+    "peruvian sheet pan chicken aji verde",
+    "chicken",
+    "Peruvian",
+    "sheet pan",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "herb-baked-salmon-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.701Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "plain Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

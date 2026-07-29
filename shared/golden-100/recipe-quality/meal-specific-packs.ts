@@ -73,9 +73,9 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
     ],
     steps: [
       step(1, "Stage two oven racks", "Heat two ovens (or rotate batches) to 400°F. Scrub and poke all russets; oil and salt the skins. For twenty-plus eaters, bake in waves on sheet pans if rack space is tight.", 20),
-      step(2, "Bake potatoes in batches", "Bake 50–65 minutes until fork-tender. Transfer finished potatoes to foil-lined cambros at 200°F while the next batch bakes. Never cover hot potatoes tightly — steam softens skins.", 65, "medium"),
+      step(2, "Bake potatoes in batches", "Bake 50–65 minutes until fork-tender. Transfer finished potatoes to foil-lined lidded containers at 200°F while the next batch bakes. Never cover hot potatoes tightly — steam softens skins.", 65, "medium"),
       step(3, "Set a long topping line", "Arrange butter, cheddar, bacon, sour cream, green onions, and warm pulled beef in a row with labels. Put a trash can and extra forks at the end — this feed gets messy in the best way.", 20),
-      step(4, "Serve family-style", "Call the crew when the first cambro is full. Split potatoes at the line; let everyone build their own loaded spud. Refill toppings before the pan looks empty — empty cheddar bowls cause hall riots.", 15, "low"),
+      step(4, "Serve family-style", "Call the crew when the first lidded container is full. Split potatoes at the line; let everyone build their own loaded spud. Refill toppings before the pan looks empty — empty cheddar bowls cause hall riots.", 15, "low"),
     ],
   }),
 
@@ -152,7 +152,7 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
       m("Coleslaw mix", mult(2, scale), "lb", "Sides"),
     ],
     steps: [
-      step(1, "Trim and prep the chicken", "Pat chicken thighs dry. Trim excess fat, score skin lightly, and lay in hotel pans or zip bags for marinating.", 15),
+      step(1, "Trim and prep the chicken", "Pat chicken thighs dry. Trim excess fat, score skin lightly, and lay in baking dishes or zip bags for marinating.", 15),
       step(2, "Blend the jerk marinade", "Blend Scotch bonnets, green onions, thyme, garlic, ginger, allspice, brown sugar, soy, lime juice, and oil until mostly smooth.", 10),
       step(3, "Marinate the chicken", "Massage marinade under the skin. Marinate at least 45 minutes in the fridge — 4–12 hours is best.", 45),
       step(4, "Set up grill or oven", "Grill: 375°F two-zone fire. Oven: 425°F with foil-lined sheet pans and wire racks.", 15, "medium-high"),
@@ -311,15 +311,15 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
       m("Basmati for serving", mult(0, scale), "", "Base", "cooked separately"),
     ],
     steps: [
-      step(1, "Rinse and start the rice", "Rinse basmati until water runs clear. Simmer with 1:1.5 rice-to-water and a pinch of salt 15 minutes; rest covered 10 minutes off heat. Fluff and hold at 200°F in a covered hotel pan.", 25, "medium"),
+      step(1, "Rinse and start the rice", "Rinse basmati until water runs clear. Simmer with 1:1.5 rice-to-water and a pinch of salt 15 minutes; rest covered 10 minutes off heat. Fluff and hold at 200°F in a covered baking dish.", 25, "medium"),
       step(2, "Build the yogurt marinade", "Stir yogurt with garam masala, cumin, half the garlic and ginger, and salt until smooth. Toss cubed chicken until coated; marinate at least 30 minutes in the fridge.", 35),
-      step(3, "Sear the chicken in batches", "Heat 2 tbsp butter in a heavy pot over medium-high. Sear chicken in single layers until golden on the edges — not cooked through. Transfer to a hotel pan.", 15, "medium-high"),
+      step(3, "Sear the chicken in batches", "Heat 2 tbsp butter in a heavy pot over medium-high. Sear chicken in single layers until golden on the edges — not cooked through. Transfer to a baking dish.", 15, "medium-high"),
       step(4, "Sweat the aromatics", "Lower heat to medium. Add remaining butter and diced onion; cook 8 minutes until soft and translucent. Add remaining garlic and ginger; stir 1 minute until fragrant.", 10, "medium"),
       step(5, "Simmer the makhani sauce", "Pour in crushed tomatoes and simmer 10 minutes, scraping the fond. Stir in cream and simmer 5 more minutes until the sauce coats a spoon and looks deep orange-red.", 15, "medium"),
       step(6, "Finish chicken to 165°F", "Return seared chicken and any juices. Simmer gently 12–15 minutes until thickest pieces read 165°F. Stir occasionally so nothing sticks on the bottom.", 15, "medium"),
       step(7, "Balance the sauce", "Taste for salt and a pinch of sugar if the tomatoes are sharp. Add a splash of cream if the sauce looks broken or grainy. Keep at a gentle simmer — do not boil hard after cream is in.", 5, "low"),
       step(8, "Hold through call interruptions", "If tones drop, hold the pot covered on the warm side of the range at 140°F. Stir in a tablespoon of cream before service if the surface tightens.", 5, "low"),
-      step(9, "Serve Butter Chicken for the crew", "Mound fluffy basmati on sheet trays or bowls, then ladle saucy chicken over the rice. Finish with cilantro. Keep extra sauce in a labeled cambro for seconds.", 8, "low"),
+      step(9, "Serve Butter Chicken for the crew", "Mound fluffy basmati on sheet trays or bowls, then ladle saucy chicken over the rice. Finish with cilantro. Keep extra sauce in a labeled lidded container for seconds.", 8, "low"),
       step(10, "Pack down leftovers", "Cool chicken and rice in shallow pans within two hours. Reheat chicken to 165°F next shift; refresh rice with a splash of water.", 10),
     ],
   }),
@@ -369,7 +369,7 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
       step(1, "Mix the meatloaf", "Combine ground beef, breadcrumbs, eggs, diced onion, salt, and pepper. Shape into two loaves on sheet pans — two loaves cook faster and slice cleaner for a crew.", 15),
       step(2, "Bake the loaves", "Bake at 375°F 50–60 minutes until internal temp hits 160°F and glaze caramelizes. Rest 10 minutes before slicing.", 60, "medium"),
       step(3, "Boil and mash potatoes", "Boil peeled russets until fork-tender. Drain; mash with butter and warm milk until smooth. Season aggressively — bland mash kills comfort food morale.", 25, "medium"),
-      step(4, "Plate family-style", "Slice meatloaf on a tray; serve mashed potatoes in a warm cambro. Meatloaf & Mashed is pure hall comfort — extra ketchup on the table, no questions asked.", 8, "low"),
+      step(4, "Plate family-style", "Slice meatloaf on a tray; serve mashed potatoes in a warm lidded container. Meatloaf & Mashed is pure hall comfort — extra ketchup on the table, no questions asked.", 8, "low"),
     ],
   }),
 
@@ -385,7 +385,7 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
     steps: [
       step(1, "Brown the filling", "Brown ground lamb with diced onion until deeply colored. Drain excess fat. Add peas, carrots, broth, and tomato paste; simmer 15 minutes until thick.", 25, "medium-high"),
       step(2, "Mash the topping", "Boil russets until tender; mash with butter and cream until smooth. Season with salt and white pepper.", 25, "medium"),
-      step(3, "Assemble and bake", "Spread filling in hotel pans; pipe or spread mashed potatoes over top. Fork ridges for crispy peaks. Bake at 400°F 25–30 minutes until golden and bubbling at edges.", 30, "high"),
+      step(3, "Assemble and bake", "Spread filling in baking dishes; pipe or spread mashed potatoes over top. Fork ridges for crispy peaks. Bake at 400°F 25–30 minutes until golden and bubbling at edges.", 30, "high"),
       step(4, "Rest before serving", "Rest 10 minutes so filling sets — scoops stay clean on the line. Shepherd's Pie feeds a hall that wants something hearty after a cold call.", 10, "low"),
     ],
   }),
@@ -416,7 +416,7 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
     ],
     steps: [
       step(1, "Brown seasoned beef", "Brown ground beef with taco seasoning and diced onion. Drain grease; stir in 1 cup enchilada sauce.", 15, "medium-high"),
-      step(2, "Layer the casserole", "In a deep hotel pan: sauce, tortillas torn to fit, beef, cheese — repeat twice. Finish with sauce and cheese on top.", 15),
+      step(2, "Layer the casserole", "In a deep baking dish: sauce, tortillas torn to fit, beef, cheese — repeat twice. Finish with sauce and cheese on top.", 15),
       step(3, "Bake until bubbling", "Bake covered at 375°F 30 minutes; uncover and bake 15 more until cheese browns at edges.", 45, "medium"),
       step(4, "Rest and scoop", "Rest 10 minutes so layers set. Scoop Enchilada Casserole with a square spatula — it should hold its shape, not slide like soup.", 10, "low"),
     ],
@@ -434,7 +434,7 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
     steps: [
       step(1, "Cook the chicken", "Simmer diced chicken thighs in salted broth until 165°F; shred or dice. Reserve broth.", 20, "medium"),
       step(2, "Make the velouté", "Melt butter; whisk flour 2 minutes. Whisk in 3 cups broth until thick. Fold in chicken, peas, carrots, and onion.", 15, "medium"),
-      step(3, "Top and bake", "Transfer filling to hotel pans; cover with pie crust or puff pastry. Vent slits. Brush with egg wash.", 12),
+      step(3, "Top and bake", "Transfer filling to baking dishes; cover with pie crust or puff pastry. Vent slits. Brush with egg wash.", 12),
       step(4, "Bake until golden", "Bake at 400°F 30–35 minutes until crust is deep golden and filling bubbles at vents. Rest 10 minutes — molten filling burns tongues.", 35, "high"),
     ],
   }),
@@ -561,7 +561,7 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
       step(
         8,
         "Serve on the line with garnishes",
-        "Transfer pad thai to sheet trays or hotel pans for family-style service — do not cover tightly or steam will soften the noodles. Line garnish bowls at the end of the counter: lime wedges, crushed peanuts, extra sliced green onion, and chili flakes for firefighters who want heat. Each plate gets noodles first, then a pinch of peanuts and a lime wedge on the rim so they can squeeze at the table. Suggested sides on separate trays: Asian cucumber salad with rice vinegar and sesame, warmed spring rolls, and edamame with flaky salt. Tell the crew to squeeze lime and add peanuts right before eating — acid and crunch fade if mixed too early.",
+        "Transfer pad thai to sheet trays or baking dishes for family-style service — do not cover tightly or steam will soften the noodles. Line garnish bowls at the end of the counter: lime wedges, crushed peanuts, extra sliced green onion, and chili flakes for firefighters who want heat. Each plate gets noodles first, then a pinch of peanuts and a lime wedge on the rim so they can squeeze at the table. Suggested sides on separate trays: Asian cucumber salad with rice vinegar and sesame, warmed spring rolls, and edamame with flaky salt. Tell the crew to squeeze lime and add peanuts right before eating — acid and crunch fade if mixed too early.",
         5,
       ),
     ],
@@ -752,7 +752,7 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
       step(
         7,
         "Pan up for the crew",
-        "Butter two full-size hotel pans or one deep half-pan for eight firefighters. Spread mac mixture evenly. Drizzle remaining BBQ sauce in thin ribbons across the top so it caramelizes in the oven. Scatter extra cheddar and mozzarella on top for a cheese pull.",
+        "Butter two large baking dishes (or one deep 9x13 dish) for eight firefighters. Spread mac mixture evenly. Drizzle remaining BBQ sauce in thin ribbons across the top so it caramelizes in the oven. Scatter extra cheddar and mozzarella on top for a cheese pull.",
         10,
       ),
       step(
@@ -772,10 +772,176 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
       step(
         10,
         "Serve and garnish",
-        "Rest 5 minutes so scoops hold together. Portion about 1.5 cups mac and cheese plus a generous scoop of BBQ chicken per firefighter (~6 oz cooked chicken each). Top with crispy fried onions and green onions at the line, not baked in. Serve with a spatula from the hotel pan — hearty, not eating-contest piles.",
+        "Rest 5 minutes so scoops hold together. Portion about 1.5 cups mac and cheese plus a generous scoop of BBQ chicken per firefighter (~6 oz cooked chicken each). Top with crispy fried onions and green onions at the line, not baked in. Serve with a spatula from the baking dish — hearty, not eating-contest piles.",
         5,
         "low",
       ),
+    ],
+  }),
+  "chicken-souvlaki": (scale) => ({
+    ingredients: [
+      m("Boneless chicken thighs, cubed", mult(4, scale), "lb", "Main"),
+      m("Fresh lemon juice", mult(0.5, scale), "cup", "Marinade"),
+      m("Olive oil", mult(0.5, scale), "cup", "Marinade"),
+      m("Garlic cloves, minced", mult(6, scale), "count", "Marinade"),
+      m("Dried oregano", mult(3, scale), "tbsp", "Marinade"),
+      m("Kosher salt", mult(2, scale), "tsp", "Marinade"),
+      m("Plain Greek yogurt", mult(2, scale), "cups", "Tzatziki"),
+      m("English cucumber, grated and squeezed dry", mult(1, scale), "count", "Tzatziki"),
+      m("Fresh dill, chopped", mult(2, scale), "tbsp", "Tzatziki"),
+      m("Pita bread", mult(12, scale), "count", "Build"),
+      m("Cherry tomatoes, halved", mult(2, scale), "pints", "Build"),
+      m("Red onion, thinly sliced", mult(1, scale), "count", "Build"),
+    ],
+    steps: [
+      step(1, "Marinate the chicken", "Cube chicken thighs into 1½-inch pieces. Whisk lemon juice, olive oil, garlic, oregano, and salt; toss with chicken. Marinate at least 30 minutes, up to 4 hours, in the fridge.", 35),
+      step(2, "Skewer and heat the grill", "Thread marinated chicken onto skewers, leaving small gaps between pieces so every side gets heat. Heat a grill or large grill pan to medium-high.", 10, "medium-high"),
+      step(3, "Grill the skewers", "Grill skewers 10–12 minutes, turning every few minutes, until deeply charred on the edges and the thickest piece reads 165°F.", 12, "medium-high"),
+      step(4, "Mix the tzatziki", "Stir Greek yogurt, grated cucumber (squeezed dry in a towel), dill, a squeeze of lemon, and a pinch of salt into a cool, tangy sauce. Keep chilled until service.", 10, "low"),
+      step(5, "Warm the pita and build the line", "Warm pitas briefly on the grill or in a dry skillet, about 30 seconds per side. Set out skewers, warm pita, tzatziki, tomatoes, and red onion so the crew builds their own wraps.", 8, "low"),
+      step(6, "Hold for call interruptions", "If tones drop, pull skewers off direct heat and hold on the cool side of the grill or in a 200°F oven. Tzatziki and cold toppings hold fine on ice for a stretch.", 5, "low"),
+    ],
+  }),
+
+  "breakfast-burrito-bar": (scale) => ({
+    ingredients: [
+      m("Large eggs", mult(24, scale), "count", "Main"),
+      m("Breakfast sausage or chorizo", mult(3, scale), "lb", "Fillings"),
+      m("Frozen hash browns", mult(4, scale), "lb", "Fillings"),
+      m("Yellow onion, diced", mult(2, scale), "count", "Fillings"),
+      m("Bell peppers, diced", mult(3, scale), "count", "Fillings"),
+      m("Shredded cheddar or pepper jack", mult(3, scale), "cups", "Toppings"),
+      m("10-inch flour tortillas", mult(20, scale), "count", "Build"),
+      m("Salsa or pico de gallo", mult(2, scale), "cups", "Toppings"),
+      m("Hot sauce", mult(1, scale), "count", "Toppings", undefined, true),
+    ],
+    steps: [
+      step(1, "Crisp the hash browns", "Heat a large griddle or two skillets over medium-high. Spread hash browns in an even layer, pressing down with a spatula; let brown 8–10 minutes before flipping in sections.", 12, "medium-high"),
+      step(2, "Brown the sausage and vegetables", "In a separate pan, brown sausage or chorizo, breaking it into crumbles. Add onion and peppers; cook until softened and the sausage is fully cooked through. Drain excess fat.", 14, "medium-high"),
+      step(3, "Scramble the eggs", "Whisk eggs with a pinch of salt. Scramble gently over medium heat until just set; fold in half the cheese off heat so it melts without turning rubbery.", 10, "medium"),
+      step(4, "Set up the burrito bar", "Warm tortillas wrapped in foil in a low oven. Lay out hash browns, sausage mix, eggs, remaining cheese, salsa, and hot sauce in separate pans so the crew builds their own.", 10),
+      step(5, "Roll and hold", "Fill and roll burritos, tucking in the sides first, then rolling forward tight. Hold finished burritos seam-side down on a sheet pan in a 200°F oven so the line stays hot as people filter through.", 8, "low"),
+    ],
+  }),
+
+  "chorizo-breakfast-tacos": (scale) => ({
+    ingredients: [
+      m("Fresh Mexican chorizo, casings removed", mult(2.5, scale), "lb", "Main"),
+      m("Large eggs", mult(20, scale), "count", "Main"),
+      m("Yellow onion, diced", mult(1, scale), "count", "Aromatics"),
+      m("6-inch corn tortillas", mult(24, scale), "count", "Build"),
+      m("Cotija cheese, crumbled", mult(8, scale), "oz", "Toppings"),
+      m("Fresh cilantro, chopped", mult(1, scale), "cup", "Toppings"),
+      m("White onion, finely diced", mult(1, scale), "count", "Toppings"),
+      m("Salsa verde", mult(2, scale), "cups", "Toppings"),
+      m("Lime wedges", mult(8, scale), "count", "Finish"),
+    ],
+    steps: [
+      step(1, "Brown the chorizo", "Cook chorizo in a large skillet over medium-high, breaking it into small crumbles, 8–10 minutes until fully cooked and rendered. Drain most of the excess fat, leaving a thin coating in the pan.", 12, "medium-high"),
+      step(2, "Soften the onion", "Add diced yellow onion to the rendered fat; cook 3–4 minutes until softened.", 5, "medium"),
+      step(3, "Scramble the eggs into the chorizo", "Whisk eggs with a pinch of salt; pour into the pan. Stir gently over medium-low heat until just set and still glossy — chorizo is salty, so the eggs need very little extra seasoning.", 8, "medium"),
+      step(4, "Warm the tortillas", "Warm corn tortillas in a dry skillet or wrapped in foil in a low oven, about 30 seconds per side, until pliable.", 8, "medium"),
+      step(5, "Build the taco line", "Fill warm tortillas with the chorizo-egg mixture. Set out cotija, cilantro, diced white onion, salsa verde, and lime wedges so the crew tops their own.", 8, "low"),
+    ],
+  }),
+
+  "french-toast-casserole": (scale) => ({
+    ingredients: [
+      m("Thick-sliced brioche or Texas toast, cubed", mult(3, scale), "lb", "Base"),
+      m("Large eggs", mult(16, scale), "count", "Custard"),
+      m("Whole milk", mult(4, scale), "cups", "Custard"),
+      m("Heavy cream", mult(1, scale), "cup", "Custard"),
+      m("Granulated sugar", mult(1, scale), "cup", "Custard"),
+      m("Ground cinnamon", mult(2, scale), "tbsp", "Custard"),
+      m("Vanilla extract", mult(2, scale), "tbsp", "Custard"),
+      m("Unsalted butter, melted", mult(0.5, scale), "cup", "Topping"),
+      m("Brown sugar", mult(0.5, scale), "cup", "Topping"),
+      m("Maple syrup", mult(2, scale), "cups", "Serve"),
+    ],
+    steps: [
+      step(1, "Layer the bread", "Cube bread into 1-inch pieces — day-old bread works best since it soaks without turning to mush. Spread evenly across two greased baking dishes.", 10),
+      step(2, "Whisk the custard", "Whisk eggs, milk, cream, sugar, cinnamon, and vanilla until fully combined. Pour evenly over the bread, pressing cubes down so every piece soaks.", 8),
+      step(3, "Rest before baking", "Cover and refrigerate at least 1 hour, overnight is best, so the bread fully absorbs the custard — this is what keeps the center soft instead of dry.", 60, "low"),
+      step(4, "Bake until set", "Bake uncovered at 350°F for 45–50 minutes until the center is puffed and springs back and the edges are deep golden. A knife inserted in the center should come out clean.", 50, "medium"),
+      step(5, "Rest, top, and serve", "Rest 10 minutes before cutting into squares. Brush with melted butter and a scatter of brown sugar. Serve warm with maple syrup on the side.", 10, "low"),
+    ],
+  }),
+
+  "sausage-egg-bake": (scale) => ({
+    ingredients: [
+      m("Breakfast sausage, casings removed", mult(3, scale), "lb", "Main"),
+      m("Large eggs", mult(20, scale), "count", "Main"),
+      m("Whole milk", mult(2, scale), "cups", "Custard"),
+      m("Frozen hash browns, thawed", mult(3, scale), "lb", "Base"),
+      m("Shredded cheddar", mult(4, scale), "cups", "Cheese"),
+      m("Yellow onion, diced", mult(1, scale), "count", "Aromatics"),
+      m("Dry mustard powder", mult(1, scale), "tsp", "Seasoning"),
+      m("Kosher salt", mult(1, scale), "tbsp", "Seasoning"),
+    ],
+    steps: [
+      step(1, "Brown the sausage", "Cook sausage in a large skillet over medium-high, breaking it into small crumbles, 8–10 minutes until fully browned. Drain well and let cool slightly.", 12, "medium-high"),
+      step(2, "Layer the base", "Spread thawed hash browns across the bottom of two greased baking dishes. Scatter browned sausage and diced onion evenly over the top.", 10),
+      step(3, "Whisk and pour the custard", "Whisk eggs, milk, dry mustard, and salt until smooth. Pour evenly over the hash browns and sausage; sprinkle cheddar over the top.", 8),
+      step(4, "Rest before baking", "Cover and refrigerate at least 1 hour, overnight works well, so the hash browns soften and the flavors settle.", 60, "low"),
+      step(5, "Bake until set", "Bake uncovered at 350°F for 45–55 minutes until the center is fully set with no jiggle and the top is golden. Internal temperature should read at least 160°F.", 50, "medium"),
+      step(6, "Rest and portion", "Rest 10 minutes before cutting into squares — this keeps portions clean instead of falling apart on the spatula.", 10, "low"),
+    ],
+  }),
+
+  "honey-garlic-pork-tenderloin": (scale) => ({
+    ingredients: [
+      m("Pork tenderloin", mult(4, scale), "lb", "Main"),
+      m("Honey", mult(0.5, scale), "cup", "Glaze"),
+      m("Soy sauce", mult(0.25, scale), "cup", "Glaze"),
+      m("Garlic cloves, minced", mult(6, scale), "count", "Glaze"),
+      m("Fresh ginger, grated", mult(1, scale), "tbsp", "Glaze"),
+      m("Dijon mustard", mult(2, scale), "tbsp", "Glaze"),
+      m("Kosher salt", mult(1, scale), "tbsp", "Seasoning"),
+      m("Vegetable oil", mult(2, scale), "tbsp", "Sear"),
+    ],
+    steps: [
+      step(1, "Season and sear", "Pat tenderloins dry; season with salt. Sear in a hot oiled skillet or on the grill 2–3 minutes per side until deeply browned on all sides.", 12, "medium-high"),
+      step(2, "Whisk the glaze", "Whisk honey, soy sauce, garlic, ginger, and Dijon mustard until smooth.", 5),
+      step(3, "Finish with the glaze", "Move tenderloins to indirect heat or a 400°F oven. Brush generously with glaze every few minutes, turning, until internal temperature reaches 145°F, about 15–18 minutes.", 18, "medium"),
+      step(4, "Rest and slice", "Rest tenderloins 5 minutes before slicing into medallions — resting keeps the glaze from washing off and the juices in the meat.", 5, "low"),
+      step(5, "Reduce extra glaze and serve", "Simmer any remaining glaze in a small pot 2–3 minutes until slightly thickened; spoon over sliced pork at the line.", 5, "low"),
+    ],
+  }),
+
+  "sheet-pan-meal-prep": (scale) => ({
+    ingredients: [
+      m("Boneless chicken breasts", mult(4, scale), "lb", "Main"),
+      m("Sweet potatoes, cubed", mult(3, scale), "lb", "Veg"),
+      m("Broccoli florets", mult(2, scale), "lb", "Veg"),
+      m("Olive oil", mult(0.33, scale), "cup", "Seasoning"),
+      m("Garlic powder", mult(2, scale), "tbsp", "Seasoning"),
+      m("Smoked paprika", mult(1, scale), "tbsp", "Seasoning"),
+      m("Long-grain rice, cooked", mult(6, scale), "cups", "Base", "cooked separately"),
+    ],
+    steps: [
+      step(1, "Prep and season", "Cube chicken breasts and sweet potatoes into even 1-inch pieces. Toss chicken, sweet potatoes, and broccoli separately with olive oil, garlic powder, smoked paprika, and salt.", 15),
+      step(2, "Roast in stages", "Spread sweet potatoes on one sheet pan and roast at 425°F for 10 minutes before adding chicken and broccoli to a second pan — sweet potatoes need a head start to cook through.", 10, "high"),
+      step(3, "Finish roasting", "Roast both pans another 18–20 minutes, swapping racks halfway, until chicken reads 165°F and vegetables are tender with browned edges.", 20, "high"),
+      step(4, "Portion into containers", "Divide cooked rice, roasted chicken, sweet potatoes, and broccoli evenly across meal prep containers — about 1 cup rice and 6 oz chicken per container.", 12),
+      step(5, "Cool and label", "Let containers cool uncovered 15–20 minutes before sealing lids, then refrigerate. Label with the date; reheat covered to 165°F before eating.", 20, "low"),
+    ],
+  }),
+
+  "sheet-pan-sausage-peppers": (scale) => ({
+    ingredients: [
+      m("Italian sausage links (sweet or hot)", mult(4, scale), "lb", "Main"),
+      m("Bell peppers, sliced", mult(6, scale), "count", "Veg"),
+      m("Yellow onion, sliced", mult(2, scale), "large", "Veg"),
+      m("Olive oil", mult(0.25, scale), "cup", "Seasoning"),
+      m("Dried Italian seasoning", mult(2, scale), "tbsp", "Seasoning"),
+      m("Garlic cloves, minced", mult(4, scale), "count", "Seasoning"),
+      m("Hoagie rolls", mult(10, scale), "count", "Serve", undefined, true),
+    ],
+    steps: [
+      step(1, "Arrange the sheet pan", "Toss sliced bell peppers and onion with olive oil, Italian seasoning, garlic, salt, and pepper. Spread across a sheet pan and nestle sausage links on top in a single layer.", 12),
+      step(2, "Roast until browned", "Roast at 425°F for 25–30 minutes, turning sausages halfway, until they're browned on the outside, peppers are softened with charred edges, and sausages read 160°F.", 30, "high"),
+      step(3, "Rest and slice", "Rest sausages 5 minutes, then slice on a bias. Toss the sliced sausage back with the peppers and onions on the pan.", 5, "low"),
+      step(4, "Serve family-style or on rolls", "Pile sausage and peppers into a serving dish, or split hoagie rolls and load them up at the line. Hold extra sausage on a lower oven rack at 200°F.", 8, "low"),
     ],
   }),
 };

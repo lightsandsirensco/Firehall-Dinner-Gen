@@ -13,10 +13,10 @@
   "cookTime": 100,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 158,
-  "protein": 6,
-  "carbs": 8,
-  "fats": 11,
+  "calories": 740,
+  "protein": 43,
+  "carbs": 34,
+  "fats": 47,
   "tags": [
     "protein:beef",
     "format:soup_chili",
@@ -165,23 +165,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 158,
-    "protein": 6,
-    "carbs": 8,
-    "fats": 11,
-    "label": "per serving (hall portion)",
+    "calories": 740,
+    "protein": 43,
+    "carbs": 34,
+    "fats": 47,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
-      "under30gFat": true,
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
-      "lighterOption": true,
+      "highProtein": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -214,5 +215,75 @@
   "sourceName": "America's Test Kitchen",
   "sourceUrl": "https://www.americastestkitchen.com/recipes/12325-french-onion-soup",
   "generatedAt": "2026-06-04T20:45:42.222Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Dry Sherry",
+        "allergens": [
+          "alcohol"
+        ]
+      },
+      {
+        "name": "Beef Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Gruyère Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Baguette",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute broth plus a splash of vinegar for the acidity."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

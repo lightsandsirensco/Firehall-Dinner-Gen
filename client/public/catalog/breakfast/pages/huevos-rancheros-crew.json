@@ -103,12 +103,13 @@
     }
   ],
   "nutrition": {
-    "calories": 506,
-    "protein": 24,
-    "carbs": 66,
-    "fat": 17,
-    "label": "per serving (hall portion)",
+    "calories": 552,
+    "protein": 32,
+    "carbs": 68,
+    "fat": 19,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -119,8 +120,8 @@
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
-      "performanceMeal": false
+      "lighterOption": false,
+      "performanceMeal": true
     }
   },
   "stationWorkflow": [
@@ -143,5 +144,46 @@
   "updatedAt": "2026-07-17T20:15:27.730Z",
   "readMinutes": 8,
   "seoTitle": "Huevos Rancheros for the Crew | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "queso fresco",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

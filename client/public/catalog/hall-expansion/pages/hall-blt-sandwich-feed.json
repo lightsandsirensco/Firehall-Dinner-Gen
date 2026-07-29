@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 540,
-  "protein": 22,
-  "carbs": 38,
-  "fats": 34,
+  "calories": 1178,
+  "protein": 57,
+  "carbs": 35,
+  "fats": 90,
   "tags": [
     "protein:pork",
     "format:sandwich",
@@ -145,19 +145,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 540,
-    "protein": 22,
-    "carbs": 38,
-    "fats": 34,
-    "label": "~540 cal/serving · 22g protein · 3g fiber (est.)",
-    "source": "estimated",
+    "calories": 1178,
+    "protein": 57,
+    "carbs": 35,
+    "fats": 90,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
@@ -181,5 +187,68 @@
   ],
   "sourceUrl": "https://www.americastestkitchen.com/recipes/8985-ultimate-blt-sandwich",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "thick-cut bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "sandwich bread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

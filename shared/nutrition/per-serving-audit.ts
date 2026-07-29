@@ -45,7 +45,8 @@ export function sumIngredientMacros(ingredients: CatalogIngredientLine[]): Recip
       continue;
     }
     const parsed = parseCatalogIngredientAmount(ing);
-    const grams = gramsFromAmount(parsed.quantity, parsed.unit, profile.unitGrams);
+    const weightHintText = [ing.notes, ing.name].filter(Boolean).join(" ");
+    const grams = gramsFromAmount(parsed.quantity, parsed.unit, profile.unitGrams, weightHintText);
     if (!grams || grams <= 0) continue;
     const factor = grams / 100;
     totalCal += profile.calories * factor;

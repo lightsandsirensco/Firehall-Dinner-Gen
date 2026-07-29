@@ -1,0 +1,242 @@
+{
+  "slug": "trinidadian-curry-chicken-potatoes",
+  "title": "Trinidadian-Style Curry Chicken with Potatoes",
+  "displayTitle": "Trinidadian-Style Curry Chicken with Potatoes",
+  "seoTitle": "Trinidadian-Style Curry Chicken with Potatoes | Firefighter Meal",
+  "shortDescription": "Dry curry powder chicken stew with potatoes, a Caribbean flavor first for the menu",
+  "subtitle": "Dry curry powder chicken stew with potatoes, a Caribbean flavor first for the menu",
+  "category": "healthy_performance",
+  "cuisine": "Caribbean",
+  "description": "Chicken thighs and potatoes simmer in a stew built on Caribbean curry powder bloomed hard in hot oil until it darkens, with onion, garlic, ginger, and a touch of Scotch bonnet for real heat.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 717,
+  "protein": 77,
+  "carbs": 64,
+  "fats": 14,
+  "tags": [
+    "protein:chicken",
+    "format:one_pot",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large Dutch oven",
+    "Rice pot"
+  ],
+  "ingredients": [
+    {
+      "name": "bone-in, skin-on chicken thighs",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "skin removed"
+    },
+    {
+      "name": "Caribbean-style curry powder",
+      "quantity": "0.33",
+      "unit": "cup"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "minced"
+    },
+    {
+      "name": "Scotch bonnet or habanero pepper",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "left whole for aroma, pierced once"
+    },
+    {
+      "name": "russet potatoes",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "peeled, cut into 1.5-inch chunks"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "low sodium"
+    },
+    {
+      "name": "fresh thyme",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "long-grain white rice",
+      "quantity": "2.5",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season the chicken",
+      "instruction": "Toss chicken thighs with half the curry powder and 1 tsp salt. Let sit 15 minutes while you prep the vegetables.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bloom the curry powder",
+      "instruction": "Heat oil in a large pot over medium. Add remaining curry powder, stir constantly 60–90 seconds until it darkens a shade and smells deeply toasty—do not let it burn.",
+      "minutes": 3,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the base",
+      "instruction": "Add onion, garlic, and ginger to the bloomed curry oil; cook 5 minutes until softened. Add seasoned chicken, searing 2–3 minutes per side in the curry paste.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer the stew",
+      "instruction": "Add potatoes, broth, thyme, and the whole Scotch bonnet. Bring to a simmer, cover, and cook 25–30 minutes until chicken is tender and potatoes are soft but holding shape.",
+      "minutes": 28,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cook rice and finish",
+      "instruction": "Cook rice while the stew simmers. Remove the Scotch bonnet before serving unless the crew wants extra heat. Sauce should be thick and cling to the chicken, not watery.",
+      "minutes": 20,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Removing the Scotch bonnet whole (not chopped) gives real heat and aroma without overwhelming spice.",
+    "Coconut milk swapped for half the broth makes a richer, slightly sweeter version if the crew prefers it.",
+    "Leftover curry is even better the next day once the spices have had time to settle."
+  ],
+  "tonightSpread": [
+    "Steamed white rice.",
+    "Simple cucumber and tomato salad."
+  ],
+  "leftovers": [
+    "Reheats beautifully on the stove with a splash of broth if it's thickened too much.",
+    "Shred into a curry chicken roti or wrap for a fast next-day lunch."
+  ],
+  "whyCrewsLikeIt": "Completely different technique and flavor from any cream-based curry—dry, deeply spiced, and genuinely new Caribbean territory for the collection. Hearty stew format holds perfectly through a call.",
+  "mealPrepNotes": "Toast the curry powder in oil until it darkens a shade before adding liquid—this is what separates real Trinidadian curry from flat, powdery curry. Station: Bloom the curry powder in hot oil 60–90 seconds until it darkens and smells toasty, not raw. Station: Cut potatoes uniform so they finish cooking with the chicken. Station: Leave the Scotch bonnet whole for aroma; remove before serving for a milder plate.",
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 717,
+    "protein": 77,
+    "carbs": 64,
+    "fats": 14,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Trinidadian-Style Curry Chicken with Potatoes on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "trinidadian-style curry chicken with potatoes",
+    "trinidadian curry chicken potatoes",
+    "chicken",
+    "Caribbean",
+    "one pot",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.704Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

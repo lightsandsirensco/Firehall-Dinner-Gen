@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 480,
-  "protein": 36,
-  "carbs": 38,
-  "fats": 20,
+  "calories": 740,
+  "protein": 53,
+  "carbs": 12,
+  "fats": 53,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -154,19 +154,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 480,
-    "protein": 36,
-    "carbs": 38,
-    "fats": 20,
-    "label": "~480 cal/serving · 36g protein · 4g fiber (est.)",
-    "source": "estimated",
+    "calories": 740,
+    "protein": 53,
+    "carbs": 12,
+    "fats": 53,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/shawarma-bar-night.jpg",
@@ -189,5 +195,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.769Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "pita or flatbread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "tahini sauce",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

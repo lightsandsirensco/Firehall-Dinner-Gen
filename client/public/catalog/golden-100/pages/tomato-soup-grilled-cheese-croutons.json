@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 15,
   "difficulty": "medium",
-  "calories": 926,
-  "protein": 34,
-  "carbs": 61,
-  "fats": 61,
+  "calories": 998,
+  "protein": 38,
+  "carbs": 77,
+  "fats": 62,
   "tags": [
     "protein:vegetarian",
     "format:soup_chili",
@@ -152,14 +152,15 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 926,
-    "protein": 34,
-    "carbs": 61,
-    "fats": 61,
-    "label": "per serving (hall portion)",
+    "calories": 998,
+    "protein": 38,
+    "carbs": 77,
+    "fats": 62,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
       "highCarb": true,
@@ -167,7 +168,7 @@
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -202,5 +203,64 @@
   "sourceName": "Serious Eats",
   "sourceUrl": "https://www.seriouseats.com/15-minute-creamy-tomato-soup-vegan-recipe",
   "generatedAt": "2026-06-04T20:45:42.218Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Chicken Broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Heavy Cream",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Sandwich Bread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Sharp Cheddar Cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

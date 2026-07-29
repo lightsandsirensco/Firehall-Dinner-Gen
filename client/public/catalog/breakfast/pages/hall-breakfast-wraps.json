@@ -30,19 +30,19 @@
     },
     {
       "name": "lean turkey breakfast sausage",
-      "quantity": "1/2",
+      "quantity": "1 1/4 lb",
       "notes": "browned and crumbled",
       "group": "Fillings"
     },
     {
       "name": "baby spinach",
-      "quantity": "8",
+      "quantity": "8 oz",
       "notes": "wilted and squeezed dry",
       "group": "Fillings"
     },
     {
       "name": "crumbled feta",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "or goat cheese",
       "group": "Fillings"
     },
@@ -54,7 +54,7 @@
     },
     {
       "name": "salsa verde",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "drained, spread thin",
       "group": "Build"
     },
@@ -66,7 +66,7 @@
     },
     {
       "name": "foil",
-      "quantity": "8",
+      "quantity": "8 sheets",
       "notes": "for wrapping to-go portions",
       "group": "Hold"
     }
@@ -104,23 +104,24 @@
     }
   ],
   "nutrition": {
-    "calories": 353,
-    "protein": 18,
-    "carbs": 28,
-    "fat": 19,
-    "label": "per serving (hall portion)",
+    "calories": 557,
+    "protein": 30,
+    "carbs": 29,
+    "fat": 36,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -144,5 +145,68 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Hall Breakfast Wraps | Firehall Breakfast",
-  "collectionTier": "healthier_hall"
+  "collectionTier": "healthier_hall",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "lean turkey breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "crumbled feta",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "10-inch whole-wheat tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Confirm corn tortillas are used, or substitute a certified gluten-free wrap."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

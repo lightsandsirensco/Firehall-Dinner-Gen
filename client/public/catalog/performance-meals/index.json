@@ -1,578 +1,9 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-06-04T20:47:19.400Z",
-  "recipeCount": 45,
+  "generatedAt": "2026-07-29T13:35:43.720Z",
+  "recipeCount": 71,
   "recipes": [
-    {
-      "slug": "lemon-garlic-chicken-tray",
-      "title": "Lemon Garlic Chicken Tray",
-      "subtitle": "Bright citrus thighs with roasted broccoli and baby potatoes for eight",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cookTime": 35,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/lemon-garlic-chicken-tray.jpg",
-      "thumbImage": "/images/thumbs/lemon-garlic-chicken-tray.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lemon garlic chicken tray",
-        "chicken",
-        "American",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "herb-baked-salmon-tray",
-      "title": "Baked Salmon Tray",
-      "subtitle": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "salmon",
-      "mealFormat": "sheet_pan",
-      "cookTime": 18,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
-      "thumbImage": "/images/thumbs/herb-baked-salmon-tray.jpg",
-      "tags": [
-        "protein:salmon",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "baked salmon tray",
-        "herb baked salmon tray",
-        "salmon",
-        "American",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "turkey-sausage-egg-muffins",
-      "title": "Turkey Sausage Egg Muffins",
-      "subtitle": "Grab-and-go protein cups with spinach and bell pepper for shift breakfast",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "turkey",
-      "mealFormat": "breakfast",
-      "cookTime": 22,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/turkey-sausage-egg-muffins.jpg",
-      "thumbImage": "/images/thumbs/turkey-sausage-egg-muffins.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:breakfast",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "turkey sausage egg muffins",
-        "turkey",
-        "American",
-        "breakfast",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "lemon-garlic-shrimp-pasta",
-      "title": "Lemon Garlic Shrimp Pasta",
-      "subtitle": "Fast skillet pasta with parsley, capers, and peeled shrimp",
-      "category": "healthy_performance",
-      "cuisine": "Italian-American",
-      "protein": "shrimp",
-      "mealFormat": "pasta",
-      "cookTime": 18,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
-      "thumbImage": "/images/thumbs/lemon-garlic-shrimp-pasta.jpg",
-      "tags": [
-        "protein:shrimp",
-        "format:pasta",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lemon garlic shrimp pasta",
-        "shrimp",
-        "Italian-American",
-        "pasta",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "baked-turkey-meatball-marinara",
-      "title": "Baked Turkey Meatball Marinara",
-      "subtitle": "Oven-baked lean meatballs in slow-simmered tomato basil sauce",
-      "category": "healthy_performance",
-      "cuisine": "Italian-American",
-      "protein": "turkey",
-      "mealFormat": "bake",
-      "cookTime": 28,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
-      "thumbImage": "/images/thumbs/baked-turkey-meatball-marinara.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:bake",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "baked turkey meatball marinara",
-        "turkey",
-        "Italian-American",
-        "bake",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "cottage-cheese-protein-pasta",
-      "title": "Protein Pasta Bake",
-      "subtitle": "High-protein baked penne with marinara and melted mozzarella",
-      "category": "healthy_performance",
-      "cuisine": "Italian-American",
-      "protein": "mixed",
-      "mealFormat": "pasta",
-      "cookTime": 35,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
-      "thumbImage": "/images/thumbs/cottage-cheese-protein-pasta.jpg",
-      "tags": [
-        "protein:mixed",
-        "format:pasta",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "protein pasta bake",
-        "cottage cheese protein pasta",
-        "mixed",
-        "Italian-American",
-        "pasta",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "honey-garlic-chicken-rice-bowls",
-      "title": "Honey Garlic Chicken Bowls",
-      "subtitle": "Skillet glazed chicken thighs over jasmine rice with steamed broccoli",
-      "category": "healthy_performance",
-      "cuisine": "Asian-American",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cookTime": 25,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
-      "thumbImage": "/images/thumbs/honey-garlic-chicken-rice-bowls.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "honey garlic chicken bowls",
-        "honey garlic chicken rice bowls",
-        "chicken",
-        "Asian-American",
-        "bowl",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "white-bean-chicken-chili",
-      "title": "White Bean Chicken Chili",
-      "subtitle": "Creamy cannellini chili with green chiles and shredded rotisserie-style chicken",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "chicken",
-      "mealFormat": "soup",
-      "cookTime": 35,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/white-bean-chicken-chili.jpg",
-      "thumbImage": "/images/thumbs/white-bean-chicken-chili.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:soup",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "white bean chicken chili",
-        "chicken",
-        "American",
-        "soup",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "korean-beef-rice-bowls",
-      "title": "Beef Rice Bowls",
-      "subtitle": "Bulgogi-style ground beef over rice with quick cucumber pickle",
-      "category": "healthy_performance",
-      "cuisine": "Korean",
-      "protein": "beef",
-      "mealFormat": "bowl",
-      "cookTime": 15,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/korean-beef-rice-bowls.jpg",
-      "thumbImage": "/images/thumbs/korean-beef-rice-bowls.jpg",
-      "tags": [
-        "protein:beef",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "beef rice bowls",
-        "korean beef rice bowls",
-        "beef",
-        "Korean",
-        "bowl",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "crispy-fish-taco-night",
-      "title": "Fish Tacos",
-      "subtitle": "Oven-crisp cod with cabbage slaw and lime crema for eight",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "fish",
-      "mealFormat": "tacos",
-      "cookTime": 18,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/crispy-fish-taco-night.jpg",
-      "thumbImage": "/images/thumbs/crispy-fish-taco-night.jpg",
-      "tags": [
-        "protein:fish",
-        "format:tacos",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "fish tacos",
-        "crispy fish taco night",
-        "fish",
-        "Mexican",
-        "tacos",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "smoky-lentil-kale-soup",
-      "title": "Lentil and Kale Soup",
-      "subtitle": "Hearty vegetarian pot with fire-roasted tomatoes and smoked paprika",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "plant",
-      "mealFormat": "soup",
-      "cookTime": 40,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/smoky-lentil-kale-soup.jpg",
-      "thumbImage": "/images/thumbs/smoky-lentil-kale-soup.jpg",
-      "tags": [
-        "protein:plant",
-        "format:soup",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lentil and kale soup",
-        "smoky lentil kale soup",
-        "plant",
-        "American",
-        "soup",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "crock-barbacoa-chicken",
-      "title": "Barbacoa Chicken",
-      "subtitle": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "chicken",
-      "mealFormat": "slow_cooker",
-      "cookTime": 360,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
-      "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:slow_cooker",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 87,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "barbacoa chicken",
-        "crock barbacoa chicken",
-        "chicken",
-        "Mexican",
-        "slow cooker",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "shawarma-chicken-rice-bowls",
-      "title": "Shawarma Chicken Bowls",
-      "subtitle": "Sheet-pan spiced chicken with turmeric rice and cucumber yogurt",
-      "category": "healthy_performance",
-      "cuisine": "Middle Eastern",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cookTime": 28,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/shawarma-chicken-rice-bowls.jpg",
-      "thumbImage": "/images/thumbs/shawarma-chicken-rice-bowls.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "shawarma chicken bowls",
-        "shawarma chicken rice bowls",
-        "chicken",
-        "Middle Eastern",
-        "bowl",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "honey-lime-chicken-tray",
-      "title": "Honey Lime Chicken Tray",
-      "subtitle": "Glazed chicken with roasted peppers and red onion on one sheet",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cookTime": 28,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/honey-lime-chicken-tray.jpg",
-      "thumbImage": "/images/thumbs/honey-lime-chicken-tray.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "honey lime chicken tray",
-        "chicken",
-        "American",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "turkey-taco-skillet",
-      "title": "Turkey Taco Skillet",
-      "subtitle": "One-pan seasoned turkey with peppers, corn, and melted cheese",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "turkey",
-      "mealFormat": "skillet",
-      "cookTime": 20,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/turkey-taco-skillet.jpg",
-      "thumbImage": "/images/thumbs/turkey-taco-skillet.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:skillet",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "turkey taco skillet",
-        "turkey",
-        "Mexican",
-        "skillet",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "maple-soy-salmon-bowls",
-      "title": "Maple Soy Salmon Bowls",
-      "subtitle": "Glazed salmon over brown rice with edamame and shredded carrot",
-      "category": "healthy_performance",
-      "cuisine": "Asian-American",
-      "protein": "salmon",
-      "mealFormat": "bowl",
-      "cookTime": 18,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/maple-soy-salmon-bowls.jpg",
-      "thumbImage": "/images/thumbs/maple-soy-salmon-bowls.jpg",
-      "tags": [
-        "protein:salmon",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "maple soy salmon bowls",
-        "salmon",
-        "Asian-American",
-        "bowl",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "turkey-sweet-potato-chili",
-      "title": "Turkey Sweet Potato Chili",
-      "subtitle": "Crock chili with diced sweet potato, black beans, and warm spices",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "turkey",
-      "mealFormat": "slow_cooker",
-      "cookTime": 300,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/turkey-sweet-potato-chili.jpg",
-      "thumbImage": "/images/thumbs/turkey-sweet-potato-chili.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:slow_cooker",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "turkey sweet potato chili",
-        "turkey",
-        "American",
-        "slow cooker",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
     {
       "slug": "asian-chicken-lettuce-cups",
       "title": "Chicken Lettuce Cups",
@@ -605,883 +36,30 @@
         "handheld",
         "performance meal",
         "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "mediterranean-baked-fish-tray",
-      "title": "Baked Cod Tray",
-      "subtitle": "Cod with cherry tomatoes, olives, and capers on one sheet",
-      "category": "healthy_performance",
-      "cuisine": "Mediterranean",
-      "protein": "fish",
-      "mealFormat": "sheet_pan",
-      "cookTime": 20,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
-      "thumbImage": "/images/thumbs/mediterranean-baked-fish-tray.jpg",
-      "tags": [
-        "protein:fish",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
       ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "baked cod tray",
-        "mediterranean baked fish tray",
-        "fish",
-        "Mediterranean",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "greek-lemon-chicken-potatoes",
-      "title": "Lemon Chicken and Potatoes",
-      "subtitle": "Roast chicken thighs with oregano potatoes and pan jus",
-      "category": "healthy_performance",
-      "cuisine": "Greek",
-      "protein": "chicken",
-      "mealFormat": "roast",
-      "cookTime": 45,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
-      "thumbImage": "/images/thumbs/greek-lemon-chicken-potatoes.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:roast",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lemon chicken and potatoes",
-        "greek lemon chicken potatoes",
-        "chicken",
-        "Greek",
-        "roast",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "moroccan-chicken-chickpea-tray",
-      "title": "Moroccan Chicken and Chickpeas",
-      "subtitle": "Warm-spiced thighs with chickpeas, apricots, and roasted carrots",
-      "category": "healthy_performance",
-      "cuisine": "Moroccan",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cookTime": 35,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
-      "thumbImage": "/images/thumbs/moroccan-chicken-chickpea-tray.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "moroccan chicken and chickpeas",
-        "moroccan chicken chickpea tray",
-        "chicken",
-        "Moroccan",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "hummus-chicken-platter",
-      "title": "Hummus Chicken Platter",
-      "subtitle": "Sliced spiced chicken over creamy hummus with veg and pita",
-      "category": "healthy_performance",
-      "cuisine": "Middle Eastern",
-      "protein": "chicken",
-      "mealFormat": "plated",
-      "cookTime": 22,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/hummus-chicken-platter.jpg",
-      "thumbImage": "/images/thumbs/hummus-chicken-platter.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:plated",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "hummus chicken platter",
-        "chicken",
-        "Middle Eastern",
-        "plated",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "tabbouleh-chicken-bowls",
-      "title": "Tabbouleh Chicken Bowls",
-      "subtitle": "Herb-heavy bulgur salad topped with lemon grilled chicken",
-      "category": "healthy_performance",
-      "cuisine": "Lebanese",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cookTime": 18,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/tabbouleh-chicken-bowls.jpg",
-      "thumbImage": "/images/thumbs/tabbouleh-chicken-bowls.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "tabbouleh chicken bowls",
-        "chicken",
-        "Lebanese",
-        "bowl",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "zaatar-roasted-chicken-thighs",
-      "title": "Za'atar Chicken Thighs",
-      "subtitle": "Middle Eastern spice-crusted thighs with roasted onions and lemon",
-      "category": "healthy_performance",
-      "cuisine": "Middle Eastern",
-      "protein": "chicken",
-      "mealFormat": "roast",
-      "cookTime": 38,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/zaatar-roasted-chicken-thighs.jpg",
-      "thumbImage": "/images/thumbs/zaatar-roasted-chicken-thighs.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:roast",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "za'atar chicken thighs",
-        "zaatar roasted chicken thighs",
-        "chicken",
-        "Middle Eastern",
-        "roast",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "lemon-salmon-orzo-skillet",
-      "title": "Lemon Salmon Orzo",
-      "subtitle": "One-pan salmon with orzo, spinach, and capers",
-      "category": "healthy_performance",
-      "cuisine": "Mediterranean",
-      "protein": "salmon",
-      "mealFormat": "pasta",
-      "cookTime": 25,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
-      "thumbImage": "/images/thumbs/lemon-salmon-orzo-skillet.jpg",
-      "tags": [
-        "protein:salmon",
-        "format:pasta",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lemon salmon orzo",
-        "lemon salmon orzo skillet",
-        "salmon",
-        "Mediterranean",
-        "pasta",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "white-bean-kale-soup",
-      "title": "White Bean and Kale Soup",
-      "subtitle": "Tuscan-style cannellini soup with garlic, rosemary, and parmesan rind",
-      "category": "healthy_performance",
-      "cuisine": "Italian",
-      "protein": "plant",
-      "mealFormat": "soup",
-      "cookTime": 35,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/white-bean-kale-soup.jpg",
-      "thumbImage": "/images/thumbs/white-bean-kale-soup.jpg",
-      "tags": [
-        "protein:plant",
-        "format:soup",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "white bean and kale soup",
-        "white bean kale soup",
-        "plant",
-        "Italian",
-        "soup",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "lemon-chicken-orzo-soup",
-      "title": "Lemon Chicken Orzo Soup",
-      "subtitle": "Bright broth with shredded chicken, orzo, and tender carrots",
-      "category": "healthy_performance",
-      "cuisine": "Greek",
-      "protein": "chicken",
-      "mealFormat": "soup",
-      "cookTime": 35,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/lemon-chicken-orzo-soup.jpg",
-      "thumbImage": "/images/thumbs/lemon-chicken-orzo-soup.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:soup",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lemon chicken orzo soup",
-        "chicken",
-        "Greek",
-        "soup",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "turkey-lettuce-wrap-night",
-      "title": "Turkey Lettuce Wraps",
-      "subtitle": "Ginger-garlic ground turkey in crisp romaine with hoisin and peanuts",
-      "category": "healthy_performance",
-      "cuisine": "Asian-American",
-      "protein": "turkey",
-      "mealFormat": "handheld",
-      "cookTime": 15,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/turkey-lettuce-wrap-night.jpg",
-      "thumbImage": "/images/thumbs/turkey-lettuce-wrap-night.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:handheld",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "turkey lettuce wraps",
-        "turkey lettuce wrap night",
-        "turkey",
-        "Asian-American",
-        "handheld",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "caprese-chicken-bake",
-      "title": "Caprese Chicken Bake",
-      "subtitle": "Baked chicken breasts with tomato, mozzarella, and balsamic glaze",
-      "category": "healthy_performance",
-      "cuisine": "Italian",
-      "protein": "chicken",
-      "mealFormat": "bake",
-      "cookTime": 25,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/caprese-chicken-bake.jpg",
-      "thumbImage": "/images/thumbs/caprese-chicken-bake.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:bake",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "caprese chicken bake",
-        "chicken",
-        "Italian",
-        "bake",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "blackened-cod-taco-night",
-      "title": "Blackened Cod Tacos",
-      "subtitle": "Spice-crusted cod with lime slaw and avocado crema in corn tortillas",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "fish",
-      "mealFormat": "tacos",
-      "cookTime": 12,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/blackened-cod-taco-night.jpg",
-      "thumbImage": "/images/thumbs/blackened-cod-taco-night.jpg",
-      "tags": [
-        "protein:fish",
-        "format:tacos",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "blackened cod tacos",
-        "blackened cod taco night",
-        "fish",
-        "Mexican",
-        "tacos",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "pesto-tomato-chicken-tray",
-      "title": "Pesto Chicken Tray",
-      "subtitle": "Basil pesto chicken with roasted cherry tomatoes and zucchini",
-      "category": "healthy_performance",
-      "cuisine": "Italian",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cookTime": 28,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
-      "thumbImage": "/images/thumbs/pesto-tomato-chicken-tray.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "pesto chicken tray",
-        "pesto tomato chicken tray",
-        "chicken",
-        "Italian",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
-      "title": "Chicken Thighs with Sweet Potato and Spinach",
-      "subtitle": "Seared thighs with roasted sweet potato and garlicky spinach",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "chicken",
-      "mealFormat": "plated_main",
-      "cookTime": 35,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
-      "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:plated_main",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "chicken thighs with sweet potato and spinach",
-        "boneless chicken thighs sweet potato spinach",
-        "chicken",
-        "American",
-        "plated main",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "spanish-chicken-chorizo-rice",
-      "title": "Chicken and Chorizo Rice",
-      "subtitle": "One-pot saffron rice with chicken thighs, chorizo, and peas",
-      "category": "healthy_performance",
-      "cuisine": "Spanish",
-      "protein": "chicken",
-      "mealFormat": "one_pot",
-      "cookTime": 45,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
-      "thumbImage": "/images/thumbs/spanish-chicken-chorizo-rice.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:one_pot",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "chicken and chorizo rice",
-        "spanish chicken chorizo rice",
-        "chicken",
-        "Spanish",
-        "one pot",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "yogurt-marinated-grill-chicken",
-      "title": "Yogurt Marinated Chicken",
-      "subtitle": "Tender spiced chicken thighs from an overnight yogurt marinade",
-      "category": "healthy_performance",
-      "cuisine": "Middle Eastern",
-      "protein": "chicken",
-      "mealFormat": "grill",
-      "cookTime": 20,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/yogurt-marinated-grill-chicken.jpg",
-      "thumbImage": "/images/thumbs/yogurt-marinated-grill-chicken.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:grill",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "yogurt marinated chicken",
-        "yogurt marinated grill chicken",
-        "chicken",
-        "Middle Eastern",
-        "grill",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "lentil-mushroom-bolognese",
-      "title": "Lentil Bolognese",
-      "subtitle": "Plant-forward ragu with green lentils, cremini, and whole-wheat pasta",
-      "category": "healthy_performance",
-      "cuisine": "Italian",
-      "protein": "plant",
-      "mealFormat": "pasta",
-      "cookTime": 40,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/lentil-mushroom-bolognese.jpg",
-      "thumbImage": "/images/thumbs/lentil-mushroom-bolognese.jpg",
-      "tags": [
-        "protein:plant",
-        "format:pasta",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "lentil bolognese",
-        "lentil mushroom bolognese",
-        "plant",
-        "Italian",
-        "pasta",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "chicken-enchilada-skillet-light",
-      "title": "Chicken Enchilada Skillet",
-      "subtitle": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "chicken",
-      "mealFormat": "skillet",
-      "cookTime": 25,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
-      "thumbImage": "/images/thumbs/chicken-enchilada-skillet-light.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:skillet",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "chicken enchilada skillet",
-        "chicken enchilada skillet light",
-        "chicken",
-        "Mexican",
-        "skillet",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "turkey-zoodle-bolognese",
-      "title": "Turkey Zoodle Bolognese",
-      "subtitle": "Lean turkey ragu over spiralized zucchini with parmesan",
-      "category": "healthy_performance",
-      "cuisine": "Italian-American",
-      "protein": "turkey",
-      "mealFormat": "pasta",
-      "cookTime": 30,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/turkey-zoodle-bolognese.jpg",
-      "thumbImage": "/images/thumbs/turkey-zoodle-bolognese.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:pasta",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "turkey zoodle bolognese",
-        "turkey",
-        "Italian-American",
-        "pasta",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "cajun-chicken-rice-bowl",
-      "title": "Cajun Chicken and Rice",
-      "subtitle": "Blackened chicken thighs over rice with bell pepper and creole spices",
-      "category": "healthy_performance",
-      "cuisine": "Cajun",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cookTime": 25,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
-      "thumbImage": "/images/thumbs/cajun-chicken-rice-bowl.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:bowl",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "cajun chicken and rice",
-        "cajun chicken rice bowl",
-        "chicken",
-        "Cajun",
-        "bowl",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "chipotle-lime-chicken-tacos",
-      "title": "Chipotle Lime Chicken Tacos",
-      "subtitle": "Adobo-marinated grilled chicken with slaw and lime crema",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "chicken",
-      "mealFormat": "tacos",
-      "cookTime": 18,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",
-      "thumbImage": "/images/thumbs/chipotle-lime-chicken-tacos.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:tacos",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "chipotle lime chicken tacos",
-        "chicken",
-        "Mexican",
-        "tacos",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "grilled-shrimp-quinoa-bowls",
-      "title": "Shrimp and Quinoa Bowls",
-      "subtitle": "Charred shrimp skewers over quinoa with roasted vegetables",
-      "category": "healthy_performance",
-      "cuisine": "Mediterranean",
-      "protein": "shrimp",
-      "mealFormat": "grill",
-      "cookTime": 20,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
-      "thumbImage": "/images/thumbs/grilled-shrimp-quinoa-bowls.jpg",
-      "tags": [
-        "protein:shrimp",
-        "format:grill",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "shrimp and quinoa bowls",
-        "grilled shrimp quinoa bowls",
-        "shrimp",
-        "Mediterranean",
-        "grill",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "veggie-egg-casserole-tray",
-      "title": "Veggie Egg Casserole",
-      "subtitle": "Baked egg casserole with spinach, bell pepper, and feta for eight",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "egg",
-      "mealFormat": "breakfast",
-      "cookTime": 35,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/veggie-egg-casserole-tray.jpg",
-      "thumbImage": "/images/thumbs/veggie-egg-casserole-tray.jpg",
-      "tags": [
-        "protein:egg",
-        "format:breakfast",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "veggie egg casserole",
-        "veggie egg casserole tray",
-        "egg",
-        "American",
-        "breakfast",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "maple-mustard-salmon-tray",
-      "title": "Maple Mustard Salmon Tray",
-      "subtitle": "Glazed salmon fillets with roasted Brussels sprouts and carrots",
-      "category": "healthy_performance",
-      "cuisine": "American",
-      "protein": "salmon",
-      "mealFormat": "sheet_pan",
-      "cookTime": 20,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/maple-mustard-salmon-tray.jpg",
-      "thumbImage": "/images/thumbs/maple-mustard-salmon-tray.jpg",
-      "tags": [
-        "protein:salmon",
-        "format:sheet_pan",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "maple mustard salmon tray",
-        "salmon",
-        "American",
-        "sheet pan",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "salsa-verde-crock-chicken",
-      "title": "Salsa Verde Crock Chicken",
-      "subtitle": "Slow-cooked tomatillo chicken that shreds for bowls and tacos",
-      "category": "healthy_performance",
-      "cuisine": "Mexican",
-      "protein": "chicken",
-      "mealFormat": "slow_cooker",
-      "cookTime": 360,
-      "difficulty": "easy",
-      "heroImage": "/images/golden-100/salsa-verde-crock-chicken.jpg",
-      "thumbImage": "/images/thumbs/salsa-verde-crock-chicken.jpg",
-      "tags": [
-        "protein:chicken",
-        "format:slow_cooker",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "salsa verde crock chicken",
-        "chicken",
-        "Mexican",
-        "slow cooker",
-        "performance meal",
-        "firefighter healthy"
-      ]
-    },
-    {
-      "slug": "turkey-shepherds-sweet-potato",
-      "title": "Turkey Shepherd's Pie",
-      "subtitle": "Lean turkey and vegetable filling under whipped sweet potato mash",
-      "category": "healthy_performance",
-      "cuisine": "British-American",
-      "protein": "turkey",
-      "mealFormat": "bake",
-      "cookTime": 40,
-      "difficulty": "medium",
-      "heroImage": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
-      "thumbImage": "/images/thumbs/turkey-shepherds-sweet-potato.jpg",
-      "tags": [
-        "protein:turkey",
-        "format:bake",
-        "category:healthy_performance",
-        "healthy",
-        "performance_meals_50",
-        "hall_meal",
-        "high_protein",
-        "healthy"
-      ],
-      "firefighterScore": 83,
-      "popularityWeight": 7.5,
-      "searchTerms": [
-        "turkey shepherd's pie",
-        "turkey shepherds sweet potato",
-        "turkey",
-        "British-American",
-        "bake",
-        "performance meal",
-        "firefighter healthy"
-      ]
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+          }
+        ]
+      }
     },
     {
       "slug": "baked-falafel-hall-bowls",
@@ -1515,7 +93,3957 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara",
+      "subtitle": "Oven-baked lean meatballs in slow-simmered tomato basil sauce",
+      "category": "healthy_performance",
+      "cuisine": "Italian-American",
+      "protein": "turkey",
+      "mealFormat": "bake",
+      "cookTime": 28,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
+      "thumbImage": "/images/thumbs/baked-turkey-meatball-marinara.jpg",
+      "tags": [
+        "protein:turkey",
+        "format:bake",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "baked turkey meatball marinara",
+        "turkey",
+        "Italian-American",
+        "bake",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "beef-birria-with-consomme",
+      "title": "Beef Birria with Consommé for Dipping",
+      "subtitle": "Chile-braised beef shredded and served with its own dipping broth",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "beef",
+      "mealFormat": "one_pot",
+      "cookTime": 210,
+      "difficulty": "medium",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:one_pot",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "beef birria with consommé for dipping",
+        "beef birria with consomme",
+        "beef",
+        "Mexican",
+        "one pot",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "blackened-cod-taco-night",
+      "title": "Blackened Cod Tacos",
+      "subtitle": "Spice-crusted cod with lime slaw and avocado crema in corn tortillas",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "fish",
+      "mealFormat": "tacos",
+      "cookTime": 12,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/blackened-cod-taco-night.jpg",
+      "thumbImage": "/images/thumbs/blackened-cod-taco-night.jpg",
+      "tags": [
+        "protein:fish",
+        "format:tacos",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "blackened cod tacos",
+        "blackened cod taco night",
+        "fish",
+        "Mexican",
+        "tacos",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "title": "Chicken Thighs with Sweet Potato and Spinach",
+      "subtitle": "Seared thighs with roasted sweet potato and garlicky spinach",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "chicken",
+      "mealFormat": "plated_main",
+      "cookTime": 35,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "thumbImage": "/images/thumbs/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:plated_main",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken thighs with sweet potato and spinach",
+        "boneless chicken thighs sweet potato spinach",
+        "chicken",
+        "American",
+        "plated main",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+      "subtitle": "Blackened chicken sliced over Cajun trinity dirty rice with black-eyed peas and a tangy remoulade",
+      "category": "healthy_performance",
+      "cuisine": "Cajun",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 25,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "cajun chicken & dirty rice bowls with remoulade",
+        "cajun chicken dirty rice bowls",
+        "chicken",
+        "Cajun",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken and Rice",
+      "subtitle": "Blackened chicken thighs over rice with bell pepper and creole spices",
+      "category": "healthy_performance",
+      "cuisine": "Cajun",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 25,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
+      "thumbImage": "/images/thumbs/cajun-chicken-rice-bowl.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "cajun chicken and rice",
+        "cajun chicken rice bowl",
+        "chicken",
+        "Cajun",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake",
+      "subtitle": "Baked chicken breasts with tomato, mozzarella, and balsamic glaze",
+      "category": "healthy_performance",
+      "cuisine": "Italian",
+      "protein": "chicken",
+      "mealFormat": "bake",
+      "cookTime": 25,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/caprese-chicken-bake.jpg",
+      "thumbImage": "/images/thumbs/caprese-chicken-bake.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bake",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "caprese chicken bake",
+        "chicken",
+        "Italian",
+        "bake",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "chicken-enchilada-skillet-light",
+      "title": "Chicken Enchilada Skillet",
+      "subtitle": "One-pan shredded chicken with tortillas, enchilada sauce, and cheese",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cookTime": 25,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
+      "thumbImage": "/images/thumbs/chicken-enchilada-skillet-light.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken enchilada skillet",
+        "chicken enchilada skillet light",
+        "chicken",
+        "Mexican",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "chicken-marsala-lightened",
+      "title": "Chicken Marsala (Lightened)",
+      "subtitle": "Braised chicken thighs and mushrooms in a marsala wine pan sauce",
+      "category": "healthy_performance",
+      "cuisine": "Italian",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cookTime": 35,
+      "difficulty": "medium",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken marsala (lightened)",
+        "chicken marsala lightened",
+        "chicken",
+        "Italian",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "chipotle-lime-chicken-tacos",
+      "title": "Chipotle Lime Chicken Tacos",
+      "subtitle": "Adobo-marinated grilled chicken with slaw and lime crema",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "chicken",
+      "mealFormat": "tacos",
+      "cookTime": 18,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",
+      "thumbImage": "/images/thumbs/chipotle-lime-chicken-tacos.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:tacos",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chipotle lime chicken tacos",
+        "chicken",
+        "Mexican",
+        "tacos",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Protein Pasta Bake",
+      "subtitle": "High-protein baked penne with marinara and melted mozzarella",
+      "category": "healthy_performance",
+      "cuisine": "Italian-American",
+      "protein": "mixed",
+      "mealFormat": "pasta",
+      "cookTime": 35,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
+      "thumbImage": "/images/thumbs/cottage-cheese-protein-pasta.jpg",
+      "tags": [
+        "protein:mixed",
+        "format:pasta",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "protein pasta bake",
+        "cottage cheese protein pasta",
+        "mixed",
+        "Italian-American",
+        "pasta",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "crispy-fish-taco-night",
+      "title": "Fish Tacos",
+      "subtitle": "Oven-crisp cod with cabbage slaw and lime crema for eight",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "fish",
+      "mealFormat": "tacos",
+      "cookTime": 18,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/crispy-fish-taco-night.jpg",
+      "thumbImage": "/images/thumbs/crispy-fish-taco-night.jpg",
+      "tags": [
+        "protein:fish",
+        "format:tacos",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "fish tacos",
+        "crispy fish taco night",
+        "fish",
+        "Mexican",
+        "tacos",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a 1:1 gluten-free all-purpose flour blend."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "crock-barbacoa-chicken",
+      "title": "Barbacoa Chicken",
+      "subtitle": "Slow-cooked chipotle barbacoa with crispy roasted potato wedges",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cookTime": 360,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/crock-barbacoa-chicken.jpg",
+      "thumbImage": "/images/thumbs/crock-barbacoa-chicken.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:slow_cooker",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 87,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "barbacoa chicken",
+        "crock barbacoa chicken",
+        "chicken",
+        "Mexican",
+        "slow cooker",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "cuban-beef-picadillo-bowls",
+      "title": "Cuban-Style Beef Picadillo Bowls",
+      "subtitle": "Sweet-savory ground beef with olives and raisins over rice and black beans",
+      "category": "healthy_performance",
+      "cuisine": "Cuban",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 30,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "cuban-style beef picadillo bowls",
+        "cuban beef picadillo bowls",
+        "beef",
+        "Cuban",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "filipino-chicken-adobo",
+      "title": "Filipino-Style Chicken Adobo",
+      "subtitle": "Soy-vinegar braised chicken thighs with garlic and bay leaf over rice",
+      "category": "healthy_performance",
+      "cuisine": "Filipino",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:one_pot",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "filipino-style chicken adobo",
+        "filipino chicken adobo",
+        "chicken",
+        "Filipino",
+        "one pot",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "general-tsos-baked-chicken",
+      "title": "General Tso's-Style Baked Chicken",
+      "subtitle": "Crispy oven-baked chicken with a sweet-spicy chili glaze baked right in",
+      "category": "healthy_performance",
+      "cuisine": "Chinese-American",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 30,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "general tso's-style baked chicken",
+        "general tsos baked chicken",
+        "chicken",
+        "Chinese-American",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+      "subtitle": "Oregano-mint baked meatballs over lemon orzo with cool tzatziki",
+      "category": "healthy_performance",
+      "cuisine": "Greek",
+      "protein": "beef",
+      "mealFormat": "bake",
+      "cookTime": 25,
+      "difficulty": "medium",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:bake",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "greek beef meatballs (keftedes) with lemon orzo & tzatziki",
+        "greek beef keftedes lemon orzo tzatziki",
+        "beef",
+        "Greek",
+        "bake",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Lemon Chicken and Potatoes",
+      "subtitle": "Roast chicken thighs with oregano potatoes and pan jus",
+      "category": "healthy_performance",
+      "cuisine": "Greek",
+      "protein": "chicken",
+      "mealFormat": "roast",
+      "cookTime": 45,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+      "thumbImage": "/images/thumbs/greek-lemon-chicken-potatoes.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:roast",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lemon chicken and potatoes",
+        "greek lemon chicken potatoes",
+        "chicken",
+        "Greek",
+        "roast",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+      "subtitle": "Oregano-feta beef patties over rice with a cool yogurt-dill cabbage slaw, no bun required",
+      "category": "healthy_performance",
+      "cuisine": "Greek/Mediterranean",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 15,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "greek-spiced beef burger bowls with tzatziki slaw",
+        "greek spiced beef burger bowls tzatziki slaw",
+        "beef",
+        "Greek/Mediterranean",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Shrimp and Quinoa Bowls",
+      "subtitle": "Charred shrimp skewers over quinoa with roasted vegetables",
+      "category": "healthy_performance",
+      "cuisine": "Mediterranean",
+      "protein": "shrimp",
+      "mealFormat": "grill",
+      "cookTime": 20,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
+      "thumbImage": "/images/thumbs/grilled-shrimp-quinoa-bowls.jpg",
+      "tags": [
+        "protein:shrimp",
+        "format:grill",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "shrimp and quinoa bowls",
+        "grilled shrimp quinoa bowls",
+        "shrimp",
+        "Mediterranean",
+        "grill",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "subtitle": "Flaky fillets with dill, parsley, and roasted asparagus for the crew",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "salmon",
+      "mealFormat": "sheet_pan",
+      "cookTime": 18,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "thumbImage": "/images/thumbs/herb-baked-salmon-tray.jpg",
+      "tags": [
+        "protein:salmon",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "baked salmon tray",
+        "herb baked salmon tray",
+        "salmon",
+        "American",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+      "subtitle": "Rosemary-thyme reverse-seared steak sliced over chimichurri-tossed farro",
+      "category": "healthy_performance",
+      "cuisine": "Argentinian/American Grill",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cookTime": 20,
+      "difficulty": "medium",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "herb-marinated flank steak with chimichurri farro",
+        "herb marinated flank steak chimichurri farro",
+        "beef",
+        "Argentinian/American Grill",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Substitute quinoa or rice. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "high-protein-chicken-fried-rice",
+      "title": "High-Protein Chicken Fried Rice",
+      "subtitle": "Wok-fried rice with diced chicken, scrambled egg, and vegetables",
+      "category": "healthy_performance",
+      "cuisine": "Chinese-American",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cookTime": 15,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "high-protein chicken fried rice",
+        "high protein chicken fried rice",
+        "chicken",
+        "Chinese-American",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Bowls",
+      "subtitle": "Skillet glazed chicken thighs over jasmine rice with steamed broccoli",
+      "category": "healthy_performance",
+      "cuisine": "Asian-American",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 25,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/honey-garlic-chicken-rice-bowls.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "honey garlic chicken bowls",
+        "honey garlic chicken rice bowls",
+        "chicken",
+        "Asian-American",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "subtitle": "Glazed chicken with roasted peppers and red onion on one sheet",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 28,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "thumbImage": "/images/thumbs/honey-lime-chicken-tray.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "honey lime chicken tray",
+        "chicken",
+        "American",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter",
+      "subtitle": "Sliced spiced chicken over creamy hummus with veg and pita",
+      "category": "healthy_performance",
+      "cuisine": "Middle Eastern",
+      "protein": "chicken",
+      "mealFormat": "plated",
+      "cookTime": 22,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/hummus-chicken-platter.jpg",
+      "thumbImage": "/images/thumbs/hummus-chicken-platter.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:plated",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "hummus chicken platter",
+        "chicken",
+        "Middle Eastern",
+        "plated",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "italian-sausage-veg-sheet-pan",
+      "title": "Sausage, Peppers & Zucchini Sheet Pan",
+      "subtitle": "Sweet Italian sausage with roasted peppers, onion, and zucchini",
+      "category": "healthy_performance",
+      "cuisine": "Italian",
+      "protein": "pork",
+      "mealFormat": "sheet_pan",
+      "cookTime": 28,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:pork",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "sausage and peppers",
+        "italian sausage veg sheet pan",
+        "pork",
+        "Italian",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "korean-beef-rice-bowls",
+      "title": "Beef Rice Bowls",
+      "subtitle": "Bulgogi-style ground beef over rice with quick cucumber pickle",
+      "category": "healthy_performance",
+      "cuisine": "Korean",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 15,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/korean-beef-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/korean-beef-rice-bowls.jpg",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "beef rice bowls",
+        "korean beef rice bowls",
+        "beef",
+        "Korean",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "kung-pao-chicken-rice-bowls",
+      "title": "Kung Pao Chicken & Rice Bowls",
+      "subtitle": "Braised chicken thighs in a tangy soy-vinegar kung pao sauce with peanuts and scallions over rice",
+      "category": "healthy_performance",
+      "cuisine": "Sichuan/Chinese",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 25,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "kung pao chicken & rice bowls",
+        "kung pao chicken rice bowls",
+        "chicken",
+        "Sichuan/Chinese",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lean-beef-broccoli-rice",
+      "title": "Beef and Broccoli Rice",
+      "subtitle": "Flat-top stir-fry with flank steak, broccoli, and brown rice",
+      "category": "healthy_performance",
+      "cuisine": "Chinese-American",
+      "protein": "beef",
+      "mealFormat": "stir_fry",
+      "cookTime": 15,
+      "difficulty": "medium",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:stir_fry",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "beef and broccoli rice",
+        "lean beef broccoli rice",
+        "beef",
+        "Chinese-American",
+        "stir fry",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lean-turkey-bean-chili",
+      "title": "Lean Turkey and Bean Chili",
+      "subtitle": "Double-batch crock chili with kidney beans and fire-roasted tomatoes",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "turkey",
+      "mealFormat": "slow_cooker",
+      "cookTime": 240,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:turkey",
+        "format:slow_cooker",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lean turkey and bean chili",
+        "lean turkey bean chili",
+        "turkey",
+        "American",
+        "slow cooker",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lemon-chicken-orzo-soup",
+      "title": "Lemon Chicken Orzo Soup",
+      "subtitle": "Bright broth with shredded chicken, orzo, and tender carrots",
+      "category": "healthy_performance",
+      "cuisine": "Greek",
+      "protein": "chicken",
+      "mealFormat": "soup",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/lemon-chicken-orzo-soup.jpg",
+      "thumbImage": "/images/thumbs/lemon-chicken-orzo-soup.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:soup",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lemon chicken orzo soup",
+        "chicken",
+        "Greek",
+        "soup",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lemon-garlic-chicken-tray",
+      "title": "Lemon Garlic Chicken Tray",
+      "subtitle": "Bright citrus thighs with roasted broccoli and baby potatoes for eight",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/lemon-garlic-chicken-tray.jpg",
+      "thumbImage": "/images/thumbs/lemon-garlic-chicken-tray.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lemon garlic chicken tray",
+        "chicken",
+        "American",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta",
+      "subtitle": "Fast skillet pasta with parsley, capers, and peeled shrimp",
+      "category": "healthy_performance",
+      "cuisine": "Italian-American",
+      "protein": "shrimp",
+      "mealFormat": "pasta",
+      "cookTime": 18,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
+      "thumbImage": "/images/thumbs/lemon-garlic-shrimp-pasta.jpg",
+      "tags": [
+        "protein:shrimp",
+        "format:pasta",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lemon garlic shrimp pasta",
+        "shrimp",
+        "Italian-American",
+        "pasta",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta/noodle alternative."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo",
+      "subtitle": "One-pan salmon with orzo, spinach, and capers",
+      "category": "healthy_performance",
+      "cuisine": "Mediterranean",
+      "protein": "salmon",
+      "mealFormat": "pasta",
+      "cookTime": 25,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
+      "thumbImage": "/images/thumbs/lemon-salmon-orzo-skillet.jpg",
+      "tags": [
+        "protein:salmon",
+        "format:pasta",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lemon salmon orzo",
+        "lemon salmon orzo skillet",
+        "salmon",
+        "Mediterranean",
+        "pasta",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "lentil-mushroom-bolognese",
+      "title": "Lentil Bolognese",
+      "subtitle": "Plant-forward ragu with green lentils, cremini, and whole-wheat pasta",
+      "category": "healthy_performance",
+      "cuisine": "Italian",
+      "protein": "plant",
+      "mealFormat": "pasta",
+      "cookTime": 40,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/lentil-mushroom-bolognese.jpg",
+      "thumbImage": "/images/thumbs/lentil-mushroom-bolognese.jpg",
+      "tags": [
+        "protein:plant",
+        "format:pasta",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lentil bolognese",
+        "lentil mushroom bolognese",
+        "plant",
+        "Italian",
+        "pasta",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray",
+      "subtitle": "Glazed salmon fillets with roasted Brussels sprouts and carrots",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "salmon",
+      "mealFormat": "sheet_pan",
+      "cookTime": 20,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/maple-mustard-salmon-tray.jpg",
+      "thumbImage": "/images/thumbs/maple-mustard-salmon-tray.jpg",
+      "tags": [
+        "protein:salmon",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "maple mustard salmon tray",
+        "salmon",
+        "American",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls",
+      "subtitle": "Glazed salmon over brown rice with edamame and shredded carrot",
+      "category": "healthy_performance",
+      "cuisine": "Asian-American",
+      "protein": "salmon",
+      "mealFormat": "bowl",
+      "cookTime": 18,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/maple-soy-salmon-bowls.jpg",
+      "thumbImage": "/images/thumbs/maple-soy-salmon-bowls.jpg",
+      "tags": [
+        "protein:salmon",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "maple soy salmon bowls",
+        "salmon",
+        "Asian-American",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Baked Cod Tray",
+      "subtitle": "Cod with cherry tomatoes, olives, and capers on one sheet",
+      "category": "healthy_performance",
+      "cuisine": "Mediterranean",
+      "protein": "fish",
+      "mealFormat": "sheet_pan",
+      "cookTime": 20,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "thumbImage": "/images/thumbs/mediterranean-baked-fish-tray.jpg",
+      "tags": [
+        "protein:fish",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "baked cod tray",
+        "mediterranean baked fish tray",
+        "fish",
+        "Mediterranean",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "mediterranean-beef-kofta-bowls",
+      "title": "Mediterranean Beef Kofta Bowls",
+      "subtitle": "Sheet-pan baked cumin-spiced beef kofta over rice pilaf with tahini-garlic sauce",
+      "category": "healthy_performance",
+      "cuisine": "Middle Eastern",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cookTime": 22,
+      "difficulty": "medium",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "mediterranean beef kofta bowls",
+        "beef",
+        "Middle Eastern",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta/noodle alternative. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "title": "Mediterranean Chicken & White Bean Skillet",
+      "subtitle": "Seared chicken thighs simmered with white beans, tomatoes, spinach, and feta",
+      "category": "healthy_performance",
+      "cuisine": "Mediterranean",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cookTime": 30,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "mediterranean chicken & white bean skillet",
+        "mediterranean chicken white bean skillet",
+        "chicken",
+        "Mediterranean",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken and Chickpeas",
+      "subtitle": "Warm-spiced thighs with chickpeas, apricots, and roasted carrots",
+      "category": "healthy_performance",
+      "cuisine": "Moroccan",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 35,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
+      "thumbImage": "/images/thumbs/moroccan-chicken-chickpea-tray.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "moroccan chicken and chickpeas",
+        "moroccan chicken chickpea tray",
+        "chicken",
+        "Moroccan",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+      "subtitle": "Ground beef and orzo simmered risotto-style with tomato, spinach, and feta",
+      "category": "healthy_performance",
+      "cuisine": "Mediterranean",
+      "protein": "beef",
+      "mealFormat": "pasta",
+      "cookTime": 30,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:pasta",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "one-pot beef & orzo skillet with spinach and feta",
+        "one pot beef orzo skillet spinach feta",
+        "beef",
+        "Mediterranean",
+        "pasta",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+      "subtitle": "Cumin-lime marinated chicken thighs and potatoes roasted together with a spicy green herb sauce",
+      "category": "healthy_performance",
+      "cuisine": "Peruvian",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "peruvian-style sheet-pan chicken with aji verde",
+        "peruvian sheet pan chicken aji verde",
+        "chicken",
+        "Peruvian",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Chicken Tray",
+      "subtitle": "Basil pesto chicken with roasted cherry tomatoes and zucchini",
+      "category": "healthy_performance",
+      "cuisine": "Italian",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 28,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "thumbImage": "/images/thumbs/pesto-tomato-chicken-tray.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "pesto chicken tray",
+        "pesto tomato chicken tray",
+        "chicken",
+        "Italian",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "treeNuts",
+            "label": "Nut-Free Adaptable",
+            "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "salsa-verde-crock-chicken",
+      "title": "Salsa Verde Crock Chicken",
+      "subtitle": "Slow-cooked tomatillo chicken that shreds for bowls and tacos",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "chicken",
+      "mealFormat": "slow_cooker",
+      "cookTime": 360,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/salsa-verde-crock-chicken.jpg",
+      "thumbImage": "/images/thumbs/salsa-verde-crock-chicken.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:slow_cooker",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "salsa verde crock chicken",
+        "chicken",
+        "Mexican",
+        "slow cooker",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "shawarma-chicken-rice-bowls",
+      "title": "Shawarma Chicken Bowls",
+      "subtitle": "Sheet-pan spiced chicken with turmeric rice and cucumber yogurt",
+      "category": "healthy_performance",
+      "cuisine": "Middle Eastern",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 28,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/shawarma-chicken-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/shawarma-chicken-rice-bowls.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "shawarma chicken bowls",
+        "shawarma chicken rice bowls",
+        "chicken",
+        "Middle Eastern",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "title": "Chicken Fajitas",
+      "subtitle": "Charred peppers and onions with spiced chicken strips—no heavy oil",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 22,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken fajitas",
+        "sheet pan chicken fajitas lite",
+        "chicken",
+        "Mexican",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
+      "subtitle": "Herb-marinated chicken thighs roasted hot with zucchini, bell pepper, and red onion, finished with fresh chimichurri",
+      "category": "healthy_performance",
+      "cuisine": "Argentinian/American Grill",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cookTime": 25,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:sheet_pan",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "sheet-pan chimichurri chicken with charred vegetables",
+        "sheet pan chimichurri chicken charred vegetables",
+        "chicken",
+        "Argentinian/American Grill",
+        "sheet pan",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Lentil and Kale Soup",
+      "subtitle": "Hearty vegetarian pot with fire-roasted tomatoes and smoked paprika",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "plant",
+      "mealFormat": "soup",
+      "cookTime": 40,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/smoky-lentil-kale-soup.jpg",
+      "thumbImage": "/images/thumbs/smoky-lentil-kale-soup.jpg",
+      "tags": [
+        "protein:plant",
+        "format:soup",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "lentil and kale soup",
+        "smoky lentil kale soup",
+        "plant",
+        "American",
+        "soup",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "title": "Southwest Beef & Sweet Potato Skillet",
+      "subtitle": "Chili-spiced ground beef with roasted sweet potato, black beans, and corn",
+      "category": "healthy_performance",
+      "cuisine": "Southwest",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cookTime": 30,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "southwest beef & sweet potato skillet",
+        "southwest beef sweet potato skillet",
+        "beef",
+        "Southwest",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Chicken and Chorizo Rice",
+      "subtitle": "One-pot saffron rice with chicken thighs, chorizo, and peas",
+      "category": "healthy_performance",
+      "cuisine": "Spanish",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cookTime": 45,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
+      "thumbImage": "/images/thumbs/spanish-chicken-chorizo-rice.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:one_pot",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "chicken and chorizo rice",
+        "spanish chicken chorizo rice",
+        "chicken",
+        "Spanish",
+        "one pot",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "tabbouleh-chicken-bowls",
+      "title": "Tabbouleh Chicken Bowls",
+      "subtitle": "Herb-heavy bulgur salad topped with lemon grilled chicken",
+      "category": "healthy_performance",
+      "cuisine": "Lebanese",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cookTime": 18,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/tabbouleh-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/tabbouleh-chicken-bowls.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:bowl",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "tabbouleh chicken bowls",
+        "chicken",
+        "Lebanese",
+        "bowl",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Substitute quinoa or rice."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "subtitle": "Garlic-chili ground beef simmered with green beans and basil over jasmine rice",
+      "category": "healthy_performance",
+      "cuisine": "Thai-inspired",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cookTime": 18,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "thai basil ground beef skillet",
+        "beef",
+        "Thai-inspired",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "subtitle": "Dry curry powder chicken stew with potatoes, a Caribbean flavor first for the menu",
+      "category": "healthy_performance",
+      "cuisine": "Caribbean",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cookTime": 40,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:one_pot",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "trinidadian-style curry chicken with potatoes",
+        "trinidadian curry chicken potatoes",
+        "chicken",
+        "Caribbean",
+        "one pot",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "turkey-lettuce-wrap-night",
+      "title": "Turkey Lettuce Wraps",
+      "subtitle": "Ginger-garlic ground turkey in crisp romaine with hoisin and peanuts",
+      "category": "healthy_performance",
+      "cuisine": "Asian-American",
+      "protein": "turkey",
+      "mealFormat": "handheld",
+      "cookTime": 15,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/turkey-lettuce-wrap-night.jpg",
+      "thumbImage": "/images/thumbs/turkey-lettuce-wrap-night.jpg",
+      "tags": [
+        "protein:turkey",
+        "format:handheld",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "turkey lettuce wraps",
+        "turkey lettuce wrap night",
+        "turkey",
+        "Asian-American",
+        "handheld",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "title": "Turkey Stuffed Peppers",
+      "subtitle": "Colorful bell peppers filled with lean turkey, quinoa, and tomato",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "turkey",
+      "mealFormat": "bake",
+      "cookTime": 45,
+      "difficulty": "medium",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:turkey",
+        "format:bake",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "turkey stuffed peppers",
+        "turkey quinoa stuffed peppers",
+        "turkey",
+        "American",
+        "bake",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "turkey-sausage-egg-muffins",
+      "title": "Turkey Sausage Egg Muffins",
+      "subtitle": "Grab-and-go protein cups with spinach and bell pepper for shift breakfast",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "turkey",
+      "mealFormat": "breakfast",
+      "cookTime": 22,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/turkey-sausage-egg-muffins.jpg",
+      "thumbImage": "/images/thumbs/turkey-sausage-egg-muffins.jpg",
+      "tags": [
+        "protein:turkey",
+        "format:breakfast",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "turkey sausage egg muffins",
+        "turkey",
+        "American",
+        "breakfast",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's Pie",
+      "subtitle": "Lean turkey and vegetable filling under whipped sweet potato mash",
+      "category": "healthy_performance",
+      "cuisine": "British-American",
+      "protein": "turkey",
+      "mealFormat": "bake",
+      "cookTime": 40,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
+      "thumbImage": "/images/thumbs/turkey-shepherds-sweet-potato.jpg",
+      "tags": [
+        "protein:turkey",
+        "format:bake",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "turkey shepherd's pie",
+        "turkey shepherds sweet potato",
+        "turkey",
+        "British-American",
+        "bake",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili",
+      "subtitle": "Crock chili with diced sweet potato, black beans, and warm spices",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "turkey",
+      "mealFormat": "slow_cooker",
+      "cookTime": 300,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/turkey-sweet-potato-chili.jpg",
+      "thumbImage": "/images/thumbs/turkey-sweet-potato-chili.jpg",
+      "tags": [
+        "protein:turkey",
+        "format:slow_cooker",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "turkey sweet potato chili",
+        "turkey",
+        "American",
+        "slow cooker",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "subtitle": "One-pan seasoned turkey with peppers, corn, and melted cheese",
+      "category": "healthy_performance",
+      "cuisine": "Mexican",
+      "protein": "turkey",
+      "mealFormat": "skillet",
+      "cookTime": 20,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/turkey-taco-skillet.jpg",
+      "thumbImage": "/images/thumbs/turkey-taco-skillet.jpg",
+      "tags": [
+        "protein:turkey",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "turkey taco skillet",
+        "turkey",
+        "Mexican",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "turkey-zoodle-bolognese",
+      "title": "Turkey Zoodle Bolognese",
+      "subtitle": "Lean turkey ragu over spiralized zucchini with parmesan",
+      "category": "healthy_performance",
+      "cuisine": "Italian-American",
+      "protein": "turkey",
+      "mealFormat": "pasta",
+      "cookTime": 30,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/turkey-zoodle-bolognese.jpg",
+      "thumbImage": "/images/thumbs/turkey-zoodle-bolognese.jpg",
+      "tags": [
+        "protein:turkey",
+        "format:pasta",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "turkey zoodle bolognese",
+        "turkey",
+        "Italian-American",
+        "pasta",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "title": "Unstuffed Cabbage Roll Skillet",
+      "subtitle": "Ground beef, rice, and cabbage simmered in paprika-tomato sauce",
+      "category": "healthy_performance",
+      "cuisine": "Eastern European",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:beef",
+        "format:skillet",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "unstuffed cabbage roll skillet",
+        "beef",
+        "Eastern European",
+        "skillet",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole",
+      "subtitle": "Baked egg casserole with spinach, bell pepper, and feta for eight",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "egg",
+      "mealFormat": "breakfast",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/veggie-egg-casserole-tray.jpg",
+      "thumbImage": "/images/thumbs/veggie-egg-casserole-tray.jpg",
+      "tags": [
+        "protein:egg",
+        "format:breakfast",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "veggie egg casserole",
+        "veggie egg casserole tray",
+        "egg",
+        "American",
+        "breakfast",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a 1:1 gluten-free all-purpose flour blend."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "title": "Vietnamese Caramel-Braised Chicken Bowls",
+      "subtitle": "Chicken thighs braised in a savory-sweet caramel-fish sauce glaze over rice with pickled vegetables",
+      "category": "healthy_performance",
+      "cuisine": "Vietnamese",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cookTime": 30,
+      "difficulty": "medium",
+      "heroImage": "",
+      "thumbImage": "",
+      "tags": [
+        "protein:chicken",
+        "format:one_pot",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "vietnamese caramel-braised chicken bowls",
+        "vietnamese caramel braised chicken bowls",
+        "chicken",
+        "Vietnamese",
+        "one pot",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili",
+      "subtitle": "Creamy cannellini chili with green chiles and shredded rotisserie-style chicken",
+      "category": "healthy_performance",
+      "cuisine": "American",
+      "protein": "chicken",
+      "mealFormat": "soup",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/white-bean-chicken-chili.jpg",
+      "thumbImage": "/images/thumbs/white-bean-chicken-chili.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:soup",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "white bean chicken chili",
+        "chicken",
+        "American",
+        "soup",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "white-bean-kale-soup",
+      "title": "White Bean and Kale Soup",
+      "subtitle": "Tuscan-style cannellini soup with garlic, rosemary, and parmesan rind",
+      "category": "healthy_performance",
+      "cuisine": "Italian",
+      "protein": "plant",
+      "mealFormat": "soup",
+      "cookTime": 35,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/white-bean-kale-soup.jpg",
+      "thumbImage": "/images/thumbs/white-bean-kale-soup.jpg",
+      "tags": [
+        "protein:plant",
+        "format:soup",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "white bean and kale soup",
+        "white bean kale soup",
+        "plant",
+        "Italian",
+        "soup",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "yogurt-marinated-grill-chicken",
+      "title": "Yogurt Marinated Chicken",
+      "subtitle": "Tender spiced chicken thighs from an overnight yogurt marinade",
+      "category": "healthy_performance",
+      "cuisine": "Middle Eastern",
+      "protein": "chicken",
+      "mealFormat": "grill",
+      "cookTime": 20,
+      "difficulty": "medium",
+      "heroImage": "/images/golden-100/yogurt-marinated-grill-chicken.jpg",
+      "thumbImage": "/images/thumbs/yogurt-marinated-grill-chicken.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:grill",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "yogurt marinated chicken",
+        "yogurt marinated grill chicken",
+        "chicken",
+        "Middle Eastern",
+        "grill",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "zaatar-roasted-chicken-thighs",
+      "title": "Za'atar Chicken Thighs",
+      "subtitle": "Middle Eastern spice-crusted thighs with roasted onions and lemon",
+      "category": "healthy_performance",
+      "cuisine": "Middle Eastern",
+      "protein": "chicken",
+      "mealFormat": "roast",
+      "cookTime": 38,
+      "difficulty": "easy",
+      "heroImage": "/images/golden-100/zaatar-roasted-chicken-thighs.jpg",
+      "thumbImage": "/images/thumbs/zaatar-roasted-chicken-thighs.jpg",
+      "tags": [
+        "protein:chicken",
+        "format:roast",
+        "category:healthy_performance",
+        "healthy",
+        "performance_meals_50",
+        "hall_meal",
+        "high_protein",
+        "healthy"
+      ],
+      "firefighterScore": 83,
+      "popularityWeight": 7.5,
+      "searchTerms": [
+        "za'atar chicken thighs",
+        "zaatar roasted chicken thighs",
+        "chicken",
+        "Middle Eastern",
+        "roast",
+        "performance meal",
+        "firefighter healthy"
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     }
   ]
 }

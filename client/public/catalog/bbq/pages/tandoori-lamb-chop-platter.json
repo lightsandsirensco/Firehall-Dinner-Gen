@@ -13,10 +13,10 @@
   "cookTime": 22,
   "prepTime": 45,
   "difficulty": "medium",
-  "calories": 80,
-  "protein": 5,
+  "calories": 744,
+  "protein": 70,
   "carbs": 7,
-  "fats": 3,
+  "fats": 47,
   "tags": [
     "protein:lamb",
     "format:smokehouse_board",
@@ -176,12 +176,26 @@
   "mealPrepNotes": "Marinate chops 4–12 hours. Grill high 475°F, 4 minutes per side for medium-rare. Hold covered at 170°F up to 30 minutes. Chutney cold on the side.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 80,
-    "protein": 5,
+    "calories": 744,
+    "protein": 70,
     "carbs": 7,
-    "fats": 3,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "fats": 47,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/tandoori-lamb-chop-platter.jpg",
   "heroImageAlt": "Kashmiri Mustard-Oil Lamb Chop Feast — crew-sized BBQ spread with visible smoke and bark",
@@ -211,5 +225,46 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-06-04T20:47:49.434Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Greek Yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Gram Flour",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -23,19 +23,19 @@
   "ingredients": [
     {
       "name": "rolled oats",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "old-fashioned, not instant",
       "group": "Base"
     },
     {
       "name": "steel-cut oats",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "notes": "adds texture; optional",
       "group": "Base"
     },
     {
       "name": "whole milk",
-      "quantity": "3.2",
+      "quantity": "3.2 cups",
       "notes": "or oat milk for dairy-free",
       "group": "Base"
     },
@@ -53,19 +53,19 @@
     },
     {
       "name": "ground cinnamon",
-      "quantity": "1.6",
+      "quantity": "1 3/4 tsp",
       "notes": "plus 1/2 tsp nutmeg",
       "group": "Spice"
     },
     {
       "name": "brown sugar",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "plus maple for serving",
       "group": "Sweet"
     },
     {
       "name": "chopped walnuts",
-      "quantity": "3/8",
+      "quantity": "3/8 cup",
       "notes": "and butter pats at the line",
       "group": "Finish"
     }
@@ -105,12 +105,13 @@
     }
   ],
   "nutrition": {
-    "calories": 267,
-    "protein": 10,
-    "carbs": 44,
-    "fat": 7,
-    "label": "per serving (hall portion)",
+    "calories": 292,
+    "protein": 11,
+    "carbs": 42,
+    "fat": 10,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -145,5 +146,63 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 7,
   "seoTitle": "Apple Cinnamon Baked Oatmeal | Firehall Breakfast",
-  "collectionTier": "performance"
+  "collectionTier": "performance",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "rolled oats",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "steel-cut oats",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "chopped walnuts",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free oats."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

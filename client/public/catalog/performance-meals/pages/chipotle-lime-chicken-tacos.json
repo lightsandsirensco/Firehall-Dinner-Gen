@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 385,
-  "protein": 36,
-  "carbs": 28,
-  "fats": 16,
+  "calories": 711,
+  "protein": 54,
+  "carbs": 50,
+  "fats": 32,
   "tags": [
     "protein:chicken",
     "format:tacos",
@@ -33,70 +33,70 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
+      "name": "boneless chicken thighs",
       "quantity": "4",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Chipotle Peppers In Adobo",
+      "name": "chipotle peppers in adobo",
       "quantity": "4",
       "unit": "whole",
       "notes": "minced"
     },
     {
-      "name": "Adobo Sauce",
+      "name": "adobo sauce",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Lime Juice",
+      "name": "lime juice",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Green Cabbage",
+      "name": "green cabbage",
       "quantity": "1",
       "unit": "head",
       "notes": "shredded"
     },
     {
-      "name": "Greek Yogurt",
+      "name": "Greek yogurt",
       "quantity": "1",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Corn Tortillas",
+      "name": "corn tortillas",
       "quantity": "24",
       "unit": "whole",
       "notes": "6-inch"
     },
     {
-      "name": "Fresh Cilantro",
+      "name": "fresh cilantro",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -143,7 +143,7 @@
   ],
   "tonightSpread": [
     "Black beans with cumin.",
-    "Mexican rice in a hotel pan."
+    "Mexican rice in a baking dish."
   ],
   "leftovers": [
     "Chicken over rice bowl with slaw and crema.",
@@ -154,11 +154,26 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 385,
-    "protein": 36,
-    "carbs": 28,
-    "fats": 16,
-    "label": "~385 cal/serving · 36g protein · 5g fiber (est.)"
+    "calories": 711,
+    "protein": 54,
+    "carbs": 50,
+    "fats": 32,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",
   "heroImageAlt": "Wide firehall crew platter of Chipotle Lime Chicken Tacos on a station prep table, family-style serving",
@@ -184,6 +199,35 @@
     "crispy-fish-taco-night",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.684Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

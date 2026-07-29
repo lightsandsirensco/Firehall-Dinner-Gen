@@ -140,7 +140,7 @@ export function EmailModal({
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
       <DialogContent
-        className="sm:max-w-[420px] gap-0 p-0 overflow-hidden border-border/60 animate-in fade-in zoom-in-95 duration-300 max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-auto max-sm:left-0 max-sm:translate-x-0 max-sm:translate-y-0 max-sm:max-h-[92dvh] max-sm:rounded-t-2xl max-sm:w-full max-sm:overflow-y-auto pb-safe"
+        className="sm:max-w-[420px] gap-0 p-0 overflow-hidden border-border/60 max-sm:fixed max-sm:inset-x-0 max-sm:bottom-0 max-sm:top-auto max-sm:left-0 max-sm:translate-x-0 max-sm:translate-y-0 max-sm:max-h-[92dvh] max-sm:rounded-t-2xl max-sm:w-full max-sm:overflow-y-auto pb-safe"
         data-testid="modal-email-recipe"
         data-email-variant={variant}
       >
@@ -163,8 +163,8 @@ export function EmailModal({
 
         <div className="px-6 pb-6">
           {status === "success" ? (
-            <div className="flex flex-col items-center gap-3 py-4" data-testid="email-success">
-              <CheckCircle className="w-11 h-11 text-green-500" />
+            <div className="flex flex-col items-center gap-3 py-4 fade-up" data-testid="email-success">
+              <CheckCircle className="w-11 h-11 text-[hsl(var(--success))] success-pop" />
               <p className="text-base font-heading tracking-wide text-foreground text-center">
                 You're on the list. Check your inbox.
               </p>

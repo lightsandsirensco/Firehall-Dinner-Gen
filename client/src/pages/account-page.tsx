@@ -11,6 +11,7 @@ import { OnboardingBanner } from "@/components/onboarding/onboarding-banner";
 import { isOnboardingMode } from "@/lib/onboarding/state";
 import { useAuth } from "@/lib/auth/context";
 import { HALL_LINKED } from "@/lib/brand-copy";
+import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 
 const GUEST_SIGN_IN_REASONS = [
@@ -38,11 +39,15 @@ export default function AccountPage() {
       hideWorkflowExit={!authenticated}
     >
       {loading ? (
-        <p className="text-sm text-muted-foreground">Loading account…</p>
+        <div className="space-y-3" aria-busy aria-label="Loading account">
+          <div className="h-20 rounded-2xl skeleton-shimmer" />
+          <div className="h-12 rounded-xl skeleton-shimmer" />
+          <div className="h-12 rounded-xl skeleton-shimmer" />
+        </div>
       ) : !authenticated ? (
-        <div className="rounded-2xl border border-border/40 bg-muted/20 p-5 space-y-5">
+        <div className={cn(app.panel, "fade-up p-5 space-y-5")}>
           <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary/10 text-primary">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-primary/12 text-primary">
               <User className="w-5 h-5" />
             </div>
             <p className="text-sm text-muted-foreground">You're using Firehall Meals as a guest.</p>
@@ -80,7 +85,7 @@ export default function AccountPage() {
             )}
 
             <section>
-              <h2 className="font-heading text-lg tracking-wide mb-4">Profile</h2>
+              <h2 className={cn(app.titleCard, "mb-4")}>Profile</h2>
               <AccountProfileForm
                 onboarding={onboardingMode}
                 onOnboardingSaved={() => navigate("/onboarding/hall")}

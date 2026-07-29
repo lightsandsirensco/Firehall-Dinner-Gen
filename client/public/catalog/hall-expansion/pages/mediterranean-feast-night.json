@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 460,
-  "protein": 34,
-  "carbs": 36,
-  "fats": 20,
+  "calories": 1009,
+  "protein": 84,
+  "carbs": 76,
+  "fats": 41,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -156,19 +156,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 460,
-    "protein": 34,
-    "carbs": 36,
-    "fats": 20,
-    "label": "~460 cal/serving · 34g protein · 6g fiber (est.)",
-    "source": "estimated",
+    "calories": 1009,
+    "protein": 84,
+    "carbs": 76,
+    "fats": 41,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/mediterranean-feast-night.jpg",
@@ -191,5 +197,64 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "hummus",
+        "allergens": [
+          "sesame"
+        ]
+      },
+      {
+        "name": "tzatziki",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "tabbouleh salad",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "pita bread",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Substitute quinoa or rice. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

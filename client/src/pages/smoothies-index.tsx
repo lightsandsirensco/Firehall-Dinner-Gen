@@ -1,7 +1,7 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
-import { Droplets, Loader2 } from "lucide-react";
+import { Droplets } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { getSavedCount } from "@/lib/saved-meals";
 import { fetchSmoothieCatalogIndex } from "@/lib/fuel-recipe-api";
@@ -89,8 +89,27 @@ export default function SmoothiesIndexPage() {
         </div>
 
         {isLoading ? (
-          <div className="flex justify-center py-16" aria-busy>
-            <Loader2 className="w-8 h-8 animate-spin text-muted-foreground" />
+          <div className="mt-10 sm:mt-12 space-y-10" aria-busy aria-label="Loading smoothies">
+            {Array.from({ length: 2 }).map((_, sectionIndex) => (
+              <section key={sectionIndex}>
+                <div className="h-5 w-40 rounded skeleton-shimmer" />
+                <ul className="mt-4 grid gap-4 sm:grid-cols-2">
+                  {Array.from({ length: 4 }).map((_, i) => (
+                    <li
+                      key={i}
+                      className="flex gap-4 rounded-2xl border border-border/25 bg-card/30 p-4 min-h-[88px]"
+                    >
+                      <div className="w-20 h-20 shrink-0 rounded-xl skeleton-shimmer" />
+                      <div className="min-w-0 flex-1 space-y-2 py-1">
+                        <div className="h-4 w-3/4 rounded skeleton-shimmer" />
+                        <div className="h-3 w-full rounded skeleton-shimmer" />
+                        <div className="h-3 w-1/3 rounded skeleton-shimmer" />
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
           </div>
         ) : (
           <div className="mt-10 sm:mt-12 space-y-10">
@@ -113,7 +132,7 @@ export default function SmoothiesIndexPage() {
                           {r.thumbImage ? (
                             <img
                               src={r.thumbImage}
-                              alt=""
+                              alt={r.title}
                               className="w-full h-full object-cover"
                               loading="lazy"
                             />

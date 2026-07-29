@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 424,
-  "protein": 35,
-  "carbs": 11,
-  "fats": 26,
+  "calories": 932,
+  "protein": 46,
+  "carbs": 31,
+  "fats": 70,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -34,70 +34,77 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
-      "quantity": "3",
-      "unit": "Lb",
+      "name": "Italian sausage links (sweet or hot)",
+      "quantity": "4",
+      "unit": "lb",
       "group": "Main"
     },
     {
-      "name": "Bell Peppers, Sliced",
-      "quantity": "4",
+      "name": "Bell peppers, sliced",
+      "quantity": "6",
       "unit": "count",
       "group": "Veg"
     },
     {
-      "name": "Red Onion, Sliced",
+      "name": "Yellow onion, sliced",
       "quantity": "2",
       "unit": "large",
       "group": "Veg"
     },
     {
-      "name": "Olive Oil",
+      "name": "Olive oil",
       "quantity": "0.3",
-      "unit": "Cup",
-      "group": "Aromatics"
-    },
-    {
-      "name": "Fajita Seasoning",
-      "quantity": "3",
-      "unit": "Tbsp",
+      "unit": "cup",
       "group": "Seasoning"
     },
     {
-      "name": "Lime",
+      "name": "Dried Italian seasoning",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "Garlic cloves, minced",
       "quantity": "4",
       "unit": "count",
-      "group": "Finish"
+      "group": "Seasoning"
+    },
+    {
+      "name": "Hoagie rolls",
+      "quantity": "10",
+      "unit": "count",
+      "group": "Serve",
+      "optional": true
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Heat oven and prep pans",
-      "instruction": "Preheat 425°F. Toss chicken and veg with oil and seasoning on two rimmed pans — single layer only or you'll steam.",
+      "title": "Arrange the sheet pan",
+      "instruction": "Toss sliced bell peppers and onion with olive oil, Italian seasoning, garlic, salt, and pepper. Spread across a sheet pan and nestle sausage links on top in a single layer.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Roast until charred",
-      "instruction": "Roast 18–22 minutes, swap racks halfway, until chicken reads 165°F and peppers have blistered edges.",
-      "minutes": 22,
+      "title": "Roast until browned",
+      "instruction": "Roast at 425°F for 25–30 minutes, turning sausages halfway, until they're browned on the outside, peppers are softened with charred edges, and sausages read 160°F.",
+      "minutes": 30,
       "heatLevel": "high"
     },
     {
       "stepNumber": 3,
-      "title": "Serve family-style",
-      "instruction": "Pile Sausage and Peppers onto trays. Hold backup pan foil-covered at 200°F. Squeeze lime at the line if using.",
+      "title": "Rest and slice",
+      "instruction": "Rest sausages 5 minutes, then slice on a bias. Toss the sliced sausage back with the peppers and onions on the pan.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 4,
-      "title": "Batch the next pan",
-      "instruction": "While the crew eats, start a second batch on clean pans if you're feeding stragglers. Scrape burned bits — they smoke up the hall.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Serve family-style or on rolls",
+      "instruction": "Pile sausage and peppers into a serving dish, or split hoagie rolls and load them up at the line. Hold extra sausage on a lower oven rack at 200°F.",
+      "minutes": 8,
+      "heatLevel": "low"
     }
   ],
   "proTips": [
@@ -120,18 +127,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 424,
-    "protein": 35,
-    "carbs": 11,
-    "fats": 26,
+    "calories": 932,
+    "protein": 46,
+    "carbs": 31,
+    "fats": 70,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
@@ -170,6 +177,52 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.256Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:33:03.243Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Italian sausage links (sweet or hot)",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Hoagie rolls",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

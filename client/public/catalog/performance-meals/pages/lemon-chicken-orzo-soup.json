@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 340,
-  "protein": 32,
-  "carbs": 36,
-  "fats": 8,
+  "calories": 325,
+  "protein": 42,
+  "carbs": 22,
+  "fats": 6,
   "tags": [
     "protein:chicken",
     "format:soup",
@@ -33,72 +33,72 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Breasts",
+      "name": "boneless chicken breasts",
       "quantity": "2",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Orzo Pasta",
+      "name": "orzo pasta",
       "quantity": "1.5",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "3",
       "unit": "whole",
       "notes": "diced small"
     },
     {
-      "name": "Celery Stalks",
+      "name": "celery stalks",
       "quantity": "3",
       "unit": "whole",
       "notes": "diced small"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "medium",
       "notes": "diced"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "10",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "low sodium"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Lemon Zest",
+      "name": "lemon zest",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Fresh Dill",
+      "name": "fresh dill",
       "quantity": "0.33",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Bay Leaves",
+      "name": "bay leaves",
       "quantity": "2",
       "unit": "whole"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -152,15 +152,30 @@
     "Freeze soup base without orzo for easy reheat."
   ],
   "whyCrewsLikeIt": "Avgolemono vibes without the egg tempering fuss. Gentle on the stomach after a rough shift.",
-  "mealPrepNotes": "Cook orzo separately and add at service to prevent bloating in the pot. Station: Poach chicken in broth for maximum flavor—do not use plain water. Station: Stir lemon juice off heat so broth stays bright, not curdled-looking. Station: Keep orzo in a separate hotel pan and add per bowl for best texture.",
+  "mealPrepNotes": "Cook orzo separately and add at service to prevent bloating in the pot. Station: Poach chicken in broth for maximum flavor—do not use plain water. Station: Stir lemon juice off heat so broth stays bright, not curdled-looking. Station: Keep orzo in a separate baking dish and add per bowl for best texture.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 340,
-    "protein": 32,
-    "carbs": 36,
-    "fats": 8,
-    "label": "~340 cal/serving · 32g protein · 3g fiber (est.)"
+    "calories": 325,
+    "protein": 42,
+    "carbs": 22,
+    "fats": 6,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/lemon-chicken-orzo-soup.jpg",
   "heroImageAlt": "Wide firehall crew platter of Lemon Chicken Orzo Soup on a station prep table, family-style serving",
@@ -186,6 +201,47 @@
     "smoky-lentil-kale-soup",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.671Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "orzo pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

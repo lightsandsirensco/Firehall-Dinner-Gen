@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 580,
-  "protein": 28,
-  "carbs": 44,
-  "fats": 34,
+  "calories": 872,
+  "protein": 46,
+  "carbs": 72,
+  "fats": 46,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -156,19 +156,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 580,
-    "protein": 28,
-    "carbs": 44,
-    "fats": 34,
-    "label": "~580 cal/serving · 28g protein · 6g fiber (est.)",
-    "source": "estimated",
+    "calories": 872,
+    "protein": 46,
+    "carbs": 72,
+    "fats": 46,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
-      "under700Calories": true,
+      "highProtein": true,
+      "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
@@ -191,5 +197,58 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "taco seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "queso dip",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "sour cream",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

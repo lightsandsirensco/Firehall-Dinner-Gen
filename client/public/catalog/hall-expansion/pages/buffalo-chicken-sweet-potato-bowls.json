@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 560,
-  "protein": 43,
-  "carbs": 47,
-  "fats": 22,
+  "calories": 953,
+  "protein": 62,
+  "carbs": 68,
+  "fats": 49,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -228,19 +228,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 560,
-    "protein": 43,
-    "carbs": 47,
-    "fats": 22,
-    "label": "~560 cal/serving · 43g protein · 10g fiber (est.)",
-    "source": "estimated",
+    "calories": 953,
+    "protein": 62,
+    "carbs": 68,
+    "fats": 49,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
@@ -269,5 +275,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "buffalo sauce",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "blue cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "ranch dressing",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

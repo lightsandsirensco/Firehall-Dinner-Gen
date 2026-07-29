@@ -239,7 +239,7 @@ export const BATCH_25_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     ],
     steps: [
       { stepNumber: 1, title: "Roast and blend salsa", tempF: 425, minutes: 15, instruction: "Roast tomatillos, onion, and jalapeños on a sheet pan at 425°F until charred in spots, about 12 minutes. Blend with broth until smooth, then simmer in a pot 10 minutes until slightly thickened." },
-      { stepNumber: 2, title: "Heat the oven", tempF: 375, minutes: 0, instruction: "Heat oven to 375°F. Grease a deep hotel pan or two 9x13 dishes. Warm salsa off heat—you want it hot but not boiling when it hits the chips." },
+      { stepNumber: 2, title: "Heat the oven", tempF: 375, minutes: 0, instruction: "Heat oven to 375°F. Grease a deep 9x13 baking dish or two smaller baking dishes. Warm salsa off heat—you want it hot but not boiling when it hits the chips." },
       { stepNumber: 3, title: "Toss chips with salsa", minutes: 5, instruction: "Toss chips with just enough warm salsa to coat—about two-thirds of the batch. Reserve remaining salsa for serving. Chips should look sauced but not swimming or they will turn to mush." },
       { stepNumber: 4, title: "Bake and add eggs", tempF: 375, minutes: 15, instruction: "Spread chips in the pan and bake 8 minutes. Make ten wells, crack an egg into each, and bake 10–12 more minutes until whites are set (165°F) and yolks are jammy." },
       { stepNumber: 5, title: "Finish and portion", minutes: 5, instruction: "Drizzle crema in zigzags, scatter cotija and cilantro, and serve with reserved warm salsa and lime wedges. Portion with a wide spatula to keep layers intact." },
@@ -250,7 +250,7 @@ export const BATCH_25_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       "Cut radishes and cilantro while the first bake runs so garnish is ready at the oven door.",
     ],
     cleanupNotes: [
-      "Soak the hotel pan immediately with hot water—baked salsa and cheese glue sets fast.",
+      "Soak the baking dish immediately with hot water—baked salsa and cheese glue sets fast.",
       "Rinse the blender with warm water before tomatillo skins dry inside the jar.",
     ],
     leftovers: [
@@ -259,7 +259,7 @@ export const BATCH_25_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     ],
     heroImage: hero("chilaquiles-verde-bake"),
     thumbImage: thumb("chilaquiles-verde-bake"),
-    imageAlt: "Baked chilaquiles verde with eggs, crema, and cotija in a hotel pan",
+    imageAlt: "Baked chilaquiles verde with eggs, crema, and cotija in a baking dish",
     publishedAt: now,
     updatedAt: now,
     readMinutes: 8,
@@ -299,7 +299,7 @@ export const BATCH_25_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     stationWorkflow: [
       "Start grits first—they need constant stirring and cannot wait for shrimp to finish.",
       "Pat shrimp completely dry before seasoning or they steam instead of sear.",
-      "Hold grits in a bain-marie on low with a splash of milk stirred in every 10 minutes.",
+      "Hold grits in a pot on low heat with a splash of milk stirred in every 10 minutes.",
     ],
     cleanupNotes: [
       "Fill the grits pot with hot water immediately—starch sets like concrete once cooled.",
@@ -350,7 +350,7 @@ export const BATCH_25_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     ],
     stationWorkflow: [
       "Bread all steaks before frying starts so the line does not stall between batches.",
-      "Keep mashed potatoes in a covered hotel pan on low with a splash of cream stirred in.",
+      "Keep mashed potatoes in a covered baking dish on low with a splash of cream stirred in.",
       "Fry eggs in a separate pan while gravy simmers—never cook eggs in gravy grease.",
     ],
     cleanupNotes: [
@@ -401,7 +401,7 @@ export const BATCH_25_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { stepNumber: 5, title: "Serve smothered or wrapped", minutes: 5, instruction: "Serve burritos whole in foil for handheld line service, or split two per plate and ladle warm green chile sauce over the top with sour cream and cilantro. Add lime at the line." },
     ],
     stationWorkflow: [
-      "Set up a rolling station with all fillings in hotel pans before scrambling the last batch of eggs.",
+      "Set up a rolling station with all fillings in baking dishes before scrambling the last batch of eggs.",
       "Warm tortillas in batches of five so they do not dry out on a hot holding surface.",
       "Keep green chile sauce on low with a ladle ready—smothered burritos need sauce at serving temp.",
     ],
@@ -502,7 +502,7 @@ export const BATCH_25_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { stepNumber: 2, title: "Scramble eggs in the wok", minutes: 4, instruction: "Heat wok or large skillet over high until smoking lightly. Add a tablespoon of oil, pour in eggs, and scramble quickly into soft curds. Remove to a plate immediately while still tender." },
       { stepNumber: 3, title: "Stir-fry vegetables", minutes: 5, instruction: "Add bacon fat to the wok. Stir-fry carrots and scallion whites 2 minutes, then add peas and rice. Press rice against the hot surface in sections to toast grains without mashing." },
       { stepNumber: 4, title: "Season and combine", minutes: 5, instruction: "Drizzle soy sauce around the rim of the wok so it sizzles and caramelizes. Toss rice until evenly golden. Fold in bacon, scrambled eggs, and scallion greens off heat." },
-      { stepNumber: 5, title: "Toss with sesame oil and portion", minutes: 3, instruction: "Drizzle sesame oil over the top and toss once. Taste for salt and transfer to a warm hotel pan for the line with chili crisp or hot sauce alongside." },
+      { stepNumber: 5, title: "Toss with sesame oil and portion", minutes: 3, instruction: "Drizzle sesame oil over the top and toss once. Taste for salt and transfer to a warm baking dish for the line with chili crisp or hot sauce alongside." },
     ],
     stationWorkflow: [
       "Use day-old rice only—fresh rice steams and clumps in the wok.",
@@ -602,7 +602,7 @@ export const BATCH_25_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
       { group: "Finish", quantity: "1/2 cup", name: "sliced green onions", notes: "plus hot sauce at the line" },
     ],
     steps: [
-      { stepNumber: 1, title: "Heat the oven", tempF: 375, minutes: 0, instruction: "Heat oven to 375°F. Grease a deep 9x13 pan or hotel half-pan. Thaw hash browns completely and squeeze out excess water in a clean towel—wet potatoes make a soggy casserole." },
+      { stepNumber: 1, title: "Heat the oven", tempF: 375, minutes: 0, instruction: "Heat oven to 375°F. Grease a deep 9x13 baking dish. Thaw hash browns completely and squeeze out excess water in a clean towel—wet potatoes make a soggy casserole." },
       { stepNumber: 2, title: "Brown the sausage", minutes: 10, instruction: "Cook breakfast sausage in a skillet over medium-high, breaking into small crumbles until no pink remains and internal temperature reaches 160°F. Drain on paper towels." },
       { stepNumber: 3, title: "Layer the base", minutes: 8, instruction: "Spread hash browns evenly in the pan. Top with sausage and half the cheddar. Whisk eggs, milk, mustard, salt, and pepper until uniform and pour evenly over the layers." },
       { stepNumber: 4, title: "Bake until set", tempF: 375, minutes: 40, instruction: "Cover with foil and bake 25 minutes. Uncover, top with remaining cheddar, and bake 15 more until center reaches 165°F on a thermometer and top is golden." },

@@ -1,0 +1,261 @@
+{
+  "slug": "lean-beef-broccoli-rice",
+  "title": "Beef and Broccoli Rice",
+  "displayTitle": "Beef and Broccoli Rice",
+  "seoTitle": "Beef and Broccoli Rice | Firefighter Meal",
+  "shortDescription": "Flat-top stir-fry with flank steak, broccoli, and brown rice",
+  "subtitle": "Flat-top stir-fry with flank steak, broccoli, and brown rice",
+  "category": "healthy_performance",
+  "cuisine": "Chinese-American",
+  "description": "Flank steak strips sear fast with broccoli florets in a ginger-garlic soy sauce, served over brown rice for a classic hall stir-fry line.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 15,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 875,
+  "protein": 55,
+  "carbs": 69,
+  "fats": 42,
+  "tags": [
+    "protein:beef",
+    "format:stir_fry",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Wok or large skillet",
+    "Rice cooker",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "flank steak",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "sliced thin against grain"
+    },
+    {
+      "name": "broccoli crowns",
+      "quantity": "2.5",
+      "unit": "lb",
+      "notes": "cut into florets"
+    },
+    {
+      "name": "brown rice",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "uncooked"
+    },
+    {
+      "name": "low-sodium soy sauce",
+      "quantity": "0.5",
+      "unit": "cup"
+    },
+    {
+      "name": "oyster sauce",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "beef broth",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "low sodium"
+    },
+    {
+      "name": "cornstarch",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "grated"
+    },
+    {
+      "name": "sesame oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "green onions",
+      "quantity": "6",
+      "unit": "whole",
+      "notes": "sliced"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook brown rice",
+      "instruction": "Simmer brown rice until tender and chewy, 35–40 minutes. Fluff with fork and hold warm in rice cooker until stir-fry is ready.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Blanch broccoli",
+      "instruction": "Boil broccoli florets 2 minutes until bright green and slightly tender. Drain and shock in ice water so florets stay crisp, not mushy.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Mix stir-fry sauce",
+      "instruction": "Whisk soy sauce, oyster sauce, broth, cornstarch, half the garlic, and ginger until smooth with no starch lumps at the bottom.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sear beef in batches",
+      "instruction": "Heat wok or skillet over high with vegetable oil. Sear beef strips 2–3 minutes per batch until browned edges appear, not gray and steaming.",
+      "minutes": 8,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Combine and glaze",
+      "instruction": "Return all beef, add broccoli and sauce. Toss 2–3 minutes until sauce thickens to a glossy coat. Finish with sesame oil and green onions.",
+      "minutes": 4,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Freeze flank 20 minutes for easier thin slicing on a busy prep board.",
+    "Do not skip oyster sauce—it adds depth soy alone cannot.",
+    "Offer chili crisp at the line for crews who want crunchy heat."
+  ],
+  "tonightSpread": [
+    "Fortune cookies if available—crew morale boost.",
+    "Quick miso soup cups."
+  ],
+  "leftovers": [
+    "Reheat in skillet with splash of broth to restore sauce gloss.",
+    "Beef and broccoli omelet next morning with sriracha."
+  ],
+  "whyCrewsLikeIt": "Familiar takeout flavor without the food-coma. High protein and ready in one wok rotation after calls.",
+  "mealPrepNotes": "Slice beef against the grain paper-thin. Mix sauce in a bowl before the fire hits the pan. Station: Cook rice first in a cooker—wok stays hot for beef without interruption. Station: Sear beef in two batches; overcrowding steams meat gray instead of browned. Station: Blanch broccoli 2 minutes first for consistent tender-crisp texture at scale.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 875,
+    "protein": 55,
+    "carbs": 69,
+    "fats": 42,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Beef and Broccoli Rice on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "beef and broccoli rice",
+    "lean beef broccoli rice",
+    "beef",
+    "Chinese-American",
+    "stir fry",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "korean-beef-rice-bowls",
+    "thai-basil-ground-beef-skillet",
+    "southwest-beef-sweet-potato-skillet",
+    "beef-birria-with-consomme",
+    "greek-beef-keftedes-lemon-orzo-tzatziki",
+    "mediterranean-beef-kofta-bowls"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.672Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "low-sodium soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "oyster sauce",
+        "allergens": [
+          "gluten",
+          "shellfish"
+        ]
+      },
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

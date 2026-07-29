@@ -77,13 +77,13 @@
     }
   ],
   "nutrition": {
-    "calories": 0,
-    "protein": 0,
-    "carbs": 0,
-    "fats": 0,
+    "calories": 146,
+    "protein": 8,
+    "carbs": 19,
+    "fats": 5,
     "highlights": "Nutrition estimate coming soon",
     "label": "Estimated per serving",
-    "source": "unavailable",
+    "source": "calculated",
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -97,7 +97,7 @@
       "lighterOption": true,
       "performanceMeal": true
     },
-    "estimateAvailable": false
+    "estimateAvailable": true
   },
   "substitutions": [
     "Swap Greek yogurt for skyr for even more protein per cup.",
@@ -149,5 +149,46 @@
     "ice bath pan"
   ],
   "baseServings": 8,
-  "crewSize": 8
+  "crewSize": 8,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "plain Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "vanilla extract",
+        "allergens": [
+          "alcohol"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

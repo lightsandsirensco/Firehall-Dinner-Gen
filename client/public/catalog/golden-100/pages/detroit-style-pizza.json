@@ -13,9 +13,9 @@
   "cookTime": 155,
   "prepTime": 110,
   "difficulty": "medium",
-  "calories": 1131,
-  "protein": 48,
-  "carbs": 63,
+  "calories": 1150,
+  "protein": 49,
+  "carbs": 67,
   "fats": 75,
   "tags": [
     "protein:pork",
@@ -168,12 +168,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1131,
-    "protein": 48,
-    "carbs": 63,
+    "calories": 1150,
+    "protein": 49,
+    "carbs": 67,
     "fats": 75,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -217,5 +218,63 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.287Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Bread Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Brick Cheese Or Mild Cheddar, Shredded",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Cup-And-Char Pepperoni",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

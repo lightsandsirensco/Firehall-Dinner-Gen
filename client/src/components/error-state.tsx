@@ -25,7 +25,7 @@ export function ErrorState({ type, message, title, onSendFeedback }: ErrorStateP
           <AlertTriangle className="w-10 h-10 text-destructive/60" />
         </div>
         <h2
-          className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-2"
+          className="font-heading text-2xl sm:text-3xl tracking-tight text-foreground mb-2"
           data-testid="text-generator-smoked-title"
         >
           Line went quiet
@@ -64,7 +64,7 @@ export function ErrorState({ type, message, title, onSendFeedback }: ErrorStateP
           <div className="absolute inset-0 rounded-full bg-amber-500/5 animate-ping" style={{ animationDuration: "3s" }} />
           <SlidersHorizontal className="w-10 h-10 text-amber-500/60" />
         </div>
-        <h2 className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-2" data-testid="text-no-match-title">
+        <h2 className="font-heading text-2xl sm:text-3xl tracking-tight text-foreground mb-2" data-testid="text-no-match-title">
           Nothing fit those picks
         </h2>
         <p className="text-muted-foreground text-sm max-w-sm mb-1 leading-relaxed" data-testid="text-no-match-description">
@@ -83,7 +83,7 @@ export function ErrorState({ type, message, title, onSendFeedback }: ErrorStateP
         <div className="absolute inset-0 rounded-full bg-destructive/5 animate-ping" style={{ animationDuration: "3s" }} />
         <AlertTriangle className="w-10 h-10 text-destructive/60" />
       </div>
-      <h2 className="font-heading text-2xl sm:text-3xl tracking-wide text-foreground mb-2" data-testid="text-error-title">
+      <h2 className="font-heading text-2xl sm:text-3xl tracking-tight text-foreground mb-2" data-testid="text-error-title">
         {title || "Couldn't load a meal"}
       </h2>
       <p className="text-muted-foreground text-sm max-w-sm mb-1 leading-relaxed" data-testid="text-error-description">

@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 540,
-  "protein": 36,
-  "carbs": 56,
-  "fats": 20,
+  "calories": 779,
+  "protein": 51,
+  "carbs": 78,
+  "fats": 30,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -157,19 +157,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 540,
-    "protein": 36,
-    "carbs": 56,
-    "fats": 20,
-    "label": "~540 cal/serving · 36g protein · 5g fiber (est.)",
-    "source": "estimated",
+    "calories": 779,
+    "protein": 51,
+    "carbs": 78,
+    "fats": 30,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
@@ -192,5 +198,68 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "rigatoni pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "ground pork",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "dry red wine",
+        "allergens": [
+          "alcohol"
+        ]
+      },
+      {
+        "name": "grated Parmesan",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta/noodle alternative."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute broth plus a splash of vinegar for the acidity."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

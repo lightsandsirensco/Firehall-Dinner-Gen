@@ -29,22 +29,22 @@
     },
     {
       "name": "sliced deli ham",
-      "quantity": "3/4",
+      "quantity": "3/4 lb",
       "group": "Sandwich"
     },
     {
       "name": "sliced deli turkey",
-      "quantity": "3/4",
+      "quantity": "3/4 lb",
       "group": "Sandwich"
     },
     {
       "name": "Swiss cheese",
-      "quantity": "8",
+      "quantity": "8 slices",
       "group": "Sandwich"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "2.4",
+      "quantity": "2.6 tbsp",
       "notes": "spread thin on half the slices",
       "group": "Sandwich"
     },
@@ -56,13 +56,13 @@
     },
     {
       "name": "butter",
-      "quantity": "3.2",
+      "quantity": "3.4 tbsp",
       "notes": "for griddling in batches",
       "group": "Cook"
     },
     {
       "name": "powdered sugar",
-      "quantity": "1/4",
+      "quantity": "1/4 cup",
       "notes": "plus raspberry jam for dipping",
       "group": "Finish"
     }
@@ -100,15 +100,16 @@
     }
   ],
   "nutrition": {
-    "calories": 652,
-    "protein": 39,
-    "carbs": 37,
-    "fat": 39,
-    "label": "per serving (hall portion)",
+    "calories": 702,
+    "protein": 46,
+    "carbs": 39,
+    "fat": 40,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": false,
@@ -140,5 +141,69 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Monte Cristo Sandwiches | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "thick white bread slices",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "sliced deli ham",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Swiss cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

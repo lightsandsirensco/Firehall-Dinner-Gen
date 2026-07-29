@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 18,
   "difficulty": "easy",
-  "calories": 410,
-  "protein": 36,
-  "carbs": 22,
-  "fats": 22,
+  "calories": 573,
+  "protein": 52,
+  "carbs": 13,
+  "fats": 33,
   "tags": [
     "protein:salmon",
     "format:sheet_pan",
@@ -33,63 +33,63 @@
   ],
   "ingredients": [
     {
-      "name": "Salmon Fillets",
+      "name": "salmon fillets",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "skin-on, 6 oz portions"
     },
     {
-      "name": "Brussels Sprouts",
+      "name": "Brussels sprouts",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "halved"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "1",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into coins"
     },
     {
-      "name": "Maple Syrup",
+      "name": "maple syrup",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Whole-Grain Mustard",
+      "name": "whole-grain mustard",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Apple Cider Vinegar",
+      "name": "apple cider vinegar",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "3",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -147,11 +147,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 410,
-    "protein": 36,
-    "carbs": 22,
-    "fats": 22,
-    "label": "~410 cal/serving · 36g protein · 6g fiber (est.)"
+    "calories": 573,
+    "protein": 52,
+    "carbs": 13,
+    "fats": 33,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/maple-mustard-salmon-tray.jpg",
   "heroImageAlt": "Wide firehall crew platter of Maple Mustard Salmon Tray on a station prep table, family-style serving",
@@ -177,6 +192,35 @@
     "maple-soy-salmon-bowls",
     "mediterranean-baked-fish-tray"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.686Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "salmon fillets",
+        "allergens": [
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

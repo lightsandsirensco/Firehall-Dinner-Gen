@@ -140,7 +140,7 @@ export const batch05: PerformanceAdaptedRecipe[] = [
       {
         title: "Rinse and start the rice",
         instruction:
-          "Rinse long-grain rice until water runs clear. Simmer in salted water or broth 18–20 minutes until grains separate with a fork — not sticky mush. Fluff and hold covered at 200°F in a hotel pan while chicken sears.",
+          "Rinse long-grain rice until water runs clear. Simmer in salted water or broth 18–20 minutes until grains separate with a fork — not sticky mush. Fluff and hold covered at 200°F in a baking dish while chicken sears.",
         minutes: 22,
         heatLevel: "medium",
       },
@@ -298,7 +298,7 @@ export const batch05: PerformanceAdaptedRecipe[] = [
       "Offer pickled red onion for extra tang without more prep.",
       "Reduce chipotle count for mild shift—start with 2 peppers.",
     ],
-    tonightSpread: ["Black beans with cumin.", "Mexican rice in a hotel pan."],
+    tonightSpread: ["Black beans with cumin.", "Mexican rice in a baking dish."],
     leftovers: [
       "Chicken over rice bowl with slaw and crema.",
       "Quesadillas with leftover chicken and cheese.",
@@ -418,7 +418,7 @@ export const batch05: PerformanceAdaptedRecipe[] = [
     mealPrepNotes:
       "Bake night before and reheat morning of. Cut into 12 squares for easy portions.",
     stationWorkflow: [
-      "Use a 4-inch deep hotel pan for even bake and clean slicing.",
+      "Use a 4-inch deep baking dish for even bake and clean slicing.",
       "Squeeze spinach dry—excess moisture makes a soggy casserole center.",
       "Rest pan 10 minutes before cutting so squares hold their shape.",
     ],
@@ -459,7 +459,7 @@ export const batch05: PerformanceAdaptedRecipe[] = [
       {
         title: "Bake casserole",
         instruction:
-          "Pour into greased deep hotel pan. Bake 32–38 minutes until center is set, puffed, and knife inserted in middle comes out clean.",
+          "Pour into greased deep baking dish. Bake 32–38 minutes until center is set, puffed, and knife inserted in middle comes out clean.",
         minutes: 35,
         heatLevel: "medium",
       },
@@ -481,7 +481,7 @@ export const batch05: PerformanceAdaptedRecipe[] = [
       "Casserole squares in breakfast burritos with salsa.",
       "Freeze individually wrapped for backup shift breakfasts.",
     ],
-    equipment: ["Deep hotel pan", "Large skillet", "Whisk"],
+    equipment: ["Deep baking dish", "Large skillet", "Whisk"],
     spiceLevel: "mild",
     cleanupDifficulty: "easy",
   }),
@@ -768,7 +768,7 @@ export const batch05: PerformanceAdaptedRecipe[] = [
     mealPrepNotes:
       "Boil sweet potatoes while turkey filling simmers. Pipe or spread mash evenly for pretty portions.",
     stationWorkflow: [
-      "Use a 4-inch deep hotel pan for clean slice portions across eight servings.",
+      "Use a 4-inch deep baking dish for clean slice portions across eight servings.",
       "Let filling cool slightly before topping—hot filling melts mash into the gravy layer.",
       "Broil last 3 minutes for golden peaks if oven time allows.",
     ],
@@ -810,7 +810,7 @@ export const batch05: PerformanceAdaptedRecipe[] = [
       {
         title: "Assemble and top",
         instruction:
-          "Spread filling in greased hotel pan. Pipe or spread sweet potato mash evenly over top with textured peaks for browning.",
+          "Spread filling in greased baking dish. Pipe or spread sweet potato mash evenly over top with textured peaks for browning.",
         minutes: 8,
       },
       {
@@ -832,7 +832,7 @@ export const batch05: PerformanceAdaptedRecipe[] = [
       "Reheat squares covered with foil—add broth if filling dried.",
       "Freeze individual portions for emergency comfort meals.",
     ],
-    equipment: ["Deep hotel pan", "Large pot for potatoes", "Large skillet"],
+    equipment: ["Deep baking dish", "Large pot for potatoes", "Large skillet"],
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
   }),

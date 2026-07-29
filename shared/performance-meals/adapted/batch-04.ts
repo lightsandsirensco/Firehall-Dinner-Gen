@@ -21,7 +21,7 @@ export const batch04: PerformanceAdaptedRecipe[] = [
     whyCrewsLikeIt:
       "Low-carb option without feeling like punishment. Interactive assembly keeps dinner fun on quiet nights.",
     mealPrepNotes:
-      "Wash and dry lettuce cups early. Keep filling warm in a hotel pan at the line.",
+      "Wash and dry lettuce cups early. Keep filling warm in a baking dish at the line.",
     stationWorkflow: [
       "Keep lettuce on ice until service—warm filling wilts leaves instantly.",
       "Cook turkey in batches for better browning and crisper texture.",
@@ -341,7 +341,7 @@ export const batch04: PerformanceAdaptedRecipe[] = [
       "Serve over polenta or pasta for a fuller plate.",
       "Sun-dried tomato pesto swap works if basil pesto is unavailable.",
     ],
-    tonightSpread: ["Creamy polenta in a hotel pan.", "Arugula salad with lemon."],
+    tonightSpread: ["Creamy polenta in a baking dish.", "Arugula salad with lemon."],
     leftovers: [
       "Slice chicken into pesto pasta next day.",
       "Chop into a wrap with extra pesto and mozzarella.",
@@ -637,7 +637,7 @@ export const batch04: PerformanceAdaptedRecipe[] = [
     stationWorkflow: [
       "Brown mushrooms in batches—crowded mushrooms steam instead of caramelize.",
       "Simmer sauce wide and uncovered so it reduces to thick ragu consistency.",
-      "Toss pasta with sauce in largest pot or hotel pan for even coating.",
+      "Toss pasta with sauce in largest pot or baking dish for even coating.",
     ],
     ingredients: [
       { name: "green lentils", quantity: 2, unit: "cups", notes: "dry, rinsed" },

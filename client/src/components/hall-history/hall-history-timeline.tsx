@@ -4,8 +4,9 @@ import { formatLastCookedMessage } from "@shared/hall-profile/history-format";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { CookAgainButton } from "@/components/hall-history/cook-again-button";
 import { Button } from "@/components/ui/button";
-import { ChefHat, Sparkles } from "lucide-react";
+import { ChefHat, History, Sparkles } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 
 function entryHref(entry: HallHistoryEntry): string | undefined {
   if (entry.meta?.voteId) return `/vote/${entry.meta.voteId}`;
@@ -41,7 +42,10 @@ export function HallHistoryTimeline({
 }: HallHistoryTimelineProps) {
   if (entries.length === 0) {
     return (
-      <div className="rounded-2xl border border-dashed border-border/50 bg-muted/10 px-6 py-10 text-center space-y-4">
+      <div className="fade-up rounded-2xl border border-dashed border-border/50 bg-muted/10 px-6 py-10 text-center space-y-4">
+        <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 ring-1 ring-primary/20">
+          <History className="h-6 w-6 text-primary/90" aria-hidden />
+        </div>
         <p className="text-sm text-muted-foreground max-w-sm mx-auto">
           {emptyMessage ?? "No meals logged yet. Cook a recipe or spin the wheel to start your timeline."}
         </p>
@@ -64,7 +68,7 @@ export function HallHistoryTimeline({
   }
 
   return (
-    <ul className={cn("space-y-3", className)} data-testid="hall-history-timeline">
+    <ul className={cn("space-y-3", app.stagger, className)} data-testid="hall-history-timeline">
       {entries.map((entry) => {
         const href = entryHref(entry);
         const date = new Date(entry.at);

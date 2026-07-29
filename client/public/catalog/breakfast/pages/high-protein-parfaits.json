@@ -23,31 +23,31 @@
   "ingredients": [
     {
       "name": "Greek yogurt",
-      "quantity": "64",
+      "quantity": "64 oz",
       "notes": "plain, 2% or full-fat"
     },
     {
       "name": "granola",
-      "quantity": "5.3",
+      "quantity": "5.3 cups",
       "notes": "sturdy, not dust-fine"
     },
     {
       "name": "mixed berries",
-      "quantity": "5.3",
+      "quantity": "5.3 cups",
       "notes": "fresh or thawed"
     },
     {
       "name": "honey or maple syrup",
-      "quantity": "5/8"
+      "quantity": "5/8 cup"
     },
     {
       "name": "chia seeds or ground flax",
-      "quantity": "5/8",
+      "quantity": "5/8 cup",
       "notes": "optional protein boost"
     },
     {
       "name": "vanilla extract",
-      "quantity": "1.3",
+      "quantity": "1 1/4 tsp",
       "optional": true
     }
   ],
@@ -78,23 +78,24 @@
     }
   ],
   "nutrition": {
-    "calories": 360,
-    "protein": 21,
-    "carbs": 46,
-    "fat": 12,
-    "label": "per serving (hall portion)",
+    "calories": 735,
+    "protein": 29,
+    "carbs": 96,
+    "fat": 28,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": true,
+      "under700Calories": false,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": true,
+      "lighterOption": false,
       "performanceMeal": false
     }
   },
@@ -118,5 +119,46 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 5,
   "seoTitle": "High-Protein Yogurt Parfaits | Firehall Breakfast",
-  "collectionTier": "performance"
+  "collectionTier": "performance",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "granola",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "vanilla extract",
+        "allergens": [
+          "alcohol"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

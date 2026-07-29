@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 22,
   "difficulty": "medium",
-  "calories": 495,
-  "protein": 40,
-  "carbs": 42,
-  "fats": 20,
+  "calories": 628,
+  "protein": 81,
+  "carbs": 33,
+  "fats": 18,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -33,70 +33,70 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "16",
       "unit": "pieces",
       "notes": "about 6 lb"
     },
     {
-      "name": "Canned Chickpeas",
+      "name": "canned chickpeas",
       "quantity": "3",
       "unit": "cans",
       "notes": "15 oz, drained, patted dry"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "1.5",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into batons"
     },
     {
-      "name": "Dried Apricots",
+      "name": "dried apricots",
       "quantity": "1.5",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "quartered"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "2",
       "unit": "large",
       "notes": "wedge-cut"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Ground Cinnamon",
+      "name": "ground cinnamon",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Ground Ginger",
+      "name": "ground ginger",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "2",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -154,14 +154,29 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 495,
-    "protein": 40,
-    "carbs": 42,
-    "fats": 20,
-    "label": "~495 cal/serving · 40g protein · 9g fiber (est.)"
+    "calories": 628,
+    "protein": 81,
+    "carbs": 33,
+    "fats": 18,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
-  "heroImageAlt": "Wide firehall crew platter of Moroccan Chicken and Chickpeas on a station prep table, family-style serving",
+  "heroImageAlt": "Wide baking dish of creamy pasta e ceci with visible chickpeas and ditalini pasta on a crew prep table, family-style",
   "mobileImage": "/images/mobile/moroccan-chicken-chickpea-tray.jpg",
   "thumbImage": "/images/thumbs/moroccan-chicken-chickpea-tray.jpg",
   "railImage": "/images/rails/moroccan-chicken-chickpea-tray.jpg",
@@ -185,6 +200,28 @@
     "white-bean-chicken-chili",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.664Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

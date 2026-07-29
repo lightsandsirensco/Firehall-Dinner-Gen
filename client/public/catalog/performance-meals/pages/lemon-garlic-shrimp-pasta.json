@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 15,
   "difficulty": "medium",
-  "calories": 445,
-  "protein": 36,
-  "carbs": 52,
-  "fats": 12,
+  "calories": 493,
+  "protein": 38,
+  "carbs": 3,
+  "fats": 35,
   "tags": [
     "protein:shrimp",
     "format:pasta",
@@ -34,59 +34,59 @@
   ],
   "ingredients": [
     {
-      "name": "Large Shrimp",
+      "name": "large shrimp",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "peeled and deveined, 16–20 count"
     },
     {
-      "name": "Whole-Wheat Linguine",
+      "name": "whole-wheat linguine",
       "quantity": "2",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "10",
       "unit": "cloves",
       "notes": "thinly sliced"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "3",
       "unit": "whole",
       "notes": "zested and juiced"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Unsalted Butter",
+      "name": "unsalted butter",
       "quantity": "4",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Capers",
+      "name": "capers",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "drained"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "0.75",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     },
     {
-      "name": "Red Pepper Flakes",
+      "name": "red pepper flakes",
       "quantity": "0.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "2",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -129,7 +129,7 @@
   "proTips": [
     "Pat shrimp bone-dry before searing—wet shrimp steam instead of caramelize.",
     "Reserve extra pasta water; whole-wheat pasta absorbs more liquid than white.",
-    "Serve immediately—this dish does not hold well on a steam table."
+    "Serve immediately—this dish doesn't hold up well if it sits around waiting to be served."
   ],
   "tonightSpread": [
     "Simple mixed green salad with balsamic vinaigrette.",
@@ -144,11 +144,26 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 445,
-    "protein": 36,
-    "carbs": 52,
-    "fats": 12,
-    "label": "~445 cal/serving · 36g protein · 6g fiber (est.)"
+    "calories": 493,
+    "protein": 38,
+    "carbs": 3,
+    "fats": 35,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
   "heroImageAlt": "Wide firehall crew platter of Lemon Garlic Shrimp Pasta on a station prep table, family-style serving",
@@ -171,8 +186,61 @@
     "lemon-salmon-orzo-skillet",
     "lentil-mushroom-bolognese",
     "turkey-zoodle-bolognese",
-    "grilled-shrimp-quinoa-bowls"
+    "grilled-shrimp-quinoa-bowls",
+    "one-pot-beef-orzo-skillet-spinach-feta"
   ],
-  "generatedAt": "2026-06-04T20:47:19.354Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.644Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large shrimp",
+        "allergens": [
+          "shellfish"
+        ]
+      },
+      {
+        "name": "whole-wheat linguine",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": false,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta/noodle alternative."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

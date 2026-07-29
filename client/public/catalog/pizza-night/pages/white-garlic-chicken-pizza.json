@@ -231,5 +231,76 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-05-30T03:45:01.624Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pizza dough balls (15 oz)",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "All-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Grated parmesan",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Fresh mozzarella, torn",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Ricotta, dollops",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 520,
-  "protein": 40,
-  "carbs": 58,
-  "fats": 14,
+  "calories": 811,
+  "protein": 55,
+  "carbs": 80,
+  "fats": 29,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -34,70 +34,70 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
+      "name": "boneless chicken thighs",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "trimmed"
     },
     {
-      "name": "Jasmine Rice",
+      "name": "jasmine rice",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "uncooked"
     },
     {
-      "name": "Broccoli Crowns",
+      "name": "broccoli crowns",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "cut into florets"
     },
     {
-      "name": "Low-Sodium Soy Sauce",
+      "name": "low-sodium soy sauce",
       "quantity": "0.5",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Honey",
+      "name": "honey",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Rice Vinegar",
+      "name": "rice vinegar",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "8",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Fresh Ginger",
+      "name": "fresh ginger",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "grated"
     },
     {
-      "name": "Sesame Oil",
+      "name": "sesame oil",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Cornstarch",
+      "name": "cornstarch",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Green Onions",
+      "name": "green onions",
       "quantity": "6",
       "unit": "whole",
       "notes": "sliced"
     },
     {
-      "name": "Toasted Sesame Seeds",
+      "name": "toasted sesame seeds",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     }
   ],
   "steps": [
@@ -155,11 +155,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 520,
-    "protein": 40,
-    "carbs": 58,
-    "fats": 14,
-    "label": "~520 cal/serving · 40g protein · 4g fiber (est.)"
+    "calories": 811,
+    "protein": 55,
+    "carbs": 80,
+    "fats": 29,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
   "heroImageAlt": "Wide firehall crew platter of Honey Garlic Chicken Bowls on a station prep table, family-style serving",
@@ -186,6 +201,53 @@
     "crock-barbacoa-chicken",
     "shawarma-chicken-rice-bowls"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.648Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "low-sodium soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "toasted sesame seeds",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

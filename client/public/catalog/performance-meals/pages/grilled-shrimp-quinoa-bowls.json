@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 395,
-  "protein": 38,
-  "carbs": 36,
-  "fats": 12,
+  "calories": 658,
+  "protein": 47,
+  "carbs": 33,
+  "fats": 36,
   "tags": [
     "protein:shrimp",
     "format:grill",
@@ -34,72 +34,72 @@
   ],
   "ingredients": [
     {
-      "name": "Large Shrimp",
+      "name": "large shrimp",
       "quantity": "3",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "peeled, deveined, 16–20 count"
     },
     {
-      "name": "Quinoa",
+      "name": "quinoa",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "dry, rinsed"
     },
     {
-      "name": "Zucchini",
+      "name": "zucchini",
       "quantity": "3",
       "unit": "medium",
       "notes": "chunked"
     },
     {
-      "name": "Cherry Tomatoes",
+      "name": "cherry tomatoes",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "halved"
     },
     {
-      "name": "Lemon Juice",
+      "name": "lemon juice",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Feta Cheese",
+      "name": "feta cheese",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "crumbled"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -157,11 +157,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 395,
-    "protein": 38,
-    "carbs": 36,
-    "fats": 12,
-    "label": "~395 cal/serving · 38g protein · 5g fiber (est.)"
+    "calories": 658,
+    "protein": 47,
+    "carbs": 33,
+    "fats": 36,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
   "heroImageAlt": "Wide firehall platter: grilled shrimp over fluffy quinoa with vegetables on a crew prep table, family-style",
@@ -184,6 +199,47 @@
     "lemon-garlic-shrimp-pasta",
     "yogurt-marinated-grill-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.685Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large shrimp",
+        "allergens": [
+          "shellfish"
+        ]
+      },
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": false,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

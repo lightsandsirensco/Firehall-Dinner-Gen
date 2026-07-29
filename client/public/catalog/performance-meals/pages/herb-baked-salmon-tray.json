@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 390,
-  "protein": 38,
-  "carbs": 6,
-  "fats": 24,
+  "calories": 578,
+  "protein": 53,
+  "carbs": 10,
+  "fats": 35,
   "tags": [
     "protein:salmon",
     "format:sheet_pan",
@@ -34,60 +34,60 @@
   ],
   "ingredients": [
     {
-      "name": "Salmon Fillets",
+      "name": "salmon fillets",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "skin-on, 6–8 oz portions"
     },
     {
-      "name": "Asparagus Spears",
+      "name": "asparagus spears",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "woody ends trimmed"
     },
     {
-      "name": "Fresh Dill",
+      "name": "fresh dill",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     },
     {
-      "name": "Fresh Parsley",
+      "name": "fresh parsley",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "chopped"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Lemon",
+      "name": "lemon",
       "quantity": "2",
       "unit": "whole",
       "notes": "zested and sliced"
     },
     {
-      "name": "Extra-Virgin Olive Oil",
+      "name": "extra-virgin olive oil",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Dijon Mustard",
+      "name": "Dijon mustard",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -145,11 +145,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 390,
-    "protein": 38,
-    "carbs": 6,
-    "fats": 24,
-    "label": "~390 cal/serving · 38g protein · 3g fiber (est.)"
+    "calories": 578,
+    "protein": 53,
+    "carbs": 10,
+    "fats": 35,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/herb-baked-salmon-tray.jpg",
   "heroImageAlt": "Wide firehall crew platter of Baked Salmon Tray on a station prep table, family-style serving",
@@ -176,6 +191,35 @@
     "mediterranean-baked-fish-tray",
     "moroccan-chicken-chickpea-tray"
   ],
-  "generatedAt": "2026-06-04T20:47:19.354Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.636Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "salmon fillets",
+        "allergens": [
+          "fish"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

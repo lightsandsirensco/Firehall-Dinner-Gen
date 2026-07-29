@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 320,
-  "protein": 32,
-  "carbs": 18,
-  "fats": 14,
+  "calories": 417,
+  "protein": 38,
+  "carbs": 16,
+  "fats": 22,
   "tags": [
     "protein:turkey",
     "format:pasta",
@@ -34,71 +34,71 @@
   ],
   "ingredients": [
     {
-      "name": "Lean Ground Turkey",
+      "name": "lean ground turkey",
       "quantity": "2.5",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Zucchini",
+      "name": "zucchini",
       "quantity": "6",
       "unit": "large",
       "notes": "spiralized"
     },
     {
-      "name": "Crushed Tomatoes",
+      "name": "crushed tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "finely diced"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "2",
       "unit": "whole",
       "notes": "finely diced"
     },
     {
-      "name": "Celery Stalks",
+      "name": "celery stalks",
       "quantity": "2",
       "unit": "whole",
       "notes": "finely diced"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Dry Red Wine",
+      "name": "dry red wine",
       "quantity": "0.75",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Dried Italian Seasoning",
+      "name": "dried Italian seasoning",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Parmesan Cheese",
+      "name": "Parmesan cheese",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "grated"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     }
   ],
   "steps": [
@@ -156,11 +156,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 320,
-    "protein": 32,
-    "carbs": 18,
-    "fats": 14,
-    "label": "~320 cal/serving · 32g protein · 5g fiber (est.)"
+    "calories": 417,
+    "protein": 38,
+    "carbs": 16,
+    "fats": 22,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/turkey-zoodle-bolognese.jpg",
   "heroImageAlt": "Wide firehall crew platter of Turkey Zoodle Bolognese on a station prep table, family-style serving",
@@ -186,6 +201,52 @@
     "cottage-cheese-protein-pasta",
     "turkey-taco-skillet"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.682Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "dry red wine",
+        "allergens": [
+          "alcohol"
+        ]
+      },
+      {
+        "name": "Parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute broth plus a splash of vinegar for the acidity."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

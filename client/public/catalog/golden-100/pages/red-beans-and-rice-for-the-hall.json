@@ -13,10 +13,10 @@
   "cookTime": 170,
   "prepTime": 20,
   "difficulty": "hard",
-  "calories": 1167,
-  "protein": 35,
+  "calories": 1161,
+  "protein": 45,
   "carbs": 180,
-  "fats": 33,
+  "fats": 29,
   "tags": [
     "protein:pork",
     "format:one_pot",
@@ -185,16 +185,17 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1167,
-    "protein": 35,
+    "calories": 1161,
+    "protein": 45,
     "carbs": 180,
-    "fats": 33,
-    "label": "per serving (hall portion)",
+    "fats": 29,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
@@ -234,5 +235,51 @@
   "sourceName": "Serious Eats",
   "sourceUrl": "https://www.seriouseats.com/new-orleans-style-red-beans-rice-recipe",
   "generatedAt": "2026-06-04T20:45:42.321Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Andouille Sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Low-Sodium Chicken Stock",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

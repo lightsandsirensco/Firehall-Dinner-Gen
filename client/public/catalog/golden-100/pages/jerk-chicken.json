@@ -13,10 +13,10 @@
   "cookTime": 110,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 1180,
-  "protein": 90,
-  "carbs": 110,
-  "fats": 42,
+  "calories": 1087,
+  "protein": 111,
+  "carbs": 125,
+  "fats": 15,
   "tags": [
     "protein:chicken",
     "format:grill",
@@ -248,16 +248,17 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1180,
-    "protein": 90,
-    "carbs": 110,
-    "fats": 42,
-    "label": "per serving (hall portion, with coconut rice + sides)",
-    "source": "estimated",
+    "calories": 1087,
+    "protein": 111,
+    "carbs": 125,
+    "fats": 15,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
@@ -297,5 +298,52 @@
   "sourceUrl": "",
   "classicSlug": "jerk-chicken",
   "generatedAt": "2026-07-23T21:40:00.000Z",
-  "contentVersion": 5
+  "contentVersion": 5,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 16,
+    "totalCount": 16,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Soy Sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "Low-Sodium Chicken Stock",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

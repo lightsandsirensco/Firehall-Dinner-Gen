@@ -1,6 +1,6 @@
 # Hero image validation
 
-Generated: 2026-06-28T01:23:42.055Z
+Generated: 2026-07-27T18:18:00.755Z
 
 ## Root cause
 
@@ -8,15 +8,15 @@ Hero files were saved at **correct slug-locked paths** but with **wrong image by
 
 ## Summary
 
-- Published recipes audited: **315**
-- Approved catalog recipes: **331** (explore-eligible after mapping: **268**)
-- Pass: **315**
-- Fail: **0**
-- Missing hero file: **6**
-- Metadata / duplicate conflicts: **3**
+- Published recipes audited: **352**
+- Approved catalog recipes: **371** (explore-eligible after mapping: **310**)
+- Pass: **345**
+- Fail: **7**
+- Missing hero file: **0**
+- Metadata / duplicate conflicts: **11**
 - Cross-recipe duplicate conflicts: **2**
-- Vision mode: **random sample (100/315)**
-- Vision failures: **0** (skipped: 315)
+- Vision mode: **random sample (100/352)**
+- Vision failures: **0** (skipped: 352)
 
 ## Recipes fixed
 
@@ -29,49 +29,55 @@ Hero files were saved at **correct slug-locked paths** but with **wrong image by
 
 ## Excluded from surfaces (duplicate heroes pending regen)
 
-_These 18 recipes are blocked from Explore/detail heroes until unique imagery is generated._
+_These 17 recipes are blocked from Explore/detail heroes until unique imagery is generated._
 
-- `crispy-chicken-cutlets`
-- `cedar-plank-salmon`
-- `four-step-chicken-piccata`
-- `tomato-soup-grilled-cheese-croutons`
-- `sheet-pan-parmesan-dijon-chicken-thigh-dinner`
-- `bbq-chicken-pizza`
-- `breakfast-sausage-pizza`
 - `chicken-alfredo-bake`
+- `big-chili`
 - `pancake-short-stack`
-- `french-toast-casserole`
-- `sheet-pan-meal-prep`
-- `buttermilk-pancakes`
+- `bulgogi-bowls`
+- `teriyaki-donburi`
+- `teriyaki-chicken-rice-bowls`
+- `firehall-korean-beef-bowls`
+- `egg-roll-in-a-bowl-crew`
+- `korean-turkey-rice-bowls`
+- `white-chicken-chili-crock`
+- `thai-peanut-chicken-crock`
+- `burnt-ends-chili-crew`
+- `pasta-e-fagioli-hall`
 - `huevos-rancheros-crew`
 - `menemen-for-the-crew`
 - `migas-for-the-crew`
 - `shakshuka-for-the-hall`
-- `bbq-chicken-pizza`
-- `breakfast-sausage-pizza`
 
 ## Critical failures
 
-_None — all audited heroes pass._
+| Slug | Title | Hero | Reasons |
+| --- | --- | --- | --- |
+| `best-tuna-melt-for-the-hall` | Best Tuna Melt for the Hall (Diner Style) | `/images/hall-expansion/best-tuna-melt-for-the-hall.jpg` | Complete meal required — hero metadata shows too few title components (1/2) |
+| `bagel-lox-breakfast-board` | Bagel and Lox Breakfast Board | `/images/breakfast/bagel-lox-breakfast-board.jpg` | Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of) |
+| `baked-oatmeal-mixed-berries` | Baked Oatmeal with Mixed Berries | `/images/breakfast/baked-oatmeal-mixed-berries.jpg` | Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of) |
+| `country-fried-steak-eggs` | Country Fried Steak and Eggs Breakfast | `/images/breakfast/country-fried-steak-eggs.jpg` | Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of) |
+| `johnnycakes-with-syrup` | Johnnycakes with Maple Syrup | `/images/breakfast/johnnycakes-with-syrup.jpg` | Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of) |
+| `lumberjack-breakfast-platter` | Lumberjack Breakfast Platter | `/images/breakfast/lumberjack-breakfast-platter.jpg` | plating accuracy: breakfast_fail: eggs on pancakes |
+| `scrapple-and-eggs-skillet` | Scrapple and Eggs Skillet | `/images/breakfast/scrapple-and-eggs-skillet.jpg` | Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of) |
 
 ## Remaining warnings
 
-- `crispy-chicken-cutlets`: hero bytes shared with 1 other recipe(s): four-step-chicken-piccata
-- `cedar-plank-salmon`: hero bytes shared with 1 other recipe(s): tomato-soup-grilled-cheese-croutons
-- `four-step-chicken-piccata`: hero bytes shared with 1 other recipe(s): crispy-chicken-cutlets
-- `tomato-soup-grilled-cheese-croutons`: hero bytes shared with 1 other recipe(s): cedar-plank-salmon
-- `sheet-pan-parmesan-dijon-chicken-thigh-dinner`: hero bytes shared with 1 other recipe(s): sheet-pan-meal-prep
-- `bbq-chicken-pizza`: hero bytes shared with 1 other recipe(s): buttermilk-pancakes
-- `breakfast-sausage-pizza`: hero bytes shared with 1 other recipe(s): french-toast-casserole
-- `french-toast-casserole`: hero bytes shared with 2 other recipe(s): breakfast-sausage-pizza, breakfast-sausage-pizza
-- `sheet-pan-meal-prep`: hero bytes shared with 1 other recipe(s): sheet-pan-parmesan-dijon-chicken-thigh-dinner
-- `buttermilk-pancakes`: hero bytes shared with 2 other recipe(s): bbq-chicken-pizza, bbq-chicken-pizza
+- `big-chili`: hero bytes shared with 3 other recipe(s): white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall
+- `bulgogi-bowls`: hero bytes shared with 3 other recipe(s): firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls
+- `teriyaki-donburi`: hero bytes shared with 2 other recipe(s): teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock
+- `teriyaki-chicken-rice-bowls`: hero bytes shared with 2 other recipe(s): teriyaki-donburi, thai-peanut-chicken-crock
+- `firehall-korean-beef-bowls`: hero bytes shared with 3 other recipe(s): bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls
+- `egg-roll-in-a-bowl-crew`: hero bytes shared with 3 other recipe(s): bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls
+- `korean-turkey-rice-bowls`: hero bytes shared with 3 other recipe(s): bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew
+- `white-chicken-chili-crock`: hero bytes shared with 3 other recipe(s): big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall
+- `thai-peanut-chicken-crock`: hero bytes shared with 2 other recipe(s): teriyaki-donburi, teriyaki-chicken-rice-bowls
+- `burnt-ends-chili-crew`: hero bytes shared with 3 other recipe(s): big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall
+- `pasta-e-fagioli-hall`: hero bytes shared with 3 other recipe(s): big-chili, white-chicken-chili-crock, burnt-ends-chili-crew
 - `huevos-rancheros-crew`: hero bytes shared with 1 other recipe(s): shakshuka-for-the-hall
 - `menemen-for-the-crew`: hero bytes shared with 1 other recipe(s): migas-for-the-crew
 - `migas-for-the-crew`: hero bytes shared with 1 other recipe(s): menemen-for-the-crew
 - `shakshuka-for-the-hall`: hero bytes shared with 1 other recipe(s): huevos-rancheros-crew
-- `bbq-chicken-pizza`: hero bytes shared with 1 other recipe(s): buttermilk-pancakes
-- `breakfast-sausage-pizza`: hero bytes shared with 1 other recipe(s): french-toast-casserole
 
 ## Manual QA checklist
 

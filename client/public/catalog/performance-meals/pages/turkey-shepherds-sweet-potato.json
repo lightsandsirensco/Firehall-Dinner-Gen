@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 425,
-  "protein": 34,
-  "carbs": 42,
-  "fats": 14,
+  "calories": 556,
+  "protein": 43,
+  "carbs": 50,
+  "fats": 19,
   "tags": [
     "protein:turkey",
     "format:bake",
@@ -28,76 +28,76 @@
     "healthy"
   ],
   "equipment": [
-    "Deep hotel pan",
+    "Deep baking dish",
     "Large pot for potatoes",
     "Large skillet"
   ],
   "ingredients": [
     {
-      "name": "Lean Ground Turkey",
+      "name": "lean ground turkey",
       "quantity": "3",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Sweet Potatoes",
+      "name": "sweet potatoes",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "peeled, cubed"
     },
     {
-      "name": "Frozen Mixed Vegetables",
+      "name": "frozen mixed vegetables",
       "quantity": "4",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "carrots, peas, corn"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "diced"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Tomato Paste",
+      "name": "tomato paste",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "low sodium"
     },
     {
-      "name": "Worcestershire Sauce",
+      "name": "Worcestershire sauce",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Dried Thyme",
+      "name": "dried thyme",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Milk",
+      "name": "milk",
       "quantity": "0.5",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "warm"
     },
     {
-      "name": "Butter",
+      "name": "butter",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "2",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -125,7 +125,7 @@
     {
       "stepNumber": 4,
       "title": "Assemble and top",
-      "instruction": "Spread filling in greased hotel pan. Pipe or spread sweet potato mash evenly over top with textured peaks for browning.",
+      "instruction": "Spread filling in greased baking dish. Pipe or spread sweet potato mash evenly over top with textured peaks for browning.",
       "minutes": 8,
       "heatLevel": ""
     },
@@ -151,15 +151,30 @@
     "Freeze individual portions for emergency comfort meals."
   ],
   "whyCrewsLikeIt": "Classic comfort food without heavy beef grease. Sweet potato top adds color and fiber crews appreciate.",
-  "mealPrepNotes": "Boil sweet potatoes while turkey filling simmers. Pipe or spread mash evenly for pretty portions. Station: Use a 4-inch deep hotel pan for clean slice portions across eight servings. Station: Let filling cool slightly before topping—hot filling melts mash into the gravy layer. Station: Broil last 3 minutes for golden peaks if oven time allows.",
+  "mealPrepNotes": "Boil sweet potatoes while turkey filling simmers. Pipe or spread mash evenly for pretty portions. Station: Use a 4-inch deep baking dish for clean slice portions across eight servings. Station: Let filling cool slightly before topping—hot filling melts mash into the gravy layer. Station: Broil last 3 minutes for golden peaks if oven time allows.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 425,
-    "protein": 34,
-    "carbs": 42,
-    "fats": 14,
-    "label": "~425 cal/serving · 34g protein · 7g fiber (est.)"
+    "calories": 556,
+    "protein": 43,
+    "carbs": 50,
+    "fats": 19,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
   "heroImageAlt": "Wide firehall crew platter of Turkey Shepherd's Pie on a station prep table, family-style serving",
@@ -186,6 +201,65 @@
     "turkey-sweet-potato-chili",
     "turkey-lettuce-wrap-night"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.689Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Worcestershire sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      },
+      {
+        "name": "milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

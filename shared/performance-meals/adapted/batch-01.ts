@@ -294,7 +294,7 @@ export const batch01: PerformanceAdaptedRecipe[] = [
     stationWorkflow: [
       "Broil the last 2 minutes if you want more char without overcooking lean breast strips.",
       "Keep tortillas wrapped in foil in a low oven so they stay pliable at the line.",
-      "Portion chicken and veg into hotel pans for fast assembly during a short dinner window.",
+      "Portion chicken and veg into baking dishes for fast assembly during a short dinner window.",
     ],
     ingredients: [
       { name: "chicken breast", quantity: 4, unit: "lb", notes: "cut into ½-inch strips" },
@@ -527,7 +527,7 @@ export const batch01: PerformanceAdaptedRecipe[] = [
     proTips: [
       "Pat shrimp bone-dry before searing—wet shrimp steam instead of caramelize.",
       "Reserve extra pasta water; whole-wheat pasta absorbs more liquid than white.",
-      "Serve immediately—this dish does not hold well on a steam table.",
+      "Serve immediately—this dish doesn't hold up well if it sits around waiting to be served.",
     ],
     tonightSpread: [
       "Simple mixed green salad with balsamic vinaigrette.",
@@ -565,7 +565,7 @@ export const batch01: PerformanceAdaptedRecipe[] = [
     stationWorkflow: [
       "Bake meatballs on parchment so they release cleanly and brown on all sides with one flip.",
       "Simmer sauce in the widest pot on the range for fast meatball absorption.",
-      "Hold sauced meatballs in a hotel pan at 165°F—do not boil or turkey dries out.",
+      "Hold sauced meatballs in a baking dish at 165°F—do not boil or turkey dries out.",
     ],
     ingredients: [
       { name: "lean ground turkey", quantity: 3, unit: "lb" },
@@ -651,13 +651,13 @@ export const batch01: PerformanceAdaptedRecipe[] = [
       sourceId: "st-09",
     }),
     description:
-      "Blended cottage cheese creates a high-protein sauce layered with penne, marinara, and part-skim mozzarella. Bakes in a deep hotel pan for easy hold.",
+      "Blended cottage cheese creates a high-protein sauce layered with penne, marinara, and part-skim mozzarella. Bakes in a deep baking dish for easy hold.",
     whyCrewsLikeIt:
       "Mac-and-cheese energy with better macros. One pan feeds the whole hall and slices into clean portions.",
     mealPrepNotes:
       "Blend cottage cheese smooth ahead of time. Undercook penne by 2 minutes—it finishes in the oven.",
     stationWorkflow: [
-      "Use a 4-inch deep hotel pan so the bake holds heat without drying at the edges.",
+      "Use a 4-inch deep baking dish so the bake holds heat without drying at the edges.",
       "Tent foil first 20 minutes, uncover last 10 for golden cheese without overcooking pasta.",
       "Rest pan 10 minutes before cutting so layers set and portions stay intact.",
     ],
@@ -697,7 +697,7 @@ export const batch01: PerformanceAdaptedRecipe[] = [
       {
         title: "Assemble and top with cheese",
         instruction:
-          "Spread half the pasta in a greased hotel pan. Drizzle remaining marinara, then top with remaining pasta and mozzarella-parmesan blend.",
+          "Spread half the pasta in a greased baking dish. Drizzle remaining marinara, then top with remaining pasta and mozzarella-parmesan blend.",
         minutes: 5,
       },
       {
@@ -722,7 +722,7 @@ export const batch01: PerformanceAdaptedRecipe[] = [
       "Reheat squares covered with foil; add splash of marinara to restore moisture.",
       "Cut cold leftovers into meal-prep cubes for shift lunches.",
     ],
-    equipment: ["Blender", "Deep hotel pan", "Large stock pot"],
+    equipment: ["Blender", "Deep baking dish", "Large stock pot"],
     spiceLevel: "mild",
     cleanupDifficulty: "medium",
   }),

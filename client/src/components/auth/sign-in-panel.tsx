@@ -344,7 +344,7 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
       {!sent ? (
         <>
           {showGoogle && (
-            <div className="relative h-10 w-full" ref={googleWrapRef}>
+            <div className="relative h-10 w-full rounded-md hover-elevate active-elevate-2" ref={googleWrapRef}>
               <div
                 className="absolute inset-0 flex items-center justify-center gap-3 rounded-md border [border-color:var(--button-outline)] bg-background text-sm font-medium shadow-xs pointer-events-none"
                 aria-hidden="true"

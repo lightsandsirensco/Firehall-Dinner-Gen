@@ -1,6 +1,6 @@
 # Recipe portion scaling audit
 
-- Pages scanned: **351**
+- Pages scanned: **377**
 - Recipes corrected: **1**
 - Ingredient fixes: **1**
 - Mode: **audit**

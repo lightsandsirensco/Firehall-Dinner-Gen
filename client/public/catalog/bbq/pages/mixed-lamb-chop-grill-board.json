@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 760,
-  "protein": 58,
-  "carbs": 34,
-  "fats": 44,
+  "calories": 818,
+  "protein": 68,
+  "carbs": 20,
+  "fats": 50,
   "tags": [
     "protein:lamb",
     "format:smokehouse_board",
@@ -220,12 +220,26 @@
   "mealPrepNotes": "Rub the chops up to 4 hours ahead and refrigerate; pull them 45 minutes before grilling. Labneh, turnips, and mint stage cold. Loin runs the hot zone, shoulder the medium zone — pull both at temp and glaze in the last minute.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 760,
-    "protein": 58,
-    "carbs": 34,
-    "fats": 44,
-    "label": "per serving (hall portion)",
-    "source": "estimated"
+    "calories": 818,
+    "protein": 68,
+    "carbs": 20,
+    "fats": 50,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/smoker-catalog/mixed-lamb-chop-grill-board.jpg",
   "heroImageAlt": "Za'atar Loin and Shoulder Lamb Board — crew-sized BBQ spread with visible smoke and bark",
@@ -257,5 +271,52 @@
   ],
   "sourceName": "Firehall Meals BBQ Collection",
   "generatedAt": "2026-07-23T21:00:00.000Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Za'atar",
+        "allergens": [
+          "sesame"
+        ]
+      },
+      {
+        "name": "Labneh",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Pita Breads",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

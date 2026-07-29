@@ -108,7 +108,7 @@ function fixChickenParm(page: GoldenRecipePage, wheelTitle: string): GoldenRecip
     step(
       7,
       "Rest baked cutlets",
-      "Pull hotel pans when cheese bubbles at the edges and cutlets read 165°F at the center. Rest 3 minutes uncovered — molten cheese sets and breading stays crunchy. Keep marinara on low beside the pans.",
+      "Pull baking dishes when cheese bubbles at the edges and cutlets read 165°F at the center. Rest 3 minutes uncovered — molten cheese sets and breading stays crunchy. Keep marinara on low beside the pans.",
       3,
       "low",
     ),
@@ -177,7 +177,7 @@ function fixPulledPork(page: GoldenRecipePage, wheelTitle: string): GoldenRecipe
     step(
       6,
       "Stage the sandwich counter",
-      "Set shredded pork in a deep hotel pan with a ladle of cooking juices on top. Line buns, slaw, pickles, and extra BBQ sauce in separate bowls with tongs. Hot pork center, cold crunch at the far end.",
+      "Set shredded pork in a deep baking dish with a ladle of cooking juices on top. Line buns, slaw, pickles, and extra BBQ sauce in separate bowls with tongs. Hot pork center, cold crunch at the far end.",
       8,
       "low",
     ),
@@ -394,7 +394,7 @@ function fixChickenCaesar(page: GoldenRecipePage, wheelTitle: string): GoldenRec
     step(
       9,
       "Plate hot chicken over salad",
-      "Lay warm sliced chicken over the dressed romaine in hotel pans or individual bowls. Finish with remaining parmesan, bacon, and a lemon squeeze at the table. Garlic bread and fries go on separate trays.",
+      "Lay warm sliced chicken over the dressed romaine in baking dishes or individual bowls. Finish with remaining parmesan, bacon, and a lemon squeeze at the table. Garlic bread and fries go on separate trays.",
       5,
       "low",
     ),
@@ -458,14 +458,14 @@ function fixBeefDip(page: GoldenRecipePage, wheelTitle: string): GoldenRecipePag
     step(
       3,
       "Build the au jus",
-      "Strain pan juices into a fat separator; skim most of the fat. Simmer the defatted juices with the Worcestershire sauce and soy sauce 10 minutes until deeply savory — the soy adds glutamate depth without tasting Asian. Taste for salt: au jus should taste like concentrated roast drippings, not dishwater. Hold hot in a deep cambro for dipping.",
+      "Strain pan juices into a fat separator; skim most of the fat. Simmer the defatted juices with the Worcestershire sauce and soy sauce 10 minutes until deeply savory — the soy adds glutamate depth without tasting Asian. Taste for salt: au jus should taste like concentrated roast drippings, not dishwater. Hold hot in a large lidded container for dipping.",
       15,
       "medium-low",
     ),
     step(
       4,
       "Slice beef paper-thin",
-      "Slice the rested meat across the grain as thin as possible — a sharp slicer or steady knife hand matters, and thick slices chew like rope. Pile sliced beef in a hotel pan with a ladle of au jus spooned over to keep it moist. Cover loosely with foil and hold at 140°F until service.",
+      "Slice the rested meat across the grain as thin as possible — a sharp slicer or steady knife hand matters, and thick slices chew like rope. Pile sliced beef in a baking dish with a ladle of au jus spooned over to keep it moist. Cover loosely with foil and hold at 140°F until service.",
       15,
       "low",
     ),
@@ -531,7 +531,7 @@ function fixBeefDip(page: GoldenRecipePage, wheelTitle: string): GoldenRecipePag
     steps,
     proTips: hallProTips([
       "Slice beef only after a full rest — rushing guarantees dry dip sandwiches.",
-      "Keep au jus hot in a deep cambro with a ladle — cold jus is the fastest way to lose hall cred.",
+      "Keep au jus hot in a large lidded container with a ladle — cold jus is the fastest way to lose hall cred.",
       "Toast rolls hard enough to survive a full dunk without disintegrating.",
     ]),
     tonightSpread: buildStructuredTonightSpread(
@@ -547,7 +547,7 @@ function fixBeefDip(page: GoldenRecipePage, wheelTitle: string): GoldenRecipePag
 
 function fixBbqChickenMacAndCheese(page: GoldenRecipePage, wheelTitle: string): GoldenRecipePage {
   const spread = buildStructuredTonightSpread(
-    "BBQ chicken mac and cheese from the hotel pan",
+    "BBQ chicken mac and cheese from the baking dish",
     ["extra warmed BBQ sauce", "crispy fried onions", "sliced green onions"],
     ["splash of milk at the line if the mac tightened on hold"],
   );
@@ -591,7 +591,7 @@ function fixBbqChickenBowls(page: GoldenRecipePage, wheelTitle: string): GoldenR
     step(
       4,
       "Slice rested chicken",
-      "Slice chicken into strips against any grain you see. Hold in a hotel pan with a light glaze of warmed BBQ sauce spooned over — not drowned, or the line goes soggy.",
+      "Slice chicken into strips against any grain you see. Hold in a baking dish with a light glaze of warmed BBQ sauce spooned over — not drowned, or the line goes soggy.",
       5,
       "low",
     ),
@@ -618,7 +618,7 @@ function fixBbqChickenBowls(page: GoldenRecipePage, wheelTitle: string): GoldenR
     step(
       8,
       "Stage the bowl line",
-      "Set rice in the first hotel pan, sliced chicken in the second, corn and slaw in separate pans. Hot components closest to the crew; cold slaw at the far end so it stays crisp.",
+      "Set rice in the first baking dish, sliced chicken in the second, corn and slaw in separate pans. Hot components closest to the crew; cold slaw at the far end so it stays crisp.",
       8,
       "low",
     ),
@@ -686,7 +686,7 @@ function fixSteakSandwiches(page: GoldenRecipePage, wheelTitle: string): GoldenR
     step(
       4,
       "Slice against the grain",
-      "Slice rested steak thin at a sharp angle against the grain — short muscle fibers, not long chewy lines. Hold loosely covered at 140°F in a hotel pan with a spoon of butter melted over top.",
+      "Slice rested steak thin at a sharp angle against the grain — short muscle fibers, not long chewy lines. Hold loosely covered at 140°F in a baking dish with a spoon of butter melted over top.",
       10,
       "low",
     ),

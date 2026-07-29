@@ -689,7 +689,7 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
       {
         heading: "Built for station workflow",
         paragraphs: [
-          "Station cooking is teamwork with bad timing. Prep what you can before the busy window, keep hot and cold components separate, and use hotel pans or sheet pans that fit a real firehouse kitchen.",
+          "Station cooking is teamwork with bad timing. Prep what you can before the busy window, keep hot and cold components separate, and use large baking dishes or sheet pans that fit a real firehouse kitchen.",
           "Call interruptions are normal. Recipes that hold — chili, pulled pork, bowl bars, braises — beat delicate dishes that peak in a ten-minute window.",
           "Use Find a Meal when you need a fast crew answer, or browse firefighter dinner ideas when the whiteboard debate will not end.",
         ],

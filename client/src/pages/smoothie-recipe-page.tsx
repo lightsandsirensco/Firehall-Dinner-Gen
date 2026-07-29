@@ -25,6 +25,7 @@ import {
 import { RecipeCrewRatingPanel } from "@/components/recipe-crew-rating/recipe-crew-rating-panel";
 import { CTA } from "@/lib/brand-copy";
 import { RecipeNutritionPanel } from "@/components/recipe-nutrition-panel";
+import { DietaryBadges } from "@/components/trust/dietary-badges";
 import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 
@@ -152,6 +153,8 @@ export default function SmoothieRecipePage() {
           }
           className="mt-6"
         />
+
+        <DietaryBadges dietary={page.dietary} className="mt-4" />
 
         <div className="mt-6 aspect-[16/10] rounded-2xl overflow-hidden border border-border/20 bg-gradient-to-br from-emerald-950/40 to-muted/20">
           {page.heroImage ? (

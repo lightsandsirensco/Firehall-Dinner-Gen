@@ -150,7 +150,7 @@ export function ProteinDealRecipeMatches({ deal, recipes, className }: ProteinDe
               >
                 <img
                   src={recipe.heroImage}
-                  alt=""
+                  alt={recipe.title}
                   className="w-14 h-14 rounded-lg object-cover shrink-0"
                 />
                 <div className="min-w-0">

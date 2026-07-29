@@ -7,16 +7,16 @@
   "subtitle": "High-protein baked penne with marinara and melted mozzarella",
   "category": "healthy_performance",
   "cuisine": "Italian-American",
-  "description": "Blended cottage cheese creates a high-protein sauce layered with penne, marinara, and part-skim mozzarella. Bakes in a deep hotel pan for easy hold.",
+  "description": "Blended cottage cheese creates a high-protein sauce layered with penne, marinara, and part-skim mozzarella. Bakes in a deep baking dish for easy hold.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 465,
-  "protein": 32,
-  "carbs": 58,
-  "fats": 14,
+  "calories": 791,
+  "protein": 42,
+  "carbs": 98,
+  "fats": 25,
   "tags": [
     "protein:mixed",
     "format:pasta",
@@ -29,67 +29,67 @@
   ],
   "equipment": [
     "Blender",
-    "Deep hotel pan",
+    "Deep baking dish",
     "Large stock pot"
   ],
   "ingredients": [
     {
-      "name": "Whole-Wheat Penne",
+      "name": "whole-wheat penne",
       "quantity": "2",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Low-Fat Cottage Cheese",
+      "name": "low-fat cottage cheese",
       "quantity": "3",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Marinara Sauce",
+      "name": "marinara sauce",
       "quantity": "4",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Part-Skim Mozzarella",
+      "name": "part-skim mozzarella",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "shredded"
     },
     {
-      "name": "Parmesan Cheese",
+      "name": "Parmesan cheese",
       "quantity": "1",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "grated"
     },
     {
-      "name": "Large Eggs",
+      "name": "large eggs",
       "quantity": "2",
       "unit": "whole"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Dried Basil",
+      "name": "dried basil",
       "quantity": "1",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Dried Oregano",
+      "name": "dried oregano",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "0.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -117,7 +117,7 @@
     {
       "stepNumber": 4,
       "title": "Assemble and top with cheese",
-      "instruction": "Spread half the pasta in a greased hotel pan. Drizzle remaining marinara, then top with remaining pasta and mozzarella-parmesan blend.",
+      "instruction": "Spread half the pasta in a greased baking dish. Drizzle remaining marinara, then top with remaining pasta and mozzarella-parmesan blend.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -143,15 +143,30 @@
     "Cut cold leftovers into meal-prep cubes for shift lunches."
   ],
   "whyCrewsLikeIt": "Mac-and-cheese energy with better macros. One pan feeds the whole hall and slices into clean portions.",
-  "mealPrepNotes": "Blend cottage cheese smooth ahead of time. Undercook penne by 2 minutes—it finishes in the oven. Station: Use a 4-inch deep hotel pan so the bake holds heat without drying at the edges. Station: Tent foil first 20 minutes, uncover last 10 for golden cheese without overcooking pasta. Station: Rest pan 10 minutes before cutting so layers set and portions stay intact.",
+  "mealPrepNotes": "Blend cottage cheese smooth ahead of time. Undercook penne by 2 minutes—it finishes in the oven. Station: Use a 4-inch deep baking dish so the bake holds heat without drying at the edges. Station: Tent foil first 20 minutes, uncover last 10 for golden cheese without overcooking pasta. Station: Rest pan 10 minutes before cutting so layers set and portions stay intact.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 465,
-    "protein": 32,
-    "carbs": 58,
-    "fats": 14,
-    "label": "~465 cal/serving · 32g protein · 7g fiber (est.)"
+    "calories": 791,
+    "protein": 42,
+    "carbs": 98,
+    "fats": 25,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
   "heroImageAlt": "Wide firehall crew platter of Protein Pasta Bake on a station prep table, family-style serving",
@@ -174,8 +189,68 @@
     "lemon-garlic-shrimp-pasta",
     "lemon-salmon-orzo-skillet",
     "lentil-mushroom-bolognese",
-    "turkey-zoodle-bolognese"
+    "turkey-zoodle-bolognese",
+    "one-pot-beef-orzo-skillet-spinach-feta"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.647Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "whole-wheat penne",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "low-fat cottage cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "part-skim mozzarella",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

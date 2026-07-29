@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 560,
-  "protein": 38,
-  "carbs": 40,
-  "fats": 26,
+  "calories": 682,
+  "protein": 51,
+  "carbs": 25,
+  "fats": 41,
   "tags": [
     "protein:beef",
     "format:handheld",
@@ -158,19 +158,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 560,
-    "protein": 38,
-    "carbs": 40,
-    "fats": 26,
-    "label": "~560 cal/serving · 38g protein · 2g fiber (est.)",
-    "source": "estimated",
+    "calories": 682,
+    "protein": 51,
+    "carbs": 25,
+    "fats": 41,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
@@ -193,5 +199,46 @@
   ],
   "sourceUrl": "https://www.seriouseats.com/gyros-recipe",
   "generatedAt": "2026-07-17T20:15:12.771Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "pita breads",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "tzatziki",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

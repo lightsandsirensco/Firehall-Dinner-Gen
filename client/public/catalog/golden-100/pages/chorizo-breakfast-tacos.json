@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 1261,
+  "calories": 1159,
   "protein": 63,
-  "carbs": 120,
-  "fats": 60,
+  "carbs": 61,
+  "fats": 75,
   "tags": [
     "protein:pork",
     "format:tacos",
@@ -32,63 +32,94 @@
   ],
   "ingredients": [
     {
-      "name": "Large Eggs",
-      "quantity": "18",
+      "name": "Fresh Mexican chorizo, casings removed",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Main"
+    },
+    {
+      "name": "Large eggs",
+      "quantity": "20",
       "unit": "count",
       "group": "Main"
     },
     {
-      "name": "Buttermilk",
-      "quantity": "4",
-      "unit": "Cups",
-      "group": "Batter"
+      "name": "Yellow onion, diced",
+      "quantity": "1",
+      "unit": "count",
+      "group": "Aromatics"
     },
     {
-      "name": "All-Purpose Flour",
-      "quantity": "4",
-      "unit": "Cups",
-      "group": "Batter"
+      "name": "6-inch corn tortillas",
+      "quantity": "24",
+      "unit": "count",
+      "group": "Build"
     },
     {
-      "name": "Thick-Cut Bacon",
+      "name": "Cotija cheese, crumbled",
+      "quantity": "8",
+      "unit": "oz",
+      "group": "Toppings"
+    },
+    {
+      "name": "Fresh cilantro, chopped",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Toppings"
+    },
+    {
+      "name": "White onion, finely diced",
+      "quantity": "1",
+      "unit": "count",
+      "group": "Toppings"
+    },
+    {
+      "name": "Salsa verde",
       "quantity": "2",
-      "unit": "Lb",
-      "group": "Side"
+      "unit": "cups",
+      "group": "Toppings"
     },
     {
-      "name": "Maple Syrup",
-      "quantity": "2",
-      "unit": "Cups",
-      "group": "Serve"
+      "name": "Lime wedges",
+      "quantity": "8",
+      "unit": "count",
+      "group": "Finish"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Mix batter gently",
-      "instruction": "Whisk dry and wet separately; combine until just mixed. Lumps are fine — over-mixing makes tough pancakes.",
-      "minutes": 10,
-      "heatLevel": ""
+      "title": "Brown the chorizo",
+      "instruction": "Cook chorizo in a large skillet over medium-high, breaking it into small crumbles, 8–10 minutes until fully cooked and rendered. Drain most of the excess fat, leaving a thin coating in the pan.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 2,
-      "title": "Bake bacon, hold oven",
-      "instruction": "Bake bacon at 400°F on sheet pans 15–18 minutes until crisp. Set oven to 200°F to hold finished pancakes and eggs.",
-      "minutes": 18,
-      "heatLevel": "high"
+      "title": "Soften the onion",
+      "instruction": "Add diced yellow onion to the rendered fat; cook 3–4 minutes until softened.",
+      "minutes": 5,
+      "heatLevel": "medium"
     },
     {
       "stepNumber": 3,
-      "title": "Griddle in batches",
-      "instruction": "Griddle at 375°F: pancakes 2–3 minutes per side until golden; eggs if serving scrambled in batches. Common mistake: heat too high — outside burns before center sets.",
-      "minutes": 20,
+      "title": "Scramble the eggs into the chorizo",
+      "instruction": "Whisk eggs with a pinch of salt; pour into the pan. Stir gently over medium-low heat until just set and still glossy — chorizo is salty, so the eggs need very little extra seasoning.",
+      "minutes": 8,
       "heatLevel": "medium"
     },
     {
       "stepNumber": 4,
-      "title": "Serve the line",
-      "instruction": "Chorizo Breakfast Tacos does not wait — call the crew as batches finish. Syrup and butter on the table; backup tray in the 200°F oven.",
-      "minutes": 5,
+      "title": "Warm the tortillas",
+      "instruction": "Warm corn tortillas in a dry skillet or wrapped in foil in a low oven, about 30 seconds per side, until pliable.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the taco line",
+      "instruction": "Fill warm tortillas with the chorizo-egg mixture. Set out cotija, cilantro, diced white onion, salsa verde, and lime wedges so the crew tops their own.",
+      "minutes": 8,
       "heatLevel": "low"
     }
   ],
@@ -112,10 +143,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1261,
+    "calories": 1159,
     "protein": 63,
-    "carbs": 120,
-    "fats": 60,
+    "carbs": 61,
+    "fats": 75,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
@@ -159,6 +190,58 @@
   ],
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
-  "generatedAt": "2026-06-04T20:45:42.330Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:33:03.260Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Fresh Mexican chorizo, casings removed",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Cotija cheese, crumbled",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

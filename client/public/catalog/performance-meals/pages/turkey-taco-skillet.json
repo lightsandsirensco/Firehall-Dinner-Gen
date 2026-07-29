@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 385,
-  "protein": 36,
-  "carbs": 28,
-  "fats": 14,
+  "calories": 563,
+  "protein": 53,
+  "carbs": 32,
+  "fats": 24,
   "tags": [
     "protein:turkey",
     "format:skillet",
@@ -33,70 +33,70 @@
   ],
   "ingredients": [
     {
-      "name": "Lean Ground Turkey",
+      "name": "lean ground turkey",
       "quantity": "3",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "diced"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "diced"
     },
     {
-      "name": "Frozen Corn",
+      "name": "frozen corn",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "thawed"
     },
     {
-      "name": "Black Beans",
+      "name": "black beans",
       "quantity": "2",
       "unit": "cans",
       "notes": "15 oz, drained"
     },
     {
-      "name": "Diced Tomatoes With Green Chiles",
+      "name": "diced tomatoes with green chiles",
       "quantity": "1",
       "unit": "can",
       "notes": "14.5 oz"
     },
     {
-      "name": "Chili Powder",
+      "name": "chili powder",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "1.5",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Shredded Cheddar",
+      "name": "shredded cheddar",
       "quantity": "2",
-      "unit": "Cups"
+      "unit": "cups"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -154,11 +154,26 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 385,
-    "protein": 36,
-    "carbs": 28,
-    "fats": 14,
-    "label": "~385 cal/serving · 36g protein · 7g fiber (est.)"
+    "calories": 563,
+    "protein": 53,
+    "carbs": 32,
+    "fats": 24,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/turkey-taco-skillet.jpg",
   "heroImageAlt": "Wide firehall crew platter of Turkey Taco Skillet on a station prep table, family-style serving",
@@ -184,6 +199,41 @@
     "turkey-lettuce-wrap-night",
     "chicken-enchilada-skillet-light"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.658Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

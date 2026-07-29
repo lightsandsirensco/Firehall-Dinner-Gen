@@ -14,9 +14,9 @@
   "prepTime": 30,
   "difficulty": "medium",
   "calories": 1400,
-  "protein": 68,
-  "carbs": 76,
-  "fats": 90,
+  "protein": 67,
+  "carbs": 83,
+  "fats": 88,
   "tags": [
     "protein:pork",
     "format:pizza",
@@ -170,11 +170,12 @@
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1400,
-    "protein": 68,
-    "carbs": 76,
-    "fats": 90,
-    "label": "per serving (hall portion)",
+    "protein": 67,
+    "carbs": 83,
+    "fats": 88,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -219,5 +220,69 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-06-04T20:45:42.284Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Bread Flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Fresh Mozzarella, Torn",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Low-Moisture Mozzarella, Shredded",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Pepperoni Slices",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Grated Parmesan",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

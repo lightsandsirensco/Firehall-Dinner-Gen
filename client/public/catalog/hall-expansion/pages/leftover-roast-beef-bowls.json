@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 650,
-  "protein": 42,
-  "carbs": 62,
-  "fats": 25,
+  "calories": 989,
+  "protein": 70,
+  "carbs": 107,
+  "fats": 32,
   "tags": [
     "protein:beef",
     "format:bowls",
@@ -168,19 +168,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 650,
-    "protein": 42,
-    "carbs": 62,
-    "fats": 25,
-    "label": "~650 cal/serving · 42g protein · 8g fiber (est.)",
-    "source": "estimated",
+    "calories": 989,
+    "protein": 70,
+    "carbs": 107,
+    "fats": 32,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
+      "under700Calories": false,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
@@ -205,5 +211,47 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.772Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "beef gravy",
+        "allergens": [
+          "gluten",
+          "dairy"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

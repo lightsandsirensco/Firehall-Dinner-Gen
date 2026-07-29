@@ -1,0 +1,263 @@
+{
+  "slug": "mediterranean-chicken-white-bean-skillet",
+  "title": "Mediterranean Chicken & White Bean Skillet",
+  "displayTitle": "Mediterranean Chicken & White Bean Skillet",
+  "seoTitle": "Mediterranean Chicken & White Bean Skillet | Firefighter Meal",
+  "shortDescription": "Seared chicken thighs simmered with white beans, tomatoes, spinach, and feta",
+  "subtitle": "Seared chicken thighs simmered with white beans, tomatoes, spinach, and feta",
+  "category": "healthy_performance",
+  "cuisine": "Mediterranean",
+  "description": "Chicken thighs sear until golden, then simmer in one skillet with cannellini beans, cherry tomatoes, garlic, and oregano until the beans turn creamy, finished with wilted spinach, olives, and crumbled feta.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 670,
+  "protein": 59,
+  "carbs": 28,
+  "fats": 35,
+  "tags": [
+    "protein:chicken",
+    "format:skillet",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large deep skillet or Dutch oven"
+  ],
+  "ingredients": [
+    {
+      "name": "boneless chicken thighs",
+      "quantity": "4",
+      "unit": "lb"
+    },
+    {
+      "name": "cannellini beans",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "15 oz, drained and rinsed"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "pints",
+      "notes": "whole"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "8",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "medium",
+      "notes": "diced"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "low sodium"
+    },
+    {
+      "name": "lemon",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "juiced"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "6",
+      "unit": "cups",
+      "notes": "packed"
+    },
+    {
+      "name": "kalamata olives",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "pitted, halved"
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "crumbled"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    },
+    {
+      "name": "black pepper",
+      "quantity": "1",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sear the chicken",
+      "instruction": "Pat chicken dry, season with salt and pepper. Sear in oil over medium-high 4–5 minutes per side until deeply golden. Remove to a plate; it will finish cooking in the sauce.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the base",
+      "instruction": "In the same skillet, cook onion 4–5 minutes until softened. Add garlic and oregano, cook 1 minute until fragrant.",
+      "minutes": 6,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer with beans and tomatoes",
+      "instruction": "Add beans, cherry tomatoes, and broth. Nestle chicken back into the skillet, cover, and simmer 15–18 minutes until chicken reaches 165°F and tomatoes have burst into the sauce.",
+      "minutes": 18,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Wilt in spinach",
+      "instruction": "Stir in lemon juice and spinach a few handfuls at a time until wilted. Sauce should look thick and stew-like, not watery.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Top with olives and feta",
+      "instruction": "Top with olives and crumbled feta right before serving so the feta stays creamy rather than fully melting into the sauce.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Smash a few beans against the side of the pan partway through simmering for a naturally thicker sauce.",
+    "Crusty bread or a small portion of rice on the side rounds this into a full meal.",
+    "A pinch of red pepper flakes at the start adds background heat without overpowering."
+  ],
+  "tonightSpread": [
+    "Crusty bread for scraping the pan.",
+    "Simple green salad."
+  ],
+  "leftovers": [
+    "Reheats beautifully—flavor deepens the next day.",
+    "Freezes well without the spinach and feta; add those fresh after reheating."
+  ],
+  "whyCrewsLikeIt": "Genuinely one-pot and bean-forward rather than another grain bowl—beans make it filling and add fiber without extra starch. Feels like a rustic Mediterranean stew, not a diet dinner.",
+  "mealPrepNotes": "Sear the chicken skin-side down first if using skin-on thighs for extra flavor in the pan before the beans go in. Station: Don't rinse all the liquid off the beans—a little bean liquid helps the sauce thicken naturally. Station: Nestle chicken back into the beans skin-side up so it doesn't turn soggy while simmering. Station: Crusty bread on the side is non-negotiable for scraping up the sauce.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 670,
+    "protein": 59,
+    "carbs": 28,
+    "fats": 35,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of Mediterranean Chicken & White Bean Skillet on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "mediterranean chicken & white bean skillet",
+    "mediterranean chicken white bean skillet",
+    "chicken",
+    "Mediterranean",
+    "skillet",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-chicken-tray",
+    "sheet-pan-chicken-fajitas-lite",
+    "honey-garlic-chicken-rice-bowls",
+    "white-bean-chicken-chili",
+    "crock-barbacoa-chicken",
+    "shawarma-chicken-rice-bowls"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.709Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

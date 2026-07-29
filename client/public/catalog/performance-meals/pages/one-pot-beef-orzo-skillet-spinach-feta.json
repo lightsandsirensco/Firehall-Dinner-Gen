@@ -1,0 +1,264 @@
+{
+  "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+  "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+  "displayTitle": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+  "seoTitle": "One-Pot Beef & Orzo Skillet with Spinach and Feta | Firefighter Meal",
+  "shortDescription": "Ground beef and orzo simmered risotto-style with tomato, spinach, and feta",
+  "subtitle": "Ground beef and orzo simmered risotto-style with tomato, spinach, and feta",
+  "category": "healthy_performance",
+  "cuisine": "Mediterranean",
+  "description": "Ground beef browns in one pot, then orzo simmers directly in tomato-broth alongside it, soaking up flavor as it cooks risotto-style, finished with a big handful of wilted spinach and crumbled feta.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 909,
+  "protein": 68,
+  "carbs": 63,
+  "fats": 45,
+  "tags": [
+    "protein:beef",
+    "format:pasta",
+    "category:healthy_performance",
+    "healthy",
+    "performance_meals_50",
+    "hall_meal",
+    "high_protein",
+    "healthy"
+  ],
+  "equipment": [
+    "Large deep skillet or Dutch oven"
+  ],
+  "ingredients": [
+    {
+      "name": "lean ground beef",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "90/10"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "large",
+      "notes": "diced"
+    },
+    {
+      "name": "garlic cloves",
+      "quantity": "6",
+      "unit": "cloves",
+      "notes": "minced"
+    },
+    {
+      "name": "whole wheat orzo",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry"
+    },
+    {
+      "name": "crushed tomatoes",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "28 oz"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "low sodium, warmed"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp"
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "0.5",
+      "unit": "tsp"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "8",
+      "unit": "cups",
+      "notes": "packed"
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "crumbled"
+    },
+    {
+      "name": "lemon",
+      "quantity": "1",
+      "unit": "whole",
+      "notes": "zested"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp"
+    },
+    {
+      "name": "kosher salt",
+      "quantity": "2",
+      "unit": "tsp"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the beef",
+      "instruction": "Cook ground beef and onion in oil over medium-high 8–10 minutes, breaking into crumbles, until no pink remains and onion is soft.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Bloom aromatics",
+      "instruction": "Add garlic, oregano, and red pepper flakes; cook 1 minute until fragrant, stirring so nothing sticks or burns.",
+      "minutes": 2,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer the orzo",
+      "instruction": "Stir in orzo, crushed tomatoes, and 3 cups warm broth. Bring to a simmer, stirring every few minutes and adding more broth as it absorbs, 15–18 minutes until orzo is tender and creamy.",
+      "minutes": 18,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Wilt in the spinach",
+      "instruction": "Fold in spinach a few handfuls at a time until wilted completely—the volume looks huge at first but cooks down fast.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Top with feta and lemon",
+      "instruction": "Remove from heat, taste for salt, and top with crumbled feta and lemon zest at the table. Mixture should look creamy and thick, not soupy.",
+      "minutes": 3,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "If the orzo looks too thick before it's fully tender, stir in more warm broth a splash at a time.",
+    "Kalamata olives stirred in at the end add a nice briny pop.",
+    "A crack of black pepper and extra lemon zest right before serving brightens the whole dish."
+  ],
+  "tonightSpread": [
+    "Crusty bread for scraping the pot.",
+    "Simple side salad with lemon vinaigrette."
+  ],
+  "leftovers": [
+    "Orzo thickens as it sits—loosen with a splash of broth or water when reheating.",
+    "Reheat gently on the stove rather than the microwave to keep the texture creamy."
+  ],
+  "whyCrewsLikeIt": "Creamy, cheesy-tasting comfort food that's actually just orzo, broth, and feta—no cream involved. One pot means fast cleanup on a busy night.",
+  "mealPrepNotes": "Have broth warm and ready to add—cold broth added to a hot pot slows down the simmer and orzo can turn gummy waiting. Station: Stir orzo occasionally while it simmers, the same way you'd stir risotto, so it releases starch and turns creamy. Station: Add spinach in batches at the very end—it wilts down fast and looks like too much at first. Station: Finish with feta and lemon zest tableside so it stays fresh, not melted into the pot.",
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 909,
+    "protein": 68,
+    "carbs": 63,
+    "fats": 45,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "",
+  "heroImageAlt": "Wide firehall crew platter of One-Pot Beef & Orzo Skillet with Spinach and Feta on a station prep table, family-style serving",
+  "mobileImage": "",
+  "thumbImage": "",
+  "railImage": "",
+  "realismScore": 100,
+  "firefighterScore": 83,
+  "popularityWeight": 7.5,
+  "searchTerms": [
+    "one-pot beef & orzo skillet with spinach and feta",
+    "one pot beef orzo skillet spinach feta",
+    "beef",
+    "Mediterranean",
+    "pasta",
+    "performance meal",
+    "firefighter healthy"
+  ],
+  "relatedSlugs": [
+    "lemon-garlic-shrimp-pasta",
+    "cottage-cheese-protein-pasta",
+    "korean-beef-rice-bowls",
+    "lemon-salmon-orzo-skillet",
+    "lean-beef-broccoli-rice",
+    "lentil-mushroom-bolognese"
+  ],
+  "generatedAt": "2026-07-29T13:35:43.699Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "whole wheat orzo",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
+}

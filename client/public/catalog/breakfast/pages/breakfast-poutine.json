@@ -24,31 +24,31 @@
   "ingredients": [
     {
       "name": "frozen straight-cut fries",
-      "quantity": "3.2",
+      "quantity": "3.2 lb",
       "notes": "or hand-cut russets",
       "group": "Base"
     },
     {
       "name": "vegetable oil",
-      "quantity": "1.6",
+      "quantity": "1 3/4 tbsp",
       "notes": "for roasting",
       "group": "Base"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "3/4",
+      "quantity": "3/4 lb",
       "notes": "browned for gravy",
       "group": "Gravy"
     },
     {
       "name": "all-purpose flour",
-      "quantity": "1/4",
+      "quantity": "1/4 cup",
       "notes": "whisked into sausage fat",
       "group": "Gravy"
     },
     {
       "name": "whole milk",
-      "quantity": "2.4",
+      "quantity": "2.4 cups",
       "notes": "plus salt and black pepper",
       "group": "Gravy"
     },
@@ -60,13 +60,13 @@
     },
     {
       "name": "cheese curds",
-      "quantity": "3/8",
+      "quantity": "1 1/4 lb",
       "notes": "or cubed mozzarella if curds unavailable",
       "group": "Toppings"
     },
     {
       "name": "green onions",
-      "quantity": "1/4",
+      "quantity": "1/4 cup",
       "notes": "sliced, and hot sauce at the line",
       "group": "Finish"
     }
@@ -105,22 +105,23 @@
     }
   ],
   "nutrition": {
-    "calories": 303,
-    "protein": 16,
-    "carbs": 7,
-    "fat": 24,
-    "label": "per serving (hall portion)",
+    "calories": 562,
+    "protein": 36,
+    "carbs": 10,
+    "fat": 42,
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": true,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -145,5 +146,74 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Breakfast Poutine | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "frozen straight-cut fries",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "breakfast sausage",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "all-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "cheese curds",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes. Use a 1:1 gluten-free all-purpose flour blend."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

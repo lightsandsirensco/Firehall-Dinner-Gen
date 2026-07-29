@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 import { CTA, HOME } from "@/lib/brand-copy";
 
 export function HomeCtaBand() {
@@ -9,12 +11,12 @@ export function HomeCtaBand() {
         className="absolute inset-0 opacity-40"
         style={{
           background:
-            "radial-gradient(ellipse 60% 80% at 50% 100%, hsl(0 72% 28% / 0.25), transparent)",
+            "radial-gradient(ellipse 60% 80% at 50% 100%, hsl(var(--primary) / 0.25), transparent)",
         }}
         aria-hidden
       />
-      <div className="relative max-w-[1400px] mx-auto px-page py-14 sm:py-16 text-center">
-        <h2 className="font-heading text-2xl sm:text-3xl tracking-tight text-foreground">
+      <div className={cn(app.main, app.sectionY, "relative text-center fade-up motion-reduce:animate-none")}>
+        <h2 className={app.titleSection}>
           {HOME.ctaBandTitle}
         </h2>
         <p className="mt-2 text-sm sm:text-base text-muted-foreground max-w-md mx-auto">

@@ -13,10 +13,10 @@
   "cookTime": 300,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 355,
-  "protein": 32,
-  "carbs": 42,
-  "fats": 8,
+  "calories": 529,
+  "protein": 45,
+  "carbs": 57,
+  "fats": 13,
   "tags": [
     "protein:turkey",
     "format:slow_cooker",
@@ -33,71 +33,71 @@
   ],
   "ingredients": [
     {
-      "name": "Lean Ground Turkey",
+      "name": "lean ground turkey",
       "quantity": "2.5",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Sweet Potatoes",
+      "name": "sweet potatoes",
       "quantity": "2",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "peeled, ½-inch dice"
     },
     {
-      "name": "Black Beans",
+      "name": "black beans",
       "quantity": "3",
       "unit": "cans",
       "notes": "15 oz, drained"
     },
     {
-      "name": "Fire-Roasted Diced Tomatoes",
+      "name": "fire-roasted diced tomatoes",
       "quantity": "2",
       "unit": "cans",
       "notes": "28 oz"
     },
     {
-      "name": "Yellow Onion",
+      "name": "yellow onion",
       "quantity": "1",
       "unit": "large",
       "notes": "diced"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "1",
       "unit": "whole",
       "notes": "diced"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Chicken Broth",
+      "name": "chicken broth",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "low sodium"
     },
     {
-      "name": "Chili Powder",
+      "name": "chili powder",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Ground Cumin",
+      "name": "ground cumin",
       "quantity": "1.5",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Smoked Paprika",
+      "name": "smoked paprika",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -154,11 +154,26 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 355,
-    "protein": 32,
-    "carbs": 42,
-    "fats": 8,
-    "label": "~355 cal/serving · 32g protein · 11g fiber (est.)"
+    "calories": 529,
+    "protein": 45,
+    "carbs": 57,
+    "fats": 13,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/turkey-sweet-potato-chili.jpg",
   "heroImageAlt": "Wide firehall crew platter of Turkey Sweet Potato Chili on a station prep table, family-style serving",
@@ -184,6 +199,41 @@
     "turkey-taco-skillet",
     "turkey-lettuce-wrap-night"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.660Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

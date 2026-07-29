@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1050,
-  "protein": 60,
-  "carbs": 55,
-  "fats": 62,
+  "calories": 1310,
+  "protein": 63,
+  "carbs": 69,
+  "fats": 90,
   "tags": [
     "protein:beef",
     "format:burger",
@@ -255,17 +255,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1050,
-    "protein": 60,
-    "carbs": 55,
-    "fats": 62,
-    "label": "per serving (hall portion, one double + fries)",
-    "source": "estimated",
+    "calories": 1310,
+    "protein": 63,
+    "carbs": 69,
+    "fats": 90,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -305,5 +306,81 @@
   "sourceUrl": "",
   "classicSlug": "smash-burgers",
   "generatedAt": "2026-07-23T21:40:00.000Z",
-  "contentVersion": 5
+  "contentVersion": 5,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 18,
+    "totalCount": 18,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "American Cheese Slices",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Unsalted Butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Worcestershire Sauce",
+        "allergens": [
+          "gluten",
+          "fish"
+        ]
+      },
+      {
+        "name": "Bacon",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Frozen Crinkle Or Diner Fries",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

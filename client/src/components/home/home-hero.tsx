@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { HeroImage } from "@/components/hero-image";
 import { useAuth } from "@/lib/auth/context";
 import { cn } from "@/lib/utils";
+import { app } from "@/lib/design-tokens";
 import { BRAND_NAME, HOME } from "@/lib/brand-copy";
 import { HOME_HERO_IMAGE } from "./home-constants";
 
@@ -48,10 +49,11 @@ export function HomeHero() {
           className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/65 to-transparent sm:via-background/55"
           aria-hidden
         />
+        <div className="home-film-grain absolute inset-0" aria-hidden />
       </div>
 
-      <div className="relative z-10 max-w-[1400px] mx-auto px-page w-full pb-10 sm:pb-12 pt-[calc(3.5rem+env(safe-area-inset-top,0px))] sm:pt-28">
-        <p className="text-[10px] sm:text-[11px] font-semibold uppercase tracking-[0.22em] text-primary/90 mb-4 sm:mb-5">
+      <div className="relative z-10 max-w-[1400px] mx-auto px-page w-full pb-10 sm:pb-12 pt-[calc(3.5rem+env(safe-area-inset-top,0px))] sm:pt-28 fade-up motion-reduce:animate-none">
+        <p className={cn(app.eyebrowAccent, "mb-4 sm:mb-5")}>
           {HOME.heroEyebrow}
         </p>
 
@@ -100,12 +102,12 @@ export function HomeHero() {
 
           <Button
             asChild
-            size="lg"
+            size="default"
             variant="outline"
             className={cn(
-              "h-12 sm:h-14 w-full sm:w-auto sm:min-w-[220px] px-6 sm:px-8",
-              "font-heading text-sm sm:text-base font-semibold tracking-wide",
-              "border-foreground/20 bg-background/50 backdrop-blur-sm",
+              "h-11 sm:h-12 w-full sm:w-auto sm:min-w-[190px] px-6",
+              "font-heading text-sm font-medium tracking-wide",
+              "border-foreground/15 bg-background/40 backdrop-blur-sm",
             )}
           >
             <Link href="/wheel" data-testid="home-cta-wheel">

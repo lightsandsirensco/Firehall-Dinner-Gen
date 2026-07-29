@@ -28,19 +28,19 @@
     },
     {
       "name": "whole milk",
-      "quantity": "2",
+      "quantity": "2 cups",
       "notes": "or half-and-half for richer custard",
       "group": "Base"
     },
     {
       "name": "day-old bread",
-      "quantity": "5/8",
+      "quantity": "3/4 loaf",
       "notes": "cubed and lightly toasted",
       "group": "Base"
     },
     {
       "name": "diced ham",
-      "quantity": "1.3",
+      "quantity": "1.3 lb",
       "notes": "deli or leftover spiral ham",
       "group": "Fillings"
     },
@@ -58,13 +58,13 @@
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2",
+      "quantity": "2 cups",
       "notes": "divided",
       "group": "Fillings"
     },
     {
       "name": "dry mustard",
-      "quantity": "3/8",
+      "quantity": "1.1 tsp",
       "notes": "plus salt, pepper, and paprika",
       "group": "Seasoning"
     }
@@ -104,12 +104,13 @@
     }
   ],
   "nutrition": {
-    "calories": 483,
-    "protein": 39,
-    "carbs": 26,
+    "calories": 488,
+    "protein": 38,
+    "carbs": 28,
     "fat": 25,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
@@ -144,5 +145,69 @@
   "updatedAt": "2026-07-17T20:15:27.729Z",
   "readMinutes": 8,
   "seoTitle": "Denver Breakfast Casserole | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "day-old bread",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "diced ham",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

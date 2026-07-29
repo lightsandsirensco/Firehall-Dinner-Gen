@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-06-28T01:23:42.055Z",
+  "generatedAt": "2026-07-27T18:18:00.755Z",
   "totals": {
-    "recipes": 315,
-    "pass": 315,
-    "fail": 0,
-    "missingHero": 6,
-    "metadataFail": 3,
+    "recipes": 352,
+    "pass": 345,
+    "fail": 7,
+    "missingHero": 0,
+    "metadataFail": 11,
     "duplicateConflict": 2,
     "visionFail": 0,
-    "visionSkipped": 315
+    "visionSkipped": 352
   },
   "rows": [
     {
@@ -42,14 +42,14 @@
     },
     {
       "slug": "steak-tacos",
-      "title": "Steak Tacos",
+      "title": "Chimichurri Steak Tacos",
       "collection": "golden_100",
       "heroImage": "/images/golden-100/steak-tacos.jpg",
-      "heroAlt": "Wide firehall crew platter of Steak Tacos on a station prep table, family-style serving",
+      "heroAlt": "Charred skirt steak tacos on corn tortillas with chimichurri, pickled red onions, cotija, and lime crema on a firehall prep line",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "steak-tacos",
-        "title": "Steak Tacos",
+        "title": "Chimichurri Steak Tacos",
         "category": "golden_100",
         "kind": "hall_classic",
         "heroImage": "/images/golden-100/steak-tacos.jpg",
@@ -63,9 +63,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -92,20 +90,22 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
     {
       "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches",
+      "title": "Carolina-Style Pulled Pork Sandwiches",
       "collection": "golden_100",
       "heroImage": "/images/golden-100/pulled-pork.jpg",
       "heroAlt": "Wide firehall crew platter of Pulled Pork Sandwiches on a station prep table, family-style serving",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "pulled-pork",
-        "title": "Pulled Pork Sandwiches",
+        "title": "Carolina-Style Pulled Pork Sandwiches",
         "category": "golden_100",
         "kind": "hall_classic",
         "heroImage": "/images/golden-100/pulled-pork.jpg",
@@ -119,9 +119,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -148,7 +146,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -208,14 +208,14 @@
     },
     {
       "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches",
+      "title": "Philly-Style Cheesesteaks",
       "collection": "golden_100",
       "heroImage": "/images/golden-100/steak-sandwiches.jpg",
-      "heroAlt": "Wide firehall crew platter of Steak Sandwiches on a station prep table, family-style serving",
+      "heroAlt": "Firehall sheet tray stacked with chopped ribeye cheesesteaks, melted provolone, and onions on soft toasted rolls",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "steak-sandwiches",
-        "title": "Steak Sandwiches",
+        "title": "Philly-Style Cheesesteaks",
         "category": "golden_100",
         "kind": "hall_classic",
         "heroImage": "/images/golden-100/steak-sandwiches.jpg",
@@ -229,7 +229,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -238,7 +240,7 @@
       "title": "Chicken Caesar Salad",
       "collection": "golden_100",
       "heroImage": "/images/golden-100/chicken-caesar.jpg",
-      "heroAlt": "Wide firehall bowl of Chicken Caesar Salad with chopped romaine, diced grilled chicken mixed through, croutons, and parmesan on a prep table",
+      "heroAlt": "Wide firehall bowl of Chicken Caesar Salad with chopped romaine, sliced grilled chicken laid on top, croutons, bacon, and shaved parmesan on a prep table",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "chicken-caesar",
@@ -256,7 +258,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -274,38 +278,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/crispy-chicken-cutlets.jpg",
         "canonicalHero": "/images/golden-100/crispy-chicken-cutlets.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (four-step-chicken-piccata) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "four-step-chicken-piccata"
-        ],
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
         "heroMd5": "b3a871fb616b780fa63c8569294b6b46",
-        "exploreEligible": false
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): four-step-chicken-piccata",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (four-step-chicken-piccata) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "loaded-nacho-skillet",
@@ -330,7 +314,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -386,9 +372,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -415,9 +399,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -444,9 +426,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -473,9 +453,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -583,9 +561,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -612,7 +588,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -630,38 +608,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/cedar-plank-salmon.jpg",
         "canonicalHero": "/images/golden-100/cedar-plank-salmon.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (tomato-soup-grilled-cheese-croutons) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "tomato-soup-grilled-cheese-croutons"
-        ],
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
         "heroMd5": "1fbac1b64857d997bb1a30df16131941",
-        "exploreEligible": false
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): tomato-soup-grilled-cheese-croutons",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (tomato-soup-grilled-cheese-croutons) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "honey-garlic-pork-tenderloin",
@@ -744,7 +702,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -771,7 +731,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -798,7 +760,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -962,7 +926,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -989,9 +955,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1045,9 +1009,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1074,9 +1036,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1157,9 +1117,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1177,36 +1135,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/four-step-chicken-piccata.jpg",
         "canonicalHero": "/images/golden-100/four-step-chicken-piccata.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (crispy-chicken-cutlets) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "crispy-chicken-cutlets"
-        ],
-        "heroMd5": "b3a871fb616b780fa63c8569294b6b46",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "bcdf1b89e4547c61e18ad8f7a759a552",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): crispy-chicken-cutlets",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (crispy-chicken-cutlets) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "tomato-soup-grilled-cheese-croutons",
@@ -1222,38 +1162,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
         "canonicalHero": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (cedar-plank-salmon) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "cedar-plank-salmon"
-        ],
-        "heroMd5": "1fbac1b64857d997bb1a30df16131941",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "5a2cf285ef4ca530da92caed153db53e",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): cedar-plank-salmon",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (cedar-plank-salmon) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "spicy-tomato-bisque-grilled-brie-toast",
@@ -1278,7 +1198,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1288,7 +1210,7 @@
       "collection": "golden_100",
       "heroImage": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
       "heroAlt": "Wide firehall crew platter of French Onion Soup for the Hall on a station prep table, family-style serving",
-      "heroOnDisk": false,
+      "heroOnDisk": true,
       "exploreMapping": {
         "slug": "french-onion-soup-for-the-hall",
         "title": "French Onion Soup for the Hall",
@@ -1296,27 +1218,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
         "canonicalHero": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
-        "status": "missing",
-        "issues": [
-          {
-            "code": "missing_image_file",
-            "severity": "critical",
-            "message": "canonical hero image missing on disk",
-            "confidence": 98
-          }
-        ],
+        "status": "correct",
+        "issues": [],
         "duplicatePeers": [],
-        "heroMd5": null,
-        "exploreEligible": false
+        "heroMd5": "a4cae1787d832a4a9128e2a0eaee3333",
+        "exploreEligible": true
       },
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "canonical hero image missing on disk"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "chicken-tortilla-soup-for-the-hall",
@@ -1395,7 +1308,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1422,9 +1337,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1451,7 +1364,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1478,9 +1393,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1561,7 +1474,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1588,9 +1503,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1617,7 +1530,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1644,9 +1559,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1673,7 +1586,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1754,7 +1669,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1864,9 +1781,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1893,7 +1808,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1920,7 +1837,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1974,7 +1893,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1992,36 +1913,20 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
         "canonicalHero": "/images/golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (sheet-pan-meal-prep) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "sheet-pan-meal-prep"
-        ],
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
         "heroMd5": "055c2210e8f4292a7c265408d155cbe7",
-        "exploreEligible": false
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): sheet-pan-meal-prep",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (sheet-pan-meal-prep) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "30-minute-pasta-e-fagioli-for-the-hall",
@@ -2029,7 +1934,7 @@
       "collection": "golden_100",
       "heroImage": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
       "heroAlt": "Wide firehall crew platter of 30-Minute Pasta e Fagioli for the Hall on a station prep table, family-style serving",
-      "heroOnDisk": false,
+      "heroOnDisk": true,
       "exploreMapping": {
         "slug": "30-minute-pasta-e-fagioli-for-the-hall",
         "title": "30-Minute Pasta e Fagioli for the Hall",
@@ -2037,29 +1942,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
         "canonicalHero": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
-        "status": "missing",
-        "issues": [
-          {
-            "code": "missing_image_file",
-            "severity": "critical",
-            "message": "canonical hero image missing on disk",
-            "confidence": 98
-          }
-        ],
+        "status": "correct",
+        "issues": [],
         "duplicatePeers": [],
-        "heroMd5": null,
-        "exploreEligible": false
+        "heroMd5": "72e8ea6ccec1cad8106450ecf792d9fd",
+        "exploreEligible": true
       },
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped_missing_file"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "canonical hero image missing on disk"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "pepperoni-pizza-night",
@@ -2133,36 +2027,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
         "canonicalHero": "/images/golden-100/bbq-chicken-pizza.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (buttermilk-pancakes) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "buttermilk-pancakes"
-        ],
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
         "heroMd5": "b2b94642354a7c7336b11cebc0923bca",
-        "exploreEligible": false
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): buttermilk-pancakes",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (buttermilk-pancakes) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "white-garlic-chicken-pizza",
@@ -2214,7 +2090,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2241,7 +2119,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2268,7 +2148,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2286,38 +2168,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
         "canonicalHero": "/images/golden-100/breakfast-sausage-pizza.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (french-toast-casserole) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "french-toast-casserole"
-        ],
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
         "heroMd5": "ef7f3e7962468e0e5c21a5558786ae52",
-        "exploreEligible": false
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): french-toast-casserole",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (french-toast-casserole) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "batch-lasagna",
@@ -2342,7 +2204,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2385,9 +2249,7 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": [
         "hero file reused across recipes (pancake-short-stack) — image reuse disabled",
@@ -2408,18 +2270,38 @@
         "kind": "hall_classic",
         "heroImage": "/images/golden-100/big-chili.jpg",
         "canonicalHero": "/images/golden-100/big-chili.jpg",
-        "status": "correct",
-        "issues": [],
-        "duplicatePeers": [],
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "white-chicken-chili-crock",
+          "burnt-ends-chili-crew",
+          "pasta-e-fagioli-hall"
+        ],
         "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
-        "exploreEligible": true
+        "exploreEligible": false
       },
-      "metadataIssues": [],
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 3 other recipe(s): white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall",
+          "confidence": 80
+        }
+      ],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": []
+      "criticalReasons": [
+        "hero file reused across recipes (white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled"
+      ]
     },
     {
       "slug": "enchilada-casserole",
@@ -2500,7 +2382,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2527,7 +2411,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2581,7 +2467,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2624,9 +2512,7 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": [
         "hero file reused across recipes (chicken-alfredo-bake) — image reuse disabled",
@@ -2647,37 +2533,20 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/french-toast-casserole.jpg",
         "canonicalHero": "/images/golden-100/french-toast-casserole.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (breakfast-sausage-pizza, breakfast-sausage-pizza) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "breakfast-sausage-pizza",
-          "breakfast-sausage-pizza"
-        ],
-        "heroMd5": "ef7f3e7962468e0e5c21a5558786ae52",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "ca90bc182b06eaa68c66355a609943c6",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 2 other recipe(s): breakfast-sausage-pizza, breakfast-sausage-pizza",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (breakfast-sausage-pizza, breakfast-sausage-pizza) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "chorizo-breakfast-tacos",
@@ -2702,9 +2571,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2749,20 +2616,40 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
         "canonicalHero": "/images/golden-100/bulgogi-bowls.jpg",
-        "status": "correct",
-        "issues": [],
-        "duplicatePeers": [],
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "firehall-korean-beef-bowls",
+          "egg-roll-in-a-bowl-crew",
+          "korean-turkey-rice-bowls"
+        ],
         "heroMd5": "7545872c4593a5901dee7066cd526054",
-        "exploreEligible": true
+        "exploreEligible": false
       },
-      "metadataIssues": [],
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 3 other recipe(s): firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls",
+          "confidence": 80
+        }
+      ],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [
         "vision_skipped"
       ],
       "pass": true,
-      "criticalReasons": []
+      "criticalReasons": [
+        "hero file reused across recipes (firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled"
+      ]
     },
     {
       "slug": "butter-chicken",
@@ -2814,9 +2701,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2843,9 +2728,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2863,18 +2746,37 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
         "canonicalHero": "/images/golden-100/teriyaki-donburi.jpg",
-        "status": "correct",
-        "issues": [],
-        "duplicatePeers": [],
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "teriyaki-chicken-rice-bowls",
+          "thai-peanut-chicken-crock"
+        ],
         "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
-        "exploreEligible": true
+        "exploreEligible": false
       },
-      "metadataIssues": [],
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 2 other recipe(s): teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock",
+          "confidence": 80
+        }
+      ],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": []
+      "criticalReasons": [
+        "hero file reused across recipes (teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock) — image reuse disabled"
+      ]
     },
     {
       "slug": "game-day-nachos",
@@ -2899,7 +2801,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2926,9 +2830,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2955,7 +2857,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2982,9 +2886,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3002,36 +2904,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
         "canonicalHero": "/images/golden-100/sheet-pan-meal-prep.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (sheet-pan-parmesan-dijon-chicken-thigh-dinner) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "sheet-pan-parmesan-dijon-chicken-thigh-dinner"
-        ],
-        "heroMd5": "055c2210e8f4292a7c265408d155cbe7",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "7ef0d5bee662124bb17ef20bdbcaf355",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): sheet-pan-parmesan-dijon-chicken-thigh-dinner",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (sheet-pan-parmesan-dijon-chicken-thigh-dinner) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "one-pot-chicken-rice",
@@ -3056,9 +2940,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3095,7 +2977,7 @@
       "collection": "golden_100",
       "heroImage": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
       "heroAlt": "Wide firehall crew platter of Spaghetti Aglio e Olio for the Hall on a station prep table, family-style serving",
-      "heroOnDisk": false,
+      "heroOnDisk": true,
       "exploreMapping": {
         "slug": "spaghetti-aglio-e-olio-for-the-hall",
         "title": "Spaghetti Aglio e Olio for the Hall",
@@ -3103,29 +2985,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
         "canonicalHero": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
-        "status": "missing",
-        "issues": [
-          {
-            "code": "missing_image_file",
-            "severity": "critical",
-            "message": "canonical hero image missing on disk",
-            "confidence": 98
-          }
-        ],
+        "status": "correct",
+        "issues": [],
         "duplicatePeers": [],
-        "heroMd5": null,
-        "exploreEligible": false
+        "heroMd5": "008997b1037e2c257c604beb86fcb5d0",
+        "exploreEligible": true
       },
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped_missing_file"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "canonical hero image missing on disk"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "lemon-garlic-chicken-tray",
@@ -3150,7 +3021,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3204,7 +3077,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3312,9 +3187,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3341,9 +3214,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3397,9 +3268,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3426,7 +3295,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3480,9 +3351,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3509,9 +3378,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3538,7 +3405,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3621,9 +3490,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3677,9 +3544,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3706,9 +3571,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3762,7 +3625,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3816,7 +3681,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3870,7 +3737,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3926,7 +3795,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3953,9 +3824,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4009,9 +3878,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4038,7 +3905,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4092,7 +3961,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4173,9 +4044,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4256,7 +4125,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4337,9 +4208,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4366,7 +4235,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4375,7 +4246,7 @@
       "title": "Smoked Turkey Breast for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/smoked-turkey-breast.jpg",
-      "heroAlt": "Smoked Turkey Breast for the Crew — crew-sized firehall meal",
+      "heroAlt": "Smoked Turkey Breast for the Crew — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "smoked-turkey-breast",
@@ -4393,9 +4264,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4404,7 +4273,7 @@
       "title": "Smoked Meatloaf with Glaze",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/smoked-meatloaf.jpg",
-      "heroAlt": "Smoked Meatloaf with Glaze — crew-sized firehall meal",
+      "heroAlt": "Smoked Meatloaf with Glaze — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "smoked-meatloaf",
@@ -4431,7 +4300,7 @@
       "title": "Pork Belly Burnt Ends",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
-      "heroAlt": "Pork Belly Burnt Ends — crew-sized firehall meal",
+      "heroAlt": "Pork Belly Burnt Ends — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "pork-belly-burnt-ends",
@@ -4458,7 +4327,7 @@
       "title": "Smoked Sausage Platter",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/smoked-sausage-platter.jpg",
-      "heroAlt": "Smoked Sausage Platter — crew-sized firehall meal",
+      "heroAlt": "Smoked Sausage Platter — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "smoked-sausage-platter",
@@ -4476,7 +4345,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4485,7 +4356,7 @@
       "title": "Smoked Queso Fundido",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/smoked-queso-fundido.jpg",
-      "heroAlt": "Smoked Queso Fundido — crew-sized firehall meal",
+      "heroAlt": "Smoked Queso Fundido — mexican smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "smoked-queso-fundido",
@@ -4512,7 +4383,7 @@
       "title": "Hickory Smoked Turkey Legs",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/hickory-turkey-legs.jpg",
-      "heroAlt": "Hickory Smoked Turkey Legs — crew-sized firehall meal",
+      "heroAlt": "Hickory Smoked Turkey Legs — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "hickory-turkey-legs",
@@ -4530,9 +4401,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4541,7 +4410,7 @@
       "title": "Smoked Tri-Tip Roast",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/smoked-tri-tip.jpg",
-      "heroAlt": "Smoked Tri-Tip Roast — crew-sized firehall meal",
+      "heroAlt": "Smoked Tri-Tip Roast — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "smoked-tri-tip",
@@ -4559,7 +4428,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4568,7 +4439,7 @@
       "title": "Smoked Corned Beef Brisket",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/smoked-corned-beef.jpg",
-      "heroAlt": "Smoked Corned Beef Brisket — crew-sized firehall meal",
+      "heroAlt": "Smoked Corned Beef Brisket — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "smoked-corned-beef",
@@ -4586,9 +4457,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4597,7 +4466,7 @@
       "title": "Pellet Smoked Chicken Quarters",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
-      "heroAlt": "Pellet Smoked Chicken Quarters — crew-sized firehall meal",
+      "heroAlt": "Pellet Smoked Chicken Quarters — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "pellet-smoked-chicken-quarters",
@@ -4615,9 +4484,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4626,7 +4493,7 @@
       "title": "Loaded Potato Skins",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/loaded-potato-skins.jpg",
-      "heroAlt": "Loaded Potato Skins — crew-sized firehall meal",
+      "heroAlt": "Loaded Potato Skins — american sheet_pan plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "loaded-potato-skins",
@@ -4653,7 +4520,7 @@
       "title": "Game Day Pizza Sliders",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/game-day-pizza-sliders.jpg",
-      "heroAlt": "Game Day Pizza Sliders — crew-sized firehall meal",
+      "heroAlt": "Game Day Pizza Sliders — italian-american sheet_pan plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "game-day-pizza-sliders",
@@ -4680,7 +4547,7 @@
       "title": "Pretzel Bite Platter with Beer Cheese",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/pretzel-bite-platter.jpg",
-      "heroAlt": "Pretzel Bite Platter with Beer Cheese — crew-sized firehall meal",
+      "heroAlt": "Pretzel Bite Platter with Beer Cheese — american bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "pretzel-bite-platter",
@@ -4707,7 +4574,7 @@
       "title": "Jalapeño Popper Dip",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/jalapeno-popper-dip.jpg",
-      "heroAlt": "Jalapeño Popper Dip — crew-sized firehall meal",
+      "heroAlt": "Jalapeño Popper Dip — american bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "jalapeno-popper-dip",
@@ -4734,7 +4601,7 @@
       "title": "Philly Cheesesteak Sliders",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
-      "heroAlt": "Philly Cheesesteak Sliders — crew-sized firehall meal",
+      "heroAlt": "Philly Cheesesteak Sliders — american sheet_pan plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "philly-cheesesteak-sliders",
@@ -4761,7 +4628,7 @@
       "title": "Chicken Wing Bar Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/chicken-wing-bar-night.jpg",
-      "heroAlt": "Chicken Wing Bar Night — crew-sized firehall meal",
+      "heroAlt": "Chicken Wing Bar Night — american bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "chicken-wing-bar-night",
@@ -4788,7 +4655,7 @@
       "title": "BBQ Meatball Skewers",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/bbq-meatball-skewers.jpg",
-      "heroAlt": "BBQ Meatball Skewers — crew-sized firehall meal",
+      "heroAlt": "BBQ Meatball Skewers — american handheld plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "bbq-meatball-skewers",
@@ -4806,7 +4673,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4815,7 +4684,7 @@
       "title": "Soft Pretzel Hot Dogs",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/soft-pretzel-dogs.jpg",
-      "heroAlt": "Soft Pretzel Hot Dogs — crew-sized firehall meal",
+      "heroAlt": "Soft Pretzel Hot Dogs — american handheld plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "soft-pretzel-dogs",
@@ -4833,9 +4702,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4844,7 +4711,7 @@
       "title": "Firehall Charcuterie Board",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/firehall-charcuterie-board.jpg",
-      "heroAlt": "Firehall Charcuterie Board — crew-sized firehall meal",
+      "heroAlt": "Firehall Charcuterie Board — american bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "firehall-charcuterie-board",
@@ -4862,7 +4729,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4871,7 +4740,7 @@
       "title": "Cheesy Beef Nacho Bake",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
-      "heroAlt": "Cheesy Beef Nacho Bake — crew-sized firehall meal",
+      "heroAlt": "Cheesy Beef Nacho Bake — mexican-american sheet_pan plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "cheesy-beef-nacho-bake",
@@ -4889,9 +4758,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4900,7 +4767,7 @@
       "title": "Shawarma Bar Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/shawarma-bar-night.jpg",
-      "heroAlt": "Shawarma Bar Night — crew-sized firehall meal",
+      "heroAlt": "Shawarma Bar Night — middle-eastern bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "shawarma-bar-night",
@@ -4927,7 +4794,7 @@
       "title": "Fajita Bar Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/fajita-bar-night.jpg",
-      "heroAlt": "Fajita Bar Night — crew-sized firehall meal",
+      "heroAlt": "Fajita Bar Night — mexican bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "fajita-bar-night",
@@ -4945,9 +4812,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4956,7 +4821,7 @@
       "title": "Hall Burger Bar",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/hall-burger-bar.jpg",
-      "heroAlt": "Hall Burger Bar — crew-sized firehall meal",
+      "heroAlt": "Hall Burger Bar — american bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "hall-burger-bar",
@@ -4974,7 +4839,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4983,7 +4850,7 @@
       "title": "Pasta Bar Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/pasta-bar-night.jpg",
-      "heroAlt": "Pasta Bar Night — crew-sized firehall meal",
+      "heroAlt": "Pasta Bar Night — italian bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "pasta-bar-night",
@@ -5001,9 +4868,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5012,7 +4877,7 @@
       "title": "Rice Bowl Bar Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/rice-bowl-bar-night.jpg",
-      "heroAlt": "Rice Bowl Bar Night — crew-sized firehall meal",
+      "heroAlt": "Rice Bowl Bar Night — asian-fusion bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "rice-bowl-bar-night",
@@ -5030,7 +4895,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5039,7 +4906,7 @@
       "title": "Sandwich Board Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/sandwich-board-night.jpg",
-      "heroAlt": "Sandwich Board Night — crew-sized firehall meal",
+      "heroAlt": "Sandwich Board Night — american bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "sandwich-board-night",
@@ -5066,7 +4933,7 @@
       "title": "Mediterranean Feast Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/mediterranean-feast-night.jpg",
-      "heroAlt": "Mediterranean Feast Night — crew-sized firehall meal",
+      "heroAlt": "Mediterranean Feast Night — mediterranean bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "mediterranean-feast-night",
@@ -5093,7 +4960,7 @@
       "title": "Burrito Bowl Bar Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
-      "heroAlt": "Burrito Bowl Bar Night — crew-sized firehall meal",
+      "heroAlt": "Burrito Bowl Bar Night — mexican bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "burrito-bowl-bar-night",
@@ -5120,7 +4987,7 @@
       "title": "Loaded Nacho Bar Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
-      "heroAlt": "Loaded Nacho Bar Night — crew-sized firehall meal",
+      "heroAlt": "Loaded Nacho Bar Night — mexican-american bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "loaded-nacho-bar-night",
@@ -5138,9 +5005,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5149,7 +5014,7 @@
       "title": "Build-Your-Own Pho Bar",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/build-your-own-pho-bar.jpg",
-      "heroAlt": "Build-Your-Own Pho Bar — crew-sized firehall meal",
+      "heroAlt": "Build-Your-Own Pho Bar — vietnamese bar_line plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "build-your-own-pho-bar",
@@ -5167,9 +5032,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5178,7 +5041,7 @@
       "title": "Mesquite Smoked Chuck Roast",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/mesquite-chuck-roast.jpg",
-      "heroAlt": "Mesquite Smoked Chuck Roast — crew-sized firehall meal",
+      "heroAlt": "Mesquite Smoked Chuck Roast — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "mesquite-chuck-roast",
@@ -5196,9 +5059,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5207,7 +5068,7 @@
       "title": "Molasses Bourbon Pork Ribs",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
-      "heroAlt": "Molasses Bourbon Pork Ribs — crew-sized firehall meal",
+      "heroAlt": "Molasses Bourbon Pork Ribs — american smoker plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "molasses-bourbon-pork-ribs",
@@ -5234,7 +5095,7 @@
       "title": "Applewood Grilled Pork Shoulder Steaks",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/applewood-pork-shoulder-steaks.jpg",
-      "heroAlt": "Applewood Grilled Pork Shoulder Steaks — crew-sized firehall meal",
+      "heroAlt": "Applewood Grilled Pork Shoulder Steaks — american grill plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "applewood-pork-shoulder-steaks",
@@ -5261,7 +5122,7 @@
       "title": "Honey Mustard Baked Chicken Thighs",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
-      "heroAlt": "Honey Mustard Baked Chicken Thighs — crew-sized firehall meal",
+      "heroAlt": "Honey Mustard Baked Chicken Thighs — american baked plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "honey-mustard-oven-chicken-thighs",
@@ -5288,7 +5149,7 @@
       "title": "Spatchcock Lemon Roast Chicken",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
-      "heroAlt": "Spatchcock Lemon Roast Chicken — crew-sized firehall meal",
+      "heroAlt": "Spatchcock Lemon Roast Chicken — american roast plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "spatchcock-lemon-roast-chicken",
@@ -5306,7 +5167,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5315,7 +5178,7 @@
       "title": "Cajun Chicken and Rice Skillet",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
-      "heroAlt": "Cajun Chicken and Rice Skillet — crew-sized firehall meal",
+      "heroAlt": "Cajun Chicken and Rice Skillet — cajun skillet plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "cajun-chicken-rice-skillet",
@@ -5342,7 +5205,7 @@
       "title": "Paprika Roasted Chicken Quarters",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/paprika-roasted-chicken-quarters.jpg",
-      "heroAlt": "Paprika Roasted Chicken Quarters — crew-sized firehall meal",
+      "heroAlt": "Paprika Roasted Chicken Quarters — american baked plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "paprika-roasted-chicken-quarters",
@@ -5360,9 +5223,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5371,7 +5232,7 @@
       "title": "Cast Iron Chicken Fajitas",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
-      "heroAlt": "Cast Iron Chicken Fajitas — crew-sized firehall meal",
+      "heroAlt": "Cast Iron Chicken Fajitas — mexican skillet plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "cast-iron-chicken-fajitas",
@@ -5389,9 +5250,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5400,7 +5259,7 @@
       "title": "Mushroom Swiss Steak Pan",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
-      "heroAlt": "Mushroom Swiss Steak Pan — crew-sized firehall meal",
+      "heroAlt": "Mushroom Swiss Steak Pan — russian pasta plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "mushroom-swiss-steak-pan",
@@ -5418,7 +5277,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5427,7 +5288,7 @@
       "title": "Pepper Steak with Onions",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/pepper-steak-onions.jpg",
-      "heroAlt": "Wide firehall platter: pepper steak with sliced onions and bell peppers on a crew prep table, family-style",
+      "heroAlt": "Pepper Steak with Onions — chinese-american skillet plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "pepper-steak-onions",
@@ -5454,7 +5315,7 @@
       "title": "Dutch Oven Pot Roast",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
-      "heroAlt": "Dutch Oven Pot Roast — crew-sized firehall meal",
+      "heroAlt": "Dutch Oven Pot Roast — american braise plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "dutch-oven-pot-roast",
@@ -5472,9 +5333,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5483,7 +5342,7 @@
       "title": "Beef Enchilada Skillet",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/enchilada-beef-skillet.jpg",
-      "heroAlt": "Beef Enchilada Skillet — crew-sized firehall meal",
+      "heroAlt": "Beef Enchilada Skillet — mexican skillet plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "enchilada-beef-skillet",
@@ -5510,7 +5369,7 @@
       "title": "Baked Mostaccioli with Sausage",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
-      "heroAlt": "Baked Mostaccioli with Sausage — crew-sized firehall meal",
+      "heroAlt": "Baked Mostaccioli with Sausage — italian pasta plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "mostaccioli-sausage-bake",
@@ -5537,7 +5396,7 @@
       "title": "Creamy Chicken Penne Alfredo",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
-      "heroAlt": "Creamy Chicken Penne Alfredo — crew-sized firehall meal",
+      "heroAlt": "Creamy Chicken Penne Alfredo — italian pasta plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "creamy-chicken-penne-alfredo",
@@ -5564,7 +5423,7 @@
       "title": "Rigatoni with Meat Sauce",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
-      "heroAlt": "Rigatoni with Meat Sauce — crew-sized firehall meal",
+      "heroAlt": "Rigatoni with Meat Sauce — italian pasta plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "rigatoni-meat-sauce-batch",
@@ -5582,7 +5441,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5591,7 +5452,7 @@
       "title": "Station Cobb Salad",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/station-cobb-salad.jpg",
-      "heroAlt": "Station Cobb Salad — crew-sized firehall meal",
+      "heroAlt": "Station Cobb Salad — american salad plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "station-cobb-salad",
@@ -5618,7 +5479,7 @@
       "title": "Warm Spinach Chicken Salad",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
-      "heroAlt": "Warm Spinach Chicken Salad — crew-sized firehall meal",
+      "heroAlt": "Warm Spinach Chicken Salad — american salad plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "warm-spinach-chicken-salad",
@@ -5636,7 +5497,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5645,7 +5508,7 @@
       "title": "Hall Chicken Noodle Soup",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/hall-chicken-noodle-soup.jpg",
-      "heroAlt": "Hall Chicken Noodle Soup — crew-sized firehall meal",
+      "heroAlt": "Hall Chicken Noodle Soup — american soup plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "hall-chicken-noodle-soup",
@@ -5663,9 +5526,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5674,7 +5535,7 @@
       "title": "Green Chile Chicken Stew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/green-chile-chicken-stew.jpg",
-      "heroAlt": "Green Chile Chicken Stew — crew-sized firehall meal",
+      "heroAlt": "Green Chile Chicken Stew — southwestern soup plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "green-chile-chicken-stew",
@@ -5701,7 +5562,7 @@
       "title": "Ginger Soy Chicken Rice Bowls",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
-      "heroAlt": "Ginger Soy Chicken Rice Bowls — crew-sized firehall meal",
+      "heroAlt": "Ginger Soy Chicken Rice Bowls — asian-american bowl plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "ginger-soy-chicken-rice-bowls",
@@ -5719,7 +5580,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5728,7 +5591,7 @@
       "title": "Mediterranean Chicken Farro Bowls",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
-      "heroAlt": "Mediterranean Chicken Farro Bowls — crew-sized firehall meal",
+      "heroAlt": "Mediterranean Chicken Farro Bowls — mediterranean bowl plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "mediterranean-chicken-farro-bowls",
@@ -5755,7 +5618,7 @@
       "title": "Kielbasa Cabbage Potato Skillet",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
-      "heroAlt": "Kielbasa Cabbage Potato Skillet — crew-sized firehall meal",
+      "heroAlt": "Kielbasa Cabbage Potato Skillet — polish-american skillet plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "kielbasa-cabbage-potato-skillet",
@@ -5782,7 +5645,7 @@
       "title": "Cheesy Chicken Broccoli Rice",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
-      "heroAlt": "Cheesy Chicken Broccoli Rice — crew-sized firehall meal",
+      "heroAlt": "Cheesy Chicken Broccoli Rice — american one_pot plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "cheesy-chicken-broccoli-rice",
@@ -5809,7 +5672,7 @@
       "title": "Sheet Pan Meatball Marinara Feed",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
-      "heroAlt": "Sheet Pan Meatball Marinara Feed — crew-sized firehall meal",
+      "heroAlt": "Sheet Pan Meatball Marinara Feed — italian sheet_pan plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "sheet-pan-meatball-marinara",
@@ -5827,9 +5690,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5838,7 +5699,7 @@
       "title": "Hall Sloppy Joe Feed",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/hall-sloppy-joe-feed.jpg",
-      "heroAlt": "Hall Sloppy Joe Feed — crew-sized firehall meal",
+      "heroAlt": "Hall Sloppy Joe Feed — american sandwich plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "hall-sloppy-joe-feed",
@@ -5865,7 +5726,7 @@
       "title": "Montreal Smoked Meat Platter",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/montreal-smoked-meat-platter.jpg",
-      "heroAlt": "Montreal Smoked Meat Platter — crew-sized firehall meal",
+      "heroAlt": "Montreal Smoked Meat Platter — canadian platter plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "montreal-smoked-meat-platter",
@@ -5892,7 +5753,7 @@
       "title": "Tourtière for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/tourtiere-for-the-crew.jpg",
-      "heroAlt": "Tourtière for the Crew — crew-sized firehall meal",
+      "heroAlt": "Tourtière for the Crew — canadian bake plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "tourtiere-for-the-crew",
@@ -5910,7 +5771,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5919,7 +5782,7 @@
       "title": "Firehall Donair Platter",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/firehall-donair-platter.jpg",
-      "heroAlt": "Firehall Donair Platter — crew-sized firehall meal",
+      "heroAlt": "Firehall Donair Platter — canadian platter plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "firehall-donair-platter",
@@ -5937,9 +5800,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5948,7 +5809,7 @@
       "title": "Maple-Cured Salmon Plank",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
-      "heroAlt": "Maple-Cured Salmon Plank — crew-sized firehall meal",
+      "heroAlt": "Maple-Cured Salmon Plank — canadian grill plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "maple-cured-salmon-plank",
@@ -5966,7 +5827,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5975,7 +5838,7 @@
       "title": "Classic Poutine Feed for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/classic-poutine-feed-crew.jpg",
-      "heroAlt": "Classic Poutine Feed for the Crew — crew-sized firehall meal",
+      "heroAlt": "Classic Poutine Feed for the Crew — canadian platter plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "classic-poutine-feed-crew",
@@ -6002,7 +5865,7 @@
       "title": "Cottage Pie for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/cottage-pie-for-the-crew.jpg",
-      "heroAlt": "Cottage Pie for the Crew — crew-sized firehall meal",
+      "heroAlt": "Cottage Pie for the Crew — british bake plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "cottage-pie-for-the-crew",
@@ -6020,7 +5883,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6029,7 +5894,7 @@
       "title": "Chicken Paprikash for the Hall",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/chicken-paprikash-hall.jpg",
-      "heroAlt": "Chicken Paprikash for the Hall — crew-sized firehall meal",
+      "heroAlt": "Chicken Paprikash for the Hall — hungarian stew plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "chicken-paprikash-hall",
@@ -6056,7 +5921,7 @@
       "title": "Chicken Cacciatore for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
-      "heroAlt": "Chicken Cacciatore for the Crew — crew-sized firehall meal",
+      "heroAlt": "Chicken Cacciatore for the Crew — italian braise plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "chicken-cacciatore-crew",
@@ -6074,9 +5939,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6085,7 +5948,7 @@
       "title": "Coq au Vin Batch",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/coq-au-vin-batch.jpg",
-      "heroAlt": "Coq au Vin Batch — crew-sized firehall meal",
+      "heroAlt": "Coq au Vin Batch — french braise plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "coq-au-vin-batch",
@@ -6112,7 +5975,7 @@
       "title": "Hungarian Goulash for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/hungarian-goulash-crew.jpg",
-      "heroAlt": "Hungarian Goulash for the Crew — crew-sized firehall meal",
+      "heroAlt": "Hungarian Goulash for the Crew — hungarian stew plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "hungarian-goulash-crew",
@@ -6139,7 +6002,7 @@
       "title": "Tonkotsu Ramen for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
-      "heroAlt": "Tonkotsu Ramen for the Crew — crew-sized firehall meal",
+      "heroAlt": "Tonkotsu Ramen for the Crew — japanese bowl plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "tonkotsu-ramen-crew",
@@ -6157,9 +6020,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6168,7 +6029,7 @@
       "title": "Miso Ramen Bar",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/miso-ramen-bar.jpg",
-      "heroAlt": "Miso Ramen Bar — crew-sized firehall meal",
+      "heroAlt": "Miso Ramen Bar — japanese bowl plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "miso-ramen-bar",
@@ -6197,7 +6058,7 @@
       "title": "Malaysian Laksa Soup",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/malaysian-laksa-soup.jpg",
-      "heroAlt": "Malaysian Laksa Soup — crew-sized firehall meal",
+      "heroAlt": "Malaysian Laksa Soup — malaysian soup plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "malaysian-laksa-soup",
@@ -6224,7 +6085,7 @@
       "title": "Bun Bo Hue Noodle Soup",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/bun-bo-hue-noodle-soup.jpg",
-      "heroAlt": "Bun Bo Hue Noodle Soup — crew-sized firehall meal",
+      "heroAlt": "Bun Bo Hue Noodle Soup — vietnamese bowl plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "bun-bo-hue-noodle-soup",
@@ -6251,7 +6112,7 @@
       "title": "Wonton Noodle Soup for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
-      "heroAlt": "Wonton Noodle Soup for the Crew — crew-sized firehall meal",
+      "heroAlt": "Wonton Noodle Soup for the Crew — chinese bowl plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "wonton-noodle-soup-crew",
@@ -6278,7 +6139,7 @@
       "title": "Peri Peri Chicken Platter",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
-      "heroAlt": "Peri Peri Chicken Platter — crew-sized firehall meal",
+      "heroAlt": "Peri Peri Chicken Platter — portuguese platter plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "peri-peri-chicken-platter",
@@ -6305,7 +6166,7 @@
       "title": "Korean Bulgogi Grill Night",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
-      "heroAlt": "Korean Bulgogi Grill Night — crew-sized firehall meal",
+      "heroAlt": "Korean Bulgogi Grill Night — korean grill plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "korean-bulgogi-grill-night",
@@ -6332,7 +6193,7 @@
       "title": "Lamb Kofta Skewer Platter",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
-      "heroAlt": "Lamb Kofta Skewer Platter — crew-sized firehall meal",
+      "heroAlt": "Lamb Kofta Skewer Platter — middle_eastern skewer plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "lamb-kofta-skewer-platter",
@@ -6361,7 +6222,7 @@
       "title": "Moroccan Chicken Kebab Platter",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/moroccan-chicken-kebab-platter.jpg",
-      "heroAlt": "Moroccan Chicken Kebab Platter — crew-sized firehall meal",
+      "heroAlt": "Moroccan Chicken Kebab Platter — moroccan skewer plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "moroccan-chicken-kebab-platter",
@@ -6388,7 +6249,7 @@
       "title": "Lebanese Chicken Shish Platter",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
-      "heroAlt": "Lebanese Chicken Shish Platter — crew-sized firehall meal",
+      "heroAlt": "Lebanese Chicken Shish Platter — lebanese skewer plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "lebanese-chicken-shish-platter",
@@ -6415,8 +6276,8 @@
       "title": "Classic Patty Melt for the Crew",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
-      "heroAlt": "Classic Patty Melt for the Crew — crew-sized firehall meal",
-      "heroOnDisk": false,
+      "heroAlt": "Classic Patty Melt for the Crew — american sandwich plated for a firehall crew",
+      "heroOnDisk": true,
       "exploreMapping": {
         "slug": "classic-patty-melt-for-the-crew",
         "title": "Classic Patty Melt for the Crew",
@@ -6424,35 +6285,26 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
         "canonicalHero": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
-        "status": "missing",
-        "issues": [
-          {
-            "code": "missing_image_file",
-            "severity": "critical",
-            "message": "canonical hero image missing on disk",
-            "confidence": 98
-          }
-        ],
+        "status": "correct",
+        "issues": [],
         "duplicatePeers": [],
-        "heroMd5": null,
-        "exploreEligible": false
+        "heroMd5": "93e88ddd58adc2aa15818e9392db2c43",
+        "exploreEligible": true
       },
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "canonical hero image missing on disk"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "best-tuna-melt-for-the-hall",
       "title": "Best Tuna Melt for the Hall (Diner Style)",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
-      "heroAlt": "Best Tuna Melt for the Hall (Diner Style) — crew-sized firehall meal",
-      "heroOnDisk": false,
+      "heroAlt": "Best Tuna Melt for the Hall (Diner Style) — american sandwich plated for a firehall crew",
+      "heroOnDisk": true,
       "exploreMapping": {
         "slug": "best-tuna-melt-for-the-hall",
         "title": "Best Tuna Melt for the Hall (Diner Style)",
@@ -6460,18 +6312,11 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
         "canonicalHero": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
-        "status": "missing",
-        "issues": [
-          {
-            "code": "missing_image_file",
-            "severity": "critical",
-            "message": "canonical hero image missing on disk",
-            "confidence": 98
-          }
-        ],
+        "status": "correct",
+        "issues": [],
         "duplicatePeers": [],
-        "heroMd5": null,
-        "exploreEligible": false
+        "heroMd5": "653c0c68e0186156be27d755c0df0eb0",
+        "exploreEligible": true
       },
       "metadataIssues": [
         {
@@ -6483,12 +6328,9 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped_missing_file"
-      ],
-      "pass": true,
+      "visionReasons": [],
+      "pass": false,
       "criticalReasons": [
-        "canonical hero image missing on disk",
         "Complete meal required — hero metadata shows too few title components (1/2)"
       ]
     },
@@ -6497,8 +6339,8 @@
       "title": "Hall BLT Sandwich Feed",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
-      "heroAlt": "Hall BLT Sandwich Feed — crew-sized firehall meal",
-      "heroOnDisk": false,
+      "heroAlt": "Hall BLT Sandwich Feed — american sandwich plated for a firehall crew",
+      "heroOnDisk": true,
       "exploreMapping": {
         "slug": "hall-blt-sandwich-feed",
         "title": "Hall BLT Sandwich Feed",
@@ -6506,36 +6348,25 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
         "canonicalHero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
-        "status": "missing",
-        "issues": [
-          {
-            "code": "missing_image_file",
-            "severity": "critical",
-            "message": "canonical hero image missing on disk",
-            "confidence": 98
-          }
-        ],
+        "status": "correct",
+        "issues": [],
         "duplicatePeers": [],
-        "heroMd5": null,
-        "exploreEligible": false
+        "heroMd5": "004887b5e4b75c076f3a5cbf50149db1",
+        "exploreEligible": true
       },
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped_missing_file"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "canonical hero image missing on disk"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "buffalo-chicken-wraps",
       "title": "Buffalo Chicken Wraps",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
-      "heroAlt": "Buffalo Chicken Wraps — crew-sized firehall meal",
+      "heroAlt": "Buffalo Chicken Wraps — american handheld plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "buffalo-chicken-wraps",
@@ -6553,7 +6384,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6562,7 +6395,7 @@
       "title": "Greek Chicken Pitas",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
-      "heroAlt": "Greek Chicken Pitas — crew-sized firehall meal",
+      "heroAlt": "Greek Chicken Pitas — greek handheld plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "greek-chicken-pitas",
@@ -6580,7 +6413,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6589,7 +6424,7 @@
       "title": "Beef Gyros",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
-      "heroAlt": "Beef Gyros — crew-sized firehall meal",
+      "heroAlt": "Beef Gyros — greek handheld plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "beef-gyros-for-the-hall",
@@ -6607,9 +6442,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6618,7 +6451,7 @@
       "title": "Chicken Shawarma Pitas",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
-      "heroAlt": "Chicken Shawarma Pitas — crew-sized firehall meal",
+      "heroAlt": "Chicken Shawarma Pitas — middle eastern handheld plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "chicken-shawarma-pitas",
@@ -6645,7 +6478,7 @@
       "title": "Sausage & Peppers on Buns",
       "collection": "hall_expansion",
       "heroImage": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
-      "heroAlt": "Sausage & Peppers on Buns — crew-sized firehall meal",
+      "heroAlt": "Sausage & Peppers on Buns — italian handheld plated for a firehall crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "sausage-peppers-on-buns",
@@ -6670,11 +6503,1086 @@
       "criticalReasons": []
     },
     {
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "heroAlt": "Firehall Taco Bowls — mexican bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "firehall-taco-bowls",
+        "title": "Firehall Taco Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/firehall-taco-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/firehall-taco-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "8ea01ea564ed6c9e4c166913d165504d",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "heroAlt": "Buffalo Chicken Sweet Potato Bowls — american bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "buffalo-chicken-sweet-potato-bowls",
+        "title": "Buffalo Chicken Sweet Potato Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "b657ff4cc8cd64f8b852cf8dbac17cb9",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "heroAlt": "Greek Chicken Bowls — greek bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "firehall-greek-chicken-bowls",
+        "title": "Greek Chicken Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "dc379f3fbbd04a86d80888211cd9ea0d",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "heroAlt": "Teriyaki Chicken Rice Bowls — japanese bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "teriyaki-chicken-rice-bowls",
+        "title": "Teriyaki Chicken Rice Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (teriyaki-donburi, thai-peanut-chicken-crock) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "teriyaki-donburi",
+          "thai-peanut-chicken-crock"
+        ],
+        "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
+        "exploreEligible": false
+      },
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 2 other recipe(s): teriyaki-donburi, thai-peanut-chicken-crock",
+          "confidence": 80
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": [
+        "hero file reused across recipes (teriyaki-donburi, thai-peanut-chicken-crock) — image reuse disabled"
+      ]
+    },
+    {
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "heroAlt": "Korean Beef Bowls — korean bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "firehall-korean-beef-bowls",
+        "title": "Korean Beef Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "bulgogi-bowls",
+          "egg-roll-in-a-bowl-crew",
+          "korean-turkey-rice-bowls"
+        ],
+        "heroMd5": "7545872c4593a5901dee7066cd526054",
+        "exploreEligible": false
+      },
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 3 other recipe(s): bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls",
+          "confidence": 80
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": [
+        "hero file reused across recipes (bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled"
+      ]
+    },
+    {
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "heroAlt": "Cajun Shrimp Rice Bowls — cajun bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "cajun-shrimp-rice-bowls",
+        "title": "Cajun Shrimp Rice Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "5bd45876adf2f97c0a1e74fe86fa1cb7",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "southwest-steak-bowls",
+      "title": "Southwest Steak Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/southwest-steak-bowls.jpg",
+      "heroAlt": "Southwest Steak Bowls — southwestern bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "southwest-steak-bowls",
+        "title": "Southwest Steak Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/southwest-steak-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/southwest-steak-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "cd6000187b3a33154e3fc85bf6a819f0",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "heroAlt": "BBQ Pulled Pork Bowls — american bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "bbq-pulled-pork-bowls",
+        "title": "BBQ Pulled Pork Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "3d318e4491c3d00f5a171514cead00bd",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "mediterranean-beef-bowls",
+      "title": "Mediterranean Beef Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+      "heroAlt": "Mediterranean Beef Bowls — mediterranean bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "mediterranean-beef-bowls",
+        "title": "Mediterranean Beef Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "93b2466002a726b7b5972a626ed0ff90",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "chipotle-chicken-burrito-bowls",
+      "title": "Chipotle Chicken Burrito Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "heroAlt": "Chipotle Chicken Burrito Bowls — mexican bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "chipotle-chicken-burrito-bowls",
+        "title": "Chipotle Chicken Burrito Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "6c3276211fb8e25ae130a3e50526fd8f",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "heroAlt": "Turkey Taco Bowls — mexican bowl plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "turkey-taco-bowls",
+        "title": "Turkey Taco Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/turkey-taco-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "2bb47e24395662be5ab063c418035a22",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "peanut-chicken-rice-bowls",
+      "title": "Peanut Chicken Rice Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "heroAlt": "Peanut Chicken Rice Bowls — Thai-inspired bowls plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "peanut-chicken-rice-bowls",
+        "title": "Peanut Chicken Rice Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "02ad9a03418479631522c37150ef67a9",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "firehall-gyro-bowls",
+      "title": "Firehall Gyro Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+      "heroAlt": "Firehall Gyro Bowls — Greek bowls plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "firehall-gyro-bowls",
+        "title": "Firehall Gyro Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "321ad2be200995f729771d1d01704a37",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "heroAlt": "Egg Roll in a Bowl for the Crew — Chinese-American skillet plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "egg-roll-in-a-bowl-crew",
+        "title": "Egg Roll in a Bowl for the Crew",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+        "canonicalHero": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "bulgogi-bowls",
+          "firehall-korean-beef-bowls",
+          "korean-turkey-rice-bowls"
+        ],
+        "heroMd5": "7545872c4593a5901dee7066cd526054",
+        "exploreEligible": false
+      },
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 3 other recipe(s): bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls",
+          "confidence": 80
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": [
+        "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls) — image reuse disabled"
+      ]
+    },
+    {
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "heroAlt": "Salmon Rice Bowls for the Crew — Japanese-inspired bowls plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "salmon-rice-bowls-crew",
+        "title": "Salmon Rice Bowls for the Crew",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+        "canonicalHero": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "8d9d96479e08a9eb9e3282017ff2703d",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "heroAlt": "Korean Turkey Rice Bowls — Korean-inspired bowls plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "korean-turkey-rice-bowls",
+        "title": "Korean Turkey Rice Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "bulgogi-bowls",
+          "firehall-korean-beef-bowls",
+          "egg-roll-in-a-bowl-crew"
+        ],
+        "heroMd5": "7545872c4593a5901dee7066cd526054",
+        "exploreEligible": false
+      },
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 3 other recipe(s): bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew",
+          "confidence": 80
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": [
+        "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew) — image reuse disabled"
+      ]
+    },
+    {
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "heroAlt": "Leftover Roast Beef Bowls — Canadian bowls plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "leftover-roast-beef-bowls",
+        "title": "Leftover Roast Beef Bowls",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+        "canonicalHero": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "930c06bc3171818caa7c9cb45da6666e",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "heroAlt": "Mississippi Pot Roast for the Crew — American slow_cooker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "mississippi-pot-roast-crew",
+        "title": "Mississippi Pot Roast for the Crew",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+        "canonicalHero": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "2f21b79f2da06c296bc310d70053b3ca",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "heroAlt": "White Chicken Chili Crock — Southwestern slow_cooker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "white-chicken-chili-crock",
+        "title": "White Chicken Chili Crock",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+        "canonicalHero": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "big-chili",
+          "burnt-ends-chili-crew",
+          "pasta-e-fagioli-hall"
+        ],
+        "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
+        "exploreEligible": false
+      },
+      "metadataIssues": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides",
+          "confidence": 98
+        },
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 3 other recipe(s): big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall",
+          "confidence": 80
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": [
+        "hero file reused across recipes (big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled",
+        "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
+      ]
+    },
+    {
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+      "heroAlt": "Italian Beef Slow Cooker Sandwiches — Italian-American slow_cooker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "italian-beef-slow-cooker",
+        "title": "Italian Beef Slow Cooker Sandwiches",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+        "canonicalHero": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "44f8c32a2585c4e9e4f10b145994151c",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "heroAlt": "Salsa Verde Chicken Crock — Mexican-inspired slow_cooker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "salsa-verde-chicken-crock",
+        "title": "Salsa Verde Chicken Crock",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+        "canonicalHero": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "6bf4386f042427ea6e865812a28c9099",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "heroAlt": "Loaded Baked Potato Soup Crock — American slow_cooker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "loaded-baked-potato-soup-crock",
+        "title": "Loaded Baked Potato Soup Crock",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+        "canonicalHero": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "11d260f85411a0eb6ccb7680f7cdc9f1",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "heroAlt": "Thai Peanut Chicken Crock — Thai-inspired slow_cooker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "thai-peanut-chicken-crock",
+        "title": "Thai Peanut Chicken Crock",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+        "canonicalHero": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (teriyaki-donburi, teriyaki-chicken-rice-bowls) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "teriyaki-donburi",
+          "teriyaki-chicken-rice-bowls"
+        ],
+        "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
+        "exploreEligible": false
+      },
+      "metadataIssues": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides",
+          "confidence": 98
+        },
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 2 other recipe(s): teriyaki-donburi, teriyaki-chicken-rice-bowls",
+          "confidence": 80
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": [
+        "hero file reused across recipes (teriyaki-donburi, teriyaki-chicken-rice-bowls) — image reuse disabled",
+        "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
+      ]
+    },
+    {
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+      "heroAlt": "Burnt Ends Chili for the Crew — BBQ smoker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "burnt-ends-chili-crew",
+        "title": "Burnt Ends Chili for the Crew",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+        "canonicalHero": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "big-chili",
+          "white-chicken-chili-crock",
+          "pasta-e-fagioli-hall"
+        ],
+        "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
+        "exploreEligible": false
+      },
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 3 other recipe(s): big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall",
+          "confidence": 80
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": [
+        "hero file reused across recipes (big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall) — image reuse disabled"
+      ]
+    },
+    {
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/smoker-nachos-crew.jpg",
+      "heroAlt": "Smoker Nachos for the Crew — BBQ smoker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "smoker-nachos-crew",
+        "title": "Smoker Nachos for the Crew",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/smoker-nachos-crew.jpg",
+        "canonicalHero": "/images/hall-expansion/smoker-nachos-crew.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "5d00ea37ec0764c115ef63668623466b",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "heroAlt": "Weeknight BBQ Ribs for the Crew — BBQ smoker plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "weeknight-bbq-ribs-crew",
+        "title": "Weeknight BBQ Ribs for the Crew",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+        "canonicalHero": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "6cd154ca9a1ac698a6d7519210112c8a",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "heroAlt": "Grilled Flank Fajita Bar — Mexican-inspired grill plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "grilled-flank-fajita-bar",
+        "title": "Grilled Flank Fajita Bar",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+        "canonicalHero": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "679de1021967a98ebac0f4212efbb355",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+      "heroAlt": "Costco Rotisserie Chicken Remix — American casserole plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "costco-rotisserie-remix",
+        "title": "Costco Rotisserie Chicken Remix",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+        "canonicalHero": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "216d48787367226e5ba53acdf246ff3e",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "chicken-thigh-stretch-dinner",
+      "title": "Chicken Thigh Stretch Dinner",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "heroAlt": "Chicken Thigh Stretch Dinner — American sheet_pan plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "chicken-thigh-stretch-dinner",
+        "title": "Chicken Thigh Stretch Dinner",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+        "canonicalHero": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "1f9d8eeaaf094641715b9c0601da0416",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "heroAlt": "Pasta e Fagioli for the Hall — Italian one_pot plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "pasta-e-fagioli-hall",
+        "title": "Pasta e Fagioli for the Hall",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+        "canonicalHero": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+        "status": "duplicate_conflict",
+        "issues": [
+          {
+            "code": "duplicate_hero_hash",
+            "severity": "critical",
+            "message": "hero file reused across recipes (big-chili, white-chicken-chili-crock, burnt-ends-chili-crew) — image reuse disabled",
+            "confidence": 99
+          }
+        ],
+        "duplicatePeers": [
+          "big-chili",
+          "white-chicken-chili-crock",
+          "burnt-ends-chili-crew"
+        ],
+        "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
+        "exploreEligible": false
+      },
+      "metadataIssues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "warning",
+          "message": "hero bytes shared with 3 other recipe(s): big-chili, white-chicken-chili-crock, burnt-ends-chili-crew",
+          "confidence": 80
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": [
+        "hero file reused across recipes (big-chili, white-chicken-chili-crock, burnt-ends-chili-crew) — image reuse disabled"
+      ]
+    },
+    {
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "heroAlt": "Dirty Rice Crew Skillet — Cajun skillet plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "dirty-rice-crew-skillet",
+        "title": "Dirty Rice Crew Skillet",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+        "canonicalHero": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "567c9e195e1da098d298e2a10dfe3418",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "heroAlt": "Sausage Gnocchi Skillet — Italian-American skillet plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "sausage-gnocchi-skillet",
+        "title": "Sausage Gnocchi Skillet",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+        "canonicalHero": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "8dee8eb1d3e66474242bc01a753fb12a",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "collection": "hall_expansion",
+      "heroImage": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "heroAlt": "Spanish Rice Chicken One Pot — Spanish-inspired one_pot plated for a firehall crew",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "spanish-rice-chicken-one-pot",
+        "title": "Spanish Rice Chicken One Pot",
+        "category": "hall_expansion",
+        "kind": "hall_expansion",
+        "heroImage": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+        "canonicalHero": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "b2c6c0a764a0754a5781bb9c657b89b4",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
       "slug": "bagel-lox-breakfast-board",
       "title": "Bagel and Lox Breakfast Board",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
-      "heroAlt": "Wide firehall breakfast board with bagels, cream cheese, smoked salmon lox, capers, and red onion on a crew prep table, family-style platter",
+      "heroAlt": "Bagel and lox breakfast board with cream cheese, capers, and fresh fixings",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "bagel-lox-breakfast-board",
@@ -6689,6 +7597,42 @@
         "heroMd5": "e43e728d400c161fbfd93745b509a618",
         "exploreEligible": true
       },
+      "metadataIssues": [
+        {
+          "code": "food_realism_red_flag",
+          "severity": "critical",
+          "message": "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)",
+          "confidence": 75
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": false,
+      "criticalReasons": [
+        "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)"
+      ]
+    },
+    {
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "collection": "breakfast",
+      "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
+      "heroAlt": "Build-your-own bagel sandwich line with egg squares, cheese, sausage, bacon, and toppings",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "bagel-sandwich-line",
+        "title": "Bagel Sandwich Line",
+        "category": "breakfast",
+        "kind": "breakfast_catalog",
+        "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
+        "canonicalHero": "/images/breakfast/bagel-sandwich-line.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "d78221d802307b301aef4c2f01bf632e",
+        "exploreEligible": true
+      },
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
@@ -6701,7 +7645,7 @@
       "title": "Baked Oatmeal with Mixed Berries",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
-      "heroAlt": "Wide firehall tray of baked oatmeal with mixed berries on a station prep table, family-style breakfast spread for the crew",
+      "heroAlt": "Golden baked oatmeal squares with mixed berries in a 9x13 pan",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "baked-oatmeal-mixed-berries",
@@ -6716,14 +7660,23 @@
         "heroMd5": "6e3fdbcef746d29ace7640028fdeacb6",
         "exploreEligible": true
       },
-      "metadataIssues": [],
+      "metadataIssues": [
+        {
+          "code": "food_realism_red_flag",
+          "severity": "critical",
+          "message": "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)",
+          "confidence": 75
+        }
+      ],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [
         "vision_skipped"
       ],
-      "pass": true,
-      "criticalReasons": []
+      "pass": false,
+      "criticalReasons": [
+        "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)"
+      ]
     },
     {
       "slug": "bbq-breakfast-hash",
@@ -6748,9 +7701,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6804,9 +7755,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6887,7 +7836,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6995,9 +7946,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -7024,9 +7973,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -7071,39 +8018,18 @@
         "kind": "breakfast_catalog",
         "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
         "canonicalHero": "/images/breakfast/buttermilk-pancakes.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (bbq-chicken-pizza, bbq-chicken-pizza) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "bbq-chicken-pizza",
-          "bbq-chicken-pizza"
-        ],
-        "heroMd5": "b2b94642354a7c7336b11cebc0923bca",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "9fbbea14d152b99fbac21a208419399b",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 2 other recipe(s): bbq-chicken-pizza, bbq-chicken-pizza",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (bbq-chicken-pizza, bbq-chicken-pizza) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "cast-iron-breakfast-skillet",
@@ -7155,9 +8081,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -7184,7 +8108,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7238,7 +8164,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7274,7 +8202,7 @@
       "title": "Country Fried Steak and Eggs Breakfast",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
-      "heroAlt": "Wide firehall breakfast platter: country-fried steak cutlet with white gravy, fried-egg zone, and hash-brown zone on a crew prep table, family-style",
+      "heroAlt": "Country fried steak with pepper gravy, mashed potatoes, and a fried egg",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "country-fried-steak-eggs",
@@ -7289,12 +8217,21 @@
         "heroMd5": "16e9c65cec7d356029131a8de9e4c5c0",
         "exploreEligible": true
       },
-      "metadataIssues": [],
+      "metadataIssues": [
+        {
+          "code": "food_realism_red_flag",
+          "severity": "critical",
+          "message": "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)",
+          "confidence": 75
+        }
+      ],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
-      "pass": true,
-      "criticalReasons": []
+      "pass": false,
+      "criticalReasons": [
+        "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)"
+      ]
     },
     {
       "slug": "crew-french-toast-bake",
@@ -7346,7 +8283,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7427,7 +8366,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7508,7 +8449,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7530,6 +8473,33 @@
         "issues": [],
         "duplicatePeers": [],
         "heroMd5": "1ff8794bf3c1938e49f89db51b0fc7c6",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "collection": "breakfast",
+      "heroImage": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+      "heroAlt": "Golden hash brown breakfast casserole squares with eggs, sausage, and melted cheddar",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "hash-brown-breakfast-casserole",
+        "title": "Hash Brown Breakfast Casserole",
+        "category": "breakfast",
+        "kind": "breakfast_catalog",
+        "heroImage": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+        "canonicalHero": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "e19d2022ef1741071d96001bbf2a1930",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -7580,9 +8550,7 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": [
         "hero file reused across recipes (shakshuka-for-the-hall) — image reuse disabled"
@@ -7620,7 +8588,7 @@
       "title": "Johnnycakes with Maple Syrup",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
-      "heroAlt": "Wide firehall platter of golden johnnycakes with butter and maple syrup on a crew breakfast prep table, family-style",
+      "heroAlt": "Golden johnnycakes with whipped butter and warm maple syrup",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "johnnycakes-with-syrup",
@@ -7635,19 +8603,28 @@
         "heroMd5": "4767ef7b85656b71a15e877c810f3714",
         "exploreEligible": true
       },
-      "metadataIssues": [],
+      "metadataIssues": [
+        {
+          "code": "food_realism_red_flag",
+          "severity": "critical",
+          "message": "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)",
+          "confidence": 75
+        }
+      ],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
-      "pass": true,
-      "criticalReasons": []
+      "pass": false,
+      "criticalReasons": [
+        "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)"
+      ]
     },
     {
       "slug": "lumberjack-breakfast-platter",
       "title": "Lumberjack Breakfast Platter",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
-      "heroAlt": "Wide firehall breakfast platter: pancake stack zone, scrambled-egg zone, bacon strips, sausage, and hash browns — each component separate on the crew line, f…",
+      "heroAlt": "Lumberjack breakfast platter with pancakes, bacon, sausage, hash browns, and eggs",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "lumberjack-breakfast-platter",
@@ -7662,14 +8639,21 @@
         "heroMd5": "476b8c256aedd8e459395a9296cbfac7",
         "exploreEligible": true
       },
-      "metadataIssues": [],
+      "metadataIssues": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: breakfast_fail: eggs on pancakes",
+          "confidence": 93
+        }
+      ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
-      "pass": true,
-      "criticalReasons": []
+      "visionReasons": [],
+      "pass": false,
+      "criticalReasons": [
+        "plating accuracy: breakfast_fail: eggs on pancakes"
+      ]
     },
     {
       "slug": "maple-sausage-pinwheels",
@@ -7694,7 +8678,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7737,7 +8723,9 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": [
         "hero file reused across recipes (migas-for-the-crew) — image reuse disabled"
@@ -7782,9 +8770,7 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": [
         "hero file reused across recipes (menemen-for-the-crew) — image reuse disabled"
@@ -7835,6 +8821,33 @@
         "issues": [],
         "duplicatePeers": [],
         "heroMd5": "bad24e39a44028a803f761529c8ba808",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "collection": "breakfast",
+      "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
+      "heroAlt": "Crew-sized overnight oat bar with berries, banana, nut butter, granola, and scoop-and-go bowls",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "overnight-oat-bar-crew",
+        "title": "Overnight Oat Bar for the Crew",
+        "category": "breakfast",
+        "kind": "breakfast_catalog",
+        "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
+        "canonicalHero": "/images/breakfast/overnight-oat-bar-crew.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "07b6351b6dbdfd34640870005c1c0877",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -7930,7 +8943,7 @@
       "title": "Scrapple and Eggs Skillet",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
-      "heroAlt": "Wide firehall cast-iron skillet breakfast with crispy scrapple and fried eggs on a crew prep table, family-style platter",
+      "heroAlt": "Crisp scrapple slices with fried eggs and buttered toast points",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "scrapple-and-eggs-skillet",
@@ -7945,14 +8958,23 @@
         "heroMd5": "120063c271debb7250384c96155f58fa",
         "exploreEligible": true
       },
-      "metadataIssues": [],
+      "metadataIssues": [
+        {
+          "code": "food_realism_red_flag",
+          "severity": "critical",
+          "message": "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)",
+          "confidence": 75
+        }
+      ],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [
         "vision_skipped"
       ],
-      "pass": true,
-      "criticalReasons": []
+      "pass": false,
+      "criticalReasons": [
+        "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)"
+      ]
     },
     {
       "slug": "shakshuka-for-the-hall",
@@ -8049,7 +9071,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8081,11 +9105,38 @@
       "criticalReasons": []
     },
     {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "collection": "breakfast",
+      "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "heroAlt": "Sheet-pan breakfast with baked eggs, browned sausage, roasted peppers, and onions",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "sheet-pan-eggs-sausage-crew",
+        "title": "Sheet-Pan Eggs & Sausage",
+        "category": "breakfast",
+        "kind": "breakfast_catalog",
+        "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+        "canonicalHero": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "e0c37841917b8a14bae40c3e5668e074",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
       "slug": "shrimp-and-grits-breakfast",
       "title": "Shrimp and Grits Breakfast",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
-      "heroAlt": "Wide firehall breakfast platter: creamy stone-ground grits with sautéed shrimp piled on top on a station prep table, family-style",
+      "heroAlt": "Creamy grits topped with Cajun shrimp and andouille for the crew",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "shrimp-and-grits-breakfast",
@@ -8103,7 +9154,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8157,9 +9210,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8186,7 +9237,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8258,36 +9311,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
         "canonicalHero": "/images/golden-100/bbq-chicken-pizza.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (buttermilk-pancakes) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "buttermilk-pancakes"
-        ],
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
         "heroMd5": "b2b94642354a7c7336b11cebc0923bca",
-        "exploreEligible": false
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): buttermilk-pancakes",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (buttermilk-pancakes) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "breakfast-sausage-pizza",
@@ -8303,38 +9338,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/breakfast-sausage-pizza.jpg",
         "canonicalHero": "/images/golden-100/breakfast-sausage-pizza.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (french-toast-casserole) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "french-toast-casserole"
-        ],
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
         "heroMd5": "ef7f3e7962468e0e5c21a5558786ae52",
-        "exploreEligible": false
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): french-toast-casserole",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (french-toast-casserole) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "buffalo-chicken-pizza",
@@ -8500,7 +9515,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8554,7 +9571,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8608,7 +9627,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8635,9 +9656,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8745,7 +9764,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8853,7 +9874,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8936,9 +9959,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8994,9 +10015,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -9050,9 +10069,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },

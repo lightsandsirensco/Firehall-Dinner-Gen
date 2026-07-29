@@ -69,7 +69,7 @@ function topicShiftSection(topic: EditorialTopic, keyword: string): EditorialSec
       heading: "When tones drop mid-prep",
       paragraphs: [
         `Operational meals need a "good enough" checkpoint. For ${pk}, choose recipes where lowering heat and covering still leaves edible food when you return — not a burned skillet.`,
-        `Hotel pans and sheet trays beat delicate plating on busy boards. Finish crisp elements last so post-call eaters still get texture.`,
+        `Large baking dishes and sheet trays beat delicate plating on busy boards. Finish crisp elements last so post-call eaters still get texture.`,
       ],
       tips: [
         "Count who is on duty at 17:00, not who was on the board at 08:00.",

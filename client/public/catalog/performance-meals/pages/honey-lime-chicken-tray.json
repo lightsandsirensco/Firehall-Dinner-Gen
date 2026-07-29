@@ -13,10 +13,10 @@
   "cookTime": 28,
   "prepTime": 18,
   "difficulty": "easy",
-  "calories": 455,
-  "protein": 40,
-  "carbs": 22,
-  "fats": 24,
+  "calories": 506,
+  "protein": 71,
+  "carbs": 21,
+  "fats": 14,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -33,65 +33,65 @@
   ],
   "ingredients": [
     {
-      "name": "Bone-In Chicken Thighs",
+      "name": "bone-in chicken thighs",
       "quantity": "16",
       "unit": "pieces",
       "notes": "about 6 lb"
     },
     {
-      "name": "Red Bell Pepper",
+      "name": "red bell pepper",
       "quantity": "3",
       "unit": "whole",
       "notes": "chunked"
     },
     {
-      "name": "Green Bell Pepper",
+      "name": "green bell pepper",
       "quantity": "2",
       "unit": "whole",
       "notes": "chunked"
     },
     {
-      "name": "Red Onion",
+      "name": "red onion",
       "quantity": "2",
       "unit": "large",
       "notes": "wedge-cut"
     },
     {
-      "name": "Honey",
+      "name": "honey",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Lime Juice",
+      "name": "lime juice",
       "quantity": "0.25",
-      "unit": "Cup",
+      "unit": "cup",
       "notes": "fresh"
     },
     {
-      "name": "Olive Oil",
+      "name": "olive oil",
       "quantity": "3",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "6",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Chili Powder",
+      "name": "chili powder",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     },
     {
-      "name": "Kosher Salt",
+      "name": "kosher salt",
       "quantity": "1.5",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Black Pepper",
+      "name": "black pepper",
       "quantity": "1",
-      "unit": "Tsp"
+      "unit": "tsp"
     }
   ],
   "steps": [
@@ -149,11 +149,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 455,
-    "protein": 40,
-    "carbs": 22,
-    "fats": 24,
-    "label": "~455 cal/serving · 40g protein · 3g fiber (est.)"
+    "calories": 506,
+    "protein": 71,
+    "carbs": 21,
+    "fats": 14,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/honey-lime-chicken-tray.jpg",
   "heroImageAlt": "Wide firehall crew platter of Honey Lime Chicken Tray on a station prep table, family-style serving",
@@ -179,6 +194,28 @@
     "white-bean-chicken-chili",
     "crock-barbacoa-chicken"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.657Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

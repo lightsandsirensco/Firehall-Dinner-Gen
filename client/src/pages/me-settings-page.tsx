@@ -49,7 +49,7 @@ export default function MeSettingsPage() {
           href="/me/profile"
           className={cn(
             "flex min-h-[52px] items-center justify-between gap-3 rounded-2xl border border-border/40 px-4 py-3",
-            "hover:bg-muted/30 touch-manipulation",
+            "hover-elevate active-elevate-2 touch-manipulation",
           )}
         >
           <span className="text-sm font-medium">{ME_SETTINGS.editProfile}</span>
@@ -64,7 +64,7 @@ export default function MeSettingsPage() {
             href="/hall/settings"
             className={cn(
               "flex min-h-[52px] items-center gap-3 rounded-2xl border border-border/40 px-4 py-3",
-              "hover:bg-muted/30 touch-manipulation",
+              "hover-elevate active-elevate-2 touch-manipulation",
             )}
           >
             <Users className="h-5 w-5 text-primary shrink-0" aria-hidden />

@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 450,
-  "protein": 40,
-  "carbs": 44,
-  "fats": 14,
+  "calories": 693,
+  "protein": 66,
+  "carbs": 50,
+  "fats": 26,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -159,19 +159,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 450,
-    "protein": 40,
-    "carbs": 44,
-    "fats": 14,
-    "label": "~450 cal/serving · 40g protein · 8g fiber (est.)",
-    "source": "estimated",
+    "calories": 693,
+    "protein": 66,
+    "carbs": 50,
+    "fats": 26,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
@@ -194,5 +200,57 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.770Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "farro",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "hummus",
+        "allergens": [
+          "sesame"
+        ]
+      },
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Substitute quinoa or rice."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

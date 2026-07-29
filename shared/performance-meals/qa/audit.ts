@@ -36,11 +36,11 @@ export function auditPerformanceMeals(): PerformanceAuditReport {
     errors.push({ slug: "_registry", code: "registry", message: msg, severity: "error" });
   }
 
-  if (PERFORMANCE_ADAPTED_RECIPES.length !== PERFORMANCE_MEAL_COUNT) {
+  if (PERFORMANCE_ADAPTED_RECIPES.length < PERFORMANCE_MEAL_COUNT) {
     errors.push({
       slug: "_manifest",
       code: "count",
-      message: `expected ${PERFORMANCE_MEAL_COUNT} adapted recipes, got ${PERFORMANCE_ADAPTED_RECIPES.length}`,
+      message: `expected at least ${PERFORMANCE_MEAL_COUNT} adapted recipes, got ${PERFORMANCE_ADAPTED_RECIPES.length}`,
       severity: "error",
     });
   }

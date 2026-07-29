@@ -13,10 +13,10 @@
   "cookTime": 480,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 730,
-  "protein": 48,
-  "carbs": 58,
-  "fats": 32,
+  "calories": 1400,
+  "protein": 117,
+  "carbs": 85,
+  "fats": 70,
   "tags": [
     "protein:beef",
     "format:slow_cooker",
@@ -166,12 +166,13 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 730,
-    "protein": 48,
-    "carbs": 58,
-    "fats": 32,
-    "label": "~730 cal/serving · 48g protein · 7g fiber (est.)",
-    "source": "estimated",
+    "calories": 1400,
+    "protein": 117,
+    "carbs": 85,
+    "fats": 70,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -179,6 +180,11 @@
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
@@ -203,5 +209,46 @@
   ],
   "sourceUrl": "",
   "generatedAt": "2026-07-17T20:15:12.772Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "beef broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "ranch seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

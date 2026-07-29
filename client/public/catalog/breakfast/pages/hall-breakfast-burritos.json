@@ -28,18 +28,18 @@
     },
     {
       "name": "shredded cheddar or pepper jack",
-      "quantity": "2",
+      "quantity": "1.6 cups",
       "group": "Eggs"
     },
     {
       "name": "frozen hash browns",
-      "quantity": "2.8",
+      "quantity": "2.8 lb",
       "notes": "or diced par-cooked potatoes",
       "group": "Fillings"
     },
     {
       "name": "breakfast sausage or chorizo",
-      "quantity": "2",
+      "quantity": "1.6 lb",
       "notes": "browned and drained",
       "group": "Fillings"
     },
@@ -51,7 +51,7 @@
     },
     {
       "name": "bell peppers",
-      "quantity": "3/4",
+      "quantity": "3/4–2",
       "notes": "diced",
       "group": "Fillings"
     },
@@ -62,7 +62,7 @@
     },
     {
       "name": "salsa or pico de gallo",
-      "quantity": "3/4",
+      "quantity": "3/4 cup",
       "group": "Build"
     },
     {
@@ -105,12 +105,13 @@
     }
   ],
   "nutrition": {
-    "calories": 830,
-    "protein": 35,
+    "calories": 852,
+    "protein": 41,
     "carbs": 71,
     "fat": 45,
-    "label": "per serving (hall portion)",
+    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
@@ -145,5 +146,68 @@
   "updatedAt": "2026-07-17T20:15:27.732Z",
   "readMinutes": 7,
   "seoTitle": "Hall Breakfast Burritos | Firehall Breakfast",
-  "collectionTier": "firehall_classic"
+  "collectionTier": "firehall_classic",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "shredded cheddar or pepper jack",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "breakfast sausage or chorizo",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "10-inch flour tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

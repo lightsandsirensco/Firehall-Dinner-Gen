@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 495,
-  "protein": 36,
-  "carbs": 52,
-  "fats": 16,
+  "calories": 819,
+  "protein": 58,
+  "carbs": 67,
+  "fats": 34,
   "tags": [
     "protein:salmon",
     "format:bowl",
@@ -33,71 +33,71 @@
   ],
   "ingredients": [
     {
-      "name": "Salmon Fillets",
+      "name": "salmon fillets",
       "quantity": "4",
-      "unit": "Lb",
+      "unit": "lb",
       "notes": "skin-on, 6 oz portions"
     },
     {
-      "name": "Brown Rice",
+      "name": "brown rice",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "uncooked"
     },
     {
-      "name": "Shelled Edamame",
+      "name": "shelled edamame",
       "quantity": "3",
-      "unit": "Cups",
+      "unit": "cups",
       "notes": "thawed if frozen"
     },
     {
-      "name": "Carrots",
+      "name": "carrots",
       "quantity": "3",
       "unit": "whole",
       "notes": "shredded"
     },
     {
-      "name": "Maple Syrup",
+      "name": "maple syrup",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Low-Sodium Soy Sauce",
+      "name": "low-sodium soy sauce",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Rice Vinegar",
+      "name": "rice vinegar",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "4",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Fresh Ginger",
+      "name": "fresh ginger",
       "quantity": "1",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "grated"
     },
     {
-      "name": "Sesame Oil",
+      "name": "sesame oil",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Green Onions",
+      "name": "green onions",
       "quantity": "6",
       "unit": "whole",
       "notes": "sliced"
     },
     {
-      "name": "Toasted Sesame Seeds",
+      "name": "toasted sesame seeds",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     }
   ],
   "steps": [
@@ -151,15 +151,30 @@
     "Cold salmon on greens with ginger dressing next shift."
   ],
   "whyCrewsLikeIt": "Brain food after a long shift. Balanced macros in a bowl that looks as good as it tastes.",
-  "mealPrepNotes": "Cook brown rice ahead—it takes longer than white. Mix glaze in advance. Station: Roast salmon on parchment for easy release and quick pan cleanup. Station: Keep edamame warm in a small hotel pan separate from rice to avoid sogginess. Station: Glaze salmon twice—mid-cook and final 2 minutes—for shiny lacquered finish.",
+  "mealPrepNotes": "Cook brown rice ahead—it takes longer than white. Mix glaze in advance. Station: Roast salmon on parchment for easy release and quick pan cleanup. Station: Keep edamame warm in a small baking dish separate from rice to avoid sogginess. Station: Glaze salmon twice—mid-cook and final 2 minutes—for shiny lacquered finish.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 495,
-    "protein": 36,
-    "carbs": 52,
-    "fats": 16,
-    "label": "~495 cal/serving · 36g protein · 5g fiber (est.)"
+    "calories": 819,
+    "protein": 58,
+    "carbs": 67,
+    "fats": 34,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
   },
   "heroImage": "/images/golden-100/maple-soy-salmon-bowls.jpg",
   "heroImageAlt": "Wide firehall crew platter of Maple Soy Salmon Bowls on a station prep table, family-style serving",
@@ -185,6 +200,60 @@
     "tabbouleh-chicken-bowls",
     "lemon-salmon-orzo-skillet"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.659Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "salmon fillets",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "shelled edamame",
+        "allergens": [
+          "soy"
+        ]
+      },
+      {
+        "name": "low-sodium soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "toasted sesame seeds",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

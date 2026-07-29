@@ -217,5 +217,88 @@
   "sourceName": "Firehall Meals",
   "sourceUrl": "",
   "generatedAt": "2026-05-30T03:45:01.589Z",
-  "contentVersion": 2
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Pizza dough balls (15 oz)",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Breakfast sausage, bulk",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
+        "name": "Whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "Unsalted butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "All-purpose flour",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Country sausage gravy mix",
+        "allergens": [
+          "gluten",
+          "dairy"
+        ]
+      },
+      {
+        "name": "Large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "Shredded cheddar-mozzarella blend",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

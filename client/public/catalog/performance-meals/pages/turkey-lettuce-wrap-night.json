@@ -13,10 +13,10 @@
   "cookTime": 15,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 275,
-  "protein": 34,
-  "carbs": 10,
-  "fats": 11,
+  "calories": 407,
+  "protein": 42,
+  "carbs": 9,
+  "fats": 22,
   "tags": [
     "protein:turkey",
     "format:handheld",
@@ -33,67 +33,67 @@
   ],
   "ingredients": [
     {
-      "name": "Lean Ground Turkey",
+      "name": "lean ground turkey",
       "quantity": "3",
-      "unit": "Lb"
+      "unit": "lb"
     },
     {
-      "name": "Romaine Lettuce Hearts",
+      "name": "romaine lettuce hearts",
       "quantity": "4",
       "unit": "heads",
       "notes": "leaves separated"
     },
     {
-      "name": "Water Chestnuts",
+      "name": "water chestnuts",
       "quantity": "1",
       "unit": "can",
       "notes": "8 oz, minced"
     },
     {
-      "name": "Green Onions",
+      "name": "green onions",
       "quantity": "8",
       "unit": "whole",
       "notes": "sliced"
     },
     {
-      "name": "Garlic Cloves",
+      "name": "garlic cloves",
       "quantity": "5",
       "unit": "cloves",
       "notes": "minced"
     },
     {
-      "name": "Fresh Ginger",
+      "name": "fresh ginger",
       "quantity": "2",
-      "unit": "Tbsp",
+      "unit": "tbsp",
       "notes": "grated"
     },
     {
-      "name": "Low-Sodium Soy Sauce",
+      "name": "low-sodium soy sauce",
       "quantity": "0.25",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Hoisin Sauce",
+      "name": "hoisin sauce",
       "quantity": "0.33",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Sesame Oil",
+      "name": "sesame oil",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Rice Vinegar",
+      "name": "rice vinegar",
       "quantity": "2",
-      "unit": "Tbsp"
+      "unit": "tbsp"
     },
     {
-      "name": "Crushed Roasted Peanuts",
+      "name": "crushed roasted peanuts",
       "quantity": "0.5",
-      "unit": "Cup"
+      "unit": "cup"
     },
     {
-      "name": "Lime",
+      "name": "lime",
       "quantity": "3",
       "unit": "whole",
       "notes": "wedged"
@@ -150,15 +150,30 @@
     "Wrap in rice paper with fresh herbs."
   ],
   "whyCrewsLikeIt": "Low-carb option without feeling like punishment. Interactive assembly keeps dinner fun on quiet nights.",
-  "mealPrepNotes": "Wash and dry lettuce cups early. Keep filling warm in a hotel pan at the line. Station: Keep lettuce on ice until service—warm filling wilts leaves instantly. Station: Cook turkey in batches for better browning and crisper texture. Station: Build station: lettuce, turkey, hoisin, peanuts, lime, scallions.",
+  "mealPrepNotes": "Wash and dry lettuce cups early. Keep filling warm in a baking dish at the line. Station: Keep lettuce on ice until service—warm filling wilts leaves instantly. Station: Cook turkey in batches for better browning and crisper texture. Station: Build station: lettuce, turkey, hoisin, peanuts, lime, scallions.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 275,
-    "protein": 34,
-    "carbs": 10,
-    "fats": 11,
-    "label": "~275 cal/serving · 34g protein · 2g fiber (est.)"
+    "calories": 407,
+    "protein": 42,
+    "carbs": 9,
+    "fats": 22,
+    "label": "Estimated per serving",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
   },
   "heroImage": "/images/golden-100/turkey-lettuce-wrap-night.jpg",
   "heroImageAlt": "Wide firehall crew platter of Turkey Lettuce Wraps on a station prep table, family-style serving",
@@ -185,6 +200,55 @@
     "turkey-sweet-potato-chili",
     "asian-chicken-lettuce-cups"
   ],
-  "generatedAt": "2026-06-04T20:47:19.355Z",
-  "contentVersion": 2
+  "generatedAt": "2026-07-29T13:35:43.673Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "low-sodium soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "hoisin sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "crushed roasted peanuts",
+        "allergens": [
+          "peanuts"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+      }
+    ],
+    "classifiedAt": "2026-07-29T13:35:50.482Z"
+  }
 }

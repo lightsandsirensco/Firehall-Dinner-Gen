@@ -150,7 +150,7 @@ export const BATCH_A_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
         title: "Fold and serve",
         minutes: 3,
         instruction:
-          "Remove from heat immediately and fold in the reserved pepper-tomato mixture. Garnish with chives. Serve at once with warm pita — menemen does not hold well on a steam table.",
+          "Remove from heat immediately and fold in the reserved pepper-tomato mixture. Garnish with chives. Serve at once with warm pita — menemen doesn't hold up well if it sits around waiting to be served.",
       },
     ],
     stationWorkflow: [

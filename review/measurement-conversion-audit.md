@@ -1,12 +1,12 @@
 # Measurement conversion audit
 
-Generated: 2026-06-28T01:23:35.795Z
+Generated: 2026-07-29T23:13:11.980Z
 
 | Metric | Value |
 |--------|-------|
-| Recipes checked | 339 |
-| Imperial fields converted (sample) | 313 |
-| Title Case gaps (display-layer fixes) | 8 |
+| Recipes checked | 402 |
+| Imperial fields converted (sample) | 1509 |
+| Title Case gaps (display-layer fixes) | 2649 |
 | Failures | 0 |
 
 _No failures._
