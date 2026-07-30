@@ -75,6 +75,65 @@
     </noscript>
     <!-- LCP element on "/" — the marketing homepage hero image (see client/src/components/home/home-constants.ts) -->
     <link rel="preload" as="image" href="/images/brand/home-hero-firetruck.jpg" fetchpriority="high" />
+    <!--
+      Static site-level structured data. These two schemas are compile-time
+      constants and never change per-page, so they live here in the HTML shell
+      rather than being injected via JavaScript. Every crawler — including AI
+      bots and social unfurlers — sees them on the very first byte.
+
+      WebSite: enables the Google Sitelinks Search Box and confirms site identity.
+      Organization: establishes the brand entity for Knowledge Panel eligibility.
+
+      The server-side injectors (generic-page-injection.ts / recipe-html-injection.ts)
+      ALSO emit these per-route, which is fine — duplicate JSON-LD blocks are
+      ignored by parsers and the richer per-route versions take precedence.
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": "Firehall Meals",
+          "alternateName": ["FirehallMeals", "Firefighter Recipes", "Firehouse Meals"],
+          "url": "https://www.firehallmeals.com/",
+          "inLanguage": "en-US",
+          "description": "Crew-sized firefighter meals for the fire hall and fire station. Browse hundreds of shift-tested recipes, meal ideas, and tools built by firefighters.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://www.firehallmeals.com/explore?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "name": "FirehallMeals",
+          "alternateName": "Firehall Meals",
+          "url": "https://www.firehallmeals.com/",
+          "description": "Crew-sized firefighter meals for the fire hall and fire station. Browse hundreds of shift-tested recipes, meal ideas, and tools built by firefighters.",
+          "knowsAbout": [
+            "firefighter meals",
+            "firefighter recipes",
+            "firehall meals",
+            "fire station meals",
+            "firehouse recipes",
+            "meals for firefighters",
+            "firefighter dinner ideas",
+            "crew meals",
+            "station meals",
+            "firehouse cooking",
+            "healthy firefighter meals",
+            "firefighter breakfast recipes",
+            "firehall recipes",
+            "firehall dinner ideas"
+          ]
+        }
+      ]
+    }
+    </script>
   </head>
   <body>
     <div id="root"></div>
