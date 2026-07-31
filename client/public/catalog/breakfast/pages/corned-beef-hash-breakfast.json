@@ -152,6 +152,12 @@
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
+        "name": "vegetable oil",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
         "name": "large eggs",
         "allergens": [
           "egg"
@@ -160,7 +166,7 @@
     ],
     "flags": {
       "glutenFree": true,
-      "dairyFree": true,
+      "dairyFree": false,
       "eggFree": false,
       "nutFree": true,
       "peanutFree": true,
@@ -171,7 +177,13 @@
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

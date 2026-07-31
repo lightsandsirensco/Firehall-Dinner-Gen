@@ -1,6 +1,6 @@
 # SEO Sitemap Audit Report
 
-Generated: 2026-07-29T13:59:35.552Z
+Generated: 2026-07-30T13:04:10.026Z
 
 ## Summary
 
@@ -47,7 +47,7 @@ Generated: 2026-07-29T13:59:35.552Z
 
 Missing dedicated pages for: meals for first responders, shift worker meals
 
-## Issues (84)
+## Issues (82)
 
 - [structured-data/recipe_schema_missing] beef-birria-with-consomme: Missing image
 - [images/missing_hero] beef-birria-with-consomme: Hero image file missing
@@ -79,8 +79,6 @@ Missing dedicated pages for: meals for first responders, shift worker meals
 - [structured-data/recipe_schema_missing] high-protein-chicken-fried-rice: Missing image
 - [images/missing_hero] high-protein-chicken-fried-rice: Hero image file missing
 - [images/schema_image_missing] high-protein-chicken-fried-rice: Recipe schema missing image
-- [recipes/duplicate_title] italian-sausage-veg-sheet-pan: Duplicate title with sheet-pan-sausage-peppers
-- [recipes/duplicate_meta_title] italian-sausage-veg-sheet-pan: Duplicate meta title with sheet-pan-sausage-peppers
 - [structured-data/recipe_schema_missing] italian-sausage-veg-sheet-pan: Missing image
 - [images/missing_hero] italian-sausage-veg-sheet-pan: Hero image file missing
 - [images/schema_image_missing] italian-sausage-veg-sheet-pan: Recipe schema missing image
@@ -89,5 +87,7 @@ Missing dedicated pages for: meals for first responders, shift worker meals
 - [images/schema_image_missing] kung-pao-chicken-rice-bowls: Recipe schema missing image
 - [structured-data/recipe_schema_missing] lean-beef-broccoli-rice: Missing image
 - [images/missing_hero] lean-beef-broccoli-rice: Hero image file missing
+- [images/schema_image_missing] lean-beef-broccoli-rice: Recipe schema missing image
+- [structured-data/recipe_schema_missing] lean-turkey-bean-chili: Missing image
 
-… and 44 more (see JSON).
+… and 42 more (see JSON).

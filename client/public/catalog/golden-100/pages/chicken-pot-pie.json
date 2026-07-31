@@ -190,6 +190,7 @@
       {
         "name": "Butter And Flour",
         "allergens": [
+          "gluten",
           "dairy"
         ]
       }
@@ -211,7 +212,7 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bread/crust/wrapper alternative."
+        "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bread/crust/wrapper alternative. Use a 1:1 gluten-free all-purpose flour blend."
       },
       {
         "flag": "dairy",
@@ -219,6 +220,6 @@
         "note": "Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

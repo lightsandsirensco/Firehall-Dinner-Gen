@@ -314,6 +314,12 @@
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
+        "name": "Potato Burger Buns",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
         "name": "American Cheese Slices",
         "allergens": [
           "dairy"
@@ -368,7 +374,7 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes."
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface. Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes."
       },
       {
         "flag": "dairy",
@@ -381,6 +387,6 @@
         "note": "Use an egg-free/vegan mayonnaise."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

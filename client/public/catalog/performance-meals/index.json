@@ -1,7 +1,7 @@
 {
   "version": 1,
   "contentVersion": 2,
-  "generatedAt": "2026-07-29T13:35:43.720Z",
+  "generatedAt": "2026-07-30T20:19:43.137Z",
   "recipeCount": 71,
   "recipes": [
     {
@@ -36,30 +36,7 @@
         "handheld",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": false,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "baked-falafel-hall-bowls",
@@ -93,24 +70,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": true
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "baked-turkey-meatball-marinara",
@@ -143,35 +103,7 @@
         "bake",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "beef-birria-with-consomme",
@@ -183,8 +115,8 @@
       "mealFormat": "one_pot",
       "cookTime": 210,
       "difficulty": "medium",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/beef-birria-with-consomme.jpg",
+      "thumbImage": "/images/thumbs/beef-birria-with-consomme.jpg",
       "tags": [
         "protein:beef",
         "format:one_pot",
@@ -205,30 +137,7 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "blackened-cod-taco-night",
@@ -262,24 +171,7 @@
         "tacos",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
@@ -313,24 +205,7 @@
         "plated main",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "cajun-chicken-dirty-rice-bowls",
@@ -342,8 +217,8 @@
       "mealFormat": "bowl",
       "cookTime": 25,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/cajun-chicken-dirty-rice-bowls.jpg",
       "tags": [
         "protein:chicken",
         "format:bowl",
@@ -364,35 +239,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "egg",
-            "label": "Egg-Free Adaptable",
-            "note": "Use an egg-free/vegan mayonnaise."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "cajun-chicken-rice-bowl",
@@ -426,30 +273,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "caprese-chicken-bake",
@@ -482,30 +306,7 @@
         "bake",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "chicken-enchilada-skillet-light",
@@ -539,30 +340,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "chicken-marsala-lightened",
@@ -574,8 +352,8 @@
       "mealFormat": "skillet",
       "cookTime": 35,
       "difficulty": "medium",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/chicken-marsala-lightened.jpg",
+      "thumbImage": "/images/thumbs/chicken-marsala-lightened.jpg",
       "tags": [
         "protein:chicken",
         "format:skillet",
@@ -596,40 +374,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a plant-based butter/margarine."
-          },
-          {
-            "flag": "alcohol",
-            "label": "Alcohol-Free Adaptable",
-            "note": "Substitute broth plus a splash of vinegar for the acidity."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "chipotle-lime-chicken-tacos",
@@ -662,24 +407,7 @@
         "tacos",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "cottage-cheese-protein-pasta",
@@ -713,30 +441,7 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pasta."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "crispy-fish-taco-night",
@@ -770,30 +475,7 @@
         "tacos",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a 1:1 gluten-free all-purpose flour blend."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "crock-barbacoa-chicken",
@@ -827,30 +509,7 @@
         "slow cooker",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "cuban-beef-picadillo-bowls",
@@ -862,8 +521,8 @@
       "mealFormat": "bowl",
       "cookTime": 30,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+      "thumbImage": "/images/thumbs/cuban-beef-picadillo-bowls.jpg",
       "tags": [
         "protein:beef",
         "format:bowl",
@@ -885,24 +544,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "filipino-chicken-adobo",
@@ -914,8 +556,8 @@
       "mealFormat": "one_pot",
       "cookTime": 35,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/filipino-chicken-adobo.jpg",
+      "thumbImage": "/images/thumbs/filipino-chicken-adobo.jpg",
       "tags": [
         "protein:chicken",
         "format:one_pot",
@@ -936,35 +578,7 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "general-tsos-baked-chicken",
@@ -976,8 +590,8 @@
       "mealFormat": "sheet_pan",
       "cookTime": 30,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/general-tsos-baked-chicken.jpg",
+      "thumbImage": "/images/thumbs/general-tsos-baked-chicken.jpg",
       "tags": [
         "protein:chicken",
         "format:sheet_pan",
@@ -998,30 +612,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
@@ -1033,8 +624,8 @@
       "mealFormat": "bake",
       "cookTime": 25,
       "difficulty": "medium",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+      "thumbImage": "/images/thumbs/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
       "tags": [
         "protein:beef",
         "format:bake",
@@ -1056,30 +647,7 @@
         "bake",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "greek-lemon-chicken-potatoes",
@@ -1113,30 +681,7 @@
         "roast",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
@@ -1148,8 +693,8 @@
       "mealFormat": "bowl",
       "cookTime": 15,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "thumbImage": "/images/thumbs/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
       "tags": [
         "protein:beef",
         "format:bowl",
@@ -1170,24 +715,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "grilled-shrimp-quinoa-bowls",
@@ -1221,30 +749,7 @@
         "grill",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": false,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "herb-baked-salmon-tray",
@@ -1278,24 +783,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "herb-marinated-flank-steak-chimichurri-farro",
@@ -1307,8 +795,8 @@
       "mealFormat": "skillet",
       "cookTime": 20,
       "difficulty": "medium",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
+      "thumbImage": "/images/thumbs/herb-marinated-flank-steak-chimichurri-farro.jpg",
       "tags": [
         "protein:beef",
         "format:skillet",
@@ -1330,30 +818,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Substitute quinoa or rice. Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "high-protein-chicken-fried-rice",
@@ -1365,8 +830,8 @@
       "mealFormat": "skillet",
       "cookTime": 15,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/high-protein-chicken-fried-rice.jpg",
+      "thumbImage": "/images/thumbs/high-protein-chicken-fried-rice.jpg",
       "tags": [
         "protein:chicken",
         "format:skillet",
@@ -1387,35 +852,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "honey-garlic-chicken-rice-bowls",
@@ -1449,35 +886,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "honey-lime-chicken-tray",
@@ -1510,24 +919,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "hummus-chicken-platter",
@@ -1560,30 +952,7 @@
         "plated",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "italian-sausage-veg-sheet-pan",
@@ -1595,8 +964,8 @@
       "mealFormat": "sheet_pan",
       "cookTime": 28,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
+      "thumbImage": "/images/thumbs/italian-sausage-veg-sheet-pan.jpg",
       "tags": [
         "protein:pork",
         "format:sheet_pan",
@@ -1617,30 +986,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": false,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "korean-beef-rice-bowls",
@@ -1674,35 +1020,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "kung-pao-chicken-rice-bowls",
@@ -1714,8 +1032,8 @@
       "mealFormat": "bowl",
       "cookTime": 25,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/kung-pao-chicken-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/kung-pao-chicken-rice-bowls.jpg",
       "tags": [
         "protein:chicken",
         "format:bowl",
@@ -1736,35 +1054,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": false,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "lean-beef-broccoli-rice",
@@ -1776,8 +1066,8 @@
       "mealFormat": "stir_fry",
       "cookTime": 15,
       "difficulty": "medium",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/lean-beef-broccoli-rice.jpg",
+      "thumbImage": "/images/thumbs/lean-beef-broccoli-rice.jpg",
       "tags": [
         "protein:beef",
         "format:stir_fry",
@@ -1798,35 +1088,7 @@
         "stir fry",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": false,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "lean-turkey-bean-chili",
@@ -1838,8 +1100,8 @@
       "mealFormat": "slow_cooker",
       "cookTime": 240,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/lean-turkey-bean-chili.jpg",
+      "thumbImage": "/images/thumbs/lean-turkey-bean-chili.jpg",
       "tags": [
         "protein:turkey",
         "format:slow_cooker",
@@ -1860,30 +1122,7 @@
         "slow cooker",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "lemon-chicken-orzo-soup",
@@ -1916,30 +1155,7 @@
         "soup",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "lemon-garlic-chicken-tray",
@@ -1972,24 +1188,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "lemon-garlic-shrimp-pasta",
@@ -2022,35 +1221,7 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": false,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pasta/noodle alternative."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a plant-based butter/margarine."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "lemon-salmon-orzo-skillet",
@@ -2084,35 +1255,7 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "lentil-mushroom-bolognese",
@@ -2146,35 +1289,7 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": true
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "alcohol",
-            "label": "Alcohol-Free Adaptable",
-            "note": "Substitute broth plus a splash of vinegar for the acidity."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "maple-mustard-salmon-tray",
@@ -2207,24 +1322,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "maple-soy-salmon-bowls",
@@ -2257,30 +1355,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "mediterranean-baked-fish-tray",
@@ -2314,24 +1389,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "mediterranean-beef-kofta-bowls",
@@ -2343,8 +1401,8 @@
       "mealFormat": "bowl",
       "cookTime": 22,
       "difficulty": "medium",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/mediterranean-beef-kofta-bowls.jpg",
+      "thumbImage": "/images/thumbs/mediterranean-beef-kofta-bowls.jpg",
       "tags": [
         "protein:beef",
         "format:bowl",
@@ -2364,30 +1422,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pasta/noodle alternative. Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "mediterranean-chicken-white-bean-skillet",
@@ -2399,8 +1434,8 @@
       "mealFormat": "skillet",
       "cookTime": 30,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
+      "thumbImage": "/images/thumbs/mediterranean-chicken-white-bean-skillet.jpg",
       "tags": [
         "protein:chicken",
         "format:skillet",
@@ -2421,35 +1456,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "moroccan-chicken-chickpea-tray",
@@ -2483,24 +1490,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "one-pot-beef-orzo-skillet-spinach-feta",
@@ -2512,8 +1502,8 @@
       "mealFormat": "pasta",
       "cookTime": 30,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+      "thumbImage": "/images/thumbs/one-pot-beef-orzo-skillet-spinach-feta.jpg",
       "tags": [
         "protein:beef",
         "format:pasta",
@@ -2534,35 +1524,7 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "peruvian-sheet-pan-chicken-aji-verde",
@@ -2574,8 +1536,8 @@
       "mealFormat": "sheet_pan",
       "cookTime": 35,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
+      "thumbImage": "/images/thumbs/peruvian-sheet-pan-chicken-aji-verde.jpg",
       "tags": [
         "protein:chicken",
         "format:sheet_pan",
@@ -2596,40 +1558,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
-          },
-          {
-            "flag": "egg",
-            "label": "Egg-Free Adaptable",
-            "note": "Use an egg-free/vegan mayonnaise."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "pesto-tomato-chicken-tray",
@@ -2663,30 +1592,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": false,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "treeNuts",
-            "label": "Nut-Free Adaptable",
-            "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "salsa-verde-crock-chicken",
@@ -2719,30 +1625,7 @@
         "slow cooker",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "shawarma-chicken-rice-bowls",
@@ -2776,24 +1659,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "sheet-pan-chicken-fajitas-lite",
@@ -2805,8 +1671,8 @@
       "mealFormat": "sheet_pan",
       "cookTime": 22,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-chicken-fajitas-lite.jpg",
       "tags": [
         "protein:chicken",
         "format:sheet_pan",
@@ -2827,24 +1693,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
@@ -2856,8 +1705,8 @@
       "mealFormat": "sheet_pan",
       "cookTime": 25,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
       "tags": [
         "protein:chicken",
         "format:sheet_pan",
@@ -2878,24 +1727,7 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "smoky-lentil-kale-soup",
@@ -2929,30 +1761,7 @@
         "soup",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": true
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "southwest-beef-sweet-potato-skillet",
@@ -2964,8 +1773,8 @@
       "mealFormat": "skillet",
       "cookTime": 30,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
+      "thumbImage": "/images/thumbs/southwest-beef-sweet-potato-skillet.jpg",
       "tags": [
         "protein:beef",
         "format:skillet",
@@ -2986,24 +1795,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "spanish-chicken-chorizo-rice",
@@ -3037,35 +1829,7 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": false,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "tabbouleh-chicken-bowls",
@@ -3098,30 +1862,7 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Substitute quinoa or rice."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "thai-basil-ground-beef-skillet",
@@ -3133,8 +1874,8 @@
       "mealFormat": "skillet",
       "cookTime": 18,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+      "thumbImage": "/images/thumbs/thai-basil-ground-beef-skillet.jpg",
       "tags": [
         "protein:beef",
         "format:skillet",
@@ -3154,35 +1895,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": false,
-          "shellfishFree": false,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "soy",
-            "label": "Soy-Free Adaptable",
-            "note": "Use coconut aminos."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "trinidadian-curry-chicken-potatoes",
@@ -3194,8 +1907,8 @@
       "mealFormat": "one_pot",
       "cookTime": 40,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+      "thumbImage": "/images/thumbs/trinidadian-curry-chicken-potatoes.jpg",
       "tags": [
         "protein:chicken",
         "format:one_pot",
@@ -3216,30 +1929,7 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "turkey-lettuce-wrap-night",
@@ -3273,30 +1963,7 @@
         "handheld",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": false,
-          "soyFree": false,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "turkey-quinoa-stuffed-peppers",
@@ -3308,8 +1975,8 @@
       "mealFormat": "bake",
       "cookTime": 45,
       "difficulty": "medium",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
+      "thumbImage": "/images/thumbs/turkey-quinoa-stuffed-peppers.jpg",
       "tags": [
         "protein:turkey",
         "format:bake",
@@ -3330,35 +1997,7 @@
         "bake",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "turkey-sausage-egg-muffins",
@@ -3391,35 +2030,7 @@
         "breakfast",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": false,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "turkey-shepherds-sweet-potato",
@@ -3453,35 +2064,7 @@
         "bake",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "turkey-sweet-potato-chili",
@@ -3514,30 +2097,7 @@
         "slow cooker",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "turkey-taco-skillet",
@@ -3570,30 +2130,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "turkey-zoodle-bolognese",
@@ -3626,35 +2163,7 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          },
-          {
-            "flag": "alcohol",
-            "label": "Alcohol-Free Adaptable",
-            "note": "Substitute broth plus a splash of vinegar for the acidity."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "unstuffed-cabbage-roll-skillet",
@@ -3666,8 +2175,8 @@
       "mealFormat": "skillet",
       "cookTime": 35,
       "difficulty": "easy",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
+      "thumbImage": "/images/thumbs/unstuffed-cabbage-roll-skillet.jpg",
       "tags": [
         "protein:beef",
         "format:skillet",
@@ -3687,30 +2196,7 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "veggie-egg-casserole-tray",
@@ -3744,35 +2230,7 @@
         "breakfast",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a 1:1 gluten-free all-purpose flour blend."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "vietnamese-caramel-braised-chicken-bowls",
@@ -3784,8 +2242,8 @@
       "mealFormat": "one_pot",
       "cookTime": 30,
       "difficulty": "medium",
-      "heroImage": "",
-      "thumbImage": "",
+      "heroImage": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/vietnamese-caramel-braised-chicken-bowls.jpg",
       "tags": [
         "protein:chicken",
         "format:one_pot",
@@ -3806,24 +2264,7 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": false,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "white-bean-chicken-chili",
@@ -3856,30 +2297,7 @@
         "soup",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "white-bean-kale-soup",
@@ -3913,35 +2331,7 @@
         "soup",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
-          }
-        ]
-      }
+      ]
     },
     {
       "slug": "yogurt-marinated-grill-chicken",
@@ -3975,24 +2365,7 @@
         "grill",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     },
     {
       "slug": "zaatar-roasted-chicken-thighs",
@@ -4026,24 +2399,7 @@
         "roast",
         "performance meal",
         "firefighter healthy"
-      ],
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": false,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      ]
     }
   ]
 }

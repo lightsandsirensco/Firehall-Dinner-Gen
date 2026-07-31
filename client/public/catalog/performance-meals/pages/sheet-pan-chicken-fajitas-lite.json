@@ -1,8 +1,8 @@
 {
   "slug": "sheet-pan-chicken-fajitas-lite",
   "title": "Chicken Fajitas",
-  "displayTitle": "Chicken Fajitas",
-  "seoTitle": "Chicken Fajitas | Firefighter Meal",
+  "displayTitle": "Chicken Fajitas (Lightened)",
+  "seoTitle": "Chicken Fajitas (Lightened) | Firefighter Meal",
   "shortDescription": "Charred peppers and onions with spiced chicken strips—no heavy oil",
   "subtitle": "Charred peppers and onions with spiced chicken strips—no heavy oil",
   "category": "healthy_performance",
@@ -175,11 +175,11 @@
       "performanceMeal": true
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
   "heroImageAlt": "Wide firehall crew platter of Chicken Fajitas on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/sheet-pan-chicken-fajitas-lite.jpg",
+  "thumbImage": "/images/thumbs/sheet-pan-chicken-fajitas-lite.jpg",
+  "railImage": "/images/rails/sheet-pan-chicken-fajitas-lite.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -222,6 +222,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

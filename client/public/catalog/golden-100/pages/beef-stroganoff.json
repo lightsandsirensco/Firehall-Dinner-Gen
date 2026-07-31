@@ -299,7 +299,8 @@
       {
         "name": "Wide Egg Noodles",
         "allergens": [
-          "gluten"
+          "gluten",
+          "egg"
         ]
       },
       {
@@ -337,7 +338,7 @@
     "flags": {
       "glutenFree": false,
       "dairyFree": false,
-      "eggFree": true,
+      "eggFree": false,
       "nutFree": true,
       "peanutFree": true,
       "soyFree": true,
@@ -351,9 +352,14 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+        "note": "Use a certified gluten-free pasta or rice noodles. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free wheat or rice noodle."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

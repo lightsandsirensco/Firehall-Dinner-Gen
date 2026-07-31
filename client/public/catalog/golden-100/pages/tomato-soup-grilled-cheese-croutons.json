@@ -251,7 +251,7 @@
       "shellfishFree": true,
       "fishFree": true,
       "porkFree": true,
-      "vegetarian": true,
+      "vegetarian": false,
       "vegan": false
     },
     "adaptable": [
@@ -261,6 +261,6 @@
         "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

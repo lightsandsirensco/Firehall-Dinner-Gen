@@ -235,6 +235,19 @@ export function ExploreCatalogFilters({
           High protein
         </FilterChip>
         <FilterChip
+          active={filters.lowCarb}
+          onClick={() => {
+            setFilters({ ...filters, lowCarb: !filters.lowCarb });
+            trackExploreFilter({
+              filter_key: "trait:low_carb",
+              filter_label: "Low carb",
+            });
+          }}
+          testId="explore-catalog-trait-low-carb"
+        >
+          Low carb
+        </FilterChip>
+        <FilterChip
           active={filters.lowCleanup}
           onClick={() => {
             setFilters({ ...filters, lowCleanup: !filters.lowCleanup });
@@ -307,6 +320,7 @@ export function countActiveCatalogFilters(filters: ApprovedCatalogFilterState): 
   if (filters.protein !== "all") n++;
   if (filters.cookTime !== "all") n++;
   if (filters.highProtein) n++;
+  if (filters.lowCarb) n++;
   if (filters.lowCleanup) n++;
   n += filters.dietary.length;
   return n;

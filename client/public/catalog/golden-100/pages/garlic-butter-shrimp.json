@@ -198,12 +198,13 @@
       {
         "name": "Dry White Wine Or Chicken Broth",
         "allergens": [
+          "gluten",
           "alcohol"
         ]
       }
     ],
     "flags": {
-      "glutenFree": true,
+      "glutenFree": false,
       "dairyFree": false,
       "eggFree": true,
       "nutFree": true,
@@ -217,6 +218,11 @@
     },
     "adaptable": [
       {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
         "note": "Use a plant-based butter/margarine."
@@ -227,6 +233,6 @@
         "note": "Substitute broth plus a splash of vinegar for the acidity."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

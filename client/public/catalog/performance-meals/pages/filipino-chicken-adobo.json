@@ -168,11 +168,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/filipino-chicken-adobo.jpg",
   "heroImageAlt": "Wide firehall crew platter of Filipino-Style Chicken Adobo on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/filipino-chicken-adobo.jpg",
+  "thumbImage": "/images/thumbs/filipino-chicken-adobo.jpg",
+  "railImage": "/images/rails/filipino-chicken-adobo.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -240,6 +240,6 @@
         "note": "Use coconut aminos."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

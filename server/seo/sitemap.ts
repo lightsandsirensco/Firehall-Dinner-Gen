@@ -387,6 +387,62 @@ export function pathShouldNoindex(pathname: string): boolean {
   );
 }
 
+/**
+ * `/llms.txt` — generated dynamically (like robots.txt/sitemap.xml above)
+ * instead of a hand-maintained static file, so it can't drift out of sync as
+ * new landing pages, product pages, or collections are added.
+ */
+export function buildLlmsTxt(origin: string): string {
+  const base = origin.replace(/\/+$/, "");
+  const recipeCount = readHallRecipeSlugs().length + readSmoothieSlugs().length;
+  const guideCount = readGuideSlugs().length;
+  const landingLinks = allSeoLandingPagePaths()
+    .map((p) => `- [${base}${p}](${base}${p})`)
+    .join("\n");
+  const productLinks = allProductSeoPagePaths()
+    .map((p) => `- [${base}${p}](${base}${p})`)
+    .join("\n");
+
+  return `# Firehall Meals
+
+> Firehall Meals is a meal-planning app for firefighters — crew-sized recipes, shift-tested dinners, and tools built for station kitchens where the tones can drop mid-prep.
+
+Firehall Meals publishes ${recipeCount}+ firefighter meal recipes (dinners, BBQ/smoker, breakfast, smoothies, pizza night, and healthy/performance meals) plus ${guideCount}+ guides on feeding a crew, along with planning tools like the Classics Wheel and a hall meal planner. Content is written for real fire station kitchens: crew scaling from 2–20+, beginner-friendly steps, and instructions that hold up when a call interrupts dinner.
+
+## Docs
+
+- [Sitemap](${base}/sitemap.xml): Full list of indexable recipe, guide, and landing page URLs
+- [About](${base}/about): Who Firehall Meals is built for and how recipes are tested
+- [How We Test Recipes](${base}/how-we-test-recipes): Recipe testing and quality methodology
+- [FAQ](${base}/faq): Common questions about firefighter meals and using the app
+
+## Recipe collections
+
+- [Explore all recipes](${base}/explore): Full searchable recipe catalog
+- [Recipe families](${base}/families): Recipes grouped by dish family
+- [Classics Wheel](${base}/wheel): Spin-to-decide firehall classics
+- [BBQ & Smoker](${base}/firefighter-bbq-recipes): Smoker and BBQ firefighter recipes
+- [Breakfast](${base}/breakfast): Firefighter breakfast and shift-fuel recipes
+- [Smoothies](${base}/smoothies): Healthy smoothies for firefighters
+- [Pizza Night](${base}/pizza): Firehall pizza night recipes
+- [Guides](${base}/guides): Articles on feeding a crew, shift nutrition, and station cooking
+
+## Landing pages
+
+${landingLinks}
+
+## Tools
+
+${productLinks}
+
+## Notes
+
+- Recipe pages include structured \`Recipe\` data (ingredients, instructions, times, nutrition) via schema.org JSON-LD, plus a plain-HTML content snapshot for non-JS clients.
+- Guide pages include structured \`Article\` data and FAQ schema.
+- Account pages, admin tooling, and API routes (\`/me\`, \`/admin\`, \`/api/\`, \`/hall\`, \`/vote/\`, \`/settings\`, \`/profile\`) are private and excluded from indexing — see \`/robots.txt\`.
+`;
+}
+
 /** Best-effort static sitemap fallback when dynamic generation fails. */
 export function readStaticSitemapFallback(): string | null {
   const candidates = [

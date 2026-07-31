@@ -186,11 +186,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/chicken-marsala-lightened.jpg",
   "heroImageAlt": "Wide firehall crew platter of Chicken Marsala (Lightened) on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/chicken-marsala-lightened.jpg",
+  "thumbImage": "/images/thumbs/chicken-marsala-lightened.jpg",
+  "railImage": "/images/rails/chicken-marsala-lightened.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -246,14 +246,15 @@
       {
         "name": "whole wheat egg noodles",
         "allergens": [
-          "gluten"
+          "gluten",
+          "egg"
         ]
       }
     ],
     "flags": {
       "glutenFree": false,
       "dairyFree": false,
-      "eggFree": true,
+      "eggFree": false,
       "nutFree": true,
       "peanutFree": true,
       "soyFree": true,
@@ -267,7 +268,7 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta."
+        "note": "Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta or rice noodles."
       },
       {
         "flag": "dairy",
@@ -275,11 +276,16 @@
         "note": "Use a plant-based butter/margarine."
       },
       {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free wheat or rice noodle."
+      },
+      {
         "flag": "alcohol",
         "label": "Alcohol-Free Adaptable",
         "note": "Substitute broth plus a splash of vinegar for the acidity."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

@@ -1,6 +1,6 @@
 # Food Safety & Dietary Intelligence Audit
 
-Generated: 2026-07-28T02:14:48.504Z
+Generated: 2026-07-30T18:44:27.512Z
 
 ## Summary
 
@@ -9,35 +9,34 @@ Before this sprint, the Firehall Meals catalog had **zero** dietary/allergen tag
 **Governing rule:** if any ingredient in a recipe cannot be confidently matched to a known dietary profile, the recipe's classification confidence drops to **Low** and it is excluded from every strict filter (Gluten-Free, Vegan, etc.) regardless of what its other ingredients look like. A recipe only ever appears under a strict dietary filter when confidence is **High** — meaning every one of its ingredients resolved to a known, verified profile.
 
 - **Total recipes classified:** 432
-- **High confidence (fully verified):** 430 (99.5%)
-- **Low confidence (contains an unverified ingredient — excluded from all strict filters):** 2 (0.5%)
+- **High confidence (fully verified):** 431 (99.8%)
+- **Low confidence (contains an unverified ingredient — excluded from all strict filters):** 1 (0.2%)
 
-Every recipe in the current catalog resolved to 100% high confidence after the ingredient database was expanded to cover every distinct ingredient string in use (see `scripts/dietary-classify-catalog.ts`). Any *future* recipe added with an ingredient not yet in the database will correctly default to Low confidence and be held out of strict filters until reviewed — this is expected, intentional behavior, not a bug.
+431 of 432 recipes resolved to high confidence after the ingredient database was expanded to cover almost every distinct ingredient string in use (see `scripts/dietary-classify-catalog.ts`). The remaining 1 recipe(s) listed below contain a genuinely ambiguous ingredient (e.g. an "X or Y" alternative naming an unconfirmed protein/dairy source) and are intentionally held out of every strict filter until a human resolves the ambiguity — this is expected, conservative behavior, not a bug. Any *future* recipe added with an ingredient not yet in the database will likewise correctly default to Low confidence.
 
 ## Per-filter counts
 
 | Filter | Qualifies | Excluded | Coverage |
 |---|---|---|---|
-| glutenFree | 119 | 313 | 27.5% |
-| dairyFree | 154 | 278 | 35.6% |
-| eggFree | 312 | 120 | 72.2% |
-| nutFree | 419 | 13 | 97% |
-| peanutFree | 421 | 11 | 97.5% |
+| glutenFree | 113 | 319 | 26.2% |
+| dairyFree | 149 | 283 | 34.5% |
+| eggFree | 306 | 126 | 70.8% |
+| nutFree | 418 | 14 | 96.8% |
+| peanutFree | 422 | 10 | 97.7% |
 | soyFree | 387 | 45 | 89.6% |
-| shellfishFree | 416 | 16 | 96.3% |
-| fishFree | 383 | 49 | 88.7% |
-| porkFree | 311 | 121 | 72% |
-| vegetarian | 56 | 376 | 13% |
-| vegan | 6 | 426 | 1.4% |
+| shellfishFree | 417 | 15 | 96.5% |
+| fishFree | 382 | 50 | 88.4% |
+| porkFree | 310 | 122 | 71.8% |
+| vegetarian | 46 | 386 | 10.6% |
+| vegan | 5 | 427 | 1.2% |
 
 Low counts for `glutenFree`, `dairyFree`, `vegetarian`, and `vegan` are expected and correct — this is a firefighter comfort-food catalog built around wheat pasta/bread/tortillas, dairy, and meat. The system is not under-tagging; it accurately reflects what's actually in these recipes.
 
-## Recipes with uncertain ingredients (2)
+## Recipes with uncertain ingredients (1)
 
-- **BBQ Chicken Sliders** (`golden-100/bbq-chicken-sliders`): Slider Rolls (Hawaiian-style, 12-count pack)
-- **Cedar Plank Salmon** (`golden-100/cedar-plank-salmon`): Cedar Planks (soaked at least 1 hour)
+- **Big-Pot Savory Oats** (`breakfast/big-pot-savory-oats`): water or broth
 
-## Recipes with a "-Free Adaptable" substitution available (356)
+## Recipes with a "-Free Adaptable" substitution available (362)
 
 These recipes do NOT qualify for the strict filter as written, but a known, single-ingredient substitution would clear them — e.g. swapping soy sauce for tamari to remove gluten. The UI surfaces these as informational "Adaptable" badges on the recipe page; they never appear when a strict filter is active.
 
@@ -59,6 +58,10 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
 - **BBQ Chicken Pizza** (`golden-100/bbq-chicken-pizza`)
   - Gluten-Free Adaptable: Use a certified gluten-free pizza crust.
   - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
+- **BBQ Chicken Sliders** (`golden-100/bbq-chicken-sliders`)
+  - Gluten-Free Adaptable: Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free broth or bouillon.
+  - Dairy-Free Adaptable: Use a plant-based butter/margarine.
+  - Egg-Free Adaptable: Use an egg-free/vegan mayonnaise.
 - **Beef Barley Soup** (`golden-100/beef-barley-soup`)
   - Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Substitute rice or a gluten-free grain.
 - **Beef and Broccoli** (`golden-100/beef-broccoli`)
@@ -70,7 +73,8 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
   - Egg-Free Adaptable: Use an egg-free/vegan mayonnaise.
   - Soy-Free Adaptable: Use coconut aminos.
 - **Beef Stroganoff** (`golden-100/beef-stroganoff`)
-  - Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce.
+  - Gluten-Free Adaptable: Use a certified gluten-free pasta or rice noodles. Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce.
+  - Egg-Free Adaptable: Use an egg-free wheat or rice noodle.
 - **Beer Can Chicken** (`golden-100/beer-can-chicken`)
   - Gluten-Free Adaptable: Use a certified gluten-free beer or non-alcoholic broth instead. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.
   - Alcohol-Free Adaptable: Substitute non-alcoholic beer or broth.
@@ -79,12 +83,16 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
   - Soy-Free Adaptable: Use coconut aminos.
   - Alcohol-Free Adaptable: Substitute brewed coffee or broth.
 - **Breakfast Burrito Bar** (`golden-100/breakfast-burrito-bar`)
-  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.
-  - Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute).
+  - Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.
+  - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
+  - Pork-Free Adaptable: Swap in chicken or turkey sausage.
 - **Breakfast Sausage Gravy Pizza** (`golden-100/breakfast-sausage-pizza`)
   - Gluten-Free Adaptable: Use a certified gluten-free pizza crust. Use a 1:1 gluten-free all-purpose flour blend. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux.
   - Pork-Free Adaptable: Swap in chicken or turkey sausage.
 - **Bulgogi Bowls** (`golden-100/bulgogi-bowls`)
+  - Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.
+  - Soy-Free Adaptable: Use coconut aminos.
+- **Cedar Plank Salmon** (`golden-100/cedar-plank-salmon`)
   - Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.
   - Soy-Free Adaptable: Use coconut aminos.
 - **Chicken Alfredo Bake** (`golden-100/chicken-alfredo-bake`)
@@ -95,24 +103,23 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
   - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon.
   - Dairy-Free Adaptable: Use a plant-based butter/margarine. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute).
 - **Chicken Parmesan** (`golden-100/chicken-parm`)
-  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta.
+  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta. Use a certified gluten-free bun/bread and toast on a separate, clean surface.
   - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
 - **Chicken Pot Pie** (`golden-100/chicken-pot-pie`)
-  - Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bread/crust/wrapper alternative.
+  - Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bread/crust/wrapper alternative. Use a 1:1 gluten-free all-purpose flour blend.
   - Dairy-Free Adaptable: Use a plant-based butter/margarine.
 - **Chicken Quesadillas** (`golden-100/chicken-quesadillas`)
   - Gluten-Free Adaptable: Use certified gluten-free tortillas or corn tortillas.
 - **Chicken Souvlaki** (`golden-100/chicken-souvlaki`)
-  - Gluten-Free Adaptable: Use a certified gluten-free beer or non-alcoholic broth instead. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.
-  - Alcohol-Free Adaptable: Substitute non-alcoholic beer or broth.
+  - Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.
 - **Chicken Tortilla Soup for the Hall** (`golden-100/chicken-tortilla-soup-for-the-hall`)
   - Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon.
   - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
 - **Chili Mac Skillet** (`golden-100/chili-mac`)
   - Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon.
 - **Chorizo Breakfast Tacos** (`golden-100/chorizo-breakfast-tacos`)
-  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.
-  - Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute).
+  - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
+  - Pork-Free Adaptable: Swap in chicken or turkey sausage.
 - **Crispy Chicken Cutlets Marinara** (`golden-100/crispy-chicken-cutlets`)
   - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers.
   - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
@@ -133,13 +140,14 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
   - Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity.
 - **French Onion Soup for the Hall** (`golden-100/french-onion-soup-for-the-hall`)
   - Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface.
+  - Dairy-Free Adaptable: Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative.
   - Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity.
 - **French Toast Casserole** (`golden-100/french-toast-casserole`)
-  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.
-  - Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute).
+  - Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.
 - **Game Day Nachos** (`golden-100/game-day-nachos`)
   - Gluten-Free Adaptable: Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet.
 - **Garlic Butter Shrimp** (`golden-100/garlic-butter-shrimp`)
+  - Gluten-Free Adaptable: Use a certified gluten-free broth or bouillon.
   - Dairy-Free Adaptable: Use a plant-based butter/margarine.
   - Alcohol-Free Adaptable: Substitute broth plus a splash of vinegar for the acidity.
 - **Ginger Salmon Rice Bowls** (`golden-100/ginger-salmon-bowls`)
@@ -153,6 +161,8 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
 - **Grilled Pork Chops** (`golden-100/grilled-pork-chops`)
   - Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.
   - Soy-Free Adaptable: Use coconut aminos.
+- **Taco Bar** (`golden-100/hall-taco-bar`)
+  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.
 - **Honey Garlic Pork Tenderloin** (`golden-100/honey-garlic-pork-tenderloin`)
   - Gluten-Free Adaptable: Use tamari (check soy-free brands separately) or coconut aminos.
   - Soy-Free Adaptable: Use coconut aminos.
@@ -186,6 +196,8 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
   - Dairy-Free Adaptable: Use a plant-based butter/margarine.
 - **Mediterranean Chickpea Bowls** (`golden-100/mediterranean-chickpea`)
   - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
+- **Memphis Dry Rub Ribs** (`golden-100/memphis-dry-rub-ribs`)
+  - Gluten-Free Adaptable: Confirm corn tortillas are used, or substitute a certified gluten-free wrap.
 - **Moroccan Lamb Meatballs** (`golden-100/moroccan-meatballs`)
   - Gluten-Free Adaptable: Use a certified gluten-free pasta/noodle alternative.
 - **NY Strip with Herb Butter** (`golden-100/ny-strip-herb-butter`)
@@ -197,21 +209,9 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
   - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.
   - Dairy-Free Adaptable: Use oat, almond, or soy milk (check tree-nut/soy status of the substitute).
 - **Parm Hero Subs** (`golden-100/parm-hero-subs`)
-  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free bun/bread and toast on a separate, clean surface.
+  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free bun/bread and toast on a separate, clean surface.
   - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
-- **Pasta e Ceci (Pasta with Chickpeas)** (`golden-100/pasta-e-ceci-for-the-hall`)
-  - Gluten-Free Adaptable: Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon.
-  - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
-- **Pepperoni Pizza** (`golden-100/pepperoni-pizza-night`)
-  - Gluten-Free Adaptable: Use a 1:1 gluten-free all-purpose flour blend.
-  - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
-- **Philly Cheesesteak Skillet** (`golden-100/philly-cheesesteak-skillet`)
-  - Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.
-  - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
-- **Philly Cheesesteak Egg Rolls** (`golden-100/philly-egg-rolls`)
-  - Gluten-Free Adaptable: Use a certified gluten-free bun/bread and toast on a separate, clean surface.
-  - Dairy-Free Adaptable: Use a dairy-free cheese shred/block alternative.
-- …and 296 more (see `review/dietary-intelligence-audit.json` for the full list).
+- …and 302 more (see `review/dietary-intelligence-audit.json` for the full list).
 
 ## Most common hidden-allergen ingredients across the catalog
 
@@ -220,32 +220,32 @@ These recipes do NOT qualify for the strict filter as written, but a known, sing
 | egg | large eggs | 80 |
 | dairy | unsalted butter | 59 |
 | gluten | chicken broth | 44 |
-| dairy | whole milk | 31 |
-| gluten | all-purpose flour | 30 |
+| dairy | whole milk | 34 |
 | gluten | soy sauce | 29 |
 | soy | soy sauce | 29 |
+| dairy | sour cream | 29 |
 | gluten | beef broth | 28 |
-| dairy | sour cream | 28 |
+| gluten | all-purpose flour | 26 |
 | dairy | grated parmesan | 25 |
+| dairy | shredded cheddar | 22 |
 | dairy | butter | 22 |
 | gluten | pizza dough balls (15 oz) | 21 |
-| dairy | shredded cheddar | 21 |
 | dairy | low-moisture mozzarella, shredded | 20 |
 | egg | mayonnaise | 20 |
 | gluten | worcestershire sauce | 19 |
 | fish | worcestershire sauce | 19 |
-| dairy | plain greek yogurt | 17 |
-| pork | thick-cut bacon | 12 |
-| dairy | heavy cream | 11 |
+| dairy | plain greek yogurt | 18 |
+| dairy | heavy cream | 12 |
+| gluten | hoagie rolls | 11 |
 | pork | bacon | 11 |
 | dairy | cheddar cheese | 11 |
+| dairy | milk | 11 |
 | dairy | greek yogurt | 11 |
-| gluten | hoagie rolls | 10 |
-| dairy | milk | 10 |
 | dairy | parmesan cheese | 9 |
 | dairy | provolone slices | 9 |
-| dairy | buttermilk | 9 |
+| alcohol | vanilla extract | 9 |
 | pork | breakfast sausage | 9 |
+| pork | thick-cut bacon | 8 |
 | dairy | fresh mozzarella, torn | 8 |
 
 ## QA test cases

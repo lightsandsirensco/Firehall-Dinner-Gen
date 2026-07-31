@@ -3,7 +3,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { toApprovedCatalogGridResponse } from "../../shared/approved-catalog.js";
 import { getApprovedCatalog } from "../approved-catalog-cache.js";
-import { sanitizeRecipeHeroSurface } from "../sanitize-verified-recipe-hero.js";
+import { sanitizeRecipeHeroSurface, sanitizeRecipeIndexEntries } from "../sanitize-verified-recipe-hero.js";
 import { log } from "../logger.js";
 import {
   PIZZA_NIGHT_CATALOG_PUBLIC_DIR,
@@ -35,7 +35,8 @@ export function registerCatalogRoutes(app: Express): void {
   app.get("/api/catalog/golden-100", async (_req: Request, res: Response) => {
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const merged = loadMergedHallCatalogIndex();
-    return res.json(merged);
+    const recipes = sanitizeRecipeIndexEntries(merged.recipes);
+    return res.json({ ...merged, recipes });
   });
 
   app.get("/api/catalog/approved/count", async (_req: Request, res: Response) => {
@@ -94,7 +95,8 @@ export function registerCatalogRoutes(app: Express): void {
       return res.status(404).json({ message: "Pizza Night catalog not found" });
     }
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
-    return res.json(JSON.parse(fs.readFileSync(indexFile, "utf8")));
+    const raw = JSON.parse(fs.readFileSync(indexFile, "utf8"));
+    return res.json({ ...raw, recipes: sanitizeRecipeIndexEntries(raw.recipes ?? []) });
   });
 
   app.get("/api/catalog/pizza-night/:slug", async (req: Request, res: Response) => {
@@ -111,7 +113,8 @@ export function registerCatalogRoutes(app: Express): void {
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const indexFile = path.join(PERFORMANCE_CATALOG_PUBLIC_DIR, "index.json");
     if (fs.existsSync(indexFile)) {
-      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
+      const raw = JSON.parse(fs.readFileSync(indexFile, "utf8"));
+      return res.json({ ...raw, recipes: sanitizeRecipeIndexEntries(raw.recipes ?? []) });
     }
     return res.status(404).json({ message: "Performance catalog not generated" });
   });
@@ -132,7 +135,8 @@ export function registerCatalogRoutes(app: Express): void {
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const indexFile = path.join(HALL_EXPANSION_CATALOG_PUBLIC_DIR, "index.json");
     if (fs.existsSync(indexFile)) {
-      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
+      const raw = JSON.parse(fs.readFileSync(indexFile, "utf8"));
+      return res.json({ ...raw, recipes: sanitizeRecipeIndexEntries(raw.recipes ?? []) });
     }
     return res.status(404).json({ message: "Hall expansion catalog not generated" });
   });
@@ -153,7 +157,8 @@ export function registerCatalogRoutes(app: Express): void {
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const indexFile = path.join(SMOOTHIE_CATALOG_PUBLIC_DIR, "index.json");
     if (fs.existsSync(indexFile)) {
-      return res.type("json").send(fs.readFileSync(indexFile, "utf8"));
+      const raw = JSON.parse(fs.readFileSync(indexFile, "utf8"));
+      return res.json({ ...raw, recipes: sanitizeRecipeIndexEntries(raw.recipes ?? []) });
     }
     return res.status(404).json({ message: "Smoothie catalog not generated" });
   });

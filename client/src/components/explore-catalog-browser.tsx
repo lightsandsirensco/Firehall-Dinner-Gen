@@ -57,6 +57,7 @@ function applyBrowsePatch(
     protein: patch.protein ?? base.protein,
     cookTime: patch.cookTime ?? base.cookTime,
     highProtein: patch.highProtein ?? base.highProtein,
+    lowCarb: patch.lowCarb ?? base.lowCarb,
     lowCleanup: patch.lowCleanup ?? base.lowCleanup,
     dietary: patch.dietary ?? base.dietary,
   };
@@ -316,6 +317,7 @@ export function ExploreCatalogBrowser({
       protein: filters.protein,
       cookTime: filters.cookTime,
       highProtein: filters.highProtein,
+      lowCarb: filters.lowCarb,
       lowCleanup: filters.lowCleanup,
       searchQuery,
       dietary: filters.dietary,

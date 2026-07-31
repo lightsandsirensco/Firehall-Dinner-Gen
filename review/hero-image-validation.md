@@ -1,6 +1,6 @@
 # Hero image validation
 
-Generated: 2026-07-27T18:18:00.755Z
+Generated: 2026-07-31T14:14:37.673Z
 
 ## Root cause
 
@@ -8,15 +8,15 @@ Hero files were saved at **correct slug-locked paths** but with **wrong image by
 
 ## Summary
 
-- Published recipes audited: **352**
-- Approved catalog recipes: **371** (explore-eligible after mapping: **310**)
-- Pass: **345**
-- Fail: **7**
+- Published recipes audited: **373**
+- Approved catalog recipes: **392** (explore-eligible after mapping: **347**)
+- Pass: **364**
+- Fail: **9**
 - Missing hero file: **0**
-- Metadata / duplicate conflicts: **11**
-- Cross-recipe duplicate conflicts: **2**
-- Vision mode: **random sample (100/352)**
-- Vision failures: **0** (skipped: 352)
+- Metadata / duplicate conflicts: **9**
+- Cross-recipe duplicate conflicts: **0**
+- Vision mode: **random sample (98/373)**
+- Vision failures: **0** (skipped: 373)
 
 ## Recipes fixed
 
@@ -27,32 +27,12 @@ Hero files were saved at **correct slug-locked paths** but with **wrong image by
 - `french-onion-soup-for-the-hall` — quarantined duplicate bootstrap copy
 - `spaghetti-aglio-e-olio-for-the-hall` — quarantined duplicate of `five-ingredient-pasta`
 
-## Excluded from surfaces (duplicate heroes pending regen)
-
-_These 17 recipes are blocked from Explore/detail heroes until unique imagery is generated._
-
-- `chicken-alfredo-bake`
-- `big-chili`
-- `pancake-short-stack`
-- `bulgogi-bowls`
-- `teriyaki-donburi`
-- `teriyaki-chicken-rice-bowls`
-- `firehall-korean-beef-bowls`
-- `egg-roll-in-a-bowl-crew`
-- `korean-turkey-rice-bowls`
-- `white-chicken-chili-crock`
-- `thai-peanut-chicken-crock`
-- `burnt-ends-chili-crew`
-- `pasta-e-fagioli-hall`
-- `huevos-rancheros-crew`
-- `menemen-for-the-crew`
-- `migas-for-the-crew`
-- `shakshuka-for-the-hall`
-
 ## Critical failures
 
 | Slug | Title | Hero | Reasons |
 | --- | --- | --- | --- |
+| `beef-birria-with-consomme` | Beef Birria with Consommé for Dipping | `/images/golden-100/beef-birria-with-consomme.jpg` | Title component not represented in hero path/slug: "consomm for dipping"; Complete meal required — hero metadata shows too few title components (1/3) |
+| `trinidadian-curry-chicken-potatoes` | Trinidadian-Style Curry Chicken with Potatoes | `/images/golden-100/trinidadian-curry-chicken-potatoes.jpg` | plating accuracy: curry_fail: rice not clearly visible |
 | `best-tuna-melt-for-the-hall` | Best Tuna Melt for the Hall (Diner Style) | `/images/hall-expansion/best-tuna-melt-for-the-hall.jpg` | Complete meal required — hero metadata shows too few title components (1/2) |
 | `bagel-lox-breakfast-board` | Bagel and Lox Breakfast Board | `/images/breakfast/bagel-lox-breakfast-board.jpg` | Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of) |
 | `baked-oatmeal-mixed-berries` | Baked Oatmeal with Mixed Berries | `/images/breakfast/baked-oatmeal-mixed-berries.jpg` | Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of) |
@@ -63,21 +43,7 @@ _These 17 recipes are blocked from Explore/detail heroes until unique imagery is
 
 ## Remaining warnings
 
-- `big-chili`: hero bytes shared with 3 other recipe(s): white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall
-- `bulgogi-bowls`: hero bytes shared with 3 other recipe(s): firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls
-- `teriyaki-donburi`: hero bytes shared with 2 other recipe(s): teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock
-- `teriyaki-chicken-rice-bowls`: hero bytes shared with 2 other recipe(s): teriyaki-donburi, thai-peanut-chicken-crock
-- `firehall-korean-beef-bowls`: hero bytes shared with 3 other recipe(s): bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls
-- `egg-roll-in-a-bowl-crew`: hero bytes shared with 3 other recipe(s): bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls
-- `korean-turkey-rice-bowls`: hero bytes shared with 3 other recipe(s): bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew
-- `white-chicken-chili-crock`: hero bytes shared with 3 other recipe(s): big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall
-- `thai-peanut-chicken-crock`: hero bytes shared with 2 other recipe(s): teriyaki-donburi, teriyaki-chicken-rice-bowls
-- `burnt-ends-chili-crew`: hero bytes shared with 3 other recipe(s): big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall
-- `pasta-e-fagioli-hall`: hero bytes shared with 3 other recipe(s): big-chili, white-chicken-chili-crock, burnt-ends-chili-crew
-- `huevos-rancheros-crew`: hero bytes shared with 1 other recipe(s): shakshuka-for-the-hall
-- `menemen-for-the-crew`: hero bytes shared with 1 other recipe(s): migas-for-the-crew
-- `migas-for-the-crew`: hero bytes shared with 1 other recipe(s): menemen-for-the-crew
-- `shakshuka-for-the-hall`: hero bytes shared with 1 other recipe(s): huevos-rancheros-crew
+_None._
 
 ## Manual QA checklist
 

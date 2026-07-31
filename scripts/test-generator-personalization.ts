@@ -5,8 +5,10 @@
 import {
   crewSizeToBucket,
   mapDietaryToAllergens,
+  mapDietaryToDiets,
   mapProfileAppliancesToSimplified,
   parsePersonalPrefs,
+  personalPrefsFromFilters,
   resolveGeneratorFilters,
 } from "../shared/generator-personalization.js";
 import { createDefaultSimplifiedFilters } from "../shared/generator-simplified.js";
@@ -30,6 +32,21 @@ assert(
   mapDietaryToAllergens(["dairy", "vegetarian", "gluten"]).join(",") === "dairy,gluten",
   "dietary map skips vegetarian",
 );
+
+// Regression: "vegan"/"pork-free" account-level dietary restrictions were previously
+// silently DROPPED by mapDietaryToAllergens (explicitly skipped, never routed anywhere).
+// mapDietaryToDiets must now capture them instead of discarding them.
+assert(
+  mapDietaryToDiets(["vegan", "pork-free"]).sort().join(",") === "porkFree,vegan",
+  "mapDietaryToDiets captures vegan + pork-free instead of dropping them",
+);
+assert(mapDietaryToDiets(["dairy", "gluten"]).length === 0, "mapDietaryToDiets ignores unrelated restrictions");
+
+// personalPrefsFromFilters must round-trip diets through parsePersonalPrefs (local-storage persistence).
+const roundTripped = parsePersonalPrefs(
+  personalPrefsFromFilters({ ...createDefaultSimplifiedFilters(), diets: ["vegan"] }),
+);
+assert(!!roundTripped && roundTripped.diets.includes("vegan"), "diets round-trip through parsePersonalPrefs");
 
 const hallLinked = resolveGeneratorFilters({
   personal: null,
@@ -79,6 +96,25 @@ const accountOnly = resolveGeneratorFilters({
 assert(accountOnly.protein === "turkey", "account protein default");
 assert(accountOnly.allergens.includes("shellfish"), "account allergens");
 assert(accountOnly.appliances.includes("air_fryer"), "account appliances");
+
+// Regression: an account-level "vegan" dietary_restriction must now surface as a `diets`
+// toggle in the resolved generator filters, not vanish silently.
+const accountVegan = resolveGeneratorFilters({
+  personal: null,
+  session: null,
+  preferences: {
+    preferred_proteins: [],
+    dietary_restrictions: ["vegan"],
+    appliance_preferences: [],
+    shift_reminders_enabled: false,
+    shift_days: [],
+    shift_reminder_time: "17:00",
+    shift_reminder_timezone: "UTC",
+  },
+  hall: null,
+  hallLinked: false,
+});
+assert(accountVegan.diets.includes("vegan"), "account-level vegan restriction reaches generator filters.diets");
 
 console.log("[test-generator-personalization] OK");
 process.exit(0);

@@ -1,0 +1,15 @@
+{
+  "generatedAt": "2026-07-31T14:11:53.530Z",
+  "totalAudited": 1,
+  "skipped": 1,
+  "skippedDetails": [
+    {
+      "slug": "big-chili",
+      "collection": "golden-100",
+      "reason": "vision_error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+    }
+  ],
+  "flaggedCount": 0,
+  "dietaryConflictCount": 0,
+  "flagged": []
+}

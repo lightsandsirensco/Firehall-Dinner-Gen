@@ -1,217 +1,20 @@
 {
   "version": 1,
   "contentVersion": 1,
-  "generatedAt": "2026-05-28T00:37:54.591Z",
+  "generatedAt": "2026-07-30T20:36:20.510Z",
   "catalogSet": "fuel_smoothie",
   "recipeCount": 10,
   "recipes": [
-    {
-      "slug": "mixed-berry-protein",
-      "title": "Mixed Berry Protein Smoothie",
-      "subtitle": "Protein · High protein",
-      "taxonomyCategory": "protein_smoothie",
-      "taxonomyLabel": "Protein",
-      "heroImage": "/images/smoothies/mixed-berry-protein.jpg",
-      "thumbImage": "/images/thumbs/mixed-berry-protein.jpg",
-      "calories": 280,
-      "protein": 22,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": []
-      }
-    },
-    {
-      "slug": "peanut-butter-banana-recovery",
-      "title": "Peanut Butter Banana Recovery Shake",
-      "subtitle": "Recovery · Recovery",
-      "taxonomyCategory": "recovery_smoothie",
-      "taxonomyLabel": "Recovery",
-      "heroImage": "/images/smoothies/peanut-butter-banana-recovery.jpg",
-      "thumbImage": "/images/thumbs/peanut-butter-banana-recovery.jpg",
-      "calories": 340,
-      "protein": 16,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": false,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": []
-      }
-    },
-    {
-      "slug": "tropical-mango-greek",
-      "title": "Tropical Mango Greek Yogurt Smoothie",
-      "subtitle": "Fruit · Tropical",
-      "taxonomyCategory": "fruit_smoothie",
-      "taxonomyLabel": "Fruit",
-      "heroImage": "/images/smoothies/tropical-mango-greek.jpg",
-      "thumbImage": "/images/thumbs/tropical-mango-greek.jpg",
-      "calories": 260,
-      "protein": 18,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": []
-      }
-    },
-    {
-      "slug": "green-pineapple",
-      "title": "Green Pineapple Smoothie",
-      "subtitle": "Green · Green",
-      "taxonomyCategory": "green_smoothie",
-      "taxonomyLabel": "Green",
-      "heroImage": "/images/smoothies/green-pineapple.jpg",
-      "thumbImage": "/images/thumbs/green-pineapple.jpg",
-      "calories": 180,
-      "protein": 15,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": true
-        },
-        "adaptable": []
-      }
-    },
-    {
-      "slug": "strawberry-oat-breakfast",
-      "title": "Strawberry Oatmeal Breakfast Smoothie",
-      "subtitle": "Breakfast · Breakfast",
-      "taxonomyCategory": "breakfast_smoothie",
-      "taxonomyLabel": "Breakfast",
-      "heroImage": "/images/smoothies/strawberry-oat-breakfast.jpg",
-      "thumbImage": "/images/thumbs/strawberry-oat-breakfast.jpg",
-      "calories": 310,
-      "protein": 20,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use certified gluten-free oats."
-          }
-        ]
-      }
-    },
-    {
-      "slug": "mocha-protein",
-      "title": "Mocha Protein Smoothie",
-      "subtitle": "Coffee · Coffee",
-      "taxonomyCategory": "coffee_smoothie",
-      "taxonomyLabel": "Coffee",
-      "heroImage": "/images/smoothies/mocha-protein.jpg",
-      "thumbImage": "/images/thumbs/mocha-protein.jpg",
-      "calories": 220,
-      "protein": 18,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": []
-      }
-    },
     {
       "slug": "blueberry-almond",
       "title": "Blueberry Almond Smoothie",
       "subtitle": "Fruit · Berry",
       "taxonomyCategory": "fruit_smoothie",
       "taxonomyLabel": "Fruit",
-      "heroImage": "/images/smoothies/blueberry-almond.jpg",
-      "thumbImage": "/images/thumbs/blueberry-almond.jpg",
-      "calories": 290,
-      "protein": 17,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": false,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": false,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use certified gluten-free oats."
-          }
-        ]
-      }
+      "heroImage": "/images/smoothies/blueberry-almond.webp",
+      "thumbImage": "/images/smoothies/blueberry-almond.webp",
+      "calories": 156,
+      "protein": 8
     },
     {
       "slug": "chocolate-banana-recovery",
@@ -219,27 +22,10 @@
       "subtitle": "Recovery · Recovery",
       "taxonomyCategory": "recovery_smoothie",
       "taxonomyLabel": "Recovery",
-      "heroImage": "/images/smoothies/chocolate-banana-recovery.jpg",
-      "thumbImage": "/images/thumbs/chocolate-banana-recovery.jpg",
-      "calories": 320,
-      "protein": 18,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": false,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      "heroImage": "/images/smoothies/chocolate-banana-recovery.webp",
+      "thumbImage": "/images/smoothies/chocolate-banana-recovery.webp",
+      "calories": 144,
+      "protein": 6
     },
     {
       "slug": "citrus-ginger",
@@ -247,27 +33,65 @@
       "subtitle": "Recovery · Recovery",
       "taxonomyCategory": "recovery_smoothie",
       "taxonomyLabel": "Recovery",
-      "heroImage": "/images/smoothies/citrus-ginger.jpg",
-      "thumbImage": "/images/thumbs/citrus-ginger.jpg",
-      "calories": 160,
-      "protein": 15,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": true,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": true
-        },
-        "adaptable": []
-      }
+      "heroImage": "/images/smoothies/citrus-ginger.webp",
+      "thumbImage": "/images/smoothies/citrus-ginger.webp",
+      "calories": 53,
+      "protein": 1
+    },
+    {
+      "slug": "green-pineapple",
+      "title": "Green Pineapple Smoothie",
+      "subtitle": "Green · Green",
+      "taxonomyCategory": "green_smoothie",
+      "taxonomyLabel": "Green",
+      "heroImage": "/images/smoothies/green-pineapple.webp",
+      "thumbImage": "/images/smoothies/green-pineapple.webp",
+      "calories": 59,
+      "protein": 1
+    },
+    {
+      "slug": "mixed-berry-protein",
+      "title": "Mixed Berry Protein Smoothie",
+      "subtitle": "Protein · High protein",
+      "taxonomyCategory": "protein_smoothie",
+      "taxonomyLabel": "Protein",
+      "heroImage": "/images/smoothies/mixed-berry-protein.webp",
+      "thumbImage": "/images/smoothies/mixed-berry-protein.webp",
+      "calories": 146,
+      "protein": 8
+    },
+    {
+      "slug": "mocha-protein",
+      "title": "Mocha Protein Smoothie",
+      "subtitle": "Coffee · Coffee",
+      "taxonomyCategory": "coffee_smoothie",
+      "taxonomyLabel": "Coffee",
+      "heroImage": "/images/smoothies/mocha-protein.webp",
+      "thumbImage": "/images/smoothies/mocha-protein.webp",
+      "calories": 99,
+      "protein": 8
+    },
+    {
+      "slug": "peanut-butter-banana-recovery",
+      "title": "Peanut Butter Banana Recovery Shake",
+      "subtitle": "Recovery · Recovery",
+      "taxonomyCategory": "recovery_smoothie",
+      "taxonomyLabel": "Recovery",
+      "heroImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
+      "thumbImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
+      "calories": 190,
+      "protein": 8
+    },
+    {
+      "slug": "strawberry-oat-breakfast",
+      "title": "Strawberry Oatmeal Breakfast Smoothie",
+      "subtitle": "Breakfast · Breakfast",
+      "taxonomyCategory": "breakfast_smoothie",
+      "taxonomyLabel": "Breakfast",
+      "heroImage": "/images/smoothies/strawberry-oat-breakfast.webp",
+      "thumbImage": "/images/smoothies/strawberry-oat-breakfast.webp",
+      "calories": 154,
+      "protein": 7
     },
     {
       "slug": "strawberry-spinach",
@@ -275,27 +99,21 @@
       "subtitle": "Green · Green",
       "taxonomyCategory": "green_smoothie",
       "taxonomyLabel": "Green",
-      "heroImage": "/images/smoothies/strawberry-spinach.jpg",
-      "thumbImage": "/images/thumbs/strawberry-spinach.jpg",
-      "calories": 250,
-      "protein": 16,
-      "dietarySummary": {
-        "confidence": "high",
-        "flags": {
-          "glutenFree": true,
-          "dairyFree": false,
-          "eggFree": true,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": false
-        },
-        "adaptable": []
-      }
+      "heroImage": "/images/smoothies/strawberry-spinach.webp",
+      "thumbImage": "/images/smoothies/strawberry-spinach.webp",
+      "calories": 118,
+      "protein": 5
+    },
+    {
+      "slug": "tropical-mango-greek",
+      "title": "Tropical Mango Greek Yogurt Smoothie",
+      "subtitle": "Fruit · Tropical",
+      "taxonomyCategory": "fruit_smoothie",
+      "taxonomyLabel": "Fruit",
+      "heroImage": "/images/smoothies/tropical-mango-greek.webp",
+      "thumbImage": "/images/smoothies/tropical-mango-greek.webp",
+      "calories": 102,
+      "protein": 5
     }
   ]
 }

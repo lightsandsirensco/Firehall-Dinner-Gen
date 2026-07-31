@@ -187,11 +187,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
   "heroImageAlt": "Wide firehall crew platter of Mediterranean Chicken & White Bean Skillet on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/mediterranean-chicken-white-bean-skillet.jpg",
+  "thumbImage": "/images/thumbs/mediterranean-chicken-white-bean-skillet.jpg",
+  "railImage": "/images/rails/mediterranean-chicken-white-bean-skillet.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -258,6 +258,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

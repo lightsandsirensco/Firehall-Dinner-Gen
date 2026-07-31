@@ -175,9 +175,16 @@
     "matchedCount": 6,
     "totalCount": 6,
     "uncertainIngredients": [],
-    "flaggedIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "Flour Or Corn Tortillas",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
     "flags": {
-      "glutenFree": true,
+      "glutenFree": false,
       "dairyFree": true,
       "eggFree": true,
       "nutFree": true,
@@ -189,7 +196,13 @@
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a 1:1 gluten-free all-purpose flour blend."
+      }
+    ],
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

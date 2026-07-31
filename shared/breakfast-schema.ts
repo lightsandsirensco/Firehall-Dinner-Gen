@@ -126,6 +126,14 @@ export const breakfastIndexEntrySchema = z.object({
   publishedAt: z.string(),
   collectionTier: breakfastCollectionTierSchema.optional(),
   dietarySummary: dietarySummarySchema.optional(),
+  nutritionSummary: z
+    .object({
+      highProtein: z.boolean(),
+      lowCarb: z.boolean(),
+      healthy: z.boolean(),
+      estimateAvailable: z.boolean(),
+    })
+    .optional(),
 });
 export type BreakfastIndexEntry = z.infer<typeof breakfastIndexEntrySchema>;
 

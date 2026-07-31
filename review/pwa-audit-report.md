@@ -1,6 +1,6 @@
 # PWA Audit — Firehall Meals
 
-**Generated:** 2026-06-22T18:21:13.322Z  
+**Generated:** 2026-07-30T13:11:57.134Z  
 **Result:** PASS (0 errors, 0 warnings)
 
 ## Checks

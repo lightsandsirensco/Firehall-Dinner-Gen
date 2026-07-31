@@ -1,0 +1,66 @@
+{
+  "generatedAt": "2026-07-31T14:14:24.288Z",
+  "totals": {
+    "recipes": 432,
+    "ok": 432,
+    "broken": 0,
+    "missingHero": 0,
+    "missingThumb": 0,
+    "missingMobile": 0,
+    "missingRail": 0,
+    "duplicateGroups": 0,
+    "duplicateMembers": 0
+  },
+  "byCollection": [
+    {
+      "collection": "golden-100",
+      "label": "Golden 100",
+      "total": 104,
+      "ok": 104,
+      "broken": 0
+    },
+    {
+      "collection": "hall-expansion",
+      "label": "Hall Expansion",
+      "total": 115,
+      "ok": 115,
+      "broken": 0
+    },
+    {
+      "collection": "performance-meals",
+      "label": "Performance Meals",
+      "total": 71,
+      "ok": 71,
+      "broken": 0
+    },
+    {
+      "collection": "breakfast",
+      "label": "Breakfast",
+      "total": 67,
+      "ok": 67,
+      "broken": 0
+    },
+    {
+      "collection": "bbq",
+      "label": "BBQ",
+      "total": 45,
+      "ok": 45,
+      "broken": 0
+    },
+    {
+      "collection": "smoothies",
+      "label": "Smoothies",
+      "total": 10,
+      "ok": 10,
+      "broken": 0
+    },
+    {
+      "collection": "pizza-night",
+      "label": "Pizza Night",
+      "total": 20,
+      "ok": 20,
+      "broken": 0
+    }
+  ],
+  "issues": []
+}

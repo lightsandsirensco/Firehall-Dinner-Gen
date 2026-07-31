@@ -129,6 +129,13 @@ export interface GoldenCatalogIndexEntry {
   popularityWeight: number;
   searchTerms: string[];
   dietarySummary?: import("../dietary/schema.js").DietarySummary;
+  /** Real per-serving nutrition thresholds (see shared/nutrition/calculate.ts) — NOT a tag/keyword guess. */
+  nutritionSummary?: {
+    highProtein: boolean;
+    lowCarb: boolean;
+    healthy: boolean;
+    estimateAvailable: boolean;
+  };
 }
 
 export const goldenCatalogIndexSchema = z.object({
@@ -154,6 +161,14 @@ export const goldenCatalogIndexSchema = z.object({
       popularityWeight: z.number(),
       searchTerms: z.array(z.string()),
       dietarySummary: dietarySummarySchema.optional(),
+      nutritionSummary: z
+        .object({
+          highProtein: z.boolean(),
+          lowCarb: z.boolean(),
+          healthy: z.boolean(),
+          estimateAvailable: z.boolean(),
+        })
+        .optional(),
     }),
   ),
 });

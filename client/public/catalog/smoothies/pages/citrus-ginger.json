@@ -48,32 +48,26 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
       "instruction": "Line up every ingredient for Citrus Ginger Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use water or coconut water as listed — measure each before heat goes on."
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
       "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Protein blend. Confirm burners ignite evenly and sheet pans are greased or lined."
     },
     {
       "stepNumber": 3,
-      "title": "Blend orange segments, carrot,",
       "instruction": "Blend orange segments, carrot, ginger, and liquid until completely smooth — carrot should not leave fibers. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 4,
-      "title": "Add pineapple and ice.",
       "instruction": "Add pineapple and ice. Blend until slushy and bright orange. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 5,
-      "title": "Ginger heat should be",
       "instruction": "Ginger heat should be noticeable but not burning — reduce ginger next batch if the crew complains. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 6,
-      "title": "Serve immediately over ice;",
       "instruction": "Serve immediately over ice; separates faster than creamy smoothies — stir before drinking. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     }
   ],
@@ -83,8 +77,8 @@
     "carbs": 13,
     "fats": 0,
     "highlights": "Nutrition estimate coming soon",
-    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -97,16 +91,15 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    },
-    "estimateAvailable": true
+    }
   },
   "substitutions": [
     "Bottled 100% orange juice (1.5 cups) replaces fresh oranges in a pinch.",
     "Skip carrot if the blender is weak — add more pineapple instead."
   ],
   "shiftNote": "Hydration-forward option on hot days or after heat exposure — not a meal replacement, but a solid bridge.",
-  "heroImage": "/images/smoothies/citrus-ginger.jpg",
-  "thumbImage": "/images/thumbs/citrus-ginger.jpg",
+  "heroImage": "/images/smoothies/citrus-ginger.webp",
+  "thumbImage": "/images/smoothies/citrus-ginger.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:recovery_smoothie",
@@ -131,29 +124,6 @@
   "catalogSet": "fuel_smoothie",
   "generatedAt": "2026-05-31T23:49:25.401Z",
   "contentVersion": 2,
-  "mobileImage": "/images/mobile/citrus-ginger.jpg",
-  "railImage": "/images/rails/citrus-ginger.jpg",
-  "proTips": [
-    "Hydration-forward option on hot days or after heat exposure — not a meal replacement, but a solid bridge.",
-    "Rinse the blender jar between batches so flavors do not muddy the next crew's cups.",
-    "If tones drop during service, cover hot food and hold at 140°F — note hold time on the pan for food safety."
-  ],
-  "tonightSpread": [
-    "Pour Citrus Ginger Smoothie into insulated cups or quart jars on ice for grab-and-go service.",
-    "Set granola, nut butter, and extra fruit in side bowls so crew can customize without slowing the line.",
-    "Keep a backup blender batch chilled at 38°F if service runs past 20 minutes."
-  ],
-  "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
-  ],
-  "equipment": [
-    "high-speed blender",
-    "measuring cups",
-    "ice bath pan"
-  ],
-  "baseServings": 8,
-  "crewSize": 8,
   "dietary": {
     "confidence": "high",
     "matchedCount": 6,
@@ -174,6 +144,6 @@
       "vegan": true
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

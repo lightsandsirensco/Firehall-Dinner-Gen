@@ -190,11 +190,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
   "heroImageAlt": "Wide firehall crew platter of Sheet-Pan Chimichurri Chicken with Charred Vegetables on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+  "thumbImage": "/images/thumbs/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+  "railImage": "/images/rails/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -237,6 +237,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

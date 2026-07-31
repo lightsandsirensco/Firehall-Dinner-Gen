@@ -230,11 +230,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
   "heroImageAlt": "Wide firehall crew platter of Cajun Chicken & Dirty Rice Bowls with Remoulade on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/cajun-chicken-dirty-rice-bowls.jpg",
+  "thumbImage": "/images/thumbs/cajun-chicken-dirty-rice-bowls.jpg",
+  "railImage": "/images/rails/cajun-chicken-dirty-rice-bowls.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -313,6 +313,6 @@
         "note": "Use an egg-free/vegan mayonnaise."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

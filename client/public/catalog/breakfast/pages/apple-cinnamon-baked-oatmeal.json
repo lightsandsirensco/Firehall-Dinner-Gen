@@ -174,7 +174,8 @@
       {
         "name": "chopped walnuts",
         "allergens": [
-          "dairy"
+          "dairy",
+          "treeNuts"
         ]
       }
     ],
@@ -182,7 +183,7 @@
       "glutenFree": false,
       "dairyFree": false,
       "eggFree": false,
-      "nutFree": true,
+      "nutFree": false,
       "peanutFree": true,
       "soyFree": true,
       "shellfishFree": true,
@@ -203,6 +204,6 @@
         "note": "Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

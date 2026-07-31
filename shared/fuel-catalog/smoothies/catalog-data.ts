@@ -43,3 +43,11 @@ export function getSmoothieCatalogItem(slug: string): SmoothieCatalogItem | unde
   const key = slug.trim().toLowerCase();
   return SMOOTHIE_CATALOG_ITEMS.find((r) => r.slug === key);
 }
+
+const SMOOTHIE_SLUG_SET = new Set(SMOOTHIE_CATALOG_ITEMS.map((r) => r.slug));
+
+/** True for any smoothie catalog slug — smoothies live at `/smoothies/:slug`, not `/recipes/:slug`. */
+export function isSmoothieCatalogSlug(slug: string | null | undefined): boolean {
+  const s = (slug || "").trim().toLowerCase();
+  return s.length > 0 && SMOOTHIE_SLUG_SET.has(s);
+}

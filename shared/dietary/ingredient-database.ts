@@ -73,8 +73,20 @@ export interface IngredientDietaryProfile {
  * profile's flag to `false` for that specific allergen — e.g. "gluten-free
  * soy sauce" or "tamari" should not be flagged gluten-containing even though
  * the base "soy sauce" profile assumes gluten by default.
+ *
+ * `unless`, if present, SUPPRESSES the override when it also matches the same
+ * text — this guards against an "X or Y" alternative ingredient line (e.g.
+ * "turkey sausage or lean pork sausage") where the poultry phrase alone would
+ * otherwise unconditionally force pork:false even though the very same line
+ * also explicitly names a pork alternative. Without this guard the override
+ * fires purely on substring presence regardless of what else is in the text.
  */
-export const TEXT_OVERRIDES: Array<{ pattern: RegExp; flag: keyof Pick<IngredientDietaryProfile, "gluten" | "dairy" | "egg" | "soy" | "treeNuts" | "peanuts" | "pork" | "alcohol">; value: boolean }> = [
+export const TEXT_OVERRIDES: Array<{
+  pattern: RegExp;
+  flag: keyof Pick<IngredientDietaryProfile, "gluten" | "dairy" | "egg" | "soy" | "treeNuts" | "peanuts" | "pork" | "alcohol">;
+  value: boolean;
+  unless?: RegExp;
+}> = [
   { pattern: /gluten[\s-]?free/i, flag: "gluten", value: false },
   { pattern: /\btamari\b/i, flag: "gluten", value: false },
   { pattern: /dairy[\s-]?free|non-?dairy|\bvegan\b/i, flag: "dairy", value: false },
@@ -83,7 +95,16 @@ export const TEXT_OVERRIDES: Array<{ pattern: RegExp; flag: keyof Pick<Ingredien
   { pattern: /\bnut[\s-]?free\b/i, flag: "treeNuts", value: false },
   { pattern: /peanut[\s-]?free/i, flag: "peanuts", value: false },
   { pattern: /non-?alcoholic|alcohol-?free/i, flag: "alcohol", value: false },
-  { pattern: /turkey bacon|beef bacon|turkey sausage|chicken sausage|turkey pepperoni/i, flag: "pork", value: false },
+  {
+    // NOTE: `unless` intentionally only lists pork-indicating words that are NOT already
+    // substrings of the trigger phrases themselves (i.e. never "bacon"/"sausage"/"pepperoni" —
+    // those appear inside "turkey bacon"/"chicken sausage"/"turkey pepperoni" and would
+    // self-suppress the override for the exact ingredients it's meant to handle).
+    pattern: /turkey bacon|beef bacon|turkey sausage|chicken sausage|turkey pepperoni/i,
+    flag: "pork",
+    value: false,
+    unless: /\bpork\b|\bham\b|\bchorizo\b|\bprosciutto\b|\blard\b/i,
+  },
 ];
 
 const NONE = { gluten: false, dairy: false, egg: false, soy: false, treeNuts: false, peanuts: false, shellfish: false, fish: false, sesame: false, pork: false, alcohol: false, meat: false };
@@ -110,6 +131,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "fish-fillet", keywords: ["salmon fillet", "salmon fillets", "salmon", "cod fillets", "cod", "tilapia", "trout", "rainbow trout", "whole rainbow trout", "whole trout", "grilled trout", "white fish", "ancho-tilapia"], category: "fish", ...NONE, meat: true, fish: true },
   { id: "shellfish", keywords: ["shrimp", "large shrimp", "jumbo shrimp"], category: "shellfish", ...NONE, meat: true, shellfish: true },
   { id: "anchovy", keywords: ["anchovy fillets", "anchovy", "anchovies"], category: "fish", ...NONE, meat: true, fish: true },
+  { id: "canned-tuna", keywords: ["canned tuna", "tuna packed in oil", "tuna packed in water", "tuna steak", "tuna", "albacore"], category: "fish", ...NONE, meat: true, fish: true },
   { id: "fish-sauce", keywords: ["fish sauce"], category: "sauce_condiment", ...NONE, fish: true },
   { id: "worcestershire", keywords: ["worcestershire sauce", "worcestershire"], category: "sauce_condiment", ...NONE, fish: true, gluten: true, crossContaminationRisk: "Contains anchovies (fish) and is typically malt-vinegar based (gluten) — verify label for gluten-free/vegan versions.", substitutions: { gluten: "Use a certified gluten-free Worcestershire sauce." } },
   { id: "caesar-dressing", keywords: ["caesar dressing"], category: "sauce_condiment", ...NONE, fish: true, egg: true, dairy: true, crossContaminationRisk: "Traditional Caesar dressing contains anchovies and raw/coddled egg." },
@@ -129,12 +151,16 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
 
   // ---------------- GRAINS / GLUTEN ----------------
   { id: "flour-tortilla", keywords: ["10-inch flour tortillas", "large flour tortillas", "flour tortilla", "flour tortillas"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Use certified gluten-free tortillas or corn tortillas." } },
-  { id: "corn-tortilla", keywords: ["corn tortilla", "corn tortillas", "tortilla strips", "tortilla chips"], category: "grain_gluten_free", ...NONE },
+  { id: "corn-tortilla", keywords: ["corn tortilla", "corn tortillas", "tortilla strips", "tortilla chips", "tostada shell", "tostada shells", "6-inch tostada shells"], category: "grain_gluten_free", ...NONE },
   { id: "generic-tortilla-wrap", keywords: ["tortillas", "tortilla", "wrap"], category: "grain_gluten", ...NONE, gluten: true, crossContaminationRisk: "Ambiguous — could be flour or corn. Treated as gluten-containing unless the recipe specifies corn tortillas.", substitutions: { gluten: "Confirm corn tortillas are used, or substitute a certified gluten-free wrap." } },
-  { id: "bun-bread-roll", keywords: ["brioche bun", "hamburger bun", "burger bun", "hot dog bun", "slider bun", "buns", "bun", "hoagie rolls", "sub rolls", "sandwich bread", "white bread", "rye bread", "marbled rye bread", "crusty bread", "baguette", "french baguettes", "ciabatta", "sourdough", "english muffin", "english muffins", "day-old bread", "bagels", "pita bread", "pita breads", "bread"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Use a certified gluten-free bun/bread and toast on a separate, clean surface." } },
+  { id: "bun-bread-roll", keywords: ["brioche bun", "hamburger bun", "burger bun", "hot dog bun", "slider bun", "buns", "bun", "hoagie rolls", "sub rolls", "sandwich bread", "white bread", "rye bread", "marbled rye bread", "crusty bread", "baguette", "french baguettes", "ciabatta", "sourdough", "english muffin", "english muffins", "day-old bread", "bagels", "pita bread", "pita breads", "brioche", "texas toast", "french toast", "thick-sliced brioche", "challah", "bread"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Use a certified gluten-free bun/bread and toast on a separate, clean surface." } },
   { id: "rice", keywords: ["jasmine rice", "white rice", "long grain rice", "long-grain rice", "long-grain white rice", "basmati rice", "basmati", "brown rice", "wild rice", "short-grain rice", "cilantro-lime rice", "cooked rice", "rice"], category: "grain_gluten_free", ...NONE },
   { id: "rice-noodles", keywords: ["rice noodles"], category: "grain_gluten_free", ...NONE },
-  { id: "pasta-wheat", keywords: ["dry elbow macaroni", "dry macaroni", "elbow macaroni", "elbow macaroni dry", "spaghetti", "dried spaghetti", "penne", "penne pasta", "macaroni", "egg noodles", "wide egg noodles", "orzo pasta", "whole wheat orzo", "orzo", "farfalle pasta", "ditalini", "pasta"], category: "grain_gluten", ...NONE, gluten: true, egg: false, substitutions: { gluten: "Use a certified gluten-free pasta." } },
+  { id: "pasta-wheat", keywords: ["dry elbow macaroni", "dry macaroni", "elbow macaroni", "elbow macaroni dry", "spaghetti", "dried spaghetti", "penne", "penne pasta", "macaroni", "orzo pasta", "whole wheat orzo", "orzo", "farfalle pasta", "ditalini", "pasta"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Use a certified gluten-free pasta." } },
+  // Egg noodles are a distinct product from egg-free wheat pasta shapes above — the eggs are
+  // a manufactured ingredient of the noodle itself, so egg-free must exclude them. (Previously
+  // this was folded into the plain "pasta" profile with an incorrect `egg: false` override.)
+  { id: "egg-noodles", keywords: ["egg noodles", "wide egg noodles", "whole wheat egg noodles"], category: "grain_gluten", ...NONE, gluten: true, egg: true, substitutions: { gluten: "Use a certified gluten-free pasta or rice noodles.", egg: "Use an egg-free wheat or rice noodle." } },
   { id: "ramen-noodles", keywords: ["ramen noodles"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Use rice noodles or a certified gluten-free ramen substitute." } },
   { id: "potatoes", keywords: ["russet potato", "russet potatoes", "yukon potato", "yukon gold potatoes", "hash brown", "hash browns", "frozen hash browns", "baby potatoes", "potato", "potatoes"], category: "grain_gluten_free", ...NONE },
   { id: "sweet-potato", keywords: ["sweet potato", "sweet potatoes"], category: "grain_gluten_free", ...NONE },
@@ -151,7 +177,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "barley", keywords: ["pearl barley", "barley"], category: "grain_gluten", ...NONE, gluten: true, substitutions: { gluten: "Substitute rice or a gluten-free grain." } },
 
   // ---------------- LEGUMES / PLANT PROTEIN ----------------
-  { id: "beans", keywords: ["kidney bean", "kidney beans", "black bean", "black beans", "pinto bean", "pinto beans", "cannellini", "cannellini beans", "chickpea", "chickpeas", "canned chickpeas", "garbanzo", "beans drained", "beans, drained", "baked beans", "beans"], category: "legume", ...NONE },
+  { id: "beans", keywords: ["kidney bean", "kidney beans", "black bean", "black beans", "pinto bean", "pinto beans", "cannellini", "cannellini beans", "chickpea", "chickpeas", "canned chickpeas", "garbanzo", "beans drained", "beans, drained", "baked beans", "butter bean", "butter beans", "lima bean", "lima beans", "great northern beans", "navy beans", "fava beans", "white beans", "beans"], category: "legume", ...NONE },
   { id: "lentils", keywords: ["lentil", "lentils", "green lentils"], category: "legume", ...NONE },
   { id: "edamame", keywords: ["edamame"], category: "legume", ...NONE, soy: true },
   { id: "tofu-tempeh", keywords: ["tofu", "tempeh"], category: "legume", ...NONE, soy: true },
@@ -175,7 +201,17 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "marinara-pizza-sauce", keywords: ["marinara sauce", "marinara", "pizza sauce", "red enchilada sauce", "crushed tomato", "diced tomato", "crushed tomatoes", "diced tomatoes", "fire-roasted diced tomatoes", "san marzano crushed tomatoes", "san marzano", "tomato sauce", "tomatoes canned"], category: "vegetable", ...NONE },
   { id: "tomato-paste-fresh", keywords: ["tomato paste", "tomatoes", "cherry tomatoes", "grape tomatoes", "roma tomatoes", "heirloom cherry tomatoes"], category: "vegetable", ...NONE },
   { id: "ranch-dressing", keywords: ["ranch dressing"], category: "sauce_condiment", ...NONE, dairy: true },
-  { id: "bouillon-stock", keywords: ["chicken stock", "beef stock", "vegetable broth", "chicken broth", "low-sodium chicken broth", "beef broth", "low-sodium chicken stock", "broth", "stock", "bouillon"], category: "sauce_condiment", ...NONE, gluten: true, crossContaminationRisk: "Bouillon and many boxed/canned stocks use hydrolyzed wheat protein, wheat starch, or 'natural flavoring' as a gluten source — treated as gluten-containing unless labeled gluten-free.", substitutions: { gluten: "Use a certified gluten-free broth or bouillon." } },
+  // Stock/broth/bouillon MUST be split by protein source — a recipe using chicken or beef
+  // stock contains meat and must never pass vegetarian/vegan, regardless of how "neutral"
+  // the ingredient sounds. An unqualified "stock"/"broth"/"bouillon" with no named protein
+  // is genuinely ambiguous (could be meat- or vegetable-based) and is deliberately left
+  // OUT of this keyword list entirely so findDietaryProfile() returns null for it — the
+  // classifier then marks the whole recipe "low confidence" rather than guessing.
+  { id: "chicken-stock", keywords: ["chicken stock", "chicken broth", "chicken bouillon", "chicken base", "chicken consomme", "turkey stock", "turkey broth", "low-sodium chicken broth", "low-sodium chicken stock"], category: "sauce_condiment", ...NONE, gluten: true, meat: true, crossContaminationRisk: "Bouillon and many boxed/canned stocks use hydrolyzed wheat protein, wheat starch, or 'natural flavoring' as a gluten source — treated as gluten-containing unless labeled gluten-free.", substitutions: { gluten: "Use a certified gluten-free broth or bouillon." } },
+  { id: "beef-stock", keywords: ["beef stock", "beef broth", "beef bouillon", "beef base", "beef bone broth", "bone broth", "veal stock"], category: "sauce_condiment", ...NONE, gluten: true, meat: true, crossContaminationRisk: "Bouillon and many boxed/canned stocks use hydrolyzed wheat protein, wheat starch, or 'natural flavoring' as a gluten source — treated as gluten-containing unless labeled gluten-free.", substitutions: { gluten: "Use a certified gluten-free broth or bouillon." } },
+  { id: "pork-ham-stock", keywords: ["ham stock", "ham broth", "pork stock", "pork broth", "pork bone broth"], category: "sauce_condiment", ...NONE, gluten: true, meat: true, pork: true, crossContaminationRisk: "Bouillon and many boxed/canned stocks use hydrolyzed wheat protein, wheat starch, or 'natural flavoring' as a gluten source — treated as gluten-containing unless labeled gluten-free.", substitutions: { gluten: "Use a certified gluten-free broth or bouillon." } },
+  { id: "fish-shellfish-stock", keywords: ["fish stock", "fish broth", "seafood stock", "seafood broth", "shrimp stock", "shrimp broth", "lobster stock", "clam broth", "clam juice"], category: "sauce_condiment", ...NONE, gluten: true, meat: true, fish: true, crossContaminationRisk: "Bouillon and many boxed/canned stocks use hydrolyzed wheat protein, wheat starch, or 'natural flavoring' as a gluten source — treated as gluten-containing unless labeled gluten-free.", substitutions: { gluten: "Use a certified gluten-free broth or bouillon." } },
+  { id: "vegetable-stock", keywords: ["vegetable stock", "vegetable broth", "veggie stock", "veggie broth", "mushroom stock", "mushroom broth", "low-sodium vegetable broth"], category: "sauce_condiment", ...NONE, gluten: true, crossContaminationRisk: "Bouillon and many boxed/canned stocks use hydrolyzed wheat protein, wheat starch, or 'natural flavoring' as a gluten source — treated as gluten-containing unless labeled gluten-free.", substitutions: { gluten: "Use a certified gluten-free broth or bouillon." } },
   { id: "cajun-taco-seasoning", keywords: ["cajun blackening spice", "cajun seasoning", "taco seasoning", "fajita seasoning", "jerk or poultry rub", "everything bagel seasoning", "seasoning packet", "seasoning"], category: "spice_herb_aromatic", ...NONE, gluten: true, crossContaminationRisk: "Pre-mixed spice/seasoning packets frequently include wheat-derived anti-caking agents or hydrolyzed wheat protein — treated as gluten-containing unless a specific gluten-free brand/blend is named.", substitutions: { gluten: "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet." } },
   { id: "gravy-mix-cream-soup", keywords: ["country sausage gravy mix", "gravy mix", "gravy", "cream of mushroom", "cream of chicken", "cream soup", "roux"], category: "sauce_condiment", ...NONE, gluten: true, dairy: true, pork: false, crossContaminationRisk: "Traditional roux and canned cream soups are wheat-flour thickened — treated as gluten-containing.", substitutions: { gluten: "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux." } },
 
@@ -202,14 +238,16 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "mushroom", keywords: ["cremini mushrooms", "mushroom", "mushrooms"], category: "vegetable", ...NONE },
   { id: "cabbage-slaw", keywords: ["green cabbage", "coleslaw mix", "shredded cabbage mix", "sauerkraut", "coleslaw", "kimchi"], category: "vegetable", ...NONE },
   { id: "herbs-fresh", keywords: ["fresh parsley, chopped", "fresh parsley", "fresh cilantro, chopped", "fresh cilantro", "cilantro", "fresh basil leaves", "fresh basil, torn", "fresh basil", "thai basil", "fresh mint", "fresh thyme leaves", "fresh thyme", "fresh dill", "fresh rosemary", "fresh oregano", "fresh epazote"], category: "spice_herb_aromatic", ...NONE },
-  { id: "herbs-dried-spice", keywords: ["dried italian seasoning", "dried oregano", "dried basil", "dried thyme", "dried sage", "ground cumin", "cumin", "chili powder", "ancho chili powder", "smoked paprika", "sweet paprika", "paprika", "ground cinnamon", "cinnamon stick", "cinnamon", "ground coriander", "coriander seeds", "ground allspice", "garam masala", "ras el hanout", "turmeric", "ground turmeric", "tajín seasoning", "mexican oregano", "oregano"], category: "spice_herb_aromatic", ...NONE },
+  { id: "herbs-dried-spice", keywords: ["dried italian seasoning", "dried oregano", "dried basil", "dried thyme", "dried sage", "ground cumin", "cumin", "chili powder", "chile powder", "ancho chili powder", "ancho chile powder", "smoked paprika", "sweet paprika", "paprika", "ground cinnamon", "cinnamon stick", "cinnamon", "ground coriander", "coriander seeds", "ground allspice", "garam masala", "ras el hanout", "turmeric", "ground turmeric", "tajín seasoning", "mexican oregano", "oregano"], category: "spice_herb_aromatic", ...NONE },
   { id: "chili-flakes-cayenne", keywords: ["red pepper flakes", "crushed red chili flakes", "cayenne pepper", "cayenne", "dried guajillo chiles", "dried ancho chiles", "dried red chilies"], category: "spice_herb_aromatic", ...NONE },
   { id: "salt-pepper", keywords: ["kosher salt and black pepper", "kosher salt", "maldon salt", "flaky sea salt", "coarse salt", "coarse black pepper", "black pepper", "cracked black pepper", "white pepper", "pinch of kosher salt", "salt", "pepper"], category: "spice_herb_aromatic", ...NONE },
   { id: "onion-powder-generic", keywords: ["onion powder"], category: "spice_herb_aromatic", ...NONE },
   { id: "ginger", keywords: ["fresh ginger, grated", "fresh ginger", "ginger"], category: "spice_herb_aromatic", ...NONE },
   { id: "shallots", keywords: ["shallots", "shallot"], category: "vegetable", ...NONE },
   { id: "capers-olives", keywords: ["capers", "kalamata olives", "black olives, sliced", "green olives", "castelvetrano olives", "olives", "pepperoncini"], category: "vegetable", ...NONE },
-  { id: "pickles", keywords: ["dill pickle chips", "dill pickles", "pickle chips", "pickled red onions", "pickled turnips", "sweet pickle relish", "pickled jalapeños, sliced"], category: "vegetable", ...NONE },
+  { id: "pickles", keywords: ["dill pickle chips", "dill pickles", "pickle chips", "pickled red onions", "pickled turnips", "sweet pickle relish", "pickled jalapeños, sliced", "pickled vegetables", "pickled veggies"], category: "vegetable", ...NONE },
+  { id: "frozen-mixed-vegetables", keywords: ["frozen mixed vegetables", "frozen mixed veggies", "frozen vegetable medley"], category: "vegetable", ...NONE },
+  { id: "parsley", keywords: ["chopped parsley", "italian parsley", "flat-leaf parsley", "parsley"], category: "spice_herb_aromatic", ...NONE },
   { id: "scallions", keywords: ["green onions, sliced", "green onions", "sliced green onions", "scallions"], category: "vegetable", ...NONE },
   { id: "bean-sprouts-water-chestnuts", keywords: ["bean sprouts", "water chestnuts", "daikon radish"], category: "vegetable", ...NONE },
   { id: "tomatillo", keywords: ["tomatillos", "tomatillo"], category: "vegetable", ...NONE },
@@ -227,18 +265,38 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
 
   // ---------------- ALCOHOL ----------------
   { id: "beer", keywords: ["beer can", "beer"], category: "beverage_alcohol", ...NONE, gluten: true, alcohol: true, substitutions: { gluten: "Use a certified gluten-free beer or non-alcoholic broth instead.", alcohol: "Substitute non-alcoholic beer or broth." } },
-  { id: "wine", keywords: ["dry red wine", "dry white wine", "bourbon", "red wine vinaigrette"], category: "beverage_alcohol", ...NONE, alcohol: true, substitutions: { alcohol: "Substitute broth plus a splash of vinegar for the acidity." } },
+  { id: "wine", keywords: ["dry red wine", "dry white wine", "bourbon", "red wine vinaigrette", "dry sherry", "cooking sherry", "sherry"], category: "beverage_alcohol", ...NONE, alcohol: true, substitutions: { alcohol: "Substitute broth plus a splash of vinegar for the acidity." } },
 
   // ---------------- MISC / DAIRY-ADJACENT ----------------
   { id: "vanilla-extract", keywords: ["vanilla extract"], category: "other", ...NONE, alcohol: true, crossContaminationRisk: "Pure vanilla extract is alcohol-based (very small quantity per serving)." },
   { id: "cocoa-powder", keywords: ["unsweetened cocoa powder", "cocoa powder"], category: "other", ...NONE },
   { id: "cornbread-cornmeal", keywords: ["cornmeal"], category: "grain_gluten_free", ...NONE },
-  { id: "protein-powder", keywords: ["protein powder", "whey protein", "greek yogurt or protein powder"], category: "dairy", ...NONE, dairy: true, crossContaminationRisk: "Whey-based protein powders contain dairy; verify the specific product if a plant-based/vegan protein powder is intended instead.", substitutions: { dairy: "Use a plant-based (pea/soy/rice) protein powder." } },
+  { id: "protein-powder", keywords: ["protein powder", "whey protein", "whey protein isolate", "casein protein", "greek yogurt or protein powder"], category: "dairy", ...NONE, dairy: true, crossContaminationRisk: "Whey-based protein powders contain dairy; verify the specific product if a plant-based/vegan protein powder is intended instead.", substitutions: { dairy: "Use a plant-based (pea/soy/rice) protein powder." } },
+  // Explicitly plant-sourced protein powders are NOT dairy — must outrank the generic
+  // "protein powder" keyword above via longer keyword length, not assumed safe by default.
+  { id: "soy-protein-powder", keywords: ["soy protein powder", "soy protein isolate"], category: "legume", ...NONE, soy: true },
+  { id: "plant-protein-powder", keywords: ["plant protein powder", "plant-based protein powder", "pea protein powder", "pea protein isolate", "pea protein", "rice protein powder", "vegan protein powder", "hemp protein powder", "pumpkin seed protein powder", "brown rice protein powder"], category: "other", ...NONE },
   { id: "coconut-water", keywords: ["coconut water"], category: "beverage_alcohol", ...NONE },
   { id: "ice-water", keywords: ["ice", "water", "warm water"], category: "other", ...NONE },
+  { id: "coffee", keywords: ["cold brew coffee", "brewed coffee", "black coffee", "espresso", "coffee"], category: "beverage_alcohol", ...NONE },
   { id: "mirin-tamarind", keywords: ["mirin"], category: "beverage_alcohol", ...NONE, alcohol: true, gluten: false },
   { id: "tamarind", keywords: ["tamarind paste", "preserved lemon"], category: "other", ...NONE },
   { id: "horseradish", keywords: ["prepared horseradish", "horseradish"], category: "sauce_condiment", ...NONE },
+
+  // ---------------- GELATIN (animal-derived unless a plant source is named) ----------------
+  // Conventional gelatin is rendered from animal collagen — usually pork or beef, but the
+  // specific source is rarely stated on a recipe ingredient line. Defaulting to `pork: true`
+  // mirrors the existing conservative default already used for unlabeled "sausage".
+  { id: "gelatin", keywords: ["unflavored gelatin", "gelatin powder", "gelatin", "gelatine"], category: "other", ...NONE, meat: true, pork: true, crossContaminationRisk: "Conventional gelatin is animal-derived collagen (commonly pork or beef); the specific source is rarely stated on packaging — verify the brand if pork status must be confirmed.", substitutions: { pork: "Use a beef, fish, or plant-based (agar-agar) gelatin substitute confirmed non-pork." } },
+  { id: "beef-gelatin", keywords: ["beef gelatin", "bovine gelatin"], category: "other", ...NONE, meat: true },
+  { id: "fish-gelatin", keywords: ["fish gelatin"], category: "other", ...NONE, meat: true, fish: true },
+  { id: "plant-gelatin", keywords: ["vegan gelatin", "agar agar", "agar-agar", "agar powder", "pectin"], category: "other", ...NONE },
+
+  // ---------------- POULTRY-BASED PROCESSED MEAT (explicit, non-pork by name) ----------------
+  // These must be matched as their own compound keywords rather than relying on the shorter
+  // generic "chicken"/"turkey" or "bacon"/"sausage" keywords to coincidentally win on length —
+  // that was fragile (a tie or a shorter match could silently flip the result).
+  { id: "poultry-processed-meat", keywords: ["turkey bacon", "chicken bacon", "beef bacon", "turkey sausage", "chicken sausage", "turkey pepperoni", "turkey ham", "turkey chorizo", "chicken chorizo", "turkey kielbasa", "chicken andouille"], category: "processed_meat", ...NONE, meat: true, pork: false, crossContaminationRisk: "Poultry/beef-based alternative — confirm the specific product to rule out pork-derived casings or fillers if strict." },
 
   // ---------------- ADDITIONAL PROTEINS (expanded pass) ----------------
   { id: "beef-cuts-2", keywords: ["boneless short rib", "picanha roast", "cube steak", "round steak", "rotisserie chickens", "whole chickens"], category: "beef", ...NONE, meat: true },
@@ -277,6 +335,15 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
 
   // ---------------- ADDITIONAL NUTS / SEEDS (expanded pass) ----------------
   { id: "pecans-pistachios", keywords: ["chopped pecans", "pecans", "pistachios", "pomegranate seeds"], category: "tree_nut", ...NONE, treeNuts: true },
+  // Food-safety gap fix: walnut, cashew, hazelnut, macadamia, and Brazil nut were completely
+  // absent from the ingredient database (an ingredient like "chopped walnuts" resolved to
+  // NOTHING and only reflected whatever happened to be in an accompanying `notes` string) —
+  // a critical hole for the nut-free filter specifically, since these are common tree-nut
+  // allergens. See scripts/dietary-qa-test-cases.ts for the regression test.
+  { id: "walnuts", keywords: ["chopped walnuts", "candied walnuts", "walnut", "walnuts"], category: "tree_nut", ...NONE, treeNuts: true },
+  { id: "cashews", keywords: ["cashew butter", "cashew milk", "cashews", "cashew"], category: "tree_nut", ...NONE, treeNuts: true },
+  { id: "hazelnuts", keywords: ["hazelnut spread", "hazelnuts", "hazelnut", "filberts"], category: "tree_nut", ...NONE, treeNuts: true },
+  { id: "macadamia-brazil-nuts", keywords: ["macadamia nuts", "macadamia", "brazil nuts", "brazil nut"], category: "tree_nut", ...NONE, treeNuts: true },
   { id: "sesame-dressing-zaatar", keywords: ["sesame dressing", "za'atar spice blend", "za'atar", "zaatar"], category: "seed", ...NONE, sesame: true },
 
   // ---------------- ADDITIONAL ALCOHOL (expanded pass) ----------------
@@ -311,24 +378,144 @@ function stripDiacritics(value: string): string {
   return value.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 }
 
+// Bare/unqualified words that are genuinely ambiguous about their animal-protein source
+// (e.g. "stock"/"broth" could be chicken, beef, pork, fish, or vegetable). These are
+// intentionally NOT included as standalone keywords on any profile above — but a compound
+// ingredient phrase like "water or broth" or "2 cups stock, any kind" can still slip through
+// if a DIFFERENT, unrelated keyword in the same string (e.g. "water") happens to win the
+// longest-match race, silently discarding the ambiguous alternative. This guard re-scans the
+// full text for a bare marker word; if one is present and the winning match isn't one of the
+// specific profiles that legitimately accounts for it (e.g. "chicken stock" -> chicken-stock),
+// the whole ingredient is forced to unknown rather than resolving via the unrelated match.
+const AMBIGUOUS_SOURCE_MARKERS = ["stock", "broth", "bouillon"];
+const MARKER_COVERING_PROFILE_IDS = new Set([
+  "chicken-stock",
+  "beef-stock",
+  "pork-ham-stock",
+  "fish-shellfish-stock",
+  "vegetable-stock",
+]);
+
+const MERGEABLE_FLAG_KEYS = [
+  "gluten",
+  "dairy",
+  "egg",
+  "soy",
+  "treeNuts",
+  "peanuts",
+  "shellfish",
+  "fish",
+  "sesame",
+  "pork",
+  "alcohol",
+  "meat",
+] as const;
+
+function mergeSubstitutions(
+  profiles: IngredientDietaryProfile[],
+): IngredientDietaryProfile["substitutions"] {
+  let merged: IngredientDietaryProfile["substitutions"];
+  for (const p of profiles) {
+    if (!p.substitutions) continue;
+    for (const [key, note] of Object.entries(p.substitutions)) {
+      if (!merged) merged = {};
+      if (!(merged as Record<string, string>)[key]) {
+        (merged as Record<string, string>)[key] = note as string;
+      }
+    }
+  }
+  return merged;
+}
+
+/**
+ * Finds every matched dietary profile within a free-text ingredient name/notes string using a
+ * greedy, longest-match-first, NON-OVERLAPPING segmentation (repeatedly consume the single
+ * longest remaining keyword match, mask it out, and continue on what's left). Then returns a
+ * single merged profile whose boolean allergen/meat flags are the UNION (logical OR) of every
+ * distinct component actually found.
+ *
+ * This matters because a single ingredient line frequently names more than one real food
+ * component — e.g. "Jalapeño Cheddar Sausage Links" contains a produce garnish (jalapeño), a
+ * dairy cheese (cheddar), AND pork meat (sausage). Picking only the single overall-longest
+ * keyword (as a naive "best match wins" approach would) silently discards the other two,
+ * which previously let a pork sausage ingredient resolve to the produce-only "jalapeno" profile
+ * and incorrectly pass as vegetarian/vegan/pork-free/dairy-free.
+ *
+ * Consuming the longest match first (rather than unioning every substring hit independently)
+ * is what keeps compound-but-singular phrases like "butter beans" correct: the longer, more
+ * specific "butter beans" keyword swallows the entire phrase in one pass, so the shorter,
+ * unrelated "butter" (dairy) keyword never gets a chance to match a now-masked span.
+ *
+ * Returns null if NO component of the ingredient resolves to a known profile — callers MUST
+ * treat a null match as "unknown ingredient" (conservative: cannot confirm any allergen-free
+ * claim) per the food-safety mandate of this system.
+ */
 export function findDietaryProfile(text: string): IngredientDietaryProfile | null {
   const normalized = stripDiacritics(text.toLowerCase()).replace(/[^a-z0-9\s,-]/g, " ").replace(/\s+/g, " ").trim();
   if (!normalized) return null;
 
-  let best: IngredientDietaryProfile | null = null;
-  let bestLen = 0;
-  for (const profile of INGREDIENT_DIETARY_PROFILES) {
-    for (const kw of profile.keywords) {
-      const kwNormalized = stripDiacritics(kw.toLowerCase())
-        .replace(/[^a-z0-9\s,-]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim();
-      const re = new RegExp(`\\b${escapeRegex(kwNormalized)}\\b`, "i");
-      if (re.test(normalized) && kw.length > bestLen) {
-        best = profile;
-        bestLen = kw.length;
+  let working = normalized;
+  const matches: Array<{ profile: IngredientDietaryProfile; keywordLength: number }> = [];
+
+  // Bounded — a well-formed ingredient line has only a handful of distinct food components.
+  for (let iteration = 0; iteration < 12; iteration++) {
+    let bestProfile: IngredientDietaryProfile | null = null;
+    let bestKeywordLength = 0;
+    let bestIndex = -1;
+    let bestSpanLength = 0;
+
+    for (const profile of INGREDIENT_DIETARY_PROFILES) {
+      for (const kw of profile.keywords) {
+        const kwNormalized = stripDiacritics(kw.toLowerCase())
+          .replace(/[^a-z0-9\s,-]/g, " ")
+          .replace(/\s+/g, " ")
+          .trim();
+        // Allow a trailing "s"/"es" so a single keyword also matches its plural form
+        // (e.g. "cedar plank" -> "cedar planks", "slider roll" -> "slider rolls")
+        // without requiring every entry to manually enumerate both forms.
+        const re = new RegExp(`\\b${escapeRegex(kwNormalized)}(?:es|s)?\\b`, "i");
+        const match = re.exec(working);
+        if (match && kw.length > bestKeywordLength) {
+          bestProfile = profile;
+          bestKeywordLength = kw.length;
+          bestIndex = match.index;
+          bestSpanLength = match[0].length;
+        }
       }
     }
+
+    if (!bestProfile || bestIndex < 0) break;
+    matches.push({ profile: bestProfile, keywordLength: bestKeywordLength });
+    // Mask out the matched span (preserve string length/indices) so a shorter keyword fully
+    // contained in — or overlapping — an already-consumed span cannot re-match it.
+    working = working.slice(0, bestIndex) + " ".repeat(bestSpanLength) + working.slice(bestIndex + bestSpanLength);
   }
-  return best;
+
+  if (matches.length === 0) return null;
+
+  for (const marker of AMBIGUOUS_SOURCE_MARKERS) {
+    const markerRe = new RegExp(`\\b${marker}(?:es|s)?\\b`, "i");
+    if (markerRe.test(normalized) && !matches.some((m) => MARKER_COVERING_PROFILE_IDS.has(m.profile.id))) {
+      return null;
+    }
+  }
+
+  // The single longest overall match is used for id/category/crossContaminationRisk — purely
+  // informational/cosmetic fields — while the boolean safety flags below are the union of ALL
+  // distinct matched components.
+  let primary = matches[0];
+  for (const m of matches) {
+    if (m.keywordLength > primary.keywordLength) primary = m;
+  }
+  if (matches.length === 1) return primary.profile;
+
+  const merged: IngredientDietaryProfile = { ...primary.profile };
+  for (const key of MERGEABLE_FLAG_KEYS) {
+    (merged as unknown as Record<string, boolean>)[key] = matches.some(
+      (m) => (m.profile as unknown as Record<string, boolean>)[key],
+    );
+  }
+  merged.substitutions = mergeSubstitutions(matches.map((m) => m.profile));
+
+  return merged;
 }

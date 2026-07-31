@@ -29,6 +29,7 @@ import { getVarietyConstraints, recordRecipe } from "./variety-memory";
 import { generatePizzaRecipe } from "./pizza-ai";
 import { pickPizzaConcept, getFeaturedPizzaIds } from "./pizza-variety";
 import { PIZZA_CONCEPT_REGISTRY } from "../shared/pizza-concepts.js";
+import { classifyRecipeDietary } from "../shared/dietary/classify-recipe.js";
 import { buildPizzaTemplate } from "./pizza-templates.js";
 import { finalizePizzaRecipe } from "./pizza-finalize.js";
 import {
@@ -92,7 +93,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { GOLDEN_CATALOG_PUBLIC_DIR } from "./golden-100/page-store.js";
 import { hallCatalogExploreCards } from "./meal-catalog/search-golden.js";
-import { buildRobotsTxt, buildSitemapXml, pathShouldNoindex, readStaticSitemapFallback, resolvePublicSiteOrigin } from "./seo/sitemap.js";
+import { buildLlmsTxt, buildRobotsTxt, buildSitemapXml, pathShouldNoindex, readStaticSitemapFallback, resolvePublicSiteOrigin } from "./seo/sitemap.js";
+import { resolveExploreLegacyRedirectPath } from "./seo/explore-legacy-redirect.js";
 import {
   readEditorialArticle,
   readEditorialIndex,
@@ -946,6 +948,37 @@ export async function registerRoutes(
         if (!ok) {
           recordReliabilityEvent("blocked_client_send", `protein_mismatch:${want}->${got || "unknown"}`);
           throw new RecipeNotSendableError([`protein_mismatch:${want}`]);
+        }
+      }
+
+      // Final-boundary re-check for strict dietary restrictions (vegan, pork-free, etc.)
+      // against the SAME canonical classifier used at pick time (see pick-local-recipes.ts).
+      // Composition steps between the initial pick and here (completeFirehallPlate,
+      // enforceCarbs, ensureRiceForRiceDishes, label-audit fixes) can inject NEW ingredients
+      // that were never checked against the user's restriction â€” this re-verifies the fully
+      // composed ingredient list. Unlike the allergen post-check above, this never attempts
+      // a string-replacement substitution (you cannot safely "swap out" meat/dairy/pork from
+      // an already-composed dish) â€” a violation here always rejects to the safe fallback path.
+      if (request?.dietary_restrictions && request.dietary_restrictions.length > 0) {
+        const composedIngredients = Array.isArray((result as any).ingredients)
+          ? ((result as any).ingredients as Array<{ item?: string; notes?: string }>)
+          : [];
+        const profile = classifyRecipeDietary(
+          composedIngredients.map((i) => ({ name: String(i.item ?? ""), notes: i.notes })),
+        );
+        const violated =
+          profile.confidence !== "high" ||
+          request.dietary_restrictions.some((key) => !profile.flags[key]);
+        if (violated) {
+          log(
+            `[dietary-postcheck] Final composed recipe violates requested=${request.dietary_restrictions.join(",")} confidence=${profile.confidence} â€” catalog fallback required`,
+            "allergen",
+          );
+          recordReliabilityEvent(
+            "blocked_client_send",
+            `dietary_violation:${request.dietary_restrictions.join(",")}`,
+          );
+          throw new RecipeNotSendableError(["dietary_no_catalog_match"]);
         }
       }
 
@@ -2220,6 +2253,78 @@ export async function registerRoutes(
           `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /vote/\nDisallow: /me\nDisallow: /hall\nSitemap: https://www.firehallmeals.com/sitemap.xml\n`,
         );
     }
+  });
+
+  app.get("/llms.txt", (req: Request, res: Response) => {
+    try {
+      const origin = resolvePublicSiteOrigin(
+        req.get("host") ?? undefined,
+        req.get("x-forwarded-proto") ?? undefined,
+      );
+      res.setHeader("Cache-Control", "public, max-age=3600, stale-while-revalidate=86400");
+      return res.type("text/plain").status(200).send(buildLlmsTxt(origin));
+    } catch (err: unknown) {
+      logError("seo", "llms.txt generation failed", err);
+      return res.status(500).type("text/plain").send("llms.txt temporarily unavailable");
+    }
+  });
+
+  // Legacy detail route — every recipe reachable here that has an approved
+  // catalog slug already client-side-redirects to /recipes/:slug once data
+  // loads (see explore-recipe-detail-page.tsx). This resolves the same
+  // redirect server-side (301, before any HTML is sent) so crawlers and
+  // shared links never see this URL's duplicate/blank content — see
+  // server/seo/explore-legacy-redirect.ts for details.
+  app.get("/explore/recipe/:id", (req: Request, res: Response, next: NextFunction) => {
+    const rawId = routeParam(req.params.id);
+    const id = parseInt(rawId, 10);
+    if (!Number.isFinite(id) || id <= 0) return next();
+    try {
+      const hints = {
+        slug: typeof req.query.slug === "string" ? req.query.slug : undefined,
+        curatedRecipeId:
+          typeof req.query.cid === "string"
+            ? req.query.cid
+            : typeof req.query.curatedRecipeId === "string"
+              ? req.query.curatedRecipeId
+              : undefined,
+      };
+      const target = resolveExploreLegacyRedirectPath(id, hints);
+      if (target) return res.redirect(301, target);
+    } catch (err: unknown) {
+      logError("seo", "explore legacy redirect failed", err);
+    }
+    return next();
+  });
+
+  // Bare "/recipes" is a client-side-only redirect to /explore today (see
+  // explore-browse-redirect.tsx) — a non-JS crawler hitting it gets a 200 +
+  // empty shell instead of a real redirect. Make it a real 301.
+  app.get("/recipes", (_req: Request, res: Response) => {
+    return res.redirect(301, "/explore");
+  });
+
+  // Legacy "Performance Fuel" URLs were client-side-only redirects (see
+  // performance-fuel-redirect.tsx). Without a server-side match, these paths
+  // fell through the SEO injector entirely and served the raw index.html
+  // shell — homepage title + hardcoded homepage canonical on every URL,
+  // which is exactly what a "hardcoded canonical" scan flags. Make both
+  // legacy shapes real 301s, mirroring the client's own mapping exactly.
+  app.get("/performance-fuel/:slug", (req: Request, res: Response) => {
+    const slug = routeParam(req.params.slug).trim();
+    return res.redirect(301, slug ? `/recipes/${encodeURIComponent(slug)}` : "/explore");
+  });
+  app.get("/performance-fuel", (_req: Request, res: Response) => {
+    return res.redirect(301, "/explore");
+  });
+
+  // "/guides/top-firehall-classics" and "/blog/top-firehall-classics" are
+  // client-side-only redirects to the real article (see App.tsx). Same
+  // failure mode as above — plus the generic guide-page injector below
+  // treats the unresolvable slug as a dead article and returns a 404. Make
+  // this a real 301 before that injector ever runs.
+  app.get(["/guides/top-firehall-classics", "/blog/top-firehall-classics"], (_req: Request, res: Response) => {
+    return res.redirect(301, "/guides/10-classic-firehall-meals");
   });
 
   app.get("/api/content/guides", async (_req: Request, res: Response) => {

@@ -214,10 +214,16 @@
         "allergens": [
           "alcohol"
         ]
+      },
+      {
+        "name": "apple juice",
+        "allergens": [
+          "gluten"
+        ]
       }
     ],
     "flags": {
-      "glutenFree": true,
+      "glutenFree": false,
       "dairyFree": true,
       "eggFree": true,
       "nutFree": true,
@@ -231,11 +237,16 @@
     },
     "adaptable": [
       {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Confirm corn tortillas are used, or substitute a certified gluten-free wrap."
+      },
+      {
         "flag": "alcohol",
         "label": "Alcohol-Free Adaptable",
         "note": "Substitute broth plus a splash of vinegar for the acidity."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

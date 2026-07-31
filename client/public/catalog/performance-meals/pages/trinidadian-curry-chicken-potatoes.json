@@ -177,11 +177,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
   "heroImageAlt": "Wide firehall crew platter of Trinidadian-Style Curry Chicken with Potatoes on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/trinidadian-curry-chicken-potatoes.jpg",
+  "thumbImage": "/images/thumbs/trinidadian-curry-chicken-potatoes.jpg",
+  "railImage": "/images/rails/trinidadian-curry-chicken-potatoes.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -237,6 +237,6 @@
         "note": "Use a certified gluten-free broth or bouillon."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

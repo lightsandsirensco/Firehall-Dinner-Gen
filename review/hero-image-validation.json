@@ -1,14 +1,14 @@
 {
-  "generatedAt": "2026-07-27T18:18:00.755Z",
+  "generatedAt": "2026-07-31T14:14:37.673Z",
   "totals": {
-    "recipes": 352,
-    "pass": 345,
-    "fail": 7,
+    "recipes": 373,
+    "pass": 364,
+    "fail": 9,
     "missingHero": 0,
-    "metadataFail": 11,
-    "duplicateConflict": 2,
+    "metadataFail": 9,
+    "duplicateConflict": 0,
     "visionFail": 0,
-    "visionSkipped": 352
+    "visionSkipped": 373
   },
   "rows": [
     {
@@ -34,9 +34,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -63,7 +61,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -90,9 +90,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -119,7 +117,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -146,9 +146,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -175,7 +173,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -229,9 +229,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -258,9 +256,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -287,7 +283,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -314,9 +312,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -343,9 +339,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -507,7 +501,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -561,7 +557,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -588,9 +586,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -673,9 +669,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -702,9 +696,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -760,9 +752,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -789,7 +779,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -843,7 +835,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -897,9 +891,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -926,9 +918,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -955,7 +945,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1009,7 +1001,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1063,7 +1057,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1117,7 +1113,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1171,7 +1169,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1198,9 +1198,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1227,7 +1225,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1281,7 +1281,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1337,7 +1339,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1364,9 +1368,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1474,9 +1476,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1503,7 +1503,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1530,9 +1532,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1586,9 +1586,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1615,7 +1613,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -1698,9 +1698,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1808,9 +1806,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1837,9 +1833,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -1922,9 +1916,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2090,9 +2082,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2148,9 +2138,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2204,9 +2192,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2224,37 +2210,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
         "canonicalHero": "/images/golden-100/chicken-alfredo-bake.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (pancake-short-stack) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "pancake-short-stack"
-        ],
-        "heroMd5": "b87b1a17f8d9751a1653d0520921f59f",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "63903a23305eda11c2cb0945e8869be0",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero bytes match conflicting recipe \"pancake-short-stack\" (Pancake Short Stack)",
-          "confidence": 97
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (pancake-short-stack) — image reuse disabled",
-        "hero bytes match conflicting recipe \"pancake-short-stack\" (Pancake Short Stack)"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "big-chili",
@@ -2270,38 +2237,20 @@
         "kind": "hall_classic",
         "heroImage": "/images/golden-100/big-chili.jpg",
         "canonicalHero": "/images/golden-100/big-chili.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "white-chicken-chili-crock",
-          "burnt-ends-chili-crew",
-          "pasta-e-fagioli-hall"
-        ],
-        "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "d2ad32689cf97ac407f5917e94e68650",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 3 other recipe(s): white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "enchilada-casserole",
@@ -2355,7 +2304,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2411,9 +2362,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2440,7 +2389,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2467,9 +2418,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2487,44 +2436,25 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/pancake-short-stack.jpg",
         "canonicalHero": "/images/golden-100/pancake-short-stack.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (chicken-alfredo-bake) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "chicken-alfredo-bake"
-        ],
-        "heroMd5": "b87b1a17f8d9751a1653d0520921f59f",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "3656849d1b3738181908eb2a5c1a9e37",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero bytes match conflicting recipe \"chicken-alfredo-bake\" (Chicken Alfredo Bake)",
-          "confidence": 97
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (chicken-alfredo-bake) — image reuse disabled",
-        "hero bytes match conflicting recipe \"chicken-alfredo-bake\" (Chicken Alfredo Bake)"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "french-toast-casserole",
       "title": "French Toast Casserole",
       "collection": "golden_100",
       "heroImage": "/images/golden-100/french-toast-casserole.jpg",
-      "heroAlt": "Wide firehall crew platter of French Toast Casserole on a station prep table, family-style serving",
+      "heroAlt": "French Toast Casserole — baked golden French toast casserole, cut into squares, served with maple syrup",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "french-toast-casserole",
@@ -2536,15 +2466,13 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "ca90bc182b06eaa68c66355a609943c6",
+        "heroMd5": "ebeda72fb179e82fc449501281930944",
         "exploreEligible": true
       },
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2571,7 +2499,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2616,40 +2546,18 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
         "canonicalHero": "/images/golden-100/bulgogi-bowls.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "firehall-korean-beef-bowls",
-          "egg-roll-in-a-bowl-crew",
-          "korean-turkey-rice-bowls"
-        ],
-        "heroMd5": "7545872c4593a5901dee7066cd526054",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "8fc7e6becae2fef7708adf36e9ff116f",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 3 other recipe(s): firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "butter-chicken",
@@ -2728,7 +2636,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2746,37 +2656,20 @@
         "kind": "firehall_catalog",
         "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
         "canonicalHero": "/images/golden-100/teriyaki-donburi.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "teriyaki-chicken-rice-bowls",
-          "thai-peanut-chicken-crock"
-        ],
-        "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "b254e645eb08c9061e774f44bb5375ef",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 2 other recipe(s): teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "game-day-nachos",
@@ -2801,9 +2694,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2830,7 +2721,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2857,9 +2750,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -2886,7 +2777,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2940,7 +2833,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -2967,7 +2862,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3021,9 +2918,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3050,7 +2945,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3133,7 +3030,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3268,7 +3167,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3295,9 +3196,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3324,7 +3223,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3405,9 +3306,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3434,9 +3333,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3490,7 +3387,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -3553,7 +3452,7 @@
       "title": "Moroccan Chicken and Chickpeas",
       "collection": "performance_meals",
       "heroImage": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
-      "heroAlt": "Wide firehall crew platter of Moroccan Chicken and Chickpeas on a station prep table, family-style serving",
+      "heroAlt": "Wide baking dish of creamy pasta e ceci with visible chickpeas and ditalini pasta on a crew prep table, family-style",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "moroccan-chicken-chickpea-tray",
@@ -3681,9 +3580,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3766,9 +3663,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3795,9 +3690,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3961,9 +3854,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -3990,7 +3881,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4125,9 +4018,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4154,7 +4045,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4235,9 +4128,609 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+      "heroAlt": "Wide firehall crew platter of Thai Basil Ground Beef Skillet on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "thai-basil-ground-beef-skillet",
+        "title": "Thai Basil Ground Beef Skillet",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+        "canonicalHero": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "e9892e2b80970b608bbcb0797193eae4",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "title": "Southwest Beef & Sweet Potato Skillet",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
+      "heroAlt": "Wide firehall crew platter of Southwest Beef & Sweet Potato Skillet on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "southwest-beef-sweet-potato-skillet",
+        "title": "Southwest Beef & Sweet Potato Skillet",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
+        "canonicalHero": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "9dc906afe9eb584e07bdb7dda9ddee24",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "beef-birria-with-consomme",
+      "title": "Beef Birria with Consommé for Dipping",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/beef-birria-with-consomme.jpg",
+      "heroAlt": "Wide firehall crew platter of Beef Birria with Consommé for Dipping on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "beef-birria-with-consomme",
+        "title": "Beef Birria with Consommé for Dipping",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/beef-birria-with-consomme.jpg",
+        "canonicalHero": "/images/golden-100/beef-birria-with-consomme.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "5ca4a64f49b7bcf686f80e95b561e0fb",
+        "exploreEligible": true
+      },
+      "metadataIssues": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "Title component not represented in hero path/slug: \"consomm for dipping\"",
+          "confidence": 82
+        },
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "Complete meal required — hero metadata shows too few title components (1/3)",
+          "confidence": 93
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": false,
+      "criticalReasons": [
+        "Title component not represented in hero path/slug: \"consomm for dipping\"",
+        "Complete meal required — hero metadata shows too few title components (1/3)"
+      ]
+    },
+    {
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+      "heroAlt": "Wide firehall crew platter of Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+        "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+        "canonicalHero": "/images/golden-100/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "544741e414338032f121cb24d71f8b4d",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "mediterranean-beef-kofta-bowls",
+      "title": "Mediterranean Beef Kofta Bowls",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/mediterranean-beef-kofta-bowls.jpg",
+      "heroAlt": "Wide firehall crew platter of Mediterranean Beef Kofta Bowls on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "mediterranean-beef-kofta-bowls",
+        "title": "Mediterranean Beef Kofta Bowls",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/mediterranean-beef-kofta-bowls.jpg",
+        "canonicalHero": "/images/golden-100/mediterranean-beef-kofta-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "0eb365d5701dc94ca119c3d7af286e9e",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
       "visionReasons": [
         "vision_skipped"
       ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "title": "Unstuffed Cabbage Roll Skillet",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
+      "heroAlt": "Wide firehall crew platter of Unstuffed Cabbage Roll Skillet on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "unstuffed-cabbage-roll-skillet",
+        "title": "Unstuffed Cabbage Roll Skillet",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
+        "canonicalHero": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "1ea3f7fcb8d88a5e88790757346b84cd",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "cuban-beef-picadillo-bowls",
+      "title": "Cuban-Style Beef Picadillo Bowls",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+      "heroAlt": "Wide firehall crew platter of Cuban-Style Beef Picadillo Bowls on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "cuban-beef-picadillo-bowls",
+        "title": "Cuban-Style Beef Picadillo Bowls",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+        "canonicalHero": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "2f197bcec51c24a3b0f4798e6b738ff8",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "heroAlt": "Wide firehall crew platter of Greek-Spiced Beef Burger Bowls with Tzatziki Slaw on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+        "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+        "canonicalHero": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "8d633a9542b016766ad6acccf56d7f6c",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
+      "heroAlt": "Wide firehall crew platter: sliced flank steak with bright green chimichurri sauce beside roasted potatoes on a station prep table, family-style",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "herb-marinated-flank-steak-chimichurri-farro",
+        "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
+        "canonicalHero": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "b73da695f7913a27db93fff016cb9124",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+      "heroAlt": "Wide firehall crew platter of One-Pot Beef & Orzo Skillet with Spinach and Feta on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+        "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+        "canonicalHero": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "3eb92f1291775216d0c4eddda62c4ce1",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "filipino-chicken-adobo",
+      "title": "Filipino-Style Chicken Adobo",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/filipino-chicken-adobo.jpg",
+      "heroAlt": "Wide firehall crew platter of Filipino-Style Chicken Adobo on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "filipino-chicken-adobo",
+        "title": "Filipino-Style Chicken Adobo",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/filipino-chicken-adobo.jpg",
+        "canonicalHero": "/images/golden-100/filipino-chicken-adobo.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "6422d3d81e7e224944ad61f98a9c571e",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
+      "heroAlt": "Wide firehall crew platter of Peruvian-Style Sheet-Pan Chicken with Aji Verde on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "peruvian-sheet-pan-chicken-aji-verde",
+        "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
+        "canonicalHero": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "aaf1c1e9eaac069a2cd6644bb7515cd1",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "kung-pao-chicken-rice-bowls",
+      "title": "Kung Pao Chicken & Rice Bowls",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/kung-pao-chicken-rice-bowls.jpg",
+      "heroAlt": "Wide firehall crew platter of Kung Pao Chicken & Rice Bowls on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "kung-pao-chicken-rice-bowls",
+        "title": "Kung Pao Chicken & Rice Bowls",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/kung-pao-chicken-rice-bowls.jpg",
+        "canonicalHero": "/images/golden-100/kung-pao-chicken-rice-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "c796c67ac06f673c15527e70b3f5e96f",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "title": "Vietnamese Caramel-Braised Chicken Bowls",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",
+      "heroAlt": "Wide firehall crew platter of Vietnamese Caramel-Braised Chicken Bowls on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "vietnamese-caramel-braised-chicken-bowls",
+        "title": "Vietnamese Caramel-Braised Chicken Bowls",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",
+        "canonicalHero": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "0dfa9a2a0f9728b89b02765a61aa5011",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+      "heroAlt": "Wide firehall crew platter of Trinidadian-Style Curry Chicken with Potatoes on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "trinidadian-curry-chicken-potatoes",
+        "title": "Trinidadian-Style Curry Chicken with Potatoes",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+        "canonicalHero": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "622714acab31d15768d793d1384236db",
+        "exploreEligible": true
+      },
+      "metadataIssues": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible",
+          "confidence": 93
+        }
+      ],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": false,
+      "criticalReasons": [
+        "plating accuracy: curry_fail: rice not clearly visible"
+      ]
+    },
+    {
+      "slug": "chicken-marsala-lightened",
+      "title": "Chicken Marsala (Lightened)",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/chicken-marsala-lightened.jpg",
+      "heroAlt": "Wide firehall crew platter of Chicken Marsala (Lightened) on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "chicken-marsala-lightened",
+        "title": "Chicken Marsala (Lightened)",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/chicken-marsala-lightened.jpg",
+        "canonicalHero": "/images/golden-100/chicken-marsala-lightened.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "768cd017a03d5fe5ae346302df5fb26f",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
+      "heroAlt": "Wide firehall crew platter of Cajun Chicken & Dirty Rice Bowls with Remoulade on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "cajun-chicken-dirty-rice-bowls",
+        "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
+        "canonicalHero": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "b062e3de6046920bcd76967f47a65dc6",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+      "heroAlt": "Wide firehall crew platter of Sheet-Pan Chimichurri Chicken with Charred Vegetables on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+        "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+        "canonicalHero": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "ef3ac809c09a6bb9eb1050b7e138327b",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [
+        "vision_skipped"
+      ],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "high-protein-chicken-fried-rice",
+      "title": "High-Protein Chicken Fried Rice",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/high-protein-chicken-fried-rice.jpg",
+      "heroAlt": "Wide firehall crew platter of High-Protein Chicken Fried Rice on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "high-protein-chicken-fried-rice",
+        "title": "High-Protein Chicken Fried Rice",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/high-protein-chicken-fried-rice.jpg",
+        "canonicalHero": "/images/golden-100/high-protein-chicken-fried-rice.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "ade8d798558bb36d8ea238a15feb14c0",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "general-tsos-baked-chicken",
+      "title": "General Tso's-Style Baked Chicken",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/general-tsos-baked-chicken.jpg",
+      "heroAlt": "Wide firehall crew platter of General Tso's-Style Baked Chicken on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "general-tsos-baked-chicken",
+        "title": "General Tso's-Style Baked Chicken",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/general-tsos-baked-chicken.jpg",
+        "canonicalHero": "/images/golden-100/general-tsos-baked-chicken.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "b6e9f7f99368c5ae98fa45034db24da6",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
+      "pass": true,
+      "criticalReasons": []
+    },
+    {
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "title": "Mediterranean Chicken & White Bean Skillet",
+      "collection": "performance_meals",
+      "heroImage": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
+      "heroAlt": "Wide firehall crew platter of Mediterranean Chicken & White Bean Skillet on a station prep table, family-style serving",
+      "heroOnDisk": true,
+      "exploreMapping": {
+        "slug": "mediterranean-chicken-white-bean-skillet",
+        "title": "Mediterranean Chicken & White Bean Skillet",
+        "category": "performance_meals",
+        "kind": "performance_meal",
+        "heroImage": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
+        "canonicalHero": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "a88197fa44a5065d238c7f6deb5cfc88",
+        "exploreEligible": true
+      },
+      "metadataIssues": [],
+      "visionPass": null,
+      "visionSkipped": true,
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4345,9 +4838,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4428,9 +4919,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4484,7 +4973,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4511,7 +5002,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4619,7 +5112,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4673,9 +5168,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4729,9 +5222,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4839,9 +5330,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -4868,7 +5357,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -4924,7 +5415,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5113,7 +5606,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5167,9 +5662,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5277,9 +5770,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5387,7 +5878,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5497,9 +5990,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5636,7 +6127,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5744,7 +6237,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5800,7 +6295,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -5827,9 +6324,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -5883,9 +6378,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6047,9 +6540,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6184,7 +6675,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6211,9 +6704,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6328,7 +6819,9 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": false,
       "criticalReasons": [
         "Complete meal required — hero metadata shows too few title components (1/2)"
@@ -6384,9 +6877,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6413,9 +6904,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6597,37 +7086,20 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
         "canonicalHero": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (teriyaki-donburi, thai-peanut-chicken-crock) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "teriyaki-donburi",
-          "thai-peanut-chicken-crock"
-        ],
-        "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "25d79ae5ce024236882bdbfa23943336",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 2 other recipe(s): teriyaki-donburi, thai-peanut-chicken-crock",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (teriyaki-donburi, thai-peanut-chicken-crock) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "firehall-korean-beef-bowls",
@@ -6643,40 +7115,18 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
         "canonicalHero": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "bulgogi-bowls",
-          "egg-roll-in-a-bowl-crew",
-          "korean-turkey-rice-bowls"
-        ],
-        "heroMd5": "7545872c4593a5901dee7066cd526054",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "7111707cdb58192c206920a7f04586ad",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 3 other recipe(s): bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "cajun-shrimp-rice-bowls",
@@ -6701,7 +7151,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6728,7 +7180,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6782,7 +7236,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6809,7 +7265,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -6836,9 +7294,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -6912,38 +7368,20 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
         "canonicalHero": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "bulgogi-bowls",
-          "firehall-korean-beef-bowls",
-          "korean-turkey-rice-bowls"
-        ],
-        "heroMd5": "7545872c4593a5901dee7066cd526054",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "9e1c2efdc0bc7d7b24a2888e9d374c20",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 3 other recipe(s): bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "salmon-rice-bowls-crew",
@@ -6986,38 +7424,18 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
         "canonicalHero": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "bulgogi-bowls",
-          "firehall-korean-beef-bowls",
-          "egg-roll-in-a-bowl-crew"
-        ],
-        "heroMd5": "7545872c4593a5901dee7066cd526054",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "7dc3cb0f3b244dba0f39b2c953562165",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 3 other recipe(s): bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "leftover-roast-beef-bowls",
@@ -7087,45 +7505,18 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
         "canonicalHero": "/images/hall-expansion/white-chicken-chili-crock.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "big-chili",
-          "burnt-ends-chili-crew",
-          "pasta-e-fagioli-hall"
-        ],
-        "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "0a37633d172b75da69a269593fc66c30",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "image_title_mismatch",
-          "severity": "critical",
-          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides",
-          "confidence": 98
-        },
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 3 other recipe(s): big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled",
-        "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "italian-beef-slow-cooker",
@@ -7204,7 +7595,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7222,44 +7615,20 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
         "canonicalHero": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (teriyaki-donburi, teriyaki-chicken-rice-bowls) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "teriyaki-donburi",
-          "teriyaki-chicken-rice-bowls"
-        ],
-        "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "bf27b65fc74a4ae22ffc2537b91bedf7",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "image_title_mismatch",
-          "severity": "critical",
-          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides",
-          "confidence": 98
-        },
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 2 other recipe(s): teriyaki-donburi, teriyaki-chicken-rice-bowls",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (teriyaki-donburi, teriyaki-chicken-rice-bowls) — image reuse disabled",
-        "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "burnt-ends-chili-crew",
@@ -7275,38 +7644,18 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
         "canonicalHero": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "big-chili",
-          "white-chicken-chili-crock",
-          "pasta-e-fagioli-hall"
-        ],
-        "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "408967346e10f656350bc4926a30592f",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 3 other recipe(s): big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "smoker-nachos-crew",
@@ -7331,7 +7680,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7385,9 +7736,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -7414,9 +7763,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -7443,7 +7790,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7461,38 +7810,18 @@
         "kind": "hall_expansion",
         "heroImage": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
         "canonicalHero": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (big-chili, white-chicken-chili-crock, burnt-ends-chili-crew) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "big-chili",
-          "white-chicken-chili-crock",
-          "burnt-ends-chili-crew"
-        ],
-        "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "07ecef879c9be3b6a064f2ac59d4565b",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 3 other recipe(s): big-chili, white-chicken-chili-crock, burnt-ends-chili-crew",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (big-chili, white-chicken-chili-crock, burnt-ends-chili-crew) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "dirty-rice-crew-skillet",
@@ -7544,9 +7873,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -7670,9 +7997,7 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": false,
       "criticalReasons": [
         "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)"
@@ -7701,7 +8026,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7755,7 +8082,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -7836,9 +8165,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8108,9 +8435,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8164,9 +8489,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8238,7 +8561,7 @@
       "title": "Crew French Toast Bake",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/crew-french-toast-bake.jpg",
-      "heroAlt": "Wide firehall crew platter of Crew French Toast Bake beside eggs on a station prep table, family-style",
+      "heroAlt": "Crew French Toast Bake — baked golden French toast casserole, cut into squares, served with maple syrup",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "crew-french-toast-bake",
@@ -8250,7 +8573,7 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "ea687e25f03096dcce1c87a5836fd40d",
+        "heroMd5": "d13dd9472941b391aa5b5307014df54f",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -8283,9 +8606,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8312,7 +8633,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8449,9 +8772,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8505,9 +8826,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8525,36 +8844,20 @@
         "kind": "breakfast_catalog",
         "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
         "canonicalHero": "/images/breakfast/huevos-rancheros-crew.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (shakshuka-for-the-hall) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "shakshuka-for-the-hall"
-        ],
-        "heroMd5": "28b6174fb9ffbd1c0109cccb546a68e7",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "767ac8c71b856f258285f1ac6d06341a",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): shakshuka-for-the-hall",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (shakshuka-for-the-hall) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "irish-breakfast-fry-up",
@@ -8678,9 +8981,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -8698,38 +8999,18 @@
         "kind": "breakfast_catalog",
         "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
         "canonicalHero": "/images/breakfast/menemen-for-the-crew.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (migas-for-the-crew) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "migas-for-the-crew"
-        ],
-        "heroMd5": "c1bd9f5504958d7b6f86e6adb9918c6a",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "d3196e61d65e24550f9f2678def3cfd5",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): migas-for-the-crew",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (migas-for-the-crew) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "migas-for-the-crew",
@@ -8745,36 +9026,20 @@
         "kind": "breakfast_catalog",
         "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
         "canonicalHero": "/images/breakfast/migas-for-the-crew.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (menemen-for-the-crew) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "menemen-for-the-crew"
-        ],
-        "heroMd5": "c1bd9f5504958d7b6f86e6adb9918c6a",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "8d1a98dc82ee844adce099cb3f0fabfc",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): menemen-for-the-crew",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (menemen-for-the-crew) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "monte-cristo-sandwiches",
@@ -8799,7 +9064,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -8808,7 +9075,7 @@
       "title": "Overnight French Toast Bake",
       "collection": "breakfast",
       "heroImage": "/images/breakfast/overnight-french-toast-bake.jpg",
-      "heroAlt": "Golden overnight French toast bake cut into squares with berries and maple",
+      "heroAlt": "Overnight French Toast Bake — baked golden French toast casserole, cut into squares, served with maple syrup",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "overnight-french-toast-bake",
@@ -8820,7 +9087,7 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "bad24e39a44028a803f761529c8ba808",
+        "heroMd5": "1f80b520c1eb7068f543f1643040d902",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -8968,9 +9235,7 @@
       ],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": false,
       "criticalReasons": [
         "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)"
@@ -8990,36 +9255,18 @@
         "kind": "breakfast_catalog",
         "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
         "canonicalHero": "/images/breakfast/shakshuka-for-the-hall.jpg",
-        "status": "duplicate_conflict",
-        "issues": [
-          {
-            "code": "duplicate_hero_hash",
-            "severity": "critical",
-            "message": "hero file reused across recipes (huevos-rancheros-crew) — image reuse disabled",
-            "confidence": 99
-          }
-        ],
-        "duplicatePeers": [
-          "huevos-rancheros-crew"
-        ],
-        "heroMd5": "28b6174fb9ffbd1c0109cccb546a68e7",
-        "exploreEligible": false
+        "status": "correct",
+        "issues": [],
+        "duplicatePeers": [],
+        "heroMd5": "d8dcae70389ceea74e3d99fae32226bb",
+        "exploreEligible": true
       },
-      "metadataIssues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "warning",
-          "message": "hero bytes shared with 1 other recipe(s): huevos-rancheros-crew",
-          "confidence": 80
-        }
-      ],
+      "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
       "visionReasons": [],
       "pass": true,
-      "criticalReasons": [
-        "hero file reused across recipes (huevos-rancheros-crew) — image reuse disabled"
-      ]
+      "criticalReasons": []
     },
     {
       "slug": "sheet-pan-breakfast-hash",
@@ -9071,9 +9318,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -9237,9 +9482,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -9459,7 +9702,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -9571,9 +9816,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -9627,9 +9870,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -9656,7 +9897,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -9683,7 +9926,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -9764,9 +10009,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -9903,9 +10146,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -9932,7 +10173,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -9986,9 +10229,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -10015,7 +10256,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -10069,7 +10312,9 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [],
+      "visionReasons": [
+        "vision_skipped"
+      ],
       "pass": true,
       "criticalReasons": []
     },
@@ -10096,9 +10341,7 @@
       "metadataIssues": [],
       "visionPass": null,
       "visionSkipped": true,
-      "visionReasons": [
-        "vision_skipped"
-      ],
+      "visionReasons": [],
       "pass": true,
       "criticalReasons": []
     },
@@ -10107,7 +10350,7 @@
       "title": "Strawberry Spinach Smoothie",
       "collection": "smoothies",
       "heroImage": "/images/smoothies/strawberry-spinach.webp",
-      "heroAlt": "Strawberry Spinach Smoothie — wide family-style firehall platter showing spinach on a crew prep table",
+      "heroAlt": "Strawberry Spinach Smoothie",
       "heroOnDisk": true,
       "exploreMapping": {
         "slug": "strawberry-spinach",

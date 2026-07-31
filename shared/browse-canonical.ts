@@ -20,6 +20,7 @@ export interface ExploreBrowseFilterPatch {
   protein?: string;
   cookTime?: ExploreCookTimeFilter;
   highProtein?: boolean;
+  lowCarb?: boolean;
   lowCleanup?: boolean;
   search?: string;
   dietary?: DietaryFilterKey[];
@@ -98,6 +99,7 @@ export function parseExploreBrowseSearch(search: string): ExploreBrowseFilterPat
   }
 
   if (params.get("highProtein") === "1") patch.highProtein = true;
+  if (params.get("lowCarb") === "1") patch.lowCarb = true;
   if (params.get("lowCleanup") === "1") patch.lowCleanup = true;
 
   const searchText = params.get("q") ?? params.get("search");
@@ -119,6 +121,7 @@ export function buildExploreBrowseSearch(input: {
   protein: string;
   cookTime: ExploreCookTimeFilter;
   highProtein: boolean;
+  lowCarb: boolean;
   lowCleanup: boolean;
   searchQuery: string;
   dietary?: DietaryFilterKey[];
@@ -130,6 +133,7 @@ export function buildExploreBrowseSearch(input: {
   if (input.protein !== "all") params.set("protein", input.protein);
   if (input.cookTime !== "all") params.set("cookTime", input.cookTime);
   if (input.highProtein) params.set("highProtein", "1");
+  if (input.lowCarb) params.set("lowCarb", "1");
   if (input.lowCleanup) params.set("lowCleanup", "1");
   if (input.searchQuery.trim()) params.set("q", input.searchQuery.trim());
   if (input.dietary && input.dietary.length > 0) params.set("dietary", input.dietary.join(","));

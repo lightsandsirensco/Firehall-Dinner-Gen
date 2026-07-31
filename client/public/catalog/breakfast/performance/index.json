@@ -31,7 +31,7 @@
           "glutenFree": false,
           "dairyFree": false,
           "eggFree": false,
-          "nutFree": true,
+          "nutFree": false,
           "peanutFree": true,
           "soyFree": true,
           "shellfishFree": true,
@@ -52,6 +52,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -74,32 +80,27 @@
       "publishedAt": "2026-07-17T20:15:27.732Z",
       "collectionTier": "performance",
       "dietarySummary": {
-        "confidence": "high",
+        "confidence": "low",
         "flags": {
           "glutenFree": false,
           "dairyFree": false,
           "eggFree": false,
-          "nutFree": true,
-          "peanutFree": true,
-          "soyFree": true,
-          "shellfishFree": true,
-          "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
+          "nutFree": false,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": false,
+          "vegetarian": false,
           "vegan": false
         },
-        "adaptable": [
-          {
-            "flag": "gluten",
-            "label": "Gluten-Free Adaptable",
-            "note": "Use certified gluten-free oats. Use a certified gluten-free broth or bouillon."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
-          }
-        ]
+        "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -139,6 +140,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -185,6 +192,12 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": false
       }
     },
     {
@@ -233,6 +246,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     }
   ]

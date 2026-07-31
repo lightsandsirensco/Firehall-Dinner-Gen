@@ -151,7 +151,9 @@ md.push(`- **High confidence (fully verified):** ${high} (${pct(high, total)})`)
 md.push(`- **Low confidence (contains an unverified ingredient — excluded from all strict filters):** ${low} (${pct(low, total)})`);
 md.push("");
 md.push(
-  "Every recipe in the current catalog resolved to 100% high confidence after the ingredient database was expanded to cover every distinct ingredient string in use (see `scripts/dietary-classify-catalog.ts`). Any *future* recipe added with an ingredient not yet in the database will correctly default to Low confidence and be held out of strict filters until reviewed — this is expected, intentional behavior, not a bug.",
+  low === 0
+    ? "Every recipe in the current catalog resolved to 100% high confidence after the ingredient database was expanded to cover every distinct ingredient string in use (see `scripts/dietary-classify-catalog.ts`). Any *future* recipe added with an ingredient not yet in the database will correctly default to Low confidence and be held out of strict filters until reviewed — this is expected, intentional behavior, not a bug."
+    : `${high} of ${total} recipes resolved to high confidence after the ingredient database was expanded to cover almost every distinct ingredient string in use (see \`scripts/dietary-classify-catalog.ts\`). The remaining ${low} recipe(s) listed below contain a genuinely ambiguous ingredient (e.g. an "X or Y" alternative naming an unconfirmed protein/dairy source) and are intentionally held out of every strict filter until a human resolves the ambiguity — this is expected, conservative behavior, not a bug. Any *future* recipe added with an ingredient not yet in the database will likewise correctly default to Low confidence.`,
 );
 md.push("");
 md.push("## Per-filter counts");

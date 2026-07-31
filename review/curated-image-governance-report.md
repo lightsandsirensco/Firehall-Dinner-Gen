@@ -1,11 +1,11 @@
 # Curated image governance audit
 
-Generated: **2026-07-27T18:19:25.541Z**
+Generated: **2026-07-30T20:40:03.398Z**
 
-- Recipes audited: **747**
-- Failed governance: **83**
+- Recipes audited: **773**
+- Failed governance: **81**
 - Build blockers (≥72): **0**
-- Duplicate hero paths: **247**
+- Duplicate hero paths: **252**
 
 ## Build blockers
 
@@ -31,6 +31,7 @@ _None — images pass governance threshold._
 - `/images/hall-expansion/bbq-meatball-skewers.jpg` → bbq-meatball-skewers, bbq-meatball-skewers
 - `/images/hall-expansion/bbq-pulled-pork-bowls.jpg` → bbq-pulled-pork-bowls, bbq-pulled-pork-bowls
 - `/images/golden-100/beef-broccoli.jpg` → beef-broccoli, beef-broccoli, sheet-pan-dinner-hanger-steak-with-mushrooms-and-carrots
+- `/images/golden-100/lean-beef-broccoli-rice.jpg` → lean-beef-broccoli-rice, lean-beef-broccoli-rice
 - `/images/golden-100/beef-barley-soup.jpg` → beef-barley-soup, beef-barley-soup
 - `/images/golden-100/beef-dip.jpg` → beef-dip, beef-dip
 - `/images/hall-expansion/enchilada-beef-skillet.jpg` → enchilada-beef-skillet, enchilada-beef-skillet
@@ -52,4 +53,3 @@ _None — images pass governance threshold._
 - `/images/hall-expansion/burrito-bowl-bar-night.jpg` → burrito-bowl-bar-night, burrito-bowl-bar-night
 - `/images/golden-100/butter-chicken.jpg` → butter-chicken, butter-chicken
 - `/images/golden-100/cajun-chicken-rice-bowl.jpg` → cajun-chicken-rice-bowl, cajun-chicken-rice-bowl
-- `/images/hall-expansion/cajun-chicken-rice-skillet.jpg` → cajun-chicken-rice-skillet, cajun-chicken-rice-skillet

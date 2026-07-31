@@ -187,10 +187,16 @@
         "allergens": [
           "dairy"
         ]
+      },
+      {
+        "name": "bunch fresh cilantro",
+        "allergens": [
+          "gluten"
+        ]
       }
     ],
     "flags": {
-      "glutenFree": true,
+      "glutenFree": false,
       "dairyFree": false,
       "eggFree": false,
       "nutFree": true,
@@ -204,11 +210,16 @@
     },
     "adaptable": [
       {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }
