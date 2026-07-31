@@ -161,7 +161,8 @@
       {
         "name": "whole milk",
         "allergens": [
-          "dairy"
+          "dairy",
+          "egg"
         ]
       },
       {
@@ -203,6 +204,6 @@
         "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

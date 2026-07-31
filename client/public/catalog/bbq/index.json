@@ -61,6 +61,12 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -119,6 +125,12 @@
             "note": "Use an egg-free/vegan mayonnaise."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -178,6 +190,12 @@
             "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -242,6 +260,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -304,6 +328,12 @@
             "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -370,6 +400,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -432,6 +468,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -488,6 +530,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -550,6 +598,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -613,6 +667,12 @@
             "note": "Use a certified gluten-free broth or bouillon. Use certified gluten-free tortillas or corn tortillas."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -676,6 +736,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -732,6 +798,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -777,24 +849,40 @@
         "confidence": "high",
         "flags": {
           "glutenFree": false,
-          "dairyFree": true,
+          "dairyFree": false,
           "eggFree": true,
           "nutFree": true,
           "peanutFree": true,
           "soyFree": true,
           "shellfishFree": true,
           "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
-          "vegan": true
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
         },
         "adaptable": [
           {
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -858,6 +946,12 @@
             "note": "Use a certified gluten-free pasta. Use a 1:1 gluten-free all-purpose flour blend. Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -921,6 +1015,12 @@
             "note": "Use a certified gluten-free Worcestershire sauce."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -977,6 +1077,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1039,6 +1145,12 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1101,6 +1213,12 @@
             "note": "Use tamari or a certified gluten-free soy sauce alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1157,6 +1275,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1219,6 +1343,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1274,6 +1404,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1336,6 +1472,12 @@
             "note": "Use tamari or a certified gluten-free soy sauce alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1398,6 +1540,12 @@
             "note": "Use a 1:1 gluten-free all-purpose flour blend."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1460,6 +1608,12 @@
             "note": "Use a certified gluten-free bread/crust/wrapper alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1522,6 +1676,12 @@
             "note": "Substitute broth plus a splash of vinegar for the acidity."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1578,6 +1738,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -1640,6 +1806,12 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1706,6 +1878,12 @@
             "note": "Substitute broth plus a splash of vinegar for the acidity."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1778,6 +1956,12 @@
             "note": "Use an egg-free/vegan mayonnaise."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1849,6 +2033,12 @@
             "note": "Substitute broth plus a splash of vinegar for the acidity."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1904,6 +2094,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1971,6 +2167,12 @@
             "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2037,6 +2239,12 @@
             "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2099,6 +2307,12 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2176,6 +2390,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2237,6 +2457,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2304,6 +2530,12 @@
             "note": "Use coconut aminos."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2371,6 +2603,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2442,6 +2680,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2514,6 +2758,12 @@
             "note": "Substitute broth plus a splash of vinegar for the acidity."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2575,6 +2825,12 @@
             "note": "Use an egg-free/vegan mayonnaise."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -2637,6 +2893,12 @@
             "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2708,6 +2970,12 @@
             "note": "Substitute broth plus a splash of vinegar for the acidity."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -2774,6 +3042,12 @@
             "note": "Substitute broth plus a splash of vinegar for the acidity."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -2835,6 +3109,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true
       }
     }
   ]

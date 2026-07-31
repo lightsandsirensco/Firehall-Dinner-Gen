@@ -45,32 +45,26 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
       "instruction": "Line up every ingredient for Blueberry Almond Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on."
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
       "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Blend. Confirm burners ignite evenly and sheet pans are greased or lined."
     },
     {
       "stepNumber": 3,
-      "title": "Combine blueberries, almond butter,",
       "instruction": "Combine blueberries, almond butter, milk, and yogurt in the blender. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 4,
-      "title": "Blend on high until",
       "instruction": "Blend on high until the purple color is even and the almond butter is fully incorporated. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 5,
-      "title": "Add oats and lemon",
       "instruction": "Add oats and lemon if using; blend 30 seconds more until smooth. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 6,
-      "title": "Should taste nutty and",
       "instruction": "Should taste nutty and fruity, not bitter — add a teaspoon of honey only if blueberries were tart. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     }
   ],
@@ -80,8 +74,8 @@
     "carbs": 15,
     "fats": 8,
     "highlights": "Nutrition estimate coming soon",
-    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -94,16 +88,15 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    },
-    "estimateAvailable": true
+    }
   },
   "substitutions": [
     "Peanut butter swaps in if almond butter is not on hand.",
     "Silken tofu (½ cup) can replace part of the yogurt for a dairy-free batch."
   ],
   "shiftNote": "Berries hide in the freezer well — good pantry item for halls trying to stock healthier grab-and-go options.",
-  "heroImage": "/images/smoothies/blueberry-almond.jpg",
-  "thumbImage": "/images/thumbs/blueberry-almond.jpg",
+  "heroImage": "/images/smoothies/blueberry-almond.webp",
+  "thumbImage": "/images/smoothies/blueberry-almond.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:fruit_smoothie",
@@ -127,29 +120,6 @@
   "catalogSet": "fuel_smoothie",
   "generatedAt": "2026-05-31T13:06:17.138Z",
   "contentVersion": 2,
-  "mobileImage": "/images/mobile/blueberry-almond.jpg",
-  "railImage": "/images/rails/blueberry-almond.jpg",
-  "proTips": [
-    "Berries hide in the freezer well — good pantry item for halls trying to stock healthier grab-and-go options.",
-    "Rinse the blender jar between batches so flavors do not muddy the next crew's cups.",
-    "If tones drop during service, cover hot food and hold at 140°F — note hold time on the pan for food safety."
-  ],
-  "tonightSpread": [
-    "Pour Blueberry Almond Smoothie into insulated cups or quart jars on ice for grab-and-go service.",
-    "Set granola, nut butter, and extra fruit in side bowls so crew can customize without slowing the line.",
-    "Keep a backup blender batch chilled at 38°F if service runs past 20 minutes."
-  ],
-  "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
-  ],
-  "equipment": [
-    "high-speed blender",
-    "measuring cups",
-    "ice bath pan"
-  ],
-  "baseServings": 8,
-  "crewSize": 8,
   "dietary": {
     "confidence": "high",
     "matchedCount": 6,
@@ -201,6 +171,6 @@
         "note": "Use certified gluten-free oats."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

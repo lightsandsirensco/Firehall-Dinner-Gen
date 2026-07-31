@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T13:59:35.552Z",
+  "generatedAt": "2026-07-30T13:04:10.026Z",
   "origin": "https://www.firehallmeals.com",
   "liveFetch": false,
   "phase1": {
@@ -291,18 +291,6 @@
       "code": "schema_image_missing",
       "message": "Recipe schema missing image",
       "slug": "high-protein-chicken-fried-rice"
-    },
-    {
-      "phase": "recipes",
-      "code": "duplicate_title",
-      "message": "Duplicate title with sheet-pan-sausage-peppers",
-      "slug": "italian-sausage-veg-sheet-pan"
-    },
-    {
-      "phase": "recipes",
-      "code": "duplicate_meta_title",
-      "message": "Duplicate meta title with sheet-pan-sausage-peppers",
-      "slug": "italian-sausage-veg-sheet-pan"
     },
     {
       "phase": "structured-data",

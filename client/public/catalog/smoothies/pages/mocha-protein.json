@@ -52,32 +52,26 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
       "instruction": "Line up every ingredient for Mocha Protein Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on. Use honey or maple syrup as listed — measure each before heat goes on."
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
       "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Blend. Confirm burners ignite evenly and sheet pans are greased or lined."
     },
     {
       "stepNumber": 3,
-      "title": "Blend yogurt, milk, cocoa,",
       "instruction": "Blend yogurt, milk, cocoa, and coffee until the cocoa is fully dissolved — no dry cocoa pockets. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 4,
-      "title": "Add banana or protein",
       "instruction": "Add banana or protein powder if using. Blend until frothy on top, about 60 seconds. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 5,
-      "title": "Taste before adding sweetener",
       "instruction": "Taste before adding sweetener — coffee bitterness varies batch to batch. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 6,
-      "title": "Serve over ice if",
       "instruction": "Serve over ice if you want it colder; foam on top is normal from the yogurt. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     }
   ],
@@ -87,8 +81,8 @@
     "carbs": 9,
     "fats": 4,
     "highlights": "Nutrition estimate coming soon",
-    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -101,16 +95,15 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    },
-    "estimateAvailable": true
+    }
   },
   "substitutions": [
     "Instant espresso (2 tsp + ½ cup water) works if cold brew is not stocked.",
     "Skip protein powder if the crew prefers whole-food protein only."
   ],
   "shiftNote": "Caffeine plus protein in one cup — useful when the pot is empty but the board is not.",
-  "heroImage": "/images/smoothies/mocha-protein.jpg",
-  "thumbImage": "/images/thumbs/mocha-protein.jpg",
+  "heroImage": "/images/smoothies/mocha-protein.webp",
+  "thumbImage": "/images/smoothies/mocha-protein.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:coffee_smoothie",
@@ -132,29 +125,6 @@
   "catalogSet": "fuel_smoothie",
   "generatedAt": "2026-05-31T23:49:25.606Z",
   "contentVersion": 2,
-  "mobileImage": "/images/mobile/mocha-protein.jpg",
-  "railImage": "/images/rails/mocha-protein.jpg",
-  "proTips": [
-    "Caffeine plus protein in one cup — useful when the pot is empty but the board is not.",
-    "Rinse the blender jar between batches so flavors do not muddy the next crew's cups.",
-    "If tones drop during service, cover hot food and hold at 140°F — note hold time on the pan for food safety."
-  ],
-  "tonightSpread": [
-    "Pour Mocha Protein Smoothie into insulated cups or quart jars on ice for grab-and-go service.",
-    "Set granola, nut butter, and extra fruit in side bowls so crew can customize without slowing the line.",
-    "Keep a backup blender batch chilled at 38°F if service runs past 20 minutes."
-  ],
-  "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
-  ],
-  "equipment": [
-    "high-speed blender",
-    "measuring cups",
-    "ice bath pan"
-  ],
-  "baseServings": 8,
-  "crewSize": 8,
   "dietary": {
     "confidence": "high",
     "matchedCount": 7,
@@ -194,6 +164,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

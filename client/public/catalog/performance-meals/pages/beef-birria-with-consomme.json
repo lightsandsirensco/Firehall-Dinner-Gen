@@ -199,11 +199,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/beef-birria-with-consomme.jpg",
   "heroImageAlt": "Wide firehall crew platter of Beef Birria with Consommé for Dipping on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/beef-birria-with-consomme.jpg",
+  "thumbImage": "/images/thumbs/beef-birria-with-consomme.jpg",
+  "railImage": "/images/rails/beef-birria-with-consomme.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -259,6 +259,6 @@
         "note": "Use a certified gluten-free broth or bouillon."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

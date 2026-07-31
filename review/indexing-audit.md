@@ -1,6 +1,6 @@
 # SEO Indexing Audit
 
-Generated: 2026-07-24T02:32:40.424Z
+Generated: 2026-07-30T13:11:40.854Z
 
 Canonical origin: **https://www.firehallmeals.com**
 
@@ -12,7 +12,7 @@ Canonical origin: **https://www.firehallmeals.com**
 |-------|--------|
 | Required routes in sitemap | PASS |
 | robots.txt allows crawling | PASS |
-| Recipe unique title + meta + canonical | NEEDS WORK |
+| Recipe unique title + meta + canonical | PASS |
 | Recipes in sitemap | PASS |
 | Internal discoverability | NEEDS WORK |
 | **Overall** | **NEEDS WORK** |
@@ -21,12 +21,12 @@ Canonical origin: **https://www.firehallmeals.com**
 
 | Metric | Count |
 |--------|------:|
-| **Total URLs in sitemap** | 444 |
-| **Total recipe URLs** (catalog indexes) | 348 |
-| Recipe URLs listed in sitemap | 348 |
+| **Total URLs in sitemap** | 515 |
+| **Total recipe URLs** (catalog indexes) | 374 |
+| Recipe URLs listed in sitemap | 374 |
 | **Total guide URLs** | 58 |
 | Guide URLs listed in sitemap | 62 |
-| Approved catalog (Explore / Recipes browse) | 299 |
+| Approved catalog (Explore / Recipes browse) | 355 |
 
 ## 1. Sitemap — required routes
 
@@ -40,7 +40,7 @@ Canonical origin: **https://www.firehallmeals.com**
 
 
 
-Hall guides index (`/guides`) plus **62** individual guide URLs. Explore catalog (`/explore`) plus **348** recipe/smoothie detail URLs.
+Hall guides index (`/guides`) plus **62** individual guide URLs. Explore catalog (`/explore`) plus **374** recipe/smoothie detail URLs.
 
 ## 2. robots.txt
 
@@ -57,6 +57,175 @@ Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
 Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: GPTBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: GoogleOther
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: CCBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: anthropic-ai
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
+
+User-agent: Bytespider
+Allow: /
+Disallow: /admin
+Disallow: /api/
+Disallow: /vote/
+Disallow: /me
+Disallow: /hall
+Disallow: /halls/
+Disallow: /settings
+Disallow: /profile
+Disallow: /tonight
+Disallow: /onboarding/
+Disallow: /favorites
 
 Sitemap: https://www.firehallmeals.com/sitemap.xml
 ```
@@ -72,20 +241,17 @@ Sitemap: https://www.firehallmeals.com/sitemap.xml
 
 ## 3. Recipe page metadata
 
-Audited **348** indexable recipe URLs.
+Audited **374** indexable recipe URLs.
 
 | Issue | Count |
 |-------|------:|
 | Missing title, description, or canonical | 0 |
-| Duplicate meta titles | 1 |
+| Duplicate meta titles | 0 |
 | Duplicate meta descriptions | 0 |
 | Invalid / missing canonical | 0 |
 | Canonical path mismatch | 0 |
 
 
-### Duplicate titles (sample)
-
-- firehall-greek-chicken-bowls ↔ greek-chicken-bowls: "Greek Chicken Bowls | Firehall Meals"
 
 
 
@@ -95,56 +261,28 @@ Recipes should be reachable via **Explore / Recipes** (approved catalog) and/or 
 
 | Signal | Count |
 |--------|------:|
-| In approved catalog (Explore / Recipes grid) | 299 |
-| Hub-only (Pizza / Breakfast / Performance — not on Explore) | 57 |
-| Not linked from any hall guide | 263 |
-| Golden-family pages with &lt;2 outbound related links | 160 |
-| **True orphan recipes** (no catalog hub, no guide link) | **37** |
+| In approved catalog (Explore / Recipes grid) | 355 |
+| Hub-only (Pizza / Breakfast / Performance — not on Explore) | 55 |
+| Not linked from any hall guide | 289 |
+| Golden-family pages with &lt;2 outbound related links | 186 |
+| **True orphan recipes** (no catalog hub, no guide link) | **9** |
 
 ### True orphan recipe slugs
 
 - `chicken-alfredo-bake`
-- `flank-chimichurri`
-- `loaded-nacho-skillet`
-- `best-tuna-melt-for-the-hall`
-- `firehall-taco-bowls`
-- `buffalo-chicken-sweet-potato-bowls`
-- `firehall-greek-chicken-bowls`
 - `teriyaki-chicken-rice-bowls`
 - `firehall-korean-beef-bowls`
-- `cajun-shrimp-rice-bowls`
-- `southwest-steak-bowls`
-- `bbq-pulled-pork-bowls`
-- `mediterranean-beef-bowls`
-- `chipotle-chicken-burrito-bowls`
-- `turkey-taco-bowls`
-- `peanut-chicken-rice-bowls`
-- `firehall-gyro-bowls`
 - `egg-roll-in-a-bowl-crew`
-- `salmon-rice-bowls-crew`
 - `korean-turkey-rice-bowls`
-- `leftover-roast-beef-bowls`
-- `mississippi-pot-roast-crew`
 - `white-chicken-chili-crock`
-- `italian-beef-slow-cooker`
-- `salsa-verde-chicken-crock`
-- `loaded-baked-potato-soup-crock`
 - `thai-peanut-chicken-crock`
 - `burnt-ends-chili-crew`
-- `smoker-nachos-crew`
-- `weeknight-bbq-ribs-crew`
-- `grilled-flank-fajita-bar`
-- `costco-rotisserie-remix`
-- `chicken-thigh-stretch-dinner`
 - `pasta-e-fagioli-hall`
-- `dirty-rice-crew-skillet`
-- `sausage-gnocchi-skillet`
-- `spanish-rice-chicken-one-pot`
 
 
 ### Hub-only recipes (indexed, not on Explore)
 
-57 recipes live on dedicated hubs instead of the main catalog — expected for Pizza Night and some breakfast/performance entries. See `hubOnlySample` in JSON.
+55 recipes live on dedicated hubs instead of the main catalog — expected for Pizza Night and some breakfast/performance entries. See `hubOnlySample` in JSON.
 
 
 ## 5. Sitemap generation coverage
@@ -153,10 +291,11 @@ Recipes should be reachable via **Explore / Recipes** (approved catalog) and/or 
 |-------|------:|
 | Indexable recipes missing from sitemap | 0 |
 | Published guides missing from sitemap | 0 |
-| Orphan sitemap URLs (no backing page) | 0 |
+| Orphan sitemap URLs (no backing page) | 45 |
 
 
 
+**Orphan sitemap paths:** /recipes/honey-chipotle-chicken-thighs, /recipes/smoked-chicken-quarters-white-sauce, /recipes/brisket-style-beef-sandwiches-au-jus, /recipes/hot-honey-grilled-sausage-peppers, /recipes/texas-central-brisket-crew, /recipes/firehall-burnt-ends-platter, /recipes/competition-bbq-chicken-thighs, /recipes/smoked-bbq-chicken-wings-tray, /recipes/hickory-smoked-chicken-breast, /recipes/santa-maria-tri-tip-roast, /recipes/reverse-seared-ribeye-crew, /recipes/smoked-picanha-steak-platter, /recipes/jalapeno-cheddar-smoked-sausages, /recipes/smoked-mac-and-cheese-crew, /recipes/smoked-baked-beans-crew, /recipes/smoked-potato-salad-tray, /recipes/lamb-merguez-skewers-crew, /recipes/pork-satay-skewers-crew, /recipes/gochujang-beef-skewers-crew, /recipes/caprese-steak-skewers-crew, /recipes/honey-sriracha-shrimp-skewers, /recipes/yakiniku-grill-platter-crew, /recipes/tandoori-lamb-chop-platter, /recipes/portuguese-linguica-grill-platter, /recipes/spiedie-chicken-platter-crew, /recipes/pollo-asado-citrus-platter, /recipes/mixed-lamb-chop-grill-board, /recipes/maple-bourbon-grilled-trout, /recipes/cajun-grilled-cod-crew, /recipes/grilled-cod-lemon-packets, /recipes/chili-lime-grilled-tilapia, /recipes/grilled-chicken-pesto-panini-crew, /recipes/pressed-cuban-sandwiches-crew, /recipes/grilled-reuben-sandwiches-crew, /recipes/andouille-po-boy-rolls-crew, /recipes/cast-iron-steak-fajita-sizzlers, /recipes/firehall-hibachi-mixed-grill-crew, /recipes/flat-top-philly-cheesesteaks-crew, /recipes/griddle-smash-sausage-peppers, /recipes/mongolian-beef-flat-top-crew, /recipes/firehall-street-elote-cups, /recipes/loaded-ranch-potato-salad-crew, /recipes/firehall-antipasto-pasta-salad, /recipes/grilled-peach-burrata-salad, /recipes/charred-broccolini-lemon-tray
 
 
 ## 6. Remediation log (browse unification)

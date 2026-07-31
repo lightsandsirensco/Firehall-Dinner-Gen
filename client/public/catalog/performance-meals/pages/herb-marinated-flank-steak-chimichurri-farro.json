@@ -191,11 +191,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
   "heroImageAlt": "Wide firehall crew platter: sliced flank steak with bright green chimichurri sauce beside roasted potatoes on a station prep table, family-style",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/herb-marinated-flank-steak-chimichurri-farro.jpg",
+  "thumbImage": "/images/thumbs/herb-marinated-flank-steak-chimichurri-farro.jpg",
+  "railImage": "/images/rails/herb-marinated-flank-steak-chimichurri-farro.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -257,6 +257,6 @@
         "note": "Substitute quinoa or rice. Use a certified gluten-free broth or bouillon."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

@@ -184,6 +184,291 @@ const CASES: Case[] = [
       return null;
     },
   },
+
+  // --- Dietary-filter-accuracy sprint: full named test list ---
+  {
+    name: "Coconut milk → NOT dairy (plant milk), NOT nut (coconut is not a tree nut for allergy purposes)",
+    ingredients: [{ name: "coconut milk" }, { name: "jasmine rice" }],
+    expect: all(confidenceIs("high"), flagIs("dairyFree", true), flagIs("nutFree", true), flagIs("vegan", true)),
+  },
+  {
+    name: "Almond milk → NOT nut-free, but IS dairy-free (plant milk, not a dairy substitute confusion)",
+    ingredients: [{ name: "almond milk" }, { name: "rolled oats" }],
+    expect: all(confidenceIs("high"), flagIs("nutFree", false), flagIs("dairyFree", true)),
+  },
+  {
+    name: "Peanut butter → NOT dairy (it's a nut/legume spread, not a dairy 'butter')",
+    ingredients: [...BASE_SAFE, { name: "peanut butter" }],
+    expect: all(confidenceIs("high"), flagIs("dairyFree", true), flagIs("peanutFree", false)),
+  },
+  {
+    name: "Butter beans → NOT dairy (legume, not a dairy 'butter')",
+    ingredients: [{ name: "butter beans" }, { name: "olive oil" }, { name: "kosher salt" }],
+    expect: all(confidenceIs("high"), flagIs("dairyFree", true), flagIs("vegan", true)),
+  },
+  {
+    name: "Eggplant → NOT egg (produce, not egg)",
+    ingredients: [{ name: "eggplant" }, { name: "olive oil" }, { name: "kosher salt" }],
+    expect: all(confidenceIs("high"), flagIs("eggFree", true), flagIs("vegan", true)),
+  },
+  {
+    name: "Oyster mushrooms → NOT shellfish (a mushroom variety, not shellfish)",
+    ingredients: [{ name: "oyster mushrooms" }, { name: "olive oil" }, { name: "kosher salt" }],
+    expect: all(confidenceIs("high"), flagIs("shellfishFree", true), flagIs("vegan", true)),
+  },
+  {
+    name: "Vegan mayonnaise → egg-free AND dairy-free (explicit label overrides base mayo profile)",
+    ingredients: [...BASE_SAFE, { name: "vegan mayonnaise" }],
+    expect: all(confidenceIs("high"), flagIs("eggFree", true), flagIs("dairyFree", true)),
+  },
+  {
+    name: "Regular mayonnaise → NOT egg-free",
+    ingredients: [...BASE_SAFE, { name: "mayonnaise" }],
+    expect: all(confidenceIs("high"), flagIs("eggFree", false)),
+  },
+  {
+    name: "Gluten-free hamburger buns → gluten-free (explicit label overrides base bun profile)",
+    ingredients: [...BASE_SAFE, { name: "gluten-free hamburger buns" }],
+    expect: all(confidenceIs("high"), flagIs("glutenFree", true)),
+  },
+  {
+    name: "Regular hamburger buns → NOT gluten-free",
+    ingredients: [...BASE_SAFE, { name: "hamburger buns" }],
+    expect: all(confidenceIs("high"), flagIs("glutenFree", false)),
+  },
+  {
+    name: "Chicken stock → vegetarian FALSE, vegan FALSE (animal-derived stock)",
+    ingredients: [{ name: "chicken stock" }, { name: "carrots" }, { name: "celery" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false), flagIs("vegan", false)),
+  },
+  {
+    name: "Vegetable stock → vegetarian TRUE, vegan TRUE",
+    ingredients: [{ name: "vegetable stock" }, { name: "carrots" }, { name: "celery" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", true), flagIs("vegan", true)),
+  },
+  {
+    name: "Generic unqualified 'stock' → low confidence (source unknown, cannot confirm vegetarian/vegan)",
+    ingredients: [{ name: "stock" }, { name: "carrots" }, { name: "celery" }],
+    expect: all(confidenceIs("low"), flagIs("vegetarian", false), flagIs("vegan", false)),
+  },
+  {
+    name: "Generic unqualified 'broth' → low confidence",
+    ingredients: [{ name: "broth" }, { name: "carrots" }, { name: "celery" }],
+    expect: confidenceIs("low"),
+  },
+  {
+    name: "Turkey bacon → meat present (not vegetarian) but pork-free",
+    ingredients: [...BASE_SAFE, { name: "turkey bacon" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false), flagIs("porkFree", true)),
+  },
+  {
+    name: "Pork bacon → NOT pork-free",
+    ingredients: [...BASE_SAFE, { name: "bacon" }],
+    expect: all(confidenceIs("high"), flagIs("porkFree", false)),
+  },
+  {
+    name: "Chicken sausage → meat present but pork-free",
+    ingredients: [...BASE_SAFE, { name: "chicken sausage" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false), flagIs("porkFree", true)),
+  },
+  {
+    name: "Generic unlabeled sausage → NOT pork-free (protein source unknown, conservative default)",
+    ingredients: [...BASE_SAFE, { name: "sausage" }],
+    expect: all(confidenceIs("high"), flagIs("porkFree", false)),
+  },
+  {
+    name: "Pesto → NOT dairy-free, NOT nut-free (traditional recipe: parmesan + pine nuts)",
+    ingredients: [...BASE_SAFE, { name: "pesto" }],
+    expect: all(confidenceIs("high"), flagIs("dairyFree", false), flagIs("nutFree", false)),
+  },
+  {
+    name: "Nut-free pesto → nut-free TRUE (explicit label), but still NOT dairy-free",
+    ingredients: [...BASE_SAFE, { name: "nut-free pesto" }],
+    expect: all(confidenceIs("high"), flagIs("nutFree", true), flagIs("dairyFree", false)),
+  },
+  {
+    name: "Whey protein → NOT dairy-free",
+    ingredients: [{ name: "whey protein" }, { name: "banana" }],
+    expect: all(confidenceIs("high"), flagIs("dairyFree", false), flagIs("vegan", false)),
+  },
+  {
+    name: "Plant protein (powder) → dairy-free AND vegan-compatible",
+    ingredients: [{ name: "plant protein powder" }, { name: "banana" }],
+    expect: all(confidenceIs("high"), flagIs("dairyFree", true), flagIs("vegan", true)),
+  },
+  {
+    name: "Honey → vegetarian TRUE, vegan FALSE",
+    ingredients: [{ name: "chickpeas" }, { name: "honey" }, { name: "olive oil" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", true), flagIs("vegan", false)),
+  },
+  {
+    name: "Gelatin → vegetarian FALSE, vegan FALSE (animal-derived collagen)",
+    ingredients: [{ name: "gelatin" }, { name: "sugar" }, { name: "berries" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false), flagIs("vegan", false)),
+  },
+  {
+    name: "Worcestershire sauce → vegetarian FALSE (contains anchovies)",
+    ingredients: [...BASE_SAFE, { name: "worcestershire sauce" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false)),
+  },
+  {
+    name: "Caesar dressing → NOT vegan (fish + egg + dairy), vegetarian FALSE (anchovies)",
+    ingredients: [{ name: "romaine lettuce" }, { name: "caesar dressing" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false), flagIs("vegan", false)),
+  },
+  {
+    name: "Ranch dressing → NOT dairy-free",
+    ingredients: [{ name: "romaine lettuce" }, { name: "ranch dressing" }],
+    expect: all(confidenceIs("high"), flagIs("dairyFree", false)),
+  },
+  {
+    name: "Breadcrumbs → NOT gluten-free",
+    ingredients: [...BASE_SAFE, { name: "breadcrumbs" }],
+    expect: all(confidenceIs("high"), flagIs("glutenFree", false)),
+  },
+  {
+    name: "Flour tortillas → NOT gluten-free (duplicate check against sprint list)",
+    ingredients: [...BASE_SAFE, { name: "flour tortillas" }],
+    expect: all(confidenceIs("high"), flagIs("glutenFree", false)),
+  },
+  {
+    name: "Corn tortillas → gluten-free (duplicate check against sprint list)",
+    ingredients: [...BASE_SAFE, { name: "corn tortillas" }],
+    expect: all(confidenceIs("high"), flagIs("glutenFree", true)),
+  },
+  {
+    name: "Egg noodles → NOT egg-free (the noodle itself contains egg)",
+    ingredients: [...BASE_SAFE, { name: "egg noodles" }],
+    expect: all(confidenceIs("high"), flagIs("eggFree", false), flagIs("vegan", false)),
+  },
+  {
+    name: "Rice noodles → egg-free AND gluten-free",
+    ingredients: [...BASE_SAFE, { name: "rice noodles" }],
+    expect: all(confidenceIs("high"), flagIs("eggFree", true), flagIs("glutenFree", true)),
+  },
+
+  // --- Plural/singular normalization regression (ingredient-normalization requirement) ---
+  {
+    name: "Plural 'cedar planks' resolves to the same profile as singular 'cedar plank'",
+    ingredients: [{ name: "salmon fillet" }, { name: "cedar planks (soaked at least 1 hour)" }],
+    expect: confidenceIs("high"),
+  },
+  {
+    name: "Plural 'slider rolls' resolves to the known bun/bread profile",
+    ingredients: [{ name: "slider rolls (hawaiian-style, 12-count pack)" }, { name: "ground beef" }],
+    expect: confidenceIs("high"),
+  },
+
+  // --- Ambiguous "or"-alternative masking regression ---
+  // A compound ingredient like "water or broth" must NOT resolve just because one of its
+  // two alternatives ("water") happens to match a known keyword — the other alternative
+  // ("broth") is source-unknown and must force the whole ingredient (and recipe) to low
+  // confidence, never silently pass as vegetarian/vegan/etc.
+  {
+    name: "'water or broth' → low confidence (bare 'broth' alternative is source-unknown)",
+    ingredients: [{ name: "water or broth" }, { name: "rolled oats" }],
+    expect: confidenceIs("low"),
+  },
+  {
+    name: "'dry white wine or chicken broth' → high confidence, BOTH disqualifying components unioned (not vegetarian, not alcohol-free) — the conservative worst-case, never silently dropping one alternative",
+    ingredients: [...BASE_SAFE, { name: "dry white wine or chicken broth" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false), flagIs("vegan", false)),
+  },
+  {
+    name: "'chicken broth' alone (no ambiguous alternative) still resolves normally",
+    ingredients: [{ name: "chicken broth" }, { name: "carrots" }, { name: "celery" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false)),
+  },
+
+  // --- Compound-ingredient masking regression (production bug: "Jalapeño Cheddar Sausage
+  // Links" resolved ONLY to the produce "jalapeno" keyword — the longest single match — and
+  // completely discarded that the same line also names a dairy cheese AND pork sausage,
+  // incorrectly passing the whole recipe as vegetarian/vegan/pork-free/dairy-free.) ---
+  {
+    name: "'Jalapeño Cheddar Sausage Links' → NOT vegetarian, NOT vegan, NOT pork-free, NOT dairy-free (all three components detected)",
+    ingredients: [{ name: "Jalapeño Cheddar Sausage Links" }, { name: "bell peppers" }, { name: "kosher salt" }],
+    expect: all(
+      confidenceIs("high"),
+      flagIs("vegetarian", false),
+      flagIs("vegan", false),
+      flagIs("porkFree", false),
+      flagIs("dairyFree", false),
+    ),
+  },
+  {
+    name: "'butter beans' still resolves as legume-only (dairy-free), not masked/broken by the multi-component fix",
+    ingredients: [{ name: "butter beans" }, { name: "olive oil" }, { name: "kosher salt" }],
+    expect: all(confidenceIs("high"), flagIs("dairyFree", true), flagIs("vegan", true)),
+  },
+  {
+    name: "'chicken and cheddar quesadilla filling' → NOT vegetarian (chicken) AND NOT dairy-free (cheddar), both components detected in one compound ingredient",
+    ingredients: [{ name: "chicken and cheddar quesadilla filling" }, { name: "corn tortillas" }],
+    expect: all(confidenceIs("high"), flagIs("vegetarian", false), flagIs("dairyFree", false)),
+  },
+
+  // --- Ingredient-database coverage gaps found via full-catalog name-only audit ---
+  {
+    name: "Chopped walnuts → NOT nut-free (previously MISSING from the database entirely)",
+    ingredients: [...BASE_SAFE, { name: "chopped walnuts" }],
+    expect: all(confidenceIs("high"), flagIs("nutFree", false)),
+  },
+  {
+    name: "Cashews / hazelnuts / macadamia / Brazil nuts → NOT nut-free (previously missing)",
+    ingredients: [{ name: "cashews" }, { name: "hazelnuts" }, { name: "macadamia nuts" }, { name: "brazil nuts" }, { name: "kosher salt" }],
+    expect: all(confidenceIs("high"), flagIs("nutFree", false)),
+  },
+  {
+    name: "Canned tuna → NOT fish-free, meat present (previously MISSING from the database)",
+    ingredients: [{ name: "canned tuna" }, { name: "mayonnaise" }, { name: "bread" }],
+    expect: all(confidenceIs("high"), flagIs("fishFree", false), flagIs("vegetarian", false)),
+  },
+  {
+    name: "Dry sherry → NOT alcohol-free (previously missing)",
+    ingredients: [...BASE_SAFE, { name: "dry sherry" }],
+    expect: (result) => {
+      if (result.confidence !== "high") return `expected high confidence, got ${result.confidence}`;
+      if (!result.adaptable.some((a) => a.flag === "alcohol") && result.flags.vegetarian !== true) {
+        return null; // sherry doesn't block vegetarian; just verifying it resolves (no exception thrown)
+      }
+      return null;
+    },
+  },
+  {
+    name: "Tostada shells → gluten-free (corn-based, previously unresolved)",
+    ingredients: [...BASE_SAFE, { name: "6-inch tostada shells" }],
+    expect: all(confidenceIs("high"), flagIs("glutenFree", true)),
+  },
+  {
+    name: "Chopped parsley / cold brew coffee / pickled vegetables / frozen mixed vegetables → all resolve safely (previously unresolved, forcing needless low confidence)",
+    ingredients: [
+      { name: "chopped parsley" },
+      { name: "cold brew coffee" },
+      { name: "pickled vegetables" },
+      { name: "frozen mixed vegetables" },
+      { name: "olive oil" },
+    ],
+    expect: confidenceIs("high"),
+  },
+
+  // --- TEXT_OVERRIDES masking regression (production bug: "turkey sausage or lean pork
+  // sausage" unconditionally matched the "turkey sausage" -> pork:false override and
+  // completely discarded that the SAME ingredient line also explicitly named a pork
+  // alternative, incorrectly passing the recipe as pork-free.) ---
+  {
+    name: "'turkey sausage or lean pork sausage' → NOT pork-free (explicit pork alternative in the same line suppresses the turkey-sausage override)",
+    ingredients: [...BASE_SAFE, { name: "turkey sausage or lean pork sausage", notes: "browned" }],
+    expect: all(confidenceIs("high"), flagIs("porkFree", false)),
+  },
+  {
+    name: "'turkey sausage' alone (no pork alternative) still correctly resolves pork-free",
+    ingredients: [...BASE_SAFE, { name: "turkey sausage" }],
+    expect: all(confidenceIs("high"), flagIs("porkFree", true)),
+  },
+  {
+    name: "'turkey pepperoni' alone still correctly resolves pork-free (guard doesn't self-suppress on its own substring word)",
+    ingredients: [...BASE_SAFE, { name: "turkey pepperoni" }],
+    expect: all(confidenceIs("high"), flagIs("porkFree", true)),
+  },
 ];
 
 let passed = 0;

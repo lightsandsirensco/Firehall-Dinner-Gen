@@ -190,11 +190,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
   "heroImageAlt": "Wide firehall crew platter of Greek-Spiced Beef Burger Bowls with Tzatziki Slaw on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+  "thumbImage": "/images/thumbs/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+  "railImage": "/images/rails/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -250,6 +250,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

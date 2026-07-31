@@ -124,19 +124,18 @@
   "seoTitle": "Big-Pot Savory Oats | Firehall Breakfast",
   "collectionTier": "performance",
   "dietary": {
-    "confidence": "high",
-    "matchedCount": 7,
+    "confidence": "low",
+    "matchedCount": 6,
     "totalCount": 7,
-    "uncertainIngredients": [],
+    "uncertainIngredients": [
+      {
+        "name": "water or broth",
+        "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
+      }
+    ],
     "flaggedIngredients": [
       {
         "name": "rolled oats",
-        "allergens": [
-          "gluten"
-        ]
-      },
-      {
-        "name": "water or broth",
         "allergens": [
           "gluten"
         ]
@@ -164,27 +163,16 @@
       "glutenFree": false,
       "dairyFree": false,
       "eggFree": false,
-      "nutFree": true,
-      "peanutFree": true,
-      "soyFree": true,
-      "shellfishFree": true,
-      "fishFree": true,
-      "porkFree": true,
-      "vegetarian": true,
+      "nutFree": false,
+      "peanutFree": false,
+      "soyFree": false,
+      "shellfishFree": false,
+      "fishFree": false,
+      "porkFree": false,
+      "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [
-      {
-        "flag": "gluten",
-        "label": "Gluten-Free Adaptable",
-        "note": "Use certified gluten-free oats. Use a certified gluten-free broth or bouillon."
-      },
-      {
-        "flag": "dairy",
-        "label": "Dairy-Free Adaptable",
-        "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
-      }
-    ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "adaptable": [],
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

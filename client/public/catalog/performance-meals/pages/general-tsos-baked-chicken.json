@@ -189,11 +189,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/general-tsos-baked-chicken.jpg",
   "heroImageAlt": "Wide firehall crew platter of General Tso's-Style Baked Chicken on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/general-tsos-baked-chicken.jpg",
+  "thumbImage": "/images/thumbs/general-tsos-baked-chicken.jpg",
+  "railImage": "/images/rails/general-tsos-baked-chicken.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -263,6 +263,6 @@
         "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

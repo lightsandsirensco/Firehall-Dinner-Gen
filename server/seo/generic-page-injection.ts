@@ -65,7 +65,15 @@ import { readBreakfastRecipePageFromDisk } from "../breakfast-catalog/page-store
 import { readSmoothieRecipePage } from "../fuel-catalog/page-store.js";
 import { readEditorialArticle } from "../editorial/page-store.js";
 import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../../shared/editorial/articles-data.js";
-import { applySeoTagsToHtml, injectJsonLdIntoHtml } from "./apply-seo-tags.js";
+import { applySeoTagsToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
+import {
+  breakfastRecipeSnapshot,
+  editorialArticleSnapshot,
+  fuelRecipeSnapshot,
+  renderArticleSnapshotHtml,
+  renderRecipeSnapshotHtml,
+} from "./content-snapshot.js";
+import type { InjectionResult } from "./recipe-html-injection.js";
 
 const HOME_CATEGORY_CLUSTERS: FirehallCategoryId[] = [
   "crew_favorites",
@@ -77,9 +85,17 @@ const HOME_CATEGORY_CLUSTERS: FirehallCategoryId[] = [
 interface ResolvedPageSeo {
   seo: PageSeoConfig;
   jsonLd: unknown[];
+  bodyHtml?: string;
 }
 
-function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | null {
+/**
+ * `null` = path isn't one we own (private/auth/redirect routes — 200
+ * pass-through, client handles it). `"not_found"` = path matches a known
+ * dynamic content pattern (e.g. `/breakfast/:slug`) but the slug doesn't
+ * resolve to real content — caller should respond 404 instead of a "soft
+ * 404" (200 + empty shell).
+ */
+function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "not_found" | null {
   const path = (pathname.split("?")[0] || "/").replace(/\/+$/, "") || "/";
 
   if (path === "/") {
@@ -317,77 +333,77 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | nul
   const breakfastPerfMatch = /^\/breakfast\/performance\/([a-z0-9-]+)$/i.exec(path);
   if (breakfastPerfMatch) {
     const page = readBreakfastRecipePageFromDisk(breakfastPerfMatch[1].trim().toLowerCase());
-    if (page) {
-      return {
-        seo: buildBreakfastRecipeSeo(page),
-        jsonLd: [
-          buildBreakfastRecipeSchema(origin, page),
-          buildBreadcrumbListSchema(origin, [
-            { name: "Home", path: "/" },
-            { name: "Breakfast", path: "/breakfast" },
-            { name: "Performance Breakfasts", path: "/breakfast/performance" },
-            { name: page.title, path: `/breakfast/performance/${page.slug}` },
-          ]),
-        ],
-      };
-    }
+    if (!page) return "not_found";
+    return {
+      seo: buildBreakfastRecipeSeo(page),
+      jsonLd: [
+        buildBreakfastRecipeSchema(origin, page),
+        buildBreadcrumbListSchema(origin, [
+          { name: "Home", path: "/" },
+          { name: "Breakfast", path: "/breakfast" },
+          { name: "Performance Breakfasts", path: "/breakfast/performance" },
+          { name: page.title, path: `/breakfast/performance/${page.slug}` },
+        ]),
+      ],
+      bodyHtml: renderRecipeSnapshotHtml(origin, breakfastRecipeSnapshot(page)),
+    };
   }
 
   const breakfastMatch = /^\/breakfast\/([a-z0-9-]+)$/i.exec(path);
   if (breakfastMatch) {
     const slug = breakfastMatch[1].trim().toLowerCase();
     const page = readBreakfastRecipePageFromDisk(slug);
-    if (page) {
-      const isPerformance = isPerformanceBreakfastSlug(slug);
-      return {
-        seo: buildBreakfastRecipeSeo(page),
-        jsonLd: [
-          buildBreakfastRecipeSchema(origin, page),
-          buildBreadcrumbListSchema(origin, [
-            { name: "Home", path: "/" },
-            { name: "Breakfast", path: "/breakfast" },
-            ...(isPerformance ? [{ name: "Performance Breakfasts", path: "/breakfast/performance" }] : []),
-            { name: page.title, path: isPerformance ? `/breakfast/performance/${page.slug}` : `/breakfast/${page.slug}` },
-          ]),
-        ],
-      };
-    }
+    if (!page) return "not_found";
+    const isPerformance = isPerformanceBreakfastSlug(slug);
+    return {
+      seo: buildBreakfastRecipeSeo(page),
+      jsonLd: [
+        buildBreakfastRecipeSchema(origin, page),
+        buildBreadcrumbListSchema(origin, [
+          { name: "Home", path: "/" },
+          { name: "Breakfast", path: "/breakfast" },
+          ...(isPerformance ? [{ name: "Performance Breakfasts", path: "/breakfast/performance" }] : []),
+          { name: page.title, path: isPerformance ? `/breakfast/performance/${page.slug}` : `/breakfast/${page.slug}` },
+        ]),
+      ],
+      bodyHtml: renderRecipeSnapshotHtml(origin, breakfastRecipeSnapshot(page)),
+    };
   }
 
   const smoothieMatch = /^\/smoothies\/([a-z0-9-]+)$/i.exec(path);
   if (smoothieMatch) {
     const slug = smoothieMatch[1].trim().toLowerCase();
     const page = readSmoothieRecipePage(slug);
-    if (page) {
-      const canonicalPath = `/smoothies/${page.slug}`;
-      return {
-        seo: buildSmoothieRecipeSeo(page),
-        jsonLd: [
-          buildFuelRecipeSchema(origin, page, canonicalPath),
-          buildBreadcrumbListSchema(origin, [
-            { name: "Home", path: "/" },
-            { name: "Smoothies", path: "/smoothies" },
-            { name: page.title, path: canonicalPath },
-          ]),
-        ],
-      };
-    }
+    if (!page) return "not_found";
+    const canonicalPath = `/smoothies/${page.slug}`;
+    return {
+      seo: buildSmoothieRecipeSeo(page),
+      jsonLd: [
+        buildFuelRecipeSchema(origin, page, canonicalPath),
+        buildBreadcrumbListSchema(origin, [
+          { name: "Home", path: "/" },
+          { name: "Smoothies", path: "/smoothies" },
+          { name: page.title, path: canonicalPath },
+        ]),
+      ],
+      bodyHtml: renderRecipeSnapshotHtml(origin, fuelRecipeSnapshot(page)),
+    };
   }
 
   const guideMatch = /^\/(?:guides|blog)\/([a-z0-9-]+)$/i.exec(path);
   if (guideMatch && guideMatch[1] !== "topic") {
     const slug = guideMatch[1].trim().toLowerCase();
     const article = readEditorialArticle(slug) ?? getEditorialArticleBySlug(slug) ?? null;
-    if (article) {
-      return {
-        seo: buildGuideArticleSeo(article),
-        jsonLd: [
-          buildArticleSchema(origin, article),
-          buildFaqPageSchema(article.faqs),
-          buildBreadcrumbListSchema(origin, buildGuideArticleBreadcrumbs(origin, article)),
-        ],
-      };
-    }
+    if (!article) return "not_found";
+    return {
+      seo: buildGuideArticleSeo(article),
+      jsonLd: [
+        buildArticleSchema(origin, article),
+        buildFaqPageSchema(article.faqs),
+        buildBreadcrumbListSchema(origin, buildGuideArticleBreadcrumbs(origin, article)),
+      ],
+      bodyHtml: renderArticleSnapshotHtml(origin, editorialArticleSnapshot(article)),
+    };
   }
 
   // SEO landing pages and product pages are single-segment, e.g. "/firefighter-meals".
@@ -437,14 +453,18 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | nul
 }
 
 /**
- * Rewrite `html` for any route type covered by `resolvePageSeo`. No-ops
- * (returns `html` unchanged) for routes not covered here (they either have
- * their own injector — recipes — or fall through to the client's own
- * post-hydration `usePageSeo` for browsers/JS-executing crawlers).
+ * Rewrite `html` for any route type covered by `resolvePageSeo`. Returns
+ * `status: 200, html` unchanged for routes not covered here (they either
+ * have their own injector — recipes/curated packages — or fall through to
+ * the client's own post-hydration `usePageSeo` for browsers/JS-executing
+ * crawlers), and `status: 404` for a recognized content-slug pattern whose
+ * slug doesn't resolve (fixes "soft 404s" — a real 404 status instead of a
+ * 200 + empty shell for dead/removed recipe, guide, or smoothie links).
  */
-export function injectGenericPageSeoIntoHtml(html: string, origin: string, pathname: string): string {
+export function injectGenericPageSeoIntoHtml(html: string, origin: string, pathname: string): InjectionResult {
   const resolved = resolvePageSeo(origin, pathname);
-  if (!resolved) return html;
+  if (resolved === "not_found") return { html, status: 404 };
+  if (!resolved) return { html, status: 200 };
 
   const canonicalUrl = absoluteUrl(origin, resolved.seo.canonicalPath);
   const ogImage = resolved.seo.ogImage
@@ -460,5 +480,8 @@ export function injectGenericPageSeoIntoHtml(html: string, origin: string, pathn
   });
 
   out = injectJsonLdIntoHtml(out, resolved.jsonLd);
-  return out;
+  if (resolved.bodyHtml) {
+    out = injectBodyContentIntoHtml(out, resolved.bodyHtml);
+  }
+  return { html: out, status: 200 };
 }

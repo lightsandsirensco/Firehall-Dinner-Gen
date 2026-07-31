@@ -222,13 +222,14 @@
       {
         "name": "all-purpose flour",
         "allergens": [
-          "gluten"
+          "gluten",
+          "dairy"
         ]
       }
     ],
     "flags": {
       "glutenFree": false,
-      "dairyFree": true,
+      "dairyFree": false,
       "eggFree": true,
       "nutFree": true,
       "peanutFree": true,
@@ -246,6 +247,6 @@
         "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce. Use a 1:1 gluten-free all-purpose flour blend."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

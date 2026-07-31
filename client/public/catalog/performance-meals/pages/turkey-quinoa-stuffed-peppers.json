@@ -176,11 +176,11 @@
       "performanceMeal": true
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
   "heroImageAlt": "Wide firehall crew platter of Turkey Stuffed Peppers on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/turkey-quinoa-stuffed-peppers.jpg",
+  "thumbImage": "/images/thumbs/turkey-quinoa-stuffed-peppers.jpg",
+  "railImage": "/images/rails/turkey-quinoa-stuffed-peppers.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -247,6 +247,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

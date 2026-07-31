@@ -177,11 +177,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/lean-beef-broccoli-rice.jpg",
   "heroImageAlt": "Wide firehall crew platter of Beef and Broccoli Rice on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/lean-beef-broccoli-rice.jpg",
+  "thumbImage": "/images/thumbs/lean-beef-broccoli-rice.jpg",
+  "railImage": "/images/rails/lean-beef-broccoli-rice.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -256,6 +256,6 @@
         "note": "Use coconut aminos."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

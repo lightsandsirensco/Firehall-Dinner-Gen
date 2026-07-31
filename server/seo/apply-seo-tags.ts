@@ -133,3 +133,17 @@ export function injectJsonLdIntoHtml(html: string, jsonLd: unknown[]): string {
   const jsonLdTag = `<script type="application/ld+json">${escapeJsonForScriptTag(jsonLd)}</script>\n  </head>`;
   return html.replace("</head>", jsonLdTag);
 }
+
+const EMPTY_ROOT_RE = /<div id="root"><\/div>/;
+
+/**
+ * Inject a plain-HTML content snapshot inside `<div id="root">` so non-JS
+ * crawlers see real content instead of an empty shell. Safe no-op if the
+ * expected empty-root marker isn't found (e.g. shell markup changed), and
+ * safe at runtime because the client uses `createRoot().render()` (not
+ * `hydrateRoot()`), which fully replaces this markup once JS executes.
+ */
+export function injectBodyContentIntoHtml(html: string, contentHtml: string): string {
+  if (!contentHtml || !EMPTY_ROOT_RE.test(html)) return html;
+  return html.replace(EMPTY_ROOT_RE, `<div id="root">${contentHtml}</div>`);
+}

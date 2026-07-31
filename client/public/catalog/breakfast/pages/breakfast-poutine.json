@@ -162,13 +162,22 @@
       {
         "name": "breakfast sausage",
         "allergens": [
+          "gluten",
+          "dairy",
           "pork"
         ]
       },
       {
         "name": "all-purpose flour",
         "allergens": [
-          "gluten"
+          "gluten",
+          "pork"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
         ]
       },
       {
@@ -201,12 +210,7 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes. Use a 1:1 gluten-free all-purpose flour blend."
-      },
-      {
-        "flag": "dairy",
-        "label": "Dairy-Free Adaptable",
-        "note": "Use a dairy-free cheese shred/block alternative."
+        "note": "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux. Use a 1:1 gluten-free all-purpose flour blend."
       },
       {
         "flag": "pork",
@@ -214,6 +218,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

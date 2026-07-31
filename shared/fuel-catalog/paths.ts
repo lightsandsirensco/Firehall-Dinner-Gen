@@ -47,5 +47,13 @@ export function smoothiePageJsonPath(slug: string): string {
 }
 
 export function smoothieHeroImagePath(slug: string): string {
-  return `/images/smoothies/${slug.trim().toLowerCase()}.jpg`;
+  // Canonical smoothie hero format is .webp (see
+  // shared/explore-image-paths.ts's slugLockedImagePaths, which prefers the
+  // .webp file when present). Every smoothie image is generated in both
+  // formats; storing the .jpg path here caused the catalog JSON to disagree
+  // with the canonical resolver used by Explore-eligibility checks, so
+  // otherwise-valid smoothie heroes were being flagged as "not canonical"
+  // and blanked once the index endpoint was sanitized like every other
+  // collection.
+  return `/images/smoothies/${slug.trim().toLowerCase()}.webp`;
 }

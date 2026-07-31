@@ -233,6 +233,12 @@
         ]
       },
       {
+        "name": "Garlic aioli or mayo",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
         "name": "Worcestershire sauce",
         "allergens": [
           "gluten",
@@ -243,7 +249,7 @@
     "flags": {
       "glutenFree": false,
       "dairyFree": false,
-      "eggFree": true,
+      "eggFree": false,
       "nutFree": true,
       "peanutFree": true,
       "soyFree": true,
@@ -263,8 +269,13 @@
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
         "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

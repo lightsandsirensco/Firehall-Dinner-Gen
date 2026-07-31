@@ -289,10 +289,16 @@
         "allergens": [
           "pork"
         ]
+      },
+      {
+        "name": "Apple Juice (spritz and wrap)",
+        "allergens": [
+          "gluten"
+        ]
       }
     ],
     "flags": {
-      "glutenFree": true,
+      "glutenFree": false,
       "dairyFree": true,
       "eggFree": true,
       "nutFree": true,
@@ -304,7 +310,13 @@
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Confirm corn tortillas are used, or substitute a certified gluten-free wrap."
+      }
+    ],
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

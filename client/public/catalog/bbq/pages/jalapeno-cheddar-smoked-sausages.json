@@ -197,7 +197,6 @@
   ],
   "relatedSlugs": [
     "hot-honey-grilled-sausage-peppers",
-    "firehall-double-smash-burgers-bbq",
     "smoked-baked-beans-crew"
   ],
   "sourceName": "Firehall Meals BBQ Collection",
@@ -210,6 +209,13 @@
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
+        "name": "Jalapeño Cheddar Sausage Links",
+        "allergens": [
+          "dairy",
+          "pork"
+        ]
+      },
+      {
         "name": "Sub Rolls",
         "allergens": [
           "gluten"
@@ -218,24 +224,34 @@
     ],
     "flags": {
       "glutenFree": false,
-      "dairyFree": true,
+      "dairyFree": false,
       "eggFree": true,
       "nutFree": true,
       "peanutFree": true,
       "soyFree": true,
       "shellfishFree": true,
       "fishFree": true,
-      "porkFree": true,
-      "vegetarian": true,
-      "vegan": true
+      "porkFree": false,
+      "vegetarian": false,
+      "vegan": false
     },
     "adaptable": [
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
         "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "pork",
+        "label": "Pork-Free Adaptable",
+        "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

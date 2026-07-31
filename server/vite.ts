@@ -7,6 +7,7 @@ import path from "path";
 import { nanoid } from "nanoid";
 import { matchRecipeSlug, injectRecipeSeoIntoHtml } from "./seo/recipe-html-injection.js";
 import { injectGenericPageSeoIntoHtml } from "./seo/generic-page-injection.js";
+import { matchPackageSlug, injectPackageSeoIntoHtml } from "./seo/package-html-injection.js";
 import { resolvePublicSiteOrigin } from "./seo/sitemap.js";
 
 const CLIENT_PUBLIC = path.resolve(import.meta.dirname, "..", "client", "public");
@@ -75,13 +76,14 @@ export async function setupVite(server: Server, app: Express) {
       );
       let page = await vite.transformIndexHtml(url, template);
       const recipeSlug = matchRecipeSlug(pathname);
+      const packageSlug = matchPackageSlug(pathname);
       const origin = resolvePublicSiteOrigin(req.get("host"), req.get("x-forwarded-proto") ?? undefined);
-      if (recipeSlug) {
-        page = injectRecipeSeoIntoHtml(page, origin, recipeSlug);
-      } else {
-        page = injectGenericPageSeoIntoHtml(page, origin, pathname);
-      }
-      res.status(200).set({ "Content-Type": "text/html" }).end(page);
+      const result = recipeSlug
+        ? injectRecipeSeoIntoHtml(page, origin, recipeSlug)
+        : packageSlug
+          ? injectPackageSeoIntoHtml(page, origin, packageSlug)
+          : injectGenericPageSeoIntoHtml(page, origin, pathname);
+      res.status(result.status).set({ "Content-Type": "text/html" }).end(result.html);
     } catch (e) {
       vite.ssrFixStacktrace(e as Error);
       next(e);

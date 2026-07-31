@@ -8,12 +8,14 @@ import {
   CREW_SIZE_BUCKETS,
   SIMPLIFIED_ALLERGENS,
   SIMPLIFIED_APPLIANCE_IDS,
+  SIMPLIFIED_DIETS,
   SIMPLIFIED_PROTEINS,
   createDefaultSimplifiedFilters,
   type CrewSizeBucketUi,
   type HealthinessPreference,
   type SimplifiedAllergen,
   type SimplifiedApplianceId,
+  type SimplifiedDiet,
   type SimplifiedGeneratorFilters,
   type SimplifiedProtein,
 } from "./generator-simplified.js";
@@ -25,6 +27,7 @@ export interface GeneratorPersonalPrefs {
   protein: SimplifiedProtein;
   healthiness: HealthinessPreference;
   allergens: SimplifiedAllergen[];
+  diets: SimplifiedDiet[];
   /** Device-level crew override when not using linked hall crew */
   crew_bucket?: CrewSizeBucketUi;
   updatedAt: string;
@@ -82,6 +85,23 @@ export function mapDietaryToAllergens(restrictions: string[]): SimplifiedAllerge
   return [...out];
 }
 
+/**
+ * Previously "vegan"/"vegetarian"/"pork-free" account preferences were silently DROPPED
+ * by `mapDietaryToAllergens` (explicitly skipped, never routed anywhere else) — a user
+ * who set vegan as an account-level dietary restriction would see it vanish the moment
+ * the generator resolved their session filters. This maps those specific values onto the
+ * new `diets` toggle set instead of discarding them.
+ */
+export function mapDietaryToDiets(restrictions: string[]): SimplifiedDiet[] {
+  const out = new Set<SimplifiedDiet>();
+  for (const r of restrictions) {
+    const key = r.toLowerCase().trim().replace(/[\s-]/g, "");
+    if (key === "vegan") out.add("vegan");
+    if (key === "porkfree" || key === "pork") out.add("porkFree");
+  }
+  return [...out];
+}
+
 export function mapPreferredProtein(raw: string | undefined): SimplifiedProtein | null {
   if (!raw?.trim()) return null;
   const key = raw.toLowerCase().trim();
@@ -108,6 +128,9 @@ export function parsePersonalPrefs(raw: unknown): GeneratorPersonalPrefs | null 
         SIMPLIFIED_ALLERGENS.includes(a as SimplifiedAllergen),
       )
     : [];
+  const diets = Array.isArray(p.diets)
+    ? p.diets.filter((d): d is SimplifiedDiet => SIMPLIFIED_DIETS.includes(d as SimplifiedDiet))
+    : [];
   const crew_bucket =
     p.crew_bucket && CREW_SIZE_BUCKETS.includes(p.crew_bucket) ? p.crew_bucket : undefined;
   return {
@@ -115,6 +138,7 @@ export function parsePersonalPrefs(raw: unknown): GeneratorPersonalPrefs | null 
     protein,
     healthiness,
     allergens,
+    diets,
     crew_bucket,
     updatedAt: typeof p.updatedAt === "string" ? p.updatedAt : new Date().toISOString(),
   };
@@ -126,6 +150,7 @@ export function personalPrefsFromFilters(filters: SimplifiedGeneratorFilters): G
     protein: filters.protein,
     healthiness: filters.healthiness,
     allergens: [...filters.allergens],
+    diets: [...filters.diets],
     crew_bucket: filters.crew_bucket,
     updatedAt: new Date().toISOString(),
   };
@@ -163,6 +188,12 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
         : session?.allergens?.length
           ? [...session.allergens]
           : mapDietaryToAllergens(input.preferences?.dietary_restrictions ?? []),
+    diets:
+      personal?.diets?.length
+        ? [...personal.diets]
+        : session?.diets?.length
+          ? [...session.diets]
+          : mapDietaryToDiets(input.preferences?.dietary_restrictions ?? []),
   };
 
   const prefProtein = input.preferences?.preferred_proteins?.[0];
@@ -174,6 +205,11 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
   if (!personal?.allergens?.length && !session?.allergens?.length) {
     const fromAccount = mapDietaryToAllergens(input.preferences?.dietary_restrictions ?? []);
     if (fromAccount.length) filters.allergens = fromAccount;
+  }
+
+  if (!personal?.diets?.length && !session?.diets?.length) {
+    const fromAccount = mapDietaryToDiets(input.preferences?.dietary_restrictions ?? []);
+    if (fromAccount.length) filters.diets = fromAccount;
   }
 
   if (!input.hallLinked && !session?.appliances?.length) {

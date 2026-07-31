@@ -48,6 +48,12 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -93,6 +99,12 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -138,6 +150,12 @@
             "note": "Use certified gluten-free oats."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -182,6 +200,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -233,6 +257,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": false
       }
     },
     {
@@ -284,6 +314,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -335,6 +371,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -385,6 +427,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -436,6 +484,12 @@
             "note": "Use coconut aminos."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -476,6 +530,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -519,12 +579,7 @@
           {
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes. Use a 1:1 gluten-free all-purpose flour blend."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
+            "note": "Use a certified gluten-free frozen fry/tot brand, or fresh-cut potatoes. Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux. Use a 1:1 gluten-free all-purpose flour blend."
           },
           {
             "flag": "pork",
@@ -532,6 +587,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -576,13 +637,14 @@
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
             "note": "Use certified gluten-free tortillas or corn tortillas."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": false
       }
     },
     {
@@ -637,6 +699,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -693,6 +761,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -744,6 +818,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -791,6 +871,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": false
       }
     },
     {
@@ -840,6 +926,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -891,6 +983,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -927,7 +1025,7 @@
           "shellfishFree": true,
           "fishFree": true,
           "porkFree": true,
-          "vegetarian": true,
+          "vegetarian": false,
           "vegan": false
         },
         "adaptable": [
@@ -937,6 +1035,12 @@
             "note": "Use a certified gluten-free broth or bouillon."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -988,6 +1092,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1034,6 +1144,12 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1062,7 +1178,7 @@
         "confidence": "high",
         "flags": {
           "glutenFree": true,
-          "dairyFree": true,
+          "dairyFree": false,
           "eggFree": false,
           "nutFree": true,
           "peanutFree": true,
@@ -1073,7 +1189,19 @@
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": []
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1118,13 +1246,14 @@
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
             "note": "Use a 1:1 gluten-free all-purpose flour blend."
-          },
-          {
-            "flag": "dairy",
-            "label": "Dairy-Free Adaptable",
-            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1176,6 +1305,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1224,6 +1359,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -1274,6 +1415,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -1325,6 +1472,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1376,6 +1529,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1422,6 +1581,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1473,6 +1638,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1501,7 +1672,7 @@
         "confidence": "high",
         "flags": {
           "glutenFree": true,
-          "dairyFree": true,
+          "dairyFree": false,
           "eggFree": false,
           "nutFree": true,
           "peanutFree": true,
@@ -1512,7 +1683,19 @@
           "vegetarian": false,
           "vegan": false
         },
-        "adaptable": []
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1559,6 +1742,12 @@
             "note": "Use certified gluten-free tortillas or corn tortillas."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1613,6 +1802,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1669,6 +1864,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1725,6 +1926,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1775,6 +1982,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1821,6 +2034,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -1872,6 +2091,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1907,8 +2132,8 @@
           "soyFree": true,
           "shellfishFree": true,
           "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
+          "porkFree": false,
+          "vegetarian": false,
           "vegan": false
         },
         "adaptable": [
@@ -1918,6 +2143,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -1969,6 +2200,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2025,6 +2262,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2064,6 +2307,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2110,6 +2359,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2157,9 +2412,15 @@
           {
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+            "note": "Use a dairy-free cheese shred/block alternative. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2210,6 +2471,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -2249,6 +2516,12 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2305,6 +2578,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2348,6 +2627,12 @@
             "note": "Use certified gluten-free tortillas or corn tortillas."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2375,7 +2660,7 @@
       "dietarySummary": {
         "confidence": "high",
         "flags": {
-          "glutenFree": true,
+          "glutenFree": false,
           "dairyFree": false,
           "eggFree": false,
           "nutFree": true,
@@ -2389,11 +2674,22 @@
         },
         "adaptable": [
           {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          },
+          {
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative."
+            "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2447,6 +2743,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2498,6 +2800,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2524,7 +2832,7 @@
       "dietarySummary": {
         "confidence": "high",
         "flags": {
-          "glutenFree": true,
+          "glutenFree": false,
           "dairyFree": false,
           "eggFree": false,
           "nutFree": true,
@@ -2538,11 +2846,22 @@
         },
         "adaptable": [
           {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true
       }
     },
     {
@@ -2584,13 +2903,14 @@
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
             "note": "Use a dairy-free cheese shred/block alternative."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2639,7 +2959,7 @@
           {
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
-            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
           },
           {
             "flag": "pork",
@@ -2647,6 +2967,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2675,7 +3001,7 @@
         "confidence": "high",
         "flags": {
           "glutenFree": false,
-          "dairyFree": true,
+          "dairyFree": false,
           "eggFree": false,
           "nutFree": true,
           "peanutFree": true,
@@ -2691,8 +3017,19 @@
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2748,6 +3085,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2804,6 +3147,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2855,6 +3204,12 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2888,7 +3243,7 @@
           "soyFree": true,
           "shellfishFree": true,
           "fishFree": true,
-          "porkFree": true,
+          "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
@@ -2902,8 +3257,19 @@
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -2955,6 +3321,12 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -3009,6 +3381,12 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     },
     {
@@ -3058,6 +3436,12 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true
       }
     }
   ]

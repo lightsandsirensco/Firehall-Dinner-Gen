@@ -5,6 +5,7 @@
 
 import type { GenerateRequest } from "./schema.js";
 import { inferBusyLevelFromTime } from "./busy-level.js";
+import type { DietaryFilterKey } from "./dietary/schema.js";
 
 /** Crew buckets shown in the generator UI */
 export const CREW_SIZE_BUCKETS = ["2-4", "5-8", "9-12", "12+"] as const;
@@ -85,6 +86,28 @@ export const SIMPLIFIED_ALLERGEN_LABELS: Record<SimplifiedAllergen, string> = {
   eggs: "Eggs",
 };
 
+/** Maps each hard allergen exclusion to the matching canonical DietaryFilterKey. */
+const ALLERGEN_TO_DIETARY_FLAG: Record<SimplifiedAllergen, DietaryFilterKey> = {
+  dairy: "dairyFree",
+  gluten: "glutenFree",
+  nuts: "nutFree",
+  shellfish: "shellfishFree",
+  eggs: "eggFree",
+};
+
+/**
+ * Strict diet toggles beyond the "avoid this allergen" list — vegan and pork-free had NO
+ * selectable option anywhere in the generator before this fix (see dietary-filter-accuracy
+ * audit). Both use the same canonical DietaryFilterKey values as Explore/Browse.
+ */
+export const SIMPLIFIED_DIETS = ["vegan", "porkFree"] as const;
+export type SimplifiedDiet = (typeof SIMPLIFIED_DIETS)[number];
+
+export const SIMPLIFIED_DIET_LABELS: Record<SimplifiedDiet, string> = {
+  vegan: "Vegan",
+  porkFree: "Pork-Free",
+};
+
 export type HealthinessPreference = GenerateRequest["healthiness_preference"];
 
 export const HEALTHINESS_OPTIONS: {
@@ -103,6 +126,7 @@ export interface SimplifiedGeneratorFilters {
   appliances: SimplifiedApplianceId[];
   healthiness: HealthinessPreference;
   allergens: SimplifiedAllergen[];
+  diets: SimplifiedDiet[];
 }
 
 export function createDefaultSimplifiedFilters(): SimplifiedGeneratorFilters {
@@ -112,6 +136,7 @@ export function createDefaultSimplifiedFilters(): SimplifiedGeneratorFilters {
     appliances: [],
     healthiness: "balanced",
     allergens: [],
+    diets: [],
   };
 }
 
@@ -163,6 +188,16 @@ export function simplifiedFiltersToGenerateRequest(
   extras: Partial<GenerateRequest> = {},
 ): Partial<GenerateRequest> {
   const crew_size = CREW_BUCKET_TO_SIZE[filters.crew_bucket];
+
+  // Strict dietary restrictions verified by the canonical classifier (shared/dietary/
+  // classify-recipe.ts) at pick time — combines the vegetarian protein choice, the new
+  // vegan/pork-free diet toggles, AND the existing allergen checkboxes (which also get a
+  // second, stricter ingredient-level check on top of the legacy keyword scanner).
+  const dietary_restrictions: DietaryFilterKey[] = [];
+  if (filters.protein === "vegetarian") dietary_restrictions.push("vegetarian");
+  for (const diet of filters.diets) dietary_restrictions.push(diet);
+  for (const allergen of filters.allergens) dietary_restrictions.push(ALLERGEN_TO_DIETARY_FLAG[allergen]);
+
   return {
     crew_size,
     busy_level: inferBusyLevelFromTime("45-60"),
@@ -171,6 +206,7 @@ export function simplifiedFiltersToGenerateRequest(
     protein: simplifiedProteinToApi(filters.protein),
     healthiness_preference: filters.healthiness,
     allergens_to_avoid: [...filters.allergens],
+    dietary_restrictions: [...new Set(dietary_restrictions)],
     firehall_category: undefined,
     budget_level: "standard",
     cuisine_style: "any",
@@ -192,6 +228,11 @@ export function formatAllergenSummary(allergens: SimplifiedAllergen[]): string {
   return allergens.map((a) => SIMPLIFIED_ALLERGEN_LABELS[a]).join(", ");
 }
 
+export function formatDietSummary(diets: SimplifiedDiet[]): string {
+  if (diets.length === 0) return "None";
+  return diets.map((d) => SIMPLIFIED_DIET_LABELS[d]).join(", ");
+}
+
 export function formatGeneratorSummary(filters: SimplifiedGeneratorFilters): string {
   const health = HEALTHINESS_OPTIONS.find((h) => h.value === filters.healthiness)?.label ?? "Balanced";
   const protein =
@@ -204,6 +245,7 @@ export function formatGeneratorSummary(filters: SimplifiedGeneratorFilters): str
     `Appliances: ${formatApplianceSummary(filters.appliances)}`,
     `Healthy: ${health}`,
     `Avoid: ${formatAllergenSummary(filters.allergens)}`,
+    `Diet: ${formatDietSummary(filters.diets)}`,
   ].join("\n");
 }
 
@@ -256,11 +298,16 @@ export function migrateLegacyFilterState(legacy: Record<string, unknown>): Simpl
       )
     : [];
 
+  const diets = Array.isArray(legacy.diets)
+    ? legacy.diets.filter((d): d is SimplifiedDiet => SIMPLIFIED_DIETS.includes(d as SimplifiedDiet))
+    : [];
+
   return {
     crew_bucket,
     protein,
     appliances: [...new Set(appliances)],
     healthiness,
     allergens,
+    diets,
   };
 }

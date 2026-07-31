@@ -182,11 +182,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
   "heroImageAlt": "Wide firehall crew platter of One-Pot Beef & Orzo Skillet with Spinach and Feta on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+  "thumbImage": "/images/thumbs/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+  "railImage": "/images/rails/one-pot-beef-orzo-skillet-spinach-feta.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -259,6 +259,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

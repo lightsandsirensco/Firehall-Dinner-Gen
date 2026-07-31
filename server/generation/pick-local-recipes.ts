@@ -49,6 +49,7 @@ import {
   scoreHealthinessPreference,
 } from "./generator-match.js";
 import { scanRecipeForAllergens } from "../allergens.js";
+import { classifyRecipeDietary } from "../../shared/dietary/classify-recipe.js";
 
 const TIME_MAX_MINUTES: Record<string, number> = {
   "15-25": 25,
@@ -182,6 +183,27 @@ function hydratePick(
     if (scan.found) {
       log(
         `[generate:local] reject hydrated allergen slug=${slug} violations=${scan.violations.join(";")}`,
+        "generate",
+      );
+      return null;
+    }
+  }
+
+  // Strict dietary restrictions (vegan, pork-free, vegetarian, etc.) go through the SAME
+  // canonical classifier used by Explore/Browse — never the separate `allergens.ts` keyword
+  // scanner above, and never a trusted-but-unverified catalog `protein` tag. Classified live
+  // from this candidate's own scaled ingredient list, so it can never be stale. A candidate
+  // is rejected (not substituted — you cannot safely "swap out" meat from a meat dish) unless
+  // classification confidence is "high" AND every requested flag is confirmed true.
+  const dietaryRestrictions = request.dietary_restrictions || [];
+  if (dietaryRestrictions.length > 0) {
+    const profile = classifyRecipeDietary(
+      (scaled.ingredients || []).map((i) => ({ name: i.item, notes: i.notes })),
+    );
+    const violated = profile.confidence !== "high" || dietaryRestrictions.some((key) => !profile.flags[key]);
+    if (violated) {
+      log(
+        `[generate:local] reject hydrated dietary slug=${slug} requested=${dietaryRestrictions.join(",")} confidence=${profile.confidence} flags=${JSON.stringify(profile.flags)}`,
         "generate",
       );
       return null;

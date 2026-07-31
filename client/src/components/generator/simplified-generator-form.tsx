@@ -11,6 +11,8 @@ import {
   SIMPLIFIED_ALLERGENS,
   SIMPLIFIED_APPLIANCE_IDS,
   SIMPLIFIED_APPLIANCE_LABELS,
+  SIMPLIFIED_DIET_LABELS,
+  SIMPLIFIED_DIETS,
   SIMPLIFIED_PROTEIN_LABELS,
   SIMPLIFIED_PROTEINS,
   formatGeneratorSummary,
@@ -18,6 +20,7 @@ import {
   type CrewSizeBucketUi,
   type SimplifiedAllergen,
   type SimplifiedApplianceId,
+  type SimplifiedDiet,
   type SimplifiedGeneratorFilters,
   type SimplifiedProtein,
 } from "@shared/generator-simplified";
@@ -118,6 +121,13 @@ export function SimplifiedGeneratorForm({
       ? filters.allergens.filter((a) => a !== id)
       : [...filters.allergens, id];
     patch({ allergens: next });
+  };
+
+  const toggleDiet = (id: SimplifiedDiet) => {
+    const next = filters.diets.includes(id)
+      ? filters.diets.filter((d) => d !== id)
+      : [...filters.diets, id];
+    patch({ diets: next });
   };
 
   const summaryLines = formatGeneratorSummary(filters).split("\n");
@@ -283,6 +293,22 @@ export function SimplifiedGeneratorForm({
                 testId={`allergen-${a}`}
               >
                 {SIMPLIFIED_ALLERGEN_LABELS[a]}
+              </Chip>
+            ))}
+          </div>
+        </div>
+
+        <div className="col-span-2 space-y-1">
+          <Label className="text-xs text-muted-foreground">Diet</Label>
+          <div className="flex flex-wrap gap-1.5">
+            {SIMPLIFIED_DIETS.map((d) => (
+              <Chip
+                key={d}
+                active={filters.diets.includes(d)}
+                onClick={() => toggleDiet(d)}
+                testId={`diet-${d}`}
+              >
+                {SIMPLIFIED_DIET_LABELS[d]}
               </Chip>
             ))}
           </div>

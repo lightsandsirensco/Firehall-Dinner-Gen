@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-06-25T13:31:20.806Z",
+  "generatedAt": "2026-07-30T18:47:19.531Z",
   "totals": {
-    "recipes": 331,
-    "correct": 313,
-    "missing": 0,
+    "recipes": 392,
+    "correct": 355,
+    "missing": 21,
     "mismatchedPath": 0,
     "mismatchedIdentity": 0,
-    "duplicateConflict": 18,
-    "exploreEligible": 313,
-    "exploreExcluded": 18,
-    "duplicateImageGroups": 9
+    "duplicateConflict": 16,
+    "exploreEligible": 355,
+    "exploreExcluded": 37,
+    "duplicateImageGroups": 6
   },
   "rows": [
     {
@@ -19,20 +19,11 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
       "canonicalHero": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (chili-mac) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "chili-mac"
-      ],
-      "heroMd5": "5a4e3f3d502c5b3bc3dd4f57bc27d9a1",
-      "exploreEligible": false
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "72e8ea6ccec1cad8106450ecf792d9fd",
+      "exploreEligible": true
     },
     {
       "slug": "chili-lime-grilled-tilapia",
@@ -87,6 +78,19 @@
       "exploreEligible": true
     },
     {
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "category": "breakfast_brunch",
+      "kind": "breakfast_catalog",
+      "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
+      "canonicalHero": "/images/breakfast/bagel-sandwich-line.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "d78221d802307b301aef4c2f01bf632e",
+      "exploreEligible": true
+    },
+    {
       "slug": "mediterranean-baked-fish-tray",
       "title": "Baked Cod Tray",
       "category": "healthy_performance",
@@ -123,6 +127,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "49362629d15bd6212aae7f91e4f0f737",
+      "exploreEligible": true
+    },
+    {
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "category": "breakfast_brunch",
+      "kind": "breakfast_catalog",
+      "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "canonicalHero": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "6e3fdbcef746d29ace7640028fdeacb6",
       "exploreEligible": true
     },
     {
@@ -262,20 +279,11 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/bbq-chicken-pizza.jpg",
       "canonicalHero": "/images/golden-100/bbq-chicken-pizza.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (buttermilk-pancakes) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "buttermilk-pancakes"
-      ],
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
       "heroMd5": "b2b94642354a7c7336b11cebc0923bca",
-      "exploreEligible": false
+      "exploreEligible": true
     },
     {
       "slug": "bbq-chicken-sliders",
@@ -304,16 +312,16 @@
       "exploreEligible": true
     },
     {
-      "slug": "big-chili",
-      "title": "Beef and Bean Chili",
-      "category": "big_crew_feeders",
-      "kind": "hall_classic",
-      "heroImage": "/images/golden-100/big-chili.jpg",
-      "canonicalHero": "/images/golden-100/big-chili.jpg",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
+      "heroMd5": "3d318e4491c3d00f5a171514cead00bd",
       "exploreEligible": true
     },
     {
@@ -341,6 +349,26 @@
       "duplicatePeers": [],
       "heroMd5": "9cd107f116d87a6415bf7691b4dd50f5",
       "exploreEligible": true
+    },
+    {
+      "slug": "beef-birria-with-consomme",
+      "title": "Beef Birria with Consommé for Dipping",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/beef-birria-with-consomme.jpg",
+      "canonicalHero": "/images/golden-100/beef-birria-with-consomme.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
     },
     {
       "slug": "beef-dip",
@@ -443,7 +471,7 @@
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "e7e29e58f4a0f466ba8ed25406fb1a84",
+      "heroMd5": "653c0c68e0186156be27d755c0df0eb0",
       "exploreEligible": true
     },
     {
@@ -479,20 +507,11 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/turkey-burgers.jpg",
       "canonicalHero": "/images/golden-100/turkey-burgers.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (hall-blt-sandwich-feed) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "hall-blt-sandwich-feed"
-      ],
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
       "heroMd5": "2161edf4d27935bc1b8096622b09d7e1",
-      "exploreEligible": false
+      "exploreEligible": true
     },
     {
       "slug": "cajun-grilled-cod-crew",
@@ -538,12 +557,12 @@
       "title": "Blueberry Almond Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/blueberry-almond.jpg",
-      "canonicalHero": "/images/smoothies/blueberry-almond.jpg",
+      "heroImage": "/images/smoothies/blueberry-almond.webp",
+      "canonicalHero": "/images/smoothies/blueberry-almond.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "e9aba1aa28f96a278feb050d0fb981da",
+      "heroMd5": "8a3b04acea1cb67ca8a95db8784aa931",
       "exploreEligible": true
     },
     {
@@ -703,6 +722,19 @@
       "exploreEligible": true
     },
     {
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "b657ff4cc8cd64f8b852cf8dbac17cb9",
+      "exploreEligible": true
+    },
+    {
       "slug": "buffalo-chicken-wraps",
       "title": "Buffalo Chicken Wraps",
       "category": "hall_expansion",
@@ -735,11 +767,22 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/bulgogi-bowls.jpg",
       "canonicalHero": "/images/golden-100/bulgogi-bowls.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "firehall-korean-beef-bowls",
+        "egg-roll-in-a-bowl-crew",
+        "korean-turkey-rice-bowls"
+      ],
       "heroMd5": "7545872c4593a5901dee7066cd526054",
-      "exploreEligible": true
+      "exploreEligible": false
     },
     {
       "slug": "bun-bo-hue-noodle-soup",
@@ -753,6 +796,30 @@
       "duplicatePeers": [],
       "heroMd5": "8ba4bdcbab4f6c1165060b2c29624e8f",
       "exploreEligible": true
+    },
+    {
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+      "canonicalHero": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (big-chili, white-chicken-chili-crock, pasta-e-fagioli-hall) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "big-chili",
+        "white-chicken-chili-crock",
+        "pasta-e-fagioli-hall"
+      ],
+      "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
+      "exploreEligible": false
     },
     {
       "slug": "burrito-bowl-bar-night",
@@ -787,19 +854,30 @@
       "kind": "breakfast_catalog",
       "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
       "canonicalHero": "/images/breakfast/buttermilk-pancakes.jpg",
-      "status": "duplicate_conflict",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "9fbbea14d152b99fbac21a208419399b",
+      "exploreEligible": true
+    },
+    {
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
+      "canonicalHero": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
+      "status": "missing",
       "issues": [
         {
-          "code": "duplicate_hero_hash",
+          "code": "missing_image_file",
           "severity": "critical",
-          "message": "hero file reused across recipes (bbq-chicken-pizza) — image reuse disabled",
-          "confidence": 99
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
         }
       ],
-      "duplicatePeers": [
-        "bbq-chicken-pizza"
-      ],
-      "heroMd5": "b2b94642354a7c7336b11cebc0923bca",
+      "duplicatePeers": [],
+      "heroMd5": null,
       "exploreEligible": false
     },
     {
@@ -829,6 +907,19 @@
       "exploreEligible": true
     },
     {
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "5bd45876adf2f97c0a1e74fe86fa1cb7",
+      "exploreEligible": true
+    },
+    {
       "slug": "grilled-cod-lemon-packets",
       "title": "Caper-Butter Cod Foil Packets",
       "category": "bbq_grill_nights",
@@ -852,6 +943,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "b98f76bc023e8f9737130affa083387e",
+      "exploreEligible": true
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Carolina-Style Pulled Pork Sandwiches",
+      "category": "firehall_classics",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/pulled-pork.jpg",
+      "canonicalHero": "/images/golden-100/pulled-pork.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "eb66ab8dff2c6196887794159bb8a517",
       "exploreEligible": true
     },
     {
@@ -900,20 +1004,11 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/cedar-plank-salmon.jpg",
       "canonicalHero": "/images/golden-100/cedar-plank-salmon.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (tomato-soup-grilled-cheese-croutons) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "tomato-soup-grilled-cheese-croutons"
-      ],
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
       "heroMd5": "1fbac1b64857d997bb1a30df16131941",
-      "exploreEligible": false
+      "exploreEligible": true
     },
     {
       "slug": "cheesy-beef-nacho-bake",
@@ -961,11 +1056,20 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/chicken-alfredo-bake.jpg",
       "canonicalHero": "/images/golden-100/chicken-alfredo-bake.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (pancake-short-stack) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "pancake-short-stack"
+      ],
       "heroMd5": "b87b1a17f8d9751a1653d0520921f59f",
-      "exploreEligible": true
+      "exploreEligible": false
     },
     {
       "slug": "spanish-chicken-chorizo-rice",
@@ -1111,26 +1215,37 @@
       "exploreEligible": true
     },
     {
+      "slug": "chicken-marsala-lightened",
+      "title": "Chicken Marsala (Lightened)",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/chicken-marsala-lightened.jpg",
+      "canonicalHero": "/images/golden-100/chicken-marsala-lightened.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "sheet-pan-meal-prep",
       "title": "Chicken Meal Prep Trays",
       "category": "meal_prep_leftovers",
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/sheet-pan-meal-prep.jpg",
       "canonicalHero": "/images/golden-100/sheet-pan-meal-prep.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (sheet-pan-parmesan-dijon-chicken-thigh-dinner) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "sheet-pan-parmesan-dijon-chicken-thigh-dinner"
-      ],
-      "heroMd5": "055c2210e8f4292a7c265408d155cbe7",
-      "exploreEligible": false
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "7ef0d5bee662124bb17ef20bdbcaf355",
+      "exploreEligible": true
     },
     {
       "slug": "chicken-paprikash-hall",
@@ -1211,6 +1326,19 @@
       "exploreEligible": true
     },
     {
+      "slug": "chicken-thigh-stretch-dinner",
+      "title": "Chicken Thigh Stretch Dinner",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "canonicalHero": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "1f9d8eeaaf094641715b9c0601da0416",
+      "exploreEligible": true
+    },
+    {
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
       "title": "Chicken Thighs with Sweet Potato and Spinach",
       "category": "healthy_performance",
@@ -1282,20 +1410,37 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/chili-mac.jpg",
       "canonicalHero": "/images/golden-100/chili-mac.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (30-minute-pasta-e-fagioli-for-the-hall) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "30-minute-pasta-e-fagioli-for-the-hall"
-      ],
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
       "heroMd5": "5a4e3f3d502c5b3bc3dd4f57bc27d9a1",
-      "exploreEligible": false
+      "exploreEligible": true
+    },
+    {
+      "slug": "steak-tacos",
+      "title": "Chimichurri Steak Tacos",
+      "category": "firehall_classics",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/steak-tacos.jpg",
+      "canonicalHero": "/images/golden-100/steak-tacos.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "b0841d80d849cdfeb092028dd88699b6",
+      "exploreEligible": true
+    },
+    {
+      "slug": "chipotle-chicken-burrito-bowls",
+      "title": "Chipotle Chicken Burrito Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "6c3276211fb8e25ae130a3e50526fd8f",
+      "exploreEligible": true
     },
     {
       "slug": "chipotle-lime-chicken-tacos",
@@ -1315,12 +1460,12 @@
       "title": "Chocolate Banana Recovery Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/chocolate-banana-recovery.jpg",
-      "canonicalHero": "/images/smoothies/chocolate-banana-recovery.jpg",
+      "heroImage": "/images/smoothies/chocolate-banana-recovery.webp",
+      "canonicalHero": "/images/smoothies/chocolate-banana-recovery.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "1c61e53c32e2d46af873ab08665608f3",
+      "heroMd5": "a6ee06b54e5a6701f95a891edea22627",
       "exploreEligible": true
     },
     {
@@ -1341,12 +1486,12 @@
       "title": "Citrus Ginger Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/citrus-ginger.jpg",
-      "canonicalHero": "/images/smoothies/citrus-ginger.jpg",
+      "heroImage": "/images/smoothies/citrus-ginger.webp",
+      "canonicalHero": "/images/smoothies/citrus-ginger.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "a0f606b569a5634be93f666902c5bd4e",
+      "heroMd5": "172a9544ab51f457fd53e09ca7dbe4c4",
       "exploreEligible": true
     },
     {
@@ -1356,20 +1501,11 @@
       "kind": "hall_expansion",
       "heroImage": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
       "canonicalHero": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (smash-burgers) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "smash-burgers"
-      ],
-      "heroMd5": "34298efc7cb434eff0d8e85896723732",
-      "exploreEligible": false
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "93e88ddd58adc2aa15818e9392db2c43",
+      "exploreEligible": true
     },
     {
       "slug": "classic-poutine-feed-crew",
@@ -1450,6 +1586,19 @@
       "exploreEligible": true
     },
     {
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+      "canonicalHero": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "216d48787367226e5ba53acdf246ff3e",
+      "exploreEligible": true
+    },
+    {
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
       "category": "hall_expansion",
@@ -1508,19 +1657,30 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/crispy-chicken-cutlets.jpg",
       "canonicalHero": "/images/golden-100/crispy-chicken-cutlets.jpg",
-      "status": "duplicate_conflict",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "b3a871fb616b780fa63c8569294b6b46",
+      "exploreEligible": true
+    },
+    {
+      "slug": "cuban-beef-picadillo-bowls",
+      "title": "Cuban-Style Beef Picadillo Bowls",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+      "canonicalHero": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+      "status": "missing",
       "issues": [
         {
-          "code": "duplicate_hero_hash",
+          "code": "missing_image_file",
           "severity": "critical",
-          "message": "hero file reused across recipes (four-step-chicken-piccata) — image reuse disabled",
-          "confidence": 99
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
         }
       ],
-      "duplicatePeers": [
-        "four-step-chicken-piccata"
-      ],
-      "heroMd5": "b3a871fb616b780fa63c8569294b6b46",
+      "duplicatePeers": [],
+      "heroMd5": null,
       "exploreEligible": false
     },
     {
@@ -1550,26 +1710,30 @@
       "exploreEligible": true
     },
     {
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "canonicalHero": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "567c9e195e1da098d298e2a10dfe3418",
+      "exploreEligible": true
+    },
+    {
       "slug": "smash-burgers",
       "title": "Double Smash Burgers",
       "category": "firehall_classics",
       "kind": "hall_classic",
       "heroImage": "/images/golden-100/smash-burgers.jpg",
       "canonicalHero": "/images/golden-100/smash-burgers.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (classic-patty-melt-for-the-crew) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "classic-patty-melt-for-the-crew"
-      ],
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
       "heroMd5": "34298efc7cb434eff0d8e85896723732",
-      "exploreEligible": false
+      "exploreEligible": true
     },
     {
       "slug": "dutch-oven-pot-roast",
@@ -1583,6 +1747,30 @@
       "duplicatePeers": [],
       "heroMd5": "9ce8b3075d4c82650957f63e26f3c5d4",
       "exploreEligible": true
+    },
+    {
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "canonicalHero": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, korean-turkey-rice-bowls) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "bulgogi-bowls",
+        "firehall-korean-beef-bowls",
+        "korean-turkey-rice-bowls"
+      ],
+      "heroMd5": "7545872c4593a5901dee7066cd526054",
+      "exploreEligible": false
     },
     {
       "slug": "eggs-benedict-hall-style",
@@ -1650,6 +1838,26 @@
       "exploreEligible": true
     },
     {
+      "slug": "filipino-chicken-adobo",
+      "title": "Filipino-Style Chicken Adobo",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/filipino-chicken-adobo.jpg",
+      "canonicalHero": "/images/golden-100/filipino-chicken-adobo.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "fire-captain-omelette-bar",
       "title": "Fire Captain Omelette Bar",
       "category": "breakfast_brunch",
@@ -1702,6 +1910,30 @@
       "exploreEligible": true
     },
     {
+      "slug": "big-chili",
+      "title": "Firehall Chili",
+      "category": "big_crew_feeders",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/big-chili.jpg",
+      "canonicalHero": "/images/golden-100/big-chili.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (white-chicken-chili-crock, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "white-chicken-chili-crock",
+        "burnt-ends-chili-crew",
+        "pasta-e-fagioli-hall"
+      ],
+      "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
+      "exploreEligible": false
+    },
+    {
       "slug": "firehall-donair-platter",
       "title": "Firehall Donair Platter",
       "category": "hall_expansion",
@@ -1712,6 +1944,32 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "c959e50328af7020dded9311870436df",
+      "exploreEligible": true
+    },
+    {
+      "slug": "firehall-gyro-bowls",
+      "title": "Firehall Gyro Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "321ad2be200995f729771d1d01704a37",
+      "exploreEligible": true
+    },
+    {
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "8ea01ea564ed6c9e4c166913d165504d",
       "exploreEligible": true
     },
     {
@@ -1747,20 +2005,11 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/four-step-chicken-piccata.jpg",
       "canonicalHero": "/images/golden-100/four-step-chicken-piccata.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (crispy-chicken-cutlets) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "crispy-chicken-cutlets"
-      ],
-      "heroMd5": "b3a871fb616b780fa63c8569294b6b46",
-      "exploreEligible": false
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "bcdf1b89e4547c61e18ad8f7a759a552",
+      "exploreEligible": true
     },
     {
       "slug": "french-onion-soup-for-the-hall",
@@ -1769,20 +2018,11 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
       "canonicalHero": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (turkey-sausage-burritos) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "turkey-sausage-burritos"
-      ],
-      "heroMd5": "54b37a3e11daed991a415ed8b26f7be1",
-      "exploreEligible": false
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "a4cae1787d832a4a9128e2a0eaee3333",
+      "exploreEligible": true
     },
     {
       "slug": "game-day-nachos",
@@ -1817,20 +2057,11 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/five-ingredient-pasta.jpg",
       "canonicalHero": "/images/golden-100/five-ingredient-pasta.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (spaghetti-aglio-e-olio-for-the-hall) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "spaghetti-aglio-e-olio-for-the-hall"
-      ],
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
       "heroMd5": "78196b4356e2e442e1cab6ed7f8a8ea7",
-      "exploreEligible": false
+      "exploreEligible": true
     },
     {
       "slug": "garlic-butter-shrimp",
@@ -1844,6 +2075,26 @@
       "duplicatePeers": [],
       "heroMd5": "04e31399d30dc46c11ef7f8fdf2ac010",
       "exploreEligible": true
+    },
+    {
+      "slug": "general-tsos-baked-chicken",
+      "title": "General Tso's-Style Baked Chicken",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/general-tsos-baked-chicken.jpg",
+      "canonicalHero": "/images/golden-100/general-tsos-baked-chicken.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
     },
     {
       "slug": "griddle-smash-sausage-peppers",
@@ -1885,6 +2136,26 @@
       "exploreEligible": true
     },
     {
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+      "canonicalHero": "/images/golden-100/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "greek-chicken-bowls",
       "title": "Greek Chicken Bowls",
       "category": "healthy_performance",
@@ -1895,6 +2166,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "233f95d6c9f9b9c4b148378cce585863",
+      "exploreEligible": true
+    },
+    {
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "dc379f3fbbd04a86d80888211cd9ea0d",
       "exploreEligible": true
     },
     {
@@ -1909,6 +2193,26 @@
       "duplicatePeers": [],
       "heroMd5": "dfb00ed4025b209070efa09da96e614a",
       "exploreEligible": true
+    },
+    {
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "canonicalHero": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
     },
     {
       "slug": "green-chile-chicken-stew",
@@ -1928,12 +2232,25 @@
       "title": "Green Pineapple Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/green-pineapple.jpg",
-      "canonicalHero": "/images/smoothies/green-pineapple.jpg",
+      "heroImage": "/images/smoothies/green-pineapple.webp",
+      "canonicalHero": "/images/smoothies/green-pineapple.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "0cba713bb24cd8b064dad079796a1397",
+      "heroMd5": "c1510e4421bdd556c616692711f7fe40",
+      "exploreEligible": true
+    },
+    {
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "canonicalHero": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "679de1021967a98ebac0f4212efbb355",
       "exploreEligible": true
     },
     {
@@ -1969,20 +2286,11 @@
       "kind": "hall_expansion",
       "heroImage": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
       "canonicalHero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (turkey-burgers) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "turkey-burgers"
-      ],
-      "heroMd5": "2161edf4d27935bc1b8096622b09d7e1",
-      "exploreEligible": false
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "004887b5e4b75c076f3a5cbf50149db1",
+      "exploreEligible": true
     },
     {
       "slug": "hall-breakfast-burritos",
@@ -2063,6 +2371,19 @@
       "exploreEligible": true
     },
     {
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "category": "breakfast_brunch",
+      "kind": "breakfast_catalog",
+      "heroImage": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+      "canonicalHero": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "e19d2022ef1741071d96001bbf2a1930",
+      "exploreEligible": true
+    },
+    {
       "slug": "caprese-steak-skewers-crew",
       "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
       "category": "bbq_grill_nights",
@@ -2089,6 +2410,26 @@
       "exploreEligible": true
     },
     {
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
+      "canonicalHero": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "hickory-smoked-chicken-breast",
       "title": "Hickory Smoked Chicken Breast",
       "category": "bbq_grill_nights",
@@ -2113,6 +2454,26 @@
       "duplicatePeers": [],
       "heroMd5": "0a850d3b9ba1cc85b16e1f2994518d53",
       "exploreEligible": true
+    },
+    {
+      "slug": "high-protein-chicken-fried-rice",
+      "title": "High-Protein Chicken Fried Rice",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/high-protein-chicken-fried-rice.jpg",
+      "canonicalHero": "/images/golden-100/high-protein-chicken-fried-rice.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
     },
     {
       "slug": "honey-chipotle-chicken-thighs",
@@ -2212,11 +2573,20 @@
       "kind": "breakfast_catalog",
       "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
       "canonicalHero": "/images/breakfast/huevos-rancheros-crew.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (shakshuka-for-the-hall) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "shakshuka-for-the-hall"
+      ],
       "heroMd5": "28b6174fb9ffbd1c0109cccb546a68e7",
-      "exploreEligible": true
+      "exploreEligible": false
     },
     {
       "slug": "hummus-chicken-platter",
@@ -2268,6 +2638,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "8ef54b60d3340641d7ccf9f9f2356c14",
+      "exploreEligible": true
+    },
+    {
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+      "canonicalHero": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "44f8c32a2585c4e9e4f10b145994151c",
       "exploreEligible": true
     },
     {
@@ -2362,6 +2745,30 @@
       "exploreEligible": true
     },
     {
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (bulgogi-bowls, egg-roll-in-a-bowl-crew, korean-turkey-rice-bowls) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "bulgogi-bowls",
+        "egg-roll-in-a-bowl-crew",
+        "korean-turkey-rice-bowls"
+      ],
+      "heroMd5": "7545872c4593a5901dee7066cd526054",
+      "exploreEligible": false
+    },
+    {
       "slug": "korean-bulgogi-grill-night",
       "title": "Korean Bulgogi Grill Night",
       "category": "hall_expansion",
@@ -2373,6 +2780,50 @@
       "duplicatePeers": [],
       "heroMd5": "494dade9b050666dec4a93cfa66bf234",
       "exploreEligible": true
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (bulgogi-bowls, firehall-korean-beef-bowls, egg-roll-in-a-bowl-crew) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "bulgogi-bowls",
+        "firehall-korean-beef-bowls",
+        "egg-roll-in-a-bowl-crew"
+      ],
+      "heroMd5": "7545872c4593a5901dee7066cd526054",
+      "exploreEligible": false
+    },
+    {
+      "slug": "kung-pao-chicken-rice-bowls",
+      "title": "Kung Pao Chicken & Rice Bowls",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/kung-pao-chicken-rice-bowls.jpg",
+      "canonicalHero": "/images/golden-100/kung-pao-chicken-rice-bowls.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
     },
     {
       "slug": "lamb-kofta-skewer-platter",
@@ -2398,6 +2849,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "9f5b14ae8d62758ebfb20599630704ae",
+      "exploreEligible": true
+    },
+    {
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "930c06bc3171818caa7c9cb45da6666e",
       "exploreEligible": true
     },
     {
@@ -2515,6 +2979,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "33c6a0bcf6a13097d94151e0bd5436d2",
+      "exploreEligible": true
+    },
+    {
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "canonicalHero": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "11d260f85411a0eb6ccb7680f7cdc9f1",
       "exploreEligible": true
     },
     {
@@ -2674,6 +3151,59 @@
       "exploreEligible": true
     },
     {
+      "slug": "mediterranean-beef-bowls",
+      "title": "Mediterranean Beef Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "93b2466002a726b7b5972a626ed0ff90",
+      "exploreEligible": true
+    },
+    {
+      "slug": "mediterranean-beef-kofta-bowls",
+      "title": "Mediterranean Beef Kofta Bowls",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/mediterranean-beef-kofta-bowls.jpg",
+      "canonicalHero": "/images/golden-100/mediterranean-beef-kofta-bowls.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "title": "Mediterranean Chicken & White Bean Skillet",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
+      "canonicalHero": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "mediterranean-chicken-farro-bowls",
       "title": "Mediterranean Chicken Farro Bowls",
       "category": "hall_expansion",
@@ -2726,6 +3256,28 @@
       "exploreEligible": true
     },
     {
+      "slug": "menemen-for-the-crew",
+      "title": "Menemen for the Crew",
+      "category": "breakfast_brunch",
+      "kind": "breakfast_catalog",
+      "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
+      "canonicalHero": "/images/breakfast/menemen-for-the-crew.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (migas-for-the-crew) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "migas-for-the-crew"
+      ],
+      "heroMd5": "c1bd9f5504958d7b6f86e6adb9918c6a",
+      "exploreEligible": false
+    },
+    {
       "slug": "mesquite-chuck-roast",
       "title": "Mesquite Smoked Chuck Roast",
       "category": "hall_expansion",
@@ -2745,11 +3297,20 @@
       "kind": "breakfast_catalog",
       "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
       "canonicalHero": "/images/breakfast/migas-for-the-crew.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (menemen-for-the-crew) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "menemen-for-the-crew"
+      ],
       "heroMd5": "c1bd9f5504958d7b6f86e6adb9918c6a",
-      "exploreEligible": true
+      "exploreEligible": false
     },
     {
       "slug": "miso-ramen-bar",
@@ -2765,16 +3326,29 @@
       "exploreEligible": true
     },
     {
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "canonicalHero": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "2f21b79f2da06c296bc310d70053b3ca",
+      "exploreEligible": true
+    },
+    {
       "slug": "mixed-berry-protein",
       "title": "Mixed Berry Protein Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/mixed-berry-protein.jpg",
-      "canonicalHero": "/images/smoothies/mixed-berry-protein.jpg",
+      "heroImage": "/images/smoothies/mixed-berry-protein.webp",
+      "canonicalHero": "/images/smoothies/mixed-berry-protein.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "54d9ce0a7fb0578cf310e62d0ee131ab",
+      "heroMd5": "4e8889ed7718ef886a9dec9d7b960868",
       "exploreEligible": true
     },
     {
@@ -2782,12 +3356,12 @@
       "title": "Mocha Protein Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/mocha-protein.jpg",
-      "canonicalHero": "/images/smoothies/mocha-protein.jpg",
+      "heroImage": "/images/smoothies/mocha-protein.webp",
+      "canonicalHero": "/images/smoothies/mocha-protein.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "2097769b6001fe3049c2d17ca1f6f83f",
+      "heroMd5": "89c87e3b429732099b8c32fb243a5eef",
       "exploreEligible": true
     },
     {
@@ -2934,6 +3508,26 @@
       "exploreEligible": true
     },
     {
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+      "canonicalHero": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "overnight-french-toast-bake",
       "title": "Overnight French Toast Bake",
       "category": "breakfast_brunch",
@@ -2944,6 +3538,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "bad24e39a44028a803f761529c8ba808",
+      "exploreEligible": true
+    },
+    {
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "category": "breakfast_brunch",
+      "kind": "breakfast_catalog",
+      "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
+      "canonicalHero": "/images/breakfast/overnight-oat-bar-crew.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "07b6351b6dbdfd34640870005c1c0877",
       "exploreEligible": true
     },
     {
@@ -3038,16 +3645,53 @@
       "exploreEligible": true
     },
     {
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "canonicalHero": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (big-chili, white-chicken-chili-crock, burnt-ends-chili-crew) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "big-chili",
+        "white-chicken-chili-crock",
+        "burnt-ends-chili-crew"
+      ],
+      "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
+      "exploreEligible": false
+    },
+    {
       "slug": "peanut-butter-banana-recovery",
       "title": "Peanut Butter Banana Recovery Shake",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/peanut-butter-banana-recovery.jpg",
-      "canonicalHero": "/images/smoothies/peanut-butter-banana-recovery.jpg",
+      "heroImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
+      "canonicalHero": "/images/smoothies/peanut-butter-banana-recovery.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "5a2c1e324efbf34a79951fde3ca5687c",
+      "heroMd5": "172424ea915140689ca390e4eb04708f",
+      "exploreEligible": true
+    },
+    {
+      "slug": "peanut-chicken-rice-bowls",
+      "title": "Peanut Chicken Rice Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "02ad9a03418479631522c37150ef67a9",
       "exploreEligible": true
     },
     {
@@ -3116,6 +3760,26 @@
       "exploreEligible": true
     },
     {
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
+      "canonicalHero": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "pesto-tomato-chicken-tray",
       "title": "Pesto Chicken Tray",
       "category": "healthy_performance",
@@ -3165,6 +3829,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "04c95834c9835ad334766161ce103d35",
+      "exploreEligible": true
+    },
+    {
+      "slug": "steak-sandwiches",
+      "title": "Philly-Style Cheesesteaks",
+      "category": "firehall_classics",
+      "kind": "hall_classic",
+      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
+      "canonicalHero": "/images/golden-100/steak-sandwiches.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "a4b65ed395b3ed80128a76f4f57b6390",
       "exploreEligible": true
     },
     {
@@ -3259,19 +3936,6 @@
       "exploreEligible": true
     },
     {
-      "slug": "pulled-pork",
-      "title": "Pulled Pork Sandwiches",
-      "category": "firehall_classics",
-      "kind": "hall_classic",
-      "heroImage": "/images/golden-100/pulled-pork.jpg",
-      "canonicalHero": "/images/golden-100/pulled-pork.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "eb66ab8dff2c6196887794159bb8a517",
-      "exploreEligible": true
-    },
-    {
       "slug": "quick-egg-tacos",
       "title": "Quick Egg Tacos",
       "category": "breakfast_brunch",
@@ -3360,6 +4024,32 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "ac86499f487a7c18326372d5fb49237e",
+      "exploreEligible": true
+    },
+    {
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "canonicalHero": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "8d9d96479e08a9eb9e3282017ff2703d",
+      "exploreEligible": true
+    },
+    {
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "canonicalHero": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "6bf4386f042427ea6e865812a28c9099",
       "exploreEligible": true
     },
     {
@@ -3454,6 +4144,19 @@
       "exploreEligible": true
     },
     {
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "canonicalHero": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "8dee8eb1d3e66474242bc01a753fb12a",
+      "exploreEligible": true
+    },
+    {
       "slug": "sausage-peppers-onions",
       "title": "Sausage Peppers and Onions",
       "category": "comfort_food",
@@ -3504,6 +4207,28 @@
       "duplicatePeers": [],
       "heroMd5": "672a2dfd4cef8c8f396ad76b986b6e09",
       "exploreEligible": true
+    },
+    {
+      "slug": "shakshuka-for-the-hall",
+      "title": "Shakshuka for the Hall",
+      "category": "breakfast_brunch",
+      "kind": "breakfast_catalog",
+      "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
+      "canonicalHero": "/images/breakfast/shakshuka-for-the-hall.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (huevos-rancheros-crew) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "huevos-rancheros-crew"
+      ],
+      "heroMd5": "28b6174fb9ffbd1c0109cccb546a68e7",
+      "exploreEligible": false
     },
     {
       "slug": "shawarma-bar-night",
@@ -3590,20 +4315,44 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
       "canonicalHero": "/images/golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
-      "status": "duplicate_conflict",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "055c2210e8f4292a7c265408d155cbe7",
+      "exploreEligible": true
+    },
+    {
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+      "canonicalHero": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+      "status": "missing",
       "issues": [
         {
-          "code": "duplicate_hero_hash",
+          "code": "missing_image_file",
           "severity": "critical",
-          "message": "hero file reused across recipes (sheet-pan-meal-prep) — image reuse disabled",
-          "confidence": 99
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
         }
       ],
-      "duplicatePeers": [
-        "sheet-pan-meal-prep"
-      ],
-      "heroMd5": "055c2210e8f4292a7c265408d155cbe7",
+      "duplicatePeers": [],
+      "heroMd5": null,
       "exploreEligible": false
+    },
+    {
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "category": "breakfast_brunch",
+      "kind": "breakfast_catalog",
+      "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "canonicalHero": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "e0c37841917b8a14bae40c3e5668e074",
+      "exploreEligible": true
     },
     {
       "slug": "shepherds-pie",
@@ -3853,6 +4602,19 @@
       "exploreEligible": true
     },
     {
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/smoker-nachos-crew.jpg",
+      "canonicalHero": "/images/hall-expansion/smoker-nachos-crew.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "5d00ea37ec0764c115ef63668623466b",
+      "exploreEligible": true
+    },
+    {
       "slug": "soft-pretzel-dogs",
       "title": "Soft Pretzel Hot Dogs",
       "category": "hall_expansion",
@@ -3864,6 +4626,26 @@
       "duplicatePeers": [],
       "heroMd5": "929922bf4d627513452e999b6f19ed48",
       "exploreEligible": true
+    },
+    {
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "title": "Southwest Beef & Sweet Potato Skillet",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
+      "canonicalHero": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
     },
     {
       "slug": "southwest-egg-bake",
@@ -3879,26 +4661,43 @@
       "exploreEligible": true
     },
     {
+      "slug": "southwest-steak-bowls",
+      "title": "Southwest Steak Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/southwest-steak-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/southwest-steak-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "cd6000187b3a33154e3fc85bf6a819f0",
+      "exploreEligible": true
+    },
+    {
       "slug": "spaghetti-aglio-e-olio-for-the-hall",
       "title": "Spaghetti Aglio e Olio for the Hall",
       "category": "rookie_friendly",
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
       "canonicalHero": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (five-ingredient-pasta) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "five-ingredient-pasta"
-      ],
-      "heroMd5": "78196b4356e2e442e1cab6ed7f8a8ea7",
-      "exploreEligible": false
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "008997b1037e2c257c604beb86fcb5d0",
+      "exploreEligible": true
+    },
+    {
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "canonicalHero": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "b2c6c0a764a0754a5781bb9c657b89b4",
+      "exploreEligible": true
     },
     {
       "slug": "spatchcock-lemon-roast-chicken",
@@ -3940,42 +4739,16 @@
       "exploreEligible": true
     },
     {
-      "slug": "steak-sandwiches",
-      "title": "Steak Sandwiches",
-      "category": "firehall_classics",
-      "kind": "hall_classic",
-      "heroImage": "/images/golden-100/steak-sandwiches.jpg",
-      "canonicalHero": "/images/golden-100/steak-sandwiches.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "a4b65ed395b3ed80128a76f4f57b6390",
-      "exploreEligible": true
-    },
-    {
-      "slug": "steak-tacos",
-      "title": "Steak Tacos",
-      "category": "firehall_classics",
-      "kind": "hall_classic",
-      "heroImage": "/images/golden-100/steak-tacos.jpg",
-      "canonicalHero": "/images/golden-100/steak-tacos.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
-      "heroMd5": "b0841d80d849cdfeb092028dd88699b6",
-      "exploreEligible": true
-    },
-    {
       "slug": "strawberry-oat-breakfast",
       "title": "Strawberry Oatmeal Breakfast Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/strawberry-oat-breakfast.jpg",
-      "canonicalHero": "/images/smoothies/strawberry-oat-breakfast.jpg",
+      "heroImage": "/images/smoothies/strawberry-oat-breakfast.webp",
+      "canonicalHero": "/images/smoothies/strawberry-oat-breakfast.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "c7c47bb32b1db135c3d0959ee8d6695a",
+      "heroMd5": "e9166ceecbc67ce429b091868b705b5f",
       "exploreEligible": true
     },
     {
@@ -3983,12 +4756,12 @@
       "title": "Strawberry Spinach Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/strawberry-spinach.jpg",
-      "canonicalHero": "/images/smoothies/strawberry-spinach.jpg",
+      "heroImage": "/images/smoothies/strawberry-spinach.webp",
+      "canonicalHero": "/images/smoothies/strawberry-spinach.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "fc960e62d581d0b66b5972933d793c29",
+      "heroMd5": "d0b6a09c911fea1791d1bfb33d89eaf2",
       "exploreEligible": true
     },
     {
@@ -4089,11 +4862,44 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/teriyaki-donburi.jpg",
       "canonicalHero": "/images/golden-100/teriyaki-donburi.jpg",
-      "status": "correct",
-      "issues": [],
-      "duplicatePeers": [],
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (teriyaki-chicken-rice-bowls, thai-peanut-chicken-crock) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "teriyaki-chicken-rice-bowls",
+        "thai-peanut-chicken-crock"
+      ],
       "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
-      "exploreEligible": true
+      "exploreEligible": false
+    },
+    {
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (teriyaki-donburi, thai-peanut-chicken-crock) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "teriyaki-donburi",
+        "thai-peanut-chicken-crock"
+      ],
+      "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
+      "exploreEligible": false
     },
     {
       "slug": "teriyaki-salmon-grill",
@@ -4148,6 +4954,49 @@
       "exploreEligible": true
     },
     {
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+      "canonicalHero": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "canonicalHero": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (teriyaki-donburi, teriyaki-chicken-rice-bowls) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "teriyaki-donburi",
+        "teriyaki-chicken-rice-bowls"
+      ],
+      "heroMd5": "a28a556ed762e4c1f0161ffca6197f9c",
+      "exploreEligible": false
+    },
+    {
       "slug": "yakiniku-grill-platter-crew",
       "title": "Tokyo Tare Ribeye Yakiniku Board",
       "category": "bbq_grill_nights",
@@ -4167,20 +5016,11 @@
       "kind": "firehall_catalog",
       "heroImage": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
       "canonicalHero": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (cedar-plank-salmon) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "cedar-plank-salmon"
-      ],
-      "heroMd5": "1fbac1b64857d997bb1a30df16131941",
-      "exploreEligible": false
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "5a2cf285ef4ca530da92caed153db53e",
+      "exploreEligible": true
     },
     {
       "slug": "tonkotsu-ramen-crew",
@@ -4209,16 +5049,36 @@
       "exploreEligible": true
     },
     {
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+      "canonicalHero": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "tropical-mango-greek",
       "title": "Tropical Mango Greek Yogurt Smoothie",
       "category": "smoothies",
       "kind": "smoothie",
-      "heroImage": "/images/smoothies/tropical-mango-greek.jpg",
-      "canonicalHero": "/images/smoothies/tropical-mango-greek.jpg",
+      "heroImage": "/images/smoothies/tropical-mango-greek.webp",
+      "canonicalHero": "/images/smoothies/tropical-mango-greek.webp",
       "status": "correct",
       "issues": [],
       "duplicatePeers": [],
-      "heroMd5": "6ff005ccd6e8dc0231971d4fd05806cb",
+      "heroMd5": "e5663016a7e7d562f857156c574a7cc4",
       "exploreEligible": true
     },
     {
@@ -4267,20 +5127,11 @@
       "kind": "breakfast_catalog",
       "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
       "canonicalHero": "/images/breakfast/turkey-sausage-burritos.jpg",
-      "status": "duplicate_conflict",
-      "issues": [
-        {
-          "code": "duplicate_hero_hash",
-          "severity": "critical",
-          "message": "hero file reused across recipes (french-onion-soup-for-the-hall) — image reuse disabled",
-          "confidence": 99
-        }
-      ],
-      "duplicatePeers": [
-        "french-onion-soup-for-the-hall"
-      ],
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
       "heroMd5": "54b37a3e11daed991a415ed8b26f7be1",
-      "exploreEligible": false
+      "exploreEligible": true
     },
     {
       "slug": "turkey-shepherds-sweet-potato",
@@ -4306,6 +5157,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "cf85c92bf1fe5e3e7a0cb30a7b30915e",
+      "exploreEligible": true
+    },
+    {
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "canonicalHero": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "2bb47e24395662be5ab063c418035a22",
       "exploreEligible": true
     },
     {
@@ -4348,6 +5212,26 @@
       "exploreEligible": true
     },
     {
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "title": "Unstuffed Cabbage Roll Skillet",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
+      "canonicalHero": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "veggie-egg-burritos",
       "title": "Veggie Egg Burritos",
       "category": "breakfast_brunch",
@@ -4361,6 +5245,26 @@
       "exploreEligible": true
     },
     {
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "title": "Vietnamese Caramel-Braised Chicken Bowls",
+      "category": "healthy_performance",
+      "kind": "performance_meal",
+      "heroImage": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",
+      "canonicalHero": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",
+      "status": "missing",
+      "issues": [
+        {
+          "code": "missing_image_file",
+          "severity": "critical",
+          "message": "canonical hero image missing on disk",
+          "confidence": 98
+        }
+      ],
+      "duplicatePeers": [],
+      "heroMd5": null,
+      "exploreEligible": false
+    },
+    {
       "slug": "warm-spinach-chicken-salad",
       "title": "Warm Spinach Chicken Salad",
       "category": "hall_expansion",
@@ -4371,6 +5275,19 @@
       "issues": [],
       "duplicatePeers": [],
       "heroMd5": "8ac02d8e8b2f5503362c47efbd8d222c",
+      "exploreEligible": true
+    },
+    {
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "canonicalHero": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "status": "correct",
+      "issues": [],
+      "duplicatePeers": [],
+      "heroMd5": "6cd154ca9a1ac698a6d7519210112c8a",
       "exploreEligible": true
     },
     {
@@ -4398,6 +5315,30 @@
       "duplicatePeers": [],
       "heroMd5": "da25a294ff751054a23148f3a9af2780",
       "exploreEligible": true
+    },
+    {
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "category": "hall_expansion",
+      "kind": "hall_expansion",
+      "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "canonicalHero": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "status": "duplicate_conflict",
+      "issues": [
+        {
+          "code": "duplicate_hero_hash",
+          "severity": "critical",
+          "message": "hero file reused across recipes (big-chili, burnt-ends-chili-crew, pasta-e-fagioli-hall) — image reuse disabled",
+          "confidence": 99
+        }
+      ],
+      "duplicatePeers": [
+        "big-chili",
+        "burnt-ends-chili-crew",
+        "pasta-e-fagioli-hall"
+      ],
+      "heroMd5": "6f485c25c41cc95e5e28c9c8b52021cf",
+      "exploreEligible": false
     },
     {
       "slug": "white-garlic-chicken-pizza",

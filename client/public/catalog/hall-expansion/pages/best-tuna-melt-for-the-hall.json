@@ -222,6 +222,12 @@
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
+        "name": "canned tuna",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
         "name": "mayonnaise",
         "allergens": [
           "egg"
@@ -254,9 +260,9 @@
       "peanutFree": true,
       "soyFree": true,
       "shellfishFree": true,
-      "fishFree": true,
+      "fishFree": false,
       "porkFree": true,
-      "vegetarian": true,
+      "vegetarian": false,
       "vegan": false
     },
     "adaptable": [
@@ -276,6 +282,6 @@
         "note": "Use an egg-free/vegan mayonnaise."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

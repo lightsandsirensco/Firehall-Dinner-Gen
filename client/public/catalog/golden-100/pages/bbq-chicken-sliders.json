@@ -271,16 +271,17 @@
   "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "low",
-    "matchedCount": 12,
+    "confidence": "high",
+    "matchedCount": 13,
     "totalCount": 13,
-    "uncertainIngredients": [
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
       {
         "name": "Slider Rolls (Hawaiian-style, 12-count pack)",
-        "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
-      }
-    ],
-    "flaggedIngredients": [
+        "allergens": [
+          "gluten"
+        ]
+      },
       {
         "name": "Chicken Broth",
         "allergens": [
@@ -304,16 +305,32 @@
       "glutenFree": false,
       "dairyFree": false,
       "eggFree": false,
-      "nutFree": false,
-      "peanutFree": false,
-      "soyFree": false,
-      "shellfishFree": false,
-      "fishFree": false,
-      "porkFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bread/crust/wrapper alternative. Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

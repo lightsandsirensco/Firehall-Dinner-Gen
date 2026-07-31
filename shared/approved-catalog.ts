@@ -11,6 +11,8 @@ import {
   isBbqCatalogSlug,
 } from "./hall-catalog/gate.js";
 import { isPerformanceBreakfastSlug } from "./breakfast-catalog/governance-types.js";
+import { isSmoothieCatalogSlug } from "./fuel-catalog/smoothies/catalog-data.js";
+import { smoothieRecipePath } from "./fuel-catalog/paths.js";
 import {
   slugLockedImagePaths,
   type ExploreCatalogImageKind,
@@ -46,9 +48,13 @@ export interface ApprovedCatalogEntry {
   catalogBadge: CatalogPublicBadge;
   traitBadges: CatalogPublicBadge[];
   isSmoothie: boolean;
+  /** Nutrition-threshold scoring rule (calories<=550 & fat<=20g, or performance macros) — not a tag/keyword guess. */
   isHealthy: boolean;
   isBbqGrill: boolean;
+  /** Real per-serving protein threshold (>=35g) from computed nutrition — not a tag/keyword guess. */
   isHighProtein: boolean;
+  /** Real per-serving carb threshold (<=25g) from computed nutrition — not a tag/keyword guess. */
+  isLowCarb: boolean;
   isLowCleanup: boolean;
   /** Food-safety dietary/allergen classification — undefined only for legacy entries that predate the audit. */
   dietarySummary?: DietarySummary;
@@ -136,6 +142,13 @@ export function approvedCatalogRecipePath(slug: string): string {
       return `/breakfast/performance/${encodeURIComponent(s)}`;
     }
     return `/breakfast/${encodeURIComponent(s)}`;
+  }
+  // Smoothies are part of the approved catalog (see `buildApprovedCatalog`)
+  // but live at /smoothies/:slug, not /recipes/:slug — without this check,
+  // any Explore card / related-recipe / favorites link built from a
+  // smoothie slug 404s (confirmed via `npm run audit:404`).
+  if (isSmoothieCatalogSlug(s)) {
+    return smoothieRecipePath(s);
   }
   return `/recipes/${encodeURIComponent(s)}`;
 }

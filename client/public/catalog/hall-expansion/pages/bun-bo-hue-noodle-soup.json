@@ -306,6 +306,12 @@
         ]
       },
       {
+        "name": "round rice noodles",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
         "name": "fish sauce",
         "allergens": [
           "fish"
@@ -313,7 +319,7 @@
       }
     ],
     "flags": {
-      "glutenFree": true,
+      "glutenFree": false,
       "dairyFree": true,
       "eggFree": true,
       "nutFree": true,
@@ -325,7 +331,13 @@
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

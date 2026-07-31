@@ -198,11 +198,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
   "heroImageAlt": "Wide firehall crew platter of Cuban-Style Beef Picadillo Bowls on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/cuban-beef-picadillo-bowls.jpg",
+  "thumbImage": "/images/thumbs/cuban-beef-picadillo-bowls.jpg",
+  "railImage": "/images/rails/cuban-beef-picadillo-bowls.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -245,6 +245,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

@@ -169,7 +169,7 @@
     }
   },
   "heroImage": "/images/golden-100/french-toast-casserole.jpg",
-  "heroImageAlt": "Wide firehall crew platter of French Toast Casserole on a station prep table, family-style serving",
+  "heroImageAlt": "French Toast Casserole — baked golden French toast casserole, cut into squares, served with maple syrup",
   "mobileImage": "/images/mobile/french-toast-casserole.jpg",
   "thumbImage": "/images/thumbs/french-toast-casserole.jpg",
   "railImage": "/images/rails/french-toast-casserole.jpg",
@@ -198,16 +198,17 @@
   "generatedAt": "2026-07-29T13:33:03.256Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "low",
-    "matchedCount": 9,
+    "confidence": "high",
+    "matchedCount": 10,
     "totalCount": 10,
-    "uncertainIngredients": [
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
       {
         "name": "Thick-sliced brioche or Texas toast, cubed",
-        "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
-      }
-    ],
-    "flaggedIngredients": [
+        "allergens": [
+          "gluten"
+        ]
+      },
       {
         "name": "Large eggs",
         "allergens": [
@@ -243,16 +244,22 @@
       "glutenFree": false,
       "dairyFree": false,
       "eggFree": false,
-      "nutFree": false,
-      "peanutFree": false,
-      "soyFree": false,
-      "shellfishFree": false,
-      "fishFree": false,
-      "porkFree": false,
-      "vegetarian": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
       "vegan": false
     },
-    "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      }
+    ],
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

@@ -3,6 +3,7 @@ import fs from "fs";
 import path from "path";
 import { matchRecipeSlug, injectRecipeSeoIntoHtml } from "./seo/recipe-html-injection.js";
 import { injectGenericPageSeoIntoHtml } from "./seo/generic-page-injection.js";
+import { matchPackageSlug, injectPackageSeoIntoHtml } from "./seo/package-html-injection.js";
 import { resolvePublicSiteOrigin } from "./seo/sitemap.js";
 
 /** Vite emits hashed filenames — safe for long-term CDN/browser cache */
@@ -64,7 +65,7 @@ export function serveStatic(app: Express) {
     // `req.originalUrl` (unaffected by mount-point rebasing) instead.
     const fullPath = req.originalUrl.split("?")[0] || "/";
     const p = fullPath.toLowerCase();
-    if (p === "/sitemap.xml" || p === "/robots.txt") {
+    if (p === "/sitemap.xml" || p === "/robots.txt" || p === "/llms.txt") {
       return res.status(404).type("text/plain").send("Not found — configure SEO routes before static fallback.");
     }
     if (/\.(jpg|jpeg|png|webp|gif|svg|ico|woff2?|css|js|map|xml|json)$/i.test(p)) {
@@ -76,13 +77,16 @@ export function serveStatic(app: Express) {
     res.setHeader("Cache-Control", "no-cache");
 
     const recipeSlug = matchRecipeSlug(fullPath);
+    const packageSlug = matchPackageSlug(fullPath);
     try {
       const template = fs.readFileSync(indexHtmlPath, "utf-8");
       const origin = resolvePublicSiteOrigin(req.get("host"), req.get("x-forwarded-proto") ?? undefined);
-      const page = recipeSlug
+      const result = recipeSlug
         ? injectRecipeSeoIntoHtml(template, origin, recipeSlug)
-        : injectGenericPageSeoIntoHtml(template, origin, fullPath);
-      return res.type("text/html").send(page);
+        : packageSlug
+          ? injectPackageSeoIntoHtml(template, origin, packageSlug)
+          : injectGenericPageSeoIntoHtml(template, origin, fullPath);
+      return res.status(result.status).type("text/html").send(result.html);
     } catch {
       // Fall through to the plain static shell if injection fails for any reason.
     }

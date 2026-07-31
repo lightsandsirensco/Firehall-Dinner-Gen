@@ -48,17 +48,24 @@ function deriveMealFlags(
   isClassic: boolean,
 ): Pick<
   ApprovedCatalogEntry,
-  "isHealthy" | "isBbqGrill" | "isHighProtein" | "isLowCleanup"
+  "isHealthy" | "isBbqGrill" | "isHighProtein" | "isLowCarb" | "isLowCleanup"
 > {
   const cat = entry.category;
   const tagHay = entry.tags.join(" ").toLowerCase();
   const isPerformance = isPerformance50Slug(entry.slug);
+  const nutrition = entry.nutritionSummary;
 
-  const isHealthy =
-    cat === "healthy_performance" ||
-    isPerformance ||
-    tagHay.includes("healthy") ||
-    tagHay.includes("light");
+  // "Healthy" and "High protein" are nutrition-threshold scoring rules (see
+  // shared/nutrition/calculate.ts) computed from the recipe's actual per-serving
+  // macros whenever an estimate is available — never a subjective tag/keyword
+  // match. The category/performance-slug checks remain as an editorial fallback
+  // ONLY for the rare recipe where no nutrition estimate could be computed at all
+  // (nutrition.estimateAvailable === false), so those recipes aren't silently
+  // dropped from every nutrition-based filter.
+  const hasNutritionData = nutrition?.estimateAvailable === true;
+  const isHealthy = hasNutritionData
+    ? nutrition!.healthy
+    : cat === "healthy_performance" || isPerformance;
 
   const isBbqGrill =
     cat === "bbq_grill_nights" ||
@@ -66,11 +73,11 @@ function deriveMealFlags(
     tagHay.includes("grill") ||
     tagHay.includes("smoker");
 
-  const isHighProtein =
-    isPerformance ||
-    cat === "healthy_performance" ||
-    tagHay.includes("high protein") ||
-    tagHay.includes("high-protein");
+  const isHighProtein = hasNutritionData
+    ? nutrition!.highProtein
+    : isPerformance || cat === "healthy_performance";
+
+  const isLowCarb = hasNutritionData ? nutrition!.lowCarb : false;
 
   const isLowCleanup =
     cat === "rookie_friendly" ||
@@ -81,7 +88,7 @@ function deriveMealFlags(
     tagHay.includes("sheet pan");
 
   void isClassic;
-  return { isHealthy, isBbqGrill, isHighProtein, isLowCleanup };
+  return { isHealthy, isBbqGrill, isHighProtein, isLowCarb, isLowCleanup };
 }
 
 function buildSearchText(parts: string[]): string {
@@ -176,6 +183,7 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
     isHealthy: true,
     isBbqGrill: false,
     isHighProtein,
+    isLowCarb: false,
     isLowCleanup: true,
     dietarySummary,
   };
@@ -191,10 +199,13 @@ function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEn
   }).filter((badge) => badge !== catalogBadge);
   const images = resolveExistingSlugImage(slug, kind);
   const tagHay = entry.tags.join(" ").toLowerCase();
-  const isHighProtein =
-    entry.filters.includes("high_protein") ||
-    tagHay.includes("protein") ||
-    tagHay.includes("high-protein");
+  const nutrition = entry.nutritionSummary;
+  const hasNutritionData = nutrition?.estimateAvailable === true;
+  const isHighProtein = hasNutritionData
+    ? nutrition!.highProtein
+    : entry.filters.includes("high_protein") || tagHay.includes("protein") || tagHay.includes("high-protein");
+  const isLowCarb = hasNutritionData ? nutrition!.lowCarb : false;
+  const isHealthy = hasNutritionData ? nutrition!.healthy : entry.filters.includes("healthy_breakfasts");
 
   return {
     slug,
@@ -225,9 +236,10 @@ function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEn
     catalogBadge,
     traitBadges,
     isSmoothie: false,
-    isHealthy: entry.filters.includes("healthy_breakfasts"),
+    isHealthy,
     isBbqGrill: entry.filters.includes("bbq_breakfast"),
     isHighProtein,
+    isLowCarb,
     isLowCleanup: entry.totalTime <= 45,
     dietarySummary: entry.dietarySummary,
   };
@@ -243,6 +255,13 @@ function bbqEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEntr
   }).filter((badge) => badge !== catalogBadge);
   const images = resolveExistingSlugImage(slug, kind);
   const tagHay = entry.tags.join(" ").toLowerCase();
+  const nutrition = entry.nutritionSummary;
+  const hasNutritionData = nutrition?.estimateAvailable === true;
+  const isHighProtein = hasNutritionData
+    ? nutrition!.highProtein
+    : tagHay.includes("high_protein") || tagHay.includes("high protein");
+  const isLowCarb = hasNutritionData ? nutrition!.lowCarb : false;
+  const isHealthy = hasNutritionData ? nutrition!.healthy : tagHay.includes("healthy");
 
   return {
     slug,
@@ -273,9 +292,10 @@ function bbqEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEntr
     catalogBadge,
     traitBadges,
     isSmoothie: false,
-    isHealthy: tagHay.includes("healthy"),
+    isHealthy,
     isBbqGrill: true,
-    isHighProtein: tagHay.includes("high_protein") || tagHay.includes("beef") || tagHay.includes("protein"),
+    isHighProtein,
+    isLowCarb,
     isLowCleanup: entry.cookTime <= 60 && !tagHay.includes("heavy"),
     dietarySummary: entry.dietarySummary,
   };

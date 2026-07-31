@@ -8,6 +8,7 @@ import {
   RECIPE_MEAL_STYLE_MAX_LEN,
 } from "./recipe-signature.js";
 import { FIREHALL_CATEGORY_IDS } from "./firehall-categories.js";
+import { DIETARY_FILTER_KEYS } from "./dietary/schema.js";
 
 const safeLabel = z.string().trim().min(1).max(80);
 const safeAllergen = z.string().trim().min(1).max(40);
@@ -41,6 +42,14 @@ export const generateRequestSchema = z.object({
   budget_level: z.enum(["low", "standard", "splurge"]).optional().default("standard"),
   allergens_to_avoid: z.array(safeAllergen).max(12),
   vegetarian_swap_needed: z.boolean().optional().default(false),
+  /**
+   * Strict dietary restrictions the user selected (vegan, pork-free, etc.) — uses the
+   * SAME canonical `DietaryFilterKey` vocabulary as the Explore/Browse filters (see
+   * shared/dietary/schema.ts), so a single classifier (shared/dietary/classify-recipe.ts)
+   * can gate both surfaces. A candidate recipe is only served when every requested flag
+   * is confirmed true AND classification confidence is "high" — never inferred/assumed.
+   */
+  dietary_restrictions: z.array(z.enum(DIETARY_FILTER_KEYS)).max(11).optional().default([]),
   last_template_id: z.number().optional(),
   use_what_we_have: z.boolean().optional().default(false),
   ingredients_on_hand: z.array(safeLabel).max(30).optional().default([]),

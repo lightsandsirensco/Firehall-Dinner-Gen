@@ -279,7 +279,11 @@ export function buildRecipePageSeo(page: GoldenRecipePage, origin: string): Page
 
   const title = titleWithBrand(page.seoTitle?.replace(/\s*\|\s*Firefighter Meal\s*$/i, "") || displayTitle);
 
-  const hero = page.heroImage?.trim() || `/images/golden-100/${page.slug}.jpg`;
+  // Never guess a per-slug path when heroImage is blank (recipe has no
+  // verified image yet, or was sanitized because its hero conflicted with
+  // another recipe) — that guessed path is exactly the file that's missing
+  // or wrong. Fall back to the site's known-good default OG image instead.
+  const hero = page.heroImage?.trim() || SEO_DEFAULT_OG_IMAGE_PATH;
 
   return {
     title,

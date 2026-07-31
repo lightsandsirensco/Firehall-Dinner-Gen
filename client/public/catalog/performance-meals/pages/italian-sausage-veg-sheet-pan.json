@@ -171,11 +171,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
   "heroImageAlt": "Wide firehall crew platter of Sausage and Peppers on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/italian-sausage-veg-sheet-pan.jpg",
+  "thumbImage": "/images/thumbs/italian-sausage-veg-sheet-pan.jpg",
+  "railImage": "/images/rails/italian-sausage-veg-sheet-pan.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -231,6 +231,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

@@ -15,6 +15,7 @@ export interface ApprovedCatalogFilterState {
   protein: string;
   cookTime: ApprovedCatalogCookTimeBucket | "all";
   highProtein: boolean;
+  lowCarb: boolean;
   lowCleanup: boolean;
   /** Food-safety filters — a recipe only qualifies with high-confidence classification AND the flag true. */
   dietary: DietaryFilterKey[];
@@ -26,6 +27,7 @@ export const DEFAULT_APPROVED_CATALOG_FILTERS: ApprovedCatalogFilterState = {
   protein: "all",
   cookTime: "all",
   highProtein: false,
+  lowCarb: false,
   lowCleanup: false,
   dietary: [],
 };
@@ -53,6 +55,7 @@ export function filterApprovedCatalogEntries<T extends ApprovedCatalogFilterable
     if (state.protein !== "all" && entry.protein !== state.protein) return false;
     if (state.cookTime !== "all" && entry.cookTimeBucket !== state.cookTime) return false;
     if (state.highProtein && !entry.isHighProtein) return false;
+    if (state.lowCarb && !entry.isLowCarb) return false;
     if (state.lowCleanup && !entry.isLowCleanup) return false;
 
     if (state.dietary.length > 0) {
@@ -104,6 +107,7 @@ export function hasActiveApprovedCatalogFilters(state: ApprovedCatalogFilterStat
     state.protein !== "all" ||
     state.cookTime !== "all" ||
     state.highProtein ||
+    state.lowCarb ||
     state.lowCleanup ||
     state.dietary.length > 0
   );

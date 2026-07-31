@@ -50,32 +50,26 @@
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Gather ingredients and equipment",
       "instruction": "Line up every ingredient for Strawberry Oatmeal Breakfast Smoothie in the order you will cook — measure spices into ramekins, trim proteins on a dedicated board, and set tongs, thermometers, and hotel pans within arm's reach before any heat goes on."
     },
     {
       "stepNumber": 2,
-      "title": "Preheat ovens and surfaces",
       "instruction": "Preheat ovens, griddles, or grills to recipe temp before the crew arrives — cold equipment extends cook time and dries out batch Blend. Confirm burners ignite evenly and sheet pans are greased or lined."
     },
     {
       "stepNumber": 3,
-      "title": "Add oats and half",
       "instruction": "Add oats and half the milk to the blender. Let sit 5 minutes if you have time — softens oats for a smoother texture. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 4,
-      "title": "Add strawberries, remaining milk,",
       "instruction": "Add strawberries, remaining milk, yogurt, cinnamon, and vanilla. Blend 90 seconds until completely smooth. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 5,
-      "title": "If you feel grit,",
       "instruction": "If you feel grit, blend 30 seconds more on high. Sweeten with honey to balance. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     },
     {
       "stepNumber": 6,
-      "title": "Serve immediately for best",
       "instruction": "Serve immediately for best texture; can refrigerate up to 6 hours and shake before drinking. Serve cold within 10 minutes — hold blended cups on ice at 38°F if the line runs long. Work in batches if the pan or grill crowding steams food instead of browning — rookies should watch for pale surfaces and adjust heat early."
     }
   ],
@@ -85,8 +79,8 @@
     "carbs": 23,
     "fats": 4,
     "highlights": "Nutrition estimate coming soon",
-    "label": "Estimated per serving",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -99,16 +93,15 @@
       "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
-    },
-    "estimateAvailable": true
+    }
   },
   "substitutions": [
     "Use a frozen banana instead of some strawberries for extra thickness.",
     "Dairy-free: oat milk + soy yogurt."
   ],
   "shiftNote": "Strong choice for breakfast handoff or crews eating light before a busy morning block.",
-  "heroImage": "/images/smoothies/strawberry-oat-breakfast.jpg",
-  "thumbImage": "/images/thumbs/strawberry-oat-breakfast.jpg",
+  "heroImage": "/images/smoothies/strawberry-oat-breakfast.webp",
+  "thumbImage": "/images/smoothies/strawberry-oat-breakfast.webp",
   "tags": [
     "fuel_smoothie",
     "taxonomy:breakfast_smoothie",
@@ -130,29 +123,6 @@
   "catalogSet": "fuel_smoothie",
   "generatedAt": "2026-05-31T13:06:17.236Z",
   "contentVersion": 2,
-  "mobileImage": "/images/mobile/strawberry-oat-breakfast.jpg",
-  "railImage": "/images/rails/strawberry-oat-breakfast.jpg",
-  "proTips": [
-    "Strong choice for breakfast handoff or crews eating light before a busy morning block.",
-    "Rinse the blender jar between batches so flavors do not muddy the next crew's cups.",
-    "If tones drop during service, cover hot food and hold at 140°F — note hold time on the pan for food safety."
-  ],
-  "tonightSpread": [
-    "Pour Strawberry Oatmeal Breakfast Smoothie into insulated cups or quart jars on ice for grab-and-go service.",
-    "Set granola, nut butter, and extra fruit in side bowls so crew can customize without slowing the line.",
-    "Keep a backup blender batch chilled at 38°F if service runs past 20 minutes."
-  ],
-  "leftovers": [
-    "Cool leftovers in shallow containers within two hours — deep pots stay hot too long.",
-    "Label trays with date and reheat to 165°F minimum before second shift."
-  ],
-  "equipment": [
-    "high-speed blender",
-    "measuring cups",
-    "ice bath pan"
-  ],
-  "baseServings": 8,
-  "crewSize": 8,
   "dietary": {
     "confidence": "high",
     "matchedCount": 7,
@@ -204,6 +174,6 @@
         "note": "Use certified gluten-free oats."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

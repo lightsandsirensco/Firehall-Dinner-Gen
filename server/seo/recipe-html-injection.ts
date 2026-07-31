@@ -27,7 +27,9 @@ import { SEO_TWITTER_HANDLE } from "../../shared/seo/constants.js";
 import { resolveHallRecipePage } from "../meal-catalog/load-index.js";
 import { readPizzaNightRecipePage } from "../pizza-night/page-store.js";
 import { isPizzaNightSlug } from "../../shared/pizza-night/manifest.js";
-import { applySeoTagsToHtml, injectJsonLdIntoHtml } from "./apply-seo-tags.js";
+import { sanitizeRecipeHeroSurface } from "../sanitize-verified-recipe-hero.js";
+import { applySeoTagsToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
+import { goldenRecipeSnapshot, renderRecipeSnapshotHtml } from "./content-snapshot.js";
 
 const RECIPE_PATH_RE = /^\/recipes\/([a-z0-9-]+)\/?$/i;
 
@@ -40,22 +42,34 @@ export function matchRecipeSlug(pathname: string): string | null {
 /** Resolve a recipe page across every catalog served at `/recipes/:slug`. */
 export function resolveRecipeForSeo(slug: string): GoldenRecipePage | null {
   const normalized = slug.trim().toLowerCase();
-  if (isPizzaNightSlug(normalized)) {
-    return readPizzaNightRecipePage(normalized) ?? resolveHallRecipePage(normalized);
-  }
-  return resolveHallRecipePage(normalized) ?? readPizzaNightRecipePage(normalized);
+  const page = isPizzaNightSlug(normalized)
+    ? readPizzaNightRecipePage(normalized) ?? resolveHallRecipePage(normalized)
+    : resolveHallRecipePage(normalized) ?? readPizzaNightRecipePage(normalized);
+  if (!page) return null;
+  // Never let an unverified/duplicate hero leak into OG/Twitter share cards
+  // or JSON-LD image fields — same eligibility check as the Explore feed.
+  return sanitizeRecipeHeroSurface(page);
+}
+
+export interface InjectionResult {
+  html: string;
+  /** 404 when the route pattern matched but the slug/id didn't resolve to real content ("soft 404" fix). */
+  status: 200 | 404;
 }
 
 /**
  * Rewrite `html` (the raw `index.html` shell) so a request for `/recipes/:slug`
  * carries the real recipe's title, description, canonical, OG/Twitter tags,
- * and Recipe/BreadcrumbList JSON-LD. No-ops (returns `html` unchanged) if the
- * slug doesn't resolve to a known recipe, so unknown slugs still fall through
- * to the client's own 404/not-found handling.
+ * Recipe/BreadcrumbList JSON-LD, and a plain-HTML content snapshot (ingredients
+ * + instructions) inside `<div id="root">` for non-JS crawlers. Returns
+ * `status: 404` if the slug doesn't resolve to a known recipe so the server
+ * can respond with a real 404 status instead of a "soft 404" (200 + empty
+ * shell), while still serving the SPA shell so the client's own not-found UI
+ * still renders for real browsers.
  */
-export function injectRecipeSeoIntoHtml(html: string, origin: string, slug: string): string {
+export function injectRecipeSeoIntoHtml(html: string, origin: string, slug: string): InjectionResult {
   const page = resolveRecipeForSeo(slug);
-  if (!page) return html;
+  if (!page) return { html, status: 404 };
 
   const seo = buildRecipePageSeo(page, origin);
   const canonicalUrl = absoluteUrl(origin, seo.canonicalPath);
@@ -81,6 +95,7 @@ export function injectRecipeSeoIntoHtml(html: string, origin: string, slug: stri
   ];
 
   out = injectJsonLdIntoHtml(out, jsonLd);
+  out = injectBodyContentIntoHtml(out, renderRecipeSnapshotHtml(origin, goldenRecipeSnapshot(page)));
 
-  return out;
+  return { html: out, status: 200 };
 }

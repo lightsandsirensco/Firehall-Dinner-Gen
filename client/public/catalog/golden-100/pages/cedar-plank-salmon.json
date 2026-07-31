@@ -267,15 +267,10 @@
   "generatedAt": "2026-07-23T21:05:00.000Z",
   "contentVersion": 2,
   "dietary": {
-    "confidence": "low",
-    "matchedCount": 10,
+    "confidence": "high",
+    "matchedCount": 11,
     "totalCount": 11,
-    "uncertainIngredients": [
-      {
-        "name": "Cedar Planks (soaked at least 1 hour)",
-        "reason": "Not found in the canonical ingredient dietary database — cannot confirm allergen/diet status."
-      }
-    ],
+    "uncertainIngredients": [],
     "flaggedIngredients": [
       {
         "name": "Salmon Fillets (skin-on)",
@@ -293,18 +288,29 @@
     ],
     "flags": {
       "glutenFree": false,
-      "dairyFree": false,
-      "eggFree": false,
-      "nutFree": false,
-      "peanutFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
       "soyFree": false,
-      "shellfishFree": false,
+      "shellfishFree": true,
       "fishFree": false,
-      "porkFree": false,
+      "porkFree": true,
       "vegetarian": false,
       "vegan": false
     },
-    "adaptable": [],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      },
+      {
+        "flag": "soy",
+        "label": "Soy-Free Adaptable",
+        "note": "Use coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

@@ -207,7 +207,8 @@
       {
         "name": "guinness or dark beer",
         "allergens": [
-          "gluten"
+          "gluten",
+          "alcohol"
         ]
       },
       {
@@ -246,8 +247,13 @@
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
         "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "alcohol",
+        "label": "Alcohol-Free Adaptable",
+        "note": "Substitute non-alcoholic beer or broth."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

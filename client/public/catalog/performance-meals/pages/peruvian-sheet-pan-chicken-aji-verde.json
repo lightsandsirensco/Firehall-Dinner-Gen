@@ -179,11 +179,11 @@
       "performanceMeal": false
     }
   },
-  "heroImage": "",
+  "heroImage": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
   "heroImageAlt": "Wide firehall crew platter of Peruvian-Style Sheet-Pan Chicken with Aji Verde on a station prep table, family-style serving",
-  "mobileImage": "",
-  "thumbImage": "",
-  "railImage": "",
+  "mobileImage": "/images/mobile/peruvian-sheet-pan-chicken-aji-verde.jpg",
+  "thumbImage": "/images/thumbs/peruvian-sheet-pan-chicken-aji-verde.jpg",
+  "railImage": "/images/rails/peruvian-sheet-pan-chicken-aji-verde.jpg",
   "realismScore": 100,
   "firefighterScore": 83,
   "popularityWeight": 7.5,
@@ -262,6 +262,6 @@
         "note": "Use coconut aminos."
       }
     ],
-    "classifiedAt": "2026-07-29T13:35:50.482Z"
+    "classifiedAt": "2026-07-30T18:40:52.075Z"
   }
 }

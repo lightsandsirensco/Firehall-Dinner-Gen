@@ -1,0 +1,352 @@
+{
+  "generatedAt": "2026-07-30T20:19:43.139Z",
+  "dryRun": false,
+  "ok": 43,
+  "fail": 0,
+  "results": [
+    {
+      "slug": "thai-basil-ground-beef-skillet",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1604403,
+      "heuristicOk": true
+    },
+    {
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1629968,
+      "heuristicOk": true
+    },
+    {
+      "slug": "beef-birria-with-consomme",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1596377,
+      "heuristicOk": true
+    },
+    {
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1584725,
+      "heuristicOk": true
+    },
+    {
+      "slug": "mediterranean-beef-kofta-bowls",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1610485,
+      "heuristicOk": true
+    },
+    {
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1580578,
+      "heuristicOk": true
+    },
+    {
+      "slug": "cuban-beef-picadillo-bowls",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1628714,
+      "heuristicOk": true
+    },
+    {
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1585629,
+      "heuristicOk": true
+    },
+    {
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1785106,
+      "heuristicOk": true
+    },
+    {
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1654245,
+      "heuristicOk": true
+    },
+    {
+      "slug": "filipino-chicken-adobo",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1606123,
+      "heuristicOk": true
+    },
+    {
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1674173,
+      "heuristicOk": true
+    },
+    {
+      "slug": "kung-pao-chicken-rice-bowls",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1558035,
+      "heuristicOk": true
+    },
+    {
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1848211,
+      "heuristicOk": true
+    },
+    {
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1644535,
+      "heuristicOk": true
+    },
+    {
+      "slug": "chicken-marsala-lightened",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1669832,
+      "heuristicOk": true
+    },
+    {
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1674631,
+      "heuristicOk": true
+    },
+    {
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1621361,
+      "heuristicOk": true
+    },
+    {
+      "slug": "high-protein-chicken-fried-rice",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1797124,
+      "heuristicOk": true
+    },
+    {
+      "slug": "general-tsos-baked-chicken",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1568537,
+      "heuristicOk": true
+    },
+    {
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1707674,
+      "heuristicOk": true
+    },
+    {
+      "slug": "italian-sausage-veg-sheet-pan",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1688770,
+      "heuristicOk": true
+    },
+    {
+      "slug": "lean-beef-broccoli-rice",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1660061,
+      "heuristicOk": true
+    },
+    {
+      "slug": "lean-turkey-bean-chili",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1626570,
+      "heuristicOk": true
+    },
+    {
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1579380,
+      "heuristicOk": true
+    },
+    {
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "collection": "performance-meals",
+      "reason": "missing",
+      "action": "generated",
+      "bytes": 1604968,
+      "heuristicOk": true
+    },
+    {
+      "slug": "big-chili",
+      "collection": "golden-100",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1549122,
+      "heuristicOk": true
+    },
+    {
+      "slug": "burnt-ends-chili-crew",
+      "collection": "hall-expansion",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1695515,
+      "heuristicOk": true
+    },
+    {
+      "slug": "pasta-e-fagioli-hall",
+      "collection": "hall-expansion",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1711241,
+      "heuristicOk": true
+    },
+    {
+      "slug": "white-chicken-chili-crock",
+      "collection": "hall-expansion",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1617252,
+      "heuristicOk": true
+    },
+    {
+      "slug": "bulgogi-bowls",
+      "collection": "golden-100",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1559790,
+      "heuristicOk": true
+    },
+    {
+      "slug": "firehall-korean-beef-bowls",
+      "collection": "hall-expansion",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1612781,
+      "heuristicOk": true
+    },
+    {
+      "slug": "egg-roll-in-a-bowl-crew",
+      "collection": "hall-expansion",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1642473,
+      "heuristicOk": true
+    },
+    {
+      "slug": "korean-turkey-rice-bowls",
+      "collection": "hall-expansion",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1567875,
+      "heuristicOk": true
+    },
+    {
+      "slug": "teriyaki-donburi",
+      "collection": "golden-100",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1662343,
+      "heuristicOk": true
+    },
+    {
+      "slug": "teriyaki-chicken-rice-bowls",
+      "collection": "hall-expansion",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1627453,
+      "heuristicOk": true
+    },
+    {
+      "slug": "thai-peanut-chicken-crock",
+      "collection": "hall-expansion",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1518128,
+      "heuristicOk": true
+    },
+    {
+      "slug": "chicken-alfredo-bake",
+      "collection": "golden-100",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1572825,
+      "heuristicOk": true
+    },
+    {
+      "slug": "pancake-short-stack",
+      "collection": "golden-100",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1699561,
+      "heuristicOk": true
+    },
+    {
+      "slug": "huevos-rancheros-crew",
+      "collection": "breakfast",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1542216,
+      "heuristicOk": true
+    },
+    {
+      "slug": "shakshuka-for-the-hall",
+      "collection": "breakfast",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1588381,
+      "heuristicOk": true
+    },
+    {
+      "slug": "menemen-for-the-crew",
+      "collection": "breakfast",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1537952,
+      "heuristicOk": true
+    },
+    {
+      "slug": "migas-for-the-crew",
+      "collection": "breakfast",
+      "reason": "duplicate_conflict",
+      "action": "generated",
+      "bytes": 1690988,
+      "heuristicOk": true
+    }
+  ]
+}

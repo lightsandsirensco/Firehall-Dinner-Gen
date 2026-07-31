@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-27T18:19:25.541Z",
+  "generatedAt": "2026-07-30T20:40:03.398Z",
   "threshold": 72,
   "totals": {
-    "recipes": 747,
-    "hallCatalog": 258,
+    "recipes": 773,
+    "hallCatalog": 284,
     "exploreCurated": 489,
-    "failed": 83,
+    "failed": 81,
     "buildBlockers": 0,
-    "duplicateHeroPaths": 247
+    "duplicateHeroPaths": 252
   },
   "duplicateHeroPaths": [
     {
@@ -137,6 +137,13 @@
         "beef-broccoli",
         "beef-broccoli",
         "sheet-pan-dinner-hanger-steak-with-mushrooms-and-carrots"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/lean-beef-broccoli-rice.jpg",
+      "slugs": [
+        "lean-beef-broccoli-rice",
+        "lean-beef-broccoli-rice"
       ]
     },
     {
@@ -421,6 +428,13 @@
       "slugs": [
         "sheet-pan-fajitas",
         "sheet-pan-fajitas"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
+      "slugs": [
+        "sheet-pan-chicken-fajitas-lite",
+        "sheet-pan-chicken-fajitas-lite"
       ]
     },
     {
@@ -718,17 +732,17 @@
       ]
     },
     {
-      "hero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "slugs": [
-        "firehall-greek-chicken-bowls",
-        "firehall-greek-chicken-bowls"
-      ]
-    },
-    {
       "hero": "/images/golden-100/greek-chicken-bowls.jpg",
       "slugs": [
         "greek-chicken-bowls",
         "greek-chicken-bowls"
+      ]
+    },
+    {
+      "hero": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "slugs": [
+        "firehall-greek-chicken-bowls",
+        "firehall-greek-chicken-bowls"
       ]
     },
     {
@@ -911,6 +925,13 @@
       "slugs": [
         "lamb-kofta-skewer-platter",
         "lamb-kofta-skewer-platter"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/lean-turkey-bean-chili.jpg",
+      "slugs": [
+        "lean-turkey-bean-chili",
+        "lean-turkey-bean-chili"
       ]
     },
     {
@@ -1406,6 +1427,13 @@
       ]
     },
     {
+      "hero": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
+      "slugs": [
+        "italian-sausage-veg-sheet-pan",
+        "italian-sausage-veg-sheet-pan"
+      ]
+    },
+    {
       "hero": "/images/hall-expansion/shawarma-bar-night.jpg",
       "slugs": [
         "shawarma-bar-night",
@@ -1648,6 +1676,13 @@
       "slugs": [
         "turkey-shepherds-sweet-potato",
         "turkey-shepherds-sweet-potato"
+      ]
+    },
+    {
+      "hero": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
+      "slugs": [
+        "turkey-quinoa-stuffed-peppers",
+        "turkey-quinoa-stuffed-peppers"
       ]
     },
     {
@@ -1937,6 +1972,32 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "Greek/Mediterranean",
+      "heroImage": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "thumbImage": "/images/thumbs/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "mobileImage": "/images/mobile/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Greek-Spiced Beef Burger Bowls with Tzatziki Slaw)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts burger but meal requires bowl (Greek-Spiced Beef Burger Bowls with Tzatziki Slaw)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "lemon-salmon-orzo-skillet",
       "title": "Lemon Salmon Orzo",
       "protein": "salmon",
@@ -2005,22 +2066,27 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "thai-peanut-chicken-crock",
-      "title": "Thai Peanut Chicken Crock",
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
       "protein": "chicken",
-      "mealFormat": "slow_cooker",
-      "cuisine": "Thai-inspired",
-      "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
-      "mobileImage": "/images/mobile/hall-expansion/thai-peanut-chicken-crock.jpg",
-      "mismatchConfidence": 98,
+      "mealFormat": "one_pot",
+      "cuisine": "Caribbean",
+      "heroImage": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+      "thumbImage": "/images/thumbs/trinidadian-curry-chicken-potatoes.jpg",
+      "mobileImage": "/images/mobile/trinidadian-curry-chicken-potatoes.jpg",
+      "mismatchConfidence": 93,
       "pass": false,
       "needsManualReview": true,
       "mismatches": [
         {
-          "code": "donor_image_forbidden",
+          "code": "format_mismatch",
           "severity": "critical",
-          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
+          "message": "image depicts soup but meal is plated_main (Trinidadian-Style Curry Chicken with Potatoes)"
+        },
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible"
         }
       ]
     },
@@ -2047,27 +2113,6 @@
           "code": "plating_mismatch",
           "severity": "critical",
           "message": "hero depicts taco but meal requires bowl (Turkey Taco Bowls)"
-        }
-      ]
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "white-chicken-chili-crock",
-      "title": "White Chicken Chili Crock",
-      "protein": "chicken",
-      "mealFormat": "slow_cooker",
-      "cuisine": "Southwestern",
-      "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
-      "mobileImage": "/images/mobile/hall-expansion/white-chicken-chili-crock.jpg",
-      "mismatchConfidence": 98,
-      "pass": false,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
         }
       ]
     },
@@ -4121,37 +4166,6 @@
     },
     {
       "source": "explore_curated",
-      "slug": "thai-peanut-chicken-crock",
-      "title": "Thai Peanut Chicken Crock",
-      "protein": "chicken",
-      "mealFormat": "slow_cooker",
-      "cuisine": "other",
-      "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
-      "mobileImage": "",
-      "mismatchConfidence": 98,
-      "pass": false,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
-        {
-          "code": "unapproved_image",
-          "severity": "warning",
-          "message": "image not marked approved — treat as manual review"
-        },
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
-        }
-      ]
-    },
-    {
-      "source": "explore_curated",
       "slug": "turkey-sausage-egg-bake",
       "title": "Turkey Sausage Egg Bake",
       "protein": "other",
@@ -4281,37 +4295,6 @@
           "code": "plating_mismatch",
           "severity": "critical",
           "message": "plated meal but hero suggests soup or stew"
-        }
-      ]
-    },
-    {
-      "source": "explore_curated",
-      "slug": "white-chicken-chili-crock",
-      "title": "White Chicken Chili Crock",
-      "protein": "chicken",
-      "mealFormat": "slow_cooker",
-      "cuisine": "other",
-      "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
-      "mobileImage": "",
-      "mismatchConfidence": 98,
-      "pass": false,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "missing_locked_mobile",
-          "severity": "warning",
-          "message": "missing mobile crop image"
-        },
-        {
-          "code": "unapproved_image",
-          "severity": "warning",
-          "message": "image not marked approved — treat as manual review"
-        },
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
         }
       ]
     }
@@ -4605,6 +4588,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "lean-beef-broccoli-rice",
+      "title": "Beef and Broccoli Rice",
+      "protein": "beef",
+      "mealFormat": "stir_fry",
+      "cuisine": "Chinese-American",
+      "heroImage": "/images/golden-100/lean-beef-broccoli-rice.jpg",
+      "thumbImage": "/images/thumbs/lean-beef-broccoli-rice.jpg",
+      "mobileImage": "/images/mobile/lean-beef-broccoli-rice.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "beef-barley-soup",
       "title": "Beef Barley Soup",
       "protein": "beef",
@@ -4613,6 +4611,21 @@
       "heroImage": "/images/golden-100/beef-barley-soup.jpg",
       "thumbImage": "/images/thumbs/beef-barley-soup.jpg",
       "mobileImage": "/images/mobile/beef-barley-soup.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "beef-birria-with-consomme",
+      "title": "Beef Birria with Consommé for Dipping",
+      "protein": "beef",
+      "mealFormat": "one_pot",
+      "cuisine": "Mexican",
+      "heroImage": "/images/golden-100/beef-birria-with-consomme.jpg",
+      "thumbImage": "/images/thumbs/beef-birria-with-consomme.jpg",
+      "mobileImage": "/images/mobile/beef-birria-with-consomme.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4920,6 +4933,21 @@
           "message": "plating accuracy: curry_fail: rice not clearly visible"
         }
       ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "Cajun",
+      "heroImage": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/cajun-chicken-dirty-rice-bowls.jpg",
+      "mobileImage": "/images/mobile/cajun-chicken-dirty-rice-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
     },
     {
       "source": "hall_catalog",
@@ -5246,6 +5274,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "title": "Chicken Fajitas",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "Mexican",
+      "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-chicken-fajitas-lite.jpg",
+      "mobileImage": "/images/mobile/sheet-pan-chicken-fajitas-lite.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "asian-chicken-lettuce-cups",
       "title": "Chicken Lettuce Cups",
       "protein": "chicken",
@@ -5254,6 +5297,21 @@
       "heroImage": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
       "thumbImage": "/images/thumbs/asian-chicken-lettuce-cups.jpg",
       "mobileImage": "/images/mobile/asian-chicken-lettuce-cups.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "chicken-marsala-lightened",
+      "title": "Chicken Marsala (Lightened)",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cuisine": "Italian",
+      "heroImage": "/images/golden-100/chicken-marsala-lightened.jpg",
+      "thumbImage": "/images/thumbs/chicken-marsala-lightened.jpg",
+      "mobileImage": "/images/mobile/chicken-marsala-lightened.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5618,6 +5676,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "cuban-beef-picadillo-bowls",
+      "title": "Cuban-Style Beef Picadillo Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "Cuban",
+      "heroImage": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+      "thumbImage": "/images/thumbs/cuban-beef-picadillo-bowls.jpg",
+      "mobileImage": "/images/mobile/cuban-beef-picadillo-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "detroit-style-pizza",
       "title": "Detroit-Style Pepperoni Pizza",
       "protein": "pork",
@@ -5716,6 +5789,21 @@
       "heroImage": "/images/golden-100/baked-falafel-hall-bowls.jpg",
       "thumbImage": "/images/thumbs/baked-falafel-hall-bowls.jpg",
       "mobileImage": "/images/mobile/baked-falafel-hall-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "filipino-chicken-adobo",
+      "title": "Filipino-Style Chicken Adobo",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "Filipino",
+      "heroImage": "/images/golden-100/filipino-chicken-adobo.jpg",
+      "thumbImage": "/images/thumbs/filipino-chicken-adobo.jpg",
+      "mobileImage": "/images/mobile/filipino-chicken-adobo.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5929,6 +6017,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "general-tsos-baked-chicken",
+      "title": "General Tso's-Style Baked Chicken",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "Chinese-American",
+      "heroImage": "/images/golden-100/general-tsos-baked-chicken.jpg",
+      "thumbImage": "/images/thumbs/general-tsos-baked-chicken.jpg",
+      "mobileImage": "/images/mobile/general-tsos-baked-chicken.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls",
       "protein": "seafood",
@@ -5959,14 +6062,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "firehall-greek-chicken-bowls",
-      "title": "Greek Chicken Bowl Bar for the Hall",
-      "protein": "chicken",
-      "mealFormat": "bowl",
-      "cuisine": "greek",
-      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
-      "mobileImage": "/images/mobile/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+      "protein": "beef",
+      "mealFormat": "bake",
+      "cuisine": "Greek",
+      "heroImage": "/images/golden-100/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+      "thumbImage": "/images/thumbs/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+      "mobileImage": "/images/mobile/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5989,6 +6092,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "greek",
+      "heroImage": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "greek-chicken-pitas",
       "title": "Greek Chicken Pitas",
       "protein": "chicken",
@@ -6001,6 +6119,32 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "Greek/Mediterranean",
+      "heroImage": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "thumbImage": "/images/thumbs/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "mobileImage": "/images/mobile/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Greek-Spiced Beef Burger Bowls with Tzatziki Slaw)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts burger but meal requires bowl (Greek-Spiced Beef Burger Bowls with Tzatziki Slaw)"
+        }
+      ]
     },
     {
       "source": "hall_catalog",
@@ -6124,6 +6268,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cuisine": "Argentinian/American Grill",
+      "heroImage": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
+      "thumbImage": "/images/thumbs/herb-marinated-flank-steak-chimichurri-farro.jpg",
+      "mobileImage": "/images/mobile/herb-marinated-flank-steak-chimichurri-farro.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "hickory-turkey-legs",
       "title": "Hickory Smoked Turkey Legs",
       "protein": "turkey",
@@ -6132,6 +6291,21 @@
       "heroImage": "/images/hall-expansion/hickory-turkey-legs.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/hickory-turkey-legs.jpg",
       "mobileImage": "/images/mobile/hall-expansion/hickory-turkey-legs.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "high-protein-chicken-fried-rice",
+      "title": "High-Protein Chicken Fried Rice",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cuisine": "Chinese-American",
+      "heroImage": "/images/golden-100/high-protein-chicken-fried-rice.jpg",
+      "thumbImage": "/images/thumbs/high-protein-chicken-fried-rice.jpg",
+      "mobileImage": "/images/mobile/high-protein-chicken-fried-rice.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -6370,6 +6544,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "kung-pao-chicken-rice-bowls",
+      "title": "Kung Pao Chicken & Rice Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "Sichuan/Chinese",
+      "heroImage": "/images/golden-100/kung-pao-chicken-rice-bowls.jpg",
+      "thumbImage": "/images/thumbs/kung-pao-chicken-rice-bowls.jpg",
+      "mobileImage": "/images/mobile/kung-pao-chicken-rice-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "lamb-kofta-skewer-platter",
       "title": "Lamb Kofta Skewer Platter",
       "protein": "lamb",
@@ -6378,6 +6567,21 @@
       "heroImage": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/lamb-kofta-skewer-platter.jpg",
       "mobileImage": "/images/mobile/hall-expansion/lamb-kofta-skewer-platter.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "lean-turkey-bean-chili",
+      "title": "Lean Turkey and Bean Chili",
+      "protein": "turkey",
+      "mealFormat": "slow_cooker",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/lean-turkey-bean-chili.jpg",
+      "thumbImage": "/images/thumbs/lean-turkey-bean-chili.jpg",
+      "mobileImage": "/images/mobile/lean-turkey-bean-chili.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -6726,6 +6930,36 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "mediterranean-beef-kofta-bowls",
+      "title": "Mediterranean Beef Kofta Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "Middle Eastern",
+      "heroImage": "/images/golden-100/mediterranean-beef-kofta-bowls.jpg",
+      "thumbImage": "/images/thumbs/mediterranean-beef-kofta-bowls.jpg",
+      "mobileImage": "/images/mobile/mediterranean-beef-kofta-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "title": "Mediterranean Chicken & White Bean Skillet",
+      "protein": "chicken",
+      "mealFormat": "skillet",
+      "cuisine": "Mediterranean",
+      "heroImage": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
+      "thumbImage": "/images/thumbs/mediterranean-chicken-white-bean-skillet.jpg",
+      "mobileImage": "/images/mobile/mediterranean-chicken-white-bean-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "mediterranean-chicken-farro-bowls",
       "title": "Mediterranean Chicken Farro Bowls",
       "protein": "chicken",
@@ -6951,6 +7185,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+      "protein": "beef",
+      "mealFormat": "pasta",
+      "cuisine": "Mediterranean",
+      "heroImage": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+      "thumbImage": "/images/thumbs/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+      "mobileImage": "/images/mobile/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "pad-thai",
       "title": "Pad Thai",
       "protein": "chicken",
@@ -7109,6 +7358,21 @@
       "heroImage": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/peri-peri-chicken-platter.jpg",
       "mobileImage": "/images/mobile/hall-expansion/peri-peri-chicken-platter.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "Peruvian",
+      "heroImage": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
+      "thumbImage": "/images/thumbs/peruvian-sheet-pan-chicken-aji-verde.jpg",
+      "mobileImage": "/images/mobile/peruvian-sheet-pan-chicken-aji-verde.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -7482,6 +7746,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "italian-sausage-veg-sheet-pan",
+      "title": "Sausage, Peppers & Zucchini Sheet Pan",
+      "protein": "pork",
+      "mealFormat": "sheet_pan",
+      "cuisine": "Italian",
+      "heroImage": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
+      "thumbImage": "/images/thumbs/italian-sausage-veg-sheet-pan.jpg",
+      "mobileImage": "/images/mobile/italian-sausage-veg-sheet-pan.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "shawarma-bar-night",
       "title": "Shawarma Bar Night",
       "protein": "chicken",
@@ -7535,6 +7814,21 @@
       "heroImage": "/images/golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
       "thumbImage": "/images/thumbs/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
       "mobileImage": "/images/mobile/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "Argentinian/American Grill",
+      "heroImage": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+      "thumbImage": "/images/thumbs/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+      "mobileImage": "/images/mobile/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -7721,6 +8015,21 @@
       "heroImage": "/images/hall-expansion/soft-pretzel-dogs.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/soft-pretzel-dogs.jpg",
       "mobileImage": "/images/mobile/hall-expansion/soft-pretzel-dogs.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "title": "Southwest Beef & Sweet Potato Skillet",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cuisine": "Southwest",
+      "heroImage": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
+      "thumbImage": "/images/thumbs/southwest-beef-sweet-potato-skillet.jpg",
+      "mobileImage": "/images/mobile/southwest-beef-sweet-potato-skillet.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -7953,6 +8262,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cuisine": "Thai-inspired",
+      "heroImage": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+      "thumbImage": "/images/thumbs/thai-basil-ground-beef-skillet.jpg",
+      "mobileImage": "/images/mobile/thai-basil-ground-beef-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "thai-peanut-chicken-crock",
       "title": "Thai Peanut Chicken Crock",
       "protein": "chicken",
@@ -7961,16 +8285,10 @@
       "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
       "mobileImage": "/images/mobile/hall-expansion/thai-peanut-chicken-crock.jpg",
-      "mismatchConfidence": 98,
-      "pass": false,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
-        }
-      ]
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
     },
     {
       "source": "hall_catalog",
@@ -8016,6 +8334,32 @@
       "pass": true,
       "needsManualReview": false,
       "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "Caribbean",
+      "heroImage": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+      "thumbImage": "/images/thumbs/trinidadian-curry-chicken-potatoes.jpg",
+      "mobileImage": "/images/mobile/trinidadian-curry-chicken-potatoes.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "format_mismatch",
+          "severity": "critical",
+          "message": "image depicts soup but meal is plated_main (Trinidadian-Style Curry Chicken with Potatoes)"
+        },
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible"
+        }
+      ]
     },
     {
       "source": "hall_catalog",
@@ -8072,6 +8416,21 @@
       "heroImage": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
       "thumbImage": "/images/thumbs/turkey-shepherds-sweet-potato.jpg",
       "mobileImage": "/images/mobile/turkey-shepherds-sweet-potato.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "title": "Turkey Stuffed Peppers",
+      "protein": "turkey",
+      "mealFormat": "bake",
+      "cuisine": "American",
+      "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
+      "thumbImage": "/images/thumbs/turkey-quinoa-stuffed-peppers.jpg",
+      "mobileImage": "/images/mobile/turkey-quinoa-stuffed-peppers.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -8165,6 +8524,36 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "title": "Unstuffed Cabbage Roll Skillet",
+      "protein": "beef",
+      "mealFormat": "skillet",
+      "cuisine": "Eastern European",
+      "heroImage": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
+      "thumbImage": "/images/thumbs/unstuffed-cabbage-roll-skillet.jpg",
+      "mobileImage": "/images/mobile/unstuffed-cabbage-roll-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "title": "Vietnamese Caramel-Braised Chicken Bowls",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "Vietnamese",
+      "heroImage": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",
+      "thumbImage": "/images/thumbs/vietnamese-caramel-braised-chicken-bowls.jpg",
+      "mobileImage": "/images/mobile/vietnamese-caramel-braised-chicken-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "warm-spinach-chicken-salad",
       "title": "Warm Spinach Chicken Salad",
       "protein": "chicken",
@@ -8233,16 +8622,10 @@
       "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
       "mobileImage": "/images/mobile/hall-expansion/white-chicken-chili-crock.jpg",
-      "mismatchConfidence": 98,
-      "pass": false,
-      "needsManualReview": true,
-      "mismatches": [
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
-        }
-      ]
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
     },
     {
       "source": "hall_catalog",
@@ -19378,8 +19761,8 @@
       "heroImage": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/thai-peanut-chicken-crock.jpg",
       "mobileImage": "",
-      "mismatchConfidence": 98,
-      "pass": false,
+      "mismatchConfidence": 45,
+      "pass": true,
       "needsManualReview": true,
       "mismatches": [
         {
@@ -19391,11 +19774,6 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
-        },
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"teriyaki-donburi\" forbidden for \"Thai Peanut Chicken Crock\" — queue AI regeneration with title-locked sides"
         }
       ]
     },
@@ -19959,8 +20337,8 @@
       "heroImage": "/images/hall-expansion/white-chicken-chili-crock.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/white-chicken-chili-crock.jpg",
       "mobileImage": "",
-      "mismatchConfidence": 98,
-      "pass": false,
+      "mismatchConfidence": 45,
+      "pass": true,
       "needsManualReview": true,
       "mismatches": [
         {
@@ -19972,11 +20350,6 @@
           "code": "unapproved_image",
           "severity": "warning",
           "message": "image not marked approved — treat as manual review"
-        },
-        {
-          "code": "donor_image_forbidden",
-          "severity": "critical",
-          "message": "donor image from \"big-chili\" forbidden for \"White Chicken Chili Crock\" — queue AI regeneration with title-locked sides"
         }
       ]
     },

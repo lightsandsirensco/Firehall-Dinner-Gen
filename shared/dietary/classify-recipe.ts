@@ -103,7 +103,7 @@ function applyOverrides(text: string, profile: IngredientDietaryProfile): Record
     alcohol: profile.alcohol,
   };
   for (const override of TEXT_OVERRIDES) {
-    if (override.pattern.test(text)) {
+    if (override.pattern.test(text) && !(override.unless && override.unless.test(text))) {
       flags[override.flag] = override.value;
     }
   }
@@ -151,7 +151,12 @@ export function classifyRecipeDietary(ingredients: DietaryIngredientInput[]): Re
     }
     matched++;
     const flags = applyOverrides(text, profile);
-    if (profile.meat) hasMeat = true;
+    // Fish and shellfish ARE animal flesh — any ingredient carrying either allergen flag
+    // blocks vegetarian/vegan even if the profile author forgot to also set `meat: true`
+    // directly (this previously let anchovy-based sauces like Caesar dressing, fish sauce,
+    // and Worcestershire sauce pass as "vegetarian" purely because their profile's `meat`
+    // field was left false).
+    if (profile.meat || flags.fish || flags.shellfish) hasMeat = true;
     if (mentionsHoney(text)) hasHoney = true;
 
     const tripped: AllergenKey[] = [];
