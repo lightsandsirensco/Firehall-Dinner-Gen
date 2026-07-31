@@ -55,6 +55,19 @@ const ROUTES: RouteCheck[] = [
   { label: "about", path: "/about", minBodyLen: 100 },
   { label: "wheel", path: "/wheel", minBodyLen: 100 },
   { label: "seo landing page", path: "/firefighter-meals", minBodyLen: 100 },
+  { label: "seo landing page 2", path: "/firefighter-bbq-recipes", minBodyLen: 100 },
+  { label: "families index", path: "/families", minBodyLen: 100 },
+  { label: "top rated recipes", path: "/top-rated-recipes", minBodyLen: 100 },
+  { label: "hall of fame", path: "/hall-of-fame", minBodyLen: 100 },
+  { label: "generator", path: "/generator", minBodyLen: 100 },
+  { label: "product page", path: "/hall-meal-planner", minBodyLen: 100 },
+  { label: "firefighter red lead recipe", path: "/firefighter-red-lead-recipe", minBodyLen: 100 },
+  {
+    label: "guide topic cluster",
+    path: "/guides/topic/firefighter-meals",
+    expectJsonLdTypes: ["Organization"],
+    minBodyLen: 300,
+  },
 ];
 
 interface Extracted {

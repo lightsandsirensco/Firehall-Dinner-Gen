@@ -119,7 +119,7 @@ export default function Home() {
 
 
 
-        <div className="hidden md:block border-t border-border/20">
+        <div className="border-t border-border/20">
 
           <Suspense fallback={null}>
             <HomeSeoIntro />
