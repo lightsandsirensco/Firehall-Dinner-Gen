@@ -1,0 +1,195 @@
+{
+  "generatedAt": "2026-07-31T22:32:34.911Z",
+  "totalRuns": 126,
+  "totalMatches": 126,
+  "totalFalsePositives": 0,
+  "totalEmpty": 0,
+  "results": [
+    {
+      "label": "protein=chicken",
+      "protein": "chicken",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "protein=beef",
+      "protein": "beef",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "protein=pork",
+      "protein": "pork",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "protein=turkey",
+      "protein": "turkey",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "protein=seafood",
+      "protein": "seafood",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "protein=vegetarian",
+      "protein": "vegetarian",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "time=15-25",
+      "time_available": "15-25",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "time=20-30",
+      "time_available": "20-30",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "time=25-40",
+      "time_available": "25-40",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "time=30-45",
+      "time_available": "30-45",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "time=45-60",
+      "time_available": "45-60",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "time=60-90",
+      "time_available": "60-90",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "chicken+quick(20-30)",
+      "protein": "chicken",
+      "time_available": "20-30",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "beef+45+(60-90)",
+      "protein": "beef",
+      "time_available": "60-90",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "vegetarian+quick(20-30)",
+      "protein": "vegetarian",
+      "time_available": "20-30",
+      "dietary": [
+        "vegetarian"
+      ],
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "chicken+glutenFree",
+      "protein": "chicken",
+      "dietary": [
+        "glutenFree"
+      ],
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "beef+dairyFree",
+      "protein": "beef",
+      "dietary": [
+        "dairyFree"
+      ],
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "seafood+quick(15-25)",
+      "protein": "seafood",
+      "time_available": "15-25",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "pork+45-60",
+      "protein": "pork",
+      "time_available": "45-60",
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "vegan",
+      "dietary": [
+        "vegan"
+      ],
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    },
+    {
+      "label": "porkFree",
+      "dietary": [
+        "porkFree"
+      ],
+      "runs": 6,
+      "matches": 6,
+      "emptyPoolCount": 0,
+      "falsePositives": []
+    }
+  ]
+}

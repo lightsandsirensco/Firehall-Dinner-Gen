@@ -126,18 +126,39 @@ export async function resolveSafeCuratedFallback(
     }
   }
 
-  const slug = pickDeterministicCatalogSlug(seed, request.protein, bias);
-  const hydrated = hydrateCatalogGenerateResponse(slug, request.crew_size);
-  if (hydrated) {
-    log(`[safe-fallback] deterministic catalog slug=${slug} reason=${reason}`, "generate");
-    return {
-      recipe: { ...hydrated.recipe, _fallback: true },
-      protein: hydrated.protein,
-      originalTitle: hydrated.title,
-      source: "hall_catalog",
-      catalogId: hydrated.catalogId,
-      slug,
-    };
+  // Food-safety rule: the deterministic slug pick below does NOT check
+  // dietary_restrictions or allergens_to_avoid (it only optionally filters by
+  // protein). Every `attempts` entry above already preserved the user's dietary
+  // restrictions and allergens unchanged (only protein/time/category were
+  // widened), so if none of those 8 attempts — including the fully-relaxed
+  // protein="any"/time="60-90" attempt — produced a match, there is genuinely no
+  // safe recipe for this user's dietary/allergen combination in the approved
+  // catalog. Silently falling back to an arbitrary recipe here would mean
+  // ignoring a user's stated allergy or diet, which is never acceptable — so we
+  // refuse the deterministic bypass and surface a clear "no match" instead.
+  const hasStrictDietaryConstraints =
+    (request.dietary_restrictions?.length ?? 0) > 0 ||
+    (request.allergens_to_avoid?.length ?? 0) > 0;
+
+  if (!hasStrictDietaryConstraints) {
+    const slug = pickDeterministicCatalogSlug(seed, request.protein, bias);
+    const hydrated = hydrateCatalogGenerateResponse(slug, request.crew_size);
+    if (hydrated) {
+      log(`[safe-fallback] deterministic catalog slug=${slug} reason=${reason}`, "generate");
+      return {
+        recipe: { ...hydrated.recipe, _fallback: true },
+        protein: hydrated.protein,
+        originalTitle: hydrated.title,
+        source: "hall_catalog",
+        catalogId: hydrated.catalogId,
+        slug,
+      };
+    }
+  } else {
+    log(
+      `[safe-fallback] refusing deterministic bypass — dietary_restrictions=${(request.dietary_restrictions || []).join(",")} allergens=${(request.allergens_to_avoid || []).join(",")} reason=${reason}`,
+      "generate",
+    );
   }
 
   throw new Error(`No approved catalog recipe available for safe fallback (${reason})`);

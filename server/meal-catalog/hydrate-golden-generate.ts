@@ -1,21 +1,34 @@
 /**
- * Hydrate approved catalog slugs (Golden 100 + Performance 50) for /api/generate.
+ * Hydrate approved catalog slugs (Golden 100 + Performance 50 + Hall Expansion + BBQ)
+ * for /api/generate. Every collection that is `isApprovedCatalogSlug`-eligible and
+ * shown as a normal dinner meal in Explore must be hydratable here — this is what
+ * makes a recipe actually generator-eligible, not just present in some candidate list.
  */
 
 import type { GenerateResponse } from "../../shared/schema.js";
 import type { CuratedRecipe } from "../../shared/curated-recipe/types.js";
 import type { PerformanceAdaptedRecipe } from "../../shared/performance-meals/types.js";
+import type { ExpansionRecipeDef } from "../../shared/hall-expansion/types.js";
+import type { BbqRecipe } from "../../shared/bbq-30/types.js";
 import { getGoldenRecipeBySlug } from "../../shared/golden-100/manifest.js";
 import { getPerformanceRecipeBySlug } from "../../shared/performance-meals/adapted/index.js";
+import { getHallExpansionRecipeBySlug } from "../../shared/hall-expansion/adapted/index.js";
+import { BBQ_CATALOG_RECIPES } from "../../shared/bbq-expansion/batch-25-bbq-recipes.js";
 import { getCuratedPackageDef, buildCuratedClientRecipe } from "../../shared/curated-hall-packages.js";
 import {
   getCatalogTitle,
   isApprovedCatalogSlug,
   isGolden100Slug,
   isPerformance50Slug,
+  isHallExpansionSlug,
+  isBbqCatalogSlug,
   resolveCatalogHeroPath,
 } from "../../shared/hall-catalog/gate.js";
 import { getCuratedRecipeBySlug } from "../curated-recipe-store.js";
+
+function getBbqCatalogRecipeBySlug(slug: string): BbqRecipe | undefined {
+  return BBQ_CATALOG_RECIPES.find((r) => r.manifest.slug === slug);
+}
 
 function clientRecipeToGenerate(
   client: ReturnType<typeof buildCuratedClientRecipe>,
@@ -208,6 +221,142 @@ function hydrateGoldenSlug(
   };
 }
 
+/** Scale ingredient quantities from a def's authored crew default to the requested crew size. */
+function scaledGoldenIngredients(
+  ingredients: { name: string; quantity?: string; unit?: string; notes?: string }[],
+  crewSizeDefault: number,
+  crewSize: number,
+) {
+  const scale = crewSize / Math.max(crewSizeDefault, 4);
+  return ingredients.map((ing) => {
+    const qtyNum = ing.quantity ? Number(ing.quantity) : NaN;
+    const amount =
+      Number.isFinite(qtyNum) && qtyNum > 0
+        ? `${Math.round(qtyNum * scale * 10) / 10} ${ing.unit || ""}`.trim()
+        : `${ing.quantity ?? ""} ${ing.unit || ""}`.trim() || ing.name;
+    return { item: ing.name, amount, notes: ing.notes || "" };
+  });
+}
+
+function hydrateHallExpansionSlug(
+  slug: string,
+  crewSize: number,
+): { recipe: GenerateResponse; protein: string; title: string; catalogId: string } | null {
+  const def = getHallExpansionRecipeBySlug(slug);
+  if (!def) return null;
+
+  const full = getCuratedRecipeBySlug(slug);
+  const title = def.title;
+
+  if (full?.generateResponse?.title?.trim()) {
+    return {
+      recipe: full.generateResponse,
+      protein: full.protein || full.generateResponse.chosen_protein || def.protein,
+      title: full.title || title,
+      catalogId: full.recipeId,
+    };
+  }
+  if (full && (full.ingredients.length > 0 || full.instructions.length > 0)) {
+    return {
+      recipe: fromCuratedRow(full, title, def.hookLine),
+      protein: full.protein || def.protein,
+      title: full.title || title,
+      catalogId: full.recipeId,
+    };
+  }
+
+  return {
+    recipe: expansionOrBbqToGenerate(def, crewSize),
+    protein: def.protein,
+    title,
+    catalogId: full?.recipeId || slug,
+  };
+}
+
+function hydrateBbqCatalogSlug(
+  slug: string,
+  crewSize: number,
+): { recipe: GenerateResponse; protein: string; title: string; catalogId: string } | null {
+  const def = getBbqCatalogRecipeBySlug(slug);
+  if (!def) return null;
+
+  const full = getCuratedRecipeBySlug(slug);
+  const title = def.manifest.title;
+
+  if (full?.generateResponse?.title?.trim()) {
+    return {
+      recipe: full.generateResponse,
+      protein: full.protein || full.generateResponse.chosen_protein || def.manifest.protein,
+      title: full.title || title,
+      catalogId: full.recipeId,
+    };
+  }
+  if (full && (full.ingredients.length > 0 || full.instructions.length > 0)) {
+    return {
+      recipe: fromCuratedRow(full, title, def.manifest.hookLine),
+      protein: full.protein || def.manifest.protein,
+      title: full.title || title,
+      catalogId: full.recipeId,
+    };
+  }
+
+  return {
+    recipe: expansionOrBbqToGenerate(def, crewSize),
+    protein: def.manifest.protein,
+    title,
+    catalogId: full?.recipeId || slug,
+  };
+}
+
+/** Shared mapper — Hall Expansion and BBQ defs both use the GoldenRecipePage ingredient/step shape. */
+function expansionOrBbqToGenerate(
+  def: ExpansionRecipeDef | BbqRecipe,
+  crewSize: number,
+): GenerateResponse {
+  const isExpansion = "slug" in def;
+  const manifest = isExpansion ? def : def.manifest;
+  const crewSizeDefault = isExpansion ? def.crewSizeDefault : def.manifest.crewSizeDefault;
+  const protein = isExpansion ? def.protein : def.manifest.protein;
+  const title = isExpansion ? def.title : def.manifest.title;
+  const hook = isExpansion ? def.hookLine : def.manifest.hookLine;
+  const mealFormat = isExpansion ? def.mealFormat : def.manifest.mealFormat;
+  const prepMinutes = isExpansion ? def.prepMinutes : def.manifest.prepMinutes;
+  const cookMinutes = isExpansion ? def.cookMinutes : def.manifest.cookMinutes;
+  void manifest;
+
+  return {
+    template_id: 0,
+    chosen_protein: protein,
+    primary_protein_source: protein,
+    title,
+    meal_style: mealFormat,
+    why_it_fits_tonight: hook,
+    timing: {
+      prep_minutes: prepMinutes,
+      cook_minutes: cookMinutes,
+      total_minutes: prepMinutes + cookMinutes,
+    },
+    protein_safety: [],
+    ingredients: scaledGoldenIngredients(def.ingredients, crewSizeDefault, crewSize),
+    steps: def.steps.map((s) => ({
+      heading: s.title,
+      body: s.instruction,
+    })),
+    cleanup_tip: "Wipe down surfaces and load the dishwasher before the next call.",
+    macros_per_serving: isExpansion
+      ? {
+          calories: def.nutrition.calories,
+          protein_g: def.nutrition.protein,
+          carbs_g: def.nutrition.carbs,
+          fat_g: def.nutrition.fats,
+        }
+      : { calories: 0, protein_g: 0, carbs_g: 0, fat_g: 0 },
+    pro_tips: def.proTips,
+    _imported: true,
+    hall_curated: true,
+  };
+}
+
 function hydratePerformanceSlug(
   slug: string,
   crewSize: number,
@@ -253,6 +402,8 @@ export function hydrateCatalogGenerateResponse(
   if (!isApprovedCatalogSlug(slug)) return null;
   if (isGolden100Slug(slug)) return hydrateGoldenSlug(slug, crewSize);
   if (isPerformance50Slug(slug)) return hydratePerformanceSlug(slug, crewSize);
+  if (isHallExpansionSlug(slug)) return hydrateHallExpansionSlug(slug, crewSize);
+  if (isBbqCatalogSlug(slug)) return hydrateBbqCatalogSlug(slug, crewSize);
   return null;
 }
 

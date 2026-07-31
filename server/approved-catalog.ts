@@ -67,9 +67,13 @@ function deriveMealFlags(
     ? nutrition!.healthy
     : cat === "healthy_performance" || isPerformance;
 
+  // "barbecue" was previously never matched (only "bbq"/"grill"/"smoker"),
+  // so a recipe tagged solely "barbecue" silently missed the BBQ & Grill
+  // filter — a pure synonym gap, not a real category distinction.
   const isBbqGrill =
     cat === "bbq_grill_nights" ||
     tagHay.includes("bbq") ||
+    tagHay.includes("barbecue") ||
     tagHay.includes("grill") ||
     tagHay.includes("smoker");
 
@@ -79,12 +83,15 @@ function deriveMealFlags(
 
   const isLowCarb = hasNutritionData ? nutrition!.lowCarb : false;
 
+  // "one pot" (unhyphenated) was previously never matched (only "one-pot"),
+  // so a recipe tagged "one pot meal" silently missed the Low Cleanup filter.
   const isLowCleanup =
     cat === "rookie_friendly" ||
     cat === "meal_prep_leftovers" ||
     tagHay.includes("easy cleanup") ||
     tagHay.includes("one pan") ||
     tagHay.includes("one-pot") ||
+    tagHay.includes("one pot") ||
     tagHay.includes("sheet pan");
 
   void isClassic;

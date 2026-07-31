@@ -8,16 +8,22 @@ import { GOLDEN_SET_TAG } from "../../shared/golden-100/types.js";
 import { GOLDEN_100_RECIPES } from "../../shared/golden-100/manifest.js";
 import { PERFORMANCE_SET_TAG } from "../../shared/performance-meals/types.js";
 import { PERFORMANCE_ADAPTED_RECIPES } from "../../shared/performance-meals/adapted/index.js";
+import { HALL_EXPANSION_ADAPTED_RECIPES } from "../../shared/hall-expansion/adapted/index.js";
+import { BBQ_CATALOG_RECIPES } from "../../shared/bbq-expansion/batch-25-bbq-recipes.js";
 import {
   catalogCollectionScoreBoost,
   isApprovedCatalogSlug,
   isGolden100Slug,
   isPerformance50Slug,
+  isHallExpansionSlug,
+  isBbqCatalogSlug,
   resolveCatalogCollection,
   resolveCatalogRankBias,
   type CatalogCollectionId,
 } from "../../shared/hall-catalog/gate.js";
 import { hydrateCatalogGenerateResponse } from "../meal-catalog/hydrate-golden-generate.js";
+import { loadMergedHallCatalogIndex } from "../meal-catalog/load-index.js";
+import { readBbqCatalogIndexFromDisk } from "../bbq-catalog/catalog.js";
 import { applyCrewPortionFloors, hallProTips } from "../firehall-voice.js";
 import {
   getCuratedRecipeBySlug,
@@ -50,15 +56,10 @@ import {
 } from "./generator-match.js";
 import { scanRecipeForAllergens } from "../allergens.js";
 import { classifyRecipeDietary } from "../../shared/dietary/classify-recipe.js";
-
-const TIME_MAX_MINUTES: Record<string, number> = {
-  "15-25": 25,
-  "20-30": 30,
-  "25-40": 40,
-  "30-45": 45,
-  "45-60": 60,
-  "60-90": 90,
-};
+import {
+  TIME_BUCKET_MAX_MINUTES as TIME_MAX_MINUTES,
+  recipeFitsTimeBucket,
+} from "../../shared/generation/time-buckets.js";
 
 export interface LocalRecipePick {
   recipe: GenerateResponse;
@@ -151,6 +152,21 @@ function hydratePick(
   const hydrated = hydrateCatalogGenerateResponse(slug, request.crew_size);
   if (!hydrated) {
     log(`[generate:local] reject unhydrated catalog slug=${slug}`, "generate");
+    return null;
+  }
+
+  // Real hard time filter — uses the fully-hydrated recipe's own computed
+  // timing (prep + cook), never a possibly-stale/unknown summary field. This
+  // was previously only a +15 soft-scoring bonus (see scoreCuratedRow), which
+  // meant a 90+ minute recipe could still win and be served to someone who
+  // asked for "15-25 min." Time is now enforced the same way allergens and
+  // dietary restrictions are: reject before ever reaching the client.
+  const totalMinutes = hydrated.recipe.timing?.total_minutes;
+  if (!recipeFitsTimeBucket(totalMinutes, request.time_available)) {
+    log(
+      `[generate:local] reject time slug=${slug} total_minutes=${totalMinutes} bucket=${request.time_available}`,
+      "generate",
+    );
     return null;
   }
 
@@ -375,6 +391,86 @@ export function pickEditorialCuratedForGenerate(
   return pick;
 }
 
+/**
+ * Real cook-time lookup for the combined-pool summary rows below, sourced
+ * from the exact same pre-built catalog indexes Explore reads (which already
+ * carry a computed `cookTime` — see shared/golden-100/recipe-page-schema.ts).
+ * Building each of the ~300 full recipe pages just to read a time field would
+ * be far too slow to do per-request, so this cheap index read is the correct
+ * source. A slug missing here (not yet present in the on-disk index) simply
+ * falls back to "unknown" (0), which the shared time-bucket helper treats as
+ * "don't penalize" rather than "always fits."
+ */
+function loadCatalogCookTimeMinutes(): Map<string, number> {
+  const map = new Map<string, number>();
+  for (const r of loadMergedHallCatalogIndex().recipes) map.set(r.slug, r.cookTime);
+  for (const r of readBbqCatalogIndexFromDisk()?.recipes ?? []) map.set(r.slug, r.cookTime);
+  return map;
+}
+
+/**
+ * Golden 100 and Performance 50 are mixed catalogs — a handful of entries are
+ * editorially breakfast items (pancakes, egg muffins, etc.) living in the same
+ * manifest file as dinner recipes. Explore's own dinner index already strips
+ * these via isBreakfastMeal() (see server/meal-catalog/load-index.ts); the
+ * Generator's default (dinner) pool must apply the exact same rule so a
+ * breakfast recipe can never surface as tonight's dinner pick.
+ */
+function isManifestBreakfastLike(entry: { mealFormat?: string; category?: string; tags?: string[] }): boolean {
+  return isBreakfastMeal(entry);
+}
+
+/**
+ * Every slug reachable via the default (non-firehall_category) Generator pool —
+ * i.e. everything `pickGolden100ForGenerate` can possibly return before any
+ * filter (protein/time/dietary/etc.) narrows it down. This is the single
+ * source of truth for "what is Generator-eligible by default," used by both
+ * the picker below and the Explore/Generator parity audit + tests so the two
+ * can never drift apart.
+ */
+export function getDefaultGeneratorPoolSlugs(): {
+  slugs: Set<string>;
+  bySource: Record<CatalogCollectionId, string[]>;
+} {
+  // Manifest arrays are the canonical, always-complete source for every
+  // collection (they're what Explore's own catalog is ultimately built from —
+  // see server/meal-catalog/load-index.ts and server/approved-catalog.ts).
+  // `curated_recipes`/`curated_recipe_tags` DB rows are a secondary,
+  // independently-synced index used elsewhere for richer editorial metadata,
+  // but the sync can lag behind the manifests. Golden 100 previously had
+  // 10/104 recipes un-synced and Performance 50 had 22/71 un-synced — this
+  // partial gap was silently narrowing the Generator's pool to "whatever
+  // happens to be DB-tagged" whenever that set was non-empty, dropping every
+  // untagged recipe. We always UNION the manifest with the DB tags now, so a
+  // DB-sync gap can never shrink Generator eligibility below what Explore shows.
+  const goldenSlugs = GOLDEN_100_RECIPES.filter((r) => !isManifestBreakfastLike(r)).map(
+    (r) => r.slug,
+  );
+  const performanceSlugs = PERFORMANCE_ADAPTED_RECIPES.filter(
+    (r) => !isManifestBreakfastLike(r.manifest),
+  ).map((r) => r.manifest.slug);
+
+  const hallExpansionSlugs = HALL_EXPANSION_ADAPTED_RECIPES.filter(
+    (r) => isHallExpansionSlug(r.slug) && !isManifestBreakfastLike(r),
+  ).map((r) => r.slug);
+
+  const bbqSlugs = BBQ_CATALOG_RECIPES.filter((r) => isBbqCatalogSlug(r.manifest.slug)).map(
+    (r) => r.manifest.slug,
+  );
+
+  const bySource: Record<CatalogCollectionId, string[]> = {
+    golden_100: goldenSlugs,
+    performance_50: performanceSlugs,
+    hall_expansion_74: hallExpansionSlugs,
+    bbq_catalog: bbqSlugs,
+  } as Record<CatalogCollectionId, string[]>;
+
+  return {
+    slugs: new Set([...goldenSlugs, ...performanceSlugs, ...hallExpansionSlugs, ...bbqSlugs]),
+    bySource,
+  };
+}
+
 /** Hall catalog pick — Golden 100 + Performance 50 with request-aware ranking. */
 export function pickGolden100ForGenerate(
   request: GenerateRequest,
@@ -391,30 +487,75 @@ export function pickGolden100ForGenerate(
 
   const rankBias = resolveCatalogRankBias(request);
 
-  const goldenTagged = listCuratedSummariesByTag(GOLDEN_SET_TAG, 120)
-    .filter((r) => r.heroImage?.trim())
-    .filter((r) => isGolden100Slug(r.slug));
+  // DB-tagged rows carry a curated heroImage/quality score when available, but
+  // the tag sync (curated_recipe_tags) can lag behind the manifests — see
+  // getDefaultGeneratorPoolSlugs() for the full explanation. We therefore
+  // ALWAYS union the manifest (guaranteed-complete) with the DB-tagged rows
+  // (richer scoring when present), keyed by slug, instead of using the DB rows
+  // exclusively whenever any exist. This guarantees the Generator's pool can
+  // never be narrower than Explore's for these two collections.
+  const goldenTaggedBySlug = new Map(
+    listCuratedSummariesByTag(GOLDEN_SET_TAG, 200)
+      .filter((r) => r.heroImage?.trim())
+      .filter((r) => isGolden100Slug(r.slug))
+      .map((r) => [r.slug, r]),
+  );
+  const performanceTaggedBySlug = new Map(
+    listCuratedSummariesByTag(PERFORMANCE_SET_TAG, 200)
+      .filter((r) => r.heroImage?.trim())
+      .filter((r) => isPerformance50Slug(r.slug))
+      .map((r) => [r.slug, r]),
+  );
 
-  const performanceTagged = listCuratedSummariesByTag(PERFORMANCE_SET_TAG, 80)
-    .filter((r) => r.heroImage?.trim())
-    .filter((r) => isPerformance50Slug(r.slug));
+  const goldenRows = GOLDEN_100_RECIPES.filter((r) => !isManifestBreakfastLike(r)).map((r) => {
+    const tagged = goldenTaggedBySlug.get(r.slug);
+    return {
+      slug: r.slug,
+      protein: tagged?.protein || r.protein,
+      quality: tagged?.quality ?? 80,
+      sourceKind: r.classicSlug ? "hall_classic" : "golden_100",
+    };
+  });
 
-  const goldenFallback = GOLDEN_100_RECIPES.map((r) => ({
+  const performanceRows = PERFORMANCE_ADAPTED_RECIPES.filter(
+    (r) => !isManifestBreakfastLike(r.manifest),
+  ).map((r) => {
+    const tagged = performanceTaggedBySlug.get(r.manifest.slug);
+    return {
+      slug: r.manifest.slug,
+      protein: tagged?.protein || r.manifest.protein,
+      quality: tagged?.quality ?? 82,
+      sourceKind: "performance_meals_50",
+    };
+  });
+
+  // Hall Expansion + BBQ catalog — same "normal dinner meal" collections shown in
+  // Explore's approved catalog (see shared/hall-catalog/gate.ts isApprovedCatalogSlug
+  // and server/approved-catalog.ts). These previously had NO path into the default
+  // (non-firehall_category) generator pool, so every Explore-visible recipe from
+  // these two collections was unreachable by the standalone Generator page —
+  // the root cause of "Explore meals missing from Generator." Manifest arrays are
+  // used directly (not a DB tag lookup) since these collections are always fully
+  // populated there and don't rely on curated_recipe_tags being backfilled.
+  const hallExpansionRows = HALL_EXPANSION_ADAPTED_RECIPES.filter(
+    (r) => isHallExpansionSlug(r.slug) && !isManifestBreakfastLike(r),
+  ).map((r) => ({
     slug: r.slug,
     protein: r.protein,
-    quality: 80,
-    sourceKind: r.classicSlug ? "hall_classic" : "golden_100",
+    quality: 78,
+    sourceKind: "hall_expansion_74",
   }));
 
-  const performanceFallback = PERFORMANCE_ADAPTED_RECIPES.map((r) => ({
-    slug: r.manifest.slug,
-    protein: r.manifest.protein,
-    quality: 82,
-    sourceKind: "performance_meals_50",
-  }));
+  const bbqRows = BBQ_CATALOG_RECIPES.filter((r) => isBbqCatalogSlug(r.manifest.slug)).map(
+    (r) => ({
+      slug: r.manifest.slug,
+      protein: r.manifest.protein,
+      quality: 78,
+      sourceKind: "bbq_catalog",
+    }),
+  );
 
-  const goldenRows = goldenTagged.length > 0 ? goldenTagged : goldenFallback;
-  const performanceRows = performanceTagged.length > 0 ? performanceTagged : performanceFallback;
+  const cookTimeBySlug = loadCatalogCookTimeMinutes();
 
   const toSummary = (
     r: { slug: string; protein: string; quality?: number; sourceKind: string },
@@ -422,7 +563,7 @@ export function pickGolden100ForGenerate(
   ) => ({
     slug: r.slug,
     protein: r.protein,
-    totalMinutes: 0,
+    totalMinutes: cookTimeBySlug.get(r.slug) ?? 0,
     scores: { quality: r.quality ?? 80 },
     sourceKind: r.sourceKind,
     catalogBoost: catalogCollectionScoreBoost(collection, rankBias),
@@ -431,6 +572,8 @@ export function pickGolden100ForGenerate(
   const combined = [
     ...goldenRows.map((r) => toSummary(r, "golden_100")),
     ...performanceRows.map((r) => toSummary(r, "performance_50")),
+    ...hallExpansionRows.map((r) => toSummary(r, "hall_expansion_74")),
+    ...bbqRows.map((r) => toSummary(r, "bbq_catalog")),
   ];
 
   if (combined.length === 0) return null;

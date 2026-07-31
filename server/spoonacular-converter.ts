@@ -241,18 +241,41 @@ export function inferActualProtein(
 }
 
 /**
+ * Canonical protein-group synonyms. Recipe `protein` fields across the Golden
+ * 100 / Performance 50 / Hall Expansion / BBQ manifests are curated editorial
+ * strings, not always one of the 6 Generator UI filter values (chicken, beef,
+ * pork, turkey, seafood, vegetarian) — an audit found values like "salmon",
+ * "shrimp", "fish", "bacon", "sausage", and "plant" that a strict `===` check
+ * silently excluded from every matching filter (e.g. every salmon/shrimp
+ * recipe never matched the "Seafood" filter). This map is the single place
+ * synonyms are declared so every one of proteinMatchesFilter's callers (hard
+ * filters, scoring, fallback pools, v2 validation) stays in sync.
+ */
+const PROTEIN_FILTER_SYNONYMS: Record<string, readonly string[]> = {
+  seafood: ["seafood", "fish", "salmon", "shrimp", "tuna", "cod", "shellfish", "crab", "lobster"],
+  pork: ["pork", "bacon", "sausage", "ham"],
+  vegetarian: ["vegetarian", "plant", "vegan"],
+  beef: ["beef"],
+  chicken: ["chicken"],
+  turkey: ["turkey"],
+};
+
+/**
  * Check whether the inferred protein satisfies the selected protein filter.
- * "seafood" filter accepts both fish and shellfish (seafood).
- * "vegetarian" filter rejects any meat or seafood.
+ * Uses PROTEIN_FILTER_SYNONYMS so species-specific / editorial values (salmon,
+ * shrimp, bacon, sausage, plant, ...) correctly match their parent filter
+ * group instead of only matching an exact string.
  */
 export function proteinMatchesFilter(
   inferred: string,
   selected: string,
 ): boolean {
   if (selected === "any") return true;
-  if (selected === "seafood") return inferred === "seafood" || inferred === "fish";
-  if (selected === "vegetarian") return inferred === "vegetarian";
-  return inferred === selected;
+  const inferredNorm = (inferred || "").trim().toLowerCase();
+  const selectedNorm = (selected || "").trim().toLowerCase();
+  const synonyms = PROTEIN_FILTER_SYNONYMS[selectedNorm];
+  if (synonyms) return synonyms.includes(inferredNorm);
+  return inferredNorm === selectedNorm;
 }
 
 function inferMealStyle(dishTypes: string[], title: string, mealFormat?: string): string {
