@@ -51,29 +51,37 @@ import {
   buildSoftwareApplicationSchema,
   buildWebSiteSchema,
 } from "../../shared/seo/schema.js";
-import { absoluteImageUrl, absoluteUrl } from "../../shared/seo/urls.js";
+import { absoluteImageUrl, absoluteUrl, recipePath } from "../../shared/seo/urls.js";
 import { SEO_TWITTER_HANDLE } from "../../shared/seo/constants.js";
 import { HOME_FAQ_ITEMS } from "../../shared/seo/home-faq-items.js";
 import { FIREHALL_CATEGORY_LABEL, type FirehallCategoryId } from "../../shared/firehall-categories.js";
 import { firehallCategoryExplorePath } from "../../shared/browse-canonical.js";
 import { APPROVED_CATALOG_TOTAL } from "../../shared/meal-catalog/curated-count.js";
-import { PIZZA_NIGHT_COUNT } from "../../shared/pizza-night/manifest.js";
+import { PIZZA_NIGHT_COUNT, PIZZA_NIGHT_RECIPES } from "../../shared/pizza-night/manifest.js";
 import { getSeoLandingPage } from "../../shared/seo/landing-pages-data.js";
 import { getProductSeoPage } from "../../shared/seo/product-pages-data.js";
 import { isPerformanceBreakfastSlug } from "../../shared/breakfast-catalog/governance-types.js";
 import { readBreakfastRecipePageFromDisk } from "../breakfast-catalog/page-store.js";
 import { readSmoothieRecipePage } from "../fuel-catalog/page-store.js";
+import { SMOOTHIE_CATALOG_ITEMS } from "../../shared/fuel-catalog/smoothies/catalog-data.js";
 import { readEditorialArticle } from "../editorial/page-store.js";
 import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../../shared/editorial/articles-data.js";
+import { guidePath } from "../../shared/editorial/content-schema.js";
 import { applySeoTagsToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
 import {
   breakfastRecipeSnapshot,
   editorialArticleSnapshot,
+  fallbackIndexSnapshot,
   fuelRecipeSnapshot,
+  h1FromSeoTitle,
   renderArticleSnapshotHtml,
+  renderIndexSnapshotHtml,
   renderRecipeSnapshotHtml,
+  type IndexSnapshotSection,
 } from "./content-snapshot.js";
 import type { InjectionResult } from "./recipe-html-injection.js";
+import { GOLDEN_100_RECIPES } from "../../shared/golden-100/manifest.js";
+import { readBreakfastCatalogIndexFromDisk } from "../breakfast-catalog/page-store.js";
 
 const HOME_CATEGORY_CLUSTERS: FirehallCategoryId[] = [
   "crew_favorites",
@@ -81,6 +89,34 @@ const HOME_CATEGORY_CLUSTERS: FirehallCategoryId[] = [
   "healthy_options",
   "bbq_smoker",
 ];
+
+/** Real, crawlable recipe detail links — every `/recipes/:slug` page already
+ * carries its own full content snapshot, so linking to a sample of them from
+ * index pages gives non-JS crawlers a real path deeper into the catalog. */
+function popularRecipeLinks(count: number): IndexSnapshotSection {
+  return {
+    heading: "Popular recipes",
+    links: GOLDEN_100_RECIPES.slice(0, count).map((r) => ({
+      label: r.title,
+      path: recipePath(r.classicSlug || r.slug),
+    })),
+  };
+}
+
+function categoryLinkSection(): IndexSnapshotSection {
+  return {
+    heading: "Browse by category",
+    links: HOME_CATEGORY_CLUSTERS.map((id) => ({
+      label: FIREHALL_CATEGORY_LABEL[id],
+      path: firehallCategoryExplorePath(id),
+    })).concat([
+      { label: "Breakfast", path: "/breakfast" },
+      { label: "Smoothies", path: "/smoothies" },
+      { label: "Pizza Night", path: "/pizza" },
+      { label: "Guides", path: "/guides" },
+    ]),
+  };
+}
 
 interface ResolvedPageSeo {
   seo: PageSeoConfig;
@@ -99,8 +135,9 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
   const path = (pathname.split("?")[0] || "/").replace(/\/+$/, "") || "/";
 
   if (path === "/") {
+    const seo = buildHomeSeo();
     return {
-      seo: buildHomeSeo(),
+      seo,
       jsonLd: [
         buildOrganizationSchema(origin),
         buildWebSiteSchema(origin),
@@ -115,6 +152,11 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         ),
         buildFaqPageSchema(HOME_FAQ_ITEMS),
       ],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: "Firehall Meals",
+        intro: seo.description,
+        sections: [categoryLinkSection(), popularRecipeLinks(10)],
+      }),
     };
   }
 
@@ -149,14 +191,20 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
   }
 
   if (path === "/explore") {
+    const seo = buildExploreSeo(APPROVED_CATALOG_TOTAL);
     return {
-      seo: buildExploreSeo(APPROVED_CATALOG_TOTAL),
+      seo,
       jsonLd: [
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
           { name: "Explore", path: "/explore" },
         ]),
       ],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: h1FromSeoTitle(seo.title),
+        intro: seo.description,
+        sections: [popularRecipeLinks(15), categoryLinkSection()],
+      }),
     };
   }
 
@@ -244,44 +292,86 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
   }
 
   if (path === "/pizza") {
+    const seo = buildPizzaNightSeo(PIZZA_NIGHT_COUNT);
     return {
-      seo: buildPizzaNightSeo(PIZZA_NIGHT_COUNT),
+      seo,
       jsonLd: [
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
           { name: "Pizza Night", path: "/pizza" },
         ]),
       ],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: h1FromSeoTitle(seo.title),
+        intro: seo.description,
+        sections: [
+          {
+            heading: "Pizza recipes",
+            links: PIZZA_NIGHT_RECIPES.slice(0, 12).map((r) => ({ label: r.title, path: recipePath(r.slug) })),
+          },
+        ],
+      }),
     };
   }
 
   if (path === "/smoothies") {
+    const seo = buildSmoothiesIndexSeo(SMOOTHIE_CATALOG_ITEMS.length);
     return {
-      seo: buildSmoothiesIndexSeo(10),
+      seo,
       jsonLd: [
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
           { name: "Smoothies", path: "/smoothies" },
         ]),
       ],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: h1FromSeoTitle(seo.title),
+        intro: seo.description,
+        sections: [
+          {
+            heading: "Smoothie recipes",
+            links: SMOOTHIE_CATALOG_ITEMS.map((item) => ({
+              label: item.title,
+              path: `/smoothies/${item.slug}`,
+            })),
+          },
+        ],
+      }),
     };
   }
 
   if (path === "/breakfast") {
+    const seo = buildBreakfastIndexSeo();
+    const breakfastIndex = readBreakfastCatalogIndexFromDisk();
     return {
-      seo: buildBreakfastIndexSeo(),
+      seo,
       jsonLd: [
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
           { name: "Breakfast", path: "/breakfast" },
         ]),
       ],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: h1FromSeoTitle(seo.title),
+        intro: seo.description,
+        sections: [
+          {
+            heading: "Breakfast recipes",
+            links: (breakfastIndex?.recipes ?? [])
+              .slice(0, 15)
+              .map((r) => ({ label: r.title, path: `/breakfast/${r.slug}` })),
+          },
+        ],
+      }),
     };
   }
 
   if (path === "/breakfast/performance") {
+    const seo = buildBreakfastPerformanceIndexSeo();
+    const breakfastIndex = readBreakfastCatalogIndexFromDisk();
+    const performanceEntries = (breakfastIndex?.recipes ?? []).filter((r) => isPerformanceBreakfastSlug(r.slug));
     return {
-      seo: buildBreakfastPerformanceIndexSeo(),
+      seo,
       jsonLd: [
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
@@ -289,19 +379,42 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           { name: "Performance Breakfasts", path: "/breakfast/performance" },
         ]),
       ],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: h1FromSeoTitle(seo.title),
+        intro: seo.description,
+        sections: [
+          {
+            heading: "Performance breakfast recipes",
+            links: performanceEntries
+              .slice(0, 15)
+              .map((r) => ({ label: r.title, path: `/breakfast/performance/${r.slug}` })),
+          },
+        ],
+      }),
     };
   }
 
   if (path === "/guides") {
     const articleCount = EDITORIAL_ARTICLES.length;
+    const seo = buildGuidesIndexSeo(articleCount);
     return {
-      seo: buildGuidesIndexSeo(articleCount),
+      seo,
       jsonLd: [
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
           { name: "Guides", path: "/guides" },
         ]),
       ],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: h1FromSeoTitle(seo.title),
+        intro: seo.description,
+        sections: [
+          {
+            heading: "Guides",
+            links: EDITORIAL_ARTICLES.map((a) => ({ label: a.title, path: guidePath(a.slug) })),
+          },
+        ],
+      }),
     };
   }
 
@@ -316,8 +429,9 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
     const rawId = guidesClusterMatch[1].trim().toLowerCase();
     const clusterId = GUIDES_CLUSTER_IDS.find((id) => id === rawId);
     if (clusterId) {
+      const seo = buildGuidesClusterSeo(clusterId, EDITORIAL_ARTICLES.length);
       return {
-        seo: buildGuidesClusterSeo(clusterId, EDITORIAL_ARTICLES.length),
+        seo,
         jsonLd: [
           buildOrganizationSchema(origin),
           buildBreadcrumbListSchema(origin, [
@@ -326,6 +440,16 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
             { name: clusterId, path: `/guides/topic/${clusterId}` },
           ]),
         ],
+        bodyHtml: renderIndexSnapshotHtml({
+          h1: h1FromSeoTitle(seo.title),
+          intro: seo.description,
+          sections: [
+            {
+              heading: "Guides",
+              links: EDITORIAL_ARTICLES.map((a) => ({ label: a.title, path: guidePath(a.slug) })),
+            },
+          ],
+        }),
       };
     }
   }
@@ -480,8 +604,14 @@ export function injectGenericPageSeoIntoHtml(html: string, origin: string, pathn
   });
 
   out = injectJsonLdIntoHtml(out, resolved.jsonLd);
-  if (resolved.bodyHtml) {
-    out = injectBodyContentIntoHtml(out, resolved.bodyHtml);
-  }
+  // Every route resolved here MUST ship real, server-visible body content —
+  // a route with correct <head> tags but an empty `<div id="root">` is
+  // still indistinguishable from every other route to a non-JS crawler.
+  // Routes with a richer, page-specific snapshot use it; everything else
+  // (marketing/landing/product pages) gets the generic fallback so no
+  // indexable page in this table can ever ship with zero visible content.
+  const bodyHtml = resolved.bodyHtml || renderIndexSnapshotHtml(fallbackIndexSnapshot(resolved.seo.title, resolved.seo.description));
+  out = injectBodyContentIntoHtml(out, bodyHtml);
+
   return { html: out, status: 200 };
 }

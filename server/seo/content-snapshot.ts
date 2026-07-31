@@ -42,6 +42,9 @@ const SNAPSHOT_STYLE = `
 .fh-snap .fh-nutri span{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em;color:#a39c91}
 .fh-snap p{margin:0 0 14px;font-size:.95rem;color:#ddd6cc}
 .fh-snap .fh-tip{color:#c9c2b8;font-size:.9rem;font-style:italic}
+.fh-snap .fh-linklist{list-style:none;padding:0;margin:0 0 22px;display:flex;flex-wrap:wrap;gap:10px}
+.fh-snap .fh-linklist li{margin:0}
+.fh-snap .fh-linklist a{display:inline-block;padding:8px 14px;border:1px solid #3a3a3a;border-radius:999px;color:#f2ede6;text-decoration:none;font-size:.85rem}
 `.trim();
 
 function styleTag(): string {
@@ -282,6 +285,82 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
   ]
     .filter(Boolean)
     .join("");
+}
+
+export interface IndexSnapshotLink {
+  label: string;
+  path: string;
+}
+
+export interface IndexSnapshotSection {
+  heading?: string;
+  links: IndexSnapshotLink[];
+}
+
+export interface IndexSnapshotData {
+  h1: string;
+  intro: string;
+  sections: IndexSnapshotSection[];
+}
+
+/**
+ * Render a plain-HTML snapshot for index/category/marketing pages (home,
+ * Explore, breakfast/smoothies/pizza/guides indexes, SEO landing pages,
+ * etc.) — an H1, an intro paragraph, and crawlable links to real content.
+ * Without this, non-JS crawlers hitting these routes see correct <head>
+ * metadata but a completely empty `<div id="root">` and no H1 — real gap
+ * confirmed against raw production HTML (no JS execution).
+ */
+export function renderIndexSnapshotHtml(data: IndexSnapshotData): string {
+  const sections = data.sections
+    .filter((s) => s.links.length > 0)
+    .map((section) => {
+      const heading = section.heading ? `<h2>${escapeHtml(section.heading)}</h2>` : "";
+      const links = `<ul class="fh-linklist">${section.links
+        .map((l) => `<li><a href="${escapeHtml(l.path)}">${escapeHtml(l.label)}</a></li>`)
+        .join("")}</ul>`;
+      return `${heading}${links}`;
+    })
+    .join("");
+
+  return [
+    `<div class="fh-snap">`,
+    styleTag(),
+    `<h1>${escapeHtml(data.h1)}</h1>`,
+    `<p class="fh-desc">${escapeHtml(data.intro)}</p>`,
+    sections,
+    `</div>`,
+  ]
+    .filter(Boolean)
+    .join("");
+}
+
+/** Strip the trailing " | Firehall Meals" (or similar) brand suffix from a <title> for use as a plain H1. */
+export function h1FromSeoTitle(title: string): string {
+  return title.replace(/\s*\|\s*Firehall Meals\s*$/i, "").trim() || title.trim();
+}
+
+/**
+ * Last-resort fallback so no route in the generic-page injector can ever
+ * ship an empty `<div id="root">` — every indexable page gets at least an
+ * H1, its real meta description as visible body copy, and links back into
+ * real crawlable content (recipe/guide detail pages already carry full
+ * content snapshots of their own).
+ */
+export function fallbackIndexSnapshot(title: string, description: string): IndexSnapshotData {
+  return {
+    h1: h1FromSeoTitle(title),
+    intro: description,
+    sections: [
+      {
+        links: [
+          { label: "Browse all recipes", path: "/explore" },
+          { label: "Find tonight's meal", path: "/generator" },
+          { label: "Firefighter meal guides", path: "/guides" },
+        ],
+      },
+    ],
+  };
 }
 
 export function editorialArticleSnapshot(article: EditorialArticle): ArticleSnapshotData {
