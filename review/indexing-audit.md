@@ -1,6 +1,6 @@
 # SEO Indexing Audit
 
-Generated: 2026-07-30T13:11:40.854Z
+Generated: 2026-08-01T00:20:06.666Z
 
 Canonical origin: **https://www.firehallmeals.com**
 
@@ -14,19 +14,19 @@ Canonical origin: **https://www.firehallmeals.com**
 | robots.txt allows crawling | PASS |
 | Recipe unique title + meta + canonical | PASS |
 | Recipes in sitemap | PASS |
-| Internal discoverability | NEEDS WORK |
+| Internal discoverability | PASS |
 | **Overall** | **NEEDS WORK** |
 
 ## URL counts
 
 | Metric | Count |
 |--------|------:|
-| **Total URLs in sitemap** | 515 |
+| **Total URLs in sitemap** | 513 |
 | **Total recipe URLs** (catalog indexes) | 374 |
 | Recipe URLs listed in sitemap | 374 |
-| **Total guide URLs** | 58 |
-| Guide URLs listed in sitemap | 62 |
-| Approved catalog (Explore / Recipes browse) | 355 |
+| **Total guide URLs** | 57 |
+| Guide URLs listed in sitemap | 61 |
+| Approved catalog (Explore / Recipes browse) | 392 |
 
 ## 1. Sitemap — required routes
 
@@ -40,7 +40,7 @@ Canonical origin: **https://www.firehallmeals.com**
 
 
 
-Hall guides index (`/guides`) plus **62** individual guide URLs. Explore catalog (`/explore`) plus **374** recipe/smoothie detail URLs.
+Hall guides index (`/guides`) plus **61** individual guide URLs. Explore catalog (`/explore`) plus **374** recipe/smoothie detail URLs.
 
 ## 2. robots.txt
 
@@ -261,28 +261,18 @@ Recipes should be reachable via **Explore / Recipes** (approved catalog) and/or 
 
 | Signal | Count |
 |--------|------:|
-| In approved catalog (Explore / Recipes grid) | 355 |
-| Hub-only (Pizza / Breakfast / Performance — not on Explore) | 55 |
-| Not linked from any hall guide | 289 |
+| In approved catalog (Explore / Recipes grid) | 392 |
+| Hub-only (Pizza / Breakfast / Performance — not on Explore) | 27 |
+| Not linked from any hall guide | 291 |
 | Golden-family pages with &lt;2 outbound related links | 186 |
-| **True orphan recipes** (no catalog hub, no guide link) | **9** |
+| **True orphan recipes** (no catalog hub, no guide link) | **0** |
 
-### True orphan recipe slugs
-
-- `chicken-alfredo-bake`
-- `teriyaki-chicken-rice-bowls`
-- `firehall-korean-beef-bowls`
-- `egg-roll-in-a-bowl-crew`
-- `korean-turkey-rice-bowls`
-- `white-chicken-chili-crock`
-- `thai-peanut-chicken-crock`
-- `burnt-ends-chili-crew`
-- `pasta-e-fagioli-hall`
+_No true orphans — every indexable recipe is reachable via Explore, a dedicated hub (/pizza, /breakfast), performance catalog, or a hall guide._
 
 
 ### Hub-only recipes (indexed, not on Explore)
 
-55 recipes live on dedicated hubs instead of the main catalog — expected for Pizza Night and some breakfast/performance entries. See `hubOnlySample` in JSON.
+27 recipes live on dedicated hubs instead of the main catalog — expected for Pizza Night and some breakfast/performance entries. See `hubOnlySample` in JSON.
 
 
 ## 5. Sitemap generation coverage

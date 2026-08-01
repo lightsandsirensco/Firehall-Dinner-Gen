@@ -1,17 +1,17 @@
 # Hall Guides Production Audit
 
-Generated: 2026-06-02T14:26:08.582Z
+Generated: 2026-08-01T00:19:48.714Z
 
 ## Executive summary
 
 | Metric | Value |
 |--------|------:|
-| Guides audited | 58 |
+| Guides audited | 57 |
 | Average SEO score | 97/100 |
 | Average human writing score | 100/100 |
-| **P0 — rewrite immediately** | **0** |
+| **P0 — rewrite immediately** | **1** |
 | P1 — improve soon | 12 |
-| P2 — acceptable | 46 |
+| P2 — acceptable | 44 |
 
 ## Audit dimensions
 
@@ -28,7 +28,20 @@ Each guide scored 0–100 on:
 
 ## P0 guides (rewrite first)
 
-_None — all guides at or above P1 threshold._
+### 10 Classic Firehall Meals Firefighters Actually Cook
+
+- **URL:** /guides/10-classic-firehall-meals
+- **Priority:** P0
+- **Primary keyword:** classic firehall meals
+- **Scores:** SEO 90 · Human 74 · Trust 100 · Firefighter 68 · Intent 85 · Depth 32
+- **Title length:** 52 · **Meta:** 145 chars · **H2 sections:** 2 · **Recipe links:** 11
+- **AI flags:** whether you're
+
+**Recommended changes:**
+- Need at least 2 H2 sections
+- Rewrite AI-pattern phrase: "whether you're"
+- Rewrite intro + one section in direct hall voice (short sentences, crew scenarios)
+- Expand thin sections with station-specific examples and timing notes
 
 ## P1 guides
 
@@ -192,7 +205,7 @@ _None — all guides at or above P1 threshold._
 | [How to Feed a Firehall Crew Without Losing the Shift](/guides/feeding-a-firehall-crew) | 100 | 100 | 100 | 68 | 70 | 78 |
 | [Comfort Food After a Long Call](/guides/comfort-food-after-a-long-shift) | 100 | 100 | 100 | 68 | 85 | 62 |
 | [Firehall Breakfast and Brunch That Actually Get Eaten](/guides/firehall-breakfast-and-brunch) | 100 | 100 | 100 | 68 | 85 | 62 |
-| [Meal Prep for Firefighters and Shift Workers](/guides/meal-prep-for-shift-workers) | 100 | 100 | 100 | 68 | 85 | 62 |
+| [Meal Prep for Firefighters and Shift Workers](/guides/meal-prep-for-shift-workers) | 100 | 100 | 100 | 68 | 85 | 78 |
 | [Healthy Meals for Active Crews (Without the Lecture)](/guides/healthy-meals-for-active-crews) | 100 | 100 | 100 | 68 | 85 | 62 |
 | [Best Firehall Meals for Busy Nights](/guides/best-firehall-meals-busy-nights) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [Best Firehouse Meals for Large Crews](/guides/best-firehouse-meals-large-crews) | 100 | 100 | 90 | 68 | 85 | 62 |
@@ -201,10 +214,9 @@ _None — all guides at or above P1 threshold._
 | [Best Firefighter Crockpot Meals](/guides/best-firefighter-crockpot-meals) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [Firehouse Comfort Meals](/guides/firehouse-comfort-meals) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [Easy Firehall Pasta Recipes](/guides/easy-firehall-pasta-recipes) | 100 | 100 | 90 | 68 | 85 | 62 |
-| [Firefighter BBQ Recipes](/guides/firefighter-bbq-recipes) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [Best Station Chili Recipes](/guides/best-station-chili-recipes) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [Best Meals After a Busy Shift](/guides/best-meals-after-busy-shift) | 100 | 100 | 90 | 68 | 85 | 62 |
-| [Firefighter Breakfast Ideas](/guides/firefighter-breakfast-ideas) | 100 | 100 | 90 | 68 | 85 | 62 |
+| [Firefighter Breakfast Ideas](/guides/firefighter-breakfast-ideas) | 100 | 100 | 100 | 68 | 85 | 78 |
 | [Firehall Meal Prep Ideas](/guides/firehall-meal-prep-ideas) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [One-Pot Firehall Meals](/guides/one-pot-firehall-meals) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [High-Protein Firehall Meals](/guides/high-protein-firehall-meals) | 100 | 100 | 100 | 68 | 85 | 62 |
@@ -219,7 +231,6 @@ _None — all guides at or above P1 threshold._
 | [Cooking for 10 Firefighters](/guides/cooking-for-10-firefighters) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [Firehall Grocery Planning](/guides/firehall-grocery-planning) | 100 | 100 | 90 | 68 | 85 | 62 |
 | [How to Organize Firehall Dinners](/guides/organize-firehall-dinners) | 100 | 100 | 90 | 68 | 85 | 62 |
-| [Top 20 Firehall Classics Every Firefighter Should Know](/guides/top-firehall-classics) | 100 | 100 | 100 | 68 | 85 | 82 |
 | [20 Most Popular Firefighter Meals](/guides/most-popular-firefighter-meals) | 100 | 100 | 100 | 68 | 85 | 82 |
 | [The Firefighter Breakfast Guide](/guides/firefighter-breakfast-guide) | 100 | 100 | 100 | 68 | 85 | 78 |
 | [10 Rookie-Proof Firehall Meals](/guides/rookie-firefighter-meal-guide) | 100 | 100 | 100 | 68 | 85 | 78 |
@@ -230,7 +241,7 @@ _None — all guides at or above P1 threshold._
 | [10 Healthy Smoothies to Make at the Hall](/guides/healthy-smoothies-at-the-hall) | 92 | 100 | 100 | 68 | 85 | 90 |
 | [Quick Firefighter Meals Between Calls](/guides/quick-meals-between-calls) | 90 | 100 | 100 | 68 | 85 | 62 |
 | [Healthy Firefighter Meals That Fill You Up](/guides/healthy-firefighter-meals-fill-you-up) | 90 | 100 | 90 | 68 | 85 | 62 |
-| [Fast Firehall Meals Under 30 Minutes](/guides/fast-firehall-meals-under-30-minutes) | 90 | 100 | 90 | 68 | 85 | 62 |
+| [Fast Firehall Meals Under 30 Minutes](/guides/fast-firehall-meals-under-30-minutes) | 90 | 100 | 100 | 68 | 85 | 62 |
 | [Meals for Feeding 10 Firefighters](/guides/meals-feeding-10-firefighters) | 90 | 100 | 90 | 68 | 85 | 62 |
 | [Cheap Firehall Meals That Still Taste Good](/guides/cheap-firehall-meals) | 90 | 100 | 90 | 68 | 85 | 62 |
 | [Firehall Taco Night Ideas](/guides/firehall-taco-night-ideas) | 90 | 100 | 90 | 68 | 85 | 62 |
@@ -240,6 +251,7 @@ _None — all guides at or above P1 threshold._
 
 | Guide | Priority | SEO | Human | Trust | FF | Intent | Depth | Conv | EEAT |
 |-------|:--------:|----:|------:|------:|---:|-------:|------:|-----:|-----:|
+| [10 Classic Firehall Meals Firefighters Actually Cook](/guides/10-classic-firehall-meals) | P0 | 90 | 74 | 100 | 68 | 85 | 32 | 100 | 100 |
 | [BBQ Night at the Fire Station](/guides/bbq-night-at-the-station) | P1 | 100 | 100 | 100 | 68 | 85 | 58 | 100 | 92 |
 | [Planning Tonight's Station Dinner (Without the 6 PM Panic)](/guides/planning-tonights-station-dinner) | P1 | 100 | 100 | 100 | 68 | 70 | 58 | 100 | 100 |
 | [Best Dutch Oven Meals for Firefighters](/guides/dutch-oven-meals-firefighters) | P1 | 100 | 100 | 90 | 68 | 85 | 58 | 95 | 100 |
@@ -256,7 +268,7 @@ _None — all guides at or above P1 threshold._
 | [Quick Firefighter Meals Between Calls](/guides/quick-meals-between-calls) | P2 | 90 | 100 | 100 | 68 | 85 | 62 | 100 | 92 |
 | [Comfort Food After a Long Call](/guides/comfort-food-after-a-long-shift) | P2 | 100 | 100 | 100 | 68 | 85 | 62 | 100 | 92 |
 | [Firehall Breakfast and Brunch That Actually Get Eaten](/guides/firehall-breakfast-and-brunch) | P2 | 100 | 100 | 100 | 68 | 85 | 62 | 100 | 84 |
-| [Meal Prep for Firefighters and Shift Workers](/guides/meal-prep-for-shift-workers) | P2 | 100 | 100 | 100 | 68 | 85 | 62 | 100 | 92 |
+| [Meal Prep for Firefighters and Shift Workers](/guides/meal-prep-for-shift-workers) | P2 | 100 | 100 | 100 | 68 | 85 | 78 | 100 | 92 |
 | [Healthy Meals for Active Crews (Without the Lecture)](/guides/healthy-meals-for-active-crews) | P2 | 100 | 100 | 100 | 68 | 85 | 62 | 100 | 84 |
 | [Best Firehall Meals for Busy Nights](/guides/best-firehall-meals-busy-nights) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 100 | 92 |
 | [25 Firefighter Dinner Ideas](/guides/25-firefighter-dinner-ideas) | P2 | 92 | 100 | 90 | 68 | 85 | 82 | 100 | 100 |
@@ -264,17 +276,16 @@ _None — all guides at or above P1 threshold._
 | [Meals Firefighters Actually Cook](/guides/meals-firefighters-actually-cook) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 100 | 100 |
 | [Best Meals for a 24 Hour Shift](/guides/best-meals-24-hour-shift) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 100 | 100 |
 | [Healthy Firefighter Meals That Fill You Up](/guides/healthy-firefighter-meals-fill-you-up) | P2 | 90 | 100 | 90 | 68 | 85 | 62 | 95 | 92 |
-| [Fast Firehall Meals Under 30 Minutes](/guides/fast-firehall-meals-under-30-minutes) | P2 | 90 | 100 | 90 | 68 | 85 | 62 | 100 | 92 |
+| [Fast Firehall Meals Under 30 Minutes](/guides/fast-firehall-meals-under-30-minutes) | P2 | 90 | 100 | 100 | 68 | 85 | 62 | 100 | 84 |
 | [Best Firefighter Crockpot Meals](/guides/best-firefighter-crockpot-meals) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 95 | 92 |
 | [Firehouse Comfort Meals](/guides/firehouse-comfort-meals) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 100 | 92 |
 | [Easy Firehall Pasta Recipes](/guides/easy-firehall-pasta-recipes) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 95 | 92 |
-| [Firefighter BBQ Recipes](/guides/firefighter-bbq-recipes) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 100 | 92 |
 | [Meals for Feeding 10 Firefighters](/guides/meals-feeding-10-firefighters) | P2 | 90 | 100 | 90 | 68 | 85 | 62 | 100 | 92 |
 | [Cheap Firehall Meals That Still Taste Good](/guides/cheap-firehall-meals) | P2 | 90 | 100 | 90 | 68 | 85 | 62 | 95 | 100 |
 | [Best Station Chili Recipes](/guides/best-station-chili-recipes) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 95 | 100 |
 | [Firehall Taco Night Ideas](/guides/firehall-taco-night-ideas) | P2 | 90 | 100 | 90 | 68 | 85 | 62 | 95 | 92 |
 | [Best Meals After a Busy Shift](/guides/best-meals-after-busy-shift) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 100 | 100 |
-| [Firefighter Breakfast Ideas](/guides/firefighter-breakfast-ideas) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 95 | 100 |
+| [Firefighter Breakfast Ideas](/guides/firefighter-breakfast-ideas) | P2 | 100 | 100 | 100 | 68 | 85 | 78 | 95 | 92 |
 | [Firehall Meal Prep Ideas](/guides/firehall-meal-prep-ideas) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 100 | 92 |
 | [One-Pot Firehall Meals](/guides/one-pot-firehall-meals) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 95 | 92 |
 | [Healthy Meals That Still Taste Good](/guides/healthy-meals-that-still-taste-good) | P2 | 92 | 100 | 100 | 68 | 85 | 62 | 100 | 92 |
@@ -293,10 +304,9 @@ _None — all guides at or above P1 threshold._
 | [Cooking for 10 Firefighters](/guides/cooking-for-10-firefighters) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 100 | 100 |
 | [Firehall Grocery Planning](/guides/firehall-grocery-planning) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 85 | 92 |
 | [How to Organize Firehall Dinners](/guides/organize-firehall-dinners) | P2 | 100 | 100 | 90 | 68 | 85 | 62 | 85 | 100 |
-| [Top 20 Firehall Classics Every Firefighter Should Know](/guides/top-firehall-classics) | P2 | 100 | 100 | 100 | 68 | 85 | 82 | 100 | 100 |
 | [20 Most Popular Firefighter Meals](/guides/most-popular-firefighter-meals) | P2 | 100 | 100 | 100 | 68 | 85 | 82 | 100 | 100 |
 | [The Firefighter Breakfast Guide](/guides/firefighter-breakfast-guide) | P2 | 100 | 100 | 100 | 68 | 85 | 78 | 100 | 100 |
-| [10 Rookie-Proof Firehall Meals](/guides/rookie-firefighter-meal-guide) | P2 | 100 | 100 | 100 | 68 | 85 | 78 | 100 | 92 |
+| [10 Rookie-Proof Firehall Meals](/guides/rookie-firefighter-meal-guide) | P2 | 100 | 100 | 100 | 68 | 85 | 78 | 100 | 84 |
 | [10 Healthy Smoothies to Make at the Hall](/guides/healthy-smoothies-at-the-hall) | P2 | 92 | 100 | 100 | 68 | 85 | 90 | 100 | 100 |
 
 ## Validation

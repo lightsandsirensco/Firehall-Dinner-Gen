@@ -1,13 +1,13 @@
 # 404 Audit â€” Firehall Meals
 
-Generated: 2026-07-30T13:09:15.727Z
+Generated: 2026-08-01T00:19:07.425Z
 
 ## Executive summary
 
 | Metric | Value |
 |--------|------:|
-| **Total URLs tested** | 561 |
-| **200 / OK (SPA route + data)** | 558 |
+| **Total URLs tested** | 560 |
+| **200 / OK (SPA route + data)** | 557 |
 | **301 / client redirects** | 3 |
 | **404 (dead routes / missing data)** | 0 |
 | **500 errors** | 0 (static audit; no server errors detected) |
@@ -15,9 +15,9 @@ Generated: 2026-07-30T13:09:15.727Z
 | **Broken internal links** | 0 |
 | **Broken recipe pages** | 0 |
 | **Broken images** | 0 |
-| **Sitemap URLs failing resolution** | 0 / 515 |
+| **Sitemap URLs failing resolution** | 0 / 513 |
 | **Orphan recipes** (no nav link + not in sitemap) | 0 |
-| **Recipes not linked from nav/footer scan** | 355 |
+| **Recipes not linked from nav/footer scan** | 392 |
 | **Approved recipes missing from sitemap** | 0 |
 | **Site Integrity %** | **100%** |
 | **Hard failures** (404, broken assets, links, recipes) | 0 |
@@ -26,7 +26,7 @@ Audit mode: **static route + filesystem** (matches SPA behavior: invalid slugs â
 
 ## Sitemap audit
 
-- URLs in sitemap: **515**
+- URLs in sitemap: **513**
 - Failing resolution: **0**
 - Recipes in catalog but missing from sitemap: **0**
 - Guides missing from sitemap: **0**
@@ -44,7 +44,7 @@ _All sitemap URLs resolve._
 | `/explore/recipe/1` | ok | ok | PASS |
 | `/recipes/__nonexistent_slug_xyz__` | not_found | not_found | PASS |
 
-## Recipe page audit (355 catalog entries)
+## Recipe page audit (392 catalog entries)
 
 | Issue count | 0 |
 |-------------|------:|
@@ -70,7 +70,7 @@ _All scanned internal links resolve._
 ## Orphan & discoverability
 
 - **Orphan recipes** (no internal link in scanned sources + not in sitemap): **0**
-- **Not linked from nav/home scan** (may still be in Explore API/sitemap): **355**
+- **Not linked from nav/home scan** (may still be in Explore API/sitemap): **392**
 - **In approved catalog but missing from sitemap:** **0**
 
 

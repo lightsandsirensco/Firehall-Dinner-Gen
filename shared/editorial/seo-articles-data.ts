@@ -7,7 +7,6 @@ import { buildSeoGuide, meal, STANDARD_FAQS } from "./seo-article-build.js";
 const REL = {
   busy: ["quick-meals-between-calls", "planning-tonights-station-dinner"],
   crew: ["feeding-a-firehall-crew", "meals-feeding-10-firefighters"],
-  bbq: ["bbq-night-at-the-station", "firefighter-bbq-recipes"],
   comfort: ["comfort-food-after-a-long-shift", "firehouse-comfort-meals"],
   prep: ["meal-prep-for-shift-workers", "firehall-meal-prep-ideas"],
 };
@@ -503,47 +502,15 @@ export const SEO_TRAFFIC_ARTICLES = [
     relatedArticleSlugs: ["one-pot-firehall-meals"],
   }),
 
-  buildSeoGuide({
-    slug: "firefighter-bbq-recipes",
-    title: "Firefighter BBQ Recipes",
-    subtitle: "Grill, smoke, and flat-top nights for the hall",
-    description:
-      "Firefighter BBQ recipes for station grills: brisket, pulled pork, chicken, ribs, and sides that keep the line moving.",
-    keywords: ["firefighter BBQ recipes", "fire station grill", "firehall BBQ", "smoker crew meals"],
-    intro:
-      "BBQ night is morale and logistics. Firefighter BBQ recipes need clear roles: fire manager, meat puller, line builder. The food should hold if calls interrupt — which is why pulls, thighs, and sliders outperform finicky steaks for most halls.",
-    practicalAdvice: [
-      "Probe temps — no guessing on chicken.",
-      "Rest meat covered, not bare on a cold tray.",
-      "Prep sides indoors — grill person stays at grill.",
-    ],
-    sections: [
-      {
-        id: "weeknight-vs-weekend",
-        heading: "Weeknight vs weekend smoke",
-        paragraphs: [
-          "Weeknights: thighs, burgers, sliders, pork chops. Weekends or training days: brisket, ribs, whole birds.",
-        ],
-      },
-      {
-        id: "sides",
-        heading: "Sides that keep the grill person sane",
-        paragraphs: [
-          "Corn, slaw, and buns prepped indoors. The grill handles protein only — everything else is assembly on the line.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("pulled-pork", "Pulled Pork Sandwiches", "Hold food — hall BBQ baseline."),
-      meal("smoked-brisket", "Kansas City Smoked Brisket", "Centerpiece when time allows."),
-      meal("beer-can-chicken", "Beer Can Chicken", "Grill classic — multiple birds scale."),
-      meal("memphis-dry-rub-ribs", "Memphis Dry Rub Ribs", "Hands-on rib night — worth the effort."),
-      meal("bbq-chicken-sliders", "BBQ Chicken Sliders", "Fast slider line — great for weeknight grill."),
-      meal("grilled-corn-cotija", "Grilled Street Corn", "Side that feels like an event."),
-    ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
-    relatedArticleSlugs: REL.bbq,
-  }),
+  // NOTE: a "firefighter-bbq-recipes" guide previously lived here. It
+  // targeted the same search intent as the /firefighter-bbq-recipes SEO
+  // landing page (shared/seo/landing-pages-data.ts) — same head keyword,
+  // 5 of its 6 recommended recipes overlapping — while the landing page
+  // carries every BBQ recipe's internal "pillar" link (see
+  // shared/seo/recipe-authority-links.ts) and this guide had none.
+  // Consolidated: /guides/firefighter-bbq-recipes now 301s to
+  // /firefighter-bbq-recipes (see server/routes.ts) instead of maintaining
+  // two competing pages for one query.
 
   buildSeoGuide({
     slug: "meals-feeding-10-firefighters",

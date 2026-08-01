@@ -111,7 +111,10 @@ function AppRoutes() {
       <Route path="/explore" component={ExplorePage} />
       <Route path="/categories/:categoryId" component={FirehallCategoryRedirect} />
       <Route path="/wheel" component={ClassicsWheelPage} />
-      <Route path="/classics-wheel">{() => <SeoProductPage slug="classics-wheel" />}</Route>
+      {/* /classics-wheel was a separate SEO explainer page for the same
+          feature as /wheel — consolidated into the one real tool page (see
+          server/routes.ts for the matching server-side 301). */}
+      <Route path="/classics-wheel">{() => <Redirect to="/wheel" />}</Route>
       <Route path="/hall-meal-planner">{() => <SeoProductPage slug="hall-meal-planner" />}</Route>
       <Route path="/firefighter-dinner-vote">{() => <SeoProductPage slug="firefighter-dinner-vote" />}</Route>
       <Route path="/fire-hall-pantry">{() => <SeoProductPage slug="fire-hall-pantry" />}</Route>
@@ -152,6 +155,14 @@ function AppRoutes() {
       </Route>
       <Route path="/blog/top-firehall-classics">
         {() => <Redirect to="/guides/10-classic-firehall-meals" />}
+      </Route>
+      {/* /guides/firefighter-bbq-recipes targeted the same search intent and
+          largely the same recipe set as the /firefighter-bbq-recipes landing
+          page, which carries every BBQ recipe's internal "pillar" link (see
+          shared/seo/recipe-authority-links.ts) — consolidated into it (see
+          server/routes.ts for the matching server-side 301). */}
+      <Route path="/guides/firefighter-bbq-recipes">
+        {() => <Redirect to="/firefighter-bbq-recipes" />}
       </Route>
       <Route path="/guides/:slug" component={GuideArticlePage} />
       <Route path="/blog/:slug" component={GuideArticlePage} />

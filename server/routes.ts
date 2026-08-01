@@ -2327,6 +2327,26 @@ export async function registerRoutes(
     return res.redirect(301, "/guides/10-classic-firehall-meals");
   });
 
+  // "/classics-wheel" was a separate SEO explainer page describing the same
+  // feature as the real interactive tool at "/wheel" (see App.tsx —
+  // ClassicsWheelPage vs. SeoProductPage). It carried almost no internal
+  // links (vs. 15+ real nav links into /wheel) and duplicated the same
+  // topic — Search Console flagged both as alternate/canonical duplicates.
+  // Consolidate into the one real tool page.
+  app.get("/classics-wheel", (_req: Request, res: Response) => {
+    return res.redirect(301, "/wheel");
+  });
+
+  // "/guides/firefighter-bbq-recipes" (an editorial guide) and
+  // "/firefighter-bbq-recipes" (an SEO landing page) targeted the same
+  // search intent and largely the same recipe set (5 of 6 recipes
+  // referenced overlap). The landing page carries every BBQ recipe's
+  // internal "pillar" link (see shared/seo/recipe-authority-links.ts) —
+  // consolidate the guide into it rather than rewiring that link system.
+  app.get("/guides/firefighter-bbq-recipes", (_req: Request, res: Response) => {
+    return res.redirect(301, "/firefighter-bbq-recipes");
+  });
+
   app.get("/api/content/guides", async (_req: Request, res: Response) => {
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const indexFile = path.join(EDITORIAL_PUBLIC_DIR, "index.json");

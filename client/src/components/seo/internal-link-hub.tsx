@@ -48,7 +48,7 @@ const HUB_LINKS: InternalLink[] = [
   { href: "/healthy-firefighter-meals", label: "Healthy firefighter meals", description: "Performance station plates" },
   { href: "/firefighter-breakfast-recipes", label: "Firefighter breakfast recipes", description: "After night shift" },
   { href: "/how-we-test-recipes", label: "How we test recipes", description: "Shift-tested standards" },
-  { href: "/classics-wheel", label: "Classics Wheel", description: "Hall kitchen-table picks" },
+  { href: "/wheel", label: "Classics Wheel", description: "Hall kitchen-table picks" },
   { href: "/hall-meal-planner", label: "Hall Meal Planner", description: "Plan crew dinners by shift" },
   { href: "/firefighter-dinner-vote", label: "Dinner Voting", description: "Let the crew pick dinner" },
   { href: "/canteen-manager", label: "Canteen Manager", description: "Staples, orders, deliveries" },

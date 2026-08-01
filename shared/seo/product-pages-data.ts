@@ -1042,7 +1042,11 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
   },
   {
     slug: "classics-wheel",
-    path: "/classics-wheel",
+    // 301-redirects to /wheel (see server/routes.ts) — this is the real
+    // destination so every other product page's `relatedProducts` link
+    // (resolved via `productSeoPagePath`) points straight at the live tool
+    // instead of through a redirect.
+    path: "/wheel",
     h1: "Classics Wheel",
     title: "Classics Wheel — Hall Dinner Picker | Firehall Meals",
     description:
@@ -1073,8 +1077,8 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
     solution: {
       heading: "Spin the Firehall Meals Classics Wheel",
       paragraphs: [
-        "The Classics Wheel is a public tool at /wheel — ten hall-tested classics with full recipes, crew scaling, and shopping lists behind each result. No private hall data required to spin.",
-        "This page explains the product for search; the live spinner is one click away. Pair with dinner voting when you want nominees from the wheel and a final crew ballot.",
+        "The Classics Wheel is a public tool — ten hall-tested classics with full recipes, crew scaling, and shopping lists behind each result. No private hall data required to spin.",
+        "Every landing opens onto a real recipe, ready to cook. Pair with dinner voting when you want nominees from the wheel and a final crew ballot.",
       ],
     },
     screenshots: [
@@ -1161,6 +1165,13 @@ export function productSeoPagePath(slug: ProductSeoPageSlug): string {
   return PAGE_BY_SLUG.get(slug)?.path ?? `/${slug}`;
 }
 
+/**
+ * "classics-wheel" is excluded here: its page 301-redirects to the real
+ * /wheel tool (see server/routes.ts) rather than serving its own content, so
+ * it must never appear in the sitemap as an independently indexable URL.
+ * Its `PRODUCT_SEO_PAGES` entry is kept only so /wheel's own SEO snapshot
+ * (server/seo/generic-page-injection.ts) can reuse its copy.
+ */
 export function allProductSeoPagePaths(): string[] {
-  return PRODUCT_SEO_PAGES.map((p) => p.path);
+  return PRODUCT_SEO_PAGES.filter((p) => p.slug !== "classics-wheel").map((p) => p.path);
 }

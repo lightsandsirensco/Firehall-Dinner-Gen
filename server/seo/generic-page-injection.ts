@@ -74,9 +74,11 @@ import {
   fallbackIndexSnapshot,
   fuelRecipeSnapshot,
   h1FromSeoTitle,
+  productSeoPageSnapshot,
   renderArticleSnapshotHtml,
   renderIndexSnapshotHtml,
   renderRecipeSnapshotHtml,
+  seoLandingPageSnapshot,
   type IndexSnapshotSection,
 } from "./content-snapshot.js";
 import type { InjectionResult } from "./recipe-html-injection.js";
@@ -177,6 +179,11 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
 
   if (path === "/wheel") {
     const seo = buildWheelSeo();
+    // "/classics-wheel" (a separate SEO explainer page for this same
+    // feature) now 301-redirects here (see server/routes.ts) — reuse its
+    // real problem/solution copy and FAQs so this page, not just that one,
+    // ships substantive server-rendered content to non-JS clients.
+    const classicsWheelProductPage = getProductSeoPage("classics-wheel");
     return {
       seo,
       jsonLd: [
@@ -186,7 +193,20 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           { name: "Home", path: "/" },
           { name: "Classics Wheel", path: seo.canonicalPath },
         ]),
+        ...(classicsWheelProductPage
+          ? [
+              buildSoftwareApplicationSchema(origin, {
+                name: classicsWheelProductPage.appName,
+                description: classicsWheelProductPage.description,
+                path: seo.canonicalPath,
+              }),
+              buildFaqPageSchema(classicsWheelProductPage.faqs),
+            ]
+          : []),
       ],
+      bodyHtml: classicsWheelProductPage
+        ? renderArticleSnapshotHtml(origin, productSeoPageSnapshot(classicsWheelProductPage))
+        : undefined,
     };
   }
 
@@ -548,6 +568,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           ]),
           buildFaqPageSchema(landing.faqs),
         ],
+        bodyHtml: renderArticleSnapshotHtml(origin, seoLandingPageSnapshot(landing)),
       };
     }
 
@@ -569,6 +590,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           ]),
           buildFaqPageSchema(product.faqs),
         ],
+        bodyHtml: renderArticleSnapshotHtml(origin, productSeoPageSnapshot(product)),
       };
     }
   }

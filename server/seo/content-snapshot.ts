@@ -23,8 +23,21 @@ import type { BreakfastRecipePage } from "../../shared/breakfast-schema.js";
 import type { FuelRecipePage } from "../../shared/fuel-catalog/schema.js";
 import type { EditorialArticle } from "../../shared/editorial/content-schema.js";
 import type { ClientRecipeResponse } from "../../shared/schema.js";
-import { absoluteImageUrl } from "../../shared/seo/urls.js";
+import type { SeoLandingPageDef } from "../../shared/seo/landing-pages-data.js";
+import type { ProductSeoPageDef } from "../../shared/seo/product-pages-data.js";
+import { absoluteImageUrl, recipePath } from "../../shared/seo/urls.js";
 import { escapeHtml } from "./apply-seo-tags.js";
+
+/** "smoked-brisket" -> "Smoked Brisket" — used only as a crawlable link label
+ * when a page links out to recipes by slug and no display title is loaded
+ * synchronously (avoids a data-store dependency in this render path). */
+export function titleCaseFromSlug(slug: string): string {
+  return slug
+    .split("-")
+    .filter(Boolean)
+    .map((w) => (w.length ? w[0].toUpperCase() + w.slice(1) : w))
+    .join(" ");
+}
 
 const SNAPSHOT_STYLE = `
 .fh-snap{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;max-width:720px;margin:0 auto;padding:20px 20px 96px;color:#f2ede6;background:#141414;line-height:1.65}
@@ -228,6 +241,29 @@ export function clientRecipeSnapshot(
   };
 }
 
+export interface IndexSnapshotLink {
+  label: string;
+  path: string;
+}
+
+export interface IndexSnapshotSection {
+  heading?: string;
+  links: IndexSnapshotLink[];
+}
+
+function renderLinkSections(sections: IndexSnapshotSection[]): string {
+  return sections
+    .filter((s) => s.links.length > 0)
+    .map((section) => {
+      const heading = section.heading ? `<h2>${escapeHtml(section.heading)}</h2>` : "";
+      const links = `<ul class="fh-linklist">${section.links
+        .map((l) => `<li><a href="${escapeHtml(l.path)}">${escapeHtml(l.label)}</a></li>`)
+        .join("")}</ul>`;
+      return `${heading}${links}`;
+    })
+    .join("");
+}
+
 export interface ArticleSnapshotData {
   title: string;
   subtitle?: string;
@@ -239,6 +275,10 @@ export interface ArticleSnapshotData {
   sections: Array<{ heading: string; paragraphs: string[]; tips?: string[] }>;
   practicalAdvice: string[];
   faqs: Array<{ question: string; answer: string }>;
+  /** Optional crawlable link lists rendered after the FAQ block (e.g. linked
+   * recipes, related pages) — used by SEO landing / product pages, which
+   * have no `practicalAdvice` list of their own. */
+  linkSections?: IndexSnapshotSection[];
 }
 
 /** Render a guide article's real body copy as plain HTML for `#root`. */
@@ -269,6 +309,8 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
         .join("")}`
     : "";
 
+  const linkSections = data.linkSections?.length ? renderLinkSections(data.linkSections) : "";
+
   return [
     `<div class="fh-snap">`,
     styleTag(),
@@ -281,20 +323,11 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
     sections,
     advice,
     faqs,
+    linkSections,
     `</div>`,
   ]
     .filter(Boolean)
     .join("");
-}
-
-export interface IndexSnapshotLink {
-  label: string;
-  path: string;
-}
-
-export interface IndexSnapshotSection {
-  heading?: string;
-  links: IndexSnapshotLink[];
 }
 
 export interface IndexSnapshotData {
@@ -312,23 +345,12 @@ export interface IndexSnapshotData {
  * confirmed against raw production HTML (no JS execution).
  */
 export function renderIndexSnapshotHtml(data: IndexSnapshotData): string {
-  const sections = data.sections
-    .filter((s) => s.links.length > 0)
-    .map((section) => {
-      const heading = section.heading ? `<h2>${escapeHtml(section.heading)}</h2>` : "";
-      const links = `<ul class="fh-linklist">${section.links
-        .map((l) => `<li><a href="${escapeHtml(l.path)}">${escapeHtml(l.label)}</a></li>`)
-        .join("")}</ul>`;
-      return `${heading}${links}`;
-    })
-    .join("");
-
   return [
     `<div class="fh-snap">`,
     styleTag(),
     `<h1>${escapeHtml(data.h1)}</h1>`,
     `<p class="fh-desc">${escapeHtml(data.intro)}</p>`,
-    sections,
+    renderLinkSections(data.sections),
     `</div>`,
   ]
     .filter(Boolean)
@@ -375,5 +397,68 @@ export function editorialArticleSnapshot(article: EditorialArticle): ArticleSnap
     sections: article.sections,
     practicalAdvice: article.practicalAdvice,
     faqs: article.faqs,
+  };
+}
+
+/**
+ * SEO landing pages (e.g. `/firefighter-bbq-recipes`) previously shipped
+ * only the generic `fallbackIndexSnapshot` to non-JS clients — real title/
+ * meta but none of their actual `sections`/FAQs/linked recipes, even though
+ * that content exists and renders fine client-side. This gives crawlers the
+ * real body copy, matching what `/guides/:slug` and recipe pages already do.
+ */
+export function seoLandingPageSnapshot(page: SeoLandingPageDef): ArticleSnapshotData {
+  return {
+    title: page.h1,
+    description: page.description,
+    intro: page.intro,
+    sections: page.sections,
+    practicalAdvice: [],
+    faqs: page.faqs,
+    linkSections: [
+      {
+        heading: "Recipes in this collection",
+        links: page.recipeSlugs.map((slug) => ({
+          label: titleCaseFromSlug(slug),
+          path: recipePath(slug),
+        })),
+      },
+      {
+        heading: "Related topics",
+        links: page.relatedPages.map((rel) => ({
+          label: rel.label,
+          path: `/${rel.slug}`,
+        })),
+      },
+    ],
+  };
+}
+
+/**
+ * Product SEO pages (e.g. `/classics-wheel`, `/hall-meal-planner`) had the
+ * same gap as landing pages — their real problem/workaround/solution copy
+ * and FAQs were never server-rendered for non-JS clients.
+ */
+export function productSeoPageSnapshot(page: ProductSeoPageDef): ArticleSnapshotData {
+  return {
+    title: page.h1,
+    description: page.description,
+    intro: page.intro,
+    sections: [page.problem, page.currentWorkaround, page.solution],
+    practicalAdvice: [],
+    faqs: page.faqs,
+    linkSections: [
+      {
+        heading: "Recipes",
+        links: page.recipeSlugs.map((slug) => ({
+          label: titleCaseFromSlug(slug),
+          path: recipePath(slug),
+        })),
+      },
+      {
+        heading: "Guides",
+        links: page.guideSlugs.map((g) => ({ label: g.label, path: `/guides/${g.slug}` })),
+      },
+    ],
   };
 }
