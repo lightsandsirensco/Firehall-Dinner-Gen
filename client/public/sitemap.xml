@@ -91,6 +91,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://www.firehallmeals.com/breakfast/performance</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.firehallmeals.com/firefighter-red-lead-recipe</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>monthly</changefreq>
@@ -1015,12 +1021,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.firehallmeals.com/recipes/italian-sausage-veg-sheet-pan</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.firehallmeals.com/recipes/korean-beef-rice-bowls</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -1028,18 +1028,6 @@
   </url>
   <url>
     <loc>https://www.firehallmeals.com/recipes/kung-pao-chicken-rice-bowls</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.firehallmeals.com/recipes/lean-beef-broccoli-rice</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.firehallmeals.com/recipes/lean-turkey-bean-chili</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -1141,12 +1129,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.firehallmeals.com/recipes/sheet-pan-chicken-fajitas-lite</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://www.firehallmeals.com/recipes/sheet-pan-chimichurri-chicken-charred-vegetables</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
@@ -1190,12 +1172,6 @@
   </url>
   <url>
     <loc>https://www.firehallmeals.com/recipes/turkey-lettuce-wrap-night</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.firehallmeals.com/recipes/turkey-quinoa-stuffed-peppers</loc>
     <lastmod>2026-07-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -2462,6 +2438,36 @@
   </url>
   <url>
     <loc>https://www.firehallmeals.com/breakfast/veggie-egg-burritos</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.firehallmeals.com/breakfast/performance/apple-cinnamon-baked-oatmeal</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.firehallmeals.com/breakfast/performance/big-pot-savory-oats</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.firehallmeals.com/breakfast/performance/high-protein-parfaits</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.firehallmeals.com/breakfast/performance/protein-french-toast</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.firehallmeals.com/breakfast/performance/protein-pancake-tray</loc>
     <lastmod>2026-07-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

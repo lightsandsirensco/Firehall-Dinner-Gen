@@ -58,15 +58,20 @@ import { FIREHALL_CATEGORY_LABEL, type FirehallCategoryId } from "../../shared/f
 import { firehallCategoryExplorePath } from "../../shared/browse-canonical.js";
 import { APPROVED_CATALOG_TOTAL } from "../../shared/meal-catalog/curated-count.js";
 import { PIZZA_NIGHT_COUNT, PIZZA_NIGHT_RECIPES } from "../../shared/pizza-night/manifest.js";
-import { getSeoLandingPage } from "../../shared/seo/landing-pages-data.js";
-import { getProductSeoPage } from "../../shared/seo/product-pages-data.js";
+import { getSeoLandingPage, SEO_LANDING_PAGES } from "../../shared/seo/landing-pages-data.js";
+import { getProductSeoPage, PRODUCT_SEO_PAGES } from "../../shared/seo/product-pages-data.js";
 import { isPerformanceBreakfastSlug } from "../../shared/breakfast-catalog/governance-types.js";
-import { readBreakfastRecipePageFromDisk } from "../breakfast-catalog/page-store.js";
+import {
+  readBreakfastRecipePageFromDisk,
+  readBreakfastPerformanceIndexFromDisk,
+} from "../breakfast-catalog/page-store.js";
 import { readSmoothieRecipePage } from "../fuel-catalog/page-store.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../../shared/fuel-catalog/smoothies/catalog-data.js";
 import { readEditorialArticle } from "../editorial/page-store.js";
 import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../../shared/editorial/articles-data.js";
 import { guidePath } from "../../shared/editorial/content-schema.js";
+import { getApprovedCatalog } from "../approved-catalog-cache.js";
+import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
 import { applySeoTagsToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
 import {
   breakfastRecipeSnapshot,
@@ -79,6 +84,7 @@ import {
   renderIndexSnapshotHtml,
   renderRecipeSnapshotHtml,
   seoLandingPageSnapshot,
+  type IndexSnapshotLink,
   type IndexSnapshotSection,
 } from "./content-snapshot.js";
 import type { InjectionResult } from "./recipe-html-injection.js";
@@ -105,6 +111,62 @@ function popularRecipeLinks(count: number): IndexSnapshotSection {
   };
 }
 
+/** Every Explore-eligible recipe across every catalog (golden/performance/
+ * expansion/pizza/bbq/breakfast/smoothies), grouped by category, as real
+ * crawlable links. Explore's raw-HTML snapshot previously sampled only 15
+ * Golden 100 titles via `popularRecipeLinks` — the other ~375+ Explore-
+ * eligible recipes had no crawlable path from Explore at all, so /explore
+ * (the site's single source of truth for the full catalog — see the
+ * Generator/Explore parity work) wasn't actually exposing that catalog to
+ * non-JS crawlers. */
+function fullCatalogLinkSections(): IndexSnapshotSection[] {
+  const { recipes } = getApprovedCatalog();
+  const byCategory = new Map<string, IndexSnapshotLink[]>();
+  for (const r of recipes) {
+    const key = r.categoryLabel || "Recipes";
+    const list = byCategory.get(key) ?? [];
+    list.push({ label: r.title, path: approvedCatalogRecipePath(r.slug) });
+    byCategory.set(key, list);
+  }
+  return [...byCategory.entries()]
+    .sort((a, b) => a[0].localeCompare(b[0]))
+    .map(([heading, links]) => ({ heading, links }));
+}
+
+interface BreakfastLinkableEntry {
+  slug: string;
+  title: string;
+  filters?: string[];
+}
+
+/** Breakfast recipes have no precomputed `relatedSlugs` (unlike the dinner
+ * catalogs/smoothies), but the catalog index already carries a `filters`
+ * taxonomy (e.g. "quick_breakfasts", "breakfast_sandwiches") used for the
+ * real Explore/Breakfast filtering UI — reuse it to pick genuinely similar
+ * recipes (highest shared-filter count) instead of a random/arbitrary set. */
+function computeRelatedBreakfastLinks(
+  currentSlug: string,
+  allEntries: BreakfastLinkableEntry[],
+  count = 6,
+): IndexSnapshotLink[] {
+  const current = allEntries.find((r) => r.slug === currentSlug);
+  const currentFilters = new Set(current?.filters ?? []);
+  return allEntries
+    .filter((r) => r.slug !== currentSlug)
+    .map((r) => ({
+      entry: r,
+      overlap: (r.filters ?? []).filter((f) => currentFilters.has(f)).length,
+    }))
+    .sort((a, b) => b.overlap - a.overlap || a.entry.slug.localeCompare(b.entry.slug))
+    .slice(0, count)
+    .map(({ entry }) => ({
+      label: entry.title,
+      path: isPerformanceBreakfastSlug(entry.slug)
+        ? `/breakfast/performance/${entry.slug}`
+        : `/breakfast/${entry.slug}`,
+    }));
+}
+
 function categoryLinkSection(): IndexSnapshotSection {
   return {
     heading: "Browse by category",
@@ -118,6 +180,47 @@ function categoryLinkSection(): IndexSnapshotSection {
       { label: "Guides", path: "/guides" },
     ]),
   };
+}
+
+/** Every SEO landing page (/firefighter-meals, /firehouse-recipes, …) and
+ * product/tool page (/hall-meal-planner, /cost-per-plate-calculator, …),
+ * plus a handful of one-off marketing/utility routes — none of these had
+ * ANY crawlable inbound link anywhere on the site (confirmed via
+ * `audit-crawlability`: 26 of 27 "static" sitemap URLs had zero inbound
+ * links). The homepage is the one page guaranteed to be at depth 0, so
+ * linking them all from here guarantees every one is at most depth 1. */
+function moreResourcesLinkSections(): IndexSnapshotSection[] {
+  return [
+    {
+      heading: "More firefighter meal resources",
+      links: SEO_LANDING_PAGES.map((p) => ({ label: p.h1, path: p.path })),
+    },
+    {
+      heading: "Tools",
+      links: PRODUCT_SEO_PAGES.map((p) => ({ label: p.h1, path: p.path })),
+    },
+    {
+      heading: "More",
+      links: [
+        { label: "Top Rated Recipes", path: "/top-rated-recipes" },
+        { label: "Hall of Fame", path: "/hall-of-fame" },
+        { label: "Generator", path: "/generator" },
+        { label: "FAQ", path: "/faq" },
+        { label: "About", path: "/about" },
+        { label: "How We Test Recipes", path: "/how-we-test-recipes" },
+        { label: "Firefighter Red Lead Recipe", path: "/firefighter-red-lead-recipe" },
+      ],
+    },
+  ];
+}
+
+/** Every slug that resolves to a real, Explore-eligible catalog recipe —
+ * used to guard every recipe-slug link built from hand-authored content
+ * (guide `mealRecommendations`, landing/product page `recipeSlugs`) against
+ * ever emitting a link to a stale/renamed/removed recipe (see
+ * `audit-crawlability`'s "broken internal links" check). */
+function knownRecipeSlugsSet(): Set<string> {
+  return new Set(getApprovedCatalog().recipes.map((r) => r.slug));
 }
 
 interface ResolvedPageSeo {
@@ -157,7 +260,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
       bodyHtml: renderIndexSnapshotHtml({
         h1: "Firehall Meals",
         intro: seo.description,
-        sections: [categoryLinkSection(), popularRecipeLinks(10)],
+        sections: [categoryLinkSection(), popularRecipeLinks(10), ...moreResourcesLinkSections()],
       }),
     };
   }
@@ -205,7 +308,10 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           : []),
       ],
       bodyHtml: classicsWheelProductPage
-        ? renderArticleSnapshotHtml(origin, productSeoPageSnapshot(classicsWheelProductPage))
+        ? renderArticleSnapshotHtml(
+            origin,
+            productSeoPageSnapshot(classicsWheelProductPage, knownRecipeSlugsSet()),
+          )
         : undefined,
     };
   }
@@ -223,7 +329,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
       bodyHtml: renderIndexSnapshotHtml({
         h1: h1FromSeoTitle(seo.title),
         intro: seo.description,
-        sections: [popularRecipeLinks(15), categoryLinkSection()],
+        sections: [categoryLinkSection(), ...fullCatalogLinkSections()],
       }),
     };
   }
@@ -327,7 +433,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         sections: [
           {
             heading: "Pizza recipes",
-            links: PIZZA_NIGHT_RECIPES.slice(0, 12).map((r) => ({ label: r.title, path: recipePath(r.slug) })),
+            links: PIZZA_NIGHT_RECIPES.map((r) => ({ label: r.title, path: recipePath(r.slug) })),
           },
         ],
       }),
@@ -363,6 +469,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
   if (path === "/breakfast") {
     const seo = buildBreakfastIndexSeo();
     const breakfastIndex = readBreakfastCatalogIndexFromDisk();
+    const performanceIndex = readBreakfastPerformanceIndexFromDisk();
     return {
       seo,
       jsonLd: [
@@ -376,10 +483,31 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         intro: seo.description,
         sections: [
           {
+            // Previously `.slice(0, 15)` — only 15 of 62 breakfast recipes
+            // had ANY crawlable link anywhere on the site (confirmed against
+            // raw production HTML: the other 47 had zero inbound links).
             heading: "Breakfast recipes",
-            links: (breakfastIndex?.recipes ?? [])
-              .slice(0, 15)
-              .map((r) => ({ label: r.title, path: `/breakfast/${r.slug}` })),
+            links: (breakfastIndex?.recipes ?? []).map((r) => ({
+              label: r.title,
+              path: `/breakfast/${r.slug}`,
+            })),
+          },
+          {
+            heading: "Performance breakfasts",
+            links: [
+              { label: "All performance breakfasts", path: "/breakfast/performance" },
+              ...(performanceIndex?.recipes ?? []).map((r) => ({
+                label: r.title,
+                path: `/breakfast/performance/${r.slug}`,
+              })),
+            ],
+          },
+          {
+            heading: "Cooking dinner tonight?",
+            links: [
+              { label: "Firefighter Meals hub", path: "/firefighter-meals" },
+              { label: "Find Tonight's Meal", path: "/generator" },
+            ],
           },
         ],
       }),
@@ -388,8 +516,13 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
 
   if (path === "/breakfast/performance") {
     const seo = buildBreakfastPerformanceIndexSeo();
-    const breakfastIndex = readBreakfastCatalogIndexFromDisk();
-    const performanceEntries = (breakfastIndex?.recipes ?? []).filter((r) => isPerformanceBreakfastSlug(r.slug));
+    // Performance breakfasts live in their own index (`/breakfast/performance/index.json`,
+    // fetched client-side via `fetchBreakfastPerformanceCatalogIndex`) — the
+    // plain breakfast index never contained them, so filtering it for
+    // performance slugs (the old approach) always produced an empty list,
+    // leaving this hub (and all 5 performance recipes) with zero crawlable
+    // links anywhere on the site.
+    const performanceIndex = readBreakfastPerformanceIndexFromDisk();
     return {
       seo,
       jsonLd: [
@@ -405,9 +538,10 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         sections: [
           {
             heading: "Performance breakfast recipes",
-            links: performanceEntries
-              .slice(0, 15)
-              .map((r) => ({ label: r.title, path: `/breakfast/performance/${r.slug}` })),
+            links: (performanceIndex?.recipes ?? []).map((r) => ({
+              label: r.title,
+              path: `/breakfast/performance/${r.slug}`,
+            })),
           },
         ],
       }),
@@ -429,6 +563,15 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         h1: h1FromSeoTitle(seo.title),
         intro: seo.description,
         sections: [
+          {
+            heading: "Guide topics",
+            links: [
+              { label: "Firefighter Meals", path: "/guides/topic/firefighter-meals" },
+              { label: "Firehall Dinner Ideas", path: "/guides/topic/firehall-dinners" },
+              { label: "Firefighter Nutrition", path: "/guides/topic/firefighter-nutrition" },
+              { label: "Station Cooking", path: "/guides/topic/station-cooking" },
+            ],
+          },
           {
             heading: "Guides",
             links: EDITORIAL_ARTICLES.map((a) => ({ label: a.title, path: guidePath(a.slug) })),
@@ -474,9 +617,16 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
     }
   }
 
+  function allBreakfastLinkableEntries(): BreakfastLinkableEntry[] {
+    const regular = readBreakfastCatalogIndexFromDisk()?.recipes ?? [];
+    const performance = readBreakfastPerformanceIndexFromDisk()?.recipes ?? [];
+    return [...regular, ...performance];
+  }
+
   const breakfastPerfMatch = /^\/breakfast\/performance\/([a-z0-9-]+)$/i.exec(path);
   if (breakfastPerfMatch) {
-    const page = readBreakfastRecipePageFromDisk(breakfastPerfMatch[1].trim().toLowerCase());
+    const slug = breakfastPerfMatch[1].trim().toLowerCase();
+    const page = readBreakfastRecipePageFromDisk(slug);
     if (!page) return "not_found";
     return {
       seo: buildBreakfastRecipeSeo(page),
@@ -489,7 +639,10 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           { name: page.title, path: `/breakfast/performance/${page.slug}` },
         ]),
       ],
-      bodyHtml: renderRecipeSnapshotHtml(origin, breakfastRecipeSnapshot(page)),
+      bodyHtml: renderRecipeSnapshotHtml(
+        origin,
+        breakfastRecipeSnapshot(page, computeRelatedBreakfastLinks(slug, allBreakfastLinkableEntries())),
+      ),
     };
   }
 
@@ -510,7 +663,10 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           { name: page.title, path: isPerformance ? `/breakfast/performance/${page.slug}` : `/breakfast/${page.slug}` },
         ]),
       ],
-      bodyHtml: renderRecipeSnapshotHtml(origin, breakfastRecipeSnapshot(page)),
+      bodyHtml: renderRecipeSnapshotHtml(
+        origin,
+        breakfastRecipeSnapshot(page, computeRelatedBreakfastLinks(slug, allBreakfastLinkableEntries())),
+      ),
     };
   }
 
@@ -546,7 +702,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         buildFaqPageSchema(article.faqs),
         buildBreadcrumbListSchema(origin, buildGuideArticleBreadcrumbs(origin, article)),
       ],
-      bodyHtml: renderArticleSnapshotHtml(origin, editorialArticleSnapshot(article)),
+      bodyHtml: renderArticleSnapshotHtml(origin, editorialArticleSnapshot(article, knownRecipeSlugsSet())),
     };
   }
 
@@ -568,7 +724,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           ]),
           buildFaqPageSchema(landing.faqs),
         ],
-        bodyHtml: renderArticleSnapshotHtml(origin, seoLandingPageSnapshot(landing)),
+        bodyHtml: renderArticleSnapshotHtml(origin, seoLandingPageSnapshot(landing, knownRecipeSlugsSet())),
       };
     }
 
@@ -590,7 +746,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
           ]),
           buildFaqPageSchema(product.faqs),
         ],
-        bodyHtml: renderArticleSnapshotHtml(origin, productSeoPageSnapshot(product)),
+        bodyHtml: renderArticleSnapshotHtml(origin, productSeoPageSnapshot(product, knownRecipeSlugsSet())),
       };
     }
   }

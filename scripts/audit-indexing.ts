@@ -18,6 +18,7 @@ import {
   smoothieRecipePath,
 } from "../shared/fuel-catalog/paths.js";
 import { guidePath } from "../shared/editorial/content-schema.js";
+import { PHASE5_REMOVED_SLUGS } from "../shared/catalog-consolidation/phase5-redirects.js";
 import { buildRecipePageSeo } from "../shared/seo/metadata.js";
 import {
   buildBreakfastRecipeSeo,
@@ -114,11 +115,26 @@ function collectIndexableRecipes(): Map<string, { slug: string; collection: stri
     ["performance", path.join(PUBLIC, "catalog", "performance-meals"), approvedCatalogRecipePath],
     ["expansion", path.join(PUBLIC, "catalog", "hall-expansion"), approvedCatalogRecipePath],
     ["pizza", path.join(PUBLIC, "catalog", "pizza-night"), approvedCatalogRecipePath],
+    // NOTE: BBQ (`catalog/bbq`) is intentionally NOT scanned here yet —
+    // `buildRecipeSeo()` below doesn't have a BBQ-specific page loader/SEO
+    // builder, so including it would trade the (pre-existing, harmless)
+    // "orphan sitemap URL" false-positive for a worse false-positive
+    // ("missing SEO bundle" for all 45 BBQ recipes). BBQ recipes ARE fully
+    // crawlable/indexable in production — confirmed via
+    // `npm run audit:crawlability` (recipe-bbq: 45/45 crawlable, 0 broken
+    // links) — this is a gap in this specific audit script's own recipe
+    // registry, not a live-site defect.
     ["breakfast", path.join(PUBLIC, "catalog", "breakfast"), approvedCatalogRecipePath],
     ["smoothie", path.join(PUBLIC, "catalog", "smoothies"), smoothieRecipePath],
   ];
   for (const [collection, dir, pathFn] of catalogs) {
     for (const { slug } of catalogSlugs(dir)) {
+      // Catalog-consolidation ("phase5") retired these slugs in favor of a
+      // canonical replacement — some on-disk index.json files still carry
+      // a stale entry even though the slug is no longer a real, separately
+      // canonical page (see `shared/catalog-consolidation/phase5-redirects.ts`
+      // and `server/seo/sitemap.ts`, which excludes them from the sitemap).
+      if (PHASE5_REMOVED_SLUGS.has(slug)) continue;
       const p = pathFn(slug);
       if (!paths.has(p)) paths.set(p, { slug, collection });
     }

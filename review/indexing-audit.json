@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-01T00:20:06.666Z",
+  "generatedAt": "2026-08-02T18:50:19.168Z",
   "origin": "https://www.firehallmeals.com",
   "sitemapSynced": false,
   "totals": {
-    "sitemapUrls": 513,
-    "recipeUrls": 374,
-    "recipeUrlsInSitemap": 374,
+    "sitemapUrls": 514,
+    "recipeUrls": 365,
+    "recipeUrlsInSitemap": 365,
     "guideUrls": 57,
     "guideUrlsInSitemap": 61,
     "approvedCatalogRecipes": 392
@@ -33,7 +33,7 @@
     }
   },
   "recipeMetadata": {
-    "audited": 374,
+    "audited": 365,
     "missingMetadata": [],
     "duplicateTitles": 0,
     "duplicateDescriptions": 0,
@@ -41,8 +41,8 @@
     "canonicalMismatch": []
   },
   "internalLinks": {
-    "notInApprovedCatalog": 27,
-    "hubOnlyRecipes": 27,
+    "notInApprovedCatalog": 18,
+    "hubOnlyRecipes": 18,
     "hubOnlySample": [
       {
         "slug": "breakfast-burrito-bar",
@@ -59,26 +59,6 @@
       {
         "slug": "pancake-short-stack",
         "hub": "hall-guide"
-      },
-      {
-        "slug": "italian-sausage-veg-sheet-pan",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "lean-beef-broccoli-rice",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "lean-turkey-bean-chili",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "sheet-pan-chicken-fajitas-lite",
-        "hub": "performance-meals"
-      },
-      {
-        "slug": "turkey-quinoa-stuffed-peppers",
-        "hub": "performance-meals"
       },
       {
         "slug": "turkey-sausage-egg-muffins",
@@ -123,10 +103,22 @@
       {
         "slug": "sicilian-sheet-pizza",
         "hub": "/pizza"
+      },
+      {
+        "slug": "smoked-brisket-bbq-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "taco-pizza",
+        "hub": "/pizza"
+      },
+      {
+        "slug": "veggie-supreme-pizza",
+        "hub": "/pizza"
       }
     ],
-    "notLinkedFromGuidesOnly": 291,
-    "weakOnPageOutboundLinks": 186,
+    "notLinkedFromGuidesOnly": 282,
+    "weakOnPageOutboundLinks": 181,
     "internallyUnreachable": []
   },
   "sitemapCoverage": {

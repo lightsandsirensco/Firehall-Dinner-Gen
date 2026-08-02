@@ -21,6 +21,29 @@ export type SeoLandingPageSection = {
   paragraphs: string[];
 };
 
+/**
+ * A categorized recipe grid within a landing page (e.g. "Quick Firehouse
+ * Meals", "High-Protein Firefighter Meals"). Optional — pages that don't
+ * set this fall back to the single flat `recipeSlugs` grid, so existing
+ * simple landing pages are unaffected.
+ */
+export type SeoLandingRecipeSection = {
+  heading: string;
+  /** Short 1-2 sentence lead-in for the section — optional. */
+  intro?: string;
+  recipeSlugs: string[];
+  /** e.g. link to /breakfast for the "Breakfast at the Firehall" section. */
+  viewAllPath?: string;
+  viewAllLabel?: string;
+};
+
+export type SeoLandingGeneratorCta = {
+  heading: string;
+  body: string;
+  ctaLabel: string;
+  ctaPath: string;
+};
+
 export type SeoLandingPageDef = {
   slug: SeoLandingPageSlug;
   path: string;
@@ -30,8 +53,19 @@ export type SeoLandingPageDef = {
   keywords: string[];
   intro: string;
   sections: SeoLandingPageSection[];
-  /** Curated catalog slugs linked on the page */
+  /** Curated catalog slugs linked on the page (flat grid — used when
+   * `recipeSections` is not set, and always used for schema/validation
+   * as the flattened union of every slug on the page). */
   recipeSlugs: string[];
+  /** Optional categorized recipe grids — supersedes the flat `recipeSlugs`
+   * grid on render when present (see `firefighter-meals` for the primary
+   * use case: Popular / Quick / High-Protein / Healthy / Classics / Breakfast). */
+  recipeSections?: SeoLandingRecipeSection[];
+  /** Optional editorial section(s) rendered AFTER `recipeSections` (and
+   * before the Generator CTA / FAQs) — e.g. "Cooking for a Firehouse Crew". */
+  secondarySections?: SeoLandingPageSection[];
+  /** Optional "Find Tonight's Meal" callout linking to the Generator. */
+  generatorCta?: SeoLandingGeneratorCta;
   relatedPages: Array<{ slug: SeoLandingPageSlug; label: string }>;
   faqs: FaqItem[];
 };
@@ -40,19 +74,22 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
   {
     slug: "firefighter-meals",
     path: "/firefighter-meals",
-    h1: "Firefighter Meals",
-    title: "Firefighter Meals — Crew Dinners for the Hall | Firehall Meals",
+    h1: "Firefighter Meals: Easy Firehouse Meals for the Whole Crew",
+    title: "Firefighter Meals: Easy Firehouse Meals for the Crew | Firehall Meals",
     description:
-      "Firefighter meals sized for the crew — hall-tested dinners, shift-friendly timing, and station portions. Built by firefighters. Tested in the firehall.",
+      "Firefighter meals for the whole crew — quick shift dinners, high-protein plates, healthy options, hall classics, and firehouse breakfast. Built by firefighters.",
     keywords: [
       "firefighter meals",
+      "firehouse meals",
+      "fire station meals",
+      "firefighter recipes",
+      "firehouse recipes",
+      "firehouse dinner ideas",
       "meals for firefighters",
       "crew meals",
-      "firehall meals",
-      "station meals",
     ],
     intro:
-      "Every hall has the same argument before the tones drop: what's for dinner? Firefighter meals are not home-cooking scaled up — they are built for crews who eat together, cook between calls, and need food that still tastes good when someone gets back late. Firehall Meals exists to end that debate with real station dinners, not influencer food.",
+      "A good firefighter meal feeds the whole crew, scales without a spreadsheet, and survives a call mid-prep. This hub is the starting point: quick shift dinners, high-protein plates, healthier options, and the hall classics every station rotates through, plus firehouse breakfast when the shift starts before the sun does. Every recipe below is written for station kitchens — crew-sized portions, honest cook times, and steps a rookie can follow solo. Built by firefighters. Tested on real shifts, not photographed for a blog.",
     sections: [
       {
         heading: "What makes a meal work at the firehall",
@@ -62,21 +99,95 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
           "Firehall Meals organizes every recipe by how halls actually cook: quick shift nights, BBQ feeds, healthy performance plates, comfort food after tough runs, and feeds for a crowd when the whole battalion shows up.",
         ],
       },
+    ],
+    recipeSections: [
       {
-        heading: "Crew-sized portions and honest timing",
-        paragraphs: [
-          "Blog recipes sized for four do not translate to a station kitchen. Our firefighter meals default to crew portions with shopping lists that match what you buy at the grocery store — not metric conversions buried in a comment section.",
-          "Timing is written for real shift flow: prep that can pause when the tones go, steps that do not assume someone is watching a pot for forty uninterrupted minutes, and cleanup that does not leave the hall a disaster before bed.",
-          "Browse the full catalog when you want to pick a specific plate, or use Find a Meal when the crew wants a fast answer based on protein, time, and head count.",
+        heading: "Popular Firefighter Meals",
+        intro:
+          "The dinners that show up on hall menus most often — reliable, crew-tested, and easy to defend when someone asks what's for dinner.",
+        recipeSlugs: [
+          "chicken-parm",
+          "smash-burgers",
+          "pulled-pork",
+          "big-chili",
+          "bbq-chicken-bowls",
+          "steak-tacos",
+          "meatloaf-mashed",
+          "sheet-pan-fajitas",
+          "baked-ziti",
+          "shepherds-pie",
         ],
       },
       {
-        heading: "Hall classics every crew recognizes",
-        paragraphs: [
-          "Chicken parm, smash burgers, pulled pork, steak tacos, beef dip, and big-batch chili show up in halls across North America for a reason — they feed people, they scale, and they taste like the kind of food firefighters actually want after a shift.",
-          "Our Classics Wheel spins through ten hall-tested picks when nobody can decide. It is the same kitchen-table gamble every station knows, backed by full recipes with crew scaling built in.",
-          "Whether you are cooking for two on a quiet night or feeding twelve after training, start with firefighter meals that were written on shift — not copied from a home kitchen blog.",
+        heading: "Quick Firehouse Meals",
+        intro: "Twenty-five minutes or less on the clock — built for shifts where dinner has to happen fast.",
+        recipeSlugs: [
+          "cast-iron-chicken-fajitas",
+          "korean-beef-rice-bowls",
+          "buffalo-chicken-sweet-potato-bowls",
+          "chipotle-lime-chicken-tacos",
+          "turkey-taco-skillet",
+          "caprese-chicken-bake",
+          "cajun-chicken-rice-bowl",
         ],
+      },
+      {
+        heading: "High-Protein Firefighter Meals",
+        intro: "Bigger plates for crews training on shift or just tired of running out of gas by 2 a.m.",
+        recipeSlugs: [
+          "batch-lasagna",
+          "chicken-tikka-masala",
+          "turkey-chili",
+          "white-bean-chicken-chili",
+          "crock-barbacoa-chicken",
+          "bbq-chicken-mac-and-cheese",
+          "beef-birria-with-consomme",
+          "performance-burrito-bowls",
+        ],
+      },
+      {
+        heading: "Healthy Firefighter Meals",
+        intro: "Lighter plates that still feel like a real hall dinner — no rabbit food, no fitness-blog portions.",
+        recipeSlugs: [
+          "mediterranean-baked-fish-tray",
+          "herb-baked-salmon-tray",
+          "baked-turkey-meatball-marinara",
+          "chicken-souvlaki",
+          "cedar-plank-salmon",
+          "turkey-sweet-potato-chili",
+          "crispy-fish-taco-night",
+        ],
+        viewAllPath: "/healthy-firefighter-meals",
+        viewAllLabel: "See all healthy firefighter meals",
+      },
+      {
+        heading: "Firehouse Classics",
+        intro: "Pasta, chicken parm, chili, tacos, subs — the crew-friendly standards every hall rotates through.",
+        recipeSlugs: [
+          "chicken-caesar",
+          "beef-dip",
+          "meatball-hoagies",
+          "loaded-nacho-skillet",
+          "parm-hero-subs",
+          "steak-sandwiches",
+          "jerk-chicken",
+          "crispy-chicken-cutlets",
+        ],
+      },
+      {
+        heading: "Breakfast at the Firehall",
+        intro:
+          "Shifts start before the sun most days. The full firehouse breakfast collection lives at /breakfast — here are a few crew favorites to start with.",
+        recipeSlugs: [
+          "cast-iron-breakfast-skillet",
+          "buttermilk-pancakes",
+          "hall-breakfast-burritos",
+          "bagel-lox-breakfast-board",
+          "belgian-waffle-platter",
+          "chorizo-breakfast-hash",
+        ],
+        viewAllPath: "/breakfast",
+        viewAllLabel: "See the full firehouse breakfast collection",
       },
     ],
     recipeSlugs: [
@@ -88,11 +199,67 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
       "steak-tacos",
       "meatloaf-mashed",
       "sheet-pan-fajitas",
+      "baked-ziti",
+      "shepherds-pie",
+      "cast-iron-chicken-fajitas",
+      "korean-beef-rice-bowls",
+      "buffalo-chicken-sweet-potato-bowls",
+      "chipotle-lime-chicken-tacos",
+      "turkey-taco-skillet",
+      "caprese-chicken-bake",
+      "cajun-chicken-rice-bowl",
+      "batch-lasagna",
+      "chicken-tikka-masala",
+      "turkey-chili",
+      "white-bean-chicken-chili",
+      "crock-barbacoa-chicken",
+      "bbq-chicken-mac-and-cheese",
+      "beef-birria-with-consomme",
+      "performance-burrito-bowls",
+      "mediterranean-baked-fish-tray",
+      "herb-baked-salmon-tray",
+      "baked-turkey-meatball-marinara",
+      "chicken-souvlaki",
+      "cedar-plank-salmon",
+      "turkey-sweet-potato-chili",
+      "crispy-fish-taco-night",
+      "chicken-caesar",
+      "beef-dip",
+      "meatball-hoagies",
+      "loaded-nacho-skillet",
+      "parm-hero-subs",
+      "steak-sandwiches",
+      "jerk-chicken",
+      "crispy-chicken-cutlets",
+      "cast-iron-breakfast-skillet",
+      "buttermilk-pancakes",
+      "hall-breakfast-burritos",
+      "bagel-lox-breakfast-board",
+      "belgian-waffle-platter",
+      "chorizo-breakfast-hash",
     ],
+    secondarySections: [
+      {
+        heading: "Cooking for a Firehouse Crew",
+        paragraphs: [
+          "Most Firehall Meals recipes are written for four, six, eight, or ten-plus and scale cleanly — double the protein and starch, keep aromatics and seasoning close to the original ratio, and taste before you salt a triple batch. A recipe that serves four rarely needs exactly 2.5x for ten; round to what your pot, sheet pan, or oven trays can actually hold.",
+          "Time dinner around the shift, not the other way around: pick something that can pause at a safe stopping point (browned and simmering, not mid-sear) if the tones drop, and hold on low heat or in the oven at 200°F until the crew is back at the table.",
+          "Slow cookers, braises, chili, and sheet pans reheat well for late arrivals — they're the safer pick on a busy night. Pan-fried, delicate seafood, and anything meant to be served the instant it leaves the pan are better saved for quieter shifts.",
+          "When picking tonight's meal, match the recipe to the shift: quick skillet or sheet-pan meals on busy nights, a slow cooker or braise when calls are unpredictable, and the bigger builds — lasagna, brisket, a full taco bar — for a shift that's actually calm.",
+        ],
+      },
+    ],
+    generatorCta: {
+      heading: "Find Tonight's Meal",
+      body: "Not sure what to cook? Tell the Generator your crew size, time on hand, and protein — it picks a real recipe from this catalog and swaps to a different meal if the first one is not it.",
+      ctaLabel: "Pick Tonight's Meal",
+      ctaPath: "/generator",
+    },
     relatedPages: [
       { slug: "firefighter-recipes", label: "Firefighter recipes" },
       { slug: "fire-station-meals", label: "Fire station meals" },
       { slug: "healthy-firefighter-meals", label: "Healthy firefighter meals" },
+      { slug: "firefighter-breakfast-recipes", label: "Firefighter breakfast recipes" },
     ],
     faqs: [
       {
@@ -104,6 +271,31 @@ export const SEO_LANDING_PAGES: SeoLandingPageDef[] = [
         question: "How many people does a firefighter meal serve?",
         answer:
           "Most Firehall Meals recipes scale from 2 to 12 at the table. Shopping lists and steps adjust with crew size so you are not mentally doubling a four-person blog recipe.",
+      },
+      {
+        question: "What's a good quick firehouse meal when the tones might drop mid-shift?",
+        answer:
+          "Skillet dinners, rice bowls, and sheet-pan meals under 25 minutes are the safest bet — see Quick Firehouse Meals above. They have short active-cooking windows and hold fine if dinner gets pushed back.",
+      },
+      {
+        question: "What counts as a \"healthy\" firefighter meal on this site?",
+        answer:
+          "Our healthy tag is based on real computed nutrition — calories and fat per serving, or performance macros for high-protein plates — not a keyword guess. See Healthy Firefighter Meals above or the full healthy-firefighter-meals collection.",
+      },
+      {
+        question: "Do you have firehouse breakfast recipes too?",
+        answer:
+          "Yes — breakfast lives at /breakfast with its own full collection (skillets, burritos, bakes, and sandwiches). It's kept separate from the dinner Generator on purpose. A few crew favorites are linked above.",
+      },
+      {
+        question: "How does Find Tonight's Meal (the Generator) work?",
+        answer:
+          "Set your crew size, time on hand, protein, and any dietary restrictions, and it picks a real recipe from the same catalog featured on this page — no fake filler meals, no relaxed dietary rules to force a match.",
+      },
+      {
+        question: "What makes these recipes different from a regular recipe blog?",
+        answer:
+          "Every recipe is written and portioned for station kitchens by firefighters — crew-sized default servings, timing that survives interruptions, and steps a rookie can run without a captain hovering over the pan.",
       },
     ],
   },

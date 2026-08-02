@@ -1,6 +1,6 @@
 # SEO Indexing Audit
 
-Generated: 2026-08-01T00:20:06.666Z
+Generated: 2026-08-02T18:50:19.168Z
 
 Canonical origin: **https://www.firehallmeals.com**
 
@@ -21,9 +21,9 @@ Canonical origin: **https://www.firehallmeals.com**
 
 | Metric | Count |
 |--------|------:|
-| **Total URLs in sitemap** | 513 |
-| **Total recipe URLs** (catalog indexes) | 374 |
-| Recipe URLs listed in sitemap | 374 |
+| **Total URLs in sitemap** | 514 |
+| **Total recipe URLs** (catalog indexes) | 365 |
+| Recipe URLs listed in sitemap | 365 |
 | **Total guide URLs** | 57 |
 | Guide URLs listed in sitemap | 61 |
 | Approved catalog (Explore / Recipes browse) | 392 |
@@ -40,7 +40,7 @@ Canonical origin: **https://www.firehallmeals.com**
 
 
 
-Hall guides index (`/guides`) plus **61** individual guide URLs. Explore catalog (`/explore`) plus **374** recipe/smoothie detail URLs.
+Hall guides index (`/guides`) plus **61** individual guide URLs. Explore catalog (`/explore`) plus **365** recipe/smoothie detail URLs.
 
 ## 2. robots.txt
 
@@ -241,7 +241,7 @@ Sitemap: https://www.firehallmeals.com/sitemap.xml
 
 ## 3. Recipe page metadata
 
-Audited **374** indexable recipe URLs.
+Audited **365** indexable recipe URLs.
 
 | Issue | Count |
 |-------|------:|
@@ -262,9 +262,9 @@ Recipes should be reachable via **Explore / Recipes** (approved catalog) and/or 
 | Signal | Count |
 |--------|------:|
 | In approved catalog (Explore / Recipes grid) | 392 |
-| Hub-only (Pizza / Breakfast / Performance — not on Explore) | 27 |
-| Not linked from any hall guide | 291 |
-| Golden-family pages with &lt;2 outbound related links | 186 |
+| Hub-only (Pizza / Breakfast / Performance — not on Explore) | 18 |
+| Not linked from any hall guide | 282 |
+| Golden-family pages with &lt;2 outbound related links | 181 |
 | **True orphan recipes** (no catalog hub, no guide link) | **0** |
 
 _No true orphans — every indexable recipe is reachable via Explore, a dedicated hub (/pizza, /breakfast), performance catalog, or a hall guide._
@@ -272,7 +272,7 @@ _No true orphans — every indexable recipe is reachable via Explore, a dedicate
 
 ### Hub-only recipes (indexed, not on Explore)
 
-27 recipes live on dedicated hubs instead of the main catalog — expected for Pizza Night and some breakfast/performance entries. See `hubOnlySample` in JSON.
+18 recipes live on dedicated hubs instead of the main catalog — expected for Pizza Night and some breakfast/performance entries. See `hubOnlySample` in JSON.
 
 
 ## 5. Sitemap generation coverage

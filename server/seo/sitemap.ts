@@ -17,6 +17,7 @@ import { PIZZA_NIGHT_CATALOG_PUBLIC_DIR } from "../pizza-night/page-store.js";
 import { guidePath } from "../../shared/editorial/content-schema.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
 import { smoothieRecipePath } from "../../shared/fuel-catalog/paths.js";
+import { PHASE5_REMOVED_SLUGS } from "../../shared/catalog-consolidation/phase5-redirects.js";
 
 export function resolvePublicSiteOrigin(reqHost?: string, forwardedProto?: string): string {
   const fromEnv =
@@ -66,6 +67,7 @@ const STATIC_PATHS: Array<{ path: string; changefreq: string; priority: string }
   { path: "/wheel", changefreq: "weekly", priority: "0.7" },
   { path: "/smoothies", changefreq: "weekly", priority: "0.85" },
   { path: "/breakfast", changefreq: "weekly", priority: "0.8" },
+  { path: "/breakfast/performance", changefreq: "weekly", priority: "0.7" },
   { path: "/firefighter-red-lead-recipe", changefreq: "monthly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.5" },
   { path: "/how-we-test-recipes", changefreq: "monthly", priority: "0.55" },
@@ -157,6 +159,35 @@ function readBreakfastSlugs(): Array<{ slug: string; generatedAt?: string }> {
   }
 }
 
+const BREAKFAST_PERFORMANCE_PUBLIC_DIR = path.join(
+  process.cwd(),
+  "client",
+  "public",
+  "catalog",
+  "breakfast",
+  "performance",
+);
+
+/** Performance breakfasts (e.g. "protein-pancake-tray") live in their own
+ * index (`/catalog/breakfast/performance/index.json`) — the plain breakfast
+ * index never contained them, so they were previously entirely absent from
+ * the sitemap (confirmed: 0 of 5 present) despite being real, indexable,
+ * `/breakfast/performance/:slug` pages. */
+function readBreakfastPerformanceSlugs(): Array<{ slug: string; generatedAt?: string }> {
+  const indexFile = path.join(BREAKFAST_PERFORMANCE_PUBLIC_DIR, "index.json");
+  if (!fs.existsSync(indexFile)) return [];
+  try {
+    const index = JSON.parse(fs.readFileSync(indexFile, "utf8")) as {
+      generatedAt?: string;
+      recipes?: Array<{ slug: string }>;
+    };
+    const generatedAt = index.generatedAt;
+    return (index.recipes ?? []).map((r) => ({ slug: r.slug, generatedAt }));
+  } catch {
+    return [];
+  }
+}
+
 function readBbqSlugs(): Array<{ slug: string; generatedAt?: string }> {
   const indexFile = path.join(BBQ_CATALOG_PUBLIC_DIR, "index.json");
   if (!fs.existsSync(indexFile)) return [];
@@ -213,6 +244,15 @@ function readHallRecipeSlugs(): Array<{ slug: string; generatedAt?: string }> {
   }
   for (const row of readPizzaNightSlugs()) {
     if (!bySlug.has(row.slug)) bySlug.set(row.slug, row);
+  }
+  // A handful of on-disk catalog index files still contain an entry for a
+  // slug that catalog-consolidation ("phase5") retired in favor of a
+  // canonical replacement slug (see `PHASE5_REMOVED_SLUGS`) — without a
+  // live 301 in place for these, keeping them in the sitemap would submit a
+  // URL to Google that 404s. Drop them here so the sitemap only lists
+  // currently-canonical recipe URLs.
+  for (const removedSlug of PHASE5_REMOVED_SLUGS) {
+    bySlug.delete(removedSlug);
   }
   return [...bySlug.values()];
 }
@@ -284,6 +324,15 @@ export function buildSitemapXml(origin: string): string {
   }
 
   for (const { slug, generatedAt } of readBreakfastSlugs()) {
+    addEntry({
+      path: approvedCatalogRecipePath(slug),
+      lastmod: generatedAt,
+      changefreq: "monthly",
+      priority: "0.8",
+    });
+  }
+
+  for (const { slug, generatedAt } of readBreakfastPerformanceSlugs()) {
     addEntry({
       path: approvedCatalogRecipePath(slug),
       lastmod: generatedAt,

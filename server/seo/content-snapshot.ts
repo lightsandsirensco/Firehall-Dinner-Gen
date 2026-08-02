@@ -25,7 +25,9 @@ import type { EditorialArticle } from "../../shared/editorial/content-schema.js"
 import type { ClientRecipeResponse } from "../../shared/schema.js";
 import type { SeoLandingPageDef } from "../../shared/seo/landing-pages-data.js";
 import type { ProductSeoPageDef } from "../../shared/seo/product-pages-data.js";
-import { absoluteImageUrl, recipePath } from "../../shared/seo/urls.js";
+import type { EditorialMealPick } from "../../shared/editorial/content-schema.js";
+import { absoluteImageUrl } from "../../shared/seo/urls.js";
+import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
 import { escapeHtml } from "./apply-seo-tags.js";
 
 /** "smoked-brisket" -> "Smoked Brisket" — used only as a crawlable link label
@@ -108,6 +110,9 @@ export interface RecipeSnapshotData {
   ingredients: RecipeSnapshotIngredient[];
   steps: RecipeSnapshotStep[];
   nutrition: { calories: number; protein: number; carbs: number; fat: number } | null;
+  /** Crawlable links to genuinely related recipes (same category/protein/
+   * meal type) — see each collection's `*RecipeSnapshot` builder below. */
+  relatedLinks?: IndexSnapshotLink[];
 }
 
 /** Render a recipe's real content (ingredients, steps, nutrition) as plain HTML for `#root`. */
@@ -137,6 +142,10 @@ export function renderRecipeSnapshotHtml(origin: string, data: RecipeSnapshotDat
     })
     .join("");
 
+  const relatedSection: IndexSnapshotSection[] = data.relatedLinks?.length
+    ? [{ heading: "Related recipes", links: data.relatedLinks }]
+    : [];
+
   return [
     `<div class="fh-snap">`,
     styleTag(),
@@ -148,6 +157,7 @@ export function renderRecipeSnapshotHtml(origin: string, data: RecipeSnapshotDat
     nutritionBlock(data.nutrition),
     ingredients ? `<h2>Ingredients</h2><ul>${ingredients}</ul>` : "",
     steps ? `<h2>Instructions</h2><ol>${steps}</ol>` : "",
+    renderLinkSections([...relatedSection, siteHubSection()]),
     `</div>`,
   ]
     .filter(Boolean)
@@ -173,10 +183,22 @@ export function goldenRecipeSnapshot(page: GoldenRecipePage): RecipeSnapshotData
       carbs: page.nutrition.carbs,
       fat: page.nutrition.fats,
     },
+    // `relatedSlugs` is already curated per-recipe (see `link-recipe-families`
+    // / editorial QA tooling) but was never rendered as an actual crawlable
+    // link — every /recipes/:slug page was a dead-end leaf in the raw-HTML
+    // link graph. `approvedCatalogRecipePath` correctly routes cross-catalog
+    // slugs (breakfast/smoothie/etc.) so this never produces a broken link.
+    relatedLinks: (page.relatedSlugs ?? []).map((slug) => ({
+      label: titleCaseFromSlug(slug),
+      path: approvedCatalogRecipePath(slug),
+    })),
   };
 }
 
-export function breakfastRecipeSnapshot(page: BreakfastRecipePage): RecipeSnapshotData {
+export function breakfastRecipeSnapshot(
+  page: BreakfastRecipePage,
+  relatedLinks: IndexSnapshotLink[] = [],
+): RecipeSnapshotData {
   return {
     title: page.title,
     subtitle: page.subtitle,
@@ -195,6 +217,7 @@ export function breakfastRecipeSnapshot(page: BreakfastRecipePage): RecipeSnapsh
       carbs: page.nutrition.carbs,
       fat: page.nutrition.fat,
     },
+    relatedLinks,
   };
 }
 
@@ -212,6 +235,10 @@ export function fuelRecipeSnapshot(page: FuelRecipePage): RecipeSnapshotData {
       carbs: page.nutrition.carbs,
       fat: page.nutrition.fats,
     },
+    relatedLinks: (page.relatedSlugs ?? []).map((slug) => ({
+      label: titleCaseFromSlug(slug),
+      path: approvedCatalogRecipePath(slug),
+    })),
   };
 }
 
@@ -251,6 +278,32 @@ export interface IndexSnapshotSection {
   links: IndexSnapshotLink[];
 }
 
+/**
+ * Every snapshot (recipe, article, or index/category page) — regardless of
+ * how thin or rich its own page-specific content is — ends with this same
+ * small set of crawlable links to the site's primary collection hubs.
+ *
+ * Without this, a raw (non-JS) crawl of the site is a graph of disconnected
+ * islands: each recipe/guide snapshot only ever contained its own content
+ * with zero outbound `<a href>`s, and each collection hub only linked a
+ * truncated sample of its own catalog — so most of the catalog was only
+ * ever reachable via `sitemap.xml`, never via an actual crawlable link path
+ * from the homepage (confirmed against raw production HTML). This section
+ * guarantees every indexable page is at most 1–2 hub hops from any other.
+ */
+const SITE_HUB_LINKS: IndexSnapshotLink[] = [
+  { label: "Explore all recipes", path: "/explore" },
+  { label: "Breakfast recipes", path: "/breakfast" },
+  { label: "Smoothies", path: "/smoothies" },
+  { label: "Pizza Night", path: "/pizza" },
+  { label: "Guides", path: "/guides" },
+  { label: "Classics Wheel", path: "/wheel" },
+];
+
+function siteHubSection(): IndexSnapshotSection {
+  return { heading: "Browse more", links: SITE_HUB_LINKS };
+}
+
 function renderLinkSections(sections: IndexSnapshotSection[]): string {
   return sections
     .filter((s) => s.links.length > 0)
@@ -273,6 +326,16 @@ export interface ArticleSnapshotData {
   readMinutes?: number;
   intro: string;
   sections: Array<{ heading: string; paragraphs: string[]; tips?: string[] }>;
+  /** Categorized recipe grids rendered right after `sections` — e.g.
+   * "Popular Firefighter Meals" / "Quick Firehouse Meals" on the
+   * `/firefighter-meals` hub. Rendered as heading + intro + crawlable
+   * `<a href>` list, with an optional "view all" link to a bigger collection. */
+  recipeGridSections?: Array<{ heading: string; intro?: string; links: IndexSnapshotLink[]; viewAll?: IndexSnapshotLink }>;
+  /** Editorial section(s) rendered after `recipeGridSections`, before the
+   * Generator CTA — e.g. "Cooking for a Firehouse Crew". */
+  secondarySections?: Array<{ heading: string; paragraphs: string[] }>;
+  /** Optional "Find Tonight's Meal" callout rendered before the FAQ block. */
+  generatorCta?: { heading: string; body: string; ctaLabel: string; ctaPath: string };
   practicalAdvice: string[];
   faqs: Array<{ question: string; answer: string }>;
   /** Optional crawlable link lists rendered after the FAQ block (e.g. linked
@@ -299,6 +362,31 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
     })
     .join("");
 
+  const recipeGridSections = (data.recipeGridSections ?? [])
+    .filter((s) => s.links.length > 0)
+    .map((s) => {
+      const intro = s.intro ? `<p>${escapeHtml(s.intro)}</p>` : "";
+      const links = `<ul class="fh-linklist">${s.links
+        .map((l) => `<li><a href="${escapeHtml(l.path)}">${escapeHtml(l.label)}</a></li>`)
+        .join("")}</ul>`;
+      const viewAll = s.viewAll
+        ? `<p><a href="${escapeHtml(s.viewAll.path)}">${escapeHtml(s.viewAll.label)}</a></p>`
+        : "";
+      return `<h2>${escapeHtml(s.heading)}</h2>${intro}${links}${viewAll}`;
+    })
+    .join("");
+
+  const secondarySections = (data.secondarySections ?? [])
+    .map((section) => {
+      const paragraphs = section.paragraphs.map((p) => `<p>${escapeHtml(p)}</p>`).join("");
+      return `<h2>${escapeHtml(section.heading)}</h2>${paragraphs}`;
+    })
+    .join("");
+
+  const generatorCta = data.generatorCta
+    ? `<h2>${escapeHtml(data.generatorCta.heading)}</h2><p>${escapeHtml(data.generatorCta.body)}</p><p><a href="${escapeHtml(data.generatorCta.ctaPath)}">${escapeHtml(data.generatorCta.ctaLabel)}</a></p>`
+    : "";
+
   const advice = data.practicalAdvice.length
     ? `<h2>Practical advice</h2><ul>${data.practicalAdvice.map((a) => `<li>${escapeHtml(a)}</li>`).join("")}</ul>`
     : "";
@@ -309,7 +397,7 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
         .join("")}`
     : "";
 
-  const linkSections = data.linkSections?.length ? renderLinkSections(data.linkSections) : "";
+  const linkSections = renderLinkSections([...(data.linkSections ?? []), siteHubSection()]);
 
   return [
     `<div class="fh-snap">`,
@@ -321,6 +409,9 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
     `<p class="fh-desc">${escapeHtml(data.description)}</p>`,
     `<p>${escapeHtml(data.intro)}</p>`,
     sections,
+    recipeGridSections,
+    secondarySections,
+    generatorCta,
     advice,
     faqs,
     linkSections,
@@ -350,7 +441,7 @@ export function renderIndexSnapshotHtml(data: IndexSnapshotData): string {
     styleTag(),
     `<h1>${escapeHtml(data.h1)}</h1>`,
     `<p class="fh-desc">${escapeHtml(data.intro)}</p>`,
-    renderLinkSections(data.sections),
+    renderLinkSections([...data.sections, siteHubSection()]),
     `</div>`,
   ]
     .filter(Boolean)
@@ -385,7 +476,27 @@ export function fallbackIndexSnapshot(title: string, description: string): Index
   };
 }
 
-export function editorialArticleSnapshot(article: EditorialArticle): ArticleSnapshotData {
+/** Guide `mealRecommendations` are already real, curated links to catalog
+ * recipes (the client renders them with the exact same
+ * `approvedCatalogRecipePath` call — see `GuideMealPicks`) but were never
+ * part of the raw-HTML snapshot, so every guide was a dead-end leaf too.
+ * A handful of `mealRecommendations` slugs across a few guides don't
+ * resolve to any real catalog recipe (stale/renamed content — confirmed
+ * via `audit-crawlability`, tracked separately as an editorial-data fix);
+ * `knownRecipeSlugs` guards against ever emitting a link to one of those. */
+function mealRecommendationLinks(
+  picks: EditorialMealPick[],
+  knownRecipeSlugs: Set<string>,
+): IndexSnapshotLink[] {
+  return picks
+    .filter((m) => knownRecipeSlugs.has(m.slug.trim().toLowerCase()))
+    .map((m) => ({ label: m.title, path: approvedCatalogRecipePath(m.slug) }));
+}
+
+export function editorialArticleSnapshot(
+  article: EditorialArticle,
+  knownRecipeSlugs: Set<string> = new Set(),
+): ArticleSnapshotData {
   return {
     title: article.title,
     subtitle: article.subtitle,
@@ -397,6 +508,12 @@ export function editorialArticleSnapshot(article: EditorialArticle): ArticleSnap
     sections: article.sections,
     practicalAdvice: article.practicalAdvice,
     faqs: article.faqs,
+    linkSections: [
+      {
+        heading: "Recipes in this guide",
+        links: mealRecommendationLinks(article.mealRecommendations ?? [], knownRecipeSlugs),
+      },
+    ],
   };
 }
 
@@ -407,22 +524,59 @@ export function editorialArticleSnapshot(article: EditorialArticle): ArticleSnap
  * that content exists and renders fine client-side. This gives crawlers the
  * real body copy, matching what `/guides/:slug` and recipe pages already do.
  */
-export function seoLandingPageSnapshot(page: SeoLandingPageDef): ArticleSnapshotData {
+export function seoLandingPageSnapshot(
+  page: SeoLandingPageDef,
+  knownRecipeSlugs: Set<string> = new Set(),
+): ArticleSnapshotData {
+  // A few `recipeSlugs` entries across landing pages reference stale/renamed
+  // recipes that no longer exist (confirmed via `audit-crawlability`, which
+  // surfaces any such 404 as a "broken internal link") — filter them out so
+  // this fix never ships a new broken link. `approvedCatalogRecipePath`
+  // (not the naive `recipePath`) so a breakfast/smoothie slug here still
+  // resolves to its real route instead of a 404 at `/recipes/:slug`.
+  const validSlugs = page.recipeSlugs.filter((slug) => knownRecipeSlugs.has(slug));
+
+  // Categorized recipe grids (e.g. Popular / Quick / High-Protein / Healthy /
+  // Classics / Breakfast on `/firefighter-meals`) take priority over the flat
+  // "Recipes in this collection" list below — same `knownRecipeSlugs` guard
+  // against stale/renamed slugs, applied per-section so one bad slug in one
+  // section can't wipe out the rest of that section's real links.
+  const recipeGridSections = (page.recipeSections ?? []).map((section) => ({
+    heading: section.heading,
+    intro: section.intro,
+    links: section.recipeSlugs
+      .filter((slug) => knownRecipeSlugs.has(slug))
+      .map((slug) => ({ label: titleCaseFromSlug(slug), path: approvedCatalogRecipePath(slug) })),
+    viewAll: section.viewAllPath
+      ? { label: section.viewAllLabel ?? "View all", path: section.viewAllPath }
+      : undefined,
+  }));
+
   return {
     title: page.h1,
     description: page.description,
     intro: page.intro,
     sections: page.sections,
+    recipeGridSections: recipeGridSections.length > 0 ? recipeGridSections : undefined,
+    secondarySections: page.secondarySections,
+    generatorCta: page.generatorCta,
     practicalAdvice: [],
     faqs: page.faqs,
     linkSections: [
-      {
-        heading: "Recipes in this collection",
-        links: page.recipeSlugs.map((slug) => ({
-          label: titleCaseFromSlug(slug),
-          path: recipePath(slug),
-        })),
-      },
+      // Only render the flat "Recipes in this collection" grid when the page
+      // has no categorized `recipeSections` of its own (avoids showing every
+      // recipe twice on pages like `/firefighter-meals`).
+      ...(recipeGridSections.length > 0
+        ? []
+        : [
+            {
+              heading: "Recipes in this collection",
+              links: validSlugs.map((slug) => ({
+                label: titleCaseFromSlug(slug),
+                path: approvedCatalogRecipePath(slug),
+              })),
+            },
+          ]),
       {
         heading: "Related topics",
         links: page.relatedPages.map((rel) => ({
@@ -439,7 +593,11 @@ export function seoLandingPageSnapshot(page: SeoLandingPageDef): ArticleSnapshot
  * same gap as landing pages — their real problem/workaround/solution copy
  * and FAQs were never server-rendered for non-JS clients.
  */
-export function productSeoPageSnapshot(page: ProductSeoPageDef): ArticleSnapshotData {
+export function productSeoPageSnapshot(
+  page: ProductSeoPageDef,
+  knownRecipeSlugs: Set<string> = new Set(),
+): ArticleSnapshotData {
+  const validSlugs = page.recipeSlugs.filter((slug) => knownRecipeSlugs.has(slug));
   return {
     title: page.h1,
     description: page.description,
@@ -450,9 +608,9 @@ export function productSeoPageSnapshot(page: ProductSeoPageDef): ArticleSnapshot
     linkSections: [
       {
         heading: "Recipes",
-        links: page.recipeSlugs.map((slug) => ({
+        links: validSlugs.map((slug) => ({
           label: titleCaseFromSlug(slug),
-          path: recipePath(slug),
+          path: approvedCatalogRecipePath(slug),
         })),
       },
       {

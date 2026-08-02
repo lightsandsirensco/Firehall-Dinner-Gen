@@ -118,6 +118,7 @@
     "catalog:generate-sitemap": "tsx scripts/generate-sitemap.ts",
     "seo:audit-sitemap": "tsx scripts/audit-seo-sitemap.ts",
     "audit:indexing": "tsx scripts/audit-indexing.ts",
+    "audit:crawlability": "tsx scripts/audit-crawlability.ts",
     "audit:404": "tsx scripts/audit-404.ts",
     "audit:pwa": "tsx scripts/audit-pwa.ts --dist",
     "catalog:generate-hall-index": "tsx scripts/generate-hall-catalog-index.ts",

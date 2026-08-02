@@ -216,7 +216,11 @@ export default function BreakfastIndexPage() {
           <Link href="/explore" className="text-primary hover:underline">
             Explore Meals
           </Link>
-          .
+          , or browse the{" "}
+          <Link href="/firefighter-meals" className="text-primary hover:underline">
+            Firefighter Meals
+          </Link>{" "}
+          hub for crew-sized dinner ideas.
         </p>
       </main>
       <SiteFooter variant="compact" pbSafe />
