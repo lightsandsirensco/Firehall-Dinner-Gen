@@ -147,3 +147,57 @@ export function injectBodyContentIntoHtml(html: string, contentHtml: string): st
   if (!contentHtml || !EMPTY_ROOT_RE.test(html)) return html;
   return html.replace(EMPTY_ROOT_RE, `<div id="root">${contentHtml}</div>`);
 }
+
+/**
+ * Rewrite `html` for a genuine 404 (dead/removed recipe, guide, smoothie,
+ * breakfast, package, or guide-topic link, or any other unrecognized public
+ * URL). Every injector previously paired `status: 404` with the completely
+ * untouched `index.html` shell — a crawler still saw the homepage's own
+ * title, description, indexable `robots` meta, and (most misleadingly) its
+ * canonical URL on a real 404 response, which can cause search engines to
+ * fold a dead URL's signals into the homepage instead of dropping it. This
+ * gives 404s their own real title/description, strips the canonical and
+ * `og:url` (there's no real page here to canonicalize), and forces
+ * `noindex, nofollow` so the 404 status is backed by 404-appropriate tags.
+ */
+export function applyNotFoundSeoToHtml(html: string): string {
+  const title = "Page Not Found | Firehall Meals";
+  const description = "That page doesn't exist or may have moved. Browse recipes, guides, and tools from the Firehall Meals homepage.";
+
+  let out = html;
+  out = replaceTag(out, /<title>[\s\S]*?<\/title>/, `<title>${escapeHtml(title)}</title>`);
+  out = replaceTag(
+    out,
+    /<meta\s+name="description"\s+content="[^"]*"\s*\/>/,
+    `<meta name="description" content="${escapeHtml(description)}" />`,
+  );
+  out = replaceTag(
+    out,
+    /<meta\s+name="robots"\s+content="[^"]*"\s*\/>/,
+    `<meta name="robots" content="noindex, nofollow" />`,
+  );
+  // No canonical/og:url on a 404 — there's no real page to point crawlers at.
+  out = out.replace(/\s*<link\s+rel="canonical"\s+href="[^"]*"\s*\/>\n?/, "\n");
+  out = out.replace(/\s*<meta\s+property="og:url"\s+content="[^"]*"\s*\/>\n?/, "\n");
+  out = replaceTag(
+    out,
+    /<meta\s+property="og:title"\s+content="[^"]*"\s*\/>/,
+    `<meta property="og:title" content="${escapeHtml(title)}" />`,
+  );
+  out = replaceTag(
+    out,
+    /<meta\s+property="og:description"\s+content="[^"]*"\s*\/>/,
+    `<meta property="og:description" content="${escapeHtml(description)}" />`,
+  );
+  out = replaceTag(
+    out,
+    /<meta\s+name="twitter:title"\s+content="[^"]*"\s*\/>/,
+    `<meta name="twitter:title" content="${escapeHtml(title)}" />`,
+  );
+  out = replaceTag(
+    out,
+    /<meta\s+name="twitter:description"\s+content="[^"]*"\s*\/>/,
+    `<meta name="twitter:description" content="${escapeHtml(description)}" />`,
+  );
+  return out;
+}

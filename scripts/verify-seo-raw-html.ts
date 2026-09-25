@@ -53,6 +53,8 @@ const ROUTES: RouteCheck[] = [
   { label: "guides index", path: "/guides", minBodyLen: 300 },
   { label: "pizza index", path: "/pizza", minBodyLen: 300 },
   { label: "about", path: "/about", minBodyLen: 100 },
+  { label: "privacy", path: "/privacy", minBodyLen: 100 },
+  { label: "terms", path: "/terms", minBodyLen: 100 },
   { label: "wheel", path: "/wheel", minBodyLen: 100 },
   { label: "seo landing page", path: "/firefighter-meals", minBodyLen: 100 },
   { label: "seo landing page 2", path: "/firefighter-bbq-recipes", minBodyLen: 100 },

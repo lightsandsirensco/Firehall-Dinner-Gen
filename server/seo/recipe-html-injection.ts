@@ -28,7 +28,7 @@ import { resolveHallRecipePage } from "../meal-catalog/load-index.js";
 import { readPizzaNightRecipePage } from "../pizza-night/page-store.js";
 import { isPizzaNightSlug } from "../../shared/pizza-night/manifest.js";
 import { sanitizeRecipeHeroSurface } from "../sanitize-verified-recipe-hero.js";
-import { applySeoTagsToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
+import { applySeoTagsToHtml, applyNotFoundSeoToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
 import { goldenRecipeSnapshot, renderRecipeSnapshotHtml } from "./content-snapshot.js";
 
 const RECIPE_PATH_RE = /^\/recipes\/([a-z0-9-]+)\/?$/i;
@@ -69,7 +69,7 @@ export interface InjectionResult {
  */
 export function injectRecipeSeoIntoHtml(html: string, origin: string, slug: string): InjectionResult {
   const page = resolveRecipeForSeo(slug);
-  if (!page) return { html, status: 404 };
+  if (!page) return { html: applyNotFoundSeoToHtml(html), status: 404 };
 
   const seo = buildRecipePageSeo(page, origin);
   const canonicalUrl = absoluteUrl(origin, seo.canonicalPath);

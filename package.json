@@ -125,6 +125,8 @@
     "verify:golden-live": "tsx scripts/verify-golden-live.ts",
     "seo:validate-schema": "tsx scripts/validate-seo-schema.ts",
     "seo:lighthouse": "tsx scripts/audit-lighthouse-seo.ts",
+    "test:seo-crawl-indexing-phase1": "tsx scripts/test-seo-crawl-indexing-phase1.ts",
+    "verify:seo-raw-html": "tsx scripts/verify-seo-raw-html.ts",
     "test:internal-links": "tsx scripts/test-internal-link-clusters.ts",
     "content:generate-guides": "tsx scripts/generate-editorial-content.ts",
     "content:verify-guides": "tsx scripts/verify-editorial-content.ts",

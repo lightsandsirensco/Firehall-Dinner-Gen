@@ -112,6 +112,8 @@ const STATIC_EXACT = new Set<string>([
   "/admin/analytics",
   "/admin/recipe-ratings",
   "/firefighter-red-lead-recipe",
+  "/privacy",
+  "/terms",
   ...allSeoLandingPagePaths(),
   "/guides/topic/firefighter-meals",
   "/guides/topic/firehall-dinners",

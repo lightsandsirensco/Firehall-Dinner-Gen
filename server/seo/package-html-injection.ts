@@ -18,7 +18,7 @@ import { isApprovedCatalogSlug } from "../../shared/hall-catalog/gate.js";
 import { recipePath, absoluteUrl, absoluteImageUrl } from "../../shared/seo/urls.js";
 import { SEO_TWITTER_HANDLE, SEO_SITE_NAME } from "../../shared/seo/constants.js";
 import { buildBreadcrumbListSchema, buildOrganizationSchema, buildWebSiteSchema } from "../../shared/seo/schema.js";
-import { applySeoTagsToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
+import { applySeoTagsToHtml, applyNotFoundSeoToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
 import { clientRecipeSnapshot, renderRecipeSnapshotHtml } from "./content-snapshot.js";
 import type { InjectionResult } from "./recipe-html-injection.js";
 
@@ -31,7 +31,7 @@ export function matchPackageSlug(pathname: string): string | null {
 
 export function injectPackageSeoIntoHtml(html: string, origin: string, slug: string): InjectionResult {
   const def = getCuratedPackageDef(slug);
-  if (!def) return { html, status: 404 };
+  if (!def) return { html: applyNotFoundSeoToHtml(html), status: 404 };
 
   const title = `${def.displayTitle} — Crew Package | ${SEO_SITE_NAME}`;
   const description = [def.tagline, def.crewLine].filter(Boolean).join(" ").slice(0, 300) ||

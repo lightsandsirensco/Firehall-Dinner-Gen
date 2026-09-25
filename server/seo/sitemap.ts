@@ -388,11 +388,21 @@ const AI_CRAWLER_USER_AGENTS = [
 
 export function buildRobotsTxt(origin: string): string {
   const base = origin.replace(/\/+$/, "");
+  // NOTE: "Disallow: /hall" (a bare prefix, no trailing "/" or "$" anchor)
+  // matches any path that starts with that *string* — including
+  // "/hall-of-fame" and "/hall-meal-planner", which are real public,
+  // indexable pages, not the private "/hall" app shell. Google/Bing both
+  // support the "$" end-of-string anchor for robots.txt (see
+  // https://developers.google.com/search/docs/crawling-indexing/robots/robots_txt#url-matching-based-on-path-values),
+  // so pairing "/hall$" (blocks exactly "/hall") with "/hall/" (blocks only
+  // its subpaths) narrows this to precisely the private route — mirroring
+  // the same exact-or-subpath logic `pathShouldNoindex` below already uses.
   const disallowBlock = `Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile

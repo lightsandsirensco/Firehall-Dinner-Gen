@@ -101,6 +101,7 @@ import {
   EDITORIAL_PUBLIC_DIR,
 } from "./editorial/page-store.js";
 import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../shared/editorial/articles-data.js";
+import { guidePath } from "../shared/editorial/content-schema.js";
 import { fetchExploreRecipeDetailPayload } from "./explore-recipe-detail.js";
 import {
   parseGenerationRateContext,
@@ -2313,7 +2314,7 @@ export async function registerRoutes(
         .status(200)
         .type("text/plain")
         .send(
-          `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /vote/\nDisallow: /me\nDisallow: /hall\nSitemap: https://www.firehallmeals.com/sitemap.xml\n`,
+          `User-agent: *\nAllow: /\nDisallow: /admin\nDisallow: /api/\nDisallow: /vote/\nDisallow: /me\nDisallow: /hall$\nDisallow: /hall/\nSitemap: https://www.firehallmeals.com/sitemap.xml\n`,
         );
     }
   });
@@ -2408,6 +2409,44 @@ export async function registerRoutes(
   // consolidate the guide into it rather than rewiring that link system.
   app.get("/guides/firefighter-bbq-recipes", (_req: Request, res: Response) => {
     return res.redirect(301, "/firefighter-bbq-recipes");
+  });
+
+  // "/home" and "/discover" were client-side-only redirects to "/tonight"
+  // (see App.tsx) with no server match — a non-JS crawler or raw fetch got
+  // a 200 + homepage shell for both instead of ever reaching "/tonight".
+  // Their destination is unambiguous, so make both real 301s.
+  app.get(["/home", "/discover"], (_req: Request, res: Response) => {
+    return res.redirect(301, "/tonight");
+  });
+
+  // "/hall-history" and "/hall-program" are likewise client-side-only
+  // redirects to "/hall" (see App.tsx). Unlike the "/hall/*" subpaths, these
+  // two don't start with "/hall/" or equal "/hall", so they fall outside
+  // both the noindex-prefix check and (previously) the robots.txt block —
+  // fixing the "/hall" robots.txt prefix bug above would otherwise leave
+  // these two newly crawlable with no real content of their own. Same fix:
+  // a real 301 to their unambiguous destination.
+  app.get(["/hall-history", "/hall-program"], (_req: Request, res: Response) => {
+    return res.redirect(301, "/hall");
+  });
+
+  // "/blog/:slug" and "/guides/:slug" have always resolved the exact same
+  // editorial article store by the exact same slug (see the shared
+  // `guideMatch` regex in `generic-page-injection.ts`, which accepts both
+  // prefixes) — "/guides/:slug" is the one and only canonical URL emitted by
+  // every internal link and by `buildGuideArticleSeo`. Any "/blog/:slug"
+  // request for a slug that resolves to a real article is an unambiguous,
+  // deterministic legacy URL for content that already lives at
+  // "/guides/:slug" — redirect it there. If the slug doesn't resolve to a
+  // real article, `next()` lets it fall through to the same generic
+  // injector so it gets a real 404 there instead of a redirect-to-a-404.
+  // (Special-cased legacy blog slugs like "/blog/top-firehall-classics" are
+  // matched by the literal route above, registered first, so they win.)
+  app.get("/blog/:slug", (req: Request, res: Response, next: NextFunction) => {
+    const slug = routeParam(req.params.slug).trim().toLowerCase();
+    const article = readEditorialArticle(slug) ?? getEditorialArticleBySlug(slug) ?? null;
+    if (!article) return next();
+    return res.redirect(301, guidePath(article.slug));
   });
 
   app.get("/api/content/guides", async (_req: Request, res: Response) => {

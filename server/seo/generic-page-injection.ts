@@ -26,8 +26,10 @@ import {
   buildHomeSeo,
   buildHowWeTestRecipesSeo,
   buildPizzaNightSeo,
+  buildPrivacySeo,
   buildProductSeoPageSeo,
   buildSeoLandingPageSeo,
+  buildTermsSeo,
   buildTopRatedRecipesSeo,
   buildWheelSeo,
   defaultOgImage,
@@ -72,7 +74,7 @@ import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../../shared/edit
 import { guidePath } from "../../shared/editorial/content-schema.js";
 import { getApprovedCatalog } from "../approved-catalog-cache.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
-import { applySeoTagsToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
+import { applySeoTagsToHtml, applyNotFoundSeoToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
 import {
   breakfastRecipeSnapshot,
   editorialArticleSnapshot,
@@ -87,6 +89,7 @@ import {
   type IndexSnapshotLink,
   type IndexSnapshotSection,
 } from "./content-snapshot.js";
+import { pathShouldNoindex } from "./sitemap.js";
 import type { InjectionResult } from "./recipe-html-injection.js";
 import { GOLDEN_100_RECIPES } from "../../shared/golden-100/manifest.js";
 import { readBreakfastCatalogIndexFromDisk } from "../breakfast-catalog/page-store.js";
@@ -230,11 +233,13 @@ interface ResolvedPageSeo {
 }
 
 /**
- * `null` = path isn't one we own (private/auth/redirect routes — 200
- * pass-through, client handles it). `"not_found"` = path matches a known
- * dynamic content pattern (e.g. `/breakfast/:slug`) but the slug doesn't
- * resolve to real content — caller should respond 404 instead of a "soft
- * 404" (200 + empty shell).
+ * `null` = path is a known private/auth/app-shell route (see
+ * `pathShouldNoindex`) — 200 pass-through, client handles it. `"not_found"`
+ * = either a known dynamic content pattern (e.g. `/breakfast/:slug`,
+ * `/guides/topic/:clusterId`) whose slug/id doesn't resolve to real content,
+ * OR a path that isn't a recognized route/pattern/private-prefix at all —
+ * both cases should get a real 404 instead of a "soft 404" (200 + homepage
+ * shell).
  */
 function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "not_found" | null {
   const path = (pathname.split("?")[0] || "/").replace(/\/+$/, "") || "/";
@@ -398,6 +403,40 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
           { name: "How We Test Recipes", path: "/how-we-test-recipes" },
+        ]),
+      ],
+    };
+  }
+
+  // "/privacy" and "/terms" previously had no entry here at all, so a non-JS
+  // crawler (or any raw HTML fetch) hitting either URL saw the untouched
+  // `index.html` shell — homepage title, homepage canonical, homepage
+  // description — instead of the real legal page's own metadata. The client
+  // still applies its own tags post-hydration (see `privacy-page.tsx` /
+  // `terms-page.tsx`), so this only fixes the pre-hydration/non-JS view.
+  if (path === "/privacy") {
+    return {
+      seo: buildPrivacySeo(),
+      jsonLd: [
+        buildOrganizationSchema(origin),
+        buildWebSiteSchema(origin),
+        buildBreadcrumbListSchema(origin, [
+          { name: "Home", path: "/" },
+          { name: "Privacy Policy", path: "/privacy" },
+        ]),
+      ],
+    };
+  }
+
+  if (path === "/terms") {
+    return {
+      seo: buildTermsSeo(),
+      jsonLd: [
+        buildOrganizationSchema(origin),
+        buildWebSiteSchema(origin),
+        buildBreadcrumbListSchema(origin, [
+          { name: "Home", path: "/" },
+          { name: "Terms of Service", path: "/terms" },
         ]),
       ],
     };
@@ -591,30 +630,34 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
   if (guidesClusterMatch) {
     const rawId = guidesClusterMatch[1].trim().toLowerCase();
     const clusterId = GUIDES_CLUSTER_IDS.find((id) => id === rawId);
-    if (clusterId) {
-      const seo = buildGuidesClusterSeo(clusterId, EDITORIAL_ARTICLES.length);
-      return {
-        seo,
-        jsonLd: [
-          buildOrganizationSchema(origin),
-          buildBreadcrumbListSchema(origin, [
-            { name: "Home", path: "/" },
-            { name: "Guides", path: "/guides" },
-            { name: clusterId, path: `/guides/topic/${clusterId}` },
-          ]),
+    // The route pattern matched ("/guides/topic/:something") but the id
+    // isn't one of the four real clusters — e.g. "/guides/topic/bogus".
+    // This used to fall all the way through to the final `return null`
+    // below (a silent 200 + homepage shell "soft 404"). Since this pattern
+    // IS ours to own, an unresolvable id is a real 404, not a pass-through.
+    if (!clusterId) return "not_found";
+    const seo = buildGuidesClusterSeo(clusterId, EDITORIAL_ARTICLES.length);
+    return {
+      seo,
+      jsonLd: [
+        buildOrganizationSchema(origin),
+        buildBreadcrumbListSchema(origin, [
+          { name: "Home", path: "/" },
+          { name: "Guides", path: "/guides" },
+          { name: clusterId, path: `/guides/topic/${clusterId}` },
+        ]),
+      ],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: h1FromSeoTitle(seo.title),
+        intro: seo.description,
+        sections: [
+          {
+            heading: "Guides",
+            links: EDITORIAL_ARTICLES.map((a) => ({ label: a.title, path: guidePath(a.slug) })),
+          },
         ],
-        bodyHtml: renderIndexSnapshotHtml({
-          h1: h1FromSeoTitle(seo.title),
-          intro: seo.description,
-          sections: [
-            {
-              heading: "Guides",
-              links: EDITORIAL_ARTICLES.map((a) => ({ label: a.title, path: guidePath(a.slug) })),
-            },
-          ],
-        }),
-      };
-    }
+      }),
+    };
   }
 
   function allBreakfastLinkableEntries(): BreakfastLinkableEntry[] {
@@ -751,21 +794,39 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
     }
   }
 
-  return null;
+  // Everything past this point is a path `resolvePageSeo` doesn't own. Two
+  // very different things land here:
+  //   1. Private/authenticated/app-shell routes (e.g. "/me", "/hall",
+  //      "/tonight", "/admin", "/vote/:id") and the small number of
+  //      known private redirect aliases under those same prefixes
+  //      (e.g. "/hall/settings" -> "/hall"). These are real, working client
+  //      routes — the client owns them entirely, and they're already kept
+  //      out of the index via `X-Robots-Tag: noindex` (see `routes.ts`,
+  //      using this same `pathShouldNoindex` prefix list). They must keep
+  //      passing through as a plain 200 shell.
+  //   2. Genuinely unknown public URLs (typos, dead links, bots probing
+  //      random paths) that don't match ANY known route, prefix, or content
+  //      pattern. These used to also fall through to a 200 + homepage title
+  //      + homepage canonical "soft 404" — indistinguishable from a real
+  //      page to a crawler. Those must be a real 404 instead.
+  if (pathShouldNoindex(pathname)) return null;
+  return "not_found";
 }
 
 /**
  * Rewrite `html` for any route type covered by `resolvePageSeo`. Returns
- * `status: 200, html` unchanged for routes not covered here (they either
- * have their own injector — recipes/curated packages — or fall through to
- * the client's own post-hydration `usePageSeo` for browsers/JS-executing
- * crawlers), and `status: 404` for a recognized content-slug pattern whose
- * slug doesn't resolve (fixes "soft 404s" — a real 404 status instead of a
- * 200 + empty shell for dead/removed recipe, guide, or smoothie links).
+ * `status: 200, html` unchanged for private/app-shell routes (they either
+ * have their own injector — recipes/curated packages — or are client-owned
+ * app/auth routes the client's own post-hydration rendering handles), and
+ * `status: 404` both for a recognized content-slug pattern whose slug
+ * doesn't resolve (dead/removed recipe, guide, smoothie, or guide-topic
+ * links) and for any other genuinely unrecognized public URL — fixing
+ * "soft 404s" (a real 404 status instead of a 200 + homepage-shell) in both
+ * cases.
  */
 export function injectGenericPageSeoIntoHtml(html: string, origin: string, pathname: string): InjectionResult {
   const resolved = resolvePageSeo(origin, pathname);
-  if (resolved === "not_found") return { html, status: 404 };
+  if (resolved === "not_found") return { html: applyNotFoundSeoToHtml(html), status: 404 };
   if (!resolved) return { html, status: 200 };
 
   const canonicalUrl = absoluteUrl(origin, resolved.seo.canonicalPath);
