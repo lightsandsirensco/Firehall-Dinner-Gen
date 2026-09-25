@@ -1,6 +1,6 @@
 # Crawlability Audit
 
-Generated: 2026-09-25T21:42:12.385Z
+Generated: 2026-09-25T22:32:26.238Z
 Target: http://localhost:5051
 
 ## Summary

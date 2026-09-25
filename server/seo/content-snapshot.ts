@@ -28,6 +28,7 @@ import type { ProductSeoPageDef } from "../../shared/seo/product-pages-data.js";
 import type { EditorialMealPick } from "../../shared/editorial/content-schema.js";
 import { absoluteImageUrl } from "../../shared/seo/urls.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
+import { getGuideLandingLink } from "../../shared/seo/guide-authority-links.js";
 import { escapeHtml } from "./apply-seo-tags.js";
 import { resolveKnownRecipeTitle } from "./recipe-title-lookup.js";
 
@@ -491,10 +492,10 @@ export function fallbackIndexSnapshot(title: string, description: string): Index
  * recipes (the client renders them with the exact same
  * `approvedCatalogRecipePath` call — see `GuideMealPicks`) but were never
  * part of the raw-HTML snapshot, so every guide was a dead-end leaf too.
- * A handful of `mealRecommendations` slugs across a few guides don't
- * resolve to any real catalog recipe (stale/renamed content — confirmed
- * via `audit-crawlability`, tracked separately as an editorial-data fix);
- * `knownRecipeSlugs` guards against ever emitting a link to one of those. */
+ * `knownRecipeSlugs` guards against ever emitting a link to a stale/renamed
+ * recipe slug (Phase 3 fixed every guide's `mealRecommendations` to point
+ * at a real, current catalog slug — see `review/` Phase 3 report — but this
+ * filter stays as a permanent safety net against future content edits). */
 function mealRecommendationLinks(
   picks: EditorialMealPick[],
   knownRecipeSlugs: Set<string>,
@@ -508,6 +509,10 @@ export function editorialArticleSnapshot(
   article: EditorialArticle,
   knownRecipeSlugs: Set<string> = new Set(),
 ): ArticleSnapshotData {
+  // Phase 3 "GUIDE → LANDING PAGE LINKS" — one deliberate, contextual hub
+  // link per guide (see `shared/seo/guide-authority-links.ts`); guides with
+  // no genuinely-fitting destination get no extra section.
+  const landingLink = getGuideLandingLink(article.slug);
   return {
     title: article.title,
     subtitle: article.subtitle,
@@ -524,6 +529,14 @@ export function editorialArticleSnapshot(
         heading: "Recipes in this guide",
         links: mealRecommendationLinks(article.mealRecommendations ?? [], knownRecipeSlugs),
       },
+      ...(landingLink
+        ? [
+            {
+              heading: "Related collection",
+              links: [{ label: landingLink.label.replace(/^our /, ""), path: landingLink.href }],
+            },
+          ]
+        : []),
     ],
   };
 }

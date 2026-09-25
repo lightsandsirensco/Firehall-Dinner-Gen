@@ -101,6 +101,8 @@ import {
   EDITORIAL_PUBLIC_DIR,
 } from "./editorial/page-store.js";
 import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../shared/editorial/articles-data.js";
+import { getCatalogSlugRedirect } from "../shared/catalog-slug-redirects.js";
+import { approvedCatalogRecipePath } from "../shared/approved-catalog.js";
 import { guidePath } from "../shared/editorial/content-schema.js";
 import { fetchExploreRecipeDetailPayload } from "./explore-recipe-detail.js";
 import {
@@ -2428,6 +2430,23 @@ export async function registerRoutes(
   // a real 301 to their unambiguous destination.
   app.get(["/hall-history", "/hall-program"], (_req: Request, res: Response) => {
     return res.redirect(301, "/hall");
+  });
+
+  // A Phase-5-consolidated (retired) catalog slug — e.g. "smoked-brisket",
+  // folded into "texas-central-brisket-crew" — already client-side-redirects
+  // to its canonical slug (see `catalog-recipe-page.tsx`'s `resolveCatalogSlug`
+  // call). Several editorial guides and SEO landing pages linked these
+  // retired slugs directly (Phase 3 fixed every one of those references —
+  // see `review/` Phase 3 report), but any remaining inbound link (old
+  // bookmark, external backlink, cached search result) still deserves a
+  // real 301 instead of a 200 + client-side swap, so crawlers/browsers never
+  // see a dead URL. Only intercepts slugs that ARE consolidated; anything
+  // else falls through to the real recipe/breakfast/smoothie page handling.
+  app.get("/recipes/:slug", (req: Request, res: Response, next: NextFunction) => {
+    const slug = routeParam(req.params.slug).trim().toLowerCase();
+    const redirectTarget = getCatalogSlugRedirect(slug);
+    if (redirectTarget) return res.redirect(301, approvedCatalogRecipePath(redirectTarget));
+    return next();
   });
 
   // "/blog/:slug" and "/guides/:slug" have always resolved the exact same

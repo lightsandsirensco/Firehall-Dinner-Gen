@@ -70,7 +70,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         "Low-stress once the pork is done — buns and slaw do the portion work on the line.",
       ),
       meal(
-        "chili-garlic-bread",
+        "big-chili",
         "Firehall Chili & Garlic Bread",
         "Smoky beef chili with cheesy garlic pull-apart — the pot waits when tones drop mid-prep.",
       ),
@@ -179,7 +179,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Rookie-friendly batch — one pot, predictable timing, easy cleanup."),
       meal("buffalo-chicken-dip", "Buffalo Chicken Dip", "Game-day share — stays hot in a low oven, chips do the work."),
       meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Self-serve — baked potatoes hold in warmers while toppings stay cold."),
-      meal("sunday-chili-batch", "Sunday Batch Chili", "Weekend batch — same chili logic, bigger pot, slower shift pace."),
+      meal("turkey-chili", "Sunday Batch Chili", "Weekend batch — same chili logic, bigger pot, slower shift pace."),
       meal("enchilada-casserole", "Enchilada Casserole", "Stack-and-bake — feeds heavy, slices like lasagna, mild by default."),
       meal("teriyaki-donburi", "Teriyaki Donburi", "Bowl line — rice base, protein, veg, sauce — everyone builds their ratio."),
       meal("bbq-chicken-bowls", "BBQ Chicken Bowls", "Line bowls — grilled or roasted chicken over rice with sharp slaw."),
@@ -306,12 +306,12 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         "Crisp potato base with bold sausage — one skillet, big flavor, easy double batch.",
       ),
       meal(
-        "bacon-egg-hash",
+        "cast-iron-breakfast-skillet",
         "8. Loaded Breakfast Hash",
         "Bacon, potato, and egg in one pan — the everything-in-the-skillet morning feed.",
       ),
       meal(
-        "biscuits-gravy",
+        "hall-sausage-biscuits-gravy",
         "9. Sausage Gravy and Biscuits",
         "Southern hall favorite — gravy hides timing mistakes if the biscuits are warm.",
       ),

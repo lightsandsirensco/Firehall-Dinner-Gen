@@ -1,6 +1,6 @@
 # Internal Link Coverage — Phase 2
 
-Generated: 2026-09-25T22:00:16.486Z
+Generated: 2026-09-25T23:04:51.055Z
 Target: http://localhost:5051
 
 ## Totals

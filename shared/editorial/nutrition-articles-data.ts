@@ -239,7 +239,7 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       },
     ],
     mealRecommendations: [
-      meal("chili-garlic-bread", "Firehall Chili", "Protein-rich batch — communal bowls."),
+      meal("big-chili", "Firehall Chili", "Protein-rich batch — communal bowls."),
       meal("chicken-pot-pie", "Chicken Pot Pie", "Warm, familiar, filling."),
       meal("ginger-salmon-bowls", "Ginger Salmon Rice Bowls", "Lighter recovery night option."),
       meal("beef-barley-soup", "Beef Barley Soup", "Hydrating broth base."),
@@ -350,7 +350,7 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
     ],
     mealRecommendations: [
       meal("breakfast-burrito-bar", "Breakfast Burrito Bar", "Staggered morning eating — line format."),
-      meal("biscuits-gravy", "Biscuits and Gravy", "Hearty when the night was thin on food."),
+      meal("hall-sausage-biscuits-gravy", "Biscuits and Gravy", "Hearty when the night was thin on food."),
       meal("chorizo-breakfast-tacos", "Chorizo Breakfast Tacos", "Fast protein line for morning after calls."),
       meal("pancake-short-stack", "Pancake Short Stack", "Pair with eggs or sausage for balance."),
     ],
@@ -480,7 +480,7 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("hall-taco-bar", "Hall Taco Bar Night", "Cheaper than eight delivered burritos."),
       meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "One pan — minimal cleanup."),
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Pantry-friendly crew dinner."),
-      meal("chili-garlic-bread", "Firehall Chili", "Batch beats delivery buckets."),
+      meal("big-chili", "Firehall Chili", "Batch beats delivery buckets."),
     ],
     faqs: [
       STANDARD_FAQS.nutrition,
@@ -693,7 +693,7 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
     ],
     mealRecommendations: [
       meal("beef-barley-soup", "Beef Barley Soup", "Sippable bowl food when appetite is low."),
-      meal("chili-garlic-bread", "Firehall Chili", "Cup portions — easy between calls."),
+      meal("big-chili", "Firehall Chili", "Cup portions — easy between calls."),
       meal("pulled-pork", "Pulled Pork Sandwiches", "Handheld — low ceremony."),
     ],
     faqs: [
@@ -747,7 +747,7 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
     mealRecommendations: [
       meal("mac-and-cheese-bake", "Baked Mac and Cheese", "Warm tray — low friction."),
       meal("chicken-pot-pie", "Chicken Pot Pie", "Familiar bowl — warm and filling."),
-      meal("chili-garlic-bread", "Firehall Chili", "Communal pot — protein rich."),
+      meal("big-chili", "Firehall Chili", "Communal pot — protein rich."),
       meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Self-serve — no pressure."),
     ],
     faqs: [

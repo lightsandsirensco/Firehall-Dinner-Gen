@@ -74,6 +74,7 @@ import { SMOOTHIE_CATALOG_ITEMS } from "../../shared/fuel-catalog/smoothies/cata
 import { readEditorialArticle } from "../editorial/page-store.js";
 import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../../shared/editorial/articles-data.js";
 import { guidePath } from "../../shared/editorial/content-schema.js";
+import { guidesInCluster } from "../../shared/editorial/topic-clusters.js";
 import { getApprovedCatalog } from "../approved-catalog-cache.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
 import { applySeoTagsToHtml, applyNotFoundSeoToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
@@ -622,7 +623,15 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
     // below (a silent 200 + homepage shell "soft 404"). Since this pattern
     // IS ours to own, an unresolvable id is a real 404, not a pass-through.
     if (!clusterId) return "not_found";
-    const seo = buildGuidesClusterSeo(clusterId, EDITORIAL_ARTICLES.length);
+    // Every guide has exactly one canonical `topic` (see content-schema.ts);
+    // `guidesInCluster` maps that topic to the one cluster it genuinely
+    // belongs to (see `shared/editorial/topic-clusters.ts` for the full
+    // topic -> cluster mapping and the one ambiguous split it documents).
+    // This used to link ALL 57 guides on every cluster's raw-HTML snapshot
+    // (the same "topic pages are identical" bug the client page had) —
+    // filter here too so non-JS crawlers see the real, topic-scoped list.
+    const clusterArticles = guidesInCluster(EDITORIAL_ARTICLES, clusterId);
+    const seo = buildGuidesClusterSeo(clusterId, clusterArticles.length);
     return {
       seo,
       jsonLd: [
@@ -638,8 +647,8 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         intro: seo.description,
         sections: [
           {
-            heading: "Guides",
-            links: EDITORIAL_ARTICLES.map((a) => ({ label: a.title, path: guidePath(a.slug) })),
+            heading: "Guides in this topic",
+            links: clusterArticles.map((a) => ({ label: a.title, path: guidePath(a.slug) })),
           },
         ],
       }),

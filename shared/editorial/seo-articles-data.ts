@@ -103,10 +103,10 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("smash-burgers", "Double Smash Burgers", "Handheld classic — fast line."),
       meal("steak-tacos", "Chimichurri Steak Tacos", "Steak night without plating stress."),
       meal("pulled-pork", "Pulled Pork Sandwiches", "Hold warm — ideal when eaters trickle in."),
-      meal("chili-garlic-bread", "Firehall Chili", "Batch hero for busy weeks."),
+      meal("turkey-chili", "Firehall Chili", "Batch hero for busy weeks."),
       meal("hall-taco-bar", "Hall Taco Bar Night", "Self-serve — ends protein debates."),
       meal("bbq-chicken-bowls", "BBQ Chicken Bowls", "Line-friendly bowl night."),
-      meal("smoked-brisket", "Kansas City Smoked Brisket", "When you have time and want a centerpiece."),
+      meal("texas-central-brisket-crew", "Kansas City Smoked Brisket", "When you have time and want a centerpiece."),
       meal("mac-and-cheese-bake", "Baked Mac and Cheese", "Comfort that scales."),
       meal("batch-lasagna", "Giant Batch Lasagna", "Feeds twelve without drama."),
       meal("pad-thai", "Hall Rush Pad Thai", "Wok energy, weeknight speed."),
@@ -119,7 +119,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "One pan — peppers, chicken, easy cleanup."),
       meal("beer-can-chicken", "Beer Can Chicken", "Grill showpiece — still practical."),
       meal("baked-ziti", "Baked Ziti", "Cheesy bake — crew pleaser."),
-      meal("sunday-chili-batch", "Sunday Batch Chili", "Cook once, eat twice."),
+      meal("chili-mac", "Sunday Batch Chili", "Cook once, eat twice."),
       meal("jerk-chicken", "Jerk Chicken", "Big flavor grill night."),
       meal("meatball-hoagies", "Firehall Meatball Hoagies", "Saucy subs — easy portions."),
       meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Lighter bowl option."),
@@ -226,7 +226,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       },
     ],
     mealRecommendations: [
-      meal("chili-garlic-bread", "Firehall Chili", "The universal hall baseline."),
+      meal("big-chili", "Firehall Chili", "The universal hall baseline."),
       meal("smash-burgers", "Double Smash Burgers", "Flat-top culture is real."),
       meal("hall-taco-bar", "Hall Taco Bar Night", "Weekly at many halls."),
       meal("chicken-parm", "Chicken Parm", "Italian night never dies."),
@@ -284,7 +284,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("pulled-pork", "Pulled Pork Sandwiches", "Late-night sandwiches still work."),
       meal("breakfast-burrito-bar", "Breakfast Burrito Bar", "Morning line — staggered eaters."),
       meal("sausage-egg-bake", "Sausage Egg Bake", "Hands-off morning bake."),
-      meal("sunday-chili-batch", "Sunday Batch Chili", "If dinner doubles as overnight option."),
+      meal("turkey-chili", "Sunday Batch Chili", "If dinner doubles as overnight option."),
     ],
     faqs: [
       {
@@ -460,10 +460,10 @@ export const SEO_TRAFFIC_ARTICLES = [
     ],
     mealRecommendations: [
       meal("pulled-pork", "Pulled Pork Sandwiches", "Classic slow-cooker win."),
-      meal("sunday-chili-batch", "Sunday Batch Chili", "Bean and beef — holds all shift."),
+      meal("big-chili", "Sunday Batch Chili", "Bean and beef — holds all shift."),
       meal("beef-barley-soup", "Beef Barley Soup", "Cold-night pot — filling."),
       meal("chicken-dumpling-soup", "Chicken and Dumplings", "Comfort in a slow pot."),
-      meal("carolina-mustard-pork", "Carolina Mustard Pulled Pork", "Tangy pull — low labor."),
+      meal("bbq-pulled-pork-bowls", "Carolina Mustard Pulled Pork", "Tangy pull — low labor."),
     ],
     faqs: [
       {
@@ -513,7 +513,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     mealRecommendations: [
       meal("mac-and-cheese-bake", "Baked Mac and Cheese", "Cheesy tray — universal."),
       meal("chicken-parm", "Chicken Parm", "Italian comfort king."),
-      meal("chili-garlic-bread", "Firehall Chili", "Bowl food after hard weather."),
+      meal("big-chili", "Firehall Chili", "Bowl food after hard weather."),
       meal("meatloaf-mashed", "Classic Meatloaf with Mashed Potatoes", "Sunday-dinner energy on a weeknight."),
       meal("chicken-pot-pie", "Chicken Pot Pie", "All-in-one bowl meal."),
       meal("beef-stroganoff", "Beef Stroganoff", "Rich, savory noodles."),
@@ -695,7 +695,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     ],
     mealRecommendations: [
       meal("five-ingredient-pasta", "Garlic Butter Pasta", "Low cost — high return."),
-      meal("chili-garlic-bread", "Firehall Chili", "Bean and beef stretch far."),
+      meal("big-chili", "Firehall Chili", "Bean and beef stretch far."),
       meal("hall-taco-bar", "Hall Taco Bar Night", "Ground beef line — economical."),
       meal("sausage-egg-bake", "Sausage Egg Bake", "Cheap breakfast for many."),
       meal("turkey-chili", "High-Protein Turkey Chili", "Lean and budget-friendly."),
@@ -747,10 +747,10 @@ export const SEO_TRAFFIC_ARTICLES = [
       },
     ],
     mealRecommendations: [
-      meal("chili-garlic-bread", "Firehall Chili", "Garlic bread night pairing built in."),
+      meal("chili-mac", "Firehall Chili", "Garlic bread night pairing built in."),
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Maximum batch when appetite is unknown."),
       meal("turkey-chili", "High-Protein Turkey Chili", "Leaner pot — still hearty."),
-      meal("sunday-chili-batch", "Sunday Batch Chili", "Meal-prep chili base."),
+      meal("white-bean-chicken-chili", "Sunday Batch Chili", "Meal-prep chili base."),
       meal("loaded-potato-feed", "Loaded Potato Feed", "Chili topping option on potato bar."),
     ],
     faqs: [
@@ -853,7 +853,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     mealRecommendations: [
       meal("chicken-pot-pie", "Chicken Pot Pie", "Bowl meal — calming."),
       meal("mac-and-cheese-bake", "Baked Mac and Cheese", "Cheese and carbs — the usual reset."),
-      meal("chili-garlic-bread", "Firehall Chili", "Deep bowls — communal."),
+      meal("big-chili", "Firehall Chili", "Deep bowls — communal."),
       meal("beef-stroganoff", "Beef Stroganoff", "Rich — feels substantial."),
       meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Self-serve — no pressure."),
     ],
@@ -922,7 +922,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("sausage-egg-bake", "Sausage Egg Bake", "Slice and serve — easy."),
       meal("pancake-short-stack", "Pancake Short Stack", "Hold warm in the oven between waves."),
       meal("chorizo-breakfast-tacos", "Chorizo Breakfast Tacos", "Bold morning tacos — fast line."),
-      meal("bacon-egg-hash", "Bacon Egg Hash Skillet", "Skillet feed — hearty."),
+      meal("cast-iron-breakfast-skillet", "Bacon Egg Hash Skillet", "Skillet feed — hearty."),
     ],
     faqs: [
       {
@@ -970,9 +970,9 @@ export const SEO_TRAFFIC_ARTICLES = [
       },
     ],
     mealRecommendations: [
-      meal("sunday-chili-batch", "Sunday Batch Chili", "Prep star — multi-day use."),
+      meal("turkey-chili", "Sunday Batch Chili", "Prep star — multi-day use."),
       meal("sheet-pan-meal-prep", "Sheet Pan Meal Prep", "Components for bowls — reheat clean."),
-      meal("pulled-pork-mac", "Pulled Pork Mac", "Uses prep-friendly pulled pork."),
+      meal("pulled-pork", "Pulled Pork Mac", "Uses prep-friendly pulled pork."),
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Big pot Sunday — feeds the week."),
     ],
     faqs: [
@@ -1089,7 +1089,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     mealRecommendations: [
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Hall rookie classic."),
       meal("jambalaya", "Cajun Jambalaya for the Hall", "Deep pot — big flavor."),
-      meal("chili-garlic-bread", "Firehall Chili", "One deep pot — holds hot across the shift."),
+      meal("big-chili", "Firehall Chili", "One deep pot — holds hot across the shift."),
       meal("sausage-peppers-onions", "Sausage Peppers and Onions", "Skillet one-pan — low dish count."),
       meal("pad-thai", "Hall Rush Pad Thai", "One wok finish — one wash."),
     ],

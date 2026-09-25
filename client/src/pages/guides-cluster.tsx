@@ -9,6 +9,7 @@ import { usePageSeo } from "@/lib/seo/use-page-seo";
 import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildBreadcrumbListSchema, buildOrganizationSchema } from "@shared/seo/schema";
 import { buildGuidesClusterSeo, type GuidesClusterId } from "@shared/seo/metadata";
+import { guidesInCluster } from "@shared/editorial/topic-clusters";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { Loader2, Compass, Flame } from "lucide-react";
@@ -18,32 +19,27 @@ const CLUSTERS: Record<
   {
     title: string;
     description: string;
-    queryHints: RegExp;
   }
 > = {
   "firefighter-meals": {
     title: "Firefighter meals",
     description:
       "Practical crew dinners built for station kitchens — no blog fluff, no influencer food, just meals that work on shift.",
-    queryHints: /\b(firefighter|firehall|firehouse|station|crew|dinner)\b/i,
   },
   "firehall-dinners": {
     title: "Firehall dinner ideas",
     description:
-      "Fire station dinner ideas crews actually run: comfort food, BBQ nights, big feeds, and quick shift plates.",
-    queryHints: /\b(dinner|comfort|bbq|cook|crew|hall)\b/i,
+      "Fire station dinner ideas crews actually run: comfort food, big feeds, and quick shift plates.",
   },
   "firefighter-nutrition": {
     title: "Firefighter nutrition",
     description:
       "Nutrition and performance guidance for the job — recovery, high-protein meals, and station habits that hold up.",
-    queryHints: /\b(nutrition|protein|healthy|recovery|performance)\b/i,
   },
   "station-cooking": {
     title: "Station cooking",
     description:
       "How crews cook together: workflow, grocery strategy, and kitchen systems that survive interruptions.",
-    queryHints: /\b(station cooking|workflow|grocer|kitchen|meal plan|prep)\b/i,
   },
 };
 
@@ -68,12 +64,9 @@ export default function GuidesClusterPage() {
   const cluster = clusterId ? CLUSTERS[clusterId] : null;
   const articles = useMemo(() => {
     const all = catalog?.articles ?? [];
-    if (!cluster) return [];
-    const re = cluster.queryHints;
-    return [...all]
-      .filter((a) => re.test(`${a.title} ${a.subtitle} ${a.description}`))
-      .sort((a, b) => a.title.localeCompare(b.title));
-  }, [catalog?.articles, cluster]);
+    if (!clusterId) return [];
+    return guidesInCluster(all, clusterId).sort((a, b) => a.title.localeCompare(b.title));
+  }, [catalog?.articles, clusterId]);
 
   const seoConfig = useMemo(
     () => (clusterId && cluster ? buildGuidesClusterSeo(clusterId, articles.length) : null),

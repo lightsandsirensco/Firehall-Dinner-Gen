@@ -39,7 +39,7 @@ export const STATION_LIFESTYLE_ARTICLES = [
     ],
     mealRecommendations: [
       meal("hall-taco-bar", "Hall Taco Bar Night", "Line meals teach rookies assembly, not plating."),
-      meal("sunday-chili-batch", "Sunday Batch Chili", "Batch cooking teaches timing and cleanup."),
+      meal("big-chili", "Sunday Batch Chili", "Batch cooking teaches timing and cleanup."),
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Forgiving format for new cooks."),
     ],
     faqs: [
@@ -143,10 +143,10 @@ export const STATION_LIFESTYLE_ARTICLES = [
       },
     ],
     mealRecommendations: [
-      meal("chili-garlic-bread", "Firehall Chili", "The universal candidate."),
+      meal("big-chili", "Firehall Chili", "The universal candidate."),
       meal("pulled-pork", "Pulled Pork Sandwiches", "BBQ lore starter at many halls."),
       meal("chicken-parm", "Chicken Parm", "Italian night legend."),
-      meal("smoked-brisket", "Kansas City Smoked Brisket", "When the hall has time and a pit."),
+      meal("texas-central-brisket-crew", "Kansas City Smoked Brisket", "When the hall has time and a pit."),
     ],
     faqs: [
       {
@@ -196,7 +196,7 @@ export const STATION_LIFESTYLE_ARTICLES = [
       },
     ],
     mealRecommendations: [
-      meal("chili-garlic-bread", "Firehall Chili", "The baseline hall chili — batch friendly."),
+      meal("big-chili", "Firehall Chili", "The baseline hall chili — batch friendly."),
       meal("smash-burgers", "Double Smash Burgers", "Handheld standard on flat-top night."),
       meal("hall-taco-bar", "Hall Taco Bar Night", "Line classic — self-serve tacos."),
       meal("chicken-parm", "Chicken Parm", "Table spread classic."),
@@ -252,7 +252,7 @@ export const STATION_LIFESTYLE_ARTICLES = [
     mealRecommendations: [
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Forgiving first cook."),
       meal("hall-taco-bar", "Hall Taco Bar Night", "Hard to ruin the whole meal."),
-      meal("sunday-chili-batch", "Sunday Batch Chili", "Teaches batch timing."),
+      meal("big-chili", "Sunday Batch Chili", "Teaches batch timing."),
     ],
     faqs: [
       {

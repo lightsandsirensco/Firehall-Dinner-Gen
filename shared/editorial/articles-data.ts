@@ -236,7 +236,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
     ],
     mealRecommendations: [
       { slug: "pulled-pork", title: "Pulled Pork Sandwiches", blurb: "Feeds a crowd, forgives hold time, classic hall win." },
-      { slug: "smoked-brisket", title: "Smoked Brisket", blurb: "When you have time and want a centerpiece." },
+      { slug: "texas-central-brisket-crew", title: "Smoked Brisket", blurb: "When you have time and want a centerpiece." },
       { slug: "beer-can-chicken", title: "Beer Can Chicken", blurb: "Grill showpiece that still scales to multiple birds." },
       { slug: "bbq-chicken-bowls", title: "BBQ Chicken Bowls", blurb: "Line-friendly if you want bowls instead of buns." },
       { slug: "grilled-corn-cotija", title: "Grilled Street Corn", blurb: "Fast side that feels like an event." },
@@ -429,9 +429,9 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       },
     ],
     mealRecommendations: [
-      { slug: "sunday-chili-batch", title: "Sunday Chili Batch", blurb: "Better day two — top dogs, potatoes, or nachos." },
+      { slug: "turkey-chili", title: "Sunday Chili Batch", blurb: "Better day two — top dogs, potatoes, or nachos." },
       { slug: "sheet-pan-meal-prep", title: "Sheet Pan Chicken Trays", blurb: "Portioned trays that reheat cleanly." },
-      { slug: "pulled-pork-mac", title: "Pulled Pork Mac", blurb: "Combines two hall favorites — feeds heavy." },
+      { slug: "pulled-pork", title: "Pulled Pork Mac", blurb: "Combines two hall favorites — feeds heavy." },
       { slug: "big-chili", title: "Big Chili Batch", blurb: "The original double-shift insurance policy." },
     ],
     faqs: [

@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-09-25T22:00:16.486Z",
+  "generatedAt": "2026-09-25T23:04:51.055Z",
   "target": "http://localhost:5051",
-  "elapsedMs": 3548,
+  "elapsedMs": 4431,
   "totals": {
     "indexableRecipes": 432,
     "withAnyInternalLink": 430,
@@ -185,7 +185,7 @@
       "slug": "big-chili",
       "path": "/recipes/big-chili",
       "status": 200,
-      "inboundAny": 38,
+      "inboundAny": 53,
       "inboundRelated": 3
     },
     {
@@ -313,7 +313,7 @@
       "slug": "chili-mac",
       "path": "/recipes/chili-mac",
       "status": 200,
-      "inboundAny": 6,
+      "inboundAny": 8,
       "inboundRelated": 4
     },
     {
@@ -689,7 +689,7 @@
       "slug": "pulled-pork",
       "path": "/recipes/pulled-pork",
       "status": 200,
-      "inboundAny": 31,
+      "inboundAny": 33,
       "inboundRelated": 2
     },
     {
@@ -889,7 +889,7 @@
       "slug": "turkey-chili",
       "path": "/recipes/turkey-chili",
       "status": 200,
-      "inboundAny": 14,
+      "inboundAny": 19,
       "inboundRelated": 2
     },
     {
@@ -1449,7 +1449,7 @@
       "slug": "white-bean-chicken-chili",
       "path": "/recipes/white-bean-chicken-chili",
       "status": 200,
-      "inboundAny": 37,
+      "inboundAny": 38,
       "inboundRelated": 35
     },
     {
@@ -2193,7 +2193,7 @@
       "slug": "bbq-pulled-pork-bowls",
       "path": "/recipes/bbq-pulled-pork-bowls",
       "status": 200,
-      "inboundAny": 1,
+      "inboundAny": 2,
       "inboundRelated": 0
     },
     {
@@ -2433,7 +2433,7 @@
       "slug": "texas-central-brisket-crew",
       "path": "/recipes/texas-central-brisket-crew",
       "status": 200,
-      "inboundAny": 3,
+      "inboundAny": 6,
       "inboundRelated": 2
     },
     {
@@ -3049,7 +3049,7 @@
       "slug": "cast-iron-breakfast-skillet",
       "path": "/breakfast/cast-iron-breakfast-skillet",
       "status": 200,
-      "inboundAny": 4,
+      "inboundAny": 6,
       "inboundRelated": 1
     },
     {
@@ -3193,7 +3193,7 @@
       "slug": "hall-sausage-biscuits-gravy",
       "path": "/breakfast/hall-sausage-biscuits-gravy",
       "status": 200,
-      "inboundAny": 8,
+      "inboundAny": 10,
       "inboundRelated": 6
     },
     {

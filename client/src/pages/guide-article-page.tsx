@@ -17,6 +17,7 @@ import {
 import { guidePath } from "@shared/editorial/content-schema";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { PILLAR_LABELS, type EditorialPillar } from "@shared/editorial/content-pillar";
+import { getGuideLandingLink } from "@shared/seo/guide-authority-links";
 import { Loader2, Clock, ChefHat } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
@@ -63,6 +64,23 @@ function GuideMealPicks({
         })}
       </ul>
     </section>
+  );
+}
+
+/** One deliberate, contextual hub link per guide (Phase 3 "GUIDE → LANDING
+ * PAGE LINKS") — see `shared/seo/guide-authority-links.ts` for the mapping.
+ * Guides with no genuinely-fitting hub render nothing here. */
+function GuideLandingLink({ slug }: { slug: string }) {
+  const link = useMemo(() => getGuideLandingLink(slug), [slug]);
+  if (!link) return null;
+  return (
+    <p className="mt-4 text-[15px] text-muted-foreground leading-relaxed max-w-prose">
+      {link.prefix}{" "}
+      <Link href={link.href} className="text-primary hover:underline font-medium">
+        {link.label}
+      </Link>{" "}
+      {link.suffix}
+    </p>
   );
 }
 
@@ -294,6 +312,8 @@ export default function GuideArticlePage() {
             >
               {article.intro}
             </p>
+
+            <GuideLandingLink slug={article.slug} />
 
             {recipesFirst ? (
               <>
