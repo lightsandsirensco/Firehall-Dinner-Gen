@@ -14,9 +14,13 @@
  *   states non-refundable-by-default with a consumer-rights qualification,
  *   and never promises prorated/guaranteed/automatic refunds
  * - the effective date is a real date on both pages, not an owner placeholder
- * - legal entity name / business address / governing law remain flagged as
- *   "OWNER INPUT REQUIRED" (genuinely unconfirmed) rather than invented, and
- *   Lights & Sirens Co. is never asserted as the legal entity/operator
+ * - the legal operator (1000119168 Ontario Inc.) and governing law (Ontario,
+ *   Canada) are now resolved, owner-confirmed facts — no invented address is
+ *   published (a legal-notice email is used instead), and zero
+ *   "OWNER INPUT REQUIRED" / "OWNER DECISION REQUIRED" placeholders remain
+ *   anywhere in either page
+ * - Lights & Sirens Co. is credited only as the parent/brand, never asserted
+ *   as the legal entity/operator itself
  * - Privacy + Terms account-deletion copy discloses that deleting an account
  *   also cancels an active Stripe-backed subscription, with no automatic refund
  */
@@ -72,13 +76,19 @@ function main(): void {
   // --- Privacy/Terms page content sanity (no fabricated legal facts) ---
   const privacyPage = readSource("client/src/pages/privacy-page.tsx");
   assert.ok(privacyPage.includes("support@firehallmeals.com"), "Privacy page must use the real support email");
-  // Legal entity name / business address genuinely aren't confirmed yet — the
-  // page must keep flagging that (not invent a legal entity/address), while
-  // the effective date (resolved below) must NOT still be a placeholder.
-  assert.ok(privacyPage.includes("OWNER INPUT REQUIRED"), "Privacy page must flag unresolved owner facts, not invent them");
+  // Legal entity, address, effective date, and governing law are now ALL
+  // owner-confirmed — zero owner placeholders may remain anywhere.
   assert.ok(
-    !/OWNER INPUT REQUIRED — effective date/i.test(privacyPage),
-    "Privacy page effective date must be resolved, not a placeholder",
+    !/OWNER INPUT REQUIRED|OWNER DECISION REQUIRED/i.test(privacyPage),
+    "Privacy page must not contain any unresolved owner placeholder",
+  );
+  assert.ok(
+    privacyPage.includes("1000119168 Ontario Inc."),
+    "Privacy page must name the confirmed legal operator",
+  );
+  assert.ok(
+    privacyPage.includes("lightsandsirensco@gmail.com"),
+    "Privacy page must use the confirmed legal-notice contact (no address is published)",
   );
   assert.ok(
     /const EFFECTIVE_DATE = "[A-Z][a-z]+ \d{1,2}, \d{4}"/.test(privacyPage),
@@ -127,11 +137,29 @@ function main(): void {
     ),
     "Terms page must not promise prorated/guaranteed/automatic refunds or arbitrary refund windows",
   );
-  // Legal entity name / governing law genuinely aren't confirmed yet.
-  assert.ok(termsPage.includes("OWNER INPUT REQUIRED"), "Terms page must flag unresolved governing law/entity facts");
+  // Legal entity, governing law, and effective date are now ALL
+  // owner-confirmed — zero owner placeholders may remain anywhere.
   assert.ok(
-    !/OWNER INPUT REQUIRED — effective date/i.test(termsPage),
-    "Terms page effective date must be resolved, not a placeholder",
+    !/OWNER INPUT REQUIRED|OWNER DECISION REQUIRED/i.test(termsPage),
+    "Terms page must not contain any unresolved owner placeholder",
+  );
+  assert.ok(
+    termsPage.includes("1000119168 Ontario Inc."),
+    "Terms page must name the confirmed legal operator",
+  );
+  assert.ok(
+    termsPage.includes("lightsandsirensco@gmail.com"),
+    "Terms page must use the confirmed legal-notice contact (no address is published)",
+  );
+  assert.ok(
+    /Ontario, Canada/.test(termsPage) && /governed by the laws of the Province of Ontario/i.test(flatTermsPage),
+    "Terms page governing-law section must state the confirmed jurisdiction (Ontario, Canada)",
+  );
+  // No physical business address should be published — only the confirmed
+  // legal-notice email stands in for it.
+  assert.ok(
+    !/business address:? *\d/i.test(flatTermsPage),
+    "Terms page must not publish an invented street address",
   );
   assert.ok(
     /const EFFECTIVE_DATE = "[A-Z][a-z]+ \d{1,2}, \d{4}"/.test(termsPage),

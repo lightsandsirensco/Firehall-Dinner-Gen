@@ -11,6 +11,10 @@ import { buildBreadcrumbListSchema, buildOrganizationSchema, buildWebSiteSchema 
 import { getSavedCount } from "@/lib/saved-meals";
 
 const SUPPORT_MAILTO = "mailto:support@firehallmeals.com?subject=Terms%20question";
+// Legal/business-notice contact — used only where a notice address would
+// otherwise go (no public business mailing address is published yet).
+// General product/billing/privacy support still goes to SUPPORT_MAILTO above.
+const LEGAL_NOTICE_MAILTO = "mailto:lightsandsirensco@gmail.com?subject=Firehall%20Meals%20legal%20notice";
 
 function Section({
   id,
@@ -34,14 +38,6 @@ function Section({
         {children}
       </div>
     </section>
-  );
-}
-
-function OwnerInput({ children }: { children: ReactNode }) {
-  return (
-    <span className="inline-block rounded bg-amber-500/15 px-1.5 py-0.5 text-[13px] font-semibold text-amber-700 dark:text-amber-400">
-      OWNER INPUT REQUIRED — {children}
-    </span>
   );
 }
 
@@ -94,10 +90,14 @@ export default function TermsPage() {
         <div className="mt-8 space-y-6">
           <Section id="operator" title="1. Who you're contracting with">
             <p>
-              Firehall Meals is offered by the team behind Lights &amp; Sirens Co. The exact
-              registered legal entity name and business address are{" "}
-              <OwnerInput>legal entity, address</OwnerInput> and will be added here once
-              confirmed.
+              Firehall Meals is operated by{" "}
+              <span className="font-medium text-foreground">1000119168 Ontario Inc.</span>,
+              the company behind the Lights &amp; Sirens Co. brand. We haven't published a public
+              business mailing address at this time; for legal or business notices, contact{" "}
+              <a href={LEGAL_NOTICE_MAILTO} className="text-primary hover:underline">
+                lightsandsirensco@gmail.com
+              </a>
+              .
             </p>
           </Section>
 
@@ -267,9 +267,8 @@ export default function TermsPage() {
 
           <Section id="governing-law" title="15. Governing law">
             <p>
-              <OwnerInput>governing law / jurisdiction</OwnerInput> — the governing law and venue
-              for disputes have not yet been specified and will be added once confirmed by the
-              business operator.
+              These terms are governed by the laws of the Province of Ontario, Canada, without
+              regard to conflict-of-law principles.
             </p>
           </Section>
 
