@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { Button } from "@/components/ui/button";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
+import { useBilling } from "@/lib/billing/hooks";
 
 /**
  * Self-service account deletion. Destructive-action confirmation required —
@@ -24,6 +25,12 @@ import { fetchWithCsrf } from "@/lib/csrf-fetch";
 export function DeleteAccountSection() {
   const [, navigate] = useLocation();
   const queryClient = useQueryClient();
+  const billing = useBilling();
+  // Only a real Stripe-billed subscription is actually cancelled as part of
+  // account deletion (see server/billing/account-deletion-guard.ts) — admin
+  // grants have no billing relationship to end, so the copy stays accurate
+  // for both without needing to know anything else about the account.
+  const isStripeSubscriber = billing.subscription?.source === "stripe";
   const [open, setOpen] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const [error, setError] = useState("");
@@ -73,6 +80,13 @@ export function DeleteAccountSection() {
               This removes your profile, saved recipes, preferences, and hall memberships. This
               cannot be undone. Shared hall content (like notes and canteen records other
               crew members rely on) is not affected.
+              {isStripeSubscriber && (
+                <>
+                  {" "}
+                  Deleting your account will also cancel your Firehall Meals Pro subscription so
+                  you won&apos;t be billed again.
+                </>
+              )}
             </AlertDialogDescription>
           </AlertDialogHeader>
           {error && (

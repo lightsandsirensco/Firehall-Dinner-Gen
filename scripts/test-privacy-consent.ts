@@ -527,6 +527,35 @@ async function main(): Promise<void> {
     decideStripeDeletionAction({ source: "stripe", status: "cancelled", stripeSubscriptionId: "sub_x" }),
     { kind: "already_lapsed" },
   );
+  assert.deepEqual(
+    decideStripeDeletionAction({ source: "stripe", status: "active", stripeSubscriptionId: null }),
+    { kind: "unresolvable" },
+    "a corrupt/incomplete source='stripe' row with no subscription id must fail closed, not be treated as 'none'",
+  );
+
+  // 7) Corrupt/incomplete Stripe row (source='stripe', still-billable status,
+  // but no stripe_subscription_id on file) — deletion must be BLOCKED, since
+  // there is no id to verify/cancel by and the subscription may still be live.
+  {
+    const { user: corruptUser } = upsertEmailUser("stripe-corrupt-row@firehall.test");
+    db.prepare(
+      `INSERT INTO user_subscriptions (user_id, plan_id, status, source, selected_at, updated_at)
+       VALUES (?, 'firefighter_plus', 'active', 'stripe', datetime('now'), datetime('now'))`,
+    ).run(corruptUser.user_id);
+
+    let cancelCalled = false;
+    const guardResult = await ensureStripeSubscriptionCancelledForDeletion(corruptUser.user_id, {
+      cancel: async () => {
+        cancelCalled = true;
+      },
+    });
+    assert.equal(guardResult.ok, false, "a source='stripe' row with no subscription id must fail closed");
+    assert.equal(cancelCalled, false, "there is no subscription id to call Stripe with");
+    assert.ok(
+      db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(corruptUser.user_id),
+      "account must NOT be deleted when the Stripe subscription can't be identified/verified",
+    );
+  }
 
   // --- Webhook race: customer.subscription.updated arriving AFTER account
   // deletion must not resurrect a user_subscriptions row for a deleted user --

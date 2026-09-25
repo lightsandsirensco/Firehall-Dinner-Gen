@@ -33,7 +33,8 @@ import { getStripeClient } from "./stripe-client.js";
 export type StripeDeletionAction =
   | { kind: "none" } // no subscription row, or not Stripe-sourced (admin_grant/self_select/free) — nothing to cancel
   | { kind: "already_lapsed" } // source='stripe' but already fully cancelled locally — nothing to cancel
-  | { kind: "cancel"; stripeSubscriptionId: string }; // active/trialing/past_due Stripe subscription — must be cancelled now
+  | { kind: "cancel"; stripeSubscriptionId: string } // active/trialing/past_due Stripe subscription — must be cancelled now
+  | { kind: "unresolvable" }; // source='stripe', still live per local status, but no subscription id on file — can't verify/cancel
 
 /**
  * Pure decision logic — never touches the network or the database, so it's
@@ -48,11 +49,19 @@ export type StripeDeletionAction =
 export function decideStripeDeletionAction(
   info: SubscriptionInfoForAccountDeletion | null,
 ): StripeDeletionAction {
-  if (!info || info.source !== "stripe" || !info.stripeSubscriptionId) {
+  if (!info || info.source !== "stripe") {
     return { kind: "none" };
   }
   if (info.status === "cancelled") {
     return { kind: "already_lapsed" };
+  }
+  // source='stripe' and a still-billable local status, but no subscription id
+  // to identify/cancel by — a corrupt/incomplete row. There is a realistic
+  // possibility this subscription is still live at Stripe, so we must NOT
+  // assume it's harmless and let deletion proceed (see PRE-LAUNCH STRIPE
+  // ACCOUNT-DELETION BILLING GAP, "missing/corrupt subscription id" case).
+  if (!info.stripeSubscriptionId) {
+    return { kind: "unresolvable" };
   }
   return { kind: "cancel", stripeSubscriptionId: info.stripeSubscriptionId };
 }
@@ -98,6 +107,15 @@ export async function ensureStripeSubscriptionCancelledForDeletion(
 
   if (decision.kind === "none") return { ok: true, action: "none" };
   if (decision.kind === "already_lapsed") return { ok: true, action: "already_lapsed" };
+  if (decision.kind === "unresolvable") {
+    // Fail closed — never delete the account while hoping a subscription we
+    // can't even identify happens not to exist at Stripe.
+    logError(
+      "billing",
+      `account deletion blocked: user ${userId} has a source='stripe' subscription with no stripe_subscription_id on file`,
+    );
+    return { ok: false };
+  }
 
   const cancel = deps.cancel ?? cancelViaLiveStripeClient;
   try {
