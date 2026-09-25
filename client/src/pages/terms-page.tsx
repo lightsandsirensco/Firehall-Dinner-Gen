@@ -45,13 +45,9 @@ function OwnerInput({ children }: { children: ReactNode }) {
   );
 }
 
-function OwnerDecision({ children }: { children: ReactNode }) {
-  return (
-    <span className="inline-block rounded bg-red-500/15 px-1.5 py-0.5 text-[13px] font-semibold text-red-700 dark:text-red-400">
-      OWNER DECISION REQUIRED — {children}
-    </span>
-  );
-}
+// Effective date is set once at the top of this file so Privacy and Terms
+// stay in sync — update both together if this ever changes.
+const EFFECTIVE_DATE = "September 25, 2026";
 
 export default function TermsPage() {
   const favCount = useMemo(() => getSavedCount(), []);
@@ -89,9 +85,7 @@ export default function TermsPage() {
         </div>
 
         <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl">Terms of Service</h1>
-        <p className="mt-2 text-muted-foreground">
-          Effective date: <OwnerInput>effective date</OwnerInput>
-        </p>
+        <p className="mt-2 text-muted-foreground">Effective date: {EFFECTIVE_DATE}</p>
         <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-2xl">
           These terms govern your use of Firehall Meals, including Firehall Meals Pro paid
           subscriptions. By using the site, you agree to them.
@@ -183,9 +177,19 @@ export default function TermsPage() {
 
           <Section id="refunds" title="7. Refunds">
             <p>
-              <OwnerDecision>refund policy</OwnerDecision> — Firehall Meals has not yet published a
-              refund policy. This section will state the actual policy once one is approved. Until
-              then, refund requests are handled on a case-by-case basis by contacting{" "}
+              Subscription payments to Firehall Meals Pro are generally non-refundable once
+              charged. You can cancel at any time to prevent the next renewal — see Cancellation
+              above. Deleting your account does not, by itself, entitle you to a refund for the
+              current billing period.
+            </p>
+            <p>
+              Where required by applicable consumer-protection law, or where we determine it's
+              appropriate, we may provide a refund at our discretion. Nothing in this policy limits
+              any refund, cancellation, or other consumer right that applicable law does not allow
+              us to waive or restrict.
+            </p>
+            <p>
+              Questions about a specific charge:{" "}
               <a href={SUPPORT_MAILTO} className="text-primary hover:underline">
                 support@firehallmeals.com
               </a>
@@ -253,8 +257,11 @@ export default function TermsPage() {
               <Link href="/privacy" className="text-primary hover:underline">
                 Privacy Policy
               </Link>{" "}
-              for exactly what that removes. We may suspend or terminate accounts that violate
-              these terms.
+              for exactly what that removes. If you have an active Firehall Meals Pro subscription
+              billed through Stripe, deleting your account also cancels that subscription
+              immediately so you won't be billed again — this does not generate an automatic
+              refund for the current billing period (see Refunds above). We may suspend or
+              terminate accounts that violate these terms.
             </p>
           </Section>
 

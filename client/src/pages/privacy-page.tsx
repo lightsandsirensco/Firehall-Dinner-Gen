@@ -45,6 +45,9 @@ function OwnerInput({ children }: { children: ReactNode }) {
   );
 }
 
+// Kept in sync with terms-page.tsx's EFFECTIVE_DATE — update both together.
+const EFFECTIVE_DATE = "September 25, 2026";
+
 export default function PrivacyPage() {
   const favCount = useMemo(() => getSavedCount(), []);
   const origin = getSiteOrigin();
@@ -81,9 +84,7 @@ export default function PrivacyPage() {
         </div>
 
         <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl">Privacy Policy</h1>
-        <p className="mt-2 text-muted-foreground">
-          Effective date: <OwnerInput>effective date</OwnerInput>
-        </p>
+        <p className="mt-2 text-muted-foreground">Effective date: {EFFECTIVE_DATE}</p>
         <p className="mt-4 text-base text-muted-foreground leading-relaxed max-w-2xl">
           This policy explains what Firehall Meals actually collects, how it's used, which
           outside services we rely on, and how to delete your data. It reflects the product as
@@ -231,6 +232,16 @@ export default function PrivacyPage() {
               subscription/entitlement record, your cloud-sync data, your Firehall Meals Pro cooked-meal
               history, your Hall membership link, and your matching marketing-lead record in our
               own database. Your account row itself is deleted.
+            </p>
+            <p>
+              If you have an active Firehall Meals Pro subscription billed through Stripe, deleting
+              your account also cancels that subscription immediately so you won't continue being
+              charged. Deleting your account does not, by itself, generate an automatic refund for
+              the current billing period — see the Refunds section of our{" "}
+              <Link href="/terms" className="text-primary hover:underline">
+                Terms of Service
+              </Link>
+              .
             </p>
             <p>
               What deletion does <span className="font-medium text-foreground">not</span> currently

@@ -10,6 +10,15 @@
  * - plans-display.ts firefighter_plus features only list shipped
  *   capabilities (advanced_search, ingredient_preferences, meal_memory)
  * - footer/plans/account pages link Privacy + Terms
+ * - the refund policy is resolved (no "OWNER DECISION REQUIRED" placeholder),
+ *   states non-refundable-by-default with a consumer-rights qualification,
+ *   and never promises prorated/guaranteed/automatic refunds
+ * - the effective date is a real date on both pages, not an owner placeholder
+ * - legal entity name / business address / governing law remain flagged as
+ *   "OWNER INPUT REQUIRED" (genuinely unconfirmed) rather than invented, and
+ *   Lights & Sirens Co. is never asserted as the legal entity/operator
+ * - Privacy + Terms account-deletion copy discloses that deleting an account
+ *   also cancels an active Stripe-backed subscription, with no automatic refund
  */
 import assert from "node:assert/strict";
 import fs from "node:fs";
@@ -20,6 +29,11 @@ import { PLAN_PRESENTATIONS } from "../client/src/lib/plans-display.ts";
 
 function readSource(relPath: string): string {
   return fs.readFileSync(path.join(process.cwd(), relPath), "utf8");
+}
+
+/** Collapses whitespace/newlines so multi-line JSX text can be matched with simple word-based regexes. */
+function flatten(source: string): string {
+  return source.replace(/\s+/g, " ");
 }
 
 function main(): void {
@@ -58,19 +72,96 @@ function main(): void {
   // --- Privacy/Terms page content sanity (no fabricated legal facts) ---
   const privacyPage = readSource("client/src/pages/privacy-page.tsx");
   assert.ok(privacyPage.includes("support@firehallmeals.com"), "Privacy page must use the real support email");
+  // Legal entity name / business address genuinely aren't confirmed yet — the
+  // page must keep flagging that (not invent a legal entity/address), while
+  // the effective date (resolved below) must NOT still be a placeholder.
   assert.ok(privacyPage.includes("OWNER INPUT REQUIRED"), "Privacy page must flag unresolved owner facts, not invent them");
+  assert.ok(
+    !/OWNER INPUT REQUIRED — effective date/i.test(privacyPage),
+    "Privacy page effective date must be resolved, not a placeholder",
+  );
+  assert.ok(
+    /const EFFECTIVE_DATE = "[A-Z][a-z]+ \d{1,2}, \d{4}"/.test(privacyPage),
+    "Privacy page must set a real EFFECTIVE_DATE constant, not a placeholder",
+  );
+  assert.ok(
+    /Effective date: \{EFFECTIVE_DATE\}/.test(privacyPage),
+    "Privacy page must render the resolved effective date, not owner-input JSX",
+  );
   assert.ok(
     !/we never share (your )?data|we guarantee (complete|absolute|total) security/i.test(privacyPage),
     "Privacy page must not make absolute data-sharing/security guarantees",
   );
+  // Account deletion copy must stay consistent with the Stripe
+  // account-deletion billing fix: cancels the subscription, no auto-refund.
+  const flatPrivacyPage = flatten(privacyPage);
+  assert.ok(
+    /deleting your account also cancels that subscription/i.test(flatPrivacyPage),
+    "Privacy page account-deletion section must disclose Stripe subscription cancellation",
+  );
+  assert.ok(
+    /does not, by itself, generate an automatic refund/i.test(flatPrivacyPage),
+    "Privacy page must not imply account deletion automatically generates a refund",
+  );
 
   const termsPage = readSource("client/src/pages/terms-page.tsx");
+  const flatTermsPage = flatten(termsPage);
   assert.ok(termsPage.includes("$4.99"), "Terms page must state monthly price");
   assert.ok(termsPage.includes("$39.99"), "Terms page must state annual price");
-  assert.ok(termsPage.includes("OWNER DECISION REQUIRED"), "Terms page must flag the unresolved refund policy");
+  // Refund policy is now a resolved, owner-confirmed policy — no placeholder left.
+  assert.ok(
+    !/OWNER DECISION REQUIRED/i.test(termsPage),
+    "Terms page refund policy must be resolved, not left as a placeholder",
+  );
+  assert.ok(/non-refundable/i.test(flatTermsPage), "Terms page must state the non-refundable-by-default policy");
+  assert.ok(
+    /consumer-protection law|consumer right/i.test(flatTermsPage),
+    "Terms page refund policy must include a consumer-rights qualification",
+  );
+  assert.ok(
+    // Note: "automatic refund" itself IS allowed to appear as part of a
+    // *denial* ("does not ... generate an automatic refund") — only a
+    // positive promise of one is banned, which these patterns target.
+    !/prorated refund|guaranteed refund|30-day guarantee|7-day guarantee|money-back guarantee|receive an automatic refund|automatic refund (will|is) (issued|provided)/i.test(
+      flatTermsPage,
+    ),
+    "Terms page must not promise prorated/guaranteed/automatic refunds or arbitrary refund windows",
+  );
+  // Legal entity name / governing law genuinely aren't confirmed yet.
   assert.ok(termsPage.includes("OWNER INPUT REQUIRED"), "Terms page must flag unresolved governing law/entity facts");
+  assert.ok(
+    !/OWNER INPUT REQUIRED — effective date/i.test(termsPage),
+    "Terms page effective date must be resolved, not a placeholder",
+  );
+  assert.ok(
+    /const EFFECTIVE_DATE = "[A-Z][a-z]+ \d{1,2}, \d{4}"/.test(termsPage),
+    "Terms page must set a real EFFECTIVE_DATE constant, not a placeholder",
+  );
+  assert.ok(
+    /Effective date: \{EFFECTIVE_DATE\}/.test(termsPage),
+    "Terms page must render the resolved effective date, not owner-input JSX",
+  );
+  // Both pages must use the exact same effective date string.
+  const privacyDateMatch = privacyPage.match(/const EFFECTIVE_DATE = "([^"]+)"/);
+  const termsDateMatch = termsPage.match(/const EFFECTIVE_DATE = "([^"]+)"/);
+  assert.ok(privacyDateMatch && termsDateMatch, "both pages must define EFFECTIVE_DATE");
+  assert.equal(
+    privacyDateMatch![1],
+    termsDateMatch![1],
+    "Privacy and Terms must use one consistent effective date",
+  );
   assert.ok(!/7-day free trial/i.test(termsPage), "Terms page must not advertise the removed trial");
   assert.ok(/no\s+free\s+trial/i.test(termsPage), "Terms page must explicitly state there is no trial");
+  assert.ok(
+    /deleting your account also cancels that subscription/i.test(flatTermsPage),
+    "Terms page account-deletion section must disclose Stripe subscription cancellation",
+  );
+  // Do not assume Lights & Sirens Co. is the legal entity — it may only be
+  // credited as the parent/brand, never asserted as the legal operator.
+  assert.ok(
+    !/Lights\s*&\s*Sirens Co\. is (the legal|a corporation|a company|the operator)/i.test(flatTermsPage),
+    "Terms page must not assert Lights & Sirens Co. as the legal entity/operator",
+  );
 
   // --- Trial removal: source-level regression guard ---
   const stripeClientSrc = readSource("server/billing/stripe-client.ts");
