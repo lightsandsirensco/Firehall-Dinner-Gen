@@ -30,7 +30,7 @@ const CLUSTERS: Record<
   "firehall-dinners": {
     title: "Firehall dinner ideas",
     description:
-      "Hall-tested dinner ideas crews actually run: comfort food, BBQ nights, big feeds, and quick shift plates.",
+      "Fire station dinner ideas crews actually run: comfort food, BBQ nights, big feeds, and quick shift plates.",
     queryHints: /\b(dinner|comfort|bbq|cook|crew|hall)\b/i,
   },
   "firefighter-nutrition": {

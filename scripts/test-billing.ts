@@ -68,6 +68,14 @@ const MIGRATION_016 = fs.readFileSync(
 
 );
 
+const MIGRATION_042 = fs.readFileSync(
+
+  path.join(process.cwd(), "server", "db", "migrations", "042_firefighter_plus_plan.sql"),
+
+  "utf8",
+
+);
+
 
 
 const tmpDb = path.join(os.tmpdir(), `fh-billing-validate-${Date.now()}.db`);
@@ -83,6 +91,8 @@ async function main(): Promise<void> {
   db.exec(MIGRATION_015);
 
   db.exec(MIGRATION_016);
+
+  db.exec(MIGRATION_042);
 
   bindAuthDb(db);
 
@@ -116,9 +126,16 @@ async function main(): Promise<void> {
 
   assert.equal(personal.features.hall_dashboard, true);
 
+  // "personal" is the free plan — it must NOT carry any Plus-only entitlement.
+  assert.equal(personal.features.advanced_search, false);
+  assert.equal(personal.features.nutrition, false);
+  assert.equal(personal.features.unlimited_saved_meals, false);
+
 
 
   assert.equal(selectUserPlan(user.user_id, "hall_pro"), null);
+  // Self-select must never grant the paid tier — no payment processing exists yet.
+  assert.equal(selectUserPlan(user.user_id, "firefighter_plus"), null);
 
 
 
@@ -160,9 +177,34 @@ async function main(): Promise<void> {
 
 
 
+  // Admin/dev grant is the only way to reach firefighter_plus (entitlement
+  // testing / monetization validation — no Stripe yet).
+  adminSetUserPlan(user.user_id, "firefighter_plus");
+
+  const pro = resolveUserBilling(user.user_id);
+
+  assert.equal(pro.effective_plan_id, "firefighter_plus");
+
+  assert.equal(pro.features.advanced_search, true);
+
+  assert.equal(pro.features.nutrition, true);
+
+  assert.equal(pro.features.unlimited_saved_meals, true);
+
+  // Pro is a strict superset of Personal — it keeps the free feature set too.
+  assert.equal(pro.features.cross_device_saves, true);
+
+  assert.equal(pro.features.hall_dashboard, true);
+
+  assert.equal(userHasFeature(user.user_id, "advanced_search"), true);
+
+
+
   const catalog = getPlanCatalog();
 
-  assert.equal(catalog.length, 3);
+  assert.equal(catalog.length, 4);
+
+  assert.ok(catalog.some((p) => p.plan_id === "firefighter_plus" && p.enabled));
 
   assert.ok(hasFeature(personal.features, "generator"));
 

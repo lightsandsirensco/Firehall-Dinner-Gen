@@ -14,7 +14,19 @@
       "heroImage": "/images/smoothies/blueberry-almond.webp",
       "thumbImage": "/images/smoothies/blueberry-almond.webp",
       "calories": 156,
-      "protein": 8
+      "protein": 8,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 156,
+        "protein": 8,
+        "carbs": 15,
+        "fat": 8,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "chocolate-banana-recovery",
@@ -25,7 +37,19 @@
       "heroImage": "/images/smoothies/chocolate-banana-recovery.webp",
       "thumbImage": "/images/smoothies/chocolate-banana-recovery.webp",
       "calories": 144,
-      "protein": 6
+      "protein": 6,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 144,
+        "protein": 6,
+        "carbs": 19,
+        "fat": 6,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "citrus-ginger",
@@ -36,7 +60,21 @@
       "heroImage": "/images/smoothies/citrus-ginger.webp",
       "thumbImage": "/images/smoothies/citrus-ginger.webp",
       "calories": 53,
-      "protein": 1
+      "protein": 1,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 53,
+        "protein": 1,
+        "carbs": 13,
+        "fat": 0,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "coconut"
+      ]
     },
     {
       "slug": "green-pineapple",
@@ -47,7 +85,22 @@
       "heroImage": "/images/smoothies/green-pineapple.webp",
       "thumbImage": "/images/smoothies/green-pineapple.webp",
       "calories": 59,
-      "protein": 1
+      "protein": 1,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 59,
+        "protein": 1,
+        "carbs": 14,
+        "fat": 0,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "spinach",
+        "coconut"
+      ]
     },
     {
       "slug": "mixed-berry-protein",
@@ -58,7 +111,19 @@
       "heroImage": "/images/smoothies/mixed-berry-protein.webp",
       "thumbImage": "/images/smoothies/mixed-berry-protein.webp",
       "calories": 146,
-      "protein": 8
+      "protein": 8,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 146,
+        "protein": 8,
+        "carbs": 19,
+        "fat": 5,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "mocha-protein",
@@ -69,7 +134,19 @@
       "heroImage": "/images/smoothies/mocha-protein.webp",
       "thumbImage": "/images/smoothies/mocha-protein.webp",
       "calories": 99,
-      "protein": 8
+      "protein": 8,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 99,
+        "protein": 8,
+        "carbs": 9,
+        "fat": 4,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "peanut-butter-banana-recovery",
@@ -80,7 +157,19 @@
       "heroImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
       "thumbImage": "/images/smoothies/peanut-butter-banana-recovery.webp",
       "calories": 190,
-      "protein": 8
+      "protein": 8,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 190,
+        "protein": 8,
+        "carbs": 20,
+        "fat": 10,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "strawberry-oat-breakfast",
@@ -91,7 +180,19 @@
       "heroImage": "/images/smoothies/strawberry-oat-breakfast.webp",
       "thumbImage": "/images/smoothies/strawberry-oat-breakfast.webp",
       "calories": 154,
-      "protein": 7
+      "protein": 7,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 154,
+        "protein": 7,
+        "carbs": 23,
+        "fat": 4,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "strawberry-spinach",
@@ -102,7 +203,21 @@
       "heroImage": "/images/smoothies/strawberry-spinach.webp",
       "thumbImage": "/images/smoothies/strawberry-spinach.webp",
       "calories": 118,
-      "protein": 5
+      "protein": 5,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 118,
+        "protein": 5,
+        "carbs": 18,
+        "fat": 3,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "spinach"
+      ]
     },
     {
       "slug": "tropical-mango-greek",
@@ -113,7 +228,21 @@
       "heroImage": "/images/smoothies/tropical-mango-greek.webp",
       "thumbImage": "/images/smoothies/tropical-mango-greek.webp",
       "calories": 102,
-      "protein": 5
+      "protein": 5,
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 102,
+        "protein": 5,
+        "carbs": 17,
+        "fat": 2,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "coconut"
+      ]
     }
   ]
 }

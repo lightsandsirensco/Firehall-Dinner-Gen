@@ -57,8 +57,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 292,
+        "protein": 11,
+        "carbs": 42,
+        "fat": 10,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "big-pot-savory-oats",
@@ -100,8 +106,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 305,
+        "protein": 14,
+        "carbs": 35,
+        "fat": 12,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "high-protein-parfaits",
@@ -145,8 +157,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 735,
+        "protein": 29,
+        "carbs": 96,
+        "fat": 28,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "protein-french-toast",
@@ -197,8 +215,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "protein-pancake-tray",
@@ -251,8 +271,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 405,
+        "protein": 13,
+        "carbs": 62,
+        "fat": 12,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     }
   ]
 }

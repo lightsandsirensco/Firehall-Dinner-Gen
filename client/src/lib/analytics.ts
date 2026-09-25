@@ -798,6 +798,55 @@ export function trackPaywallViewed(feature?: string, surface?: string): void {
   });
 }
 
+/** Firehall Meals Pro (firefighter_plus) — monetization validation events. */
+function proEventParams(input: {
+  feature?: string;
+  page?: string;
+  plan?: string;
+  logged_in?: boolean;
+}): Record<string, string | number> {
+  return {
+    ...(input.feature ? { feature: input.feature } : {}),
+    ...(input.page ? { page: input.page } : {}),
+    ...(input.plan ? { plan: input.plan } : {}),
+    ...(input.logged_in != null ? { logged_in: String(input.logged_in) } : {}),
+  };
+}
+
+export function trackProPaywallViewed(input: { feature?: string; page?: string; logged_in?: boolean }): void {
+  const params = proEventParams({ ...input, plan: "firefighter_plus" });
+  trackEvent("pro_paywall_viewed", params);
+  trackProductEvent("pro_paywall_viewed", params);
+}
+
+export function trackProFeatureClicked(input: { feature: string; page?: string; logged_in?: boolean }): void {
+  const params = proEventParams(input);
+  trackEvent("pro_feature_clicked", params);
+  trackProductEvent("pro_feature_clicked", params);
+}
+
+export function trackProPlanSelected(input: {
+  plan: string;
+  page?: string;
+  logged_in?: boolean;
+  feature?: string;
+}): void {
+  const params = proEventParams(input);
+  trackEvent("pro_plan_selected", params);
+  trackProductEvent("pro_plan_selected", params);
+}
+
+export function trackProUpgradeInterest(input: {
+  plan?: string;
+  page?: string;
+  logged_in?: boolean;
+  feature?: string;
+}): void {
+  const params = proEventParams(input);
+  trackEvent("pro_upgrade_interest", params);
+  trackProductEvent("pro_upgrade_interest", params);
+}
+
 export function trackHallProEnabled(hallId: string): void {
   trackEvent("hall_pro_enabled", { hall_id: hallId });
   trackProductEvent("hall_pro_enabled", { hall_id: hallId });

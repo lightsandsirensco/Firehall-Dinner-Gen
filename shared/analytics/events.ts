@@ -47,6 +47,7 @@ export const ANALYTICS_EVENT_TYPES = [
   "pwa_prompt_shown",
   "pwa_installed",
   "account_created",
+  "account_deleted",
   "login",
   "magic_link_requested",
   "magic_link_sent",
@@ -115,6 +116,15 @@ export const ANALYTICS_EVENT_TYPES = [
   "preferred_store_added",
   "preferred_store_removed",
   "protein_setup_completed",
+  "pro_paywall_viewed",
+  "pro_feature_clicked",
+  "pro_plan_selected",
+  "pro_upgrade_interest",
+  "stripe_checkout_started",
+  "stripe_checkout_completed",
+  "stripe_subscription_updated",
+  "stripe_subscription_cancelled",
+  "stripe_billing_portal_opened",
 ] as const;
 
 export type AnalyticsEventType = (typeof ANALYTICS_EVENT_TYPES)[number];

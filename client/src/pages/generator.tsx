@@ -372,9 +372,10 @@ export default function Generator() {
         preferences,
         hall: detail?.hall ?? null,
         hallLinked,
+        profile,
       }),
     );
-  }, [preferences, detail?.hall, hallLinked]);
+  }, [preferences, profile, detail?.hall, hallLinked]);
 
   const openEarnedEmailCapture = useCallback((trigger: EmailCaptureTrigger) => {
     setEmailModalVariant("earned");
@@ -730,13 +731,14 @@ export default function Generator() {
             preferences,
             hall: detail.hall,
             hallLinked: true,
+            profile,
           }),
         );
         return;
       }
       setFilters(newFilters);
     },
-    [hallLinked, detail?.hall, preferences],
+    [hallLinked, detail?.hall, preferences, profile],
   );
 
   // ── Deep-link: ?classic=<slug> → curated dinner package ─────────────────

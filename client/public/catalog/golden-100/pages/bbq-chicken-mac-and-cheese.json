@@ -13,10 +13,10 @@
   "cookTime": 65,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 1386,
-  "protein": 83,
-  "carbs": 106,
-  "fats": 68,
+  "calories": 820,
+  "protein": 54,
+  "carbs": 62,
+  "fats": 30,
   "tags": [
     "protein:chicken",
     "format:bake",
@@ -233,10 +233,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1386,
-    "protein": 83,
-    "carbs": 106,
-    "fats": 68,
+    "calories": 820,
+    "protein": 54,
+    "carbs": 62,
+    "fats": 30,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -353,5 +353,8 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "onions"
+  ]
 }

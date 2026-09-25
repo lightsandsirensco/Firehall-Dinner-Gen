@@ -14,6 +14,8 @@ import { memberHasPermission } from "../hall-membership/store.js";
 
 import {
 
+  adminSetGlobalFlag,
+
   adminSetHallPlan,
 
   adminSetPlanEnabled,
@@ -34,7 +36,21 @@ import {
 
   getPlanCatalog,
 
+  getStripeCustomerIdForUser,
+
+  getUserIdByStripeCustomerId,
+
+  getUserIdByStripeSubscriptionId,
+
+  hasWebhookEventBeenProcessed,
+
   initBillingStore,
+
+  linkStripeCustomer,
+
+  markStripeSubscriptionCancelledBySubscriptionId,
+
+  recordWebhookEvent,
 
   resolveUserBilling,
 
@@ -42,9 +58,29 @@ import {
 
   startHallProTrial,
 
+  upsertStripeSubscription,
+
 } from "./store.js";
 
 import {
+
+  getStripeClient,
+
+  getVerifiedPriceIdForPeriod,
+
+  getWebhookSecret,
+
+  mapStripeStatus,
+
+} from "./stripe-client.js";
+
+import { userAlreadyHasProAccess } from "./checkout-guard.js";
+
+import { getUserById } from "../auth/auth-store.js";
+
+import {
+
+  adminSetGlobalFlagSchema,
 
   adminSetUserPlanSchema,
 
@@ -52,11 +88,15 @@ import {
 
   adminTogglePlanSchema,
 
+  createCheckoutSessionSchema,
+
   hallBillingActionSchema,
 
   selectPlanSchema,
 
 } from "../../shared/billing/schema.js";
+
+import { resolvePublicSiteOrigin } from "../seo/sitemap.js";
 
 import type { PlanId } from "../../shared/billing/types.js";
 
@@ -96,7 +136,17 @@ function trackBillingEvent(
 
     | "hall_pro_trial_started"
 
-    | "hall_pro_converted",
+    | "hall_pro_converted"
+
+    | "stripe_checkout_started"
+
+    | "stripe_checkout_completed"
+
+    | "stripe_subscription_updated"
+
+    | "stripe_subscription_cancelled"
+
+    | "stripe_billing_portal_opened",
 
   metadata?: Record<string, string | number | boolean>,
 
@@ -444,6 +494,223 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
+  app.post("/api/billing/checkout", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
+    try {
+      await ensureStore();
+      const config = getBillingPublicConfig();
+      if (!config.monetization_enabled || !config.payments_enabled) {
+        return res.status(503).json({ message: "Checkout is not available yet" });
+      }
+
+      const parsed = createCheckoutSessionSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ message: "Invalid checkout request" });
+      }
+
+      const userId = req._authUserId!;
+      const user = getUserById(userId);
+      if (!user) {
+        return res.status(404).json({ message: "Account not found" });
+      }
+
+      // Prevent accidental duplicate subscriptions — checked server-side, not
+      // just via the disabled "Current plan" button on /plans (which a
+      // hand-crafted request would bypass entirely). Covers admin-granted
+      // Pro too: no reason to let an already-entitled user pay again.
+      const existingBilling = resolveUserBilling(userId);
+      if (userAlreadyHasProAccess(existingBilling.subscription)) {
+        return res.status(409).json({ message: "You already have an active Firehall Meals Pro subscription." });
+      }
+
+      const stripe = getStripeClient();
+      let customerId = getStripeCustomerIdForUser(userId);
+      if (!customerId) {
+        const customer = await stripe.customers.create({
+          email: user.email ?? undefined,
+          metadata: { user_id: userId },
+        });
+        customerId = customer.id;
+        linkStripeCustomer(userId, customerId);
+      }
+
+      const priceId = await getVerifiedPriceIdForPeriod(parsed.data.billing_period);
+      const origin = resolvePublicSiteOrigin(req.get("host"), req.protocol);
+
+      const session = await stripe.checkout.sessions.create({
+        mode: "subscription",
+        customer: customerId,
+        client_reference_id: userId,
+        line_items: [{ price: priceId, quantity: 1 }],
+        // No trial_period_days — Firehall Meals Pro bills immediately on
+        // successful checkout (see PAID LAUNCH LEGAL & COMMERCIAL SURFACES:
+        // the 7-day free trial was removed everywhere ahead of Stripe
+        // test-mode checkout testing).
+        subscription_data: {
+          metadata: { user_id: userId },
+        },
+        metadata: {
+          user_id: userId,
+          billing_period: parsed.data.billing_period,
+          ...(parsed.data.feature ? { feature: parsed.data.feature } : {}),
+        },
+        success_url: `${origin}/plans?checkout=success`,
+        cancel_url: `${origin}/plans?checkout=cancelled`,
+        allow_promotion_codes: true,
+      });
+
+      trackBillingEvent(req, "stripe_checkout_started", {
+        plan_id: "firefighter_plus",
+        billing_period: parsed.data.billing_period,
+        ...(parsed.data.feature ? { feature: parsed.data.feature } : {}),
+      });
+
+      if (!session.url) {
+        return res.status(500).json({ message: "Failed to create checkout session" });
+      }
+
+      return res.json({ ok: true, url: session.url });
+    } catch (err) {
+      logError("billing", "checkout failed", err);
+      return res.status(500).json({ message: "Failed to start checkout" });
+    }
+  });
+
+  app.post("/api/billing/portal", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
+    try {
+      await ensureStore();
+      const userId = req._authUserId!;
+      const customerId = getStripeCustomerIdForUser(userId);
+      if (!customerId) {
+        return res.status(404).json({ message: "No billing account on file" });
+      }
+
+      const stripe = getStripeClient();
+      const origin = resolvePublicSiteOrigin(req.get("host"), req.protocol);
+      const session = await stripe.billingPortal.sessions.create({
+        customer: customerId,
+        return_url: `${origin}/account`,
+      });
+
+      trackBillingEvent(req, "stripe_billing_portal_opened");
+
+      return res.json({ ok: true, url: session.url });
+    } catch (err) {
+      logError("billing", "billing portal failed", err);
+      return res.status(500).json({ message: "Failed to open billing portal" });
+    }
+  });
+
+  // Stripe-signed webhook — intentionally NOT behind requireCsrf/requireAuth.
+  // Authenticity comes from the Stripe-Signature header + STRIPE_WEBHOOK_SECRET,
+  // verified via stripe.webhooks.constructEvent below. req.rawBody is captured
+  // by the global express.json({ verify }) hook in server/index.ts, so the
+  // exact bytes Stripe signed are available even though express.json() also
+  // parses req.body for us.
+  app.post("/api/billing/stripe-webhook", async (req: Request, res: Response) => {
+    try {
+      await ensureStore();
+      const signature = req.headers["stripe-signature"];
+      if (!signature || typeof signature !== "string" || !req.rawBody) {
+        return res.status(400).json({ message: "Missing Stripe signature" });
+      }
+
+      const stripe = getStripeClient();
+      let event;
+      try {
+        event = stripe.webhooks.constructEvent(
+          req.rawBody as Buffer,
+          signature,
+          getWebhookSecret(),
+        );
+      } catch (err) {
+        logError("billing", "stripe webhook signature verification failed", err);
+        return res.status(400).json({ message: "Invalid signature" });
+      }
+
+      // Idempotency — Stripe redelivers events; never double-apply one.
+      if (hasWebhookEventBeenProcessed(event.id)) {
+        return res.json({ ok: true, duplicate: true });
+      }
+
+      switch (event.type) {
+        case "checkout.session.completed": {
+          const session = event.data.object as import("stripe").Stripe.Checkout.Session;
+          const userId =
+            session.client_reference_id ?? (session.metadata?.user_id as string | undefined);
+          const stripeSubscriptionId =
+            typeof session.subscription === "string" ? session.subscription : session.subscription?.id;
+          const stripeCustomerId =
+            typeof session.customer === "string" ? session.customer : session.customer?.id;
+          if (userId && stripeSubscriptionId && stripeCustomerId) {
+            const subscription = await stripe.subscriptions.retrieve(stripeSubscriptionId);
+            upsertStripeSubscription({
+              userId,
+              stripeCustomerId,
+              stripeSubscriptionId,
+              stripePriceId: subscription.items.data[0]?.price?.id ?? null,
+              status: mapStripeStatus(subscription.status),
+              cancelAtPeriodEnd: subscription.cancel_at_period_end,
+              currentPeriodEnd: subscription.items.data[0]?.current_period_end
+                ? new Date(subscription.items.data[0].current_period_end * 1000).toISOString()
+                : null,
+            });
+            trackBillingEvent(req, "stripe_checkout_completed", { plan_id: "firefighter_plus" });
+          } else {
+            logError(
+              "billing",
+              "stripe checkout.session.completed missing user/subscription/customer linkage",
+              new Error(`session ${session.id}`),
+            );
+          }
+          break;
+        }
+        case "customer.subscription.updated": {
+          const subscription = event.data.object as import("stripe").Stripe.Subscription;
+          const stripeCustomerId =
+            typeof subscription.customer === "string" ? subscription.customer : subscription.customer.id;
+          const userId =
+            (subscription.metadata?.user_id as string | undefined) ??
+            getUserIdByStripeCustomerId(stripeCustomerId) ??
+            getUserIdByStripeSubscriptionId(subscription.id);
+          if (userId) {
+            upsertStripeSubscription({
+              userId,
+              stripeCustomerId,
+              stripeSubscriptionId: subscription.id,
+              stripePriceId: subscription.items.data[0]?.price?.id ?? null,
+              status: mapStripeStatus(subscription.status),
+              cancelAtPeriodEnd: subscription.cancel_at_period_end,
+              currentPeriodEnd: subscription.items.data[0]?.current_period_end
+                ? new Date(subscription.items.data[0].current_period_end * 1000).toISOString()
+                : null,
+            });
+            trackBillingEvent(req, "stripe_subscription_updated", { status: subscription.status });
+          }
+          break;
+        }
+        case "customer.subscription.deleted": {
+          const subscription = event.data.object as import("stripe").Stripe.Subscription;
+          markStripeSubscriptionCancelledBySubscriptionId(subscription.id);
+          trackBillingEvent(req, "stripe_subscription_cancelled");
+          break;
+        }
+        default:
+          // Other event types (invoices, payment methods, etc.) are covered
+          // indirectly by customer.subscription.updated, which Stripe also
+          // fires on payment-failure status transitions (e.g. → past_due).
+          break;
+      }
+
+      recordWebhookEvent(event.id, event.type);
+      return res.json({ ok: true });
+    } catch (err) {
+      logError("billing", "stripe webhook handling failed", err);
+      // 500 so Stripe retries — safe because of the idempotency check above.
+      return res.status(500).json({ message: "Webhook handling failed" });
+    }
+  });
+
+
   app.get("/api/admin/billing", requireAdmin, async (_req: Request, res: Response) => {
 
     try {
@@ -628,5 +895,27 @@ export function registerBillingRoutes(app: Express): void {
 
   });
 
+  app.patch(
+    "/api/admin/billing/flags/:flagKey",
+    requireAdmin,
+    async (req: Request, res: Response) => {
+      try {
+        await ensureStore();
+        const flagKey = String(req.params.flagKey ?? "");
+        const parsed = adminSetGlobalFlagSchema.safeParse(req.body);
+        if (!parsed.success) {
+          return res.status(400).json({ message: "Invalid payload" });
+        }
+        const flag = adminSetGlobalFlag(flagKey, parsed.data.enabled);
+        if (!flag) {
+          return res.status(404).json({ message: "Unknown flag" });
+        }
+        return res.json({ flag, dashboard: getAdminBillingDashboard() });
+      } catch (err) {
+        logError("billing", "admin set global flag failed", err);
+        return res.status(500).json({ message: "Failed to update flag" });
+      }
+    },
+  );
 }
 

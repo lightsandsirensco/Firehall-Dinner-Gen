@@ -58,6 +58,8 @@ export function recordEmailLead(input: {
   source: string;
   signup_form?: string;
   klaviyo_synced?: boolean;
+  /** Affirmative marketing opt-in for THIS submission only — never inferred/backfilled. */
+  marketing_consent?: boolean;
   metadata?: Record<string, string | number | boolean>;
 }): void {
   const d = getDb();
@@ -71,15 +73,24 @@ export function recordEmailLead(input: {
 
   const metadataJson = input.metadata ? JSON.stringify(input.metadata) : null;
   const now = new Date().toISOString();
+  const consentGiven = input.marketing_consent ? 1 : 0;
 
   if (existing) {
+    // Escalate-only: a missing/false consent on a later submission never revokes
+    // a previously recorded affirmative consent. consent_captured_at is set once,
+    // on first affirmative consent, and never overwritten afterward.
     d.prepare(
       `UPDATE email_leads SET
         last_activity_at = ?,
         klaviyo_synced = CASE WHEN ? = 1 THEN 1 ELSE klaviyo_synced END,
+        marketing_consent = CASE WHEN ? = 1 THEN 1 ELSE marketing_consent END,
+        consent_captured_at = CASE
+          WHEN ? = 1 AND consent_captured_at IS NULL THEN ?
+          ELSE consent_captured_at
+        END,
         metadata_json = COALESCE(?, metadata_json)
        WHERE lead_id = ?`,
-    ).run(now, input.klaviyo_synced ? 1 : 0, metadataJson, existing.lead_id);
+    ).run(now, input.klaviyo_synced ? 1 : 0, consentGiven, consentGiven, now, metadataJson, existing.lead_id);
     syncLeadConversionsForEmail(email);
     return;
   }
@@ -87,8 +98,8 @@ export function recordEmailLead(input: {
   d.prepare(
     `INSERT INTO email_leads (
       lead_id, email, source, signup_form, captured_at, last_activity_at,
-      klaviyo_synced, metadata_json
-    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+      klaviyo_synced, marketing_consent, consent_captured_at, metadata_json
+    ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`,
   ).run(
     nanoid(12),
     email,
@@ -97,6 +108,8 @@ export function recordEmailLead(input: {
     now,
     now,
     input.klaviyo_synced ? 1 : 0,
+    consentGiven,
+    consentGiven ? now : null,
     metadataJson,
   );
   syncLeadConversionsForEmail(email);

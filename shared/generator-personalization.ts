@@ -19,6 +19,7 @@ import {
   type SimplifiedGeneratorFilters,
   type SimplifiedProtein,
 } from "./generator-simplified.js";
+import { sanitizeFoodPreferenceKeys } from "./ingredient-preferences/definitions.js";
 
 export const GENERATOR_PERSONAL_PREFS_SCHEMA = 1 as const;
 
@@ -28,6 +29,8 @@ export interface GeneratorPersonalPrefs {
   healthiness: HealthinessPreference;
   allergens: SimplifiedAllergen[];
   diets: SimplifiedDiet[];
+  /** Firehall Meals Pro — "Foods to Avoid" (canonical keys). Session-overridable. */
+  foodsToAvoid: SimplifiedGeneratorFilters["foodsToAvoid"];
   /** Device-level crew override when not using linked hall crew */
   crew_bucket?: CrewSizeBucketUi;
   updatedAt: string;
@@ -131,6 +134,9 @@ export function parsePersonalPrefs(raw: unknown): GeneratorPersonalPrefs | null 
   const diets = Array.isArray(p.diets)
     ? p.diets.filter((d): d is SimplifiedDiet => SIMPLIFIED_DIETS.includes(d as SimplifiedDiet))
     : [];
+  const foodsToAvoid = sanitizeFoodPreferenceKeys(
+    Array.isArray(p.foodsToAvoid) ? p.foodsToAvoid.map(String) : [],
+  );
   const crew_bucket =
     p.crew_bucket && CREW_SIZE_BUCKETS.includes(p.crew_bucket) ? p.crew_bucket : undefined;
   return {
@@ -139,6 +145,7 @@ export function parsePersonalPrefs(raw: unknown): GeneratorPersonalPrefs | null 
     healthiness,
     allergens,
     diets,
+    foodsToAvoid,
     crew_bucket,
     updatedAt: typeof p.updatedAt === "string" ? p.updatedAt : new Date().toISOString(),
   };
@@ -151,6 +158,7 @@ export function personalPrefsFromFilters(filters: SimplifiedGeneratorFilters): G
     healthiness: filters.healthiness,
     allergens: [...filters.allergens],
     diets: [...filters.diets],
+    foodsToAvoid: [...filters.foodsToAvoid],
     crew_bucket: filters.crew_bucket,
     updatedAt: new Date().toISOString(),
   };
@@ -163,6 +171,14 @@ export interface ResolveGeneratorFiltersInput {
   hall: Pick<HallRecord, "crew_size" | "appliances"> | null;
   hallLinked: boolean;
   localCrewSize?: number;
+  /**
+   * Signed-in user's saved account-level crew size (`user_profiles.crew_size`,
+   * edited on /account — distinct from a linked hall's crew_size). Used as a
+   * default only, one tier below an explicit hall link and any existing
+   * personal/session choice, so it never overwrites something the user
+   * already picked.
+   */
+  accountCrewSize?: number | null;
 }
 
 /** Merge hall, account, and personal defaults into tonight's generator state. */
@@ -176,9 +192,11 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
       personal?.crew_bucket ??
       (session?.crew_bucket && CREW_SIZE_BUCKETS.includes(session.crew_bucket)
         ? session.crew_bucket
-        : input.localCrewSize
-          ? crewSizeToBucket(input.localCrewSize)
-          : base.crew_bucket),
+        : input.accountCrewSize != null && input.accountCrewSize >= 2
+          ? crewSizeToBucket(input.accountCrewSize)
+          : input.localCrewSize
+            ? crewSizeToBucket(input.localCrewSize)
+            : base.crew_bucket),
     protein: personal?.protein ?? session?.protein ?? base.protein,
     appliances: session?.appliances?.length ? [...session.appliances] : base.appliances,
     healthiness: personal?.healthiness ?? session?.healthiness ?? base.healthiness,
@@ -194,6 +212,12 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
         : session?.diets?.length
           ? [...session.diets]
           : mapDietaryToDiets(input.preferences?.dietary_restrictions ?? []),
+    foodsToAvoid:
+      personal?.foodsToAvoid?.length
+        ? [...personal.foodsToAvoid]
+        : session?.foodsToAvoid?.length
+          ? [...session.foodsToAvoid]
+          : sanitizeFoodPreferenceKeys(input.preferences?.excluded_ingredients ?? []),
   };
 
   const prefProtein = input.preferences?.preferred_proteins?.[0];

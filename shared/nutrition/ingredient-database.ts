@@ -40,6 +40,12 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["brioche bun", "hamburger bun", "burger bun", "hot dog bun", "bun", "buns", "slider bun"], calories: 280, protein: 9, carbs: 49, fat: 5, unitGrams: { count: 55, bun: 55 } },
   { keywords: ["jasmine rice", "white rice", "long grain rice", "basmati rice", "rice uncooked", "rice, uncooked"], calories: 360, protein: 7, carbs: 80, fat: 0.6, unitGrams: { cup: 185, lb: 454 } },
   { keywords: ["brown rice", "wild rice"], calories: 360, protein: 8, carbs: 76, fat: 2.7, unitGrams: { cup: 190 } },
+  // Cooked/prepared rice is ~3x less calorie-dense by weight than dry/uncooked
+  // rice (it has absorbed water). Recipes that call for a quantity of already
+  // "cooked"/"steamed"/"fried" rice were matching the generic uncooked "rice"
+  // profile above and wildly overstating calories/carbs for that line. These
+  // keywords are longer/more specific so they win the longest-match lookup.
+  { keywords: ["cooked rice", "cooked white rice", "steamed rice", "fried rice", "cooked jasmine rice"], calories: 130, protein: 2.7, carbs: 28, fat: 0.3, unitGrams: { cup: 175, lb: 454 } },
   { keywords: ["dry elbow macaroni", "dry macaroni", "elbow macaroni dry", "pasta", "spaghetti", "penne", "macaroni", "egg noodles"], calories: 371, protein: 13, carbs: 75, fat: 1.5, unitGrams: { lb: 454, oz: 28, cup: 100 } },
   { keywords: ["potato", "potatoes", "russet potato", "yukon potato", "hash brown", "hash browns", "frozen hash browns"], calories: 77, protein: 2, carbs: 17, fat: 0.1, unitGrams: { lb: 454, oz: 28, count: 170, medium: 170, large: 280 } },
   { keywords: ["sweet potato"], calories: 86, protein: 1.6, carbs: 20, fat: 0.1, unitGrams: { lb: 454, count: 130 } },
@@ -49,7 +55,7 @@ export const INGREDIENT_NUTRITION_PROFILES: IngredientNutritionProfile[] = [
   { keywords: ["kidney bean", "black bean", "pinto bean", "cannellini", "chickpea", "garbanzo", "beans drained", "beans, drained"], calories: 127, protein: 8.7, carbs: 23, fat: 0.5, unitGrams: { can: 250, cans: 250, cup: 170, lb: 454 } },
   { keywords: ["crushed tomato", "diced tomato", "tomato sauce", "marinara", "tomatoes canned", "san marzano"], calories: 32, protein: 1.4, carbs: 7, fat: 0.2, unitGrams: { can: 400, cans: 400, cup: 240, oz: 28 } },
   { keywords: ["tomato paste"], calories: 82, protein: 4.3, carbs: 19, fat: 0.5, unitGrams: { tbsp: 16, oz: 28, can: 170 } },
-  { keywords: ["cheddar", "mozzarella", "pepper jack", "shredded cheese", "cheese shredded", "parmesan", "monterey jack", "swiss cheese"], calories: 403, protein: 25, carbs: 1.3, fat: 33, unitGrams: { cup: 113, oz: 28, lb: 454 } },
+  { keywords: ["cheddar", "mozzarella", "pepper jack", "shredded cheese", "cheese shredded", "parmesan", "monterey jack", "swiss cheese"], calories: 403, protein: 25, carbs: 1.3, fat: 33, unitGrams: { cup: 113, oz: 28, lb: 454, slice: 28 } },
   { keywords: ["cream cheese", "sour cream"], calories: 342, protein: 6, carbs: 4, fat: 34, unitGrams: { cup: 230, oz: 28, block: 225 } },
   { keywords: ["butter", "unsalted butter"], calories: 717, protein: 0.9, carbs: 0.1, fat: 81, unitGrams: { tbsp: 14, tsp: 5, stick: 113, lb: 454, oz: 28, cup: 227 } },
   { keywords: ["olive oil", "vegetable oil", "canola oil", "cooking oil", "oil"], calories: 884, protein: 0, carbs: 0, fat: 100, unitGrams: { tbsp: 14, tsp: 5, cup: 218, oz: 28 } },

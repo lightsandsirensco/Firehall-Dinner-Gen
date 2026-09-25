@@ -243,15 +243,18 @@ function scoreHumanVoice(prose: string, aiFlags: string[], article: EditorialArt
   return Math.max(0, Math.min(100, score));
 }
 
+const GENERIC_FAQ_QUESTION_MARKERS =
+  /where do these recipes? (come from|links? go)|how do i find (more )?recipes|what if.*crew size (or time )?change/i;
+
 function scoreTrust(factFlags: string[], article: EditorialArticle): number {
   let score = 100;
   score -= factFlags.length * 15;
-  const boilerplateFaq = article.faqs.filter(
-    (f) =>
-      f.question === "Where do these recipes come from?" ||
-      f.question === "What if crew size or time changes tonight?",
-  );
-  if (boilerplateFaq.length >= 2 && article.faqs.length <= 2) score -= 10;
+  const boilerplateFaq = article.faqs.filter((f) => GENERIC_FAQ_QUESTION_MARKERS.test(f.question));
+  // Any generic/product-explainer FAQ question is a trust problem — it
+  // signals the guide leaned on filler instead of answering something
+  // specific to its own subject. Penalize per occurrence, regardless of
+  // how many other FAQs exist alongside it.
+  score -= boilerplateFaq.length * 15;
   return Math.max(0, score);
 }
 

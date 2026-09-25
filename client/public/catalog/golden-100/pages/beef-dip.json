@@ -14,9 +14,9 @@
   "prepTime": 35,
   "difficulty": "medium",
   "calories": 1400,
-  "protein": 96,
-  "carbs": 80,
-  "fats": 78,
+  "protein": 94,
+  "carbs": 97,
+  "fats": 71,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -235,9 +235,9 @@
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1400,
-    "protein": 96,
-    "carbs": 80,
-    "fats": 78,
+    "protein": 94,
+    "carbs": 97,
+    "fats": 71,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -378,5 +378,9 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "onions",
+    "mayonnaise"
+  ]
 }

@@ -67,8 +67,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 93,
+        "carbs": 143,
+        "fat": 47,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro"
+      ]
     },
     {
       "slug": "breakfast-sausage-pizza",
@@ -134,8 +143,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "buffalo-chicken-pizza",
@@ -196,8 +207,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 87,
+        "carbs": 101,
+        "fat": 68,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "blue_cheese"
+      ]
     },
     {
       "slug": "pepperoni-pizza-night",
@@ -264,8 +283,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "detroit-style-pizza",
@@ -330,8 +351,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "firehall-supreme-pizza",
@@ -398,8 +421,15 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "mushrooms",
+        "onions",
+        "olives",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "four-cheese-white-pizza",
@@ -460,11 +490,17 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": true,
+        "calories": 1331,
+        "protein": 61,
+        "carbs": 112,
+        "fat": 68,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "margherita-pizza",
@@ -529,8 +565,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "hawaiian-pizza",
@@ -591,11 +629,19 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": true,
+        "calories": 1143,
+        "protein": 64,
+        "carbs": 126,
+        "fat": 40,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "honey-soppressata-pizza",
@@ -659,8 +705,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "jalapeno-popper-pizza",
@@ -722,8 +770,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "jalapenos"
+      ]
     },
     {
       "slug": "meat-lovers-sheet-pizza",
@@ -791,8 +843,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "nashville-hot-chicken-pizza",
@@ -857,8 +911,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "pickles"
+      ]
     },
     {
       "slug": "pesto-chicken-pizza",
@@ -916,8 +974,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1266,
+        "protein": 94,
+        "carbs": 110,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "tomatoes"
+      ]
     },
     {
       "slug": "philly-cheesesteak-pizza",
@@ -985,8 +1051,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 85,
+        "carbs": 105,
+        "fat": 69,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "mayonnaise",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "sicilian-sheet-pizza",
@@ -1053,8 +1129,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "smoked-brisket-bbq-pizza",
@@ -1119,8 +1197,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "jalapenos"
+      ]
     },
     {
       "slug": "taco-pizza",
@@ -1182,8 +1265,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "jalapenos",
+        "beans"
+      ]
     },
     {
       "slug": "veggie-supreme-pizza",
@@ -1245,11 +1333,23 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": true,
+        "calories": 1183,
+        "protein": 52,
+        "carbs": 126,
+        "fat": 50,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mushrooms",
+        "onions",
+        "olives",
+        "bell_peppers",
+        "spinach"
+      ]
     },
     {
       "slug": "white-garlic-chicken-pizza",
@@ -1308,8 +1408,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "spinach"
+      ]
     }
   ]
 }

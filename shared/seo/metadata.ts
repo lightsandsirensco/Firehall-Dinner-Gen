@@ -146,7 +146,7 @@ export function buildHallOfFameSeo(): PageSeoConfig {
   return {
     title: "Hall of Fame — Top Firehall Meals | Firehall Meals",
     description: clipDescription(
-      "Canada's most cooked, voted, and wheel-spun firehall meals — community rankings from crews using Firehall Meals.",
+      "The most cooked, voted, and wheel-spun firehall meals — community rankings from crews using Firehall Meals.",
     ),
     canonicalPath: "/hall-of-fame",
     ogType: "website",
@@ -229,6 +229,28 @@ export function buildAboutSeo(): PageSeoConfig {
     canonicalPath: "/about",
     ogType: "website",
     keywords: [...SEO_TARGET_KEYWORDS],
+  };
+}
+
+export function buildPrivacySeo(): PageSeoConfig {
+  return {
+    title: `Privacy Policy | ${SEO_SITE_NAME}`,
+    description: clipDescription(
+      "How Firehall Meals collects, uses, and stores your account information, preferences, and analytics data — including third-party services like Stripe, Klaviyo, and Google Analytics.",
+    ),
+    canonicalPath: "/privacy",
+    ogType: "website",
+  };
+}
+
+export function buildTermsSeo(): PageSeoConfig {
+  return {
+    title: `Terms of Service | ${SEO_SITE_NAME}`,
+    description: clipDescription(
+      "The terms that govern using Firehall Meals, including Firehall Meals Pro subscriptions, billing, cancellation, and content disclaimers.",
+    ),
+    canonicalPath: "/terms",
+    ogType: "website",
   };
 }
 
@@ -334,7 +356,7 @@ export function buildGuidesClusterSeo(clusterId: GuidesClusterId, articleCount =
     clusterId === "firefighter-meals"
       ? "Firefighter meals built for station kitchens — crew-sized, shift-friendly, and hall-tested."
       : clusterId === "firehall-dinners"
-        ? "Firehall dinner ideas crews actually run: comfort, BBQ, big feeds, and quick shift plates."
+        ? "Fire station dinner ideas crews actually run: comfort, BBQ, big feeds, and quick shift plates."
         : clusterId === "firefighter-nutrition"
           ? "Firefighter nutrition for the job: recovery, high-protein meals, and performance habits that hold up."
           : "Station cooking systems: workflow, grocery strategy, and kitchen habits that survive interruptions.";

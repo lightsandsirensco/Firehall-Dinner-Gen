@@ -107,8 +107,8 @@ export const CREW_RATING_COMPLAINT_LABELS: Record<CrewRatingComplaintCategory, s
 
 export const RECIPE_CREW_RATING_BADGE_LABELS: Record<RecipeCrewRatingBadgeId, string> = {
   hall_approved: "Hall Approved",
-  crew_favourite: "Crew Favourite",
-  hall_favourite: "Hall Favourite",
+  crew_favourite: "Crew Favorite",
+  hall_favourite: "Hall Favorite",
   top_rated: "Top Rated",
   trending: "Trending",
   rookie_approved: "Rookie Approved",

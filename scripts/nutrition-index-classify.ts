@@ -11,36 +11,80 @@
  * "protein" or "healthy") instead of real per-serving macros. Must be re-run
  * any time recipe nutrition changes or a collection index is regenerated.
  *
+ * Also projects the raw per-serving macros (calories/protein/carbs/fat —
+ * straight from the page's own `nutrition` block, never recalculated here)
+ * plus `numericFilterEligible`, a deterministic reliability signal reused
+ * from the existing nutrition integrity audit (see
+ * shared/nutrition/integrity-audit.ts + shared/nutrition/filter-eligibility.ts)
+ * that powers Firehall Meals Pro's numeric nutrition filtering (min protein /
+ * max calories / max carbs / max fat) in server/approved-catalog.ts. This
+ * does NOT introduce a second nutrition calculation engine — it reuses the
+ * exact same audit function the human-facing integrity report runs.
+ *
  *   npx tsx scripts/nutrition-index-classify.ts --dry-run
  *   npx tsx scripts/nutrition-index-classify.ts
  */
 import fs from "node:fs";
 import path from "node:path";
+import {
+  auditRecipeNutritionIntegrity,
+  type NutritionCatalogId,
+} from "../shared/nutrition/integrity-audit.js";
+import { isEligibleForNumericNutritionFilter } from "../shared/nutrition/filter-eligibility.js";
+import { catalogIngredientsFromUnknown, defaultRecipeServings } from "../shared/nutrition/servings.js";
+import { getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
-const COLLECTIONS: Array<{ id: string; root: string }> = [
-  { id: "golden-100", root: "client/public/catalog/golden-100" },
-  { id: "hall-expansion", root: "client/public/catalog/hall-expansion" },
-  { id: "bbq", root: "client/public/catalog/bbq" },
-  { id: "performance-meals", root: "client/public/catalog/performance-meals" },
-  { id: "breakfast", root: "client/public/catalog/breakfast" },
-  { id: "pizza-night", root: "client/public/catalog/pizza-night" },
-  { id: "smoothies", root: "client/public/catalog/smoothies" },
+const COLLECTIONS: Array<{
+  id: string;
+  root: string;
+  catalogId: NutritionCatalogId;
+  mealType: "dinner" | "breakfast" | "smoothie";
+}> = [
+  { id: "golden-100", root: "client/public/catalog/golden-100", catalogId: "golden_100", mealType: "dinner" },
+  {
+    id: "hall-expansion",
+    root: "client/public/catalog/hall-expansion",
+    catalogId: "hall_expansion",
+    mealType: "dinner",
+  },
+  { id: "bbq", root: "client/public/catalog/bbq", catalogId: "bbq_grill", mealType: "dinner" },
+  {
+    id: "performance-meals",
+    root: "client/public/catalog/performance-meals",
+    catalogId: "performance_meals",
+    mealType: "dinner",
+  },
+  { id: "breakfast", root: "client/public/catalog/breakfast", catalogId: "breakfast", mealType: "breakfast" },
+  { id: "pizza-night", root: "client/public/catalog/pizza-night", catalogId: "pizza_night", mealType: "dinner" },
+  { id: "smoothies", root: "client/public/catalog/smoothies", catalogId: "smoothies", mealType: "smoothie" },
 ];
+
+interface NutritionSummary {
+  highProtein: boolean;
+  lowCarb: boolean;
+  healthy: boolean;
+  estimateAvailable: boolean;
+  calories?: number;
+  protein?: number;
+  carbs?: number;
+  fat?: number;
+  numericFilterEligible: boolean;
+}
 
 interface PageRecord {
   collection: string;
   slug: string;
-  nutritionSummary: {
-    highProtein: boolean;
-    lowCarb: boolean;
-    healthy: boolean;
-    estimateAvailable: boolean;
-  };
+  nutritionSummary: NutritionSummary;
 }
 
-function loadPages(root: string, collection: string): PageRecord[] {
+function loadPages(
+  root: string,
+  collection: string,
+  catalogId: NutritionCatalogId,
+  mealType: "dinner" | "breakfast" | "smoothie",
+): PageRecord[] {
   const dir = path.join(root, "pages");
   const out: PageRecord[] = [];
   if (!fs.existsSync(dir)) return out;
@@ -52,6 +96,40 @@ function loadPages(root: string, collection: string): PageRecord[] {
       const ff = json.nutrition?.filterFlags;
       const bc = json.nutrition?.badgeCandidates;
       const estimateAvailable = Boolean(json.nutrition?.estimateAvailable);
+
+      const calories = Number(json.nutrition?.calories ?? json.calories ?? 0);
+      const protein = Number(json.nutrition?.protein ?? json.protein ?? 0);
+      const carbs = Number(json.nutrition?.carbs ?? json.carbs ?? 0);
+      const fat = Number(json.nutrition?.fats ?? json.nutrition?.fat ?? json.fats ?? json.fat ?? 0);
+
+      // Reuse the exact same integrity audit the human-facing nutrition
+      // report runs (shared/nutrition/integrity-audit.ts) to derive a
+      // deterministic reliability signal — no separate calculation engine,
+      // no recalculation written back to the page, no hand-written slug list.
+      const baseServings =
+        getRecipeBaseServings({
+          baseServings: Number(json.baseServings) || undefined,
+          crewSize: Number(json.crewSize) || undefined,
+        }) || defaultRecipeServings(json, mealType);
+      const auditResult = auditRecipeNutritionIntegrity({
+        slug: json.slug,
+        title: String(json.displayTitle || json.title || json.slug),
+        catalog: catalogId,
+        mealType,
+        category: typeof json.category === "string" ? json.category : undefined,
+        baseServings,
+        ingredients: catalogIngredientsFromUnknown(json.ingredients),
+        stored: {
+          calories,
+          protein,
+          carbs,
+          fat,
+          source: json.nutrition?.source,
+          estimateAvailable,
+        },
+      });
+      const numericFilterEligible = estimateAvailable && isEligibleForNumericNutritionFilter(auditResult);
+
       out.push({
         collection,
         slug: json.slug,
@@ -64,6 +142,8 @@ function loadPages(root: string, collection: string): PageRecord[] {
           // <=650 cal, <=25g fat) — never a subjective "healthy" tag/keyword match.
           healthy: estimateAvailable ? Boolean(bc?.lighterOption || bc?.performanceMeal) : false,
           estimateAvailable,
+          ...(numericFilterEligible ? { calories, protein, carbs, fat } : {}),
+          numericFilterEligible,
         },
       });
     } catch {
@@ -74,14 +154,18 @@ function loadPages(root: string, collection: string): PageRecord[] {
 }
 
 const allPages: PageRecord[] = [];
-for (const { id, root } of COLLECTIONS) {
-  allPages.push(...loadPages(root, id));
+for (const { id, root, catalogId, mealType } of COLLECTIONS) {
+  allPages.push(...loadPages(root, id, catalogId, mealType));
 }
 
 const bySlug = new Map<string, PageRecord["nutritionSummary"]>();
 for (const p of allPages) bySlug.set(`${p.collection}::${p.slug}`, p.nutritionSummary);
 
 console.log(`[nutrition-index] Loaded nutrition data for ${allPages.length} recipe pages.`);
+const eligibleCount = allPages.filter((p) => p.nutritionSummary.numericFilterEligible).length;
+console.log(
+  `[nutrition-index] ${eligibleCount}/${allPages.length} recipes eligible for Pro numeric nutrition filtering.`,
+);
 
 let indexesUpdated = 0;
 function patchIndex(indexPath: string, collectionId: string): void {

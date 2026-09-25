@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 838,
-  "protein": 60,
-  "carbs": 31,
-  "fats": 51,
+  "calories": 1400,
+  "protein": 85,
+  "carbs": 105,
+  "fats": 69,
   "tags": [
     "protein:beef",
     "format:pizza",
@@ -162,10 +162,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 838,
-    "protein": 60,
-    "carbs": 31,
-    "fats": 51,
+    "calories": 1400,
+    "protein": 85,
+    "carbs": 105,
+    "fats": 69,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -173,7 +173,7 @@
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -277,5 +277,10 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "onions",
+    "mayonnaise",
+    "bell_peppers"
+  ]
 }

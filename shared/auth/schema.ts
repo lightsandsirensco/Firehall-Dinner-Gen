@@ -33,6 +33,8 @@ export const profileUpdateSchema = z.object({
   preferred_proteins: z.array(z.string().max(64)).max(20).optional(),
   dietary_restrictions: z.array(z.string().max(64)).max(20).optional(),
   appliance_preferences: z.array(z.string().max(64)).max(20).optional(),
+  /** "Foods to Avoid" (Firehall Meals Pro) — canonical keys, sanitized/entitlement-checked server-side. */
+  excluded_ingredients: z.array(z.string().max(64)).max(30).optional(),
   shift_reminders_enabled: z.boolean().optional(),
   shift_days: z.array(z.coerce.number().int().min(0).max(6)).max(7).optional(),
   shift_reminder_time: z

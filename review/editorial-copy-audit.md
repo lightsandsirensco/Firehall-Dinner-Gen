@@ -1,13 +1,47 @@
 # Editorial copy audit
 
-Articles: 58
-Pass: yes
+Articles: 57
+Pass: no
 
 ## Schema
 - none
 
 ## Unknown recipe slugs
-- none
+- quick-meals-between-calls: unknown recipe hall-blt-sandwich-feed
+- bbq-night-at-the-station: unknown recipe smoked-brisket
+- meal-prep-for-shift-workers: unknown recipe sunday-chili-batch
+- meal-prep-for-shift-workers: unknown recipe pulled-pork-mac
+- 25-firefighter-dinner-ideas: unknown recipe chili-garlic-bread
+- 25-firefighter-dinner-ideas: unknown recipe smoked-brisket
+- 25-firefighter-dinner-ideas: unknown recipe sunday-chili-batch
+- meals-firefighters-actually-cook: unknown recipe chili-garlic-bread
+- best-meals-24-hour-shift: unknown recipe sunday-chili-batch
+- best-firefighter-crockpot-meals: unknown recipe sunday-chili-batch
+- best-firefighter-crockpot-meals: unknown recipe carolina-mustard-pork
+- firehouse-comfort-meals: unknown recipe chili-garlic-bread
+- cheap-firehall-meals: unknown recipe chili-garlic-bread
+- best-station-chili-recipes: unknown recipe chili-garlic-bread
+- best-station-chili-recipes: unknown recipe sunday-chili-batch
+- best-meals-after-busy-shift: unknown recipe chili-garlic-bread
+- firefighter-breakfast-ideas: unknown recipe bacon-egg-hash
+- firehall-meal-prep-ideas: unknown recipe sunday-chili-batch
+- firehall-meal-prep-ideas: unknown recipe pulled-pork-mac
+- one-pot-firehall-meals: unknown recipe chili-garlic-bread
+- firefighter-recovery-nutrition: unknown recipe chili-garlic-bread
+- nutrition-after-overnight-calls: unknown recipe biscuits-gravy
+- avoid-living-on-takeout: unknown recipe chili-garlic-bread
+- eating-during-high-stress-shifts: unknown recipe chili-garlic-bread
+- recovery-meals-after-hard-calls: unknown recipe chili-garlic-bread
+- firehall-kitchen-culture: unknown recipe sunday-chili-batch
+- legendary-firehall-meals: unknown recipe chili-garlic-bread
+- legendary-firehall-meals: unknown recipe smoked-brisket
+- meals-every-firefighter-knows: unknown recipe chili-garlic-bread
+- rookie-cooking-mistakes: unknown recipe sunday-chili-batch
+- 10-classic-firehall-meals: unknown recipe chili-garlic-bread
+- 10-classic-firehall-meals: unknown recipe classic-patty-melt-for-the-crew
+- most-popular-firefighter-meals: unknown recipe sunday-chili-batch
+- firefighter-breakfast-guide: unknown recipe bacon-egg-hash
+- firefighter-breakfast-guide: unknown recipe biscuits-gravy
 
 ## Recommendation logic
 - none
@@ -17,26 +51,7 @@ Pass: yes
 
 ## Copy warnings
 - firehall-breakfast-and-brunch (thin_intro): Intro is short for a pillar guide
-- best-firehouse-meals-large-crews (thin_intro): Intro is short for a pillar guide
-- firehouse-comfort-meals (thin_intro): Intro is short for a pillar guide
-- firefighter-bbq-recipes (thin_intro): Intro is short for a pillar guide
-- meals-feeding-10-firefighters (thin_intro): Intro is short for a pillar guide
-- firehall-taco-night-ideas (thin_intro): Intro is short for a pillar guide
-- best-meals-after-busy-shift (thin_intro): Intro is short for a pillar guide
-- firefighter-breakfast-ideas (thin_intro): Intro is short for a pillar guide
-- firehall-meal-prep-ideas (thin_intro): Intro is short for a pillar guide
-- dutch-oven-meals-firefighters (thin_intro): Intro is short for a pillar guide
-- one-pot-firehall-meals (thin_intro): Intro is short for a pillar guide
-- hydration-for-firefighters (thin_intro): Intro is short for a pillar guide
-- nutrition-after-overnight-calls (thin_intro): Intro is short for a pillar guide
-- eating-during-high-stress-shifts (thin_intro): Intro is short for a pillar guide
-- recovery-meals-after-hard-calls (thin_intro): Intro is short for a pillar guide
-- how-crews-split-groceries (thin_intro): Intro is short for a pillar guide
-- meals-every-firefighter-knows (thin_intro): Intro is short for a pillar guide
-- feeding-ten-firefighters (thin_intro): Intro is short for a pillar guide
-- busy-shift-dinner-strategies (thin_intro): Intro is short for a pillar guide
-- station-kitchen-essentials (thin_intro): Intro is short for a pillar guide
-- organize-firehall-dinners (thin_intro): Intro is short for a pillar guide
+- 10-classic-firehall-meals (thin_intro): Intro is short for a pillar guide
 
 ## Manual review slugs
 - none

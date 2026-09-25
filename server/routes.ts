@@ -188,6 +188,8 @@ import { registerGrowthDashboardRoutes } from "./growth-dashboard/routes.js";
 import { registerSocialProofRoutes } from "./social-proof/social-proof-routes.js";
 import { registerAuthRoutes } from "./auth/auth-routes.js";
 import { initAuthStore } from "./auth/auth-store.js";
+import type { AuthedRequest } from "./auth/auth-middleware.js";
+import { gateFoodsToAvoidByEntitlement } from "./generation/foods-to-avoid-gate.js";
 import { registerUserSyncRoutes } from "./sync/routes.js";
 import { registerHallMembershipRoutes } from "./hall-membership/routes.js";
 import { registerHallShoppingListRoutes } from "./hall-shopping-list/routes.js";
@@ -202,7 +204,11 @@ import { registerHallLogbookRoutes } from "./hall-logbook/routes.js";
 import { initHallEventStore } from "./hall-events/store.js";
 import { initHallMembershipStore } from "./hall-membership/store.js";
 import { registerBillingRoutes } from "./billing/routes.js";
-import { initBillingStore } from "./billing/store.js";
+import { initBillingStore, resolveUserBilling } from "./billing/store.js";
+import { registerMealHistoryRoutes } from "./meal-history/routes.js";
+import { listRecentCookedSlugsOldestFirst } from "./meal-history/store.js";
+import { mergeRecentSlugSources } from "../shared/meal-rotation/weighted-pick.js";
+import { hasFeature } from "../shared/billing/types.js";
 import { captureEmailLead, registerAdminUsersRoutes } from "./admin-users/routes.js";
 import { registerGroceryDealsRoutes } from "./grocery-deals/routes.js";
 import { registerMonitoringRoutes } from "./monitoring/error-monitor.js";
@@ -355,6 +361,7 @@ export async function registerRoutes(
   registerHallLogbookRoutes(app);
   void initHallEventStore();
   registerBillingRoutes(app);
+  registerMealHistoryRoutes(app);
   registerAdminUsersRoutes(app);
   registerGroceryDealsRoutes(app);
   registerMonitoringRoutes(app);
@@ -1260,6 +1267,23 @@ export async function registerRoutes(
         busy_level: inferBusyLevelFromTime(parsed.data.time_available),
       });
 
+      // Resolved once per request — reused below for "Foods to Avoid" gating
+      // AND Meal Memory (Pro V1 Feature 3) durable-history personalization.
+      const authUserId = (req as AuthedRequest)._authUserId ?? null;
+      const requestUserBilling = authUserId ? resolveUserBilling(authUserId) : null;
+
+      // "Foods to Avoid" (ingredient_preferences) is a Firehall Meals Pro capability.
+      // The client may send a session list (seeded from the signed-in user's saved
+      // preference, overridable — see shared/generator-personalization.ts), but it is
+      // only ever honored here for a currently-entitled authenticated user. A spoofed
+      // request from a non-Pro/guest session is always forced back to [] — this is the
+      // sole point of truth for the gate, independent of whatever the client sent.
+      if (request.foods_to_avoid.length > 0) {
+        request.foods_to_avoid = requestUserBilling
+          ? gateFoodsToAvoidByEntitlement(requestUserBilling, request.foods_to_avoid)
+          : [];
+      }
+
       if (request.use_what_we_have && (!request.ingredients_on_hand || request.ingredients_on_hand.length === 0)) {
         cancelRequest(sessionKey, requestId);
         return res.status(400).json({ message: "Please enter at least one ingredient when using 'Use What's in the Fridge' mode." });
@@ -1279,7 +1303,26 @@ export async function registerRoutes(
       const clientMeta = sanitizeClientGenerationMeta((req.body as Record<string, unknown>) || {});
       const clientCurrentSig = clientMeta.currentRecipeSignature;
       const clientRecentSigs = clientMeta.recentSignatures;
-      const clientRecentSlugs = clientMeta.recentSlugs;
+
+      // Firehall Meals Pro V1 Feature 3 — "Meal Memory": for a signed-in,
+      // entitled user, load their durable server-side cooked-meal history
+      // (never client-submitted — a Free/guest session cannot spoof this by
+      // sending fake account history) and merge it with this session's
+      // device-local recent slugs. Reuses the EXISTING recentSlugPenalty /
+      // pickFromSummaries variety mechanics untouched — see
+      // shared/meal-rotation/weighted-pick.ts mergeRecentSlugSources for the
+      // exact recency policy (last 10 cooked events, oldest-first, soft
+      // penalty only — never a hard block, so a small candidate pool can
+      // still relax repetition preference exactly as it already does).
+      // Dietary restrictions / Foods to Avoid are computed independently
+      // above/below and are never touched by this merge.
+      let clientRecentSlugs = clientMeta.recentSlugs;
+      if (authUserId && requestUserBilling && hasFeature(requestUserBilling.features, "meal_memory")) {
+        const durableHistory = listRecentCookedSlugsOldestFirst(authUserId, 10);
+        if (durableHistory.length > 0) {
+          clientRecentSlugs = mergeRecentSlugSources(durableHistory, clientRecentSlugs);
+        }
+      }
 
       if (clientCurrentSig) {
         addSessionSignature(`${ipHash}:${sessionId}`, clientCurrentSig);
@@ -1632,6 +1675,7 @@ export async function registerRoutes(
         healthiness_level,
         crew_size,
         timestamp,
+        marketing_consent,
       } = parsed.data;
 
       if (!enforceEmailRateLimit(req, res, email)) return;
@@ -1642,8 +1686,12 @@ export async function registerRoutes(
         return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
       }
 
+      // Sending the recipe is transactional and must not require marketing consent.
+      // Only add the profile to the marketing list when the user explicitly opted in.
+      const wantsMarketing = marketing_consent === true;
+
       const results = await Promise.allSettled([
-        subscribeToList(email),
+        wantsMarketing ? subscribeToList(email) : Promise.resolve(),
         trackRecipeEvent(email, {
           recipe_title,
           primary_protein: primary_protein || "",
@@ -1657,7 +1705,7 @@ export async function registerRoutes(
         }),
       ]);
 
-      const subscribeFailed = results[0].status === "rejected";
+      const subscribeFailed = wantsMarketing && results[0].status === "rejected";
       const eventFailed = results[1].status === "rejected";
 
       if (subscribeFailed) {
@@ -1681,7 +1729,8 @@ export async function registerRoutes(
         email,
         source: "generator",
         signup_form: "email-recipe",
-        klaviyo_synced: !subscribeFailed,
+        klaviyo_synced: wantsMarketing && !subscribeFailed,
+        marketing_consent: wantsMarketing,
       });
 
       if (subscribeFailed) {
@@ -1715,7 +1764,8 @@ export async function registerRoutes(
         });
       }
 
-      const { email, recipe_title, shopping_list_sections, generator_type, timestamp } = parsed.data;
+      const { email, recipe_title, shopping_list_sections, generator_type, timestamp, marketing_consent } =
+        parsed.data;
 
       if (!enforceEmailRateLimit(req, res, email)) return;
 
@@ -1725,8 +1775,11 @@ export async function registerRoutes(
         return res.status(503).json({ message: "Email service is not configured. Please contact the site owner." });
       }
 
+      // Sending the shopping list is transactional and must not require marketing consent.
+      const wantsMarketing = marketing_consent === true;
+
       const results = await Promise.allSettled([
-        subscribeToList(email),
+        wantsMarketing ? subscribeToList(email) : Promise.resolve(),
         trackShoppingListEvent(email, {
           recipe_title,
           shopping_list_sections: (shopping_list_sections || []).map((section) => ({
@@ -1740,7 +1793,7 @@ export async function registerRoutes(
         }),
       ]);
 
-      const subscribeFailed = results[0].status === "rejected";
+      const subscribeFailed = wantsMarketing && results[0].status === "rejected";
       const eventFailed = results[1].status === "rejected";
 
       if (subscribeFailed) {
@@ -1764,7 +1817,8 @@ export async function registerRoutes(
         email,
         source: "shopping_list",
         signup_form: "email-shopping-list",
-        klaviyo_synced: !subscribeFailed,
+        klaviyo_synced: wantsMarketing && !subscribeFailed,
+        marketing_consent: wantsMarketing,
       });
 
       const sectionCount = Array.isArray(shopping_list_sections) ? shopping_list_sections.length : 0;
@@ -1830,11 +1884,15 @@ export async function registerRoutes(
         return res.status(502).json({ message: `Email service error: ${reason}` });
       }
 
+      // This endpoint's sole stated purpose (homepage newsletter / Hall waitlist submit
+      // button) is to subscribe — submitting it IS the affirmative marketing opt-in, so
+      // no separate checkbox is added here. See PRE-LEGAL PRIVACY task notes.
       void captureEmailLead({
         email,
         source: leadSource,
         signup_form: leadSource === "hall_private_beta" ? "hall-private-beta-waitlist" : "homepage-subscribe",
         klaviyo_synced: !subscribeFailed,
+        marketing_consent: true,
       });
 
       if (subscribeFailed) {
@@ -1865,7 +1923,7 @@ export async function registerRoutes(
         });
       }
 
-      const { email } = parsed.data;
+      const { email, marketing_consent } = parsed.data;
 
       if (!enforceEmailRateLimit(req, res, email)) return;
 
@@ -1877,15 +1935,19 @@ export async function registerRoutes(
 
       const pdfUrl = "/downloads/the-official-firehall-red-lead-recipe.pdf";
 
+      // Unlocking the PDF is the transactional action and must not require marketing
+      // consent. Only add the profile to the marketing list when explicitly opted in.
+      const wantsMarketing = marketing_consent === true;
+
       const results = await Promise.allSettled([
-        subscribeToList(email),
+        wantsMarketing ? subscribeToList(email) : Promise.resolve(),
         trackLeadMagnetDownloaded(email, {
           source: "red-lead-page",
           lead_magnet: "red-lead-recipe",
         }),
       ]);
 
-      const subscribeFailed = results[0].status === "rejected";
+      const subscribeFailed = wantsMarketing && results[0].status === "rejected";
       const eventFailed = results[1].status === "rejected";
 
       if (subscribeFailed) {
@@ -1909,7 +1971,8 @@ export async function registerRoutes(
         email,
         source: "red_lead",
         signup_form: "red-lead-pdf",
-        klaviyo_synced: !subscribeFailed,
+        klaviyo_synced: wantsMarketing && !subscribeFailed,
+        marketing_consent: wantsMarketing,
       });
 
       if (subscribeFailed) {

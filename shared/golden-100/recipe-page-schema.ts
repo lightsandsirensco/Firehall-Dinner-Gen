@@ -104,6 +104,8 @@ export const goldenRecipePageSchema = z.object({
   generatedAt: z.string().trim().max(40),
   contentVersion: z.number().int().min(1).max(99),
   dietary: recipeDietaryProfileSchema.optional(),
+  /** Precomputed "Foods to Avoid" preference keys — see shared/ingredient-preferences/. */
+  avoidTags: z.array(z.string()).optional(),
 });
 
 export type GoldenRecipePage = z.infer<typeof goldenRecipePageSchema>;
@@ -135,7 +137,23 @@ export interface GoldenCatalogIndexEntry {
     lowCarb: boolean;
     healthy: boolean;
     estimateAvailable: boolean;
+    /** Raw per-serving macros — projected straight from the page's own computed `nutrition` block, never recalculated here. Omitted when unavailable. */
+    calories?: number;
+    protein?: number;
+    carbs?: number;
+    fat?: number;
+    /** Whether these macros are reliable enough for Pro numeric nutrition filtering — see shared/nutrition/filter-eligibility.ts. */
+    numericFilterEligible: boolean;
   };
+  /**
+   * Precomputed "Foods to Avoid" preference keys this recipe's ingredients
+   * match (Firehall Meals Pro personalization) — see
+   * shared/ingredient-preferences/ for the canonical matcher/definitions and
+   * scripts/ingredient-preferences-classify.ts for how this is computed.
+   * A recipe is excluded from Explore results when any of the user's
+   * selected avoid keys appear here. Deterministic keyword matching only.
+   */
+  avoidTags?: string[];
 }
 
 export const goldenCatalogIndexSchema = z.object({
@@ -167,8 +185,14 @@ export const goldenCatalogIndexSchema = z.object({
           lowCarb: z.boolean(),
           healthy: z.boolean(),
           estimateAvailable: z.boolean(),
+          calories: z.number().min(0).optional(),
+          protein: z.number().min(0).optional(),
+          carbs: z.number().min(0).optional(),
+          fat: z.number().min(0).optional(),
+          numericFilterEligible: z.boolean().default(false),
         })
         .optional(),
+      avoidTags: z.array(z.string()).optional(),
     }),
   ),
 });

@@ -200,6 +200,59 @@ export function useHallBillingAction(hallId: string) {
 
 
 
+/**
+ * Starts a real Stripe Checkout session for Firehall Meals Pro and redirects
+ * the browser there. No-op paywall/early-access UI stays the caller's
+ * responsibility when payments aren't enabled yet — this hook assumes the
+ * caller already confirmed `config.payments_enabled`.
+ */
+export function useStartProCheckout() {
+  const { authenticated, openSignIn } = useAuth();
+
+  return useCallback(
+    async (billingPeriod: "monthly" | "annual", feature?: string) => {
+      if (!authenticated) {
+        openSignIn();
+        return { ok: false as const, reason: "sign_in_required" as const };
+      }
+      try {
+        const res = await apiRequest("POST", "/api/billing/checkout", {
+          billing_period: billingPeriod,
+          feature,
+        });
+        if (!res.ok) {
+          return { ok: false as const, reason: "request_failed" as const };
+        }
+        const body = (await res.json()) as { url?: string };
+        if (!body.url) {
+          return { ok: false as const, reason: "request_failed" as const };
+        }
+        window.location.href = body.url;
+        return { ok: true as const };
+      } catch {
+        return { ok: false as const, reason: "request_failed" as const };
+      }
+    },
+    [authenticated, openSignIn],
+  );
+}
+
+/** Opens the Stripe Customer Portal for a Pro subscriber to manage/cancel billing. */
+export function useOpenBillingPortal() {
+  return useCallback(async () => {
+    try {
+      const res = await apiRequest("POST", "/api/billing/portal");
+      if (!res.ok) return { ok: false as const, reason: "request_failed" as const };
+      const body = (await res.json()) as { url?: string };
+      if (!body.url) return { ok: false as const, reason: "request_failed" as const };
+      window.location.href = body.url;
+      return { ok: true as const };
+    } catch {
+      return { ok: false as const, reason: "request_failed" as const };
+    }
+  }, []);
+}
+
 export function useRecordPaywallView() {
 
   return useCallback(async (feature?: BillingFeature, surface?: string) => {

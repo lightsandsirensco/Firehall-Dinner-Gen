@@ -8,6 +8,9 @@ import {
 /** Verified diet badges shown only when classification confidence is High. */
 const VERIFIED_ORDER: DietaryFilterKey[] = ["vegan", "vegetarian", "glutenFree", "dairyFree", "nutFree", "peanutFree", "soyFree", "shellfishFree", "fishFree", "eggFree", "porkFree"];
 
+export const DIETARY_ALLERGEN_DISCLAIMER =
+  "Dietary and allergen information is provided as a guide. Always check ingredient labels and account for substitutions and cross-contact when cooking for allergies.";
+
 export function DietaryBadges({
   dietary,
   className,
@@ -47,6 +50,7 @@ export function DietaryBadges({
           ))}
         </ul>
       )}
+      <p className="text-[11px] text-muted-foreground/80 leading-relaxed">{DIETARY_ALLERGEN_DISCLAIMER}</p>
     </div>
   );
 }

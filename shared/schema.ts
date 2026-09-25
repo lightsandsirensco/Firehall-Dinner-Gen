@@ -50,6 +50,16 @@ export const generateRequestSchema = z.object({
    * is confirmed true AND classification confidence is "high" — never inferred/assumed.
    */
   dietary_restrictions: z.array(z.enum(DIETARY_FILTER_KEYS)).max(11).optional().default([]),
+  /**
+   * Firehall Meals Pro — "Foods to Avoid" personal ingredient preferences
+   * (canonical keys, see shared/ingredient-preferences/definitions.ts). This
+   * is a taste-preference hard exclusion, NOT the allergen system above —
+   * kept as a fully separate field/pipeline on purpose. Only ever honored
+   * server-side for an authenticated user entitled to `ingredient_preferences`
+   * — see server/routes.ts, which forces this to [] otherwise regardless of
+   * what the client sends.
+   */
+  foods_to_avoid: z.array(z.string().max(64)).max(30).optional().default([]),
   last_template_id: z.number().optional(),
   use_what_we_have: z.boolean().optional().default(false),
   ingredients_on_hand: z.array(safeLabel).max(30).optional().default([]),
@@ -132,6 +142,8 @@ export const emailRecipeSchema = z.object({
   macros: emailMacrosSchema,
   timestamp: z.string().trim().max(40).optional(),
   capture_source: z.string().trim().max(40).optional(),
+  /** Explicit, unchecked-by-default marketing opt-in — distinct from the transactional recipe email. */
+  marketing_consent: z.boolean().optional().default(false),
 });
 
 export type EmailRecipePayload = z.infer<typeof emailRecipeSchema>;
@@ -157,12 +169,16 @@ export const emailShoppingListSchema = z.object({
     .default([]),
   generator_type: z.enum(["meal", "pizza"]).optional().default("meal"),
   timestamp: z.string().trim().max(40).optional(),
+  /** Explicit, unchecked-by-default marketing opt-in — distinct from the transactional shopping-list email. */
+  marketing_consent: z.boolean().optional().default(false),
 });
 
 export type EmailShoppingListPayload = z.infer<typeof emailShoppingListSchema>;
 
 export const redLeadLeadMagnetSchema = z.object({
   email: emailAddressSchema,
+  /** Explicit, unchecked-by-default marketing opt-in — distinct from unlocking the PDF. */
+  marketing_consent: z.boolean().optional().default(false),
 });
 
 export type RedLeadLeadMagnetPayload = z.infer<typeof redLeadLeadMagnetSchema>;

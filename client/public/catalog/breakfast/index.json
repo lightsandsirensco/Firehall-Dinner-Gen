@@ -53,8 +53,17 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 639,
+        "protein": 34,
+        "carbs": 61,
+        "fat": 28,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes"
+      ]
     },
     {
       "slug": "bagel-sandwich-line",
@@ -104,8 +113,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 983,
+        "protein": 51,
+        "carbs": 68,
+        "fat": 57,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "tomatoes",
+        "spinach"
+      ]
     },
     {
       "slug": "baked-oatmeal-mixed-berries",
@@ -155,8 +173,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "bbq-breakfast-hash",
@@ -205,8 +225,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 553,
+        "protein": 39,
+        "carbs": 43,
+        "fat": 24,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "belgian-waffle-platter",
@@ -262,8 +290,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "biscuit-french-toast-sliders",
@@ -319,8 +349,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 798,
+        "protein": 29,
+        "carbs": 73,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "breakfast-crunchwraps",
@@ -376,8 +412,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 625,
+        "protein": 32,
+        "carbs": 32,
+        "fat": 41,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "breakfast-enchiladas",
@@ -432,8 +474,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 792,
+        "protein": 41,
+        "carbs": 37,
+        "fat": 53,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "cilantro",
+        "feta"
+      ]
     },
     {
       "slug": "breakfast-fried-rice-crew",
@@ -489,8 +540,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 920,
+        "protein": 39,
+        "carbs": 117,
+        "fat": 32,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "breakfast-nachos-supreme",
@@ -535,8 +592,17 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 611,
+        "protein": 36,
+        "carbs": 14,
+        "fat": 46,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "jalapenos",
+        "avocado"
+      ]
     },
     {
       "slug": "breakfast-poutine",
@@ -592,8 +658,14 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 562,
+        "protein": 36,
+        "carbs": 10,
+        "fat": 42,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "breakfast-quesadillas",
@@ -644,8 +716,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "cilantro"
+      ]
     },
     {
       "slug": "breakfast-sandwich-trays",
@@ -704,8 +780,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 565,
+        "protein": 30,
+        "carbs": 26,
+        "fat": 38,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "breakfast-sliders",
@@ -766,8 +848,16 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 793,
+        "protein": 42,
+        "carbs": 15,
+        "fat": 63,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mustard"
+      ]
     },
     {
       "slug": "breakfast-stromboli-roll",
@@ -823,8 +913,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 715,
+        "protein": 46,
+        "carbs": 61,
+        "fat": 31,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "bell_peppers"
+      ]
     },
     {
       "slug": "buttermilk-pancakes",
@@ -876,8 +974,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "cast-iron-breakfast-skillet",
@@ -931,8 +1031,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 658,
+        "protein": 36,
+        "carbs": 50,
+        "fat": 35,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "chicken-and-waffles-crew",
@@ -988,8 +1096,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1071,
+        "protein": 82,
+        "carbs": 80,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "chilaquiles-verde-bake",
@@ -1040,8 +1154,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "jalapenos"
+      ]
     },
     {
       "slug": "chorizo-breakfast-hash",
@@ -1097,8 +1217,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 708,
+        "protein": 38,
+        "carbs": 42,
+        "fat": 43,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "club-sandwich-breakfast-bake",
@@ -1149,8 +1279,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 635,
+        "protein": 43,
+        "carbs": 31,
+        "fat": 37,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mayonnaise",
+        "tomatoes"
+      ]
     },
     {
       "slug": "corned-beef-hash-breakfast",
@@ -1201,8 +1340,17 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 611,
+        "protein": 32,
+        "carbs": 44,
+        "fat": 34,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "country-fried-steak-eggs",
@@ -1253,8 +1401,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 964,
+        "protein": 65,
+        "carbs": 81,
+        "fat": 41,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "cowboy-breakfast-skillet",
@@ -1310,8 +1464,19 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 631,
+        "protein": 35,
+        "carbs": 39,
+        "fat": 38,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "jalapenos",
+        "beans"
+      ]
     },
     {
       "slug": "crew-french-toast-bake",
@@ -1364,8 +1529,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 414,
+        "protein": 19,
+        "carbs": 50,
+        "fat": 15,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "denver-breakfast-casserole",
@@ -1420,8 +1591,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 488,
+        "protein": 38,
+        "carbs": 28,
+        "fat": 25,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "mustard"
+      ]
     },
     {
       "slug": "eggs-benedict-hall-style",
@@ -1474,11 +1655,19 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 713,
+        "protein": 28,
+        "carbs": 17,
+        "fat": 60,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mustard"
+      ]
     },
     {
       "slug": "farmers-breakfast-casserole",
@@ -1534,8 +1723,16 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 623,
+        "protein": 36,
+        "carbs": 21,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mustard"
+      ]
     },
     {
       "slug": "fire-captain-omelette-bar",
@@ -1586,8 +1783,18 @@
         "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 360,
+        "protein": 27,
+        "carbs": 5,
+        "fat": 26,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mushrooms",
+        "bell_peppers",
+        "spinach"
+      ]
     },
     {
       "slug": "firehall-breakfast-pizza",
@@ -1643,8 +1850,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 899,
+        "protein": 43,
+        "carbs": 77,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "german-potato-breakfast-skillet",
@@ -1695,8 +1908,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "mustard"
+      ]
     },
     {
       "slug": "green-chile-breakfast-burritos",
@@ -1747,8 +1965,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1004,
+        "protein": 59,
+        "carbs": 35,
+        "fat": 69,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "cilantro"
+      ]
     },
     {
       "slug": "hall-breakfast-burritos",
@@ -1807,8 +2033,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 852,
+        "protein": 41,
+        "carbs": 71,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "hall-breakfast-wraps",
@@ -1869,8 +2104,18 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 557,
+        "protein": 30,
+        "carbs": 29,
+        "fat": 36,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "avocado",
+        "feta",
+        "spinach"
+      ]
     },
     {
       "slug": "hall-sausage-biscuits-gravy",
@@ -1931,8 +2176,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 566,
+        "protein": 22,
+        "carbs": 45,
+        "fat": 33,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "hash-brown-breakfast-casserole",
@@ -1987,8 +2238,16 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 632,
+        "protein": 35,
+        "carbs": 22,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "huevos-rancheros-crew",
@@ -2039,8 +2298,18 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 552,
+        "protein": 32,
+        "carbs": 68,
+        "fat": 19,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "beans"
+      ]
     },
     {
       "slug": "irish-breakfast-fry-up",
@@ -2096,8 +2365,13 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "mushrooms",
+        "tomatoes"
+      ]
     },
     {
       "slug": "johnnycakes-with-syrup",
@@ -2148,8 +2422,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 574,
+        "protein": 6,
+        "carbs": 102,
+        "fat": 19,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "lumberjack-breakfast-platter",
@@ -2205,8 +2485,10 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "maple-sausage-pinwheels",
@@ -2267,8 +2549,14 @@
         "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 383,
+        "protein": 17,
+        "carbs": 10,
+        "fat": 31,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "menemen-for-the-crew",
@@ -2312,8 +2600,17 @@
         "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 348,
+        "protein": 14,
+        "carbs": 6,
+        "fat": 31,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes"
+      ]
     },
     {
       "slug": "migas-for-the-crew",
@@ -2364,8 +2661,19 @@
         "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 378,
+        "protein": 19,
+        "carbs": 24,
+        "fat": 24,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "tomatoes",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "monte-cristo-sandwiches",
@@ -2417,11 +2725,19 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true
-      }
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 492,
+        "protein": 33,
+        "carbs": 38,
+        "fat": 23,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mustard"
+      ]
     },
     {
       "slug": "overnight-french-toast-bake",
@@ -2476,8 +2792,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 398,
+        "protein": 15,
+        "carbs": 58,
+        "fat": 13,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "overnight-oat-bar-crew",
@@ -2521,8 +2843,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 548,
+        "protein": 23,
+        "carbs": 66,
+        "fat": 24,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "overnight-sausage-strata",
@@ -2583,8 +2911,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 686,
+        "protein": 39,
+        "carbs": 29,
+        "fat": 46,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "mustard"
+      ]
     },
     {
       "slug": "quick-egg-tacos",
@@ -2632,8 +2969,17 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 485,
+        "protein": 23,
+        "carbs": 50,
+        "fat": 21,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "avocado",
+        "corn"
+      ]
     },
     {
       "slug": "red-lead-skillet",
@@ -2689,8 +3035,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 746,
+        "protein": 51,
+        "carbs": 41,
+        "fat": 42,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "sausage-egg-cheese-sandwiches",
@@ -2748,8 +3103,14 @@
         "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 571,
+        "protein": 31,
+        "carbs": 24,
+        "fat": 39,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "scrapple-and-eggs-skillet",
@@ -2805,8 +3166,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 629,
+        "protein": 20,
+        "carbs": 35,
+        "fat": 47,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "shakshuka-for-the-hall",
@@ -2861,8 +3228,15 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "bell_peppers",
+        "feta"
+      ]
     },
     {
       "slug": "sheet-pan-breakfast-hash",
@@ -2910,8 +3284,17 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 582,
+        "protein": 31,
+        "carbs": 31,
+        "fat": 37,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "sheet-pan-breakfast-sandwiches",
@@ -2969,11 +3352,17 @@
         ]
       },
       "nutritionSummary": {
-        "highProtein": true,
+        "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 576,
+        "protein": 34,
+        "carbs": 6,
+        "fat": 46,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "sheet-pan-full-english",
@@ -3029,8 +3418,18 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 998,
+        "protein": 61,
+        "carbs": 22,
+        "fat": 73,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mushrooms",
+        "tomatoes",
+        "beans"
+      ]
     },
     {
       "slug": "sheet-pan-eggs-sausage-crew",
@@ -3090,8 +3489,17 @@
         "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 565,
+        "protein": 34,
+        "carbs": 8,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "shrimp-and-grits-breakfast",
@@ -3152,8 +3560,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 789,
+        "protein": 49,
+        "carbs": 45,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "smoked-salmon-benedit",
@@ -3209,8 +3623,16 @@
         "highProtein": false,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 694,
+        "protein": 33,
+        "carbs": 17,
+        "fat": 54,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "southwest-egg-bake",
@@ -3269,8 +3691,17 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 454,
+        "protein": 42,
+        "carbs": 8,
+        "fat": 28,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "spinach"
+      ]
     },
     {
       "slug": "tater-tot-breakfast-casserole",
@@ -3326,8 +3757,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 871,
+        "protein": 47,
+        "carbs": 35,
+        "fat": 59,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "bell_peppers"
+      ]
     },
     {
       "slug": "turkey-sausage-burritos",
@@ -3386,8 +3825,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 874,
+        "protein": 42,
+        "carbs": 76,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "veggie-egg-burritos",
@@ -3441,8 +3889,20 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 758,
+        "protein": 40,
+        "carbs": 92,
+        "fat": 27,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mushrooms",
+        "onions",
+        "bell_peppers",
+        "beans",
+        "spinach"
+      ]
     }
   ]
 }

@@ -19,7 +19,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
     seoTitle: "Firefighter Meals: Feed a Firehall Crew on Shift",
     subtitle: "Scaling, timing, and station-kitchen reality — not food-blog fantasy",
     description:
-      "Firefighter meals for a full crew on shift: portion math, hold times, line setup, and hall-tested recipes that survive tones dropping mid-dinner.",
+      "Meals for a fire crew on shift: portion math, hold times, line setup, and hall-tested recipes that survive tones dropping mid-dinner.",
     topic: "shift_operations",
     pillar: "operations_how_to",
     readMinutes: 8,
@@ -31,6 +31,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       "feed a crew",
       "fire station meals",
       "crew dinner",
+      "meals for a fire crew",
     ],
     intro:
       "Feeding a hall is not the same as cooking dinner at home. You are planning for mixed appetites, uneven arrival times, and the very real chance that tones drop mid-prep. The goal is not a perfect plate — it is a reliable spread that still tastes good when someone eats at 7:10 and someone else eats at 8:45. This is how crews actually run dinner on shift.",
@@ -506,9 +507,9 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
           "Default to a line format (tacos, bowls, baked potato bar). Agreement is easier when people assemble their own plate. If two factions remain, make one base protein and two sauces.",
       },
       {
-        question: "Where do I find firefighter-tested recipes?",
+        question: "What's the fastest way to decide dinner when time is short?",
         answer:
-          "Browse all recipes — every one is structured for crew scale, realistic timing, and station kitchens. Use Explore to browse by situation, or Find a Meal when you need a pick for tonight.",
+          "Run the three-question filter: how many minutes, how many people, which appliance is free. That alone eliminates most options and leaves you choosing between two or three formats — tacos, a skillet, or a bake — instead of scrolling endlessly.",
       },
     ],
     relatedArticleSlugs: ["quick-meals-between-calls", "feeding-a-firehall-crew"],

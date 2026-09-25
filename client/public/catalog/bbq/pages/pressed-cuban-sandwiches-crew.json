@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 1325,
-  "protein": 113,
+  "calories": 1027,
+  "protein": 97,
   "carbs": 12,
-  "fats": 90,
+  "fats": 63,
   "tags": [
     "protein:pork",
     "format:hoagie_press",
@@ -179,10 +179,10 @@
   "mealPrepNotes": "Grill pork at 400°F to 195°F for slicing. Hold pork at 170°F up to 45 minutes. Press sandwiches at 375°F, 4 minutes per side with weight.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1325,
-    "protein": 113,
+    "calories": 1027,
+    "protein": 97,
     "carbs": 12,
-    "fats": 90,
+    "fats": 63,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -290,5 +290,9 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "pickles",
+    "mustard"
+  ]
 }

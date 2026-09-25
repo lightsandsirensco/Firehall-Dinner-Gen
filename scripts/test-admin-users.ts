@@ -39,6 +39,7 @@ const MIGRATIONS = [
   "023_hall_pro_subscription.sql",
   "025_admin_users_leads.sql",
   "039_founder_leads_meta.sql",
+  "043_email_marketing_consent.sql",
 ].map((name) =>
   fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8"),
 );

@@ -13,6 +13,7 @@ import {
 } from "@/lib/email-capture";
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
+import { MarketingConsentCheckbox } from "@/components/marketing-consent-checkbox";
 import {
   formatClientIngredientQty,
   formatRecipeIngredientName,
@@ -47,6 +48,7 @@ export function EmailModal({
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [marketingConsent, setMarketingConsent] = useState(false);
 
   const isEarned = variant === "earned";
 
@@ -82,6 +84,7 @@ export function EmailModal({
           macros: recipe.macros_per_serving,
           timestamp: new Date().toISOString(),
           capture_source: isEarned ? captureTrigger || "earned" : "manual",
+          marketing_consent: marketingConsent,
         }),
       });
 
@@ -195,6 +198,13 @@ export function EmailModal({
                 </p>
               )}
 
+              <MarketingConsentCheckbox
+                id="email-modal-marketing-consent"
+                checked={marketingConsent}
+                onCheckedChange={setMarketingConsent}
+                disabled={status === "loading"}
+              />
+
               <Button
                 type="submit"
                 className="w-full font-heading text-base tracking-wider min-h-11"
@@ -206,11 +216,7 @@ export function EmailModal({
                 ) : (
                   <Mail className="w-4 h-4 mr-2" />
                 )}
-                {status === "loading"
-                  ? "Sending…"
-                  : isEarned
-                    ? "Send me hall meal ideas"
-                    : "Email this recipe"}
+                {status === "loading" ? "Sending…" : "Email this recipe"}
               </Button>
 
               {isEarned && (
@@ -227,9 +233,7 @@ export function EmailModal({
               )}
 
               <p className="text-[11px] text-muted-foreground text-center leading-relaxed">
-                {isEarned
-                  ? "Occasional crew-ready dinners — unsubscribe anytime."
-                  : "We'll send this recipe and sometimes share new hall meal ideas."}
+                We&apos;ll always send this recipe. New hall meal ideas only if you check the box above.
               </p>
               <div className="pt-2 border-t border-border/20 text-center">
                 <p className="text-[11px] text-muted-foreground leading-relaxed">{LIGHTS_COPY.emailNote}</p>

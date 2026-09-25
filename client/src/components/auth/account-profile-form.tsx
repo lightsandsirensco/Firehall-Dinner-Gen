@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Loader2 } from "lucide-react";
+import { useLocation } from "wouter";
+import { Loader2, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -10,8 +11,9 @@ import {
 import { cn } from "@/lib/utils";
 import { apiRequest } from "@/lib/queryClient";
 import { useAuth } from "@/lib/auth/context";
+import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
 import { useToast } from "@/hooks/use-toast";
-import { trackProfileUpdated, trackPersonalOnboardingStepCompleted } from "@/lib/analytics";
+import { trackProfileUpdated, trackPersonalOnboardingStepCompleted, trackProFeatureClicked } from "@/lib/analytics";
 import {
   markProfileBuilt,
   onboardingSignalsFromAuth,
@@ -21,6 +23,7 @@ import {
   PROFILE_DIETARY_OPTIONS,
   PROFILE_PROTEIN_OPTIONS,
 } from "@shared/auth/constants";
+import { FOOD_PREFERENCE_DEFINITIONS } from "@shared/ingredient-preferences/definitions";
 
 function ChipToggle({
   label,
@@ -48,8 +51,11 @@ function ChipToggle({
 }
 
 export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { onboarding?: boolean; onOnboardingSaved?: () => void }) {
-  const { profile, preferences, refresh, user, halls } = useAuth();
+  const { profile, preferences, refresh, user, halls, authenticated } = useAuth();
   const { toast } = useToast();
+  const [, setLocation] = useLocation();
+  const hasFoodPreferences = useFeature("ingredient_preferences");
+  const recordPaywall = useRecordPaywallView();
   const [saving, setSaving] = useState(false);
 
   const [firstName, setFirstName] = useState("");
@@ -63,6 +69,7 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
   const [proteins, setProteins] = useState<string[]>([]);
   const [dietary, setDietary] = useState<string[]>([]);
   const [appliances, setAppliances] = useState<string[]>([]);
+  const [foodsToAvoid, setFoodsToAvoid] = useState<string[]>([]);
   const [shiftSettings, setShiftSettings] = useSyncedShiftReminderSettings(preferences);
 
   useEffect(() => {
@@ -77,6 +84,7 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
     setProteins(preferences?.preferred_proteins ?? []);
     setDietary(preferences?.dietary_restrictions ?? []);
     setAppliances(preferences?.appliance_preferences ?? []);
+    setFoodsToAvoid(preferences?.excluded_ingredients ?? []);
   }, [profile, preferences]);
 
   const toggleItem = (list: string[], value: string, setter: (v: string[]) => void) => {
@@ -99,6 +107,10 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
         preferred_proteins: proteins,
         dietary_restrictions: dietary,
         appliance_preferences: appliances,
+        // Server re-checks Pro entitlement independently and forces this back to
+        // [] for a non-Pro account regardless of what's sent — see
+        // server/auth/auth-store.ts.
+        excluded_ingredients: foodsToAvoid,
         shift_reminders_enabled: shiftSettings.shift_reminders_enabled,
         shift_days: shiftSettings.shift_days,
         shift_reminder_time: shiftSettings.shift_reminder_time,
@@ -240,6 +252,48 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
             />
           ))}
         </div>
+      </div>
+
+      <div className="space-y-2">
+        <div className="flex items-center gap-1.5">
+          <Label>Foods to avoid</Label>
+          {!hasFoodPreferences && (
+            <span className="inline-flex items-center gap-0.5 text-[9px] font-bold uppercase tracking-wide text-primary">
+              <Lock className="h-2.5 w-2.5" aria-hidden />
+              Pro
+            </span>
+          )}
+        </div>
+        <p className="text-xs text-muted-foreground">
+          Tell us what you'd rather not see in your meals. This is a personal preference, not
+          allergy protection — for allergies or dietary restrictions, use Dietary restrictions
+          above and always check ingredient labels.
+        </p>
+        {hasFoodPreferences ? (
+          <div className="flex flex-wrap gap-2">
+            {FOOD_PREFERENCE_DEFINITIONS.map((def) => (
+              <ChipToggle
+                key={def.key}
+                label={def.label}
+                selected={foodsToAvoid.includes(def.key)}
+                onToggle={() => toggleItem(foodsToAvoid, def.key, setFoodsToAvoid)}
+              />
+            ))}
+          </div>
+        ) : (
+          <button
+            type="button"
+            onClick={() => {
+              trackProFeatureClicked({ feature: "foods_to_avoid", page: "/account", logged_in: authenticated });
+              void recordPaywall("ingredient_preferences", "account_preferences");
+              setLocation("/me/subscription?feature=foods_to_avoid");
+            }}
+            className="w-full rounded-md border border-border/40 bg-muted/20 px-3 py-2 text-left text-xs text-muted-foreground"
+            data-testid="account-foods-to-avoid-locked"
+          >
+            Upgrade to Firehall Meals Pro to save foods you'd rather avoid.
+          </button>
+        )}
       </div>
 
       <ShiftReminderSettingsFields value={shiftSettings} onChange={setShiftSettings} />

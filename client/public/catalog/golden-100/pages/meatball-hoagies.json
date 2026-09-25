@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 95,
-  "carbs": 65,
-  "fats": 86,
+  "calories": 1376,
+  "protein": 89,
+  "carbs": 84,
+  "fats": 77,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -223,10 +223,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 95,
-    "carbs": 65,
-    "fats": 86,
+    "calories": 1376,
+    "protein": 89,
+    "carbs": 84,
+    "fats": 77,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -361,5 +361,6 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": []
 }

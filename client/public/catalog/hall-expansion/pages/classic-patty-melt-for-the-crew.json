@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1277,
-  "protein": 77,
-  "carbs": 42,
-  "fats": 90,
+  "calories": 1272,
+  "protein": 76,
+  "carbs": 61,
+  "fats": 82,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -152,10 +152,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1277,
-    "protein": 77,
-    "carbs": 42,
-    "fats": 90,
+    "calories": 1272,
+    "protein": 76,
+    "carbs": 61,
+    "fats": 82,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -163,7 +163,7 @@
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
@@ -253,5 +253,9 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "onions",
+    "pickles"
+  ]
 }

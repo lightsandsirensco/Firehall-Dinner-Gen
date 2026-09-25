@@ -14,6 +14,12 @@ interface MeSubpageShellProps {
   centeredHeader?: boolean;
   /** Hide the trailing "Back to Tonight" exit link — use when the page already has one obvious primary action. */
   hideWorkflowExit?: boolean;
+  /**
+   * Opt into a wider (~1100px) content column instead of the default
+   * ~576px phone-width reading column. Use for pages that need real
+   * desktop layout room, e.g. a side-by-side pricing comparison.
+   */
+  wide?: boolean;
 }
 
 /** Profile sub-pages — Me parent + always escape to Tonight. */
@@ -24,13 +30,20 @@ export function MeSubpageShell({
   testId,
   centeredHeader,
   hideWorkflowExit,
+  wide,
 }: MeSubpageShellProps) {
   useNoIndex();
 
   return (
     <div className={cn(app.page, "bg-background")} data-testid={testId}>
       <AppTopBar title={title} parentHref="/me" parentLabel="Me" />
-      <main className={cn(app.main, app.mobileScreen, "page-enter motion-reduce:animate-none")}>
+      <main
+        className={cn(
+          app.main,
+          wide ? app.mobileScreenWide : app.mobileScreen,
+          "page-enter motion-reduce:animate-none",
+        )}
+      >
         <header className={cn("space-y-1.5 px-0.5", centeredHeader && "text-center mx-auto max-w-2xl")}>
           <h1 className={app.titleSection}>{title}</h1>
           {subtitle ? (

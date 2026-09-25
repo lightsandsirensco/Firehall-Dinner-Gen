@@ -518,6 +518,7 @@ export async function captureEmailLead(input: {
   source: string;
   signup_form?: string;
   klaviyo_synced?: boolean;
+  marketing_consent?: boolean;
 }): Promise<void> {
   try {
     await ensureStore();

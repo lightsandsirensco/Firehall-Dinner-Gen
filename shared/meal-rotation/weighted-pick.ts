@@ -17,6 +17,36 @@ export function recentSlugPenalty(slug: string, recentSlugs?: string[]): number 
   return recency * 28;
 }
 
+/**
+ * Firehall Meals Pro V1 Feature 3 — merge durable account-level "cooked"
+ * history (oldest-first) with device/session-local recent slugs
+ * (oldest-first) into ONE ordered list for the existing `recentSlugPenalty`
+ * mechanic above. Reuses the exact same recency-by-array-position contract
+ * as client/src/lib/meal-rotation-memory.ts (oldest first, most recent
+ * last) — no new scoring model, no new ranking engine.
+ *
+ * Later entries win position on duplicates (matches recordMealSlug's own
+ * "remove earlier occurrence, push to end" behavior), so a recipe cooked
+ * durably a week ago but also just shown this session is treated as
+ * "just shown" recent, not stale. Capped at 32 to match the existing
+ * client-submitted recentSlugs limit (see server/sanitize-request.ts).
+ */
+export function mergeRecentSlugSources(
+  durableOldestFirst: readonly string[],
+  sessionOldestFirst: readonly string[],
+  maxLength = 32,
+): string[] {
+  const merged: string[] = [];
+  for (const raw of [...durableOldestFirst, ...sessionOldestFirst]) {
+    const slug = raw?.trim().toLowerCase();
+    if (!slug) continue;
+    const existingIdx = merged.indexOf(slug);
+    if (existingIdx !== -1) merged.splice(existingIdx, 1);
+    merged.push(slug);
+  }
+  return merged.slice(-maxLength);
+}
+
 /** Pick index from weights using deterministic seed. */
 export function weightedPickIndex(weights: number[], seed: string): number {
   const total = weights.reduce((a, b) => a + b, 0);

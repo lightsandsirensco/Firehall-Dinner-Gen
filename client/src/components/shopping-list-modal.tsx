@@ -17,6 +17,7 @@ import { useHallFeature } from "@/lib/billing/hooks";
 import { addRecipeToHallShoppingList } from "@/lib/hall-shopping-list/api";
 import { useToast } from "@/hooks/use-toast";
 import { cn } from "@/lib/utils";
+import { MarketingConsentCheckbox } from "@/components/marketing-consent-checkbox";
 
 interface ShoppingListModalProps {
   open: boolean;
@@ -135,6 +136,7 @@ export function ShoppingListModal({
   const [email, setEmail] = useState("");
   const [emailStatus, setEmailStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
   const [emailError, setEmailError] = useState("");
+  const [marketingConsent, setMarketingConsent] = useState(false);
   const [hallAddBusy, setHallAddBusy] = useState(false);
   const [hallAddDone, setHallAddDone] = useState(false);
   const [checkedItems, setCheckedItems] = useState<Set<string>>(new Set());
@@ -237,6 +239,7 @@ export function ShoppingListModal({
           shopping_list_sections: sectionsData,
           generator_type: generatorType,
           timestamp: new Date().toISOString(),
+          marketing_consent: marketingConsent,
         }),
       });
 
@@ -268,6 +271,7 @@ export function ShoppingListModal({
       setEmailStatus("idle");
       setEmail("");
       setEmailError("");
+      setMarketingConsent(false);
     }, 300);
   };
 
@@ -309,6 +313,12 @@ export function ShoppingListModal({
               {emailStatus === "error" && (
                 <p className="text-sm text-destructive">{emailError}</p>
               )}
+              <MarketingConsentCheckbox
+                id="shopping-list-marketing-consent"
+                checked={marketingConsent}
+                onCheckedChange={setMarketingConsent}
+                disabled={emailStatus === "loading"}
+              />
               <div className="flex gap-2">
                 <Button
                   type="button"

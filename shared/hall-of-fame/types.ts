@@ -17,6 +17,6 @@ export const HALL_OF_FAME_PERIOD_LABELS: Record<AnalyticsPeriod, string> = {
 
 export function hallOfFameHeadline(period: AnalyticsPeriod): string {
   const span = HALL_OF_FAME_PERIOD_LABELS[period];
-  if (period === "all") return "Canada's Top Firehall Meals — All Time";
-  return `Canada's Top Meals ${span}`;
+  if (period === "all") return "Top Firehall Meals — All Time";
+  return `Top Meals ${span}`;
 }

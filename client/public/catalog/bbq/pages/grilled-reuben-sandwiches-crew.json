@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 1241,
-  "protein": 75,
-  "carbs": 29,
-  "fats": 90,
+  "calories": 1029,
+  "protein": 62,
+  "carbs": 33,
+  "fats": 71,
   "tags": [
     "protein:beef",
     "format:hoagie_press",
@@ -165,10 +165,10 @@
   "mealPrepNotes": "Grill corned beef slices at 425°F, 2 minutes per side. Hold at 170°F up to 30 minutes. Press reubens at 375°F, 3 minutes per side.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1241,
-    "protein": 75,
-    "carbs": 29,
-    "fats": 90,
+    "calories": 1029,
+    "protein": 62,
+    "carbs": 33,
+    "fats": 71,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -267,5 +267,8 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "pickles"
+  ]
 }

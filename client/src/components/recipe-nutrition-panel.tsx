@@ -11,6 +11,9 @@ export interface RecipeNutritionPanelProps {
   estimateAvailable?: boolean;
 }
 
+export const NUTRITION_ESTIMATE_DISCLAIMER =
+  "Nutrition information is an estimate and may vary based on ingredients, brands, substitutions, and serving sizes.";
+
 function macroValue(v: number | null | undefined): number | null {
   if (v == null || Number.isNaN(v)) return null;
   return v;
@@ -93,6 +96,9 @@ export function RecipeNutritionPanel({
           </div>
         ))}
       </dl>
+      <p className="mt-3 text-[11px] text-muted-foreground leading-relaxed">
+        {NUTRITION_ESTIMATE_DISCLAIMER}
+      </p>
     </section>
   );
 }
@@ -108,5 +114,6 @@ export function buildNutritionPrintHtml(macros: RecipeNutritionPanelProps): stri
   <p style="font-size:14px;line-height:1.8;margin:0">
     ${lines}
   </p>
+  <p style="font-size:11px;color:#888;margin:8px 0 0">${NUTRITION_ESTIMATE_DISCLAIMER}</p>
 </section>`;
 }

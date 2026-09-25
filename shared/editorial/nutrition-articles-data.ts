@@ -4,8 +4,6 @@
 
 import { buildSeoGuide, meal, STANDARD_FAQS } from "./seo-article-build.js";
 
-const NUTRITION_FAQ = [STANDARD_FAQS.nutrition, STANDARD_FAQS.catalog];
-
 export const NUTRITION_PERFORMANCE_ARTICLES = [
   buildSeoGuide({
     slug: "healthy-meals-that-still-taste-good",
@@ -63,7 +61,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("turkey-chili", "High-Protein Turkey Chili", "Chili still counts — leaner batch that holds all shift."),
       meal("mediterranean-chickpea", "Mediterranean Chickpea Bowl Night", "Plant-forward option that still feels like dinner."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What makes a firefighter meal healthy without turning it into diet food?",
+        answer:
+          "Protein-forward plates with real sauce — yogurt, citrus, garlic — instead of dry, under-seasoned chicken. Greek chicken bowls and ginger salmon rice bowls hit that mark: a full plate with real flavor, not a diet-plate stand-in.",
+      },
+      {
+        question: "How do you keep dinner lighter without leaving the crew hungry?",
+        answer:
+          "Make the vegetable side bigger instead of shrinking the rice or protein. Bowls work well because everyone builds their own ratio — protein, grain, veg, sauce — so nobody ends up with a sad, small plate.",
+      },
+    ],
     relatedArticleSlugs: ["healthy-meals-for-active-crews", "high-protein-firehall-meals", "meals-wont-wreck-energy-levels"],
   }),
 
@@ -117,7 +127,24 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("pulled-pork", "Pulled Pork Sandwiches", "Late-night sandwiches still work."),
       meal("sausage-egg-bake", "Sausage Egg Bake", "Hands-off morning bake."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What should dinner look like on a 24-hour shift?",
+        answer:
+          "One anchor meal that holds — chili, pulled pork, or baked pasta — cooked early enough that it still tastes good at 22:00 for late eaters. Bowls and lines beat a single dish that has to be eaten hot out of the oven, since staggered eating is normal on a full tour.",
+      },
+      {
+        question: "What's a good overnight snack if the board stays busy?",
+        answer:
+          "Fruit, yogurt, sandwich fixings, or a pot of chili on low — nothing that needs a second full cook at 2 a.m. Keep it visible in the fridge; crews eat what they can see without digging behind condiments.",
+      },
+      {
+        question: "What's an easy breakfast to close out a 24-hour tour?",
+        answer:
+          "A sausage egg bake or breakfast burrito bar. Both tolerate a staggered eating window, so people coming off apparatus checks at 9:30 still get a hot plate instead of cold eggs from 7 a.m.",
+      },
+    ],
     relatedArticleSlugs: ["best-meals-24-hour-shift", "hydration-for-firefighters"],
   }),
 
@@ -162,7 +189,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("teriyaki-donburi", "Teriyaki Donburi", "Balanced bowl — predictable portions."),
       meal("beef-barley-soup", "Beef Barley Soup", "Slow-burn bowl food."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What foods keep energy steady during a long shift?",
+        answer:
+          "Rice bowls, chili, and roasted chicken paired with a real starch — food that releases energy slower than sugar alone. Pair protein with a starch every time you sit down instead of eating carbs by themselves.",
+      },
+      {
+        question: "What should you avoid eating on a long tour?",
+        answer:
+          "Sugar without protein next to it — a donut or a pastry might work as a quick bite, but it won't hold you the way a plate with real protein does. The same goes for energy drinks on their own; caffeine can mask hunger instead of actually feeding you.",
+      },
+    ],
     relatedArticleSlugs: ["meals-wont-wreck-energy-levels", "healthy-meals-for-active-crews"],
   }),
 
@@ -205,7 +244,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("ginger-salmon-bowls", "Ginger Salmon Rice Bowls", "Lighter recovery night option."),
       meal("beef-barley-soup", "Beef Barley Soup", "Hydrating broth base."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What should firefighters eat after a hard call?",
+        answer:
+          "Something hot, salty, and familiar — chili, chicken pot pie, or mac and cheese — plus water before anything else. The goal is food that feels normal, not a health lecture right after a rough job.",
+      },
+      {
+        question: "Does recovery food need to be different from a normal dinner?",
+        answer:
+          "Not really — protein and fluids matter more than novelty. A bowl of firehall chili or ginger salmon rice bowls covers both without turning recovery into a production.",
+      },
+    ],
     relatedArticleSlugs: ["recovery-meals-after-hard-calls", "comfort-food-after-a-long-shift"],
   }),
 
@@ -249,7 +300,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Cucumber and tzatziki add fluid."),
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Salty batch — sip water with it."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "How much water should firefighters drink on shift?",
+        answer:
+          "Start the tour with a full bottle instead of planning to fill it later, then keep refilling through the day — heat, gear, and dry station air pull fluid fast. There is no single magic number; steady sipping beats chugging once you're already thirsty.",
+      },
+      {
+        question: "Do firefighters need electrolytes, or is water enough?",
+        answer:
+          "Water covers most shifts, but electrolytes help on long hot jobs or back-to-back calls where you're sweating through gear. Broth-based soups like beef barley add sodium and fluid at dinner without a separate packet.",
+      },
+    ],
     relatedArticleSlugs: ["eating-well-on-24-hour-shifts", "best-foods-for-long-shifts"],
   }),
 
@@ -291,7 +354,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("chorizo-breakfast-tacos", "Chorizo Breakfast Tacos", "Fast protein line for morning after calls."),
       meal("pancake-short-stack", "Pancake Short Stack", "Pair with eggs or sausage for balance."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What's the best breakfast after an overnight call?",
+        answer:
+          "Eggs, yogurt, fruit, or toast — something with real protein, not just a sugar pastry. Burrito bars and egg bakes let a tired crew eat when they surface instead of everyone needing a hot plate at the same minute.",
+      },
+      {
+        question: "Should you drink coffee first thing after a rough night?",
+        answer:
+          "Have water alongside it rather than skipping straight to a second pot. Overnight tours dehydrate quietly, and some of what feels like exhaustion the next morning is just needing fluids before more caffeine.",
+      },
+    ],
     relatedArticleSlugs: ["firefighter-breakfast-ideas", "eating-well-on-24-hour-shifts"],
   }),
 
@@ -356,9 +431,14 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
           "No. This is how halls cook for hungry crews on shift. Follow your department and your own provider for personal health questions.",
       },
       {
-        question: "Where do these recipes come from?",
+        question: "What are some high-protein dinners that work for a firehall crew?",
         answer:
-          "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen.",
+          "Turkey chili, Greek chicken bowls, and a sausage egg bake all put protein front and center instead of hiding it in a sauce. Building the plate around a protein-forward main — rather than treating meat as a side to rice or pasta — is the easiest way to get there without a special shopping list.",
+      },
+      {
+        question: "What are cheap ways to add protein without raising the grocery bill much?",
+        answer:
+          "Beans can stretch a pot of chili while keeping it filling, and chicken thighs cost less than breasts for a similar amount of protein. Eggs and dairy worked into a bake — cheese, a yogurt-based sauce — add protein too, usually for less than buying more meat.",
       },
     ],
     relatedArticleSlugs: ["healthy-firefighter-meals-fill-you-up", "performance-nutrition-firefighters"],
@@ -402,7 +482,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Pantry-friendly crew dinner."),
       meal("chili-garlic-bread", "Firehall Chili", "Batch beats delivery buckets."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What's a fast meal that beats ordering delivery for the whole crew?",
+        answer:
+          "A taco bar or sheet-pan chicken fajitas — both come together in under 45 minutes and cost less than delivery for eight people. Keep one of these as the default 'board's loud' meal so nobody defaults to an app.",
+      },
+      {
+        question: "How do you stop a hall from ordering takeout every busy night?",
+        answer:
+          "Assign a cook before the shift gets busy and keep a stocked pantry so dinner is a decision, not a shopping trip. It's easier to stick with cooking most nights than to enforce a no-takeout rule after the fact.",
+      },
+    ],
     relatedArticleSlugs: ["planning-tonights-station-dinner", "firehall-grocery-planning"],
   }),
 
@@ -444,7 +536,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("herb-roasted-thighs", "Herb Roasted Chicken Thighs", "Protein-forward oven night."),
       meal("ginger-salmon-bowls", "Ginger Salmon Rice Bowls", "Omega-3s plus carbs."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What does a balanced plate look like for a working shift?",
+        answer:
+          "A visible protein, a vegetable, a real starch, and sauce for flavor — not a plate that's mostly one thing. Bowls make this easy since everyone builds their own: bulgogi rice bowls or herb roasted chicken thighs with rice cover all four without anyone measuring anything.",
+      },
+      {
+        question: "Should firefighters eat before or after a long call?",
+        answer:
+          "Eat before when you can — it's easier to fuel ahead than to catch up. After a long job, prioritize fluids and a real meal over a shake; performance nutrition is about the whole tour, not one heroic plate.",
+      },
+    ],
     relatedArticleSlugs: ["healthy-meals-for-active-crews", "high-protein-firehall-meals"],
   }),
 
@@ -485,7 +589,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Prep components for quick plates."),
       meal("turkey-chili", "High-Protein Turkey Chili", "Reheat cup between meals."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What snacks should a fire station keep stocked?",
+        answer:
+          "Fruit, yogurt, string cheese, and hummus at eye level in the fridge — visible options get eaten, buried ones do not. A labeled bin of nuts or trail mix works too, as long as someone owns rotating it weekly.",
+      },
+      {
+        question: "Why do healthy snacks in the fridge go untouched?",
+        answer:
+          "Usually because they're invisible. A banana on the counter gets eaten; the same banana in the back of the crisper does not. Put the good options where the chips already are.",
+      },
+    ],
     relatedArticleSlugs: ["avoid-living-on-takeout", "best-foods-for-long-shifts"],
   }),
 
@@ -527,7 +643,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("turkey-chili", "High-Protein Turkey Chili", "Bean and turkey — steady."),
       meal("lemon-herb-salmon", "Lemon Herb Grilled Salmon", "Lighter grill night."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What causes the post-dinner crash at the station?",
+        answer:
+          "Usually heavy fat and heavy starch together in one big portion, not a single ingredient. A plate that's mostly fried food with nothing balancing it tends to leave a crew sluggish for the rest of the evening.",
+      },
+      {
+        question: "What dinners keep the crew alert instead of sluggish?",
+        answer:
+          "Bowls and grilled proteins with rice — teriyaki donburi, sheet-pan chicken fajitas — because they balance starch and protein instead of stacking grease on grease. Save the heaviest, richest meals for slow nights when nobody needs to stay sharp after.",
+      },
+    ],
     relatedArticleSlugs: ["best-foods-for-long-shifts", "healthy-meals-for-active-crews"],
   }),
 
@@ -568,7 +696,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("chili-garlic-bread", "Firehall Chili", "Cup portions — easy between calls."),
       meal("pulled-pork", "Pulled Pork Sandwiches", "Handheld — low ceremony."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What should you eat when you're too stressed to feel hungry?",
+        answer:
+          "Small, familiar food — broth, a sandwich, banana with peanut butter, chili in a cup. Forcing a full plate mid-crisis rarely works; something easy to eat in a few bites keeps fuel going without the pressure of a sit-down meal.",
+      },
+      {
+        question: "Is it bad to skip a meal during a rough shift?",
+        answer:
+          "One skipped meal is not a disaster, but don't skip the next one too. Warm, simple food after things settle down — a bowl of beef barley soup or a sandwich — is an easy way to get something in without needing a full sit-down dinner.",
+      },
+    ],
     relatedArticleSlugs: ["best-meals-after-busy-shift", "firefighter-recovery-nutrition"],
   }),
 
@@ -610,7 +750,19 @@ export const NUTRITION_PERFORMANCE_ARTICLES = [
       meal("chili-garlic-bread", "Firehall Chili", "Communal pot — protein rich."),
       meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Self-serve — no pressure."),
     ],
-    faqs: NUTRITION_FAQ,
+    faqs: [
+      STANDARD_FAQS.nutrition,
+      {
+        question: "What food actually helps after a difficult call?",
+        answer:
+          "Hot, plentiful, familiar food — mac and cheese, chili, chicken pot pie — not a wellness experiment sprung on a tired crew. Comfort and recovery are not opposites; pair the comfort food with protein when you can and let people eat in whatever mood they're in.",
+      },
+      {
+        question: "Should the crew talk through a hard call over dinner?",
+        answer:
+          "Only if they want to. The kitchen can just be a place to land — quiet food without forcing conversation works fine. Keep a tray warm for people who need a minute before they sit down.",
+      },
+    ],
     relatedArticleSlugs: ["comfort-food-after-a-long-shift", "firefighter-recovery-nutrition"],
   }),
 ];

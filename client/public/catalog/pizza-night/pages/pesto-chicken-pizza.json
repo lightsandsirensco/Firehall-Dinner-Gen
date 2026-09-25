@@ -13,10 +13,10 @@
   "cookTime": 80,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 788,
-  "protein": 80,
-  "carbs": 28,
-  "fats": 38,
+  "calories": 1266,
+  "protein": 94,
+  "carbs": 110,
+  "fats": 45,
   "tags": [
     "protein:chicken",
     "format:pizza",
@@ -153,10 +153,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 788,
-    "protein": 80,
-    "carbs": 28,
-    "fats": 38,
+    "calories": 1266,
+    "protein": 94,
+    "carbs": 110,
+    "fats": 45,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -164,7 +164,7 @@
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -258,5 +258,8 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "tomatoes"
+  ]
 }

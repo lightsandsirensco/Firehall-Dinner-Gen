@@ -23,7 +23,7 @@ const SECTIONS: Array<{
   title: string;
   badge: RecipeCrewRatingBadgeId;
 }> = [
-  { key: "crewFavourites", title: "Crew Favourites", badge: "crew_favourite" },
+  { key: "crewFavourites", title: "Crew Favorites", badge: "crew_favourite" },
   { key: "topRated", title: "Top Rated Recipes", badge: "top_rated" },
   { key: "trending", title: "Trending Recipes", badge: "trending" },
   { key: "rookieApproved", title: "Rookie Approved", badge: "rookie_approved" },

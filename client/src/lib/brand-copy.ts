@@ -648,7 +648,7 @@ export const SOCIAL_PROOF = {
 export const HALL_OF_FAME = {
   title: "Hall of Fame",
   eyebrow: "Community picks",
-  subtitle: "What crews across Canada are cooking, voting, and spinning — ranked from real hall activity.",
+  subtitle: "What crews are cooking, voting, and spinning — ranked from real hall activity.",
   aggregateNote: "Site-wide totals for now. Hall names and badges are coming soon.",
   mostCooked: "Most cooked meals",
   mostVoted: "Most voted meals",

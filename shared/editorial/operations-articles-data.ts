@@ -2,7 +2,7 @@
  * Operational how-to guides — groceries, equipment, organizing crew dinners.
  */
 
-import { buildSeoGuide, meal, STANDARD_FAQS } from "./seo-article-build.js";
+import { buildSeoGuide, meal } from "./seo-article-build.js";
 
 export const OPERATIONS_HOWTO_ARTICLES = [
   buildSeoGuide({
@@ -66,7 +66,18 @@ export const OPERATIONS_HOWTO_ARTICLES = [
       meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Cheap to scale, filling, and the topping line keeps plates consistent."),
       meal("pulled-pork", "Pulled Pork", "Hold food for busy boards — serve as sandwiches or bowls."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's the biggest mistake when cooking for 10 people instead of 4?",
+        answer:
+          "Treating it like a bigger version of a small recipe. At ten, you need a format that scales — a big pot, a tray bake, or a build-your-own line — not eight separate finish steps that all need to land at the same minute.",
+      },
+      {
+        question: "How do you keep food warm when people don't all sit down at once?",
+        answer:
+          "Hold it on low heat or in a warm oven, and label one tray 'late eaters' so nobody picks through the pan looking for a good piece. A pot on low for 30–60 minutes beats trying to time a fresh finish for the second wave.",
+      },
+    ],
     relatedArticleSlugs: ["feeding-a-firehall-crew", "best-firehouse-meals-large-crews", "meals-feeding-10-firefighters"],
   }),
 
@@ -108,7 +119,18 @@ export const OPERATIONS_HOWTO_ARTICLES = [
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Staple batch — repeat monthly."),
       meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "Short grocery list — one pan."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "How do you build a grocery list for a station dinner?",
+        answer:
+          "Start from the meal, not a blank cart. Chili needs meat, beans, tomatoes, onions, and spices; a taco bar needs protein, tortillas, and toppings — list what the recipe actually needs and buy protein and starch first.",
+      },
+      {
+        question: "What pantry staples should a fire station always have on hand?",
+        answer:
+          "Oil, salt, pepper, garlic, onions, rice, pasta, canned tomatoes, and foil. When these are already stocked, dinner becomes a decision instead of a store run every single night.",
+      },
+    ],
     relatedArticleSlugs: ["how-crews-split-groceries", "feeding-a-firehall-crew"],
   }),
 
@@ -150,7 +172,18 @@ export const OPERATIONS_HOWTO_ARTICLES = [
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Tests your largest pot."),
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Minimal tools — one pot dinner."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What kitchen equipment does a fire station actually need?",
+        answer:
+          "Two large sheet pans (one pan crowds food), a big stock pot or Dutch oven, a probe thermometer, and enough foil and containers to hold leftovers for a week. These are force multipliers, not luxuries — most bad hall dinners trace back to missing one of these.",
+      },
+      {
+        question: "Why does a probe thermometer matter more at a station than at home?",
+        answer:
+          "Because you're cooking chicken and pork for a crowd, and guessing wrong means raw centers or dried-out meat for ten people instead of two. A cheap probe thermometer ends the 'is this done' debate every time.",
+      },
+    ],
     relatedArticleSlugs: ["feeding-a-firehall-crew", "organize-firehall-dinners"],
   }),
 
@@ -191,7 +224,18 @@ export const OPERATIONS_HOWTO_ARTICLES = [
       meal("batch-lasagna", "Giant Batch Lasagna", "Prep ahead bake — feeds the line."),
       meal("sausage-egg-bake", "Sausage Egg Bake", "Morning timeline practice."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "Who should be in charge of deciding what's for dinner at the hall?",
+        answer:
+          "One person, decided by mid-afternoon — not a rotating group text that never resolves. Post the meal and rough serve time on the whiteboard by 16:00 so the rest of the crew isn't guessing.",
+      },
+      {
+        question: "How far in advance should a fire station plan dinner?",
+        answer:
+          "Decide on the meal a few hours out, then work backward — leave enough time to shop and enough time to prep before you actually want to eat. Assign cook and cleanup roles before anyone starts shopping, not after the dishes are already piling up.",
+      },
+    ],
     relatedArticleSlugs: ["planning-tonights-station-dinner", "busy-shift-dinner-strategies"],
   }),
 

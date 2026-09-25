@@ -28,3 +28,12 @@ export const paywallViewSchema = z.object({
   feature: z.enum(BILLING_FEATURES).optional(),
   surface: z.string().max(80).optional(),
 });
+
+export const createCheckoutSessionSchema = z.object({
+  billing_period: z.enum(["monthly", "annual"]),
+  feature: z.string().max(80).optional(),
+});
+
+export const adminSetGlobalFlagSchema = z.object({
+  enabled: z.boolean(),
+});

@@ -56,6 +56,11 @@ import {
 } from "./generator-match.js";
 import { scanRecipeForAllergens } from "../allergens.js";
 import { classifyRecipeDietary } from "../../shared/dietary/classify-recipe.js";
+import { recipeMatchesFoodPreference } from "../../shared/ingredient-preferences/match.js";
+import {
+  FOOD_PREFERENCE_DEFINITIONS,
+  type FoodPreferenceDefinition,
+} from "../../shared/ingredient-preferences/definitions.js";
 import {
   TIME_BUCKET_MAX_MINUTES as TIME_MAX_MINUTES,
   recipeFitsTimeBucket,
@@ -222,6 +227,26 @@ function hydratePick(
         `[generate:local] reject hydrated dietary slug=${slug} requested=${dietaryRestrictions.join(",")} confidence=${profile.confidence} flags=${JSON.stringify(profile.flags)}`,
         "generate",
       );
+      return null;
+    }
+  }
+
+  // Firehall Meals Pro — "Foods to Avoid" personal ingredient preferences.
+  // A DISTINCT, separate concept from the allergen/dietary checks above (never
+  // merged with them) — see shared/ingredient-preferences/. Hard exclusion,
+  // same as allergens: a deterministically matched avoided ingredient means
+  // this candidate is never served, it is not "deprioritized." Only reaches
+  // here already entitlement-gated + sanitized to canonical keys by
+  // server/routes.ts, so no further gating is needed at this layer.
+  const foodsToAvoid = request.foods_to_avoid || [];
+  if (foodsToAvoid.length > 0) {
+    const avoidDefs = FOOD_PREFERENCE_DEFINITIONS.filter((d) => foodsToAvoid.includes(d.key));
+    const avoidIngredients = (scaled.ingredients || []).map((i) => ({ name: i.item, notes: i.notes }));
+    const matched = avoidDefs.find((def: FoodPreferenceDefinition) =>
+      recipeMatchesFoodPreference(avoidIngredients, def),
+    );
+    if (matched) {
+      log(`[generate:local] reject hydrated foods-to-avoid slug=${slug} matched=${matched.key}`, "generate");
       return null;
     }
   }

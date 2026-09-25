@@ -22,6 +22,7 @@ export const GUEST_BILLING: UserBillingState = {
   hall_pro_hall_ids: [],
   hall_subscriptions: [],
   catalog: [],
+  manage_billing_available: false,
 };
 
 export { hasFeature, requiredPlanForFeature } from "@shared/billing/types";

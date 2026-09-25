@@ -18,7 +18,8 @@ import { authCapabilities } from "../../shared/auth/types.js";
 import type { HallSummary } from "../../shared/hall-membership/types.js";
 import { listUserHallSummaries } from "../hall-membership/store.js";
 import { resolveUserBilling } from "../billing/store.js";
-import type { UserBillingState } from "../../shared/billing/types.js";
+import { hasFeature, type UserBillingState } from "../../shared/billing/types.js";
+import { sanitizeFoodPreferenceKeys } from "../../shared/ingredient-preferences/definitions.js";
 
 const AUTH_COOKIE_NAME = "fh_auth";
 const SESSION_DAYS = 30;
@@ -97,6 +98,7 @@ function rowToPreferences(row: Record<string, unknown> | undefined): UserPrefere
     preferred_proteins: parseJsonArray(row.preferred_proteins_json as string),
     dietary_restrictions: parseJsonArray(row.dietary_restrictions_json as string),
     appliance_preferences: parseJsonArray(row.appliance_preferences_json as string),
+    excluded_ingredients: sanitizeFoodPreferenceKeys(parseJsonArray(row.excluded_ingredients_json as string)),
     shift_reminders_enabled: Number(row.shift_reminders_enabled) === 1,
     shift_days: normalizeShiftDays(
       (() => {
@@ -191,6 +193,14 @@ export function getUserIdFromSessionToken(token: string | undefined): string | n
   );
 
   return row.user_id;
+}
+
+export function getUserById(userId: string): UserAccount | null {
+  const d = getDb();
+  const row = d.prepare(`SELECT * FROM users WHERE user_id = ?`).get(userId) as
+    | Record<string, unknown>
+    | undefined;
+  return row ? rowToUser(row) : null;
 }
 
 export function findUserByEmail(email: string): UserAccount | null {
@@ -388,6 +398,7 @@ export function updateUserProfile(
     preferred_proteins?: string[];
     dietary_restrictions?: string[];
     appliance_preferences?: string[];
+    excluded_ingredients?: string[];
     shift_reminders_enabled?: boolean;
     shift_days?: number[];
     shift_reminder_time?: string;
@@ -424,6 +435,24 @@ export function updateUserProfile(
   }
   if (patch.appliance_preferences) {
     prefFields.push(["appliance_preferences_json", JSON.stringify(patch.appliance_preferences)]);
+  }
+  if (patch.excluded_ingredients) {
+    // "Foods to Avoid" is a Firehall Meals Pro capability — a non-Pro user
+    // (including a downgraded former-Pro user) can never persist a non-empty
+    // list here, even via a direct API call. Clearing to an empty list is
+    // always allowed regardless of plan. Values are also sanitized against
+    // the canonical curated key list so a stale/invalid key can never be
+    // stored (see shared/ingredient-preferences/definitions.ts).
+    const sanitized = sanitizeFoodPreferenceKeys(patch.excluded_ingredients);
+    let allowed = sanitized.length === 0;
+    if (!allowed) {
+      const userRow = d.prepare(`SELECT * FROM users WHERE user_id = ?`).get(userId) as
+        | Record<string, unknown>
+        | undefined;
+      const billing = attachBilling(userId, userRow ? rowToUser(userRow) : null);
+      allowed = hasFeature(billing.features, "ingredient_preferences");
+    }
+    prefFields.push(["excluded_ingredients_json", JSON.stringify(allowed ? sanitized : [])]);
   }
   if (typeof patch.shift_reminders_enabled === "boolean") {
     prefFields.push(["shift_reminders_enabled", patch.shift_reminders_enabled ? 1 : 0]);
@@ -511,4 +540,140 @@ export function syncSavedRecipes(
 
 export function getAuthCapabilitiesForUser(user: UserAccount | null, billing?: UserBillingState) {
   return authCapabilities(user, billing);
+}
+
+export function revokeAllAuthSessionsForUser(userId: string): void {
+  const d = getDb();
+  d.prepare(`DELETE FROM auth_sessions WHERE user_id = ?`).run(userId);
+}
+
+/**
+ * Hall/canteen columns that reference a user purely as an OPTIONAL
+ * attribution ("who did this") — nullable in schema, and already treated as
+ * nullable elsewhere in the app (e.g. a hall with no canteen manager
+ * assigned yet is a normal, pre-existing state). Safe to clear to NULL on
+ * account deletion: the Hall, its shared data, and other members are
+ * completely unaffected — only the "who" attribution is cleared.
+ *
+ * This list intentionally excludes columns where the user_id is NOT NULL
+ * and represents either (a) the user's own row (handled by direct row
+ * deletion below, same precedent as hall_memberships) or (b) shared/
+ * historical Hall content whose authorship can't be nulled without a
+ * product decision (see the NOT TOUCHED list in deleteUserAccount's doc
+ * comment).
+ */
+const HALL_NULLABLE_USER_REFERENCE_COLUMNS: Array<{ table: string; column: string }> = [
+  { table: "halls", column: "created_by_user_id" },
+  { table: "halls", column: "canteen_manager_user_id" },
+  { table: "hall_invites", column: "created_by_user_id" },
+  { table: "hall_shopping_lists", column: "runner_user_id" },
+  { table: "hall_shopping_lists", column: "created_by_user_id" },
+  { table: "hall_shopping_list_items", column: "added_by_user_id" },
+  { table: "hall_canteen_items", column: "submitted_by_user_id" },
+  { table: "hall_canteen_items", column: "last_updated_by_user_id" },
+  { table: "hall_canteen_items", column: "picked_up_by_user_id" },
+  { table: "hall_canteen_items", column: "preferred_buyer_user_id" },
+  { table: "hall_canteen_history", column: "user_id" },
+  { table: "hall_activity_events", column: "user_id" },
+  { table: "hall_subscriptions", column: "subscribed_by_user_id" },
+  { table: "hall_canteen_dues_members", column: "enrolled_by_user_id" },
+  { table: "hall_canteen_shortage_reports", column: "resolved_by_user_id" },
+  { table: "hall_canteen_suggestions", column: "reviewed_by_user_id" },
+  { table: "hall_canteen_weekly_orders", column: "purchaser_user_id" },
+  { table: "hall_canteen_weekly_orders", column: "created_by_user_id" },
+  { table: "hall_canteen_order_items", column: "assigned_buyer_user_id" },
+  { table: "hall_canteen_manager_notes", column: "created_by_user_id" },
+  { table: "hall_canteen_manager_notes", column: "updated_by_user_id" },
+  { table: "hall_canteen_activity", column: "actor_user_id" },
+  { table: "hall_events", column: "actor_user_id" },
+  { table: "hall_board_tonight", column: "cook_user_id" },
+  { table: "hall_board_tonight", column: "runner_user_id" },
+  { table: "hall_logbook_entries", column: "author_user_id" },
+  { table: "hall_inventory_ledger", column: "actor_user_id" },
+];
+
+/**
+ * Permanently deletes a signed-in user's private account data.
+ *
+ * DELETED (private, user-specific — safe to remove):
+ * - auth_sessions (all sessions for this user — revokes access everywhere)
+ * - auth_magic_links matching this user's email
+ * - user_profiles, user_preferences (personal profile + saved preferences)
+ * - user_saved_recipes (personal favorites/saves)
+ * - shift_reminder_sends (personal reminder delivery history)
+ * - user_subscriptions (personal billing/entitlement row — Hall Pro/Stripe subs unaffected)
+ * - user_data_snapshots (personal cloud-sync snapshots)
+ * - user_meal_history (Firehall Meals Pro V1 Feature 3 — durable "Mark as
+ *   Cooked" event log; no identifiable cooked-history events are retained
+ *   after account deletion)
+ * - hall_memberships for this user only (their membership link, not the Hall itself)
+ * - hall_canteen_dues_members for this user only (their own dues enrollment —
+ *   NOT NULL user_id, so the row is removed rather than nulled; other
+ *   members' enrollments are untouched)
+ * - hall_logbook_reads for this user only (their own "last read" marker —
+ *   NOT NULL user_id, same treatment)
+ * - admin_user_meta (internal admin notes about this user)
+ * - email_leads matching this user's email (marketing CRM record)
+ * - users row itself
+ *
+ * CLEARED TO NULL (optional "who did this" attribution only — see
+ * HALL_NULLABLE_USER_REFERENCE_COLUMNS; the Hall, its shared data, and other
+ * members are unaffected, e.g. halls.created_by_user_id / canteen_manager_user_id):
+ * - every column listed in HALL_NULLABLE_USER_REFERENCE_COLUMNS
+ *
+ * INTENTIONALLY NOT TOUCHED (shared/historical Hall content whose authorship
+ * is NOT NULL in schema — clearing it would require inventing an
+ * ownership/anonymization policy, which is a product decision, not a bug
+ * fix; left dangling and reported — see PRE-LEGAL PRIVACY + CONSENT PRODUCT
+ * FIXES and ACCOUNT DELETION HALL REFERENCE INTEGRITY reports):
+ * - hall_notes.author_user_id, hall_board_notes.author_user_id (shared
+ *   grocery/whiteboard messages authored by this user)
+ * - hall_canteen_shortage_reports.reporter_user_id,
+ *   hall_canteen_suggestions.suggested_by_user_id (shared canteen reports)
+ * - hall_canteen_dues_history.user_id / marked_by_user_id (historical
+ *   payment ledger — shared Hall financial record other members and the
+ *   canteen manager rely on for accounting)
+ * - recipe_crew_ratings / recipe_crew_rating_ballots (anonymous
+ *   fingerprint-based votes — no user_id column)
+ * - analytics_events (keyed by session/visitor id, not user_id)
+ * - the user's Klaviyo marketing profile (handled by the caller, if at all)
+ */
+export function deleteUserAccount(userId: string): { ok: true; email: string | null } {
+  const d = getDb();
+  const userRow = d.prepare(`SELECT email FROM users WHERE user_id = ?`).get(userId) as
+    | { email: string | null }
+    | undefined;
+  if (!userRow) {
+    return { ok: true, email: null };
+  }
+
+  const email = userRow.email ? userRow.email.trim().toLowerCase() : null;
+
+  const tx = d.transaction(() => {
+    d.prepare(`DELETE FROM auth_sessions WHERE user_id = ?`).run(userId);
+    if (email) {
+      d.prepare(`DELETE FROM auth_magic_links WHERE lower(email) = ?`).run(email);
+    }
+    d.prepare(`DELETE FROM user_profiles WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM user_preferences WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM user_saved_recipes WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM shift_reminder_sends WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM user_subscriptions WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM user_data_snapshots WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM user_meal_history WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM hall_memberships WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM hall_canteen_dues_members WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM hall_logbook_reads WHERE user_id = ?`).run(userId);
+    for (const { table, column } of HALL_NULLABLE_USER_REFERENCE_COLUMNS) {
+      d.prepare(`UPDATE ${table} SET ${column} = NULL WHERE ${column} = ?`).run(userId);
+    }
+    d.prepare(`DELETE FROM admin_user_meta WHERE user_id = ?`).run(userId);
+    if (email) {
+      d.prepare(`DELETE FROM email_leads WHERE lower(email) = ?`).run(email);
+    }
+    d.prepare(`DELETE FROM users WHERE user_id = ?`).run(userId);
+  });
+  tx();
+
+  return { ok: true, email };
 }

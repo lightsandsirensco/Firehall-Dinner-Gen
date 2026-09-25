@@ -65,6 +65,17 @@ export const app = {
 
   /** Mobile shell — 44px touch, generous rhythm */
   mobileScreen: "mx-auto max-w-lg px-4 py-4 pb-safe-nav sm:max-w-xl sm:py-5 space-y-5",
+  /**
+   * Same touch targets/rhythm as `mobileScreen`, but for the rare Me-subpage
+   * that genuinely needs desktop-width layout room (e.g. a two-card pricing
+   * comparison) instead of the narrow ~576px phone-width reading column.
+   * `mobileScreen`'s `sm:max-w-xl` caps EVERY Me subpage at 576px on every
+   * screen size — fine for a stacked settings list, but it's what forced a
+   * 3-column pricing grid into a ~250px-wide lane on desktop. Opt in via
+   * `MeSubpageShell`'s `wide` prop rather than changing `mobileScreen`
+   * itself, so every other Me subpage keeps its narrow column untouched.
+   */
+  mobileScreenWide: "mx-auto max-w-[1100px] px-4 py-4 pb-safe-nav sm:py-5 space-y-5",
   touchMin: "min-h-11 min-w-11 touch-manipulation",
   cardSurface: "rounded-2xl border border-border/45 bg-card/35 overflow-hidden",
 } as const;

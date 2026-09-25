@@ -15,8 +15,8 @@
   "difficulty": "medium",
   "calories": 1400,
   "protein": 103,
-  "carbs": 92,
-  "fats": 67,
+  "carbs": 114,
+  "fats": 58,
   "tags": [
     "protein:chicken",
     "format:pasta",
@@ -221,8 +221,8 @@
   "nutrition": {
     "calories": 1400,
     "protein": 103,
-    "carbs": 92,
-    "fats": 67,
+    "carbs": 114,
+    "fats": 58,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -352,5 +352,6 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": []
 }

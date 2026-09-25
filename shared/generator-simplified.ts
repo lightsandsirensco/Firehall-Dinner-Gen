@@ -6,6 +6,7 @@
 import type { GenerateRequest } from "./schema.js";
 import { inferBusyLevelFromTime } from "./busy-level.js";
 import type { DietaryFilterKey } from "./dietary/schema.js";
+import { getFoodPreferenceDefinition } from "./ingredient-preferences/definitions.js";
 
 /** Crew buckets shown in the generator UI */
 export const CREW_SIZE_BUCKETS = ["2-4", "5-8", "9-12", "12+"] as const;
@@ -127,6 +128,15 @@ export interface SimplifiedGeneratorFilters {
   healthiness: HealthinessPreference;
   allergens: SimplifiedAllergen[];
   diets: SimplifiedDiet[];
+  /**
+   * Firehall Meals Pro — "Foods to Avoid" personal ingredient preferences
+   * (canonical keys, see shared/ingredient-preferences/definitions.ts). A
+   * distinct, Pro-gated taste preference — never merged with `allergens`/
+   * `diets` above. Server-side entitlement is re-checked and enforced
+   * independently (see server/routes.ts) — this client field is only ever a
+   * convenience default/session override, never trusted on its own.
+   */
+  foodsToAvoid: string[];
 }
 
 export function createDefaultSimplifiedFilters(): SimplifiedGeneratorFilters {
@@ -137,6 +147,7 @@ export function createDefaultSimplifiedFilters(): SimplifiedGeneratorFilters {
     healthiness: "balanced",
     allergens: [],
     diets: [],
+    foodsToAvoid: [],
   };
 }
 
@@ -207,6 +218,7 @@ export function simplifiedFiltersToGenerateRequest(
     healthiness_preference: filters.healthiness,
     allergens_to_avoid: [...filters.allergens],
     dietary_restrictions: [...new Set(dietary_restrictions)],
+    foods_to_avoid: [...filters.foodsToAvoid],
     firehall_category: undefined,
     budget_level: "standard",
     cuisine_style: "any",
@@ -233,20 +245,33 @@ export function formatDietSummary(diets: SimplifiedDiet[]): string {
   return diets.map((d) => SIMPLIFIED_DIET_LABELS[d]).join(", ");
 }
 
+export function formatFoodsToAvoidSummary(foodsToAvoid: string[]): string {
+  if (foodsToAvoid.length === 0) return "None";
+  return foodsToAvoid
+    .map((key) => getFoodPreferenceDefinition(key)?.label ?? key)
+    .join(", ");
+}
+
 export function formatGeneratorSummary(filters: SimplifiedGeneratorFilters): string {
   const health = HEALTHINESS_OPTIONS.find((h) => h.value === filters.healthiness)?.label ?? "Balanced";
   const protein =
     filters.protein === "surprise"
       ? "Surprise Me"
       : SIMPLIFIED_PROTEIN_LABELS[filters.protein];
-  return [
+  const lines = [
     `Crew: ${CREW_BUCKET_LABELS[filters.crew_bucket]}`,
     `Protein: ${protein}`,
     `Appliances: ${formatApplianceSummary(filters.appliances)}`,
     `Healthy: ${health}`,
     `Avoid: ${formatAllergenSummary(filters.allergens)}`,
     `Diet: ${formatDietSummary(filters.diets)}`,
-  ].join("\n");
+  ];
+  // Only shown once set — keeps the summary unchanged for the vast majority of
+  // (free or Pro-but-unused) sessions with no foods-to-avoid preference set.
+  if (filters.foodsToAvoid.length > 0) {
+    lines.push(`Foods to avoid: ${formatFoodsToAvoidSummary(filters.foodsToAvoid)}`);
+  }
+  return lines.join("\n");
 }
 
 export function healthinessRelaxationMessage(
@@ -309,5 +334,8 @@ export function migrateLegacyFilterState(legacy: Record<string, unknown>): Simpl
     healthiness,
     allergens,
     diets,
+    // No legacy shape ever carried this — always starts empty on migration,
+    // same as `defaults.foodsToAvoid` would.
+    foodsToAvoid: defaults.foodsToAvoid,
   };
 }

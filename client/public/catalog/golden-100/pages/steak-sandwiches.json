@@ -13,10 +13,10 @@
   "cookTime": 45,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1380,
-  "protein": 103,
-  "carbs": 39,
-  "fats": 90,
+  "calories": 1400,
+  "protein": 105,
+  "carbs": 54,
+  "fats": 84,
   "tags": [
     "protein:beef",
     "format:sandwich",
@@ -210,10 +210,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1380,
-    "protein": 103,
-    "carbs": 39,
-    "fats": 90,
+    "calories": 1400,
+    "protein": 105,
+    "carbs": 54,
+    "fats": 84,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -221,7 +221,7 @@
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -313,5 +313,10 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "mushrooms",
+    "onions",
+    "bell_peppers"
+  ]
 }

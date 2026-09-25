@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 1392,
-  "protein": 61,
-  "carbs": 180,
-  "fats": 47,
+  "calories": 998,
+  "protein": 57,
+  "carbs": 78,
+  "fats": 51,
   "tags": [
     "protein:chicken",
     "format:casserole",
@@ -178,10 +178,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1392,
-    "protein": 61,
-    "carbs": 180,
-    "fats": 47,
+    "calories": 998,
+    "protein": 57,
+    "carbs": 78,
+    "fats": 51,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -269,5 +269,8 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "broccoli"
+  ]
 }

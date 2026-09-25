@@ -41,6 +41,14 @@ export function HomeFaqSection() {
             </AccordionTrigger>
             <AccordionContent className="text-sm text-muted-foreground leading-relaxed pb-4">
               {item.answer}
+              {item.link ? (
+                <>
+                  {" "}
+                  <Link href={item.link.href} className="text-primary font-medium hover:underline">
+                    See {item.link.label} →
+                  </Link>
+                </>
+              ) : null}
             </AccordionContent>
           </AccordionItem>
         ))}

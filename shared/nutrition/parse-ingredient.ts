@@ -169,7 +169,15 @@ export function gramsFromAmount(
       return quantity * 480;
     case "":
     case "count":
-      return gramsFromNotesHint(notes, quantity) ?? quantity * (unitGrams?.count ?? 100);
+      // Recipes sometimes count deli-meat/cheese toppings as a generic "count"
+      // (e.g. "24 count" Provolone Slices) instead of the literal unit "slice"/
+      // "slices". The generic ~100g/count guess badly overstates a real slice
+      // (2g pepperoni, 8g bacon, 21-28g cheese) whenever the ingredient profile
+      // already defines a specific `slice` weight — prefer that over the
+      // catch-all default rather than silently 3-13x'ing a topping's weight.
+      return (
+        gramsFromNotesHint(notes, quantity) ?? quantity * (unitGrams?.count ?? unitGrams?.slice ?? 100)
+      );
     default:
       return gramsFromNotesHint(notes, quantity) ?? quantity * (unitGrams?.count ?? 80);
   }

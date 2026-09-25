@@ -1,17 +1,16 @@
 {
-  "generatedAt": "2026-07-29T23:10:20.271Z",
+  "generatedAt": "2026-09-25T00:32:27.779Z",
   "mode": "audit",
   "summary": {
     "total": 432,
-    "pass": 271,
-    "fail": 148,
+    "pass": 270,
+    "fail": 149,
     "withheld": 13,
-    "accuracyPct": 64.7,
+    "accuracyPct": 64.4,
     "suspiciousCalories": [
       "baked-ziti",
       "batch-lasagna",
       "bbq-brisket-burnt-ends",
-      "bbq-chicken-mac-and-cheese",
       "bbq-chicken-pizza",
       "beef-dip",
       "beef-stroganoff",
@@ -28,7 +27,6 @@
       "chili-mac",
       "chorizo-breakfast-tacos",
       "detroit-style-pizza",
-      "fast-philly-skillet",
       "french-toast-casserole",
       "game-day-nachos",
       "honey-soppressata-pizza",
@@ -60,7 +58,6 @@
       "spaghetti-aglio-e-olio-for-the-hall",
       "steak-sandwiches",
       "steak-tacos",
-      "stuffed-peppers",
       "tomato-soup-grilled-cheese-croutons",
       "white-garlic-chicken-pizza",
       "bbq-pulled-pork-bowls",
@@ -123,10 +120,8 @@
       "one-pot-beef-orzo-skillet-spinach-feta",
       "bagel-sandwich-line",
       "breakfast-fried-rice-crew",
-      "breakfast-sliders",
       "chicken-and-waffles-crew",
       "country-fried-steak-eggs",
-      "eggs-benedict-hall-style",
       "green-chile-breakfast-burritos",
       "irish-breakfast-fry-up",
       "lumberjack-breakfast-platter",
@@ -151,13 +146,18 @@
       "pressed-cuban-sandwiches-crew",
       "reverse-seared-ribeye-crew",
       "santa-maria-tri-tip-roast",
-      "yakiniku-grill-platter-crew"
+      "yakiniku-grill-platter-crew",
+      "bbq-chicken-pizza",
+      "buffalo-chicken-pizza",
+      "four-cheese-white-pizza",
+      "hawaiian-pizza",
+      "pesto-chicken-pizza",
+      "philly-cheesesteak-pizza",
+      "veggie-supreme-pizza"
     ],
     "suspiciousProtein": [
       "baked-ziti",
       "bbq-brisket-burnt-ends",
-      "bbq-chicken-mac-and-cheese",
-      "beef-dip",
       "beef-stroganoff",
       "beer-can-chicken",
       "breakfast-burrito-bar",
@@ -171,10 +171,8 @@
       "mediterranean-chickpea",
       "memphis-dry-rub-ribs",
       "pancake-short-stack",
-      "parm-hero-subs",
       "pasta-e-ceci-for-the-hall",
       "philly-cheesesteak-skillet",
-      "philly-egg-rolls",
       "shepherds-pie",
       "smoked-wings-white-sauce",
       "spicy-tomato-bisque-grilled-brie-toast",
@@ -225,8 +223,10 @@
       "smoked-potato-salad-tray",
       "spiedie-chicken-platter-crew",
       "yakiniku-grill-platter-crew",
+      "bbq-chicken-pizza",
       "buffalo-chicken-pizza",
       "pesto-chicken-pizza",
+      "philly-cheesesteak-pizza",
       "blueberry-almond",
       "chocolate-banana-recovery",
       "citrus-ginger",
@@ -247,11 +247,11 @@
       "chicken-alfredo-bake",
       "loaded-baked-potato-bar",
       "meat-lovers-sheet-pizza",
-      "meatball-hoagies",
       "memphis-dry-rub-ribs",
       "parm-hero-subs",
+      "slider-bar",
+      "smash-burgers",
       "steak-tacos",
-      "classic-patty-melt-for-the-crew",
       "italian-beef-slow-cooker",
       "loaded-baked-potato-soup-crock",
       "sausage-gnocchi-skillet",
@@ -259,15 +259,12 @@
       "baked-oatmeal-mixed-berries",
       "irish-breakfast-fry-up",
       "lumberjack-breakfast-platter",
-      "shakshuka-for-the-hall",
-      "firehall-hibachi-mixed-grill-crew",
-      "grilled-reuben-sandwiches-crew"
+      "shakshuka-for-the-hall"
     ],
     "needsRecalculation": [
       "baked-ziti",
       "batch-lasagna",
       "bbq-brisket-burnt-ends",
-      "bbq-chicken-mac-and-cheese",
       "bbq-chicken-pizza",
       "beef-dip",
       "beef-stroganoff",
@@ -284,7 +281,6 @@
       "chili-mac",
       "chorizo-breakfast-tacos",
       "detroit-style-pizza",
-      "fast-philly-skillet",
       "french-toast-casserole",
       "game-day-nachos",
       "honey-soppressata-pizza",
@@ -316,7 +312,6 @@
       "spaghetti-aglio-e-olio-for-the-hall",
       "steak-sandwiches",
       "steak-tacos",
-      "stuffed-peppers",
       "tomato-soup-grilled-cheese-croutons",
       "white-garlic-chicken-pizza",
       "bbq-pulled-pork-bowls",
@@ -381,10 +376,8 @@
       "bagel-sandwich-line",
       "baked-oatmeal-mixed-berries",
       "breakfast-fried-rice-crew",
-      "breakfast-sliders",
       "chicken-and-waffles-crew",
       "country-fried-steak-eggs",
-      "eggs-benedict-hall-style",
       "green-chile-breakfast-burritos",
       "irish-breakfast-fry-up",
       "lumberjack-breakfast-platter",
@@ -411,7 +404,13 @@
       "reverse-seared-ribeye-crew",
       "santa-maria-tri-tip-roast",
       "yakiniku-grill-platter-crew",
-      "philly-cheesesteak-pizza"
+      "bbq-chicken-pizza",
+      "buffalo-chicken-pizza",
+      "four-cheese-white-pizza",
+      "hawaiian-pizza",
+      "pesto-chicken-pizza",
+      "philly-cheesesteak-pizza",
+      "veggie-supreme-pizza"
     ]
   },
   "fixed": 0,
@@ -537,27 +536,23 @@
       "slug": "bbq-chicken-mac-and-cheese",
       "title": "BBQ Chicken Mac and Cheese",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "1386 cal · 83g P · 106g C · 68g F",
+      "stored": "820 cal · 54g P · 62g C · 30g F",
       "recommended": "820 cal · 54g P · 62g C · 30g F",
       "findings": [
         {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1386) — verify crew portions"
-        },
-        {
           "code": "protein_target_range",
-          "message": "Protein 83g outside Comfort Food target (25–45g)"
+          "message": "Protein 54g outside Comfort Food target (25–45g)"
         }
       ],
-      "suspiciousCalories": true,
-      "suspiciousProtein": true,
+      "suspiciousCalories": false,
+      "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -648,28 +643,24 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1400 cal · 96g P · 80g C · 78g F",
-      "recommended": "1400 cal · 96g P · 80g C · 78g F",
+      "stored": "1400 cal · 94g P · 97g C · 71g F",
+      "recommended": "1400 cal · 94g P · 97g C · 71g F",
       "findings": [
         {
           "code": "calories_too_high",
           "message": "Calories over 900 per serving (1400) — verify crew portions"
         },
         {
-          "code": "protein_too_high",
-          "message": "Protein over 95g per serving (96g) — verify portion"
-        },
-        {
           "code": "ingredient_protein_drift",
-          "message": "Stored protein 96g vs ingredient estimate 267g"
+          "message": "Stored protein 94g vs ingredient estimate 211g"
         },
         {
           "code": "ingredient_calorie_drift",
-          "message": "Stored 1400 cal vs ingredient estimate 3906 cal"
+          "message": "Stored 1400 cal vs ingredient estimate 3148 cal"
         }
       ],
       "suspiciousCalories": true,
-      "suspiciousProtein": true,
+      "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -960,8 +951,8 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1400 cal · 103g P · 92g C · 67g F",
-      "recommended": "1400 cal · 103g P · 92g C · 67g F",
+      "stored": "1400 cal · 103g P · 114g C · 58g F",
+      "recommended": "1400 cal · 103g P · 114g C · 58g F",
       "findings": [
         {
           "code": "calories_too_high",
@@ -1226,23 +1217,18 @@
       "slug": "fast-philly-skillet",
       "title": "Quick Philly Skillet",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "1179 cal · 89g P · 73g C · 59g F",
-      "recommended": "1179 cal · 89g P · 73g C · 59g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1179) — verify crew portions"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "800 cal · 61g P · 71g C · 30g F",
+      "recommended": "800 cal · 61g P · 71g C · 30g F",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -1791,16 +1777,12 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1400 cal · 95g P · 65g C · 86g F",
-      "recommended": "1400 cal · 95g P · 65g C · 86g F",
+      "stored": "1376 cal · 89g P · 84g C · 77g F",
+      "recommended": "1376 cal · 89g P · 84g C · 77g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1400) — verify crew portions"
-        },
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷10 crew better than batch÷8 base servings"
+          "message": "Calories over 900 per serving (1376) — verify crew portions"
         }
       ],
       "suspiciousCalories": true,
@@ -1808,7 +1790,7 @@
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
+      "crewSizeCoupled": false,
       "needsRecalculation": true,
       "ingredientMatchPct": 100
     },
@@ -2007,24 +1989,20 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1400 cal · 96g P · 84g C · 75g F",
-      "recommended": "1400 cal · 96g P · 84g C · 75g F",
+      "stored": "1400 cal · 93g P · 106g C · 65g F",
+      "recommended": "1400 cal · 93g P · 106g C · 65g F",
       "findings": [
         {
           "code": "calories_too_high",
           "message": "Calories over 900 per serving (1400) — verify crew portions"
         },
         {
-          "code": "protein_too_high",
-          "message": "Protein over 95g per serving (96g) — verify portion"
-        },
-        {
           "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
+          "message": "Stored macros match batch÷10 crew better than batch÷8 base servings"
         }
       ],
       "suspiciousCalories": true,
-      "suspiciousProtein": true,
+      "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -2107,20 +2085,16 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1400 cal · 98g P · 71g C · 80g F",
-      "recommended": "1400 cal · 98g P · 71g C · 80g F",
+      "stored": "1060 cal · 72g P · 76g C · 51g F",
+      "recommended": "1060 cal · 72g P · 76g C · 51g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1400) — verify crew portions"
-        },
-        {
-          "code": "protein_too_high",
-          "message": "Protein over 95g per serving (98g) — verify portion"
+          "message": "Calories over 900 per serving (1060) — verify crew portions"
         },
         {
           "code": "protein_target_range",
-          "message": "Protein 98g outside Comfort Food target (25–45g)"
+          "message": "Protein 72g outside Comfort Food target (25–45g)"
         }
       ],
       "suspiciousCalories": true,
@@ -2138,20 +2112,16 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1400 cal · 104g P · 74g C · 78g F",
-      "recommended": "1400 cal · 104g P · 74g C · 78g F",
+      "stored": "1122 cal · 84g P · 77g C · 55g F",
+      "recommended": "1122 cal · 84g P · 77g C · 55g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1400) — verify crew portions"
-        },
-        {
-          "code": "protein_too_high",
-          "message": "Protein over 95g per serving (104g) — verify portion"
+          "message": "Calories over 900 per serving (1122) — verify crew portions"
         }
       ],
       "suspiciousCalories": true,
-      "suspiciousProtein": true,
+      "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -2407,20 +2377,16 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1364 cal · 68g P · 77g C · 90g F",
-      "recommended": "1364 cal · 68g P · 77g C · 90g F",
+      "stored": "1400 cal · 72g P · 109g C · 77g F",
+      "recommended": "1400 cal · 72g P · 109g C · 77g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1364) — verify crew portions"
+          "message": "Calories over 900 per serving (1400) — verify crew portions"
         },
         {
-          "code": "ingredient_protein_drift",
-          "message": "Stored protein 68g vs ingredient estimate 167g"
-        },
-        {
-          "code": "ingredient_calorie_drift",
-          "message": "Stored 1364 cal vs ingredient estimate 3333 cal"
+          "code": "crew_size_coupled",
+          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
         }
       ],
       "suspiciousCalories": true,
@@ -2428,7 +2394,7 @@
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": false,
+      "crewSizeCoupled": true,
       "needsRecalculation": true,
       "ingredientMatchPct": 93
     },
@@ -2438,12 +2404,16 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1310 cal · 63g P · 69g C · 90g F",
-      "recommended": "1310 cal · 63g P · 69g C · 90g F",
+      "stored": "1400 cal · 66g P · 94g C · 86g F",
+      "recommended": "1400 cal · 66g P · 94g C · 86g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1310) — verify crew portions"
+          "message": "Calories over 900 per serving (1400) — verify crew portions"
+        },
+        {
+          "code": "crew_size_coupled",
+          "message": "Stored macros match batch÷10 crew better than batch÷8 base servings"
         }
       ],
       "suspiciousCalories": true,
@@ -2451,7 +2421,7 @@
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": false,
+      "crewSizeCoupled": true,
       "needsRecalculation": true,
       "ingredientMatchPct": 88
     },
@@ -2530,16 +2500,16 @@
       "catalog": "golden_100",
       "status": "fail",
       "servings": 8,
-      "stored": "1380 cal · 103g P · 39g C · 90g F",
-      "recommended": "1380 cal · 103g P · 39g C · 90g F",
+      "stored": "1400 cal · 105g P · 54g C · 84g F",
+      "recommended": "1400 cal · 105g P · 54g C · 84g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1380) — verify crew portions"
+          "message": "Calories over 900 per serving (1400) — verify crew portions"
         },
         {
           "code": "protein_too_high",
-          "message": "Protein over 95g per serving (103g) — verify portion"
+          "message": "Protein over 95g per serving (105g) — verify portion"
         }
       ],
       "suspiciousCalories": true,
@@ -2600,27 +2570,18 @@
       "slug": "stuffed-peppers",
       "title": "Quinoa Stuffed Peppers",
       "catalog": "golden_100",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "916 cal · 62g P · 70g C · 44g F",
-      "recommended": "916 cal · 62g P · 70g C · 44g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (916) — verify crew portions"
-        },
-        {
-          "code": "protein_target_range",
-          "message": "Protein 62g outside Performance Meals target (35–60g)"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "752 cal · 59g P · 33g C · 44g F",
+      "recommended": "752 cal · 59g P · 33g C · 44g F",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -3250,16 +3211,12 @@
       "catalog": "hall_expansion",
       "status": "fail",
       "servings": 8,
-      "stored": "1277 cal · 77g P · 42g C · 90g F",
-      "recommended": "1277 cal · 77g P · 42g C · 90g F",
+      "stored": "1272 cal · 76g P · 61g C · 82g F",
+      "recommended": "1272 cal · 76g P · 61g C · 82g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1277) — verify crew portions"
-        },
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷12 crew better than batch÷8 base servings"
+          "message": "Calories over 900 per serving (1272) — verify crew portions"
         }
       ],
       "suspiciousCalories": true,
@@ -3267,7 +3224,7 @@
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
+      "crewSizeCoupled": false,
       "needsRecalculation": true,
       "ingredientMatchPct": 89
     },
@@ -3322,12 +3279,12 @@
       "catalog": "hall_expansion",
       "status": "fail",
       "servings": 8,
-      "stored": "1392 cal · 61g P · 180g C · 47g F",
-      "recommended": "1392 cal · 61g P · 180g C · 47g F",
+      "stored": "998 cal · 57g P · 78g C · 51g F",
+      "recommended": "998 cal · 57g P · 78g C · 51g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1392) — verify crew portions"
+          "message": "Calories over 900 per serving (998) — verify crew portions"
         }
       ],
       "suspiciousCalories": true,
@@ -3523,7 +3480,7 @@
     },
     {
       "slug": "firehall-greek-chicken-bowls",
-      "title": "Greek Chicken Bowls",
+      "title": "Greek Chicken Bowls for the Hall",
       "catalog": "hall_expansion",
       "status": "pass",
       "servings": 8,
@@ -4767,7 +4724,7 @@
       "status": "fail",
       "servings": 8,
       "stored": "1400 cal · 109g P · 66g C · 80g F",
-      "recommended": "1400 cal · 109g P · 66g C · 80g F",
+      "recommended": "1307 cal · 105g P · 70g C · 70g F",
       "findings": [
         {
           "code": "calories_too_high",
@@ -6201,7 +6158,7 @@
     },
     {
       "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Chicken Fajitas",
+      "title": "Chicken Fajitas (Lightened)",
       "catalog": "performance_meals",
       "status": "pass",
       "servings": 8,
@@ -6957,27 +6914,18 @@
       "slug": "breakfast-sliders",
       "title": "Breakfast Sliders",
       "catalog": "breakfast",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "1100 cal · 62g P · 14g C · 89g F",
-      "recommended": "1100 cal · 62g P · 14g C · 89g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1100) — verify crew portions"
-        },
-        {
-          "code": "protein_target_range",
-          "message": "Protein 62g outside Breakfast target (20–45g)"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "793 cal · 42g P · 15g C · 63g F",
+      "recommended": "793 cal · 42g P · 15g C · 63g F",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -7228,27 +7176,18 @@
       "slug": "eggs-benedict-hall-style",
       "title": "Eggs Benedict Hall Style",
       "catalog": "breakfast",
-      "status": "fail",
+      "status": "pass",
       "servings": 8,
-      "stored": "922 cal · 58g P · 19g C · 69g F",
-      "recommended": "922 cal · 58g P · 19g C · 69g F",
-      "findings": [
-        {
-          "code": "calories_too_high",
-          "message": "Calories over 900 per serving (922) — verify crew portions"
-        },
-        {
-          "code": "protein_target_range",
-          "message": "Protein 58g outside Breakfast target (20–45g)"
-        }
-      ],
-      "suspiciousCalories": true,
+      "stored": "713 cal · 28g P · 17g C · 60g F",
+      "recommended": "713 cal · 28g P · 17g C · 60g F",
+      "findings": [],
+      "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": true,
+      "needsRecalculation": false,
       "ingredientMatchPct": 100
     },
     {
@@ -7618,14 +7557,9 @@
       "catalog": "breakfast",
       "status": "pass",
       "servings": 8,
-      "stored": "702 cal · 46g P · 39g C · 40g F",
-      "recommended": "702 cal · 46g P · 39g C · 40g F",
-      "findings": [
-        {
-          "code": "protein_target_range",
-          "message": "Protein 46g outside Breakfast target (20–45g)"
-        }
-      ],
+      "stored": "492 cal · 33g P · 38g C · 23g F",
+      "recommended": "492 cal · 33g P · 38g C · 23g F",
+      "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
@@ -7859,14 +7793,9 @@
       "catalog": "breakfast",
       "status": "pass",
       "servings": 8,
-      "stored": "812 cal · 48g P · 7g C · 66g F",
-      "recommended": "812 cal · 48g P · 7g C · 66g F",
-      "findings": [
-        {
-          "code": "protein_target_range",
-          "message": "Protein 48g outside Breakfast target (20–45g)"
-        }
-      ],
+      "stored": "576 cal · 34g P · 6g C · 46g F",
+      "recommended": "576 cal · 34g P · 6g C · 46g F",
+      "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
@@ -8289,16 +8218,12 @@
       "catalog": "bbq_grill",
       "status": "fail",
       "servings": 8,
-      "stored": "1400 cal · 48g P · 127g C · 76g F",
-      "recommended": "1400 cal · 48g P · 127g C · 76g F",
+      "stored": "1253 cal · 49g P · 55g C · 90g F",
+      "recommended": "1253 cal · 49g P · 55g C · 90g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1400) — verify crew portions"
-        },
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷10 crew better than batch÷8 base servings"
+          "message": "Calories over 900 per serving (1253) — verify crew portions"
         }
       ],
       "suspiciousCalories": true,
@@ -8306,7 +8231,7 @@
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
+      "crewSizeCoupled": false,
       "needsRecalculation": true,
       "ingredientMatchPct": 90
     },
@@ -8513,20 +8438,16 @@
       "catalog": "bbq_grill",
       "status": "fail",
       "servings": 8,
-      "stored": "1241 cal · 75g P · 29g C · 90g F",
-      "recommended": "1241 cal · 75g P · 29g C · 90g F",
+      "stored": "1029 cal · 62g P · 33g C · 71g F",
+      "recommended": "1029 cal · 62g P · 33g C · 71g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1241) — verify crew portions"
-        },
-        {
-          "code": "crew_size_coupled",
-          "message": "Stored macros match batch÷10 crew better than batch÷8 base servings"
+          "message": "Calories over 900 per serving (1029) — verify crew portions"
         },
         {
           "code": "protein_target_range",
-          "message": "Protein 75g outside BBQ & Grill target (30–55g)"
+          "message": "Protein 62g outside BBQ & Grill target (30–55g)"
         }
       ],
       "suspiciousCalories": true,
@@ -8534,7 +8455,7 @@
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
-      "crewSizeCoupled": true,
+      "crewSizeCoupled": false,
       "needsRecalculation": true,
       "ingredientMatchPct": 50
     },
@@ -8826,20 +8747,20 @@
       "catalog": "bbq_grill",
       "status": "fail",
       "servings": 8,
-      "stored": "1325 cal · 113g P · 12g C · 90g F",
-      "recommended": "1325 cal · 113g P · 12g C · 90g F",
+      "stored": "1027 cal · 97g P · 12g C · 63g F",
+      "recommended": "1027 cal · 97g P · 12g C · 63g F",
       "findings": [
         {
           "code": "calories_too_high",
-          "message": "Calories over 900 per serving (1325) — verify crew portions"
+          "message": "Calories over 900 per serving (1027) — verify crew portions"
         },
         {
           "code": "protein_too_high",
-          "message": "Protein over 95g per serving (113g) — verify portion"
+          "message": "Protein over 95g per serving (97g) — verify portion"
         },
         {
           "code": "protein_target_range",
-          "message": "Protein 113g outside BBQ & Grill target (30–55g)"
+          "message": "Protein 97g outside BBQ & Grill target (30–55g)"
         }
       ],
       "suspiciousCalories": true,
@@ -9133,23 +9054,27 @@
       "slug": "bbq-chicken-pizza",
       "title": "BBQ Chicken Pizza",
       "catalog": "pizza_night",
-      "status": "pass",
+      "status": "fail",
       "servings": 8,
-      "stored": "880 cal · 75g P · 58g C · 36g F",
+      "stored": "1400 cal · 93g P · 143g C · 47g F",
       "recommended": "1400 cal · 93g P · 143g C · 47g F",
       "findings": [
         {
+          "code": "calories_too_high",
+          "message": "Calories over 900 per serving (1400) — verify crew portions"
+        },
+        {
           "code": "protein_target_range",
-          "message": "Protein 75g outside Pizza Night target (25–55g)"
+          "message": "Protein 93g outside Pizza Night target (25–55g)"
         }
       ],
-      "suspiciousCalories": false,
-      "suspiciousProtein": false,
+      "suspiciousCalories": true,
+      "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": false,
+      "needsRecalculation": true,
       "ingredientMatchPct": 92
     },
     {
@@ -9173,23 +9098,27 @@
       "slug": "buffalo-chicken-pizza",
       "title": "Buffalo Chicken Pizza",
       "catalog": "pizza_night",
-      "status": "pass",
+      "status": "fail",
       "servings": 8,
-      "stored": "845 cal · 79g P · 29g C · 44g F",
+      "stored": "1400 cal · 87g P · 101g C · 68g F",
       "recommended": "1400 cal · 87g P · 101g C · 68g F",
       "findings": [
         {
+          "code": "calories_too_high",
+          "message": "Calories over 900 per serving (1400) — verify crew portions"
+        },
+        {
           "code": "protein_target_range",
-          "message": "Protein 79g outside Pizza Night target (25–55g)"
+          "message": "Protein 87g outside Pizza Night target (25–55g)"
         }
       ],
-      "suspiciousCalories": false,
+      "suspiciousCalories": true,
       "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": false,
+      "needsRecalculation": true,
       "ingredientMatchPct": 100
     },
     {
@@ -9230,36 +9159,54 @@
       "slug": "four-cheese-white-pizza",
       "title": "Four-Cheese White Pizza",
       "catalog": "pizza_night",
-      "status": "pass",
+      "status": "fail",
       "servings": 8,
-      "stored": "800 cal · 41g P · 30g C · 57g F",
+      "stored": "1331 cal · 61g P · 112g C · 68g F",
       "recommended": "1331 cal · 61g P · 112g C · 68g F",
-      "findings": [],
-      "suspiciousCalories": false,
+      "findings": [
+        {
+          "code": "calories_too_high",
+          "message": "Calories over 900 per serving (1331) — verify crew portions"
+        },
+        {
+          "code": "protein_target_range",
+          "message": "Protein 61g outside Pizza Night target (25–55g)"
+        }
+      ],
+      "suspiciousCalories": true,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": false,
+      "needsRecalculation": true,
       "ingredientMatchPct": 91
     },
     {
       "slug": "hawaiian-pizza",
       "title": "Hawaiian Pizza",
       "catalog": "pizza_night",
-      "status": "pass",
+      "status": "fail",
       "servings": 8,
-      "stored": "710 cal · 51g P · 45g C · 36g F",
+      "stored": "1143 cal · 64g P · 126g C · 40g F",
       "recommended": "1143 cal · 64g P · 126g C · 40g F",
-      "findings": [],
-      "suspiciousCalories": false,
+      "findings": [
+        {
+          "code": "calories_too_high",
+          "message": "Calories over 900 per serving (1143) — verify crew portions"
+        },
+        {
+          "code": "protein_target_range",
+          "message": "Protein 64g outside Pizza Night target (25–55g)"
+        }
+      ],
+      "suspiciousCalories": true,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": false,
+      "needsRecalculation": true,
       "ingredientMatchPct": 100
     },
     {
@@ -9368,23 +9315,27 @@
       "slug": "pesto-chicken-pizza",
       "title": "Pesto Chicken Pizza",
       "catalog": "pizza_night",
-      "status": "pass",
+      "status": "fail",
       "servings": 8,
-      "stored": "788 cal · 80g P · 28g C · 38g F",
+      "stored": "1266 cal · 94g P · 110g C · 45g F",
       "recommended": "1266 cal · 94g P · 110g C · 45g F",
       "findings": [
         {
+          "code": "calories_too_high",
+          "message": "Calories over 900 per serving (1266) — verify crew portions"
+        },
+        {
           "code": "protein_target_range",
-          "message": "Protein 80g outside Pizza Night target (25–55g)"
+          "message": "Protein 94g outside Pizza Night target (25–55g)"
         }
       ],
-      "suspiciousCalories": false,
+      "suspiciousCalories": true,
       "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": false,
+      "needsRecalculation": true,
       "ingredientMatchPct": 78
     },
     {
@@ -9393,28 +9344,20 @@
       "catalog": "pizza_night",
       "status": "fail",
       "servings": 8,
-      "stored": "838 cal · 60g P · 31g C · 51g F",
-      "recommended": "1400 cal · 91g P · 73g C · 81g F",
+      "stored": "1400 cal · 85g P · 105g C · 69g F",
+      "recommended": "1400 cal · 85g P · 105g C · 69g F",
       "findings": [
         {
-          "code": "ingredient_protein_drift",
-          "message": "Stored protein 60g vs ingredient estimate 152g"
-        },
-        {
-          "code": "ingredient_calorie_drift",
-          "message": "Stored 838 cal vs ingredient estimate 2346 cal"
+          "code": "calories_too_high",
+          "message": "Calories over 900 per serving (1400) — verify crew portions"
         },
         {
           "code": "protein_target_range",
-          "message": "Protein 60g outside Pizza Night target (25–55g)"
-        },
-        {
-          "code": "needs_recalculation",
-          "message": "Recommended: 1400 cal · 91g P · 73g C · 81g F"
+          "message": "Protein 85g outside Pizza Night target (25–55g)"
         }
       ],
-      "suspiciousCalories": false,
-      "suspiciousProtein": false,
+      "suspiciousCalories": true,
+      "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -9477,18 +9420,23 @@
       "slug": "veggie-supreme-pizza",
       "title": "Veggie Supreme Pizza",
       "catalog": "pizza_night",
-      "status": "pass",
+      "status": "fail",
       "servings": 8,
-      "stored": "676 cal · 35g P · 44g C · 40g F",
+      "stored": "1183 cal · 52g P · 126g C · 50g F",
       "recommended": "1183 cal · 52g P · 126g C · 50g F",
-      "findings": [],
-      "suspiciousCalories": false,
+      "findings": [
+        {
+          "code": "calories_too_high",
+          "message": "Calories over 900 per serving (1183) — verify crew portions"
+        }
+      ],
+      "suspiciousCalories": true,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
       "crewSizeCoupled": false,
-      "needsRecalculation": false,
+      "needsRecalculation": true,
       "ingredientMatchPct": 92
     },
     {

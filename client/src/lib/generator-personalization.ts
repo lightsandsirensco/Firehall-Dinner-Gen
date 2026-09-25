@@ -2,7 +2,7 @@
  * Client-side generator personalization — localStorage + auth/hall merge.
  */
 
-import type { UserPreferences } from "@shared/auth/types";
+import type { UserPreferences, UserProfile } from "@shared/auth/types";
 import type { HallRecord } from "@shared/hall-membership/types";
 import {
   createDefaultSimplifiedFilters,
@@ -108,6 +108,8 @@ export function mergeAuthAndHallIntoFilters(
     preferences: UserPreferences | null;
     hall: Pick<HallRecord, "crew_size" | "appliances"> | null;
     hallLinked: boolean;
+    /** Signed-in user's saved account profile — used only for its crew_size default. */
+    profile?: Pick<UserProfile, "crew_size"> | null;
   },
 ): SimplifiedGeneratorFilters {
   const personal = readPersonalGeneratorPrefs();
@@ -118,6 +120,7 @@ export function mergeAuthAndHallIntoFilters(
     hall: options.hall,
     hallLinked: options.hallLinked,
     localCrewSize: getHallProfile().defaultCrewSize,
+    accountCrewSize: options.profile?.crew_size ?? null,
   });
 }
 

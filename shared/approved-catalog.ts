@@ -58,6 +58,34 @@ export interface ApprovedCatalogEntry {
   isLowCleanup: boolean;
   /** Food-safety dietary/allergen classification — undefined only for legacy entries that predate the audit. */
   dietarySummary?: DietarySummary;
+  /**
+   * Raw per-serving macros for Pro numeric nutrition filtering (min protein /
+   * max calories / max carbs / max fat) — projected straight from the
+   * recipe's own already-computed nutrition (shared/nutrition/calculate.ts),
+   * never recalculated here. Only present when `numericFilterEligible` is
+   * true (fail closed — see shared/nutrition/filter-eligibility.ts).
+   */
+  macros?: {
+    calories: number;
+    protein: number;
+    carbs: number;
+    fat: number;
+  };
+  /**
+   * Whether this recipe's macros are reliable enough to use for Pro numeric
+   * nutrition filtering. Always false for smoothies in V1 (Explore's
+   * smoothie dataset isn't wired to the calculated detail-page nutrition
+   * dataset) and for any recipe with an unresolved nutrition integrity
+   * finding — never a hand-written slug exception list.
+   */
+  numericFilterEligible: boolean;
+  /**
+   * Precomputed "Foods to Avoid" preference keys this recipe's ingredients
+   * match (Firehall Meals Pro personalization) — see
+   * shared/ingredient-preferences/. Always present (empty array when no
+   * preference matches or for legacy entries predating the classifier).
+   */
+  avoidTags: string[];
 }
 
 export interface ApprovedCatalogResponse {

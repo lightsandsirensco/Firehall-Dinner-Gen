@@ -28,6 +28,7 @@ import type { BreakfastIndexEntry } from "../shared/breakfast-schema.js";
 import { CATALOG_ASSET_REVISION } from "../shared/meal-catalog/asset-revision.js";
 import { classifyRecipeDietary } from "../shared/dietary/classify-recipe.js";
 import type { DietarySummary } from "../shared/dietary/schema.js";
+import { computeAvoidTags } from "../shared/ingredient-preferences/match.js";
 
 const SMOOTHIE_COOK_MINUTES = 5;
 
@@ -40,6 +41,31 @@ function catalogImageFields(images: ReturnType<typeof resolveExistingSlugImage>)
     thumbImage: images.thumb,
     thumbCacheVersion: images.thumbCacheVersion,
     heroCacheVersion: images.heroCacheVersion,
+  };
+}
+
+/**
+ * Raw per-serving macros + numeric-filter eligibility, straight from the
+ * catalog index's `nutritionSummary` (itself projected from the recipe
+ * page's own already-computed nutrition by scripts/nutrition-index-classify.ts
+ * — see shared/nutrition/filter-eligibility.ts for the eligibility rule).
+ * Fails closed: no `nutritionSummary`, or not eligible, means no macros are
+ * exposed and numeric Pro filters must never match this recipe.
+ */
+function deriveNumericNutritionFields(
+  nutrition: GoldenCatalogIndexEntry["nutritionSummary"] | undefined,
+): Pick<ApprovedCatalogEntry, "macros" | "numericFilterEligible"> {
+  if (!nutrition?.numericFilterEligible) {
+    return { numericFilterEligible: false };
+  }
+  return {
+    numericFilterEligible: true,
+    macros: {
+      calories: nutrition.calories ?? 0,
+      protein: nutrition.protein ?? 0,
+      carbs: nutrition.carbs ?? 0,
+      fat: nutrition.fat ?? 0,
+    },
   };
 }
 
@@ -143,6 +169,8 @@ function mealEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEnt
     isSmoothie: false,
     ...flags,
     dietarySummary: entry.dietarySummary,
+    ...deriveNumericNutritionFields(entry.nutritionSummary),
+    avoidTags: entry.avoidTags ?? [],
   };
 }
 
@@ -193,6 +221,17 @@ function smoothieEntryToApproved(item: (typeof SMOOTHIE_CATALOG_ITEMS)[number]):
     isLowCarb: false,
     isLowCleanup: true,
     dietarySummary,
+    // Smoothies are explicitly excluded from Pro numeric nutrition filtering
+    // in V1 — Explore's smoothie dataset isn't wired to the calculated
+    // detail-page nutrition dataset (see shared/fuel-catalog/smoothies), so
+    // there is no reliable per-serving macro source to fail-closed check
+    // against here. Existing smoothie browsing/filtering is unchanged.
+    numericFilterEligible: false,
+    // "Foods to Avoid" is pure ingredient-text matching (not nutrition-data
+    // dependent), so — unlike numeric filtering — it CAN run live here on
+    // the smoothie catalog's own ingredient list, same as the dietary
+    // classification immediately above.
+    avoidTags: computeAvoidTags(item.ingredients),
   };
 }
 
@@ -249,6 +288,8 @@ function breakfastEntryToApproved(entry: BreakfastIndexEntry): ApprovedCatalogEn
     isLowCarb,
     isLowCleanup: entry.totalTime <= 45,
     dietarySummary: entry.dietarySummary,
+    ...deriveNumericNutritionFields(entry.nutritionSummary),
+    avoidTags: entry.avoidTags ?? [],
   };
 }
 
@@ -305,6 +346,8 @@ function bbqEntryToApproved(entry: GoldenCatalogIndexEntry): ApprovedCatalogEntr
     isLowCarb,
     isLowCleanup: entry.cookTime <= 60 && !tagHay.includes("heavy"),
     dietarySummary: entry.dietarySummary,
+    ...deriveNumericNutritionFields(entry.nutritionSummary),
+    avoidTags: entry.avoidTags ?? [],
   };
 }
 

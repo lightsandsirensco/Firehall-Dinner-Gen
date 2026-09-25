@@ -100,25 +100,25 @@
     }
   ],
   "nutrition": {
-    "calories": 702,
-    "protein": 46,
-    "carbs": 39,
-    "fat": 40,
+    "calories": 492,
+    "protein": 33,
+    "carbs": 38,
+    "fat": 23,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "stationWorkflow": [
@@ -206,5 +206,8 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "mustard"
+  ]
 }

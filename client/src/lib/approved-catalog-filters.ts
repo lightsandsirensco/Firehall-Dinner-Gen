@@ -5,6 +5,7 @@ import type {
   ApprovedCatalogPrimaryFilter,
 } from "@shared/approved-catalog";
 import type { DietaryFilterKey } from "@shared/dietary/schema";
+import { recipeHasAnyAvoidedTag } from "@shared/ingredient-preferences/match";
 
 /** Entries usable in Explore filters (full catalog or grid payload without hero). */
 export type ApprovedCatalogFilterable = ApprovedCatalogEntry | ApprovedCatalogGridEntry;
@@ -19,6 +20,25 @@ export interface ApprovedCatalogFilterState {
   lowCleanup: boolean;
   /** Food-safety filters — a recipe only qualifies with high-confidence classification AND the flag true. */
   dietary: DietaryFilterKey[];
+  /**
+   * Pro numeric nutrition targets (Firehall Meals Pro — `advanced_search`).
+   * Grams for protein/carbs/fat, kcal for calories; `null` = not set. A
+   * recipe only qualifies when `numericFilterEligible` is true (fail
+   * closed — see shared/nutrition/filter-eligibility.ts) AND it satisfies
+   * every target that is set. Composes as a plain AND with every other
+   * filter, including the existing `highProtein` preset.
+   */
+  minProtein: number | null;
+  maxCalories: number | null;
+  maxCarbs: number | null;
+  maxFat: number | null;
+  /**
+   * Pro "Foods to Avoid" preference keys (Firehall Meals Pro — `ingredient_preferences`).
+   * A recipe is excluded when its precomputed `avoidTags` intersect any of
+   * these keys. Composes as a plain AND with every other filter. See
+   * shared/ingredient-preferences/ for the canonical matcher/definitions.
+   */
+  avoidIngredients: string[];
 }
 
 export const DEFAULT_APPROVED_CATALOG_FILTERS: ApprovedCatalogFilterState = {
@@ -30,7 +50,22 @@ export const DEFAULT_APPROVED_CATALOG_FILTERS: ApprovedCatalogFilterState = {
   lowCarb: false,
   lowCleanup: false,
   dietary: [],
+  minProtein: null,
+  maxCalories: null,
+  maxCarbs: null,
+  maxFat: null,
+  avoidIngredients: [],
 };
+
+/** True when any Pro numeric nutrition target is set. */
+export function hasActiveNumericNutritionFilter(state: ApprovedCatalogFilterState): boolean {
+  return (
+    state.minProtein != null ||
+    state.maxCalories != null ||
+    state.maxCarbs != null ||
+    state.maxFat != null
+  );
+}
 
 export function filterApprovedCatalogEntries<T extends ApprovedCatalogFilterable>(
   entries: T[],
@@ -66,6 +101,20 @@ export function filterApprovedCatalogEntries<T extends ApprovedCatalogFilterable
         if (!entry.dietarySummary.flags[key]) return false;
       }
     }
+
+    if (hasActiveNumericNutritionFilter(state)) {
+      // Fail closed: no macros (ineligible nutrition, or a category — e.g.
+      // smoothies — never wired to numeric filtering) never qualifies, no
+      // matter how the targets are set.
+      if (!entry.numericFilterEligible || !entry.macros) return false;
+      const { calories, protein, carbs, fat } = entry.macros;
+      if (state.minProtein != null && protein < state.minProtein) return false;
+      if (state.maxCalories != null && calories > state.maxCalories) return false;
+      if (state.maxCarbs != null && carbs > state.maxCarbs) return false;
+      if (state.maxFat != null && fat > state.maxFat) return false;
+    }
+
+    if (recipeHasAnyAvoidedTag(entry.avoidTags, state.avoidIngredients)) return false;
 
     return true;
   });
@@ -109,6 +158,8 @@ export function hasActiveApprovedCatalogFilters(state: ApprovedCatalogFilterStat
     state.highProtein ||
     state.lowCarb ||
     state.lowCleanup ||
-    state.dietary.length > 0
+    state.dietary.length > 0 ||
+    hasActiveNumericNutritionFilter(state) ||
+    state.avoidIngredients.length > 0
   );
 }

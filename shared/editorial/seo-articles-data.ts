@@ -2,7 +2,7 @@
  * SEO traffic pillar guides — high-intent firefighter / firehall meal keywords.
  */
 
-import { buildSeoGuide, meal, STANDARD_FAQS } from "./seo-article-build.js";
+import { buildSeoGuide, meal } from "./seo-article-build.js";
 
 const REL = {
   busy: ["quick-meals-between-calls", "planning-tonights-station-dinner"],
@@ -52,7 +52,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("pad-thai", "Hall Rush Pad Thai", "High flavor wok/skillet finish."),
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Low dish count, predictable."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's a good meal to cook when the board might interrupt dinner?",
+        answer:
+          "Skillet meals, sheet-pan dinners, and tacos — anything that survives being turned to low and covered for twenty minutes. A Philly cheesesteak skillet or sheet-pan fajitas hold their shape better than a sauce that needs constant attention.",
+      },
+      {
+        question: "How do you keep a busy-night dinner from turning into three separate meals?",
+        answer:
+          "Pick one protein and one format, then set a serve window instead of a single dinner time. Post it on the whiteboard so people know food is ready between 18:00 and 19:00, not exactly at 18:00 sharp.",
+      },
+    ],
     relatedArticleSlugs: REL.busy,
   }),
 
@@ -115,7 +126,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("pork-carnitas-tacos", "Quick Pork Carnitas Tacos", "Crispy pork taco line."),
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "When the whole hall is hungry."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "How do you pick from a big list of dinner ideas without wasting time?",
+        answer:
+          "Match time first, protein second. Under forty minutes, stay with handhelds and skillets; if the board is quiet, go for a bake or a batch. Filtering by the clock cuts twenty-five options down to two or three fast.",
+      },
+      {
+        question: "How often should a hall repeat the same dinner ideas?",
+        answer:
+          "Rotate through five or six picks that fit your usual shift length instead of chasing something new every night. Tag a couple as tones-drop safe — chili, pulled pork, baked pasta — so there's always a fallback.",
+      },
+    ],
     relatedArticleSlugs: ["planning-tonights-station-dinner", "meals-firefighters-actually-cook"],
   }),
 
@@ -157,7 +179,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("loaded-potato-feed", "Loaded Potato Feed", "Self-serve spuds — customizable."),
       meal("pulled-pork", "Pulled Pork Sandwiches", "Hold in a covered container — fast service."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's an easy way to portion protein for a large firehouse crew?",
+        answer:
+          "Round up rather than trying to hit an exact number — an extra pound of chicken thighs is cheap compared to running short. Add an extra tray of starch too; rice, pasta, or buns fill in fast if the protein runs light before everyone's been through the line.",
+      },
+      {
+        question: "What's the easiest format for feeding a dozen firefighters at once?",
+        answer:
+          "Chili, lasagna, taco bars, and pulled pork win because they forgive timing and let people self-portion. Use two half-sheet pans instead of one crowded pan — even cooking beats faster stacking.",
+      },
+    ],
     relatedArticleSlugs: REL.crew,
   }),
 
@@ -200,7 +233,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("pulled-pork", "Pulled Pork Sandwiches", "BBQ hold food — crew favorite."),
       meal("sheet-pan-sausage-peppers", "Sheet Pan Sausage and Peppers", "Low drama, high yield."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "Why don't firehouse crews cook more ambitious meals?",
+        answer:
+          "Interruptions, mixed skill levels, and limited cleanup time push crews toward forgiving recipes — not lack of ambition. A recipe that needs constant stove attention loses on a busy night no matter how good it tastes.",
+      },
+      {
+        question: "What meals show up again and again at fire stations?",
+        answer:
+          "Chili, burgers, tacos, pasta bakes, and grilled chicken. These formats scale, hold, and reheat, which matters more on shift than novelty.",
+      },
+    ],
     relatedArticleSlugs: ["25-firefighter-dinner-ideas", "feeding-a-firehall-crew"],
   }),
 
@@ -242,7 +286,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("sausage-egg-bake", "Sausage Egg Bake", "Hands-off morning bake."),
       meal("sunday-chili-batch", "Sunday Batch Chili", "If dinner doubles as overnight option."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "How do you plan meals across an entire 24-hour shift?",
+        answer:
+          "Treat it as three kitchens in one: a dinner that still holds for late eaters, light overnight snacks if the board stays busy, and a breakfast bake or line before handoff. One heroic dinner that's supposed to cover the whole tour usually falls apart by midnight.",
+      },
+      {
+        question: "What's a good overnight option if people are still hungry at 2 a.m.?",
+        answer:
+          "Keep fruit, yogurt, and sandwich fixings in the fridge, or leave a pot of chili on low. Nobody needs a second full cook overnight — just something that's already ready.",
+      },
+    ],
     relatedArticleSlugs: ["firefighter-breakfast-ideas", "meal-prep-for-shift-workers"],
   }),
 
@@ -285,7 +340,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("mediterranean-chickpea", "Mediterranean Chickpea Tray", "Plant-forward tray that still fills."),
       meal("turkey-burgers", "Black Bean Turkey Burgers", "Juicy lean burgers that still satisfy the crew."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "How do you make a healthy meal that doesn't leave the crew hungry?",
+        answer:
+          "Build bowls — grain, protein, vegetable, sauce — so people control their own portions instead of getting a fixed diet plate. Greek chicken bowls and salmon rice bowls fill up the same way a regular dinner does; they just lead with protein instead of extra starch.",
+      },
+      {
+        question: "Can you grill light without the meal feeling small?",
+        answer:
+          "Yes — salmon, souvlaki, and lean chili still feel like dinner when the sides are generous. Offer bread, rice, or potatoes on the side so a lighter main doesn't mean a lighter plate.",
+      },
+    ],
     relatedArticleSlugs: ["healthy-meals-for-active-crews"],
   }),
 
@@ -294,8 +360,8 @@ export const SEO_TRAFFIC_ARTICLES = [
     title: "Fast Firehall Meals Under 30 Minutes",
     subtitle: "From walk-in to eating — realistic station timers",
     description:
-      "Skillet, pasta, shrimp, quesadillas, and flat-top dinners that respect a real hall clock — not magazine prep times.",
-    keywords: ["fast firehall meals", "30 minute crew dinner", "quick firefighter meals"],
+      "Easy firehouse meals — skillet, pasta, shrimp, quesadillas, and flat-top dinners that respect a real hall clock, not magazine prep times.",
+    keywords: ["fast firehall meals", "30 minute crew dinner", "quick firefighter meals", "easy firehouse meals"],
     intro:
       "Thirty minutes on a hall clock is closer to twenty-two after someone asks a 'quick question' in the kitchen. Fast firehall meals skip rests, brines, and multi-stage bakes. They hit high heat, short ingredient lists, and formats you have cooked before — garlic butter shrimp on the flat-top, a philly skillet, carnitas tacos when the board already looks ugly at 18:15.",
     practicalAdvice: [
@@ -351,12 +417,12 @@ export const SEO_TRAFFIC_ARTICLES = [
       {
         question: "What if tones drop right before dinner hits the table?",
         answer:
-          "Lower heat, cover, post the hold on the whiteboard. Shrimp and skillet meals survive; seared chicken cutlets do not — finish those when you are back or pivot to a line format.",
+          "Turn the heat down but keep it hot rather than warm, cover it, and post the hold on the whiteboard so it doesn't sit forgotten. Shrimp and skillet meals hold up reasonably well for a short wait; seared chicken cutlets dry out fast, so those are better finished fresh when you're back.",
       },
       {
-        question: "Where do these recipe links go?",
+        question: "What's the biggest time-saver for a meal under 30 minutes?",
         answer:
-          "Each one opens a full Firehall Meals recipe page — ingredients, steps, crew scaling, and nutrition — so you can cook it without guessing.",
+          "Skip anything that needs a rest, a brine, or a multi-stage bake. Shrimp, thin-cut chicken, ground beef, and pasta with a jarred-plus-fresh sauce clear thirty minutes because there's no dead time waiting on the oven or a resting protein.",
       },
     ],
     relatedArticleSlugs: REL.busy,
@@ -399,7 +465,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("chicken-dumpling-soup", "Chicken and Dumplings", "Comfort in a slow pot."),
       meal("carolina-mustard-pork", "Carolina Mustard Pulled Pork", "Tangy pull — low labor."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What crockpot meals hold up best on a busy shift?",
+        answer:
+          "Pulled pork, chili, and braises — anything that forgives being left on low for hours instead of needing last-minute precision. Brown the meat first when you can; color still matters even in a slow cooker.",
+      },
+      {
+        question: "When should you start a crockpot meal for dinner?",
+        answer:
+          "Start pulls and chili mid-afternoon on quieter days. On busy nights, use the crockpot as a hold vessel after a quick stovetop sear instead of gambling on a full slow-cook starting at 18:00.",
+      },
+    ],
     relatedArticleSlugs: ["one-pot-firehall-meals"],
   }),
 
@@ -446,7 +523,18 @@ export const SEO_TRAFFIC_ARTICLES = [
         "Golden cutlets with bubbling sauce — Italian night energy.",
       ),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What comfort meals do firehouse crews ask for again and again?",
+        answer:
+          "Mac and cheese, chicken parm, chili, meatloaf, and loaded potatoes. None of it is creative — it's effective, and it reheats well for people eating in shifts.",
+      },
+      {
+        question: "How do you serve comfort food without backing up the line?",
+        answer:
+          "Use a tray format with one ladle per pot and buns or garlic bread on the side. Comfort food fails fast when the line backs up, so keep the setup simple even if the menu is rich.",
+      },
+    ],
     relatedArticleSlugs: REL.comfort,
   }),
 
@@ -498,7 +586,18 @@ export const SEO_TRAFFIC_ARTICLES = [
         "Garlic, oil, and pasta — emulsified the right way.",
       ),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's the easiest pasta dish for a big crew?",
+        answer:
+          "A baked ziti or lasagna — assemble it in a tray, put it in the oven, and it feeds the whole hall with almost no active time once it's in. Skillet pastas like garlic butter or alfredo are faster if the board is loud and dinner needs to happen in under 30 minutes.",
+      },
+      {
+        question: "How do you keep pasta from drying out if it sits before people eat?",
+        answer:
+          "Hold the sauce slightly loose since the pasta keeps absorbing liquid, and refresh it with a splash of pasta water or butter at service instead of cooking it dry in the tray.",
+      },
+    ],
     relatedArticleSlugs: ["one-pot-firehall-meals"],
   }),
 
@@ -549,7 +648,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("smash-burgers", "Double Smash Burgers", "Two burgers each if hungry."),
       meal("bbq-chicken-bowls", "BBQ Chicken Bowls", "Rice line — predictable."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "How do you make sure you've cooked enough food for 10 firefighters?",
+        answer:
+          "Round up rather than trying to land on an exact amount — floaters and second helpings are normal, so a little extra protein or a second batch of starch is cheap insurance. Two trays of protein beat one overcrowded pan, since crowding is what actually causes food to run short or cook unevenly.",
+      },
+      {
+        question: "What's the best way to serve dinner for a table of ten?",
+        answer:
+          "Run a line instead of plating: one person serves, everyone else stays out of the kitchen, and toppings go in bowls instead of a free-for-all at the stove.",
+      },
+    ],
     relatedArticleSlugs: REL.crew,
   }),
 
@@ -591,7 +701,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("turkey-chili", "High-Protein Turkey Chili", "Lean and budget-friendly."),
       meal("baked-ziti", "Baked Ziti", "Tray feed — crowd pleaser."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's a cheap meal that still feeds a big crew well?",
+        answer:
+          "Chili, tacos, and baked pasta stretch a grocery budget the furthest — beans and lentils can stretch chili while keeping it filling, and thighs cost less than breasts for a similar amount of protein. Flavor comes from browning the meat and finishing with acid, not from spending more.",
+      },
+      {
+        question: "How do you keep a budget meal from tasting cheap?",
+        answer:
+          "Toast your spices, brown the meat properly, and finish with lemon or vinegar — technique reads louder than ingredient cost. One inexpensive splurge topping, like real cheese or good bread, makes a budget dinner feel intentional instead of like a compromise.",
+      },
+    ],
     relatedArticleSlugs: ["feeding-a-firehall-crew"],
   }),
 
@@ -632,7 +753,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("sunday-chili-batch", "Sunday Batch Chili", "Meal-prep chili base."),
       meal("loaded-potato-feed", "Loaded Potato Feed", "Chili topping option on potato bar."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's the difference between beef and turkey station chili?",
+        answer:
+          "Beef chili is the classic, heavier pick for a cold or rough shift; turkey chili is leaner but still holds up with the same seasoning and simmer time. A double pot of both covers a crew when appetite is unknown.",
+      },
+      {
+        question: "What toppings should a chili bar have?",
+        answer:
+          "Cheese, diced onion, jalapeño, sour cream, and something crunchy like Fritos or crackers. Label a mild and a hot pot separately — it heads off the usual argument about spice level before it starts.",
+      },
+    ],
     relatedArticleSlugs: ["firehouse-comfort-meals"],
   }),
 
@@ -673,7 +805,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("street-corn-chicken", "Street Corn Chicken Tacos", "Bright street-corn vibe."),
       meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "Fajita filling crossover."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "How many proteins should you run on taco night?",
+        answer:
+          "Two max — ground beef and shredded chicken, or beef and carnitas — plus a seasoned bean option for anyone skipping meat. More than two proteins turns a simple line into a second kitchen to manage.",
+      },
+      {
+        question: "How do you keep a taco line moving for ten-plus people?",
+        answer:
+          "Warm tortillas in a cooler instead of a microwave stack, keep cold toppings separate from the hot line, and label the mild and hot salsa. Two tortillas per person in the warmer keeps the line from running out mid-service.",
+      },
+    ],
     relatedArticleSlugs: ["best-firehall-meals-busy-nights"],
   }),
 
@@ -714,7 +857,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("beef-stroganoff", "Beef Stroganoff", "Rich — feels substantial."),
       meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Self-serve — no pressure."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What should you cook after a genuinely hard shift?",
+        answer:
+          "Something familiar, hot, and plentiful — mac and cheese, chili, pulled pork, or a potato bar. This isn't the night to try a new recipe; soft, salty, and generous beats light and elegant every time.",
+      },
+      {
+        question: "Should you wait for everyone to eat dinner together after a tough call?",
+        answer:
+          "No — let people eat in shifts without commentary about late eaters. The meal is for recovery, not a group performance, so start comfort food early if the board hints at being busy.",
+      },
+    ],
     relatedArticleSlugs: REL.comfort,
   }),
 
@@ -777,9 +931,9 @@ export const SEO_TRAFFIC_ARTICLES = [
           "Hold the bake or burrito components warm and let late arrivals build a plate. A second wave of scrambled eggs in a baking dish beats cooking a fresh full breakfast for two people.",
       },
       {
-        question: "What if crew size or time changes this morning?",
+        question: "What's the fastest hall breakfast when the morning is already behind schedule?",
         answer:
-          "Keep it simple: pick a line (burritos/tacos) or a bake. If you need a different headcount, open the recipe page and scale it for the crew you actually have in the building.",
+          "A burrito bar or taco line — components cook in batches and people build their own plate in seconds. Skip made-to-order eggs entirely once you're running late; nobody has time to wait on individual orders.",
       },
     ],
     relatedArticleSlugs: ["firehall-breakfast-and-brunch"],
@@ -821,7 +975,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("pulled-pork-mac", "Pulled Pork Mac", "Uses prep-friendly pulled pork."),
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Big pot Sunday — feeds the week."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What components are worth prepping ahead at a fire station?",
+        answer:
+          "Chili, pulled pork, roasted chicken thighs, cooked rice, and roasted vegetables — proteins and bases that reheat clean instead of drying out. Combine them into bowls, tacos, or bakes in under thirty minutes on a busy night.",
+      },
+      {
+        question: "How do you keep prepped food from getting lost in the fridge?",
+        answer:
+          "Date and label everything the same night you cook it, and post a simple fridge map so the next shift doesn't duplicate the same prep. One prep cook working off one list beats three people helping in different directions.",
+      },
+    ],
     relatedArticleSlugs: REL.prep,
   }),
 
@@ -876,7 +1041,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("beef-barley-soup", "Beef Barley Soup", "Slow simmer — filling."),
       meal("shepherds-pie", "Shepherd's Pie", "Potato cap — tray friendly."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What meals work best in a Dutch oven at the station?",
+        answer:
+          "Chili, jambalaya, and braised stews — spoon food with obvious doneness that doesn't need precision plating. Cobblers are a good outdoor pick too since they feel like an event without much extra work.",
+      },
+      {
+        question: "Can you cook Dutch oven meals indoors instead of over coals?",
+        answer:
+          "Yes — treat it like a heavy casserole dish and use the station oven. You lose some of the campfire romance but gain faster, more predictable cleanup, which matters more on a weeknight than a training day.",
+      },
+    ],
     relatedArticleSlugs: ["best-firefighter-crockpot-meals"],
   }),
 
@@ -917,7 +1093,18 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("sausage-peppers-onions", "Sausage Peppers and Onions", "Skillet one-pan — low dish count."),
       meal("pad-thai", "Hall Rush Pad Thai", "One wok finish — one wash."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What are the best one-pot meals for a fire station kitchen?",
+        answer:
+          "Jambalaya, chicken and rice, and firehall chili — all built in a single pot or skillet so there's one thing to soak afterward instead of a stack of pans. Brown the protein in the pot first, then build the rest of the dish on top of that flavor.",
+      },
+      {
+        question: "Why do one-pot meals work so well for busy shifts?",
+        answer:
+          "Cleanup drives more of what halls cook than most people admit. A one-pot meal means one soak and one washer assigned before cooking starts — not the cook stuck doing dishes after everyone else has left the kitchen.",
+      },
+    ],
     relatedArticleSlugs: ["easy-firehall-pasta-recipes"],
   }),
 ];

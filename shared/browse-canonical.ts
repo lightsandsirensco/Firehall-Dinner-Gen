@@ -8,6 +8,7 @@ import {
   type FirehallCategoryId,
 } from "./firehall-categories.js";
 import { DIETARY_FILTER_KEYS, type DietaryFilterKey } from "./dietary/schema.js";
+import { isFoodPreferenceKey } from "./ingredient-preferences/definitions.js";
 
 export const BROWSE_CANONICAL_PATH = "/explore";
 
@@ -24,6 +25,24 @@ export interface ExploreBrowseFilterPatch {
   lowCleanup?: boolean;
   search?: string;
   dietary?: DietaryFilterKey[];
+  /** Pro numeric nutrition targets — grams/kcal per serving. See shared/nutrition/filter-eligibility.ts. */
+  minProtein?: number;
+  maxCalories?: number;
+  maxCarbs?: number;
+  maxFat?: number;
+  /** Pro "Foods to Avoid" preference keys — see shared/ingredient-preferences/. */
+  avoid?: string[];
+}
+
+/** Sane upper bounds for numeric nutrition query params — reject garbage/abuse values rather than pass them through to the filter. */
+const MAX_NUMERIC_FILTER_GRAMS = 500;
+const MAX_NUMERIC_FILTER_CALORIES = 3000;
+
+function parsePositiveIntParam(raw: string | null, max: number): number | undefined {
+  if (!raw) return undefined;
+  const n = Number(raw);
+  if (!Number.isFinite(n) || n <= 0) return undefined;
+  return Math.min(Math.round(n), max);
 }
 
 export function isFirehallCategoryId(id: string): id is FirehallCategoryId {
@@ -112,6 +131,24 @@ export function parseExploreBrowseSearch(search: string): ExploreBrowseFilterPat
     if (parsed.length > 0) patch.dietary = parsed;
   }
 
+  const minProtein = parsePositiveIntParam(params.get("minProtein"), MAX_NUMERIC_FILTER_GRAMS);
+  if (minProtein != null) patch.minProtein = minProtein;
+  const maxCalories = parsePositiveIntParam(params.get("maxCalories"), MAX_NUMERIC_FILTER_CALORIES);
+  if (maxCalories != null) patch.maxCalories = maxCalories;
+  const maxCarbs = parsePositiveIntParam(params.get("maxCarbs"), MAX_NUMERIC_FILTER_GRAMS);
+  if (maxCarbs != null) patch.maxCarbs = maxCarbs;
+  const maxFat = parsePositiveIntParam(params.get("maxFat"), MAX_NUMERIC_FILTER_GRAMS);
+  if (maxFat != null) patch.maxFat = maxFat;
+
+  const avoid = params.get("avoid");
+  if (avoid) {
+    // Unknown values are silently dropped — never passed through to the
+    // filter or reflected back into the URL, so no new indexable
+    // faceted-search surface is created for arbitrary/garbage values.
+    const parsed = avoid.split(",").map((v) => v.trim()).filter(isFoodPreferenceKey);
+    if (parsed.length > 0) patch.avoid = [...new Set(parsed)];
+  }
+
   return patch;
 }
 
@@ -125,6 +162,11 @@ export function buildExploreBrowseSearch(input: {
   lowCleanup: boolean;
   searchQuery: string;
   dietary?: DietaryFilterKey[];
+  minProtein?: number | null;
+  maxCalories?: number | null;
+  maxCarbs?: number | null;
+  maxFat?: number | null;
+  avoid?: string[];
 }): string {
   const params = new URLSearchParams();
 
@@ -137,6 +179,14 @@ export function buildExploreBrowseSearch(input: {
   if (input.lowCleanup) params.set("lowCleanup", "1");
   if (input.searchQuery.trim()) params.set("q", input.searchQuery.trim());
   if (input.dietary && input.dietary.length > 0) params.set("dietary", input.dietary.join(","));
+  if (input.minProtein != null) params.set("minProtein", String(input.minProtein));
+  if (input.maxCalories != null) params.set("maxCalories", String(input.maxCalories));
+  if (input.maxCarbs != null) params.set("maxCarbs", String(input.maxCarbs));
+  if (input.maxFat != null) params.set("maxFat", String(input.maxFat));
+  if (input.avoid && input.avoid.length > 0) {
+    const known = input.avoid.filter(isFoodPreferenceKey);
+    if (known.length > 0) params.set("avoid", [...new Set(known)].join(","));
+  }
 
   const qs = params.toString();
   return qs ? `?${qs}` : "";

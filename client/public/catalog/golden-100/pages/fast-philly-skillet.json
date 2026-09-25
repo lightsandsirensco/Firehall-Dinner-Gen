@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 1179,
-  "protein": 89,
-  "carbs": 73,
-  "fats": 59,
+  "calories": 800,
+  "protein": 61,
+  "carbs": 71,
+  "fats": 30,
   "tags": [
     "protein:beef",
     "format:skillet",
@@ -119,10 +119,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 1179,
-    "protein": 89,
-    "carbs": 73,
-    "fats": 59,
+    "calories": 800,
+    "protein": 61,
+    "carbs": 71,
+    "fats": 30,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -215,5 +215,8 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "onions"
+  ]
 }

@@ -28,6 +28,8 @@ import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-cred
 
 import { fetchWithCsrf } from "@/lib/csrf-fetch";
 
+import { MarketingConsentCheckbox } from "@/components/marketing-consent-checkbox";
+
 import {
 
   setAnalyticsUserId,
@@ -80,6 +82,10 @@ type RedLeadCaptureContextValue = {
 
   setEmail: (value: string) => void;
 
+  marketingConsent: boolean;
+
+  setMarketingConsent: (value: boolean) => void;
+
   status: CaptureStatus;
 
   errorMsg: string;
@@ -120,6 +126,8 @@ export function RedLeadCaptureProvider({ children }: { children: ReactNode }) {
 
   const [email, setEmail] = useState("");
 
+  const [marketingConsent, setMarketingConsent] = useState(false);
+
   const [status, setStatus] = useState<CaptureStatus>("idle");
 
   const [errorMsg, setErrorMsg] = useState("");
@@ -158,7 +166,7 @@ export function RedLeadCaptureProvider({ children }: { children: ReactNode }) {
 
           headers: { "Content-Type": "application/json" },
 
-          body: JSON.stringify({ email: email.trim() }),
+          body: JSON.stringify({ email: email.trim(), marketing_consent: marketingConsent }),
 
         });
 
@@ -202,7 +210,7 @@ export function RedLeadCaptureProvider({ children }: { children: ReactNode }) {
 
     },
 
-    [email, status, unlocked],
+    [email, marketingConsent, status, unlocked],
 
   );
 
@@ -226,6 +234,10 @@ export function RedLeadCaptureProvider({ children }: { children: ReactNode }) {
 
       setEmail,
 
+      marketingConsent,
+
+      setMarketingConsent,
+
       status,
 
       errorMsg,
@@ -238,7 +250,7 @@ export function RedLeadCaptureProvider({ children }: { children: ReactNode }) {
 
     }),
 
-    [download, email, errorMsg, scrollToCapture, status, submit, unlocked],
+    [download, email, errorMsg, marketingConsent, scrollToCapture, status, submit, unlocked],
 
   );
 
@@ -272,7 +284,17 @@ export function RedLeadPdfCapture({
 
 }: RedLeadPdfCaptureProps) {
 
-  const { unlocked, email, setEmail, status, errorMsg, submit, download } = useRedLeadCapture();
+  const {
+    unlocked,
+    email,
+    setEmail,
+    marketingConsent,
+    setMarketingConsent,
+    status,
+    errorMsg,
+    submit,
+    download,
+  } = useRedLeadCapture();
 
   const showDownload = unlocked || status === "success";
 
@@ -366,7 +388,7 @@ export function RedLeadPdfCapture({
 
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
 
-              Join the Firehall Meals crew and get the printable PDF plus hall breakfast and meal ideas by email.
+              Get the printable PDF now — plus optional hall breakfast and meal ideas by email.
 
             </p>
 
@@ -468,7 +490,12 @@ export function RedLeadPdfCapture({
 
           )}
 
-
+          <MarketingConsentCheckbox
+            id={`${id}-marketing-consent`}
+            checked={marketingConsent}
+            onCheckedChange={setMarketingConsent}
+            disabled={status === "loading"}
+          />
 
           <Button
 
@@ -492,7 +519,7 @@ export function RedLeadPdfCapture({
 
             )}
 
-            {status === "loading" ? "Sending…" : "Send Me The Recipe"}
+            {status === "loading" ? "Sending…" : "Unlock The PDF"}
 
           </Button>
 
@@ -500,9 +527,9 @@ export function RedLeadPdfCapture({
 
           <p className="text-[11px] text-muted-foreground leading-relaxed">
 
-            We&apos;ll email hall breakfast ideas now and then — unsubscribe anytime. The full recipe stays on this
+            You&apos;ll get the PDF either way. Check the box above only if you also want hall breakfast ideas by
 
-            page for your crew.
+            email — unsubscribe anytime.
 
           </p>
 

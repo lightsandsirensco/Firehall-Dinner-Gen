@@ -18,6 +18,28 @@ type SiteFooterProps = {
   pbSafe?: boolean;
 };
 
+const SUPPORT_MAILTO = "mailto:support@firehallmeals.com?subject=Firehall%20Meals%20support";
+
+/** Privacy / Terms / Support — kept tiny and identical across both footer variants. */
+function LegalLinksRow({ className }: { className?: string }) {
+  return (
+    <nav aria-label="Legal" className={cn("flex items-center justify-center gap-4 text-xs", className)}>
+      <Link href="/privacy" className="text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline">
+        Privacy
+      </Link>
+      <Link href="/terms" className="text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline">
+        Terms
+      </Link>
+      <a
+        href={SUPPORT_MAILTO}
+        className="text-muted-foreground/80 hover:text-primary transition-colors underline-offset-4 hover:underline"
+      >
+        Support
+      </a>
+    </nav>
+  );
+}
+
 export function SiteFooter({ variant = "full", className, pbSafe = false }: SiteFooterProps) {
   if (variant === "compact") {
     return (
@@ -40,6 +62,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
             {LIGHTS_COPY.footerSub}{" "}
             <LightsAndSirensLink variant="footer">Lights & Sirens Co.</LightsAndSirensLink>
           </p>
+          <LegalLinksRow className="pt-2" />
         </div>
       </footer>
     );
@@ -77,7 +100,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
             </p>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2">
+          <div className="grid gap-8 sm:grid-cols-3">
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
                 Firehall Meals
@@ -112,6 +135,28 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
                   <Link href="/about" className="text-foreground/85 hover:text-primary transition-colors">
                     About
                   </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+                Legal &amp; Support
+              </h3>
+              <ul className="mt-3 space-y-2 text-sm">
+                <li>
+                  <Link href="/privacy" className="text-foreground/85 hover:text-primary transition-colors">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="text-foreground/85 hover:text-primary transition-colors">
+                    Terms of Service
+                  </Link>
+                </li>
+                <li>
+                  <a href={SUPPORT_MAILTO} className="text-foreground/85 hover:text-primary transition-colors">
+                    Contact support
+                  </a>
                 </li>
               </ul>
             </div>
@@ -152,6 +197,10 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
             <p className="text-xs text-muted-foreground/75">{HALL_FEEDBACK_COPY.footerTagline}</p>
             <HallFeedbackFooterLink className="text-xs text-primary/80 hover:text-primary transition-colors underline-offset-4 hover:underline" />
           </div>
+        </div>
+
+        <div className="mt-6 pt-6 border-t border-border/15 flex flex-col items-center gap-3 text-center">
+          <LegalLinksRow />
         </div>
 
         <div className="mt-6 pt-6 border-t border-border/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">

@@ -13,10 +13,10 @@
   "cookTime": 90,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 880,
-  "protein": 75,
-  "carbs": 58,
-  "fats": 36,
+  "calories": 1400,
+  "protein": 93,
+  "carbs": 143,
+  "fats": 47,
   "tags": [
     "protein:chicken",
     "format:pizza",
@@ -180,10 +180,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 880,
-    "protein": 75,
-    "carbs": 58,
-    "fats": 36,
+    "calories": 1400,
+    "protein": 93,
+    "carbs": 143,
+    "fats": 47,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -280,5 +280,9 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "onions",
+    "cilantro"
+  ]
 }

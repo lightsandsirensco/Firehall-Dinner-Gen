@@ -3,6 +3,7 @@ import {
   consumeMagicLink,
   createAuthSession,
   createMagicLink,
+  deleteUserAccount,
   getAuthCapabilitiesForUser,
   getAuthCookieName,
   getAuthMe,
@@ -15,6 +16,7 @@ import {
   upsertOAuthUser,
 } from "./auth-store.js";
 import { sendMagicLinkEmail, getMagicLinkMailStatus, MAGIC_LINK_EXPIRY_MINUTES } from "./magic-link-mail.js";
+import { ensureStripeSubscriptionCancelledForDeletion } from "../billing/account-deletion-guard.js";
 import { verifyAppleIdToken, verifyGoogleIdToken } from "./oauth-verify.js";
 import { attachAuthUser, requireAuth, type AuthedRequest } from "./auth-middleware.js";
 import { requireCsrf } from "../csrf.js";
@@ -61,6 +63,7 @@ function trackAuthEvent(
   req: Request,
   eventType:
     | "account_created"
+    | "account_deleted"
     | "login"
     | "profile_updated"
     | "magic_link_sent"
@@ -323,6 +326,40 @@ export function registerAuthRoutes(app: Express): void {
     } catch (err) {
       logError("auth", "profile update failed", err);
       return res.status(500).json({ message: "Failed to update profile" });
+    }
+  });
+
+  // Self-service account deletion. Permanently removes the signed-in user's
+  // private data (see deleteUserAccount for the exact scope) and revokes
+  // every active session for the account. Hall/shared content is preserved.
+  app.delete("/api/auth/account", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
+    try {
+      await ensureStore();
+      const userId = req._authUserId!;
+
+      // Cancel any live Stripe subscription BEFORE deleting the local
+      // records needed to identify/manage it — deleteUserAccount() removes
+      // the user_subscriptions row, and once that's gone there is nothing
+      // left to look up the Stripe customer/subscription by. Fails closed:
+      // if cancellation can't be confirmed, the account is NOT deleted, so
+      // we never end up with a deleted account still being billed by
+      // Stripe. See billing/account-deletion-guard.ts.
+      const stripeResult = await ensureStripeSubscriptionCancelledForDeletion(userId);
+      if (!stripeResult.ok) {
+        return res.status(502).json({
+          message:
+            "We couldn't confirm your subscription was cancelled, so your account was not deleted. Please try again in a moment, or contact support.",
+        });
+      }
+
+      deleteUserAccount(userId);
+      trackAuthEvent(req, "account_deleted");
+      clearAuthCookie(res);
+
+      return res.json({ ok: true });
+    } catch (err) {
+      logError("auth", "account deletion failed", err);
+      return res.status(500).json({ message: "Failed to delete account. Please try again or contact support." });
     }
   });
 

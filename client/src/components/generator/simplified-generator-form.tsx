@@ -1,7 +1,9 @@
 import type { ReactNode } from "react";
+import { useLocation } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   CREW_BUCKET_LABELS,
@@ -25,6 +27,10 @@ import {
   type SimplifiedProtein,
 } from "@shared/generator-simplified";
 import type { HealthinessPreference } from "@shared/generator-simplified";
+import { FOOD_PREFERENCE_DEFINITIONS } from "@shared/ingredient-preferences/definitions";
+import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
+import { trackProFeatureClicked } from "@/lib/analytics";
+import { useAuth } from "@/lib/auth/context";
 import {
   ChevronLeft,
   ChevronRight,
@@ -128,6 +134,24 @@ export function SimplifiedGeneratorForm({
       ? filters.diets.filter((d) => d !== id)
       : [...filters.diets, id];
     patch({ diets: next });
+  };
+
+  const hasFoodPreferences = useFeature("ingredient_preferences");
+  const { authenticated } = useAuth();
+  const recordPaywall = useRecordPaywallView();
+  const [, setLocation] = useLocation();
+
+  const toggleFoodToAvoid = (key: string) => {
+    const next = filters.foodsToAvoid.includes(key)
+      ? filters.foodsToAvoid.filter((k) => k !== key)
+      : [...filters.foodsToAvoid, key];
+    patch({ foodsToAvoid: next });
+  };
+
+  const requestFoodPreferences = () => {
+    trackProFeatureClicked({ feature: "foods_to_avoid", page: "/generator", logged_in: authenticated });
+    void recordPaywall("ingredient_preferences", "generator_filter");
+    setLocation(`/me/subscription?feature=foods_to_avoid`);
   };
 
   const summaryLines = formatGeneratorSummary(filters).split("\n");
@@ -312,6 +336,46 @@ export function SimplifiedGeneratorForm({
               </Chip>
             ))}
           </div>
+        </div>
+
+        <div className="col-span-2 space-y-1">
+          <Label className="text-xs text-muted-foreground">
+            Foods to avoid
+            {!hasFoodPreferences && (
+              <span className="ml-1 inline-flex items-center gap-0.5 align-middle text-[9px] font-bold uppercase tracking-wide text-primary">
+                <Lock className="h-2.5 w-2.5" aria-hidden />
+                Pro
+              </span>
+            )}
+          </Label>
+          {hasFoodPreferences ? (
+            <div className="flex flex-wrap gap-1.5" data-testid="generator-foods-to-avoid">
+              {FOOD_PREFERENCE_DEFINITIONS.map((def) => (
+                <Chip
+                  key={def.key}
+                  active={filters.foodsToAvoid.includes(def.key)}
+                  onClick={() => toggleFoodToAvoid(def.key)}
+                  testId={`avoid-${def.key}`}
+                >
+                  {def.label}
+                </Chip>
+              ))}
+            </div>
+          ) : (
+            <button
+              type="button"
+              onClick={requestFoodPreferences}
+              className="w-full rounded-md border border-border/40 bg-muted/20 px-3 py-2 text-left text-xs text-muted-foreground touch-manipulation"
+              data-testid="generator-foods-to-avoid-locked"
+            >
+              Tell us what you'd rather not see in your meals (Pro)
+            </button>
+          )}
+          {filters.foodsToAvoid.length > 0 && (
+            <p className="text-[10px] text-muted-foreground/80">
+              Preference only — not for allergies. Use "Avoid allergies" above for food-safety needs.
+            </p>
+          )}
         </div>
       </div>
 

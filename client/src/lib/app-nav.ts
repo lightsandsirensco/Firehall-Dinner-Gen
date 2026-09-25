@@ -28,6 +28,11 @@ export type PublicTab = MealsTab;
 /** The in-app dashboard — Tonight's meal planning. Not Home. */
 export const TONIGHT = "/tonight" as const;
 
+/**
+ * Hall/canteen is paused (private beta / coming soon) — deliberately left out
+ * of the primary tab bar. `/hall` still exists and still renders its
+ * smallest "coming soon" treatment; it's just not a promoted destination.
+ */
 export const PRIMARY_TABS: Array<{
   id: AppTab;
   label: string;
@@ -36,7 +41,6 @@ export const PRIMARY_TABS: Array<{
 }> = [
   { id: "tonight", label: "Tonight", href: "/tonight", testId: "tab-tonight" },
   { id: "explore", label: "Explore", href: "/explore", testId: "tab-explore" },
-  { id: "hall", label: "Hall", href: "/hall", testId: "tab-hall" },
   { id: "me", label: "Me", href: "/me", testId: "tab-me" },
 ];
 
@@ -89,6 +93,8 @@ const SHELL_EXCLUDED_PREFIXES = [
   "/admin",
   "/about",
   "/faq",
+  "/privacy",
+  "/terms",
   "/firefighter-meals",
   "/firefighter-recipes",
   "/firehouse-recipes",

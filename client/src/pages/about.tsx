@@ -231,7 +231,17 @@ export default function AboutPage() {
 
                 <dt className="font-semibold text-foreground">{f.question}</dt>
 
-                <dd className="mt-1 text-muted-foreground leading-relaxed">{f.answer}</dd>
+                <dd className="mt-1 text-muted-foreground leading-relaxed">
+                  {f.answer}
+                  {f.link ? (
+                    <>
+                      {" "}
+                      <Link href={f.link.href} className="text-primary font-medium hover:underline">
+                        See {f.link.label} →
+                      </Link>
+                    </>
+                  ) : null}
+                </dd>
 
               </div>
 

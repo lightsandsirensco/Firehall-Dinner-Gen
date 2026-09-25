@@ -12,11 +12,13 @@ import { HALL_PRO_FEATURE_LABELS } from "@shared/billing/hall-pro";
 import { useBilling, useHallFeature, useRecordPaywallView } from "@/lib/billing/hooks";
 import { useAuth } from "@/lib/auth/context";
 import { useHallMembership } from "@/lib/hall-membership/context";
+import { trackProPaywallViewed } from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 const PLAN_LABELS = {
   guest: "Free",
-  personal: "Firefighter Plus",
+  personal: "Personal",
+  firefighter_plus: "Firehall Meals Pro",
   hall_pro: "Hall Pro",
 } as const;
 
@@ -43,19 +45,22 @@ export function PaywallGate({
   const billing = useBilling();
   const { authenticated, openSignIn } = useAuth();
   const recordPaywall = useRecordPaywallView();
+  const required = requiredPlanForFeature(resolveBillingFeature(feature));
 
   useEffect(() => {
     if (!allowed) {
       void recordPaywall(feature, surface);
+      if (required === "firefighter_plus") {
+        trackProPaywallViewed({ feature, page: surface, logged_in: authenticated });
+      }
     }
-  }, [allowed, feature, surface, recordPaywall]);
+  }, [allowed, feature, surface, recordPaywall, required, authenticated]);
 
   if (allowed) {
     return <>{children}</>;
   }
 
   const resolved = resolveBillingFeature(feature);
-  const required = requiredPlanForFeature(feature);
   const current = billing.effective_plan_id;
   const hallScoped = isHallProFeature(resolved);
   const headline =
@@ -81,7 +86,7 @@ export function PaywallGate({
             : "Hall Pro benefits the whole crew: shared list, meal history, staples, advanced vote, and grocery planning. Billed per hall."
           : compact
             ? `Upgrade from ${PLAN_LABELS[current]} to unlock this.`
-            : `You're on ${PLAN_LABELS[current]}. Firefighter Plus unlocks personal tools.`}
+            : `You're on ${PLAN_LABELS[current]}. ${PLAN_LABELS[required]} unlocks personal tools.`}
       </p>
 
       <div className="flex flex-wrap justify-center gap-2 mt-4">

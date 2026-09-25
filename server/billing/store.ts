@@ -8,6 +8,7 @@ import {
   hallHasProStatus,
   isHallProFeature,
   resolveBillingFeature,
+  subscriptionGrantsAccess,
   type BillingFeature,
 
   type HallSubscription,
@@ -248,59 +249,200 @@ export function getPlanCatalog(): PlanCatalogEntry[] {
 
 
 
-export function getUserSubscription(userId: string): UserSubscription | null {
-
-  const d = getDb();
-
-  const row = d.prepare(`SELECT * FROM user_subscriptions WHERE user_id = ?`).get(userId) as
-
-    | Record<string, unknown>
-
-    | undefined;
-
-  if (!row) return null;
-
-  const planId = String(row.plan_id) as PlanId;
-
-  if (planId === "hall_pro") {
-
-    return {
-
-      user_id: String(row.user_id),
-
-      plan_id: "personal",
-
-      status: String(row.status) as SubscriptionStatus,
-
-      source: row.source as UserSubscription["source"],
-
-      selected_at: String(row.selected_at),
-
-      expires_at: row.expires_at ? String(row.expires_at) : null,
-
-    };
-
-  }
-
+function rowToUserSubscription(row: Record<string, unknown>, planIdOverride?: PlanId): UserSubscription {
   return {
-
     user_id: String(row.user_id),
-
-    plan_id: planId,
-
+    plan_id: planIdOverride ?? (String(row.plan_id) as PlanId),
     status: String(row.status) as SubscriptionStatus,
-
     source: row.source as UserSubscription["source"],
-
     selected_at: String(row.selected_at),
-
     expires_at: row.expires_at ? String(row.expires_at) : null,
-
+    cancel_at_period_end: row.stripe_subscription_id ? Number(row.cancel_at_period_end) === 1 : undefined,
+    current_period_end: row.stripe_subscription_id
+      ? row.current_period_end
+        ? String(row.current_period_end)
+        : null
+      : undefined,
   };
-
 }
 
+export function getUserSubscription(userId: string): UserSubscription | null {
+  const d = getDb();
+  const row = d.prepare(`SELECT * FROM user_subscriptions WHERE user_id = ?`).get(userId) as
+    | Record<string, unknown>
+    | undefined;
+  if (!row) return null;
+  const planId = String(row.plan_id) as PlanId;
+  if (planId === "hall_pro") {
+    return rowToUserSubscription(row, "personal");
+  }
+  return rowToUserSubscription(row);
+}
 
+export interface SubscriptionInfoForAccountDeletion {
+  source: UserSubscription["source"];
+  status: SubscriptionStatus;
+  stripeSubscriptionId: string | null;
+}
+
+/**
+ * Minimal read used only by the account-deletion Stripe-cancellation guard
+ * (see billing/account-deletion-guard.ts) — deliberately narrower than
+ * getUserSubscription() so that guard only ever sees the three fields it
+ * needs to decide whether a live Stripe subscription must be cancelled
+ * before the account (and this row) is deleted.
+ */
+export function getSubscriptionInfoForAccountDeletion(
+  userId: string,
+): SubscriptionInfoForAccountDeletion | null {
+  const d = getDb();
+  const row = d
+    .prepare(`SELECT source, status, stripe_subscription_id FROM user_subscriptions WHERE user_id = ?`)
+    .get(userId) as
+    | { source: string; status: string; stripe_subscription_id: string | null }
+    | undefined;
+  if (!row) return null;
+  return {
+    source: row.source as UserSubscription["source"],
+    status: row.status as SubscriptionStatus,
+    stripeSubscriptionId: row.stripe_subscription_id,
+  };
+}
+
+/** Whether this user has a Stripe customer id on file (drives the "Manage billing" portal link). */
+export function userHasStripeCustomer(userId: string): boolean {
+  const d = getDb();
+  const row = d
+    .prepare(`SELECT stripe_customer_id FROM user_subscriptions WHERE user_id = ?`)
+    .get(userId) as { stripe_customer_id: string | null } | undefined;
+  return Boolean(row?.stripe_customer_id);
+}
+
+export function getStripeCustomerIdForUser(userId: string): string | null {
+  const d = getDb();
+  const row = d
+    .prepare(`SELECT stripe_customer_id FROM user_subscriptions WHERE user_id = ?`)
+    .get(userId) as { stripe_customer_id: string | null } | undefined;
+  return row?.stripe_customer_id ?? null;
+}
+
+export function getUserIdByStripeCustomerId(stripeCustomerId: string): string | null {
+  const d = getDb();
+  const row = d
+    .prepare(`SELECT user_id FROM user_subscriptions WHERE stripe_customer_id = ?`)
+    .get(stripeCustomerId) as { user_id: string } | undefined;
+  return row?.user_id ?? null;
+}
+
+export function getUserIdByStripeSubscriptionId(stripeSubscriptionId: string): string | null {
+  const d = getDb();
+  const row = d
+    .prepare(`SELECT user_id FROM user_subscriptions WHERE stripe_subscription_id = ?`)
+    .get(stripeSubscriptionId) as { user_id: string } | undefined;
+  return row?.user_id ?? null;
+}
+
+/**
+ * Links a Stripe Customer to a user BEFORE checkout completes, so the same
+ * customer is reused across checkout attempts instead of creating a new one
+ * every time. Preserves any existing plan/status — this call alone never
+ * grants firefighter_plus (only a completed/updated Stripe subscription does).
+ */
+export function linkStripeCustomer(userId: string, stripeCustomerId: string): void {
+  const d = getDb();
+  d.prepare(
+    `INSERT INTO user_subscriptions (user_id, plan_id, status, source, stripe_customer_id, selected_at, updated_at)
+     VALUES (?, 'personal', 'active', 'self_select', ?, datetime('now'), datetime('now'))
+     ON CONFLICT(user_id) DO UPDATE SET
+       stripe_customer_id = excluded.stripe_customer_id,
+       updated_at = datetime('now')`,
+  ).run(userId, stripeCustomerId);
+}
+
+/**
+ * Canonical write path for Stripe-sourced subscription state — called from
+ * the webhook handler only. Always sets plan_id='firefighter_plus' and
+ * source='stripe' since that's the only plan currently sold through Stripe.
+ */
+export function upsertStripeSubscription(params: {
+  userId: string;
+  stripeCustomerId: string;
+  stripeSubscriptionId: string;
+  stripePriceId: string | null;
+  status: SubscriptionStatus;
+  cancelAtPeriodEnd: boolean;
+  currentPeriodEnd: string | null;
+}): UserBillingState {
+  const d = getDb();
+
+  // Guard against a Stripe webhook (checkout.session.completed or
+  // customer.subscription.updated) racing with account deletion. Both events
+  // can resolve a user_id from Stripe object metadata alone — bypassing any
+  // DB lookup — so without this check a webhook delivered during/after
+  // deleteUserAccount() could resurrect a user_subscriptions row for a
+  // user_id that no longer exists in `users`. Deletion already cancels any
+  // live Stripe subscription first (see account-deletion-guard.ts), so
+  // there is nothing left to record here — just fall through to the
+  // (free-plan) default below without writing anything.
+  const userExists = d.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(params.userId);
+  if (userExists) {
+    d.prepare(
+      `INSERT INTO user_subscriptions (
+         user_id, plan_id, status, source, stripe_customer_id, stripe_subscription_id,
+         stripe_price_id, cancel_at_period_end, current_period_end, selected_at, updated_at
+       )
+       VALUES (?, 'firefighter_plus', ?, 'stripe', ?, ?, ?, ?, ?, datetime('now'), datetime('now'))
+       ON CONFLICT(user_id) DO UPDATE SET
+         plan_id = 'firefighter_plus',
+         status = excluded.status,
+         source = 'stripe',
+         stripe_customer_id = excluded.stripe_customer_id,
+         stripe_subscription_id = excluded.stripe_subscription_id,
+         stripe_price_id = excluded.stripe_price_id,
+         cancel_at_period_end = excluded.cancel_at_period_end,
+         current_period_end = excluded.current_period_end,
+         updated_at = datetime('now')`,
+    ).run(
+      params.userId,
+      params.status,
+      params.stripeCustomerId,
+      params.stripeSubscriptionId,
+      params.stripePriceId,
+      params.cancelAtPeriodEnd ? 1 : 0,
+      params.currentPeriodEnd,
+    );
+  }
+
+  return resolveUserBilling(params.userId);
+}
+
+/** Called on `customer.subscription.deleted` — the subscription is gone for good (not just past_due). */
+export function markStripeSubscriptionCancelledBySubscriptionId(
+  stripeSubscriptionId: string,
+): UserBillingState | null {
+  const userId = getUserIdByStripeSubscriptionId(stripeSubscriptionId);
+  if (!userId) return null;
+  const d = getDb();
+  d.prepare(
+    `UPDATE user_subscriptions
+     SET status = 'cancelled', cancel_at_period_end = 0, updated_at = datetime('now')
+     WHERE stripe_subscription_id = ?`,
+  ).run(stripeSubscriptionId);
+  return resolveUserBilling(userId);
+}
+
+export function hasWebhookEventBeenProcessed(eventId: string): boolean {
+  const d = getDb();
+  const row = d.prepare(`SELECT 1 FROM stripe_webhook_events WHERE event_id = ?`).get(eventId);
+  return Boolean(row);
+}
+
+export function recordWebhookEvent(eventId: string, eventType: string): void {
+  const d = getDb();
+  d.prepare(
+    `INSERT OR IGNORE INTO stripe_webhook_events (event_id, event_type) VALUES (?, ?)`,
+  ).run(eventId, eventType);
+}
 
 export function getHallSubscription(hallId: string): HallSubscription | null {
 
@@ -401,104 +543,59 @@ export function listUserHallSubscriptions(userId: string): HallSubscription[] {
 
 
 function resolvePersonalPlanId(
-
   subscribedPlanId: PlanId | null,
-
   isGuest: boolean,
-
 ): PlanId {
-
   if (isGuest) return "guest";
-
   let candidate: PlanId = subscribedPlanId ?? "personal";
-
   if (candidate === "hall_pro") candidate = "personal";
-
   if (!isPlanEnabled(candidate)) {
-
     return isPlanEnabled("personal") ? "personal" : "guest";
-
   }
-
   return candidate;
-
 }
-
-
 
 export function resolveUserBilling(
-
   userId: string | null,
-
   options?: { is_guest?: boolean },
-
 ): UserBillingState {
-
   const catalog = getPlanCatalog();
 
-
-
   if (!userId || options?.is_guest) {
-
     return {
-
       plan_id: "guest",
-
       effective_plan_id: "guest",
-
       subscription: null,
-
       features: buildFeatureMap("guest"),
-
       hall_pro_hall_ids: [],
-
       hall_subscriptions: [],
-
       catalog,
-
+      manage_billing_available: false,
     };
-
   }
 
-
-
   const sub = getUserSubscription(userId);
-
+  // A Stripe subscription in its `past_due` dunning grace period still grants
+  // access (see subscriptionGrantsAccess) — only a fully lapsed/cancelled
+  // subscription falls back to the free "personal" plan.
   const subscribedPlan =
-
-    sub && sub.status !== "cancelled" ? sub.plan_id : ("personal" as PlanId);
-
-
+    sub && subscriptionGrantsAccess(sub.status) ? sub.plan_id : ("personal" as PlanId);
 
   const effective = resolvePersonalPlanId(subscribedPlan, false);
-
   const hallSubscriptions = listUserHallSubscriptions(userId);
-
   const hallProHallIds = hallSubscriptions.map((s) => s.hall_id);
 
-
-
   return {
-
     plan_id: effective,
-
     effective_plan_id: effective,
-
     subscription: sub,
-
     features: buildFeatureMap(effective),
-
     hall_pro_hall_ids: hallProHallIds,
-
     hall_subscriptions: hallSubscriptions,
-
     catalog,
-
+    manage_billing_available: sub?.source === "stripe" && userHasStripeCustomer(userId),
   };
-
 }
-
-
 
 export function userHasFeature(
 
@@ -536,7 +633,10 @@ export function userHasFeature(
 
 export function selectUserPlan(userId: string, planId: PlanId): UserBillingState | null {
 
-  if (planId === "guest" || planId === "hall_pro") return null;
+  // Self-select is limited to the free plan. firefighter_plus has no payment
+  // processing yet — it's granted only via admin/dev tools (adminSetUserPlan),
+  // never through this user-facing endpoint.
+  if (planId !== "personal") return null;
 
   if (!isPlanEnabled(planId)) return null;
 
@@ -807,7 +907,7 @@ export function getAdminBillingDashboard(): {
 
 
 
-  const counts: Record<PlanId, number> = { guest: 0, personal: 0, hall_pro: 0 };
+  const counts: Record<PlanId, number> = { guest: 0, personal: 0, firefighter_plus: 0, hall_pro: 0 };
 
   const countRows = d
 
@@ -895,5 +995,25 @@ export function getBillingPublicConfig(): {
 
   };
 
+}
+
+/**
+ * Admin-only kill switch for `billing_global_flags` (e.g. `payments_enabled`).
+ * This is the mechanism to flip real Stripe checkout on once STRIPE_* env
+ * vars are configured and verified — never enabled automatically.
+ */
+export function adminSetGlobalFlag(
+  flagKey: string,
+  enabled: boolean,
+): { flag_key: string; enabled: boolean; description: string | null } | null {
+  const d = getDb();
+  const existing = d
+    .prepare(`SELECT flag_key, description FROM billing_global_flags WHERE flag_key = ?`)
+    .get(flagKey) as { flag_key: string; description: string | null } | undefined;
+  if (!existing) return null;
+  d.prepare(
+    `UPDATE billing_global_flags SET enabled = ?, updated_at = datetime('now') WHERE flag_key = ?`,
+  ).run(enabled ? 1 : 0, flagKey);
+  return { flag_key: flagKey, enabled, description: existing.description };
 }
 

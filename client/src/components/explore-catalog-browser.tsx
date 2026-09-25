@@ -43,6 +43,9 @@ import {
   buildExploreBrowseSearch,
   parseExploreBrowseSearch,
 } from "@shared/browse-canonical";
+import { useAuth } from "@/lib/auth/context";
+import { hasFeature } from "@shared/billing/types";
+import { sanitizeFoodPreferenceKeys } from "@shared/ingredient-preferences/definitions";
 
 export { EXPLORE_CATALOG_PAGE_SIZE_MOBILE as EXPLORE_CATALOG_PAGE_SIZE };
 export type { CatalogSortMode };
@@ -60,6 +63,11 @@ function applyBrowsePatch(
     lowCarb: patch.lowCarb ?? base.lowCarb,
     lowCleanup: patch.lowCleanup ?? base.lowCleanup,
     dietary: patch.dietary ?? base.dietary,
+    minProtein: patch.minProtein ?? base.minProtein,
+    maxCalories: patch.maxCalories ?? base.maxCalories,
+    maxCarbs: patch.maxCarbs ?? base.maxCarbs,
+    maxFat: patch.maxFat ?? base.maxFat,
+    avoidIngredients: patch.avoid ?? base.avoidIngredients,
   };
 }
 
@@ -285,6 +293,30 @@ export function ExploreCatalogBrowser({
   const [visibleCount, setVisibleCount] = useState(pageSize);
   const [filtersOpen, setFiltersOpen] = useState(false);
   const skipUrlSync = useRef(true);
+  const { preferences, billing } = useAuth();
+  const avoidSeededRef = useRef(false);
+
+  // Saved "Foods to Avoid" becomes the session default (once) for an entitled
+  // signed-in user — but only when the URL/session hasn't already set an
+  // explicit avoid list, and never overrides an explicit "no avoided foods"
+  // choice made later in the same session. A downgraded-Pro user's stale
+  // saved preference is never applied (re-checked against CURRENT
+  // entitlement here, not just whatever was true when it was saved).
+  useEffect(() => {
+    if (avoidSeededRef.current) return;
+    if (initialPatch.avoid && initialPatch.avoid.length > 0) {
+      avoidSeededRef.current = true;
+      return;
+    }
+    if (!preferences || !billing) return;
+    avoidSeededRef.current = true;
+    if (!hasFeature(billing.features, "ingredient_preferences")) return;
+    const saved = sanitizeFoodPreferenceKeys(preferences.excluded_ingredients);
+    if (saved.length === 0) return;
+    setFilters((current) =>
+      current.avoidIngredients.length === 0 ? { ...current, avoidIngredients: saved } : current,
+    );
+  }, [preferences, billing, initialPatch.avoid]);
 
   useEffect(() => {
     const patch = parseExploreBrowseSearch(window.location.search);
@@ -321,6 +353,11 @@ export function ExploreCatalogBrowser({
       lowCleanup: filters.lowCleanup,
       searchQuery,
       dietary: filters.dietary,
+      minProtein: filters.minProtein,
+      maxCalories: filters.maxCalories,
+      maxCarbs: filters.maxCarbs,
+      maxFat: filters.maxFat,
+      avoid: filters.avoidIngredients,
     });
     const next = `/explore${qs}`;
     if (location !== next) {

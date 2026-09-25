@@ -71,8 +71,17 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 559,
+        "protein": 25,
+        "carbs": 80,
+        "fat": 17,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "beans"
+      ]
     },
     {
       "slug": "baked-ziti",
@@ -132,8 +141,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1394,
+        "protein": 85,
+        "carbs": 106,
+        "fat": 71,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "batch-lasagna",
@@ -198,8 +215,12 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "bbq-brisket-burnt-ends",
@@ -260,8 +281,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "bbq-chicken-bowls",
@@ -320,8 +343,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "corn"
+      ]
     },
     {
       "slug": "bbq-chicken-mac-and-cheese",
@@ -388,8 +415,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 820,
+        "protein": 54,
+        "carbs": 62,
+        "fat": 30,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "bbq-chicken-pizza",
@@ -454,8 +489,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 93,
+        "carbs": 143,
+        "fat": 47,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro"
+      ]
     },
     {
       "slug": "bbq-chicken-sliders",
@@ -527,8 +571,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 825,
+        "protein": 47,
+        "carbs": 53,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mayonnaise",
+        "pickles"
+      ]
     },
     {
       "slug": "beef-barley-soup",
@@ -589,8 +642,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "beef-broccoli",
@@ -655,8 +712,16 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 520,
+        "protein": 48,
+        "carbs": 12,
+        "fat": 31,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "broccoli"
+      ]
     },
     {
       "slug": "beef-dip",
@@ -731,8 +796,13 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "mayonnaise"
+      ]
     },
     {
       "slug": "beef-stroganoff",
@@ -799,8 +869,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1362,
+        "protein": 85,
+        "carbs": 104,
+        "fat": 70,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mushrooms",
+        "onions",
+        "mustard"
+      ]
     },
     {
       "slug": "beer-can-chicken",
@@ -865,8 +945,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "big-chili",
@@ -939,8 +1021,20 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 79,
+        "carbs": 102,
+        "fat": 78,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "tomatoes",
+        "jalapenos",
+        "beans"
+      ]
     },
     {
       "slug": "breakfast-burrito-bar",
@@ -1010,8 +1104,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 70,
+        "carbs": 103,
+        "fat": 78,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "breakfast-sausage-pizza",
@@ -1077,8 +1180,10 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "buffalo-chicken-dip",
@@ -1134,8 +1239,14 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 660,
+        "protein": 44,
+        "carbs": 6,
+        "fat": 51,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "bulgogi-bowls",
@@ -1199,8 +1310,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 779,
+        "protein": 51,
+        "carbs": 63,
+        "fat": 35,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "butter-chicken",
@@ -1253,8 +1370,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1173,
+        "protein": 63,
+        "carbs": 103,
+        "fat": 56,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro"
+      ]
     },
     {
       "slug": "cedar-plank-salmon",
@@ -1321,8 +1447,16 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 384,
+        "protein": 39,
+        "carbs": 8,
+        "fat": 21,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mustard"
+      ]
     },
     {
       "slug": "chicken-alfredo-bake",
@@ -1381,8 +1515,10 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "chicken-caesar",
@@ -1441,8 +1577,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 87,
+        "carbs": 79,
+        "fat": 80,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "chicken-dumpling-soup",
@@ -1509,8 +1651,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "chicken-parm",
@@ -1576,8 +1722,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 103,
+        "carbs": 114,
+        "fat": 58,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "chicken-pot-pie",
@@ -1642,8 +1794,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 639,
+        "protein": 41,
+        "carbs": 32,
+        "fat": 37,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "chicken-quesadillas",
@@ -1704,8 +1864,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1393,
+        "protein": 85,
+        "carbs": 64,
+        "fat": 87,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "chicken-souvlaki",
@@ -1765,8 +1934,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes"
+      ]
     },
     {
       "slug": "chicken-tikka-masala",
@@ -1819,8 +1993,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1162,
+        "protein": 65,
+        "carbs": 104,
+        "fat": 54,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro"
+      ]
     },
     {
       "slug": "chicken-tortilla-soup-for-the-hall",
@@ -1886,8 +2069,20 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1158,
+        "protein": 72,
+        "carbs": 64,
+        "fat": 70,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "tomatoes",
+        "jalapenos",
+        "avocado"
+      ]
     },
     {
       "slug": "chili-mac",
@@ -1949,8 +2144,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1368,
+        "protein": 82,
+        "carbs": 100,
+        "fat": 73,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "beans"
+      ]
     },
     {
       "slug": "chorizo-breakfast-tacos",
@@ -2015,8 +2220,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro"
+      ]
     },
     {
       "slug": "creamy-tuscan-chicken",
@@ -2071,8 +2281,16 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 500,
+        "protein": 58,
+        "carbs": 4,
+        "fat": 27,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "spinach"
+      ]
     },
     {
       "slug": "crispy-chicken-cutlets",
@@ -2138,8 +2356,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 845,
+        "protein": 80,
+        "carbs": 60,
+        "fat": 30,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "detroit-style-pizza",
@@ -2204,8 +2428,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1150,
+        "protein": 49,
+        "carbs": 67,
+        "fat": 75,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "enchilada-casserole",
@@ -2266,8 +2496,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 897,
+        "protein": 65,
+        "carbs": 42,
+        "fat": 54,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "olives"
+      ]
     },
     {
       "slug": "fast-philly-skillet",
@@ -2333,8 +2571,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 800,
+        "protein": 61,
+        "carbs": 71,
+        "fat": 30,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "five-ingredient-pasta",
@@ -2401,8 +2647,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "flank-chimichurri",
@@ -2457,8 +2705,14 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 745,
+        "protein": 59,
+        "carbs": 2,
+        "fat": 55,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "four-step-chicken-piccata",
@@ -2529,8 +2783,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "french-onion-soup-for-the-hall",
@@ -2601,8 +2857,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 740,
+        "protein": 43,
+        "carbs": 34,
+        "fat": 47,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "french-toast-casserole",
@@ -2661,8 +2925,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1158,
+        "protein": 30,
+        "carbs": 180,
+        "fat": 38,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "game-day-nachos",
@@ -2725,8 +2995,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1225,
+        "protein": 65,
+        "carbs": 105,
+        "fat": 63,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "jalapenos",
+        "beans"
+      ]
     },
     {
       "slug": "garlic-butter-shrimp",
@@ -2795,8 +3074,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "ginger-salmon-bowls",
@@ -2862,8 +3143,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 687,
+        "protein": 47,
+        "carbs": 72,
+        "fat": 22,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "broccoli"
+      ]
     },
     {
       "slug": "greek-chicken-bowls",
@@ -2923,8 +3212,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 702,
+        "protein": 46,
+        "carbs": 64,
+        "fat": 27,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "tomatoes",
+        "feta"
+      ]
     },
     {
       "slug": "grilled-corn-cotija",
@@ -2989,8 +3287,17 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 292,
+        "protein": 11,
+        "carbs": 27,
+        "fat": 18,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mayonnaise",
+        "corn"
+      ]
     },
     {
       "slug": "grilled-pork-chops",
@@ -3054,8 +3361,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "hall-taco-bar",
@@ -3117,8 +3426,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 689,
+        "protein": 50,
+        "carbs": 49,
+        "fat": 33,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro"
+      ]
     },
     {
       "slug": "herb-roasted-thighs",
@@ -3173,8 +3491,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "honey-garlic-pork-tenderloin",
@@ -3238,8 +3558,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "mustard"
+      ]
     },
     {
       "slug": "honey-soppressata-pizza",
@@ -3303,8 +3627,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 59,
+        "carbs": 129,
+        "fat": 70,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "jambalaya",
@@ -3368,8 +3698,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 635,
+        "protein": 38,
+        "carbs": 45,
+        "fat": 33,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "jerk-chicken",
@@ -3434,8 +3770,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1087,
+        "protein": 111,
+        "carbs": 125,
+        "fat": 15,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "jalapenos",
+        "beans",
+        "coconut"
+      ]
     },
     {
       "slug": "lemon-herb-salmon",
@@ -3489,8 +3835,14 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 493,
+        "protein": 38,
+        "carbs": 6,
+        "fat": 34,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "loaded-baked-potato-bar",
@@ -3545,8 +3897,10 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "loaded-nacho-skillet",
@@ -3614,8 +3968,14 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "jalapenos",
+        "beans"
+      ]
     },
     {
       "slug": "loaded-potato-feed",
@@ -3670,8 +4030,10 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "mac-and-cheese-bake",
@@ -3738,8 +4100,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "mustard"
+      ]
     },
     {
       "slug": "margherita-pizza",
@@ -3803,8 +4169,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "meat-lovers-sheet-pizza",
@@ -3869,8 +4237,10 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "meatball-hoagies",
@@ -3942,8 +4312,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1376,
+        "protein": 89,
+        "carbs": 84,
+        "fat": 77,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "meatloaf-mashed",
@@ -4008,8 +4384,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "mediterranean-chickpea",
@@ -4070,8 +4448,19 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 662,
+        "protein": 29,
+        "carbs": 71,
+        "fat": 32,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes",
+        "feta",
+        "beans"
+      ]
     },
     {
       "slug": "memphis-dry-rub-ribs",
@@ -4132,8 +4521,12 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "mustard"
+      ]
     },
     {
       "slug": "moroccan-meatballs",
@@ -4193,8 +4586,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 613,
+        "protein": 50,
+        "carbs": 41,
+        "fat": 28,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "cilantro"
+      ]
     },
     {
       "slug": "ny-strip-herb-butter",
@@ -4255,8 +4656,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "one-pot-chicken-rice",
@@ -4323,8 +4726,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 747,
+        "protein": 80,
+        "carbs": 71,
+        "fat": 14,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "pad-thai",
@@ -4377,8 +4788,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 820,
+        "protein": 59,
+        "carbs": 46,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "beans"
+      ]
     },
     {
       "slug": "pancake-short-stack",
@@ -4441,8 +4860,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1310,
+        "protein": 67,
+        "carbs": 125,
+        "fat": 61,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "parm-hero-subs",
@@ -4509,8 +4934,10 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "pasta-e-ceci-for-the-hall",
@@ -4579,8 +5006,16 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 511,
+        "protein": 23,
+        "carbs": 65,
+        "fat": 20,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "beans"
+      ]
     },
     {
       "slug": "pepperoni-pizza-night",
@@ -4647,8 +5082,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 67,
+        "carbs": 83,
+        "fat": 88,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "performance-burrito-bowls",
@@ -4703,8 +5144,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "beans",
+        "corn"
+      ]
     },
     {
       "slug": "philly-cheesesteak-skillet",
@@ -4769,8 +5215,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1060,
+        "protein": 72,
+        "carbs": 76,
+        "fat": 51,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "philly-egg-rolls",
@@ -4836,8 +5291,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1122,
+        "protein": 84,
+        "carbs": 77,
+        "fat": 55,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "pork-carnitas-tacos",
@@ -4898,8 +5361,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 529,
+        "protein": 39,
+        "carbs": 49,
+        "fat": 20,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro"
+      ]
     },
     {
       "slug": "pulled-pork",
@@ -4967,8 +5439,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 82,
+        "carbs": 124,
+        "fat": 61,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mayonnaise",
+        "pickles",
+        "mustard"
+      ]
     },
     {
       "slug": "red-beans-and-rice-for-the-hall",
@@ -5034,8 +5516,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1161,
+        "protein": 45,
+        "carbs": 180,
+        "fat": 29,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "beans"
+      ]
     },
     {
       "slug": "sausage-egg-bake",
@@ -5101,8 +5593,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "mustard"
+      ]
     },
     {
       "slug": "sausage-peppers-onions",
@@ -5170,8 +5667,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 992,
+        "protein": 45,
+        "carbs": 86,
+        "fat": 51,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "sheet-pan-fajitas",
@@ -5233,8 +5739,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "sheet-pan-meal-prep",
@@ -5290,8 +5801,12 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "broccoli"
+      ]
     },
     {
       "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
@@ -5359,8 +5874,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 637,
+        "protein": 56,
+        "carbs": 52,
+        "fat": 22,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mustard",
+        "beans"
+      ]
     },
     {
       "slug": "sheet-pan-sausage-peppers",
@@ -5428,8 +5952,13 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "shepherds-pie",
@@ -5496,8 +6025,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 927,
+        "protein": 68,
+        "carbs": 63,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "skillet-chicken-alfredo",
@@ -5558,8 +6095,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "slider-bar",
@@ -5631,8 +6170,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "mayonnaise",
+        "pickles",
+        "tomatoes",
+        "mustard"
+      ]
     },
     {
       "slug": "smash-burgers",
@@ -5703,8 +6250,15 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "mayonnaise",
+        "pickles",
+        "mustard"
+      ]
     },
     {
       "slug": "smoked-wings-white-sauce",
@@ -5772,8 +6326,16 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 779,
+        "protein": 87,
+        "carbs": 3,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mayonnaise"
+      ]
     },
     {
       "slug": "spaghetti-aglio-e-olio-for-the-hall",
@@ -5841,8 +6403,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "spicy-tomato-bisque-grilled-brie-toast",
@@ -5904,8 +6468,16 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 625,
+        "protein": 16,
+        "carbs": 74,
+        "fat": 31,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
+      ]
     },
     {
       "slug": "steak-sandwiches",
@@ -5971,8 +6543,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 105,
+        "carbs": 54,
+        "fat": 84,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mushrooms",
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "steak-tacos",
@@ -6028,8 +6610,14 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "numericFilterEligible": false
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "jalapenos"
+      ]
     },
     {
       "slug": "street-corn-chicken",
@@ -6095,8 +6683,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 776,
+        "protein": 46,
+        "carbs": 73,
+        "fat": 33,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mayonnaise",
+        "corn"
+      ]
     },
     {
       "slug": "stuffed-peppers",
@@ -6156,8 +6753,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 752,
+        "protein": 59,
+        "carbs": 33,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "bell_peppers"
+      ]
     },
     {
       "slug": "teriyaki-donburi",
@@ -6218,8 +6823,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 654,
+        "protein": 43,
+        "carbs": 74,
+        "fat": 19,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "broccoli"
+      ]
     },
     {
       "slug": "teriyaki-salmon-grill",
@@ -6286,8 +6899,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "texas-beef-ribs",
@@ -6348,8 +6963,14 @@
         "highProtein": true,
         "lowCarb": true,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 859,
+        "protein": 89,
+        "carbs": 1,
+        "fat": 58,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "thai-basil-chicken",
@@ -6415,8 +7036,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 846,
+        "protein": 54,
+        "carbs": 86,
+        "fat": 29,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
+      ]
     },
     {
       "slug": "tomato-soup-grilled-cheese-croutons",
@@ -6478,8 +7108,17 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 998,
+        "protein": 38,
+        "carbs": 77,
+        "fat": 62,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes"
+      ]
     },
     {
       "slug": "turkey-burgers",
@@ -6551,8 +7190,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 772,
+        "protein": 54,
+        "carbs": 32,
+        "fat": 49,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mayonnaise",
+        "pickles",
+        "mustard"
+      ]
     },
     {
       "slug": "turkey-chili",
@@ -6613,8 +7262,18 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": true,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 607,
+        "protein": 59,
+        "carbs": 51,
+        "fat": 18,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "beans"
+      ]
     },
     {
       "slug": "turkey-meatball-zoodles",
@@ -6679,8 +7338,10 @@
         "highProtein": false,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false
-      }
+        "estimateAvailable": false,
+        "numericFilterEligible": false
+      },
+      "avoidTags": []
     },
     {
       "slug": "white-garlic-chicken-pizza",
@@ -6739,8 +7400,16 @@
         "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": true
-      }
+        "estimateAvailable": true,
+        "calories": 1400,
+        "protein": 94,
+        "carbs": 115,
+        "fat": 59,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "spinach"
+      ]
     }
   ]
 }

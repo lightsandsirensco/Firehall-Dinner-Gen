@@ -13,10 +13,10 @@
   "cookTime": 85,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 845,
-  "protein": 79,
-  "carbs": 29,
-  "fats": 44,
+  "calories": 1400,
+  "protein": 87,
+  "carbs": 101,
+  "fats": 68,
   "tags": [
     "protein:chicken",
     "format:pizza",
@@ -161,10 +161,10 @@
   "spiceLevel": "hot",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 845,
-    "protein": 79,
-    "carbs": 29,
-    "fats": 44,
+    "calories": 1400,
+    "protein": 87,
+    "carbs": 101,
+    "fats": 68,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -172,7 +172,7 @@
       "highProtein": true,
       "under700Calories": false,
       "under30gFat": false,
-      "highCarb": false,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": false
     },
@@ -267,5 +267,8 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "blue_cheese"
+  ]
 }

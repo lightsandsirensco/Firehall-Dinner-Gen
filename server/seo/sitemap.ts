@@ -71,6 +71,8 @@ const STATIC_PATHS: Array<{ path: string; changefreq: string; priority: string }
   { path: "/firefighter-red-lead-recipe", changefreq: "monthly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.5" },
   { path: "/how-we-test-recipes", changefreq: "monthly", priority: "0.55" },
+  { path: "/privacy", changefreq: "yearly", priority: "0.2" },
+  { path: "/terms", changefreq: "yearly", priority: "0.2" },
   ...allSeoLandingPagePaths().map((path) => ({
     path,
     changefreq: "weekly",

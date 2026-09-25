@@ -1,14 +1,14 @@
 # Crew scaling audit
 
-Generated: 2026-07-23T19:25:02.938Z
+Generated: 2026-09-24T23:53:29.737Z
 
 ## Summary
 
 | Metric | Count |
 | --- | ---: |
-| Recipes audited | 406 |
-| Successfully scaled (canonical base 8) | 325 |
-| Failures | 81 |
+| Recipes audited | 432 |
+| Successfully scaled (canonical base 8) | 393 |
+| Failures | 39 |
 | Edge-case recipes | 0 |
 | Quantity formatting notes | 0 |
 
@@ -23,87 +23,45 @@ Generated: 2026-07-23T19:25:02.938Z
 
 ## Failures
 
-- **apple-cinnamon-baked-oatmeal**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **bagel-lox-breakfast-board**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **bagel-sandwich-line**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **big-pot-savory-oats**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **breakfast-crunchwraps**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **breakfast-enchiladas**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **breakfast-nachos-supreme**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **breakfast-poutine**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **breakfast-sandwich-trays**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **breakfast-sliders**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **chilaquiles-verde-bake**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **club-sandwich-breakfast-bake**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **crew-french-toast-bake**: non_canonical_base: stored at 12, expected 8; metadata: baseServings=12 crewSize=12 (expected 8)
-- **denver-breakfast-casserole**: non_canonical_base: stored at 12, expected 8; metadata: baseServings=12 crewSize=12 (expected 8)
-- **farmers-breakfast-casserole**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **fire-captain-omelette-bar**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **firehall-breakfast-pizza**: non_canonical_base: stored at 12, expected 8; metadata: baseServings=12 crewSize=12 (expected 8)
-- **green-chile-breakfast-burritos**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **hall-breakfast-burritos**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **hall-breakfast-wraps**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **hall-sausage-biscuits-gravy**: non_canonical_base: stored at 12, expected 8; metadata: baseServings=12 crewSize=12 (expected 8)
-- **hash-brown-breakfast-casserole**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **high-protein-parfaits**: non_canonical_base: stored at 6, expected 8; metadata: baseServings=6 crewSize=6 (expected 8)
-- **maple-sausage-pinwheels**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **monte-cristo-sandwiches**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **overnight-french-toast-bake**: non_canonical_base: stored at 12, expected 8; metadata: baseServings=12 crewSize=12 (expected 8)
-- **overnight-oat-bar-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **overnight-sausage-strata**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **protein-pancake-tray**: non_canonical_base: stored at 12, expected 8; metadata: baseServings=12 crewSize=12 (expected 8)
-- **quick-egg-tacos**: non_canonical_base: stored at 6, expected 8; metadata: baseServings=6 crewSize=6 (expected 8)
-- **sheet-pan-breakfast-hash**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **sheet-pan-breakfast-sandwiches**: non_canonical_base: stored at 12, expected 8; metadata: baseServings=12 crewSize=12 (expected 8)
-- **sheet-pan-eggs-sausage-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **sheet-pan-full-english**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **southwest-egg-bake**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **tater-tot-breakfast-casserole**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **andouille-po-boy-rolls-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **brisket-style-beef-sandwiches-au-jus**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **cajun-grilled-cod-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **caprese-steak-skewers-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **cast-iron-steak-fajita-sizzlers**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **charred-broccolini-lemon-tray**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **chili-lime-grilled-tilapia**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **competition-bbq-chicken-thighs**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **firehall-antipasto-pasta-salad**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **firehall-burnt-ends-platter**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **firehall-hibachi-mixed-grill-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **firehall-street-elote-cups**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **flat-top-philly-cheesesteaks-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **gochujang-beef-skewers-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **griddle-smash-sausage-peppers**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **grilled-chicken-pesto-panini-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **grilled-cod-lemon-packets**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **grilled-peach-burrata-salad**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **grilled-reuben-sandwiches-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **hickory-smoked-chicken-breast**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **honey-chipotle-chicken-thighs**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **honey-sriracha-shrimp-skewers**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **hot-honey-grilled-sausage-peppers**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **jalapeno-cheddar-smoked-sausages**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **lamb-merguez-skewers-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **loaded-ranch-potato-salad-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **maple-bourbon-grilled-trout**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **mixed-lamb-chop-grill-board**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **mongolian-beef-flat-top-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **pollo-asado-citrus-platter**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **pork-satay-skewers-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **portuguese-linguica-grill-platter**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **pressed-cuban-sandwiches-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **reverse-seared-ribeye-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **santa-maria-tri-tip-roast**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **smoked-baked-beans-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **smoked-bbq-chicken-wings-tray**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **smoked-chicken-quarters-white-sauce**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **smoked-mac-and-cheese-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **smoked-picanha-steak-platter**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **smoked-potato-salad-tray**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **spiedie-chicken-platter-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **tandoori-lamb-chop-platter**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **texas-central-brisket-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
-- **yakiniku-grill-platter-crew**: non_canonical_base: stored at 10, expected 8; metadata: baseServings=10 crewSize=10 (expected 8)
+- **apple-cinnamon-baked-oatmeal**: scale_up_bug: ground cinnamon increased when scaling down to 4; scale_up_bug: ground cinnamon increased when scaling down to 6
+- **bbq-breakfast-hash**: scale_up_bug: pulled pork or brisket increased when scaling down to 4; scale_up_bug: pulled pork or brisket increased when scaling down to 6
+- **big-pot-savory-oats**: scale_up_bug: kosher salt increased when scaling down to 4; scale_up_bug: kosher salt increased when scaling down to 6
+- **biscuit-french-toast-sliders**: scale_up_bug: whole milk increased when scaling down to 4; scale_up_bug: whole milk increased when scaling down to 6
+- **breakfast-crunchwraps**: scale_up_bug: breakfast sausage increased when scaling down to 4; scale_up_bug: breakfast sausage increased when scaling down to 6
+- **breakfast-enchiladas**: scale_up_bug: Mexican chorizo increased when scaling down to 4; scale_up_bug: Mexican chorizo increased when scaling down to 6
+- **breakfast-nachos-supreme**: scale_up_bug: nacho cheese sauce increased when scaling down to 4; scale_up_bug: pico de gallo increased when scaling down to 4; scale_up_bug: nacho cheese sauce increased when scaling down to 6; scale_up_bug: pico de gallo increased when scaling down to 6
+- **breakfast-poutine**: scale_up_bug: vegetable oil increased when scaling down to 4; scale_up_bug: cheese curds increased when scaling down to 4; scale_up_bug: vegetable oil increased when scaling down to 6; scale_up_bug: cheese curds increased when scaling down to 6
+- **breakfast-stromboli-roll**: scale_up_bug: deli ham increased when scaling down to 4; scale_up_bug: deli ham increased when scaling down to 6
+- **cast-iron-breakfast-skillet**: scale_up_bug: breakfast sausage or diced ham increased when scaling down to 4; scale_up_bug: breakfast sausage or diced ham increased when scaling down to 6
+- **chorizo-breakfast-hash**: scale_up_bug: Mexican chorizo increased when scaling down to 4; scale_up_bug: Mexican chorizo increased when scaling down to 6
+- **club-sandwich-breakfast-bake**: scale_up_bug: deli turkey increased when scaling down to 4; scale_up_bug: deli turkey increased when scaling down to 6
+- **cowboy-breakfast-skillet**: scale_up_bug: shredded cheddar increased when scaling down to 4; scale_up_bug: shredded cheddar increased when scaling down to 6
+- **crew-french-toast-bake**: scale_up_bug: cinnamon increased when scaling down to 4
+- **firehall-breakfast-pizza**: scale_up_bug: olive oil increased when scaling down to 4
+- **hall-breakfast-wraps**: scale_up_bug: lean turkey breakfast sausage increased when scaling down to 4; scale_up_bug: lean turkey breakfast sausage increased when scaling down to 6
+- **hall-sausage-biscuits-gravy**: scale_up_bug: butter increased when scaling down to 4; scale_up_bug: black pepper increased when scaling down to 4
+- **hash-brown-breakfast-casserole**: scale_up_bug: breakfast sausage or diced ham increased when scaling down to 4; scale_up_bug: breakfast sausage or diced ham increased when scaling down to 6
+- **high-protein-parfaits**: scale_up_bug: vanilla extract increased when scaling down to 4; scale_up_bug: vanilla extract increased when scaling down to 6
+- **maple-sausage-pinwheels**: scale_up_bug: breakfast sausage increased when scaling down to 4; scale_up_bug: shredded cheddar increased when scaling down to 4; scale_up_bug: maple syrup increased when scaling down to 4; scale_up_bug: maple syrup increased when scaling down to 4; scale_up_bug: breakfast sausage increased when scaling down to 6; scale_up_bug: shredded cheddar increased when scaling down to 6; scale_up_bug: maple syrup increased when scaling down to 6; scale_up_bug: maple syrup increased when scaling down to 6
+- **overnight-french-toast-bake**: scale_up_bug: vanilla extract increased when scaling down to 4
+- **protein-pancake-tray**: scale_up_bug: sugar increased when scaling down to 4
+- **red-lead-skillet**: scale_up_bug: shredded pepper jack increased when scaling down to 4; scale_up_bug: shredded pepper jack increased when scaling down to 6
+- **sausage-egg-cheese-sandwiches**: scale_up_bug: breakfast sausage patties or links increased when scaling down to 4; scale_up_bug: breakfast sausage patties or links increased when scaling down to 6
+- **sheet-pan-breakfast-hash**: scale_up_bug: olive oil or bacon fat increased when scaling down to 4; scale_up_bug: olive oil or bacon fat increased when scaling down to 6
+- **sheet-pan-eggs-sausage-crew**: scale_up_bug: olive oil increased when scaling down to 4; scale_up_bug: olive oil increased when scaling down to 6
+- **smoked-salmon-benedit**: scale_up_bug: smoked salmon increased when scaling down to 4; scale_up_bug: smoked salmon increased when scaling down to 6
+- **tater-tot-breakfast-casserole**: scale_up_bug: bacon increased when scaling down to 4; scale_up_bug: whole milk increased when scaling down to 4; scale_up_bug: bacon increased when scaling down to 6; scale_up_bug: whole milk increased when scaling down to 6
+- **turkey-sausage-burritos**: scale_up_bug: shredded cheddar or pepper jack increased when scaling down to 4; scale_up_bug: breakfast sausage or chorizo increased when scaling down to 4; scale_up_bug: shredded cheddar or pepper jack increased when scaling down to 6; scale_up_bug: breakfast sausage or chorizo increased when scaling down to 6
+- **blueberry-almond**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **chocolate-banana-recovery**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **citrus-ginger**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **green-pineapple**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **mixed-berry-protein**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **mocha-protein**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **peanut-butter-banana-recovery**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **strawberry-oat-breakfast**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **strawberry-spinach**: metadata: baseServings=missing crewSize=missing (expected 8)
+- **tropical-mango-greek**: metadata: baseServings=missing crewSize=missing (expected 8)
 
 ## Edge cases
 

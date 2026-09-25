@@ -11,7 +11,19 @@ import { absoluteImageUrl, absoluteUrl, recipePath } from "./urls.js";
 
 export type BreadcrumbItem = { name: string; path: string };
 
-export type FaqItem = { question: string; answer: string };
+export type FaqItem = {
+  question: string;
+  answer: string;
+  /**
+   * Optional contextual internal link rendered right after `answer` —
+   * points a short homepage/FAQ answer toward the deeper page that owns
+   * that search intent (e.g. "/firefighter-meals"). Not every FAQ needs
+   * one. Purely a UI affordance: FAQPage JSON-LD (`buildFaqPageSchema`)
+   * only reads `question`/`answer`, so this never creates a mismatch
+   * between visible and structured-data content.
+   */
+  link?: { href: string; label: string };
+};
 
 function isoDurationMinutes(minutes: number): string {
   const m = Math.max(0, Math.round(minutes));

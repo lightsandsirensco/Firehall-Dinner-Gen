@@ -30,6 +30,7 @@ import { CTA, HALL_VOTE } from "@/lib/brand-copy";
 import { StartCookingButton } from "@/components/cook-mode/start-cooking-button";
 import { clientRecipeToCookMode } from "@/lib/cook-mode/adapters";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
+import { NUTRITION_ESTIMATE_DISCLAIMER } from "@/components/recipe-nutrition-panel";
 import {
   useMeasurementSystem,
 } from "@/components/measurement-unit-toggle";
@@ -597,6 +598,9 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
           <span className="text-foreground font-medium">{recipe.macros_per_serving.carbs_g}g</span> carbs ·{" "}
           <span className="text-foreground font-medium">{recipe.macros_per_serving.fat_g}g</span> fat per seat
         </span>
+      </p>
+      <p className="text-[11px] text-muted-foreground/80 leading-relaxed" data-testid="text-nutrition-disclaimer">
+        {NUTRITION_ESTIMATE_DISCLAIMER}
       </p>
 
       {hasSafety && (

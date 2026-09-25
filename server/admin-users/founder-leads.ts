@@ -33,7 +33,7 @@ export async function initFounderLeadsStore(): Promise<void> {
 
 function planLabel(planId: string | null | undefined, hallPro: boolean): FounderLeadPlanLabel {
   if (hallPro) return "Hall Pro";
-  if (planId === "personal") return "Firefighter Plus";
+  if (planId === "firefighter_plus") return "Firefighter Plus";
   return "Free";
 }
 

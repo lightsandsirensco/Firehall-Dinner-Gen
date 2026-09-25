@@ -1,6 +1,6 @@
 # Nutrition Integrity Audit — Firehall Meals
 
-Generated: 2026-07-29T23:10:20.275Z
+Generated: 2026-09-25T00:32:27.782Z
 Mode: **audit**
 
 ## Executive summary
@@ -11,11 +11,11 @@ Crew size changes ingredient quantities on recipe pages; **nutrition does not sc
 | Metric | Value |
 |--------|------:|
 | **Total recipes audited** | 432 |
-| **PASS** | 271 |
-| **FAIL** | 148 |
+| **PASS** | 270 |
+| **FAIL** | 149 |
 | Withheld (estimate coming soon) | 13 |
 | Recipes fixed this run | 0 |
-| **Nutrition Accuracy %** (pass ÷ recipes with displayed macros) | **64.7%** |
+| **Nutrition Accuracy %** (pass ÷ recipes with displayed macros) | **64.4%** |
 
 Crew-size calculation invariant (engine): PASS
 
@@ -23,34 +23,33 @@ Crew-size calculation invariant (engine): PASS
 
 | Catalog | Recipes | Pass | Fail | Withheld |
 |---------|--------:|-----:|-----:|---------:|
-| golden 100 | 104 | 49 | 55 | 0 |
+| golden 100 | 104 | 52 | 52 | 0 |
 | hall expansion | 115 | 59 | 56 | 0 |
 | performance meals | 71 | 68 | 3 | 0 |
-| breakfast | 67 | 55 | 12 | 0 |
+| breakfast | 67 | 57 | 10 | 0 |
 | bbq grill | 45 | 24 | 21 | 0 |
-| pizza night | 20 | 6 | 1 | 13 |
+| pizza night | 20 | 0 | 7 | 13 |
 | smoothies | 10 | 10 | 0 | 0 |
 
 ## Issue counts
 
 | Issue | Count |
 |-------|------:|
-| Suspicious calories | 144 |
-| Suspicious protein | 83 |
+| Suspicious calories | 146 |
+| Suspicious protein | 81 |
 | Suspicious carbs | 0 |
 | Suspicious fat | 0 |
 | UI shows zero macros | 0 |
-| Nutrition coupled to wrong crew divisor | 20 |
-| Needs recalculation | 148 |
+| Nutrition coupled to wrong crew divisor | 18 |
+| Needs recalculation | 149 |
 
 ## Recipes with suspicious calories
 
 - `baked-ziti` — 1394 cal · 85g P · 106g C · 71g F
 - `batch-lasagna` — 1400 cal · 71g P · 90g C · 84g F
 - `bbq-brisket-burnt-ends` — 1109 cal · 89g P · 52g C · 64g F
-- `bbq-chicken-mac-and-cheese` — 1386 cal · 83g P · 106g C · 68g F
 - `bbq-chicken-pizza` — 1400 cal · 93g P · 143g C · 47g F
-- `beef-dip` — 1400 cal · 96g P · 80g C · 78g F
+- `beef-dip` — 1400 cal · 94g P · 97g C · 71g F
 - `beef-stroganoff` — 1362 cal · 85g P · 104g C · 70g F
 - `big-chili` — 1400 cal · 79g P · 102g C · 78g F
 - `breakfast-burrito-bar` — 1400 cal · 70g P · 103g C · 78g F
@@ -58,14 +57,13 @@ Crew-size calculation invariant (engine): PASS
 - `butter-chicken` — 1173 cal · 63g P · 103g C · 56g F
 - `chicken-alfredo-bake` — 1400 cal · 90g P · 73g C · 82g F
 - `chicken-caesar` — 1400 cal · 87g P · 79g C · 80g F
-- `chicken-parm` — 1400 cal · 103g P · 92g C · 67g F
+- `chicken-parm` — 1400 cal · 103g P · 114g C · 58g F
 - `chicken-quesadillas` — 1393 cal · 85g P · 64g C · 87g F
 - `chicken-tikka-masala` — 1162 cal · 65g P · 104g C · 54g F
 - `chicken-tortilla-soup-for-the-hall` — 1158 cal · 72g P · 64g C · 70g F
 - `chili-mac` — 1368 cal · 82g P · 100g C · 73g F
 - `chorizo-breakfast-tacos` — 1159 cal · 63g P · 61g C · 75g F
 - `detroit-style-pizza` — 1150 cal · 49g P · 67g C · 75g F
-- `fast-philly-skillet` — 1179 cal · 89g P · 73g C · 59g F
 - `french-toast-casserole` — 1158 cal · 30g P · 180g C · 38g F
 - `game-day-nachos` — 1225 cal · 65g P · 105g C · 63g F
 - `honey-soppressata-pizza` — 1400 cal · 59g P · 129g C · 70g F
@@ -76,14 +74,14 @@ Crew-size calculation invariant (engine): PASS
 - `mac-and-cheese-bake` — 1381 cal · 61g P · 127g C · 69g F
 - `margherita-pizza` — 945 cal · 39g P · 80g C · 52g F
 - `meat-lovers-sheet-pizza` — 1400 cal · 78g P · 75g C · 86g F
-- `meatball-hoagies` — 1400 cal · 95g P · 65g C · 86g F
+- `meatball-hoagies` — 1376 cal · 89g P · 84g C · 77g F
 - `meatloaf-mashed` — 1009 cal · 72g P · 69g C · 51g F
 - `memphis-dry-rub-ribs` — 1310 cal · 103g P · 18g C · 90g F
 - `pancake-short-stack` — 1310 cal · 67g P · 125g C · 61g F
-- `parm-hero-subs` — 1400 cal · 96g P · 84g C · 75g F
+- `parm-hero-subs` — 1400 cal · 93g P · 106g C · 65g F
 - `pepperoni-pizza-night` — 1400 cal · 67g P · 83g C · 88g F
-- `philly-cheesesteak-skillet` — 1400 cal · 98g P · 71g C · 80g F
-- `philly-egg-rolls` — 1400 cal · 104g P · 74g C · 78g F
+- `philly-cheesesteak-skillet` — 1060 cal · 72g P · 76g C · 51g F
+- `philly-egg-rolls` — 1122 cal · 84g P · 77g C · 55g F
 - `pulled-pork` — 1400 cal · 82g P · 124g C · 61g F
 - `red-beans-and-rice-for-the-hall` — 1161 cal · 45g P · 180g C · 29g F
 - `sausage-egg-bake` — 1136 cal · 67g P · 39g C · 79g F
@@ -92,23 +90,23 @@ Crew-size calculation invariant (engine): PASS
 - `sheet-pan-sausage-peppers` — 932 cal · 46g P · 31g C · 70g F
 - `shepherds-pie` — 927 cal · 68g P · 63g C · 45g F
 - `skillet-chicken-alfredo` — 1228 cal · 77g P · 89g C · 61g F
-- `slider-bar` — 1364 cal · 68g P · 77g C · 90g F
-- `smash-burgers` — 1310 cal · 63g P · 69g C · 90g F
+- `slider-bar` — 1400 cal · 72g P · 109g C · 77g F
+- `smash-burgers` — 1400 cal · 66g P · 94g C · 86g F
 - `spaghetti-aglio-e-olio-for-the-hall` — 942 cal · 28g P · 135g C · 34g F
+- `steak-sandwiches` — 1400 cal · 105g P · 54g C · 84g F
+- `steak-tacos` — 1400 cal · 67g P · 93g C · 87g F
 
-_…and 94 more._
+_…and 96 more._
 
 ## Recipes with suspicious protein
 
 - `baked-ziti` — 1394 cal · 85g P · 106g C · 71g F
 - `bbq-brisket-burnt-ends` — 1109 cal · 89g P · 52g C · 64g F
-- `bbq-chicken-mac-and-cheese` — 1386 cal · 83g P · 106g C · 68g F
-- `beef-dip` — 1400 cal · 96g P · 80g C · 78g F
 - `beef-stroganoff` — 1362 cal · 85g P · 104g C · 70g F
 - `beer-can-chicken` — 501 cal · 88g P · 0g C · 14g F
 - `breakfast-burrito-bar` — 1400 cal · 70g P · 103g C · 78g F
 - `chicken-dumpling-soup` — 670 cal · 66g P · 55g C · 20g F
-- `chicken-parm` — 1400 cal · 103g P · 92g C · 67g F
+- `chicken-parm` — 1400 cal · 103g P · 114g C · 58g F
 - `chicken-tortilla-soup-for-the-hall` — 1158 cal · 72g P · 64g C · 70g F
 - `four-step-chicken-piccata` — 667 cal · 77g P · 36g C · 23g F
 - `grilled-corn-cotija` — 292 cal · 11g P · 27g C · 18g F
@@ -117,14 +115,12 @@ _…and 94 more._
 - `mediterranean-chickpea` — 662 cal · 29g P · 71g C · 32g F
 - `memphis-dry-rub-ribs` — 1310 cal · 103g P · 18g C · 90g F
 - `pancake-short-stack` — 1310 cal · 67g P · 125g C · 61g F
-- `parm-hero-subs` — 1400 cal · 96g P · 84g C · 75g F
 - `pasta-e-ceci-for-the-hall` — 511 cal · 23g P · 65g C · 20g F
-- `philly-cheesesteak-skillet` — 1400 cal · 98g P · 71g C · 80g F
-- `philly-egg-rolls` — 1400 cal · 104g P · 74g C · 78g F
+- `philly-cheesesteak-skillet` — 1060 cal · 72g P · 76g C · 51g F
 - `shepherds-pie` — 927 cal · 68g P · 63g C · 45g F
 - `smoked-wings-white-sauce` — 779 cal · 87g P · 3g C · 44g F
 - `spicy-tomato-bisque-grilled-brie-toast` — 625 cal · 16g P · 74g C · 31g F
-- `steak-sandwiches` — 1380 cal · 103g P · 39g C · 90g F
+- `steak-sandwiches` — 1400 cal · 105g P · 54g C · 84g F
 - `texas-beef-ribs` — 859 cal · 89g P · 1g C · 58g F
 - `bbq-pulled-pork-bowls` — 1303 cal · 100g P · 99g C · 54g F
 - `chicken-wing-bar-night` — 907 cal · 107g P · 33g C · 37g F
@@ -150,8 +146,12 @@ _…and 94 more._
 - `belgian-waffle-platter` — 723 cal · 13g P · 133g C · 18g F
 - `big-pot-savory-oats` — 305 cal · 14g P · 35g C · 12g F
 - `chicken-and-waffles-crew` — 1071 cal · 82g P · 80g C · 45g F
+- `irish-breakfast-fry-up` — 1100 cal · 66g P · 26g C · 82g F
+- `johnnycakes-with-syrup` — 574 cal · 6g P · 102g C · 19g F
+- `menemen-for-the-crew` — 348 cal · 14g P · 6g C · 31g F
+- `protein-pancake-tray` — 405 cal · 13g P · 62g C · 12g F
 
-_…and 33 more._
+_…and 31 more._
 
 ## Recipes with suspicious carbs
 
@@ -172,11 +172,11 @@ _None._
 - `chicken-alfredo-bake` — 1400 cal · 90g P · 73g C · 82g F
 - `loaded-baked-potato-bar` — 1296 cal · 62g P · 60g C · 90g F
 - `meat-lovers-sheet-pizza` — 1400 cal · 78g P · 75g C · 86g F
-- `meatball-hoagies` — 1400 cal · 95g P · 65g C · 86g F
 - `memphis-dry-rub-ribs` — 1310 cal · 103g P · 18g C · 90g F
-- `parm-hero-subs` — 1400 cal · 96g P · 84g C · 75g F
+- `parm-hero-subs` — 1400 cal · 93g P · 106g C · 65g F
+- `slider-bar` — 1400 cal · 72g P · 109g C · 77g F
+- `smash-burgers` — 1400 cal · 66g P · 94g C · 86g F
 - `steak-tacos` — 1400 cal · 67g P · 93g C · 87g F
-- `classic-patty-melt-for-the-crew` — 1277 cal · 77g P · 42g C · 90g F
 - `italian-beef-slow-cooker` — 1400 cal · 114g P · 65g C · 78g F
 - `loaded-baked-potato-soup-crock` — 1371 cal · 69g P · 69g C · 90g F
 - `sausage-gnocchi-skillet` — 1188 cal · 69g P · 27g C · 90g F
@@ -185,17 +185,14 @@ _None._
 - `irish-breakfast-fry-up` — 1100 cal · 66g P · 26g C · 82g F
 - `lumberjack-breakfast-platter` — 1100 cal · 49g P · 87g C · 62g F
 - `shakshuka-for-the-hall` — 420 cal · 25g P · 46g C · 17g F
-- `firehall-hibachi-mixed-grill-crew` — 1400 cal · 48g P · 127g C · 76g F
-- `grilled-reuben-sandwiches-crew` — 1241 cal · 75g P · 29g C · 90g F
 
 ## Recipes needing recalculation
 
 - `baked-ziti` — 1394 cal · 85g P · 106g C · 71g F
 - `batch-lasagna` — 1400 cal · 71g P · 90g C · 84g F
 - `bbq-brisket-burnt-ends` — 1109 cal · 89g P · 52g C · 64g F
-- `bbq-chicken-mac-and-cheese` — 1386 cal · 83g P · 106g C · 68g F
 - `bbq-chicken-pizza` — 1400 cal · 93g P · 143g C · 47g F
-- `beef-dip` — 1400 cal · 96g P · 80g C · 78g F
+- `beef-dip` — 1400 cal · 94g P · 97g C · 71g F
 - `beef-stroganoff` — 1362 cal · 85g P · 104g C · 70g F
 - `big-chili` — 1400 cal · 79g P · 102g C · 78g F
 - `breakfast-burrito-bar` — 1400 cal · 70g P · 103g C · 78g F
@@ -203,14 +200,13 @@ _None._
 - `butter-chicken` — 1173 cal · 63g P · 103g C · 56g F
 - `chicken-alfredo-bake` — 1400 cal · 90g P · 73g C · 82g F
 - `chicken-caesar` — 1400 cal · 87g P · 79g C · 80g F
-- `chicken-parm` — 1400 cal · 103g P · 92g C · 67g F
+- `chicken-parm` — 1400 cal · 103g P · 114g C · 58g F
 - `chicken-quesadillas` — 1393 cal · 85g P · 64g C · 87g F
 - `chicken-tikka-masala` — 1162 cal · 65g P · 104g C · 54g F
 - `chicken-tortilla-soup-for-the-hall` — 1158 cal · 72g P · 64g C · 70g F
 - `chili-mac` — 1368 cal · 82g P · 100g C · 73g F
 - `chorizo-breakfast-tacos` — 1159 cal · 63g P · 61g C · 75g F
 - `detroit-style-pizza` — 1150 cal · 49g P · 67g C · 75g F
-- `fast-philly-skillet` — 1179 cal · 89g P · 73g C · 59g F
 - `french-toast-casserole` — 1158 cal · 30g P · 180g C · 38g F
 - `game-day-nachos` — 1225 cal · 65g P · 105g C · 63g F
 - `honey-soppressata-pizza` — 1400 cal · 59g P · 129g C · 70g F
@@ -221,14 +217,14 @@ _None._
 - `mac-and-cheese-bake` — 1381 cal · 61g P · 127g C · 69g F
 - `margherita-pizza` — 945 cal · 39g P · 80g C · 52g F
 - `meat-lovers-sheet-pizza` — 1400 cal · 78g P · 75g C · 86g F
-- `meatball-hoagies` — 1400 cal · 95g P · 65g C · 86g F
+- `meatball-hoagies` — 1376 cal · 89g P · 84g C · 77g F
 - `meatloaf-mashed` — 1009 cal · 72g P · 69g C · 51g F
 - `memphis-dry-rub-ribs` — 1310 cal · 103g P · 18g C · 90g F
 - `pancake-short-stack` — 1310 cal · 67g P · 125g C · 61g F
-- `parm-hero-subs` — 1400 cal · 96g P · 84g C · 75g F
+- `parm-hero-subs` — 1400 cal · 93g P · 106g C · 65g F
 - `pepperoni-pizza-night` — 1400 cal · 67g P · 83g C · 88g F
-- `philly-cheesesteak-skillet` — 1400 cal · 98g P · 71g C · 80g F
-- `philly-egg-rolls` — 1400 cal · 104g P · 74g C · 78g F
+- `philly-cheesesteak-skillet` — 1060 cal · 72g P · 76g C · 51g F
+- `philly-egg-rolls` — 1122 cal · 84g P · 77g C · 55g F
 - `pulled-pork` — 1400 cal · 82g P · 124g C · 61g F
 - `red-beans-and-rice-for-the-hall` — 1161 cal · 45g P · 180g C · 29g F
 - `sausage-egg-bake` — 1136 cal · 67g P · 39g C · 79g F
@@ -237,11 +233,13 @@ _None._
 - `sheet-pan-sausage-peppers` — 932 cal · 46g P · 31g C · 70g F
 - `shepherds-pie` — 927 cal · 68g P · 63g C · 45g F
 - `skillet-chicken-alfredo` — 1228 cal · 77g P · 89g C · 61g F
-- `slider-bar` — 1364 cal · 68g P · 77g C · 90g F
-- `smash-burgers` — 1310 cal · 63g P · 69g C · 90g F
+- `slider-bar` — 1400 cal · 72g P · 109g C · 77g F
+- `smash-burgers` — 1400 cal · 66g P · 94g C · 86g F
 - `spaghetti-aglio-e-olio-for-the-hall` — 942 cal · 28g P · 135g C · 34g F
+- `steak-sandwiches` — 1400 cal · 105g P · 54g C · 84g F
+- `steak-tacos` — 1400 cal · 67g P · 93g C · 87g F
 
-_…and 98 more._
+_…and 99 more._
 
 ## UI surfaces checked
 
@@ -275,13 +273,6 @@ _…and 98 more._
 - Calories over 900 per serving (1109) — verify crew portions
 - Protein 89g outside BBQ & Grill target (30–55g)
 
-### bbq-chicken-mac-and-cheese (golden_100)
-- **BBQ Chicken Mac and Cheese** · 8 base servings
-- Stored: 1386 cal · 83g P · 106g C · 68g F
-- Recommended: 820 cal · 54g P · 62g C · 30g F
-- Calories over 900 per serving (1386) — verify crew portions
-- Protein 83g outside Comfort Food target (25–45g)
-
 ### bbq-chicken-pizza (golden_100)
 - **BBQ Chicken Pizza** · 8 base servings
 - Stored: 1400 cal · 93g P · 143g C · 47g F
@@ -290,12 +281,11 @@ _…and 98 more._
 
 ### beef-dip (golden_100)
 - **Beef Dip Sandwiches** · 8 base servings
-- Stored: 1400 cal · 96g P · 80g C · 78g F
-- Recommended: 1400 cal · 96g P · 80g C · 78g F
+- Stored: 1400 cal · 94g P · 97g C · 71g F
+- Recommended: 1400 cal · 94g P · 97g C · 71g F
 - Calories over 900 per serving (1400) — verify crew portions
-- Protein over 95g per serving (96g) — verify portion
-- Stored protein 96g vs ingredient estimate 267g
-- Stored 1400 cal vs ingredient estimate 3906 cal
+- Stored protein 94g vs ingredient estimate 211g
+- Stored 1400 cal vs ingredient estimate 3148 cal
 
 ### beef-stroganoff (golden_100)
 - **Beef Stroganoff** · 8 base servings
@@ -345,8 +335,8 @@ _…and 98 more._
 
 ### chicken-parm (golden_100)
 - **Chicken Parmesan** · 8 base servings
-- Stored: 1400 cal · 103g P · 92g C · 67g F
-- Recommended: 1400 cal · 103g P · 92g C · 67g F
+- Stored: 1400 cal · 103g P · 114g C · 58g F
+- Recommended: 1400 cal · 103g P · 114g C · 58g F
 - Calories over 900 per serving (1400) — verify crew portions
 - Protein over 95g per serving (103g) — verify portion
 
@@ -387,12 +377,6 @@ _…and 98 more._
 - Stored: 1150 cal · 49g P · 67g C · 75g F
 - Recommended: 1150 cal · 49g P · 67g C · 75g F
 - Calories over 900 per serving (1150) — verify crew portions
-
-### fast-philly-skillet (golden_100)
-- **Quick Philly Skillet** · 8 base servings
-- Stored: 1179 cal · 89g P · 73g C · 59g F
-- Recommended: 1179 cal · 89g P · 73g C · 59g F
-- Calories over 900 per serving (1179) — verify crew portions
 
 ### french-toast-casserole (golden_100)
 - **French Toast Casserole** · 8 base servings
@@ -463,10 +447,9 @@ _…and 98 more._
 
 ### meatball-hoagies (golden_100)
 - **Meatball Hoagies** · 8 base servings
-- Stored: 1400 cal · 95g P · 65g C · 86g F
-- Recommended: 1400 cal · 95g P · 65g C · 86g F
-- Calories over 900 per serving (1400) — verify crew portions
-- Stored macros match batch÷10 crew better than batch÷8 base servings
+- Stored: 1376 cal · 89g P · 84g C · 77g F
+- Recommended: 1376 cal · 89g P · 84g C · 77g F
+- Calories over 900 per serving (1376) — verify crew portions
 
 ### meatloaf-mashed (golden_100)
 - **Meatloaf and Mashed Potatoes** · 8 base servings
@@ -491,7 +474,20 @@ _…and 98 more._
 - Calories over 900 per serving (1310) — verify crew portions
 - Protein 67g outside Breakfast target (20–45g)
 
-_…and 113 more in JSON._
+### parm-hero-subs (golden_100)
+- **Parm Hero Subs** · 8 base servings
+- Stored: 1400 cal · 93g P · 106g C · 65g F
+- Recommended: 1400 cal · 93g P · 106g C · 65g F
+- Calories over 900 per serving (1400) — verify crew portions
+- Stored macros match batch÷10 crew better than batch÷8 base servings
+
+### pepperoni-pizza-night (golden_100)
+- **Pepperoni Pizza** · 8 base servings
+- Stored: 1400 cal · 67g P · 83g C · 88g F
+- Recommended: 1400 cal · 67g P · 83g C · 88g F
+- Calories over 900 per serving (1400) — verify crew portions
+
+_…and 114 more in JSON._
 
 ## Validation rules applied
 

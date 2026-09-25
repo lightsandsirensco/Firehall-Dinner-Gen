@@ -115,6 +115,18 @@
     <priority>0.55</priority>
   </url>
   <url>
+    <loc>https://www.firehallmeals.com/privacy</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://www.firehallmeals.com/terms</loc>
+    <lastmod>2026-07-29</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  <url>
     <loc>https://www.firehallmeals.com/firefighter-meals</loc>
     <lastmod>2026-07-29</lastmod>
     <changefreq>weekly</changefreq>

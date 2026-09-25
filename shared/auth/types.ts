@@ -29,6 +29,8 @@ export interface UserPreferences {
   preferred_proteins: string[];
   dietary_restrictions: string[];
   appliance_preferences: string[];
+  /** Firehall Meals Pro — "Foods to Avoid" personal ingredient preferences (canonical keys only). */
+  excluded_ingredients: string[];
   shift_reminders_enabled: boolean;
   shift_days: number[];
   shift_reminder_time: string;

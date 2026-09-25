@@ -60,6 +60,24 @@ export default function AdminBillingPage() {
     }
   };
 
+  const toggleGlobalFlag = async (flagKey: string, enabled: boolean) => {
+    setBusy(true);
+    try {
+      const res = await adminFetch(`/api/admin/billing/flags/${encodeURIComponent(flagKey)}`, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ enabled }),
+      });
+      if (!res.ok) throw new Error("Toggle failed");
+      const body = await res.json();
+      setData(body.dashboard);
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Toggle failed");
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const grantUserPlan = async () => {
     if (!userId.trim()) return;
     setBusy(true);
@@ -155,17 +173,28 @@ export default function AdminBillingPage() {
               </div>
             </section>
 
-            <section className="rounded-xl border border-border/40 p-4">
-              <h2 className="font-medium mb-2">Global flags</h2>
-              <ul className="text-sm space-y-1 text-muted-foreground">
-                {data.global_flags.map((f) => (
-                  <li key={f.flag_key}>
-                    <span className="font-mono text-xs">{f.flag_key}</span>:{" "}
-                    {f.enabled ? "on" : "off"}
-                    {f.description ? ` — ${f.description}` : ""}
-                  </li>
-                ))}
-              </ul>
+            <section className="rounded-xl border border-border/40 p-4 space-y-3">
+              <h2 className="font-medium">Global flags</h2>
+              <p className="text-xs text-muted-foreground">
+                <code className="font-mono">payments_enabled</code> is the real-money kill switch —
+                flip it on only after STRIPE_SECRET_KEY / STRIPE_WEBHOOK_SECRET / STRIPE_PRICE_ID_*
+                are set and verified in test mode.
+              </p>
+              {data.global_flags.map((f) => (
+                <div key={f.flag_key} className="flex items-center justify-between gap-4 py-2 border-b border-border/20 last:border-0">
+                  <div>
+                    <p className="font-mono text-xs">{f.flag_key}</p>
+                    {f.description ? (
+                      <p className="text-xs text-muted-foreground">{f.description}</p>
+                    ) : null}
+                  </div>
+                  <Switch
+                    checked={f.enabled}
+                    disabled={busy}
+                    onCheckedChange={(v) => void toggleGlobalFlag(f.flag_key, v)}
+                  />
+                </div>
+              ))}
             </section>
           </>
         )}

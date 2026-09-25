@@ -2,7 +2,7 @@
  * Cornerstone blog content — shareable hall culture guides at /blog/{slug}.
  */
 
-import { buildSeoGuide, meal, STANDARD_FAQS } from "./seo-article-build.js";
+import { buildSeoGuide, meal } from "./seo-article-build.js";
 
 export const CORNERSTONE_BLOG_ARTICLES = [
   buildSeoGuide({
@@ -107,11 +107,10 @@ export const CORNERSTONE_BLOG_ARTICLES = [
           "Each recipe scales — open the page, set your crew size, and follow the portions. Line meals like tacos and sandwiches stretch easiest when eaters trickle in.",
       },
       {
-        question: "Where do these recipes come from?",
+        question: "How do you decide which of these ten to cook tonight?",
         answer:
-          "Fire Hall Tested. Firefighter Approved. Every recipe on Firehall Meals is based on meals that regularly make their way onto fire station tables. We've adapted them into crew-sized recipes with practical instructions, realistic timing, and portions that work whether you're feeding 4 or 14 firefighters.",
+          "Match it to the board. Jerk chicken and steak tacos need someone at the grill or flat-top the whole time, while firehall chili and BBQ chicken mac and cheese hold on their own if a call pulls you away. Save the two-cook meals for a quieter night.",
       },
-      STANDARD_FAQS.generator,
     ],
     relatedArticleSlugs: [
       "legendary-firehall-meals",
@@ -193,9 +192,9 @@ export const CORNERSTONE_BLOG_ARTICLES = [
     ],
     faqs: [
       {
-        question: "How much food do I need for a typical firehall dinner?",
+        question: "How do you avoid coming up short on a typical firehall dinner?",
         answer:
-          "Start with one pound of raw protein per three to four eaters for mixed plates, closer to one pound per three for burgers and sandwiches. Starches are cheap insurance — extra rice, bread, or tortillas fix hungry crews without a second main.",
+          "Round up on protein rather than portioning exactly, and lean on cheap starches as backup — extra rice, bread, or tortillas fill in fast if the main runs short. It's easier to have a little extra chicken or beef left over than to come up short with people still in line.",
       },
       {
         question: "What meals hold up best if tones drop during dinner?",
@@ -207,7 +206,11 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         answer:
           "No — volunteer and combination halls run the same formats with smaller pots. Scale down the batch, keep the format. A taco line for six beats a fragile plated dinner for six.",
       },
-      STANDARD_FAQS.catalog,
+      {
+        question: "What's the easiest meal on this list for a first-time hall cook?",
+        answer:
+          "One-pot chicken and rice or a taco bar — both forgive imprecise timing and scale by adding more to the pot or line. Save the flat-top cheesesteaks and smash burgers for once you're comfortable managing multiple things on high heat at the same time.",
+      },
     ],
     relatedArticleSlugs: [
       "10-classic-firehall-meals",
@@ -330,7 +333,11 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         answer:
           "Yes — even a simple line beats running empty until lunch. A fifteen-minute burrito assembly saves morale and keeps people from living on gas station pastries.",
       },
-      STANDARD_FAQS.catalog,
+      {
+        question: "What's the best hall breakfast when the crew is eating in waves?",
+        answer:
+          "A bake or a burrito bar — both hold warm and let people build a plate whenever they surface, whether that's 07:00 or 09:30 after apparatus checks. Made-to-order eggs only work if one cook can dedicate the whole morning to the stove.",
+      },
     ],
     relatedArticleSlugs: [
       "firehall-breakfast-and-brunch",

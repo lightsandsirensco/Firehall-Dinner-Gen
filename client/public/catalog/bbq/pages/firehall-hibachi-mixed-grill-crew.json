@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 1400,
-  "protein": 48,
-  "carbs": 127,
-  "fats": 76,
+  "calories": 1253,
+  "protein": 49,
+  "carbs": 55,
+  "fats": 90,
   "tags": [
     "protein:mixed",
     "format:teppan_mixed",
@@ -179,10 +179,10 @@
   "mealPrepNotes": "Prep proteins separately. Griddle pork belly first at 400°F to render, then shrimp at 450°F, veg last. Hold components covered at 170°F. Sauce at service.",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 48,
-    "carbs": 127,
-    "fats": 76,
+    "calories": 1253,
+    "protein": 49,
+    "carbs": 55,
+    "fats": 90,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -286,5 +286,9 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "mushrooms",
+    "onions"
+  ]
 }

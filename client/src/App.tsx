@@ -42,6 +42,8 @@ const ClassicsWheelPage = lazy(() => import("@/pages/classics-wheel"));
 const CuratedPackagePage = lazy(() => import("@/pages/curated-package"));
 const CatalogRecipePage = lazy(() => import("@/pages/catalog-recipe-page"));
 const AboutPage = lazy(() => import("@/pages/about"));
+const PrivacyPage = lazy(() => import("@/pages/privacy-page"));
+const TermsPage = lazy(() => import("@/pages/terms-page"));
 const HowWeTestRecipesPage = lazy(() => import("@/pages/how-we-test-recipes"));
 const FaqPage = lazy(() => import("@/pages/faq"));
 const RecipesIndexPage = lazy(() => import("@/pages/explore-browse-redirect"));
@@ -106,6 +108,8 @@ function AppRoutes() {
       <Route path="/generator" component={Generator} />
       <Route path="/faq" component={FaqPage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/privacy" component={PrivacyPage} />
+      <Route path="/terms" component={TermsPage} />
       <Route path="/pizza" component={PizzaNight} />
       <Route path="/explore/recipe/:id" component={ExplorePage} />
       <Route path="/explore" component={ExplorePage} />

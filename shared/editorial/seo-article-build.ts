@@ -32,6 +32,54 @@ function defaultPillar(topic: EditorialTopic): EditorialPillar {
   return "recipes_meals";
 }
 
+/**
+ * Guard rails against regressing to generic, product-promotional FAQ
+ * filler ("Where do these recipes come from?", "What if crew size or
+ * time changes tonight?", etc). These questions do not answer anything
+ * about the guide's actual subject — they explain the product instead.
+ * See GUIDE FAQ CONTENT AUDIT + REWRITE for the original cleanup.
+ *
+ * This runs on every guide at build time (buildSeoGuide /
+ * withGuidePublishingDefaults) so a future edit — human or generated —
+ * cannot silently reintroduce this pattern. If you hit this error while
+ * writing a new guide, write a question specific to that guide's topic
+ * instead of reaching for boilerplate.
+ */
+const BANNED_GENERIC_FAQ_QUESTION_PATTERNS: RegExp[] = [
+  /where do these recipes? (come from|links? go)/i,
+  /how do i find (more )?recipes/i,
+  /what if (my |our )?crew size (or time )?change/i,
+  /what if.*time changes tonight/i,
+  /how does firehall meals work/i,
+  /why should i use firehall meals/i,
+];
+
+const BANNED_FAQ_ANSWER_PHRASES: RegExp[] = [
+  /not home-blog scaling/i,
+  /curated,?\s*hall-tested catalog/i,
+  /designed specifically for firefighters/i,
+];
+
+function assertGuideSpecificFaqs(slug: string, faqs: EditorialFaq[]): void {
+  for (const faq of faqs) {
+    for (const pattern of BANNED_GENERIC_FAQ_QUESTION_PATTERNS) {
+      if (pattern.test(faq.question)) {
+        throw new Error(
+          `[guide-faq-guard] "${slug}" has a generic/product-promotional FAQ question: "${faq.question}". ` +
+            `Write a question that answers something about this guide's actual subject instead.`,
+        );
+      }
+    }
+    for (const pattern of BANNED_FAQ_ANSWER_PHRASES) {
+      if (pattern.test(faq.answer)) {
+        throw new Error(
+          `[guide-faq-guard] "${slug}" FAQ answer uses banned boilerplate phrasing: "${faq.answer}"`,
+        );
+      }
+    }
+  }
+}
+
 export function buildSeoGuide(input: {
   slug: string;
   title: string;
@@ -56,6 +104,7 @@ export function buildSeoGuide(input: {
     topic === "nutrition_performance" && !input.faqs.some((f) => /medical/i.test(f.question))
       ? [...input.faqs, STANDARD_FAQS.nutrition]
       : input.faqs;
+  assertGuideSpecificFaqs(input.slug, faqs);
 
   const base: EditorialArticle = {
     slug: input.slug,
@@ -90,6 +139,7 @@ export function withGuidePublishingDefaults(article: EditorialArticle): Editoria
     !article.faqs.some((f) => /medical/i.test(f.question))
       ? [...article.faqs, STANDARD_FAQS.nutrition]
       : article.faqs;
+  assertGuideSpecificFaqs(article.slug, faqs);
 
   return enrichGuideArticle({
     ...article,
@@ -100,17 +150,14 @@ export function withGuidePublishingDefaults(article: EditorialArticle): Editoria
   });
 }
 
+/**
+ * Standard FAQ fragments that are genuinely reusable — not guide-specific
+ * boilerplate. `nutrition` is a real disclaimer (this is not medical
+ * advice), appropriate to repeat verbatim across nutrition_performance
+ * guides. Do not add generic "how does this product work" entries here;
+ * every other FAQ must be written specifically for its guide.
+ */
 export const STANDARD_FAQS = {
-  catalog: {
-    question: "Where do these recipes come from?",
-    answer:
-      "Each link goes to a full recipe on Firehall Meals — crew-sized portions, station timing, and steps written for a shared kitchen. Not home-blog scaling.",
-  },
-  generator: {
-    question: "What if crew size or time changes tonight?",
-    answer:
-      "Use Find a Meal with your headcount and minutes available. Hall Match pulls from the same curated, hall-tested catalog these guides recommend.",
-  },
   nutrition: {
     question: "Is this medical advice?",
     answer:

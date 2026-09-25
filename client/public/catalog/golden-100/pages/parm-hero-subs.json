@@ -14,9 +14,9 @@
   "prepTime": 25,
   "difficulty": "medium",
   "calories": 1400,
-  "protein": 96,
-  "carbs": 84,
-  "fats": 75,
+  "protein": 93,
+  "carbs": 106,
+  "fats": 65,
   "tags": [
     "protein:chicken",
     "format:sandwich",
@@ -208,9 +208,9 @@
   "cleanupDifficulty": "medium",
   "nutrition": {
     "calories": 1400,
-    "protein": 96,
-    "carbs": 84,
-    "fats": 75,
+    "protein": 93,
+    "carbs": 106,
+    "fats": 65,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -328,5 +328,6 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": []
 }

@@ -109,6 +109,8 @@ export const breakfastRecipePageSchema = z.object({
   seoTitle: z.string().trim().max(80).optional(),
   collectionTier: breakfastCollectionTierSchema.optional(),
   dietary: recipeDietaryProfileSchema.optional(),
+  /** Precomputed "Foods to Avoid" preference keys — see shared/ingredient-preferences/. */
+  avoidTags: z.array(z.string()).optional(),
 });
 
 export type BreakfastRecipePage = z.infer<typeof breakfastRecipePageSchema>;
@@ -132,8 +134,15 @@ export const breakfastIndexEntrySchema = z.object({
       lowCarb: z.boolean(),
       healthy: z.boolean(),
       estimateAvailable: z.boolean(),
+      calories: z.number().min(0).optional(),
+      protein: z.number().min(0).optional(),
+      carbs: z.number().min(0).optional(),
+      fat: z.number().min(0).optional(),
+      numericFilterEligible: z.boolean().default(false),
     })
     .optional(),
+  /** Precomputed "Foods to Avoid" preference keys — see shared/ingredient-preferences/. */
+  avoidTags: z.array(z.string()).optional(),
 });
 export type BreakfastIndexEntry = z.infer<typeof breakfastIndexEntrySchema>;
 

@@ -36,7 +36,19 @@
         "handheld",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 435,
+        "protein": 41,
+        "carbs": 9,
+        "fat": 26,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "baked-falafel-hall-bowls",
@@ -70,6 +82,23 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 644,
+        "protein": 17,
+        "carbs": 89,
+        "fat": 26,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "tomatoes",
+        "beans"
       ]
     },
     {
@@ -103,6 +132,20 @@
         "bake",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 552,
+        "protein": 48,
+        "carbs": 26,
+        "fat": 27,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
       ]
     },
     {
@@ -137,6 +180,22 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 848,
+        "protein": 68,
+        "carbs": 55,
+        "fat": 43,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "tomatoes"
       ]
     },
     {
@@ -171,6 +230,20 @@
         "tacos",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 809,
+        "protein": 54,
+        "carbs": 55,
+        "fat": 42,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "avocado"
       ]
     },
     {
@@ -205,6 +278,20 @@
         "plated main",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 625,
+        "protein": 49,
+        "carbs": 38,
+        "fat": 30,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "spinach"
       ]
     },
     {
@@ -239,6 +326,24 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 863,
+        "protein": 76,
+        "carbs": 80,
+        "fat": 25,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "mayonnaise",
+        "tomatoes",
+        "bell_peppers",
+        "mustard"
       ]
     },
     {
@@ -273,6 +378,21 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 696,
+        "protein": 51,
+        "carbs": 64,
+        "fat": 24,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
       ]
     },
     {
@@ -306,6 +426,20 @@
         "bake",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 795,
+        "protein": 93,
+        "carbs": 7,
+        "fat": 42,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "tomatoes"
       ]
     },
     {
@@ -340,6 +474,22 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 574,
+        "protein": 61,
+        "carbs": 46,
+        "fat": 17,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "beans",
+        "corn"
       ]
     },
     {
@@ -374,6 +524,20 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 661,
+        "protein": 50,
+        "carbs": 43,
+        "fat": 31,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mushrooms"
       ]
     },
     {
@@ -407,6 +571,20 @@
         "tacos",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 711,
+        "protein": 54,
+        "carbs": 50,
+        "fat": 32,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "cilantro"
       ]
     },
     {
@@ -441,7 +619,19 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 791,
+        "protein": 42,
+        "carbs": 98,
+        "fat": 25,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "crispy-fish-taco-night",
@@ -475,7 +665,19 @@
         "tacos",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 880,
+        "protein": 61,
+        "carbs": 85,
+        "fat": 32,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "crock-barbacoa-chicken",
@@ -509,6 +711,21 @@
         "slow cooker",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 692,
+        "protein": 60,
+        "carbs": 32,
+        "fat": 34,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro"
       ]
     },
     {
@@ -544,6 +761,23 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 862,
+        "protein": 58,
+        "carbs": 79,
+        "fat": 36,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "olives",
+        "bell_peppers",
+        "beans"
       ]
     },
     {
@@ -578,7 +812,19 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 723,
+        "protein": 52,
+        "carbs": 62,
+        "fat": 27,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "general-tsos-baked-chicken",
@@ -612,6 +858,20 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 802,
+        "protein": 49,
+        "carbs": 76,
+        "fat": 32,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "broccoli"
       ]
     },
     {
@@ -647,6 +907,20 @@
         "bake",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 837,
+        "protein": 61,
+        "carbs": 62,
+        "fat": 40,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
       ]
     },
     {
@@ -681,7 +955,19 @@
         "roast",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 692,
+        "protein": 76,
+        "carbs": 44,
+        "fat": 22,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
@@ -715,6 +1001,22 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 857,
+        "protein": 60,
+        "carbs": 66,
+        "fat": 41,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes",
+        "feta"
       ]
     },
     {
@@ -749,6 +1051,21 @@
         "grill",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 658,
+        "protein": 47,
+        "carbs": 33,
+        "fat": 36,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "tomatoes",
+        "feta"
       ]
     },
     {
@@ -783,6 +1100,20 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 578,
+        "protein": 53,
+        "carbs": 10,
+        "fat": 35,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mustard"
       ]
     },
     {
@@ -818,7 +1149,19 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 940,
+        "protein": 61,
+        "carbs": 41,
+        "fat": 58,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "high-protein-chicken-fried-rice",
@@ -852,6 +1195,20 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 826,
+        "protein": 69,
+        "carbs": 83,
+        "fat": 22,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
       ]
     },
     {
@@ -886,6 +1243,20 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 811,
+        "protein": 55,
+        "carbs": 80,
+        "fat": 29,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "broccoli"
       ]
     },
     {
@@ -919,6 +1290,21 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 506,
+        "protein": 71,
+        "carbs": 21,
+        "fat": 14,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
       ]
     },
     {
@@ -952,6 +1338,22 @@
         "plated",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 716,
+        "protein": 85,
+        "carbs": 32,
+        "fat": 27,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "olives",
+        "tomatoes",
+        "beans"
       ]
     },
     {
@@ -986,6 +1388,22 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 675,
+        "protein": 33,
+        "carbs": 16,
+        "fat": 53,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes",
+        "bell_peppers"
       ]
     },
     {
@@ -1020,7 +1438,19 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 798,
+        "protein": 52,
+        "carbs": 69,
+        "fat": 36,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "kung-pao-chicken-rice-bowls",
@@ -1054,7 +1484,19 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 789,
+        "protein": 50,
+        "carbs": 66,
+        "fat": 35,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "lean-beef-broccoli-rice",
@@ -1088,6 +1530,20 @@
         "stir fry",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 875,
+        "protein": 55,
+        "carbs": 69,
+        "fat": 42,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "broccoli"
       ]
     },
     {
@@ -1122,6 +1578,22 @@
         "slow cooker",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 587,
+        "protein": 56,
+        "carbs": 54,
+        "fat": 16,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "beans"
       ]
     },
     {
@@ -1155,6 +1627,20 @@
         "soup",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 325,
+        "protein": 42,
+        "carbs": 22,
+        "fat": 6,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
       ]
     },
     {
@@ -1188,6 +1674,20 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 685,
+        "protein": 77,
+        "carbs": 42,
+        "fat": 23,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "broccoli"
       ]
     },
     {
@@ -1221,7 +1721,19 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 493,
+        "protein": 38,
+        "carbs": 3,
+        "fat": 35,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "lemon-salmon-orzo-skillet",
@@ -1255,6 +1767,20 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 867,
+        "protein": 60,
+        "carbs": 70,
+        "fat": 36,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "spinach"
       ]
     },
     {
@@ -1289,6 +1815,21 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 616,
+        "protein": 26,
+        "carbs": 112,
+        "fat": 8,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mushrooms",
+        "onions"
       ]
     },
     {
@@ -1322,6 +1863,20 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 573,
+        "protein": 52,
+        "carbs": 13,
+        "fat": 33,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "mustard"
       ]
     },
     {
@@ -1355,7 +1910,19 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 819,
+        "protein": 58,
+        "carbs": 67,
+        "fat": 34,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "mediterranean-baked-fish-tray",
@@ -1389,6 +1956,22 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 635,
+        "protein": 54,
+        "carbs": 10,
+        "fat": 40,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "olives",
+        "tomatoes"
       ]
     },
     {
@@ -1422,6 +2005,21 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 909,
+        "protein": 56,
+        "carbs": 71,
+        "fat": 47,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes"
       ]
     },
     {
@@ -1456,6 +2054,25 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 670,
+        "protein": 59,
+        "carbs": 28,
+        "fat": 35,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "olives",
+        "tomatoes",
+        "feta",
+        "beans",
+        "spinach"
       ]
     },
     {
@@ -1490,6 +2107,21 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 628,
+        "protein": 81,
+        "carbs": 33,
+        "fat": 18,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "beans"
       ]
     },
     {
@@ -1524,6 +2156,22 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 909,
+        "protein": 68,
+        "carbs": 63,
+        "fat": 45,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "feta",
+        "spinach"
       ]
     },
     {
@@ -1558,6 +2206,22 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 678,
+        "protein": 50,
+        "carbs": 28,
+        "fat": 39,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "cilantro",
+        "mayonnaise",
+        "jalapenos"
       ]
     },
     {
@@ -1592,6 +2256,20 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 463,
+        "protein": 73,
+        "carbs": 7,
+        "fat": 14,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "tomatoes"
       ]
     },
     {
@@ -1625,6 +2303,22 @@
         "slow cooker",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 560,
+        "protein": 58,
+        "carbs": 11,
+        "fat": 29,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "jalapenos"
       ]
     },
     {
@@ -1659,6 +2353,21 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 826,
+        "protein": 56,
+        "carbs": 66,
+        "fat": 35,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "tomatoes"
       ]
     },
     {
@@ -1693,6 +2402,21 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 485,
+        "protein": 72,
+        "carbs": 13,
+        "fat": 14,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
       ]
     },
     {
@@ -1727,6 +2451,21 @@
         "sheet pan",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 831,
+        "protein": 50,
+        "carbs": 54,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
       ]
     },
     {
@@ -1761,6 +2500,20 @@
         "soup",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 304,
+        "protein": 18,
+        "carbs": 43,
+        "fat": 8,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
       ]
     },
     {
@@ -1795,6 +2548,23 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 878,
+        "protein": 63,
+        "carbs": 63,
+        "fat": 46,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "avocado",
+        "beans",
+        "corn"
       ]
     },
     {
@@ -1829,6 +2599,21 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 834,
+        "protein": 71,
+        "carbs": 67,
+        "fat": 29,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
       ]
     },
     {
@@ -1862,6 +2647,20 @@
         "bowl",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 555,
+        "protein": 67,
+        "carbs": 33,
+        "fat": 17,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "tomatoes"
       ]
     },
     {
@@ -1895,6 +2694,21 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 850,
+        "protein": 60,
+        "carbs": 67,
+        "fat": 40,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "jalapenos",
+        "beans"
       ]
     },
     {
@@ -1929,6 +2743,21 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 717,
+        "protein": 77,
+        "carbs": 64,
+        "fat": 14,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "jalapenos"
       ]
     },
     {
@@ -1963,7 +2792,19 @@
         "handheld",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 407,
+        "protein": 42,
+        "carbs": 9,
+        "fat": 22,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "turkey-quinoa-stuffed-peppers",
@@ -1997,6 +2838,21 @@
         "bake",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 535,
+        "protein": 39,
+        "carbs": 41,
+        "fat": 23,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers"
       ]
     },
     {
@@ -2030,6 +2886,22 @@
         "breakfast",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 581,
+        "protein": 40,
+        "carbs": 6,
+        "fat": 44,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "spinach"
       ]
     },
     {
@@ -2064,6 +2936,21 @@
         "bake",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 556,
+        "protein": 43,
+        "carbs": 50,
+        "fat": 19,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "corn"
       ]
     },
     {
@@ -2097,6 +2984,22 @@
         "slow cooker",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 529,
+        "protein": 45,
+        "carbs": 57,
+        "fat": 13,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "beans"
       ]
     },
     {
@@ -2130,6 +3033,23 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 563,
+        "protein": 53,
+        "carbs": 32,
+        "fat": 24,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "beans",
+        "corn"
       ]
     },
     {
@@ -2163,6 +3083,20 @@
         "pasta",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 417,
+        "protein": 38,
+        "carbs": 16,
+        "fat": 22,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
       ]
     },
     {
@@ -2196,6 +3130,20 @@
         "skillet",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 722,
+        "protein": 55,
+        "carbs": 50,
+        "fat": 36,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
       ]
     },
     {
@@ -2230,6 +3178,23 @@
         "breakfast",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": true,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 386,
+        "protein": 27,
+        "carbs": 12,
+        "fat": 26,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "bell_peppers",
+        "feta",
+        "spinach"
       ]
     },
     {
@@ -2264,6 +3229,22 @@
         "one pot",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 756,
+        "protein": 52,
+        "carbs": 72,
+        "fat": 27,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "cilantro",
+        "jalapenos",
+        "coconut"
       ]
     },
     {
@@ -2297,6 +3278,22 @@
         "soup",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 535,
+        "protein": 59,
+        "carbs": 36,
+        "fat": 16,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "cilantro",
+        "beans"
       ]
     },
     {
@@ -2331,6 +3328,21 @@
         "soup",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 325,
+        "protein": 19,
+        "carbs": 40,
+        "fat": 11,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions",
+        "beans"
       ]
     },
     {
@@ -2365,7 +3377,19 @@
         "grill",
         "performance meal",
         "firefighter healthy"
-      ]
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 490,
+        "protein": 76,
+        "carbs": 5,
+        "fat": 17,
+        "numericFilterEligible": true
+      },
+      "avoidTags": []
     },
     {
       "slug": "zaatar-roasted-chicken-thighs",
@@ -2399,6 +3423,20 @@
         "roast",
         "performance meal",
         "firefighter healthy"
+      ],
+      "nutritionSummary": {
+        "highProtein": true,
+        "lowCarb": true,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 541,
+        "protein": 72,
+        "carbs": 11,
+        "fat": 22,
+        "numericFilterEligible": true
+      },
+      "avoidTags": [
+        "onions"
       ]
     }
   ]

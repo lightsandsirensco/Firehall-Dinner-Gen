@@ -11,9 +11,11 @@ import {
 } from "../client/src/lib/app-nav.ts";
 
 function main(): void {
+  // Hall is deliberately left out of the primary tab bar (private beta /
+  // coming soon) — see app-nav.ts. Routing to /hall still works below.
   assert.deepEqual(
     PRIMARY_TABS.map((t) => t.id),
-    ["tonight", "explore", "hall", "me"],
+    ["tonight", "explore", "me"],
   );
 
   assert.equal(resolveAppTab("/tonight"), "tonight");
@@ -42,6 +44,9 @@ function main(): void {
   assert.equal(shouldShowAppShell("/hall"), true);
   // The one true Home — the landing page — never shows app chrome.
   assert.equal(shouldShowAppShell("/"), false);
+  // Public legal pages render as plain marketing pages — no bottom tab bar.
+  assert.equal(shouldShowAppShell("/privacy"), false);
+  assert.equal(shouldShowAppShell("/terms"), false);
 
   console.log("[test-app-nav] OK");
 }

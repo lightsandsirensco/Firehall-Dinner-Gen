@@ -29,6 +29,14 @@ export default function FaqPage() {
               <dt className="font-heading text-lg text-foreground">{item.question}</dt>
               <dd className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {item.answer}
+                {item.link ? (
+                  <>
+                    {" "}
+                    <Link href={item.link.href} className="text-primary font-medium hover:underline">
+                      See {item.link.label} →
+                    </Link>
+                  </>
+                ) : null}
               </dd>
             </div>
           ))}

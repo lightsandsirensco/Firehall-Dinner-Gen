@@ -2,7 +2,7 @@
  * Firehall lifestyle & culture guides — how crews actually eat together.
  */
 
-import { buildSeoGuide, meal, STANDARD_FAQS } from "./seo-article-build.js";
+import { buildSeoGuide, meal } from "./seo-article-build.js";
 
 export const STATION_LIFESTYLE_ARTICLES = [
   buildSeoGuide({
@@ -42,7 +42,18 @@ export const STATION_LIFESTYLE_ARTICLES = [
       meal("sunday-chili-batch", "Sunday Batch Chili", "Batch cooking teaches timing and cleanup."),
       meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Forgiving format for new cooks."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "Who should be in charge of cooking at a fire station?",
+        answer:
+          "Rotate it — one person on cook, one on cleanup, one on groceries, and switch weekly. When everyone 'helps' with no single owner, dishes sit until morning and resentment builds fast.",
+      },
+      {
+        question: "How do you teach a rookie to cook for the crew without embarrassing them?",
+        answer:
+          "Pair them with a senior firefighter for their first few meals and pick a forgiving format like one-pot chicken and rice or a taco bar. Praise what goes well in front of the crew; save corrections for a one-on-one afterward.",
+      },
+    ],
     relatedArticleSlugs: ["better-station-food-culture", "how-crews-split-groceries"],
   }),
 
@@ -84,7 +95,18 @@ export const STATION_LIFESTYLE_ARTICLES = [
       meal("hall-taco-bar", "Hall Taco Bar Night", "Predictable cost per person."),
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Stretches ground beef with beans."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's the fairest way to split grocery costs at a fire station?",
+        answer:
+          "Divide the total by the number of eaters on duty that shift, not by seniority, and photo the receipt to the group chat right away. A dedicated hall card or shared payment app beats chasing people down after the fact.",
+      },
+      {
+        question: "Who should do the grocery shopping for the hall?",
+        answer:
+          "Rotate it. One person shopping every week burns out and starts cutting corners; spreading the job also catches price drift that one person might stop noticing.",
+      },
+    ],
     relatedArticleSlugs: ["firehall-grocery-planning", "avoid-living-on-takeout"],
   }),
 
@@ -126,7 +148,18 @@ export const STATION_LIFESTYLE_ARTICLES = [
       meal("chicken-parm", "Chicken Parm", "Italian night legend."),
       meal("smoked-brisket", "Kansas City Smoked Brisket", "When the hall has time and a pit."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What makes a firehall meal become a hall legend?",
+        answer:
+          "A big batch, strong flavor, enough for seconds, and a story attached — the chili after the big job, the rookie's first burnt burgers. It's rarely the fanciest dish; it's the one tied to a memorable night.",
+      },
+      {
+        question: "How do you keep a legendary recipe from disappearing when the cook transfers?",
+        answer:
+          "Write it down. 'Dave's chili' should still be cookable after Dave leaves — get the actual recipe on paper instead of relying on one person's memory.",
+      },
+    ],
     relatedArticleSlugs: ["meals-every-firefighter-knows", "bbq-night-at-the-station"],
   }),
 
@@ -168,7 +201,18 @@ export const STATION_LIFESTYLE_ARTICLES = [
       meal("hall-taco-bar", "Hall Taco Bar Night", "Line classic — self-serve tacos."),
       meal("chicken-parm", "Chicken Parm", "Table spread classic."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What meals does almost every fire station cook?",
+        answer:
+          "Chili, smash burgers, taco bar, chicken parm, pulled pork, and mac and cheese. If you can cook these six, you can feed most crews without relearning a new recipe every week.",
+      },
+      {
+        question: "Why do the same meals show up at almost every hall?",
+        answer:
+          "They scale, survive being held on the stove, and don't need fine-dining timing. They're also what someone suggests by default when the board asks 'what should we make?' and nobody wants to debate it.",
+      },
+    ],
     relatedArticleSlugs: ["meals-firefighters-actually-cook", "legendary-firehall-meals"],
   }),
 
@@ -210,7 +254,18 @@ export const STATION_LIFESTYLE_ARTICLES = [
       meal("hall-taco-bar", "Hall Taco Bar Night", "Hard to ruin the whole meal."),
       meal("sunday-chili-batch", "Sunday Batch Chili", "Teaches batch timing."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's the most common mistake a rookie makes cooking their first hall meal?",
+        answer:
+          "Trying too hard — a twelve-ingredient fusion dish on a busy night instead of something forgiving. Basics like crowded pans, undercooked chicken, and oversalted pasta water trip up rookies more than an ambitious menu does.",
+      },
+      {
+        question: "How do you recover from a bad meal in front of the whole crew?",
+        answer:
+          "Own it, clean up without complaint, and cook something simple and reliable next time — a one-pot chicken and rice or a taco bar. Cooking with a partner for the next few meals rebuilds trust faster than over-explaining what went wrong.",
+      },
+    ],
     relatedArticleSlugs: ["feeding-a-firehall-crew", "firehall-kitchen-culture"],
   }),
 
@@ -252,7 +307,18 @@ export const STATION_LIFESTYLE_ARTICLES = [
       meal("jambalaya", "Cajun Jambalaya for the Hall", "One pot — loud flavor."),
       meal("loaded-potato-feed", "Loaded Potato Feed", "Ten-plus friendly self-serve line."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "How do you avoid running short on protein when cooking for ten?",
+        answer:
+          "Round up rather than portioning exactly — it's cheaper to have a little extra chicken left over than to come up short with three people still in line. Use two half-sheet pans or two pots instead of one crowded pan, since crowding the pan is what usually causes uneven cooking, not the total amount of meat.",
+      },
+      {
+        question: "What's the easiest format for serving ten people at once?",
+        answer:
+          "A taco bar or potato bar — self-serve lines scale cleaner than ten plated entrées and let people build to their own appetite. Chili, lasagna, and jambalaya are close seconds since they hold well and self-portion from one pot or tray.",
+      },
+    ],
     relatedArticleSlugs: ["best-firehouse-meals-large-crews", "feeding-a-firehall-crew"],
   }),
 
@@ -294,7 +360,18 @@ export const STATION_LIFESTYLE_ARTICLES = [
       meal("garlic-butter-shrimp", "Garlic Butter Shrimp", "Minutes on heat — high flavor."),
       meal("fast-philly-skillet", "Fast Philly Cheesesteak Skillet", "Flat-top speed for busy nights."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's a good default dinner when you don't know how busy the shift will get?",
+        answer:
+          "Chili, quesadillas, or a sheet-pan meal — anything that holds on low if calls stack up. Pick dinner by 16:00 and keep a 30-minute fallback in the freezer so a bad-looking board never means no food.",
+      },
+      {
+        question: "How do you communicate dinner plans when the shift is unpredictable?",
+        answer:
+          "Post it on the whiteboard with a specific format and rough time — 'Chili, 18:30, line' — instead of 'food sometime.' Holding food on low beats reheating twelve individual plates after everyone gets back from a call.",
+      },
+    ],
     relatedArticleSlugs: ["quick-meals-between-calls", "best-firehall-meals-busy-nights"],
   }),
 
@@ -335,7 +412,18 @@ export const STATION_LIFESTYLE_ARTICLES = [
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Teaches batch cooperation."),
       meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "Shared cook night — low drama."),
     ],
-    faqs: [STANDARD_FAQS.catalog, STANDARD_FAQS.generator],
+    faqs: [
+      {
+        question: "What's the first thing to fix to improve a station's food culture?",
+        answer:
+          "Cleanup fairness. If the same one or two people are stuck doing dishes every time, cooking starts to feel like a punishment and people stop volunteering. Fix that before touching the grocery budget or the menu.",
+      },
+      {
+        question: "Does rotating cooks actually help, or does it just create inconsistent meals?",
+        answer:
+          "It helps more than it hurts. Weekly rotation prevents burnout and spreads the job fairly; stock a few pantry basics so whoever's cooking isn't starting from zero, and the inconsistency mostly disappears.",
+      },
+    ],
     relatedArticleSlugs: ["firehall-kitchen-culture", "how-crews-split-groceries"],
   }),
 ];

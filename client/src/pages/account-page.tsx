@@ -1,15 +1,17 @@
-import { useMemo } from "react";
-import { useLocation } from "wouter";
+import { useMemo, useState } from "react";
+import { Link, useLocation } from "wouter";
 import { Check, Cloud, Heart, LogOut, ShoppingCart, Smartphone, User, Users, Vote } from "lucide-react";
 import { MalteseCross } from "@/components/icons/maltese-cross";
 import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
 import { Button } from "@/components/ui/button";
 import { AccountProfileForm } from "@/components/auth/account-profile-form";
+import { DeleteAccountSection } from "@/components/auth/delete-account-section";
 import { SignInPanel } from "@/components/auth/sign-in-panel";
 import { HallPrivateBetaNotice } from "@/components/hall/hall-private-beta-notice";
 import { OnboardingBanner } from "@/components/onboarding/onboarding-banner";
 import { isOnboardingMode } from "@/lib/onboarding/state";
 import { useAuth } from "@/lib/auth/context";
+import { useBilling, useOpenBillingPortal } from "@/lib/billing/hooks";
 import { HALL_LINKED } from "@/lib/brand-copy";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
@@ -24,8 +26,11 @@ const GUEST_SIGN_IN_REASONS = [
 
 export default function AccountPage() {
   const { authenticated, loading, capabilities, logout } = useAuth();
+  const billing = useBilling();
+  const openBillingPortal = useOpenBillingPortal();
   const [, navigate] = useLocation();
   const onboardingMode = useMemo(() => isOnboardingMode(), []);
+  const [openingPortal, setOpeningPortal] = useState(false);
 
   return (
     <MeSubpageShell
@@ -102,11 +107,42 @@ export default function AccountPage() {
               <Button type="button" variant="outline" className="min-h-11 touch-manipulation" onClick={() => navigate("/plans")}>
                 View plans
               </Button>
+              {billing.manage_billing_available ? (
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="min-h-11 touch-manipulation"
+                  disabled={openingPortal}
+                  onClick={async () => {
+                    setOpeningPortal(true);
+                    const result = await openBillingPortal();
+                    if (!result.ok) setOpeningPortal(false);
+                  }}
+                >
+                  {openingPortal ? "Opening…" : "Manage billing"}
+                </Button>
+              ) : null}
               <Button type="button" variant="ghost" className="min-h-11 touch-manipulation" onClick={() => void logout()}>
                 <LogOut className="w-4 h-4 mr-2" />
                 Sign out
               </Button>
             </div>
+
+            <p className="text-xs text-muted-foreground/80">
+              <Link href="/privacy" className="hover:text-primary hover:underline underline-offset-4">
+                Privacy Policy
+              </Link>
+              {" · "}
+              <Link href="/terms" className="hover:text-primary hover:underline underline-offset-4">
+                Terms of Service
+              </Link>
+            </p>
+
+            {!onboardingMode && (
+              <div className="pt-2 border-t border-border/30">
+                <DeleteAccountSection />
+              </div>
+            )}
           </div>
         )}
     </MeSubpageShell>

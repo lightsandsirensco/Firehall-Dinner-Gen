@@ -137,10 +137,10 @@
     }
   ],
   "nutrition": {
-    "calories": 1100,
-    "protein": 62,
-    "carbs": 14,
-    "fat": 89,
+    "calories": 793,
+    "protein": 42,
+    "carbs": 15,
+    "fat": 63,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -274,5 +274,8 @@
       }
     ],
     "classifiedAt": "2026-07-30T18:40:52.075Z"
-  }
+  },
+  "avoidTags": [
+    "mustard"
+  ]
 }
