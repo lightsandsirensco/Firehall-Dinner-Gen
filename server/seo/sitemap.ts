@@ -71,6 +71,12 @@ const STATIC_PATHS: Array<{ path: string; changefreq: string; priority: string }
   { path: "/firefighter-red-lead-recipe", changefreq: "monthly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.5" },
   { path: "/how-we-test-recipes", changefreq: "monthly", priority: "0.55" },
+  // Real, fully SEO-configured public page (buildFamiliesSeo — title,
+  // description, canonicalPath, BreadcrumbList schema; also listed in
+  // /llms.txt's "Recipe collections") — it was simply never added to this
+  // static list, so it never reached the sitemap despite being indexable
+  // and unblocked by robots.txt/NOINDEX_PATH_PREFIXES.
+  { path: "/families", changefreq: "monthly", priority: "0.6" },
   { path: "/privacy", changefreq: "yearly", priority: "0.2" },
   { path: "/terms", changefreq: "yearly", priority: "0.2" },
   ...allSeoLandingPagePaths().map((path) => ({
@@ -317,6 +323,7 @@ export function buildSitemapXml(origin: string): string {
   }
 
   for (const { slug, generatedAt } of readSmoothieSlugs()) {
+    if (PHASE5_REMOVED_SLUGS.has(slug)) continue;
     addEntry({
       path: smoothieRecipePath(slug),
       lastmod: generatedAt,
@@ -325,7 +332,16 @@ export function buildSitemapXml(origin: string): string {
     });
   }
 
+  // Same `PHASE5_REMOVED_SLUGS` exclusion `readHallRecipeSlugs()` already
+  // applies to golden/performance/expansion/pizza — without it here too, a
+  // stale on-disk breakfast/BBQ catalog index entry for a slug that
+  // catalog-consolidation retired (confirmed: 4 breakfast slugs —
+  // "cowboy-breakfast-skillet", "german-potato-breakfast-skillet",
+  // "green-chile-breakfast-burritos", "red-lead-skillet" — never got purged
+  // from `catalog/breakfast/index.json`) would still be submitted to search
+  // engines as a live, indexable URL.
   for (const { slug, generatedAt } of readBreakfastSlugs()) {
+    if (PHASE5_REMOVED_SLUGS.has(slug)) continue;
     addEntry({
       path: approvedCatalogRecipePath(slug),
       lastmod: generatedAt,
@@ -335,6 +351,7 @@ export function buildSitemapXml(origin: string): string {
   }
 
   for (const { slug, generatedAt } of readBreakfastPerformanceSlugs()) {
+    if (PHASE5_REMOVED_SLUGS.has(slug)) continue;
     addEntry({
       path: approvedCatalogRecipePath(slug),
       lastmod: generatedAt,
@@ -344,6 +361,7 @@ export function buildSitemapXml(origin: string): string {
   }
 
   for (const { slug, generatedAt } of readBbqSlugs()) {
+    if (PHASE5_REMOVED_SLUGS.has(slug)) continue;
     addEntry({
       path: approvedCatalogRecipePath(slug),
       lastmod: generatedAt,

@@ -1,6 +1,6 @@
 # SEO Indexing Audit
 
-Generated: 2026-08-02T18:50:19.168Z
+Generated: 2026-09-25T23:32:22.391Z
 
 Canonical origin: **https://www.firehallmeals.com**
 
@@ -21,7 +21,7 @@ Canonical origin: **https://www.firehallmeals.com**
 
 | Metric | Count |
 |--------|------:|
-| **Total URLs in sitemap** | 514 |
+| **Total URLs in sitemap** | 513 |
 | **Total recipe URLs** (catalog indexes) | 365 |
 | Recipe URLs listed in sitemap | 365 |
 | **Total guide URLs** | 57 |
@@ -51,7 +51,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -65,7 +66,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -79,7 +81,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -93,7 +96,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -107,7 +111,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -121,7 +126,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -135,7 +141,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -149,7 +156,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -163,7 +171,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -177,7 +186,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -191,7 +201,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -205,7 +216,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
@@ -219,7 +231,8 @@ Disallow: /admin
 Disallow: /api/
 Disallow: /vote/
 Disallow: /me
-Disallow: /hall
+Disallow: /hall$
+Disallow: /hall/
 Disallow: /halls/
 Disallow: /settings
 Disallow: /profile

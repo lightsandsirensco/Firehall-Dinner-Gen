@@ -30,6 +30,7 @@ import {
 } from "../shared/seo/schema.js";
 import { buildRecipeHeroAlt } from "../shared/seo/recipe-image-seo.js";
 import { SEO_LANDING_PAGES } from "../shared/seo/landing-pages-data.js";
+import { PHASE5_REMOVED_SLUGS } from "../shared/catalog-consolidation/phase5-redirects.js";
 import type { GoldenRecipePage } from "../shared/golden-100/recipe-page-schema.js";
 import type { EditorialArticle } from "../shared/editorial/content-schema.js";
 import type { BreakfastRecipePage } from "../shared/breakfast-schema.js";
@@ -93,6 +94,13 @@ const STATIC_WHITELIST = new Set([
   "/guides/topic/firehall-dinners",
   "/guides/topic/firefighter-nutrition",
   "/guides/topic/station-cooking",
+  // Performance-breakfast hub — a real indexable page (see STATIC_PATHS in
+  // server/seo/sitemap.ts), just served from a distinct
+  // `/breakfast/performance` route rather than a catalog-index-backed one.
+  // Without this, every URL under it gets misclassified as an
+  // "orphan_sitemap_url" below (this whitelist only covers /recipes/,
+  // /breakfast/, /smoothies/ prefixed paths — see the filter below).
+  "/breakfast/performance",
 ]);
 
 function readJson<T>(file: string): T | null {
@@ -310,12 +318,28 @@ function collectIndexableRecipePaths(origin: string): Map<string, { slug: string
     ["expansion", path.join(PUBLIC, "catalog", "hall-expansion"), (s) => approvedCatalogRecipePath(s)],
     ["pizza", path.join(PUBLIC, "catalog", "pizza-night"), (s) => approvedCatalogRecipePath(s)],
     ["breakfast", path.join(PUBLIC, "catalog", "breakfast"), (s) => approvedCatalogRecipePath(s)],
+    // Performance breakfasts (e.g. "protein-pancake-tray") live in their own
+    // index (`/catalog/breakfast/performance/index.json`, resolving to
+    // `/breakfast/performance/:slug` via `approvedCatalogRecipePath`'s
+    // `isPerformanceBreakfastSlug` check) — the plain breakfast index above
+    // never contains them. Same `collection: "breakfast"` label as the
+    // plain breakfast catalog (their page JSON lives in the same
+    // `catalog/breakfast/pages/` directory), so every downstream lookup
+    // that switches on `collection` needs no separate case for this.
+    ["breakfast", path.join(PUBLIC, "catalog", "breakfast", "performance"), (s) => approvedCatalogRecipePath(s)],
     ["smoothie", path.join(PUBLIC, "catalog", "smoothies"), (s) => smoothieRecipePath(s)],
     ["bbq", path.join(PUBLIC, "catalog", "bbq"), (s) => approvedCatalogRecipePath(s)],
   ];
 
   for (const [collection, dir, pathFn] of catalogs) {
     for (const { slug } of catalogSlugs(dir)) {
+      // Slugs retired by catalog-consolidation ("phase5") in favor of a
+      // canonical replacement slug (see `PHASE5_REMOVED_SLUGS`) — the sitemap
+      // generator (server/seo/sitemap.ts) deliberately excludes these, so
+      // they must not be treated as "indexable" here either, or every one of
+      // them gets misreported as `recipe_missing_from_sitemap` below even
+      // though the sitemap is correctly omitting a retired URL.
+      if (PHASE5_REMOVED_SLUGS.has(slug)) continue;
       const p = pathFn(slug);
       if (!paths.has(p)) paths.set(p, { slug, collection });
     }
@@ -396,6 +420,7 @@ async function main(): Promise<void> {
   const performance = catalogSlugs(path.join(PUBLIC, "catalog", "performance-meals"));
   const expansion = catalogSlugs(path.join(PUBLIC, "catalog", "hall-expansion"));
   const breakfast = catalogSlugs(path.join(PUBLIC, "catalog", "breakfast"));
+  const breakfastPerformance = catalogSlugs(path.join(PUBLIC, "catalog", "breakfast", "performance"));
   const smoothies = catalogSlugs(path.join(PUBLIC, "catalog", "smoothies"));
   const pizza = catalogSlugs(path.join(PUBLIC, "catalog", "pizza-night"));
   const bbq = catalogSlugs(path.join(PUBLIC, "catalog", "bbq"));
@@ -663,7 +688,14 @@ async function main(): Promise<void> {
   const missingKeywordPages = TARGET_KEYWORDS.filter((kw) => keywordReport[kw].length === 0);
 
   const totalRecipes =
-    golden.length + performance.length + expansion.length + breakfast.length + smoothies.length + pizza.length + bbq.length;
+    golden.length +
+    performance.length +
+    expansion.length +
+    breakfast.length +
+    breakfastPerformance.length +
+    smoothies.length +
+    pizza.length +
+    bbq.length;
   const uniqueRecipeUrls = recipePaths.size;
 
   const report = {
@@ -682,6 +714,7 @@ async function main(): Promise<void> {
         hallExpansion: expansion.length,
         pizzaNight: pizza.length,
         breakfast: breakfast.length,
+        breakfastPerformance: breakfastPerformance.length,
         smoothies: smoothies.length,
         bbq: bbq.length,
         approvedCatalog: approved.recipeCount,
@@ -738,6 +771,7 @@ Generated: ${report.generatedAt}
 - Hall Expansion: ${expansion.length}
 - Pizza Night: ${pizza.length}
 - Breakfast: ${breakfast.length}
+- Breakfast Performance: ${breakfastPerformance.length}
 - Smoothies: ${smoothies.length}
 - BBQ: ${bbq.length}
 - Approved catalog: ${approved.recipeCount}

@@ -1,21 +1,21 @@
 # SEO Sitemap Audit Report
 
-Generated: 2026-07-30T13:04:10.026Z
+Generated: 2026-09-25T23:31:52.708Z
 
 ## Summary
 
 | Metric | Value |
 | --- | --- |
-| Total URLs audited | 515 |
+| Total URLs audited | 513 |
 | Invalid URLs removed | 0 |
-| Recipes found (unique URLs) | 419 |
+| Recipes found (unique URLs) | 415 |
 | Recipes missing from sitemap | 0 |
-| Articles found | 58 |
+| Articles found | 57 |
 | Articles missing from sitemap | 0 |
 | Canonical issues | 0 |
-| Structured data issues | 26 |
-| Image SEO issues | 52 |
-| Final sitemap URL count | 515 |
+| Structured data issues | 0 |
+| Image SEO issues | 0 |
+| Final sitemap URL count | 513 |
 | Robots status | PASS |
 | Overall | NEEDS WORK |
 
@@ -26,16 +26,17 @@ Generated: 2026-07-30T13:04:10.026Z
 - Hall Expansion: 115
 - Pizza Night: 20
 - Breakfast: 62
+- Breakfast Performance: 5
 - Smoothies: 10
 - BBQ: 45
-- Approved catalog: 355
+- Approved catalog: 392
 
 ## Keyword opportunities
 
 - **firefighter meals**: /, /firefighter-dinner-ideas, /firefighter-meals, /firehouse-meals, /healthy-firefighter-meals
-- **firefighter recipes**: /, /firefighter-bbq-recipes, /firefighter-recipes, /healthy-firefighter-meals
+- **firefighter recipes**: /, /firefighter-bbq-recipes, /firefighter-meals, /firefighter-recipes, /healthy-firefighter-meals
 - **firehall meals**: /, /crew-meals, /fire-station-meals, /firefighter-bbq-recipes, /firefighter-breakfast-recipes, /firefighter-dinner-ideas, /firefighter-meals, /firefighter-recipes, /firehouse-meals, /firehouse-recipes, /healthy-firefighter-meals
-- **firehouse meals**: /firehouse-meals
+- **firehouse meals**: /firefighter-meals, /firehouse-meals
 - **fire station meals**: /fire-station-meals, /firefighter-meals
 - **firefighter breakfast recipes**: /breakfast, /firefighter-breakfast-recipes, /guides/firefighter-breakfast-guide, /guides/firefighter-breakfast-ideas, /guides/firehall-breakfast-and-brunch
 - **firehall breakfast**: /breakfast, /firefighter-breakfast-recipes, /guides/firefighter-breakfast-guide, /guides/firefighter-breakfast-ideas, /guides/firehall-breakfast-and-brunch
@@ -47,47 +48,7 @@ Generated: 2026-07-30T13:04:10.026Z
 
 Missing dedicated pages for: meals for first responders, shift worker meals
 
-## Issues (82)
+## Issues (1)
 
-- [structured-data/recipe_schema_missing] beef-birria-with-consomme: Missing image
-- [images/missing_hero] beef-birria-with-consomme: Hero image file missing
-- [images/schema_image_missing] beef-birria-with-consomme: Recipe schema missing image
-- [structured-data/recipe_schema_missing] cajun-chicken-dirty-rice-bowls: Missing image
-- [images/missing_hero] cajun-chicken-dirty-rice-bowls: Hero image file missing
-- [images/schema_image_missing] cajun-chicken-dirty-rice-bowls: Recipe schema missing image
-- [structured-data/recipe_schema_missing] chicken-marsala-lightened: Missing image
-- [images/missing_hero] chicken-marsala-lightened: Hero image file missing
-- [images/schema_image_missing] chicken-marsala-lightened: Recipe schema missing image
-- [structured-data/recipe_schema_missing] cuban-beef-picadillo-bowls: Missing image
-- [images/missing_hero] cuban-beef-picadillo-bowls: Hero image file missing
-- [images/schema_image_missing] cuban-beef-picadillo-bowls: Recipe schema missing image
-- [structured-data/recipe_schema_missing] filipino-chicken-adobo: Missing image
-- [images/missing_hero] filipino-chicken-adobo: Hero image file missing
-- [images/schema_image_missing] filipino-chicken-adobo: Recipe schema missing image
-- [structured-data/recipe_schema_missing] general-tsos-baked-chicken: Missing image
-- [images/missing_hero] general-tsos-baked-chicken: Hero image file missing
-- [images/schema_image_missing] general-tsos-baked-chicken: Recipe schema missing image
-- [structured-data/recipe_schema_missing] greek-beef-keftedes-lemon-orzo-tzatziki: Missing image
-- [images/missing_hero] greek-beef-keftedes-lemon-orzo-tzatziki: Hero image file missing
-- [images/schema_image_missing] greek-beef-keftedes-lemon-orzo-tzatziki: Recipe schema missing image
-- [structured-data/recipe_schema_missing] greek-spiced-beef-burger-bowls-tzatziki-slaw: Missing image
-- [images/missing_hero] greek-spiced-beef-burger-bowls-tzatziki-slaw: Hero image file missing
-- [images/schema_image_missing] greek-spiced-beef-burger-bowls-tzatziki-slaw: Recipe schema missing image
-- [structured-data/recipe_schema_missing] herb-marinated-flank-steak-chimichurri-farro: Missing image
-- [images/missing_hero] herb-marinated-flank-steak-chimichurri-farro: Hero image file missing
-- [images/schema_image_missing] herb-marinated-flank-steak-chimichurri-farro: Recipe schema missing image
-- [structured-data/recipe_schema_missing] high-protein-chicken-fried-rice: Missing image
-- [images/missing_hero] high-protein-chicken-fried-rice: Hero image file missing
-- [images/schema_image_missing] high-protein-chicken-fried-rice: Recipe schema missing image
-- [structured-data/recipe_schema_missing] italian-sausage-veg-sheet-pan: Missing image
-- [images/missing_hero] italian-sausage-veg-sheet-pan: Hero image file missing
-- [images/schema_image_missing] italian-sausage-veg-sheet-pan: Recipe schema missing image
-- [structured-data/recipe_schema_missing] kung-pao-chicken-rice-bowls: Missing image
-- [images/missing_hero] kung-pao-chicken-rice-bowls: Hero image file missing
-- [images/schema_image_missing] kung-pao-chicken-rice-bowls: Recipe schema missing image
-- [structured-data/recipe_schema_missing] lean-beef-broccoli-rice: Missing image
-- [images/missing_hero] lean-beef-broccoli-rice: Hero image file missing
-- [images/schema_image_missing] lean-beef-broccoli-rice: Recipe schema missing image
-- [structured-data/recipe_schema_missing] lean-turkey-bean-chili: Missing image
+- [recipes/duplicate_title] firehall-greek-chicken-bowls: Duplicate title with greek-chicken-bowls
 
-… and 42 more (see JSON).

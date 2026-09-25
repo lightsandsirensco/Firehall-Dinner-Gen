@@ -1,13 +1,13 @@
 # 404 Audit â€” Firehall Meals
 
-Generated: 2026-08-02T19:06:42.987Z
+Generated: 2026-09-25T23:31:46.084Z
 
 ## Executive summary
 
 | Metric | Value |
 |--------|------:|
-| **Total URLs tested** | 561 |
-| **200 / OK (SPA route + data)** | 558 |
+| **Total URLs tested** | 560 |
+| **200 / OK (SPA route + data)** | 557 |
 | **301 / client redirects** | 3 |
 | **404 (dead routes / missing data)** | 0 |
 | **500 errors** | 0 (static audit; no server errors detected) |
@@ -15,7 +15,7 @@ Generated: 2026-08-02T19:06:42.987Z
 | **Broken internal links** | 0 |
 | **Broken recipe pages** | 0 |
 | **Broken images** | 0 |
-| **Sitemap URLs failing resolution** | 0 / 514 |
+| **Sitemap URLs failing resolution** | 0 / 513 |
 | **Orphan recipes** (no nav link + not in sitemap) | 0 |
 | **Recipes not linked from nav/footer scan** | 392 |
 | **Approved recipes missing from sitemap** | 0 |
@@ -26,7 +26,7 @@ Audit mode: **static route + filesystem** (matches SPA behavior: invalid slugs â
 
 ## Sitemap audit
 
-- URLs in sitemap: **514**
+- URLs in sitemap: **513**
 - Failing resolution: **0**
 - Recipes in catalog but missing from sitemap: **0**
 - Guides missing from sitemap: **0**
