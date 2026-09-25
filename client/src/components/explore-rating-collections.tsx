@@ -1,3 +1,4 @@
+import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import {
   crewRatingCollectionsKey,
@@ -7,6 +8,7 @@ import {
   approvedCatalogGridQueryKey,
   fetchApprovedCatalogGrid,
 } from "@/lib/approved-catalog-api";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { useIsMobile } from "@/hooks/use-mobile";
 import {
   RECIPE_CREW_RATING_BADGE_EMOJI,
@@ -96,17 +98,20 @@ export function ExploreRatingCollections({
             <ul className="flex gap-3 overflow-x-auto pb-1 snap-x snap-mandatory scrollbar-hide">
               {items.map((item) => (
                 <li key={item.recipeSlug} className="snap-start shrink-0 w-[200px] sm:w-[220px]">
-                  <button
-                    type="button"
-                    onClick={() => onRecipeClick(item.recipeSlug)}
-                    className="w-full rounded-2xl border border-border/25 bg-card/30 p-4 text-left hover:border-primary/30 transition-colors touch-manipulation min-h-11"
+                  <Link
+                    href={approvedCatalogRecipePath(item.recipeSlug)}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      onRecipeClick(item.recipeSlug);
+                    }}
+                    className="block w-full rounded-2xl border border-border/25 bg-card/30 p-4 text-left hover:border-primary/30 transition-colors touch-manipulation min-h-11"
                   >
                     <p className="text-sm font-semibold line-clamp-2">
                       {titleBySlug.get(item.recipeSlug) ??
                         item.recipeSlug.replace(/-/g, " ")}
                     </p>
                     <p className="mt-2 text-xs text-primary font-medium">{item.approvalLabel}</p>
-                  </button>
+                  </Link>
                 </li>
               ))}
             </ul>

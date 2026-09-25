@@ -63,6 +63,8 @@ import { PIZZA_NIGHT_COUNT, PIZZA_NIGHT_RECIPES } from "../../shared/pizza-night
 import { getSeoLandingPage, SEO_LANDING_PAGES } from "../../shared/seo/landing-pages-data.js";
 import { getProductSeoPage, PRODUCT_SEO_PAGES } from "../../shared/seo/product-pages-data.js";
 import { isPerformanceBreakfastSlug } from "../../shared/breakfast-catalog/governance-types.js";
+import { pickRelatedBreakfastEntries } from "../../shared/fuel-catalog/breakfast-related.js";
+import type { BreakfastIndexEntry } from "../../shared/breakfast-schema.js";
 import {
   readBreakfastRecipePageFromDisk,
   readBreakfastPerformanceIndexFromDisk,
@@ -136,38 +138,22 @@ function fullCatalogLinkSections(): IndexSnapshotSection[] {
     .map(([heading, links]) => ({ heading, links }));
 }
 
-interface BreakfastLinkableEntry {
-  slug: string;
-  title: string;
-  filters?: string[];
-}
-
 /** Breakfast recipes have no precomputed `relatedSlugs` (unlike the dinner
- * catalogs/smoothies), but the catalog index already carries a `filters`
- * taxonomy (e.g. "quick_breakfasts", "breakfast_sandwiches") used for the
- * real Explore/Breakfast filtering UI — reuse it to pick genuinely similar
- * recipes (highest shared-filter count) instead of a random/arbitrary set. */
+ * catalogs/smoothies) — `pickRelatedBreakfastEntries` (shared with the
+ * client's own "Related breakfasts" section, see `breakfast-recipe-page.tsx`)
+ * picks genuinely similar recipes by shared-filter overlap instead of a
+ * random/arbitrary set, so both surfaces render the same related set. */
 function computeRelatedBreakfastLinks(
   currentSlug: string,
-  allEntries: BreakfastLinkableEntry[],
+  allEntries: BreakfastIndexEntry[],
   count = 6,
 ): IndexSnapshotLink[] {
-  const current = allEntries.find((r) => r.slug === currentSlug);
-  const currentFilters = new Set(current?.filters ?? []);
-  return allEntries
-    .filter((r) => r.slug !== currentSlug)
-    .map((r) => ({
-      entry: r,
-      overlap: (r.filters ?? []).filter((f) => currentFilters.has(f)).length,
-    }))
-    .sort((a, b) => b.overlap - a.overlap || a.entry.slug.localeCompare(b.entry.slug))
-    .slice(0, count)
-    .map(({ entry }) => ({
-      label: entry.title,
-      path: isPerformanceBreakfastSlug(entry.slug)
-        ? `/breakfast/performance/${entry.slug}`
-        : `/breakfast/${entry.slug}`,
-    }));
+  return pickRelatedBreakfastEntries(currentSlug, allEntries, count).map((entry) => ({
+    label: entry.title,
+    path: isPerformanceBreakfastSlug(entry.slug)
+      ? `/breakfast/performance/${entry.slug}`
+      : `/breakfast/${entry.slug}`,
+  }));
 }
 
 function categoryLinkSection(): IndexSnapshotSection {
@@ -660,7 +646,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
     };
   }
 
-  function allBreakfastLinkableEntries(): BreakfastLinkableEntry[] {
+  function allBreakfastLinkableEntries(): BreakfastIndexEntry[] {
     const regular = readBreakfastCatalogIndexFromDisk()?.recipes ?? [];
     const performance = readBreakfastPerformanceIndexFromDisk()?.recipes ?? [];
     return [...regular, ...performance];

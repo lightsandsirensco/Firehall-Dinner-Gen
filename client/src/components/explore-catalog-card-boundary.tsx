@@ -1,6 +1,7 @@
 import { Component, type ReactNode } from "react";
+import { Link } from "wouter";
 import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
-import type { ApprovedCatalogGridEntry } from "@shared/approved-catalog";
+import { approvedCatalogRecipePath, type ApprovedCatalogGridEntry } from "@shared/approved-catalog";
 
 interface Props {
   entry: ApprovedCatalogGridEntry;
@@ -37,11 +38,13 @@ export class ExploreCatalogCardBoundary extends Component<Props, State> {
     if (this.state.hasError) {
       const { entry, onClick } = this.props;
       return (
-        <article
+        <Link
+          href={approvedCatalogRecipePath(entry.slug)}
           className="flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl bg-card/30 ring-1 ring-border/15"
-          onClick={onClick}
-          role="button"
-          tabIndex={0}
+          onClick={(e) => {
+            e.preventDefault();
+            onClick();
+          }}
           data-testid={`explore-catalog-card-fallback-${entry.slug}`}
         >
           <div className="relative aspect-[4/5] overflow-hidden bg-zinc-950">
@@ -51,7 +54,7 @@ export class ExploreCatalogCardBoundary extends Component<Props, State> {
             <h3 className="line-clamp-2 text-sm font-medium leading-snug">{entry.title}</h3>
             <p className="mt-auto text-xs text-muted-foreground">Tap to open recipe</p>
           </div>
-        </article>
+        </Link>
       );
     }
 

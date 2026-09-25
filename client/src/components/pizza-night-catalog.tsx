@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Clock, RefreshCw } from "lucide-react";
 import type { GoldenCatalogIndexEntry } from "@shared/golden-100/recipe-page-schema";
@@ -7,7 +8,11 @@ import { Button } from "@/components/ui/button";
 import { FoodImage } from "@/components/mobile/food-image";
 import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { RecipeGridSkeleton } from "@/components/mobile/loading-skeletons";
-import { fetchPizzaNightCatalog, pizzaNightCatalogQueryKey } from "@/lib/pizza-night-api";
+import {
+  fetchPizzaNightCatalog,
+  pizzaNightCatalogQueryKey,
+  pizzaNightRecipePath,
+} from "@/lib/pizza-night-api";
 
 function PizzaCatalogCard({
   entry,
@@ -21,20 +26,16 @@ function PizzaCatalogCard({
   const showImage = Boolean(imageSrc) && !imgFailed;
 
   return (
-    <article
+    <Link
+      href={pizzaNightRecipePath(entry.slug)}
       className={cn(
         "group flex h-full cursor-pointer flex-col overflow-hidden rounded-2xl bg-card/30 ring-1 ring-border/15",
         "transition-transform duration-150 ease-out touch-manipulation active:scale-[0.98]",
         "hover:ring-primary/25 hover:shadow-lg hover:shadow-black/10",
       )}
-      onClick={onClick}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onClick();
-        }
+      onClick={(e) => {
+        e.preventDefault();
+        onClick();
       }}
       data-testid={`pizza-night-card-${entry.slug}`}
     >
@@ -72,7 +73,7 @@ function PizzaCatalogCard({
           </span>
         </p>
       </div>
-    </article>
+    </Link>
   );
 }
 

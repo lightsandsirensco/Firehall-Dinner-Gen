@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Link } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { Flame } from "lucide-react";
 import {
@@ -7,6 +8,8 @@ import {
   playWheelSound,
   pickWeightedWheelClassic,
   recordWheelClassicSlug,
+  buildRecipeUrl,
+  buildExplorePackageUrl,
 } from "@/lib/firehall-classics-wheel";
 import {
   assertWheelClassicImage,
@@ -349,15 +352,23 @@ export function WheelReveal({
               </span>
             </div>
             <div className="grid grid-cols-1 gap-2.5">
-              <button
-                type="button"
-                onClick={onCook}
+              <Link
+                href={buildRecipeUrl(classic)}
+                onClick={(e) => {
+                  // Real `<a href>` — crawlable + supports ctrl/cmd/middle
+                  // click to open the recipe in a new tab. Existing side
+                  // effect (analytics) still runs on a plain click; wouter's
+                  // own navigate is skipped in that case since we've already
+                  // navigated via `onCook`.
+                  e.preventDefault();
+                  onCook();
+                }}
                 className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary text-primary-foreground font-heading tracking-wider uppercase text-sm py-3.5 px-4 min-h-[52px] hover:bg-primary/90 active:scale-[0.98] transition-all touch-manipulation"
                 data-testid="button-wheel-cook"
               >
                 <Flame className="w-4 h-4" />
                 Cook this one
-              </button>
+              </Link>
               <button
                 type="button"
                 onClick={onSpinAgain}
@@ -375,14 +386,17 @@ export function WheelReveal({
                 >
                   Share
                 </button>
-                <button
-                  type="button"
-                  onClick={onExplore}
+                <Link
+                  href={buildExplorePackageUrl(classic)}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    onExplore();
+                  }}
                   className="text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline min-h-8"
                   data-testid="button-wheel-explore"
                 >
                   Similar meals
-                </button>
+                </Link>
                 <button
                   type="button"
                   onClick={onTogglePin}

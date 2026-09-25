@@ -42,6 +42,23 @@ export function readPizzaNightRecipePage(slug: string): GoldenRecipePage | null 
   }
 }
 
+/** Read the generated Pizza Night catalog index straight from disk (same
+ * shape as the Golden/Performance/Hall Expansion indexes) — used to fold
+ * Pizza Night into the cross-catalog related-recipe link graph without
+ * touching the Explore-eligible `approved-catalog` build (Pizza Night stays
+ * off Explore/the dinner picker by design; only *internal-link discovery*
+ * needs it merged in). */
+export function readPizzaNightCatalogIndexFromDisk(): GoldenCatalogIndex | null {
+  const file = path.join(PIZZA_NIGHT_CATALOG_PUBLIC_DIR, "index.json");
+  if (!fs.existsSync(file)) return null;
+  try {
+    const raw = JSON.parse(fs.readFileSync(file, "utf8"));
+    return goldenCatalogIndexSchema.parse(raw);
+  } catch {
+    return null;
+  }
+}
+
 export function writePizzaNightCatalogIndex(pages: GoldenRecipePage[]): string {
   const entries: GoldenCatalogIndexEntry[] = pages.map((p) => ({
     slug: p.slug,

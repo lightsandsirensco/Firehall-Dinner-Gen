@@ -29,16 +29,27 @@ import type { EditorialMealPick } from "../../shared/editorial/content-schema.js
 import { absoluteImageUrl } from "../../shared/seo/urls.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
 import { escapeHtml } from "./apply-seo-tags.js";
+import { resolveKnownRecipeTitle } from "./recipe-title-lookup.js";
 
-/** "smoked-brisket" -> "Smoked Brisket" — used only as a crawlable link label
- * when a page links out to recipes by slug and no display title is loaded
- * synchronously (avoids a data-store dependency in this render path). */
+/** "smoked-brisket" -> "Smoked Brisket" — last-resort anchor text for a
+ * recipe slug that isn't in any known catalog (see `recipeLinkLabel` below,
+ * which is what every snapshot builder should actually call). */
 export function titleCaseFromSlug(slug: string): string {
   return slug
     .split("-")
     .filter(Boolean)
     .map((w) => (w.length ? w[0].toUpperCase() + w.slice(1) : w))
     .join(" ");
+}
+
+/** Real catalog title for `slug` when known, else a title-cased guess from
+ * the slug itself. Every snapshot builder below that links to a recipe by
+ * bare slug (no display title loaded synchronously) should use this instead
+ * of calling `titleCaseFromSlug` directly, so crawlable related-recipe
+ * anchor text matches the recipe's actual title rather than a slug-derived
+ * approximation. */
+export function recipeLinkLabel(slug: string): string {
+  return resolveKnownRecipeTitle(slug) ?? titleCaseFromSlug(slug);
 }
 
 const SNAPSHOT_STYLE = `
@@ -189,7 +200,7 @@ export function goldenRecipeSnapshot(page: GoldenRecipePage): RecipeSnapshotData
     // link graph. `approvedCatalogRecipePath` correctly routes cross-catalog
     // slugs (breakfast/smoothie/etc.) so this never produces a broken link.
     relatedLinks: (page.relatedSlugs ?? []).map((slug) => ({
-      label: titleCaseFromSlug(slug),
+      label: recipeLinkLabel(slug),
       path: approvedCatalogRecipePath(slug),
     })),
   };
@@ -236,7 +247,7 @@ export function fuelRecipeSnapshot(page: FuelRecipePage): RecipeSnapshotData {
       fat: page.nutrition.fats,
     },
     relatedLinks: (page.relatedSlugs ?? []).map((slug) => ({
-      label: titleCaseFromSlug(slug),
+      label: recipeLinkLabel(slug),
       path: approvedCatalogRecipePath(slug),
     })),
   };
@@ -546,7 +557,7 @@ export function seoLandingPageSnapshot(
     intro: section.intro,
     links: section.recipeSlugs
       .filter((slug) => knownRecipeSlugs.has(slug))
-      .map((slug) => ({ label: titleCaseFromSlug(slug), path: approvedCatalogRecipePath(slug) })),
+      .map((slug) => ({ label: recipeLinkLabel(slug), path: approvedCatalogRecipePath(slug) })),
     viewAll: section.viewAllPath
       ? { label: section.viewAllLabel ?? "View all", path: section.viewAllPath }
       : undefined,
@@ -572,7 +583,7 @@ export function seoLandingPageSnapshot(
             {
               heading: "Recipes in this collection",
               links: validSlugs.map((slug) => ({
-                label: titleCaseFromSlug(slug),
+                label: recipeLinkLabel(slug),
                 path: approvedCatalogRecipePath(slug),
               })),
             },
@@ -609,7 +620,7 @@ export function productSeoPageSnapshot(
       {
         heading: "Recipes",
         links: validSlugs.map((slug) => ({
-          label: titleCaseFromSlug(slug),
+          label: recipeLinkLabel(slug),
           path: approvedCatalogRecipePath(slug),
         })),
       },

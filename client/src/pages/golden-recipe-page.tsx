@@ -24,7 +24,7 @@ import { StartCookingButton } from "@/components/cook-mode/start-cooking-button"
 import { HallRecipeHistoryPanel } from "@/components/hall-history/hall-recipe-history-panel";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 
-import { fetchGoldenCatalogIndex, fetchGoldenRecipePage } from "@/lib/golden-recipe-api";
+import { fetchGoldenRecipePage, fetchRecipeLinkGraphCatalogIndex } from "@/lib/golden-recipe-api";
 import { buildRecipeLinkClusters } from "@shared/golden-100/internal-link-clusters";
 import { buildRecipeHeroAlt } from "@shared/seo/recipe-image-seo";
 import { RecipeInternalLinks } from "@/components/seo/recipe-internal-links";
@@ -487,9 +487,13 @@ export default function GoldenRecipePageView() {
 
   usePageSeo(seoConfig, seoJsonLd);
 
+  // Cross-catalog link graph (Golden + Performance + Hall Expansion + BBQ +
+  // Pizza Night) — see `fetchRecipeLinkGraphCatalogIndex` — so BBQ/Pizza
+  // recipe pages can find their own related-recipe clusters and every page
+  // can surface BBQ/Pizza recipes as related-link candidates.
   const { data: catalog } = useQuery({
-    queryKey: ["golden-catalog-index"],
-    queryFn: fetchGoldenCatalogIndex,
+    queryKey: ["recipe-link-graph-catalog-index"],
+    queryFn: fetchRecipeLinkGraphCatalogIndex,
     staleTime: Infinity,
   });
 

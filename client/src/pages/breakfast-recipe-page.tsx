@@ -2,11 +2,16 @@ import { useMemo, useState } from "react";
 import { Link, Redirect, useRoute } from "wouter";
 import { resolveCatalogSlug } from "@shared/catalog-slug-redirects";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
+import { pickRelatedBreakfastEntries } from "@shared/fuel-catalog/breakfast-related";
 import { useQuery } from "@tanstack/react-query";
 import { Sunrise, List } from "lucide-react";
 import { SiteHeader } from "@/components/site-header";
 import { getSavedCount } from "@/lib/saved-meals";
-import { fetchBreakfastRecipePage } from "@/lib/breakfast-api";
+import {
+  fetchBreakfastCatalogIndex,
+  fetchBreakfastPerformanceCatalogIndex,
+  fetchBreakfastRecipePage,
+} from "@/lib/breakfast-api";
 import { displayRecipeHeroSrc } from "@/lib/verified-recipe-hero";
 import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { FoodImage } from "@/components/mobile/food-image";
@@ -89,6 +94,29 @@ export default function BreakfastRecipePage() {
     enabled: Boolean(slug),
     staleTime: 10 * 60 * 1000,
   });
+
+  // Related breakfasts — same shared-filter-overlap logic as the server's
+  // pre-hydration snapshot (`pickRelatedBreakfastEntries`), against the
+  // combined regular + performance breakfast catalogs so a performance
+  // recipe can surface a regular one (and vice versa) when relevant.
+  const { data: breakfastCatalog } = useQuery({
+    queryKey: ["breakfast-catalog-index"],
+    queryFn: fetchBreakfastCatalogIndex,
+    staleTime: 5 * 60 * 1000,
+  });
+  const { data: breakfastPerformanceCatalog } = useQuery({
+    queryKey: ["breakfast-performance-catalog-index"],
+    queryFn: fetchBreakfastPerformanceCatalogIndex,
+    staleTime: 5 * 60 * 1000,
+  });
+  const relatedBreakfasts = useMemo(() => {
+    if (!slug) return [];
+    const all = [
+      ...(breakfastCatalog?.recipes ?? []),
+      ...(breakfastPerformanceCatalog?.recipes ?? []),
+    ];
+    return pickRelatedBreakfastEntries(slug, all, 6);
+  }, [slug, breakfastCatalog?.recipes, breakfastPerformanceCatalog?.recipes]);
 
   const seoConfig = useMemo(() => (page ? buildBreakfastRecipeSeo(page) : null), [page]);
   usePageSeo(
@@ -385,6 +413,45 @@ export default function BreakfastRecipePage() {
                 </ul>
               </section>
             </div>
+
+            {relatedBreakfasts.length > 0 && (
+              <section className="mt-10" aria-labelledby="related-breakfasts">
+                <h2 id="related-breakfasts" className="font-heading text-xl">
+                  More breakfasts like this
+                </h2>
+                <nav aria-label="Related breakfasts">
+                  <ul className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+                    {relatedBreakfasts.map((r) => (
+                      <li key={r.slug}>
+                        <Link
+                          href={
+                            isPerformanceBreakfastSlug(r.slug)
+                              ? breakfastPerformanceRecipePath(r.slug)
+                              : breakfastRecipePath(r.slug)
+                          }
+                          className="group block h-full rounded-2xl border border-border/20 bg-card/15 hover:bg-card/25 transition-colors overflow-hidden"
+                        >
+                          <div className="relative aspect-[4/5]">
+                            <FoodImage
+                              src={r.thumbImage || r.heroImage}
+                              alt={r.title}
+                              layout="card-fill"
+                              fit="cover"
+                              focal="food-plate"
+                              overlay="none"
+                              rounded="none"
+                            />
+                          </div>
+                          <p className="p-3 text-sm font-medium leading-snug line-clamp-2 group-hover:text-primary transition-colors">
+                            {r.title}
+                          </p>
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </nav>
+              </section>
+            )}
           </>
         )}
         {page && shoppingList && (

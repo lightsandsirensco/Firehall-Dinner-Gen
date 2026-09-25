@@ -21,7 +21,11 @@ import {
 } from "../hall-expansion/page-store.js";
 import { buildHallExpansionRecipePage } from "../hall-expansion/page-builder.js";
 import { getHallExpansionRecipeBySlug } from "../../shared/hall-expansion/adapted/index.js";
-import { loadMergedHallCatalogIndex, resolveHallRecipePage } from "../meal-catalog/load-index.js";
+import {
+  loadMergedHallCatalogIndex,
+  loadRecipeLinkGraphCatalogIndex,
+  resolveHallRecipePage,
+} from "../meal-catalog/load-index.js";
 import { readBreakfastRecipePageFromDisk } from "../breakfast-catalog/page-store.js";
 import {
   SMOOTHIE_CATALOG_PUBLIC_DIR,
@@ -35,6 +39,19 @@ export function registerCatalogRoutes(app: Express): void {
   app.get("/api/catalog/golden-100", async (_req: Request, res: Response) => {
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const merged = loadMergedHallCatalogIndex();
+    const recipes = sanitizeRecipeIndexEntries(merged.recipes);
+    return res.json({ ...merged, recipes });
+  });
+
+  // Cross-catalog related-recipe link graph (Golden + Performance + Hall
+  // Expansion + BBQ + Pizza Night) — used only by `/recipes/:slug` to
+  // compute related-recipe clusters. Kept separate from
+  // `/api/catalog/golden-100` (which feeds Home's featured meals and the
+  // approved-catalog build) so this fix can't change what's Explore-eligible
+  // or what Home features.
+  app.get("/api/catalog/recipe-link-graph", async (_req: Request, res: Response) => {
+    res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
+    const merged = loadRecipeLinkGraphCatalogIndex();
     const recipes = sanitizeRecipeIndexEntries(merged.recipes);
     return res.json({ ...merged, recipes });
   });

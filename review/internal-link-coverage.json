@@ -1,0 +1,3536 @@
+{
+  "generatedAt": "2026-09-25T22:00:16.486Z",
+  "target": "http://localhost:5051",
+  "elapsedMs": 3548,
+  "totals": {
+    "indexableRecipes": 432,
+    "withAnyInternalLink": 430,
+    "withRelatedRecipeLink": 316,
+    "orphans": 2,
+    "brokenRecipeLinks": 0,
+    "crawledUniqueUrls": 517
+  },
+  "byCatalog": {
+    "golden-100": {
+      "total": 104,
+      "withAnyLink": 104,
+      "withRelatedLink": 103,
+      "orphans": 0
+    },
+    "performance-meals": {
+      "total": 71,
+      "withAnyLink": 69,
+      "withRelatedLink": 46,
+      "orphans": 2
+    },
+    "hall-expansion": {
+      "total": 115,
+      "withAnyLink": 115,
+      "withRelatedLink": 78,
+      "orphans": 0
+    },
+    "bbq": {
+      "total": 45,
+      "withAnyLink": 45,
+      "withRelatedLink": 15,
+      "orphans": 0
+    },
+    "pizza-night": {
+      "total": 20,
+      "withAnyLink": 20,
+      "withRelatedLink": 20,
+      "orphans": 0
+    },
+    "breakfast": {
+      "total": 62,
+      "withAnyLink": 62,
+      "withRelatedLink": 43,
+      "orphans": 0
+    },
+    "breakfast-performance": {
+      "total": 5,
+      "withAnyLink": 5,
+      "withRelatedLink": 4,
+      "orphans": 0
+    },
+    "smoothies": {
+      "total": 10,
+      "withAnyLink": 10,
+      "withRelatedLink": 7,
+      "orphans": 0
+    }
+  },
+  "orphanedRecipes": [
+    {
+      "catalog": "performance-meals",
+      "slug": "italian-sausage-veg-sheet-pan",
+      "path": "/recipes/italian-sausage-veg-sheet-pan",
+      "status": "not-crawled"
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "veggie-egg-casserole-tray",
+      "path": "/recipes/veggie-egg-casserole-tray",
+      "status": "not-crawled"
+    }
+  ],
+  "brokenLinks": [],
+  "perRecipe": [
+    {
+      "catalog": "golden-100",
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "path": "/recipes/30-minute-pasta-e-fagioli-for-the-hall",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "baked-ziti",
+      "path": "/recipes/baked-ziti",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "batch-lasagna",
+      "path": "/recipes/batch-lasagna",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-brisket-burnt-ends",
+      "path": "/recipes/bbq-brisket-burnt-ends",
+      "status": 200,
+      "inboundAny": 18,
+      "inboundRelated": 16
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-bowls",
+      "path": "/recipes/bbq-chicken-bowls",
+      "status": 200,
+      "inboundAny": 21,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-mac-and-cheese",
+      "path": "/recipes/bbq-chicken-mac-and-cheese",
+      "status": 200,
+      "inboundAny": 13,
+      "inboundRelated": 10
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-pizza",
+      "path": "/recipes/bbq-chicken-pizza",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 12
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bbq-chicken-sliders",
+      "path": "/recipes/bbq-chicken-sliders",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-barley-soup",
+      "path": "/recipes/beef-barley-soup",
+      "status": 200,
+      "inboundAny": 23,
+      "inboundRelated": 15
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-broccoli",
+      "path": "/recipes/beef-broccoli",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-dip",
+      "path": "/recipes/beef-dip",
+      "status": 200,
+      "inboundAny": 16,
+      "inboundRelated": 9
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beef-stroganoff",
+      "path": "/recipes/beef-stroganoff",
+      "status": 200,
+      "inboundAny": 10,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "beer-can-chicken",
+      "path": "/recipes/beer-can-chicken",
+      "status": 200,
+      "inboundAny": 19,
+      "inboundRelated": 15
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "big-chili",
+      "path": "/recipes/big-chili",
+      "status": 200,
+      "inboundAny": 38,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "breakfast-burrito-bar",
+      "path": "/recipes/breakfast-burrito-bar",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "breakfast-sausage-pizza",
+      "path": "/recipes/breakfast-sausage-pizza",
+      "status": 200,
+      "inboundAny": 21,
+      "inboundRelated": 18
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "buffalo-chicken-dip",
+      "path": "/recipes/buffalo-chicken-dip",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "bulgogi-bowls",
+      "path": "/recipes/bulgogi-bowls",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "butter-chicken",
+      "path": "/recipes/butter-chicken",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "cedar-plank-salmon",
+      "path": "/recipes/cedar-plank-salmon",
+      "status": 200,
+      "inboundAny": 18,
+      "inboundRelated": 14
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-alfredo-bake",
+      "path": "/recipes/chicken-alfredo-bake",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-caesar",
+      "path": "/recipes/chicken-caesar",
+      "status": 200,
+      "inboundAny": 10,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-dumpling-soup",
+      "path": "/recipes/chicken-dumpling-soup",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 9
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-parm",
+      "path": "/recipes/chicken-parm",
+      "status": 200,
+      "inboundAny": 36,
+      "inboundRelated": 9
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-pot-pie",
+      "path": "/recipes/chicken-pot-pie",
+      "status": 200,
+      "inboundAny": 20,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-quesadillas",
+      "path": "/recipes/chicken-quesadillas",
+      "status": 200,
+      "inboundAny": 15,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-souvlaki",
+      "path": "/recipes/chicken-souvlaki",
+      "status": 200,
+      "inboundAny": 11,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-tikka-masala",
+      "path": "/recipes/chicken-tikka-masala",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chicken-tortilla-soup-for-the-hall",
+      "path": "/recipes/chicken-tortilla-soup-for-the-hall",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chili-mac",
+      "path": "/recipes/chili-mac",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "chorizo-breakfast-tacos",
+      "path": "/recipes/chorizo-breakfast-tacos",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "creamy-tuscan-chicken",
+      "path": "/recipes/creamy-tuscan-chicken",
+      "status": 200,
+      "inboundAny": 13,
+      "inboundRelated": 12
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "crispy-chicken-cutlets",
+      "path": "/recipes/crispy-chicken-cutlets",
+      "status": 200,
+      "inboundAny": 11,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "detroit-style-pizza",
+      "path": "/recipes/detroit-style-pizza",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 15
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "enchilada-casserole",
+      "path": "/recipes/enchilada-casserole",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "fast-philly-skillet",
+      "path": "/recipes/fast-philly-skillet",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "five-ingredient-pasta",
+      "path": "/recipes/five-ingredient-pasta",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "flank-chimichurri",
+      "path": "/recipes/flank-chimichurri",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "four-step-chicken-piccata",
+      "path": "/recipes/four-step-chicken-piccata",
+      "status": 200,
+      "inboundAny": 11,
+      "inboundRelated": 9
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "french-onion-soup-for-the-hall",
+      "path": "/recipes/french-onion-soup-for-the-hall",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "french-toast-casserole",
+      "path": "/recipes/french-toast-casserole",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "game-day-nachos",
+      "path": "/recipes/game-day-nachos",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "garlic-butter-shrimp",
+      "path": "/recipes/garlic-butter-shrimp",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "ginger-salmon-bowls",
+      "path": "/recipes/ginger-salmon-bowls",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "greek-chicken-bowls",
+      "path": "/recipes/greek-chicken-bowls",
+      "status": 200,
+      "inboundAny": 19,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "grilled-corn-cotija",
+      "path": "/recipes/grilled-corn-cotija",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "grilled-pork-chops",
+      "path": "/recipes/grilled-pork-chops",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "hall-taco-bar",
+      "path": "/recipes/hall-taco-bar",
+      "status": 200,
+      "inboundAny": 28,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "herb-roasted-thighs",
+      "path": "/recipes/herb-roasted-thighs",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "honey-garlic-pork-tenderloin",
+      "path": "/recipes/honey-garlic-pork-tenderloin",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "honey-soppressata-pizza",
+      "path": "/recipes/honey-soppressata-pizza",
+      "status": 200,
+      "inboundAny": 16,
+      "inboundRelated": 14
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "jambalaya",
+      "path": "/recipes/jambalaya",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "jerk-chicken",
+      "path": "/recipes/jerk-chicken",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "lemon-herb-salmon",
+      "path": "/recipes/lemon-herb-salmon",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-baked-potato-bar",
+      "path": "/recipes/loaded-baked-potato-bar",
+      "status": 200,
+      "inboundAny": 18,
+      "inboundRelated": 12
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-nacho-skillet",
+      "path": "/recipes/loaded-nacho-skillet",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "loaded-potato-feed",
+      "path": "/recipes/loaded-potato-feed",
+      "status": 200,
+      "inboundAny": 10,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "mac-and-cheese-bake",
+      "path": "/recipes/mac-and-cheese-bake",
+      "status": 200,
+      "inboundAny": 13,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "margherita-pizza",
+      "path": "/recipes/margherita-pizza",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meat-lovers-sheet-pizza",
+      "path": "/recipes/meat-lovers-sheet-pizza",
+      "status": 200,
+      "inboundAny": 10,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meatball-hoagies",
+      "path": "/recipes/meatball-hoagies",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 9
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "meatloaf-mashed",
+      "path": "/recipes/meatloaf-mashed",
+      "status": 200,
+      "inboundAny": 20,
+      "inboundRelated": 9
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "mediterranean-chickpea",
+      "path": "/recipes/mediterranean-chickpea",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "memphis-dry-rub-ribs",
+      "path": "/recipes/memphis-dry-rub-ribs",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "moroccan-meatballs",
+      "path": "/recipes/moroccan-meatballs",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "ny-strip-herb-butter",
+      "path": "/recipes/ny-strip-herb-butter",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "one-pot-chicken-rice",
+      "path": "/recipes/one-pot-chicken-rice",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pad-thai",
+      "path": "/recipes/pad-thai",
+      "status": 200,
+      "inboundAny": 13,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pancake-short-stack",
+      "path": "/recipes/pancake-short-stack",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "parm-hero-subs",
+      "path": "/recipes/parm-hero-subs",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pasta-e-ceci-for-the-hall",
+      "path": "/recipes/pasta-e-ceci-for-the-hall",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pepperoni-pizza-night",
+      "path": "/recipes/pepperoni-pizza-night",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "performance-burrito-bowls",
+      "path": "/recipes/performance-burrito-bowls",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "philly-cheesesteak-skillet",
+      "path": "/recipes/philly-cheesesteak-skillet",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 10
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "philly-egg-rolls",
+      "path": "/recipes/philly-egg-rolls",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pork-carnitas-tacos",
+      "path": "/recipes/pork-carnitas-tacos",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "pulled-pork",
+      "path": "/recipes/pulled-pork",
+      "status": 200,
+      "inboundAny": 31,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "red-beans-and-rice-for-the-hall",
+      "path": "/recipes/red-beans-and-rice-for-the-hall",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sausage-egg-bake",
+      "path": "/recipes/sausage-egg-bake",
+      "status": 200,
+      "inboundAny": 13,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sausage-peppers-onions",
+      "path": "/recipes/sausage-peppers-onions",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-fajitas",
+      "path": "/recipes/sheet-pan-fajitas",
+      "status": 200,
+      "inboundAny": 28,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-meal-prep",
+      "path": "/recipes/sheet-pan-meal-prep",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "path": "/recipes/sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "sheet-pan-sausage-peppers",
+      "path": "/recipes/sheet-pan-sausage-peppers",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "shepherds-pie",
+      "path": "/recipes/shepherds-pie",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "skillet-chicken-alfredo",
+      "path": "/recipes/skillet-chicken-alfredo",
+      "status": 200,
+      "inboundAny": 13,
+      "inboundRelated": 10
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "slider-bar",
+      "path": "/recipes/slider-bar",
+      "status": 200,
+      "inboundAny": 10,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "smash-burgers",
+      "path": "/recipes/smash-burgers",
+      "status": 200,
+      "inboundAny": 28,
+      "inboundRelated": 9
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "smoked-wings-white-sauce",
+      "path": "/recipes/smoked-wings-white-sauce",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "path": "/recipes/spaghetti-aglio-e-olio-for-the-hall",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "path": "/recipes/spicy-tomato-bisque-grilled-brie-toast",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "steak-sandwiches",
+      "path": "/recipes/steak-sandwiches",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "steak-tacos",
+      "path": "/recipes/steak-tacos",
+      "status": 200,
+      "inboundAny": 22,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "street-corn-chicken",
+      "path": "/recipes/street-corn-chicken",
+      "status": 200,
+      "inboundAny": 10,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "stuffed-peppers",
+      "path": "/recipes/stuffed-peppers",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "teriyaki-donburi",
+      "path": "/recipes/teriyaki-donburi",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "teriyaki-salmon-grill",
+      "path": "/recipes/teriyaki-salmon-grill",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "texas-beef-ribs",
+      "path": "/recipes/texas-beef-ribs",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "thai-basil-chicken",
+      "path": "/recipes/thai-basil-chicken",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "path": "/recipes/tomato-soup-grilled-cheese-croutons",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-burgers",
+      "path": "/recipes/turkey-burgers",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-chili",
+      "path": "/recipes/turkey-chili",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "turkey-meatball-zoodles",
+      "path": "/recipes/turkey-meatball-zoodles",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "golden-100",
+      "slug": "white-garlic-chicken-pizza",
+      "path": "/recipes/white-garlic-chicken-pizza",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "asian-chicken-lettuce-cups",
+      "path": "/recipes/asian-chicken-lettuce-cups",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "baked-falafel-hall-bowls",
+      "path": "/recipes/baked-falafel-hall-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "baked-turkey-meatball-marinara",
+      "path": "/recipes/baked-turkey-meatball-marinara",
+      "status": 200,
+      "inboundAny": 12,
+      "inboundRelated": 10
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "beef-birria-with-consomme",
+      "path": "/recipes/beef-birria-with-consomme",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "blackened-cod-taco-night",
+      "path": "/recipes/blackened-cod-taco-night",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "path": "/recipes/boneless-chicken-thighs-sweet-potato-spinach",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "path": "/recipes/cajun-chicken-dirty-rice-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "cajun-chicken-rice-bowl",
+      "path": "/recipes/cajun-chicken-rice-bowl",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "caprese-chicken-bake",
+      "path": "/recipes/caprese-chicken-bake",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "chicken-enchilada-skillet-light",
+      "path": "/recipes/chicken-enchilada-skillet-light",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "chicken-marsala-lightened",
+      "path": "/recipes/chicken-marsala-lightened",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "chipotle-lime-chicken-tacos",
+      "path": "/recipes/chipotle-lime-chicken-tacos",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "cottage-cheese-protein-pasta",
+      "path": "/recipes/cottage-cheese-protein-pasta",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "crispy-fish-taco-night",
+      "path": "/recipes/crispy-fish-taco-night",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "crock-barbacoa-chicken",
+      "path": "/recipes/crock-barbacoa-chicken",
+      "status": 200,
+      "inboundAny": 37,
+      "inboundRelated": 35
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "cuban-beef-picadillo-bowls",
+      "path": "/recipes/cuban-beef-picadillo-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "filipino-chicken-adobo",
+      "path": "/recipes/filipino-chicken-adobo",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "general-tsos-baked-chicken",
+      "path": "/recipes/general-tsos-baked-chicken",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "path": "/recipes/greek-beef-keftedes-lemon-orzo-tzatziki",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "greek-lemon-chicken-potatoes",
+      "path": "/recipes/greek-lemon-chicken-potatoes",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "path": "/recipes/greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "path": "/recipes/grilled-shrimp-quinoa-bowls",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "herb-baked-salmon-tray",
+      "path": "/recipes/herb-baked-salmon-tray",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 12
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "path": "/recipes/herb-marinated-flank-steak-chimichurri-farro",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "high-protein-chicken-fried-rice",
+      "path": "/recipes/high-protein-chicken-fried-rice",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "path": "/recipes/honey-garlic-chicken-rice-bowls",
+      "status": 200,
+      "inboundAny": 41,
+      "inboundRelated": 39
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "honey-lime-chicken-tray",
+      "path": "/recipes/honey-lime-chicken-tray",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "hummus-chicken-platter",
+      "path": "/recipes/hummus-chicken-platter",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "italian-sausage-veg-sheet-pan",
+      "path": "/recipes/italian-sausage-veg-sheet-pan",
+      "status": "not-crawled",
+      "inboundAny": 0,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "korean-beef-rice-bowls",
+      "path": "/recipes/korean-beef-rice-bowls",
+      "status": 200,
+      "inboundAny": 21,
+      "inboundRelated": 19
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "kung-pao-chicken-rice-bowls",
+      "path": "/recipes/kung-pao-chicken-rice-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lean-beef-broccoli-rice",
+      "path": "/recipes/lean-beef-broccoli-rice",
+      "status": 200,
+      "inboundAny": 11,
+      "inboundRelated": 11
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lean-turkey-bean-chili",
+      "path": "/recipes/lean-turkey-bean-chili",
+      "status": 200,
+      "inboundAny": 10,
+      "inboundRelated": 10
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-chicken-orzo-soup",
+      "path": "/recipes/lemon-chicken-orzo-soup",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-garlic-chicken-tray",
+      "path": "/recipes/lemon-garlic-chicken-tray",
+      "status": 200,
+      "inboundAny": 37,
+      "inboundRelated": 36
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-garlic-shrimp-pasta",
+      "path": "/recipes/lemon-garlic-shrimp-pasta",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lemon-salmon-orzo-skillet",
+      "path": "/recipes/lemon-salmon-orzo-skillet",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "lentil-mushroom-bolognese",
+      "path": "/recipes/lentil-mushroom-bolognese",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "maple-mustard-salmon-tray",
+      "path": "/recipes/maple-mustard-salmon-tray",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "maple-soy-salmon-bowls",
+      "path": "/recipes/maple-soy-salmon-bowls",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "mediterranean-baked-fish-tray",
+      "path": "/recipes/mediterranean-baked-fish-tray",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "mediterranean-beef-kofta-bowls",
+      "path": "/recipes/mediterranean-beef-kofta-bowls",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "path": "/recipes/mediterranean-chicken-white-bean-skillet",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "moroccan-chicken-chickpea-tray",
+      "path": "/recipes/moroccan-chicken-chickpea-tray",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "path": "/recipes/one-pot-beef-orzo-skillet-spinach-feta",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "path": "/recipes/peruvian-sheet-pan-chicken-aji-verde",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "pesto-tomato-chicken-tray",
+      "path": "/recipes/pesto-tomato-chicken-tray",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "salsa-verde-crock-chicken",
+      "path": "/recipes/salsa-verde-crock-chicken",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "shawarma-chicken-rice-bowls",
+      "path": "/recipes/shawarma-chicken-rice-bowls",
+      "status": 200,
+      "inboundAny": 26,
+      "inboundRelated": 25
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "path": "/recipes/sheet-pan-chicken-fajitas-lite",
+      "status": 200,
+      "inboundAny": 36,
+      "inboundRelated": 36
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "path": "/recipes/sheet-pan-chimichurri-chicken-charred-vegetables",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "smoky-lentil-kale-soup",
+      "path": "/recipes/smoky-lentil-kale-soup",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "path": "/recipes/southwest-beef-sweet-potato-skillet",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "spanish-chicken-chorizo-rice",
+      "path": "/recipes/spanish-chicken-chorizo-rice",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "tabbouleh-chicken-bowls",
+      "path": "/recipes/tabbouleh-chicken-bowls",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "thai-basil-ground-beef-skillet",
+      "path": "/recipes/thai-basil-ground-beef-skillet",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "path": "/recipes/trinidadian-curry-chicken-potatoes",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-lettuce-wrap-night",
+      "path": "/recipes/turkey-lettuce-wrap-night",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "path": "/recipes/turkey-quinoa-stuffed-peppers",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-sausage-egg-muffins",
+      "path": "/recipes/turkey-sausage-egg-muffins",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-shepherds-sweet-potato",
+      "path": "/recipes/turkey-shepherds-sweet-potato",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-sweet-potato-chili",
+      "path": "/recipes/turkey-sweet-potato-chili",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-taco-skillet",
+      "path": "/recipes/turkey-taco-skillet",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 12
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "turkey-zoodle-bolognese",
+      "path": "/recipes/turkey-zoodle-bolognese",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "path": "/recipes/unstuffed-cabbage-roll-skillet",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "veggie-egg-casserole-tray",
+      "path": "/recipes/veggie-egg-casserole-tray",
+      "status": "not-crawled",
+      "inboundAny": 0,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "path": "/recipes/vietnamese-caramel-braised-chicken-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "white-bean-chicken-chili",
+      "path": "/recipes/white-bean-chicken-chili",
+      "status": 200,
+      "inboundAny": 37,
+      "inboundRelated": 35
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "white-bean-kale-soup",
+      "path": "/recipes/white-bean-kale-soup",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "yogurt-marinated-grill-chicken",
+      "path": "/recipes/yogurt-marinated-grill-chicken",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "performance-meals",
+      "slug": "zaatar-roasted-chicken-thighs",
+      "path": "/recipes/zaatar-roasted-chicken-thighs",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "smoked-turkey-breast",
+      "path": "/recipes/smoked-turkey-breast",
+      "status": 200,
+      "inboundAny": 16,
+      "inboundRelated": 15
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "smoked-meatloaf",
+      "path": "/recipes/smoked-meatloaf",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "pork-belly-burnt-ends",
+      "path": "/recipes/pork-belly-burnt-ends",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "smoked-sausage-platter",
+      "path": "/recipes/smoked-sausage-platter",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "smoked-queso-fundido",
+      "path": "/recipes/smoked-queso-fundido",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "hickory-turkey-legs",
+      "path": "/recipes/hickory-turkey-legs",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "smoked-tri-tip",
+      "path": "/recipes/smoked-tri-tip",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "smoked-corned-beef",
+      "path": "/recipes/smoked-corned-beef",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "pellet-smoked-chicken-quarters",
+      "path": "/recipes/pellet-smoked-chicken-quarters",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "loaded-potato-skins",
+      "path": "/recipes/loaded-potato-skins",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "game-day-pizza-sliders",
+      "path": "/recipes/game-day-pizza-sliders",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "pretzel-bite-platter",
+      "path": "/recipes/pretzel-bite-platter",
+      "status": 200,
+      "inboundAny": 16,
+      "inboundRelated": 15
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "jalapeno-popper-dip",
+      "path": "/recipes/jalapeno-popper-dip",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "philly-cheesesteak-sliders",
+      "path": "/recipes/philly-cheesesteak-sliders",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "chicken-wing-bar-night",
+      "path": "/recipes/chicken-wing-bar-night",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "bbq-meatball-skewers",
+      "path": "/recipes/bbq-meatball-skewers",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "soft-pretzel-dogs",
+      "path": "/recipes/soft-pretzel-dogs",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "firehall-charcuterie-board",
+      "path": "/recipes/firehall-charcuterie-board",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "cheesy-beef-nacho-bake",
+      "path": "/recipes/cheesy-beef-nacho-bake",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "shawarma-bar-night",
+      "path": "/recipes/shawarma-bar-night",
+      "status": 200,
+      "inboundAny": 39,
+      "inboundRelated": 38
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "fajita-bar-night",
+      "path": "/recipes/fajita-bar-night",
+      "status": 200,
+      "inboundAny": 21,
+      "inboundRelated": 20
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "hall-burger-bar",
+      "path": "/recipes/hall-burger-bar",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "pasta-bar-night",
+      "path": "/recipes/pasta-bar-night",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "rice-bowl-bar-night",
+      "path": "/recipes/rice-bowl-bar-night",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "sandwich-board-night",
+      "path": "/recipes/sandwich-board-night",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "mediterranean-feast-night",
+      "path": "/recipes/mediterranean-feast-night",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "burrito-bowl-bar-night",
+      "path": "/recipes/burrito-bowl-bar-night",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "loaded-nacho-bar-night",
+      "path": "/recipes/loaded-nacho-bar-night",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "build-your-own-pho-bar",
+      "path": "/recipes/build-your-own-pho-bar",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "mesquite-chuck-roast",
+      "path": "/recipes/mesquite-chuck-roast",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "molasses-bourbon-pork-ribs",
+      "path": "/recipes/molasses-bourbon-pork-ribs",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "applewood-pork-shoulder-steaks",
+      "path": "/recipes/applewood-pork-shoulder-steaks",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "path": "/recipes/honey-mustard-oven-chicken-thighs",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "spatchcock-lemon-roast-chicken",
+      "path": "/recipes/spatchcock-lemon-roast-chicken",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "cajun-chicken-rice-skillet",
+      "path": "/recipes/cajun-chicken-rice-skillet",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "paprika-roasted-chicken-quarters",
+      "path": "/recipes/paprika-roasted-chicken-quarters",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "cast-iron-chicken-fajitas",
+      "path": "/recipes/cast-iron-chicken-fajitas",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "mushroom-swiss-steak-pan",
+      "path": "/recipes/mushroom-swiss-steak-pan",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "pepper-steak-onions",
+      "path": "/recipes/pepper-steak-onions",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "dutch-oven-pot-roast",
+      "path": "/recipes/dutch-oven-pot-roast",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "enchilada-beef-skillet",
+      "path": "/recipes/enchilada-beef-skillet",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "mostaccioli-sausage-bake",
+      "path": "/recipes/mostaccioli-sausage-bake",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "creamy-chicken-penne-alfredo",
+      "path": "/recipes/creamy-chicken-penne-alfredo",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "rigatoni-meat-sauce-batch",
+      "path": "/recipes/rigatoni-meat-sauce-batch",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "station-cobb-salad",
+      "path": "/recipes/station-cobb-salad",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "warm-spinach-chicken-salad",
+      "path": "/recipes/warm-spinach-chicken-salad",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "hall-chicken-noodle-soup",
+      "path": "/recipes/hall-chicken-noodle-soup",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "green-chile-chicken-stew",
+      "path": "/recipes/green-chile-chicken-stew",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "path": "/recipes/ginger-soy-chicken-rice-bowls",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 16
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "mediterranean-chicken-farro-bowls",
+      "path": "/recipes/mediterranean-chicken-farro-bowls",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 16
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "path": "/recipes/kielbasa-cabbage-potato-skillet",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "cheesy-chicken-broccoli-rice",
+      "path": "/recipes/cheesy-chicken-broccoli-rice",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "sheet-pan-meatball-marinara",
+      "path": "/recipes/sheet-pan-meatball-marinara",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "hall-sloppy-joe-feed",
+      "path": "/recipes/hall-sloppy-joe-feed",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "montreal-smoked-meat-platter",
+      "path": "/recipes/montreal-smoked-meat-platter",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "tourtiere-for-the-crew",
+      "path": "/recipes/tourtiere-for-the-crew",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "firehall-donair-platter",
+      "path": "/recipes/firehall-donair-platter",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "maple-cured-salmon-plank",
+      "path": "/recipes/maple-cured-salmon-plank",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "classic-poutine-feed-crew",
+      "path": "/recipes/classic-poutine-feed-crew",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "cottage-pie-for-the-crew",
+      "path": "/recipes/cottage-pie-for-the-crew",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "chicken-paprikash-hall",
+      "path": "/recipes/chicken-paprikash-hall",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "chicken-cacciatore-crew",
+      "path": "/recipes/chicken-cacciatore-crew",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "coq-au-vin-batch",
+      "path": "/recipes/coq-au-vin-batch",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "hungarian-goulash-crew",
+      "path": "/recipes/hungarian-goulash-crew",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "tonkotsu-ramen-crew",
+      "path": "/recipes/tonkotsu-ramen-crew",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 16
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "miso-ramen-bar",
+      "path": "/recipes/miso-ramen-bar",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 16
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "malaysian-laksa-soup",
+      "path": "/recipes/malaysian-laksa-soup",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "bun-bo-hue-noodle-soup",
+      "path": "/recipes/bun-bo-hue-noodle-soup",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "wonton-noodle-soup-crew",
+      "path": "/recipes/wonton-noodle-soup-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "peri-peri-chicken-platter",
+      "path": "/recipes/peri-peri-chicken-platter",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "korean-bulgogi-grill-night",
+      "path": "/recipes/korean-bulgogi-grill-night",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "lamb-kofta-skewer-platter",
+      "path": "/recipes/lamb-kofta-skewer-platter",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "moroccan-chicken-kebab-platter",
+      "path": "/recipes/moroccan-chicken-kebab-platter",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "lebanese-chicken-shish-platter",
+      "path": "/recipes/lebanese-chicken-shish-platter",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "classic-patty-melt-for-the-crew",
+      "path": "/recipes/classic-patty-melt-for-the-crew",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "best-tuna-melt-for-the-hall",
+      "path": "/recipes/best-tuna-melt-for-the-hall",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "hall-blt-sandwich-feed",
+      "path": "/recipes/hall-blt-sandwich-feed",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "buffalo-chicken-wraps",
+      "path": "/recipes/buffalo-chicken-wraps",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "greek-chicken-pitas",
+      "path": "/recipes/greek-chicken-pitas",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "beef-gyros-for-the-hall",
+      "path": "/recipes/beef-gyros-for-the-hall",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "chicken-shawarma-pitas",
+      "path": "/recipes/chicken-shawarma-pitas",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "sausage-peppers-on-buns",
+      "path": "/recipes/sausage-peppers-on-buns",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "firehall-taco-bowls",
+      "path": "/recipes/firehall-taco-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "path": "/recipes/buffalo-chicken-sweet-potato-bowls",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "firehall-greek-chicken-bowls",
+      "path": "/recipes/firehall-greek-chicken-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "teriyaki-chicken-rice-bowls",
+      "path": "/recipes/teriyaki-chicken-rice-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "firehall-korean-beef-bowls",
+      "path": "/recipes/firehall-korean-beef-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "cajun-shrimp-rice-bowls",
+      "path": "/recipes/cajun-shrimp-rice-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "southwest-steak-bowls",
+      "path": "/recipes/southwest-steak-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "bbq-pulled-pork-bowls",
+      "path": "/recipes/bbq-pulled-pork-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "mediterranean-beef-bowls",
+      "path": "/recipes/mediterranean-beef-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "chipotle-chicken-burrito-bowls",
+      "path": "/recipes/chipotle-chicken-burrito-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "turkey-taco-bowls",
+      "path": "/recipes/turkey-taco-bowls",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "peanut-chicken-rice-bowls",
+      "path": "/recipes/peanut-chicken-rice-bowls",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "firehall-gyro-bowls",
+      "path": "/recipes/firehall-gyro-bowls",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "egg-roll-in-a-bowl-crew",
+      "path": "/recipes/egg-roll-in-a-bowl-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "salmon-rice-bowls-crew",
+      "path": "/recipes/salmon-rice-bowls-crew",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "korean-turkey-rice-bowls",
+      "path": "/recipes/korean-turkey-rice-bowls",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "leftover-roast-beef-bowls",
+      "path": "/recipes/leftover-roast-beef-bowls",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "mississippi-pot-roast-crew",
+      "path": "/recipes/mississippi-pot-roast-crew",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "white-chicken-chili-crock",
+      "path": "/recipes/white-chicken-chili-crock",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "italian-beef-slow-cooker",
+      "path": "/recipes/italian-beef-slow-cooker",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "salsa-verde-chicken-crock",
+      "path": "/recipes/salsa-verde-chicken-crock",
+      "status": 200,
+      "inboundAny": 6,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "loaded-baked-potato-soup-crock",
+      "path": "/recipes/loaded-baked-potato-soup-crock",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "thai-peanut-chicken-crock",
+      "path": "/recipes/thai-peanut-chicken-crock",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "burnt-ends-chili-crew",
+      "path": "/recipes/burnt-ends-chili-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "smoker-nachos-crew",
+      "path": "/recipes/smoker-nachos-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "weeknight-bbq-ribs-crew",
+      "path": "/recipes/weeknight-bbq-ribs-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "grilled-flank-fajita-bar",
+      "path": "/recipes/grilled-flank-fajita-bar",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "costco-rotisserie-remix",
+      "path": "/recipes/costco-rotisserie-remix",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "chicken-thigh-stretch-dinner",
+      "path": "/recipes/chicken-thigh-stretch-dinner",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "pasta-e-fagioli-hall",
+      "path": "/recipes/pasta-e-fagioli-hall",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "dirty-rice-crew-skillet",
+      "path": "/recipes/dirty-rice-crew-skillet",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "sausage-gnocchi-skillet",
+      "path": "/recipes/sausage-gnocchi-skillet",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "hall-expansion",
+      "slug": "spanish-rice-chicken-one-pot",
+      "path": "/recipes/spanish-rice-chicken-one-pot",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "bbq",
+      "slug": "honey-chipotle-chicken-thighs",
+      "path": "/recipes/honey-chipotle-chicken-thighs",
+      "status": 200,
+      "inboundAny": 35,
+      "inboundRelated": 34
+    },
+    {
+      "catalog": "bbq",
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "path": "/recipes/smoked-chicken-quarters-white-sauce",
+      "status": 200,
+      "inboundAny": 35,
+      "inboundRelated": 34
+    },
+    {
+      "catalog": "bbq",
+      "slug": "brisket-style-beef-sandwiches-au-jus",
+      "path": "/recipes/brisket-style-beef-sandwiches-au-jus",
+      "status": 200,
+      "inboundAny": 34,
+      "inboundRelated": 33
+    },
+    {
+      "catalog": "bbq",
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "path": "/recipes/hot-honey-grilled-sausage-peppers",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "bbq",
+      "slug": "texas-central-brisket-crew",
+      "path": "/recipes/texas-central-brisket-crew",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "bbq",
+      "slug": "firehall-burnt-ends-platter",
+      "path": "/recipes/firehall-burnt-ends-platter",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "bbq",
+      "slug": "competition-bbq-chicken-thighs",
+      "path": "/recipes/competition-bbq-chicken-thighs",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "bbq",
+      "slug": "smoked-bbq-chicken-wings-tray",
+      "path": "/recipes/smoked-bbq-chicken-wings-tray",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "bbq",
+      "slug": "hickory-smoked-chicken-breast",
+      "path": "/recipes/hickory-smoked-chicken-breast",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "bbq",
+      "slug": "santa-maria-tri-tip-roast",
+      "path": "/recipes/santa-maria-tri-tip-roast",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "bbq",
+      "slug": "reverse-seared-ribeye-crew",
+      "path": "/recipes/reverse-seared-ribeye-crew",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "bbq",
+      "slug": "smoked-picanha-steak-platter",
+      "path": "/recipes/smoked-picanha-steak-platter",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "bbq",
+      "slug": "jalapeno-cheddar-smoked-sausages",
+      "path": "/recipes/jalapeno-cheddar-smoked-sausages",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "smoked-mac-and-cheese-crew",
+      "path": "/recipes/smoked-mac-and-cheese-crew",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "bbq",
+      "slug": "smoked-baked-beans-crew",
+      "path": "/recipes/smoked-baked-beans-crew",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "bbq",
+      "slug": "smoked-potato-salad-tray",
+      "path": "/recipes/smoked-potato-salad-tray",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "bbq",
+      "slug": "lamb-merguez-skewers-crew",
+      "path": "/recipes/lamb-merguez-skewers-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "pork-satay-skewers-crew",
+      "path": "/recipes/pork-satay-skewers-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "gochujang-beef-skewers-crew",
+      "path": "/recipes/gochujang-beef-skewers-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "caprese-steak-skewers-crew",
+      "path": "/recipes/caprese-steak-skewers-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "honey-sriracha-shrimp-skewers",
+      "path": "/recipes/honey-sriracha-shrimp-skewers",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "yakiniku-grill-platter-crew",
+      "path": "/recipes/yakiniku-grill-platter-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "tandoori-lamb-chop-platter",
+      "path": "/recipes/tandoori-lamb-chop-platter",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "portuguese-linguica-grill-platter",
+      "path": "/recipes/portuguese-linguica-grill-platter",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "spiedie-chicken-platter-crew",
+      "path": "/recipes/spiedie-chicken-platter-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "pollo-asado-citrus-platter",
+      "path": "/recipes/pollo-asado-citrus-platter",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "mixed-lamb-chop-grill-board",
+      "path": "/recipes/mixed-lamb-chop-grill-board",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "maple-bourbon-grilled-trout",
+      "path": "/recipes/maple-bourbon-grilled-trout",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "cajun-grilled-cod-crew",
+      "path": "/recipes/cajun-grilled-cod-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "grilled-cod-lemon-packets",
+      "path": "/recipes/grilled-cod-lemon-packets",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "chili-lime-grilled-tilapia",
+      "path": "/recipes/chili-lime-grilled-tilapia",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "path": "/recipes/grilled-chicken-pesto-panini-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "pressed-cuban-sandwiches-crew",
+      "path": "/recipes/pressed-cuban-sandwiches-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "grilled-reuben-sandwiches-crew",
+      "path": "/recipes/grilled-reuben-sandwiches-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "andouille-po-boy-rolls-crew",
+      "path": "/recipes/andouille-po-boy-rolls-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "path": "/recipes/cast-iron-steak-fajita-sizzlers",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "path": "/recipes/firehall-hibachi-mixed-grill-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "path": "/recipes/flat-top-philly-cheesesteaks-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "griddle-smash-sausage-peppers",
+      "path": "/recipes/griddle-smash-sausage-peppers",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "mongolian-beef-flat-top-crew",
+      "path": "/recipes/mongolian-beef-flat-top-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "firehall-street-elote-cups",
+      "path": "/recipes/firehall-street-elote-cups",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "loaded-ranch-potato-salad-crew",
+      "path": "/recipes/loaded-ranch-potato-salad-crew",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "firehall-antipasto-pasta-salad",
+      "path": "/recipes/firehall-antipasto-pasta-salad",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "grilled-peach-burrata-salad",
+      "path": "/recipes/grilled-peach-burrata-salad",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "bbq",
+      "slug": "charred-broccolini-lemon-tray",
+      "path": "/recipes/charred-broccolini-lemon-tray",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "bbq-chicken-pizza",
+      "path": "/recipes/bbq-chicken-pizza",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 12
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "breakfast-sausage-pizza",
+      "path": "/recipes/breakfast-sausage-pizza",
+      "status": 200,
+      "inboundAny": 21,
+      "inboundRelated": 18
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "buffalo-chicken-pizza",
+      "path": "/recipes/buffalo-chicken-pizza",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "pepperoni-pizza-night",
+      "path": "/recipes/pepperoni-pizza-night",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "detroit-style-pizza",
+      "path": "/recipes/detroit-style-pizza",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 15
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "firehall-supreme-pizza",
+      "path": "/recipes/firehall-supreme-pizza",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "four-cheese-white-pizza",
+      "path": "/recipes/four-cheese-white-pizza",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "margherita-pizza",
+      "path": "/recipes/margherita-pizza",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "hawaiian-pizza",
+      "path": "/recipes/hawaiian-pizza",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "honey-soppressata-pizza",
+      "path": "/recipes/honey-soppressata-pizza",
+      "status": 200,
+      "inboundAny": 16,
+      "inboundRelated": 14
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "jalapeno-popper-pizza",
+      "path": "/recipes/jalapeno-popper-pizza",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "meat-lovers-sheet-pizza",
+      "path": "/recipes/meat-lovers-sheet-pizza",
+      "status": 200,
+      "inboundAny": 10,
+      "inboundRelated": 8
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "nashville-hot-chicken-pizza",
+      "path": "/recipes/nashville-hot-chicken-pizza",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 4
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "pesto-chicken-pizza",
+      "path": "/recipes/pesto-chicken-pizza",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "philly-cheesesteak-pizza",
+      "path": "/recipes/philly-cheesesteak-pizza",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "sicilian-sheet-pizza",
+      "path": "/recipes/sicilian-sheet-pizza",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "smoked-brisket-bbq-pizza",
+      "path": "/recipes/smoked-brisket-bbq-pizza",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "taco-pizza",
+      "path": "/recipes/taco-pizza",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "veggie-supreme-pizza",
+      "path": "/recipes/veggie-supreme-pizza",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "pizza-night",
+      "slug": "white-garlic-chicken-pizza",
+      "path": "/recipes/white-garlic-chicken-pizza",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "bagel-lox-breakfast-board",
+      "path": "/breakfast/bagel-lox-breakfast-board",
+      "status": 200,
+      "inboundAny": 24,
+      "inboundRelated": 21
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "bagel-sandwich-line",
+      "path": "/breakfast/bagel-sandwich-line",
+      "status": 200,
+      "inboundAny": 23,
+      "inboundRelated": 21
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "baked-oatmeal-mixed-berries",
+      "path": "/breakfast/baked-oatmeal-mixed-berries",
+      "status": 200,
+      "inboundAny": 19,
+      "inboundRelated": 17
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "bbq-breakfast-hash",
+      "path": "/breakfast/bbq-breakfast-hash",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "belgian-waffle-platter",
+      "path": "/breakfast/belgian-waffle-platter",
+      "status": 200,
+      "inboundAny": 23,
+      "inboundRelated": 20
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "biscuit-french-toast-sliders",
+      "path": "/breakfast/biscuit-french-toast-sliders",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 15
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-crunchwraps",
+      "path": "/breakfast/breakfast-crunchwraps",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-enchiladas",
+      "path": "/breakfast/breakfast-enchiladas",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-fried-rice-crew",
+      "path": "/breakfast/breakfast-fried-rice-crew",
+      "status": 200,
+      "inboundAny": 21,
+      "inboundRelated": 19
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-nachos-supreme",
+      "path": "/breakfast/breakfast-nachos-supreme",
+      "status": 200,
+      "inboundAny": 17,
+      "inboundRelated": 15
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-poutine",
+      "path": "/breakfast/breakfast-poutine",
+      "status": 200,
+      "inboundAny": 23,
+      "inboundRelated": 21
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-quesadillas",
+      "path": "/breakfast/breakfast-quesadillas",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-sandwich-trays",
+      "path": "/breakfast/breakfast-sandwich-trays",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-sliders",
+      "path": "/breakfast/breakfast-sliders",
+      "status": 200,
+      "inboundAny": 11,
+      "inboundRelated": 9
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "breakfast-stromboli-roll",
+      "path": "/breakfast/breakfast-stromboli-roll",
+      "status": 200,
+      "inboundAny": 15,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "buttermilk-pancakes",
+      "path": "/breakfast/buttermilk-pancakes",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "cast-iron-breakfast-skillet",
+      "path": "/breakfast/cast-iron-breakfast-skillet",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "chicken-and-waffles-crew",
+      "path": "/breakfast/chicken-and-waffles-crew",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "chilaquiles-verde-bake",
+      "path": "/breakfast/chilaquiles-verde-bake",
+      "status": 200,
+      "inboundAny": 18,
+      "inboundRelated": 16
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "chorizo-breakfast-hash",
+      "path": "/breakfast/chorizo-breakfast-hash",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "club-sandwich-breakfast-bake",
+      "path": "/breakfast/club-sandwich-breakfast-bake",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "corned-beef-hash-breakfast",
+      "path": "/breakfast/corned-beef-hash-breakfast",
+      "status": 200,
+      "inboundAny": 16,
+      "inboundRelated": 14
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "country-fried-steak-eggs",
+      "path": "/breakfast/country-fried-steak-eggs",
+      "status": 200,
+      "inboundAny": 15,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "cowboy-breakfast-skillet",
+      "path": "/breakfast/cowboy-breakfast-skillet",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "crew-french-toast-bake",
+      "path": "/breakfast/crew-french-toast-bake",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "denver-breakfast-casserole",
+      "path": "/breakfast/denver-breakfast-casserole",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "eggs-benedict-hall-style",
+      "path": "/breakfast/eggs-benedict-hall-style",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "farmers-breakfast-casserole",
+      "path": "/breakfast/farmers-breakfast-casserole",
+      "status": 200,
+      "inboundAny": 15,
+      "inboundRelated": 13
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "fire-captain-omelette-bar",
+      "path": "/breakfast/fire-captain-omelette-bar",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "firehall-breakfast-pizza",
+      "path": "/breakfast/firehall-breakfast-pizza",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "german-potato-breakfast-skillet",
+      "path": "/breakfast/german-potato-breakfast-skillet",
+      "status": 200,
+      "inboundAny": 13,
+      "inboundRelated": 12
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "green-chile-breakfast-burritos",
+      "path": "/breakfast/green-chile-breakfast-burritos",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "hall-breakfast-burritos",
+      "path": "/breakfast/hall-breakfast-burritos",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "hall-breakfast-wraps",
+      "path": "/breakfast/hall-breakfast-wraps",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "hall-sausage-biscuits-gravy",
+      "path": "/breakfast/hall-sausage-biscuits-gravy",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "hash-brown-breakfast-casserole",
+      "path": "/breakfast/hash-brown-breakfast-casserole",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "huevos-rancheros-crew",
+      "path": "/breakfast/huevos-rancheros-crew",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "irish-breakfast-fry-up",
+      "path": "/breakfast/irish-breakfast-fry-up",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "johnnycakes-with-syrup",
+      "path": "/breakfast/johnnycakes-with-syrup",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "lumberjack-breakfast-platter",
+      "path": "/breakfast/lumberjack-breakfast-platter",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "maple-sausage-pinwheels",
+      "path": "/breakfast/maple-sausage-pinwheels",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "menemen-for-the-crew",
+      "path": "/breakfast/menemen-for-the-crew",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "migas-for-the-crew",
+      "path": "/breakfast/migas-for-the-crew",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "monte-cristo-sandwiches",
+      "path": "/breakfast/monte-cristo-sandwiches",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "overnight-french-toast-bake",
+      "path": "/breakfast/overnight-french-toast-bake",
+      "status": 200,
+      "inboundAny": 5,
+      "inboundRelated": 3
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "overnight-oat-bar-crew",
+      "path": "/breakfast/overnight-oat-bar-crew",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "overnight-sausage-strata",
+      "path": "/breakfast/overnight-sausage-strata",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "quick-egg-tacos",
+      "path": "/breakfast/quick-egg-tacos",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "red-lead-skillet",
+      "path": "/breakfast/red-lead-skillet",
+      "status": 200,
+      "inboundAny": 1,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "sausage-egg-cheese-sandwiches",
+      "path": "/breakfast/sausage-egg-cheese-sandwiches",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "scrapple-and-eggs-skillet",
+      "path": "/breakfast/scrapple-and-eggs-skillet",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "shakshuka-for-the-hall",
+      "path": "/breakfast/shakshuka-for-the-hall",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "sheet-pan-breakfast-hash",
+      "path": "/breakfast/sheet-pan-breakfast-hash",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "path": "/breakfast/sheet-pan-breakfast-sandwiches",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "sheet-pan-full-english",
+      "path": "/breakfast/sheet-pan-full-english",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "path": "/breakfast/sheet-pan-eggs-sausage-crew",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "shrimp-and-grits-breakfast",
+      "path": "/breakfast/shrimp-and-grits-breakfast",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "smoked-salmon-benedit",
+      "path": "/breakfast/smoked-salmon-benedit",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "southwest-egg-bake",
+      "path": "/breakfast/southwest-egg-bake",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "tater-tot-breakfast-casserole",
+      "path": "/breakfast/tater-tot-breakfast-casserole",
+      "status": 200,
+      "inboundAny": 8,
+      "inboundRelated": 6
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "turkey-sausage-burritos",
+      "path": "/breakfast/turkey-sausage-burritos",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast",
+      "slug": "veggie-egg-burritos",
+      "path": "/breakfast/veggie-egg-burritos",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "breakfast-performance",
+      "slug": "apple-cinnamon-baked-oatmeal",
+      "path": "/breakfast/performance/apple-cinnamon-baked-oatmeal",
+      "status": 200,
+      "inboundAny": 14,
+      "inboundRelated": 12
+    },
+    {
+      "catalog": "breakfast-performance",
+      "slug": "big-pot-savory-oats",
+      "path": "/breakfast/performance/big-pot-savory-oats",
+      "status": 200,
+      "inboundAny": 9,
+      "inboundRelated": 7
+    },
+    {
+      "catalog": "breakfast-performance",
+      "slug": "high-protein-parfaits",
+      "path": "/breakfast/performance/high-protein-parfaits",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "breakfast-performance",
+      "slug": "protein-french-toast",
+      "path": "/breakfast/performance/protein-french-toast",
+      "status": 200,
+      "inboundAny": 7,
+      "inboundRelated": 5
+    },
+    {
+      "catalog": "breakfast-performance",
+      "slug": "protein-pancake-tray",
+      "path": "/breakfast/performance/protein-pancake-tray",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "blueberry-almond",
+      "path": "/smoothies/blueberry-almond",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "chocolate-banana-recovery",
+      "path": "/smoothies/chocolate-banana-recovery",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "citrus-ginger",
+      "path": "/smoothies/citrus-ginger",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "green-pineapple",
+      "path": "/smoothies/green-pineapple",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "mixed-berry-protein",
+      "path": "/smoothies/mixed-berry-protein",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "mocha-protein",
+      "path": "/smoothies/mocha-protein",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "peanut-butter-banana-recovery",
+      "path": "/smoothies/peanut-butter-banana-recovery",
+      "status": 200,
+      "inboundAny": 4,
+      "inboundRelated": 2
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "strawberry-oat-breakfast",
+      "path": "/smoothies/strawberry-oat-breakfast",
+      "status": 200,
+      "inboundAny": 2,
+      "inboundRelated": 0
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "strawberry-spinach",
+      "path": "/smoothies/strawberry-spinach",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 1
+    },
+    {
+      "catalog": "smoothies",
+      "slug": "tropical-mango-greek",
+      "path": "/smoothies/tropical-mango-greek",
+      "status": 200,
+      "inboundAny": 3,
+      "inboundRelated": 1
+    }
+  ]
+}

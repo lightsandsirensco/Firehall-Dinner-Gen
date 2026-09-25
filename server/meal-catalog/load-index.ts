@@ -29,6 +29,8 @@ import { BBQ_CATALOG_RECIPES } from "../../shared/bbq-expansion/batch-25-bbq-rec
 import { readBbqRecipePageFromDisk } from "../bbq-catalog/page-store.js";
 import { buildBbqCatalogRecipePage } from "../bbq-catalog/page-builder.js";
 import { BBQ_CATALOG_SLUGS } from "../../shared/bbq-catalog/slug-registry.js";
+import { readBbqCatalogIndexFromDisk } from "../bbq-catalog/catalog.js";
+import { readPizzaNightCatalogIndexFromDisk } from "../pizza-night/page-store.js";
 
 function readCatalogIndexFile(dir: string): GoldenCatalogIndex | null {
   const indexFile = path.join(dir, "index.json");
@@ -75,6 +77,27 @@ export function loadMergedHallCatalogIndex(): GoldenCatalogIndex {
   // Breakfast meals must live in a separate file/catalog.
   const recipes = merged.recipes.filter((r) => !isBreakfastMeal(r));
   return { ...merged, recipeCount: recipes.length, recipes };
+}
+
+/**
+ * Merged catalog used ONLY for cross-catalog internal-link discovery
+ * (related-recipe clusters on `/recipes/:slug`) — extends
+ * `loadMergedHallCatalogIndex()` with BBQ and Pizza Night so those recipes
+ * (a) can find their own entry when computing their related-recipe clusters
+ * and (b) are eligible as related-link *candidates* on every other recipe's
+ * page. Deliberately kept separate from `loadMergedHallCatalogIndex()` —
+ * that function also feeds `buildAllApprovedCatalogEntries()` (the
+ * Explore/dinner-picker source of truth), and BBQ already has its own
+ * dedicated entry-building path there while Pizza Night is intentionally
+ * excluded from Explore/the dinner picker (its own `/pizza` hub, same as
+ * Breakfast). Merging here never changes Explore eligibility, badges, or
+ * any canonical URL — `mergeHallCatalogIndexes` is slug-keyed and the first
+ * catalog to claim a slug wins, so no duplicate identities are created. */
+export function loadRecipeLinkGraphCatalogIndex(): GoldenCatalogIndex {
+  const hall = loadMergedHallCatalogIndex();
+  const bbq = readBbqCatalogIndexFromDisk();
+  const pizza = readPizzaNightCatalogIndexFromDisk();
+  return mergeHallCatalogIndexes(hall, bbq, pizza);
 }
 
 /** Resolve a recipe page from Golden 100 or Performance Meals catalogs. */

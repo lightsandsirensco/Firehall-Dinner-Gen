@@ -1,5 +1,5 @@
 import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { useLocation } from "wouter";
+import { Link, useLocation } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Clock, Flame, SlidersHorizontal, AlertTriangle } from "lucide-react";
 import {
@@ -141,20 +141,21 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
   }, [entry.slug]);
 
   return (
-    <article
+    <Link
+      href={approvedCatalogRecipePath(entry.slug)}
       className={cn(
         "group flex h-full cursor-pointer flex-col overflow-hidden rounded-xl bg-card/30 ring-1 ring-border/15",
         "transition-transform duration-150 ease-out touch-manipulation active:scale-[0.98]",
         "md:rounded-2xl md:hover:ring-primary/25",
       )}
-      onClick={onClick}
-      role="button"
-      tabIndex={0}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          onClick();
-        }
+      onClick={(e) => {
+        // Real `<a href>` now owns navigation (crawlable + supports
+        // ctrl/cmd/middle-click to open in a new tab) — run the existing
+        // click side effect (analytics + `navigate()`, unchanged) once, then
+        // mark the event handled so wouter's own `Link` navigation doesn't
+        // also fire and double-push the same URL onto history.
+        e.preventDefault();
+        onClick();
       }}
       data-testid={`explore-catalog-card-${entry.slug}`}
       data-recipe-route={approvedCatalogRecipePath(entry.slug)}
@@ -200,7 +201,7 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
           </span>
         </p>
       </div>
-    </article>
+    </Link>
   );
 });
 
