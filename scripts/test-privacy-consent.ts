@@ -19,6 +19,7 @@ import {
   bindBillingDb,
   getUserSubscription,
   linkStripeCustomer,
+  markStripeSubscriptionCancelledBySubscriptionId,
   upsertStripeSubscription,
 } from "../server/billing/store.js";
 import {
@@ -63,9 +64,9 @@ const MIGRATIONS = [
   "043_email_marketing_consent.sql",
   "046_stripe_billing.sql",
   "047_user_meal_history.sql",
-  // GOOGLE SIGN-IN SAFETY -- upsertEmailUser()/deleteUserAccount() now also
+  // GOOGLE SIGN-IN SAFETY — upsertEmailUser()/deleteUserAccount() now also
   // read/write auth_identities; this table must exist for this schema chain
-  // to still match reality. No new assertions added to this file -- see
+  // to still match reality. No new assertions added to this file — see
   // scripts/test-google-signin.ts for auth_identities-specific coverage.
   "048_auth_identities.sql",
 ].map((name) => fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8"));
@@ -373,6 +374,42 @@ async function main(): Promise<void> {
     assert.equal(deleted.ok, true);
   }
 
+  // 2b) cancel_at_period_end Stripe subscription — still `active`/billable
+  // right up until the scheduled period end, so account deletion must
+  // terminate it NOW rather than trusting the future scheduled cancellation
+  // (nobody will be around after deletion to see that period end arrive).
+  {
+    const { user: capeUser } = upsertEmailUser("stripe-cancel-at-period-end@firehall.test");
+    linkStripeCustomer(capeUser.user_id, "cus_cape_1");
+    upsertStripeSubscription({
+      userId: capeUser.user_id,
+      stripeCustomerId: "cus_cape_1",
+      stripeSubscriptionId: "sub_cape_1",
+      stripePriceId: "price_monthly",
+      status: "active",
+      cancelAtPeriodEnd: true, // customer already scheduled cancellation via Portal
+      currentPeriodEnd: "2027-06-01T00:00:00.000Z",
+    });
+    assert.equal(getUserSubscription(capeUser.user_id)?.cancel_at_period_end, true, "sanity: still scheduled, not yet lapsed");
+
+    const cancelCalls: string[] = [];
+    const guardResult = await ensureStripeSubscriptionCancelledForDeletion(capeUser.user_id, {
+      cancel: async (subId) => {
+        cancelCalls.push(subId);
+      },
+    });
+    assert.equal(guardResult.ok, true);
+    assert.equal((guardResult as { action: string }).action, "cancelled");
+    assert.deepEqual(
+      cancelCalls,
+      ["sub_cape_1"],
+      "cancel_at_period_end must not be treated as 'already handled' — it is still billable until the period actually ends",
+    );
+
+    const deleted = deleteUserAccount(capeUser.user_id);
+    assert.equal(deleted.ok, true);
+  }
+
   // 3) Already-cancelled Stripe subscription — no Stripe call needed, deletion proceeds.
   {
     const { user: cancelledUser } = upsertEmailUser("stripe-cancelled@firehall.test");
@@ -477,6 +514,53 @@ async function main(): Promise<void> {
     assert.equal(retryResult.ok, true, "retrying after a transient Stripe failure must succeed");
     const deleted = deleteUserAccount(failUser.user_id);
     assert.equal(deleted.ok, true);
+  }
+
+  // 8) Stripe cancellation succeeds, but the subsequent LOCAL deletion step
+  // fails (e.g. a DB error) before the account is actually removed. The
+  // subscription row is still present locally (still says 'active' — the
+  // guard never rewrites local state), so retrying must not re-bill: a
+  // second real Stripe call would hit "already canceled", which is treated
+  // as success, and deletion can then complete.
+  {
+    const { user: partialUser } = upsertEmailUser("stripe-partial-failure@firehall.test");
+    linkStripeCustomer(partialUser.user_id, "cus_partial_1");
+    upsertStripeSubscription({
+      userId: partialUser.user_id,
+      stripeCustomerId: "cus_partial_1",
+      stripeSubscriptionId: "sub_partial_1",
+      stripePriceId: "price_monthly",
+      status: "active",
+      cancelAtPeriodEnd: false,
+      currentPeriodEnd: "2027-01-01T00:00:00.000Z",
+    });
+
+    // Attempt 1: Stripe cancellation succeeds...
+    const firstAttempt = await ensureStripeSubscriptionCancelledForDeletion(partialUser.user_id, {
+      cancel: async () => undefined,
+    });
+    assert.equal(firstAttempt.ok, true);
+    assert.equal((firstAttempt as { action: string }).action, "cancelled");
+
+    // ...but local deletion itself fails (simulated — e.g. a DB error mid-transaction).
+    // The subscription row is untouched (guard doesn't rewrite local state),
+    // so it still reads 'active' for a retry.
+    assert.equal(getUserSubscription(partialUser.user_id)?.status, "active", "local row is unchanged by a successful Stripe cancel alone");
+    assert.ok(db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(partialUser.user_id), "account still exists — the simulated local failure never ran deleteUserAccount");
+
+    // Attempt 2 (retry): Stripe now correctly reports the subscription is
+    // already canceled — must be treated as success, not a hard failure,
+    // and must NOT re-bill (no new subscription is created/charged).
+    const retryAttempt = await ensureStripeSubscriptionCancelledForDeletion(partialUser.user_id, {
+      cancel: async () => {
+        throw { code: "resource_missing", message: "No such subscription: 'sub_partial_1'" };
+      },
+    });
+    assert.equal(retryAttempt.ok, true, "retry after Stripe already succeeded must not fail");
+    assert.equal((retryAttempt as { action: string }).action, "already_cancelled_at_stripe");
+
+    const deleted = deleteUserAccount(partialUser.user_id);
+    assert.equal(deleted.ok, true, "retry must be able to complete local deletion");
   }
 
   // --- Retry idempotency: a prior attempt that actually succeeded at Stripe
@@ -596,6 +680,97 @@ async function main(): Promise<void> {
       undefined,
       "a late webhook must NOT resurrect the deleted users row either",
     );
+  }
+
+  // 9) customer.subscription.deleted webhook arrives AFTER local user deletion
+  // for a user who genuinely had a live Stripe subscription — must handle the
+  // missing user/row safely (no throw, no recreation), matching the existing
+  // idempotent no-op behavior markStripeSubscriptionCancelledBySubscriptionId
+  // already has for an unknown subscription id.
+  {
+    const { user: postDeleteWebhookUser } = upsertEmailUser("stripe-webhook-after-delete@firehall.test");
+    linkStripeCustomer(postDeleteWebhookUser.user_id, "cus_postdelete_1");
+    upsertStripeSubscription({
+      userId: postDeleteWebhookUser.user_id,
+      stripeCustomerId: "cus_postdelete_1",
+      stripeSubscriptionId: "sub_postdelete_1",
+      stripePriceId: "price_monthly",
+      status: "active",
+      cancelAtPeriodEnd: false,
+      currentPeriodEnd: "2027-01-01T00:00:00.000Z",
+    });
+
+    // Full deletion flow: cancel at Stripe, then delete locally (row is gone
+    // afterward, same as deleteUserAccount's real DELETE FROM user_subscriptions).
+    const guardResult = await ensureStripeSubscriptionCancelledForDeletion(postDeleteWebhookUser.user_id, {
+      cancel: async () => undefined,
+    });
+    assert.equal(guardResult.ok, true);
+    const deleted = deleteUserAccount(postDeleteWebhookUser.user_id);
+    assert.equal(deleted.ok, true);
+    assert.equal(
+      db.prepare(`SELECT 1 FROM user_subscriptions WHERE stripe_subscription_id = 'sub_postdelete_1'`).get(),
+      undefined,
+    );
+
+    // Stripe's real customer.subscription.deleted webhook (fired async after
+    // our own cancel() call above) arrives once the account is already gone.
+    assert.doesNotThrow(() => {
+      const result = markStripeSubscriptionCancelledBySubscriptionId("sub_postdelete_1");
+      assert.equal(result, null, "no user/subscription to update — must no-op, not throw or recreate anything");
+    });
+    assert.equal(
+      db.prepare(`SELECT 1 FROM users WHERE user_id = ?`).get(postDeleteWebhookUser.user_id),
+      undefined,
+      "the late webhook must not resurrect the deleted user",
+    );
+
+    // Stripe redelivering the exact same event id a second time (duplicate
+    // delivery) must also stay a safe no-op via the existing idempotency table.
+    assert.doesNotThrow(() => markStripeSubscriptionCancelledBySubscriptionId("sub_postdelete_1"));
+  }
+
+  // 10) Duplicate deletion request (e.g. a double-click, or a client retry
+  // after the first request actually succeeded server-side) must be a safe,
+  // idempotent no-op end-to-end — both the Stripe guard and deleteUserAccount.
+  {
+    const { user: dupUser } = upsertEmailUser("stripe-duplicate-delete@firehall.test");
+    linkStripeCustomer(dupUser.user_id, "cus_dup_1");
+    upsertStripeSubscription({
+      userId: dupUser.user_id,
+      stripeCustomerId: "cus_dup_1",
+      stripeSubscriptionId: "sub_dup_1",
+      stripePriceId: "price_monthly",
+      status: "active",
+      cancelAtPeriodEnd: false,
+      currentPeriodEnd: "2027-01-01T00:00:00.000Z",
+    });
+
+    const cancelCalls: string[] = [];
+    const firstGuard = await ensureStripeSubscriptionCancelledForDeletion(dupUser.user_id, {
+      cancel: async (subId) => {
+        cancelCalls.push(subId);
+      },
+    });
+    assert.equal(firstGuard.ok, true);
+    const firstDelete = deleteUserAccount(dupUser.user_id);
+    assert.equal(firstDelete.ok, true);
+
+    // Duplicate request for the same (now-deleted) user: the guard sees no
+    // subscription row at all (user_id no longer exists) — 'none', no Stripe
+    // call — and deleteUserAccount's own pre-existing early-return handles
+    // the missing user row as a safe no-op.
+    const secondGuard = await ensureStripeSubscriptionCancelledForDeletion(dupUser.user_id, {
+      cancel: async (subId) => {
+        cancelCalls.push(subId);
+      },
+    });
+    assert.equal(secondGuard.ok, true);
+    assert.equal((secondGuard as { action: string }).action, "none");
+    const secondDelete = deleteUserAccount(dupUser.user_id);
+    assert.equal(secondDelete.ok, true);
+    assert.equal(secondDelete.email, null, "second deletion finds no user row — matches existing idempotent behavior");
+    assert.deepEqual(cancelCalls, ["sub_dup_1"], "Stripe must be called exactly once across both requests, never twice");
   }
 
   console.log("[test-privacy-consent] OK");
