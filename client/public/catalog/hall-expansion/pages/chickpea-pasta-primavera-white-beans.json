@@ -1,0 +1,288 @@
+{
+  "slug": "chickpea-pasta-primavera-white-beans",
+  "title": "Chickpea Pasta Primavera with White Beans",
+  "displayTitle": "Chickpea Pasta Primavera with White Beans",
+  "seoTitle": "Chickpea Pasta Primavera with White Beans | Firefighter Meal",
+  "shortDescription": "High-protein chickpea pasta tossed with roasted vegetables, white beans, and parmesan",
+  "subtitle": "High-protein chickpea pasta tossed with roasted vegetables, white beans, and parmesan",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "Chickpea pasta is tossed with roasted zucchini, bell pepper, and cherry tomatoes, then finished with white beans, garlic, and parmesan. It looks and eats like a normal pasta primavera with a genuinely higher protein count.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 636,
+  "protein": 39,
+  "carbs": 86,
+  "fats": 20,
+  "tags": [
+    "protein:vegetarian",
+    "format:pasta",
+    "category:crew_feeders",
+    "pasta",
+    "vegetarian",
+    "healthy",
+    "high_protein",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large pot",
+    "Sheet pan",
+    "Large skillet",
+    "Colander"
+  ],
+  "ingredients": [
+    {
+      "name": "chickpea pasta",
+      "quantity": "2",
+      "unit": "lb",
+      "notes": "penne or rotini",
+      "group": "Base"
+    },
+    {
+      "name": "zucchini",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Vegetables"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Vegetables"
+    },
+    {
+      "name": "cannellini beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "drained, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "garlic",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Base"
+    },
+    {
+      "name": "parmesan cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "grated",
+      "group": "Finish"
+    },
+    {
+      "name": "fresh basil",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "torn",
+      "group": "Finish",
+      "optional": true
+    },
+    {
+      "name": "red pepper flakes",
+      "quantity": "0.5",
+      "unit": "tsp",
+      "group": "Finish",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Roast the vegetables",
+      "instruction": "Heat the oven to 425°F. Toss zucchini, bell pepper, and cherry tomatoes with 3 tablespoons olive oil, salt, and pepper on a sheet pan. Roast 18–20 minutes until softened and lightly browned. Target oven/smoker temperature: 425°F.",
+      "minutes": 20,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the chickpea pasta",
+      "instruction": "Bring a large pot of salted water to a boil. Cook chickpea pasta 1–2 minutes under the package time — it firms and can turn mushy fast if overcooked. Drain, reserving 1/2 cup pasta water.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm the beans and garlic",
+      "instruction": "While pasta cooks, warm remaining olive oil in a large skillet over medium. Add garlic and cook 30 seconds until fragrant, then stir in cannellini beans and warm through, 3–4 minutes.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Combine everything",
+      "instruction": "Add drained pasta, roasted vegetables, and a splash of reserved pasta water to the skillet with the beans. Toss over low heat 2 minutes so everything comes together and coats lightly.",
+      "minutes": 4,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish off heat",
+      "instruction": "Remove from heat and fold in parmesan so it melts into the sauce without clumping into a hot pan. Add basil and red pepper flakes if using.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold and serve",
+      "instruction": "Hold covered at 140°F or above with a splash of extra pasta water if it thickens on standby. Serve with extra parmesan on the side.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover chickpea pasta and white beans — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool chickpea pasta primavera and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Chickpea pasta cooks faster than wheat pasta and turns mushy quickly — watch it closely near the end.",
+    "Rookie tip: Reserve pasta water before draining; it is the easiest way to loosen the sauce without adding more fat.",
+    "Add grilled chicken or shrimp on top for crews who want extra protein beyond the pasta and beans.",
+    "Swap in whatever roastable vegetables are on hand — this recipe is forgiving."
+  ],
+  "tonightSpread": [
+    "Main: Chickpea pasta primavera",
+    "Sides: Simple green salad, garlic bread",
+    "Condiments: Extra parmesan, red pepper flakes",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool chickpea pasta primavera in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat with a splash of water or broth — chickpea pasta dries out faster than wheat pasta."
+  ],
+  "whyCrewsLikeIt": "It keeps the comfort of a pasta dinner while quietly doubling the protein of a standard vegetable pasta, and it is fully vegetarian without anyone needing to be told.",
+  "mealPrepNotes": "Make-ahead: roast vegetables up to two days ahead. Storage: keep pasta, vegetables, and beans together up to 4 days. Reheating: reheat with a splash of water or broth so the chickpea pasta doesn't dry out or turn gummy.",
+  "substitutions": [
+    "Use lentil pasta or regular whole wheat pasta if chickpea pasta isn't available.",
+    "Use great northern beans instead of cannellini beans.",
+    "Add spinach in the last minute of tossing for extra greens."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 636,
+    "protein": 39,
+    "carbs": 86,
+    "fats": 20,
+    "label": "~636 cal/serving · 39g protein · 12g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+  "heroImageAlt": "Chickpea Pasta Primavera with White Beans — italian pasta plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+  "railImage": "/images/rails/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "chickpea pasta",
+    "high protein pasta",
+    "vegetarian pasta primavera",
+    "high protein vegetarian dinner",
+    "chickpea pasta recipe",
+    "firehouse pasta primavera"
+  ],
+  "relatedSlugs": [
+    "mushroom-swiss-steak-pan",
+    "mostaccioli-sausage-bake",
+    "creamy-chicken-penne-alfredo",
+    "rigatoni-meat-sauce-batch"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chickpea pasta",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

@@ -7,16 +7,16 @@
   "subtitle": "Choose-your-sauce pasta bar with garlic bread for ten",
   "category": "hall_expansion",
   "cuisine": "italian",
-  "description": "A large batch of penne stays hot in a hotel pan while three sauces—marinara, Alfredo, and pesto—sit ready for crew to mix and match. Grated cheese, chili flakes, and garlic bread complete the bar.",
+  "description": "A large batch of penne stays hot in a baking dish while three sauces—marinara, Alfredo, and pesto—sit ready for crew to mix and match. Grated cheese, chili flakes, and garlic bread complete the bar.",
   "crewSize": 8,
   "baseServings": 8,
   "cookTime": 30,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 1006,
-  "protein": 33,
-  "carbs": 132,
-  "fats": 38,
+  "calories": 520,
+  "protein": 16,
+  "carbs": 68,
+  "fats": 20,
   "tags": [
     "protein:vegetarian",
     "format:bar_line",
@@ -31,7 +31,7 @@
   ],
   "equipment": [
     "Large stock pot",
-    "Hotel pans",
+    "baking dishes",
     "Saucepans",
     "Ladles",
     "Sheet pan"
@@ -105,7 +105,7 @@
     {
       "stepNumber": 1,
       "title": "Cook the pasta",
-      "instruction": "Boil penne in well-salted water until just shy of al dente, about 9 minutes. Drain, toss with 2 tbsp olive oil, and hold covered in a hotel pan with a splash of reserved pasta water.",
+      "instruction": "Boil penne in well-salted water until just shy of al dente, about 9 minutes. Drain, toss with 2 tbsp olive oil, and hold covered in a baking dish with a splash of reserved pasta water.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -156,29 +156,29 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 1006,
-    "protein": 33,
-    "carbs": 132,
-    "fats": 38,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 520,
+    "protein": 16,
+    "carbs": 68,
+    "fats": 20,
+    "label": "~520 cal/serving · 16g protein · 4g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/pasta-bar-night.jpg",
-  "heroImageAlt": "Pasta Bar Night — italian bar line plated for a firehall crew",
+  "heroImageAlt": "Pasta Bar Night — italian bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/pasta-bar-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/pasta-bar-night.jpg",
   "railImage": "/images/rails/hall-expansion/pasta-bar-night.jpg",
@@ -196,7 +196,7 @@
     "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -273,7 +273,6 @@
         "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

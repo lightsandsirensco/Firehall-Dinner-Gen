@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 508,
-  "protein": 41,
-  "carbs": 33,
-  "fats": 26,
+  "calories": 380,
+  "protein": 28,
+  "carbs": 22,
+  "fats": 20,
   "tags": [
     "protein:beef",
     "format:handheld",
@@ -154,24 +154,24 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 508,
-    "protein": 41,
-    "carbs": 33,
-    "fats": 26,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 380,
+    "protein": 28,
+    "carbs": 22,
+    "fats": 20,
+    "label": "~380 cal/serving · 28g protein · 2g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": false,
+      "lowCarb": true,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
+      "highProtein": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
@@ -189,11 +189,12 @@
   ],
   "relatedSlugs": [
     "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
     "buffalo-chicken-wraps",
     "greek-chicken-pitas"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.769Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -234,10 +235,6 @@
         "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "tomatoes"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

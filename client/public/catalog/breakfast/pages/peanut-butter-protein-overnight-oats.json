@@ -1,0 +1,193 @@
+{
+  "slug": "peanut-butter-protein-overnight-oats",
+  "title": "Peanut Butter Protein Overnight Oats",
+  "subtitle": "No-cook overnight oats built with Greek yogurt and peanut butter for a grab-and-go breakfast.",
+  "description": "Rolled oats soak overnight in milk and Greek yogurt with peanut butter and a touch of honey, then get topped with banana and extra peanut butter in the morning. No stove time and no line — just jars in the fridge.",
+  "filters": [
+    "quick_breakfasts",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "overnight-oats",
+    "no-cook",
+    "peanut-butter",
+    "greek-yogurt",
+    "make-ahead"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 12,
+  "cookTime": 5,
+  "totalTime": 17,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "rolled oats",
+      "quantity": "4 cups",
+      "group": "Base"
+    },
+    {
+      "name": "whole milk",
+      "quantity": "4 cups",
+      "notes": "or oat milk",
+      "group": "Base"
+    },
+    {
+      "name": "greek yogurt",
+      "quantity": "3 cups",
+      "notes": "plain",
+      "group": "Protein"
+    },
+    {
+      "name": "peanut butter",
+      "quantity": "1 cup",
+      "notes": "plus more for topping",
+      "group": "Flavor"
+    },
+    {
+      "name": "honey",
+      "quantity": "1/3 cup",
+      "group": "Flavor"
+    },
+    {
+      "name": "vanilla extract",
+      "quantity": "1 tsp",
+      "group": "Flavor",
+      "optional": true
+    },
+    {
+      "name": "banana",
+      "quantity": "3",
+      "notes": "sliced",
+      "group": "Topping",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Whisk the base",
+      "instruction": "Whisk milk, Greek yogurt, peanut butter, honey, and vanilla in a large bowl or pitcher until the peanut butter is fully incorporated and no streaks remain.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 2,
+      "title": "Add the oats",
+      "instruction": "Stir in rolled oats until evenly coated in the peanut butter-yogurt mixture.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 3,
+      "title": "Portion into jars",
+      "instruction": "Divide the mixture evenly into 8 jars or containers with lids. Seal and refrigerate at least 6 hours, or overnight, until the oats soften and thicken.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 4,
+      "title": "Top and serve",
+      "instruction": "Stir each jar before eating — the mixture settles overnight. Top with sliced banana and an extra spoonful of peanut butter if desired.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 552,
+    "protein": 27,
+    "carbs": 54,
+    "fat": 28,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Batch-mix the base the night before so morning service is just grab-and-go.",
+    "Keep jars labeled with the date; overnight oats are best within 4 days.",
+    "Set out banana and extra peanut butter as optional toppings rather than mixing them in ahead."
+  ],
+  "cleanupNotes": [
+    "Rinse peanut butter measuring cups immediately in hot water before it hardens on the sides.",
+    "Wash jars right after emptying — dried oat residue is much harder to scrub off once set."
+  ],
+  "leftovers": [
+    "Keeps well sealed in the refrigerator up to 4 days.",
+    "If oats thicken too much overnight, stir in a splash of milk before eating."
+  ],
+  "heroImage": "/images/breakfast/peanut-butter-protein-overnight-oats.jpg",
+  "thumbImage": "/images/thumbs/breakfast/peanut-butter-protein-overnight-oats.jpg",
+  "imageAlt": "Jar of peanut butter protein overnight oats topped with sliced banana",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 4,
+  "seoTitle": "Peanut Butter Protein Overnight Oats | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "rolled oats",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "whole milk",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "peanut butter",
+        "allergens": [
+          "peanuts"
+        ]
+      },
+      {
+        "name": "vanilla extract",
+        "allergens": [
+          "alcohol"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": false,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free oats."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

@@ -1,0 +1,288 @@
+{
+  "slug": "greek-yogurt-white-bean-power-bowls",
+  "title": "Greek Yogurt & White Bean Power Bowls",
+  "displayTitle": "Greek Yogurt & White Bean Power Bowls",
+  "seoTitle": "Greek Yogurt & White Bean Power Bowls | Firefighter Meal",
+  "shortDescription": "Warm white beans and quinoa with a lemon Greek yogurt sauce, feta, and vegetables",
+  "subtitle": "Warm white beans and quinoa with a lemon Greek yogurt sauce, feta, and vegetables",
+  "category": "hall_expansion",
+  "cuisine": "mediterranean",
+  "description": "Warm white beans and quinoa are topped with cucumber, tomato, and feta, then finished with a generous lemon Greek yogurt sauce instead of a thin vinaigrette. It is a balanced, fully vegetarian bowl built to hold its own at dinner.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 752,
+  "protein": 39,
+  "carbs": 87,
+  "fats": 29,
+  "tags": [
+    "protein:vegetarian",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "vegetarian",
+    "healthy",
+    "high_protein",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Pot for quinoa",
+    "Skillet",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "white beans",
+      "quantity": "4",
+      "unit": "cans",
+      "notes": "drained, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "quinoa",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "dry",
+      "group": "Base"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "garlic",
+      "quantity": "2",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Base"
+    },
+    {
+      "name": "greek yogurt",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "plain",
+      "group": "Sauce"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "fresh dill",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "chopped",
+      "group": "Sauce",
+      "optional": true
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "crumbled",
+      "group": "Toppings"
+    },
+    {
+      "name": "cucumber",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Toppings"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "halved",
+      "group": "Toppings"
+    },
+    {
+      "name": "red onion",
+      "quantity": "0.5",
+      "unit": "each",
+      "notes": "thinly sliced",
+      "group": "Toppings"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the quinoa",
+      "instruction": "Rinse quinoa and cook according to package directions. Fluff with a fork and hold covered.",
+      "minutes": 18,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Warm the beans",
+      "instruction": "Heat olive oil in a skillet over medium. Add garlic and cook 30 seconds, then stir in white beans and warm through, 5–6 minutes, seasoning with salt and pepper.",
+      "minutes": 6,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the yogurt sauce",
+      "instruction": "Whisk Greek yogurt, lemon juice, olive oil, and dill if using in a bowl with a pinch of salt until smooth.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold everything at the right temperature",
+      "instruction": "Keep quinoa and beans covered and warm. Keep the yogurt sauce, feta, cucumber, tomatoes, and red onion cold and separate until serving.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the bowls",
+      "instruction": "Layer quinoa and white beans in each bowl, then top with cucumber, cherry tomatoes, red onion, and feta.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Finish with the sauce",
+      "instruction": "Spoon a generous amount of lemon Greek yogurt sauce over each bowl just before serving.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover white beans and quinoa — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool greek yogurt white bean power bowls and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Salt the yogurt sauce a little more than tastes right when raw — cold quinoa and beans mute seasoning.",
+    "Rookie tip: Keep the sauce separate until serving so the bowl doesn't turn soupy sitting on the line.",
+    "Add kalamata olives for crews who want a saltier, more traditional Greek profile."
+  ],
+  "tonightSpread": [
+    "Main: Greek yogurt and white bean power bowls",
+    "Sides: Warm pita, simple side salad",
+    "Condiments: Extra lemon wedges, kalamata olives",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool greek yogurt white bean power bowls in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Keep the yogurt sauce separate from the grains so leftovers don't turn watery."
+  ],
+  "whyCrewsLikeIt": "It eats like a Mediterranean plate the crew already likes, but the yogurt-and-bean combination pushes the protein well past a typical vegetable bowl.",
+  "mealPrepNotes": "Make-ahead: cook quinoa and beans up to two days ahead. Storage: keep grains, beans, cold vegetables, and yogurt sauce in separate containers up to 4 days. Reheating: warm quinoa and beans together; add cold vegetables and sauce at serving time.",
+  "substitutions": [
+    "Use chickpeas instead of white beans.",
+    "Use farro or brown rice instead of quinoa.",
+    "Use dairy-free yogurt for a lighter-dairy version (protein count will drop)."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 752,
+    "protein": 39,
+    "carbs": 87,
+    "fats": 29,
+    "label": "~752 cal/serving · 39g protein · 14g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
+  "heroImageAlt": "Greek Yogurt & White Bean Power Bowls — mediterranean bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "greek yogurt bowl",
+    "white bean quinoa bowl",
+    "vegetarian high protein bowl",
+    "mediterranean protein bowl",
+    "high protein meal prep bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

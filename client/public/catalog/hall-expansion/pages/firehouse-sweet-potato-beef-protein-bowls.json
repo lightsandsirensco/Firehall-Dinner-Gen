@@ -1,0 +1,297 @@
+{
+  "slug": "firehouse-sweet-potato-beef-protein-bowls",
+  "title": "Firehouse Sweet Potato & Beef Protein Bowls",
+  "displayTitle": "Firehouse Sweet Potato & Beef Protein Bowls",
+  "seoTitle": "Firehouse Sweet Potato & Beef Protein Bowls | Firefighter Meal",
+  "shortDescription": "Seasoned ground beef, roasted sweet potato, and cottage cheese in a high-protein bowl",
+  "subtitle": "Seasoned ground beef, roasted sweet potato, and cottage cheese in a high-protein bowl",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Roasted sweet potato cubes and seasoned ground beef share a bowl with cottage cheese, avocado, and a quick lime-herb drizzle. It is a straightforward, high-protein dinner that also reheats well for next-day lunches.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 789,
+  "protein": 49,
+  "carbs": 56,
+  "fats": 44,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "beef",
+    "healthy",
+    "high_protein",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Two sheet pans",
+    "Large skillet",
+    "Mixing bowls",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "sweet potato",
+      "quantity": "4",
+      "unit": "lb",
+      "notes": "peeled, 3/4-inch cubes",
+      "group": "Base"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "ground beef",
+      "quantity": "2.5",
+      "unit": "lb",
+      "notes": "90/10",
+      "group": "Protein"
+    },
+    {
+      "name": "garlic",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Protein"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "cumin",
+      "quantity": "2",
+      "unit": "tsp",
+      "group": "Protein"
+    },
+    {
+      "name": "cottage cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "avocado",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "sliced",
+      "group": "Toppings"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved",
+      "group": "Toppings"
+    },
+    {
+      "name": "green onions",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "sliced",
+      "group": "Toppings"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Dressing"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Dressing"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Dressing",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Roast the sweet potato base",
+      "instruction": "Heat the oven to 425°F. Toss sweet potato cubes with olive oil, salt, and pepper on two sheet pans in a single layer. Roast 25–28 minutes, turning once, until browned at the edges and fork-tender. Target oven/smoker temperature: 425°F.",
+      "minutes": 28,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Season and brown the beef",
+      "instruction": "Heat a wide skillet over medium-high. Add beef and break it into crumbles, cooking 7–8 minutes until no pink remains. Drain excess fat, then stir in garlic, smoked paprika, cumin, salt, and pepper and cook 2 more minutes until fragrant.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the lime-herb drizzle",
+      "instruction": "Whisk lime juice with olive oil, a pinch of salt, and cilantro if using. Keep it in a squeeze bottle at the cold end of the line so it stays bright instead of wilting the toppings early.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold everything at the right temperature",
+      "instruction": "Cover beef and sweet potato in separate dishes and hold at 140°F or above until service. Keep cottage cheese, avocado, tomatoes, and green onions cold and covered until the last possible moment.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Layer the bowls",
+      "instruction": "Start each bowl with roasted sweet potato, then add a portion of seasoned beef beside it rather than on top, so both stay visible and neither steams the other soft.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Add the cottage cheese and produce",
+      "instruction": "Spoon cottage cheese into its own section of the bowl, then scatter avocado, cherry tomatoes, and green onions around the hot components.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Finish and send it out",
+      "instruction": "Drizzle the lime-herb dressing over the top and set bowls at the pass with extra lime wedges and hot sauce on the side for anyone who wants more heat.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover seasoned ground beef and roasted sweet potato — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool seasoned ground beef and roasted sweet potato and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Cut sweet potato pieces the same size so none burn while others stay firm.",
+    "Rookie tip: Add cottage cheese cold, right before serving, so it never breaks down from residual heat.",
+    "Swap ground turkey for beef if the hall is trying to keep saturated fat lower without losing protein.",
+    "Keep hot sauce and extra lime on the side — the base recipe is intentionally mild."
+  ],
+  "tonightSpread": [
+    "Main: Sweet potato and beef protein bowls",
+    "Sides: Sliced cucumber, extra lime wedges",
+    "Condiments: Hot sauce, extra cottage cheese",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool seasoned ground beef and roasted sweet potato in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Fold cold leftovers into a lunch bowl with extra greens the next shift."
+  ],
+  "whyCrewsLikeIt": "It uses ingredients most halls already stock, comes together in two pans, and lands well above the crew's usual protein target without feeling like a diet plate.",
+  "mealPrepNotes": "Make-ahead: roast sweet potatoes and brown the beef up to two days ahead. Storage: keep beef, sweet potato, and cold toppings in separate containers up to 4 days; add cottage cheese and avocado at serving time. Reheating: warm beef and sweet potato together to 165°F, then top cold.",
+  "substitutions": [
+    "Use ground turkey or ground bison for beef.",
+    "Use Greek yogurt if cottage cheese is unpopular.",
+    "Use roasted broccoli alongside the sweet potato for more volume."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 789,
+    "protein": 49,
+    "carbs": 56,
+    "fats": 44,
+    "label": "~789 cal/serving · 49g protein · 7g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+  "heroImageAlt": "Firehouse Sweet Potato & Beef Protein Bowls — american bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "sweet potato beef protein bowl",
+    "ground beef sweet potato bowl",
+    "cottage cheese beef bowl",
+    "high protein dinner bowl",
+    "firehouse protein bowl",
+    "meal prep beef bowl",
+    "crew dinner high protein"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cottage cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

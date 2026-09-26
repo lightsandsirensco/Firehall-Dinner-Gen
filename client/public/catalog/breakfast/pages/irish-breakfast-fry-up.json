@@ -107,7 +107,7 @@
     "protein": 66,
     "carbs": 26,
     "fat": 82,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/irish-breakfast-fry-up.jpg",
   "thumbImage": "/images/thumbs/breakfast/irish-breakfast-fry-up.jpg",
   "imageAlt": "Full Irish breakfast fry-up with bacon, sausage, black pudding, and fried eggs",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 9,
   "seoTitle": "Irish Breakfast Fry-Up | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -213,10 +213,6 @@
         "note": "Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "mushrooms",
-    "tomatoes"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

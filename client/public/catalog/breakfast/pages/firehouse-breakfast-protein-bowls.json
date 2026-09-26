@@ -1,0 +1,192 @@
+{
+  "slug": "firehouse-breakfast-protein-bowls",
+  "title": "Firehouse Breakfast Protein Bowls",
+  "subtitle": "Roasted sweet potato, eggs, and chicken sausage in a savory high-protein breakfast bowl.",
+  "description": "Roasted sweet potato cubes are topped with scrambled eggs, browned chicken sausage, salsa, and a spoon of cottage cheese. It is a savory, fully composed breakfast bowl built to hold real protein instead of just carbs.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "breakfast-bowl",
+    "sweet-potato",
+    "eggs",
+    "chicken-sausage",
+    "high-protein"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 25,
+  "totalTime": 40,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "sweet potato",
+      "quantity": "3.5 lb",
+      "notes": "peeled, 1/2-inch cubes",
+      "group": "Base"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3 tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "chicken sausage",
+      "quantity": "2 lb",
+      "notes": "casings removed, or turkey sausage",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "16",
+      "group": "Protein"
+    },
+    {
+      "name": "butter",
+      "quantity": "2 tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "cottage cheese",
+      "quantity": "1 1/2 cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "salsa",
+      "quantity": "1 1/2 cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "green onions",
+      "quantity": "1/2 cup",
+      "notes": "sliced",
+      "group": "Toppings"
+    },
+    {
+      "name": "avocado",
+      "quantity": "2",
+      "notes": "sliced",
+      "group": "Toppings",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Roast the sweet potato",
+      "instruction": "Heat oven to 425°F. Toss sweet potato cubes with olive oil, salt, and pepper on a sheet pan. Roast 20–22 minutes, turning once, until browned at the edges and fork-tender.",
+      "minutes": 22,
+      "tempF": 425
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the chicken sausage",
+      "instruction": "While the potatoes roast, brown chicken sausage in a large skillet over medium-high, breaking it into crumbles, 8–10 minutes until cooked through and browned.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 3,
+      "title": "Scramble the eggs",
+      "instruction": "Lower heat to medium-low. Melt butter in a separate pan, add whisked eggs, and stir gently until just set and still glossy. Season with salt and pepper.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold everything separately",
+      "instruction": "Keep sweet potato, sausage, and eggs in separate covered dishes in a 200°F oven until ready to build bowls — combining them too early turns the eggs rubbery.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the bowls",
+      "instruction": "Layer roasted sweet potato in each bowl, add a portion of sausage and scrambled eggs, then top with cottage cheese, salsa, green onions, and avocado if using.",
+      "minutes": 8
+    }
+  ],
+  "nutrition": {
+    "calories": 814,
+    "protein": 42,
+    "carbs": 48,
+    "fat": 51,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Get sweet potatoes into the oven first — they take the longest of any component.",
+    "Cook sausage and eggs in separate pans so eggs stay soft instead of picking up grease.",
+    "Hold sweet potato and sausage covered at 200°F; scramble eggs closer to service so they stay tender."
+  ],
+  "cleanupNotes": [
+    "Wipe down the egg pan while it's still warm — cooked egg sets hard once it cools completely.",
+    "Soak the sausage skillet in hot water while plates are served to loosen any browned bits."
+  ],
+  "leftovers": [
+    "Store sweet potato, sausage, and eggs in separate containers up to 4 days; reheat eggs gently on low power.",
+    "Rebuild bowls with cold cottage cheese, salsa, and avocado added fresh rather than reheated."
+  ],
+  "heroImage": "/images/breakfast/firehouse-breakfast-protein-bowls.jpg",
+  "thumbImage": "/images/thumbs/breakfast/firehouse-breakfast-protein-bowls.jpg",
+  "imageAlt": "Firehouse breakfast protein bowl with roasted sweet potato, scrambled eggs, chicken sausage, and salsa",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 6,
+  "seoTitle": "Firehouse Breakfast Protein Bowls | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cottage cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

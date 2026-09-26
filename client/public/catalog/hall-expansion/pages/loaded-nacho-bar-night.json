@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 25,
   "difficulty": "easy",
-  "calories": 872,
-  "protein": 46,
-  "carbs": 72,
-  "fats": 46,
+  "calories": 580,
+  "protein": 28,
+  "carbs": 44,
+  "fats": 34,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -33,7 +33,7 @@
   "equipment": [
     "Slow cooker",
     "Sheet pans",
-    "Hotel pans",
+    "baking dishes",
     "Broiler",
     "Large skillet"
   ],
@@ -112,7 +112,7 @@
     {
       "stepNumber": 2,
       "title": "Warm queso and beans",
-      "instruction": "Heat queso in a slow cooker on warm, stirring occasionally. Season and warm black beans in a separate hotel pan. Verify both reach 165°F for safe holding.",
+      "instruction": "Heat queso in a slow cooker on warm, stirring occasionally. Season and warm black beans in a separate baking dish. Verify both reach 165°F for safe holding.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -126,7 +126,7 @@
     {
       "stepNumber": 4,
       "title": "Set the nacho bar",
-      "instruction": "Line up the warm chip pans, beef, queso, cheddar, and beans on one side, with jalapeños, pico, sour cream, and guacamole staged separately on ice — labeled and within reach, but off that heat.",
+      "instruction": "Line up warm chip pans, beef, queso, cheddar, beans, jalapeños, pico, sour cream, and guacamole with serving spoons and clear labels.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -156,29 +156,29 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 872,
-    "protein": 46,
-    "carbs": 72,
-    "fats": 46,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 580,
+    "protein": 28,
+    "carbs": 44,
+    "fats": 34,
+    "label": "~580 cal/serving · 28g protein · 6g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
+      "highProtein": false,
+      "under700Calories": true,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
-  "heroImageAlt": "Loaded Nacho Bar Night — mexican-american bar line plated for a firehall crew",
+  "heroImageAlt": "Loaded Nacho Bar Night — mexican-american bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/loaded-nacho-bar-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/loaded-nacho-bar-night.jpg",
   "railImage": "/images/rails/hall-expansion/loaded-nacho-bar-night.jpg",
@@ -196,7 +196,7 @@
     "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -249,11 +249,6 @@
         "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "jalapenos",
-    "avocado",
-    "beans"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

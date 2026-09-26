@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 515,
-  "protein": 53,
-  "carbs": 20,
-  "fats": 22,
+  "calories": 490,
+  "protein": 36,
+  "carbs": 46,
+  "fats": 18,
   "tags": [
     "protein:shrimp",
     "format:soup",
@@ -34,7 +34,7 @@
     "Ladle",
     "Tongs",
     "Bowls",
-    "Hotel pans"
+    "baking dishes"
   ],
   "ingredients": [
     {
@@ -142,14 +142,14 @@
     {
       "stepNumber": 4,
       "title": "Poach chicken breast",
-      "instruction": "Slide in 2 lb thin-sliced chicken breast. Return to a gentle simmer and cook 8–10 minutes until chicken is opaque white throughout and reads 165°F in the thickest piece. Transfer chicken to a hotel pan, shred or slice, and cover loosely. Target oven/smoker temperature: 165°F.",
+      "instruction": "Slide in 2 lb thin-sliced chicken breast. Return to a gentle simmer and cook 8–10 minutes until chicken is opaque white throughout and reads 165°F in the thickest piece. Transfer chicken to a baking dish, shred or slice, and cover loosely. Target oven/smoker temperature: 165°F.",
       "minutes": 10,
       "heatLevel": ""
     },
     {
       "stepNumber": 5,
       "title": "Cook and cool rice noodles",
-      "instruction": "Soak or boil 1.5 lb thick rice noodles per package until tender but still springy. Drain, rinse under cold water to stop cooking, toss with a few drops of oil, and portion into bowls or a labeled hotel pan for the line.",
+      "instruction": "Soak or boil 1.5 lb thick rice noodles per package until tender but still springy. Drain, rinse under cold water to stop cooking, toss with a few drops of oil, and portion into bowls or a labeled baking dish for the line.",
       "minutes": 10,
       "heatLevel": ""
     },
@@ -163,7 +163,7 @@
     {
       "stepNumber": 7,
       "title": "Brighten with lime and hold",
-      "instruction": "Remove the pot from heat. Stir in 1/4 cup lime juice and taste once more—the broth should finish bright and slightly tangy. For holding, keep broth in the pot or a hotel pan at 170°F max; do not boil while holding or coconut fat may split. Target oven/smoker temperature: 170°F.",
+      "instruction": "Remove the pot from heat. Stir in 1/4 cup lime juice and taste once more—the broth should finish bright and slightly tangy. For holding, keep broth in the pot or a baking dish at 170°F max; do not boil while holding or coconut fat may split. Target oven/smoker temperature: 170°F.",
       "minutes": 3,
       "heatLevel": ""
     },
@@ -193,24 +193,24 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 515,
-    "protein": 53,
-    "carbs": 20,
-    "fats": 22,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 490,
+    "protein": 36,
+    "carbs": 46,
+    "fats": 18,
+    "label": "~490 cal/serving · 36g protein · 2g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": true
     }
   },
@@ -233,7 +233,7 @@
     "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -286,11 +286,6 @@
         "note": "Use a certified gluten-free broth or bouillon."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "cilantro",
-    "beans",
-    "coconut"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

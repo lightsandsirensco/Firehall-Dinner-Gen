@@ -48,7 +48,30 @@
         "fat": 26,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+          }
+        ]
+      }
     },
     {
       "slug": "baked-falafel-hall-bowls",
@@ -99,7 +122,24 @@
         "cilantro",
         "tomatoes",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "baked-turkey-meatball-marinara",
@@ -146,7 +186,35 @@
       },
       "avoidTags": [
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "beef-birria-with-consomme",
@@ -196,7 +264,30 @@
         "onions",
         "cilantro",
         "tomatoes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "blackened-cod-taco-night",
@@ -244,7 +335,24 @@
       },
       "avoidTags": [
         "avocado"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
@@ -292,7 +400,24 @@
       },
       "avoidTags": [
         "spinach"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "cajun-chicken-dirty-rice-bowls",
@@ -344,7 +469,35 @@
         "tomatoes",
         "bell_peppers",
         "mustard"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          }
+        ]
+      }
     },
     {
       "slug": "cajun-chicken-rice-bowl",
@@ -393,7 +546,30 @@
       "avoidTags": [
         "onions",
         "bell_peppers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "caprese-chicken-bake",
@@ -440,7 +616,30 @@
       },
       "avoidTags": [
         "tomatoes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "chicken-enchilada-skillet-light",
@@ -490,7 +689,30 @@
         "onions",
         "beans",
         "corn"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "chicken-marsala-lightened",
@@ -538,7 +760,45 @@
       },
       "avoidTags": [
         "mushrooms"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a 1:1 gluten-free all-purpose flour blend. Use a certified gluten-free broth or bouillon. Use a certified gluten-free pasta or rice noodles."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free wheat or rice noodle."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "chipotle-lime-chicken-tacos",
@@ -585,7 +845,24 @@
       },
       "avoidTags": [
         "cilantro"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "cottage-cheese-protein-pasta",
@@ -631,7 +908,30 @@
         "fat": 25,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta."
+          }
+        ]
+      }
     },
     {
       "slug": "crispy-fish-taco-night",
@@ -677,7 +977,30 @@
         "fat": 32,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a 1:1 gluten-free all-purpose flour blend."
+          }
+        ]
+      }
     },
     {
       "slug": "crock-barbacoa-chicken",
@@ -726,7 +1049,30 @@
       "avoidTags": [
         "onions",
         "cilantro"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "cuban-beef-picadillo-bowls",
@@ -778,7 +1124,24 @@
         "olives",
         "bell_peppers",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "filipino-chicken-adobo",
@@ -824,7 +1187,35 @@
         "fat": 27,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "general-tsos-baked-chicken",
@@ -872,7 +1263,30 @@
       },
       "avoidTags": [
         "broccoli"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+          }
+        ]
+      }
     },
     {
       "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
@@ -921,7 +1335,30 @@
       },
       "avoidTags": [
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free pasta."
+          }
+        ]
+      }
     },
     {
       "slug": "greek-lemon-chicken-potatoes",
@@ -967,7 +1404,30 @@
         "fat": 22,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
@@ -1017,7 +1477,24 @@
         "onions",
         "tomatoes",
         "feta"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "grilled-shrimp-quinoa-bowls",
@@ -1066,7 +1543,30 @@
       "avoidTags": [
         "tomatoes",
         "feta"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "herb-baked-salmon-tray",
@@ -1114,7 +1614,24 @@
       },
       "avoidTags": [
         "mustard"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "herb-marinated-flank-steak-chimichurri-farro",
@@ -1161,7 +1678,30 @@
         "fat": 58,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Substitute quinoa or rice. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "high-protein-chicken-fried-rice",
@@ -1209,7 +1749,35 @@
       },
       "avoidTags": [
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "honey-garlic-chicken-rice-bowls",
@@ -1257,7 +1825,35 @@
       },
       "avoidTags": [
         "broccoli"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "honey-lime-chicken-tray",
@@ -1305,7 +1901,24 @@
       "avoidTags": [
         "onions",
         "bell_peppers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "hummus-chicken-platter",
@@ -1354,7 +1967,30 @@
         "olives",
         "tomatoes",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bread/crust/wrapper alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "italian-sausage-veg-sheet-pan",
@@ -1404,7 +2040,30 @@
         "onions",
         "tomatoes",
         "bell_peppers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "korean-beef-rice-bowls",
@@ -1450,7 +2109,35 @@
         "fat": 36,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "kung-pao-chicken-rice-bowls",
@@ -1496,7 +2183,35 @@
         "fat": 35,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "lean-beef-broccoli-rice",
@@ -1544,7 +2259,35 @@
       },
       "avoidTags": [
         "broccoli"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "lean-turkey-bean-chili",
@@ -1594,7 +2337,30 @@
         "onions",
         "bell_peppers",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "lemon-chicken-orzo-soup",
@@ -1641,7 +2407,30 @@
       },
       "avoidTags": [
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "lemon-garlic-chicken-tray",
@@ -1688,7 +2477,24 @@
       },
       "avoidTags": [
         "broccoli"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "lemon-garlic-shrimp-pasta",
@@ -1733,7 +2539,35 @@
         "fat": 35,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": false,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta/noodle alternative."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "lemon-salmon-orzo-skillet",
@@ -1781,7 +2615,35 @@
       },
       "avoidTags": [
         "spinach"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "lentil-mushroom-bolognese",
@@ -1830,7 +2692,35 @@
       "avoidTags": [
         "mushrooms",
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "maple-mustard-salmon-tray",
@@ -1877,7 +2767,24 @@
       },
       "avoidTags": [
         "mustard"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "maple-soy-salmon-bowls",
@@ -1916,13 +2823,36 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 819,
-        "protein": 58,
-        "carbs": 67,
-        "fat": 34,
+        "calories": 890,
+        "protein": 65,
+        "carbs": 73,
+        "fat": 37,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "mediterranean-baked-fish-tray",
@@ -1972,7 +2902,24 @@
         "onions",
         "olives",
         "tomatoes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "mediterranean-beef-kofta-bowls",
@@ -2020,7 +2967,30 @@
       "avoidTags": [
         "onions",
         "tomatoes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta/noodle alternative. Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "mediterranean-chicken-white-bean-skillet",
@@ -2073,7 +3043,35 @@
         "feta",
         "beans",
         "spinach"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "moroccan-chicken-chickpea-tray",
@@ -2122,7 +3120,24 @@
       "avoidTags": [
         "onions",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "one-pot-beef-orzo-skillet-spinach-feta",
@@ -2172,7 +3187,35 @@
         "onions",
         "feta",
         "spinach"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free pasta. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "peruvian-sheet-pan-chicken-aji-verde",
@@ -2222,7 +3265,40 @@
         "cilantro",
         "mayonnaise",
         "jalapenos"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+          },
+          {
+            "flag": "egg",
+            "label": "Egg-Free Adaptable",
+            "note": "Use an egg-free/vegan mayonnaise."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "pesto-tomato-chicken-tray",
@@ -2270,7 +3346,30 @@
       },
       "avoidTags": [
         "tomatoes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "treeNuts",
+            "label": "Nut-Free Adaptable",
+            "note": "Use a nut-free pesto made with pepitas or sunflower seeds instead of pine nuts."
+          }
+        ]
+      }
     },
     {
       "slug": "salsa-verde-crock-chicken",
@@ -2319,7 +3418,30 @@
         "onions",
         "cilantro",
         "jalapenos"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "shawarma-chicken-rice-bowls",
@@ -2368,7 +3490,24 @@
       "avoidTags": [
         "onions",
         "tomatoes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "sheet-pan-chicken-fajitas-lite",
@@ -2417,7 +3556,24 @@
       "avoidTags": [
         "onions",
         "bell_peppers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
@@ -2466,7 +3622,24 @@
       "avoidTags": [
         "onions",
         "bell_peppers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "smoky-lentil-kale-soup",
@@ -2514,7 +3687,30 @@
       },
       "avoidTags": [
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "southwest-beef-sweet-potato-skillet",
@@ -2565,7 +3761,24 @@
         "avocado",
         "beans",
         "corn"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "spanish-chicken-chorizo-rice",
@@ -2614,7 +3827,35 @@
       "avoidTags": [
         "onions",
         "bell_peppers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "tabbouleh-chicken-bowls",
@@ -2661,7 +3902,30 @@
       },
       "avoidTags": [
         "tomatoes"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Substitute quinoa or rice."
+          }
+        ]
+      }
     },
     {
       "slug": "thai-basil-ground-beef-skillet",
@@ -2709,7 +3973,35 @@
       "avoidTags": [
         "jalapenos",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": false,
+          "shellfishFree": false,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free or vegetarian 'oyster' sauce alternative. Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "soy",
+            "label": "Soy-Free Adaptable",
+            "note": "Use coconut aminos."
+          }
+        ]
+      }
     },
     {
       "slug": "trinidadian-curry-chicken-potatoes",
@@ -2758,7 +4050,30 @@
       "avoidTags": [
         "onions",
         "jalapenos"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-lettuce-wrap-night",
@@ -2804,7 +4119,30 @@
         "fat": 22,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": false,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use tamari (check soy-free brands separately) or coconut aminos. Use a certified gluten-free hoisin or a tamari-based substitute."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-quinoa-stuffed-peppers",
@@ -2853,7 +4191,35 @@
       "avoidTags": [
         "onions",
         "bell_peppers"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-sausage-egg-muffins",
@@ -2892,17 +4258,45 @@
         "lowCarb": true,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 581,
-        "protein": 40,
+        "calories": 570,
+        "protein": 43,
         "carbs": 6,
-        "fat": 44,
+        "fat": 41,
         "numericFilterEligible": true
       },
       "avoidTags": [
         "onions",
         "bell_peppers",
         "spinach"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": false,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-shepherds-sweet-potato",
@@ -2951,7 +4345,35 @@
       "avoidTags": [
         "onions",
         "corn"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-sweet-potato-chili",
@@ -3000,7 +4422,30 @@
         "onions",
         "bell_peppers",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-taco-skillet",
@@ -3050,7 +4495,30 @@
         "bell_peppers",
         "beans",
         "corn"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-zoodle-bolognese",
@@ -3097,7 +4565,35 @@
       },
       "avoidTags": [
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "alcohol",
+            "label": "Alcohol-Free Adaptable",
+            "note": "Substitute broth plus a splash of vinegar for the acidity."
+          }
+        ]
+      }
     },
     {
       "slug": "unstuffed-cabbage-roll-skillet",
@@ -3144,7 +4640,30 @@
       },
       "avoidTags": [
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free Worcestershire sauce."
+          }
+        ]
+      }
     },
     {
       "slug": "veggie-egg-casserole-tray",
@@ -3195,7 +4714,35 @@
         "bell_peppers",
         "feta",
         "spinach"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a 1:1 gluten-free all-purpose flour blend."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "vietnamese-caramel-braised-chicken-bowls",
@@ -3245,7 +4792,24 @@
         "cilantro",
         "jalapenos",
         "coconut"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": false,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "white-bean-chicken-chili",
@@ -3294,7 +4858,30 @@
         "onions",
         "cilantro",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          }
+        ]
+      }
     },
     {
       "slug": "white-bean-kale-soup",
@@ -3343,7 +4930,35 @@
       "avoidTags": [
         "onions",
         "beans"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free broth or bouillon."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "yogurt-marinated-grill-chicken",
@@ -3389,7 +5004,24 @@
         "fat": 17,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "zaatar-roasted-chicken-thighs",
@@ -3437,7 +5069,24 @@
       },
       "avoidTags": [
         "onions"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     }
   ]
 }

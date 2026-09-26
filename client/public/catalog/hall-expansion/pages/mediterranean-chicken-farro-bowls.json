@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 693,
-  "protein": 66,
-  "carbs": 50,
-  "fats": 26,
+  "calories": 450,
+  "protein": 40,
+  "carbs": 44,
+  "fats": 14,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -159,25 +159,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 693,
-    "protein": 66,
-    "carbs": 50,
-    "fats": 26,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 450,
+    "protein": 40,
+    "carbs": 44,
+    "fats": 14,
+    "label": "~450 cal/serving · 40g protein · 8g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
@@ -199,7 +199,7 @@
     "bun-bo-hue-noodle-soup"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -251,11 +251,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "olives",
-    "tomatoes",
-    "feta"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

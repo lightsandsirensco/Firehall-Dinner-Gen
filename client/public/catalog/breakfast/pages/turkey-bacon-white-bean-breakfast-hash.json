@@ -1,0 +1,168 @@
+{
+  "slug": "turkey-bacon-white-bean-breakfast-hash",
+  "title": "Turkey Bacon & White Bean Breakfast Hash",
+  "subtitle": "A leaner skillet hash built on turkey bacon, white beans, and crisped potatoes.",
+  "description": "Turkey bacon and white beans fold into a crisped potato hash with peppers and onion, finished with eggs cooked over the top. White beans add fiber and body next to a leaner bacon than the hall's usual pork versions.",
+  "filters": [
+    "skillets",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "hash",
+    "turkey-bacon",
+    "white-beans",
+    "eggs",
+    "one-pan"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 26,
+  "totalTime": 41,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "russet potato",
+      "quantity": "3 lb",
+      "notes": "diced 1/2-inch",
+      "group": "Base"
+    },
+    {
+      "name": "turkey bacon",
+      "quantity": "1 lb",
+      "notes": "diced",
+      "group": "Protein"
+    },
+    {
+      "name": "white beans",
+      "quantity": "2 cans",
+      "notes": "drained, rinsed",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "group": "Protein"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "1",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2 tbsp",
+      "group": "Aromatics"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook the potatoes",
+      "instruction": "Microwave diced potatoes with a splash of water in a covered bowl until just tender. This cuts skillet time and helps them crisp instead of steam.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 2,
+      "title": "Crisp the turkey bacon",
+      "instruction": "Cook diced turkey bacon in a large skillet or two batches on a griddle over medium-high until browned and crisp at the edges. Remove and set aside, leaving the rendered fat in the pan.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Crisp the potatoes",
+      "instruction": "Add olive oil to the pan, then add par-cooked potatoes in a single layer. Let sit 3–4 minutes for color before tossing. Add onion and bell pepper and cook until softened and browned in spots.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fold in bacon and beans",
+      "instruction": "Return turkey bacon to the pan along with white beans. Toss to combine and warm through.",
+      "minutes": 4
+    },
+    {
+      "stepNumber": 5,
+      "title": "Top with eggs and finish",
+      "instruction": "Make shallow wells in the hash and crack an egg into each. Cover with a lid or inverted sheet pan over medium-low until egg whites are set and yolks reach preference.",
+      "minutes": 6
+    }
+  ],
+  "nutrition": {
+    "calories": 471,
+    "protein": 28,
+    "carbs": 48,
+    "fat": 19,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Par-cook potatoes in the microwave first to save real skillet time.",
+    "Crisp turkey bacon before the potatoes so its rendered fat flavors the hash.",
+    "Add eggs last so they finish exactly when the rest of the pan is ready."
+  ],
+  "cleanupNotes": [
+    "Deglaze the skillet with hot water while still warm, then scrub once cool enough to handle.",
+    "Wipe down cutting boards immediately after raw turkey bacon prep."
+  ],
+  "leftovers": [
+    "Reheat the potato-bean base covered at 325°F for 10 minutes; fry fresh eggs rather than reheating set yolks.",
+    "Keeps refrigerated up to 3 days."
+  ],
+  "heroImage": "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+  "thumbImage": "/images/thumbs/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+  "imageAlt": "Skillet of turkey bacon and white bean breakfast hash with eggs cooked on top",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 6,
+  "seoTitle": "Turkey Bacon White Bean Breakfast Hash | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 675,
-  "protein": 49,
-  "carbs": 58,
-  "fats": 28,
+  "calories": 510,
+  "protein": 38,
+  "carbs": 46,
+  "fats": 18,
   "tags": [
     "protein:chicken",
     "format:handheld",
@@ -180,25 +180,25 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 675,
-    "protein": 49,
-    "carbs": 58,
-    "fats": 28,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 510,
+    "protein": 38,
+    "carbs": 46,
+    "fats": 18,
+    "label": "~510 cal/serving · 38g protein · 3g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
@@ -216,10 +216,11 @@
   "relatedSlugs": [
     "bbq-meatball-skewers",
     "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
     "buffalo-chicken-wraps"
   ],
   "sourceUrl": "https://www.seriouseats.com/shawarma-recipe",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.958Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -266,10 +267,6 @@
         "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "tomatoes"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

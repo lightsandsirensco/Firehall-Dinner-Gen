@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 718,
-  "protein": 120,
-  "carbs": 5,
-  "fats": 21,
+  "calories": 420,
+  "protein": 40,
+  "carbs": 8,
+  "fats": 26,
   "tags": [
     "protein:chicken",
     "format:roast",
@@ -135,7 +135,7 @@
     {
       "stepNumber": 5,
       "title": "Carve for the line",
-      "instruction": "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on hotel pans with pan juices spooned over.",
+      "instruction": "Carve each bird into ten portions: legs, thighs, and breast pieces. Arrange on baking dishes with pan juices spooned over.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -158,16 +158,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 718,
-    "protein": 120,
-    "carbs": 5,
-    "fats": 21,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 420,
+    "protein": 40,
+    "carbs": 8,
+    "fats": 26,
+    "label": "~420 cal/serving · 40g protein · 2g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
@@ -198,7 +198,7 @@
     "pasta-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -233,9 +233,6 @@
         "note": "Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

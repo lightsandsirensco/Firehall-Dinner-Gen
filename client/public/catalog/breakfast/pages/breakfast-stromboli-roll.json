@@ -110,7 +110,7 @@
     "protein": 46,
     "carbs": 61,
     "fat": 31,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -143,8 +143,8 @@
   "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
   "imageAlt": "Golden breakfast stromboli sliced with ham, eggs, and melted cheese",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 8,
   "seoTitle": "Breakfast Stromboli Roll | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -210,9 +210,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "bell_peppers"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

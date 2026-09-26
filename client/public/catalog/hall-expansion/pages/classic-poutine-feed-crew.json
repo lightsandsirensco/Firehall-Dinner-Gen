@@ -13,10 +13,10 @@
   "cookTime": 40,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 810,
-  "protein": 32,
-  "carbs": 68,
-  "fats": 46,
+  "calories": 680,
+  "protein": 18,
+  "carbs": 72,
+  "fats": 36,
   "tags": [
     "protein:beef",
     "format:platter",
@@ -156,16 +156,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 810,
-    "protein": 32,
-    "carbs": 68,
-    "fats": 46,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 680,
+    "protein": 18,
+    "carbs": 72,
+    "fats": 36,
+    "label": "~680 cal/serving · 18g protein · 5g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
@@ -196,7 +196,7 @@
     "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -261,7 +261,6 @@
         "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

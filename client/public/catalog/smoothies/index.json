@@ -26,7 +26,30 @@
         "fat": 8,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats."
+          }
+        ]
+      }
     },
     {
       "slug": "chocolate-banana-recovery",
@@ -49,7 +72,24 @@
         "fat": 6,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": false,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "citrus-ginger",
@@ -74,7 +114,24 @@
       },
       "avoidTags": [
         "coconut"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "green-pineapple",
@@ -100,7 +157,24 @@
       "avoidTags": [
         "spinach",
         "coconut"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": true
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "mixed-berry-protein",
@@ -123,7 +197,24 @@
         "fat": 5,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "mocha-protein",
@@ -146,7 +237,24 @@
         "fat": 4,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "peanut-butter-banana-recovery",
@@ -169,7 +277,24 @@
         "fat": 10,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "strawberry-oat-breakfast",
@@ -192,7 +317,30 @@
         "fat": 4,
         "numericFilterEligible": true
       },
-      "avoidTags": []
+      "avoidTags": [],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats."
+          }
+        ]
+      }
     },
     {
       "slug": "strawberry-spinach",
@@ -217,7 +365,24 @@
       },
       "avoidTags": [
         "spinach"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "tropical-mango-greek",
@@ -242,7 +407,24 @@
       },
       "avoidTags": [
         "coconut"
-      ]
+      ],
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     }
   ]
 }

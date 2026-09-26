@@ -13,10 +13,10 @@
   "cookTime": 60,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 779,
-  "protein": 51,
-  "carbs": 78,
-  "fats": 30,
+  "calories": 540,
+  "protein": 36,
+  "carbs": 56,
+  "fats": 20,
   "tags": [
     "protein:beef",
     "format:pasta",
@@ -134,7 +134,7 @@
     {
       "stepNumber": 5,
       "title": "Serve family-style",
-      "instruction": "Portion pasta into bowls or hotel pan, top with remaining sauce and Parmesan. Serve with extra cheese at the line.",
+      "instruction": "Portion pasta into bowls or baking dish, top with remaining sauce and Parmesan. Serve with extra cheese at the line.",
       "minutes": 5,
       "heatLevel": ""
     }
@@ -152,30 +152,30 @@
     "Bake into a pasta casserole with extra mozzarella on top.",
     "Stuff into hoagie rolls with melted provolone for meatball-less subs."
   ],
-  "whyCrewsLikeIt": "Meat sauce is the pasta baseline everyone recognizes. It scales cheap, simmers while you handle other duties, and holds hot in a hotel pan for late eaters.",
+  "whyCrewsLikeIt": "Meat sauce is the pasta baseline everyone recognizes. It scales cheap, simmers while you handle other duties, and holds hot in a baking dish for late eaters.",
   "mealPrepNotes": "Simmer sauce at least 45 minutes for depth—longer is better. Salt pasta water heavily. Sauce and pasta can stay separate until service if holding.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 779,
-    "protein": 51,
-    "carbs": 78,
-    "fats": 30,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 540,
+    "protein": 36,
+    "carbs": 56,
+    "fats": 20,
+    "label": "~540 cal/serving · 36g protein · 5g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/rigatoni-meat-sauce-batch.jpg",
@@ -194,10 +194,10 @@
     "mushroom-swiss-steak-pan",
     "mostaccioli-sausage-bake",
     "creamy-chicken-penne-alfredo",
-    "shawarma-bar-night"
+    "chickpea-pasta-primavera-white-beans"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -260,9 +260,6 @@
         "note": "Substitute broth plus a splash of vinegar for the acidity."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 740,
-  "protein": 53,
-  "carbs": 12,
-  "fats": 53,
+  "calories": 480,
+  "protein": 36,
+  "carbs": 38,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -31,7 +31,7 @@
   ],
   "equipment": [
     "Sheet pans",
-    "Hotel pans",
+    "baking dishes",
     "Instant-read thermometer",
     "Sharp slicing knife",
     "Serving spoons"
@@ -117,7 +117,7 @@
     {
       "stepNumber": 3,
       "title": "Rest and slice thin",
-      "instruction": "Rest chicken 10 minutes, then slice as thin as possible against the grain. Pile into a hotel pan and tent with foil for holding at the bar.",
+      "instruction": "Rest chicken 10 minutes, then slice as thin as possible against the grain. Pile into a baking dish and tent with foil for holding at the bar.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -150,33 +150,33 @@
     "Stuff into pita with feta for a cold lunch wrap the next shift."
   ],
   "whyCrewsLikeIt": "Shawarma bar night feels like takeout but costs a fraction and scales cleanly. Warm spiced chicken smells incredible in the hall and the DIY format means no one gets stuck with toppings they hate.",
-  "mealPrepNotes": "Marinate chicken up to 24 hours. Prep all bar toppings in labeled hotel pans the night before. Slice chicken just before service and hold at 165°F in a covered pan with a splash of lemon juice.",
+  "mealPrepNotes": "Marinate chicken up to 24 hours. Prep all bar toppings in labeled baking dishes the night before. Slice chicken just before service and hold at 165°F in a covered pan with a splash of lemon juice.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 740,
-    "protein": 53,
-    "carbs": 12,
-    "fats": 53,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 480,
+    "protein": 36,
+    "carbs": 38,
+    "fats": 20,
+    "label": "~480 cal/serving · 36g protein · 4g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/shawarma-bar-night.jpg",
-  "heroImageAlt": "Shawarma Bar Night — middle-eastern bar line plated for a firehall crew",
+  "heroImageAlt": "Shawarma Bar Night — middle-eastern bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/shawarma-bar-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/shawarma-bar-night.jpg",
   "railImage": "/images/rails/hall-expansion/shawarma-bar-night.jpg",
@@ -194,7 +194,7 @@
     "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.769Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -235,7 +235,6 @@
         "note": "Use a certified gluten-free bread/crust/wrapper alternative."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

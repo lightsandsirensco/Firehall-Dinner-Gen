@@ -15,8 +15,8 @@
     "handheld",
     "make-ahead"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 18,
   "cookTime": 15,
   "totalTime": 33,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "13",
+      "quantity": "16",
       "notes": "soft-scrambled",
       "group": "Fillings"
     },
     {
       "name": "lean turkey breakfast sausage",
-      "quantity": "1 1/4 lb",
+      "quantity": "1 1/2 lb",
       "notes": "browned and crumbled",
       "group": "Fillings"
     },
     {
       "name": "baby spinach",
-      "quantity": "8 oz",
+      "quantity": "10 oz",
       "notes": "wilted and squeezed dry",
       "group": "Fillings"
     },
     {
       "name": "crumbled feta",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "or goat cheese",
       "group": "Fillings"
     },
     {
       "name": "10-inch whole-wheat tortillas",
-      "quantity": "8",
+      "quantity": "10",
       "notes": "warmed",
       "group": "Build"
     },
     {
       "name": "salsa verde",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "drained, spread thin",
       "group": "Build"
     },
     {
       "name": "avocado",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "sliced, optional",
       "group": "Build"
     },
     {
       "name": "foil",
-      "quantity": "8 sheets",
+      "quantity": "10 sheets",
       "notes": "for wrapping to-go portions",
       "group": "Hold"
     }
@@ -104,11 +104,11 @@
     }
   ],
   "nutrition": {
-    "calories": 557,
+    "calories": 550,
     "protein": 30,
     "carbs": 29,
     "fat": 36,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/hall-breakfast-wraps.jpg",
   "thumbImage": "/images/thumbs/breakfast/hall-breakfast-wraps.jpg",
   "imageAlt": "Hall breakfast wraps cut in half showing eggs, turkey sausage, and spinach",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 7,
   "seoTitle": "Hall Breakfast Wraps | Firehall Breakfast",
   "collectionTier": "healthier_hall",
@@ -207,11 +207,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "avocado",
-    "feta",
-    "spinach"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

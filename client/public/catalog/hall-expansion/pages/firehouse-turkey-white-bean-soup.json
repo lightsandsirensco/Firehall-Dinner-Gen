@@ -1,0 +1,299 @@
+{
+  "slug": "firehouse-turkey-white-bean-soup",
+  "title": "Firehouse Turkey & White Bean Soup",
+  "displayTitle": "Firehouse Turkey & White Bean Soup",
+  "seoTitle": "Firehouse Turkey & White Bean Soup | Firefighter Meal",
+  "shortDescription": "A hearty, lower-fat soup built on lean ground turkey, white beans, and greens",
+  "subtitle": "A hearty, lower-fat soup built on lean ground turkey, white beans, and greens",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Ground turkey browns with onion, carrot, and celery, then simmers with white beans, chicken broth, and kale into a thick, ladle-able soup. It is a lighter alternative to the hall's cream-based soup nights.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 35,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 405,
+  "protein": 37,
+  "carbs": 29,
+  "fats": 14,
+  "tags": [
+    "protein:turkey",
+    "format:soup_chili",
+    "category:crew_feeders",
+    "soup_chili",
+    "turkey",
+    "healthy",
+    "high_protein",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large soup pot",
+    "Wooden spoon",
+    "Ladle"
+  ],
+  "ingredients": [
+    {
+      "name": "ground turkey",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Protein"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "carrots",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "celery",
+      "quantity": "3",
+      "unit": "stalks",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "garlic",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Base"
+    },
+    {
+      "name": "chicken broth",
+      "quantity": "8",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "cannellini beans",
+      "quantity": "3",
+      "unit": "cans",
+      "notes": "drained, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "dried thyme",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "bay leaf",
+      "quantity": "1",
+      "unit": "whole",
+      "group": "Seasoning"
+    },
+    {
+      "name": "kale",
+      "quantity": "4",
+      "unit": "cups",
+      "notes": "chopped, stems removed",
+      "group": "Greens"
+    },
+    {
+      "name": "parmesan cheese",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "grated",
+      "group": "Finish",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the turkey",
+      "instruction": "Heat 1 tablespoon oil in a large pot over medium-high. Brown ground turkey in batches 6–7 minutes per batch, breaking it into crumbles, until no pink remains. Set aside.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sweat the vegetables",
+      "instruction": "Add remaining oil to the same pot with onion, carrots, and celery. Cook 6–7 minutes until softened, then add garlic and cook 1 more minute.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Build the soup base",
+      "instruction": "Return turkey to the pot along with chicken broth, cannellini beans, thyme, and bay leaf. Bring to a boil, then reduce to a gentle simmer.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Simmer to develop flavor",
+      "instruction": "Simmer uncovered 20–25 minutes, stirring occasionally, until the vegetables are tender and the broth has thickened slightly from the beans breaking down at the edges.",
+      "minutes": 25,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with kale",
+      "instruction": "Remove the bay leaf. Stir in kale during the last 3–4 minutes just until wilted and bright green — overcooking turns it dull and bitter.",
+      "minutes": 4,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold and serve",
+      "instruction": "Keep the soup at a bare simmer for holding, stirring occasionally. Serve with parmesan on the side if using.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover turkey and white bean soup — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool turkey and white bean soup and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Brown the turkey in batches — crowding the pot steams it instead of browning it.",
+    "Rookie tip: Add kale at the very end; it only needs a few minutes to wilt properly.",
+    "This soup thickens overnight — add extra broth when reheating leftovers.",
+    "Swap kale for spinach if that's what's on hand; add it off heat since spinach wilts almost instantly."
+  ],
+  "tonightSpread": [
+    "Main: Turkey and white bean soup",
+    "Sides: Crusty bread, simple green salad",
+    "Condiments: Grated parmesan, red pepper flakes",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool turkey and white bean soup in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Freezes well in individual portions for up to 3 months."
+  ],
+  "whyCrewsLikeIt": "It still feels like a real cold-weather soup night, holds well in a big pot for staggered eating, and comes in noticeably lighter than a cream-based chowder without sacrificing how filling it is.",
+  "mealPrepNotes": "Make-ahead: this soup holds and reheats exceptionally well. Storage: refrigerate up to 5 days or freeze up to 3 months. Reheating: reheat covered on the stove, adding a splash of broth since it thickens as it sits.",
+  "substitutions": [
+    "Use ground chicken instead of turkey.",
+    "Use great northern beans or navy beans instead of cannellini beans.",
+    "Use spinach instead of kale."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 405,
+    "protein": 37,
+    "carbs": 29,
+    "fats": 14,
+    "label": "~405 cal/serving · 37g protein · 9g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+  "heroImageAlt": "Firehouse Turkey & White Bean Soup — american soup_chili plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+  "railImage": "/images/rails/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "turkey white bean soup",
+    "high protein soup",
+    "lean turkey soup",
+    "healthy soup recipe",
+    "meal prep soup",
+    "firehouse turkey soup"
+  ],
+  "relatedSlugs": [
+    "firehouse-lentil-chili",
+    "red-lentil-paneer-dal",
+    "shawarma-bar-night",
+    "fajita-bar-night"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "chicken broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

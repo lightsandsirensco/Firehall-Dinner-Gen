@@ -15,8 +15,8 @@
     "eggs",
     "station"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 25,
   "cookTime": 20,
   "totalTime": 45,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "19",
+      "quantity": "24",
       "notes": "beaten in batches of 3 per omelette",
       "group": "Eggs"
     },
     {
       "name": "whole milk",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "whisked into beaten eggs",
       "group": "Eggs"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "1.6 cups",
+      "quantity": "2 cups",
       "notes": "and 2 cups shredded mozzarella",
       "group": "Fillings"
     },
     {
       "name": "diced ham",
-      "quantity": "1.6 cups",
+      "quantity": "2 cups",
       "notes": "and 1 lb cooked crumbled bacon",
       "group": "Fillings"
     },
     {
       "name": "sautéed mushrooms",
-      "quantity": "1.6 cups",
+      "quantity": "2 cups",
       "notes": "and 1 cup diced bell peppers",
       "group": "Fillings"
     },
     {
       "name": "diced tomatoes",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "drained, plus 1 cup spinach",
       "group": "Fillings"
     },
     {
       "name": "butter",
-      "quantity": "3.4 tbsp",
+      "quantity": "4 tbsp",
       "notes": "for pans, plus oil as needed",
       "group": "Fat"
     },
     {
       "name": "salsa and hot sauce",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "at the line",
       "group": "Serve"
     }
@@ -75,7 +75,7 @@
     {
       "stepNumber": 1,
       "title": "Prep the filling line",
-      "instruction": "Set all fillings in labeled hotel pans with spoons. Sauté mushrooms and peppers ahead; drain tomatoes well. Beat eggs with milk in a pitcher for fast pours.",
+      "instruction": "Set all fillings in labeled baking dishes with spoons. Sauté mushrooms and peppers ahead; drain tomatoes well. Beat eggs with milk in a pitcher for fast pours.",
       "minutes": 20
     },
     {
@@ -105,10 +105,10 @@
   ],
   "nutrition": {
     "calories": 360,
-    "protein": 27,
+    "protein": 28,
     "carbs": 5,
     "fat": 26,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/fire-captain-omelette-bar.jpg",
   "thumbImage": "/images/thumbs/breakfast/fire-captain-omelette-bar.jpg",
   "imageAlt": "Fire captain omelette bar with fillings and folded omelettes on warm plates",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 9,
   "seoTitle": "Fire Captain Omelette Bar | Firehall Breakfast",
   "collectionTier": "healthier_hall",
@@ -204,11 +204,6 @@
         "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "mushrooms",
-    "bell_peppers",
-    "spinach"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

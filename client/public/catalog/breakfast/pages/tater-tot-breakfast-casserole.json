@@ -15,8 +15,8 @@
     "bake",
     "midwest"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 40,
   "totalTime": 55,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "frozen tater tots",
-      "quantity": "2.4 lb",
+      "quantity": "3 lb",
       "notes": "straight from freezer",
       "group": "Base"
     },
     {
       "name": "bacon",
-      "quantity": "1 1/4 lb",
+      "quantity": "1 1/2 lb",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
       "name": "large eggs",
-      "quantity": "10",
+      "quantity": "12",
       "notes": "lightly beaten",
       "group": "Egg mix"
     },
     {
       "name": "whole milk",
-      "quantity": "1 1/4 cups",
+      "quantity": "1 1/2 cups",
       "group": "Egg mix"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "garlic powder",
-      "quantity": "7/8 tsp",
+      "quantity": "1 tsp",
       "notes": "plus salt and pepper",
       "group": "Seasoning"
     },
     {
       "name": "sliced green onions",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "plus ranch or hot sauce",
       "group": "Finish"
     },
     {
       "name": "diced bell pepper",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "sautéed soft, optional layer",
       "group": "Optional"
     }
@@ -105,11 +105,11 @@
     }
   ],
   "nutrition": {
-    "calories": 871,
-    "protein": 47,
+    "calories": 851,
+    "protein": 46,
     "carbs": 35,
-    "fat": 59,
-    "label": "Estimated per serving",
+    "fat": 58,
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -142,8 +142,8 @@
   "heroImage": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
   "thumbImage": "/images/thumbs/breakfast/tater-tot-breakfast-casserole.jpg",
   "imageAlt": "Tater tot breakfast casserole with bacon, eggs, and melted cheddar",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 7,
   "seoTitle": "Tater Tot Breakfast Casserole | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -209,9 +209,6 @@
         "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "bell_peppers"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

@@ -1,0 +1,198 @@
+{
+  "slug": "black-bean-egg-white-breakfast-burritos",
+  "title": "Black Bean & Egg White Breakfast Burritos",
+  "subtitle": "Vegetarian breakfast burritos built on egg whites, black beans, and pepper jack.",
+  "description": "Egg whites scramble up with black beans, bell pepper, and onion, then get wrapped in a warm tortilla with pepper jack and salsa. It is a fully vegetarian, higher-protein burrito option next to the hall's usual sausage versions.",
+  "filters": [
+    "feed_a_crew",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "burritos",
+    "vegetarian",
+    "egg-whites",
+    "black-beans",
+    "make-ahead"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 16,
+  "totalTime": 31,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "egg whites",
+      "quantity": "24",
+      "notes": "or 3 cups liquid egg whites",
+      "group": "Eggs"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2 cans",
+      "notes": "drained, rinsed",
+      "group": "Fillings"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "2",
+      "notes": "diced",
+      "group": "Fillings"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "notes": "diced",
+      "group": "Fillings"
+    },
+    {
+      "name": "pepper jack cheese",
+      "quantity": "1 1/2 cups",
+      "notes": "shredded",
+      "group": "Fillings"
+    },
+    {
+      "name": "flour tortilla",
+      "quantity": "12",
+      "notes": "10-inch",
+      "group": "Build"
+    },
+    {
+      "name": "salsa",
+      "quantity": "1 cup",
+      "group": "Build"
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "1",
+      "group": "Build",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Sauté the vegetables",
+      "instruction": "Heat a splash of oil in a large skillet over medium. Cook onion and bell pepper 5–6 minutes until softened.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 2,
+      "title": "Warm the black beans",
+      "instruction": "Add black beans to the pan with the vegetables and warm through, 4–5 minutes, seasoning with a pinch of salt and cumin if desired.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 3,
+      "title": "Scramble the egg whites",
+      "instruction": "Move beans and vegetables to one side of the pan or a separate pan. Pour in egg whites and scramble gently over medium-low until just set — they firm up fast, so don't walk away.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build and wrap for the line",
+      "instruction": "Warm tortillas briefly. Fill with egg whites, bean-vegetable mixture, cheese, and a spoon of salsa. Fold in the sides, then roll forward tightly. Hold seam-side down on a warm tray.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 5,
+      "title": "Serve and hold",
+      "instruction": "Hold wrapped burritos in a 200°F oven, uncovered for a crisper tortilla or covered for a softer one. Serve with hot sauce on the side.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 454,
+    "protein": 28,
+    "carbs": 56,
+    "fat": 13,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Cook vegetables and beans first since they hold well while the egg whites finish.",
+    "Scramble egg whites gently and pull them slightly underdone — they keep setting off the heat.",
+    "Wrap burritos tightly so fillings stay contained through the line."
+  ],
+  "cleanupNotes": [
+    "Wipe the egg white pan while warm to prevent set residue from sticking.",
+    "Rinse the bean pan promptly — bean starch dries stubborn if left to sit."
+  ],
+  "leftovers": [
+    "Wrap cooled burritos individually in foil and refrigerate up to 4 days, or freeze up to 2 months.",
+    "Reheat wrapped in foil at 350°F for 15–18 minutes, or unwrapped in a skillet for a crisper tortilla."
+  ],
+  "heroImage": "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+  "thumbImage": "/images/thumbs/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+  "imageAlt": "Black bean and egg white breakfast burrito sliced open on a plate",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 5,
+  "seoTitle": "Black Bean Egg White Breakfast Burritos | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 8,
+    "totalCount": 8,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "egg whites",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "pepper jack cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "flour tortilla",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

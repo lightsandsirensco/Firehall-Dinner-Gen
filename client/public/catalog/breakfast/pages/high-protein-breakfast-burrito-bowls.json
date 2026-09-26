@@ -1,0 +1,205 @@
+{
+  "slug": "high-protein-breakfast-burrito-bowls",
+  "title": "High-Protein Breakfast Burrito Bowls",
+  "subtitle": "A deconstructed breakfast burrito over rice with ground turkey, eggs, and black beans.",
+  "description": "Seasoned ground turkey, scrambled eggs, black beans, and brown rice build into a bowl instead of a wrap, finished with pico de gallo, cheese, and avocado. It is a fork-and-bowl format for crews who want burrito flavor without the tortilla.",
+  "filters": [
+    "feed_a_crew",
+    "high_protein",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "breakfast-bowl",
+    "ground-turkey",
+    "black-beans",
+    "eggs",
+    "meal-prep"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 25,
+  "totalTime": 40,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "brown rice",
+      "quantity": "2 cups",
+      "notes": "uncooked",
+      "group": "Base"
+    },
+    {
+      "name": "ground turkey",
+      "quantity": "2 lb",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "16",
+      "group": "Protein"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2 cans",
+      "notes": "drained, rinsed",
+      "group": "Protein"
+    },
+    {
+      "name": "taco seasoning",
+      "quantity": "2 tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "pico de gallo",
+      "quantity": "1 1/2 cups",
+      "notes": "or diced tomato and onion",
+      "group": "Toppings"
+    },
+    {
+      "name": "shredded cheese",
+      "quantity": "1 1/2 cups",
+      "notes": "cheddar or Mexican blend",
+      "group": "Toppings"
+    },
+    {
+      "name": "avocado",
+      "quantity": "2",
+      "notes": "sliced",
+      "group": "Toppings"
+    },
+    {
+      "name": "greek yogurt",
+      "quantity": "1 cup",
+      "notes": "plain, in place of sour cream",
+      "group": "Toppings",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the rice",
+      "instruction": "Cook brown rice according to package directions. This takes the longest, so start it first and hold covered until bowls are built.",
+      "minutes": 40
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the ground turkey",
+      "instruction": "Brown ground turkey in a large skillet over medium-high, breaking it into crumbles. Stir in taco seasoning and a splash of water, and simmer 2 minutes until coated.",
+      "minutes": 10
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm the black beans",
+      "instruction": "Warm black beans in a small saucepan with a pinch of salt and cumin while the turkey finishes.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 4,
+      "title": "Scramble the eggs",
+      "instruction": "In a separate nonstick pan, scramble eggs over medium-low until just set. Keep them soft — they will finish warming once bowls are built.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 5,
+      "title": "Build the bowls",
+      "instruction": "Layer rice, ground turkey, black beans, and scrambled eggs in each bowl. Top with pico de gallo, cheese, avocado, and a spoon of Greek yogurt if using.",
+      "minutes": 8
+    }
+  ],
+  "nutrition": {
+    "calories": 753,
+    "protein": 54,
+    "carbs": 59,
+    "fat": 33,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Start the rice first since it takes the longest of any component.",
+    "Cook turkey, beans, and eggs in separate pans so each stays properly textured.",
+    "Set toppings out buffet-style so crew members can build bowls to their own taste."
+  ],
+  "cleanupNotes": [
+    "Wipe the egg pan while still warm — cooked egg is much harder to scrub once cool.",
+    "Rinse the rice pot promptly so starch doesn't dry stuck to the bottom."
+  ],
+  "leftovers": [
+    "Store rice, turkey, beans, and eggs in separate containers up to 4 days for the cleanest reheats.",
+    "Add pico, avocado, and yogurt fresh each time rather than storing them mixed in."
+  ],
+  "heroImage": "/images/breakfast/high-protein-breakfast-burrito-bowls.jpg",
+  "thumbImage": "/images/thumbs/breakfast/high-protein-breakfast-burrito-bowls.jpg",
+  "imageAlt": "High-protein breakfast burrito bowl with ground turkey, eggs, black beans, and avocado",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 6,
+  "seoTitle": "High-Protein Breakfast Burrito Bowls | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "taco seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "shredded cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

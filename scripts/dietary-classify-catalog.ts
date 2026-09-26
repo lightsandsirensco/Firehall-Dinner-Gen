@@ -24,6 +24,26 @@ import { toDietarySummary } from "../shared/dietary/schema.js";
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
+/** Windows (esp. OneDrive-synced folders) occasionally throws a transient
+ *  "UNKNOWN"/EBUSY error on writeFileSync when hundreds of files are written
+ *  back-to-back in a tight loop (antivirus/indexer briefly holding a handle).
+ *  Retry a few times with a short backoff instead of crashing the whole run. */
+function writeFileSyncWithRetry(file: string, data: string, attempts = 5): void {
+  for (let i = 1; i <= attempts; i++) {
+    try {
+      fs.writeFileSync(file, data, "utf8");
+      return;
+    } catch (err) {
+      if (i === attempts) throw err;
+      const waitMs = 150 * i;
+      const end = Date.now() + waitMs;
+      while (Date.now() < end) {
+        /* busy-wait briefly; keeps this a plain sync script */
+      }
+    }
+  }
+}
+
 const COLLECTIONS: Array<{ id: string; root: string }> = [
   { id: "golden-100", root: "client/public/catalog/golden-100" },
   { id: "hall-expansion", root: "client/public/catalog/hall-expansion" },
@@ -89,7 +109,7 @@ for (const record of allPages) {
   };
 
   if (!DRY_RUN) {
-    fs.writeFileSync(record.file, JSON.stringify(record.json, null, 2) + "\n", "utf8");
+    writeFileSyncWithRetry(record.file, JSON.stringify(record.json, null, 2) + "\n");
   }
   written++;
 }
@@ -126,7 +146,7 @@ for (const { id, root } of COLLECTIONS) {
   }
 
   if (!DRY_RUN) {
-    fs.writeFileSync(indexPath, JSON.stringify(index, null, 2) + "\n", "utf8");
+    writeFileSyncWithRetry(indexPath, JSON.stringify(index, null, 2) + "\n");
   }
   indexesUpdated++;
   console.log(`[dietary-classify] ${id}: tagged ${touched}/${index.recipes.length} index entries.`);

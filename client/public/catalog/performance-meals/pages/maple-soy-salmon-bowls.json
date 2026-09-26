@@ -13,10 +13,10 @@
   "cookTime": 18,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 819,
-  "protein": 58,
-  "carbs": 67,
-  "fats": 34,
+  "calories": 890,
+  "protein": 65,
+  "carbs": 73,
+  "fats": 37,
   "tags": [
     "protein:salmon",
     "format:bowl",
@@ -155,10 +155,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 819,
-    "protein": 58,
-    "carbs": 67,
-    "fats": 34,
+    "calories": 890,
+    "protein": 65,
+    "carbs": 73,
+    "fats": 37,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -254,7 +254,7 @@
         "note": "Use tamari (check soy-free brands separately) or coconut aminos."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
   },
   "avoidTags": []
 }

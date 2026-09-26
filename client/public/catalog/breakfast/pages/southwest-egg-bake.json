@@ -13,8 +13,8 @@
     "salsa",
     "pepper-jack"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 20,
   "cookTime": 38,
   "totalTime": 58,
@@ -22,36 +22,36 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "11"
+      "quantity": "14"
     },
     {
       "name": "whole milk",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "or half-and-half for richer"
     },
     {
       "name": "turkey sausage or lean pork sausage",
-      "quantity": "1.6 lb",
+      "quantity": "2 lb",
       "notes": "browned"
     },
     {
       "name": "onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "diced"
     },
     {
       "name": "baby spinach",
-      "quantity": "6.4–8 oz",
+      "quantity": "8–10 oz",
       "notes": "or chopped kale, sautéed and squeezed dry"
     },
     {
       "name": "shredded cheese",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "cheddar + mozzarella works well"
     },
     {
       "name": "loaf day-old bread",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "cubed (optional), turns it into a strata",
       "optional": true
     }
@@ -91,11 +91,11 @@
     }
   ],
   "nutrition": {
-    "calories": 454,
+    "calories": 456,
     "protein": 42,
     "carbs": 8,
     "fat": 28,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -114,7 +114,7 @@
   },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
-    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Set a warm holding zone (oven at 200°F, food covered) so staggered eaters still get a hot plate.",
     "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
   ],
   "cleanupNotes": [
@@ -128,8 +128,8 @@
   "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
   "imageAlt": "Wide firehall crew platter of Southwest Egg Bake beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-07-17T20:15:27.732Z",
-  "updatedAt": "2026-07-17T20:15:27.732Z",
+  "publishedAt": "2026-09-26T19:26:57.127Z",
+  "updatedAt": "2026-09-26T19:26:57.127Z",
   "readMinutes": 6,
   "seoTitle": "Southwest Egg Bake | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -200,10 +200,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "spinach"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

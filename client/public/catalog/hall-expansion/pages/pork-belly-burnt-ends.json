@@ -13,10 +13,10 @@
   "cookTime": 240,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 946,
-  "protein": 16,
-  "carbs": 17,
-  "fats": 90,
+  "calories": 580,
+  "protein": 18,
+  "carbs": 24,
+  "fats": 48,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -155,16 +155,16 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 946,
-    "protein": 16,
-    "carbs": 17,
-    "fats": 90,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 580,
+    "protein": 18,
+    "carbs": 24,
+    "fats": 48,
+    "label": "~580 cal/serving · 18g protein · 0g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": false,
+      "under700Calories": true,
       "under30gFat": false,
       "highCarb": false,
       "lowCarb": true,
@@ -195,7 +195,7 @@
     "smoked-queso-fundido"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.768Z",
+  "generatedAt": "2026-09-26T19:26:55.955Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -236,7 +236,6 @@
         "note": "Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

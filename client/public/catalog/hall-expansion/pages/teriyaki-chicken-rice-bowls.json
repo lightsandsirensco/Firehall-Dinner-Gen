@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 675,
-  "protein": 69,
-  "carbs": 75,
-  "fats": 10,
+  "calories": 610,
+  "protein": 42,
+  "carbs": 69,
+  "fats": 18,
   "tags": [
     "protein:chicken",
     "format:bowl",
@@ -34,7 +34,7 @@
     "Two large skillets or woks",
     "Saucepan",
     "Instant-read thermometer",
-    "Hotel pans"
+    "baking dishes"
   ],
   "ingredients": [
     {
@@ -123,14 +123,14 @@
     {
       "stepNumber": 3,
       "title": "Prepare chicken for a hard sear",
-      "instruction": "Pat chicken dry and season lightly with pepper; the teriyaki supplies plenty of salt. Heat a wide skillet over medium-high until oil shimmers and set a clean hotel pan nearby. Wet chicken cools the skillet and produces pale pieces, so blot it before it touches the oil.",
+      "instruction": "Pat chicken dry and season lightly with pepper; the teriyaki supplies plenty of salt. Heat a wide skillet over medium-high until oil shimmers and set a clean baking dish nearby. Wet chicken cools the skillet and produces pale pieces, so blot it before it touches the oil.",
       "minutes": 5,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 4,
       "title": "Brown the teriyaki chicken",
-      "instruction": "Sear chicken 8–10 minutes, turning after a crust forms, until browned and 165°F in the largest piece. Move it to the hotel pan before sauce goes in. Chicken left in the skillet while the sweet glaze reduces will overcook before the sauce thickens.",
+      "instruction": "Sear chicken 8–10 minutes, turning after a crust forms, until browned and 165°F in the largest piece. Move it to the baking dish before sauce goes in. Chicken left in the skillet while the sweet glaze reduces will overcook before the sauce thickens.",
       "minutes": 12,
       "heatLevel": "medium-high"
     },
@@ -151,7 +151,7 @@
     {
       "stepNumber": 7,
       "title": "Hold the hot bowl pans",
-      "instruction": "Cover rice, glazed chicken, and vegetables in separate hotel pans above 140°F. Stir a spoonful of glaze through chicken before holding so the pieces do not dry at the edges. Keep sesame and onion cold and dry; steam from a hot pan makes both lose their fresh crunch. Target oven/smoker temperature: 200°F.",
+      "instruction": "Cover rice, glazed chicken, and vegetables in separate baking dishes above 140°F. Stir a spoonful of glaze through chicken before holding so the pieces do not dry at the edges. Keep sesame and onion cold and dry; steam from a hot pan makes both lose their fresh crunch. Target oven/smoker temperature: 200°F.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -186,7 +186,7 @@
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool teriyaki chicken and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool teriyaki chicken and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -221,12 +221,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 675,
-    "protein": 69,
-    "carbs": 75,
-    "fats": 10,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 610,
+    "protein": 42,
+    "carbs": 69,
+    "fats": 18,
+    "label": "~610 cal/serving · 42g protein · 8g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
@@ -239,7 +239,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
@@ -267,7 +267,7 @@
     "miso-ramen-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.958Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -315,9 +315,6 @@
         "note": "Use tamari (check soy-free brands separately) or coconut aminos."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "broccoli"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

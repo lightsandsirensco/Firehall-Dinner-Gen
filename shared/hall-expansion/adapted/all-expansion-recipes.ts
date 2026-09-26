@@ -6,6 +6,8 @@ import { BATCH_B_SANDWICH_RECIPES } from "./batch-b-sandwiches.js";
 import { BATCH_HANDHELD_WRAP_RECIPES } from "./batch-handheld-wraps.js";
 import { BATCH_BOWL_CLASSICS_RECIPES } from "./batch-bowl-classics.js";
 import { BATCH_WAVE1_EXPANSION_RECIPES } from "./batch-wave1-expansion.js";
+import { BATCH_HIGH_PROTEIN_EXPANSION_RECIPES } from "./batch-high-protein-expansion.js";
+import { BATCH_HIGH_PROTEIN_EXPANSION_2_RECIPES } from "./batch-high-protein-expansion-2.js";
 
 const SMOKER_RECIPES: ExpansionRecipeDef[] = [
   def({
@@ -1852,4 +1854,6 @@ export const HALL_EXPANSION_ADAPTED_RECIPES: ExpansionRecipeDef[] = [
   ...BATCH_HANDHELD_WRAP_RECIPES,
   ...BATCH_BOWL_CLASSICS_RECIPES,
   ...BATCH_WAVE1_EXPANSION_RECIPES,
+  ...BATCH_HIGH_PROTEIN_EXPANSION_RECIPES,
+  ...BATCH_HIGH_PROTEIN_EXPANSION_2_RECIPES,
 ];

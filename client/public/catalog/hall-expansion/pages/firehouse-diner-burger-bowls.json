@@ -1,0 +1,305 @@
+{
+  "slug": "firehouse-diner-burger-bowls",
+  "title": "Firehouse Diner Burger Bowls",
+  "displayTitle": "Firehouse Diner Burger Bowls",
+  "seoTitle": "Firehouse Diner Burger Bowls | Firefighter Meal",
+  "shortDescription": "Seasoned beef patties over lettuce with diner-style burger toppings and a tangy burger sauce",
+  "subtitle": "Seasoned beef patties over lettuce with diner-style burger toppings and a tangy burger sauce",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Griddled beef patties are chopped over crisp lettuce with tomato, pickles, red onion, and cheddar, finished with a tangy burger sauce. It tastes like a diner cheeseburger without the bun weighing the plate down.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 560,
+  "protein": 44,
+  "carbs": 5,
+  "fats": 42,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "beef",
+    "healthy",
+    "high_protein",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Griddle or large skillet",
+    "Chef knife",
+    "Mixing bowls",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "ground beef",
+      "quantity": "2.5",
+      "unit": "lb",
+      "notes": "80/20, formed into thin patties",
+      "group": "Protein"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "onion powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "romaine lettuce",
+      "quantity": "3",
+      "unit": "hearts",
+      "notes": "chopped",
+      "group": "Base"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "shredded",
+      "group": "Toppings"
+    },
+    {
+      "name": "tomatoes",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Toppings"
+    },
+    {
+      "name": "dill pickles",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Toppings"
+    },
+    {
+      "name": "red onion",
+      "quantity": "0.5",
+      "unit": "each",
+      "notes": "finely diced",
+      "group": "Toppings"
+    },
+    {
+      "name": "mayonnaise",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "ketchup",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "dill pickle juice",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "0.5",
+      "unit": "tsp",
+      "group": "Sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Chop the diner toppings",
+      "instruction": "Chop romaine into bite-size ribbons, dice tomato and red onion, and chop pickles. Hold all of it cold and covered — this is a rookie-friendly, low-heat prep step.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix the burger sauce",
+      "instruction": "Whisk mayonnaise, ketchup, pickle juice, and smoked paprika until smooth and pink-orange. Taste and adjust with more pickle juice for tang.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season and form thin patties",
+      "instruction": "Mix ground beef with garlic powder, onion powder, salt, and pepper. Form into thin, wide patties so they cook fast and develop a real seared crust.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Griddle the beef",
+      "instruction": "Cook patties on a hot griddle or skillet 3–4 minutes per side until well browned and 165°F in the center. Work in batches rather than crowding the pan, which steams instead of sears.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Chop the beef for the bowls",
+      "instruction": "Rest patties 2 minutes, then chop into bite-size pieces on a clean board. Chopping instead of leaving whole patties makes portioning and eating with a fork much easier.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold beef and lettuce separately",
+      "instruction": "Keep chopped beef covered at 140°F or above. Keep lettuce and cold toppings refrigerated and undressed until right before service so nothing wilts.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Build the bowls",
+      "instruction": "Fill each bowl with lettuce first, then add chopped beef, cheddar, tomato, pickles, and red onion around it. Drizzle burger sauce over the top and serve immediately.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover griddled ground beef — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool griddled ground beef and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Thin patties cook faster and develop more seared surface per pound than thick ones.",
+    "Rookie tip: Keep the burger sauce on the side for anyone who wants their bowl drier.",
+    "Add crumbled turkey bacon for a smokier version without much extra fat.",
+    "Skip the cheese to lower saturated fat while keeping the protein count about the same."
+  ],
+  "tonightSpread": [
+    "Main: Diner burger bowls",
+    "Sides: Oven fries or roasted potatoes, extra pickles",
+    "Condiments: Extra burger sauce, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool griddled ground beef in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Fold leftover beef and toppings into a wrap or over rice for a fast next-day lunch."
+  ],
+  "whyCrewsLikeIt": "It delivers the exact flavor of a diner burger night — griddled beef, melted cheddar, tangy sauce — while landing in a much better protein-to-calorie ratio than a double burger and fries.",
+  "mealPrepNotes": "Make-ahead: chop vegetables and mix the sauce up to a day ahead. Storage: keep cooked beef, chopped lettuce, and sauce in separate containers up to 3 days. Reheating: warm beef to 165°F; add cold lettuce and sauce after, never before.",
+  "substitutions": [
+    "Use ground turkey or ground chicken instead of beef.",
+    "Use a Greek yogurt-based sauce instead of mayonnaise for a lighter dressing.",
+    "Add avocado for extra healthy fat if the crew wants more richness."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 560,
+    "protein": 44,
+    "carbs": 5,
+    "fats": 42,
+    "label": "~560 cal/serving · 44g protein · 4g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehouse-diner-burger-bowls.jpg",
+  "heroImageAlt": "Firehouse Diner Burger Bowls — american bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehouse-diner-burger-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehouse-diner-burger-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/firehouse-diner-burger-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "burger bowl",
+    "high protein burger bowl",
+    "diner burger bowl",
+    "cheeseburger bowl",
+    "low carb burger bowl",
+    "firehouse burger bowl",
+    "crew dinner burger bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "mayonnaise",
+        "allergens": [
+          "egg"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      },
+      {
+        "flag": "egg",
+        "label": "Egg-Free Adaptable",
+        "note": "Use an egg-free/vegan mayonnaise."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

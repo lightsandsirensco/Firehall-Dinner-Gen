@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T20:15:27.732Z",
+  "generatedAt": "2026-09-26T19:26:57.127Z",
   "recipeCount": 5,
   "collection": "performance",
   "recipes": [
@@ -23,7 +23,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/apple-cinnamon-baked-oatmeal.jpg",
       "thumbImage": "/images/thumbs/breakfast/apple-cinnamon-baked-oatmeal.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "performance",
       "dietarySummary": {
         "confidence": "high",
@@ -52,19 +52,7 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 292,
-        "protein": 11,
-        "carbs": 42,
-        "fat": 10,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "big-pot-savory-oats",
@@ -83,7 +71,7 @@
       "totalTime": 28,
       "heroImage": "/images/breakfast/big-pot-savory-oats.jpg",
       "thumbImage": "/images/thumbs/breakfast/big-pot-savory-oats.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "performance",
       "dietarySummary": {
         "confidence": "low",
@@ -101,19 +89,7 @@
           "vegan": false
         },
         "adaptable": []
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 305,
-        "protein": 14,
-        "carbs": 35,
-        "fat": 12,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "high-protein-parfaits",
@@ -134,7 +110,7 @@
       "totalTime": 17,
       "heroImage": "/images/breakfast/high-protein-parfaits.jpg",
       "thumbImage": "/images/thumbs/breakfast/high-protein-parfaits.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "performance",
       "dietarySummary": {
         "confidence": "high",
@@ -152,19 +128,7 @@
           "vegan": false
         },
         "adaptable": []
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 735,
-        "protein": 29,
-        "carbs": 96,
-        "fat": 28,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "protein-french-toast",
@@ -186,7 +150,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/protein-french-toast.jpg",
       "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "performance",
       "dietarySummary": {
         "confidence": "high",
@@ -210,15 +174,7 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "protein-pancake-tray",
@@ -237,7 +193,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/protein-pancake-tray.jpg",
       "thumbImage": "/images/thumbs/breakfast/protein-pancake-tray.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "performance",
       "dietarySummary": {
         "confidence": "high",
@@ -266,19 +222,7 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 405,
-        "protein": 13,
-        "carbs": 62,
-        "fat": 12,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     }
   ]
 }

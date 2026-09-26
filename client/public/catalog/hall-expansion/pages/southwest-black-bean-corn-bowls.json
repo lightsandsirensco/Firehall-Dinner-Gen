@@ -1,0 +1,253 @@
+{
+  "slug": "southwest-black-bean-corn-bowls",
+  "title": "Southwest Black Bean & Corn Bowls",
+  "displayTitle": "Southwest Black Bean & Corn Bowls",
+  "seoTitle": "Southwest Black Bean & Corn Bowls | Firefighter Meal",
+  "shortDescription": "A cold, meal-prep-friendly bowl of black beans, corn, quinoa, and avocado with lime dressing",
+  "subtitle": "A cold, meal-prep-friendly bowl of black beans, corn, quinoa, and avocado with lime dressing",
+  "category": "hall_expansion",
+  "cuisine": "mexican",
+  "description": "Quinoa, black beans, roasted corn, bell pepper, and avocado come together with a lime-cumin dressing. It is served cold or at room temperature and is built specifically to pack well for several days.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 15,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 458,
+  "protein": 15,
+  "carbs": 63,
+  "fats": 19,
+  "tags": [
+    "protein:vegetarian",
+    "format:salad",
+    "category:crew_feeders",
+    "salad",
+    "vegetarian",
+    "healthy",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Medium pot",
+    "Sheet pan",
+    "Skillet",
+    "Mixing bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "quinoa",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "uncooked, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "drained, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "corn",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "red onion",
+      "quantity": "0.5",
+      "unit": "each",
+      "notes": "finely diced",
+      "group": "Base"
+    },
+    {
+      "name": "avocado",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Finish"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Dressing"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Dressing"
+    },
+    {
+      "name": "cumin",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Dressing"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Dressing"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the quinoa",
+      "instruction": "Rinse quinoa well, then simmer with water in a lidded pot 15 minutes until tender and the liquid is absorbed. Fluff and spread on a sheet pan to cool quickly so it doesn't turn mushy in the dressing.",
+      "minutes": 20,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Char the corn",
+      "instruction": "Toast corn in a dry, wide skillet over medium-high 4–5 minutes, stirring occasionally, until several kernels brown. Set aside to cool.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Dice the vegetables",
+      "instruction": "Dice bell pepper and red onion into a small, even size so they distribute evenly through the grain base.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Mix the lime-cumin dressing",
+      "instruction": "Whisk lime juice, olive oil, cumin, chili powder, and a pinch of salt until combined.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Combine and dress the base",
+      "instruction": "Toss cooled quinoa with black beans, charred corn, bell pepper, and red onion. Pour dressing over and toss well to coat everything evenly.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Add avocado and cilantro at the end",
+      "instruction": "Fold in diced avocado and cilantro right before serving, or hold them separately if packing ahead so the avocado doesn't brown or turn mushy.",
+      "minutes": 4,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Cool quinoa fully before dressing it, or the heat will wilt the vegetables and dull the lime flavor.",
+    "Rookie tip: Pack avocado in its own small container for multi-day meal prep and add it fresh each time.",
+    "Add grilled chicken or shrimp on top for crews who want more protein than the beans and quinoa provide alone.",
+    "A squeeze of extra lime right before eating brightens up bowls that have been in the fridge a couple of days."
+  ],
+  "tonightSpread": [
+    "Main: Southwest black bean and corn bowls",
+    "Sides: Tortilla chips, extra lime wedges",
+    "Condiments: Hot sauce, extra cilantro",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Keeps well covered and cold for up to 5 days without the avocado.",
+    "Add avocado fresh to each portion rather than mixing it into the full batch ahead of time.",
+    "Serve leftovers over greens or wrapped in a tortilla for variety."
+  ],
+  "whyCrewsLikeIt": "No stove time is needed at the point of service, it travels well in individual containers, and it gives the crew a genuine vegetarian option that still reads as a full meal.",
+  "mealPrepNotes": "Make-ahead: this bowl is designed entirely for advance prep. Storage: keep quinoa, beans, corn, and pepper together up to 5 days; add avocado and dressing just before eating. Reheating: none required — serve cold or room temperature.",
+  "substitutions": [
+    "Use brown rice instead of quinoa.",
+    "Use pinto beans instead of black beans.",
+    "Add crumbled feta or cotija for extra flavor and protein."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 458,
+    "protein": 15,
+    "carbs": 63,
+    "fats": 19,
+    "label": "~458 cal/serving · 15g protein · 14g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+  "heroImageAlt": "Southwest Black Bean & Corn Bowls — mexican salad plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "black bean corn bowl",
+    "vegetarian meal prep bowl",
+    "quinoa black bean bowl",
+    "high fiber meal prep",
+    "southwest quinoa salad",
+    "firehouse black bean bowl"
+  ],
+  "relatedSlugs": [
+    "station-cobb-salad",
+    "warm-spinach-chicken-salad",
+    "firehouse-dense-bean-salad",
+    "shawarma-bar-night"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": true
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

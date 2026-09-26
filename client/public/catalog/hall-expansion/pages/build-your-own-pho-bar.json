@@ -13,10 +13,10 @@
   "cookTime": 120,
   "prepTime": 40,
   "difficulty": "hard",
-  "calories": 352,
-  "protein": 26,
-  "carbs": 23,
-  "fats": 17,
+  "calories": 420,
+  "protein": 28,
+  "carbs": 48,
+  "fats": 12,
   "tags": [
     "protein:beef",
     "format:bar_line",
@@ -33,7 +33,7 @@
   "equipment": [
     "Large stock pot",
     "Strainer",
-    "Hotel pans",
+    "baking dishes",
     "Ladle",
     "Sharp slicing knife"
   ],
@@ -113,7 +113,7 @@
     {
       "stepNumber": 2,
       "title": "Prep proteins and noodles",
-      "instruction": "Slice partially frozen sirloin paper-thin across the grain. Cook rice noodles per package, rinse, toss with oil, and hold warm in a hotel pan.",
+      "instruction": "Slice partially frozen sirloin paper-thin across the grain. Cook rice noodles per package, rinse, toss with oil, and hold warm in a baking dish.",
       "minutes": 20,
       "heatLevel": ""
     },
@@ -157,19 +157,19 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 352,
-    "protein": 26,
-    "carbs": 23,
-    "fats": 17,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 420,
+    "protein": 28,
+    "carbs": 48,
+    "fats": 12,
+    "label": "~420 cal/serving · 28g protein · 3g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
@@ -179,7 +179,7 @@
     }
   },
   "heroImage": "/images/hall-expansion/build-your-own-pho-bar.jpg",
-  "heroImageAlt": "Build-Your-Own Pho Bar — vietnamese bar line plated for a firehall crew",
+  "heroImageAlt": "Build-Your-Own Pho Bar — vietnamese bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/build-your-own-pho-bar.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/build-your-own-pho-bar.jpg",
   "railImage": "/images/rails/hall-expansion/build-your-own-pho-bar.jpg",
@@ -197,7 +197,7 @@
     "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -239,9 +239,6 @@
         "note": "Use a certified gluten-free broth or bouillon. Use a certified gluten-free hoisin or a tamari-based substitute."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "beans"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

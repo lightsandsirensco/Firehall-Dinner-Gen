@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 30,
   "difficulty": "easy",
-  "calories": 683,
-  "protein": 65,
-  "carbs": 56,
-  "fats": 21,
+  "calories": 380,
+  "protein": 36,
+  "carbs": 32,
+  "fats": 12,
   "tags": [
     "protein:chicken",
     "format:skillet",
@@ -136,7 +136,7 @@
     {
       "stepNumber": 5,
       "title": "Serve sizzling",
-      "instruction": "Warm tortillas wrapped in foil at 300°F for 10 minutes. Portion chicken and peppers into hot cast iron skillets or hotel pans and serve with fixings. Target oven/smoker temperature: 300°F.",
+      "instruction": "Warm tortillas wrapped in foil at 300°F for 10 minutes. Portion chicken and peppers into hot cast iron skillets or baking dishes and serve with fixings. Target oven/smoker temperature: 300°F.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -159,25 +159,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 683,
-    "protein": 65,
-    "carbs": 56,
-    "fats": 21,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 380,
+    "protein": 36,
+    "carbs": 32,
+    "fats": 12,
+    "label": "~380 cal/serving · 36g protein · 4g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
       "under30gFat": true,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
@@ -199,7 +199,7 @@
     "kielbasa-cabbage-potato-skillet"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -234,10 +234,6 @@
         "note": "Use certified gluten-free tortillas or corn tortillas."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "bell_peppers"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

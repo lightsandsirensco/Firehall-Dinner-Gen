@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-07-17T20:15:27.732Z",
-  "recipeCount": 62,
+  "generatedAt": "2026-09-26T19:26:57.127Z",
+  "recipeCount": 74,
   "collection": "primary",
   "recipes": [
     {
@@ -24,7 +24,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
       "thumbImage": "/images/thumbs/breakfast/bagel-lox-breakfast-board.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "healthier_hall",
       "dietarySummary": {
         "confidence": "high",
@@ -48,28 +48,13 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 639,
-        "protein": 34,
-        "carbs": 61,
-        "fat": 28,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "tomatoes"
-      ]
+      }
     },
     {
       "slug": "bagel-sandwich-line",
       "title": "Bagel Sandwich Line",
       "subtitle": "Build-your-own bagel sandwiches with eggs, cheese, and proteins for staggered crews.",
-      "description": "A firefighter hall breakfast line that lets every crew member build a hot bagel sandwich without waiting for individual orders. Egg sheets, cheese, and warm proteins stay organized in hotel pans so morning service continues even when the crew arrives in waves.",
+      "description": "A firefighter hall breakfast line that lets every crew member build a hot bagel sandwich without waiting for individual orders. Egg sheets, cheese, and warm proteins stay organized in baking dishes so morning service continues even when the crew arrives in waves.",
       "filters": [
         "breakfast_sandwiches",
         "feed_a_crew",
@@ -85,7 +70,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
       "thumbImage": "/images/thumbs/breakfast/bagel-sandwich-line.jpg",
-      "publishedAt": "2026-07-17T20:15:27.731Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "dietarySummary": {
         "confidence": "high",
         "flags": {
@@ -108,22 +93,7 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 983,
-        "protein": 51,
-        "carbs": 68,
-        "fat": 57,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "tomatoes",
-        "spinach"
-      ]
+      }
     },
     {
       "slug": "baked-oatmeal-mixed-berries",
@@ -145,7 +115,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
       "thumbImage": "/images/thumbs/breakfast/baked-oatmeal-mixed-berries.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "dietarySummary": {
         "confidence": "high",
         "flags": {
@@ -168,15 +138,7 @@
             "note": "Use certified gluten-free oats."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "numericFilterEligible": false
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "bbq-breakfast-hash",
@@ -196,7 +158,7 @@
       "totalTime": 43,
       "heroImage": "/images/breakfast/bbq-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/bbq-breakfast-hash.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -220,21 +182,7 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 553,
-        "protein": 39,
-        "carbs": 43,
-        "fat": 24,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions"
-      ]
+      }
     },
     {
       "slug": "belgian-waffle-platter",
@@ -256,7 +204,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/belgian-waffle-platter.jpg",
       "thumbImage": "/images/thumbs/breakfast/belgian-waffle-platter.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -285,15 +233,51 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
-      },
-      "avoidTags": []
+      }
+    },
+    {
+      "slug": "berry-vanilla-protein-overnight-oats",
+      "title": "Berry Vanilla Protein Overnight Oats",
+      "subtitle": "Greek yogurt overnight oats with vanilla and mixed berries, ready straight from the fridge.",
+      "description": "Oats soak overnight in milk, Greek yogurt, and vanilla, then get topped with mixed berries and a drizzle of honey. It is a lighter, fruit-forward alternative to the peanut butter version for crews who want something brighter in the morning.",
+      "filters": [
+        "quick_breakfasts",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "overnight-oats",
+        "no-cook",
+        "berries",
+        "greek-yogurt",
+        "make-ahead"
+      ],
+      "totalTime": 15,
+      "heroImage": "/images/breakfast/berry-vanilla-protein-overnight-oats.jpg",
+      "thumbImage": "/images/thumbs/breakfast/berry-vanilla-protein-overnight-oats.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": false,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats."
+          }
+        ]
+      }
     },
     {
       "slug": "biscuit-french-toast-sliders",
@@ -312,10 +296,10 @@
         "griddle",
         "maple"
       ],
-      "totalTime": 40,
+      "totalTime": 35,
       "heroImage": "/images/breakfast/biscuit-french-toast-sliders.jpg",
       "thumbImage": "/images/thumbs/breakfast/biscuit-french-toast-sliders.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -328,8 +312,8 @@
           "soyFree": true,
           "shellfishFree": true,
           "fishFree": true,
-          "porkFree": false,
-          "vegetarian": false,
+          "porkFree": true,
+          "vegetarian": true,
           "vegan": false
         },
         "adaptable": [
@@ -337,26 +321,58 @@
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 798,
-        "protein": 29,
-        "carbs": 73,
-        "fat": 44,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
+    },
+    {
+      "slug": "black-bean-egg-white-breakfast-burritos",
+      "title": "Black Bean & Egg White Breakfast Burritos",
+      "subtitle": "Vegetarian breakfast burritos built on egg whites, black beans, and pepper jack.",
+      "description": "Egg whites scramble up with black beans, bell pepper, and onion, then get wrapped in a warm tortilla with pepper jack and salsa. It is a fully vegetarian, higher-protein burrito option next to the hall's usual sausage versions.",
+      "filters": [
+        "feed_a_crew",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "burritos",
+        "vegetarian",
+        "egg-whites",
+        "black-beans",
+        "make-ahead"
+      ],
+      "totalTime": 31,
+      "heroImage": "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+      "thumbImage": "/images/thumbs/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "breakfast-crunchwraps",
@@ -378,7 +394,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/breakfast-crunchwraps.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-crunchwraps.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -407,19 +423,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 625,
-        "protein": 32,
-        "carbs": 32,
-        "fat": 41,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "breakfast-enchiladas",
@@ -440,7 +444,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -469,22 +473,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 792,
-        "protein": 41,
-        "carbs": 37,
-        "fat": 53,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "cilantro",
-        "feta"
-      ]
+      }
     },
     {
       "slug": "breakfast-fried-rice-crew",
@@ -506,7 +495,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/breakfast-fried-rice-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-fried-rice-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -535,19 +524,7 @@
             "note": "Use coconut aminos."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 920,
-        "protein": 39,
-        "carbs": 117,
-        "fat": 32,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "breakfast-nachos-supreme",
@@ -569,7 +546,7 @@
       "totalTime": 30,
       "heroImage": "/images/breakfast/breakfast-nachos-supreme.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-nachos-supreme.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -587,22 +564,7 @@
           "vegan": false
         },
         "adaptable": []
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 611,
-        "protein": 36,
-        "carbs": 14,
-        "fat": 46,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "jalapenos",
-        "avocado"
-      ]
+      }
     },
     {
       "slug": "breakfast-poutine",
@@ -624,7 +586,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/breakfast-poutine.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-poutine.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -653,19 +615,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 562,
-        "protein": 36,
-        "carbs": 10,
-        "fat": 42,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "breakfast-quesadillas",
@@ -687,7 +637,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/breakfast-quesadillas.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-quesadillas.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -711,17 +661,7 @@
             "note": "Use certified gluten-free tortillas or corn tortillas."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
-      },
-      "avoidTags": [
-        "cilantro"
-      ]
+      }
     },
     {
       "slug": "breakfast-sandwich-trays",
@@ -741,7 +681,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -775,19 +715,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 565,
-        "protein": 30,
-        "carbs": 26,
-        "fat": 38,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "breakfast-sliders",
@@ -809,7 +737,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/breakfast-sliders.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-sliders.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -843,21 +771,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 793,
-        "protein": 42,
-        "carbs": 15,
-        "fat": 63,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "mustard"
-      ]
+      }
     },
     {
       "slug": "breakfast-stromboli-roll",
@@ -879,7 +793,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/breakfast-stromboli-roll.jpg",
       "thumbImage": "/images/thumbs/breakfast/breakfast-stromboli-roll.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -908,21 +822,7 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 715,
-        "protein": 46,
-        "carbs": 61,
-        "fat": 31,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "bell_peppers"
-      ]
+      }
     },
     {
       "slug": "buttermilk-pancakes",
@@ -940,7 +840,7 @@
       "totalTime": 30,
       "heroImage": "/images/breakfast/buttermilk-pancakes.jpg",
       "thumbImage": "/images/thumbs/breakfast/buttermilk-pancakes.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -969,15 +869,7 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": false,
-        "numericFilterEligible": false
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "cast-iron-breakfast-skillet",
@@ -997,7 +889,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/cast-iron-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/cast-iron-breakfast-skillet.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1026,21 +918,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 658,
-        "protein": 36,
-        "carbs": 50,
-        "fat": 35,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions"
-      ]
+      }
     },
     {
       "slug": "chicken-and-waffles-crew",
@@ -1062,7 +940,7 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/chicken-and-waffles-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/chicken-and-waffles-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1091,19 +969,7 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 1071,
-        "protein": 82,
-        "carbs": 80,
-        "fat": 45,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "chilaquiles-verde-bake",
@@ -1125,7 +991,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/chilaquiles-verde-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/chilaquiles-verde-bake.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1149,19 +1015,7 @@
             "note": "Use a certified gluten-free broth or bouillon."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "numericFilterEligible": false
-      },
-      "avoidTags": [
-        "onions",
-        "cilantro",
-        "jalapenos"
-      ]
+      }
     },
     {
       "slug": "chorizo-breakfast-hash",
@@ -1183,7 +1037,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/chorizo-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-hash.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1212,23 +1066,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 708,
-        "protein": 38,
-        "carbs": 42,
-        "fat": 43,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "cilantro",
-        "bell_peppers"
-      ]
+      }
     },
     {
       "slug": "club-sandwich-breakfast-bake",
@@ -1250,7 +1088,7 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1274,22 +1112,7 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 635,
-        "protein": 43,
-        "carbs": 31,
-        "fat": 37,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "mayonnaise",
-        "tomatoes"
-      ]
+      }
     },
     {
       "slug": "corned-beef-hash-breakfast",
@@ -1311,7 +1134,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/corned-beef-hash-breakfast.jpg",
       "thumbImage": "/images/thumbs/breakfast/corned-beef-hash-breakfast.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1335,22 +1158,45 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 611,
-        "protein": 32,
-        "carbs": 44,
-        "fat": 34,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "bell_peppers"
-      ]
+      }
+    },
+    {
+      "slug": "cottage-cheese-veggie-egg-bake",
+      "title": "Cottage Cheese Veggie Egg Bake",
+      "subtitle": "A vegetarian egg bake with cottage cheese folded in for extra protein and a creamier texture.",
+      "description": "Eggs, cottage cheese, spinach, and roasted bell pepper bake into a firm, sliceable casserole. Cottage cheese adds protein and a slightly creamier texture than a standard egg bake, without any meat in the pan.",
+      "filters": [
+        "feed_a_crew",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "egg-bake",
+        "cottage-cheese",
+        "vegetarian",
+        "spinach",
+        "9x13"
+      ],
+      "totalTime": 49,
+      "heroImage": "/images/breakfast/cottage-cheese-veggie-egg-bake.jpg",
+      "thumbImage": "/images/thumbs/breakfast/cottage-cheese-veggie-egg-bake.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "country-fried-steak-eggs",
@@ -1372,7 +1218,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
       "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1396,19 +1242,7 @@
             "note": "Use a 1:1 gluten-free all-purpose flour blend."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 964,
-        "protein": 65,
-        "carbs": 81,
-        "fat": 41,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "cowboy-breakfast-skillet",
@@ -1430,7 +1264,7 @@
       "totalTime": 43,
       "heroImage": "/images/breakfast/cowboy-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/cowboy-breakfast-skillet.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1459,24 +1293,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 631,
-        "protein": 35,
-        "carbs": 39,
-        "fat": 38,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "cilantro",
-        "jalapenos",
-        "beans"
-      ]
+      }
     },
     {
       "slug": "crew-french-toast-bake",
@@ -1495,7 +1312,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/crew-french-toast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/crew-french-toast-bake.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1524,19 +1341,7 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 414,
-        "protein": 19,
-        "carbs": 50,
-        "fat": 15,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "denver-breakfast-casserole",
@@ -1557,7 +1362,7 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/denver-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/denver-breakfast-casserole.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1586,23 +1391,56 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 488,
-        "protein": 38,
-        "carbs": 28,
-        "fat": 25,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "bell_peppers",
-        "mustard"
-      ]
+      }
+    },
+    {
+      "slug": "egg-white-black-bean-breakfast-quesadillas",
+      "title": "Egg White & Black Bean Breakfast Quesadillas",
+      "subtitle": "Crisp breakfast quesadillas filled with egg whites, black beans, and pepper jack.",
+      "description": "Egg whites, black beans, and pepper jack get folded into a tortilla and griddled until crisp outside and melted inside. It is a fast, handheld, vegetarian breakfast with a leaner fat profile than a whole-egg quesadilla.",
+      "filters": [
+        "quick_breakfasts",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "quesadillas",
+        "egg-whites",
+        "vegetarian",
+        "black-beans",
+        "quick"
+      ],
+      "totalTime": 26,
+      "heroImage": "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+      "thumbImage": "/images/thumbs/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free tortillas or corn tortillas."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "eggs-benedict-hall-style",
@@ -1624,7 +1462,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/eggs-benedict-hall-style.jpg",
       "thumbImage": "/images/thumbs/breakfast/eggs-benedict-hall-style.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1653,21 +1491,7 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 713,
-        "protein": 28,
-        "carbs": 17,
-        "fat": 60,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "mustard"
-      ]
+      }
     },
     {
       "slug": "farmers-breakfast-casserole",
@@ -1689,7 +1513,7 @@
       "totalTime": 65,
       "heroImage": "/images/breakfast/farmers-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/farmers-breakfast-casserole.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1718,21 +1542,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 623,
-        "protein": 36,
-        "carbs": 21,
-        "fat": 44,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "mustard"
-      ]
+      }
     },
     {
       "slug": "fire-captain-omelette-bar",
@@ -1754,7 +1564,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/fire-captain-omelette-bar.jpg",
       "thumbImage": "/images/thumbs/breakfast/fire-captain-omelette-bar.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "healthier_hall",
       "dietarySummary": {
         "confidence": "high",
@@ -1778,23 +1588,7 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 360,
-        "protein": 27,
-        "carbs": 5,
-        "fat": 26,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "mushrooms",
-        "bell_peppers",
-        "spinach"
-      ]
+      }
     },
     {
       "slug": "firehall-breakfast-pizza",
@@ -1816,7 +1610,7 @@
       "totalTime": 48,
       "heroImage": "/images/breakfast/firehall-breakfast-pizza.jpg",
       "thumbImage": "/images/thumbs/breakfast/firehall-breakfast-pizza.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1845,19 +1639,46 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 899,
-        "protein": 43,
-        "carbs": 77,
-        "fat": 45,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
+    },
+    {
+      "slug": "firehouse-breakfast-protein-bowls",
+      "title": "Firehouse Breakfast Protein Bowls",
+      "subtitle": "Roasted sweet potato, eggs, and chicken sausage in a savory high-protein breakfast bowl.",
+      "description": "Roasted sweet potato cubes are topped with scrambled eggs, browned chicken sausage, salsa, and a spoon of cottage cheese. It is a savory, fully composed breakfast bowl built to hold real protein instead of just carbs.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "breakfast-bowl",
+        "sweet-potato",
+        "eggs",
+        "chicken-sausage",
+        "high-protein"
+      ],
+      "totalTime": 40,
+      "heroImage": "/images/breakfast/firehouse-breakfast-protein-bowls.jpg",
+      "thumbImage": "/images/thumbs/breakfast/firehouse-breakfast-protein-bowls.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
     },
     {
       "slug": "german-potato-breakfast-skillet",
@@ -1879,7 +1700,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/german-potato-breakfast-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/german-potato-breakfast-skillet.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1903,18 +1724,7 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "numericFilterEligible": false
-      },
-      "avoidTags": [
-        "onions",
-        "mustard"
-      ]
+      }
     },
     {
       "slug": "green-chile-breakfast-burritos",
@@ -1936,7 +1746,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/green-chile-breakfast-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/green-chile-breakfast-burritos.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -1960,21 +1770,7 @@
             "note": "Use certified gluten-free tortillas or corn tortillas."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 1004,
-        "protein": 59,
-        "carbs": 35,
-        "fat": 69,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "cilantro"
-      ]
+      }
     },
     {
       "slug": "hall-breakfast-burritos",
@@ -1994,7 +1790,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/hall-breakfast-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-breakfast-burritos.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2028,22 +1824,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 852,
-        "protein": 41,
-        "carbs": 71,
-        "fat": 45,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "bell_peppers"
-      ]
+      }
     },
     {
       "slug": "hall-breakfast-wraps",
@@ -2065,7 +1846,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/hall-breakfast-wraps.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-breakfast-wraps.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "healthier_hall",
       "dietarySummary": {
         "confidence": "high",
@@ -2099,23 +1880,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 557,
-        "protein": 30,
-        "carbs": 29,
-        "fat": 36,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "avocado",
-        "feta",
-        "spinach"
-      ]
+      }
     },
     {
       "slug": "hall-sausage-biscuits-gravy",
@@ -2137,7 +1902,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
       "thumbImage": "/images/thumbs/breakfast/hall-sausage-biscuits-gravy.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2171,19 +1936,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 566,
-        "protein": 22,
-        "carbs": 45,
-        "fat": 33,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "hash-brown-breakfast-casserole",
@@ -2205,7 +1958,7 @@
       "totalTime": 70,
       "heroImage": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/hash-brown-breakfast-casserole.jpg",
-      "publishedAt": "2026-07-17T20:15:27.731Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "dietarySummary": {
         "confidence": "high",
         "flags": {
@@ -2233,21 +1986,52 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 632,
-        "protein": 35,
-        "carbs": 22,
-        "fat": 45,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions"
-      ]
+      }
+    },
+    {
+      "slug": "high-protein-breakfast-burrito-bowls",
+      "title": "High-Protein Breakfast Burrito Bowls",
+      "subtitle": "A deconstructed breakfast burrito over rice with ground turkey, eggs, and black beans.",
+      "description": "Seasoned ground turkey, scrambled eggs, black beans, and brown rice build into a bowl instead of a wrap, finished with pico de gallo, cheese, and avocado. It is a fork-and-bowl format for crews who want burrito flavor without the tortilla.",
+      "filters": [
+        "feed_a_crew",
+        "high_protein",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "breakfast-bowl",
+        "ground-turkey",
+        "black-beans",
+        "eggs",
+        "meal-prep"
+      ],
+      "totalTime": 40,
+      "heroImage": "/images/breakfast/high-protein-breakfast-burrito-bowls.jpg",
+      "thumbImage": "/images/thumbs/breakfast/high-protein-breakfast-burrito-bowls.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "huevos-rancheros-crew",
@@ -2269,7 +2053,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/huevos-rancheros-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2293,23 +2077,7 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 552,
-        "protein": 32,
-        "carbs": 68,
-        "fat": 19,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "cilantro",
-        "beans"
-      ]
+      }
     },
     {
       "slug": "irish-breakfast-fry-up",
@@ -2331,7 +2099,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/irish-breakfast-fry-up.jpg",
       "thumbImage": "/images/thumbs/breakfast/irish-breakfast-fry-up.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2360,18 +2128,7 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "numericFilterEligible": false
-      },
-      "avoidTags": [
-        "mushrooms",
-        "tomatoes"
-      ]
+      }
     },
     {
       "slug": "johnnycakes-with-syrup",
@@ -2393,7 +2150,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/johnnycakes-with-syrup.jpg",
       "thumbImage": "/images/thumbs/breakfast/johnnycakes-with-syrup.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2417,19 +2174,7 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 574,
-        "protein": 6,
-        "carbs": 102,
-        "fat": 19,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "lumberjack-breakfast-platter",
@@ -2451,7 +2196,7 @@
       "totalTime": 60,
       "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
       "thumbImage": "/images/thumbs/breakfast/lumberjack-breakfast-platter.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2480,15 +2225,7 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "numericFilterEligible": false
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "maple-sausage-pinwheels",
@@ -2510,7 +2247,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/maple-sausage-pinwheels.jpg",
       "thumbImage": "/images/thumbs/breakfast/maple-sausage-pinwheels.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2544,19 +2281,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 383,
-        "protein": 17,
-        "carbs": 10,
-        "fat": 31,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "menemen-for-the-crew",
@@ -2578,7 +2303,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/menemen-for-the-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "dietarySummary": {
         "confidence": "high",
         "flags": {
@@ -2595,22 +2320,7 @@
           "vegan": false
         },
         "adaptable": []
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 348,
-        "protein": 14,
-        "carbs": 6,
-        "fat": 31,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "tomatoes"
-      ]
+      }
     },
     {
       "slug": "migas-for-the-crew",
@@ -2632,7 +2342,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/migas-for-the-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/migas-for-the-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2656,24 +2366,7 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 378,
-        "protein": 19,
-        "carbs": 24,
-        "fat": 24,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "cilantro",
-        "tomatoes",
-        "bell_peppers"
-      ]
+      }
     },
     {
       "slug": "monte-cristo-sandwiches",
@@ -2694,7 +2387,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2723,21 +2416,7 @@
             "note": "Use a dairy-free cheese shred/block alternative. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 492,
-        "protein": 33,
-        "carbs": 38,
-        "fat": 23,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "mustard"
-      ]
+      }
     },
     {
       "slug": "overnight-french-toast-bake",
@@ -2758,7 +2437,7 @@
       "totalTime": 65,
       "heroImage": "/images/breakfast/overnight-french-toast-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-french-toast-bake.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "healthier_hall",
       "dietarySummary": {
         "confidence": "high",
@@ -2787,19 +2466,7 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute)."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "calories": 398,
-        "protein": 15,
-        "carbs": 58,
-        "fat": 13,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "overnight-oat-bar-crew",
@@ -2821,7 +2488,7 @@
       "totalTime": 20,
       "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-oat-bar-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.731Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "dietarySummary": {
         "confidence": "high",
         "flags": {
@@ -2838,19 +2505,7 @@
           "vegan": false
         },
         "adaptable": []
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 548,
-        "protein": 23,
-        "carbs": 66,
-        "fat": 24,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "overnight-sausage-strata",
@@ -2872,7 +2527,7 @@
       "totalTime": 75,
       "heroImage": "/images/breakfast/overnight-sausage-strata.jpg",
       "thumbImage": "/images/thumbs/breakfast/overnight-sausage-strata.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2906,22 +2561,51 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 686,
-        "protein": 39,
-        "carbs": 29,
-        "fat": 46,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "mustard"
-      ]
+      }
+    },
+    {
+      "slug": "peanut-butter-protein-overnight-oats",
+      "title": "Peanut Butter Protein Overnight Oats",
+      "subtitle": "No-cook overnight oats built with Greek yogurt and peanut butter for a grab-and-go breakfast.",
+      "description": "Rolled oats soak overnight in milk and Greek yogurt with peanut butter and a touch of honey, then get topped with banana and extra peanut butter in the morning. No stove time and no line — just jars in the fridge.",
+      "filters": [
+        "quick_breakfasts",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "overnight-oats",
+        "no-cook",
+        "peanut-butter",
+        "greek-yogurt",
+        "make-ahead"
+      ],
+      "totalTime": 17,
+      "heroImage": "/images/breakfast/peanut-butter-protein-overnight-oats.jpg",
+      "thumbImage": "/images/thumbs/breakfast/peanut-butter-protein-overnight-oats.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": false,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use certified gluten-free oats."
+          }
+        ]
+      }
     },
     {
       "slug": "quick-egg-tacos",
@@ -2940,7 +2624,7 @@
       "totalTime": 22,
       "heroImage": "/images/breakfast/quick-egg-tacos.jpg",
       "thumbImage": "/images/thumbs/breakfast/quick-egg-tacos.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -2964,22 +2648,7 @@
             "note": "Use certified gluten-free tortillas or corn tortillas."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 485,
-        "protein": 23,
-        "carbs": 50,
-        "fat": 21,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "avocado",
-        "corn"
-      ]
+      }
     },
     {
       "slug": "red-lead-skillet",
@@ -3001,7 +2670,7 @@
       "totalTime": 40,
       "heroImage": "/images/breakfast/red-lead-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/red-lead-skillet.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3030,22 +2699,7 @@
             "note": "Use a plant-based butter/margarine. Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 746,
-        "protein": 51,
-        "carbs": 41,
-        "fat": 42,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "bell_peppers"
-      ]
+      }
     },
     {
       "slug": "sausage-egg-cheese-sandwiches",
@@ -3064,7 +2718,7 @@
       "totalTime": 27,
       "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3098,19 +2752,51 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 571,
-        "protein": 31,
-        "carbs": 24,
-        "fat": 39,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
+    },
+    {
+      "slug": "savory-cottage-cheese-breakfast-bowls",
+      "title": "Savory Cottage Cheese Breakfast Bowls",
+      "subtitle": "A fast, no-cook breakfast bowl built on cottage cheese, cucumber, tomato, and everything seasoning.",
+      "description": "Cottage cheese is topped with diced cucumber, cherry tomatoes, avocado, and an everything-bagel seasoning for a savory, no-cook breakfast. It is built for mornings when nobody wants to fire up the stove but still wants real protein.",
+      "filters": [
+        "quick_breakfasts",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "cottage-cheese",
+        "no-cook",
+        "vegetarian",
+        "quick",
+        "savory"
+      ],
+      "totalTime": 20,
+      "heroImage": "/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
+      "thumbImage": "/images/thumbs/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": true,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": true,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+          }
+        ]
+      }
     },
     {
       "slug": "scrapple-and-eggs-skillet",
@@ -3132,7 +2818,7 @@
       "totalTime": 35,
       "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
       "thumbImage": "/images/thumbs/breakfast/scrapple-and-eggs-skillet.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3161,19 +2847,7 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 629,
-        "protein": 20,
-        "carbs": 35,
-        "fat": 47,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "shakshuka-for-the-hall",
@@ -3195,7 +2869,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/shakshuka-for-the-hall.jpg",
       "thumbImage": "/images/thumbs/breakfast/shakshuka-for-the-hall.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "dietarySummary": {
         "confidence": "high",
         "flags": {
@@ -3223,20 +2897,7 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": true,
-        "estimateAvailable": true,
-        "numericFilterEligible": false
-      },
-      "avoidTags": [
-        "onions",
-        "cilantro",
-        "bell_peppers",
-        "feta"
-      ]
+      }
     },
     {
       "slug": "sheet-pan-breakfast-hash",
@@ -3255,7 +2916,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-hash.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3279,22 +2940,7 @@
             "note": "Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 582,
-        "protein": 31,
-        "carbs": 31,
-        "fat": 37,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "bell_peppers"
-      ]
+      }
     },
     {
       "slug": "sheet-pan-breakfast-sandwiches",
@@ -3316,7 +2962,7 @@
       "totalTime": 37,
       "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
-      "publishedAt": "2026-07-17T20:15:27.729Z",
+      "publishedAt": "2026-09-26T19:26:57.124Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3350,19 +2996,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 576,
-        "protein": 34,
-        "carbs": 6,
-        "fat": 46,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "sheet-pan-full-english",
@@ -3384,7 +3018,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/sheet-pan-full-english.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-full-english.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3413,23 +3047,7 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 998,
-        "protein": 61,
-        "carbs": 22,
-        "fat": 73,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "mushrooms",
-        "tomatoes",
-        "beans"
-      ]
+      }
     },
     {
       "slug": "sheet-pan-eggs-sausage-crew",
@@ -3451,7 +3069,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
       "thumbImage": "/images/thumbs/breakfast/sheet-pan-eggs-sausage-crew.jpg",
-      "publishedAt": "2026-07-17T20:15:27.731Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "dietarySummary": {
         "confidence": "high",
         "flags": {
@@ -3484,22 +3102,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 565,
-        "protein": 34,
-        "carbs": 8,
-        "fat": 44,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "bell_peppers"
-      ]
+      }
     },
     {
       "slug": "shrimp-and-grits-breakfast",
@@ -3521,7 +3124,7 @@
       "totalTime": 50,
       "heroImage": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
       "thumbImage": "/images/thumbs/breakfast/shrimp-and-grits-breakfast.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3555,19 +3158,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 789,
-        "protein": 49,
-        "carbs": 45,
-        "fat": 45,
-        "numericFilterEligible": true
-      },
-      "avoidTags": []
+      }
     },
     {
       "slug": "smoked-salmon-benedit",
@@ -3589,7 +3180,7 @@
       "totalTime": 45,
       "heroImage": "/images/breakfast/smoked-salmon-benedit.jpg",
       "thumbImage": "/images/thumbs/breakfast/smoked-salmon-benedit.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "healthier_hall",
       "dietarySummary": {
         "confidence": "high",
@@ -3618,21 +3209,7 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": false,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 694,
-        "protein": 33,
-        "carbs": 17,
-        "fat": 54,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions"
-      ]
+      }
     },
     {
       "slug": "southwest-egg-bake",
@@ -3652,7 +3229,7 @@
       "totalTime": 58,
       "heroImage": "/images/breakfast/southwest-egg-bake.jpg",
       "thumbImage": "/images/thumbs/breakfast/southwest-egg-bake.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3686,22 +3263,7 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": true,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 454,
-        "protein": 42,
-        "carbs": 8,
-        "fat": 28,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "spinach"
-      ]
+      }
     },
     {
       "slug": "tater-tot-breakfast-casserole",
@@ -3723,7 +3285,7 @@
       "totalTime": 55,
       "heroImage": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
       "thumbImage": "/images/thumbs/breakfast/tater-tot-breakfast-casserole.jpg",
-      "publishedAt": "2026-07-17T20:15:27.730Z",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
       "collectionTier": "firehall_classic",
       "dietarySummary": {
         "confidence": "high",
@@ -3752,21 +3314,90 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a dairy-free cheese shred/block alternative."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 871,
-        "protein": 47,
-        "carbs": 35,
-        "fat": 59,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "bell_peppers"
-      ]
+      }
+    },
+    {
+      "slug": "turkey-bacon-white-bean-breakfast-hash",
+      "title": "Turkey Bacon & White Bean Breakfast Hash",
+      "subtitle": "A leaner skillet hash built on turkey bacon, white beans, and crisped potatoes.",
+      "description": "Turkey bacon and white beans fold into a crisped potato hash with peppers and onion, finished with eggs cooked over the top. White beans add fiber and body next to a leaner bacon than the hall's usual pork versions.",
+      "filters": [
+        "skillets",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "hash",
+        "turkey-bacon",
+        "white-beans",
+        "eggs",
+        "one-pan"
+      ],
+      "totalTime": 41,
+      "heroImage": "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+      "thumbImage": "/images/thumbs/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": true,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": []
+      }
+    },
+    {
+      "slug": "turkey-sausage-sweet-potato-skillet",
+      "title": "Turkey Sausage & Sweet Potato Breakfast Skillet",
+      "subtitle": "A leaner cast-iron breakfast built on turkey sausage, sweet potato, and eggs.",
+      "description": "Turkey sausage and diced sweet potato crisp together in a cast-iron skillet, finished with eggs cracked over the top. It follows the hall's classic breakfast skillet format with a leaner sausage and a sweeter, more fiber-forward potato base.",
+      "filters": [
+        "skillets",
+        "high_protein",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "cast-iron",
+        "turkey-sausage",
+        "sweet-potato",
+        "eggs",
+        "one-pan"
+      ],
+      "totalTime": 39,
+      "heroImage": "/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
+      "thumbImage": "/images/thumbs/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "turkey-sausage-burritos",
@@ -3786,7 +3417,7 @@
       "totalTime": 33,
       "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/turkey-sausage-burritos.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "healthier_hall",
       "dietarySummary": {
         "confidence": "high",
@@ -3820,22 +3451,101 @@
             "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 874,
-        "protein": 42,
-        "carbs": 76,
-        "fat": 44,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "onions",
-        "bell_peppers"
-      ]
+      }
+    },
+    {
+      "slug": "turkey-sausage-egg-white-sandwiches",
+      "title": "Turkey Sausage Egg White Breakfast Sandwiches",
+      "subtitle": "A leaner breakfast sandwich built on turkey sausage, egg whites, and whole English muffins.",
+      "description": "Turkey sausage patties and fluffy egg whites are stacked on toasted English muffins with a slice of cheese. It is a lighter take on the hall's usual breakfast sandwich, built for crews watching fat without giving up a real handheld breakfast.",
+      "filters": [
+        "breakfast_sandwiches",
+        "high_protein",
+        "healthy_breakfasts"
+      ],
+      "tags": [
+        "sandwiches",
+        "turkey-sausage",
+        "egg-whites",
+        "english-muffin",
+        "leaner"
+      ],
+      "totalTime": 26,
+      "heroImage": "/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
+      "thumbImage": "/images/thumbs/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": false,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "gluten",
+            "label": "Gluten-Free Adaptable",
+            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+          },
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+          }
+        ]
+      }
+    },
+    {
+      "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
+      "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
+      "subtitle": "A leaner scramble built on egg whites, turkey sausage, spinach, and feta.",
+      "description": "Egg whites scramble with browned turkey sausage, wilted spinach, and crumbled feta for a savory, leaner breakfast with a Mediterranean-leaning flavor. It holds well on the line and reheats cleanly for a next-shift breakfast.",
+      "filters": [
+        "healthy_breakfasts",
+        "high_protein"
+      ],
+      "tags": [
+        "scramble",
+        "egg-whites",
+        "turkey-sausage",
+        "spinach",
+        "feta"
+      ],
+      "totalTime": 30,
+      "heroImage": "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+      "thumbImage": "/images/thumbs/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+      "publishedAt": "2026-09-26T19:26:57.125Z",
+      "dietarySummary": {
+        "confidence": "high",
+        "flags": {
+          "glutenFree": true,
+          "dairyFree": false,
+          "eggFree": false,
+          "nutFree": true,
+          "peanutFree": true,
+          "soyFree": true,
+          "shellfishFree": true,
+          "fishFree": true,
+          "porkFree": true,
+          "vegetarian": false,
+          "vegan": false
+        },
+        "adaptable": [
+          {
+            "flag": "dairy",
+            "label": "Dairy-Free Adaptable",
+            "note": "Use a dairy-free cheese shred/block alternative."
+          }
+        ]
+      }
     },
     {
       "slug": "veggie-egg-burritos",
@@ -3855,7 +3565,7 @@
       "totalTime": 34,
       "heroImage": "/images/breakfast/veggie-egg-burritos.jpg",
       "thumbImage": "/images/thumbs/breakfast/veggie-egg-burritos.jpg",
-      "publishedAt": "2026-07-17T20:15:27.732Z",
+      "publishedAt": "2026-09-26T19:26:57.127Z",
       "collectionTier": "healthier_hall",
       "dietarySummary": {
         "confidence": "high",
@@ -3868,8 +3578,8 @@
           "soyFree": true,
           "shellfishFree": true,
           "fishFree": true,
-          "porkFree": true,
-          "vegetarian": true,
+          "porkFree": false,
+          "vegetarian": false,
           "vegan": false
         },
         "adaptable": [
@@ -3882,27 +3592,14 @@
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
             "note": "Use a dairy-free cheese shred/block alternative."
+          },
+          {
+            "flag": "pork",
+            "label": "Pork-Free Adaptable",
+            "note": "Swap in chicken or turkey sausage."
           }
         ]
-      },
-      "nutritionSummary": {
-        "highProtein": true,
-        "lowCarb": false,
-        "healthy": false,
-        "estimateAvailable": true,
-        "calories": 758,
-        "protein": 40,
-        "carbs": 92,
-        "fat": 27,
-        "numericFilterEligible": true
-      },
-      "avoidTags": [
-        "mushrooms",
-        "onions",
-        "bell_peppers",
-        "beans",
-        "spinach"
-      ]
+      }
     }
   ]
 }

@@ -107,7 +107,7 @@
     "protein": 38,
     "carbs": 42,
     "fat": 43,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/chorizo-breakfast-hash.jpg",
   "thumbImage": "/images/thumbs/breakfast/chorizo-breakfast-hash.jpg",
   "imageAlt": "Chorizo breakfast hash with crispy potatoes, peppers, and jammy eggs",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 7,
   "seoTitle": "Chorizo Breakfast Hash | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -195,11 +195,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "cilantro",
-    "bell_peppers"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

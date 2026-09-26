@@ -1,6 +1,6 @@
 # Recipe content quality audit
 
-Generated: 2026-07-25T13:04:41.300Z
+Generated: 2026-09-26T18:44:37.199Z
 
 | Metric | Count |
 |--------|------:|

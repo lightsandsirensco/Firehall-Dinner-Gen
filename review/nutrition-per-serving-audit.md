@@ -1,15 +1,15 @@
 # Nutrition Per-Serving Audit
 
-Generated: 2026-09-24T23:52:38.899Z
+Generated: 2026-09-26T19:27:11.315Z
 Mode: **audit**
 
 ## Summary
 
 | Metric | Count |
 |--------|------:|
-| Recipes audited | 392 |
+| Recipes audited | 415 |
 | Recipes fixed (this run) | 0 |
-| Hidden (estimate coming soon) | 134 |
+| Hidden (estimate coming soon) | 132 |
 | Suspicious remaining | 0 |
 | Batch totals corrected | 0 |
 
@@ -70,6 +70,7 @@ _None._
 - `egg-roll-in-a-bowl-crew` — Egg Roll in a Bowl for the Crew
 - `firehall-street-elote-cups` — Epazote Esquites Street Cups
 - `fajita-bar-night` — Fajita Bar Night
+- `firehall-breakfast-pizza` — Firehall Breakfast Pizza
 - `firehall-burnt-ends-platter` — Firehall Burnt Ends Platter
 - `big-chili` — Firehall Chili
 - `firehall-gyro-bowls` — Firehall Gyro Bowls
@@ -84,7 +85,6 @@ _None._
 - `herb-marinated-flank-steak-chimichurri-farro` — Herb-Marinated Flank Steak with Chimichurri Farro
 - `hickory-turkey-legs` — Hickory Smoked Turkey Legs
 - `honey-soppressata-pizza` — Hot Honey Soppressata Pizza
-- `hungarian-goulash-crew` — Hungarian Goulash for the Crew
 - `pork-satay-skewers-crew` — Indonesian Tamarind Pork Satay Batches
 - `irish-breakfast-fry-up` — Irish Breakfast Fry-Up
 - `italian-beef-slow-cooker` — Italian Beef Slow Cooker Sandwiches
@@ -105,7 +105,6 @@ _None._
 - `mesquite-chuck-roast` — Mesquite Smoked Chuck Roast
 - `mississippi-pot-roast-crew` — Mississippi Pot Roast for the Crew
 - `molasses-bourbon-pork-ribs` — Molasses Bourbon Pork Ribs
-- `mushroom-swiss-steak-pan` — Mushroom Swiss Steak Pan
 - `loaded-nacho-skillet` — Nacho Skillet
 - `one-pot-beef-orzo-skillet-spinach-feta` — One-Pot Beef & Orzo Skillet with Spinach and Feta
 - `parm-hero-subs` — Parm Hero Subs
@@ -151,7 +150,6 @@ _None._
 - `thai-peanut-chicken-crock` — Thai Peanut Chicken Crock
 - `yakiniku-grill-platter-crew` — Tokyo Tare Ribeye Yakiniku Board
 - `tomato-soup-grilled-cheese-croutons` — Tomato Soup with Grilled Cheese Croutons
-- `tonkotsu-ramen-crew` — Tonkotsu Ramen for the Crew
 - `turkey-taco-bowls` — Turkey Taco Bowls
 - `white-chicken-chili-crock` — White Chicken Chili Crock
 - `white-garlic-chicken-pizza` — White Garlic Chicken Pizza

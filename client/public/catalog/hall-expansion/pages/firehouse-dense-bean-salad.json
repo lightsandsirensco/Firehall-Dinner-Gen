@@ -1,0 +1,296 @@
+{
+  "slug": "firehouse-dense-bean-salad",
+  "title": "Firehouse Dense Bean Salad",
+  "displayTitle": "Firehouse Dense Bean Salad",
+  "seoTitle": "Firehouse Dense Bean Salad | Firefighter Meal",
+  "shortDescription": "Mixed beans, crunchy vegetables, and a lemon-herb vinaigrette in a make-ahead salad",
+  "subtitle": "Mixed beans, crunchy vegetables, and a lemon-herb vinaigrette in a make-ahead salad",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Chickpeas, black beans, and kidney beans are tossed with cucumber, bell pepper, red onion, and feta in a lemon-herb vinaigrette. It holds in the fridge for days and actually improves as the flavors settle.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 5,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 390,
+  "protein": 19,
+  "carbs": 46,
+  "fats": 16,
+  "tags": [
+    "protein:vegetarian",
+    "format:salad",
+    "category:crew_feeders",
+    "salad",
+    "vegetarian",
+    "healthy",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Colander",
+    "Large mixing bowl",
+    "Chef knife",
+    "Whisk"
+  ],
+  "ingredients": [
+    {
+      "name": "chickpeas",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "drained, rinsed",
+      "group": "Beans"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "drained, rinsed",
+      "group": "Beans"
+    },
+    {
+      "name": "kidney beans",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "drained, rinsed",
+      "group": "Beans"
+    },
+    {
+      "name": "cucumber",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "small dice",
+      "group": "Vegetables"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "small dice",
+      "group": "Vegetables"
+    },
+    {
+      "name": "red onion",
+      "quantity": "0.5",
+      "unit": "each",
+      "notes": "finely diced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "halved",
+      "group": "Vegetables"
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "1.5",
+      "unit": "cups",
+      "notes": "crumbled",
+      "group": "Vegetables"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Dressing"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Dressing"
+    },
+    {
+      "name": "dijon mustard",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Dressing"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Dressing"
+    },
+    {
+      "name": "garlic",
+      "quantity": "2",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Dressing"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Drain and rinse the beans",
+      "instruction": "Drain chickpeas, black beans, and kidney beans, then rinse under cold water until the runoff is clear. Shake dry in a colander — excess liquid dilutes the dressing.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Dice the vegetables small and even",
+      "instruction": "Cut cucumber, bell pepper, and red onion into a small, even dice so no single bite is all onion or all bean. Halve the cherry tomatoes.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Whisk the lemon-herb vinaigrette",
+      "instruction": "Whisk olive oil, lemon juice, dijon, oregano, and garlic in a bowl until it looks cohesive rather than separated. Taste and adjust salt — the beans will mute seasoning as they sit.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Combine beans and vegetables",
+      "instruction": "Fold the beans, cucumber, pepper, onion, and tomatoes together in a large bowl. Toss gently rather than stirring hard, so the softer beans stay intact.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Dress and rest before serving",
+      "instruction": "Pour the vinaigrette over the salad and toss to coat evenly. Let it sit at least 20 minutes, or refrigerate up to 3 days, so the beans absorb the dressing.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Finish with feta and parsley",
+      "instruction": "Fold in feta and parsley just before serving so the cheese stays in distinct pieces instead of dissolving into the dressing overnight.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold and serve cold",
+      "instruction": "Keep the salad covered and cold until service — it does not need to be held warm and should not sit at room temperature longer than two hours.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Rinse beans until the water runs clear — skipping this leaves a starchy film on the dressing.",
+    "Rookie tip: Dress the salad ahead of time; it actually tastes better after a day in the fridge.",
+    "Swap feta for cottage cheese if the crew wants a milder, higher-protein finish.",
+    "Add diced avocado right before serving if you want extra richness — it does not hold well pre-mixed."
+  ],
+  "tonightSpread": [
+    "Main: Dense bean salad",
+    "Sides: Warm pita or crusty bread, grilled protein on the side",
+    "Condiments: Extra lemon wedges, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Keeps well covered and cold for up to 4 days — flavor improves on day two.",
+    "Store any dressing added separately if serving over multiple days to keep vegetables crisp.",
+    "Spoon leftovers over greens or into a wrap for a fast next-day lunch."
+  ],
+  "whyCrewsLikeIt": "It needs no reheating, travels well to calls, and gives the crew a fiber- and protein-forward option next to heavier mains without anyone feeling shortchanged.",
+  "mealPrepNotes": "Make-ahead: this salad is designed to be made 1–3 days in advance. Storage: keep in a sealed container up to 4 days; dress fully or hold dressing separate for the crispest vegetables. Reheating: none — serve cold or at room temperature.",
+  "substitutions": [
+    "Use cottage cheese instead of feta for a milder, dairy-forward protein boost.",
+    "Use any combination of canned beans on hand — cannellini and pinto both work.",
+    "Add canned tuna or grilled chicken to turn this into a heartier main."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 390,
+    "protein": 19,
+    "carbs": 46,
+    "fats": 16,
+    "label": "~390 cal/serving · 19g protein · 14g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+  "heroImageAlt": "Firehouse Dense Bean Salad — american salad plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehouse-dense-bean-salad.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehouse-dense-bean-salad.jpg",
+  "railImage": "/images/rails/hall-expansion/firehouse-dense-bean-salad.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "dense bean salad",
+    "mixed bean salad",
+    "make ahead bean salad",
+    "meal prep bean salad",
+    "vegetarian bean salad",
+    "firehouse bean salad",
+    "cold crew side dish"
+  ],
+  "relatedSlugs": [
+    "station-cobb-salad",
+    "warm-spinach-chicken-salad",
+    "southwest-black-bean-corn-bowls",
+    "shawarma-bar-night"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

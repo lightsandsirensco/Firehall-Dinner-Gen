@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 1400,
-  "protein": 67,
-  "carbs": 97,
-  "fats": 82,
+  "calories": 620,
+  "protein": 28,
+  "carbs": 48,
+  "fats": 34,
   "tags": [
     "protein:pork",
     "format:handheld",
@@ -138,27 +138,27 @@
     "Breakfast hash with leftover peppers"
   ],
   "whyCrewsLikeIt": "Hoagie feed is fast to eat and scales to fourteen easily. Skillet sausage and peppers already exist in the catalog as a plated dinner; this is the sandwich version crews grab with one hand.",
-  "mealPrepNotes": "Poke sausages before roasting so they do not burst. Hoagies can be split and toasted 5 minutes in the oven. Hold sausage and pepper mix in a hotel pan at 165°F; assemble buns to order if calls interrupt.",
+  "mealPrepNotes": "Poke sausages before roasting so they do not burst. Hoagies can be split and toasted 5 minutes in the oven. Hold sausage and pepper mix in a baking dish at 165°F; assemble buns to order if calls interrupt.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 1400,
-    "protein": 67,
-    "carbs": 97,
-    "fats": 82,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 620,
+    "protein": 28,
+    "carbs": 48,
+    "fats": 34,
+    "label": "~620 cal/serving · 28g protein · 4g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
+      "highProtein": false,
+      "under700Calories": true,
       "under30gFat": false,
-      "highCarb": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -178,10 +178,11 @@
   "relatedSlugs": [
     "bbq-meatball-skewers",
     "soft-pretzel-dogs",
+    "chicken-caesar-wraps",
     "buffalo-chicken-wraps"
   ],
   "sourceUrl": "https://www.americastestkitchen.com/recipes/6831-sausage-peppers-and-onions",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.958Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -238,10 +239,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "bell_peppers"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

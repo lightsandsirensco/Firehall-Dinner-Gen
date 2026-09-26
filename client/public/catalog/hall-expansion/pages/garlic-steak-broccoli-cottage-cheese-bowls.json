@@ -1,0 +1,265 @@
+{
+  "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
+  "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
+  "displayTitle": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
+  "seoTitle": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese | Firefighter Meal",
+  "shortDescription": "Seared steak strips and roasted broccoli over rice with a garlic-herb cottage cheese sauce",
+  "subtitle": "Seared steak strips and roasted broccoli over rice with a garlic-herb cottage cheese sauce",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Seared sirloin strips and roasted broccoli sit over rice, finished with a smooth garlic-herb cottage cheese sauce blended until creamy. It reads like a steakhouse plate with a real per-serving protein boost.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 15,
+  "difficulty": "medium",
+  "calories": 855,
+  "protein": 58,
+  "carbs": 59,
+  "fats": 43,
+  "tags": [
+    "protein:beef",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "beef",
+    "healthy",
+    "high_protein",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Rice pot",
+    "Sheet pan",
+    "Blender",
+    "Large skillet"
+  ],
+  "ingredients": [
+    {
+      "name": "sirloin steak",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "sliced into strips",
+      "group": "Protein"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "2.5",
+      "unit": "cups",
+      "notes": "uncooked",
+      "group": "Base"
+    },
+    {
+      "name": "broccoli florets",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Vegetables"
+    },
+    {
+      "name": "cottage cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Sauce"
+    },
+    {
+      "name": "garlic",
+      "quantity": "3",
+      "unit": "cloves",
+      "group": "Sauce"
+    },
+    {
+      "name": "fresh chives",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Sauce"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the rice",
+      "instruction": "Rinse rice, bring it with water to a boil in a lidded pot, then reduce to low and simmer 18 minutes. Rest 10 minutes, then fluff.",
+      "minutes": 28,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Roast the broccoli",
+      "instruction": "Heat the oven to 425°F. Toss broccoli with oil, salt, and pepper on a sheet pan and roast 15–18 minutes until browned at the tips and crisp-tender. Target oven/smoker temperature: 425°F.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Blend the cottage cheese sauce",
+      "instruction": "Blend cottage cheese, garlic, chives, lemon juice, and a pinch of salt until completely smooth. Thin with a splash of water if it's too thick to drizzle.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sear the steak",
+      "instruction": "Pat steak strips dry and season with garlic powder, salt, and pepper. Sear in a very hot skillet in batches, 60–90 seconds per side, until browned outside and medium-rare to medium inside.",
+      "minutes": 10,
+      "heatLevel": "high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest the steak",
+      "instruction": "Rest steak 5 minutes on a plate before serving — cutting or plating it immediately loses the juices onto the board instead of the bowl.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Build the bowls",
+      "instruction": "Layer rice and broccoli in each bowl, top with seared steak strips, and finish with a generous drizzle of the garlic-herb cottage cheese sauce.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover seared steak strips — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool seared steak strips and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Slice steak thin and against the grain so it stays tender through a fast, hot sear.",
+    "Rookie tip: Blend the cottage cheese sauce until fully smooth — a few seconds longer than you think it needs.",
+    "Use flank or flat iron steak as a budget-friendly swap for sirloin.",
+    "Keep the skillet very hot; thin steak strips need speed more than time."
+  ],
+  "tonightSpread": [
+    "Main: Garlic steak and broccoli bowls",
+    "Sides: Simple green salad, crusty bread",
+    "Condiments: Extra cottage cheese sauce, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool seared steak strips in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat steak gently in a covered skillet rather than the microwave to avoid overcooking it further."
+  ],
+  "whyCrewsLikeIt": "It gives steak-night fans a genuine reason to try cottage cheese — blended smooth, it tastes like a herb sauce, not a diet ingredient — while keeping the protein count well above a normal steak dinner.",
+  "mealPrepNotes": "Make-ahead: the cottage cheese sauce holds 4 days blended and covered. Storage: keep steak, rice, broccoli, and sauce in separate containers up to 3 days. Reheating: reheat steak and rice to 165°F; add sauce cold or gently warmed, never boiled.",
+  "substitutions": [
+    "Use flank steak or flat iron steak instead of sirloin.",
+    "Use Greek yogurt instead of cottage cheese for the sauce.",
+    "Use cauliflower rice for a lower-carb base."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 855,
+    "protein": 58,
+    "carbs": 59,
+    "fats": 43,
+    "label": "~855 cal/serving · 58g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+  "heroImageAlt": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese — american bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "steak broccoli bowl",
+    "cottage cheese sauce",
+    "high protein steak bowl",
+    "steak rice bowl",
+    "high protein dinner bowl",
+    "firehouse steak bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cottage cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

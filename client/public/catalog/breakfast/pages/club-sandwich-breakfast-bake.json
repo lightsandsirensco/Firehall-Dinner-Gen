@@ -15,8 +15,8 @@
     "bacon",
     "bake"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 25,
   "cookTime": 45,
   "totalTime": 70,
@@ -24,47 +24,47 @@
   "ingredients": [
     {
       "name": "sandwich bread",
-      "quantity": "13 slices",
+      "quantity": "16 slices",
       "notes": "toasted until crisp",
       "group": "Bread"
     },
     {
       "name": "deli turkey",
-      "quantity": "1 1/4 lb",
+      "quantity": "1 1/2 lb",
       "notes": "sliced thick",
       "group": "Protein"
     },
     {
       "name": "bacon",
-      "quantity": "3/4 lb",
+      "quantity": "1 lb",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
       "name": "Roma tomatoes",
-      "quantity": "2",
+      "quantity": "3",
       "notes": "sliced, seeds drained",
       "group": "Veg"
     },
     {
       "name": "large eggs",
-      "quantity": "10",
+      "quantity": "12",
       "group": "Egg mix"
     },
     {
       "name": "whole milk",
-      "quantity": "2 cups",
+      "quantity": "2 1/2 cups",
       "group": "Egg mix"
     },
     {
       "name": "shredded Swiss",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "mayonnaise",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "light spread on bread, plus lettuce after bake",
       "group": "Finish"
     }
@@ -104,11 +104,11 @@
     }
   ],
   "nutrition": {
-    "calories": 635,
+    "calories": 648,
     "protein": 43,
     "carbs": 31,
-    "fat": 37,
-    "label": "Estimated per serving",
+    "fat": 38,
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/club-sandwich-breakfast-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/club-sandwich-breakfast-bake.jpg",
   "imageAlt": "Club sandwich breakfast bake with turkey, bacon, tomato, and melted Swiss",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 8,
   "seoTitle": "Club Sandwich Breakfast Bake | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -210,10 +210,6 @@
         "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "mayonnaise",
-    "tomatoes"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

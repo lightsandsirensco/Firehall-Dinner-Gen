@@ -15,8 +15,8 @@
     "sausage",
     "eggs"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 20,
   "cookTime": 25,
   "totalTime": 45,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "11",
+      "quantity": "14",
       "notes": "scrambled soft",
       "group": "Fillings"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "1 1/4 lb",
+      "quantity": "1 1/2 lb",
       "notes": "browned and crumbled",
       "group": "Fillings"
     },
     {
       "name": "frozen hash browns",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "crisped on the griddle",
       "group": "Fillings"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "1.6 cups",
+      "quantity": "2 cups",
       "notes": "plus slices for sealing",
       "group": "Fillings"
     },
     {
       "name": "12-inch flour tortillas",
-      "quantity": "8",
+      "quantity": "10",
       "notes": "burrito size",
       "group": "Build"
     },
     {
       "name": "6-inch tostada shells",
-      "quantity": "8",
+      "quantity": "10",
       "notes": "or crisp fried corn tortillas",
       "group": "Build"
     },
     {
       "name": "nacho cheese sauce",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "warm, not boiling",
       "group": "Build"
     },
     {
       "name": "sour cream",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "and salsa for the line",
       "group": "Finish"
     }
@@ -104,11 +104,11 @@
     }
   ],
   "nutrition": {
-    "calories": 625,
+    "calories": 620,
     "protein": 32,
     "carbs": 32,
-    "fat": 41,
-    "label": "Estimated per serving",
+    "fat": 40,
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/breakfast-crunchwraps.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-crunchwraps.jpg",
   "imageAlt": "Golden griddled breakfast crunchwraps cut in half showing layers of egg and hash",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 8,
   "seoTitle": "Breakfast Crunchwraps | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -214,7 +214,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

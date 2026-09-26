@@ -15,8 +15,8 @@
     "make-ahead",
     "bake"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 25,
   "cookTime": 50,
   "totalTime": 75,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "day-old bread",
-      "quantity": "3/4 lb",
+      "quantity": "1 lb",
       "notes": "cubed into 1-inch pieces",
       "group": "Base"
     },
     {
       "name": "breakfast sausage",
-      "quantity": "1.6 lb",
+      "quantity": "2 lb",
       "notes": "browned and crumbled",
       "group": "Protein"
     },
     {
       "name": "shredded sharp cheddar",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "divided",
       "group": "Cheese"
     },
     {
       "name": "large eggs",
-      "quantity": "10",
+      "quantity": "12",
       "group": "Egg mix"
     },
     {
       "name": "whole milk",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "or half-and-half",
       "group": "Egg mix"
     },
     {
       "name": "dry mustard",
-      "quantity": "7/8 tsp",
+      "quantity": "1 tsp",
       "notes": "plus salt, pepper, and pinch nutmeg",
       "group": "Seasoning"
     },
     {
       "name": "sautéed onion",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "optional layer",
       "group": "Optional"
     },
     {
       "name": "sliced green onions",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "plus hot sauce at the line",
       "group": "Finish"
     }
@@ -103,11 +103,11 @@
     }
   ],
   "nutrition": {
-    "calories": 686,
+    "calories": 691,
     "protein": 39,
-    "carbs": 29,
+    "carbs": 30,
     "fat": 46,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/overnight-sausage-strata.jpg",
   "thumbImage": "/images/thumbs/breakfast/overnight-sausage-strata.jpg",
   "imageAlt": "Overnight sausage strata baked golden with melted cheddar",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 8,
   "seoTitle": "Overnight Sausage Strata | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -212,10 +212,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "mustard"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

@@ -28,6 +28,11 @@ export function initPostHog(): void {
     // anonymous distinct_id, UTM/referrer capture) uses SDK defaults.
   });
   initialized = true;
+
+  // TEMPORARY DIAGNOSTIC — remove once PostHog Activity shows events again.
+  // Confirms the init above actually reaches PostHog (vs. silently no-op'd
+  // by CSP/ad-block/etc.). Safe no-op if init() above didn't run.
+  posthog.capture("posthog_test");
 }
 
 export { posthog };

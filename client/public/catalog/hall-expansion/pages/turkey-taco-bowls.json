@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 1039,
-  "protein": 62,
-  "carbs": 97,
-  "fats": 44,
+  "calories": 580,
+  "protein": 42,
+  "carbs": 60,
+  "fats": 18,
   "tags": [
     "protein:turkey",
     "format:bowl",
@@ -33,7 +33,7 @@
   "equipment": [
     "Large skillet",
     "Rice pot",
-    "Hotel pans",
+    "baking dishes",
     "Instant-read thermometer"
   ],
   "ingredients": [
@@ -158,7 +158,7 @@
     {
       "stepNumber": 7,
       "title": "Hold hot turkey components",
-      "instruction": "Move rice, turkey, beans, and corn into covered hotel pans above 140°F in a 200°F oven. Taste turkey with rice and adjust salt or lime before service. Target oven/smoker temperature: 200°F.",
+      "instruction": "Move rice, turkey, beans, and corn into covered baking dishes above 140°F in a 200°F oven. Taste turkey with rice and adjust salt or lime before service. Target oven/smoker temperature: 200°F.",
       "minutes": 5,
       "heatLevel": "low"
     },
@@ -186,14 +186,14 @@
     {
       "stepNumber": 11,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover the seasoned ground turkey — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the sour cream and pico over ice the whole time — dairy that sits near that heat splits fast. On return, spot-check the turkey at a safe internal temp, then rebuild bowls with fresh cold toppings.",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover seasoned ground turkey — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool seasoned ground turkey and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool seasoned ground turkey and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -225,17 +225,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 1039,
-    "protein": 62,
-    "carbs": 97,
-    "fats": 44,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 580,
+    "protein": 42,
+    "carbs": 60,
+    "fats": 18,
+    "label": "~580 cal/serving · 42g protein · 11g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -243,7 +243,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/turkey-taco-bowls.jpg",
@@ -267,7 +267,7 @@
     "miso-ramen-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -314,11 +314,6 @@
         "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "cilantro",
-    "beans",
-    "corn"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

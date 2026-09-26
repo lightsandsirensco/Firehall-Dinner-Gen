@@ -74,7 +74,7 @@
     {
       "stepNumber": 1,
       "title": "Blend the batter",
-      "instruction": "Blend cottage cheese, eggs, milk, vanilla, cinnamon, and maple until completely smooth—no curds. Pour into a shallow hotel pan for fast dipping.",
+      "instruction": "Blend cottage cheese, eggs, milk, vanilla, cinnamon, and maple until completely smooth—no curds. Pour into a shallow baking dish for fast dipping.",
       "minutes": 5
     },
     {
@@ -109,6 +109,7 @@
     "fat": 18,
     "label": "per serving (hall portion)",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
@@ -139,8 +140,8 @@
   "heroImage": "/images/breakfast/protein-french-toast.jpg",
   "thumbImage": "/images/thumbs/breakfast/protein-french-toast.jpg",
   "imageAlt": "Golden protein French toast stacks with fresh berries and maple drizzle",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 7,
   "seoTitle": "Protein French Toast | Firehall Breakfast",
   "collectionTier": "performance",
@@ -207,7 +208,6 @@
         "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T23:53:29.737Z",
+  "generatedAt": "2026-09-26T19:29:30.912Z",
   "crewOptions": [
     4,
     6,
@@ -8,9 +8,9 @@
     14
   ],
   "canonicalBase": 8,
-  "recipesAudited": 432,
-  "successfullyScaled": 393,
-  "failures": 39,
+  "recipesAudited": 467,
+  "successfullyScaled": 421,
+  "failures": 46,
   "edgeCaseRecipes": 0,
   "quantityFormattingNotes": 0,
   "failed": [
@@ -18,28 +18,43 @@
       "slug": "apple-cinnamon-baked-oatmeal",
       "title": "Apple Cinnamon Baked Oatmeal",
       "file": "client\\public\\catalog\\breakfast\\pages\\apple-cinnamon-baked-oatmeal.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: ground cinnamon increased when scaling down to 4",
-        "scale_up_bug: ground cinnamon increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
     },
     {
-      "slug": "bbq-breakfast-hash",
-      "title": "BBQ Breakfast Hash",
-      "file": "client\\public\\catalog\\breakfast\\pages\\bbq-breakfast-hash.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "slug": "bagel-lox-breakfast-board",
+      "title": "Bagel and Lox Breakfast Board",
+      "file": "client\\public\\catalog\\breakfast\\pages\\bagel-lox-breakfast-board.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "file": "client\\public\\catalog\\breakfast\\pages\\bagel-sandwich-line.json",
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 7,
       "ok": false,
       "issues": [
-        "scale_up_bug: pulled pork or brisket increased when scaling down to 4",
-        "scale_up_bug: pulled pork or brisket increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -48,28 +63,13 @@
       "slug": "big-pot-savory-oats",
       "title": "Big-Pot Savory Oats",
       "file": "client\\public\\catalog\\breakfast\\pages\\big-pot-savory-oats.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 7,
       "ok": false,
       "issues": [
-        "scale_up_bug: kosher salt increased when scaling down to 4",
-        "scale_up_bug: kosher salt increased when scaling down to 6"
-      ],
-      "edgeCases": [],
-      "scaleSamples": []
-    },
-    {
-      "slug": "biscuit-french-toast-sliders",
-      "title": "Biscuit French Toast Sliders",
-      "file": "client\\public\\catalog\\breakfast\\pages\\biscuit-french-toast-sliders.json",
-      "baseServings": 8,
-      "crewSize": 8,
-      "ingredientCount": 9,
-      "ok": false,
-      "issues": [
-        "scale_up_bug: whole milk increased when scaling down to 4",
-        "scale_up_bug: whole milk increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -78,13 +78,13 @@
       "slug": "breakfast-crunchwraps",
       "title": "Breakfast Crunchwraps",
       "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-crunchwraps.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: breakfast sausage increased when scaling down to 4",
-        "scale_up_bug: breakfast sausage increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -93,13 +93,13 @@
       "slug": "breakfast-enchiladas",
       "title": "Breakfast Enchiladas for the Crew",
       "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-enchiladas.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: Mexican chorizo increased when scaling down to 4",
-        "scale_up_bug: Mexican chorizo increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -108,15 +108,13 @@
       "slug": "breakfast-nachos-supreme",
       "title": "Breakfast Nachos Supreme",
       "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-nachos-supreme.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: nacho cheese sauce increased when scaling down to 4",
-        "scale_up_bug: pico de gallo increased when scaling down to 4",
-        "scale_up_bug: nacho cheese sauce increased when scaling down to 6",
-        "scale_up_bug: pico de gallo increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -125,60 +123,58 @@
       "slug": "breakfast-poutine",
       "title": "Breakfast Poutine",
       "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-poutine.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: vegetable oil increased when scaling down to 4",
-        "scale_up_bug: cheese curds increased when scaling down to 4",
-        "scale_up_bug: vegetable oil increased when scaling down to 6",
-        "scale_up_bug: cheese curds increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
     },
     {
-      "slug": "breakfast-stromboli-roll",
-      "title": "Breakfast Stromboli Roll",
-      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-stromboli-roll.json",
-      "baseServings": 8,
-      "crewSize": 8,
-      "ingredientCount": 8,
+      "slug": "breakfast-sandwich-trays",
+      "title": "Breakfast Sandwich Trays",
+      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-sandwich-trays.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 6,
       "ok": false,
       "issues": [
-        "scale_up_bug: deli ham increased when scaling down to 4",
-        "scale_up_bug: deli ham increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
     },
     {
-      "slug": "cast-iron-breakfast-skillet",
-      "title": "Cast Iron Breakfast Skillet",
-      "file": "client\\public\\catalog\\breakfast\\pages\\cast-iron-breakfast-skillet.json",
-      "baseServings": 8,
-      "crewSize": 8,
-      "ingredientCount": 7,
+      "slug": "breakfast-sliders",
+      "title": "Breakfast Sliders",
+      "file": "client\\public\\catalog\\breakfast\\pages\\breakfast-sliders.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: breakfast sausage or diced ham increased when scaling down to 4",
-        "scale_up_bug: breakfast sausage or diced ham increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
     },
     {
-      "slug": "chorizo-breakfast-hash",
-      "title": "Chorizo Breakfast Hash",
-      "file": "client\\public\\catalog\\breakfast\\pages\\chorizo-breakfast-hash.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "slug": "chilaquiles-verde-bake",
+      "title": "Chilaquiles Verde Bake",
+      "file": "client\\public\\catalog\\breakfast\\pages\\chilaquiles-verde-bake.json",
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: Mexican chorizo increased when scaling down to 4",
-        "scale_up_bug: Mexican chorizo increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -187,28 +183,13 @@
       "slug": "club-sandwich-breakfast-bake",
       "title": "Club Sandwich Breakfast Bake",
       "file": "client\\public\\catalog\\breakfast\\pages\\club-sandwich-breakfast-bake.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: deli turkey increased when scaling down to 4",
-        "scale_up_bug: deli turkey increased when scaling down to 6"
-      ],
-      "edgeCases": [],
-      "scaleSamples": []
-    },
-    {
-      "slug": "cowboy-breakfast-skillet",
-      "title": "Cowboy Breakfast Skillet",
-      "file": "client\\public\\catalog\\breakfast\\pages\\cowboy-breakfast-skillet.json",
-      "baseServings": 8,
-      "crewSize": 8,
-      "ingredientCount": 8,
-      "ok": false,
-      "issues": [
-        "scale_up_bug: shredded cheddar increased when scaling down to 4",
-        "scale_up_bug: shredded cheddar increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -217,12 +198,58 @@
       "slug": "crew-french-toast-bake",
       "title": "Crew French Toast Bake",
       "file": "client\\public\\catalog\\breakfast\\pages\\crew-french-toast-bake.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 12,
+      "crewSize": 12,
       "ingredientCount": 7,
       "ok": false,
       "issues": [
-        "scale_up_bug: cinnamon increased when scaling down to 4"
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "denver-breakfast-casserole",
+      "title": "Denver Breakfast Casserole",
+      "file": "client\\public\\catalog\\breakfast\\pages\\denver-breakfast-casserole.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "farmers-breakfast-casserole",
+      "title": "Farmer's Breakfast Casserole",
+      "file": "client\\public\\catalog\\breakfast\\pages\\farmers-breakfast-casserole.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "fire-captain-omelette-bar",
+      "title": "Fire Captain Omelette Bar",
+      "file": "client\\public\\catalog\\breakfast\\pages\\fire-captain-omelette-bar.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -231,12 +258,43 @@
       "slug": "firehall-breakfast-pizza",
       "title": "Firehall Breakfast Pizza",
       "file": "client\\public\\catalog\\breakfast\\pages\\firehall-breakfast-pizza.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 12,
+      "crewSize": 12,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: olive oil increased when scaling down to 4"
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "green-chile-breakfast-burritos",
+      "title": "Green Chile Breakfast Burritos",
+      "file": "client\\public\\catalog\\breakfast\\pages\\green-chile-breakfast-burritos.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "hall-breakfast-burritos",
+      "title": "Hall Breakfast Burritos",
+      "file": "client\\public\\catalog\\breakfast\\pages\\hall-breakfast-burritos.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 9,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -245,13 +303,13 @@
       "slug": "hall-breakfast-wraps",
       "title": "Hall Breakfast Wraps",
       "file": "client\\public\\catalog\\breakfast\\pages\\hall-breakfast-wraps.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: lean turkey breakfast sausage increased when scaling down to 4",
-        "scale_up_bug: lean turkey breakfast sausage increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -260,13 +318,13 @@
       "slug": "hall-sausage-biscuits-gravy",
       "title": "Hall Sausage Biscuits & Gravy",
       "file": "client\\public\\catalog\\breakfast\\pages\\hall-sausage-biscuits-gravy.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 12,
+      "crewSize": 12,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: butter increased when scaling down to 4",
-        "scale_up_bug: black pepper increased when scaling down to 4"
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -275,13 +333,13 @@
       "slug": "hash-brown-breakfast-casserole",
       "title": "Hash Brown Breakfast Casserole",
       "file": "client\\public\\catalog\\breakfast\\pages\\hash-brown-breakfast-casserole.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: breakfast sausage or diced ham increased when scaling down to 4",
-        "scale_up_bug: breakfast sausage or diced ham increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -290,13 +348,13 @@
       "slug": "high-protein-parfaits",
       "title": "High-Protein Yogurt Parfaits",
       "file": "client\\public\\catalog\\breakfast\\pages\\high-protein-parfaits.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 6,
+      "crewSize": 6,
       "ingredientCount": 6,
       "ok": false,
       "issues": [
-        "scale_up_bug: vanilla extract increased when scaling down to 4",
-        "scale_up_bug: vanilla extract increased when scaling down to 6"
+        "non_canonical_base: stored at 6, expected 8",
+        "metadata: baseServings=6 crewSize=6 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -305,19 +363,28 @@
       "slug": "maple-sausage-pinwheels",
       "title": "Maple Sausage Pinwheels",
       "file": "client\\public\\catalog\\breakfast\\pages\\maple-sausage-pinwheels.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: breakfast sausage increased when scaling down to 4",
-        "scale_up_bug: shredded cheddar increased when scaling down to 4",
-        "scale_up_bug: maple syrup increased when scaling down to 4",
-        "scale_up_bug: maple syrup increased when scaling down to 4",
-        "scale_up_bug: breakfast sausage increased when scaling down to 6",
-        "scale_up_bug: shredded cheddar increased when scaling down to 6",
-        "scale_up_bug: maple syrup increased when scaling down to 6",
-        "scale_up_bug: maple syrup increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "monte-cristo-sandwiches",
+      "title": "Monte Cristo Sandwiches",
+      "file": "client\\public\\catalog\\breakfast\\pages\\monte-cristo-sandwiches.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -326,12 +393,43 @@
       "slug": "overnight-french-toast-bake",
       "title": "Overnight French Toast Bake",
       "file": "client\\public\\catalog\\breakfast\\pages\\overnight-french-toast-bake.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 12,
+      "crewSize": 12,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: vanilla extract increased when scaling down to 4"
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "file": "client\\public\\catalog\\breakfast\\pages\\overnight-oat-bar-crew.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "overnight-sausage-strata",
+      "title": "Overnight Sausage Strata",
+      "file": "client\\public\\catalog\\breakfast\\pages\\overnight-sausage-strata.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -340,42 +438,28 @@
       "slug": "protein-pancake-tray",
       "title": "Protein Pancake Tray",
       "file": "client\\public\\catalog\\breakfast\\pages\\protein-pancake-tray.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 12,
+      "crewSize": 12,
       "ingredientCount": 7,
       "ok": false,
       "issues": [
-        "scale_up_bug: sugar increased when scaling down to 4"
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
     },
     {
-      "slug": "red-lead-skillet",
-      "title": "Red Lead Skillet",
-      "file": "client\\public\\catalog\\breakfast\\pages\\red-lead-skillet.json",
-      "baseServings": 8,
-      "crewSize": 8,
-      "ingredientCount": 8,
+      "slug": "quick-egg-tacos",
+      "title": "Quick Egg Tacos",
+      "file": "client\\public\\catalog\\breakfast\\pages\\quick-egg-tacos.json",
+      "baseServings": 6,
+      "crewSize": 6,
+      "ingredientCount": 7,
       "ok": false,
       "issues": [
-        "scale_up_bug: shredded pepper jack increased when scaling down to 4",
-        "scale_up_bug: shredded pepper jack increased when scaling down to 6"
-      ],
-      "edgeCases": [],
-      "scaleSamples": []
-    },
-    {
-      "slug": "sausage-egg-cheese-sandwiches",
-      "title": "Sausage Egg & Cheese Sandwiches",
-      "file": "client\\public\\catalog\\breakfast\\pages\\sausage-egg-cheese-sandwiches.json",
-      "baseServings": 8,
-      "crewSize": 8,
-      "ingredientCount": 6,
-      "ok": false,
-      "issues": [
-        "scale_up_bug: breakfast sausage patties or links increased when scaling down to 4",
-        "scale_up_bug: breakfast sausage patties or links increased when scaling down to 6"
+        "non_canonical_base: stored at 6, expected 8",
+        "metadata: baseServings=6 crewSize=6 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -384,13 +468,28 @@
       "slug": "sheet-pan-breakfast-hash",
       "title": "Sheet Pan Breakfast Hash",
       "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-breakfast-hash.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 7,
       "ok": false,
       "issues": [
-        "scale_up_bug: olive oil or bacon fat increased when scaling down to 4",
-        "scale_up_bug: olive oil or bacon fat increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "title": "Sheet Pan Breakfast Sandwiches",
+      "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-breakfast-sandwiches.json",
+      "baseServings": 12,
+      "crewSize": 12,
+      "ingredientCount": 8,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 12, expected 8",
+        "metadata: baseServings=12 crewSize=12 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -399,28 +498,43 @@
       "slug": "sheet-pan-eggs-sausage-crew",
       "title": "Sheet-Pan Eggs & Sausage",
       "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-eggs-sausage-crew.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 7,
       "ok": false,
       "issues": [
-        "scale_up_bug: olive oil increased when scaling down to 4",
-        "scale_up_bug: olive oil increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
     },
     {
-      "slug": "smoked-salmon-benedit",
-      "title": "Smoked Salmon Benedict",
-      "file": "client\\public\\catalog\\breakfast\\pages\\smoked-salmon-benedit.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "slug": "sheet-pan-full-english",
+      "title": "Sheet Pan Full English",
+      "file": "client\\public\\catalog\\breakfast\\pages\\sheet-pan-full-english.json",
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: smoked salmon increased when scaling down to 4",
-        "scale_up_bug: smoked salmon increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
+      ],
+      "edgeCases": [],
+      "scaleSamples": []
+    },
+    {
+      "slug": "southwest-egg-bake",
+      "title": "Southwest Egg Bake",
+      "file": "client\\public\\catalog\\breakfast\\pages\\southwest-egg-bake.json",
+      "baseServings": 10,
+      "crewSize": 10,
+      "ingredientCount": 7,
+      "ok": false,
+      "issues": [
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []
@@ -429,32 +543,13 @@
       "slug": "tater-tot-breakfast-casserole",
       "title": "Tater Tot Breakfast Casserole",
       "file": "client\\public\\catalog\\breakfast\\pages\\tater-tot-breakfast-casserole.json",
-      "baseServings": 8,
-      "crewSize": 8,
+      "baseServings": 10,
+      "crewSize": 10,
       "ingredientCount": 8,
       "ok": false,
       "issues": [
-        "scale_up_bug: bacon increased when scaling down to 4",
-        "scale_up_bug: whole milk increased when scaling down to 4",
-        "scale_up_bug: bacon increased when scaling down to 6",
-        "scale_up_bug: whole milk increased when scaling down to 6"
-      ],
-      "edgeCases": [],
-      "scaleSamples": []
-    },
-    {
-      "slug": "turkey-sausage-burritos",
-      "title": "Turkey Sausage Breakfast Burritos",
-      "file": "client\\public\\catalog\\breakfast\\pages\\turkey-sausage-burritos.json",
-      "baseServings": 8,
-      "crewSize": 8,
-      "ingredientCount": 9,
-      "ok": false,
-      "issues": [
-        "scale_up_bug: shredded cheddar or pepper jack increased when scaling down to 4",
-        "scale_up_bug: breakfast sausage or chorizo increased when scaling down to 4",
-        "scale_up_bug: shredded cheddar or pepper jack increased when scaling down to 6",
-        "scale_up_bug: breakfast sausage or chorizo increased when scaling down to 6"
+        "non_canonical_base: stored at 10, expected 8",
+        "metadata: baseServings=10 crewSize=10 (expected 8)"
       ],
       "edgeCases": [],
       "scaleSamples": []

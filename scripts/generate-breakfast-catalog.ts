@@ -11,6 +11,7 @@ import { NEW_BREAKFAST_PAGES } from "../shared/breakfast-expansion/new-breakfast
 import { BATCH_25_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-25-breakfast-pages.js";
 import { BATCH_A_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-a-breakfast-pages.js";
 import { BATCH_WAVE1_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-wave1-breakfast-pages.js";
+import { BATCH_HIGH_PROTEIN_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-high-protein-breakfasts.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
 import { PHASE5_REMOVED_SLUGS } from "../shared/catalog-consolidation/phase5-redirects.js";
 import { buildFirehallHeroImageAlt } from "../shared/curated-image-governance/firehall-hero-alt.js";
@@ -384,6 +385,7 @@ function withBreakfastNutrition(page: BreakfastRecipePageDraft): BreakfastRecipe
       fat: record.fat,
       label: "per serving (hall portion)",
       source: record.source,
+      estimateAvailable: record.estimateAvailable,
       filterFlags: record.filterFlags,
       badgeCandidates: record.badgeCandidates,
     },
@@ -443,6 +445,7 @@ async function main(): Promise<void> {
     ...BATCH_25_BREAKFAST_PAGES.map((p) => p.slug),
     ...BATCH_A_BREAKFAST_PAGES.map((p) => p.slug),
     ...BATCH_WAVE1_BREAKFAST_PAGES.map((p) => p.slug),
+    ...BATCH_HIGH_PROTEIN_BREAKFAST_PAGES.map((p) => p.slug),
   ]);
   const merged = [
     ...basePages.filter((p) => !newSlugs.has(p.slug)),
@@ -450,6 +453,7 @@ async function main(): Promise<void> {
     ...BATCH_25_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
     ...BATCH_A_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
     ...BATCH_WAVE1_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
+    ...BATCH_HIGH_PROTEIN_BREAKFAST_PAGES.map((p) => withBreakfastNutrition(p)),
   ];
 
   const gov = getBreakfastGovernanceMap();
@@ -512,7 +516,7 @@ async function main(): Promise<void> {
   }
 
   console.log(
-    `[breakfast] wrote ${governed.length} pages — primary ${primaryPages.length}, performance ${performancePages.length} (${NEW_BREAKFAST_PAGES.length} expansion + ${BATCH_25_BREAKFAST_PAGES.length} batch-25 + ${BATCH_A_BREAKFAST_PAGES.length} batch-a + ${BATCH_WAVE1_BREAKFAST_PAGES.length} wave1)`,
+    `[breakfast] wrote ${governed.length} pages — primary ${primaryPages.length}, performance ${performancePages.length} (${NEW_BREAKFAST_PAGES.length} expansion + ${BATCH_25_BREAKFAST_PAGES.length} batch-25 + ${BATCH_A_BREAKFAST_PAGES.length} batch-a + ${BATCH_WAVE1_BREAKFAST_PAGES.length} wave1 + ${BATCH_HIGH_PROTEIN_BREAKFAST_PAGES.length} high-protein)`,
   );
 }
 

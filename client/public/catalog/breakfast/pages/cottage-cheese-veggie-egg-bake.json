@@ -1,0 +1,181 @@
+{
+  "slug": "cottage-cheese-veggie-egg-bake",
+  "title": "Cottage Cheese Veggie Egg Bake",
+  "subtitle": "A vegetarian egg bake with cottage cheese folded in for extra protein and a creamier texture.",
+  "description": "Eggs, cottage cheese, spinach, and roasted bell pepper bake into a firm, sliceable casserole. Cottage cheese adds protein and a slightly creamier texture than a standard egg bake, without any meat in the pan.",
+  "filters": [
+    "feed_a_crew",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "egg-bake",
+    "cottage-cheese",
+    "vegetarian",
+    "spinach",
+    "9x13"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 34,
+  "totalTime": 49,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "large eggs",
+      "quantity": "12",
+      "group": "Eggs"
+    },
+    {
+      "name": "cottage cheese",
+      "quantity": "1 1/2 cups",
+      "group": "Eggs"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "notes": "diced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "2",
+      "notes": "diced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "6 oz",
+      "notes": "sautéed and squeezed dry",
+      "group": "Vegetables"
+    },
+    {
+      "name": "shredded cheese",
+      "quantity": "1 1/2 cups",
+      "notes": "cheddar or mozzarella",
+      "group": "Cheese"
+    },
+    {
+      "name": "dried thyme",
+      "quantity": "1 tsp",
+      "group": "Seasoning"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven and prep the pan",
+      "instruction": "Heat oven to 375°F. Grease a 9x13 pan.",
+      "minutes": 0,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 2,
+      "title": "Sauté the vegetables",
+      "instruction": "Sauté onion and bell pepper in a splash of oil over medium 5–6 minutes until softened. Add spinach and cook just until wilted, then squeeze out excess liquid before it goes in the pan.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Whisk the egg-cottage cheese base",
+      "instruction": "Whisk eggs and cottage cheese together with thyme, salt, and pepper until mostly smooth — small curds of cottage cheese are fine and expected.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 4,
+      "title": "Build and bake",
+      "instruction": "Spread the sautéed vegetables in the pan, pour the egg mixture over the top, and scatter with cheese. Bake 28–31 minutes until the center is set and the top is lightly browned.",
+      "minutes": 31,
+      "tempF": 375
+    },
+    {
+      "stepNumber": 5,
+      "title": "Rest and slice",
+      "instruction": "Rest 10 minutes before slicing so squares hold together for the line instead of falling apart.",
+      "minutes": 10
+    }
+  ],
+  "nutrition": {
+    "calories": 256,
+    "protein": 21,
+    "carbs": 6,
+    "fat": 16,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Squeeze sautéed spinach dry before adding it — excess water waters down the bake and slows setting.",
+    "Whisk the egg-cottage cheese base well so it pours evenly over the vegetables.",
+    "Rest the finished bake before cutting so slices come out clean."
+  ],
+  "cleanupNotes": [
+    "Soak the baking dish immediately after service — baked egg sets hard once it cools.",
+    "Wipe the sauté pan while warm to prevent vegetable residue from sticking."
+  ],
+  "leftovers": [
+    "Cool completely, then refrigerate covered up to 4 days.",
+    "Reheat individual slices covered at 325°F for 10 minutes, or in the microwave at 50% power."
+  ],
+  "heroImage": "/images/breakfast/cottage-cheese-veggie-egg-bake.jpg",
+  "thumbImage": "/images/thumbs/breakfast/cottage-cheese-veggie-egg-bake.jpg",
+  "imageAlt": "Sliced cottage cheese vegetable egg bake in a baking dish",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 5,
+  "seoTitle": "Cottage Cheese Veggie Egg Bake | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "cottage cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

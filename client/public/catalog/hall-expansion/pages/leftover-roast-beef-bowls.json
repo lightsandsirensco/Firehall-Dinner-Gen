@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 989,
-  "protein": 70,
-  "carbs": 107,
-  "fats": 32,
+  "calories": 650,
+  "protein": 42,
+  "carbs": 62,
+  "fats": 25,
   "tags": [
     "protein:beef",
     "format:bowls",
@@ -137,7 +137,7 @@
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool Cooked roast beef and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool Cooked roast beef and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -168,17 +168,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 989,
-    "protein": 70,
-    "carbs": 107,
-    "fats": 32,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 650,
+    "protein": 42,
+    "carbs": 62,
+    "fats": 25,
+    "label": "~650 cal/serving · 42g protein · 8g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -186,7 +186,7 @@
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
-      "performanceMeal": false
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
@@ -210,7 +210,7 @@
     "korean-turkey-rice-bowls"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -252,7 +252,6 @@
         "note": "Thicken with cornstarch or a gluten-free flour blend instead of a wheat roux."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

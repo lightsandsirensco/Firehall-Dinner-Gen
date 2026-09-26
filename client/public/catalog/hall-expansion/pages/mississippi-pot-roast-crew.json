@@ -13,10 +13,10 @@
   "cookTime": 480,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 1400,
-  "protein": 117,
-  "carbs": 85,
-  "fats": 70,
+  "calories": 730,
+  "protein": 48,
+  "carbs": 58,
+  "fats": 32,
   "tags": [
     "protein:beef",
     "format:slow_cooker",
@@ -135,7 +135,7 @@
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool Chuck roast and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool Chuck roast and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -166,12 +166,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 117,
-    "carbs": 85,
-    "fats": 70,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 730,
+    "protein": 48,
+    "carbs": 58,
+    "fats": 32,
+    "label": "~730 cal/serving · 48g protein · 7g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
@@ -188,7 +188,7 @@
     }
   },
   "heroImage": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
-  "heroImageAlt": "Wide firehall crew platter of Mississippi Pot Roast for the Crew beside mashed potatoes on a station prep table, family-style",
+  "heroImageAlt": "Mississippi Pot Roast for the Crew — American slow_cooker plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/mississippi-pot-roast-crew.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/mississippi-pot-roast-crew.jpg",
   "railImage": "/images/rails/hall-expansion/mississippi-pot-roast-crew.jpg",
@@ -208,7 +208,7 @@
     "loaded-baked-potato-soup-crock"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -249,7 +249,6 @@
         "note": "Use a certified gluten-free broth or bouillon. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

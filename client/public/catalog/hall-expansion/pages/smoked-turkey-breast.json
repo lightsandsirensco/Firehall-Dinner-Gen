@@ -13,10 +13,10 @@
   "cookTime": 180,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 653,
-  "protein": 75,
-  "carbs": 8,
-  "fats": 32,
+  "calories": 320,
+  "protein": 48,
+  "carbs": 12,
+  "fats": 9,
   "tags": [
     "protein:turkey",
     "format:smoker",
@@ -32,7 +32,7 @@
   "equipment": [
     "Pellet or offset smoker",
     "Instant-read thermometer",
-    "Hotel pans",
+    "baking dishes",
     "Aluminum foil",
     "Basting brush"
   ],
@@ -145,7 +145,7 @@
     "Save pan drippings, skim fat, and whisk into the glaze for a richer service sauce."
   ],
   "tonightSpread": [
-    "Sliced turkey on a hotel pan with extra glaze, soft rolls, and quick pickles on the side.",
+    "Sliced turkey on a baking dish with extra glaze, soft rolls, and quick pickles on the side.",
     "Simple green salad with lemon vinaigrette to cut the richness of the smoked glaze."
   ],
   "leftovers": [
@@ -153,29 +153,29 @@
     "Dice and fold into a creamy turkey tetrazzini bake for the next shift lunch."
   ],
   "whyCrewsLikeIt": "Turkey breast feels lighter than brisket but still reads as a special smoke night. It slices fast on the line, portions evenly, and reheats without turning stringy when held properly.",
-  "mealPrepNotes": "Brine breasts up to 24 hours ahead in labeled cambros. Pat completely dry before smoking so the skin sets instead of steaming. Hold sliced turkey at 165°F max in a covered hotel pan with a splash of broth.",
+  "mealPrepNotes": "Brine breasts up to 24 hours ahead in labeled lidded containers. Pat completely dry before smoking so the skin sets instead of steaming. Hold sliced turkey at 165°F max in a covered baking dish with a splash of broth.",
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 653,
-    "protein": 75,
-    "carbs": 8,
-    "fats": 32,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 320,
+    "protein": 48,
+    "carbs": 12,
+    "fats": 9,
+    "label": "~320 cal/serving · 48g protein · 1g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": true,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/smoked-turkey-breast.jpg",
@@ -197,7 +197,7 @@
     "smoked-queso-fundido"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.767Z",
+  "generatedAt": "2026-09-26T19:26:55.954Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -219,9 +219,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "mustard"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

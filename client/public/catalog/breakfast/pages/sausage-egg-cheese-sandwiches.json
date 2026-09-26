@@ -80,7 +80,7 @@
     "protein": 31,
     "carbs": 24,
     "fat": 39,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -99,7 +99,7 @@
   },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
-    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Set a warm holding zone (oven at 200°F, food covered) so staggered eaters still get a hot plate.",
     "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
   ],
   "cleanupNotes": [
@@ -113,8 +113,8 @@
   "heroImage": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/sausage-egg-cheese-sandwiches.jpg",
   "imageAlt": "Wide firehall crew platter of Sausage Egg & Cheese Sandwiches beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-07-17T20:15:27.732Z",
-  "updatedAt": "2026-07-17T20:15:27.732Z",
+  "publishedAt": "2026-09-26T19:26:57.127Z",
+  "updatedAt": "2026-09-26T19:26:57.127Z",
   "readMinutes": 5,
   "seoTitle": "Sausage Egg & Cheese Sandwiches | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -186,7 +186,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

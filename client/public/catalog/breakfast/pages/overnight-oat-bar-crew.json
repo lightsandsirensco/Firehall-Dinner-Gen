@@ -15,8 +15,8 @@
     "healthy",
     "scoop-and-go"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 5,
   "totalTime": 20,
@@ -24,49 +24,49 @@
   "ingredients": [
     {
       "name": "old-fashioned rolled oats",
-      "quantity": "4 cups",
+      "quantity": "5 cups",
       "notes": "not instant or steel-cut",
       "group": "Oat base"
     },
     {
       "name": "milk",
-      "quantity": "4 cups",
+      "quantity": "5 cups",
       "notes": "dairy or unsweetened oat milk",
       "group": "Oat base"
     },
     {
       "name": "plain Greek yogurt",
-      "quantity": "1.6 cups",
+      "quantity": "2 cups",
       "notes": "for extra protein",
       "group": "Oat base"
     },
     {
       "name": "chia seeds",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "for thickening",
       "group": "Oat base"
     },
     {
       "name": "maple syrup",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "adjust to taste",
       "group": "Sweetener"
     },
     {
       "name": "mixed berries",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "fresh or thawed and drained",
       "group": "Toppings"
     },
     {
       "name": "chopped nuts or granola",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "keep dry until service",
       "group": "Toppings"
     },
     {
       "name": "peanut or almond butter",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "plus cinnamon and sliced bananas",
       "group": "Toppings"
     }
@@ -110,11 +110,11 @@
     }
   ],
   "nutrition": {
-    "calories": 548,
+    "calories": 564,
     "protein": 23,
-    "carbs": 66,
-    "fat": 24,
-    "label": "Estimated per serving",
+    "carbs": 67,
+    "fat": 25,
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -147,8 +147,8 @@
   "heroImage": "/images/breakfast/overnight-oat-bar-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/overnight-oat-bar-crew.jpg",
   "imageAlt": "Crew-sized overnight oat bar with berries, banana, nut butter, granola, and scoop-and-go bowls",
-  "publishedAt": "2026-07-17T20:15:27.731Z",
-  "updatedAt": "2026-07-17T20:15:27.731Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 6,
   "seoTitle": "Overnight Oat Bar for the Crew | Firehall Breakfast",
   "dietary": {
@@ -202,7 +202,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

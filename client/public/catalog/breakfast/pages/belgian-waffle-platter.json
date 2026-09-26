@@ -109,6 +109,7 @@
     "fat": 18,
     "label": "per serving (hall portion)",
     "source": "calculated",
+    "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": false,
@@ -139,8 +140,8 @@
   "heroImage": "/images/breakfast/belgian-waffle-platter.jpg",
   "thumbImage": "/images/thumbs/breakfast/belgian-waffle-platter.jpg",
   "imageAlt": "Belgian waffle platter with maple syrup, whipped butter, and fresh berries",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 7,
   "seoTitle": "Belgian Waffle Platter | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -206,7 +207,6 @@
         "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

@@ -13,10 +13,10 @@
   "cookTime": 50,
   "prepTime": 30,
   "difficulty": "medium",
-  "calories": 414,
-  "protein": 64,
-  "carbs": 19,
-  "fats": 8,
+  "calories": 360,
+  "protein": 32,
+  "carbs": 34,
+  "fats": 12,
   "tags": [
     "protein:chicken",
     "format:soup",
@@ -160,23 +160,23 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 414,
-    "protein": 64,
-    "carbs": 19,
-    "fats": 8,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 360,
+    "protein": 32,
+    "carbs": 34,
+    "fats": 12,
+    "label": "~360 cal/serving · 32g protein · 8g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
+      "highProtein": false,
       "under700Calories": true,
       "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
+      "highProtein": false,
       "lighterOption": true,
       "performanceMeal": true
     }
@@ -200,7 +200,7 @@
     "fajita-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -235,11 +235,6 @@
         "note": "Use a certified gluten-free broth or bouillon."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "cilantro",
-    "beans"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

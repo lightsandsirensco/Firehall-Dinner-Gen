@@ -91,7 +91,7 @@
     {
       "stepNumber": 4,
       "title": "Fold and serve",
-      "instruction": "Remove from heat immediately and fold in the reserved pepper-tomato mixture. Garnish with chives. Serve at once with warm pita — menemen does not hold well on a steam table.",
+      "instruction": "Remove from heat immediately and fold in the reserved pepper-tomato mixture. Garnish with chives. Serve at once with warm pita — menemen doesn't hold up well if it sits around waiting to be served.",
       "minutes": 3
     }
   ],
@@ -100,7 +100,7 @@
     "protein": 14,
     "carbs": 6,
     "fat": 31,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -133,8 +133,8 @@
   "heroImage": "/images/breakfast/menemen-for-the-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/menemen-for-the-crew.jpg",
   "imageAlt": "Soft Turkish menemen scrambled eggs with tomatoes and peppers in a skillet",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 7,
   "seoTitle": "Menemen for the Crew | Firehall Breakfast",
   "dietary": {
@@ -164,10 +164,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "tomatoes"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

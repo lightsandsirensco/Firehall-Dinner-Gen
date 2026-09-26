@@ -147,6 +147,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "cream", keywords: ["heavy cream", "whipping cream", "ricotta", "whole-milk ricotta"], category: "dairy", ...NONE, dairy: true },
   { id: "yogurt", keywords: ["greek yogurt", "plain yogurt", "yogurt", "tzatziki"], category: "dairy", ...NONE, dairy: true },
   { id: "cottage-cheese", keywords: ["cottage cheese"], category: "dairy", ...NONE, dairy: true },
+  { id: "paneer", keywords: ["paneer"], category: "dairy", ...NONE, dairy: true, substitutions: { dairy: "Use extra-firm tofu in place of paneer." } },
   { id: "dairy-alt-milk", keywords: ["oat milk", "coconut milk"], category: "dairy", ...NONE }, // plant milks: not dairy by definition ("almond milk" is handled by the dedicated almond/tree-nut profile below)
 
   // ---------------- GRAINS / GLUTEN ----------------
@@ -245,7 +246,7 @@ export const INGREDIENT_DIETARY_PROFILES: IngredientDietaryProfile[] = [
   { id: "ginger", keywords: ["fresh ginger, grated", "fresh ginger", "ginger"], category: "spice_herb_aromatic", ...NONE },
   { id: "shallots", keywords: ["shallots", "shallot"], category: "vegetable", ...NONE },
   { id: "capers-olives", keywords: ["capers", "kalamata olives", "black olives, sliced", "green olives", "castelvetrano olives", "olives", "pepperoncini"], category: "vegetable", ...NONE },
-  { id: "pickles", keywords: ["dill pickle chips", "dill pickles", "pickle chips", "pickled red onions", "pickled turnips", "sweet pickle relish", "pickled jalapeños, sliced", "pickled vegetables", "pickled veggies"], category: "vegetable", ...NONE },
+  { id: "pickles", keywords: ["dill pickle chips", "dill pickles", "dill pickle juice", "pickle chips", "pickled red onions", "pickled turnips", "sweet pickle relish", "pickled jalapeños, sliced", "pickled vegetables", "pickled veggies"], category: "vegetable", ...NONE },
   { id: "frozen-mixed-vegetables", keywords: ["frozen mixed vegetables", "frozen mixed veggies", "frozen vegetable medley"], category: "vegetable", ...NONE },
   { id: "parsley", keywords: ["chopped parsley", "italian parsley", "flat-leaf parsley", "parsley"], category: "spice_herb_aromatic", ...NONE },
   { id: "scallions", keywords: ["green onions, sliced", "green onions", "sliced green onions", "scallions"], category: "vegetable", ...NONE },

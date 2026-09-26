@@ -13,10 +13,10 @@
   "cookTime": 210,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 856,
-  "protein": 32,
-  "carbs": 142,
-  "fats": 19,
+  "calories": 860,
+  "protein": 46,
+  "carbs": 61,
+  "fats": 49,
   "tags": [
     "protein:pork",
     "format:smoker",
@@ -136,7 +136,7 @@
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool Pork ribs and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool Pork ribs and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -167,23 +167,23 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "heavy",
   "nutrition": {
-    "calories": 856,
-    "protein": 32,
-    "carbs": 142,
-    "fats": 19,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 860,
+    "protein": 46,
+    "carbs": 61,
+    "fats": 49,
+    "label": "~860 cal/serving · 46g protein · 6g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": false,
+      "highProtein": true,
       "under700Calories": false,
-      "under30gFat": true,
+      "under30gFat": false,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": false,
+      "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
     }
@@ -209,7 +209,7 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.772Z",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -250,9 +250,6 @@
         "note": "Use a certified gluten-free rub or build your own from confirmed gluten-free spices."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "corn"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

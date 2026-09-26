@@ -1,0 +1,295 @@
+{
+  "slug": "cottage-cheese-spinach-stuffed-shells",
+  "title": "Cottage Cheese & Spinach Stuffed Shells",
+  "displayTitle": "Cottage Cheese & Spinach Stuffed Shells",
+  "seoTitle": "Cottage Cheese & Spinach Stuffed Shells | Firefighter Meal",
+  "shortDescription": "Jumbo pasta shells stuffed with cottage cheese, mozzarella, and spinach in marinara",
+  "subtitle": "Jumbo pasta shells stuffed with cottage cheese, mozzarella, and spinach in marinara",
+  "category": "hall_expansion",
+  "cuisine": "italian",
+  "description": "Jumbo pasta shells are stuffed with a cottage cheese, mozzarella, and spinach filling, then baked under marinara until bubbling. It looks and eats like a normal stuffed shells dinner with a genuinely higher protein count per serving.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 25,
+  "difficulty": "medium",
+  "calories": 791,
+  "protein": 48,
+  "carbs": 83,
+  "fats": 30,
+  "tags": [
+    "protein:vegetarian",
+    "format:pasta",
+    "category:crew_feeders",
+    "pasta",
+    "vegetarian",
+    "healthy",
+    "high_protein",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "9x13 baking dish",
+    "Large pot",
+    "Mixing bowl",
+    "Colander"
+  ],
+  "ingredients": [
+    {
+      "name": "jumbo pasta shells",
+      "quantity": "1.5",
+      "unit": "lb",
+      "notes": "dry",
+      "group": "Base"
+    },
+    {
+      "name": "cottage cheese",
+      "quantity": "4.5",
+      "unit": "cups",
+      "group": "Filling"
+    },
+    {
+      "name": "shredded mozzarella",
+      "quantity": "3.5",
+      "unit": "cups",
+      "notes": "divided",
+      "group": "Filling"
+    },
+    {
+      "name": "parmesan cheese",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "grated",
+      "group": "Filling"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "3",
+      "unit": "each",
+      "group": "Filling"
+    },
+    {
+      "name": "frozen spinach",
+      "quantity": "20",
+      "unit": "oz",
+      "notes": "thawed and squeezed very dry",
+      "group": "Filling"
+    },
+    {
+      "name": "garlic",
+      "quantity": "2",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Filling"
+    },
+    {
+      "name": "italian seasoning",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Filling"
+    },
+    {
+      "name": "marinara sauce",
+      "quantity": "5",
+      "unit": "cups",
+      "group": "Sauce"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Heat the oven and cook the shells",
+      "instruction": "Heat oven to 375°F. Cook jumbo shells in salted boiling water 2 minutes under the package time so they stay firm enough to stuff. Drain and cool slightly. Target oven/smoker temperature: 375°F.",
+      "minutes": 12,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the filling",
+      "instruction": "In a large bowl, combine cottage cheese, 2 cups mozzarella, parmesan, eggs, squeezed spinach, garlic, and Italian seasoning until evenly mixed.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Stuff the shells",
+      "instruction": "Spread 1 cup marinara in the bottom of a 9x13 pan. Stuff each shell with a generous spoonful of filling and arrange seam-side up in the pan.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sauce and top",
+      "instruction": "Pour remaining marinara over the stuffed shells and scatter the remaining mozzarella on top.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake covered, then uncovered",
+      "instruction": "Cover with foil and bake 25 minutes, then uncover and bake 10–15 more minutes until bubbling and the cheese on top is golden. Target oven/smoker temperature: 375°F.",
+      "minutes": 40,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Rest and serve",
+      "instruction": "Rest 8–10 minutes before serving so the filling sets and shells hold together on the plate.",
+      "minutes": 10,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover cottage cheese and spinach stuffed shells — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool stuffed shells and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Squeeze spinach in a clean towel, not just a colander — excess water is the main cause of a soupy bake.",
+    "Rookie tip: Slightly undercooking the shells before stuffing keeps them from turning mushy after baking.",
+    "A piping bag (or a zip-top bag with the corner cut off) makes stuffing the shells much faster for a big batch."
+  ],
+  "tonightSpread": [
+    "Main: Cottage cheese and spinach stuffed shells",
+    "Sides: Garlic bread, simple green salad",
+    "Condiments: Extra parmesan, red pepper flakes",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool cottage cheese and spinach stuffed shells in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat covered at 350°F rather than microwaving so the shells don't turn rubbery."
+  ],
+  "whyCrewsLikeIt": "It keeps the comfort of a baked pasta night while quietly packing more protein than a standard ricotta filling, and it is fully vegetarian without anyone needing to be told.",
+  "mealPrepNotes": "Make-ahead: assemble the full pan up to a day ahead and refrigerate unbaked. Storage: refrigerate baked shells up to 4 days. Reheating: cover and reheat at 350°F until warmed through, about 15–20 minutes.",
+  "substitutions": [
+    "Use part-skim ricotta blended half-and-half with cottage cheese for a more traditional texture.",
+    "Use frozen chopped kale instead of spinach.",
+    "Use a jarred vodka sauce instead of marinara for a richer bake."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 791,
+    "protein": 48,
+    "carbs": 83,
+    "fats": 30,
+    "label": "~791 cal/serving · 48g protein · 6g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
+  "heroImageAlt": "Cottage Cheese & Spinach Stuffed Shells — italian pasta plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
+  "railImage": "/images/rails/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
+  "realismScore": 100,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "cottage cheese stuffed shells",
+    "vegetarian stuffed shells",
+    "high protein pasta bake",
+    "spinach stuffed shells",
+    "high protein vegetarian dinner"
+  ],
+  "relatedSlugs": [
+    "mushroom-swiss-steak-pan",
+    "mostaccioli-sausage-bake",
+    "creamy-chicken-penne-alfredo",
+    "rigatoni-meat-sauce-batch"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "jumbo pasta shells",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "cottage cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "shredded mozzarella",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "parmesan cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "italian seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free pasta. Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

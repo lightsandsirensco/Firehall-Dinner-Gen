@@ -13,10 +13,10 @@
   "cookTime": 22,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 581,
-  "protein": 40,
+  "calories": 570,
+  "protein": 43,
   "carbs": 6,
-  "fats": 44,
+  "fats": 41,
   "tags": [
     "protein:turkey",
     "format:breakfast",
@@ -145,10 +145,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 581,
-    "protein": 40,
+    "calories": 570,
+    "protein": 43,
     "carbs": 6,
-    "fats": 44,
+    "fats": 41,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -248,7 +248,7 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
   },
   "avoidTags": [
     "onions",

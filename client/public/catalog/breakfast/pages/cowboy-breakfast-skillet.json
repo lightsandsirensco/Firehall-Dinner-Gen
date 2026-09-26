@@ -107,7 +107,7 @@
     "protein": 35,
     "carbs": 39,
     "fat": 38,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/cowboy-breakfast-skillet.jpg",
   "thumbImage": "/images/thumbs/breakfast/cowboy-breakfast-skillet.jpg",
   "imageAlt": "Cowboy breakfast skillet with chorizo, ranch beans, potatoes, and baked eggs",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 7,
   "seoTitle": "Cowboy Breakfast Skillet | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -195,12 +195,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "cilantro",
-    "jalapenos",
-    "beans"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

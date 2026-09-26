@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-09-24T23:52:38.899Z",
+  "generatedAt": "2026-09-26T19:27:11.315Z",
   "mode": "audit",
   "totals": {
-    "recipesAudited": 392,
+    "recipesAudited": 415,
     "recipesFixed": 0,
-    "hiddenDueToIncomplete": 134,
+    "hiddenDueToIncomplete": 132,
     "suspiciousRemaining": 0,
     "batchCorrected": 0,
-    "ok": 258
+    "ok": 283
   },
   "rows": [
     {
@@ -48,7 +48,7 @@
       "title": "Applewood Grilled Pork Shoulder Steaks",
       "servings": 8,
       "status": "ok",
-      "before": "761 cal · 74g P · 10g C · 45g F",
+      "before": "460 cal · 44g P · 14g C · 26g F",
       "after": "761 cal · 74g P · 10g C · 45g F",
       "issues": []
     },
@@ -56,17 +56,17 @@
       "slug": "bagel-lox-breakfast-board",
       "kind": "breakfast_catalog",
       "title": "Bagel and Lox Breakfast Board",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "639 cal · 34g P · 61g C · 28g F",
-      "after": "639 cal · 34g P · 61g C · 28g F",
+      "before": "718 cal · 35g P · 60g C · 37g F",
+      "after": "718 cal · 35g P · 60g C · 37g F",
       "issues": []
     },
     {
       "slug": "bagel-sandwich-line",
       "kind": "breakfast_catalog",
       "title": "Bagel Sandwich Line",
-      "servings": 8,
+      "servings": 10,
       "status": "hidden",
       "before": "983 cal · 51g P · 68g C · 57g F",
       "after": "hidden",
@@ -102,7 +102,7 @@
       "title": "Baked Mostaccioli with Sausage",
       "servings": 8,
       "status": "hidden",
-      "before": "1044 cal · 52g P · 84g C · 55g F",
+      "before": "580 cal · 32g P · 52g C · 28g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -222,7 +222,7 @@
       "title": "BBQ Chicken Mac and Cheese",
       "servings": 8,
       "status": "ok",
-      "before": "820 cal · 54g P · 62g C · 30g F",
+      "before": "1386 cal · 83g P · 106g C · 68g F",
       "after": "820 cal · 54g P · 62g C · 30g F",
       "issues": []
     },
@@ -254,7 +254,7 @@
       "title": "BBQ Meatball Skewers",
       "servings": 8,
       "status": "ok",
-      "before": "508 cal · 41g P · 33g C · 26g F",
+      "before": "380 cal · 28g P · 22g C · 20g F",
       "after": "508 cal · 41g P · 33g C · 26g F",
       "issues": []
     },
@@ -264,7 +264,7 @@
       "title": "BBQ Pulled Pork Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "1303 cal · 100g P · 99g C · 54g F",
+      "before": "720 cal · 45g P · 70g C · 30g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -318,7 +318,7 @@
       "title": "Beef Enchilada Skillet",
       "servings": 8,
       "status": "ok",
-      "before": "738 cal · 50g P · 33g C · 46g F",
+      "before": "510 cal · 34g P · 36g C · 28g F",
       "after": "738 cal · 50g P · 33g C · 46g F",
       "issues": []
     },
@@ -328,7 +328,7 @@
       "title": "Beef Gyros",
       "servings": 8,
       "status": "ok",
-      "before": "682 cal · 51g P · 25g C · 41g F",
+      "before": "560 cal · 38g P · 40g C · 26g F",
       "after": "682 cal · 51g P · 25g C · 41g F",
       "issues": []
     },
@@ -380,7 +380,7 @@
       "title": "Best Tuna Melt for the Hall (Diner Style)",
       "servings": 8,
       "status": "hidden",
-      "before": "1001 cal · 71g P · 34g C · 64g F",
+      "before": "480 cal · 32g P · 28g C · 26g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -402,8 +402,18 @@
       "title": "Biscuit French Toast Sliders",
       "servings": 8,
       "status": "ok",
-      "before": "798 cal · 29g P · 73g C · 44g F",
-      "after": "798 cal · 29g P · 73g C · 44g F",
+      "before": "473 cal · 11g P · 71g C · 17g F",
+      "after": "473 cal · 11g P · 71g C · 17g F",
+      "issues": []
+    },
+    {
+      "slug": "black-bean-cottage-cheese-enchilada-bake",
+      "kind": "hall_expansion",
+      "title": "Black Bean & Cottage Cheese Enchilada Bake",
+      "servings": 8,
+      "status": "ok",
+      "before": "639 cal · 36g P · 72g C · 25g F",
+      "after": "639 cal · 36g P · 72g C · 25g F",
       "issues": []
     },
     {
@@ -437,6 +447,16 @@
       "issues": []
     },
     {
+      "slug": "blackened-salmon-sweet-potato-bowls",
+      "kind": "hall_expansion",
+      "title": "Blackened Salmon Sweet Potato Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "629 cal · 45g P · 44g C · 29g F",
+      "after": "629 cal · 45g P · 44g C · 29g F",
+      "issues": []
+    },
+    {
       "slug": "loaded-ranch-potato-salad-crew",
       "kind": "bbq_catalog",
       "title": "Blue Cheese Fingerling Ranch Tray",
@@ -460,20 +480,20 @@
       "slug": "breakfast-crunchwraps",
       "kind": "breakfast_catalog",
       "title": "Breakfast Crunchwraps",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "625 cal · 32g P · 32g C · 41g F",
-      "after": "625 cal · 32g P · 32g C · 41g F",
+      "before": "620 cal · 32g P · 32g C · 40g F",
+      "after": "620 cal · 32g P · 32g C · 40g F",
       "issues": []
     },
     {
       "slug": "breakfast-enchiladas",
       "kind": "breakfast_catalog",
       "title": "Breakfast Enchiladas for the Crew",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "792 cal · 41g P · 37g C · 53g F",
-      "after": "792 cal · 41g P · 37g C · 53g F",
+      "before": "785 cal · 41g P · 37g C · 53g F",
+      "after": "785 cal · 41g P · 37g C · 53g F",
       "issues": []
     },
     {
@@ -492,20 +512,20 @@
       "slug": "breakfast-nachos-supreme",
       "kind": "breakfast_catalog",
       "title": "Breakfast Nachos Supreme",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "611 cal · 36g P · 14g C · 46g F",
-      "after": "611 cal · 36g P · 14g C · 46g F",
+      "before": "611 cal · 37g P · 12g C · 46g F",
+      "after": "611 cal · 37g P · 12g C · 46g F",
       "issues": []
     },
     {
       "slug": "breakfast-poutine",
       "kind": "breakfast_catalog",
       "title": "Breakfast Poutine",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "562 cal · 36g P · 10g C · 42g F",
-      "after": "562 cal · 36g P · 10g C · 42g F",
+      "before": "552 cal · 36g P · 9g C · 42g F",
+      "after": "552 cal · 36g P · 9g C · 42g F",
       "issues": []
     },
     {
@@ -522,10 +542,10 @@
       "slug": "breakfast-sandwich-trays",
       "kind": "breakfast_catalog",
       "title": "Breakfast Sandwich Trays",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "565 cal · 30g P · 26g C · 38g F",
-      "after": "565 cal · 30g P · 26g C · 38g F",
+      "before": "563 cal · 30g P · 26g C · 38g F",
+      "after": "563 cal · 30g P · 26g C · 38g F",
       "issues": []
     },
     {
@@ -544,10 +564,10 @@
       "slug": "breakfast-sliders",
       "kind": "breakfast_catalog",
       "title": "Breakfast Sliders",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "793 cal · 42g P · 15g C · 63g F",
-      "after": "793 cal · 42g P · 15g C · 63g F",
+      "before": "739 cal · 39g P · 13g C · 59g F",
+      "after": "739 cal · 39g P · 13g C · 59g F",
       "issues": []
     },
     {
@@ -588,7 +608,7 @@
       "title": "Buffalo Chicken Sweet Potato Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "953 cal · 62g P · 68g C · 49g F",
+      "before": "560 cal · 43g P · 47g C · 22g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -600,7 +620,7 @@
       "title": "Buffalo Chicken Wraps",
       "servings": 8,
       "status": "ok",
-      "before": "720 cal · 42g P · 36g C · 44g F",
+      "before": "540 cal · 36g P · 42g C · 24g F",
       "after": "720 cal · 42g P · 36g C · 44g F",
       "issues": []
     },
@@ -610,7 +630,7 @@
       "title": "Build-Your-Own Pho Bar",
       "servings": 8,
       "status": "ok",
-      "before": "352 cal · 26g P · 23g C · 17g F",
+      "before": "420 cal · 28g P · 48g C · 12g F",
       "after": "352 cal · 26g P · 23g C · 17g F",
       "issues": []
     },
@@ -630,8 +650,8 @@
       "title": "Bun Bo Hue Noodle Soup",
       "servings": 8,
       "status": "ok",
-      "before": "846 cal · 69g P · 37g C · 49g F",
-      "after": "846 cal · 69g P · 37g C · 49g F",
+      "before": "520 cal · 40g P · 50g C · 16g F",
+      "after": "840 cal · 69g P · 35g C · 49g F",
       "issues": []
     },
     {
@@ -640,7 +660,7 @@
       "title": "Burnt Ends Chili for the Crew",
       "servings": 8,
       "status": "ok",
-      "before": "900 cal · 79g P · 62g C · 41g F",
+      "before": "710 cal · 45g P · 55g C · 33g F",
       "after": "900 cal · 79g P · 62g C · 41g F",
       "issues": []
     },
@@ -650,7 +670,7 @@
       "title": "Burrito Bowl Bar Night",
       "servings": 8,
       "status": "hidden",
-      "before": "948 cal · 78g P · 59g C · 44g F",
+      "before": "540 cal · 32g P · 52g C · 22g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -704,8 +724,18 @@
       "title": "Cajun Chicken and Rice Skillet",
       "servings": 8,
       "status": "ok",
-      "before": "549 cal · 63g P · 52g C · 8g F",
+      "before": "480 cal · 34g P · 52g C · 16g F",
       "after": "549 cal · 63g P · 52g C · 8g F",
+      "issues": []
+    },
+    {
+      "slug": "cajun-lime-shrimp-black-bean-bowls",
+      "kind": "hall_expansion",
+      "title": "Cajun Lime Shrimp & Black Bean Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "788 cal · 50g P · 76g C · 31g F",
+      "after": "788 cal · 50g P · 76g C · 31g F",
       "issues": []
     },
     {
@@ -714,7 +744,7 @@
       "title": "Cajun Shrimp Rice Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "937 cal · 55g P · 86g C · 42g F",
+      "before": "520 cal · 38g P · 61g C · 15g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -770,7 +800,7 @@
       "title": "Cast Iron Chicken Fajitas",
       "servings": 8,
       "status": "ok",
-      "before": "683 cal · 65g P · 56g C · 21g F",
+      "before": "380 cal · 36g P · 32g C · 12g F",
       "after": "683 cal · 65g P · 56g C · 21g F",
       "issues": []
     },
@@ -802,7 +832,7 @@
       "title": "Cheesy Beef Nacho Bake",
       "servings": 8,
       "status": "ok",
-      "before": "838 cal · 52g P · 50g C · 49g F",
+      "before": "560 cal · 32g P · 42g C · 30g F",
       "after": "838 cal · 52g P · 50g C · 49g F",
       "issues": []
     },
@@ -812,7 +842,7 @@
       "title": "Cheesy Chicken Broccoli Rice",
       "servings": 8,
       "status": "ok",
-      "before": "606 cal · 56g P · 54g C · 17g F",
+      "before": "460 cal · 38g P · 48g C · 14g F",
       "after": "606 cal · 56g P · 54g C · 17g F",
       "issues": []
     },
@@ -898,7 +928,7 @@
       "title": "Chicken Cacciatore for the Crew",
       "servings": 8,
       "status": "ok",
-      "before": "682 cal · 90g P · 36g C · 18g F",
+      "before": "460 cal · 38g P · 36g C · 18g F",
       "after": "682 cal · 90g P · 36g C · 18g F",
       "issues": []
     },
@@ -982,7 +1012,7 @@
       "title": "Chicken Paprikash for the Hall",
       "servings": 8,
       "status": "ok",
-      "before": "804 cal · 89g P · 52g C · 24g F",
+      "before": "490 cal · 36g P · 44g C · 20g F",
       "after": "804 cal · 89g P · 52g C · 24g F",
       "issues": []
     },
@@ -1026,7 +1056,7 @@
       "title": "Chicken Shawarma Pitas",
       "servings": 8,
       "status": "ok",
-      "before": "675 cal · 49g P · 58g C · 28g F",
+      "before": "510 cal · 38g P · 46g C · 18g F",
       "after": "675 cal · 49g P · 58g C · 28g F",
       "issues": []
     },
@@ -1046,7 +1076,7 @@
       "title": "Chicken Thigh Stretch Dinner",
       "servings": 8,
       "status": "hidden",
-      "before": "986 cal · 95g P · 126g C · 10g F",
+      "before": "670 cal · 41g P · 57g C · 29g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1092,20 +1122,30 @@
       "title": "Chicken Wing Bar Night",
       "servings": 8,
       "status": "hidden",
-      "before": "907 cal · 107g P · 33g C · 37g F",
+      "before": "490 cal · 36g P · 14g C · 34g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
       ]
     },
     {
+      "slug": "chickpea-pasta-primavera-white-beans",
+      "kind": "hall_expansion",
+      "title": "Chickpea Pasta Primavera with White Beans",
+      "servings": 8,
+      "status": "ok",
+      "before": "636 cal · 39g P · 86g C · 20g F",
+      "after": "636 cal · 39g P · 86g C · 20g F",
+      "issues": []
+    },
+    {
       "slug": "chilaquiles-verde-bake",
       "kind": "breakfast_catalog",
       "title": "Chilaquiles Verde Bake",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "711 cal · 25g P · 102g C · 23g F",
-      "after": "711 cal · 25g P · 102g C · 23g F",
+      "before": "714 cal · 25g P · 102g C · 23g F",
+      "after": "714 cal · 25g P · 102g C · 23g F",
       "issues": []
     },
     {
@@ -1138,7 +1178,7 @@
       "title": "Chipotle Chicken Burrito Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "1061 cal · 82g P · 90g C · 41g F",
+      "before": "670 cal · 44g P · 68g C · 24g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1190,7 +1230,7 @@
       "title": "Classic Patty Melt for the Crew",
       "servings": 8,
       "status": "hidden",
-      "before": "1272 cal · 76g P · 61g C · 82g F",
+      "before": "620 cal · 34g P · 42g C · 36g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1202,7 +1242,7 @@
       "title": "Classic Poutine Feed for the Crew",
       "servings": 8,
       "status": "ok",
-      "before": "810 cal · 32g P · 68g C · 46g F",
+      "before": "680 cal · 18g P · 72g C · 36g F",
       "after": "810 cal · 32g P · 68g C · 46g F",
       "issues": []
     },
@@ -1210,10 +1250,10 @@
       "slug": "club-sandwich-breakfast-bake",
       "kind": "breakfast_catalog",
       "title": "Club Sandwich Breakfast Bake",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "635 cal · 43g P · 31g C · 37g F",
-      "after": "635 cal · 43g P · 31g C · 37g F",
+      "before": "648 cal · 43g P · 31g C · 38g F",
+      "after": "648 cal · 43g P · 31g C · 38g F",
       "issues": []
     },
     {
@@ -1244,7 +1284,7 @@
       "title": "Coq au Vin Batch",
       "servings": 8,
       "status": "hidden",
-      "before": "1123 cal · 112g P · 49g C · 52g F",
+      "before": "510 cal · 40g P · 32g C · 22g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1266,11 +1306,21 @@
       "title": "Costco Rotisserie Chicken Remix",
       "servings": 8,
       "status": "hidden",
-      "before": "998 cal · 57g P · 78g C · 51g F",
+      "before": "640 cal · 40g P · 58g C · 27g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
       ]
+    },
+    {
+      "slug": "cottage-cheese-spinach-stuffed-shells",
+      "kind": "hall_expansion",
+      "title": "Cottage Cheese & Spinach Stuffed Shells",
+      "servings": 8,
+      "status": "ok",
+      "before": "791 cal · 48g P · 83g C · 30g F",
+      "after": "791 cal · 48g P · 83g C · 30g F",
+      "issues": []
     },
     {
       "slug": "cottage-pie-for-the-crew",
@@ -1278,7 +1328,7 @@
       "title": "Cottage Pie for the Crew",
       "servings": 8,
       "status": "ok",
-      "before": "644 cal · 45g P · 40g C · 35g F",
+      "before": "520 cal · 32g P · 48g C · 24g F",
       "after": "644 cal · 45g P · 40g C · 35g F",
       "issues": []
     },
@@ -1300,7 +1350,7 @@
       "title": "Creamy Chicken Penne Alfredo",
       "servings": 8,
       "status": "hidden",
-      "before": "1083 cal · 62g P · 72g C · 60g F",
+      "before": "560 cal · 42g P · 50g C · 24g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1310,10 +1360,10 @@
       "slug": "crew-french-toast-bake",
       "kind": "breakfast_catalog",
       "title": "Crew French Toast Bake",
-      "servings": 8,
+      "servings": 12,
       "status": "ok",
-      "before": "414 cal · 19g P · 50g C · 15g F",
-      "after": "414 cal · 19g P · 50g C · 15g F",
+      "before": "423 cal · 19g P · 50g C · 16g F",
+      "after": "423 cal · 19g P · 50g C · 16g F",
       "issues": []
     },
     {
@@ -1340,10 +1390,10 @@
       "slug": "denver-breakfast-casserole",
       "kind": "breakfast_catalog",
       "title": "Denver Breakfast Casserole",
-      "servings": 8,
+      "servings": 12,
       "status": "ok",
-      "before": "488 cal · 38g P · 28g C · 25g F",
-      "after": "488 cal · 38g P · 28g C · 25g F",
+      "before": "479 cal · 38g P · 26g C · 25g F",
+      "after": "479 cal · 38g P · 26g C · 25g F",
       "issues": []
     },
     {
@@ -1364,7 +1414,7 @@
       "title": "Dirty Rice Crew Skillet",
       "servings": 8,
       "status": "hidden",
-      "before": "1069 cal · 61g P · 88g C · 52g F",
+      "before": "690 cal · 37g P · 68g C · 30g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1388,7 +1438,7 @@
       "title": "Dutch Oven Pot Roast",
       "servings": 8,
       "status": "ok",
-      "before": "748 cal · 66g P · 37g C · 40g F",
+      "before": "540 cal · 44g P · 38g C · 24g F",
       "after": "748 cal · 66g P · 37g C · 40g F",
       "issues": []
     },
@@ -1398,7 +1448,7 @@
       "title": "Egg Roll in a Bowl for the Crew",
       "servings": 8,
       "status": "hidden",
-      "before": "1026 cal · 68g P · 76g C · 51g F",
+      "before": "580 cal · 35g P · 56g C · 24g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1432,7 +1482,7 @@
       "title": "Fajita Bar Night",
       "servings": 8,
       "status": "hidden",
-      "before": "916 cal · 73g P · 60g C · 42g F",
+      "before": "450 cal · 38g P · 32g C · 18g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1452,10 +1502,10 @@
       "slug": "farmers-breakfast-casserole",
       "kind": "breakfast_catalog",
       "title": "Farmer's Breakfast Casserole",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "623 cal · 36g P · 21g C · 44g F",
-      "after": "623 cal · 36g P · 21g C · 44g F",
+      "before": "619 cal · 36g P · 21g C · 43g F",
+      "after": "619 cal · 36g P · 21g C · 43g F",
       "issues": []
     },
     {
@@ -1472,21 +1522,23 @@
       "slug": "fire-captain-omelette-bar",
       "kind": "breakfast_catalog",
       "title": "Fire Captain Omelette Bar",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "360 cal · 27g P · 5g C · 26g F",
-      "after": "360 cal · 27g P · 5g C · 26g F",
+      "before": "360 cal · 28g P · 5g C · 26g F",
+      "after": "360 cal · 28g P · 5g C · 26g F",
       "issues": []
     },
     {
       "slug": "firehall-breakfast-pizza",
       "kind": "breakfast_catalog",
       "title": "Firehall Breakfast Pizza",
-      "servings": 8,
-      "status": "ok",
-      "before": "899 cal · 43g P · 77g C · 45g F",
-      "after": "899 cal · 43g P · 77g C · 45g F",
-      "issues": []
+      "servings": 12,
+      "status": "hidden",
+      "before": "910 cal · 44g P · 78g C · 45g F",
+      "after": "hidden",
+      "issues": [
+        "Estimate withheld — insufficient or unrealistic per-serving data"
+      ]
     },
     {
       "slug": "firehall-burnt-ends-platter",
@@ -1506,7 +1558,7 @@
       "title": "Firehall Charcuterie Board",
       "servings": 8,
       "status": "ok",
-      "before": "690 cal · 47g P · 3g C · 53g F",
+      "before": "420 cal · 22g P · 32g C · 24g F",
       "after": "690 cal · 47g P · 3g C · 53g F",
       "issues": []
     },
@@ -1528,7 +1580,7 @@
       "title": "Firehall Donair Platter",
       "servings": 8,
       "status": "ok",
-      "before": "888 cal · 82g P · 26g C · 52g F",
+      "before": "540 cal · 38g P · 36g C · 28g F",
       "after": "888 cal · 82g P · 26g C · 52g F",
       "issues": []
     },
@@ -1538,7 +1590,7 @@
       "title": "Firehall Gyro Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "1065 cal · 73g P · 91g C · 47g F",
+      "before": "640 cal · 39g P · 68g C · 23g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1550,11 +1602,71 @@
       "title": "Firehall Taco Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "1235 cal · 69g P · 101g C · 64g F",
+      "before": "650 cal · 38g P · 62g C · 28g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
       ]
+    },
+    {
+      "slug": "firehouse-chicken-black-bean-bowls",
+      "kind": "hall_expansion",
+      "title": "Firehouse Chicken & Black Bean Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "714 cal · 68g P · 78g C · 15g F",
+      "after": "714 cal · 68g P · 78g C · 15g F",
+      "issues": []
+    },
+    {
+      "slug": "firehouse-dense-bean-salad",
+      "kind": "hall_expansion",
+      "title": "Firehouse Dense Bean Salad",
+      "servings": 8,
+      "status": "ok",
+      "before": "390 cal · 19g P · 46g C · 16g F",
+      "after": "390 cal · 19g P · 46g C · 16g F",
+      "issues": []
+    },
+    {
+      "slug": "firehouse-diner-burger-bowls",
+      "kind": "hall_expansion",
+      "title": "Firehouse Diner Burger Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "560 cal · 44g P · 5g C · 42g F",
+      "after": "560 cal · 44g P · 5g C · 42g F",
+      "issues": []
+    },
+    {
+      "slug": "firehouse-lentil-chili",
+      "kind": "hall_expansion",
+      "title": "Firehouse Lentil Chili",
+      "servings": 8,
+      "status": "ok",
+      "before": "272 cal · 14g P · 40g C · 7g F",
+      "after": "272 cal · 14g P · 40g C · 7g F",
+      "issues": []
+    },
+    {
+      "slug": "firehouse-sweet-potato-beef-protein-bowls",
+      "kind": "hall_expansion",
+      "title": "Firehouse Sweet Potato & Beef Protein Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "789 cal · 49g P · 56g C · 44g F",
+      "after": "789 cal · 49g P · 56g C · 44g F",
+      "issues": []
+    },
+    {
+      "slug": "firehouse-turkey-white-bean-soup",
+      "kind": "hall_expansion",
+      "title": "Firehouse Turkey & White Bean Soup",
+      "servings": 8,
+      "status": "ok",
+      "before": "405 cal · 37g P · 29g C · 14g F",
+      "after": "405 cal · 37g P · 29g C · 14g F",
+      "issues": []
     },
     {
       "slug": "crispy-fish-taco-night",
@@ -1614,7 +1726,7 @@
       "title": "Game Day Pizza Sliders",
       "servings": 8,
       "status": "ok",
-      "before": "449 cal · 19g P · 14g C · 35g F",
+      "before": "420 cal · 18g P · 42g C · 20g F",
       "after": "449 cal · 19g P · 14g C · 35g F",
       "issues": []
     },
@@ -1636,6 +1748,16 @@
       "status": "ok",
       "before": "504 cal · 32g P · 2g C · 40g F",
       "after": "504 cal · 32g P · 2g C · 40g F",
+      "issues": []
+    },
+    {
+      "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
+      "kind": "hall_expansion",
+      "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
+      "servings": 8,
+      "status": "ok",
+      "before": "855 cal · 58g P · 59g C · 43g F",
+      "after": "855 cal · 58g P · 59g C · 43g F",
       "issues": []
     },
     {
@@ -1676,7 +1798,7 @@
       "title": "Ginger Soy Chicken Rice Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "616 cal · 43g P · 58g C · 22g F",
+      "before": "420 cal · 36g P · 48g C · 10g F",
       "after": "616 cal · 43g P · 58g C · 22g F",
       "issues": []
     },
@@ -1703,10 +1825,10 @@
     {
       "slug": "firehall-greek-chicken-bowls",
       "kind": "hall_expansion",
-      "title": "Greek Chicken Bowls for the Hall",
+      "title": "Greek Chicken Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "722 cal · 72g P · 57g C · 21g F",
+      "before": "590 cal · 43g P · 54g C · 22g F",
       "after": "722 cal · 72g P · 57g C · 21g F",
       "issues": []
     },
@@ -1716,8 +1838,18 @@
       "title": "Greek Chicken Pitas",
       "servings": 8,
       "status": "ok",
-      "before": "611 cal · 68g P · 44g C · 17g F",
+      "before": "480 cal · 40g P · 44g C · 14g F",
       "after": "611 cal · 68g P · 44g C · 17g F",
+      "issues": []
+    },
+    {
+      "slug": "greek-yogurt-white-bean-power-bowls",
+      "kind": "hall_expansion",
+      "title": "Greek Yogurt & White Bean Power Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "752 cal · 39g P · 87g C · 29g F",
+      "after": "752 cal · 39g P · 87g C · 29g F",
       "issues": []
     },
     {
@@ -1736,7 +1868,7 @@
       "title": "Green Chile Chicken Stew",
       "servings": 8,
       "status": "ok",
-      "before": "414 cal · 64g P · 19g C · 8g F",
+      "before": "360 cal · 32g P · 34g C · 12g F",
       "after": "414 cal · 64g P · 19g C · 8g F",
       "issues": []
     },
@@ -1756,7 +1888,7 @@
       "title": "Grilled Flank Fajita Bar",
       "servings": 8,
       "status": "hidden",
-      "before": "1313 cal · 88g P · 97g C · 63g F",
+      "before": "690 cal · 46g P · 60g C · 28g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1790,7 +1922,7 @@
       "title": "Hall BLT Sandwich Feed",
       "servings": 8,
       "status": "hidden",
-      "before": "1178 cal · 57g P · 35g C · 90g F",
+      "before": "540 cal · 22g P · 38g C · 34g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1800,7 +1932,7 @@
       "slug": "hall-breakfast-burritos",
       "kind": "breakfast_catalog",
       "title": "Hall Breakfast Burritos",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
       "before": "852 cal · 41g P · 71g C · 45g F",
       "after": "852 cal · 41g P · 71g C · 45g F",
@@ -1810,10 +1942,10 @@
       "slug": "hall-breakfast-wraps",
       "kind": "breakfast_catalog",
       "title": "Hall Breakfast Wraps",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "557 cal · 30g P · 29g C · 36g F",
-      "after": "557 cal · 30g P · 29g C · 36g F",
+      "before": "550 cal · 30g P · 29g C · 36g F",
+      "after": "550 cal · 30g P · 29g C · 36g F",
       "issues": []
     },
     {
@@ -1822,7 +1954,7 @@
       "title": "Hall Burger Bar",
       "servings": 8,
       "status": "hidden",
-      "before": "1305 cal · 92g P · 51g C · 82g F",
+      "before": "620 cal · 34g P · 36g C · 38g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -1834,7 +1966,7 @@
       "title": "Hall Chicken Noodle Soup",
       "servings": 8,
       "status": "ok",
-      "before": "506 cal · 65g P · 38g C · 8g F",
+      "before": "340 cal · 28g P · 36g C · 10g F",
       "after": "506 cal · 65g P · 38g C · 8g F",
       "issues": []
     },
@@ -1842,10 +1974,10 @@
       "slug": "hall-sausage-biscuits-gravy",
       "kind": "breakfast_catalog",
       "title": "Hall Sausage Biscuits & Gravy",
-      "servings": 8,
+      "servings": 12,
       "status": "ok",
-      "before": "566 cal · 22g P · 45g C · 33g F",
-      "after": "566 cal · 22g P · 45g C · 33g F",
+      "before": "568 cal · 22g P · 45g C · 33g F",
+      "after": "568 cal · 22g P · 45g C · 33g F",
       "issues": []
     },
     {
@@ -1854,7 +1986,7 @@
       "title": "Hall Sloppy Joe Feed",
       "servings": 8,
       "status": "ok",
-      "before": "844 cal · 68g P · 49g C · 44g F",
+      "before": "520 cal · 36g P · 42g C · 24g F",
       "after": "844 cal · 68g P · 49g C · 44g F",
       "issues": []
     },
@@ -1862,10 +1994,10 @@
       "slug": "hash-brown-breakfast-casserole",
       "kind": "breakfast_catalog",
       "title": "Hash Brown Breakfast Casserole",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "632 cal · 35g P · 22g C · 45g F",
-      "after": "632 cal · 35g P · 22g C · 45g F",
+      "before": "619 cal · 35g P · 22g C · 44g F",
+      "after": "619 cal · 35g P · 22g C · 44g F",
       "issues": []
     },
     {
@@ -1918,11 +2050,21 @@
       "title": "Hickory Smoked Turkey Legs",
       "servings": 8,
       "status": "hidden",
-      "before": "947 cal · 103g P · 27g C · 44g F",
+      "before": "410 cal · 52g P · 18g C · 16g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
       ]
+    },
+    {
+      "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
+      "kind": "hall_expansion",
+      "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "621 cal · 62g P · 39g C · 23g F",
+      "after": "621 cal · 62g P · 39g C · 23g F",
+      "issues": []
     },
     {
       "slug": "high-protein-chicken-fried-rice",
@@ -1980,8 +2122,18 @@
       "title": "Honey Mustard Baked Chicken Thighs",
       "servings": 8,
       "status": "ok",
-      "before": "456 cal · 71g P · 10g C · 13g F",
+      "before": "390 cal · 36g P · 12g C · 22g F",
       "after": "456 cal · 71g P · 10g C · 13g F",
+      "issues": []
+    },
+    {
+      "slug": "honey-mustard-turkey-meatball-bowls",
+      "kind": "hall_expansion",
+      "title": "Honey Mustard Turkey Meatball Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "659 cal · 43g P · 76g C · 20g F",
+      "after": "659 cal · 43g P · 76g C · 20g F",
       "issues": []
     },
     {
@@ -2031,12 +2183,10 @@
       "kind": "hall_expansion",
       "title": "Hungarian Goulash for the Crew",
       "servings": 8,
-      "status": "hidden",
-      "before": "909 cal · 64g P · 61g C · 47g F",
-      "after": "hidden",
-      "issues": [
-        "Estimate withheld — insufficient or unrealistic per-serving data"
-      ]
+      "status": "ok",
+      "before": "480 cal · 38g P · 34g C · 20g F",
+      "after": "760 cal · 57g P · 45g C · 41g F",
+      "issues": []
     },
     {
       "slug": "pork-satay-skewers-crew",
@@ -2068,7 +2218,7 @@
       "title": "Italian Beef Slow Cooker Sandwiches",
       "servings": 8,
       "status": "hidden",
-      "before": "1400 cal · 114g P · 65g C · 78g F",
+      "before": "760 cal · 49g P · 61g C · 34g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2090,7 +2240,7 @@
       "title": "Jalapeño Popper Dip",
       "servings": 8,
       "status": "hidden",
-      "before": "1050 cal · 39g P · 81g C · 63g F",
+      "before": "510 cal · 16g P · 24g C · 40g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2144,7 +2294,7 @@
       "title": "Kielbasa Cabbage Potato Skillet",
       "servings": 8,
       "status": "ok",
-      "before": "582 cal · 29g P · 33g C · 37g F",
+      "before": "480 cal · 22g P · 38g C · 28g F",
       "after": "582 cal · 29g P · 33g C · 37g F",
       "issues": []
     },
@@ -2154,7 +2304,7 @@
       "title": "Korean Beef Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "808 cal · 59g P · 69g C · 36g F",
+      "before": "630 cal · 39g P · 62g C · 26g F",
       "after": "808 cal · 59g P · 69g C · 36g F",
       "issues": []
     },
@@ -2164,7 +2314,7 @@
       "title": "Korean Bulgogi Grill Night",
       "servings": 8,
       "status": "ok",
-      "before": "547 cal · 49g P · 9g C · 35g F",
+      "before": "460 cal · 36g P · 18g C · 28g F",
       "after": "547 cal · 49g P · 9g C · 35g F",
       "issues": []
     },
@@ -2174,7 +2324,7 @@
       "title": "Korean Turkey Rice Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "825 cal · 61g P · 96g C · 20g F",
+      "before": "610 cal · 38g P · 76g C · 17g F",
       "after": "825 cal · 61g P · 96g C · 20g F",
       "issues": []
     },
@@ -2194,7 +2344,7 @@
       "title": "Lamb Kofta Skewer Platter",
       "servings": 8,
       "status": "ok",
-      "before": "551 cal · 55g P · 7g C · 34g F",
+      "before": "520 cal · 34g P · 28g C · 32g F",
       "after": "551 cal · 55g P · 7g C · 34g F",
       "issues": []
     },
@@ -2204,7 +2354,7 @@
       "title": "Lebanese Chicken Shish Platter",
       "servings": 8,
       "status": "ok",
-      "before": "884 cal · 78g P · 39g C · 45g F",
+      "before": "420 cal · 40g P · 32g C · 16g F",
       "after": "884 cal · 78g P · 39g C · 45g F",
       "issues": []
     },
@@ -2214,7 +2364,7 @@
       "title": "Leftover Roast Beef Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "989 cal · 70g P · 107g C · 32g F",
+      "before": "650 cal · 42g P · 62g C · 25g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2281,6 +2431,16 @@
       "issues": []
     },
     {
+      "slug": "lemon-herb-cod-roasted-vegetables",
+      "kind": "hall_expansion",
+      "title": "Lemon-Herb Cod with Roasted Vegetables",
+      "servings": 8,
+      "status": "ok",
+      "before": "574 cal · 41g P · 28g C · 32g F",
+      "after": "574 cal · 41g P · 28g C · 32g F",
+      "issues": []
+    },
+    {
       "slug": "smoky-lentil-kale-soup",
       "kind": "performance_meal",
       "title": "Lentil and Kale Soup",
@@ -2318,11 +2478,21 @@
       "title": "Loaded Baked Potato Soup Crock",
       "servings": 8,
       "status": "hidden",
-      "before": "1371 cal · 69g P · 69g C · 90g F",
+      "before": "680 cal · 26g P · 64g C · 36g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
       ]
+    },
+    {
+      "slug": "loaded-firehouse-sweet-potatoes",
+      "kind": "hall_expansion",
+      "title": "Loaded Firehouse Sweet Potatoes",
+      "servings": 8,
+      "status": "ok",
+      "before": "736 cal · 55g P · 44g C · 40g F",
+      "after": "736 cal · 55g P · 44g C · 40g F",
+      "issues": []
     },
     {
       "slug": "loaded-nacho-bar-night",
@@ -2330,7 +2500,7 @@
       "title": "Loaded Nacho Bar Night",
       "servings": 8,
       "status": "ok",
-      "before": "872 cal · 46g P · 72g C · 46g F",
+      "before": "580 cal · 28g P · 44g C · 34g F",
       "after": "872 cal · 46g P · 72g C · 46g F",
       "issues": []
     },
@@ -2340,7 +2510,7 @@
       "title": "Loaded Potato Skins",
       "servings": 8,
       "status": "hidden",
-      "before": "1178 cal · 57g P · 53g C · 81g F",
+      "before": "480 cal · 18g P · 38g C · 28g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2364,7 +2534,7 @@
       "title": "Malaysian Laksa Soup",
       "servings": 8,
       "status": "ok",
-      "before": "515 cal · 53g P · 20g C · 22g F",
+      "before": "490 cal · 36g P · 46g C · 18g F",
       "after": "515 cal · 53g P · 20g C · 22g F",
       "issues": []
     },
@@ -2382,10 +2552,10 @@
       "slug": "maple-sausage-pinwheels",
       "kind": "breakfast_catalog",
       "title": "Maple Sausage Pinwheels",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "383 cal · 17g P · 10g C · 31g F",
-      "after": "383 cal · 17g P · 10g C · 31g F",
+      "before": "364 cal · 17g P · 11g C · 29g F",
+      "after": "364 cal · 17g P · 11g C · 29g F",
       "issues": []
     },
     {
@@ -2394,8 +2564,8 @@
       "title": "Maple Soy Salmon Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "819 cal · 58g P · 67g C · 34g F",
-      "after": "819 cal · 58g P · 67g C · 34g F",
+      "before": "890 cal · 65g P · 73g C · 37g F",
+      "after": "890 cal · 65g P · 73g C · 37g F",
       "issues": []
     },
     {
@@ -2404,7 +2574,7 @@
       "title": "Maple-Cured Salmon Plank",
       "servings": 8,
       "status": "ok",
-      "before": "716 cal · 68g P · 25g C · 36g F",
+      "before": "420 cal · 40g P · 18g C · 22g F",
       "after": "716 cal · 68g P · 25g C · 36g F",
       "issues": []
     },
@@ -2462,7 +2632,7 @@
       "title": "Mediterranean Beef Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "752 cal · 58g P · 27g C · 49g F",
+      "before": "640 cal · 40g P · 65g C · 25g F",
       "after": "752 cal · 58g P · 27g C · 49g F",
       "issues": []
     },
@@ -2494,7 +2664,7 @@
       "title": "Mediterranean Chicken Farro Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "693 cal · 66g P · 50g C · 26g F",
+      "before": "450 cal · 40g P · 44g C · 14g F",
       "after": "693 cal · 66g P · 50g C · 26g F",
       "issues": []
     },
@@ -2514,7 +2684,7 @@
       "title": "Mediterranean Feast Night",
       "servings": 8,
       "status": "hidden",
-      "before": "1009 cal · 84g P · 76g C · 41g F",
+      "before": "460 cal · 34g P · 36g C · 20g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2548,7 +2718,7 @@
       "title": "Mesquite Smoked Chuck Roast",
       "servings": 8,
       "status": "hidden",
-      "before": "911 cal · 77g P · 49g C · 47g F",
+      "before": "410 cal · 42g P · 18g C · 20g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2570,8 +2740,8 @@
       "title": "Miso Ramen Bar",
       "servings": 8,
       "status": "ok",
-      "before": "657 cal · 64g P · 44g C · 23g F",
-      "after": "657 cal · 64g P · 44g C · 23g F",
+      "before": "460 cal · 34g P · 48g C · 14g F",
+      "after": "500 cal · 61g P · 24g C · 16g F",
       "issues": []
     },
     {
@@ -2580,7 +2750,7 @@
       "title": "Mississippi Pot Roast for the Crew",
       "servings": 8,
       "status": "hidden",
-      "before": "1400 cal · 117g P · 85g C · 70g F",
+      "before": "730 cal · 48g P · 58g C · 32g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2612,7 +2782,7 @@
       "title": "Molasses Bourbon Pork Ribs",
       "servings": 8,
       "status": "hidden",
-      "before": "1348 cal · 102g P · 28g C · 90g F",
+      "before": "580 cal · 38g P · 28g C · 36g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2622,10 +2792,10 @@
       "slug": "monte-cristo-sandwiches",
       "kind": "breakfast_catalog",
       "title": "Monte Cristo Sandwiches",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "492 cal · 33g P · 38g C · 23g F",
-      "after": "492 cal · 33g P · 38g C · 23g F",
+      "before": "490 cal · 34g P · 37g C · 22g F",
+      "after": "490 cal · 34g P · 37g C · 22g F",
       "issues": []
     },
     {
@@ -2634,7 +2804,7 @@
       "title": "Montreal Smoked Meat Platter",
       "servings": 8,
       "status": "ok",
-      "before": "878 cal · 78g P · 35g C · 49g F",
+      "before": "520 cal · 42g P · 38g C · 22g F",
       "after": "878 cal · 78g P · 35g C · 49g F",
       "issues": []
     },
@@ -2654,7 +2824,7 @@
       "title": "Moroccan Chicken Kebab Platter",
       "servings": 8,
       "status": "ok",
-      "before": "621 cal · 45g P · 42g C · 28g F",
+      "before": "450 cal · 36g P · 38g C · 18g F",
       "after": "621 cal · 45g P · 42g C · 28g F",
       "issues": []
     },
@@ -2683,12 +2853,10 @@
       "kind": "hall_expansion",
       "title": "Mushroom Swiss Steak Pan",
       "servings": 8,
-      "status": "hidden",
-      "before": "911 cal · 52g P · 74g C · 45g F",
-      "after": "hidden",
-      "issues": [
-        "Estimate withheld — insufficient or unrealistic per-serving data"
-      ]
+      "status": "ok",
+      "before": "520 cal · 38g P · 48g C · 22g F",
+      "after": "879 cal · 52g P · 74g C · 41g F",
+      "issues": []
     },
     {
       "slug": "loaded-nacho-skillet",
@@ -2738,30 +2906,30 @@
       "slug": "overnight-french-toast-bake",
       "kind": "breakfast_catalog",
       "title": "Overnight French Toast Bake",
-      "servings": 8,
+      "servings": 12,
       "status": "ok",
-      "before": "398 cal · 15g P · 58g C · 13g F",
-      "after": "398 cal · 15g P · 58g C · 13g F",
+      "before": "439 cal · 17g P · 66g C · 13g F",
+      "after": "439 cal · 17g P · 66g C · 13g F",
       "issues": []
     },
     {
       "slug": "overnight-oat-bar-crew",
       "kind": "breakfast_catalog",
       "title": "Overnight Oat Bar for the Crew",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "548 cal · 23g P · 66g C · 24g F",
-      "after": "548 cal · 23g P · 66g C · 24g F",
+      "before": "564 cal · 23g P · 67g C · 25g F",
+      "after": "564 cal · 23g P · 67g C · 25g F",
       "issues": []
     },
     {
       "slug": "overnight-sausage-strata",
       "kind": "breakfast_catalog",
       "title": "Overnight Sausage Strata",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "686 cal · 39g P · 29g C · 46g F",
-      "after": "686 cal · 39g P · 29g C · 46g F",
+      "before": "691 cal · 39g P · 30g C · 46g F",
+      "after": "691 cal · 39g P · 30g C · 46g F",
       "issues": []
     },
     {
@@ -2785,12 +2953,22 @@
       "issues": []
     },
     {
+      "slug": "paneer-tikka-masala-bowls",
+      "kind": "hall_expansion",
+      "title": "Paneer Tikka Masala Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "714 cal · 32g P · 65g C · 37g F",
+      "after": "714 cal · 32g P · 65g C · 37g F",
+      "issues": []
+    },
+    {
       "slug": "paprika-roasted-chicken-quarters",
       "kind": "hall_expansion",
       "title": "Paprika Roasted Chicken Quarters",
       "servings": 8,
       "status": "ok",
-      "before": "523 cal · 85g P · 4g C · 17g F",
+      "before": "410 cal · 38g P · 4g C · 28g F",
       "after": "523 cal · 85g P · 4g C · 17g F",
       "issues": []
     },
@@ -2812,7 +2990,7 @@
       "title": "Pasta Bar Night",
       "servings": 8,
       "status": "hidden",
-      "before": "1006 cal · 33g P · 132g C · 38g F",
+      "before": "520 cal · 16g P · 68g C · 20g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2834,7 +3012,7 @@
       "title": "Pasta e Fagioli for the Hall",
       "servings": 8,
       "status": "hidden",
-      "before": "1080 cal · 75g P · 103g C · 43g F",
+      "before": "610 cal · 35g P · 70g C · 19g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2856,7 +3034,7 @@
       "title": "Peanut Chicken Rice Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "968 cal · 62g P · 90g C · 40g F",
+      "before": "690 cal · 42g P · 72g C · 27g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -2878,7 +3056,7 @@
       "title": "Pellet Smoked Chicken Quarters",
       "servings": 8,
       "status": "ok",
-      "before": "413 cal · 39g P · 40g C · 10g F",
+      "before": "450 cal · 38g P · 28g C · 22g F",
       "after": "413 cal · 39g P · 40g C · 10g F",
       "issues": []
     },
@@ -2888,8 +3066,8 @@
       "title": "Pepper Steak with Onions",
       "servings": 8,
       "status": "ok",
-      "before": "750 cal · 48g P · 55g C · 36g F",
-      "after": "750 cal · 48g P · 55g C · 36g F",
+      "before": "490 cal · 40g P · 54g C · 12g F",
+      "after": "688 cal · 48g P · 55g C · 29g F",
       "issues": []
     },
     {
@@ -2910,7 +3088,7 @@
       "title": "Peri Peri Chicken Platter",
       "servings": 8,
       "status": "ok",
-      "before": "586 cal · 86g P · 11g C · 20g F",
+      "before": "430 cal · 38g P · 12g C · 26g F",
       "after": "586 cal · 86g P · 11g C · 20g F",
       "issues": []
     },
@@ -2964,7 +3142,7 @@
       "title": "Philly Cheesesteak Sliders",
       "servings": 8,
       "status": "ok",
-      "before": "873 cal · 56g P · 60g C · 44g F",
+      "before": "440 cal · 28g P · 32g C · 24g F",
       "after": "873 cal · 56g P · 60g C · 44g F",
       "issues": []
     },
@@ -2998,7 +3176,7 @@
       "title": "Pork Belly Burnt Ends",
       "servings": 8,
       "status": "hidden",
-      "before": "946 cal · 16g P · 17g C · 90g F",
+      "before": "580 cal · 18g P · 24g C · 48g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3044,7 +3222,7 @@
       "title": "Pretzel Bite Platter with Beer Cheese",
       "servings": 8,
       "status": "hidden",
-      "before": "924 cal · 29g P · 126g C · 33g F",
+      "before": "460 cal · 16g P · 52g C · 20g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3064,10 +3242,10 @@
       "slug": "quick-egg-tacos",
       "kind": "breakfast_catalog",
       "title": "Quick Egg Tacos",
-      "servings": 8,
+      "servings": 6,
       "status": "ok",
-      "before": "485 cal · 23g P · 50g C · 21g F",
-      "after": "485 cal · 23g P · 50g C · 21g F",
+      "before": "490 cal · 23g P · 50g C · 22g F",
+      "after": "490 cal · 23g P · 50g C · 22g F",
       "issues": []
     },
     {
@@ -3103,6 +3281,16 @@
       ]
     },
     {
+      "slug": "red-lentil-paneer-dal",
+      "kind": "hall_expansion",
+      "title": "Red Lentil & Paneer Dal",
+      "servings": 8,
+      "status": "ok",
+      "before": "723 cal · 38g P · 66g C · 34g F",
+      "after": "723 cal · 38g P · 66g C · 34g F",
+      "issues": []
+    },
+    {
       "slug": "reverse-seared-ribeye-crew",
       "kind": "bbq_catalog",
       "title": "Reverse-Seared Ribeye for the Crew",
@@ -3120,8 +3308,8 @@
       "title": "Rice Bowl Bar Night",
       "servings": 8,
       "status": "ok",
-      "before": "757 cal · 66g P · 64g C · 25g F",
-      "after": "757 cal · 66g P · 64g C · 25g F",
+      "before": "490 cal · 32g P · 58g C · 14g F",
+      "after": "795 cal · 70g P · 67g C · 27g F",
       "issues": []
     },
     {
@@ -3130,7 +3318,7 @@
       "title": "Rigatoni with Meat Sauce",
       "servings": 8,
       "status": "ok",
-      "before": "779 cal · 51g P · 78g C · 30g F",
+      "before": "540 cal · 36g P · 56g C · 20g F",
       "after": "779 cal · 51g P · 78g C · 30g F",
       "issues": []
     },
@@ -3140,7 +3328,7 @@
       "title": "Salmon Rice Bowls for the Crew",
       "servings": 8,
       "status": "hidden",
-      "before": "973 cal · 61g P · 87g C · 41g F",
+      "before": "720 cal · 43g P · 70g C · 29g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3152,7 +3340,7 @@
       "title": "Salsa Verde Chicken Crock",
       "servings": 8,
       "status": "hidden",
-      "before": "1249 cal · 116g P · 146g C · 23g F",
+      "before": "620 cal · 44g P · 62g C · 19g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3174,7 +3362,7 @@
       "title": "Sandwich Board Night",
       "servings": 8,
       "status": "hidden",
-      "before": "1293 cal · 84g P · 94g C · 63g F",
+      "before": "480 cal · 28g P · 42g C · 22g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3198,7 +3386,7 @@
       "title": "Sausage & Peppers on Buns",
       "servings": 8,
       "status": "hidden",
-      "before": "1400 cal · 67g P · 97g C · 82g F",
+      "before": "620 cal · 28g P · 48g C · 34g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3244,7 +3432,7 @@
       "title": "Sausage Gnocchi Skillet",
       "servings": 8,
       "status": "hidden",
-      "before": "1188 cal · 69g P · 27g C · 90g F",
+      "before": "760 cal · 35g P · 75g C · 35g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3295,6 +3483,16 @@
       "issues": []
     },
     {
+      "slug": "sesame-ginger-tofu-bowls",
+      "kind": "hall_expansion",
+      "title": "Sesame Ginger Tofu Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "584 cal · 35g P · 68g C · 22g F",
+      "after": "584 cal · 35g P · 68g C · 22g F",
+      "issues": []
+    },
+    {
       "slug": "shakshuka-for-the-hall",
       "kind": "breakfast_catalog",
       "title": "Shakshuka for the Hall",
@@ -3310,7 +3508,7 @@
       "title": "Shawarma Bar Night",
       "servings": 8,
       "status": "ok",
-      "before": "740 cal · 53g P · 12g C · 53g F",
+      "before": "480 cal · 36g P · 38g C · 20g F",
       "after": "740 cal · 53g P · 12g C · 53g F",
       "issues": []
     },
@@ -3328,29 +3526,29 @@
       "slug": "sheet-pan-breakfast-hash",
       "kind": "breakfast_catalog",
       "title": "Sheet Pan Breakfast Hash",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "582 cal · 31g P · 31g C · 37g F",
-      "after": "582 cal · 31g P · 31g C · 37g F",
+      "before": "584 cal · 31g P · 31g C · 37g F",
+      "after": "584 cal · 31g P · 31g C · 37g F",
       "issues": []
     },
     {
       "slug": "sheet-pan-breakfast-sandwiches",
       "kind": "breakfast_catalog",
       "title": "Sheet Pan Breakfast Sandwiches",
-      "servings": 8,
+      "servings": 12,
       "status": "ok",
-      "before": "576 cal · 34g P · 6g C · 46g F",
-      "after": "576 cal · 34g P · 6g C · 46g F",
+      "before": "561 cal · 33g P · 5g C · 45g F",
+      "after": "561 cal · 33g P · 5g C · 45g F",
       "issues": []
     },
     {
       "slug": "sheet-pan-full-english",
       "kind": "breakfast_catalog",
       "title": "Sheet Pan Full English",
-      "servings": 8,
+      "servings": 10,
       "status": "hidden",
-      "before": "998 cal · 61g P · 22g C · 73g F",
+      "before": "996 cal · 61g P · 22g C · 73g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3362,7 +3560,7 @@
       "title": "Sheet Pan Meatball Marinara Feed",
       "servings": 8,
       "status": "hidden",
-      "before": "1400 cal · 83g P · 160g C · 49g F",
+      "before": "580 cal · 42g P · 52g C · 24g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3392,10 +3590,20 @@
       "slug": "sheet-pan-eggs-sausage-crew",
       "kind": "breakfast_catalog",
       "title": "Sheet-Pan Eggs & Sausage",
+      "servings": 10,
+      "status": "ok",
+      "before": "566 cal · 35g P · 8g C · 44g F",
+      "after": "566 cal · 35g P · 8g C · 44g F",
+      "issues": []
+    },
+    {
+      "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+      "kind": "hall_expansion",
+      "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
       "servings": 8,
       "status": "ok",
-      "before": "565 cal · 34g P · 8g C · 44g F",
-      "after": "565 cal · 34g P · 8g C · 44g F",
+      "before": "615 cal · 59g P · 47g C · 21g F",
+      "after": "615 cal · 59g P · 47g C · 21g F",
       "issues": []
     },
     {
@@ -3490,7 +3698,7 @@
       "title": "Smoked Corned Beef Brisket",
       "servings": 8,
       "status": "hidden",
-      "before": "1400 cal · 109g P · 66g C · 80g F",
+      "before": "530 cal · 36g P · 34g C · 28g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3512,7 +3720,7 @@
       "title": "Smoked Meatloaf with Glaze",
       "servings": 8,
       "status": "ok",
-      "before": "683 cal · 64g P · 19g C · 41g F",
+      "before": "420 cal · 32g P · 22g C · 24g F",
       "after": "683 cal · 64g P · 19g C · 41g F",
       "issues": []
     },
@@ -3542,7 +3750,7 @@
       "title": "Smoked Queso Fundido",
       "servings": 8,
       "status": "hidden",
-      "before": "1165 cal · 46g P · 84g C · 72g F",
+      "before": "540 cal · 26g P · 22g C · 40g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3564,7 +3772,7 @@
       "title": "Smoked Sausage Platter",
       "servings": 8,
       "status": "hidden",
-      "before": "1229 cal · 57g P · 81g C · 74g F",
+      "before": "480 cal · 22g P · 28g C · 32g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3576,7 +3784,7 @@
       "title": "Smoked Tri-Tip Roast",
       "servings": 8,
       "status": "hidden",
-      "before": "1084 cal · 81g P · 56g C · 57g F",
+      "before": "390 cal · 42g P · 14g C · 20g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3588,7 +3796,7 @@
       "title": "Smoked Turkey Breast for the Crew",
       "servings": 8,
       "status": "ok",
-      "before": "653 cal · 75g P · 8g C · 32g F",
+      "before": "320 cal · 48g P · 12g C · 9g F",
       "after": "653 cal · 75g P · 8g C · 32g F",
       "issues": []
     },
@@ -3608,7 +3816,7 @@
       "title": "Smoker Nachos for the Crew",
       "servings": 8,
       "status": "hidden",
-      "before": "1400 cal · 88g P · 95g C · 73g F",
+      "before": "830 cal · 41g P · 72g C · 43g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3620,7 +3828,7 @@
       "title": "Soft Pretzel Hot Dogs",
       "servings": 8,
       "status": "ok",
-      "before": "557 cal · 20g P · 66g C · 23g F",
+      "before": "490 cal · 16g P · 52g C · 24g F",
       "after": "557 cal · 20g P · 66g C · 23g F",
       "issues": []
     },
@@ -3635,13 +3843,23 @@
       "issues": []
     },
     {
+      "slug": "southwest-black-bean-corn-bowls",
+      "kind": "hall_expansion",
+      "title": "Southwest Black Bean & Corn Bowls",
+      "servings": 8,
+      "status": "ok",
+      "before": "458 cal · 15g P · 63g C · 19g F",
+      "after": "458 cal · 15g P · 63g C · 19g F",
+      "issues": []
+    },
+    {
       "slug": "southwest-egg-bake",
       "kind": "breakfast_catalog",
       "title": "Southwest Egg Bake",
-      "servings": 8,
+      "servings": 10,
       "status": "ok",
-      "before": "454 cal · 42g P · 8g C · 28g F",
-      "after": "454 cal · 42g P · 8g C · 28g F",
+      "before": "456 cal · 42g P · 8g C · 28g F",
+      "after": "456 cal · 42g P · 8g C · 28g F",
       "issues": []
     },
     {
@@ -3650,7 +3868,7 @@
       "title": "Southwest Steak Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "1005 cal · 76g P · 48g C · 59g F",
+      "before": "690 cal · 48g P · 62g C · 29g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3674,7 +3892,7 @@
       "title": "Spanish Rice Chicken One Pot",
       "servings": 8,
       "status": "hidden",
-      "before": "1043 cal · 74g P · 112g C · 30g F",
+      "before": "650 cal · 42g P · 72g C · 20g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3686,7 +3904,7 @@
       "title": "Spatchcock Lemon Roast Chicken",
       "servings": 8,
       "status": "ok",
-      "before": "718 cal · 120g P · 5g C · 21g F",
+      "before": "420 cal · 40g P · 8g C · 26g F",
       "after": "718 cal · 120g P · 5g C · 21g F",
       "issues": [
         "Protein over 95g per serving (120g) — verify portion"
@@ -3708,7 +3926,7 @@
       "title": "Station Cobb Salad",
       "servings": 8,
       "status": "ok",
-      "before": "683 cal · 61g P · 7g C · 45g F",
+      "before": "420 cal · 38g P · 12g C · 26g F",
       "after": "683 cal · 61g P · 7g C · 45g F",
       "issues": []
     },
@@ -3788,10 +4006,20 @@
       "slug": "tater-tot-breakfast-casserole",
       "kind": "breakfast_catalog",
       "title": "Tater Tot Breakfast Casserole",
+      "servings": 10,
+      "status": "ok",
+      "before": "851 cal · 46g P · 35g C · 58g F",
+      "after": "851 cal · 46g P · 35g C · 58g F",
+      "issues": []
+    },
+    {
+      "slug": "tempeh-peanut-buddha-bowls",
+      "kind": "hall_expansion",
+      "title": "Tempeh Peanut Buddha Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "871 cal · 47g P · 35g C · 59g F",
-      "after": "871 cal · 47g P · 35g C · 59g F",
+      "before": "622 cal · 33g P · 71g C · 27g F",
+      "after": "622 cal · 33g P · 71g C · 27g F",
       "issues": []
     },
     {
@@ -3822,8 +4050,8 @@
       "title": "Teriyaki Chicken Rice Bowls",
       "servings": 8,
       "status": "ok",
-      "before": "675 cal · 69g P · 75g C · 10g F",
-      "after": "675 cal · 69g P · 75g C · 10g F",
+      "before": "610 cal · 42g P · 69g C · 18g F",
+      "after": "731 cal · 75g P · 80g C · 12g F",
       "issues": []
     },
     {
@@ -3882,7 +4110,7 @@
       "title": "Thai Peanut Chicken Crock",
       "servings": 8,
       "status": "hidden",
-      "before": "1006 cal · 100g P · 87g C · 28g F",
+      "before": "740 cal · 43g P · 67g C · 35g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -3917,12 +4145,10 @@
       "kind": "hall_expansion",
       "title": "Tonkotsu Ramen for the Crew",
       "servings": 8,
-      "status": "hidden",
-      "before": "956 cal · 27g P · 46g C · 74g F",
-      "after": "hidden",
-      "issues": [
-        "Estimate withheld — insufficient or unrealistic per-serving data"
-      ]
+      "status": "ok",
+      "before": "580 cal · 32g P · 52g C · 28g F",
+      "after": "773 cal · 22g P · 36g C · 60g F",
+      "issues": []
     },
     {
       "slug": "tourtiere-for-the-crew",
@@ -3930,7 +4156,7 @@
       "title": "Tourtière for the Crew",
       "servings": 8,
       "status": "ok",
-      "before": "710 cal · 40g P · 37g C · 45g F",
+      "before": "580 cal · 28g P · 42g C · 34g F",
       "after": "710 cal · 40g P · 37g C · 45g F",
       "issues": []
     },
@@ -4020,7 +4246,7 @@
       "title": "Turkey Taco Bowls",
       "servings": 8,
       "status": "hidden",
-      "before": "1039 cal · 62g P · 97g C · 44g F",
+      "before": "580 cal · 42g P · 60g C · 18g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -4072,8 +4298,8 @@
       "title": "Veggie Egg Burritos",
       "servings": 8,
       "status": "ok",
-      "before": "758 cal · 40g P · 92g C · 27g F",
-      "after": "758 cal · 40g P · 92g C · 27g F",
+      "before": "874 cal · 42g P · 76g C · 44g F",
+      "after": "874 cal · 42g P · 76g C · 44g F",
       "issues": []
     },
     {
@@ -4092,7 +4318,7 @@
       "title": "Warm Spinach Chicken Salad",
       "servings": 8,
       "status": "ok",
-      "before": "511 cal · 48g P · 7g C · 32g F",
+      "before": "380 cal · 34g P · 8g C · 24g F",
       "after": "511 cal · 48g P · 7g C · 32g F",
       "issues": []
     },
@@ -4102,7 +4328,7 @@
       "title": "Weeknight BBQ Ribs for the Crew",
       "servings": 8,
       "status": "ok",
-      "before": "856 cal · 32g P · 142g C · 19g F",
+      "before": "860 cal · 46g P · 61g C · 49g F",
       "after": "856 cal · 32g P · 142g C · 19g F",
       "issues": []
     },
@@ -4132,7 +4358,7 @@
       "title": "White Chicken Chili Crock",
       "servings": 8,
       "status": "hidden",
-      "before": "1106 cal · 102g P · 79g C · 43g F",
+      "before": "590 cal · 43g P · 52g C · 21g F",
       "after": "hidden",
       "issues": [
         "Estimate withheld — insufficient or unrealistic per-serving data"
@@ -4156,7 +4382,7 @@
       "title": "Wonton Noodle Soup for the Crew",
       "servings": 8,
       "status": "ok",
-      "before": "692 cal · 37g P · 91g C · 19g F",
+      "before": "440 cal · 28g P · 48g C · 14g F",
       "after": "692 cal · 37g P · 91g C · 19g F",
       "issues": []
     },

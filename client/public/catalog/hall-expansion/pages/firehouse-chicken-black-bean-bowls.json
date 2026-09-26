@@ -1,0 +1,286 @@
+{
+  "slug": "firehouse-chicken-black-bean-bowls",
+  "title": "Firehouse Chicken & Black Bean Bowls",
+  "displayTitle": "Firehouse Chicken & Black Bean Bowls",
+  "seoTitle": "Firehouse Chicken & Black Bean Bowls | Firefighter Meal",
+  "shortDescription": "Chili-lime chicken, black beans, corn, and brown rice with a cool avocado crema",
+  "subtitle": "Chili-lime chicken, black beans, corn, and brown rice with a cool avocado crema",
+  "category": "hall_expansion",
+  "cuisine": "mexican",
+  "description": "Chili-lime chicken breast is sliced over brown rice, black beans, and roasted corn, then finished with an avocado crema. It is built to hold well in individual containers for several days without going soggy.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 714,
+  "protein": 68,
+  "carbs": 78,
+  "fats": 15,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "chicken",
+    "healthy",
+    "high_protein",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Rice pot",
+    "Large skillet",
+    "Blender or fork for mashing",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breast",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "boneless, skinless",
+      "group": "Protein"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "cumin",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic",
+      "quantity": "3",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "brown rice",
+      "quantity": "2.5",
+      "unit": "cups",
+      "notes": "uncooked",
+      "group": "Base"
+    },
+    {
+      "name": "black beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "drained, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "corn",
+      "quantity": "3",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "avocado",
+      "quantity": "2",
+      "unit": "each",
+      "group": "Crema"
+    },
+    {
+      "name": "plain greek yogurt",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Crema"
+    },
+    {
+      "name": "lime juice",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Crema"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Crema"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate the chicken",
+      "instruction": "Whisk lime juice, chili powder, cumin, garlic, salt, and pepper in a bowl. Add chicken and turn to coat; let it sit at least 15 minutes while the rice cooks.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the brown rice",
+      "instruction": "Rinse rice, then bring it with water to a boil in a lidded pot, cover, and simmer on low about 35 minutes until tender. Rest 5 minutes, then fluff. Do not lift the lid repeatedly during the simmer.",
+      "minutes": 40,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Sear the chicken",
+      "instruction": "Heat a skillet over medium-high with a splash of oil. Sear chicken 5–6 minutes per side until browned and 165°F at the thickest point. Rest 5 minutes, then slice against the grain.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Char the corn",
+      "instruction": "In a dry, wide skillet over medium-high, toast corn 4–5 minutes, stirring only when it starts to pop, until a few kernels brown. This adds real flavor beyond just heating it through.",
+      "minutes": 6,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Warm the black beans",
+      "instruction": "Warm drained black beans in a small saucepan with a splash of water over medium-low 4–5 minutes. Season lightly with cumin and salt.",
+      "minutes": 6,
+      "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Blend the avocado crema",
+      "instruction": "Blend or mash avocado with Greek yogurt, lime juice, cilantro, and a pinch of salt until smooth and pourable. Add a splash of water if it is too thick to drizzle.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Build the bowls",
+      "instruction": "Layer rice, black beans, and corn in each bowl, fan sliced chicken across the top, and finish with a drizzle of avocado crema and extra cilantro.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover chili-lime chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool chili-lime chicken and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Slice chicken against the grain for the most tender bite.",
+    "Rookie tip: Keep avocado crema in its own small container for multi-day meal prep so it doesn't brown on top.",
+    "Add a squeeze of lime over packed containers before sealing to help keep the avocado crema bright.",
+    "Swap brown rice for quinoa for a slightly higher-protein base."
+  ],
+  "tonightSpread": [
+    "Main: Chicken and black bean bowls",
+    "Sides: Tortilla chips, sliced jalapeño",
+    "Condiments: Extra lime wedges, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool chili-lime chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Pack rice, beans, corn, and chicken together for grab-and-go lunches; keep crema separate."
+  ],
+  "whyCrewsLikeIt": "It is genuinely different from the hall's other bowl nights, packs well into individual containers for the next shift, and gives a real fiber-and-protein combination instead of just chicken and rice.",
+  "mealPrepNotes": "Make-ahead: chicken and rice both hold well up to 4 days. Storage: pack rice, beans, corn, and chicken together; keep avocado crema in a separate small container and add at the time of eating. Reheating: heat to 165°F, then top with cold crema.",
+  "substitutions": [
+    "Use quinoa instead of brown rice.",
+    "Use shredded rotisserie chicken to save time.",
+    "Use sour cream thinned with lime juice if avocado isn't available."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 714,
+    "protein": 68,
+    "carbs": 78,
+    "fats": 15,
+    "label": "~714 cal/serving · 68g protein · 11g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+  "heroImageAlt": "Firehouse Chicken & Black Bean Bowls — mexican bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "chicken black bean bowl",
+    "high protein meal prep bowl",
+    "chicken burrito bowl",
+    "chili lime chicken bowl",
+    "meal prep chicken bowl",
+    "firehouse chicken bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "plain greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 35,
   "difficulty": "medium",
-  "calories": 557,
-  "protein": 20,
-  "carbs": 66,
-  "fats": 23,
+  "calories": 490,
+  "protein": 16,
+  "carbs": 52,
+  "fats": 24,
   "tags": [
     "protein:pork",
     "format:handheld",
@@ -158,12 +158,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 557,
-    "protein": 20,
-    "carbs": 66,
-    "fats": 23,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 490,
+    "protein": 16,
+    "carbs": 52,
+    "fats": 24,
+    "label": "~490 cal/serving · 16g protein · 2g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
@@ -193,11 +193,12 @@
   ],
   "relatedSlugs": [
     "bbq-meatball-skewers",
+    "chicken-caesar-wraps",
     "buffalo-chicken-wraps",
     "greek-chicken-pitas"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.769Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -249,9 +250,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "mustard"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

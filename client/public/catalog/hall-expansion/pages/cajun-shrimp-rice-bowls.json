@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 937,
-  "protein": 55,
-  "carbs": 86,
-  "fats": 42,
+  "calories": 520,
+  "protein": 38,
+  "carbs": 61,
+  "fats": 15,
   "tags": [
     "protein:shrimp",
     "format:bowl",
@@ -32,7 +32,7 @@
     "Rice pot",
     "Two large skillets",
     "Instant-read thermometer",
-    "Hotel pans",
+    "baking dishes",
     "Squeeze bottles"
   ],
   "ingredients": [
@@ -178,14 +178,14 @@
     {
       "stepNumber": 11,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover the Cajun shrimp — hold at 140°F in a warm cabinet or 200°F oven, but check it often; shrimp overcooks and turns rubbery fast even held gently. Keep the lime sour cream sauce chilled and away from any heat source — it splits the moment it gets warm. On return, spot-check the shrimp is still tender and safe before reopening the line.",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover Cajun shrimp — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool Cajun shrimp and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool Cajun shrimp and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -220,25 +220,25 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 937,
-    "protein": 55,
-    "carbs": 86,
-    "fats": 42,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 520,
+    "protein": 38,
+    "carbs": 61,
+    "fats": 15,
+    "label": "~520 cal/serving · 38g protein · 11g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
@@ -266,7 +266,7 @@
     "miso-ramen-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.958Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -313,14 +313,6 @@
         "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "cilantro",
-    "tomatoes",
-    "bell_peppers",
-    "avocado",
-    "beans",
-    "corn"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

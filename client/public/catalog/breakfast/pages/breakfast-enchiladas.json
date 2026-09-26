@@ -14,8 +14,8 @@
     "bake",
     "9x13"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 25,
   "cookTime": 35,
   "totalTime": 60,
@@ -23,49 +23,49 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "13",
+      "quantity": "16",
       "notes": "soft-scrambled with salt and pepper",
       "group": "Filling"
     },
     {
       "name": "Mexican chorizo",
-      "quantity": "1 1/4 lb",
+      "quantity": "1 1/2 lb",
       "notes": "cooked and crumbled, fat drained",
       "group": "Filling"
     },
     {
       "name": "shredded Monterey Jack",
-      "quantity": "1.6 cups",
+      "quantity": "2 cups",
       "notes": "divided for filling and top",
       "group": "Filling"
     },
     {
       "name": "8-inch flour tortillas",
-      "quantity": "11",
+      "quantity": "14",
       "notes": "warmed briefly to stay pliable",
       "group": "Build"
     },
     {
       "name": "green enchilada sauce",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "jarred or homemade",
       "group": "Sauce"
     },
     {
       "name": "sour cream",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "whisked into half the sauce for creaminess",
       "group": "Sauce"
     },
     {
       "name": "cotija or feta",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "crumbled",
       "group": "Finish"
     },
     {
       "name": "cilantro",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "chopped, plus lime wedges",
       "group": "Finish"
     }
@@ -74,7 +74,7 @@
     {
       "stepNumber": 1,
       "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a deep 9x13 pan or two smaller hotel pans. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing.",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 baking dish, or two smaller baking dishes. Warm tortillas in a dry skillet or wrapped in foil so they roll without tearing.",
       "minutes": 0,
       "tempF": 375
     },
@@ -105,11 +105,11 @@
     }
   ],
   "nutrition": {
-    "calories": 792,
+    "calories": 785,
     "protein": 41,
     "carbs": 37,
     "fat": 53,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -142,8 +142,8 @@
   "heroImage": "/images/breakfast/breakfast-enchiladas.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-enchiladas.jpg",
   "imageAlt": "Crew-sized breakfast enchiladas in a 9x13 casserole — green chile sauce, melted cheese, and egg-chorizo filling in rolled tortillas",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 9,
   "seoTitle": "Breakfast Enchiladas for the Crew | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -215,10 +215,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "cilantro",
-    "feta"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

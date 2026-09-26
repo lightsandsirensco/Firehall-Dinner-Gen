@@ -1,0 +1,303 @@
+{
+  "slug": "firehouse-lentil-chili",
+  "title": "Firehouse Lentil Chili",
+  "displayTitle": "Firehouse Lentil Chili",
+  "seoTitle": "Firehouse Lentil Chili | Firefighter Meal",
+  "shortDescription": "A thick, vegetarian chili built on lentils, beans, and fire-roasted tomatoes",
+  "subtitle": "A thick, vegetarian chili built on lentils, beans, and fire-roasted tomatoes",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Lentils, kidney beans, and fire-roasted tomatoes simmer together with chili spices into a thick, ladle-able chili. It is built for a big pot on a cold shift and holds beautifully for days.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 45,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 272,
+  "protein": 14,
+  "carbs": 40,
+  "fats": 7,
+  "tags": [
+    "protein:vegetarian",
+    "format:soup_chili",
+    "category:crew_feeders",
+    "soup_chili",
+    "vegetarian",
+    "healthy",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large soup pot",
+    "Wooden spoon",
+    "Ladle"
+  ],
+  "ingredients": [
+    {
+      "name": "dried lentils",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "garlic",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Base"
+    },
+    {
+      "name": "crushed tomato",
+      "quantity": "2",
+      "unit": "cans",
+      "group": "Base"
+    },
+    {
+      "name": "kidney beans",
+      "quantity": "2",
+      "unit": "cans",
+      "notes": "drained, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "vegetable broth",
+      "quantity": "5",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "chili powder",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "cumin",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "shredded cheddar",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Toppings",
+      "optional": true
+    },
+    {
+      "name": "green onions",
+      "quantity": "0.5",
+      "unit": "cup",
+      "group": "Toppings",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Build the aromatic base",
+      "instruction": "Heat oil in a large pot over medium. Cook onion and bell pepper 5–6 minutes until softened, then add garlic and cook 1 more minute until fragrant.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Add lentils, tomatoes, and spices",
+      "instruction": "Stir in rinsed lentils, crushed tomato, chili powder, cumin, and smoked paprika until everything is coated in the spiced tomato base.",
+      "minutes": 4,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer until the lentils soften",
+      "instruction": "Pour in vegetable broth, bring to a gentle boil, then reduce to a low simmer. Cook 30–35 minutes, stirring occasionally, until lentils are tender and the chili has thickened.",
+      "minutes": 35,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Fold in the beans",
+      "instruction": "Stir in kidney beans during the last 8 minutes of simmering, just long enough to heat through without breaking them down.",
+      "minutes": 8,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Adjust seasoning and thickness",
+      "instruction": "Taste and add salt, more chili powder, or a splash of broth if it has gotten too thick. A good chili should hold its shape on a spoon but still pour easily from a ladle.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold and set the topping bar",
+      "instruction": "Keep chili at a bare simmer, covered, for holding. Set cheddar and green onions out only once it's close to service so the toppings stay fresh.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover lentil chili base — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool lentil chili and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Rinse lentils well and pick through for any small stones before cooking.",
+    "Rookie tip: Resist boiling the chili hard — a gentle simmer keeps the lentils intact instead of turning to mush.",
+    "This chili freezes exceptionally well; portion it before storing for fast reheats.",
+    "Add a spoonful of cocoa powder or a square of dark chocolate for a deeper, restaurant-style chili flavor."
+  ],
+  "tonightSpread": [
+    "Main: Lentil chili",
+    "Sides: Cornbread, simple green salad",
+    "Condiments: Shredded cheddar, sour cream, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool lentil chili in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Freezes well in individual portions for up to 3 months."
+  ],
+  "whyCrewsLikeIt": "It is a genuine one-pot, low-cleanup dinner that happens to be vegetarian, and the lentils give it enough body and protein that it does not feel like a side dish.",
+  "mealPrepNotes": "Make-ahead: this chili is better on day two. Storage: refrigerate up to 5 days or freeze up to 3 months in portioned containers. Reheating: reheat covered on the stove with a splash of water or broth to loosen it back up.",
+  "substitutions": [
+    "Use black beans or pinto beans instead of kidney beans.",
+    "Use diced sweet potato in place of half the lentils for a heartier texture.",
+    "Add ground turkey if the crew wants a hybrid, still lighter chili."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 272,
+    "protein": 14,
+    "carbs": 40,
+    "fats": 7,
+    "label": "~272 cal/serving · 14g protein · 16g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/firehouse-lentil-chili.jpg",
+  "heroImageAlt": "Firehouse Lentil Chili — american soup_chili plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/firehouse-lentil-chili.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/firehouse-lentil-chili.jpg",
+  "railImage": "/images/rails/hall-expansion/firehouse-lentil-chili.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "lentil chili",
+    "vegetarian chili",
+    "high fiber vegetarian chili",
+    "high fiber chili",
+    "meal prep chili",
+    "firehouse lentil chili"
+  ],
+  "relatedSlugs": [
+    "firehouse-turkey-white-bean-soup",
+    "red-lentil-paneer-dal",
+    "shawarma-bar-night",
+    "fajita-bar-night"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "vegetable broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "shredded cheddar",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

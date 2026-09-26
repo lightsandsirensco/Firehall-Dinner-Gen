@@ -107,7 +107,7 @@
     "protein": 32,
     "carbs": 68,
     "fat": 19,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -140,8 +140,8 @@
   "heroImage": "/images/breakfast/huevos-rancheros-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/huevos-rancheros-crew.jpg",
   "imageAlt": "Huevos rancheros with fried eggs, ranchero sauce, and crisp corn tortillas for the crew",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 8,
   "seoTitle": "Huevos Rancheros for the Crew | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -184,11 +184,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "cilantro",
-    "beans"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

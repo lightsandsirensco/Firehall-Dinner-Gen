@@ -1,0 +1,265 @@
+{
+  "slug": "lemon-herb-cod-roasted-vegetables",
+  "title": "Lemon-Herb Cod with Roasted Vegetables",
+  "displayTitle": "Lemon-Herb Cod with Roasted Vegetables",
+  "seoTitle": "Lemon-Herb Cod with Roasted Vegetables | Firefighter Meal",
+  "shortDescription": "Flaky baked cod with roasted zucchini, tomatoes, and potatoes in a lemon-herb butter",
+  "subtitle": "Flaky baked cod with roasted zucchini, tomatoes, and potatoes in a lemon-herb butter",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Cod fillets bake under a lemon-herb butter alongside zucchini, cherry tomatoes, and baby potatoes. It is a genuinely lighter dinner option with lean protein and roasted vegetables, built to be simple rather than fussy.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 574,
+  "protein": 41,
+  "carbs": 28,
+  "fats": 32,
+  "tags": [
+    "protein:seafood",
+    "format:bake",
+    "category:crew_feeders",
+    "bake",
+    "seafood",
+    "healthy",
+    "high_protein",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pan",
+    "Mixing bowls",
+    "Fish spatula"
+  ],
+  "ingredients": [
+    {
+      "name": "cod fillet",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "cut into 8 portions",
+      "group": "Protein"
+    },
+    {
+      "name": "baby potatoes",
+      "quantity": "2.5",
+      "unit": "lb",
+      "notes": "halved",
+      "group": "Vegetables"
+    },
+    {
+      "name": "zucchini",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Vegetables"
+    },
+    {
+      "name": "butter",
+      "quantity": "4",
+      "unit": "tbsp",
+      "notes": "melted",
+      "group": "Sauce"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "garlic",
+      "quantity": "3",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Sauce"
+    },
+    {
+      "name": "fresh parsley",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Sauce"
+    },
+    {
+      "name": "dried thyme",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Vegetables"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook the potatoes",
+      "instruction": "Heat the oven to 400°F. Toss halved baby potatoes with olive oil, salt, and pepper on a sheet pan and roast 15 minutes to give them a head start over the faster-cooking vegetables. Target oven/smoker temperature: 400°F.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix the lemon-herb butter",
+      "instruction": "Whisk melted butter with lemon juice, garlic, parsley, and thyme in a small bowl until combined.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Add zucchini and tomatoes",
+      "instruction": "Add zucchini and cherry tomatoes to the pan with the potatoes, tossing lightly with a bit more oil, salt, and pepper.",
+      "minutes": 3,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Add the cod and butter sauce",
+      "instruction": "Pat cod dry and season with salt and pepper. Nestle cod portions among the vegetables and spoon the lemon-herb butter evenly over the fish.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Bake until cod flakes easily",
+      "instruction": "Bake 12–15 minutes until cod is opaque and flakes easily with a fork and vegetables are tender. Cod is done by texture, not just a clock — check the thickest fillet. Target oven/smoker temperature: 400°F.",
+      "minutes": 15,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold and serve",
+      "instruction": "If service is delayed, hold covered loosely at 200°F for no more than 15 minutes — cod continues to firm up and can dry out if held too long. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Pat cod completely dry before seasoning so the butter sauce actually clings instead of sliding off.",
+    "Rookie tip: Check cod a few minutes early — it goes from tender to dry quickly once it passes done.",
+    "Use haddock or tilapia if cod isn't available; cook times are similar.",
+    "Squeeze fresh lemon over the finished dish right before serving for extra brightness."
+  ],
+  "tonightSpread": [
+    "Main: Lemon-herb cod with roasted vegetables",
+    "Sides: Crusty bread, simple green salad",
+    "Condiments: Extra lemon wedges, melted butter",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool cod and vegetables in a shallow pan within two hours; reheat gently at 300°F, not high heat.",
+    "Store cod and vegetables together — they hold reasonably well for up to 3 days.",
+    "Flake leftover cod over greens for a fast, no-cook next-day lunch."
+  ],
+  "whyCrewsLikeIt": "It gives crews a real lighter-calorie option on nights when the hall wants to ease off heavier meals, without turning dinner into a salad — everything still comes out of the oven hot and finished.",
+  "mealPrepNotes": "Make-ahead: potatoes can be par-cooked a day ahead. Storage: keep cod and vegetables together up to 3 days. Reheating: reheat covered at 300°F just until warm — cod dries out fast at high heat.",
+  "substitutions": [
+    "Use haddock, tilapia, or halibut instead of cod.",
+    "Use olive oil instead of butter for a dairy-free version.",
+    "Add asparagus in place of zucchini when in season."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 574,
+    "protein": 41,
+    "carbs": 28,
+    "fats": 32,
+    "label": "~574 cal/serving · 41g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+  "heroImageAlt": "Lemon-Herb Cod with Roasted Vegetables — american bake plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+  "railImage": "/images/rails/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "baked cod dinner",
+    "lighter fish dinner",
+    "lemon herb cod",
+    "healthy sheet pan fish",
+    "lean protein dinner",
+    "firehouse cod dinner"
+  ],
+  "relatedSlugs": [
+    "tourtiere-for-the-crew",
+    "cottage-pie-for-the-crew",
+    "loaded-firehouse-sweet-potatoes",
+    "black-bean-cottage-cheese-enchilada-bake"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 10,
+    "totalCount": 10,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cod fillet",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

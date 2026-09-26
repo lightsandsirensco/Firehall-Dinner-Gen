@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 582,
-  "protein": 29,
-  "carbs": 33,
-  "fats": 37,
+  "calories": 480,
+  "protein": 22,
+  "carbs": 38,
+  "fats": 28,
   "tags": [
     "protein:pork",
     "format:skillet",
@@ -33,7 +33,7 @@
     "Chef knife",
     "Wooden spoon",
     "Measuring cups",
-    "Hotel pan"
+    "baking dish"
   ],
   "ingredients": [
     {
@@ -134,7 +134,7 @@
     {
       "stepNumber": 5,
       "title": "Serve from the skillet",
-      "instruction": "Taste for salt. Serve straight from the skillet or transfer to a hotel pan for buffet line.",
+      "instruction": "Taste for salt. Serve straight from the skillet or transfer to a baking dish for buffet line.",
       "minutes": 3,
       "heatLevel": ""
     }
@@ -157,17 +157,17 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 582,
-    "protein": 29,
-    "carbs": 33,
-    "fats": 37,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 480,
+    "protein": 22,
+    "carbs": 38,
+    "fats": 28,
+    "label": "~480 cal/serving · 22g protein · 6g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -197,7 +197,7 @@
     "enchilada-beef-skillet"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.957Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -238,10 +238,6 @@
         "note": "Use a certified gluten-free broth or bouillon."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "mustard"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

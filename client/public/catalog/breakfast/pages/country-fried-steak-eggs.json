@@ -109,7 +109,7 @@
     "protein": 65,
     "carbs": 81,
     "fat": 41,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -128,7 +128,7 @@
   },
   "stationWorkflow": [
     "Bread all steaks before frying starts so the line does not stall between batches.",
-    "Keep mashed potatoes in a covered hotel pan on low with a splash of cream stirred in.",
+    "Keep mashed potatoes in a covered baking dish on low with a splash of cream stirred in.",
     "Fry eggs in a separate pan while gravy simmers—never cook eggs in gravy grease."
   ],
   "cleanupNotes": [
@@ -142,8 +142,8 @@
   "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
   "thumbImage": "/images/thumbs/breakfast/country-fried-steak-eggs.jpg",
   "imageAlt": "Country fried steak with pepper gravy, mashed potatoes, and a fried egg",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 9,
   "seoTitle": "Country Fried Steak and Eggs | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -211,7 +211,6 @@
         "note": "Use a 1:1 gluten-free all-purpose flour blend."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

@@ -15,8 +15,8 @@
     "sausage",
     "batch-cook"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 12,
+  "baseServings": 12,
   "prepTime": 15,
   "cookTime": 22,
   "totalTime": 37,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "24-count slider roll package",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "connected, not separated",
       "group": "Build"
     },
     {
       "name": "large eggs",
-      "quantity": "9",
+      "quantity": "14",
       "notes": "whisked with 2 tbsp milk",
       "group": "Egg layer"
     },
     {
       "name": "kosher salt",
-      "quantity": "3/8 tsp",
+      "quantity": "1/2 tsp",
       "notes": "and black pepper",
       "group": "Egg layer"
     },
     {
       "name": "pre-cooked sausage patties",
-      "quantity": "8",
+      "quantity": "12",
       "notes": "thin, fit slider size",
       "group": "Protein"
     },
     {
       "name": "American or cheddar cheese",
-      "quantity": "9 slices",
+      "quantity": "12 slices",
       "group": "Protein"
     },
     {
       "name": "butter",
-      "quantity": "2.2 tbsp",
+      "quantity": "3 tbsp",
       "notes": "melted for brushing tops",
       "group": "Finish"
     },
     {
       "name": "everything bagel seasoning",
-      "quantity": "3/4 tsp",
+      "quantity": "1 tsp",
       "notes": "optional",
       "group": "Finish"
     },
     {
       "name": "hot sauce or ketchup",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "at the line",
       "group": "Serve"
     }
@@ -101,16 +101,16 @@
     {
       "stepNumber": 5,
       "title": "Cut and serve",
-      "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife. Serve warm from the pan or transfer to a hotel pan for the line.",
+      "instruction": "Rest 5 minutes, then cut along roll seams with a sharp knife. Serve warm from the pan or transfer to a baking dish for the line.",
       "minutes": 5
     }
   ],
   "nutrition": {
-    "calories": 576,
-    "protein": 34,
-    "carbs": 6,
-    "fat": 46,
-    "label": "Estimated per serving",
+    "calories": 561,
+    "protein": 33,
+    "carbs": 5,
+    "fat": 45,
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -143,8 +143,8 @@
   "heroImage": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/sheet-pan-breakfast-sandwiches.jpg",
   "imageAlt": "Sheet pan of pull-apart breakfast slider sandwiches with egg and sausage",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 7,
   "seoTitle": "Sheet Pan Breakfast Sandwiches | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -222,7 +222,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

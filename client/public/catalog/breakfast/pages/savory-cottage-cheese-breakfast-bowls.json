@@ -1,0 +1,176 @@
+{
+  "slug": "savory-cottage-cheese-breakfast-bowls",
+  "title": "Savory Cottage Cheese Breakfast Bowls",
+  "subtitle": "A fast, no-cook breakfast bowl built on cottage cheese, cucumber, tomato, and everything seasoning.",
+  "description": "Cottage cheese is topped with diced cucumber, cherry tomatoes, avocado, and an everything-bagel seasoning for a savory, no-cook breakfast. It is built for mornings when nobody wants to fire up the stove but still wants real protein.",
+  "filters": [
+    "quick_breakfasts",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "cottage-cheese",
+    "no-cook",
+    "vegetarian",
+    "quick",
+    "savory"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 5,
+  "totalTime": 20,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "cottage cheese",
+      "quantity": "64 oz",
+      "group": "Base"
+    },
+    {
+      "name": "cucumber",
+      "quantity": "3",
+      "notes": "diced",
+      "group": "Toppings"
+    },
+    {
+      "name": "cherry tomatoes",
+      "quantity": "2 2/3 cups",
+      "notes": "halved",
+      "group": "Toppings"
+    },
+    {
+      "name": "avocado",
+      "quantity": "3",
+      "notes": "diced",
+      "group": "Toppings"
+    },
+    {
+      "name": "everything bagel seasoning",
+      "quantity": "3 tbsp",
+      "group": "Toppings",
+      "optional": true
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "1",
+      "group": "Toppings",
+      "optional": true
+    },
+    {
+      "name": "olive oil",
+      "quantity": "1",
+      "notes": "for drizzling",
+      "group": "Toppings",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Prep the line",
+      "instruction": "Dice cucumber and avocado, halve cherry tomatoes, and set cottage cheese and each topping out in separate bowls so the crew can build their own without cross-contamination.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build order",
+      "instruction": "Scoop cottage cheese into a bowl first, then top with cucumber, tomatoes, and avocado. Finish with everything seasoning and a light drizzle of olive oil.",
+      "minutes": 4
+    },
+    {
+      "stepNumber": 3,
+      "title": "Hold briefly",
+      "instruction": "This bowl holds about 20 minutes covered in the fridge before the cucumber and tomato start releasing water — build close to serving time when possible.",
+      "minutes": 0
+    },
+    {
+      "stepNumber": 4,
+      "title": "Serve cold",
+      "instruction": "Serve cold with hot sauce on the side for anyone who wants heat. This is a fast, no-stove option when the hall is busy.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 338,
+    "protein": 27,
+    "carbs": 19,
+    "fat": 18,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Set out cottage cheese and all toppings in separate bowls for a self-serve build.",
+    "Keep tomatoes and cucumber cold until the moment of assembly so bowls don't get watery.",
+    "Have everything seasoning and hot sauce within reach at the end of the line."
+  ],
+  "cleanupNotes": [
+    "Rinse the cutting board right after dicing vegetables — no cooked residue to worry about, but keep raw-produce boards separate from any meat prep that day.",
+    "Store unused toppings back in the fridge immediately rather than leaving them out."
+  ],
+  "leftovers": [
+    "Best assembled fresh — store cottage cheese and toppings separately if planning ahead.",
+    "Cottage cheese itself keeps up to a week; diced vegetables are best used within 2 days."
+  ],
+  "heroImage": "/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
+  "thumbImage": "/images/thumbs/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
+  "imageAlt": "Savory cottage cheese breakfast bowl with cucumber, tomato, and avocado",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 4,
+  "seoTitle": "Savory Cottage Cheese Breakfast Bowls | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "cottage cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "everything bagel seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

@@ -13,8 +13,8 @@
     "eggs",
     "cheddar"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 18,
   "totalTime": 33,
@@ -22,31 +22,31 @@
   "ingredients": [
     {
       "name": "large eggs",
-      "quantity": "11",
+      "quantity": "14",
       "notes": "for scrambling or fried"
     },
     {
       "name": "English muffins or brioche buns",
-      "quantity": "13"
+      "quantity": "16"
     },
     {
       "name": "breakfast sausage patties or links",
-      "quantity": "1.6 lb",
+      "quantity": "2 lb",
       "notes": "cooked through"
     },
     {
       "name": "sliced cheese",
-      "quantity": "1.6 cups",
+      "quantity": "2 cups",
       "notes": "American or cheddar"
     },
     {
       "name": "butter",
-      "quantity": "3.4 tbsp",
+      "quantity": "4 tbsp",
       "notes": "for toasting buns"
     },
     {
       "name": "hot sauce",
-      "quantity": "3/4",
+      "quantity": "1",
       "optional": true
     }
   ],
@@ -77,11 +77,11 @@
     }
   ],
   "nutrition": {
-    "calories": 565,
+    "calories": 563,
     "protein": 30,
     "carbs": 26,
     "fat": 38,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -100,7 +100,7 @@
   },
   "stationWorkflow": [
     "Assign one cook to the hot surface and one to assembly. Keep the line moving; don’t crowd the griddle.",
-    "Set a warm holding zone (oven 200°F or covered hotel pan) so staggered eaters still get a hot plate.",
+    "Set a warm holding zone (oven at 200°F, food covered) so staggered eaters still get a hot plate.",
     "Run a quick call-proof check: anything crispy stays uncovered; anything soft stays covered."
   ],
   "cleanupNotes": [
@@ -114,8 +114,8 @@
   "heroImage": "/images/breakfast/breakfast-sandwich-trays.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-sandwich-trays.jpg",
   "imageAlt": "Wide firehall crew platter of Breakfast Sandwich Trays beside eggs on a station prep table, family-style",
-  "publishedAt": "2026-07-17T20:15:27.732Z",
-  "updatedAt": "2026-07-17T20:15:27.732Z",
+  "publishedAt": "2026-09-26T19:26:57.127Z",
+  "updatedAt": "2026-09-26T19:26:57.127Z",
   "readMinutes": 5,
   "seoTitle": "Breakfast Sandwich Trays | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -187,7 +187,6 @@
         "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

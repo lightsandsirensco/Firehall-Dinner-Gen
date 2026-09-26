@@ -1,0 +1,301 @@
+{
+  "slug": "loaded-firehouse-sweet-potatoes",
+  "title": "Loaded Firehouse Sweet Potatoes",
+  "displayTitle": "Loaded Firehouse Sweet Potatoes",
+  "seoTitle": "Loaded Firehouse Sweet Potatoes | Firefighter Meal",
+  "shortDescription": "Baked sweet potatoes topped with seasoned beef, Greek yogurt, and cheese, topping-bar style",
+  "subtitle": "Baked sweet potatoes topped with seasoned beef, Greek yogurt, and cheese, topping-bar style",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Whole sweet potatoes are baked until tender, split, and loaded with seasoned chili-style beef, Greek yogurt, shredded cheese, and a topping bar of scallions, black beans, and salsa. Everyone builds their own.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 55,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 736,
+  "protein": 55,
+  "carbs": 44,
+  "fats": 40,
+  "tags": [
+    "protein:beef",
+    "format:bake",
+    "category:crew_feeders",
+    "bake",
+    "beef",
+    "healthy",
+    "high_protein",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pan",
+    "Large skillet",
+    "Foil",
+    "Serving bowls"
+  ],
+  "ingredients": [
+    {
+      "name": "sweet potato",
+      "quantity": "8",
+      "unit": "each",
+      "notes": "medium, scrubbed",
+      "group": "Base"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Base"
+    },
+    {
+      "name": "ground beef",
+      "quantity": "2.5",
+      "unit": "lb",
+      "notes": "90/10",
+      "group": "Filling"
+    },
+    {
+      "name": "taco seasoning",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Filling"
+    },
+    {
+      "name": "black beans",
+      "quantity": "1",
+      "unit": "can",
+      "notes": "drained, rinsed",
+      "group": "Filling"
+    },
+    {
+      "name": "plain greek yogurt",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "shredded",
+      "group": "Toppings"
+    },
+    {
+      "name": "green onions",
+      "quantity": "0.5",
+      "unit": "cup",
+      "notes": "sliced",
+      "group": "Toppings"
+    },
+    {
+      "name": "salsa",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "diced tomato",
+      "quantity": "1.5",
+      "unit": "cups",
+      "group": "Toppings"
+    },
+    {
+      "name": "jalapeno",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "sliced",
+      "group": "Toppings",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Bake the sweet potatoes",
+      "instruction": "Heat the oven to 400°F. Rub potatoes with olive oil, pierce a few times with a fork, and bake directly on a rack or sheet pan 45–55 minutes until a knife slides in with no resistance. Target oven/smoker temperature: 400°F.",
+      "minutes": 55,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Brown the beef filling",
+      "instruction": "While potatoes bake, brown ground beef in a skillet over medium-high 7–8 minutes until no pink remains. Drain excess fat, stir in taco seasoning with 1/4 cup water, and simmer 3 minutes.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Warm the black beans into the filling",
+      "instruction": "Fold drained black beans into the seasoned beef and simmer 3–4 minutes until heated through. This keeps the filling scoopable instead of two separate components on the plate.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Hold potatoes and filling hot",
+      "instruction": "Wrap finished potatoes loosely in foil to hold their heat, and keep the beef-bean filling covered at 140°F or above. Do not let potatoes sit uncovered — they dry out fast.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Set the topping bar",
+      "instruction": "Put Greek yogurt, cheddar, green onions, salsa, diced tomato, and jalapeño in separate bowls at the end of the line, keeping the yogurt and cheese cold until service starts.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Split and load the potatoes",
+      "instruction": "Slice each potato lengthwise and press the ends toward the middle to open it up. Spoon in the beef-bean filling first so the base of the bowl holds heat.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Finish loading and serve",
+      "instruction": "Top with cheddar so it melts slightly into the hot filling, then add Greek yogurt, salsa, tomato, and green onions. Serve immediately so the yogurt stays cool against the hot potato.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover seasoned beef and black bean filling — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 9,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool seasoned beef and black bean filling and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Bake a few extra potatoes — they reheat well and let latecomers build their own.",
+    "Rookie tip: Use Greek yogurt in place of sour cream; it holds up better once it hits the hot filling.",
+    "Swap the beef filling for seasoned black beans only to make the whole tray vegetarian.",
+    "Score the potato flesh lightly with a fork before loading so toppings settle in instead of sliding off."
+  ],
+  "tonightSpread": [
+    "Main: Loaded sweet potatoes",
+    "Sides: Simple green salad, tortilla chips",
+    "Condiments: Extra salsa, hot sauce, lime wedges",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool seasoned beef and black bean filling in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Scoop leftover potato flesh and filling into a quick skillet hash the next shift."
+  ],
+  "whyCrewsLikeIt": "It turns a familiar loaded-potato format into a higher-protein, better-balanced dinner without losing the comfort-food feel, and the topping bar handles picky eaters without extra cooking.",
+  "mealPrepNotes": "Make-ahead: bake potatoes and cook the beef filling up to two days ahead. Storage: keep potatoes, beef, and cold toppings in separate containers up to 4 days. Reheating: reheat potatoes and beef separately to 165°F, then rebuild with cold toppings.",
+  "substitutions": [
+    "Use lean ground turkey instead of beef.",
+    "Use shredded rotisserie chicken tossed in taco seasoning for a lighter filling.",
+    "Skip the cheese and add extra black beans for a lower-fat version."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 736,
+    "protein": 55,
+    "carbs": 44,
+    "fats": 40,
+    "label": "~736 cal/serving · 55g protein · 9g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
+  "heroImageAlt": "Loaded Firehouse Sweet Potatoes — american bake plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
+  "railImage": "/images/rails/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "loaded sweet potato",
+    "loaded sweet potato bar",
+    "high protein loaded potato",
+    "sweet potato dinner",
+    "greek yogurt loaded potato",
+    "firehouse loaded sweet potatoes",
+    "crew dinner sweet potato"
+  ],
+  "relatedSlugs": [
+    "tourtiere-for-the-crew",
+    "cottage-pie-for-the-crew",
+    "lemon-herb-cod-roasted-vegetables",
+    "black-bean-cottage-cheese-enchilada-bake"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "taco seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "plain greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

@@ -13,10 +13,10 @@
   "cookTime": 240,
   "prepTime": 25,
   "difficulty": "medium",
-  "calories": 1303,
-  "protein": 100,
-  "carbs": 99,
-  "fats": 54,
+  "calories": 720,
+  "protein": 45,
+  "carbs": 70,
+  "fats": 30,
   "tags": [
     "protein:pork",
     "format:bowl",
@@ -34,7 +34,7 @@
     "Two forks or meat claws",
     "Rice pot",
     "Instant-read thermometer",
-    "Hotel pans"
+    "baking dishes"
   ],
   "ingredients": [
     {
@@ -144,7 +144,7 @@
     {
       "stepNumber": 7,
       "title": "Hold the pork hot and moist",
-      "instruction": "Move shredded pork into a shallow hotel pan, nestle it with a ladle of braising juices, cover, and hold at 200°F. Deep stockpots dry out the top layer while the bottom steams — shallow pans hold better. Keep rice covered separately so it does not soak up all the BBQ sauce smell and turn pink. Target oven/smoker temperature: 200°F.",
+      "instruction": "Move shredded pork into a shallow baking dish, nestle it with a ladle of braising juices, cover, and hold at 200°F. Deep stockpots dry out the top layer while the bottom steams — shallow pans hold better. Keep rice covered separately so it does not soak up all the BBQ sauce smell and turn pink. Target oven/smoker temperature: 200°F.",
       "minutes": 5,
       "heatLevel": ""
     },
@@ -165,21 +165,21 @@
     {
       "stepNumber": 10,
       "title": "Serve family-style with extras",
-      "instruction": "Set bowls at the pass with extra sauce, pickles, and a sealed container of crispy onions for seconds. Tell the crew the pork holds hot for late arrivals. Do not leave the slaw bowl sitting next to the steam table or it collapses into cabbage soup.",
+      "instruction": "Set bowls at the pass with extra sauce, pickles, and a sealed container of crispy onions for seconds. Tell the crew the pork holds hot for late arrivals. Do not leave the slaw bowl sitting next to the warm oven or it collapses into cabbage soup.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 11,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover the pulled pork — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Don't dress the coleslaw yet if you haven't already — hold it, the pickles, cheddar, and crispy onions cold and dry in the fridge. On return, spot-check the pork at a safe internal temp, then dress the slaw fresh so it stays crisp instead of wilting.",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover pulled pork — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool pulled pork and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool pulled pork and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -189,7 +189,7 @@
     "Rookie tip: Skim the braising liquid before saucing so pork tastes rich, not greasy.",
     "Rookie tip: Shred in a rimmed pan to capture every drop of juice.",
     "Prep tip: Keep crispy onions sealed until the line opens.",
-    "Use a shallow hotel pan for better hot holding than a deep stockpot."
+    "Use a shallow baking dish for better hot holding than a deep stockpot."
   ],
   "tonightSpread": [
     "Main: BBQ pulled pork bowls",
@@ -215,12 +215,12 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1303,
-    "protein": 100,
-    "carbs": 99,
-    "fats": 54,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 720,
+    "protein": 45,
+    "carbs": 70,
+    "fats": 30,
+    "label": "~720 cal/serving · 45g protein · 6g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
@@ -261,7 +261,7 @@
     "miso-ramen-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -313,11 +313,6 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "pickles",
-    "corn"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

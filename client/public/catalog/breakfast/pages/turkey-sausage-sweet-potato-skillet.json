@@ -1,0 +1,182 @@
+{
+  "slug": "turkey-sausage-sweet-potato-skillet",
+  "title": "Turkey Sausage & Sweet Potato Breakfast Skillet",
+  "subtitle": "A leaner cast-iron breakfast built on turkey sausage, sweet potato, and eggs.",
+  "description": "Turkey sausage and diced sweet potato crisp together in a cast-iron skillet, finished with eggs cracked over the top. It follows the hall's classic breakfast skillet format with a leaner sausage and a sweeter, more fiber-forward potato base.",
+  "filters": [
+    "skillets",
+    "high_protein",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "cast-iron",
+    "turkey-sausage",
+    "sweet-potato",
+    "eggs",
+    "one-pan"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 15,
+  "cookTime": 24,
+  "totalTime": 39,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "sweet potato",
+      "quantity": "3 lb",
+      "notes": "diced 1/2-inch",
+      "group": "Base"
+    },
+    {
+      "name": "turkey sausage",
+      "quantity": "2 lb",
+      "notes": "casings removed",
+      "group": "Protein"
+    },
+    {
+      "name": "large eggs",
+      "quantity": "14",
+      "group": "Protein"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "1",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2 tbsp",
+      "group": "Aromatics"
+    },
+    {
+      "name": "shredded cheese",
+      "quantity": "1 cup",
+      "notes": "cheddar",
+      "group": "Finish",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Par-cook the sweet potato",
+      "instruction": "Microwave diced sweet potato with a splash of water in a covered bowl until just tender. This cuts skillet time significantly and helps it crisp rather than steam.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the crispy base",
+      "instruction": "Heat cast iron over medium-high with oil. Add sweet potato in a single layer; let it sit 3–4 minutes for color before tossing. Add onion and pepper and cook until softened.",
+      "minutes": 12
+    },
+    {
+      "stepNumber": 3,
+      "title": "Brown the turkey sausage",
+      "instruction": "Push vegetables to one side. Add turkey sausage and break into crumbles, cooking 7–8 minutes until browned and 165°F. Fold everything together once cooked through.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 4,
+      "title": "Make wells for the eggs",
+      "instruction": "Make shallow wells across the skillet and crack an egg into each well. Season with salt and pepper.",
+      "minutes": 3
+    },
+    {
+      "stepNumber": 5,
+      "title": "Cover and finish",
+      "instruction": "Cover with a lid or inverted sheet pan over medium-low heat until egg whites are fully set and yolks are cooked to preference. Add cheese in the last minute to melt if using.",
+      "minutes": 6
+    }
+  ],
+  "nutrition": {
+    "calories": 508,
+    "protein": 39,
+    "carbs": 37,
+    "fat": 22,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
+  },
+  "stationWorkflow": [
+    "Par-cook sweet potato in the microwave first to save real skillet time.",
+    "Build the crispy base before adding sausage so both get proper browning.",
+    "Add eggs last so they finish exactly when the rest of the skillet is ready."
+  ],
+  "cleanupNotes": [
+    "Deglaze the cast iron with hot water while still warm, then scrub once cool enough to handle.",
+    "Wipe down cutting boards immediately after raw sausage prep before eggs go anywhere near them."
+  ],
+  "leftovers": [
+    "Reheat the potato-sausage base covered at 325°F for 10 minutes; fry fresh eggs rather than reheating set yolks.",
+    "Chop leftovers into a breakfast wrap with hot sauce for a fast next-shift meal."
+  ],
+  "heroImage": "/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
+  "thumbImage": "/images/thumbs/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
+  "imageAlt": "Cast-iron skillet with turkey sausage, sweet potato, and eggs for the crew",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 6,
+  "seoTitle": "Turkey Sausage Sweet Potato Skillet | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 7,
+    "totalCount": 7,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "large eggs",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "shredded cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

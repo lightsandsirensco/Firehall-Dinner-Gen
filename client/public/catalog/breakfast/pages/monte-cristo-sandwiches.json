@@ -14,8 +14,8 @@
     "griddle",
     "diner"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 20,
   "cookTime": 25,
   "totalTime": 45,
@@ -23,40 +23,40 @@
   "ingredients": [
     {
       "name": "thick white bread slices",
-      "quantity": "16",
+      "quantity": "20",
       "notes": "crusts trimmed optional",
       "group": "Sandwich"
     },
     {
       "name": "sliced deli ham",
-      "quantity": "3/4 lb",
+      "quantity": "1 lb",
       "group": "Sandwich"
     },
     {
       "name": "sliced deli turkey",
-      "quantity": "3/4 lb",
+      "quantity": "1 lb",
       "group": "Sandwich"
     },
     {
       "name": "Swiss cheese",
-      "quantity": "8 slices",
+      "quantity": "10 slices",
       "group": "Sandwich"
     },
     {
       "name": "Dijon mustard",
-      "quantity": "2.6 tbsp",
+      "quantity": "3 tbsp",
       "notes": "spread thin on half the slices",
       "group": "Sandwich"
     },
     {
       "name": "large eggs",
-      "quantity": "5",
+      "quantity": "6",
       "notes": "whisked with 1 cup milk and pinch of salt",
       "group": "Batter"
     },
     {
       "name": "butter",
-      "quantity": "3.4 tbsp",
+      "quantity": "4 tbsp",
       "notes": "for griddling in batches",
       "group": "Cook"
     },
@@ -100,11 +100,11 @@
     }
   ],
   "nutrition": {
-    "calories": 492,
-    "protein": 33,
-    "carbs": 38,
-    "fat": 23,
-    "label": "Estimated per serving",
+    "calories": 490,
+    "protein": 34,
+    "carbs": 37,
+    "fat": 22,
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -137,8 +137,8 @@
   "heroImage": "/images/breakfast/monte-cristo-sandwiches.jpg",
   "thumbImage": "/images/thumbs/breakfast/monte-cristo-sandwiches.jpg",
   "imageAlt": "Golden Monte Cristo sandwiches dusted with powdered sugar and served with jam",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 8,
   "seoTitle": "Monte Cristo Sandwiches | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -205,9 +205,6 @@
         "note": "Use a dairy-free cheese shred/block alternative. Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "mustard"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

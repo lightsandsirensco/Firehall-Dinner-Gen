@@ -1,0 +1,285 @@
+{
+  "slug": "blackened-salmon-sweet-potato-bowls",
+  "title": "Blackened Salmon Sweet Potato Bowls",
+  "displayTitle": "Blackened Salmon Sweet Potato Bowls",
+  "seoTitle": "Blackened Salmon Sweet Potato Bowls | Firefighter Meal",
+  "shortDescription": "Cajun-blackened salmon over roasted sweet potato and greens with a cooling yogurt drizzle",
+  "subtitle": "Cajun-blackened salmon over roasted sweet potato and greens with a cooling yogurt drizzle",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Salmon fillets get a bold blackening seasoning and a hard sear, then sit over roasted sweet potato and sautéed greens with a cool lemon-yogurt drizzle to balance the heat.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 25,
+  "prepTime": 15,
+  "difficulty": "medium",
+  "calories": 629,
+  "protein": 45,
+  "carbs": 44,
+  "fats": 29,
+  "tags": [
+    "protein:salmon",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "seafood",
+    "healthy",
+    "high_protein",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Sheet pan",
+    "Large skillet",
+    "Instant-read thermometer",
+    "Fish spatula"
+  ],
+  "ingredients": [
+    {
+      "name": "sweet potato",
+      "quantity": "3.5",
+      "unit": "lb",
+      "notes": "3/4-inch cubes",
+      "group": "Base"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.25",
+      "unit": "cup",
+      "group": "Base"
+    },
+    {
+      "name": "salmon fillet",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "cut into 8 portions",
+      "group": "Protein"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "cayenne pepper",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "dried thyme",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "10",
+      "unit": "oz",
+      "group": "Greens"
+    },
+    {
+      "name": "garlic",
+      "quantity": "3",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Greens"
+    },
+    {
+      "name": "plain greek yogurt",
+      "quantity": "1",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "fresh dill",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "chopped",
+      "group": "Sauce",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Roast the sweet potato",
+      "instruction": "Heat the oven to 425°F. Toss sweet potato cubes with 2 tablespoons oil, salt, and pepper on a sheet pan and roast 22–25 minutes, turning once, until tender and browned at the edges. Target oven/smoker temperature: 425°F.",
+      "minutes": 25,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Mix the blackening seasoning",
+      "instruction": "Combine smoked paprika, garlic powder, cayenne, thyme, salt, and pepper in a small bowl. Pat salmon portions dry, then coat evenly on both sides — dry fish takes seasoning and sears better than wet fish.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 3,
+      "title": "Sear the salmon",
+      "instruction": "Heat remaining oil in a large skillet over medium-high until shimmering. Sear salmon skin-side up first 3–4 minutes until a dark crust forms, flip, and cook 3 more minutes to 130–135°F for medium.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Wilt the greens",
+      "instruction": "In the same skillet, add garlic and spinach in batches, tossing 2–3 minutes just until wilted. Season lightly with salt — the salmon and sauce both carry plenty of flavor already.",
+      "minutes": 5,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Mix the lemon-yogurt sauce",
+      "instruction": "Stir Greek yogurt with lemon juice, dill, and a pinch of salt until smooth. Keep it cold in a squeeze bottle so it stays thick and cooling against the spiced fish.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold and build the bowls",
+      "instruction": "Keep salmon loosely covered and sweet potato warm in a 200°F oven. Layer sweet potato and spinach in each bowl, top with a portion of salmon, and finish with a drizzle of yogurt sauce. Target oven/smoker temperature: 200°F.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover blackened salmon — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool blackened salmon and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Pat salmon completely dry before seasoning — moisture is the enemy of a real blackened crust.",
+    "Rookie tip: Pull salmon a shade under your target temperature; it keeps cooking a bit while it rests.",
+    "Use cod or tilapia if the hall doesn't have salmon on hand — the seasoning still works well.",
+    "Keep cayenne on the lower end if the crew doesn't run hot on spice; the smoked paprika still carries flavor."
+  ],
+  "tonightSpread": [
+    "Main: Blackened salmon sweet potato bowls",
+    "Sides: Simple cucumber salad, lemon wedges",
+    "Condiments: Extra yogurt sauce, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool salmon and sweet potato in shallow pans within two hours; reheat salmon gently, not on high heat.",
+    "Store the yogurt sauce separately — it keeps well cold for up to 3 days.",
+    "Flake leftover salmon over greens for a fast next-day lunch instead of reheating it whole."
+  ],
+  "whyCrewsLikeIt": "It gives crews who are tired of chicken and beef a genuinely satisfying fish option with real crust and spice, and the sweet potato base makes it filling instead of light and forgettable.",
+  "mealPrepNotes": "Make-ahead: roast sweet potato up to two days ahead; the yogurt sauce holds 3 days. Storage: keep salmon, sweet potato, and greens separate. Reheating: gently reheat salmon covered at 275°F just until warm — high heat dries it out fast.",
+  "substitutions": [
+    "Use cod, tilapia, or trout in place of salmon.",
+    "Use sour cream thinned with a little water if Greek yogurt isn't on hand.",
+    "Swap spinach for kale or broccolini."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 629,
+    "protein": 45,
+    "carbs": 44,
+    "fats": 29,
+    "label": "~629 cal/serving · 45g protein · 5g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+  "heroImageAlt": "Blackened Salmon Sweet Potato Bowls — american bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "blackened salmon bowl",
+    "salmon sweet potato bowl",
+    "high protein salmon bowl",
+    "healthy salmon dinner",
+    "omega 3 dinner bowl",
+    "firehouse salmon bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 12,
+    "totalCount": 12,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "salmon fillet",
+        "allergens": [
+          "fish"
+        ]
+      },
+      {
+        "name": "plain greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": false,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

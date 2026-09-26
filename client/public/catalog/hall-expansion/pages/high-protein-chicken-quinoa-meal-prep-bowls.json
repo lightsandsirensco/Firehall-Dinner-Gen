@@ -1,0 +1,251 @@
+{
+  "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
+  "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
+  "displayTitle": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
+  "seoTitle": "High-Protein Chicken & Quinoa Meal-Prep Bowls | Firefighter Meal",
+  "shortDescription": "Roasted chicken and quinoa with vegetables, built specifically for individual meal-prep containers",
+  "subtitle": "Roasted chicken and quinoa with vegetables, built specifically for individual meal-prep containers",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Roasted chicken thighs, quinoa, and roasted vegetables are portioned into individual containers with a simple herb dressing on the side, designed specifically for crews prepping meals ahead of a shift.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 20,
+  "difficulty": "easy",
+  "calories": 621,
+  "protein": 62,
+  "carbs": 39,
+  "fats": 23,
+  "tags": [
+    "protein:chicken",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "chicken",
+    "healthy",
+    "high_protein",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Two sheet pans",
+    "Medium pot",
+    "Meal-prep containers",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken thighs",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "boneless, skinless",
+      "group": "Protein"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "garlic powder",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "smoked paprika",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "quinoa",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "uncooked, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "broccoli florets",
+      "quantity": "2",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "bell pepper",
+      "quantity": "3",
+      "unit": "each",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Vegetables"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Dressing"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Dressing"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Dressing"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Season and roast the chicken",
+      "instruction": "Heat the oven to 425°F. Toss chicken thighs with olive oil, garlic powder, smoked paprika, salt, and pepper on a sheet pan. Roast 22–25 minutes until 165°F at the thickest point. Target oven/smoker temperature: 425°F.",
+      "minutes": 25,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the quinoa",
+      "instruction": "Rinse quinoa and simmer with water in a lidded pot 15 minutes until tender. Fluff and spread on a sheet pan to cool.",
+      "minutes": 20,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Roast the vegetables",
+      "instruction": "Toss broccoli and bell pepper with olive oil, salt, and pepper on a separate sheet pan. Roast 16–18 minutes alongside the chicken until tender with browned edges. Target oven/smoker temperature: 425°F.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Mix the dressing",
+      "instruction": "Whisk lemon juice, olive oil, oregano, salt, and pepper in a small container. Keep it separate from the bowls until eating time.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 5,
+      "title": "Slice the chicken",
+      "instruction": "Rest chicken 5 minutes, then slice into strips for even portioning across containers.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Portion into containers",
+      "instruction": "Divide quinoa, roasted vegetables, and sliced chicken evenly across 8 containers. Let everything cool with lids off for 15–20 minutes before sealing and refrigerating.",
+      "minutes": 15,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Let food cool before sealing containers — trapped steam leads to soggy quinoa and shortens shelf life.",
+    "Rookie tip: Keep the dressing in small separate cups so vegetables stay crisp until the moment of eating.",
+    "Weigh or eyeball even portions across containers so everyone gets a consistent amount of protein.",
+    "Label containers with the date — this recipe is meant for the fridge, not indefinite storage."
+  ],
+  "tonightSpread": [
+    "Main: Chicken and quinoa meal-prep bowls",
+    "Sides: Extra roasted vegetables, fresh fruit",
+    "Condiments: Hot sauce, extra lemon dressing",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Refrigerate portioned containers up to 4 days, or freeze without dressing up to 2 months.",
+    "Reheat covered to 165°F, then add dressing after reheating so vegetables don't turn soggy.",
+    "Thaw frozen portions overnight in the refrigerator before reheating."
+  ],
+  "whyCrewsLikeIt": "It is built for the reality of shift work — portioned, labeled, and ready to grab — with a protein and fiber count that holds crews over during a long stretch without a real meal break.",
+  "mealPrepNotes": "Make-ahead: this recipe is built entirely for advance portioning. Storage: pack into 8 individual containers; refrigerate up to 4 days or freeze up to 2 months without the dressing. Reheating: heat to 165°F, then add dressing after.",
+  "substitutions": [
+    "Use chicken breast instead of thighs for a leaner version.",
+    "Use brown rice instead of quinoa.",
+    "Use zucchini or green beans instead of broccoli."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 621,
+    "protein": 62,
+    "carbs": 39,
+    "fats": 23,
+    "label": "~621 cal/serving · 62g protein · 7g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+  "heroImageAlt": "High-Protein Chicken & Quinoa Meal-Prep Bowls — american bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "high protein meal prep bowl",
+    "chicken quinoa meal prep",
+    "meal prep containers",
+    "high protein lunch prep",
+    "healthy meal prep bowl",
+    "firehouse meal prep"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 11,
+    "totalCount": 11,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

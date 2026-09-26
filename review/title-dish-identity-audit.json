@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-07-24T02:19:54.948Z",
+  "generatedAt": "2026-09-26T18:46:10.059Z",
   "totals": {
-    "audited": 371,
-    "passed": 371,
+    "audited": 409,
+    "passed": 409,
     "failed": 0
   },
   "failedRecipes": [],
@@ -164,6 +164,12 @@
       "pass": true
     },
     {
+      "slug": "beef-birria-with-consomme",
+      "title": "Beef Birria with Consommé for Dipping",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "beef-dip",
       "title": "Beef Dip Sandwiches",
       "kind": "hall_classic",
@@ -239,6 +245,12 @@
       "slug": "blackened-cod-taco-night",
       "title": "Blackened Cod Tacos",
       "kind": "performance_meal",
+      "pass": true
+    },
+    {
+      "slug": "blackened-salmon-sweet-potato-bowls",
+      "title": "Blackened Salmon Sweet Potato Bowls",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -380,6 +392,12 @@
       "pass": true
     },
     {
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "cajun-chicken-rice-bowl",
       "title": "Cajun Chicken and Rice",
       "kind": "performance_meal",
@@ -388,6 +406,12 @@
     {
       "slug": "cajun-chicken-rice-skillet",
       "title": "Cajun Chicken and Rice Skillet",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "cajun-lime-shrimp-black-bean-bowls",
+      "title": "Cajun Lime Shrimp & Black Bean Bowls",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -530,6 +554,12 @@
       "pass": true
     },
     {
+      "slug": "chicken-marsala-lightened",
+      "title": "Chicken Marsala (Lightened)",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "sheet-pan-meal-prep",
       "title": "Chicken Meal Prep Trays",
       "kind": "firehall_catalog",
@@ -598,6 +628,12 @@
     {
       "slug": "chicken-wing-bar-night",
       "title": "Chicken Wing Bar Night",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "chickpea-pasta-primavera-white-beans",
+      "title": "Chickpea Pasta Primavera with White Beans",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -728,6 +764,12 @@
       "pass": true
     },
     {
+      "slug": "cuban-beef-picadillo-bowls",
+      "title": "Cuban-Style Beef Picadillo Bowls",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "denver-breakfast-casserole",
       "title": "Denver Breakfast Casserole",
       "kind": "breakfast_catalog",
@@ -794,6 +836,12 @@
       "pass": true
     },
     {
+      "slug": "filipino-chicken-adobo",
+      "title": "Filipino-Style Chicken Adobo",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "fire-captain-omelette-bar",
       "title": "Fire Captain Omelette Bar",
       "kind": "breakfast_catalog",
@@ -838,6 +886,42 @@
     {
       "slug": "firehall-taco-bowls",
       "title": "Firehall Taco Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehouse-chicken-black-bean-bowls",
+      "title": "Firehouse Chicken & Black Bean Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehouse-dense-bean-salad",
+      "title": "Firehouse Dense Bean Salad",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehouse-diner-burger-bowls",
+      "title": "Firehouse Diner Burger Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehouse-lentil-chili",
+      "title": "Firehouse Lentil Chili",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehouse-sweet-potato-beef-protein-bowls",
+      "title": "Firehouse Sweet Potato & Beef Protein Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehouse-turkey-white-bean-soup",
+      "title": "Firehouse Turkey & White Bean Soup",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -890,6 +974,18 @@
       "pass": true
     },
     {
+      "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
+      "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "general-tsos-baked-chicken",
+      "title": "General Tso's-Style Baked Chicken",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "griddle-smash-sausage-peppers",
       "title": "Giardiniera Smash Sausage Hoagies",
       "kind": "bbq_catalog",
@@ -908,6 +1004,12 @@
       "pass": true
     },
     {
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "greek-chicken-bowls",
       "title": "Greek Chicken Bowls",
       "kind": "firehall_catalog",
@@ -923,6 +1025,12 @@
       "slug": "greek-chicken-pitas",
       "title": "Greek Chicken Pitas",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+      "kind": "performance_meal",
       "pass": true
     },
     {
@@ -1016,6 +1124,12 @@
       "pass": true
     },
     {
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "hickory-smoked-chicken-breast",
       "title": "Hickory Smoked Chicken Breast",
       "kind": "bbq_catalog",
@@ -1025,6 +1139,18 @@
       "slug": "hickory-turkey-legs",
       "title": "Hickory Smoked Turkey Legs",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
+      "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "high-protein-chicken-fried-rice",
+      "title": "High-Protein Chicken Fried Rice",
+      "kind": "performance_meal",
       "pass": true
     },
     {
@@ -1054,6 +1180,12 @@
     {
       "slug": "honey-mustard-oven-chicken-thighs",
       "title": "Honey Mustard Baked Chicken Thighs",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "honey-mustard-turkey-meatball-bowls",
+      "title": "Honey Mustard Turkey Meatball Bowls",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -1166,6 +1298,12 @@
       "pass": true
     },
     {
+      "slug": "kung-pao-chicken-rice-bowls",
+      "title": "Kung Pao Chicken & Rice Bowls",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "lamb-kofta-skewer-platter",
       "title": "Lamb Kofta Skewer Platter",
       "kind": "hall_expansion",
@@ -1220,6 +1358,12 @@
       "pass": true
     },
     {
+      "slug": "lemon-herb-cod-roasted-vegetables",
+      "title": "Lemon-Herb Cod with Roasted Vegetables",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "smoky-lentil-kale-soup",
       "title": "Lentil and Kale Soup",
       "kind": "performance_meal",
@@ -1240,6 +1384,12 @@
     {
       "slug": "loaded-baked-potato-soup-crock",
       "title": "Loaded Baked Potato Soup Crock",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "loaded-firehouse-sweet-potatoes",
+      "title": "Loaded Firehouse Sweet Potatoes",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -1319,6 +1469,18 @@
       "slug": "mediterranean-beef-bowls",
       "title": "Mediterranean Beef Bowls",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "mediterranean-beef-kofta-bowls",
+      "title": "Mediterranean Beef Kofta Bowls",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "title": "Mediterranean Chicken & White Bean Skillet",
+      "kind": "performance_meal",
       "pass": true
     },
     {
@@ -1454,6 +1616,12 @@
       "pass": true
     },
     {
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "overnight-french-toast-bake",
       "title": "Overnight French Toast Bake",
       "kind": "breakfast_catalog",
@@ -1553,6 +1721,12 @@
       "slug": "peri-peri-chicken-platter",
       "title": "Peri Peri Chicken Platter",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+      "kind": "performance_meal",
       "pass": true
     },
     {
@@ -1754,6 +1928,12 @@
       "pass": true
     },
     {
+      "slug": "sesame-ginger-tofu-bowls",
+      "title": "Sesame Ginger Tofu Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "shakshuka-for-the-hall",
       "title": "Shakshuka for the Hall",
       "kind": "breakfast_catalog",
@@ -1802,9 +1982,21 @@
       "pass": true
     },
     {
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "sheet-pan-eggs-sausage-crew",
       "title": "Sheet-Pan Eggs & Sausage",
       "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
+      "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+      "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -1930,6 +2122,18 @@
     {
       "slug": "soft-pretzel-dogs",
       "title": "Soft Pretzel Hot Dogs",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "title": "Southwest Beef & Sweet Potato Skillet",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
+      "slug": "southwest-black-bean-corn-bowls",
+      "title": "Southwest Black Bean & Corn Bowls",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -2066,6 +2270,12 @@
       "pass": true
     },
     {
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "thai-peanut-chicken-crock",
       "title": "Thai Peanut Chicken Crock",
       "kind": "hall_expansion",
@@ -2093,6 +2303,12 @@
       "slug": "tourtiere-for-the-crew",
       "title": "Tourtière for the Crew",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "kind": "performance_meal",
       "pass": true
     },
     {
@@ -2162,9 +2378,21 @@
       "pass": true
     },
     {
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "title": "Unstuffed Cabbage Roll Skillet",
+      "kind": "performance_meal",
+      "pass": true
+    },
+    {
       "slug": "veggie-egg-burritos",
       "title": "Veggie Egg Burritos",
       "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "title": "Vietnamese Caramel-Braised Chicken Bowls",
+      "kind": "performance_meal",
       "pass": true
     },
     {

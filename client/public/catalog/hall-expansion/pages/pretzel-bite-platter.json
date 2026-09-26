@@ -13,10 +13,10 @@
   "cookTime": 20,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 924,
-  "protein": 29,
-  "carbs": 126,
-  "fats": 33,
+  "calories": 460,
+  "protein": 16,
+  "carbs": 52,
+  "fats": 20,
   "tags": [
     "protein:vegetarian",
     "format:bar_line",
@@ -157,29 +157,29 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 924,
-    "protein": 29,
-    "carbs": 126,
-    "fats": 33,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 460,
+    "protein": 16,
+    "carbs": 52,
+    "fats": 20,
+    "label": "~460 cal/serving · 16g protein · 2g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
-      "under700Calories": false,
-      "under30gFat": false,
+      "under700Calories": true,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/pretzel-bite-platter.jpg",
-  "heroImageAlt": "Pretzel Bite Platter with Beer Cheese — american bar line plated for a firehall crew",
+  "heroImageAlt": "Pretzel Bite Platter with Beer Cheese — american bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/pretzel-bite-platter.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/pretzel-bite-platter.jpg",
   "railImage": "/images/rails/hall-expansion/pretzel-bite-platter.jpg",
@@ -197,7 +197,7 @@
     "shawarma-bar-night"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.769Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -269,9 +269,6 @@
         "note": "Substitute non-alcoholic beer or broth."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "mustard"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

@@ -15,8 +15,8 @@
     "sheet-pan",
     "shareable"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 15,
   "cookTime": 15,
   "totalTime": 30,
@@ -30,31 +30,31 @@
     },
     {
       "name": "large eggs",
-      "quantity": "11",
+      "quantity": "14",
       "notes": "soft-scrambled",
       "group": "Protein"
     },
     {
       "name": "bacon",
-      "quantity": "3/4 lb",
+      "quantity": "1 lb",
       "notes": "cooked crisp and crumbled",
       "group": "Protein"
     },
     {
       "name": "shredded cheddar",
-      "quantity": "2.4 cups",
+      "quantity": "3 cups",
       "notes": "and 2 cups shredded Monterey Jack",
       "group": "Cheese"
     },
     {
       "name": "nacho cheese sauce",
-      "quantity": "1 1/4 cups",
+      "quantity": "1 1/2 cups",
       "notes": "warmed",
       "group": "Cheese"
     },
     {
       "name": "pico de gallo",
-      "quantity": "1 1/4 cups",
+      "quantity": "1 1/2 cups",
       "notes": "drained well",
       "group": "Toppings"
     },
@@ -66,7 +66,7 @@
     },
     {
       "name": "sour cream",
-      "quantity": "3/8 cup",
+      "quantity": "1/2 cup",
       "notes": "crema, and sliced jalapeños",
       "group": "Finish"
     }
@@ -107,10 +107,10 @@
   ],
   "nutrition": {
     "calories": 611,
-    "protein": 36,
-    "carbs": 14,
+    "protein": 37,
+    "carbs": 12,
     "fat": 46,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -143,8 +143,8 @@
   "heroImage": "/images/breakfast/breakfast-nachos-supreme.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-nachos-supreme.jpg",
   "imageAlt": "Breakfast nachos supreme loaded with eggs, bacon, melted cheese, and pico",
-  "publishedAt": "2026-07-17T20:15:27.729Z",
-  "updatedAt": "2026-07-17T20:15:27.729Z",
+  "publishedAt": "2026-09-26T19:26:57.124Z",
+  "updatedAt": "2026-09-26T19:26:57.124Z",
   "readMinutes": 7,
   "seoTitle": "Breakfast Nachos Supreme | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -199,10 +199,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "jalapenos",
-    "avocado"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

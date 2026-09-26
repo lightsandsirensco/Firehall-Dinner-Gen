@@ -1,0 +1,174 @@
+{
+  "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
+  "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
+  "subtitle": "A leaner scramble built on egg whites, turkey sausage, spinach, and feta.",
+  "description": "Egg whites scramble with browned turkey sausage, wilted spinach, and crumbled feta for a savory, leaner breakfast with a Mediterranean-leaning flavor. It holds well on the line and reheats cleanly for a next-shift breakfast.",
+  "filters": [
+    "healthy_breakfasts",
+    "high_protein"
+  ],
+  "tags": [
+    "scramble",
+    "egg-whites",
+    "turkey-sausage",
+    "spinach",
+    "feta"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 12,
+  "cookTime": 18,
+  "totalTime": 30,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "turkey sausage",
+      "quantity": "2 lb",
+      "notes": "casings removed",
+      "group": "Protein"
+    },
+    {
+      "name": "egg whites",
+      "quantity": "28",
+      "notes": "or 3.5 cups liquid egg whites",
+      "group": "Eggs"
+    },
+    {
+      "name": "baby spinach",
+      "quantity": "8 oz",
+      "group": "Vegetables"
+    },
+    {
+      "name": "feta cheese",
+      "quantity": "1 1/2 cups",
+      "notes": "crumbled",
+      "group": "Cheese"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "1",
+      "notes": "diced",
+      "group": "Aromatics"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2 tbsp",
+      "group": "Aromatics"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Brown the turkey sausage",
+      "instruction": "Heat olive oil in a large skillet over medium-high. Brown turkey sausage, breaking it into crumbles, 8–9 minutes until cooked through.",
+      "minutes": 9
+    },
+    {
+      "stepNumber": 2,
+      "title": "Soften the onion and spinach",
+      "instruction": "Add onion to the pan with the sausage and cook until softened, about 4 minutes. Add spinach and cook just until wilted, 1–2 minutes.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 3,
+      "title": "Scramble in the egg whites",
+      "instruction": "Lower heat to medium-low. Pour egg whites over the sausage mixture and stir gently until just set — egg whites firm up faster than whole eggs, so pull the pan a little early.",
+      "minutes": 7
+    },
+    {
+      "stepNumber": 4,
+      "title": "Finish with feta",
+      "instruction": "Fold in crumbled feta off the heat so it stays soft rather than melting completely into the eggs.",
+      "minutes": 2
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold and serve",
+      "instruction": "Hold covered on low heat up to 10 minutes if service is staggered. Serve directly from the pan.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 372,
+    "protein": 43,
+    "carbs": 5,
+    "fat": 19,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": true,
+      "performanceMeal": true
+    }
+  },
+  "stationWorkflow": [
+    "Brown sausage and soften vegetables before adding egg whites so the pan isn't overcrowded.",
+    "Scramble egg whites gently and pull them slightly underdone — they keep setting off the heat.",
+    "Fold feta in last so it stays in soft crumbles instead of melting away."
+  ],
+  "cleanupNotes": [
+    "Wipe the pan while still warm — cooked egg white sets hard once it cools completely.",
+    "Wash cutting boards immediately after raw sausage prep."
+  ],
+  "leftovers": [
+    "Refrigerate covered up to 3 days.",
+    "Reheat gently on low power or in a covered skillet over low heat to keep the eggs from turning rubbery."
+  ],
+  "heroImage": "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+  "thumbImage": "/images/thumbs/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+  "imageAlt": "Skillet of turkey sausage, spinach, and feta egg white scramble",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 5,
+  "seoTitle": "Turkey Sausage Spinach Feta Egg White Scramble | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "egg whites",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "feta cheese",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

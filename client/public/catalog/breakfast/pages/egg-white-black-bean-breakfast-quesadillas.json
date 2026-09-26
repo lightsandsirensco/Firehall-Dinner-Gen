@@ -1,0 +1,186 @@
+{
+  "slug": "egg-white-black-bean-breakfast-quesadillas",
+  "title": "Egg White & Black Bean Breakfast Quesadillas",
+  "subtitle": "Crisp breakfast quesadillas filled with egg whites, black beans, and pepper jack.",
+  "description": "Egg whites, black beans, and pepper jack get folded into a tortilla and griddled until crisp outside and melted inside. It is a fast, handheld, vegetarian breakfast with a leaner fat profile than a whole-egg quesadilla.",
+  "filters": [
+    "quick_breakfasts",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "quesadillas",
+    "egg-whites",
+    "vegetarian",
+    "black-beans",
+    "quick"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 10,
+  "cookTime": 16,
+  "totalTime": 26,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "egg whites",
+      "quantity": "20",
+      "notes": "or 2.5 cups liquid egg whites",
+      "group": "Eggs"
+    },
+    {
+      "name": "black beans",
+      "quantity": "1 can",
+      "notes": "drained, rinsed",
+      "group": "Fillings"
+    },
+    {
+      "name": "pepper jack cheese",
+      "quantity": "2 cups",
+      "notes": "shredded",
+      "group": "Fillings"
+    },
+    {
+      "name": "salsa",
+      "quantity": "1/2 cup",
+      "group": "Fillings"
+    },
+    {
+      "name": "flour tortilla",
+      "quantity": "8",
+      "notes": "10-inch",
+      "group": "Build"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "2 tbsp",
+      "notes": "for the griddle",
+      "group": "Build"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Scramble the egg whites",
+      "instruction": "Cook egg whites in a nonstick skillet over medium-low, stirring gently, until just set. Pull them a little early since they continue to firm up off the heat.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 2,
+      "title": "Warm the black beans",
+      "instruction": "Warm black beans in a small saucepan with a splash of water and a pinch of cumin until heated through.",
+      "minutes": 4
+    },
+    {
+      "stepNumber": 3,
+      "title": "Fill the tortillas",
+      "instruction": "Lay tortillas flat and cover one half with cheese, egg whites, beans, and a spoon of salsa. Fold in half over the filling.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 4,
+      "title": "Griddle until crisp",
+      "instruction": "Heat a lightly oiled griddle or skillet over medium. Cook quesadillas 3–4 minutes per side until golden and crisp outside and the cheese has melted through.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 5,
+      "title": "Slice and serve",
+      "instruction": "Rest 1 minute, then slice into wedges. Serve immediately while the tortilla is still crisp — quesadillas soften fast once stacked.",
+      "minutes": 2
+    }
+  ],
+  "nutrition": {
+    "calories": 373,
+    "protein": 23,
+    "carbs": 33,
+    "fat": 17,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": false
+    }
+  },
+  "stationWorkflow": [
+    "Cook egg whites and beans ahead so assembly and griddling go quickly.",
+    "Fill tortillas just before griddling — a filled, unheated quesadilla gets soggy waiting.",
+    "Slice each quesadilla right before serving so the crust stays crisp."
+  ],
+  "cleanupNotes": [
+    "Wipe the griddle between batches so melted cheese doesn't build up and burn.",
+    "Clean the egg white pan while warm for the easiest scrub."
+  ],
+  "leftovers": [
+    "Store cooked quesadillas in the fridge up to 3 days.",
+    "Reheat in a dry skillet over medium heat to re-crisp rather than microwaving them soft."
+  ],
+  "heroImage": "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+  "thumbImage": "/images/thumbs/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+  "imageAlt": "Sliced egg white breakfast quesadilla with black beans and pepper jack cheese",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 5,
+  "seoTitle": "Egg White Breakfast Quesadillas | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "egg whites",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "pepper jack cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "flour tortilla",
+        "allergens": [
+          "gluten"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use certified gluten-free tortillas or corn tortillas."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

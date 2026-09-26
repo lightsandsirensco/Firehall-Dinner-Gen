@@ -1,0 +1,311 @@
+{
+  "slug": "red-lentil-paneer-dal",
+  "title": "Red Lentil & Paneer Dal",
+  "displayTitle": "Red Lentil & Paneer Dal",
+  "seoTitle": "Red Lentil & Paneer Dal | Firefighter Meal",
+  "shortDescription": "A creamy red lentil dal finished with seared paneer over basmati rice",
+  "subtitle": "A creamy red lentil dal finished with seared paneer over basmati rice",
+  "category": "hall_expansion",
+  "cuisine": "indian",
+  "description": "Red lentils simmer down into a creamy dal with tomato, garlic, and warm spices, then get topped with seared paneer and a dollop of yogurt. It is a genuine vegetarian main, not a side dish, served over basmati rice.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 40,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 723,
+  "protein": 38,
+  "carbs": 66,
+  "fats": 34,
+  "tags": [
+    "protein:vegetarian",
+    "format:soup_chili",
+    "category:crew_feeders",
+    "soup_chili",
+    "vegetarian",
+    "healthy",
+    "high_protein",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Large soup pot",
+    "Skillet",
+    "Rice cooker or pot"
+  ],
+  "ingredients": [
+    {
+      "name": "red lentils",
+      "quantity": "2.5",
+      "unit": "cups",
+      "notes": "dried, rinsed",
+      "group": "Base"
+    },
+    {
+      "name": "paneer",
+      "quantity": "2.25",
+      "unit": "lb",
+      "notes": "cubed",
+      "group": "Protein"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "basmati rice",
+      "quantity": "2",
+      "unit": "cups",
+      "notes": "dry",
+      "group": "Base"
+    },
+    {
+      "name": "yellow onion",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "diced",
+      "group": "Base"
+    },
+    {
+      "name": "garlic",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Base"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "1",
+      "unit": "tbsp",
+      "notes": "grated",
+      "group": "Base"
+    },
+    {
+      "name": "crushed tomato",
+      "quantity": "1",
+      "unit": "can",
+      "group": "Base"
+    },
+    {
+      "name": "vegetable broth",
+      "quantity": "6",
+      "unit": "cups",
+      "group": "Base"
+    },
+    {
+      "name": "garam masala",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "turmeric",
+      "quantity": "1",
+      "unit": "tsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "cumin",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Seasoning"
+    },
+    {
+      "name": "greek yogurt",
+      "quantity": "1",
+      "unit": "cup",
+      "notes": "for serving",
+      "group": "Finish"
+    },
+    {
+      "name": "fresh cilantro",
+      "quantity": "0.25",
+      "unit": "cup",
+      "notes": "chopped",
+      "group": "Finish",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Cook the rice",
+      "instruction": "Rinse basmati rice and cook according to package directions. Fluff and hold covered.",
+      "minutes": 20,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Build the dal base",
+      "instruction": "Heat 1 tablespoon olive oil in a large pot over medium. Cook onion 5–6 minutes until soft, then add garlic and ginger and cook 1 minute more. Stir in garam masala, turmeric, and cumin and toast 30 seconds.",
+      "minutes": 8,
+      "heatLevel": "medium"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Simmer the lentils",
+      "instruction": "Add rinsed red lentils, crushed tomato, and vegetable broth. Bring to a gentle boil, then reduce to a low simmer. Cook 25–30 minutes, stirring occasionally, until the lentils break down into a thick, creamy dal.",
+      "minutes": 30,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 4,
+      "title": "Sear the paneer",
+      "instruction": "While the dal simmers, heat remaining oil in a skillet over medium-high. Sear paneer cubes 2–3 minutes per side until golden. Set aside.",
+      "minutes": 8,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Adjust seasoning and thickness",
+      "instruction": "Taste the dal and add salt or a splash of broth if it's too thick. It should be thick enough to hold on a spoon but still pourable.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Serve",
+      "instruction": "Ladle dal over basmati rice, top with seared paneer, a dollop of yogurt, and cilantro if using.",
+      "minutes": 6,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover red lentil dal base — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool red lentil and paneer dal and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Rinse red lentils until the water runs mostly clear for the smoothest dal.",
+    "Rookie tip: Sear paneer close to service so it stays crisp instead of softening in the hot dal.",
+    "A spoon of ghee stirred in at the end (a classic tadka) adds real depth if the hall has it on hand."
+  ],
+  "tonightSpread": [
+    "Main: Red lentil and paneer dal",
+    "Sides: Cucumber raita, simple green salad",
+    "Condiments: Naan, extra yogurt",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool red lentil and paneer dal in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Dal thickens in the fridge — loosen with a splash of water or broth when reheating."
+  ],
+  "whyCrewsLikeIt": "It is a one-pot, low-cleanup dinner that happens to be vegetarian, and the seared paneer on top makes it feel like a full entrée instead of a bowl of soup.",
+  "mealPrepNotes": "Make-ahead: the dal base holds and improves for up to 3 days. Storage: keep dal, paneer, and rice in separate containers up to 4 days. Reheating: reheat dal on the stove with a splash of water; sear paneer fresh or reheat gently so it doesn't turn rubbery.",
+  "substitutions": [
+    "Use extra-firm tofu instead of paneer for a dairy-free-adaptable version.",
+    "Use canned lentils in a pinch, added in the last 10 minutes instead of simmering from dry.",
+    "Use brown rice instead of basmati for more fiber."
+  ],
+  "spiceLevel": "medium",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 723,
+    "protein": 38,
+    "carbs": 66,
+    "fats": 34,
+    "label": "~723 cal/serving · 38g protein · 12g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": false
+    }
+  },
+  "heroImage": "/images/hall-expansion/red-lentil-paneer-dal.jpg",
+  "heroImageAlt": "Red Lentil & Paneer Dal — indian soup_chili plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/red-lentil-paneer-dal.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/red-lentil-paneer-dal.jpg",
+  "railImage": "/images/rails/hall-expansion/red-lentil-paneer-dal.jpg",
+  "realismScore": 100,
+  "firefighterScore": 86,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "red lentil dal",
+    "paneer dal",
+    "vegetarian high protein dal",
+    "indian lentil dinner",
+    "high protein vegetarian dinner"
+  ],
+  "relatedSlugs": [
+    "firehouse-lentil-chili",
+    "firehouse-turkey-white-bean-soup",
+    "shawarma-bar-night",
+    "fajita-bar-night"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 14,
+    "totalCount": 14,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "paneer",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "vegetable broth",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "greek yogurt",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free broth or bouillon."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

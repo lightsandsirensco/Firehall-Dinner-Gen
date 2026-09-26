@@ -2,7 +2,7 @@
   "slug": "bagel-sandwich-line",
   "title": "Bagel Sandwich Line",
   "subtitle": "Build-your-own bagel sandwiches with eggs, cheese, and proteins for staggered crews.",
-  "description": "A firefighter hall breakfast line that lets every crew member build a hot bagel sandwich without waiting for individual orders. Egg sheets, cheese, and warm proteins stay organized in hotel pans so morning service continues even when the crew arrives in waves.",
+  "description": "A firefighter hall breakfast line that lets every crew member build a hot bagel sandwich without waiting for individual orders. Egg sheets, cheese, and warm proteins stay organized in baking dishes so morning service continues even when the crew arrives in waves.",
   "filters": [
     "breakfast_sandwiches",
     "feed_a_crew",
@@ -15,8 +15,8 @@
     "build-your-own",
     "handheld"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 20,
   "cookTime": 25,
   "totalTime": 45,
@@ -24,42 +24,42 @@
   "ingredients": [
     {
       "name": "bagels",
-      "quantity": "9.6",
+      "quantity": "12",
       "notes": "assorted, sliced",
       "group": "Bagels"
     },
     {
       "name": "large eggs",
-      "quantity": "14",
+      "quantity": "18",
       "notes": "whisked with 1/2 cup milk",
       "group": "Egg sheet"
     },
     {
       "name": "breakfast sausage patties",
-      "quantity": "8",
+      "quantity": "10",
       "notes": "or Canadian bacon slices",
       "group": "Protein"
     },
     {
       "name": "cooked bacon",
-      "quantity": "8 slices",
+      "quantity": "10 slices",
       "notes": "optional second protein",
       "group": "Protein"
     },
     {
       "name": "cheddar, Swiss, or American cheese",
-      "quantity": "10 slices",
+      "quantity": "12 slices",
       "group": "Cheese"
     },
     {
       "name": "cream cheese",
-      "quantity": "6.4 oz",
+      "quantity": "8 oz",
       "notes": "plus sliced tomato, spinach, and hot sauce",
       "group": "Toppings"
     },
     {
       "name": "kosher salt",
-      "quantity": "7/8 tsp",
+      "quantity": "1 tsp",
       "notes": "plus black pepper for eggs",
       "group": "Seasoning"
     }
@@ -111,7 +111,7 @@
     "protein": 51,
     "carbs": 68,
     "fat": 57,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -131,7 +131,7 @@
   "stationWorkflow": [
     "Bake one egg sheet while another cook toasts bagels and warms sausage so the line opens all at once.",
     "Keep hot proteins above 140°F and cold tomato, spinach, and cream cheese below 40°F during extended service.",
-    "For a call, cover the hot hotel pan and leave sandwiches unassembled; crews can build fresh when they return."
+    "For a call, cover the hot baking dish and leave sandwiches unassembled; crews can build fresh when they return."
   ],
   "cleanupNotes": [
     "Lift and discard the parchment egg liner before washing the sheet pan; it removes nearly all baked-on egg.",
@@ -144,8 +144,8 @@
   "heroImage": "/images/breakfast/bagel-sandwich-line.jpg",
   "thumbImage": "/images/thumbs/breakfast/bagel-sandwich-line.jpg",
   "imageAlt": "Build-your-own bagel sandwich line with egg squares, cheese, sausage, bacon, and toppings",
-  "publishedAt": "2026-07-17T20:15:27.731Z",
-  "updatedAt": "2026-07-17T20:15:27.731Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 7,
   "seoTitle": "Bagel Sandwich Line | Firehall Breakfast",
   "dietary": {
@@ -218,10 +218,6 @@
         "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "tomatoes",
-    "spinach"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

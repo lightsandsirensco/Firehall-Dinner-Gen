@@ -1,0 +1,194 @@
+{
+  "slug": "turkey-sausage-egg-white-sandwiches",
+  "title": "Turkey Sausage Egg White Breakfast Sandwiches",
+  "subtitle": "A leaner breakfast sandwich built on turkey sausage, egg whites, and whole English muffins.",
+  "description": "Turkey sausage patties and fluffy egg whites are stacked on toasted English muffins with a slice of cheese. It is a lighter take on the hall's usual breakfast sandwich, built for crews watching fat without giving up a real handheld breakfast.",
+  "filters": [
+    "breakfast_sandwiches",
+    "high_protein",
+    "healthy_breakfasts"
+  ],
+  "tags": [
+    "sandwiches",
+    "turkey-sausage",
+    "egg-whites",
+    "english-muffin",
+    "leaner"
+  ],
+  "crewSize": 8,
+  "baseServings": 8,
+  "prepTime": 10,
+  "cookTime": 16,
+  "totalTime": 26,
+  "difficulty": "easy",
+  "ingredients": [
+    {
+      "name": "turkey sausage",
+      "quantity": "2 lb",
+      "notes": "formed into 8 thin patties",
+      "group": "Protein"
+    },
+    {
+      "name": "egg whites",
+      "quantity": "24",
+      "notes": "or 3 cups liquid egg whites",
+      "group": "Protein"
+    },
+    {
+      "name": "english muffin",
+      "quantity": "8",
+      "notes": "split",
+      "group": "Build"
+    },
+    {
+      "name": "cheddar cheese",
+      "quantity": "8 slices",
+      "notes": "or reduced-fat cheese",
+      "group": "Build"
+    },
+    {
+      "name": "butter",
+      "quantity": "1 tbsp",
+      "notes": "for the pan",
+      "group": "Build"
+    },
+    {
+      "name": "hot sauce",
+      "quantity": "1",
+      "group": "Build",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Toast the muffins",
+      "instruction": "Split and toast English muffins on a griddle or under the broiler until golden. Hold warm on a tray.",
+      "minutes": 5
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the turkey sausage",
+      "instruction": "Cook turkey sausage patties in a skillet over medium heat 4 minutes per side until browned and 165°F internal. Turkey sausage has less fat than pork, so watch closely — it can dry out if pushed too hot.",
+      "minutes": 8
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cook the egg whites",
+      "instruction": "Melt butter in a nonstick pan over medium-low. Pour in egg whites and cook gently, stirring occasionally, until just set — egg whites firm up faster than whole eggs, so pull them a little early.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 4,
+      "title": "Assemble the sandwiches",
+      "instruction": "Layer sausage, a portion of egg whites, and cheese on the bottom muffin half. Close and hold wrapped in foil on a warm tray until served.",
+      "minutes": 6
+    },
+    {
+      "stepNumber": 5,
+      "title": "Hold and serve",
+      "instruction": "Hold wrapped sandwiches in a 200°F oven up to 15 minutes if serving is staggered. Serve with hot sauce on the side.",
+      "minutes": 0
+    }
+  ],
+  "nutrition": {
+    "calories": 449,
+    "protein": 46,
+    "carbs": 16,
+    "fat": 21,
+    "label": "per serving (hall portion)",
+    "source": "calculated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": true,
+      "mealPrepFriendly": false
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
+  },
+  "stationWorkflow": [
+    "Toast muffins first since they hold well wrapped while the rest finishes.",
+    "Cook sausage and egg whites in separate pans so timing for each stays accurate.",
+    "Assemble sandwiches just before service — egg whites lose their texture if they sit built too long."
+  ],
+  "cleanupNotes": [
+    "Wipe the egg white pan while still warm — a nonstick surface is easiest to clean before it cools.",
+    "Drain the sausage skillet promptly; turkey sausage renders less fat than pork but it still sets up if left to cool in the pan."
+  ],
+  "leftovers": [
+    "Store sausage and egg whites separately from muffins to avoid sogginess.",
+    "Reheat sausage and eggs covered at 300°F for 8 minutes, then rebuild sandwiches fresh."
+  ],
+  "heroImage": "/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
+  "thumbImage": "/images/thumbs/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
+  "imageAlt": "Turkey sausage and egg white breakfast sandwich on a toasted English muffin",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
+  "readMinutes": 5,
+  "seoTitle": "Turkey Sausage Egg White Sandwiches | Firehall Breakfast",
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 6,
+    "totalCount": 6,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "egg whites",
+        "allergens": [
+          "egg"
+        ]
+      },
+      {
+        "name": "english muffin",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "cheddar cheese",
+        "allergens": [
+          "dairy"
+        ]
+      },
+      {
+        "name": "butter",
+        "allergens": [
+          "dairy"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": false,
+      "eggFree": false,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+      },
+      {
+        "flag": "dairy",
+        "label": "Dairy-Free Adaptable",
+        "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

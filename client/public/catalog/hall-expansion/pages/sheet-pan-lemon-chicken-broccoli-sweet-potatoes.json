@@ -1,0 +1,252 @@
+{
+  "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+  "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
+  "displayTitle": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
+  "seoTitle": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes | Firefighter Meal",
+  "shortDescription": "A one-pan, lighter dinner of lemon-herb chicken with roasted broccoli and sweet potato",
+  "subtitle": "A one-pan, lighter dinner of lemon-herb chicken with roasted broccoli and sweet potato",
+  "category": "hall_expansion",
+  "cuisine": "american",
+  "description": "Chicken breast, broccoli, and sweet potato roast together on sheet pans with a lemon-herb marinade, finished with a squeeze of fresh lemon. It is a straightforward, lower-calorie dinner with one pan per station and little cleanup.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 30,
+  "prepTime": 15,
+  "difficulty": "easy",
+  "calories": 615,
+  "protein": 59,
+  "carbs": 47,
+  "fats": 21,
+  "tags": [
+    "protein:chicken",
+    "format:sheet_pan",
+    "category:crew_feeders",
+    "sheet_pan",
+    "chicken",
+    "healthy",
+    "high_protein",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Two sheet pans",
+    "Mixing bowls",
+    "Instant-read thermometer"
+  ],
+  "ingredients": [
+    {
+      "name": "chicken breast",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "cut into even pieces",
+      "group": "Protein"
+    },
+    {
+      "name": "lemon juice",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Marinade"
+    },
+    {
+      "name": "dried oregano",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Marinade"
+    },
+    {
+      "name": "garlic",
+      "quantity": "4",
+      "unit": "cloves",
+      "notes": "minced",
+      "group": "Marinade"
+    },
+    {
+      "name": "sweet potato",
+      "quantity": "3",
+      "unit": "lb",
+      "notes": "3/4-inch cubes",
+      "group": "Vegetables"
+    },
+    {
+      "name": "broccoli florets",
+      "quantity": "2.5",
+      "unit": "lb",
+      "group": "Vegetables"
+    },
+    {
+      "name": "olive oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Vegetables"
+    },
+    {
+      "name": "lemon",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "for zest and wedges",
+      "group": "Finish"
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Marinate the chicken",
+      "instruction": "Whisk lemon juice, olive oil, oregano, garlic, salt, and pepper. Add chicken and turn to coat. Let it marinate at least 15 minutes while the oven heats and vegetables are cut.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Start the sweet potato",
+      "instruction": "Heat the oven to 425°F. Toss sweet potato with 2 tablespoons olive oil, salt, and pepper on a sheet pan and roast 12 minutes to give it a head start over the faster-cooking broccoli and chicken. Target oven/smoker temperature: 425°F.",
+      "minutes": 12,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Add chicken and broccoli",
+      "instruction": "Toss broccoli with remaining oil, salt, and pepper. Add marinated chicken and broccoli to the pan with the sweet potato, spreading everything into a single layer across one or two pans as needed.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Roast until everything is cooked through",
+      "instruction": "Roast 16–18 minutes, until chicken reaches 165°F, broccoli is browned at the tips, and sweet potato is fork-tender. Rotate pans halfway if using two ovens racks. Target oven/smoker temperature: 425°F.",
+      "minutes": 18,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Finish with lemon",
+      "instruction": "Pull the pan from the oven and immediately zest a lemon over everything while it's hot — the citrus oils bloom in the heat. Squeeze lemon wedges over individual portions at serving.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Hold for a delayed line",
+      "instruction": "If service is delayed, hold everything loosely covered in a 200°F oven. Add the lemon zest and juice only right before serving so it doesn't turn bitter sitting on hot food. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Hold for call interruptions",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover lemon-herb chicken — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
+      "minutes": 5,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 8,
+      "title": "Pack down leftovers safely",
+      "instruction": "Cool lemon-herb chicken and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "minutes": 10,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Give the sweet potato a head start — it takes longer than chicken and broccoli.",
+    "Rookie tip: Add lemon zest right when the pan comes out of the oven; the heat brings out more citrus flavor.",
+    "Cut chicken into even pieces so everything finishes cooking at the same time.",
+    "Use two sheet pans rather than crowding one — crowded vegetables steam instead of roast."
+  ],
+  "tonightSpread": [
+    "Main: Sheet-pan lemon chicken with broccoli and sweet potatoes",
+    "Sides: Simple green salad, crusty bread",
+    "Condiments: Extra lemon wedges, hot sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Cool lemon-herb chicken in shallow pans within two hours; label with date and reheat to 165°F before second shift.",
+    "Store cold sides separately — hot and cold stacked overnight ruins texture.",
+    "Reheat in a skillet over medium heat to re-crisp the vegetables rather than microwaving them soft."
+  ],
+  "whyCrewsLikeIt": "It is fast to put together, uses one or two pans total, and gives crews a genuinely lighter dinner night without feeling like a diet plate.",
+  "mealPrepNotes": "Make-ahead: marinate chicken up to a day ahead. Storage: keep chicken and vegetables together up to 4 days. Reheating: reheat covered at 350°F for 10 minutes, or in a skillet to re-crisp the vegetables.",
+  "substitutions": [
+    "Use chicken thighs instead of breast for a juicier result.",
+    "Use cauliflower instead of broccoli.",
+    "Use white fish in place of chicken for an even lighter option."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "easy",
+  "nutrition": {
+    "calories": 615,
+    "protein": 59,
+    "carbs": 47,
+    "fats": 21,
+    "label": "~615 cal/serving · 59g protein · 7g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+  "heroImageAlt": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes — american sheet_pan plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+  "railImage": "/images/rails/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "sheet pan chicken dinner",
+    "lighter chicken dinner",
+    "high protein sheet pan dinner",
+    "lemon chicken broccoli sweet potato",
+    "healthy sheet pan dinner",
+    "firehouse sheet pan chicken"
+  ],
+  "relatedSlugs": [
+    "loaded-potato-skins",
+    "game-day-pizza-sliders",
+    "philly-cheesesteak-sliders",
+    "cheesy-beef-nacho-bake"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 9,
+    "totalCount": 9,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [],
+    "flags": {
+      "glutenFree": true,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": true,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": false,
+      "vegan": false
+    },
+    "adaptable": [],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

@@ -1,6 +1,6 @@
 # Hall Guides Production Audit
 
-Generated: 2026-09-25T15:12:59.529Z
+Generated: 2026-09-26T17:52:17.618Z
 
 ## Executive summary
 

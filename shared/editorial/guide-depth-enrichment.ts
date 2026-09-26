@@ -115,7 +115,12 @@ function needsEnrichment(article: EditorialArticle): boolean {
 }
 
 /** Recipe-list guides — keep author structure; do not inject filler sections. */
-const SKIP_DEPTH_ENRICHMENT_SLUGS = new Set(["10-classic-firehall-meals"]);
+const SKIP_DEPTH_ENRICHMENT_SLUGS = new Set([
+  "10-classic-firehall-meals",
+  // Editorially rewritten with guide-specific sections/FAQs — do not
+  // overwrite with the generic nutrition_performance template.
+  "healthy-smoothies-at-the-hall",
+]);
 
 /** Add station depth to thin guides at publish/audit time. */
 export function enrichGuideArticle(article: EditorialArticle): EditorialArticle {

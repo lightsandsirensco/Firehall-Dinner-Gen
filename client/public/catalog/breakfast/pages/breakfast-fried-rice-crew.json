@@ -99,7 +99,7 @@
     {
       "stepNumber": 5,
       "title": "Toss with sesame oil and portion",
-      "instruction": "Drizzle sesame oil over the top and toss once. Taste for salt and transfer to a warm hotel pan for the line with chili crisp or hot sauce alongside.",
+      "instruction": "Drizzle sesame oil over the top and toss once. Taste for salt and transfer to a warm baking dish for the line with chili crisp or hot sauce alongside.",
       "minutes": 3
     }
   ],
@@ -108,7 +108,7 @@
     "protein": 39,
     "carbs": 117,
     "fat": 32,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -141,8 +141,8 @@
   "heroImage": "/images/breakfast/breakfast-fried-rice-crew.jpg",
   "thumbImage": "/images/thumbs/breakfast/breakfast-fried-rice-crew.jpg",
   "imageAlt": "Breakfast fried rice with bacon, eggs, peas, and scallions in a wok",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 7,
   "seoTitle": "Breakfast Fried Rice for the Crew | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -197,7 +197,6 @@
         "note": "Use coconut aminos."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

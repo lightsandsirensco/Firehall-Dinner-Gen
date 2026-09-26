@@ -13,10 +13,10 @@
   "cookTime": 300,
   "prepTime": 15,
   "difficulty": "hard",
-  "calories": 1400,
-  "protein": 109,
-  "carbs": 66,
-  "fats": 80,
+  "calories": 530,
+  "protein": 36,
+  "carbs": 34,
+  "fats": 28,
   "tags": [
     "protein:beef",
     "format:smoker",
@@ -34,7 +34,7 @@
     "Heavy-duty foil",
     "Instant-read thermometer",
     "Slicing knife",
-    "Hotel pans"
+    "baking dishes"
   ],
   "ingredients": [
     {
@@ -156,18 +156,18 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1400,
-    "protein": 109,
-    "carbs": 66,
-    "fats": 80,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 530,
+    "protein": 36,
+    "carbs": 34,
+    "fats": 28,
+    "label": "~530 cal/serving · 36g protein · 4g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
@@ -196,7 +196,7 @@
     "smoked-sausage-platter"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.769Z",
+  "generatedAt": "2026-09-26T19:26:55.955Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -254,9 +254,6 @@
         "note": "Substitute non-alcoholic beer or broth."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "mustard"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

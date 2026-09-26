@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 40,
   "difficulty": "medium",
-  "calories": 1009,
-  "protein": 84,
-  "carbs": 76,
-  "fats": 41,
+  "calories": 460,
+  "protein": 34,
+  "carbs": 36,
+  "fats": 20,
   "tags": [
     "protein:chicken",
     "format:bar_line",
@@ -31,7 +31,7 @@
   ],
   "equipment": [
     "Grill or grill pan",
-    "Hotel pans",
+    "baking dishes",
     "Serving bowls",
     "Instant-read thermometer",
     "Sheet pan"
@@ -112,7 +112,7 @@
     {
       "stepNumber": 2,
       "title": "Rest and slice chicken",
-      "instruction": "Rest grilled chicken 10 minutes, then slice into strips. Hold in a hotel pan at 165°F with a light drizzle of olive oil to prevent drying.",
+      "instruction": "Rest grilled chicken 10 minutes, then slice into strips. Hold in a baking dish at 165°F with a light drizzle of olive oil to prevent drying.",
       "minutes": 15,
       "heatLevel": ""
     },
@@ -156,29 +156,29 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1009,
-    "protein": 84,
-    "carbs": 76,
-    "fats": 41,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 460,
+    "protein": 34,
+    "carbs": 36,
+    "fats": 20,
+    "label": "~460 cal/serving · 34g protein · 6g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
-      "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": true,
+      "highProtein": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": false,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
-      "highProtein": true,
-      "lighterOption": false,
-      "performanceMeal": false
+      "highProtein": false,
+      "lighterOption": true,
+      "performanceMeal": true
     }
   },
   "heroImage": "/images/hall-expansion/mediterranean-feast-night.jpg",
-  "heroImageAlt": "Mediterranean Feast Night — mediterranean bar line plated for a firehall crew",
+  "heroImageAlt": "Mediterranean Feast Night — mediterranean bar_line plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/mediterranean-feast-night.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/mediterranean-feast-night.jpg",
   "railImage": "/images/rails/hall-expansion/mediterranean-feast-night.jpg",
@@ -196,7 +196,7 @@
     "firehall-charcuterie-board"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.770Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -255,10 +255,6 @@
         "note": "Substitute quinoa or rice. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "olives",
-    "feta"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

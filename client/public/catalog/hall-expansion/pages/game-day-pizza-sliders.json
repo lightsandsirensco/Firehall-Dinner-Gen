@@ -13,10 +13,10 @@
   "cookTime": 25,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 449,
-  "protein": 19,
-  "carbs": 14,
-  "fats": 35,
+  "calories": 420,
+  "protein": 18,
+  "carbs": 42,
+  "fats": 20,
   "tags": [
     "protein:pork",
     "format:sheet_pan",
@@ -159,29 +159,29 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 449,
-    "protein": 19,
-    "carbs": 14,
-    "fats": 35,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 420,
+    "protein": 18,
+    "carbs": 42,
+    "fats": 20,
+    "label": "~420 cal/serving · 18g protein · 2g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": false,
       "under700Calories": true,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": false,
-      "lowCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": true
     },
     "badgeCandidates": {
       "highProtein": false,
-      "lighterOption": false,
+      "lighterOption": true,
       "performanceMeal": false
     }
   },
   "heroImage": "/images/hall-expansion/game-day-pizza-sliders.jpg",
-  "heroImageAlt": "Game Day Pizza Sliders — italian-american sheet pan plated for a firehall crew",
+  "heroImageAlt": "Game Day Pizza Sliders — italian-american sheet_pan plated for a firehall crew",
   "mobileImage": "/images/mobile/hall-expansion/game-day-pizza-sliders.jpg",
   "thumbImage": "/images/thumbs/hall-expansion/game-day-pizza-sliders.jpg",
   "railImage": "/images/rails/hall-expansion/game-day-pizza-sliders.jpg",
@@ -199,7 +199,7 @@
     "sheet-pan-meatball-marinara"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.769Z",
+  "generatedAt": "2026-09-26T19:26:55.956Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -263,7 +263,6 @@
         "note": "Use a dairy-free cheese shred/block alternative. Use a plant-based butter/margarine."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": []
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

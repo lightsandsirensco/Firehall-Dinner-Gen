@@ -1,0 +1,312 @@
+{
+  "slug": "sesame-ginger-tofu-bowls",
+  "title": "Sesame Ginger Tofu Bowls",
+  "displayTitle": "Sesame Ginger Tofu Bowls",
+  "seoTitle": "Sesame Ginger Tofu Bowls | Firefighter Meal",
+  "shortDescription": "Crisped tofu, edamame, and vegetables over rice with a sesame-ginger sauce",
+  "subtitle": "Crisped tofu, edamame, and vegetables over rice with a sesame-ginger sauce",
+  "category": "hall_expansion",
+  "cuisine": "asian",
+  "description": "Pressed tofu is pan-crisped until golden, then served over rice with edamame, shredded carrots, and cucumber in a sesame-ginger sauce. It is the hall's first fully vegetarian high-protein bowl option.",
+  "crewSize": 8,
+  "baseServings": 8,
+  "cookTime": 20,
+  "prepTime": 20,
+  "difficulty": "medium",
+  "calories": 584,
+  "protein": 35,
+  "carbs": 68,
+  "fats": 22,
+  "tags": [
+    "protein:vegetarian",
+    "format:bowl",
+    "category:crew_feeders",
+    "bowl",
+    "vegetarian",
+    "healthy",
+    "high_protein",
+    "meal_prep",
+    "hall_expansion",
+    "hall_expansion_74",
+    "hall_meal",
+    "firefighter_meal"
+  ],
+  "equipment": [
+    "Rice pot",
+    "Large skillet",
+    "Mixing bowls",
+    "Whisk"
+  ],
+  "ingredients": [
+    {
+      "name": "firm tofu",
+      "quantity": "3",
+      "unit": "block",
+      "notes": "pressed, cubed",
+      "group": "Protein"
+    },
+    {
+      "name": "cornstarch",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "vegetable oil",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Protein"
+    },
+    {
+      "name": "jasmine rice",
+      "quantity": "2.5",
+      "unit": "cups",
+      "notes": "uncooked",
+      "group": "Base"
+    },
+    {
+      "name": "edamame",
+      "quantity": "3",
+      "unit": "cups",
+      "notes": "shelled, thawed",
+      "group": "Vegetables"
+    },
+    {
+      "name": "shredded carrots",
+      "quantity": "2",
+      "unit": "cups",
+      "group": "Vegetables"
+    },
+    {
+      "name": "cucumber",
+      "quantity": "2",
+      "unit": "each",
+      "notes": "sliced",
+      "group": "Vegetables"
+    },
+    {
+      "name": "soy sauce",
+      "quantity": "0.33",
+      "unit": "cup",
+      "group": "Sauce"
+    },
+    {
+      "name": "rice vinegar",
+      "quantity": "3",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "honey",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "fresh ginger",
+      "quantity": "2",
+      "unit": "tbsp",
+      "notes": "grated",
+      "group": "Sauce"
+    },
+    {
+      "name": "sesame oil",
+      "quantity": "1",
+      "unit": "tbsp",
+      "group": "Sauce"
+    },
+    {
+      "name": "sesame seeds",
+      "quantity": "2",
+      "unit": "tbsp",
+      "group": "Finish",
+      "optional": true
+    }
+  ],
+  "steps": [
+    {
+      "stepNumber": 1,
+      "title": "Press the tofu",
+      "instruction": "Wrap tofu blocks in paper towel and press under a heavy pan for at least 15 minutes to remove excess water. Dry tofu is the difference between crisp edges and a soggy pan.",
+      "minutes": 15,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 2,
+      "title": "Cook the rice",
+      "instruction": "Rinse rice, bring it with water to a boil in a lidded pot, then reduce to low and simmer 18 minutes. Rest 10 minutes off heat, then fluff.",
+      "minutes": 28,
+      "heatLevel": "low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Cube and coat the tofu",
+      "instruction": "Cut pressed tofu into 3/4-inch cubes and toss gently with cornstarch until lightly coated. The cornstarch is what creates the crisp shell in the pan.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 4,
+      "title": "Crisp the tofu",
+      "instruction": "Heat oil in a wide skillet over medium-high. Add tofu in a single layer and let it sit undisturbed 3 minutes per side, turning occasionally, until golden and crisp on most sides, about 10 minutes total.",
+      "minutes": 10,
+      "heatLevel": "medium-high"
+    },
+    {
+      "stepNumber": 5,
+      "title": "Mix the sesame-ginger sauce",
+      "instruction": "Whisk soy sauce, rice vinegar, honey, ginger, and sesame oil in a small bowl until the honey dissolves. Toss half of it with the warm tofu right in the pan.",
+      "minutes": 5,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 6,
+      "title": "Warm the edamame",
+      "instruction": "Steam or microwave edamame with a splash of water 3–4 minutes until hot. Toss with a pinch of salt.",
+      "minutes": 4,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 7,
+      "title": "Build the bowls",
+      "instruction": "Layer rice, edamame, carrots, and cucumber in each bowl, top with crisped tofu, and drizzle the remaining sauce over the top. Finish with sesame seeds if using.",
+      "minutes": 8,
+      "heatLevel": ""
+    },
+    {
+      "stepNumber": 8,
+      "title": "Hold for a delayed line",
+      "instruction": "If service is delayed, hold tofu uncovered on a rack over a sheet pan in a 200°F oven so the crust stays crisp instead of steaming soft under a lid. Target oven/smoker temperature: 200°F.",
+      "minutes": 5,
+      "heatLevel": ""
+    }
+  ],
+  "proTips": [
+    "Prep tip: Do not skip pressing the tofu — wet tofu will not crisp no matter how hot the pan is.",
+    "Rookie tip: Let tofu sit undisturbed in the pan; flipping it too early tears off the crust.",
+    "Add sriracha or chili crisp on the side for crews who want heat.",
+    "Double the sauce batch and keep extra on hand — this dish tends to run out of sauce first."
+  ],
+  "tonightSpread": [
+    "Main: Sesame ginger tofu bowls",
+    "Sides: Steamed broccoli, extra cucumber",
+    "Condiments: Sriracha, extra sesame-ginger sauce",
+    "Set hot components closest to the crew; cold crunch and toppings at the far end of the line.",
+    "Keep a backup tray at 200°F for firefighters returning from a run."
+  ],
+  "leftovers": [
+    "Store tofu separately from rice and re-crisp it in a dry skillet rather than the microwave.",
+    "Cool rice and vegetables in shallow containers within two hours of cooking.",
+    "Leftover tofu and vegetables work well cold, tossed with extra sauce, as a next-day lunch."
+  ],
+  "whyCrewsLikeIt": "The sauce and crisp texture do the convincing — most crews are surprised how filling and flavorful a vegetarian night can be, and it gives anyone avoiding meat a real seat at the table.",
+  "mealPrepNotes": "Make-ahead: press and marinate tofu up to a day ahead; sauce holds 5 days. Storage: keep tofu, rice, and vegetables separate up to 4 days. Reheating: reheat tofu in a dry skillet to re-crisp rather than the microwave, which turns it soft.",
+  "substitutions": [
+    "Use tempeh instead of tofu for a firmer, nuttier bite.",
+    "Use brown rice or quinoa instead of jasmine rice.",
+    "Use tamari instead of soy sauce for a gluten-free version."
+  ],
+  "spiceLevel": "mild",
+  "cleanupDifficulty": "medium",
+  "nutrition": {
+    "calories": 584,
+    "protein": 35,
+    "carbs": 68,
+    "fats": 22,
+    "label": "~584 cal/serving · 35g protein · 8g fiber (est.)",
+    "source": "estimated",
+    "estimateAvailable": true,
+    "filterFlags": {
+      "highProtein": true,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
+      "lowCarb": false,
+      "mealPrepFriendly": true
+    },
+    "badgeCandidates": {
+      "highProtein": true,
+      "lighterOption": false,
+      "performanceMeal": true
+    }
+  },
+  "heroImage": "/images/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+  "heroImageAlt": "Sesame Ginger Tofu Bowls — asian bowl plated for a firehall crew",
+  "mobileImage": "/images/mobile/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+  "thumbImage": "/images/thumbs/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+  "railImage": "/images/rails/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+  "realismScore": 100,
+  "firefighterScore": 89,
+  "popularityWeight": 7.8,
+  "searchTerms": [
+    "tofu bowl",
+    "high protein vegetarian bowl",
+    "sesame ginger tofu",
+    "crispy tofu rice bowl",
+    "vegetarian meal prep bowl",
+    "firehouse tofu bowl"
+  ],
+  "relatedSlugs": [
+    "ginger-soy-chicken-rice-bowls",
+    "mediterranean-chicken-farro-bowls",
+    "tonkotsu-ramen-crew",
+    "miso-ramen-bar"
+  ],
+  "sourceUrl": "",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
+  "contentVersion": 2,
+  "dietary": {
+    "confidence": "high",
+    "matchedCount": 13,
+    "totalCount": 13,
+    "uncertainIngredients": [],
+    "flaggedIngredients": [
+      {
+        "name": "firm tofu",
+        "allergens": [
+          "soy"
+        ]
+      },
+      {
+        "name": "edamame",
+        "allergens": [
+          "soy"
+        ]
+      },
+      {
+        "name": "soy sauce",
+        "allergens": [
+          "gluten",
+          "soy"
+        ]
+      },
+      {
+        "name": "sesame seeds",
+        "allergens": [
+          "sesame"
+        ]
+      }
+    ],
+    "flags": {
+      "glutenFree": false,
+      "dairyFree": true,
+      "eggFree": true,
+      "nutFree": true,
+      "peanutFree": true,
+      "soyFree": false,
+      "shellfishFree": true,
+      "fishFree": true,
+      "porkFree": true,
+      "vegetarian": true,
+      "vegan": false
+    },
+    "adaptable": [
+      {
+        "flag": "gluten",
+        "label": "Gluten-Free Adaptable",
+        "note": "Use tamari (check soy-free brands separately) or coconut aminos."
+      }
+    ],
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
+}

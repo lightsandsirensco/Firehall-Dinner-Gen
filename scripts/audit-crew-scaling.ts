@@ -14,6 +14,7 @@ import {
 } from "../shared/recipe/crew-scaling-config.js";
 import {
   formatScaledQuantity,
+  parseQuantityAndUnit,
   roundCountQuantity,
   scaleGoldenIngredients,
 } from "../shared/golden-100/recipe-quality/crew-scale.js";
@@ -61,16 +62,12 @@ type RecipeAudit = {
 };
 
 function parseQty(qty: string | undefined): number {
-  if (!qty?.trim()) return 0;
-  const s = qty.replace(/[¼]/g, "0.25").replace(/[½]/g, "0.5").replace(/[¾]/g, "0.75");
-  const mixed = s.match(/^(\d+)\s+(\d+)\/(\d+)$/);
-  if (mixed) return parseInt(mixed[1], 10) + parseInt(mixed[2], 10) / parseInt(mixed[3], 10);
-  if (s.includes("/")) {
-    const [a, b] = s.split("/").map((x) => parseFloat(x.trim()));
-    if (a && b) return a / b;
-  }
-  const n = parseFloat(s);
-  return Number.isFinite(n) ? n : 0;
+  // Delegates to the same mixed-fraction/unit-aware parser production scaling
+  // uses (shared/golden-100/recipe-quality/crew-scale.ts). The previous local
+  // implementation naively split on "/", which mis-parsed mixed fractions with
+  // a trailing unit (e.g. "1 1/2 cups" → 0.5 instead of 1.5), producing false
+  // "scale_up_bug" reports for perfectly correct scaling.
+  return parseQuantityAndUnit(qty).amount;
 }
 
 function auditRecipe(file: string): RecipeAudit | null {

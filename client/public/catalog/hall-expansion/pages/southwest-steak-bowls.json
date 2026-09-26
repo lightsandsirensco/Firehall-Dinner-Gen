@@ -13,10 +13,10 @@
   "cookTime": 30,
   "prepTime": 20,
   "difficulty": "easy",
-  "calories": 1005,
-  "protein": 76,
-  "carbs": 48,
-  "fats": 59,
+  "calories": 690,
+  "protein": 48,
+  "carbs": 62,
+  "fats": 29,
   "tags": [
     "protein:beef",
     "format:bowl",
@@ -34,7 +34,7 @@
     "Rice pot",
     "Grill basket",
     "Instant-read thermometer",
-    "Hotel pans"
+    "baking dishes"
   ],
   "ingredients": [
     {
@@ -173,14 +173,14 @@
     {
       "stepNumber": 11,
       "title": "Hold for call interruptions",
-      "instruction": "If tones drop mid-cook: turn off direct heat and cover the grilled steak — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. Keep the chipotle crema and pico away from that heat entirely — warm dairy splits and looks broken on the line. On return, spot-check the steak at a safe internal temp before reopening the line.",
+      "instruction": "If tones drop mid-cook: turn off direct heat and cover grilled steak — hold at 140°F in a warm cabinet or 200°F oven, never below 140°F for more than 30 minutes cumulative. Log hold time on the pan with a grease pencil. If tones drop after service, cover hot food and keep sides on low heat or ice as appropriate. On return, spot-check proteins at safe internal temp before reopening the line.",
       "minutes": 5,
       "heatLevel": "low"
     },
     {
       "stepNumber": 12,
       "title": "Pack down leftovers safely",
-      "instruction": "Cool grilled steak and hot components in shallow hotel pans within two hours — deep pots stay in the danger zone too long. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
+      "instruction": "Cool grilled steak and hot components in a shallow baking dish within two hours — food left out too long isn't safe to eat. Label with date; reheat proteins to 165°F minimum before second shift. Store cold components separately so textures survive overnight.",
       "minutes": 10,
       "heatLevel": ""
     }
@@ -215,18 +215,18 @@
   "spiceLevel": "medium",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 1005,
-    "protein": 76,
-    "carbs": 48,
-    "fats": 59,
-    "label": "Estimated per serving",
-    "source": "calculated",
+    "calories": 690,
+    "protein": 48,
+    "carbs": 62,
+    "fats": 29,
+    "label": "~690 cal/serving · 48g protein · 11g fiber (est.)",
+    "source": "estimated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": false,
-      "under30gFat": false,
-      "highCarb": false,
+      "under700Calories": true,
+      "under30gFat": true,
+      "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
     },
@@ -261,7 +261,7 @@
     "miso-ramen-bar"
   ],
   "sourceUrl": "",
-  "generatedAt": "2026-07-17T20:15:12.771Z",
+  "generatedAt": "2026-09-26T19:26:55.959Z",
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
@@ -297,13 +297,6 @@
       "vegan": false
     },
     "adaptable": [],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "cilantro",
-    "bell_peppers",
-    "avocado",
-    "beans",
-    "corn"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }

@@ -15,8 +15,8 @@
     "eggs",
     "bake"
   ],
-  "crewSize": 8,
-  "baseServings": 8,
+  "crewSize": 10,
+  "baseServings": 10,
   "prepTime": 20,
   "cookTime": 30,
   "totalTime": 50,
@@ -24,48 +24,48 @@
   "ingredients": [
     {
       "name": "tomatillos",
-      "quantity": "1.6 lb",
+      "quantity": "2 lb",
       "notes": "husked and rinsed",
       "group": "Salsa"
     },
     {
       "name": "white onion",
-      "quantity": "3/4",
+      "quantity": "1",
       "notes": "quartered",
       "group": "Salsa"
     },
     {
       "name": "jalapeños",
-      "quantity": "3.2",
+      "quantity": "4",
       "notes": "stemmed, seeds optional",
       "group": "Salsa"
     },
     {
       "name": "chicken broth",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "low-sodium",
       "group": "Salsa"
     },
     {
       "name": "thick tortilla chips",
-      "quantity": "12.8 cups",
+      "quantity": "16 cups",
       "notes": "restaurant-style, not thin",
       "group": "Build"
     },
     {
       "name": "large eggs",
-      "quantity": "8",
+      "quantity": "10",
       "group": "Protein"
     },
     {
       "name": "Mexican crema",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "or thinned sour cream",
       "group": "Finish"
     },
     {
       "name": "cotija cheese",
-      "quantity": "3/4 cup",
+      "quantity": "1 cup",
       "notes": "crumbled, plus cilantro and radish slices",
       "group": "Finish"
     }
@@ -81,7 +81,7 @@
     {
       "stepNumber": 2,
       "title": "Heat the oven",
-      "instruction": "Heat oven to 375°F. Grease a deep hotel pan or two 9x13 dishes. Warm salsa off heat—you want it hot but not boiling when it hits the chips.",
+      "instruction": "Heat oven to 375°F. Grease a deep 9x13 baking dish or two smaller baking dishes. Warm salsa off heat—you want it hot but not boiling when it hits the chips.",
       "minutes": 0,
       "tempF": 375
     },
@@ -106,11 +106,11 @@
     }
   ],
   "nutrition": {
-    "calories": 711,
+    "calories": 714,
     "protein": 25,
     "carbs": 102,
     "fat": 23,
-    "label": "Estimated per serving",
+    "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
@@ -133,7 +133,7 @@
     "Cut radishes and cilantro while the first bake runs so garnish is ready at the oven door."
   ],
   "cleanupNotes": [
-    "Soak the hotel pan immediately with hot water—baked salsa and cheese glue sets fast.",
+    "Soak the baking dish immediately with hot water—baked salsa and cheese glue sets fast.",
     "Rinse the blender with warm water before tomatillo skins dry inside the jar."
   ],
   "leftovers": [
@@ -142,9 +142,9 @@
   ],
   "heroImage": "/images/breakfast/chilaquiles-verde-bake.jpg",
   "thumbImage": "/images/thumbs/breakfast/chilaquiles-verde-bake.jpg",
-  "imageAlt": "Baked chilaquiles verde with eggs, crema, and cotija in a hotel pan",
-  "publishedAt": "2026-07-17T20:15:27.730Z",
-  "updatedAt": "2026-07-17T20:15:27.730Z",
+  "imageAlt": "Baked chilaquiles verde with eggs, crema, and cotija in a baking dish",
+  "publishedAt": "2026-09-26T19:26:57.125Z",
+  "updatedAt": "2026-09-26T19:26:57.125Z",
   "readMinutes": 8,
   "seoTitle": "Chilaquiles Verde Bake | Firehall Breakfast",
   "collectionTier": "firehall_classic",
@@ -199,11 +199,6 @@
         "note": "Use a certified gluten-free broth or bouillon."
       }
     ],
-    "classifiedAt": "2026-07-30T18:40:52.075Z"
-  },
-  "avoidTags": [
-    "onions",
-    "cilantro",
-    "jalapenos"
-  ]
+    "classifiedAt": "2026-09-26T19:31:02.326Z"
+  }
 }
