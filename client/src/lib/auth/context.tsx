@@ -9,6 +9,7 @@ import {
 } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { posthog } from "@/lib/posthog-client";
+import { toast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
 import { apiRequest } from "@/lib/queryClient";
 import { trackAccountCreated, trackLogin } from "@/lib/analytics";
@@ -37,6 +38,8 @@ interface AuthContextValue {
   billing: UserBillingState;
   capabilities: AuthCapabilities;
   config: AuthConfig | null;
+  /** True while /api/auth/config is still resolving — lets sign-in UI reserve space instead of popping in. */
+  configLoading: boolean;
   signInOpen: boolean;
   authReturnTo: string | null;
   openSignIn: (returnTo?: string) => void;
@@ -135,6 +138,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     clearAuthReturnTo();
     setAuthReturnTo(null);
     await queryClient.invalidateQueries({ queryKey: ["/api/auth/me"] });
+    toast({ title: "Signed out", description: "See you next shift." });
   }, [queryClient]);
 
   const value = useMemo<AuthContextValue>(
@@ -149,6 +153,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       billing: me?.billing ?? GUEST_BILLING,
       capabilities: me?.capabilities ?? authCapabilities(me?.user ?? null, me?.billing ?? GUEST_BILLING),
       config: configQuery.data ?? null,
+      configLoading: configQuery.isLoading,
       signInOpen,
       authReturnTo,
       openSignIn,
@@ -162,6 +167,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       authenticated,
       me,
       configQuery.data,
+      configQuery.isLoading,
       signInOpen,
       authReturnTo,
       openSignIn,

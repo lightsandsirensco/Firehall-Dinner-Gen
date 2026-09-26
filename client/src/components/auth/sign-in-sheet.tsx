@@ -1,3 +1,4 @@
+import { Flame } from "lucide-react";
 import {
   Sheet,
   SheetContent,
@@ -7,6 +8,7 @@ import {
 } from "@/components/ui/sheet";
 import { useAuth } from "@/lib/auth/context";
 import { SignInPanel } from "@/components/auth/sign-in-panel";
+import { BRAND_NAME } from "@/lib/brand-copy";
 
 export function SignInSheet() {
   const { signInOpen, closeSignIn } = useAuth();
@@ -19,10 +21,14 @@ export function SignInSheet() {
       }}
     >
       <SheetContent side="bottom" className="rounded-t-2xl pb-safe max-h-[90vh] overflow-y-auto">
-        <SheetHeader className="text-left">
-          <SheetTitle className="font-heading tracking-wide">Sign in to Firehall Meals</SheetTitle>
-          <SheetDescription>
-            Sync saves, connect to a hall, and unlock Hall Pro.
+        <SheetHeader className="text-left space-y-3">
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <Flame className="w-4 h-4 text-primary" aria-hidden />
+            <span className="text-xs font-semibold uppercase tracking-[0.18em]">{BRAND_NAME}</span>
+          </div>
+          <SheetTitle className="font-heading tracking-wide text-2xl">Welcome back</SheetTitle>
+          <SheetDescription className="text-[15px]">
+            Sign in to sync your saved meals and preferences.
           </SheetDescription>
         </SheetHeader>
 

@@ -81,7 +81,9 @@ function appChromeForPage(activePage: SiteHeaderActivePage): {
 export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [location, navigate] = useLocation();
-  const { authenticated, openSignIn } = useAuth();
+  const { authenticated, profile, openSignIn } = useAuth();
+  const accountLabel = authenticated ? profile?.display_name || profile?.first_name || "Profile" : "Sign in";
+  const accountInitial = accountLabel.trim().charAt(0).toUpperCase() || "F";
   const [badgeCount, setBadgeCount] = useState(() => favCount ?? getHallFavoritesCount());
   const inAppShell = shouldShowAppShell(location);
   // The logo and "Home" nav item always go to the one true Home — the landing page.
@@ -201,8 +203,14 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
               data-testid="nav-link-account"
               aria-label={authenticated ? "Your account" : "Sign in"}
             >
-              <User className="w-3.5 h-3.5" />
-              <span className="hidden lg:inline">{authenticated ? "Account" : "Sign in"}</span>
+              {authenticated ? (
+                <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-[10px] font-semibold text-primary">
+                  {accountInitial}
+                </span>
+              ) : (
+                <User className="w-3.5 h-3.5" />
+              )}
+              <span className="hidden lg:inline">{accountLabel}</span>
             </button>
 
             {activePage === "favorites" ? (
@@ -318,7 +326,11 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                       hapticLight();
                       setMenuOpen(false);
                       if (authenticated) navigate("/account");
-                      else openSignIn();
+                      // Defer opening the sign-in Sheet to the next tick so it
+                      // doesn't mount while this Sheet's Radix close/focus
+                      // teardown is still running in the same frame — on
+                      // mobile Safari that race can swallow the tap entirely.
+                      else setTimeout(() => openSignIn(), 0);
                     }}
                     className={cn(
                       "w-full text-left rounded-xl px-4 py-3.5 text-base font-medium min-h-[52px] touch-manipulation flex items-center gap-2",
@@ -326,8 +338,14 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                     )}
                     data-testid="nav-mobile-account"
                   >
-                    <User className="w-4 h-4" />
-                    {authenticated ? "Account" : "Sign in"}
+                    {authenticated ? (
+                      <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-semibold text-primary">
+                        {accountInitial}
+                      </span>
+                    ) : (
+                      <User className="w-4 h-4" />
+                    )}
+                    {accountLabel}
                   </button>
                   <button
                     type="button"

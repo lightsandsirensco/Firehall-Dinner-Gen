@@ -37,9 +37,36 @@ declare module "http" {
 
 const isProduction = process.env.NODE_ENV === "production";
 
+// Helmet's default CSP has no explicit `connect-src`, so it falls back to
+// `default-src 'self'` — that silently blocks every posthog-js network call
+// (init/capture/session-replay flush) to VITE_POSTHOG_HOST in production,
+// even though the client is initialized correctly. Only `connect-src` is
+// widened here (to `'self'` + the configured PostHog host); every other
+// directive stays exactly at Helmet's defaults, so this does not change
+// GA4 (loaded via `<script>` in client/index.html, governed by `script-src`,
+// left untouched) or any other CSP behavior.
+const posthogHost = process.env.VITE_POSTHOG_HOST?.trim();
+
+// Google Identity Services (the GIS client + its rendered sign-in button
+// iframe) requires accounts.google.com in both script-src and frame-src —
+// Helmet's defaults have neither, which silently blocks Google Sign-In in
+// production. Only these two directives are widened for this; every other
+// directive (including default script-src 'self', no unsafe-inline) is
+// untouched.
+const GOOGLE_ACCOUNTS_ORIGIN = "https://accounts.google.com";
+
 app.use(
   helmet({
-    contentSecurityPolicy: isProduction,
+    contentSecurityPolicy: isProduction
+      ? {
+          directives: {
+            ...helmet.contentSecurityPolicy.getDefaultDirectives(),
+            "connect-src": ["'self'", ...(posthogHost ? [posthogHost] : [])],
+            "script-src": ["'self'", GOOGLE_ACCOUNTS_ORIGIN],
+            "frame-src": ["'self'", GOOGLE_ACCOUNTS_ORIGIN],
+          },
+        }
+      : false,
     crossOriginEmbedderPolicy: false,
     crossOriginResourcePolicy: { policy: "cross-origin" },
   }),

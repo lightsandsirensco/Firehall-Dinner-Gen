@@ -38,20 +38,45 @@ declare global {
   }
 }
 
+// Cache the in-flight/completed load promise per script id. Without this, a
+// second call while the script is still downloading saw the <script> tag
+// already in the DOM and resolved immediately (treating "tag exists" as
+// "loaded") — which made the Google button-init effect below (it re-runs
+// when googleWidth settles from its initial default to the measured width,
+// shortly after mount) see `window.google` as not-yet-defined and report
+// Google Sign-In as unavailable, even though the script was simply still
+// loading normally.
+const scriptLoadPromises = new Map<string, Promise<void>>();
+
 function loadScript(src: string, id: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    if (document.getElementById(id)) {
-      resolve();
+  const cached = scriptLoadPromises.get(id);
+  if (cached) return cached;
+
+  const promise = new Promise<void>((resolve, reject) => {
+    const existing = document.getElementById(id) as HTMLScriptElement | null;
+    if (existing) {
+      if (existing.dataset.loaded === "true") {
+        resolve();
+      } else {
+        existing.addEventListener("load", () => resolve(), { once: true });
+        existing.addEventListener("error", () => reject(new Error(`Failed to load ${src}`)), { once: true });
+      }
       return;
     }
     const script = document.createElement("script");
     script.id = id;
     script.src = src;
     script.async = true;
-    script.onload = () => resolve();
+    script.onload = () => {
+      script.dataset.loaded = "true";
+      resolve();
+    };
     script.onerror = () => reject(new Error(`Failed to load ${src}`));
     document.head.appendChild(script);
   });
+
+  scriptLoadPromises.set(id, promise);
+  return promise;
 }
 
 function parseOAuthError(err: unknown): { title: string; description: string } {
@@ -142,7 +167,7 @@ interface SignInPanelProps {
  * and inside SignInSheet everywhere else in the app.
  */
 export function SignInPanel({ active = true, dismissLabel, onDismiss, className }: SignInPanelProps) {
-  const { config, afterSignIn, authReturnTo } = useAuth();
+  const { config, configLoading, afterSignIn, authReturnTo } = useAuth();
   const { toast } = useToast();
   const [email, setEmail] = useState("");
   const [sentEmail, setSentEmail] = useState("");
@@ -151,6 +176,7 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
   const [error, setError] = useState<string | null>(null);
   const [devLink, setDevLink] = useState<string | null>(null);
   const [oauthBusy, setOauthBusy] = useState(false);
+  const [googleUnavailable, setGoogleUnavailable] = useState(false);
   const [resendSeconds, setResendSeconds] = useState(0);
   const [helpOpen, setHelpOpen] = useState(false);
   const [expiresMinutes, setExpiresMinutes] = useState(30);
@@ -195,11 +221,16 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
     if (!active || !showGoogle || !googleButtonRef.current) return;
 
     let cancelled = false;
+    setGoogleUnavailable(false);
 
     (async () => {
       try {
         await loadScript("https://accounts.google.com/gsi/client", "google-gsi");
-        if (cancelled || !googleButtonRef.current || !window.google) return;
+        if (cancelled) return;
+        if (!googleButtonRef.current || !window.google) {
+          setGoogleUnavailable(true);
+          return;
+        }
 
         window.google.accounts.id.initialize({
           client_id: googleClientId,
@@ -233,7 +264,7 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
           text: "continue_with",
         });
       } catch {
-        /* Google optional */
+        if (!cancelled) setGoogleUnavailable(true);
       }
     })();
 
@@ -374,7 +405,11 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
     <div className={cn("space-y-3", className)}>
       {!sent ? (
         <>
-          {showGoogle && (
+          {configLoading && (
+            <div className="h-10 w-full rounded-md skeleton-shimmer" aria-hidden="true" />
+          )}
+
+          {showGoogle && !googleUnavailable && (
             <div className="relative h-10 w-full rounded-md hover-elevate active-elevate-2" ref={googleWrapRef}>
               <div
                 className="absolute inset-0 flex items-center justify-center gap-3 rounded-md border [border-color:var(--button-outline)] bg-background text-sm font-medium shadow-xs pointer-events-none"
@@ -385,6 +420,12 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
               </div>
               <div className="absolute inset-0 overflow-hidden rounded-md opacity-0" ref={googleButtonRef} />
             </div>
+          )}
+
+          {showGoogle && googleUnavailable && (
+            <p className="text-xs text-muted-foreground text-center" role="status">
+              Google Sign-In is unavailable right now. Please use email instead.
+            </p>
           )}
 
           {showApple && (
@@ -401,15 +442,24 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
           )}
 
           {!emailFormOpen ? (
-            <Button
-              type="button"
-              variant="outline"
-              className="w-full min-h-10 justify-center gap-3"
-              onClick={() => setEmailFormOpen(true)}
-            >
-              <Mail className="h-4 w-4 shrink-0" />
-              Continue with Email
-            </Button>
+            <>
+              {(showGoogle || showApple) && (
+                <div className="flex items-center gap-3 py-1" aria-hidden="true">
+                  <div className="h-px flex-1 bg-border/50" />
+                  <span className="text-[11px] font-medium uppercase tracking-wide text-muted-foreground/70">or</span>
+                  <div className="h-px flex-1 bg-border/50" />
+                </div>
+              )}
+              <Button
+                type="button"
+                variant="ghost"
+                className="w-full min-h-10 justify-center gap-2.5 text-muted-foreground hover:text-foreground"
+                onClick={() => setEmailFormOpen(true)}
+              >
+                <Mail className="h-4 w-4 shrink-0" />
+                Continue with Email
+              </Button>
+            </>
           ) : (
             <div className="space-y-2 rounded-xl border border-border/40 p-3 animate-in fade-in-0 slide-in-from-top-1 duration-200">
               <Label htmlFor="sign-in-email">Email address</Label>
