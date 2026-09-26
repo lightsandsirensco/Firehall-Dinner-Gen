@@ -4,8 +4,8 @@
  * (product-analytics.ts) — do not merge with either.
  *
  * Initialized exactly once (guarded), called from main.tsx before the app
- * renders. No-ops (safe) if VITE_PUBLIC_POSTHOG_KEY/HOST are unset, e.g. in
- * local dev.
+ * renders. No-ops (safe) if VITE_POSTHOG_PROJECT_TOKEN/VITE_POSTHOG_HOST are
+ * unset, e.g. in local dev.
  */
 import posthog from "posthog-js";
 
@@ -14,8 +14,8 @@ let initialized = false;
 export function initPostHog(): void {
   if (initialized || typeof window === "undefined") return;
 
-  const key = import.meta.env.VITE_PUBLIC_POSTHOG_KEY?.trim();
-  const host = import.meta.env.VITE_PUBLIC_POSTHOG_HOST?.trim();
+  const key = import.meta.env.VITE_POSTHOG_PROJECT_TOKEN?.trim();
+  const host = import.meta.env.VITE_POSTHOG_HOST?.trim();
   if (!key || !host) return;
 
   posthog.init(key, {
