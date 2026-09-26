@@ -2,11 +2,13 @@ import {
   createContext,
   useCallback,
   useContext,
+  useEffect,
   useMemo,
   useState,
   type ReactNode,
 } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { posthog } from "@/lib/posthog-client";
 import { useLocation } from "wouter";
 import { apiRequest } from "@/lib/queryClient";
 import { trackAccountCreated, trackLogin } from "@/lib/analytics";
@@ -69,6 +71,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const me = meQuery.data;
   const authenticated = Boolean(me?.authenticated);
+  const userId = me?.user?.user_id ?? null;
+
+  // Identify with PostHog using ONLY our stable internal user_id — never
+  // email/name/preferences. Covers both a fresh sign-in (afterSignIn below
+  // triggers a me refetch) and an already-authenticated page load. Safe to
+  // call repeatedly with the same id.
+  useEffect(() => {
+    if (authenticated && userId) {
+      posthog.identify(userId);
+    }
+  }, [authenticated, userId]);
 
   const openSignIn = useCallback((returnTo?: string) => {
     const path = captureAuthReturnTo(returnTo);
@@ -118,6 +131,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = useCallback(async () => {
     await apiRequest("POST", "/api/auth/logout");
+    posthog.reset();
     clearAuthReturnTo();
     setAuthReturnTo(null);
     await queryClient.invalidateQueries({ queryKey: ["/api/auth/me"] });

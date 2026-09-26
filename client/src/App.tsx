@@ -1,4 +1,6 @@
 import { lazy, Suspense, useEffect } from "react";
+import { PostHogProvider } from "@posthog/react";
+import { posthog } from "@/lib/posthog-client";
 import { Switch, Route, useLocation, Redirect } from "wouter";
 import { prefetchLikelyRoutes } from "@/lib/route-prefetch";
 import { trackAnalyticsPageView } from "@/lib/analytics-deferred";
@@ -241,6 +243,7 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
+      <PostHogProvider client={posthog}>
       <QueryClientProvider client={queryClient}>
         <MeasurementSystemProvider>
           <AuthProvider>
@@ -264,6 +267,7 @@ function App() {
           </AuthProvider>
         </MeasurementSystemProvider>
       </QueryClientProvider>
+      </PostHogProvider>
     </ErrorBoundary>
   );
 }

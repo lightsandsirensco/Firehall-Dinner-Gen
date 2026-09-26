@@ -3,11 +3,13 @@ import App from "./App";
 import "./index.css";
 import { initClientPerformance } from "@/lib/performance";
 import { initDeferredAnalytics } from "@/lib/analytics-deferred";
+import { initPostHog } from "@/lib/posthog-client";
 import { initRoutePrefetch } from "@/lib/route-prefetch";
 import { PwaServiceWorker } from "@/components/pwa/pwa-service-worker";
 
 initClientPerformance();
 initDeferredAnalytics();
+initPostHog();
 initRoutePrefetch();
 
 if (import.meta.env.DEV) {
