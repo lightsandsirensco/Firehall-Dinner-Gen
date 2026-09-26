@@ -54,7 +54,6 @@ import { registerHealthRoutes } from "./routes/health-routes.js";
 import { registerVoteRoutes } from "./routes/vote-routes.js";
 import { registerCatalogRoutes } from "./routes/catalog-routes.js";
 import { registerRecipeRatingsRoutes } from "./routes/recipe-ratings-routes.js";
-import { registerFavouritesRoutes } from "./routes/favourites-routes.js";
 import { routeParam } from "./routes/param.js";
 import { getAllFavouriteIds } from "./favourites";
 import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
@@ -371,7 +370,6 @@ export async function registerRoutes(
   registerHealthRoutes(app);
   registerVoteRoutes(app);
   registerRecipeRatingsRoutes(app);
-  registerFavouritesRoutes(app);
   registerCatalogRoutes(app);
 
   warmApprovedCatalogCache();
@@ -970,11 +968,23 @@ export async function registerRoutes(
       // a string-replacement substitution (you cannot safely "swap out" meat/dairy/pork from
       // an already-composed dish) â€” a violation here always rejects to the safe fallback path.
       if (request?.dietary_restrictions && request.dietary_restrictions.length > 0) {
+        // NOTE: `result` here is the already client-normalized response (see
+        // `normalizeToClientFormat` / `buildResponse` above), whose ingredient
+        // shape is `{ name, qty, unit, category }` â€” NOT the internal
+        // `{ item, amount, notes }` shape used at pick time. Reading `.item`
+        // here always resolved to "" (every ingredient name lost), which
+        // forced classifier confidence to "low" for EVERY request carrying a
+        // dietary restriction (vegetarian/vegan/pork-free, or any allergen
+        // checkbox â€” all map into `dietary_restrictions`), rejecting every
+        // otherwise-valid recipe and surfacing as "Generation failed" for
+        // every protein. Read `.name` (the real field at this stage), falling
+        // back to `.item` defensively in case this runs against an
+        // unnormalized shape in the future.
         const composedIngredients = Array.isArray((result as any).ingredients)
-          ? ((result as any).ingredients as Array<{ item?: string; notes?: string }>)
+          ? ((result as any).ingredients as Array<{ item?: string; name?: string; notes?: string }>)
           : [];
         const profile = classifyRecipeDietary(
-          composedIngredients.map((i) => ({ name: String(i.item ?? ""), notes: i.notes })),
+          composedIngredients.map((i) => ({ name: String(i.name ?? i.item ?? ""), notes: i.notes })),
         );
         const violated =
           profile.confidence !== "high" ||
@@ -1452,7 +1462,16 @@ export async function registerRoutes(
       // Even send-gate issues should resolve to a usable emergency recipe.
 
       try {
-        const parsed = generateRequestSchema.safeParse(req.body);
+        // Use the SAME coercion as the primary parse (line ~1270) before
+        // re-validating. Without this, requests that only validate after
+        // coercion (e.g. `firehall_category: null`, or an empty `appliances`
+        // array) fail `safeParse` here even though they succeeded the first
+        // time, so `parsed.success` flips to false and every field below
+        // that isn't explicitly re-listed (notably `dietary_restrictions`)
+        // silently reverts to schema-default `[]` â€” dropping the user's
+        // vegetarian/vegan/pork-free/allergen hard restriction in the
+        // emergency-fallback path.
+        const parsed = generateRequestSchema.safeParse(coerceGenerateRequestBody(req.body));
         const raw = (req.body || {}) as Record<string, unknown>;
         const fallbackTime =
           typeof raw.time_available === "string" && raw.time_available.trim()
@@ -1513,6 +1532,16 @@ export async function registerRoutes(
               ? parsed.data.allergens_to_avoid
               : Array.isArray(raw.allergens_to_avoid)
                 ? (raw.allergens_to_avoid as string[])
+                : [],
+          // Hard dietary restrictions (vegetarian/vegan/pork-free/allergen-derived) must
+          // never be silently dropped in this fallback path â€” explicit even though the
+          // spread above already carries it when `parsed.success` is true, so a future
+          // regression in the spread/coercion above can't reintroduce this gap silently.
+          dietary_restrictions:
+            parsed.success
+              ? parsed.data.dietary_restrictions
+              : Array.isArray(raw.dietary_restrictions)
+                ? (raw.dietary_restrictions as string[])
                 : [],
           vegetarian_swap_needed:
             parsed.success
@@ -1581,7 +1610,13 @@ export async function registerRoutes(
         cancelRequest(failKey, failCtx.requestId);
         logError("generate", "emergency fallback failed", innerErr);
         try {
-          const parsed = generateRequestSchema.safeParse(req.body);
+          // Same coercion as the primary parse â€” see the matching comment on the
+          // outer catch block's `parsed` above. Without it, `parsed.success` can
+          // flip to false here too, and `resolveSafeCuratedFallback`'s
+          // dietary/allergen safety refusal (see safe-curated-fallback.ts) only
+          // works if `dietary_restrictions`/`allergens_to_avoid` actually reach it.
+          const parsed = generateRequestSchema.safeParse(coerceGenerateRequestBody(req.body));
+          const rawSalvage = (req.body || {}) as Record<string, unknown>;
           const salvage = sanitizeGenerateRequest({
             ...(parsed.success ? parsed.data : ({} as GenerateRequest)),
             firehall_category: undefined,
@@ -1591,6 +1626,18 @@ export async function registerRoutes(
             time_available: "60-90",
             use_what_we_have: false,
             ingredients_on_hand: [],
+            dietary_restrictions:
+              parsed.success
+                ? parsed.data.dietary_restrictions
+                : Array.isArray(rawSalvage.dietary_restrictions)
+                  ? (rawSalvage.dietary_restrictions as string[])
+                  : [],
+            allergens_to_avoid:
+              parsed.success
+                ? parsed.data.allergens_to_avoid
+                : Array.isArray(rawSalvage.allergens_to_avoid)
+                  ? (rawSalvage.allergens_to_avoid as string[])
+                  : [],
           } as GenerateRequest);
           const safe = await resolveSafeCuratedFallback(salvage, [], `emergency_catch:${failCtx.requestId}`);
           const allergens = salvage.allergens_to_avoid || [];
