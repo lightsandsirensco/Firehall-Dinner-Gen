@@ -135,6 +135,17 @@ export interface RecipeSnapshotData {
   /** Crawlable links to genuinely related recipes (same category/protein/
    * meal type) — see each collection's `*RecipeSnapshot` builder below. */
   relatedLinks?: IndexSnapshotLink[];
+  /** Additional headed link sections rendered after `relatedLinks` — for a
+   * recipe with more than one genuinely distinct crawlable link group (e.g.
+   * "/firefighter-red-lead-recipe"'s breakfast-side links vs. dinner-classic
+   * links), where a single flat "Related recipes" list would blur two
+   * different real groupings the client itself shows separately. */
+  linkSections?: IndexSnapshotSection[];
+  /** Only for a recipe route whose SSR JSON-LD also includes a FAQPage
+   * entity (e.g. `/firefighter-red-lead-recipe`) — rendered so the visible
+   * snapshot always matches what that schema claims, instead of a crawler
+   * seeing FAQPage structured data with no corresponding visible Q&A. */
+  faqs?: Array<{ question: string; answer: string }>;
 }
 
 /**
@@ -193,6 +204,7 @@ export function renderRecipeSnapshotHtml(origin: string, data: RecipeSnapshotDat
   const relatedSection: IndexSnapshotSection[] = data.relatedLinks?.length
     ? [{ heading: "Related recipes", links: data.relatedLinks }]
     : [];
+  const extraLinkSections = data.linkSections ?? [];
 
   const guidanceHtml = (data.guidanceSections ?? [])
     .filter((section) => section.items.length > 0)
@@ -205,6 +217,12 @@ export function renderRecipeSnapshotHtml(origin: string, data: RecipeSnapshotDat
       return `${heading}${body}`;
     })
     .join("");
+
+  const faqs = data.faqs?.length
+    ? `<h2>FAQ</h2>${data.faqs
+        .map((f) => `<p><strong>${escapeHtml(f.question)}</strong></p><p>${escapeHtml(f.answer)}</p>`)
+        .join("")}`
+    : "";
 
   return [
     `<div class="fh-snap">`,
@@ -221,7 +239,8 @@ export function renderRecipeSnapshotHtml(origin: string, data: RecipeSnapshotDat
     ingredients ? `<h2>Ingredients</h2><ul>${ingredients}</ul>` : "",
     steps ? `<h2>Instructions</h2><ol>${steps}</ol>` : "",
     guidanceHtml,
-    renderLinkSections([...relatedSection, siteHubSection()]),
+    faqs,
+    renderLinkSections([...relatedSection, ...extraLinkSections, siteHubSection()]),
     `</div>`,
   ]
     .filter(Boolean)

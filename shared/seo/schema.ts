@@ -1,6 +1,7 @@
 import type { EditorialArticle } from "../editorial/content-schema.js";
 import { guidePath, guidesIndexPath } from "../editorial/content-schema.js";
 import type { GoldenRecipePage } from "../golden-100/recipe-page-schema.js";
+import type { RecipeDietaryProfileSchema } from "../dietary/schema.js";
 import {
   SEO_BRAND,
   SEO_DEFAULT_DESCRIPTION,
@@ -10,6 +11,101 @@ import {
 import { absoluteImageUrl, absoluteUrl, recipePath } from "./urls.js";
 
 export type BreadcrumbItem = { name: string; path: string };
+
+/**
+ * Hall Expansion's on-disk `category` field is stamped with the internal
+ * collection/family id ("hall_expansion") rather than a real food category —
+ * every other golden-100-shaped family already stores a genuine category
+ * there (e.g. "comfort_food", "bbq_grill_nights"). Every recipe in every
+ * family — Hall Expansion included — already carries its real category as a
+ * `category:`-prefixed tag (see the catalog generation tooling), so this
+ * only reads that existing, already-canonical value for schema.org's
+ * `recipeCategory` when the top-level field is the internal collection id.
+ * It never invents a category, and never touches the on-disk `category`
+ * field itself — Explore grouping, badges, and filters all keep reading
+ * `category` exactly as before; this is a presentation/schema-only mapping.
+ */
+export function recipeCategoryLabel(page: Pick<GoldenRecipePage, "category" | "tags">): string {
+  if (page.category === "hall_expansion") {
+    const tag = page.tags.find((t) => t.startsWith("category:"));
+    if (tag) return tag.slice("category:".length).replace(/_/g, " ");
+  }
+  return page.category.replace(/_/g, " ");
+}
+
+/**
+ * `recipeCuisine` is free-text, authored across many recipe-generation
+ * batches over time — the exact same cuisine ends up spelled with
+ * inconsistent casing ("italian" vs "Italian"), inconsistent word
+ * separators ("middle_eastern" / "middle-eastern" / "middle eastern"), or as
+ * an obvious synonym ("Southwest" vs "Southwestern"). This normalizes only
+ * those obvious formatting/synonym duplicates for the schema.org
+ * `recipeCuisine` value — it never reclassifies a cuisine into a different
+ * one (e.g. "Thai-inspired" stays distinct from "Thai", "Sichuan/Chinese"
+ * stays distinct from "Chinese") and never touches the on-disk `cuisine`
+ * field itself, which many other systems read as free text.
+ */
+const CUISINE_SYNONYMS: Record<string, string> = {
+  "middle eastern": "Middle Eastern",
+  middle_eastern: "Middle Eastern",
+  "middle-eastern": "Middle Eastern",
+  southwest: "Southwestern",
+};
+
+const CUISINE_ACRONYMS = new Set(["bbq"]);
+
+function titleCaseWord(word: string): string {
+  return word.length ? word[0]!.toUpperCase() + word.slice(1) : word;
+}
+
+export function normalizeRecipeCuisineLabel(raw: string): string {
+  const trimmed = raw.trim();
+  if (!trimmed) return trimmed;
+  const lower = trimmed.toLowerCase();
+  if (CUISINE_SYNONYMS[lower]) return CUISINE_SYNONYMS[lower];
+  if (CUISINE_ACRONYMS.has(lower)) return trimmed.toUpperCase();
+  // Title-case each word segment; preserve separators ("-", "/", " ") as-is
+  // so compounds like "Italian-American" and "Sichuan/Chinese" stay intact.
+  return trimmed
+    .split(/(\s|-|\/)/)
+    .map((part) => (/^[a-z]/i.test(part) ? titleCaseWord(part.toLowerCase()) : part))
+    .join("");
+}
+
+/**
+ * Audited for SEO Phase 5, Section C (`suitableForDiet`): Firehall Meals'
+ * dietary classification is an intentionally conservative CONVENIENCE
+ * filter (see `shared/dietary/classify-recipe.ts` and the disclaimer in
+ * `client/src/components/trust/dietary-badges.tsx` — "Always check
+ * ingredient labels and account for substitutions and cross-contact when
+ * cooking for allergies"), not a certified allergen-safety guarantee.
+ * schema.org's `suitableForDiet` carries no such disclaimer, so an allergen
+ * claim there (gluten-free, dairy-free, nut-free, etc.) would read as a
+ * *stronger*, unqualified safety claim than the site itself makes — exactly
+ * what this audit says must not happen. Separately, schema.org's
+ * `RestrictedDiet` enum has no value at all for "dairy-free", "nut-free",
+ * "egg-free", "soy-free", "shellfish-free", "fish-free", or "pork-free", so
+ * those 7 flags have no valid mapping regardless of confidence.
+ *
+ * `vegan`/`vegetarian` are different in kind: they're ingredient-composition
+ * facts (no meat/fish/dairy/egg/honey), not cross-contamination/allergy
+ * safety claims, schema.org has exact-match enum values for both, and the
+ * site already asserts the identical claim to users today via the same
+ * high-confidence gate. Gated strictly on `confidence === "high"` (every
+ * ingredient resolved — see `classifyRecipeDietary`'s own "food-safety rule"
+ * doc comment) and the specific flag being `true`, these two are
+ * implemented. Every allergen-type flag, including `glutenFree` (schema.org
+ * *does* have `GlutenFreeDiet`, but gluten-free is squarely the kind of
+ * allergy/safety claim this audit warns against making from a text-based
+ * ingredient classifier), is deliberately left out of `suitableForDiet`.
+ */
+export function suitableForDietFromProfile(dietary: RecipeDietaryProfileSchema | undefined): string[] | undefined {
+  if (!dietary || dietary.confidence !== "high") return undefined;
+  const diets: string[] = [];
+  if (dietary.flags.vegan) diets.push("https://schema.org/VeganDiet");
+  if (dietary.flags.vegetarian) diets.push("https://schema.org/VegetarianDiet");
+  return diets.length ? diets : undefined;
+}
 
 export type FaqItem = {
   question: string;
@@ -148,7 +244,9 @@ export function buildRecipeSchemaAtPath(
     ...(step.minutes ? { duration: isoDurationMinutes(step.minutes) } : {}),
   }));
 
-  const categoryLabel = page.category.replace(/_/g, " ");
+  const categoryLabel = recipeCategoryLabel(page);
+  const cuisineLabel = normalizeRecipeCuisineLabel(page.cuisine);
+  const suitableForDiet = suitableForDietFromProfile(page.dietary);
   const aggregate = options?.aggregateRating;
 
   return {
@@ -174,8 +272,9 @@ export function buildRecipeSchemaAtPath(
     datePublished: page.generatedAt,
     dateModified: page.generatedAt,
     recipeCategory: categoryLabel,
-    recipeCuisine: page.cuisine,
-    keywords: [...SEO_TARGET_KEYWORDS, categoryLabel, page.cuisine, ...page.tags.slice(0, 8)].join(
+    recipeCuisine: cuisineLabel,
+    ...(suitableForDiet ? { suitableForDiet } : {}),
+    keywords: [...SEO_TARGET_KEYWORDS, categoryLabel, cuisineLabel, ...page.tags.slice(0, 8)].join(
       ", ",
     ),
     prepTime: isoDurationMinutes(prep),
@@ -236,11 +335,14 @@ export type StandaloneRecipeSchemaInput = {
   steps: Array<{ stepNumber: number; title: string; instruction: string; minutes?: number }>;
   nutrition: { calories: number; protein: number; carbs: number; fat: number };
   generatedAt: string;
+  dietary?: RecipeDietaryProfileSchema;
 };
 
 export function buildStandaloneRecipeSchema(origin: string, recipe: StandaloneRecipeSchemaInput) {
   const url = absoluteUrl(origin, recipe.path);
   const hero = recipe.heroImage?.trim();
+  const cuisineLabel = normalizeRecipeCuisineLabel(recipe.recipeCuisine);
+  const suitableForDiet = suitableForDietFromProfile(recipe.dietary);
   const image = hero ? absoluteImageUrl(origin, hero) : undefined;
 
   const ingredients = recipe.ingredients
@@ -281,7 +383,8 @@ export function buildStandaloneRecipeSchema(origin: string, recipe: StandaloneRe
     datePublished: recipe.generatedAt,
     dateModified: recipe.generatedAt,
     recipeCategory: recipe.recipeCategory,
-    recipeCuisine: recipe.recipeCuisine,
+    recipeCuisine: cuisineLabel,
+    ...(suitableForDiet ? { suitableForDiet } : {}),
     keywords: [...SEO_TARGET_KEYWORDS, ...recipe.tags, recipe.recipeCategory].join(", "),
     prepTime: isoDurationMinutes(recipe.prepTime),
     cookTime: isoDurationMinutes(recipe.cookTime),
@@ -301,12 +404,15 @@ export function buildStandaloneRecipeSchema(origin: string, recipe: StandaloneRe
 
 export function buildArticleSchema(origin: string, article: EditorialArticle) {
   const url = absoluteUrl(origin, guidePath(article.slug));
+  const hero = article.heroImage?.trim();
+  const image = hero ? absoluteImageUrl(origin, hero) : undefined;
   return {
     "@context": "https://schema.org",
     "@type": "Article",
     "@id": `${url}#article`,
     headline: article.title,
     description: article.description,
+    image: image ? [image] : undefined,
     url,
     inLanguage: "en-US",
     datePublished: article.publishedAt,

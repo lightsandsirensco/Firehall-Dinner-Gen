@@ -51,8 +51,17 @@ import {
   buildHomeRecipeCollectionSchema,
   buildOrganizationSchema,
   buildSoftwareApplicationSchema,
+  buildStandaloneRecipeSchema,
   buildWebSiteSchema,
 } from "../../shared/seo/schema.js";
+import {
+  FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS,
+  FIREFIGHTER_RED_LEAD_CLASSIC_LINKS,
+  FIREFIGHTER_RED_LEAD_FAQS,
+  FIREFIGHTER_RED_LEAD_FIREHALL_TIPS,
+  FIREFIGHTER_RED_LEAD_RECIPE,
+  FIREFIGHTER_RED_LEAD_SERVING_SUGGESTIONS,
+} from "../../shared/seo/firefighter-red-lead-recipe-data.js";
 import { absoluteImageUrl, absoluteUrl, recipePath } from "../../shared/seo/urls.js";
 import { SEO_TWITTER_HANDLE } from "../../shared/seo/constants.js";
 import { HOME_FAQ_ITEMS } from "../../shared/seo/home-faq-items.js";
@@ -430,6 +439,14 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
   }
 
   if (path === "/firefighter-red-lead-recipe") {
+    // Previously only shipped Organization/WebSite/Breadcrumb here — the
+    // page's own Recipe + FAQPage JSON-LD (see
+    // `firefighter-red-lead-recipe-page.tsx`) only ever existed client-side,
+    // and the route had no body snapshot at all, so a non-JS crawler saw
+    // neither the recipe nor any FAQ content this route is actually about.
+    // This mirrors the client's exact schema + visible content so both are
+    // available in the initial HTML.
+    const recipe = FIREFIGHTER_RED_LEAD_RECIPE;
     return {
       seo: buildFirefighterRedLeadRecipeSeo(),
       jsonLd: [
@@ -437,9 +454,73 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         buildWebSiteSchema(origin),
         buildBreadcrumbListSchema(origin, [
           { name: "Home", path: "/" },
+          { name: "Breakfast", path: "/breakfast" },
           { name: "Firefighter Red Lead Recipe", path: "/firefighter-red-lead-recipe" },
         ]),
+        buildStandaloneRecipeSchema(origin, {
+          path: recipe.path,
+          title: recipe.h1,
+          description: recipe.description,
+          heroImage: recipe.heroImage,
+          prepTime: recipe.prepTime,
+          cookTime: recipe.cookTime,
+          crewSize: recipe.crewSize,
+          recipeCategory: recipe.recipeCategory,
+          recipeCuisine: recipe.recipeCuisine,
+          tags: [...recipe.tags],
+          ingredients: [...recipe.ingredients],
+          steps: [...recipe.steps],
+          nutrition: recipe.nutrition,
+          generatedAt: recipe.generatedAt,
+        }),
+        buildFaqPageSchema(FIREFIGHTER_RED_LEAD_FAQS),
       ],
+      bodyHtml: renderRecipeSnapshotHtml(origin, {
+        title: recipe.h1,
+        description: recipe.intro,
+        heroImage: recipe.heroImage,
+        heroImageAlt: recipe.heroImageAlt,
+        prepMinutes: recipe.prepTime,
+        cookMinutes: recipe.cookTime,
+        servingsLabel: `Serves ${recipe.crewSize}`,
+        difficulty: recipe.difficulty,
+        ingredients: recipe.ingredients.map((i) => ({ name: i.name, quantity: i.quantity, unit: i.unit })),
+        steps: recipe.steps.map((s) => ({ stepNumber: s.stepNumber, title: s.title, instruction: s.instruction })),
+        nutrition: {
+          calories: recipe.nutrition.calories,
+          protein: recipe.nutrition.protein,
+          carbs: recipe.nutrition.carbs,
+          fat: recipe.nutrition.fat,
+        },
+        guidanceSections: [
+          ...recipe.tradition.map((section) => ({
+            heading: section.heading,
+            kind: "paragraph" as const,
+            items: [...section.paragraphs],
+          })),
+          {
+            heading: "Firehall tips",
+            kind: "paragraph" as const,
+            items: FIREFIGHTER_RED_LEAD_FIREHALL_TIPS.map((t) => `${t.title}: ${t.body}`),
+          },
+          {
+            heading: "Serve it like the hall does",
+            kind: "paragraph" as const,
+            items: FIREFIGHTER_RED_LEAD_SERVING_SUGGESTIONS.map((t) => `${t.title}: ${t.body}`),
+          },
+        ],
+        faqs: [...FIREFIGHTER_RED_LEAD_FAQS],
+        linkSections: [
+          {
+            heading: "More firehall breakfast recipes",
+            links: FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS.map((l) => ({ label: l.label, path: l.href })),
+          },
+          {
+            heading: "Firehall classics for dinner shift",
+            links: FIREFIGHTER_RED_LEAD_CLASSIC_LINKS.map((l) => ({ label: l.label, path: l.href })),
+          },
+        ],
+      }),
     };
   }
 

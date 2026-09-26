@@ -78,19 +78,31 @@
     <!-- LCP element on "/" — the marketing homepage hero image (see client/src/components/home/home-constants.ts) -->
     <link rel="preload" as="image" href="/images/brand/home-hero-firetruck.jpg" fetchpriority="high" />
     <!--
-      Static site-level structured data. These two schemas are compile-time
-      constants and never change per-page, so they live here in the HTML shell
-      rather than being injected via JavaScript. Every crawler — including AI
-      bots and social unfurlers — sees them on the very first byte.
+      Static site-level structured data — the fallback Organization/WebSite
+      entities for any route the server-side injectors (generic-page-injection.ts /
+      recipe-html-injection.ts) don't cover (private/app-shell client routes).
+      Every crawler — including AI bots and social unfurlers — sees them on
+      the very first byte even before those injectors run.
 
       WebSite: enables the Google Sitelinks Search Box and confirms site identity.
       Organization: establishes the brand entity for Knowledge Panel eligibility.
 
-      The server-side injectors (generic-page-injection.ts / recipe-html-injection.ts)
-      ALSO emit these per-route, which is fine — duplicate JSON-LD blocks are
-      ignored by parsers and the richer per-route versions take precedence.
+      IMPORTANT — audited in SEO Phase 5 (duplicate JSON-LD): a prior version
+      of this comment claimed the per-route injectors emitting Organization/
+      WebSite again "is fine — duplicate JSON-LD blocks are ignored by
+      parsers." That's false — parsers register every `<script
+      type="application/ld+json">` block, so two Organization/WebSite
+      entities describing the identical entity really did produce duplicate
+      structured data on every route whose own jsonLd also included one of
+      these types. `injectJsonLdIntoHtml` (see `server/seo/apply-seo-tags.ts`)
+      now strips whichever of these two `@graph` entries a route supplies
+      itself before injecting that route's own JSON-LD, using this
+      `id="fh-default-jsonld"` marker to find this block — so exactly one
+      Organization and one WebSite entity ever exists per page: the
+      route-specific one when the route provides it, this static fallback
+      otherwise.
     -->
-    <script type="application/ld+json">
+    <script type="application/ld+json" id="fh-default-jsonld">
     {
       "@context": "https://schema.org",
       "@graph": [

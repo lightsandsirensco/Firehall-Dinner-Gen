@@ -96,7 +96,14 @@ function extract(status: number, html: string): Extracted {
   const ogTitle = /<meta\s+property="og:title"\s+content="([^"]*)"/.exec(html)?.[1] ?? null;
   const twitterTitle = /<meta\s+name="twitter:title"\s+content="([^"]*)"/.exec(html)?.[1] ?? null;
   const h1 = /<h1[^>]*>([\s\S]*?)<\/h1>/.exec(html)?.[1] ?? null;
-  const jsonLdTypes = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].flatMap(
+  // Server-rendered JSON-LD is tagged `data-seo-jsonld="true"` (see
+  // `injectJsonLdIntoHtml` in `server/seo/apply-seo-tags.ts`) so the client
+  // can identify and replace exactly this block on hydration without
+  // leaving a duplicate behind — match that attribute optionally so this
+  // check still passes regardless of which lifecycle owns the tag.
+  const jsonLdTypes = [
+    ...html.matchAll(/<script type="application\/ld\+json"(?:\s+data-seo-jsonld="true")?>([\s\S]*?)<\/script>/g),
+  ].flatMap(
     (m) => {
       try {
         const j = JSON.parse(m[1]);

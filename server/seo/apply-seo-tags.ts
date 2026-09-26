@@ -127,11 +127,80 @@ export function applySeoTagsToHtml(html: string, values: SeoTagValues): string {
   return out;
 }
 
+/**
+ * Insert one or more JSON-LD `<script>` blocks just before `</head>`.
+ *
+ * Tagged `data-seo-jsonld="true"` so this is the *same* attribute the client
+ * (`clearManagedSeo()` in `client/src/lib/seo/apply-page-seo.ts`) already
+ * looks for and removes, the instant before it re-applies its own JSON-LD,
+ * on every route that calls a `usePageSeo`-family hook with a `jsonLd`
+ * argument. Before this attribute existed, the client only ever cleared
+ * *its own previously client-injected* scripts (which also carried this
+ * attribute) — the untagged server-rendered block was invisible to that
+ * query, so it was left in the DOM while the client appended its own,
+ * equivalent copy right next to it, producing duplicate Recipe /
+ * BreadcrumbList / FAQPage / Article / WebSite / Organization /
+ * CollectionPage / SoftwareApplication entities after hydration. Tagging it
+ * makes the client's post-hydration re-render the single, intentional
+ * source of truth (it already computes the identical schema from the same
+ * page data, plus any client-only values like a live aggregateRating) while
+ * crawlers that don't execute JS still see fully correct structured data in
+ * the initial server HTML.
+ */
+const DEFAULT_JSON_LD_RE = /<script type="application\/ld\+json" id="fh-default-jsonld">([\s\S]*?)<\/script>\n?/;
+
+/** Top-level `@type` of a JSON-LD entity, when it's a plain object with one. */
+function topLevelType(entity: unknown): string | undefined {
+  if (!entity || typeof entity !== "object" || Array.isArray(entity)) return undefined;
+  const t = (entity as Record<string, unknown>)["@type"];
+  return typeof t === "string" ? t : undefined;
+}
+
+/**
+ * `client/index.html` ships a static fallback `@graph` of exactly
+ * Organization + WebSite (see its own doc comment, and `id="fh-default-jsonld"`)
+ * for routes this file's injectors don't otherwise cover. Several routes'
+ * own `jsonLd` (passed in below) also legitimately build one or both of
+ * those same two entities — previously that static block was never touched,
+ * so those routes shipped two Organization and/or two WebSite entities in
+ * the very first server response. This removes only the entity type(s) the
+ * incoming `jsonLd` itself supplies from that static `@graph` (dropping the
+ * whole block once it's emptied), so exactly one instance of each ever
+ * reaches a crawler: the route-specific one when present, the static
+ * fallback otherwise.
+ */
+function dedupeDefaultJsonLd(html: string, jsonLd: unknown[]): string {
+  const suppliedTypes = new Set(jsonLd.map(topLevelType).filter((t): t is string => Boolean(t)));
+  if (!suppliedTypes.has("Organization") && !suppliedTypes.has("WebSite")) return html;
+
+  const match = DEFAULT_JSON_LD_RE.exec(html);
+  if (!match) return html;
+
+  let parsed: { "@graph"?: unknown[] } | undefined;
+  try {
+    parsed = JSON.parse(match[1]!);
+  } catch {
+    return html; // Defensive — never let a malformed static block break injection.
+  }
+  const graph = Array.isArray(parsed?.["@graph"]) ? parsed!["@graph"]! : [];
+  const remaining = graph.filter((entity) => {
+    const t = topLevelType(entity);
+    return !t || !suppliedTypes.has(t);
+  });
+
+  if (remaining.length === graph.length) return html; // Nothing overlapped — leave it as-is.
+  if (remaining.length === 0) return html.replace(match[0], "");
+
+  const rebuilt = `<script type="application/ld+json" id="fh-default-jsonld">${escapeJsonForScriptTag({ ...parsed, "@graph": remaining })}</script>\n`;
+  return html.replace(match[0], rebuilt);
+}
+
 /** Insert one or more JSON-LD `<script>` blocks just before `</head>`. */
 export function injectJsonLdIntoHtml(html: string, jsonLd: unknown[]): string {
   if (!jsonLd.length || !html.includes("</head>")) return html;
-  const jsonLdTag = `<script type="application/ld+json">${escapeJsonForScriptTag(jsonLd)}</script>\n  </head>`;
-  return html.replace("</head>", jsonLdTag);
+  const deduped = dedupeDefaultJsonLd(html, jsonLd);
+  const jsonLdTag = `<script type="application/ld+json" data-seo-jsonld="true">${escapeJsonForScriptTag(jsonLd)}</script>\n  </head>`;
+  return deduped.replace("</head>", jsonLdTag);
 }
 
 const EMPTY_ROOT_RE = /<div id="root"><\/div>/;

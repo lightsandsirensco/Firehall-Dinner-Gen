@@ -26,6 +26,7 @@ import { SiteFooter } from "@/components/site-footer";
 import { trackWheelSpin, trackWheelRecipeOpen } from "@/lib/analytics";
 import { recordWheelResult } from "@/lib/hall-history-store";
 import { recordWheelStreakSpin } from "@/lib/wheel-streak-store";
+import { getProductSeoPage } from "@shared/seo/product-pages-data";
 
 type Phase = "ready" | "spinning" | "reveal";
 
@@ -116,6 +117,12 @@ export default function ClassicsWheelPage() {
     () => (winner ? wheelVotePair(winner) : []),
     [winner],
   );
+
+  // Same FAQ content the server renders into this route's FAQPage JSON-LD
+  // (see `resolvePageSeo`'s "/wheel" case in `server/seo/generic-page-injection.ts`)
+  // — kept visible here so the schema always matches what a user actually
+  // sees on the page, not just what a crawler gets pre-hydration.
+  const wheelFaqs = useMemo(() => getProductSeoPage("classics-wheel")?.faqs ?? [], []);
 
   return (
     <div className="page-shell min-h-screen min-h-[100dvh] bg-background flex flex-col">
@@ -239,6 +246,22 @@ export default function ClassicsWheelPage() {
             {CLASSICS_WHEEL.browseLink}
           </Link>
         </div>
+
+        {wheelFaqs.length > 0 && (
+          <section className="mt-12 pt-8 border-t border-border/30 max-w-lg mx-auto" aria-labelledby="wheel-faq-heading">
+            <h2 id="wheel-faq-heading" className="font-heading text-xl text-foreground text-center">
+              Questions
+            </h2>
+            <dl className="mt-6 space-y-6">
+              {wheelFaqs.map((item) => (
+                <div key={item.question}>
+                  <dt className="font-medium text-foreground">{item.question}</dt>
+                  <dd className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.answer}</dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
       </main>
 
       <SiteFooter variant="compact" className="mt-8" pbSafe />
