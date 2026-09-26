@@ -114,6 +114,16 @@ export default function PrivacyPage() {
               Creating a Firehall Meals account requires only an email address. We sign you in
               using a one-time "magic link" sent to that email — we do not store passwords.
             </p>
+            <p>
+              You can also sign in with{" "}
+              <span className="font-medium text-foreground">Google</span>. When you do, Google
+              provides us a stable account identifier, your email address, and basic profile
+              information you've made available to apps (such as your name) — never a password.
+              Firehall Meals never receives or stores your Google password. If you already have a
+              Firehall Meals account under the same email, we don't automatically connect Google to
+              it for you — you sign in with your existing method first, then connect Google from
+              your Account page if you choose to.
+            </p>
             <p>We store, tied to your account:</p>
             <ul className="list-disc pl-5 space-y-1">
               <li>Your email address and any display name/profile details you add.</li>

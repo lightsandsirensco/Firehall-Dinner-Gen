@@ -211,11 +211,88 @@ export function findUserByEmail(email: string): UserAccount | null {
   return row ? rowToUser(row) : null;
 }
 
+// ---------------------------------------------------------------------------
+// auth_identities — the lookup source for OAuth sign-in (GOOGLE SIGN-IN
+// SAFETY). Maps a verified (provider, provider_subject) pair to a single,
+// existing user_id. See server/db/migrations/048_auth_identities.sql for the
+// table + backfill of pre-existing users.auth_provider/provider_subject data.
+// ---------------------------------------------------------------------------
+
+export type IdentityProvider = "email" | "google" | "apple";
+
+/** Thrown by linkIdentity() when the identity is already owned by a DIFFERENT user_id. */
+export class IdentityOwnershipConflictError extends Error {
+  constructor(provider: IdentityProvider) {
+    super(`This ${provider} account is already linked to a different Firehall Meals account.`);
+    this.name = "IdentityOwnershipConflictError";
+  }
+}
+
+export function findUserIdByIdentity(provider: IdentityProvider, subject: string): string | null {
+  const d = getDb();
+  const row = d
+    .prepare(`SELECT user_id FROM auth_identities WHERE provider = ? AND provider_subject = ?`)
+    .get(provider, subject) as { user_id: string } | undefined;
+  return row?.user_id ?? null;
+}
+
+/**
+ * Every provider currently linked to a user_id — used by Account →
+ * "Sign-in methods" and never anything more sensitive (no subjects/emails
+ * of other identities are exposed to the client).
+ */
+export function listLinkedIdentityProviders(userId: string): IdentityProvider[] {
+  const d = getDb();
+  const rows = d
+    .prepare(`SELECT DISTINCT provider FROM auth_identities WHERE user_id = ?`)
+    .all(userId) as Array<{ provider: IdentityProvider }>;
+  return rows.map((r) => r.provider);
+}
+
+/**
+ * Links (provider, subject) → userId. Idempotent no-op if this exact
+ * identity is already linked to this same user (e.g. signing in again with
+ * an already-linked Google account, or clicking "Connect Google" twice).
+ * Throws IdentityOwnershipConflictError if the identity is already owned by
+ * a DIFFERENT user_id — callers must never silently reassign ownership.
+ * user_id is always the caller's own resolved id; this function never
+ * accepts or infers a user_id from client-supplied data.
+ */
+export function linkIdentity(
+  userId: string,
+  provider: IdentityProvider,
+  subject: string,
+  emailAtLinkTime: string | null,
+): void {
+  const d = getDb();
+  const owner = findUserIdByIdentity(provider, subject);
+  if (owner) {
+    if (owner !== userId) {
+      throw new IdentityOwnershipConflictError(provider);
+    }
+    return; // already linked to this same user — idempotent no-op
+  }
+  d.prepare(
+    `INSERT INTO auth_identities (provider, provider_subject, user_id, email_at_link_time) VALUES (?, ?, ?, ?)`,
+  ).run(provider, subject, userId, emailAtLinkTime);
+}
+
 export function upsertEmailUser(email: string): { user: UserAccount; isNew: boolean } {
   const d = getDb();
   const normalized = email.trim().toLowerCase();
   const existing = findUserByEmail(normalized);
   if (existing) {
+    // Defensive backfill: an existing email user from before auth_identities
+    // existed (or a row the migration backfill somehow missed) still gets a
+    // matching identity row the next time they sign in — same user_id,
+    // never a new one. Never allowed to fail this sign-in: a genuine
+    // ownership conflict here would mean two users already share an email,
+    // which users.email UNIQUE already prevents.
+    try {
+      linkIdentity(existing.user_id, "email", normalized, normalized);
+    } catch {
+      /* ownership conflict on a supposedly-unique email should be impossible; never block sign-in on it */
+    }
     return { user: existing, isNew: false };
   }
 
@@ -227,48 +304,109 @@ export function upsertEmailUser(email: string): { user: UserAccount; isNew: bool
   ).run(userId, normalized, normalized);
   ensureProfileAndPreferences(userId);
   d.prepare(`UPDATE user_profiles SET display_name = ? WHERE user_id = ?`).run(displayName, userId);
+  // Best-effort: the `users` row (created above) is the authoritative new
+  // account event and must never be blocked by this. auth_identities is
+  // additive/supplementary bookkeeping for OAuth lookup + the "Sign-in
+  // methods" UI — collision protection for future OAuth sign-ins relies on
+  // users.email (queried directly), not on this row existing.
+  try {
+    linkIdentity(userId, "email", normalized, normalized);
+  } catch {
+    /* never block account creation on identity bookkeeping */
+  }
 
   const userRow = d.prepare(`SELECT * FROM users WHERE user_id = ?`).get(userId) as Record<string, unknown>;
   return { user: rowToUser(userRow), isNew: true };
 }
 
-export function upsertOAuthUser(input: {
+export type OAuthSignInResult =
+  | { kind: "signed_in"; user: UserAccount; isNew: boolean }
+  /**
+   * A server-verified OAuth identity has never been seen before, AND its
+   * verified email matches an existing Firehall Meals account that has NOT
+   * already linked this identity. Per GOOGLE SIGN-IN SAFETY: never silently
+   * merge, never create a duplicate user, never move data, never link based
+   * solely on a client-provided/matching email. The caller (route) must
+   * return a deliberate conflict (409) instead of signing anyone in.
+   */
+  | { kind: "email_collision"; existingEmail: string };
+
+/**
+ * Resolves a server-verified OAuth identity (Google or Apple) to a Firehall
+ * Meals session-eligible user, using auth_identities as the lookup source —
+ * NOT email, and NOT the legacy users.auth_provider/provider_subject columns
+ * (kept only for backward compatibility; see migration 048). This is the
+ * single entry point for both "new Google sign-up" and "returning Google
+ * user" (task sections 5 & 6), and the email-collision guard (section 7).
+ */
+export function resolveOAuthSignIn(input: {
   provider: "google" | "apple";
   subject: string;
   email?: string | null;
   firstName?: string | null;
   lastName?: string | null;
-}): { user: UserAccount; isNew: boolean } {
+}): OAuthSignInResult {
   const d = getDb();
-  const existing = d
-    .prepare(`SELECT * FROM users WHERE auth_provider = ? AND provider_subject = ?`)
-    .get(input.provider, input.subject) as Record<string, unknown> | undefined;
 
-  if (existing) {
-    if (input.email && !existing.email) {
-      d.prepare(`UPDATE users SET email = ?, updated_at = datetime('now') WHERE user_id = ?`).run(
-        input.email.toLowerCase(),
-        String(existing.user_id),
-      );
+  // 1) Known identity → resolve the existing user_id. This is the ONLY path
+  // that returns an existing user for a returning OAuth sign-in; it never
+  // consults email.
+  const existingUserId = findUserIdByIdentity(input.provider, input.subject);
+  if (existingUserId) {
+    const userRow = d.prepare(`SELECT * FROM users WHERE user_id = ?`).get(existingUserId) as
+      | Record<string, unknown>
+      | undefined;
+    if (userRow) {
+      // Never overwrite an existing account email from an OAuth login — only
+      // fill it in if the account genuinely has none on file yet.
+      if (input.email && !userRow.email) {
+        d.prepare(`UPDATE users SET email = ?, updated_at = datetime('now') WHERE user_id = ?`).run(
+          input.email.trim().toLowerCase(),
+          existingUserId,
+        );
+      }
+      const refreshed = d.prepare(`SELECT * FROM users WHERE user_id = ?`).get(existingUserId) as Record<
+        string,
+        unknown
+      >;
+      return { kind: "signed_in", user: rowToUser(refreshed), isNew: false };
     }
-    const refreshed = d.prepare(`SELECT * FROM users WHERE user_id = ?`).get(String(existing.user_id)) as Record<
-      string,
-      unknown
-    >;
-    return { user: rowToUser(refreshed), isNew: false };
+    // The identity row points at a user_id that no longer exists (the
+    // account was deleted — see deleteUserAccount). Clear the stale
+    // identity row so this Google/Apple subject can create a genuinely new
+    // account below, matching task section 14 (DELETION): "a deleted
+    // Google user can create a genuinely new account later."
+    d.prepare(`DELETE FROM auth_identities WHERE provider = ? AND provider_subject = ?`).run(
+      input.provider,
+      input.subject,
+    );
   }
 
+  // 2) Never-seen identity. If the verified email belongs to a DIFFERENT
+  // existing account, this is a deliberate conflict, not a merge point.
+  const normalizedEmail = input.email?.trim().toLowerCase() || null;
+  if (normalizedEmail) {
+    const existingByEmail = findUserByEmail(normalizedEmail);
+    if (existingByEmail) {
+      return { kind: "email_collision", existingEmail: normalizedEmail };
+    }
+  }
+
+  // 3) Genuinely new person — create the user and its identity together.
+  // users.auth_provider/provider_subject are still populated for backward
+  // compatibility (migration 048 leaves them in place; nothing reads them
+  // for OAuth resolution anymore, but nothing destroys them either).
   const userId = createUserId();
-  const email = input.email?.trim().toLowerCase() ?? null;
   d.prepare(
     `INSERT INTO users (user_id, email, auth_provider, is_guest, provider_subject)
      VALUES (?, ?, ?, 0, ?)`,
-  ).run(userId, email, input.provider, input.subject);
+  ).run(userId, normalizedEmail, input.provider, input.subject);
   ensureProfileAndPreferences(userId);
+  linkIdentity(userId, input.provider, input.subject, normalizedEmail);
 
   const displayName =
     [input.firstName, input.lastName].filter(Boolean).join(" ").trim() ||
-    email?.split("@")[0] ||
+    normalizedEmail?.split("@")[0] ||
     "Firefighter";
 
   d.prepare(
@@ -276,7 +414,7 @@ export function upsertOAuthUser(input: {
   ).run(input.firstName ?? null, input.lastName ?? null, displayName, userId);
 
   const userRow = d.prepare(`SELECT * FROM users WHERE user_id = ?`).get(userId) as Record<string, unknown>;
-  return { user: rowToUser(userRow), isNew: true };
+  return { kind: "signed_in", user: rowToUser(userRow), isNew: true };
 }
 
 export function createMagicLink(
@@ -329,6 +467,15 @@ function getUserHalls(userId: string): HallSummary[] {
   }
 }
 
+/** Defensive wrapper — same graceful-degradation pattern as getUserHalls(). */
+function getLinkedProviders(userId: string): IdentityProvider[] {
+  try {
+    return listLinkedIdentityProviders(userId);
+  } catch {
+    return [];
+  }
+}
+
 function attachBilling(userId: string | null, user: UserAccount | null): UserBillingState {
   try {
     return resolveUserBilling(userId, {
@@ -348,6 +495,7 @@ export function getAuthMe(userId: string | null): AuthMeResponse {
       preferences: null,
       halls: [],
       billing: attachBilling(null, null),
+      linked_providers: [],
     };
   }
 
@@ -363,6 +511,7 @@ export function getAuthMe(userId: string | null): AuthMeResponse {
       preferences: null,
       halls: [],
       billing: attachBilling(null, null),
+      linked_providers: [],
     };
   }
 
@@ -381,6 +530,7 @@ export function getAuthMe(userId: string | null): AuthMeResponse {
     preferences: rowToPreferences(prefRow),
     halls: getUserHalls(userId),
     billing: attachBilling(userId, user),
+    linked_providers: getLinkedProviders(userId),
   };
 }
 
@@ -597,6 +747,10 @@ const HALL_NULLABLE_USER_REFERENCE_COLUMNS: Array<{ table: string; column: strin
  *
  * DELETED (private, user-specific — safe to remove):
  * - auth_sessions (all sessions for this user — revokes access everywhere)
+ * - auth_identities (every provider/subject mapping for this user_id — a
+ *   deleted user's Google/Apple/email identity is fully released, so the
+ *   same Google account can sign up again later as a genuinely new account;
+ *   see GOOGLE SIGN-IN SAFETY)
  * - auth_magic_links matching this user's email
  * - user_profiles, user_preferences (personal profile + saved preferences)
  * - user_saved_recipes (personal favorites/saves)
@@ -651,6 +805,7 @@ export function deleteUserAccount(userId: string): { ok: true; email: string | n
 
   const tx = d.transaction(() => {
     d.prepare(`DELETE FROM auth_sessions WHERE user_id = ?`).run(userId);
+    d.prepare(`DELETE FROM auth_identities WHERE user_id = ?`).run(userId);
     if (email) {
       d.prepare(`DELETE FROM auth_magic_links WHERE lower(email) = ?`).run(email);
     }

@@ -86,6 +86,9 @@ async function main(): Promise<void> {
     "042_firefighter_plus_plan.sql",
     "043_email_marketing_consent.sql",
     "047_user_meal_history.sql",
+    // GOOGLE SIGN-IN SAFETY — deleteUserAccount() now also removes
+    // auth_identities rows for the deleted user.
+    "048_auth_identities.sql",
   ];
 
   const tmpDb = path.join(os.tmpdir(), `fh-meal-history-validate-${Date.now()}.db`);

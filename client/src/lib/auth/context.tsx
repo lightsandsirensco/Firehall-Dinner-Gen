@@ -31,6 +31,7 @@ interface AuthContextValue {
   profile: AuthMePayload["profile"];
   preferences: AuthMePayload["preferences"];
   halls: AuthMePayload["halls"];
+  linkedProviders: AuthMePayload["linked_providers"];
   billing: UserBillingState;
   capabilities: AuthCapabilities;
   config: AuthConfig | null;
@@ -130,6 +131,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       profile: me?.profile ?? null,
       preferences: me?.preferences ?? null,
       halls: me?.halls ?? [],
+      linkedProviders: me?.linked_providers ?? [],
       billing: me?.billing ?? GUEST_BILLING,
       capabilities: me?.capabilities ?? authCapabilities(me?.user ?? null, me?.billing ?? GUEST_BILLING),
       config: configQuery.data ?? null,

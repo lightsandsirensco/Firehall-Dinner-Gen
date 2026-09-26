@@ -54,6 +54,36 @@ function loadScript(src: string, id: string): Promise<void> {
   });
 }
 
+function parseOAuthError(err: unknown): { title: string; description: string } {
+  const fallback = { title: "Google sign-in failed", description: "Try email instead." };
+  if (!(err instanceof Error)) return fallback;
+  const match = err.message.match(/^(\d{3}):\s*(.+)$/s);
+  if (!match) return fallback;
+
+  const status = match[1];
+  const body = match[2]?.trim() ?? "";
+  let message = "";
+  let code = "";
+  try {
+    const json = JSON.parse(body) as { message?: string; code?: string };
+    if (json.message) message = json.message;
+    if (json.code) code = json.code;
+  } catch {
+    /* plain text body */
+  }
+
+  if (status === "409" && code === "email_collision") {
+    return {
+      title: "You already have an account",
+      description:
+        message ||
+        "You already have a Firehall Meals account with this email. Sign in with your email link first, then connect Google from your Account page.",
+    };
+  }
+
+  return { title: fallback.title, description: message || fallback.description };
+}
+
 function parseMagicLinkError(err: unknown): { message: string; retryAfter?: number } {
   if (!(err instanceof Error)) return { message: "We could not send the sign-in link. Try again." };
   const match = err.message.match(/^(\d{3}):\s*(.+)$/s);
@@ -182,10 +212,11 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
               });
               const body = await res.json();
               await afterSignIn(body.is_new, "google");
-            } catch {
+            } catch (err) {
+              const parsed = parseOAuthError(err);
               toast({
-                title: "Google sign-in failed",
-                description: "Try email instead.",
+                title: parsed.title,
+                description: parsed.description,
                 variant: "destructive",
               });
             } finally {

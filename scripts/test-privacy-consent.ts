@@ -63,6 +63,11 @@ const MIGRATIONS = [
   "043_email_marketing_consent.sql",
   "046_stripe_billing.sql",
   "047_user_meal_history.sql",
+  // GOOGLE SIGN-IN SAFETY -- upsertEmailUser()/deleteUserAccount() now also
+  // read/write auth_identities; this table must exist for this schema chain
+  // to still match reality. No new assertions added to this file -- see
+  // scripts/test-google-signin.ts for auth_identities-specific coverage.
+  "048_auth_identities.sql",
 ].map((name) => fs.readFileSync(path.join(process.cwd(), "server", "db", "migrations", name), "utf8"));
 
 const tmpDb = path.join(os.tmpdir(), `fh-privacy-consent-${Date.now()}.db`);

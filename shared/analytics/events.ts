@@ -56,6 +56,8 @@ export const ANALYTICS_EVENT_TYPES = [
   "magic_link_completed",
   "magic_link_expired",
   "profile_updated",
+  "google_linked",
+  "google_email_collision",
   "hall_created",
   "hall_updated",
   "shift_created",

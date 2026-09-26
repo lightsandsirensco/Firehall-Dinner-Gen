@@ -7,6 +7,26 @@ export interface OAuthIdentity {
   lastName?: string | null;
 }
 
+/**
+ * Verifies a Google ID token via Google's tokeninfo endpoint. This endpoint
+ * performs full signature verification against Google's own signing keys
+ * server-side and is Google's own documented low-volume verification
+ * approach (see developers.google.com/identity/sign-in/web/backend-auth) —
+ * kept as-is rather than replaced with a JWKS/library-based approach, since
+ * it already returns every claim needed to close the gaps below and a
+ * client-provided token is never trusted without this round-trip.
+ *
+ * Hardening beyond the original implementation (GOOGLE SIGN-IN SAFETY):
+ * - issuer (`iss`) must be Google's own issuer
+ * - audience (`aud`) must be THIS app's client id (already existed)
+ * - expiry (`exp`) must not have passed (defense in depth — tokeninfo
+ *   already rejects expired tokens with a non-200 response, but a token's
+ *   own claims are never trusted on faith)
+ * - `email_verified` must be true before the email claim is trusted for
+ *   anything (account matching, prefill, collision detection); an
+ *   unverified email is treated as absent, never as identity
+ * - a valid `sub` is required (already existed)
+ */
 export async function verifyGoogleIdToken(idToken: string): Promise<OAuthIdentity> {
   const clientId = process.env.GOOGLE_CLIENT_ID?.trim();
   if (!clientId) {
@@ -23,17 +43,46 @@ export async function verifyGoogleIdToken(idToken: string): Promise<OAuthIdentit
   const payload = (await res.json()) as {
     sub?: string;
     email?: string;
+    email_verified?: string | boolean;
     aud?: string;
+    iss?: string;
+    exp?: string | number;
     given_name?: string;
     family_name?: string;
   };
 
-  if (!payload.sub) throw new Error("Invalid Google token");
-  if (payload.aud !== clientId) throw new Error("Google token audience mismatch");
+  // Subject is the permanent identity key — never proceed without one.
+  if (!payload.sub || typeof payload.sub !== "string") {
+    throw new Error("Invalid Google token: missing subject");
+  }
+
+  // Audience — must be issued specifically for THIS app's Google OAuth
+  // client id; never trust a token minted for a different client.
+  if (payload.aud !== clientId) {
+    throw new Error("Google token audience mismatch");
+  }
+
+  // Issuer — Google issues tokens with either form depending on token type.
+  if (payload.iss !== "https://accounts.google.com" && payload.iss !== "accounts.google.com") {
+    throw new Error("Google token issuer mismatch");
+  }
+
+  // Expiry — belt-and-suspenders even though tokeninfo already enforces this.
+  const exp = typeof payload.exp === "string" ? Number(payload.exp) : payload.exp;
+  if (!exp || !Number.isFinite(exp) || exp * 1000 < Date.now()) {
+    throw new Error("Google token expired");
+  }
+
+  // email_verified — Google can return an email Google itself has not
+  // verified. An unverified email must never be used to match an existing
+  // account, prefill account email, or feed collision detection — treated
+  // as if no email were provided at all.
+  const emailVerified = payload.email_verified === true || payload.email_verified === "true";
+  const email = emailVerified ? payload.email ?? null : null;
 
   return {
     subject: payload.sub,
-    email: payload.email ?? null,
+    email,
     firstName: payload.given_name ?? null,
     lastName: payload.family_name ?? null,
   };

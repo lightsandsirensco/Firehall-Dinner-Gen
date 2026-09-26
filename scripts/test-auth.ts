@@ -82,6 +82,13 @@ const MIGRATION_038 = fs.readFileSync(
   "utf8",
 );
 
+// GOOGLE SIGN-IN SAFETY — upsertEmailUser() now also links an auth_identities
+// row, so this table must exist even for this suite's email-only coverage.
+const MIGRATION_048 = fs.readFileSync(
+  path.join(process.cwd(), "server", "db", "migrations", "048_auth_identities.sql"),
+  "utf8",
+);
+
 const tmpDb = path.join(os.tmpdir(), `fh-auth-validate-${Date.now()}.db`);
 
 
@@ -98,6 +105,7 @@ async function bindTestDb(): Promise<void> {
 
   db.exec(MIGRATION_022);
   db.exec(MIGRATION_038);
+  db.exec(MIGRATION_048);
 
   bindAuthDb(db);
 

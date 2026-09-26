@@ -44,6 +44,8 @@ export interface AuthMeResponse {
   preferences: UserPreferences | null;
   halls: HallSummary[];
   billing: UserBillingState;
+  /** Sign-in methods currently linked to this account (e.g. ["email", "google"]). Empty when unauthenticated. */
+  linked_providers: Array<"email" | "google" | "apple">;
 }
 
 export interface UserSavedRecipeRow {

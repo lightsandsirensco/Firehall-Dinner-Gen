@@ -4,16 +4,19 @@ import {
   createAuthSession,
   createMagicLink,
   deleteUserAccount,
+  findUserIdByIdentity,
   getAuthCapabilitiesForUser,
   getAuthCookieName,
   getAuthMe,
+  IdentityOwnershipConflictError,
   initAuthStore,
+  linkIdentity,
   listSavedRecipes,
+  resolveOAuthSignIn,
   revokeAuthSession,
   syncSavedRecipes,
   updateUserProfile,
   upsertEmailUser,
-  upsertOAuthUser,
 } from "./auth-store.js";
 import { sendMagicLinkEmail, getMagicLinkMailStatus, MAGIC_LINK_EXPIRY_MINUTES } from "./magic-link-mail.js";
 import { ensureStripeSubscriptionCancelledForDeletion } from "../billing/account-deletion-guard.js";
@@ -70,7 +73,9 @@ function trackAuthEvent(
     | "magic_link_failed"
     | "magic_link_opened"
     | "magic_link_completed"
-    | "magic_link_expired",
+    | "magic_link_expired"
+    | "google_linked"
+    | "google_email_collision",
   metadata?: Record<string, string | number | boolean>,
 ): void {
   try {
@@ -241,24 +246,93 @@ export function registerAuthRoutes(app: Express): void {
       }
 
       const identity = await verifyGoogleIdToken(parsed.data.id_token);
-      const { user, isNew } = upsertOAuthUser({
+      const result = resolveOAuthSignIn({
         provider: "google",
         subject: identity.subject,
         email: identity.email,
         firstName: identity.firstName,
         lastName: identity.lastName,
       });
-      const session = createAuthSession(user.user_id, isNew);
+
+      if (result.kind === "email_collision") {
+        // Deliberate conflict — never silently merge/duplicate/move data.
+        // See GOOGLE SIGN-IN SAFETY section 7. Does not reveal whether an
+        // arbitrary email has an account: only reachable after a
+        // server-verified Google identity has already proven the requester
+        // controls that Google account/email.
+        trackAuthEvent(req, "google_email_collision");
+        return res.status(409).json({
+          code: "email_collision",
+          message:
+            "You already have a Firehall Meals account with this email. Sign in with your email link first, then connect Google from your Account page.",
+        });
+      }
+
+      const session = createAuthSession(result.user.user_id, result.isNew);
       setAuthCookie(res, session.token);
 
-      trackAuthEvent(req, isNew ? "account_created" : "login", { provider: "google" });
+      trackAuthEvent(req, result.isNew ? "account_created" : "login", { provider: "google" });
 
-      return res.json({ ok: true, is_new: isNew, user: getAuthMe(user.user_id) });
+      return res.json({ ok: true, is_new: result.isNew, user: getAuthMe(result.user.user_id) });
     } catch (err) {
       logError("auth", "google sign-in failed", err);
       return res.status(401).json({ message: "Google sign-in failed" });
     }
   });
+
+  // Authenticated account linking — connects a verified Google identity to
+  // the SIGNED-IN user's existing account without ever changing user_id,
+  // email, or moving any subscription/history/preferences/saves. See
+  // GOOGLE SIGN-IN SAFETY section 8.
+  app.post(
+    "/api/auth/google/link",
+    requireCsrf,
+    requireAuth,
+    async (req: AuthedRequest, res: Response) => {
+      try {
+        await ensureStore();
+        if (!process.env.GOOGLE_CLIENT_ID?.trim()) {
+          return res.status(501).json({ message: "Google Sign In is not configured" });
+        }
+
+        const parsed = oauthTokenSchema.safeParse(req.body);
+        if (!parsed.success) {
+          return res.status(400).json({ message: "Invalid Google credential" });
+        }
+
+        const identity = await verifyGoogleIdToken(parsed.data.id_token);
+        // The target account is ALWAYS the session's own user — never read
+        // from the request body, so a client can never redirect identity
+        // ownership onto a different account.
+        const userId = req._authUserId!;
+
+        const owner = findUserIdByIdentity("google", identity.subject);
+        if (owner && owner !== userId) {
+          return res.status(409).json({
+            message: "This Google account is already linked to a different Firehall Meals account.",
+          });
+        }
+
+        // Idempotent no-op if already linked to this same user.
+        linkIdentity(userId, "google", identity.subject, identity.email ?? null);
+
+        trackAuthEvent(req, "google_linked");
+
+        const me = getAuthMe(userId);
+        return res.json({
+          ok: true,
+          ...me,
+          capabilities: getAuthCapabilitiesForUser(me.user, me.billing),
+        });
+      } catch (err) {
+        if (err instanceof IdentityOwnershipConflictError) {
+          return res.status(409).json({ message: err.message });
+        }
+        logError("auth", "google link failed", err);
+        return res.status(401).json({ message: "Could not connect Google. Try again." });
+      }
+    },
+  );
 
   app.post("/api/auth/apple", requireCsrf, async (req: Request, res: Response) => {
     try {
@@ -274,19 +348,30 @@ export function registerAuthRoutes(app: Express): void {
 
       const identity = await verifyAppleIdToken(parsed.data.id_token);
       const appleName = parsed.data.user?.name;
-      const { user, isNew } = upsertOAuthUser({
+      const result = resolveOAuthSignIn({
         provider: "apple",
         subject: identity.subject,
         email: identity.email ?? parsed.data.user?.email ?? null,
         firstName: appleName?.firstName ?? null,
         lastName: appleName?.lastName ?? null,
       });
-      const session = createAuthSession(user.user_id, isNew);
+
+      if (result.kind === "email_collision") {
+        // Same collision guard as Google — see GOOGLE SIGN-IN SAFETY section 7.
+        trackAuthEvent(req, "google_email_collision", { provider: "apple" });
+        return res.status(409).json({
+          code: "email_collision",
+          message:
+            "You already have a Firehall Meals account with this email. Sign in with your email link first, then connect Apple from your Account page.",
+        });
+      }
+
+      const session = createAuthSession(result.user.user_id, result.isNew);
       setAuthCookie(res, session.token);
 
-      trackAuthEvent(req, isNew ? "account_created" : "login", { provider: "apple" });
+      trackAuthEvent(req, result.isNew ? "account_created" : "login", { provider: "apple" });
 
-      return res.json({ ok: true, is_new: isNew, user: getAuthMe(user.user_id) });
+      return res.json({ ok: true, is_new: result.isNew, user: getAuthMe(result.user.user_id) });
     } catch (err) {
       logError("auth", "apple sign-in failed", err);
       return res.status(401).json({ message: "Apple sign-in failed" });

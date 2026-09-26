@@ -6,6 +6,7 @@ import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
 import { Button } from "@/components/ui/button";
 import { AccountProfileForm } from "@/components/auth/account-profile-form";
 import { DeleteAccountSection } from "@/components/auth/delete-account-section";
+import { SignInMethodsSection } from "@/components/auth/sign-in-methods-section";
 import { SignInPanel } from "@/components/auth/sign-in-panel";
 import { HallPrivateBetaNotice } from "@/components/hall/hall-private-beta-notice";
 import { OnboardingBanner } from "@/components/onboarding/onboarding-banner";
@@ -102,6 +103,8 @@ export default function AccountPage() {
               <HallPrivateBetaNotice compact />
             </section>
             )}
+
+            {!onboardingMode && <SignInMethodsSection />}
 
             <div className="flex flex-wrap gap-3 pt-2 border-t border-border/30">
               <Button type="button" variant="outline" className="min-h-11 touch-manipulation" onClick={() => navigate("/plans")}>
