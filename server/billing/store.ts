@@ -1,5 +1,7 @@
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
 
+import { getStripeConfigStatus } from "./stripe-client.js";
+
 import {
   BILLING_FEATURES,
   HALL_PRO_FEATURES,
@@ -787,6 +789,24 @@ export function adminSetPlanEnabled(planId: PlanId, enabled: boolean): PlanCatal
 
 
 
+/**
+ * Thrown by adminSetUserPlan() when the target user has a live (non-cancelled)
+ * Stripe-sourced subscription. This is a HARD block, with no override: an
+ * admin grant must never be able to silently flip `source` from 'stripe' to
+ * 'admin_grant' — which would hide `manage_billing_available` (and the
+ * "Manage billing" portal link) for a user Stripe is still actively
+ * charging, without ever touching the real Stripe subscription. If a
+ * customer genuinely needs to be comped, their live Stripe subscription
+ * must be cancelled in Stripe first — there is deliberately no "force" path
+ * here. See scripts/test-admin-billing.ts.
+ */
+export class AdminGrantBlockedError extends Error {
+  constructor(message: string) {
+    super(message);
+    this.name = "AdminGrantBlockedError";
+  }
+}
+
 export function adminSetUserPlan(
 
   userId: string,
@@ -806,6 +826,21 @@ export function adminSetUserPlan(
 
 
   const d = getDb();
+
+  const existing = d
+    .prepare(`SELECT source, status FROM user_subscriptions WHERE user_id = ?`)
+    .get(userId) as { source: string; status: string } | undefined;
+
+  if (existing?.source === "stripe" && existing.status !== "cancelled") {
+    throw new AdminGrantBlockedError(
+      `This user has a live Stripe subscription (status: ${existing.status}). An admin grant would ` +
+        `overwrite the local plan/status and hide the "Manage billing" link WITHOUT cancelling the real ` +
+        `Stripe subscription — they would keep being charged. Cancel their subscription in Stripe first, ` +
+        `then retry the grant once the subscription shows as cancelled.`,
+    );
+  }
+
+
 
   d.prepare(
 
@@ -871,6 +906,61 @@ export function adminTogglePlanFeature(
 
 
 
+/**
+ * Truthful, non-misleading breakdown of Firehall Meals Pro (firefighter_plus)
+ * subscribers — deliberately kept as four separate counts rather than one
+ * blended "active subscriptions" number, since that number would otherwise
+ * silently combine real paying Stripe customers with free admin-granted
+ * preview accounts (see Phase A audit finding — the old subscription_counts
+ * query did exactly this via `WHERE status != 'cancelled'` with no source
+ * filter at all).
+ */
+export interface ProSubscriberBreakdown {
+  /** source='stripe' AND status IN ('active','trialing') — real, currently-paying (or in trial) customers. */
+  stripe_active: number;
+  /** source='stripe' AND status='past_due' — Stripe's dunning retry window; still entitled, but card is failing. */
+  stripe_past_due: number;
+  /** source='admin_grant' AND status != 'cancelled' — no money changing hands (previews/comps/QA). */
+  admin_grants: number;
+  /** status='cancelled', any source — no longer entitled. */
+  cancelled: number;
+}
+
+function getProSubscriberBreakdown(): ProSubscriberBreakdown {
+  const d = getDb();
+  const rows = d
+    .prepare(
+      `SELECT source, status, COUNT(*) AS c FROM user_subscriptions WHERE plan_id = 'firefighter_plus' GROUP BY source, status`,
+    )
+    .all() as Array<{ source: string; status: string; c: number }>;
+
+  const breakdown: ProSubscriberBreakdown = {
+    stripe_active: 0,
+    stripe_past_due: 0,
+    admin_grants: 0,
+    cancelled: 0,
+  };
+
+  for (const row of rows) {
+    const count = Number(row.c);
+    if (row.status === "cancelled") {
+      breakdown.cancelled += count;
+    } else if (row.source === "stripe" && row.status === "past_due") {
+      breakdown.stripe_past_due += count;
+    } else if (row.source === "stripe") {
+      breakdown.stripe_active += count;
+    } else if (row.source === "admin_grant") {
+      breakdown.admin_grants += count;
+    }
+    // Note: firefighter_plus can never be reached via source='self_select'
+    // (selectUserPlan() only ever grants the free 'personal' plan) — no
+    // catch-all bucket needed, but nothing here throws if that invariant
+    // is ever violated; the row is just excluded from every named bucket.
+  }
+
+  return breakdown;
+}
+
 export function getAdminBillingDashboard(): {
 
   catalog: PlanCatalogEntry[];
@@ -882,6 +972,10 @@ export function getAdminBillingDashboard(): {
   subscription_counts: Record<PlanId, number>;
 
   hall_pro_hall_count: number;
+
+  pro_subscriber_breakdown: ProSubscriberBreakdown;
+
+  stripe_config: ReturnType<typeof getStripeConfigStatus>;
 
 } {
 
@@ -972,6 +1066,10 @@ export function getAdminBillingDashboard(): {
     subscription_counts: counts,
 
     hall_pro_hall_count: Number(hallProRow?.c ?? 0),
+
+    pro_subscriber_breakdown: getProSubscriberBreakdown(),
+
+    stripe_config: getStripeConfigStatus(),
 
   };
 

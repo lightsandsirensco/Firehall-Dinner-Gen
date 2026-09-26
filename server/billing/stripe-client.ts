@@ -16,6 +16,36 @@ export type BillingPeriod = "monthly" | "annual";
 
 let cachedClient: Stripe | null = null;
 
+/**
+ * Boolean-only Stripe configuration status for the admin billing console —
+ * presence checks ONLY, never the actual secret/key values. Safe to send to
+ * the browser. See getAdminBillingDashboard() in store.ts, the only caller.
+ */
+export interface StripeConfigStatus {
+  secret_key_configured: boolean;
+  webhook_secret_configured: boolean;
+  price_monthly_configured: boolean;
+  price_annual_configured: boolean;
+  public_site_url_configured: boolean;
+}
+
+export function getStripeConfigStatus(): StripeConfigStatus {
+  return {
+    secret_key_configured: Boolean(process.env.STRIPE_SECRET_KEY?.trim()),
+    webhook_secret_configured: Boolean(process.env.STRIPE_WEBHOOK_SECRET?.trim()),
+    price_monthly_configured: Boolean(process.env.STRIPE_PRICE_ID_MONTHLY?.trim()),
+    price_annual_configured: Boolean(process.env.STRIPE_PRICE_ID_ANNUAL?.trim()),
+    // Same fallback chain resolvePublicSiteOrigin() uses (server/seo/sitemap.ts) —
+    // "configured" means checkout/portal redirect URLs won't fall back to the
+    // hardcoded canonical origin.
+    public_site_url_configured: Boolean(
+      process.env.PUBLIC_SITE_URL?.trim() ||
+        process.env.SITE_URL?.trim() ||
+        process.env.REPLIT_DEPLOYMENT_URL?.trim(),
+    ),
+  };
+}
+
 /** Throws a clear, actionable error if Stripe isn't configured — never silently no-ops on a payment path. */
 export function getStripeClient(): Stripe {
   if (cachedClient) return cachedClient;

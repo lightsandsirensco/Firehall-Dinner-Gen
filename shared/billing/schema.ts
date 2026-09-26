@@ -18,6 +18,10 @@ export const adminSetUserPlanSchema = z.object({
   status: z.enum(["active", "trialing", "cancelled"]).optional(),
 });
 
+export const adminUserLookupSchema = z.object({
+  email: z.string().trim().min(1).max(320),
+});
+
 export const adminToggleFeatureSchema = z.object({
   plan_id: z.enum(PLAN_IDS),
   feature_key: z.enum(BILLING_FEATURES),

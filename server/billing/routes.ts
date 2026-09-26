@@ -14,6 +14,8 @@ import { memberHasPermission } from "../hall-membership/store.js";
 
 import {
 
+  AdminGrantBlockedError,
+
   adminSetGlobalFlag,
 
   adminSetHallPlan,
@@ -76,7 +78,7 @@ import {
 
 import { userAlreadyHasProAccess } from "./checkout-guard.js";
 
-import { getUserById } from "../auth/auth-store.js";
+import { findUserByEmail, getUserById } from "../auth/auth-store.js";
 
 import {
 
@@ -87,6 +89,8 @@ import {
   adminToggleFeatureSchema,
 
   adminTogglePlanSchema,
+
+  adminUserLookupSchema,
 
   createCheckoutSessionSchema,
 
@@ -829,6 +833,81 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
+  /**
+   * Read-only user billing lookup by email — lets the admin console find a
+   * real user (rather than requiring a hand-typed internal user_id) before
+   * granting/inspecting their plan. Deliberately returns only the fields
+   * needed to operate billing (no profile data, no raw Stripe ids).
+   */
+
+  app.get("/api/admin/billing/users/lookup", requireAdmin, async (req: Request, res: Response) => {
+
+    try {
+
+      await ensureStore();
+
+      const parsed = adminUserLookupSchema.safeParse({ email: req.query.email });
+
+      if (!parsed.success) {
+
+        return res.status(400).json({ message: "Provide ?email=" });
+
+      }
+
+      const user = findUserByEmail(parsed.data.email);
+
+      if (!user) {
+
+        return res.status(404).json({ message: "No user found with that email" });
+
+      }
+
+      const billing = resolveUserBilling(user.user_id);
+
+      return res.json({
+
+        user_id: user.user_id,
+
+        email: user.email,
+
+        created_at: user.created_at,
+
+        last_login_at: user.last_login_at,
+
+        effective_plan_id: billing.effective_plan_id,
+
+        subscription: billing.subscription
+
+          ? {
+
+              plan_id: billing.subscription.plan_id,
+
+              status: billing.subscription.status,
+
+              source: billing.subscription.source,
+
+              cancel_at_period_end: billing.subscription.cancel_at_period_end ?? null,
+
+              current_period_end: billing.subscription.current_period_end ?? null,
+
+            }
+
+          : null,
+
+        manage_billing_available: billing.manage_billing_available,
+
+      });
+
+    } catch (err) {
+
+      logError("billing", "admin user lookup failed", err);
+
+      return res.status(500).json({ message: "Lookup failed" });
+
+    }
+
+  });
+
   app.patch("/api/admin/billing/users/:userId", requireAdmin, async (req: Request, res: Response) => {
 
     try {
@@ -845,21 +924,34 @@ export function registerBillingRoutes(app: Express): void {
 
       }
 
-
-
       if (parsed.data.plan_id === "hall_pro") {
 
         return res.status(400).json({ message: "Hall Pro is hall-scoped — use hall admin tools" });
 
       }
 
+      // Grants against a nonexistent user silently created an orphaned
+      // user_subscriptions row before (SQLite foreign_keys enforcement is
+      // off in this codebase) — verify the user is real first so a typo'd
+      // user_id fails loudly instead of looking like a successful grant.
 
+      if (!getUserById(userId)) {
+
+        return res.status(404).json({ message: "User not found" });
+
+      }
 
       const billing = adminSetUserPlan(userId, parsed.data.plan_id, parsed.data.status ?? "active");
 
       return res.json({ billing });
 
     } catch (err) {
+
+      if (err instanceof AdminGrantBlockedError) {
+
+        return res.status(409).json({ message: err.message });
+
+      }
 
       logError("billing", "admin set user plan failed", err);
 
@@ -868,7 +960,6 @@ export function registerBillingRoutes(app: Express): void {
     }
 
   });
-
 
 
   app.patch("/api/admin/billing/halls/:hallId", requireAdmin, async (req: Request, res: Response) => {
