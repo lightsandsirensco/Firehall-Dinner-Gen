@@ -3,7 +3,7 @@ import { requireCsrf } from "../csrf.js";
 import { logError } from "../logger.js";
 import { insertAnalyticsEvents } from "../analytics/analytics-store.js";
 import { requireAuth, type AuthedRequest } from "../auth/auth-middleware.js";
-import { userHasFeature } from "../billing/store.js";
+import { userHasHallProFeature } from "../billing/store.js";
 import {
   addManualItem,
   addRecipeIngredients,
@@ -53,7 +53,7 @@ function trackListEvent(
 }
 
 function requireSharedShoppingList(req: AuthedRequest, res: Response, hallId: string): boolean {
-  if (!userHasFeature(req._authUserId ?? null, "shared_shopping_lists", { hall_id: hallId })) {
+  if (!userHasHallProFeature(req._authUserId ?? null, "shared_shopping_lists", { hall_id: hallId })) {
     res.status(402).json({ message: "Hall Pro required", feature: "shared_shopping_lists" });
     return false;
   }

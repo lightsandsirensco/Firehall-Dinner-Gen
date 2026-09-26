@@ -228,10 +228,13 @@ export function personalOnboardingStep(
   if (!progress.first_meal_generated) return "generate_meal";
   if (!progress.first_meal_saved) return "save_meal";
   if (!progress.profile_built) return "profile";
-  if (progress.works_at_firehall === null) return "hall_question";
-  if (progress.works_at_firehall === true && !hasHall && !progress.hall_connect_skipped) {
-    return "connect_hall";
-  }
+  // Hall operations is on hold — the funnel no longer asks the
+  // "do you cook at a fire hall?" question or offers to connect a hall.
+  // `hall_question`/`connect_hall` remain valid PersonalOnboardingStep
+  // values (kept for type/back-compat with any stored progress and other
+  // switch statements below) but are never returned here anymore, so no
+  // caller will route a user into that CTA. See FIREHALL MEALS — REMOVE
+  // HALL OPERATIONS / HALL SIGNUP SURFACES cleanup.
   return "completed";
 }
 

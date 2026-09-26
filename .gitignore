@@ -12,4 +12,6 @@ data/*.db-wal
 .env.local
 .env.production
 cookies.txt
+cookies_*.txt
 data/backups/
+.local/

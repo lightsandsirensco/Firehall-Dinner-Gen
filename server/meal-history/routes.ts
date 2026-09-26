@@ -41,11 +41,11 @@ export function registerMealHistoryRoutes(app: Express): void {
     try {
       await ensureStore();
       const userId = req._authUserId!;
-      const billing = resolveUserBilling(userId);
+      const billing = await resolveUserBilling(userId);
       const entitled = hasFeature(billing.features, "meal_memory");
       const response: MealHistoryListResponse = {
         entitled,
-        entries: entitled ? listMealHistoryForUser(userId, 20) : [],
+        entries: entitled ? await listMealHistoryForUser(userId, 20) : [],
       };
       return res.json(response);
     } catch (err) {
@@ -61,7 +61,7 @@ export function registerMealHistoryRoutes(app: Express): void {
     try {
       await ensureStore();
       const userId = req._authUserId!;
-      const billing = resolveUserBilling(userId);
+      const billing = await resolveUserBilling(userId);
       if (!hasFeature(billing.features, "meal_memory")) {
         return res.status(403).json({
           message: "Firehall Meals Pro remembers your cooked meals across devices.",
@@ -73,7 +73,7 @@ export function registerMealHistoryRoutes(app: Express): void {
         return res.status(400).json({ message: "Invalid recipe" });
       }
 
-      const result = recordMealCookedForUser(userId, parsed.data.recipe_slug);
+      const result = await recordMealCookedForUser(userId, parsed.data.recipe_slug);
       if (!result.ok) {
         return res.status(400).json({ message: "Recipe not found" });
       }
@@ -106,7 +106,7 @@ export function registerMealHistoryRoutes(app: Express): void {
           return res.status(400).json({ message: "Invalid history entry" });
         }
 
-        const deleted = deleteMealHistoryEntryForUser(userId, id);
+        const deleted = await deleteMealHistoryEntryForUser(userId, id);
         if (!deleted) {
           return res.status(404).json({ message: "History entry not found" });
         }

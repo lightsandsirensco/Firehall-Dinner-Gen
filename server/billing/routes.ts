@@ -180,7 +180,7 @@ export function registerBillingRoutes(app: Express): void {
 
       await ensureStore();
 
-      return res.json(getBillingPublicConfig());
+      return res.json(await getBillingPublicConfig());
 
     } catch (err) {
 
@@ -204,9 +204,9 @@ export function registerBillingRoutes(app: Express): void {
 
       return res.json({
 
-        plans: getPlanCatalog(),
+        plans: await getPlanCatalog(),
 
-        config: getBillingPublicConfig(),
+        config: await getBillingPublicConfig(),
 
       });
 
@@ -230,7 +230,7 @@ export function registerBillingRoutes(app: Express): void {
 
       const userId = req._authUserId ?? null;
 
-      const billing = resolveUserBilling(userId, {
+      const billing = await resolveUserBilling(userId, {
 
         is_guest: !userId,
 
@@ -266,7 +266,7 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
-      const config = getBillingPublicConfig();
+      const config = await getBillingPublicConfig();
 
       if (!config.monetization_enabled) {
 
@@ -276,7 +276,7 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
-      const billing = selectUserPlan(req._authUserId!, parsed.data.plan_id);
+      const billing = await selectUserPlan(req._authUserId!, parsed.data.plan_id);
 
       if (!billing) {
 
@@ -390,7 +390,7 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
-        const config = getBillingPublicConfig();
+        const config = await getBillingPublicConfig();
 
         if (!config.monetization_enabled) {
 
@@ -444,7 +444,7 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
-        const billing = resolveUserBilling(userId);
+        const billing = await resolveUserBilling(userId);
 
         return res.json({
 
@@ -501,7 +501,7 @@ export function registerBillingRoutes(app: Express): void {
   app.post("/api/billing/checkout", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
     try {
       await ensureStore();
-      const config = getBillingPublicConfig();
+      const config = await getBillingPublicConfig();
       if (!config.monetization_enabled || !config.payments_enabled) {
         return res.status(503).json({ message: "Checkout is not available yet" });
       }
@@ -512,7 +512,7 @@ export function registerBillingRoutes(app: Express): void {
       }
 
       const userId = req._authUserId!;
-      const user = getUserById(userId);
+      const user = await getUserById(userId);
       if (!user) {
         return res.status(404).json({ message: "Account not found" });
       }
@@ -521,20 +521,20 @@ export function registerBillingRoutes(app: Express): void {
       // just via the disabled "Current plan" button on /plans (which a
       // hand-crafted request would bypass entirely). Covers admin-granted
       // Pro too: no reason to let an already-entitled user pay again.
-      const existingBilling = resolveUserBilling(userId);
+      const existingBilling = await resolveUserBilling(userId);
       if (userAlreadyHasProAccess(existingBilling.subscription)) {
         return res.status(409).json({ message: "You already have an active Firehall Meals Pro subscription." });
       }
 
       const stripe = getStripeClient();
-      let customerId = getStripeCustomerIdForUser(userId);
+      let customerId = await getStripeCustomerIdForUser(userId);
       if (!customerId) {
         const customer = await stripe.customers.create({
           email: user.email ?? undefined,
           metadata: { user_id: userId },
         });
         customerId = customer.id;
-        linkStripeCustomer(userId, customerId);
+        await linkStripeCustomer(userId, customerId);
       }
 
       const priceId = await getVerifiedPriceIdForPeriod(parsed.data.billing_period);
@@ -583,7 +583,7 @@ export function registerBillingRoutes(app: Express): void {
     try {
       await ensureStore();
       const userId = req._authUserId!;
-      const customerId = getStripeCustomerIdForUser(userId);
+      const customerId = await getStripeCustomerIdForUser(userId);
       if (!customerId) {
         return res.status(404).json({ message: "No billing account on file" });
       }
@@ -632,7 +632,7 @@ export function registerBillingRoutes(app: Express): void {
       }
 
       // Idempotency — Stripe redelivers events; never double-apply one.
-      if (hasWebhookEventBeenProcessed(event.id)) {
+      if (await hasWebhookEventBeenProcessed(event.id)) {
         return res.json({ ok: true, duplicate: true });
       }
 
@@ -647,7 +647,7 @@ export function registerBillingRoutes(app: Express): void {
             typeof session.customer === "string" ? session.customer : session.customer?.id;
           if (userId && stripeSubscriptionId && stripeCustomerId) {
             const subscription = await stripe.subscriptions.retrieve(stripeSubscriptionId);
-            upsertStripeSubscription({
+            await upsertStripeSubscription({
               userId,
               stripeCustomerId,
               stripeSubscriptionId,
@@ -674,10 +674,10 @@ export function registerBillingRoutes(app: Express): void {
             typeof subscription.customer === "string" ? subscription.customer : subscription.customer.id;
           const userId =
             (subscription.metadata?.user_id as string | undefined) ??
-            getUserIdByStripeCustomerId(stripeCustomerId) ??
-            getUserIdByStripeSubscriptionId(subscription.id);
+            (await getUserIdByStripeCustomerId(stripeCustomerId)) ??
+            (await getUserIdByStripeSubscriptionId(subscription.id));
           if (userId) {
-            upsertStripeSubscription({
+            await upsertStripeSubscription({
               userId,
               stripeCustomerId,
               stripeSubscriptionId: subscription.id,
@@ -694,7 +694,7 @@ export function registerBillingRoutes(app: Express): void {
         }
         case "customer.subscription.deleted": {
           const subscription = event.data.object as import("stripe").Stripe.Subscription;
-          markStripeSubscriptionCancelledBySubscriptionId(subscription.id);
+          await markStripeSubscriptionCancelledBySubscriptionId(subscription.id);
           trackBillingEvent(req, "stripe_subscription_cancelled");
           break;
         }
@@ -705,7 +705,7 @@ export function registerBillingRoutes(app: Express): void {
           break;
       }
 
-      recordWebhookEvent(event.id, event.type);
+      await recordWebhookEvent(event.id, event.type);
       return res.json({ ok: true });
     } catch (err) {
       logError("billing", "stripe webhook handling failed", err);
@@ -721,7 +721,7 @@ export function registerBillingRoutes(app: Express): void {
 
       await ensureStore();
 
-      return res.json(getAdminBillingDashboard());
+      return res.json(await getAdminBillingDashboard());
 
     } catch (err) {
 
@@ -753,7 +753,7 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
-      const plan = adminSetPlanEnabled(planId, parsed.data.enabled);
+      const plan = await adminSetPlanEnabled(planId, parsed.data.enabled);
 
       if (!plan) {
 
@@ -763,7 +763,7 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
-      return res.json({ plan, dashboard: getAdminBillingDashboard() });
+      return res.json({ plan, dashboard: await getAdminBillingDashboard() });
 
     } catch (err) {
 
@@ -807,7 +807,7 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
-        const row = adminTogglePlanFeature(
+        const row = await adminTogglePlanFeature(
 
           parsed.data.plan_id,
 
@@ -817,7 +817,7 @@ export function registerBillingRoutes(app: Express): void {
 
         );
 
-        return res.json({ feature: row, dashboard: getAdminBillingDashboard() });
+        return res.json({ feature: row, dashboard: await getAdminBillingDashboard() });
 
       } catch (err) {
 
@@ -854,7 +854,7 @@ export function registerBillingRoutes(app: Express): void {
 
       }
 
-      const user = findUserByEmail(parsed.data.email);
+      const user = await findUserByEmail(parsed.data.email);
 
       if (!user) {
 
@@ -862,7 +862,7 @@ export function registerBillingRoutes(app: Express): void {
 
       }
 
-      const billing = resolveUserBilling(user.user_id);
+      const billing = await resolveUserBilling(user.user_id);
 
       return res.json({
 
@@ -935,13 +935,13 @@ export function registerBillingRoutes(app: Express): void {
       // off in this codebase) — verify the user is real first so a typo'd
       // user_id fails loudly instead of looking like a successful grant.
 
-      if (!getUserById(userId)) {
+      if (!(await getUserById(userId))) {
 
         return res.status(404).json({ message: "User not found" });
 
       }
 
-      const billing = adminSetUserPlan(userId, parsed.data.plan_id, parsed.data.status ?? "active");
+      const billing = await adminSetUserPlan(userId, parsed.data.plan_id, parsed.data.status ?? "active");
 
       return res.json({ billing });
 
@@ -974,7 +974,7 @@ export function registerBillingRoutes(app: Express): void {
 
       const subscription = adminSetHallPlan(hallId, status);
 
-      return res.json({ subscription, dashboard: getAdminBillingDashboard() });
+      return res.json({ subscription, dashboard: await getAdminBillingDashboard() });
 
     } catch (err) {
 
@@ -997,11 +997,11 @@ export function registerBillingRoutes(app: Express): void {
         if (!parsed.success) {
           return res.status(400).json({ message: "Invalid payload" });
         }
-        const flag = adminSetGlobalFlag(flagKey, parsed.data.enabled);
+        const flag = await adminSetGlobalFlag(flagKey, parsed.data.enabled);
         if (!flag) {
           return res.status(404).json({ message: "Unknown flag" });
         }
-        return res.json({ flag, dashboard: getAdminBillingDashboard() });
+        return res.json({ flag, dashboard: await getAdminBillingDashboard() });
       } catch (err) {
         logError("billing", "admin set global flag failed", err);
         return res.status(500).json({ message: "Failed to update flag" });

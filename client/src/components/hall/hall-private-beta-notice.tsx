@@ -1,12 +1,6 @@
-import { useState, type FormEvent } from "react";
-import { CheckCircle2, Flame, Loader2, Mail } from "lucide-react";
+import { Flame } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { fetchWithCsrf } from "@/lib/csrf-fetch";
 import { cn } from "@/lib/utils";
-
-type Status = "idle" | "loading" | "success" | "error";
 
 interface HallPrivateBetaNoticeProps {
   /** Tighter spacing/type scale for embedding inside another card (e.g. the Account page). */
@@ -19,8 +13,12 @@ interface HallPrivateBetaNoticeProps {
 /**
  * The single source of truth for "Hall Operations" messaging everywhere in the
  * app — deliberately reveals nothing about what the feature does beyond the
- * name, so it can be reused on the dedicated page, the homepage teaser, and
- * inline inside the Account page without ever leaking roadmap details.
+ * name, so it can be reused on the dedicated page and inline inside the
+ * Account page without ever leaking roadmap details.
+ *
+ * Status-only, no signup — Hall Operations is on hold and is not currently
+ * offered for signup/waitlist anywhere in the product (see
+ * FIREHALL MEALS — REMOVE HALL OPERATIONS / HALL SIGNUP SURFACES cleanup).
  */
 export function HallPrivateBetaNotice({
   compact,
@@ -28,38 +26,6 @@ export function HallPrivateBetaNotice({
   secondaryLabel,
   className,
 }: HallPrivateBetaNoticeProps) {
-  const [showForm, setShowForm] = useState(false);
-  const [email, setEmail] = useState("");
-  const [status, setStatus] = useState<Status>("idle");
-  const [errorMsg, setErrorMsg] = useState("");
-
-  const handleSubmit = async (event: FormEvent) => {
-    event.preventDefault();
-    if (!email.trim() || status === "loading" || status === "success") return;
-
-    setStatus("loading");
-    setErrorMsg("");
-    try {
-      const res = await fetchWithCsrf("/api/homepage-subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), source: "hall_private_beta" }),
-      });
-      const data = await res.json().catch(() => null);
-
-      if (!res.ok) {
-        setStatus("error");
-        setErrorMsg(data?.message || `Server error (${res.status}). Please try again.`);
-        return;
-      }
-
-      setStatus("success");
-    } catch {
-      setStatus("error");
-      setErrorMsg("Network error. Check your connection and try again.");
-    }
-  };
-
   return (
     <div
       className={cn(
@@ -85,51 +51,11 @@ export function HallPrivateBetaNotice({
           compact ? "text-sm max-w-sm" : "text-sm sm:text-base max-w-md",
         )}
       >
-        Hall Operations is currently being tested with a small number of fire stations. We're
-        refining the experience before opening access more broadly.
+        Hall Operations is on hold — not currently open for signup. Everything you need for
+        picking, planning, and cooking tonight's meal is available right now in Firehall Meals.
       </p>
 
       <div className="mx-auto max-w-sm space-y-3">
-        {status === "success" ? (
-          <div
-            className="flex items-start gap-3 rounded-xl border border-[hsl(var(--success)/0.25)] bg-[hsl(var(--success)/0.08)] px-4 py-3 text-left success-pop"
-            role="status"
-          >
-            <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[hsl(var(--success))]" aria-hidden />
-            <p className="text-sm font-medium text-foreground">You're on the list — we'll be in touch.</p>
-          </div>
-        ) : showForm ? (
-          <form onSubmit={handleSubmit} className="space-y-2 rounded-xl border border-border/40 p-3 text-left">
-            <Label htmlFor="hall-beta-email">Email address</Label>
-            <div className="flex gap-2">
-              <Input
-                id="hall-beta-email"
-                type="email"
-                autoComplete="email"
-                placeholder="you@firehall.org"
-                value={email}
-                autoFocus
-                onChange={(e) => setEmail(e.target.value)}
-                disabled={status === "loading"}
-                className="min-h-11"
-              />
-              <Button
-                type="submit"
-                disabled={status === "loading" || !email.trim()}
-                className="shrink-0 min-h-11 min-w-11"
-                aria-label={status === "loading" ? "Joining waitlist" : "Join the waitlist"}
-              >
-                {status === "loading" ? <Loader2 className="w-4 h-4 animate-spin" /> : <Mail className="w-4 h-4" />}
-              </Button>
-            </div>
-            {status === "error" ? <p className="text-sm text-destructive">{errorMsg}</p> : null}
-          </form>
-        ) : (
-          <Button type="button" className="w-full min-h-11 touch-manipulation" onClick={() => setShowForm(true)}>
-            Join the Waitlist
-          </Button>
-        )}
-
         {onSecondaryAction ? (
           <Button
             type="button"

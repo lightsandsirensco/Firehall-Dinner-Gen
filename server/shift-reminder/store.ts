@@ -1,5 +1,6 @@
 import { nanoid } from "nanoid";
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
+import { pgAll, pgOne } from "../db/pg-sql.js";
 import { shouldSendShiftReminder } from "../../shared/shift-reminder/scheduling.js";
 import { normalizeShiftDays } from "../../shared/shift-reminder/schema.js";
 import type {
@@ -61,21 +62,22 @@ export interface ShiftReminderCandidate {
   shift_date: string;
 }
 
-export function listDueShiftReminders(now = new Date()): ShiftReminderCandidate[] {
+// PRODUCTION DATABASE MIGRATION: users/user_preferences now live in Postgres
+// (see server/auth/auth-store.ts) — this candidate query moved with them.
+// shift_reminder_sends (dedup tracking, below) is untouched, still SQLite.
+export async function listDueShiftReminders(now = new Date()): Promise<ShiftReminderCandidate[]> {
   const d = getDb();
-  const rows = d
-    .prepare(
-      `SELECT u.user_id, u.email, p.display_name, pref.*
-       FROM users u
-       INNER JOIN user_preferences pref ON pref.user_id = u.user_id
-       LEFT JOIN user_profiles p ON p.user_id = u.user_id
-       WHERE u.is_guest = 0
-         AND u.email IS NOT NULL
-         AND pref.shift_reminders_enabled = 1
-         AND pref.shift_days_json IS NOT NULL
-         AND pref.shift_days_json != '[]'`,
-    )
-    .all() as Record<string, unknown>[];
+  const rows = await pgAll<Record<string, unknown>>(
+    `SELECT u.user_id, u.email, p.display_name, pref.*
+     FROM users u
+     INNER JOIN user_preferences pref ON pref.user_id = u.user_id
+     LEFT JOIN user_profiles p ON p.user_id = u.user_id
+     WHERE u.is_guest = 0
+       AND u.email IS NOT NULL
+       AND pref.shift_reminders_enabled = 1
+       AND pref.shift_days_json IS NOT NULL
+       AND pref.shift_days_json != '[]'`,
+  );
 
   const due: ShiftReminderCandidate[] = [];
 
@@ -175,20 +177,19 @@ export function getShiftReminderSend(sendId: string): {
   };
 }
 
-export function evaluateShiftReminderForUser(
+export async function evaluateShiftReminderForUser(
   userId: string,
   now = new Date(),
-): ShiftReminderCandidate | null {
+): Promise<ShiftReminderCandidate | null> {
   const d = getDb();
-  const row = d
-    .prepare(
-      `SELECT u.user_id, u.email, p.display_name, pref.*
-       FROM users u
-       INNER JOIN user_preferences pref ON pref.user_id = u.user_id
-       LEFT JOIN user_profiles p ON p.user_id = u.user_id
-       WHERE u.user_id = ?`,
-    )
-    .get(userId) as Record<string, unknown> | undefined;
+  const row = await pgOne<Record<string, unknown>>(
+    `SELECT u.user_id, u.email, p.display_name, pref.*
+     FROM users u
+     INNER JOIN user_preferences pref ON pref.user_id = u.user_id
+     LEFT JOIN user_profiles p ON p.user_id = u.user_id
+     WHERE u.user_id = $1`,
+    [userId],
+  );
   if (!row) return null;
 
   const email = row.email ? String(row.email) : "";

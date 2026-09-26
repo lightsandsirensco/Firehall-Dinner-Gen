@@ -3,7 +3,7 @@ import { requireCsrf } from "../csrf.js";
 import { logError } from "../logger.js";
 import { insertAnalyticsEvents } from "../analytics/analytics-store.js";
 import { requireAuth, type AuthedRequest } from "../auth/auth-middleware.js";
-import { userHasFeature } from "../billing/store.js";
+import { userHasHallProFeature } from "../billing/store.js";
 import { memberHasPermission } from "../hall-membership/store.js";
 import { addManualItem, initHallShoppingListStore } from "../hall-shopping-list/store.js";
 import { saveGroceryPreferencesSchema, nearbyStoresQuerySchema } from "../../shared/grocery-stores/schema.js";
@@ -49,7 +49,7 @@ function requireHallMember(req: AuthedRequest, res: Response, hallId: string): b
 }
 
 function requireProteinDealsAccess(req: AuthedRequest, res: Response, hallId: string): boolean {
-  if (!userHasFeature(req._authUserId ?? null, "hall_grocery_planning", { hall_id: hallId })) {
+  if (!userHasHallProFeature(req._authUserId ?? null, "hall_grocery_planning", { hall_id: hallId })) {
     res.status(402).json({ message: "Hall Pro required", feature: "hall_grocery_planning" });
     return false;
   }
@@ -83,7 +83,7 @@ function registerProteinDealRoutes(app: Express, basePath: string): void {
       await ensureStore();
       const hallId = String(req.params.hallId ?? "");
       if (!requireHallMember(req, res, hallId)) return;
-      const hasPro = userHasFeature(req._authUserId ?? null, "hall_grocery_planning", { hall_id: hallId });
+      const hasPro = userHasHallProFeature(req._authUserId ?? null, "hall_grocery_planning", { hall_id: hallId });
       if (!hasPro) {
         return res.json(await getProteinDealsResponse(hallId, false));
       }
@@ -186,7 +186,7 @@ export function registerGroceryDealsRoutes(app: Express): void {
         await ensureStore();
         const hallId = String(req.params.hallId ?? "");
         if (!requireHallMember(req, res, hallId)) return;
-        const hasPro = userHasFeature(req._authUserId ?? null, "hall_grocery_planning", { hall_id: hallId });
+        const hasPro = userHasHallProFeature(req._authUserId ?? null, "hall_grocery_planning", { hall_id: hallId });
         if (!hasPro) {
           const teaser = getProteinDealsTeaser(hallId);
           return res.json({ message: teaser.message, deals: teaser.top_deals });
@@ -262,7 +262,7 @@ export function registerGroceryDealsRoutes(app: Express): void {
         });
         trackProteinEvent(req, "protein_setup_completed", { hall_id: hallId });
         await refreshProteinDealsFromProvider(hallId).catch(() => undefined);
-        const hasPro = userHasFeature(req._authUserId ?? null, "hall_grocery_planning", { hall_id: hallId });
+        const hasPro = userHasHallProFeature(req._authUserId ?? null, "hall_grocery_planning", { hall_id: hallId });
         return res.json({
           ok: true,
           preferences: prefs,

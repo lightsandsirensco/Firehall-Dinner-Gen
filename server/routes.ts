@@ -87,6 +87,7 @@ import { readGoldenRecipePage, listGoldenPageSlugs } from "./golden-100/page-sto
 import { buildGoldenRecipePage } from "./golden-100/recipe-page-builder.js";
 import { getGoldenRecipeBySlug } from "../shared/golden-100/manifest.js";
 import { checkGoldenPageAssets } from "./golden-100/page-assets.js";
+import { buildAdminCatalogManifest } from "./admin/catalog-manifest.js";
 import { validateGoldenRecipePage } from "./golden-100/recipe-page-validator.js";
 import fs from "node:fs";
 import path from "node:path";
@@ -1283,7 +1284,7 @@ export async function registerRoutes(
       // Resolved once per request — reused below for "Foods to Avoid" gating
       // AND Meal Memory (Pro V1 Feature 3) durable-history personalization.
       const authUserId = (req as AuthedRequest)._authUserId ?? null;
-      const requestUserBilling = authUserId ? resolveUserBilling(authUserId) : null;
+      const requestUserBilling = authUserId ? await resolveUserBilling(authUserId) : null;
 
       // "Foods to Avoid" (ingredient_preferences) is a Firehall Meals Pro capability.
       // The client may send a session list (seeded from the signed-in user's saved
@@ -1331,7 +1332,7 @@ export async function registerRoutes(
       // above/below and are never touched by this merge.
       let clientRecentSlugs = clientMeta.recentSlugs;
       if (authUserId && requestUserBilling && hasFeature(requestUserBilling.features, "meal_memory")) {
-        const durableHistory = listRecentCookedSlugsOldestFirst(authUserId, 10);
+        const durableHistory = await listRecentCookedSlugsOldestFirst(authUserId, 10);
         if (durableHistory.length > 0) {
           clientRecentSlugs = mergeRecentSlugSources(durableHistory, clientRecentSlugs);
         }
@@ -2644,6 +2645,20 @@ export async function registerRoutes(
   app.get("/api/admin/golden-100/audit", async (_req: Request, res: Response) => {
     try {
       return res.json(auditGolden100Dataset());
+    } catch (err: unknown) {
+      return res.status(500).json({ message: (err as Error).message });
+    }
+  });
+
+  // Unified "All Recipes" manifest across every active canonical catalog
+  // (Golden 100, Performance Meals, Hall Expansion, Breakfast, BBQ,
+  // Smoothies, Pizza Night) — additive read-only view; see
+  // server/admin/catalog-manifest.ts for the merge logic. The dedicated
+  // /api/admin/golden-100/manifest endpoint above is untouched.
+  app.get("/api/admin/catalog/manifest", async (_req: Request, res: Response) => {
+    try {
+      res.setHeader("Cache-Control", "private, max-age=60");
+      return res.json(buildAdminCatalogManifest());
     } catch (err: unknown) {
       return res.status(500).json({ message: (err as Error).message });
     }

@@ -47,7 +47,7 @@ function trackSent(candidate: ShiftReminderCandidate, sendId: string): void {
 
 export async function processDueShiftReminders(now = new Date()): Promise<number> {
   await ensureStore();
-  const due = listDueShiftReminders(now);
+  const due = await listDueShiftReminders(now);
   let sentCount = 0;
 
   for (const candidate of due) {

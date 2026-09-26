@@ -91,24 +91,16 @@ function departmentName(row: Record<string, unknown>): string | null {
   return value ? String(value) : null;
 }
 
-function memberDisplayName(userId: string): string | null {
-  const row = getDb()
-    .prepare(
-      `SELECT p.display_name, p.first_name, u.email
-       FROM user_profiles p
-       JOIN users u ON u.user_id = p.user_id
-       WHERE p.user_id = ?`,
-    )
-    .get(userId) as
-    | { display_name: string | null; first_name: string | null; email: string | null }
-    | undefined;
-  if (!row) return null;
-  return (
-    row.display_name?.trim() ||
-    row.first_name?.trim() ||
-    row.email?.split("@")[0] ||
-    null
-  );
+/**
+ * KNOWN LIMITATION (PRODUCTION DATABASE MIGRATION): user_profiles/users now
+ * live in Postgres (see server/auth/auth-store.ts); this SQLite-side module
+ * can no longer cheaply JOIN against them for a display name. Returns null
+ * rather than a stale/incorrect name. Follow-up: batch-resolve display names
+ * from Postgres at the route layer where this is actually rendered
+ * (hall detail "Canteen Manager" label) instead of inline here.
+ */
+function memberDisplayName(_userId: string): string | null {
+  return null;
 }
 
 function rowToShift(row: Record<string, unknown>): HallShiftRecord {
@@ -212,16 +204,24 @@ function rowToHall(row: Record<string, unknown>, shifts: HallShiftRecord[]): Hal
   };
 }
 
+// PRODUCTION DATABASE MIGRATION: this used to INNER JOIN `users`/`user_profiles`
+// for display_name/email. Those tables now live in Postgres (see
+// server/auth/auth-store.ts) — an INNER JOIN against the old (now
+// increasingly stale, no-longer-written) SQLite copy would return NO ROW at
+// all for any user created after the migration, which would silently lock
+// them out of every hall permission (memberHasPermission depends on this
+// returning their role). The membership/permission read below is SQLite-only
+// (hall_memberships/hall_shifts, untouched by this migration) and always
+// resolves; display_name/email are left null here — see memberDisplayName()
+// for why, and the follow-up plan to resolve them from Postgres at the
+// route layer where they're actually rendered.
 export function getHallMember(hallId: string, userId: string): HallMemberRecord | null {
   const d = getDb();
   const row = d
     .prepare(
       `SELECT m.hall_id, m.user_id, m.role, m.shift_id, m.joined_at,
-              p.display_name, u.email,
               s.name AS shift_name, s.shift_key
        FROM hall_memberships m
-       JOIN users u ON u.user_id = m.user_id
-       LEFT JOIN user_profiles p ON p.user_id = m.user_id
        LEFT JOIN hall_shifts s ON s.shift_id = m.shift_id
        WHERE m.hall_id = ? AND m.user_id = ?`,
     )
@@ -236,8 +236,8 @@ export function getHallMember(hallId: string, userId: string): HallMemberRecord 
     shift_id: row.shift_id ? String(row.shift_id) : null,
     shift_name: row.shift_name ? String(row.shift_name) : null,
     shift_key: row.shift_key ? (String(row.shift_key) as HallShiftKey) : null,
-    display_name: row.display_name ? String(row.display_name) : null,
-    email: row.email ? String(row.email) : null,
+    display_name: null,
+    email: null,
     joined_at: String(row.joined_at),
     permissions: getPermissionsForRole(role),
   };
@@ -284,16 +284,14 @@ export function listUserHallSummaries(userId: string): HallSummary[] {
   });
 }
 
+// See getHallMember() above for why this no longer JOINs users/user_profiles.
 export function listHallMembers(hallId: string): HallMemberRecord[] {
   const d = getDb();
   const rows = d
     .prepare(
       `SELECT m.hall_id, m.user_id, m.role, m.shift_id, m.joined_at,
-              p.display_name, u.email,
               s.name AS shift_name, s.shift_key
        FROM hall_memberships m
-       JOIN users u ON u.user_id = m.user_id
-       LEFT JOIN user_profiles p ON p.user_id = m.user_id
        LEFT JOIN hall_shifts s ON s.shift_id = m.shift_id
        WHERE m.hall_id = ?
        ORDER BY
@@ -315,8 +313,8 @@ export function listHallMembers(hallId: string): HallMemberRecord[] {
       shift_id: row.shift_id ? String(row.shift_id) : null,
       shift_name: row.shift_name ? String(row.shift_name) : null,
       shift_key: row.shift_key ? (String(row.shift_key) as HallShiftKey) : null,
-      display_name: row.display_name ? String(row.display_name) : null,
-      email: row.email ? String(row.email) : null,
+      display_name: null,
+      email: null,
       joined_at: String(row.joined_at),
       permissions: getPermissionsForRole(role),
     };

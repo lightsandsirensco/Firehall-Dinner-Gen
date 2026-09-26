@@ -5,48 +5,47 @@
  * Append-only event log — a recipe may be cooked, and recorded, any
  * number of times. Never upserts/dedupes by recipe_slug alone (except a
  * short accidental-double-click window — see DOUBLE_CLICK_WINDOW_MS).
+ *
+ * Postgres-backed (see PRODUCTION DATABASE MIGRATION PLAN) — no SQLite
+ * fallback; initMealHistoryStore() fails closed if DATABASE_URL is unset.
  */
-import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
+import { verifyPgConnection } from "../db/pg-client.js";
+import { pgAll, pgOne, pgRun } from "../db/pg-sql.js";
 import { getCatalogTitle, isApprovedCatalogSlug } from "../../shared/hall-catalog/gate.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
 import type { MealHistoryEntry } from "../../shared/meal-history/types.js";
 
-let db: SqliteDatabase;
-
 export async function initMealHistoryStore(): Promise<void> {
-  db = await getSharedLocalDb();
+  await verifyPgConnection();
 }
 
-/** Test hook — bind a specific SQLite database (validation scripts only). */
-export function bindMealHistoryDb(database: SqliteDatabase): void {
-  db = database;
-}
-
-function getDb(): SqliteDatabase {
-  if (!db) {
-    throw new Error("Meal history store not initialized — call initMealHistoryStore() first");
-  }
-  return db;
+/**
+ * @deprecated Meal history is Postgres-only now. No-op compatibility stub
+ * kept only so existing test scripts that call bindMealHistoryDb() still
+ * compile. Set DATABASE_URL to a test database to exercise this store.
+ */
+export function bindMealHistoryDb(_database: unknown): void {
+  console.warn(
+    "[meal-history/store] bindMealHistoryDb() is a no-op — meal history is Postgres-only now.",
+  );
 }
 
 interface MealHistoryRow {
   id: number;
   user_id: string;
   recipe_slug: string;
-  cooked_at: string;
-  created_at: string;
+  cooked_at: Date;
+  created_at: Date;
 }
 
 /** Resolve display fields at read time — never duplicated into the row. Fails gracefully. */
 function toEntry(row: MealHistoryRow): MealHistoryEntry {
   const title = isApprovedCatalogSlug(row.recipe_slug) ? getCatalogTitle(row.recipe_slug) : null;
-  const recipe_path = isApprovedCatalogSlug(row.recipe_slug)
-    ? approvedCatalogRecipePath(row.recipe_slug)
-    : null;
+  const recipe_path = isApprovedCatalogSlug(row.recipe_slug) ? approvedCatalogRecipePath(row.recipe_slug) : null;
   return {
     id: row.id,
     recipe_slug: row.recipe_slug,
-    cooked_at: row.cooked_at,
+    cooked_at: row.cooked_at instanceof Date ? row.cooked_at.toISOString() : String(row.cooked_at),
     title,
     recipe_path,
   };
@@ -59,91 +58,68 @@ export type RecordMealCookedResult =
   | { ok: true; entry: MealHistoryEntry; deduped: boolean }
   | { ok: false; reason: "invalid_slug" };
 
-export function recordMealCookedForUser(userId: string, recipeSlugRaw: string): RecordMealCookedResult {
+export async function recordMealCookedForUser(
+  userId: string,
+  recipeSlugRaw: string,
+): Promise<RecordMealCookedResult> {
   const recipeSlug = recipeSlugRaw.trim().toLowerCase();
   if (!isApprovedCatalogSlug(recipeSlug)) {
     return { ok: false, reason: "invalid_slug" };
   }
 
-  const d = getDb();
-
   // Idempotent double-click guard: if the exact same user+recipe was just
   // recorded a few seconds ago, return that same row instead of inserting
   // a duplicate. A deliberate re-cook (minutes/hours/days later) always
-  // creates a new row — see migration doc comment.
-  const recent = d
-    .prepare(
-      `SELECT * FROM user_meal_history
-       WHERE user_id = ? AND recipe_slug = ?
-       ORDER BY id DESC LIMIT 1`,
-    )
-    .get(userId, recipeSlug) as unknown as MealHistoryRow | undefined;
+  // creates a new row.
+  const recent = await pgOne<MealHistoryRow>(
+    `SELECT * FROM user_meal_history WHERE user_id = $1 AND recipe_slug = $2 ORDER BY id DESC LIMIT 1`,
+    [userId, recipeSlug],
+  );
 
   if (recent) {
-    const recentMs = new Date(recent.created_at.replace(" ", "T") + "Z").getTime();
+    const recentMs = new Date(recent.created_at).getTime();
     if (Number.isFinite(recentMs) && Date.now() - recentMs < DOUBLE_CLICK_WINDOW_MS) {
       return { ok: true, entry: toEntry(recent), deduped: true };
     }
   }
 
-  // sql.js's Statement#run() has no lastInsertRowid — re-select the row we
-  // just inserted (single-connection, synchronous wrapper — see
-  // server/sqlite.ts — so this is race-free within one process).
-  d.prepare(`INSERT INTO user_meal_history (user_id, recipe_slug) VALUES (?, ?)`).run(
-    userId,
-    recipeSlug,
+  const row = await pgOne<MealHistoryRow>(
+    `INSERT INTO user_meal_history (user_id, recipe_slug) VALUES ($1, $2) RETURNING *`,
+    [userId, recipeSlug],
   );
 
-  const row = d
-    .prepare(
-      `SELECT * FROM user_meal_history WHERE user_id = ? AND recipe_slug = ? ORDER BY id DESC LIMIT 1`,
-    )
-    .get(userId, recipeSlug) as unknown as MealHistoryRow;
-
-  return { ok: true, entry: toEntry(row), deduped: false };
+  return { ok: true, entry: toEntry(row!), deduped: false };
 }
 
 /** Most recent cooked events for a user, newest first — for account UI. */
-export function listMealHistoryForUser(userId: string, limit = 20): MealHistoryEntry[] {
-  const d = getDb();
-  const rows = d
-    .prepare(
-      `SELECT * FROM user_meal_history WHERE user_id = ? ORDER BY cooked_at DESC, id DESC LIMIT ?`,
-    )
-    .all(userId, Math.max(1, Math.min(limit, 50))) as unknown as MealHistoryRow[];
+export async function listMealHistoryForUser(userId: string, limit = 20): Promise<MealHistoryEntry[]> {
+  const rows = await pgAll<MealHistoryRow>(
+    `SELECT * FROM user_meal_history WHERE user_id = $1 ORDER BY cooked_at DESC, id DESC LIMIT $2`,
+    [userId, Math.max(1, Math.min(limit, 50))],
+  );
   return rows.map(toEntry);
 }
 
 /** Ownership-checked delete. Returns true only if the row existed and belonged to this user. */
-export function deleteMealHistoryEntryForUser(userId: string, id: number): boolean {
-  const d = getDb();
-  // sql.js's Statement#run() reports no affected-row count — check
-  // ownership with a SELECT first (see recordMealCookedForUser comment).
-  const existing = d
-    .prepare(`SELECT id FROM user_meal_history WHERE id = ? AND user_id = ?`)
-    .get(id, userId);
+export async function deleteMealHistoryEntryForUser(userId: string, id: number): Promise<boolean> {
+  const existing = await pgOne(`SELECT id FROM user_meal_history WHERE id = $1 AND user_id = $2`, [id, userId]);
   if (!existing) return false;
-  d.prepare(`DELETE FROM user_meal_history WHERE id = ? AND user_id = ?`).run(id, userId);
+  await pgRun(`DELETE FROM user_meal_history WHERE id = $1 AND user_id = $2`, [id, userId]);
   return true;
 }
 
 /**
  * Recent cooked recipe slugs, OLDEST FIRST — the exact ordering contract the
  * Generator's existing recency mechanics expect (see
- * client/src/lib/meal-rotation-memory.ts recordMealSlug — the free/local
- * "recentSlugs" array is built the same way: push newest to the end).
- * Handed to the EXISTING recentSlugPenalty (shared/meal-rotation/weighted-pick.ts,
- * unmodified by this feature) exactly as the client's own device-local list
- * already is — no new ranking engine. `limit` is the exact recency window
- * (see server/routes.ts generate handler for the chosen policy).
+ * client/src/lib/meal-rotation-memory.ts recordMealSlug). Handed to the
+ * existing recentSlugPenalty (shared/meal-rotation/weighted-pick.ts,
+ * unmodified) exactly as the client's own device-local list already is.
  */
-export function listRecentCookedSlugsOldestFirst(userId: string, limit = 10): string[] {
-  const d = getDb();
-  const rows = d
-    .prepare(
-      `SELECT recipe_slug FROM user_meal_history WHERE user_id = ? ORDER BY cooked_at DESC, id DESC LIMIT ?`,
-    )
-    .all(userId, Math.max(1, Math.min(limit, 32))) as Array<{ recipe_slug: string }>;
+export async function listRecentCookedSlugsOldestFirst(userId: string, limit = 10): Promise<string[]> {
+  const rows = await pgAll<{ recipe_slug: string }>(
+    `SELECT recipe_slug FROM user_meal_history WHERE user_id = $1 ORDER BY cooked_at DESC, id DESC LIMIT $2`,
+    [userId, Math.max(1, Math.min(limit, 32))],
+  );
   // rows come back newest-first; reverse for oldest-first.
   return rows.map((r) => r.recipe_slug).reverse();
 }

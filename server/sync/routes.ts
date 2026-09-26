@@ -14,7 +14,7 @@ export function registerUserSyncRoutes(app: Express): void {
   app.get("/api/auth/sync", requireAuth, async (req: AuthedRequest, res: Response) => {
     try {
       await ensureStore();
-      const snapshots = listUserSnapshots(req._authUserId!);
+      const snapshots = await listUserSnapshots(req._authUserId!);
       return res.json({ snapshots });
     } catch (err) {
       logError("sync", "pull failed", err);
@@ -30,7 +30,7 @@ export function registerUserSyncRoutes(app: Express): void {
         return res.status(400).json({ message: "Invalid sync payload" });
       }
 
-      const result = upsertUserSnapshots(
+      const result = await upsertUserSnapshots(
         req._authUserId!,
         parsed.data.snapshots as import("../../shared/sync/types.js").SyncSnapshotRow[],
       );

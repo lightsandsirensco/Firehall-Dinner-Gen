@@ -87,6 +87,12 @@ export default function AdminPage() {
                 Golden 100 catalog
               </Button>
             </Link>
+            <Link href="/admin/catalog">
+              <Button variant="outline" data-testid="button-all-recipes-admin">
+                <ChefHat className="w-4 h-4 mr-2" />
+                All Recipes
+              </Button>
+            </Link>
             <Link href="/admin/ingestion">
               <Button variant="outline" data-testid="button-ingestion-admin">
                 <ChefHat className="w-4 h-4 mr-2" />
@@ -170,6 +176,12 @@ export default function AdminPage() {
             <Button variant="outline" size="sm" data-testid="button-golden-100-admin-nav">
               <ChefHat className="w-4 h-4 mr-2" />
               Golden 100
+            </Button>
+          </Link>
+          <Link href="/admin/catalog">
+            <Button variant="outline" size="sm" data-testid="button-all-recipes-admin-nav">
+              <ChefHat className="w-4 h-4 mr-2" />
+              All Recipes
             </Button>
           </Link>
           <Link href="/admin/ingestion">

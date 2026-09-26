@@ -27,6 +27,7 @@ import { SkipToContent } from "@/components/skip-to-content";
 import Home from "@/pages/home";
 const Generator = lazy(() => import("@/pages/generator"));
 const AdminGolden100Page = lazy(() => import("@/pages/admin-golden-100"));
+const AdminCatalogPage = lazy(() => import("@/pages/admin-catalog"));
 
 const PizzaNight = lazy(() => import("@/pages/pizza-night"));
 const ExplorePage = lazy(() => import("@/pages/explore"));
@@ -173,6 +174,7 @@ function AppRoutes() {
       <Route path="/families" component={FamiliesIndexPage} />
       {/* Admin: longest paths first — never let /admin swallow sub-routes */}
       <Route path="/admin/golden-100" component={AdminGolden100Page} />
+      <Route path="/admin/catalog" component={AdminCatalogPage} />
       <Route path="/admin/ingestion" component={AdminIngestionPage} />
       <Route path="/admin/recipe-ratings" component={AdminRecipeRatingsPage} />
       <Route path="/admin/analytics" component={AdminAnalyticsPage} />

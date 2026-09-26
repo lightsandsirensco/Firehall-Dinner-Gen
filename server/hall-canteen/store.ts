@@ -1,7 +1,7 @@
 import { nanoid } from "nanoid";
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
 import { getHallMember } from "../hall-membership/store.js";
-import { userHasFeature } from "../billing/store.js";
+import { userHasHallProFeature } from "../billing/store.js";
 import type { HallRole } from "../../shared/hall-membership/types.js";
 import { normalizeHallRole } from "../../shared/hall-membership/types.js";
 import type {
@@ -140,7 +140,7 @@ function memberDisplayName(userId: string): string {
 }
 
 function isHallPro(hallId: string, userId: string): boolean {
-  return userHasFeature(userId, "canteen_manager_pro", { hall_id: hallId });
+  return userHasHallProFeature(userId, "canteen_manager_pro", { hall_id: hallId });
 }
 
 function activeStapleCount(hallId: string): number {

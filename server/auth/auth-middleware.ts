@@ -25,23 +25,31 @@ function authCookieOptions() {
   };
 }
 
-export function attachAuthUser(req: AuthedRequest, res: Response, next: NextFunction): void {
-  const token = readAuthToken(req);
-  const userId = getUserIdFromSessionToken(token);
-  if (userId && token) {
-    res.cookie(getAuthCookieName(), token, authCookieOptions());
+export async function attachAuthUser(req: AuthedRequest, res: Response, next: NextFunction): Promise<void> {
+  try {
+    const token = readAuthToken(req);
+    const userId = await getUserIdFromSessionToken(token);
+    if (userId && token) {
+      res.cookie(getAuthCookieName(), token, authCookieOptions());
+    }
+    req._authUserId = userId ?? null;
+    next();
+  } catch (err) {
+    next(err);
   }
-  req._authUserId = userId ?? null;
-  next();
 }
 
-export function requireAuth(req: AuthedRequest, res: Response, next: NextFunction): void {
-  const token = readAuthToken(req);
-  const userId = getUserIdFromSessionToken(token);
-  if (!userId) {
-    res.status(401).json({ message: "Sign in required" });
-    return;
+export async function requireAuth(req: AuthedRequest, res: Response, next: NextFunction): Promise<void> {
+  try {
+    const token = readAuthToken(req);
+    const userId = await getUserIdFromSessionToken(token);
+    if (!userId) {
+      res.status(401).json({ message: "Sign in required" });
+      return;
+    }
+    req._authUserId = userId;
+    next();
+  } catch (err) {
+    next(err);
   }
-  req._authUserId = userId;
-  next();
 }

@@ -25,9 +25,6 @@ const HomeSocialProof = lazy(() =>
 const HomeFeaturedMeals = lazy(() =>
   import("@/components/home/home-featured-meals").then((m) => ({ default: m.HomeFeaturedMeals })),
 );
-const HomeHallVote = lazy(() =>
-  import("@/components/home/home-hall-vote").then((m) => ({ default: m.HomeHallVote })),
-);
 const HomeCtaBand = lazy(() =>
   import("@/components/home/home-cta-band").then((m) => ({ default: m.HomeCtaBand })),
 );
@@ -109,9 +106,6 @@ export default function Home() {
         </Suspense>
         <Suspense fallback={<SectionFallback minHeight={360} />}>
           <HomeFeaturedMeals meals={catalogMeals} loading={catalogLoading} />
-        </Suspense>
-        <Suspense fallback={<SectionFallback minHeight={240} />}>
-          <HomeHallVote />
         </Suspense>
         <Suspense fallback={<SectionFallback minHeight={220} />}>
           <HomeCtaBand />

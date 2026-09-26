@@ -106,7 +106,7 @@ export function registerAuthRoutes(app: Express): void {
   app.get("/api/auth/me", async (req: AuthedRequest, res: Response) => {
     try {
       await ensureStore();
-      const me = getAuthMe(req._authUserId ?? null);
+      const me = await getAuthMe(req._authUserId ?? null);
       return res.json({
         ...me,
         capabilities: getAuthCapabilitiesForUser(me.user, me.billing),
@@ -135,7 +135,7 @@ export function registerAuthRoutes(app: Express): void {
       }
 
       const returnTo = sanitizeReturnToPath(parsed.data.return_to);
-      const { rawToken } = createMagicLink(parsed.data.email, returnTo);
+      const { rawToken } = await createMagicLink(parsed.data.email, returnTo);
       const forwarded = String(req.headers["x-forwarded-proto"] ?? "").split(",")[0]?.trim();
       const mail = await sendMagicLinkEmail(parsed.data.email, rawToken, {
         reqHost: req.get("host") ?? undefined,
@@ -199,7 +199,7 @@ export function registerAuthRoutes(app: Express): void {
       }
 
       trackAuthEvent(req, "magic_link_opened", { valid: true });
-      const consumed = consumeMagicLink(token);
+      const consumed = await consumeMagicLink(token);
       if (!consumed.ok) {
         if (consumed.reason === "expired" || consumed.reason === "used") {
           trackAuthEvent(req, "magic_link_expired", { reason: consumed.reason });
@@ -213,8 +213,8 @@ export function registerAuthRoutes(app: Express): void {
         return res.redirect(`/me/profile?error=${errorParam}`);
       }
 
-      const { user, isNew } = upsertEmailUser(consumed.email);
-      const session = createAuthSession(user.user_id, isNew);
+      const { user, isNew } = await upsertEmailUser(consumed.email);
+      const session = await createAuthSession(user.user_id, isNew);
       setAuthCookie(res, session.token);
 
       trackAuthEvent(req, isNew ? "account_created" : "login", {
@@ -246,7 +246,7 @@ export function registerAuthRoutes(app: Express): void {
       }
 
       const identity = await verifyGoogleIdToken(parsed.data.id_token);
-      const result = resolveOAuthSignIn({
+      const result = await resolveOAuthSignIn({
         provider: "google",
         subject: identity.subject,
         email: identity.email,
@@ -268,12 +268,12 @@ export function registerAuthRoutes(app: Express): void {
         });
       }
 
-      const session = createAuthSession(result.user.user_id, result.isNew);
+      const session = await createAuthSession(result.user.user_id, result.isNew);
       setAuthCookie(res, session.token);
 
       trackAuthEvent(req, result.isNew ? "account_created" : "login", { provider: "google" });
 
-      return res.json({ ok: true, is_new: result.isNew, user: getAuthMe(result.user.user_id) });
+      return res.json({ ok: true, is_new: result.isNew, user: await getAuthMe(result.user.user_id) });
     } catch (err) {
       logError("auth", "google sign-in failed", err);
       return res.status(401).json({ message: "Google sign-in failed" });
@@ -306,7 +306,7 @@ export function registerAuthRoutes(app: Express): void {
         // ownership onto a different account.
         const userId = req._authUserId!;
 
-        const owner = findUserIdByIdentity("google", identity.subject);
+        const owner = await findUserIdByIdentity("google", identity.subject);
         if (owner && owner !== userId) {
           return res.status(409).json({
             message: "This Google account is already linked to a different Firehall Meals account.",
@@ -314,11 +314,11 @@ export function registerAuthRoutes(app: Express): void {
         }
 
         // Idempotent no-op if already linked to this same user.
-        linkIdentity(userId, "google", identity.subject, identity.email ?? null);
+        await linkIdentity(userId, "google", identity.subject, identity.email ?? null);
 
         trackAuthEvent(req, "google_linked");
 
-        const me = getAuthMe(userId);
+        const me = await getAuthMe(userId);
         return res.json({
           ok: true,
           ...me,
@@ -348,7 +348,7 @@ export function registerAuthRoutes(app: Express): void {
 
       const identity = await verifyAppleIdToken(parsed.data.id_token);
       const appleName = parsed.data.user?.name;
-      const result = resolveOAuthSignIn({
+      const result = await resolveOAuthSignIn({
         provider: "apple",
         subject: identity.subject,
         email: identity.email ?? parsed.data.user?.email ?? null,
@@ -366,12 +366,12 @@ export function registerAuthRoutes(app: Express): void {
         });
       }
 
-      const session = createAuthSession(result.user.user_id, result.isNew);
+      const session = await createAuthSession(result.user.user_id, result.isNew);
       setAuthCookie(res, session.token);
 
       trackAuthEvent(req, result.isNew ? "account_created" : "login", { provider: "apple" });
 
-      return res.json({ ok: true, is_new: result.isNew, user: getAuthMe(result.user.user_id) });
+      return res.json({ ok: true, is_new: result.isNew, user: await getAuthMe(result.user.user_id) });
     } catch (err) {
       logError("auth", "apple sign-in failed", err);
       return res.status(401).json({ message: "Apple sign-in failed" });
@@ -382,7 +382,7 @@ export function registerAuthRoutes(app: Express): void {
     try {
       await ensureStore();
       const token = req.cookies?.[getAuthCookieName()] as string | undefined;
-      if (token) revokeAuthSession(token);
+      if (token) await revokeAuthSession(token);
       clearAuthCookie(res);
       return res.json({ ok: true });
     } catch (err) {
@@ -399,7 +399,7 @@ export function registerAuthRoutes(app: Express): void {
         return res.status(400).json({ message: "Invalid profile data" });
       }
 
-      const me = updateUserProfile(req._authUserId!, parsed.data);
+      const me = await updateUserProfile(req._authUserId!, parsed.data);
       trackAuthEvent(req, "profile_updated", {
         has_photo: Boolean(me.profile?.profile_photo_url),
       });
@@ -437,7 +437,7 @@ export function registerAuthRoutes(app: Express): void {
         });
       }
 
-      deleteUserAccount(userId);
+      await deleteUserAccount(userId);
       trackAuthEvent(req, "account_deleted");
       clearAuthCookie(res);
 
@@ -451,7 +451,7 @@ export function registerAuthRoutes(app: Express): void {
   app.get("/api/auth/saves", requireAuth, async (req: AuthedRequest, res: Response) => {
     try {
       await ensureStore();
-      const recipes = listSavedRecipes(req._authUserId!);
+      const recipes = await listSavedRecipes(req._authUserId!);
       return res.json({ recipes });
     } catch (err) {
       logError("auth", "list saves failed", err);
@@ -467,7 +467,7 @@ export function registerAuthRoutes(app: Express): void {
         return res.status(400).json({ message: "Invalid saves payload" });
       }
 
-      const upserted = syncSavedRecipes(
+      const upserted = await syncSavedRecipes(
         req._authUserId!,
         parsed.data.recipes.map((r) => ({
           recipe_key: r.recipe_key,
@@ -476,7 +476,7 @@ export function registerAuthRoutes(app: Express): void {
         })),
         { replace: parsed.data.replace },
       );
-      const recipes = listSavedRecipes(req._authUserId!);
+      const recipes = await listSavedRecipes(req._authUserId!);
       return res.json({ ok: true, upserted, recipes });
     } catch (err) {
       logError("auth", "sync saves failed", err);

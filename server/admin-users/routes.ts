@@ -340,7 +340,7 @@ export function registerAdminUsersRoutes(app: Express): void {
       }
 
       if (parsed.data.plan_id) {
-        adminSetUserPlan(userId, parsed.data.plan_id as PlanId, "active");
+        await adminSetUserPlan(userId, parsed.data.plan_id as PlanId, "active");
       }
 
       const detail = getAdminUserDetail(userId);
@@ -390,7 +390,7 @@ export function registerAdminUsersRoutes(app: Express): void {
       const userId = String(req.params.userId ?? "");
       const detail = getAdminUserDetail(userId);
       if (!detail) return res.status(404).json({ message: "User not found" });
-      const session = createAuthSession(userId, false);
+      const session = await createAuthSession(userId, false);
       res.cookie(getAuthCookieName(), session.token, authCookieOptions());
       return res.json({ ok: true, user_id: userId, redirect: "/me/profile" });
     } catch (err) {

@@ -226,10 +226,6 @@ export const HOME = {
       title: "Works for home or hall",
       body: "Cook solo on your shift, or link your hall when the crew wants to plan together.",
     },
-    {
-      title: "Hall Operations — private beta",
-      body: "Shared votes, lists, staples, and meal history for the whole crew. In testing with a small number of fire stations now.",
-    },
   ],
   hallSectionTitle: "Cooking with your crew?",
   hallSectionLead:

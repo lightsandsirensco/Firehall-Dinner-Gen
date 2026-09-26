@@ -4,7 +4,7 @@ import { logError } from "../logger.js";
 import { insertAnalyticsEvents } from "../analytics/analytics-store.js";
 import { requireAuth, type AuthedRequest } from "../auth/auth-middleware.js";
 import { memberHasPermission } from "../hall-membership/store.js";
-import { userHasFeature } from "../billing/store.js";
+import { userHasHallProFeature } from "../billing/store.js";
 import {
   getHallAnalytics,
   initHallAnalyticsStore,
@@ -22,7 +22,7 @@ async function ensureStore(): Promise<void> {
 }
 
 function requireHallAnalyticsAccess(req: AuthedRequest, res: Response, hallId: string): boolean {
-  if (!userHasFeature(req._authUserId ?? null, "hall_analytics", { hall_id: hallId })) {
+  if (!userHasHallProFeature(req._authUserId ?? null, "hall_analytics", { hall_id: hallId })) {
     res.status(402).json({ message: "Hall Pro required", feature: "hall_analytics" });
     return false;
   }

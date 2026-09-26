@@ -1,71 +1,70 @@
-import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
+/**
+ * Cloud sync snapshots — Postgres-backed (see PRODUCTION DATABASE MIGRATION
+ * PLAN). No SQLite fallback; initUserSyncStore() fails closed if
+ * DATABASE_URL is unset.
+ */
+import { verifyPgConnection } from "../db/pg-client.js";
+import { pgAll, pgTx } from "../db/pg-sql.js";
 import type { SyncSnapshotKey, SyncSnapshotRow } from "../../shared/sync/types.js";
 import { normalizeSyncSnapshots } from "../../shared/sync/types.js";
 
-let db: SqliteDatabase;
-
 export async function initUserSyncStore(): Promise<void> {
-  db = await getSharedLocalDb();
+  await verifyPgConnection();
 }
 
-export function bindUserSyncDb(database: SqliteDatabase): void {
-  db = database;
-}
-
-function getDb(): SqliteDatabase {
-  if (!db) {
-    throw new Error("User sync store not initialized — call initUserSyncStore() first");
-  }
-  return db;
-}
-
-export function listUserSnapshots(userId: string): SyncSnapshotRow[] {
-  const d = getDb();
-  const rows = d
-    .prepare(
-      `SELECT data_key, snapshot_json, updated_at
-       FROM user_data_snapshots
-       WHERE user_id = ?
-       ORDER BY data_key`,
-    )
-    .all(userId) as Array<{ data_key: string; snapshot_json: string; updated_at: string }>;
+export async function listUserSnapshots(userId: string): Promise<SyncSnapshotRow[]> {
+  const rows = await pgAll<{ data_key: string; snapshot_json: string; updated_at: Date }>(
+    `SELECT data_key, snapshot_json, updated_at
+     FROM user_data_snapshots
+     WHERE user_id = $1
+     ORDER BY data_key`,
+    [userId],
+  );
 
   return normalizeSyncSnapshots(
     rows.map((row) => ({
       data_key: row.data_key as SyncSnapshotKey,
       snapshot_json: JSON.parse(row.snapshot_json),
-      updated_at: row.updated_at,
+      updated_at: row.updated_at instanceof Date ? row.updated_at.toISOString() : String(row.updated_at),
     })),
   );
 }
 
-export function upsertUserSnapshots(
+export async function upsertUserSnapshots(
   userId: string,
   snapshots: SyncSnapshotRow[],
-): { upserted: number; snapshots: SyncSnapshotRow[] } {
-  const d = getDb();
-  const stmt = d.prepare(
-    `INSERT INTO user_data_snapshots (user_id, data_key, snapshot_json, updated_at)
-     VALUES (?, ?, ?, ?)
-     ON CONFLICT(user_id, data_key) DO UPDATE SET
-       snapshot_json = CASE
-         WHEN excluded.updated_at >= user_data_snapshots.updated_at THEN excluded.snapshot_json
-         ELSE user_data_snapshots.snapshot_json
-       END,
-       updated_at = CASE
-         WHEN excluded.updated_at >= user_data_snapshots.updated_at THEN excluded.updated_at
-         ELSE user_data_snapshots.updated_at
-       END`,
-  );
-
+): Promise<{ upserted: number; snapshots: SyncSnapshotRow[] }> {
   let upserted = 0;
-  const tx = d.transaction(() => {
+  await pgTx(async (tx) => {
     for (const snap of snapshots) {
-      stmt.run(userId, snap.data_key, JSON.stringify(snap.snapshot_json), snap.updated_at);
+      await tx.run(
+        `INSERT INTO user_data_snapshots (user_id, data_key, snapshot_json, updated_at)
+         VALUES ($1, $2, $3, $4)
+         ON CONFLICT (user_id, data_key) DO UPDATE SET
+           snapshot_json = CASE
+             WHEN excluded.updated_at >= user_data_snapshots.updated_at THEN excluded.snapshot_json
+             ELSE user_data_snapshots.snapshot_json
+           END,
+           updated_at = CASE
+             WHEN excluded.updated_at >= user_data_snapshots.updated_at THEN excluded.updated_at
+             ELSE user_data_snapshots.updated_at
+           END`,
+        [userId, snap.data_key, JSON.stringify(snap.snapshot_json), snap.updated_at],
+      );
       upserted++;
     }
   });
-  tx();
 
-  return { upserted, snapshots: listUserSnapshots(userId) };
+  return { upserted, snapshots: await listUserSnapshots(userId) };
+}
+
+/**
+ * @deprecated Cloud sync is Postgres-only now. No-op compatibility stub kept
+ * only so existing test scripts that call bindUserSyncDb() still compile.
+ */
+export function bindUserSyncDb(_database: unknown): void {
+  console.warn(
+    "[sync/store] bindUserSyncDb() is a no-op — cloud sync is Postgres-only now. " +
+      "Set DATABASE_URL to a test database to exercise this store.",
+  );
 }

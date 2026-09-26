@@ -1,6 +1,11 @@
 #!/usr/bin/env tsx
 /**
- * Validates personal onboarding state machine — Generate → Save → Profile → Hall (optional).
+ * Validates personal onboarding state machine — Generate → Save → Profile → Done.
+ *
+ * Hall operations is on hold, so the funnel no longer asks the "do you cook
+ * at a fire hall?" question or offers to connect a hall — profile_built
+ * goes straight to "completed". See FIREHALL MEALS — REMOVE HALL OPERATIONS
+ * / HALL SIGNUP SURFACES cleanup.
  */
 import assert from "node:assert/strict";
 import {
@@ -34,8 +39,11 @@ function main(): void {
       }),
       false,
     ),
-    "hall_question",
+    "completed",
   );
+  // Hall operations is on hold — works_at_firehall/hall_connect_skipped are
+  // still valid stored fields (back-compat with existing localStorage data),
+  // but no longer change the returned step once profile_built is true.
   assert.equal(
     personalOnboardingStep(
       progress({
@@ -46,7 +54,7 @@ function main(): void {
       }),
       false,
     ),
-    "connect_hall",
+    "completed",
   );
   assert.equal(
     personalOnboardingStep(

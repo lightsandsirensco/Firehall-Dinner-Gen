@@ -2,7 +2,7 @@ import type { Express, Response } from "express";
 import { requireCsrf } from "../csrf.js";
 import { logError } from "../logger.js";
 import { requireAuth, type AuthedRequest } from "../auth/auth-middleware.js";
-import { userHasFeature } from "../billing/store.js";
+import { userHasHallProFeature } from "../billing/store.js";
 import {
   enrollAllCanteenMembers,
   getCanteenPaymentsPayload,
@@ -22,7 +22,7 @@ async function ensureStore(): Promise<void> {
 }
 
 function requireCanteenPaymentTracker(req: AuthedRequest, res: Response, hallId: string): boolean {
-  if (!userHasFeature(req._authUserId ?? null, "canteen_payment_tracker", { hall_id: hallId })) {
+  if (!userHasHallProFeature(req._authUserId ?? null, "canteen_payment_tracker", { hall_id: hallId })) {
     res.status(402).json({ message: "Hall Pro required", feature: "canteen_payment_tracker" });
     return false;
   }

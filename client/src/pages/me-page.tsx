@@ -114,7 +114,7 @@ export default function MePage() {
               href="/me/subscription"
               icon={CreditCard}
               title="Subscription"
-              description="Plans and Hall Pro"
+              description="Plans and billing"
               secondary
               testId="me-subscription"
             />

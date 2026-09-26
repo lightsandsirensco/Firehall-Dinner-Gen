@@ -102,7 +102,7 @@ export async function ensureStripeSubscriptionCancelledForDeletion(
   userId: string,
   deps: { cancel?: StripeSubscriptionCancelFn } = {},
 ): Promise<StripeDeletionGuardResult> {
-  const info = getSubscriptionInfoForAccountDeletion(userId);
+  const info = await getSubscriptionInfoForAccountDeletion(userId);
   const decision = decideStripeDeletionAction(info);
 
   if (decision.kind === "none") return { ok: true, action: "none" };

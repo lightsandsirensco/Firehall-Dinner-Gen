@@ -6,13 +6,17 @@ export function isDevelopmentAdminBypass(): boolean {
 }
 
 /**
- * Golden 100 catalog tooling — readable in local dev without ADMIN_SECRET.
- * Production always requires auth for these paths.
+ * Golden 100 / unified catalog browsing tooling — readable in local dev
+ * without ADMIN_SECRET. Production always requires auth for these paths.
  */
 export function isGolden100DevAdminRoute(req: Request): boolean {
   const path = (req.originalUrl || req.url || "").split("?")[0];
   if (path.startsWith("/api/admin/golden-100")) return true;
   if (path.startsWith("/api/admin/curated-recipes")) return true;
+  // /api/admin/catalog/manifest — the unified "All Recipes" admin view (see
+  // server/admin/catalog-manifest.ts) is read-only catalog browsing, same
+  // trust level as the Golden 100 routes above.
+  if (path.startsWith("/api/admin/catalog")) return true;
   return false;
 }
 
