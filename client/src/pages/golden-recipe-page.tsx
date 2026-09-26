@@ -82,6 +82,7 @@ import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
 import { trackRecipeView } from "@/lib/analytics";
 import { dedupeAgainstShownCopy } from "@shared/text/dedupe-lead-sentence";
+import { goldenRecipeLeadParagraph } from "@shared/golden-100/lead-paragraph";
 
 
 
@@ -634,17 +635,10 @@ export default function GoldenRecipePageView() {
     ];
   }, [page, crewSize, displayCookTime]);
 
-  // The catalog's `shortDescription` field is identical to `subtitle` for
-  // every recipe (already shown in the hero, just above), so falling back to
-  // it here would repeat the exact same sentence twice on every recipe page.
-  // Prefer the longer, distinct `description` field for the lead paragraph.
-  const leadParagraph = useMemo(() => {
-    if (!page) return "";
-    const short = page.shortDescription?.trim();
-    const subtitle = page.subtitle?.trim().toLowerCase();
-    if (short && short.toLowerCase() !== subtitle) return short;
-    return page.description;
-  }, [page]);
+  // Shared with the server's pre-hydration snapshot (see
+  // `shared/golden-100/lead-paragraph.ts`) so the lead copy a user sees and
+  // the lead copy a crawler sees can never drift apart.
+  const leadParagraph = useMemo(() => (page ? goldenRecipeLeadParagraph(page) : ""), [page]);
 
   // `whyCrewsLikeIt` frequently restates the subtitle/lead as a leading
   // phrase (e.g. "Double pot, triple appetite. Real toasted-chile depth…")

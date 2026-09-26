@@ -29,6 +29,8 @@ import type { EditorialMealPick } from "../../shared/editorial/content-schema.js
 import { absoluteImageUrl } from "../../shared/seo/urls.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
 import { getGuideLandingLink } from "../../shared/seo/guide-authority-links.js";
+import { dedupeAgainstShownCopy } from "../../shared/text/dedupe-lead-sentence.js";
+import { goldenRecipeLeadParagraph } from "../../shared/golden-100/lead-paragraph.js";
 import { escapeHtml } from "./apply-seo-tags.js";
 import { resolveKnownRecipeTitle } from "./recipe-title-lookup.js";
 
@@ -122,9 +124,43 @@ export interface RecipeSnapshotData {
   ingredients: RecipeSnapshotIngredient[];
   steps: RecipeSnapshotStep[];
   nutrition: { calories: number; protein: number; carbs: number; fat: number } | null;
+  /** "Why crews like it" — already deduped against the subtitle/lead
+   * paragraph exactly like the client (`dedupeAgainstShownCopy`), so it's
+   * never a verbatim repeat of copy already shown just above it. */
+  whyCrewsLikeIt?: string;
+  /** Crew-specific guidance beyond the generic recipe core (why-it-works,
+   * hall tips, holding/leftover/meal-prep notes, substitutions, equipment)
+   * — see `RecipeGuidanceSection`. Rendered after the steps. */
+  guidanceSections?: RecipeGuidanceSection[];
   /** Crawlable links to genuinely related recipes (same category/protein/
    * meal type) — see each collection's `*RecipeSnapshot` builder below. */
   relatedLinks?: IndexSnapshotLink[];
+}
+
+/**
+ * A server-renderable block of "beyond the generic recipe core" content —
+ * the crew-specific guidance (why crews like it, hall tips, holding/leftover/
+ * meal-prep notes, substitutions, equipment) that already exists in canonical
+ * recipe data and is already shown to users client-side, but never reached
+ * the pre-hydration HTML (see Phase 4 SEO audit). Every section here maps
+ * 1:1 to a field + heading the recipe's own client page already renders —
+ * see `goldenRecipeSnapshot`/`breakfastRecipeSnapshot`/`fuelRecipeSnapshot`
+ * below for the exact field -> heading mapping per recipe family. Sections
+ * are only ever pushed when the underlying field is genuinely non-empty, so
+ * no recipe is ever forced into a section it doesn't have real content for.
+ */
+export interface RecipeGuidanceSection {
+  /**
+   * Omit when the client shows this content with no visible section
+   * label/heading of its own (e.g. golden-shaped recipes' `equipment`,
+   * rendered client-side as unlabeled pills) — the point of this field is
+   * server/client parity, so we never invent a heading the client doesn't
+   * actually show. The content itself still renders (as a plain list), just
+   * without a synthesized `<h2>`.
+   */
+  heading?: string;
+  kind: "list" | "paragraph";
+  items: string[];
 }
 
 /** Render a recipe's real content (ingredients, steps, nutrition) as plain HTML for `#root`. */
@@ -158,6 +194,18 @@ export function renderRecipeSnapshotHtml(origin: string, data: RecipeSnapshotDat
     ? [{ heading: "Related recipes", links: data.relatedLinks }]
     : [];
 
+  const guidanceHtml = (data.guidanceSections ?? [])
+    .filter((section) => section.items.length > 0)
+    .map((section) => {
+      const heading = section.heading ? `<h2>${escapeHtml(section.heading)}</h2>` : "";
+      const body =
+        section.kind === "paragraph"
+          ? section.items.map((p) => `<p>${escapeHtml(p)}</p>`).join("")
+          : `<ul>${section.items.map((i) => `<li>${escapeHtml(i)}</li>`).join("")}</ul>`;
+      return `${heading}${body}`;
+    })
+    .join("");
+
   return [
     `<div class="fh-snap">`,
     styleTag(),
@@ -166,9 +214,13 @@ export function renderRecipeSnapshotHtml(origin: string, data: RecipeSnapshotDat
     data.subtitle ? `<p class="fh-sub">${escapeHtml(data.subtitle)}</p>` : "",
     meta,
     `<p class="fh-desc">${escapeHtml(data.description)}</p>`,
+    data.whyCrewsLikeIt
+      ? `<p class="fh-desc"><strong>Why crews like it: </strong>${escapeHtml(data.whyCrewsLikeIt)}</p>`
+      : "",
     nutritionBlock(data.nutrition),
     ingredients ? `<h2>Ingredients</h2><ul>${ingredients}</ul>` : "",
     steps ? `<h2>Instructions</h2><ol>${steps}</ol>` : "",
+    guidanceHtml,
     renderLinkSections([...relatedSection, siteHubSection()]),
     `</div>`,
   ]
@@ -176,11 +228,53 @@ export function renderRecipeSnapshotHtml(origin: string, data: RecipeSnapshotDat
     .join("");
 }
 
+/**
+ * Golden-100-shaped families (Golden 100, Hall Expansion, Performance,
+ * BBQ, Pizza Night all build to this same `GoldenRecipePage` shape — see
+ * `shared/golden-100/recipe-page-schema.ts`). Every guidance section below
+ * mirrors a field + heading `client/src/pages/golden-recipe-page.tsx`
+ * already renders post-hydration ("Tonight's spread" / "Hall tips" /
+ * "Substitutions" / "Meal prep" / "Leftovers"). `equipment` is included too,
+ * but deliberately *without* a heading: the client shows it as unlabeled
+ * pills with no section label of its own, so a synthesized `<h2>Equipment</h2>`
+ * here would be crawler-only content the client never actually presents.
+ * Sections are only pushed when the field is genuinely non-empty.
+ */
 export function goldenRecipeSnapshot(page: GoldenRecipePage): RecipeSnapshotData {
+  // Shared with the client's `leadParagraph` (see `golden-recipe-page.tsx`
+  // and `shared/golden-100/lead-paragraph.ts`) so the two can never drift.
+  const leadParagraph = goldenRecipeLeadParagraph(page);
+
+  // `whyCrewsLikeIt` frequently restates the subtitle/lead as a leading
+  // phrase — same dedupe the client applies, so the snapshot never repeats
+  // the sentence shown just above it in `<p class="fh-desc">`.
+  const whyCrewsLikeIt = dedupeAgainstShownCopy(page.whyCrewsLikeIt, page.subtitle, leadParagraph);
+
+  const guidanceSections: RecipeGuidanceSection[] = [];
+  if (page.tonightSpread.length) {
+    guidanceSections.push({ heading: "Tonight's spread", kind: "list", items: page.tonightSpread });
+  }
+  if (page.proTips.length) {
+    guidanceSections.push({ heading: "Hall tips", kind: "list", items: page.proTips });
+  }
+  if (page.substitutions?.length) {
+    guidanceSections.push({ heading: "Substitutions", kind: "list", items: page.substitutions });
+  }
+  if (page.mealPrepNotes?.trim()) {
+    guidanceSections.push({ heading: "Meal prep", kind: "paragraph", items: [page.mealPrepNotes.trim()] });
+  }
+  if (page.leftovers.length) {
+    guidanceSections.push({ heading: "Leftovers", kind: "list", items: page.leftovers });
+  }
+  if (page.equipment.length) {
+    // No `heading` — see doc comment above.
+    guidanceSections.push({ kind: "list", items: page.equipment });
+  }
+
   return {
     title: page.displayTitle || page.title,
     subtitle: page.subtitle,
-    description: page.description,
+    description: leadParagraph,
     heroImage: page.heroImage,
     heroImageAlt: page.heroImageAlt,
     prepMinutes: page.prepTime ?? Math.max(5, Math.round(page.cookTime * 0.25)),
@@ -195,6 +289,8 @@ export function goldenRecipeSnapshot(page: GoldenRecipePage): RecipeSnapshotData
       carbs: page.nutrition.carbs,
       fat: page.nutrition.fats,
     },
+    whyCrewsLikeIt,
+    guidanceSections,
     // `relatedSlugs` is already curated per-recipe (see `link-recipe-families`
     // / editorial QA tooling) but was never rendered as an actual crawlable
     // link — every /recipes/:slug page was a dead-end leaf in the raw-HTML
@@ -207,10 +303,33 @@ export function goldenRecipeSnapshot(page: GoldenRecipePage): RecipeSnapshotData
   };
 }
 
+/**
+ * Breakfast + Breakfast Performance (`BreakfastRecipePage` —
+ * `shared/breakfast-schema.ts`). Headings mirror
+ * `client/src/pages/breakfast-recipe-page.tsx` exactly ("Equipment" /
+ * "Morning spread" / "Station workflow" / "Cleanup" / "Leftovers").
+ */
 export function breakfastRecipeSnapshot(
   page: BreakfastRecipePage,
   relatedLinks: IndexSnapshotLink[] = [],
 ): RecipeSnapshotData {
+  const guidanceSections: RecipeGuidanceSection[] = [];
+  if (page.equipment?.length) {
+    guidanceSections.push({ heading: "Equipment", kind: "list", items: page.equipment });
+  }
+  if (page.tonightSpread?.length) {
+    guidanceSections.push({ heading: "Morning spread", kind: "list", items: page.tonightSpread });
+  }
+  if (page.stationWorkflow.length) {
+    guidanceSections.push({ heading: "Station workflow", kind: "list", items: page.stationWorkflow });
+  }
+  if (page.cleanupNotes.length) {
+    guidanceSections.push({ heading: "Cleanup", kind: "list", items: page.cleanupNotes });
+  }
+  if (page.leftovers.length) {
+    guidanceSections.push({ heading: "Leftovers", kind: "list", items: page.leftovers });
+  }
+
   return {
     title: page.title,
     subtitle: page.subtitle,
@@ -229,11 +348,38 @@ export function breakfastRecipeSnapshot(
       carbs: page.nutrition.carbs,
       fat: page.nutrition.fat,
     },
+    guidanceSections,
     relatedLinks,
   };
 }
 
+/** Every current smoothie's `nutrition.highlights` is the literal placeholder
+ * string "Nutrition estimate coming soon" (verified against all 10 on-disk
+ * pages — not recipe-specific content, just an unshipped-feature placeholder)
+ * — so it's deliberately excluded from SSR (and from this list of real
+ * guidance) rather than rendered as if it were genuine nutrition commentary.
+ * If a future recipe ships a real, non-placeholder highlight, it can be
+ * added back in without any other change here. */
+const SMOOTHIE_NUTRITION_HIGHLIGHTS_PLACEHOLDER = /^nutrition estimate coming soon$/i;
+
+/**
+ * Smoothies (`FuelRecipePage` — `shared/fuel-catalog/schema.ts`). Headings
+ * mirror `client/src/pages/smoothie-recipe-page.tsx` ("Substitutions" /
+ * "On shift").
+ */
 export function fuelRecipeSnapshot(page: FuelRecipePage): RecipeSnapshotData {
+  const guidanceSections: RecipeGuidanceSection[] = [];
+  if (page.substitutions?.length) {
+    guidanceSections.push({ heading: "Substitutions", kind: "list", items: page.substitutions });
+  }
+  const highlights = page.nutrition.highlights?.trim();
+  if (highlights && !SMOOTHIE_NUTRITION_HIGHLIGHTS_PLACEHOLDER.test(highlights)) {
+    guidanceSections.push({ heading: "Nutrition notes", kind: "paragraph", items: [highlights] });
+  }
+  if (page.shiftNote?.trim()) {
+    guidanceSections.push({ heading: "On shift", kind: "paragraph", items: [page.shiftNote.trim()] });
+  }
+
   return {
     title: page.title,
     subtitle: page.subtitle,
@@ -247,6 +393,7 @@ export function fuelRecipeSnapshot(page: FuelRecipePage): RecipeSnapshotData {
       carbs: page.nutrition.carbs,
       fat: page.nutrition.fats,
     },
+    guidanceSections,
     relatedLinks: (page.relatedSlugs ?? []).map((slug) => ({
       label: recipeLinkLabel(slug),
       path: approvedCatalogRecipePath(slug),
