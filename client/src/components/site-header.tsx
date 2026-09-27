@@ -81,7 +81,7 @@ function appChromeForPage(activePage: SiteHeaderActivePage): {
 export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [location, navigate] = useLocation();
-  const { authenticated, profile, openSignIn } = useAuth();
+  const { authenticated, loading: authLoading, profile, openSignIn } = useAuth();
   const accountLabel = authenticated ? profile?.display_name || profile?.first_name || "Profile" : "Sign in";
   const accountInitial = accountLabel.trim().charAt(0).toUpperCase() || "F";
   const [badgeCount, setBadgeCount] = useState(() => favCount ?? getHallFavoritesCount());
@@ -198,19 +198,31 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
           <div className="hidden md:flex items-center gap-2 shrink-0">
             <button
               type="button"
-              onClick={() => (authenticated ? navigate("/account") : openSignIn())}
+              onClick={() => {
+                if (authLoading) return;
+                authenticated ? navigate("/account") : openSignIn();
+              }}
               className={cn(linkClass(false), "gap-1.5")}
               data-testid="nav-link-account"
-              aria-label={authenticated ? "Your account" : "Sign in"}
+              aria-label={authLoading ? "Loading account status" : authenticated ? "Your account" : "Sign in"}
+              aria-busy={authLoading || undefined}
             >
-              {authenticated ? (
+              {authLoading ? (
+                <span className="h-5 w-5 shrink-0 rounded-full skeleton-shimmer" aria-hidden="true" />
+              ) : authenticated ? (
                 <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-primary/15 text-[10px] font-semibold text-primary">
                   {accountInitial}
                 </span>
               ) : (
                 <User className="w-3.5 h-3.5" />
               )}
-              <span className="hidden lg:inline">{accountLabel}</span>
+              <span className="hidden lg:inline">
+                {authLoading ? (
+                  <span className="inline-block h-3 w-12 rounded skeleton-shimmer align-middle" aria-hidden="true" />
+                ) : (
+                  accountLabel
+                )}
+              </span>
             </button>
 
             {activePage === "favorites" ? (
@@ -323,6 +335,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                   <button
                     type="button"
                     onClick={() => {
+                      if (authLoading) return;
                       hapticLight();
                       setMenuOpen(false);
                       if (authenticated) navigate("/account");
@@ -337,15 +350,22 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
                       "text-foreground hover:bg-muted/50",
                     )}
                     data-testid="nav-mobile-account"
+                    aria-busy={authLoading || undefined}
                   >
-                    {authenticated ? (
+                    {authLoading ? (
+                      <span className="h-6 w-6 shrink-0 rounded-full skeleton-shimmer" aria-hidden="true" />
+                    ) : authenticated ? (
                       <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-primary/15 text-xs font-semibold text-primary">
                         {accountInitial}
                       </span>
                     ) : (
                       <User className="w-4 h-4" />
                     )}
-                    {accountLabel}
+                    {authLoading ? (
+                      <span className="inline-block h-3 w-16 rounded skeleton-shimmer" aria-hidden="true" />
+                    ) : (
+                      accountLabel
+                    )}
                   </button>
                   <button
                     type="button"
