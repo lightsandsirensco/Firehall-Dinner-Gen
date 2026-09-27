@@ -48,11 +48,11 @@ const isProduction = process.env.NODE_ENV === "production";
 const posthogHost = process.env.VITE_POSTHOG_HOST?.trim();
 
 // Google Identity Services (the GIS client + its rendered sign-in button
-// iframe) requires accounts.google.com in both script-src and frame-src —
-// Helmet's defaults have neither, which silently blocks Google Sign-In in
-// production. Only these two directives are widened for this; every other
-// directive (including default script-src 'self', no unsafe-inline) is
-// untouched.
+// iframe) requires accounts.google.com in script-src, frame-src, and
+// connect-src — Helmet's defaults have none of these, which silently blocks
+// Google Sign-In in production. Only these directives are widened for this;
+// every other directive (including default script-src 'self', no
+// unsafe-inline) is untouched.
 const GOOGLE_ACCOUNTS_ORIGIN = "https://accounts.google.com";
 
 app.use(
@@ -61,7 +61,14 @@ app.use(
       ? {
           directives: {
             ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-            "connect-src": ["'self'", ...(posthogHost ? [posthogHost] : [])],
+            // connect-src must include accounts.google.com: once the GIS
+            // script loads, it makes same-page fetch/XHR calls to Google
+            // (account chooser state, credential exchange) — without this,
+            // the button renders and is clickable but silently does nothing
+            // on click (CSP blocks the network call). script-src/frame-src
+            // alone are not sufficient; see Google's documented CSP
+            // requirements: developers.google.com/identity/gsi/web/guides/display-button
+            "connect-src": ["'self'", GOOGLE_ACCOUNTS_ORIGIN, ...(posthogHost ? [posthogHost] : [])],
             "script-src": ["'self'", GOOGLE_ACCOUNTS_ORIGIN],
             "frame-src": ["'self'", GOOGLE_ACCOUNTS_ORIGIN],
           },
