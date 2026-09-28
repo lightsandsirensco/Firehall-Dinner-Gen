@@ -96,6 +96,22 @@ export default defineConfig({
             },
           },
           {
+            // Identity/session endpoints (/api/auth/me, /api/auth/config, ...)
+            // must never be answered from the Cache Storage fallback below.
+            // NetworkFirst still calls fetch() first, but on any hiccup —
+            // exactly the kind that happens right after an OAuth round-trip
+            // on a mobile connection — it falls back to whatever response
+            // was cached from BEFORE sign-in (still-a-guest / stale user).
+            // That's how a real sign-in can "succeed" (the POST is never
+            // cached — only GETs are, see the "GET" arg on registerRoute)
+            // while the very next /api/auth/me read still shows the old,
+            // signed-out state until a hard refresh finally wins the race.
+            // Routes are matched in registration order, so this narrower,
+            // uncached rule must come before the general /api/ rule.
+            urlPattern: /^\/api\/auth\//i,
+            handler: "NetworkOnly",
+          },
+          {
             urlPattern: /\/api\//i,
             handler: "NetworkFirst",
             options: {
