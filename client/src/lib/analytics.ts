@@ -19,6 +19,33 @@ export function trackEvent(name: string, params?: Record<string, string | number
   }
 }
 
+/** Nutrition Goal chip picked — fires for both defaults-applied and explicit taps. */
+export function trackNutritionGoalSelected(input: { goal: string; source?: string }): void {
+  trackProductEvent("nutrition_goal_selected", {
+    goal: input.goal,
+    ...(input.source ? { source: input.source } : {}),
+  });
+}
+
+/** User's session choice differs from their signed-in saved profile default. */
+export function trackNutritionGoalOverride(input: { goal: string; saved_default?: string | null }): void {
+  trackProductEvent("nutrition_goal_override", {
+    goal: input.goal,
+    ...(input.saved_default ? { saved_default: input.saved_default } : {}),
+  });
+}
+
+/** A recipe was actually generated with a given Nutrition Goal in effect. */
+export function trackRecipeGeneratedWithNutritionGoal(input: {
+  goal: string;
+  recipe_slug?: string;
+}): void {
+  trackProductEvent("recipe_generated_with_nutrition_goal", {
+    goal: input.goal,
+    ...(input.recipe_slug ? { recipe_slug: input.recipe_slug } : {}),
+  });
+}
+
 export function trackMealGenerationStarted(meta?: { meal_category?: string }): void {
   const params = {
     ...(meta?.meal_category ? { meal_category: meta.meal_category } : {}),
@@ -220,6 +247,94 @@ export function trackMealCooked(input: {
   };
   trackEvent("meal_cooked", params);
   trackProductEvent("meal_cooked", params);
+}
+
+/** "Made This" / Cook Mode completion recorded to durable meal history (Meal Memory Pro). */
+export function trackMealLogged(input: {
+  recipe_slug?: string;
+  meal_occasion?: string;
+  crew_size?: number;
+  nutrition_goal?: string;
+  source: string;
+}): void {
+  const params = {
+    source: input.source.slice(0, 64),
+    ...(input.recipe_slug ? { recipe_slug: input.recipe_slug } : {}),
+    ...(input.meal_occasion ? { meal_occasion: input.meal_occasion } : {}),
+    ...(input.crew_size != null ? { crew_size: input.crew_size } : {}),
+    ...(input.nutrition_goal ? { nutrition_goal: input.nutrition_goal } : {}),
+  };
+  trackEvent("meal_logged", params);
+  trackProductEvent("meal_logged", params);
+}
+
+/** Star rating tapped in the post-meal feedback sheet. */
+export function trackMealRated(input: { recipe_slug?: string; rating: number; meal_occasion?: string }): void {
+  const params = {
+    rating: input.rating,
+    ...(input.recipe_slug ? { recipe_slug: input.recipe_slug } : {}),
+    ...(input.meal_occasion ? { meal_occasion: input.meal_occasion } : {}),
+  };
+  trackEvent("meal_rated", params);
+  trackProductEvent("meal_rated", params);
+}
+
+/** Make-again Yes/No tapped in the post-meal feedback sheet. */
+export function trackMealMakeAgainSelected(input: {
+  recipe_slug?: string;
+  make_again: boolean;
+  meal_occasion?: string;
+}): void {
+  const params = {
+    make_again: input.make_again,
+    ...(input.recipe_slug ? { recipe_slug: input.recipe_slug } : {}),
+    ...(input.meal_occasion ? { meal_occasion: input.meal_occasion } : {}),
+  };
+  trackEvent("meal_make_again_selected", { ...params, make_again: String(input.make_again) });
+  trackProductEvent("meal_make_again_selected", params);
+}
+
+/** Optional positive/negative feedback tag toggled in the post-meal feedback sheet. */
+export function trackMealFeedbackTagSelected(input: {
+  recipe_slug?: string;
+  tag: string;
+  selected: boolean;
+  meal_occasion?: string;
+}): void {
+  const params = {
+    tag: input.tag,
+    selected: input.selected,
+    ...(input.recipe_slug ? { recipe_slug: input.recipe_slug } : {}),
+    ...(input.meal_occasion ? { meal_occasion: input.meal_occasion } : {}),
+  };
+  trackEvent("meal_feedback_tag_selected", { ...params, selected: String(input.selected) });
+  trackProductEvent("meal_feedback_tag_selected", params);
+}
+
+/** Goals + Progress page (or Profile "Your Progress" section) viewed. */
+export function trackProgressPageViewed(input?: { active_goal_count?: number }): void {
+  const params: Record<string, number> = {};
+  if (input?.active_goal_count != null) params.active_goal_count = input.active_goal_count;
+  trackEvent("progress_page_viewed", params);
+  trackProductEvent("progress_page_viewed", params);
+}
+
+export function trackGoalCreated(input: { goal_type: string; target: number; period?: string }): void {
+  const params = { goal_type: input.goal_type, target: input.target, ...(input.period ? { period: input.period } : {}) };
+  trackEvent("goal_created", params);
+  trackProductEvent("goal_created", params);
+}
+
+export function trackGoalCompleted(input: { goal_type: string; target: number; period?: string }): void {
+  const params = { goal_type: input.goal_type, target: input.target, ...(input.period ? { period: input.period } : {}) };
+  trackEvent("goal_completed", params);
+  trackProductEvent("goal_completed", params);
+}
+
+export function trackGoalRemoved(input: { goal_type: string; target: number; period?: string }): void {
+  const params = { goal_type: input.goal_type, target: input.target, ...(input.period ? { period: input.period } : {}) };
+  trackEvent("goal_removed", params);
+  trackProductEvent("goal_removed", params);
 }
 
 export function trackHallRecentMealClicked(input: {
@@ -884,6 +999,52 @@ export function trackSyncCompleted(metadata: {
 export function trackSyncFailed(metadata: { trigger: string; reason: string }): void {
   trackEvent("sync_failed", metadata);
   trackProductEvent("sync_failed", metadata);
+}
+
+export function trackInsightsPageViewed(input?: { insight_count?: number }): void {
+  const params: Record<string, number> = {};
+  if (input?.insight_count != null) params.insight_count = input.insight_count;
+  trackEvent("insights_page_viewed", params);
+  trackProductEvent("insights_page_viewed", params);
+}
+
+export function trackInsightViewed(input: { insight_type: string; category: string; sample_size: number }): void {
+  const params = { insight_type: input.insight_type, category: input.category, sample_size: input.sample_size };
+  trackEvent("insight_viewed", params);
+  trackProductEvent("insight_viewed", params);
+}
+
+export function trackInsightsProTeaserClicked(input?: { surface?: string }): void {
+  const params: Record<string, string> = {};
+  if (input?.surface) params.surface = input.surface;
+  trackEvent("insights_pro_teaser_clicked", params);
+  trackProductEvent("insights_pro_teaser_clicked", params);
+}
+
+/** Insight-Driven Personalization (deterministic, history-learned — NOT AI). */
+export function trackHistoryPersonalizationUsed(input: { sample_size_bucket: string }): void {
+  const params = { sample_size_bucket: input.sample_size_bucket };
+  trackEvent("history_personalization_used", params);
+  trackProductEvent("history_personalization_used", params);
+}
+
+export function trackHistoryPersonalizationDisabled(input?: { source?: string }): void {
+  const params: Record<string, string> = {};
+  if (input?.source) params.source = input.source;
+  trackEvent("history_personalization_disabled", params);
+  trackProductEvent("history_personalization_disabled", params);
+}
+
+export function trackPersonalizedRecipeSelected(input: {
+  signal_types_used: string;
+  sample_size_bucket: string;
+}): void {
+  const params = {
+    signal_types_used: input.signal_types_used,
+    sample_size_bucket: input.sample_size_bucket,
+  };
+  trackEvent("personalized_recipe_selected", params);
+  trackProductEvent("personalized_recipe_selected", params);
 }
 
 export { flushProductAnalytics, getAnalyticsVisitorId };

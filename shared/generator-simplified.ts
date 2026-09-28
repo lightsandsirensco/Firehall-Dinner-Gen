@@ -7,6 +7,21 @@ import type { GenerateRequest } from "./schema.js";
 import { inferBusyLevelFromTime } from "./busy-level.js";
 import type { DietaryFilterKey } from "./dietary/schema.js";
 import { getFoodPreferenceDefinition } from "./ingredient-preferences/definitions.js";
+import {
+  NUTRITION_GOAL_OPTIONS,
+  NUTRITION_GOAL_LABELS,
+  nutritionGoalToHealthiness,
+  type NutritionGoal,
+} from "./nutrition/goal-scoring.js";
+
+export {
+  NUTRITION_GOAL_OPTIONS,
+  NUTRITION_GOAL_LABELS,
+  NUTRITION_GOAL_QUICK_PICKS,
+  NUTRITION_GOAL_MICROCOPY,
+  nutritionGoalToHealthiness,
+  type NutritionGoal,
+} from "./nutrition/goal-scoring.js";
 
 /** Crew buckets shown in the generator UI */
 export const CREW_SIZE_BUCKETS = ["2-4", "5-8", "9-12", "12+"] as const;
@@ -126,6 +141,15 @@ export interface SimplifiedGeneratorFilters {
   protein: SimplifiedProtein;
   appliances: SimplifiedApplianceId[];
   healthiness: HealthinessPreference;
+  /**
+   * Nutrition Personalization — session-overridable Nutrition Goal (8 modes).
+   * Defaults to the signed-in user's saved profile `nutrition_goal` (see
+   * resolveGeneratorFilters in shared/generator-personalization.ts) but never
+   * writes back to the profile unless the user explicitly saves it there.
+   * `healthiness` above is kept in sync via `nutritionGoalToHealthiness` so
+   * existing relaxation-message/category scoring keeps working unchanged.
+   */
+  nutrition_goal: NutritionGoal;
   allergens: SimplifiedAllergen[];
   diets: SimplifiedDiet[];
   /**
@@ -137,6 +161,14 @@ export interface SimplifiedGeneratorFilters {
    * convenience default/session override, never trusted on its own.
    */
   foodsToAvoid: string[];
+  /**
+   * Insight-Driven Personalization — "Personalize for my crew" toggle.
+   * Defaults to true; only ever has an effect for a signed-in user entitled
+   * to `meal_memory` with real cooked history (see
+   * server/generation/history-personalization.ts) — a no-op otherwise.
+   * Session-only, never persisted to the saved profile.
+   */
+  personalizeWithHistory: boolean;
 }
 
 export function createDefaultSimplifiedFilters(): SimplifiedGeneratorFilters {
@@ -145,9 +177,11 @@ export function createDefaultSimplifiedFilters(): SimplifiedGeneratorFilters {
     protein: "chicken",
     appliances: [],
     healthiness: "balanced",
+    nutrition_goal: "no_preference",
     allergens: [],
     diets: [],
     foodsToAvoid: [],
+    personalizeWithHistory: true,
   };
 }
 
@@ -216,6 +250,7 @@ export function simplifiedFiltersToGenerateRequest(
     appliances: simplifiedAppliancesToRequest(filters.appliances),
     protein: simplifiedProteinToApi(filters.protein),
     healthiness_preference: filters.healthiness,
+    nutrition_goal: filters.nutrition_goal,
     allergens_to_avoid: [...filters.allergens],
     dietary_restrictions: [...new Set(dietary_restrictions)],
     foods_to_avoid: [...filters.foodsToAvoid],
@@ -226,6 +261,7 @@ export function simplifiedFiltersToGenerateRequest(
     vegetarian_swap_needed: filters.protein === "vegetarian",
     use_what_we_have: false,
     ingredients_on_hand: [],
+    personalize_with_history: filters.personalizeWithHistory,
     ...extras,
   };
 }
@@ -266,6 +302,9 @@ export function formatGeneratorSummary(filters: SimplifiedGeneratorFilters): str
     `Avoid: ${formatAllergenSummary(filters.allergens)}`,
     `Diet: ${formatDietSummary(filters.diets)}`,
   ];
+  if (filters.nutrition_goal && filters.nutrition_goal !== "no_preference") {
+    lines.push(`Nutrition: ${NUTRITION_GOAL_LABELS[filters.nutrition_goal]}`);
+  }
   // Only shown once set — keeps the summary unchanged for the vast majority of
   // (free or Pro-but-unused) sessions with no foods-to-avoid preference set.
   if (filters.foodsToAvoid.length > 0) {
@@ -327,15 +366,25 @@ export function migrateLegacyFilterState(legacy: Record<string, unknown>): Simpl
     ? legacy.diets.filter((d): d is SimplifiedDiet => SIMPLIFIED_DIETS.includes(d as SimplifiedDiet))
     : [];
 
+  const legacyGoal = String(legacy.nutrition_goal || "");
+  const nutrition_goal: NutritionGoal = (NUTRITION_GOAL_OPTIONS as readonly string[]).includes(
+    legacyGoal,
+  )
+    ? (legacyGoal as NutritionGoal)
+    : defaults.nutrition_goal;
+
   return {
     crew_bucket,
     protein,
     appliances: [...new Set(appliances)],
     healthiness,
+    nutrition_goal,
     allergens,
     diets,
     // No legacy shape ever carried this — always starts empty on migration,
     // same as `defaults.foodsToAvoid` would.
     foodsToAvoid: defaults.foodsToAvoid,
+    // No legacy shape ever carried this either — always defaults on, same as a brand-new session.
+    personalizeWithHistory: defaults.personalizeWithHistory,
   };
 }

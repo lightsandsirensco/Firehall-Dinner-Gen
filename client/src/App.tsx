@@ -28,6 +28,7 @@ import { PageTransition } from "@/components/page-transition";
 import { SkipToContent } from "@/components/skip-to-content";
 import Home from "@/pages/home";
 const Generator = lazy(() => import("@/pages/generator"));
+const ShiftPlannerPage = lazy(() => import("@/pages/shift-planner"));
 const AdminGolden100Page = lazy(() => import("@/pages/admin-golden-100"));
 const AdminCatalogPage = lazy(() => import("@/pages/admin-catalog"));
 
@@ -79,6 +80,8 @@ const AdminDealsPage = lazy(() => import("@/pages/admin-deals"));
 const TonightDashboardPage = lazy(() => import("@/pages/app-home-page"));
 const MePage = lazy(() => import("@/pages/me-page"));
 const MeHistoryPage = lazy(() => import("@/pages/me-history-page"));
+const MeProgressPage = lazy(() => import("@/pages/me-progress-page"));
+const MeInsightsPage = lazy(() => import("@/pages/me-insights-page"));
 const MeSettingsPage = lazy(() => import("@/pages/me-settings-page"));
 const MeShoppingListPage = lazy(() => import("@/pages/me-shopping-list-page"));
 const MePantryPage = lazy(() => import("@/pages/me-pantry-page"));
@@ -99,6 +102,8 @@ function AppRoutes() {
       <Route path="/me" component={MePage} />
       <Route path="/me/profile" component={AccountPage} />
       <Route path="/me/history" component={MeHistoryPage} />
+      <Route path="/me/progress" component={MeProgressPage} />
+      <Route path="/me/insights" component={MeInsightsPage} />
       <Route path="/me/settings" component={MeSettingsPage} />
       <Route path="/profile">{() => <Redirect to="/me/profile" />}</Route>
       <Route path="/me/saved" component={FavoritesPage} />
@@ -109,6 +114,7 @@ function AppRoutes() {
       <Route path="/hall/history">{() => <Redirect to="/hall" />}</Route>
       <Route path="/onboarding/hall" component={OnboardingHallPage} />
       <Route path="/generator" component={Generator} />
+      <Route path="/shift-planner" component={ShiftPlannerPage} />
       <Route path="/faq" component={FaqPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/privacy" component={PrivacyPage} />

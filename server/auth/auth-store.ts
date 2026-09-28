@@ -110,6 +110,11 @@ function rowToProfile(row: Record<string, unknown> | undefined, email: string | 
     hall_name: row.hall_name ? String(row.hall_name) : null,
     shift_label: row.shift_label ? String(row.shift_label) : null,
     crew_size: row.crew_size != null ? Number(row.crew_size) : null,
+    username: row.username ? String(row.username) : null,
+    city: row.city ? String(row.city) : null,
+    province_state: row.province_state ? String(row.province_state) : null,
+    postal_code: row.postal_code ? String(row.postal_code) : null,
+    country: row.country ? String(row.country) : null,
   };
 }
 
@@ -120,6 +125,12 @@ function rowToPreferences(row: Record<string, unknown> | undefined): UserPrefere
     dietary_restrictions: parseJsonArray(row.dietary_restrictions_json as string),
     appliance_preferences: parseJsonArray(row.appliance_preferences_json as string),
     excluded_ingredients: sanitizeFoodPreferenceKeys(parseJsonArray(row.excluded_ingredients_json as string)),
+    allergies: parseJsonArray(row.allergies_json as string),
+    favorite_cuisines: parseJsonArray(row.favorite_cuisines_json as string),
+    spice_level: row.spice_level ? String(row.spice_level) : null,
+    meal_difficulty: row.meal_difficulty ? String(row.meal_difficulty) : null,
+    cook_time_preference: row.cook_time_preference ? String(row.cook_time_preference) : null,
+    nutrition_goal: row.nutrition_goal ? String(row.nutrition_goal) : null,
     shift_reminders_enabled: Number(row.shift_reminders_enabled) === 1,
     shift_days: normalizeShiftDays(
       (() => {
@@ -500,6 +511,26 @@ export async function getAuthMe(userId: string | null): Promise<AuthMeResponse> 
   };
 }
 
+/** Thrown by updateUserProfile() when the requested username is already taken by a different account. */
+export class UsernameTakenError extends Error {
+  constructor() {
+    super("That username is already taken.");
+    this.name = "UsernameTakenError";
+  }
+}
+
+/** Case-insensitive availability check — used by the live "username unavailable" UI state. */
+export async function isUsernameAvailable(username: string, excludingUserId?: string): Promise<boolean> {
+  const normalized = username.trim().toLowerCase();
+  if (!normalized) return false;
+  const row = await pgOne<{ user_id: string }>(
+    `SELECT user_id FROM user_profiles WHERE lower(username) = $1`,
+    [normalized],
+  );
+  if (!row) return true;
+  return Boolean(excludingUserId) && row.user_id === excludingUserId;
+}
+
 export async function updateUserProfile(
   userId: string,
   patch: {
@@ -511,10 +542,21 @@ export async function updateUserProfile(
     hall_name?: string | null;
     shift_label?: string | null;
     crew_size?: number | null;
+    username?: string | null;
+    city?: string | null;
+    province_state?: string | null;
+    postal_code?: string | null;
+    country?: string | null;
     preferred_proteins?: string[];
     dietary_restrictions?: string[];
     appliance_preferences?: string[];
     excluded_ingredients?: string[];
+    allergies?: string[];
+    favorite_cuisines?: string[];
+    spice_level?: string | null;
+    meal_difficulty?: string | null;
+    cook_time_preference?: string | null;
+    nutrition_goal?: string | null;
     shift_reminders_enabled?: boolean;
     shift_days?: number[];
     shift_reminder_time?: string;
@@ -522,6 +564,14 @@ export async function updateUserProfile(
   },
 ): Promise<AuthMeResponse> {
   await ensureProfileAndPreferences(userId);
+
+  if ("username" in patch) {
+    const nextUsername = patch.username?.trim().toLowerCase() || null;
+    if (nextUsername) {
+      const available = await isUsernameAvailable(nextUsername, userId);
+      if (!available) throw new UsernameTakenError();
+    }
+  }
 
   const profileFields: Array<[string, unknown]> = [];
   if ("first_name" in patch) profileFields.push(["first_name", patch.first_name ?? null]);
@@ -532,6 +582,11 @@ export async function updateUserProfile(
   if ("hall_name" in patch) profileFields.push(["hall_name", patch.hall_name ?? null]);
   if ("shift_label" in patch) profileFields.push(["shift_label", patch.shift_label ?? null]);
   if ("crew_size" in patch) profileFields.push(["crew_size", patch.crew_size ?? null]);
+  if ("username" in patch) profileFields.push(["username", patch.username?.trim().toLowerCase() || null]);
+  if ("city" in patch) profileFields.push(["city", patch.city ?? null]);
+  if ("province_state" in patch) profileFields.push(["province_state", patch.province_state ?? null]);
+  if ("postal_code" in patch) profileFields.push(["postal_code", patch.postal_code ?? null]);
+  if ("country" in patch) profileFields.push(["country", patch.country ?? null]);
 
   if (profileFields.length > 0) {
     const sets = profileFields.map(([col], i) => `${col} = $${i + 1}`).join(", ");
@@ -565,6 +620,24 @@ export async function updateUserProfile(
       allowed = hasFeature(billing.features, "ingredient_preferences");
     }
     prefFields.push(["excluded_ingredients_json", JSON.stringify(allowed ? sanitized : [])]);
+  }
+  if (patch.allergies) {
+    prefFields.push(["allergies_json", JSON.stringify(patch.allergies)]);
+  }
+  if (patch.favorite_cuisines) {
+    prefFields.push(["favorite_cuisines_json", JSON.stringify(patch.favorite_cuisines)]);
+  }
+  if ("spice_level" in patch) {
+    prefFields.push(["spice_level", patch.spice_level ?? null]);
+  }
+  if ("meal_difficulty" in patch) {
+    prefFields.push(["meal_difficulty", patch.meal_difficulty ?? null]);
+  }
+  if ("cook_time_preference" in patch) {
+    prefFields.push(["cook_time_preference", patch.cook_time_preference ?? null]);
+  }
+  if ("nutrition_goal" in patch) {
+    prefFields.push(["nutrition_goal", patch.nutrition_goal ?? null]);
   }
   if (typeof patch.shift_reminders_enabled === "boolean") {
     prefFields.push(["shift_reminders_enabled", patch.shift_reminders_enabled ? 1 : 0]);

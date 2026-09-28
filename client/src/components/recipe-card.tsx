@@ -30,7 +30,10 @@ import { CTA, HALL_VOTE } from "@/lib/brand-copy";
 import { StartCookingButton } from "@/components/cook-mode/start-cooking-button";
 import { clientRecipeToCookMode } from "@/lib/cook-mode/adapters";
 import { RecipeMeasurementBar } from "@/components/recipe-measurement-bar";
-import { NUTRITION_ESTIMATE_DISCLAIMER } from "@/components/recipe-nutrition-panel";
+import { NUTRITION_ESTIMATE_DISCLAIMER, getDisplayableMacroRows } from "@/components/recipe-nutrition-panel";
+import { explainNutritionGoalFit, NUTRITION_GOAL_LABELS, type NutritionGoal } from "@shared/nutrition/goal-scoring";
+import { formatTotalCostRange, formatPerPersonCostRange } from "@shared/pricing";
+import { profileToLocationQuery, useRecipeCostEstimate } from "@/lib/recipe-cost-estimate";
 import {
   useMeasurementSystem,
 } from "@/components/measurement-unit-toggle";
@@ -55,6 +58,12 @@ interface RecipeCardProps {
   onShoppingListClick?: () => void;
   onHallVoteClick?: () => void;
   hideSave?: boolean;
+  /** Active Nutrition Goal (if any) — drives the "why this fits" line below the macros. */
+  nutritionGoal?: NutritionGoal;
+  /** Set only on generated Shift Planner meal-slot cards — undefined elsewhere (never fabricated). */
+  mealOccasion?: string;
+  /** Real linked hall id, if this surface has hall context. */
+  hallId?: string;
 }
 
 function MealSection({
@@ -273,7 +282,7 @@ export function buildPrintHtml(
 </html>`;
 }
 
-export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, onHallVoteClick, hideSave }: RecipeCardProps) {
+export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, onHallVoteClick, hideSave, nutritionGoal, mealOccasion, hallId }: RecipeCardProps) {
   const auth = useOptionalAuth();
   const [, navigate] = useLocation();
   const hasTiming = recipe.timing && (recipe.timing.prep_min || recipe.timing.cook_min || recipe.timing.total_min);
@@ -341,6 +350,40 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       printWindow.document.close();
     }
   };
+
+  // Compact nutrition summary — hides individual macros (and the whole line/disclaimer)
+  // that are missing/zero instead of showing a fabricated "0 cal · 0g protein" row.
+  const macroRows = useMemo(
+    () =>
+      getDisplayableMacroRows({
+        calories: recipe.macros_per_serving?.calories,
+        protein: recipe.macros_per_serving?.protein_g,
+        carbs: recipe.macros_per_serving?.carbs_g,
+        fat: recipe.macros_per_serving?.fat_g,
+      }),
+    [recipe.macros_per_serving],
+  );
+
+  // "Why this fits" — one honest, data-backed line for the active Nutrition Goal.
+  // Never fabricates a metric; hides itself when there's nothing real to point to.
+  const nutritionGoalFit = useMemo(
+    () =>
+      nutritionGoal && nutritionGoal !== "no_preference"
+        ? explainNutritionGoalFit(nutritionGoal, {
+            calories: recipe.macros_per_serving?.calories,
+            protein_g: recipe.macros_per_serving?.protein_g,
+            carbs_g: recipe.macros_per_serving?.carbs_g,
+            totalMinutes: recipe.timing?.total_min,
+          })
+        : null,
+    [nutritionGoal, recipe.macros_per_serving, recipe.timing?.total_min],
+  );
+
+  // Free "estimated cost" — same shared engine Premium sale overrides will use later.
+  // Only rendered when pricing coverage clears the trust threshold (see
+  // shared/pricing/cost-engine.ts COVERAGE_THRESHOLD) — never a misleading guess.
+  const costLocation = useMemo(() => profileToLocationQuery(auth?.profile), [auth?.profile]);
+  const costEstimate = useRecipeCostEstimate(recipe.ingredients, recipe.servings || crewSize, costLocation);
 
   const mealPlate = useMemo(() => resolveMealPlate(recipe), [recipe]);
   const trustLine = useMemo(() => buildRecipeTrustLine(recipe, crewSize), [recipe, crewSize]);
@@ -481,6 +524,12 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             <p className="text-sm text-muted-foreground">
               Crew size:{" "}
               <span className="font-medium text-foreground">{crewSize} firefighters</span>
+              {costEstimate?.coverageTrustworthy && (
+                <span data-testid="text-recipe-cost-estimate">
+                  {" "}
+                  · {formatTotalCostRange(costEstimate)} ({formatPerPersonCostRange(costEstimate)})
+                </span>
+              )}
             </p>
           </RecipeMeasurementBar>
         </div>
@@ -490,9 +539,24 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             <StartCookingButton
               recipe={cookModeRecipe}
               recipeSlug={recipeSlug}
+              recipeTags={recipe.recipe_tags}
               source="generator_result"
               className="w-full min-h-12 text-base"
               size="lg"
+              mealOccasion={mealOccasion}
+              nutritionGoal={nutritionGoal}
+              hallId={hallId}
+              costSnapshot={
+                costEstimate?.coverageTrustworthy
+                  ? {
+                      totalMin: costEstimate.totalMin,
+                      totalMax: costEstimate.totalMax,
+                      perPersonMin: costEstimate.perPersonMin,
+                      perPersonMax: costEstimate.perPersonMax,
+                      trustworthy: costEstimate.coverageTrustworthy,
+                    }
+                  : undefined
+              }
             />
           ) : null}
           <div className="flex flex-wrap gap-2">
@@ -583,6 +647,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         </MealSection>
       )}
 
+      {(hasTiming || macroRows.length > 0) && (
       <p className={cn(app.caption, "flex flex-wrap gap-x-4 gap-y-1")} data-testid="section-timing-macros">
         {hasTiming && (
           <>
@@ -592,16 +657,34 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </span>
           </>
         )}
-        <span data-testid="section-macros">
-          <span className="text-foreground font-medium">{recipe.macros_per_serving.calories}</span> cal ·{" "}
-          <span className="text-foreground font-medium">{recipe.macros_per_serving.protein_g}g</span> protein ·{" "}
-          <span className="text-foreground font-medium">{recipe.macros_per_serving.carbs_g}g</span> carbs ·{" "}
-          <span className="text-foreground font-medium">{recipe.macros_per_serving.fat_g}g</span> fat per seat
-        </span>
+        {macroRows.length > 0 && (
+          <span data-testid="section-macros">
+            {macroRows.map((row, i) => (
+              <span key={row.id}>
+                {i > 0 ? " · " : ""}
+                <span className="text-foreground font-medium">{row.value}</span>{" "}
+                {row.id === "calories" ? "cal" : row.label.toLowerCase()}
+              </span>
+            ))}
+            {" "}per seat
+          </span>
+        )}
       </p>
-      <p className="text-[11px] text-muted-foreground/80 leading-relaxed" data-testid="text-nutrition-disclaimer">
-        {NUTRITION_ESTIMATE_DISCLAIMER}
-      </p>
+      )}
+      {macroRows.length > 0 && (
+        <p className="text-[11px] text-muted-foreground/80 leading-relaxed" data-testid="text-nutrition-disclaimer">
+          {NUTRITION_ESTIMATE_DISCLAIMER}
+        </p>
+      )}
+      {nutritionGoalFit && (
+        <p
+          className="text-xs text-primary/90 font-medium flex items-center gap-1.5"
+          data-testid="text-nutrition-goal-fit"
+        >
+          <Sparkles className="w-3.5 h-3.5 shrink-0 opacity-80" aria-hidden />
+          {nutritionGoal ? NUTRITION_GOAL_LABELS[nutritionGoal] : ""} pick — {nutritionGoalFit}
+        </p>
+      )}
 
       {hasSafety && (
         <MealSection title="Cook to temp" data-testid="section-protein-safety">

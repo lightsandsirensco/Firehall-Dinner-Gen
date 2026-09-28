@@ -14,6 +14,8 @@ import {
   healthinessRelaxationMessage,
   type HealthinessPreference,
 } from "../../shared/generator-simplified.js";
+import { scoreNutritionGoal as scoreNutritionGoalForCategory } from "../../shared/nutrition/goal-scoring.js";
+import type { NutritionGoal } from "../../shared/nutrition/goal-scoring.js";
 
 /** Default equipment assumed when recipe metadata is missing */
 const DEFAULT_RECIPE_EQUIPMENT: EquipmentKind[] = ["skillet", "oven"];
@@ -191,6 +193,24 @@ export function scoreHealthinessPreference(
   if (preference === "comfort") return Math.round(comfort / 4);
   if (preference === "lean") return Math.round(healthy / 4);
   return Math.round((comfort + healthy) / 8);
+}
+
+/**
+ * Nutrition Goal soft-scoring bonus for the simplified generator — a secondary
+ * refinement layered on top of `scoreHealthinessPreference` above, using the
+ * SAME already-derived `metadata.nutritionCategory` (real, never fabricated)
+ * plus real cook-time minutes. See shared/nutrition/goal-scoring.ts for the
+ * full mode → category mapping and rationale.
+ */
+export function scoreNutritionGoal(
+  goal: NutritionGoal | null | undefined,
+  recipe: CuratedRecipe,
+  totalMinutes?: number,
+): number {
+  return scoreNutritionGoalForCategory(goal, {
+    nutritionCategory: recipe.metadata?.nutritionCategory ?? null,
+    totalMinutes: totalMinutes ?? recipe.totalMinutes ?? null,
+  });
 }
 
 export function scoreCrewFit(recipe: CuratedRecipe, crewSize: number): number {

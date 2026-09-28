@@ -43,7 +43,7 @@ import {
   hasUserGeneratedBefore,
 } from "@/lib/prefetch";
 import { GENERATION_INTENT_USER } from "@shared/generation-intent";
-import { trackEvent, trackMealGenerationStarted, trackMealGenerated, trackMealGenerationFailed, trackEmailModalOpened } from "@/lib/analytics";
+import { trackEvent, trackMealGenerationStarted, trackMealGenerated, trackMealGenerationFailed, trackEmailModalOpened, trackRecipeGeneratedWithNutritionGoal, trackHistoryPersonalizationUsed, trackPersonalizedRecipeSelected } from "@/lib/analytics";
 import {
   getPersistedGenerationCount,
   recordSuccessfulGeneration,
@@ -223,6 +223,14 @@ const ResultsPanel = memo(function ResultsPanel({
               {(recipeWithHero as ClientRecipeResponse & { _relaxation_note?: string })._relaxation_note}
             </p>
           )}
+          {(recipeWithHero as ClientRecipeResponse & { _personalization_note?: string })._personalization_note && (
+            <p
+              className="mb-3 text-xs text-muted-foreground rounded-lg border border-primary/20 bg-primary/5 px-3 py-2"
+              data-testid="personalization-note"
+            >
+              {(recipeWithHero as ClientRecipeResponse & { _personalization_note?: string })._personalization_note}
+            </p>
+          )}
           <GeneratorMealRepeatWarning recipe={recipeWithHero} />
           {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
             <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
@@ -238,6 +246,7 @@ const ResultsPanel = memo(function ResultsPanel({
             onEmailClick={onEmailClick}
             onShoppingListClick={onShoppingListClick}
             onHallVoteClick={onHallVoteClick}
+            nutritionGoal={filters.nutrition_goal}
           />
           {showHallVotePrompt && (
             <HallVotePromoBanner
@@ -492,6 +501,26 @@ export default function Generator() {
       meal_format: data.meal_style,
       cache_hit: generationCacheHitRef.current,
     });
+    if (genFilters?.nutrition_goal) {
+      trackRecipeGeneratedWithNutritionGoal({ goal: genFilters.nutrition_goal, recipe_slug: slug });
+    }
+    const personalization = data as ClientRecipeResponse & {
+      _personalization_used?: boolean;
+      _personalization_note?: string;
+      _personalization_signal_types?: string;
+      _personalization_sample_bucket?: string;
+    };
+    if (personalization._personalization_used) {
+      trackHistoryPersonalizationUsed({
+        sample_size_bucket: personalization._personalization_sample_bucket || "none",
+      });
+    }
+    if (personalization._personalization_note) {
+      trackPersonalizedRecipeSelected({
+        signal_types_used: personalization._personalization_signal_types || "",
+        sample_size_bucket: personalization._personalization_sample_bucket || "none",
+      });
+    }
     recordMealGenerated({
       title: data.title,
       recipeSlug: slug,
@@ -805,6 +834,13 @@ export default function Generator() {
             <p className="mt-2 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-prose">
               {GENERATOR.subline}
             </p>
+            <a
+              href="/shift-planner"
+              className="mt-2 inline-block text-sm text-primary hover:underline"
+              data-testid="link-shift-planner"
+            >
+              Planning more than one meal? Try the Shift Planner →
+            </a>
           </header>
         )}
 

@@ -8,7 +8,6 @@ import {
   ShiftReminderSettingsFields,
   useSyncedShiftReminderSettings,
 } from "@/components/auth/shift-reminder-settings-fields";
-import { cn } from "@/lib/utils";
 import { apiRequest } from "@/lib/queryClient";
 import { useAuth } from "@/lib/auth/context";
 import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
@@ -24,31 +23,7 @@ import {
   PROFILE_PROTEIN_OPTIONS,
 } from "@shared/auth/constants";
 import { FOOD_PREFERENCE_DEFINITIONS } from "@shared/ingredient-preferences/definitions";
-
-function ChipToggle({
-  label,
-  selected,
-  onToggle,
-}: {
-  label: string;
-  selected: boolean;
-  onToggle: () => void;
-}) {
-  return (
-    <button
-      type="button"
-      onClick={onToggle}
-      className={cn(
-        "rounded-full border px-3 py-1.5 text-xs font-medium capitalize transition-colors min-h-9",
-        selected
-          ? "border-primary bg-primary/15 text-foreground"
-          : "border-border/60 text-muted-foreground hover:border-border",
-      )}
-    >
-      {label.replace(/_/g, " ")}
-    </button>
-  );
-}
+import { ChipToggle } from "@/components/auth/profile-chips";
 
 export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { onboarding?: boolean; onOnboardingSaved?: () => void }) {
   const { profile, preferences, refresh, user, halls, authenticated } = useAuth();

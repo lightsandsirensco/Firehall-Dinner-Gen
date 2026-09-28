@@ -523,6 +523,25 @@ export function registerBillingRoutes(app: Express): void {
       // Pro too: no reason to let an already-entitled user pay again.
       const existingBilling = await resolveUserBilling(userId);
       if (userAlreadyHasProAccess(existingBilling.subscription)) {
+        // Stripe-sourced subscribers get routed straight to the Customer
+        // Portal (same shape the client already expects — `{ ok, url }` —
+        // so useStartProCheckout()'s existing `window.location.href = url`
+        // redirect handles this with no client change). Admin-granted Pro
+        // has no Stripe customer to open a portal for, so it still just
+        // blocks with a clear message.
+        if (existingBilling.manage_billing_available) {
+          const customerId = await getStripeCustomerIdForUser(userId);
+          if (customerId) {
+            const stripe = getStripeClient();
+            const origin = resolvePublicSiteOrigin(req.get("host"), req.protocol);
+            const portalSession = await stripe.billingPortal.sessions.create({
+              customer: customerId,
+              return_url: `${origin}/account`,
+            });
+            trackBillingEvent(req, "stripe_billing_portal_opened", { reason: "duplicate_checkout_redirect" });
+            return res.json({ ok: true, url: portalSession.url, redirected_to_portal: true });
+          }
+        }
         return res.status(409).json({ message: "You already have an active Firehall Meals Pro subscription." });
       }
 

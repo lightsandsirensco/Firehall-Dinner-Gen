@@ -10,9 +10,12 @@ import {
   SIMPLIFIED_APPLIANCE_IDS,
   SIMPLIFIED_DIETS,
   SIMPLIFIED_PROTEINS,
+  NUTRITION_GOAL_OPTIONS,
   createDefaultSimplifiedFilters,
+  nutritionGoalToHealthiness,
   type CrewSizeBucketUi,
   type HealthinessPreference,
+  type NutritionGoal,
   type SimplifiedAllergen,
   type SimplifiedApplianceId,
   type SimplifiedDiet,
@@ -27,6 +30,8 @@ export interface GeneratorPersonalPrefs {
   schemaVersion: typeof GENERATOR_PERSONAL_PREFS_SCHEMA;
   protein: SimplifiedProtein;
   healthiness: HealthinessPreference;
+  /** Device-level "remember my last pick" — never written back to the saved profile. */
+  nutrition_goal?: NutritionGoal;
   allergens: SimplifiedAllergen[];
   diets: SimplifiedDiet[];
   /** Firehall Meals Pro — "Foods to Avoid" (canonical keys). Session-overridable. */
@@ -105,6 +110,12 @@ export function mapDietaryToDiets(restrictions: string[]): SimplifiedDiet[] {
   return [...out];
 }
 
+/** Map the saved profile `nutrition_goal` (loose string in the DB) to a valid session value. */
+export function mapProfileNutritionGoal(raw: string | null | undefined): NutritionGoal | null {
+  if (!raw) return null;
+  return (NUTRITION_GOAL_OPTIONS as readonly string[]).includes(raw) ? (raw as NutritionGoal) : null;
+}
+
 export function mapPreferredProtein(raw: string | undefined): SimplifiedProtein | null {
   if (!raw?.trim()) return null;
   const key = raw.toLowerCase().trim();
@@ -139,10 +150,12 @@ export function parsePersonalPrefs(raw: unknown): GeneratorPersonalPrefs | null 
   );
   const crew_bucket =
     p.crew_bucket && CREW_SIZE_BUCKETS.includes(p.crew_bucket) ? p.crew_bucket : undefined;
+  const nutrition_goal = mapProfileNutritionGoal(p.nutrition_goal) ?? undefined;
   return {
     schemaVersion: GENERATOR_PERSONAL_PREFS_SCHEMA,
     protein,
     healthiness,
+    nutrition_goal,
     allergens,
     diets,
     foodsToAvoid,
@@ -156,6 +169,7 @@ export function personalPrefsFromFilters(filters: SimplifiedGeneratorFilters): G
     schemaVersion: GENERATOR_PERSONAL_PREFS_SCHEMA,
     protein: filters.protein,
     healthiness: filters.healthiness,
+    nutrition_goal: filters.nutrition_goal,
     allergens: [...filters.allergens],
     diets: [...filters.diets],
     foodsToAvoid: [...filters.foodsToAvoid],
@@ -199,7 +213,22 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
             : base.crew_bucket),
     protein: personal?.protein ?? session?.protein ?? base.protein,
     appliances: session?.appliances?.length ? [...session.appliances] : base.appliances,
-    healthiness: personal?.healthiness ?? session?.healthiness ?? base.healthiness,
+    // Precedence: this-device "remember my last pick" > current session > signed-in
+    // saved profile default > generator default ("no preference"). Never mutates the
+    // saved profile value itself — see PROFILE_NUTRITION_GOAL_OPTIONS. `healthiness`
+    // mirrors whichever tier resolved `nutrition_goal` so the legacy 3-way scoring/
+    // relaxation-message machinery (see generator-match.ts) always stays in sync with it.
+    healthiness:
+      personal?.healthiness ??
+      session?.healthiness ??
+      (mapProfileNutritionGoal(input.preferences?.nutrition_goal)
+        ? nutritionGoalToHealthiness(mapProfileNutritionGoal(input.preferences?.nutrition_goal)!)
+        : base.healthiness),
+    nutrition_goal:
+      personal?.nutrition_goal ??
+      session?.nutrition_goal ??
+      mapProfileNutritionGoal(input.preferences?.nutrition_goal) ??
+      base.nutrition_goal,
     allergens:
       personal?.allergens?.length
         ? [...personal.allergens]
@@ -218,6 +247,8 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
         : session?.foodsToAvoid?.length
           ? [...session.foodsToAvoid]
           : sanitizeFoodPreferenceKeys(input.preferences?.excluded_ingredients ?? []),
+    // Per-generation only — never saved to the account/device personal prefs above.
+    personalizeWithHistory: session?.personalizeWithHistory ?? base.personalizeWithHistory,
   };
 
   const prefProtein = input.preferences?.preferred_proteins?.[0];

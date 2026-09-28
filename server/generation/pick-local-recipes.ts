@@ -53,6 +53,7 @@ import {
   recipePassesHardFilters,
   scoreCrewFit,
   scoreHealthinessPreference,
+  scoreNutritionGoal,
 } from "./generator-match.js";
 import { scanRecipeForAllergens } from "../allergens.js";
 import { classifyRecipeDietary } from "../../shared/dietary/classify-recipe.js";
@@ -65,6 +66,12 @@ import {
   TIME_BUCKET_MAX_MINUTES as TIME_MAX_MINUTES,
   recipeFitsTimeBucket,
 } from "../../shared/generation/time-buckets.js";
+import {
+  explainPersonalization,
+  scoreHistorySignal,
+  type HistorySignals,
+  type HistorySignalType,
+} from "./history-personalization.js";
 
 export interface LocalRecipePick {
   recipe: GenerateResponse;
@@ -74,6 +81,21 @@ export interface LocalRecipePick {
   recipeSource?: RecipeSourceAttribution;
   slug: string;
   matchedCategory?: FirehallCategoryId;
+  /** Insight-Driven Personalization — set only when history signals were considered for this pick. */
+  personalization?: {
+    note: string | null;
+    signalTypes: HistorySignalType[];
+  };
+}
+
+/** Shared option shape for every local-catalog picker below. */
+export interface PickOptions {
+  recentSignatures?: string[];
+  recentSlugs?: string[];
+  currentRecipeSignature?: string;
+  varietySeed: string;
+  /** Insight-Driven Personalization — deterministic history-learned soft signals (see history-personalization.ts). Null/absent = scoring unchanged from before this feature existed. */
+  historySignals?: HistorySignals | null;
 }
 
 function signatureBlocked(
@@ -275,11 +297,7 @@ function pickFromSummaries(
     catalogBoost?: number;
   }>,
   request: GenerateRequest,
-  options: {
-    recentSignatures?: string[];
-    recentSlugs?: string[];
-    currentRecipeSignature?: string;
-    varietySeed: string;
+  options: PickOptions & {
     excludeSlugs?: Set<string>;
     /** Allow score 0 when pool is very small (category-filtered picks). */
     minScore?: number;
@@ -287,6 +305,10 @@ function pickFromSummaries(
 ): LocalRecipePick | null {
   const selectedProtein = request.protein || "any";
   const strictProtein = selectedProtein !== "any";
+  // Per-slug history delta/signals, stashed here so whichever candidate the
+  // existing weighted-band selection below ultimately picks can carry its
+  // own explanation — never recomputed against a different candidate.
+  const historyBySlug = new Map<string, { delta: number; appliedSignals: HistorySignalType[] }>();
   const ranked = summaries
     .filter((r) => !isExcludedFromDinnerFeeds(r))
     .filter((r) => !options.excludeSlugs?.has(r.slug))
@@ -298,15 +320,28 @@ function pickFromSummaries(
       const full = getCuratedRecipeBySlug(row.slug);
       if (full) {
         const hard = recipePassesHardFilters(full, request);
-        if (!hard.ok) return { row, score: -9999 };
+        if (!hard.ok) return { row, score: -9999, eligibilityScore: -9999 };
         score += scoreHealthinessPreference(request.healthiness_preference || "balanced", full);
+        score += scoreNutritionGoal(request.nutrition_goal, full, row.totalMinutes);
         score += scoreCrewFit(full, request.crew_size);
       }
       score -= recentSlugPenalty(row.slug, options.recentSlugs);
       if (typeof row.catalogBoost === "number") score += row.catalogBoost;
-      return { row, score };
+      // Candidate pool membership (the minScore floor below) is decided BEFORE
+      // history signals are applied — a learned suppression/penalty must only
+      // ever push a candidate to the bottom of the ranking, never make an
+      // otherwise-eligible candidate vanish from the pool entirely. This keeps
+      // "history signals never override hard constraints" true even in a
+      // small, heavily-suppressed pool (e.g. a narrow firehall-category stage).
+      const eligibilityScore = score;
+      if (options.historySignals) {
+        const history = scoreHistorySignal({ slug: row.slug, protein: row.protein }, options.historySignals);
+        historyBySlug.set(row.slug, history);
+        score += history.delta;
+      }
+      return { row, score, eligibilityScore };
     })
-    .filter((x) => x.score >= (options.minScore ?? 1))
+    .filter((x) => x.eligibilityScore >= (options.minScore ?? 1))
     .sort((a, b) => b.score - a.score);
 
   if (ranked.length === 0) return null;
@@ -314,6 +349,18 @@ function pickFromSummaries(
   const band = ranked.slice(0, 16);
   const weights = band.map((x) => Math.max(1, x.score));
   const startIdx = weightedPickIndex(weights, options.varietySeed);
+
+  const withPersonalization = (pick: LocalRecipePick): LocalRecipePick => {
+    if (!options.historySignals) return pick;
+    const history = historyBySlug.get(pick.slug);
+    if (!history) return pick;
+    const note = explainPersonalization(
+      { slug: pick.slug, protein: pick.protein },
+      options.historySignals,
+      history.appliedSignals,
+    );
+    return { ...pick, personalization: { note, signalTypes: history.appliedSignals } };
+  };
 
   // Try to hydrate + pass variety constraints across the band.
   // Some curated rows may not have a generateResponse yet — skip those gracefully.
@@ -323,13 +370,13 @@ function pickFromSummaries(
     if (!pick) continue;
     const sig = computeSignature(pick.recipe);
     if (signatureBlocked(sig, options.recentSignatures, options.currentRecipeSignature)) continue;
-    return pick;
+    return withPersonalization(pick);
   }
 
   // As a last resort, return any hydrated pick (even if it repeats) to avoid a blank state.
   for (const candidate of ordered) {
     const pick = hydratePick(candidate.row.slug, request);
-    if (pick) return pick;
+    if (pick) return withPersonalization(pick);
   }
 
   return null;
@@ -338,12 +385,7 @@ function pickFromSummaries(
 function pickForFirehallCategory(
   request: GenerateRequest,
   categoryId: FirehallCategoryId,
-  options: {
-    recentSignatures?: string[];
-    recentSlugs?: string[];
-    currentRecipeSignature?: string;
-    varietySeed: string;
-  },
+  options: PickOptions,
 ): LocalRecipePick | null {
   const stages = buildFirehallPoolStages(categoryId);
 
@@ -384,12 +426,7 @@ function pickForFirehallCategory(
 /** Layer A — published editorial curated (publisher / hall classics, not Golden 100). */
 export function pickEditorialCuratedForGenerate(
   request: GenerateRequest,
-  options: {
-    recentSignatures?: string[];
-    recentSlugs?: string[];
-    currentRecipeSignature?: string;
-    varietySeed: string;
-  },
+  options: PickOptions,
 ): LocalRecipePick | null {
   const goldenSlugs = new Set(
     listCuratedSummariesByTag(GOLDEN_SET_TAG, 120).map((r) => r.slug),
@@ -499,12 +536,7 @@ export function getDefaultGeneratorPoolSlugs(): {
 /** Hall catalog pick — Golden 100 + Performance 50 with request-aware ranking. */
 export function pickGolden100ForGenerate(
   request: GenerateRequest,
-  options: {
-    recentSignatures?: string[];
-    recentSlugs?: string[];
-    currentRecipeSignature?: string;
-    varietySeed: string;
-  },
+  options: PickOptions,
 ): LocalRecipePick | null {
   if (request.firehall_category) {
     return pickForFirehallCategory(request, request.firehall_category, options);

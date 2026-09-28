@@ -116,6 +116,7 @@ import { generationTimeoutMs, pizzaTimeoutMs, withTimeout } from "./generation-t
 import {
   runLocalFirstGeneratePipeline,
 } from "./generation/local-first-pipeline.js";
+import { computeHistorySignals } from "./generation/history-personalization.js";
 import { logGenerateTelemetry } from "./generation/generation-telemetry.js";
 import { resolveSafeCuratedFallback } from "./generation/safe-curated-fallback.js";
 import { runRealismFirewall } from "./generation/realism-firewall.js";
@@ -209,6 +210,8 @@ import { initHallMembershipStore } from "./hall-membership/store.js";
 import { registerBillingRoutes } from "./billing/routes.js";
 import { initBillingStore, resolveUserBilling } from "./billing/store.js";
 import { registerMealHistoryRoutes } from "./meal-history/routes.js";
+import { registerGoalsRoutes } from "./goals/routes.js";
+import { registerInsightsRoutes } from "./insights/routes.js";
 import { listRecentCookedSlugsOldestFirst } from "./meal-history/store.js";
 import { mergeRecentSlugSources } from "../shared/meal-rotation/weighted-pick.js";
 import { hasFeature } from "../shared/billing/types.js";
@@ -365,6 +368,8 @@ export async function registerRoutes(
   void initHallEventStore();
   registerBillingRoutes(app);
   registerMealHistoryRoutes(app);
+  registerGoalsRoutes(app);
+  registerInsightsRoutes(app);
   registerAdminUsersRoutes(app);
   registerGroceryDealsRoutes(app);
   registerMonitoringRoutes(app);
@@ -833,6 +838,18 @@ export async function registerRoutes(
     }
     if (extras._healthiness_relaxed) {
       base._healthiness_relaxed = extras._healthiness_relaxed;
+    }
+    if (extras._personalization_used) {
+      base._personalization_used = true;
+    }
+    if (extras._personalization_note) {
+      base._personalization_note = extras._personalization_note;
+    }
+    if (extras._personalization_signal_types) {
+      base._personalization_signal_types = extras._personalization_signal_types;
+    }
+    if (extras._personalization_sample_bucket) {
+      base._personalization_sample_bucket = extras._personalization_sample_bucket;
     }
 
     const curation = curateRecipeForClient(recipe, validation, {
@@ -1338,6 +1355,32 @@ export async function registerRoutes(
         }
       }
 
+      // Insight-Driven Personalization — deterministic, non-AI soft-ranking
+      // signals learned from this SAME durable meal history. Gated behind the
+      // identical `meal_memory` entitlement above (no new billing logic) AND
+      // the "Personalize for my crew" toggle, which defaults on but the user
+      // can turn off per-generation. Never overrides hard filters, explicit
+      // session choices, or saved profile preferences — see
+      // server/generation/history-personalization.ts / pick-local-recipes.ts
+      // for exactly where this layers into the existing scoring.
+      let historySignals: Awaited<ReturnType<typeof computeHistorySignals>> | null = null;
+      if (
+        authUserId &&
+        requestUserBilling &&
+        hasFeature(requestUserBilling.features, "meal_memory") &&
+        request.personalize_with_history !== false
+      ) {
+        try {
+          historySignals = await computeHistorySignals(authUserId, clientRecentSlugs);
+        } catch (err) {
+          log(
+            `[generate] history personalization signals failed: ${(err as Error)?.message}`,
+            "generate",
+          );
+          historySignals = null;
+        }
+      }
+
       if (clientCurrentSig) {
         addSessionSignature(`${ipHash}:${sessionId}`, clientCurrentSig);
       }
@@ -1386,6 +1429,7 @@ export async function registerRoutes(
         currentRecipeSignature: clientCurrentSig || undefined,
         preferDifferentStyle: Boolean(request.prefer_different_style),
         startTime,
+        historySignals,
       });
 
       auditCtx.chosenProtein = pipelineHit.protein;

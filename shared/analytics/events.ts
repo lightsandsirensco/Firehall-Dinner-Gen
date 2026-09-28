@@ -127,6 +127,23 @@ export const ANALYTICS_EVENT_TYPES = [
   "stripe_subscription_updated",
   "stripe_subscription_cancelled",
   "stripe_billing_portal_opened",
+  "nutrition_goal_selected",
+  "nutrition_goal_override",
+  "recipe_generated_with_nutrition_goal",
+  "meal_logged",
+  "meal_rated",
+  "meal_make_again_selected",
+  "meal_feedback_tag_selected",
+  "progress_page_viewed",
+  "goal_created",
+  "goal_completed",
+  "goal_removed",
+  "insights_page_viewed",
+  "insight_viewed",
+  "insights_pro_teaser_clicked",
+  "history_personalization_used",
+  "history_personalization_disabled",
+  "personalized_recipe_selected",
 ] as const;
 
 export type AnalyticsEventType = (typeof ANALYTICS_EVENT_TYPES)[number];

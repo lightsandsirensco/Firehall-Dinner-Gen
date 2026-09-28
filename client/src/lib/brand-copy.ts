@@ -390,6 +390,16 @@ export const ME_HISTORY = {
   subtitle: "Your last picks — tap to cook again tonight.",
 } as const;
 
+export const ME_PROGRESS = {
+  title: "Your Progress",
+  subtitle: "Real shift-meal progress this month — not app opens.",
+} as const;
+
+export const ME_INSIGHTS = {
+  title: "Your Insights",
+  subtitle: "Real trends from your own meal history.",
+} as const;
+
 export const ME_SETTINGS = {
   title: "Settings",
   subtitle: "App preferences and crew admin.",

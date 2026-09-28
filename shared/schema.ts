@@ -9,6 +9,7 @@ import {
 } from "./recipe-signature.js";
 import { FIREHALL_CATEGORY_IDS } from "./firehall-categories.js";
 import { DIETARY_FILTER_KEYS } from "./dietary/schema.js";
+import { PROFILE_NUTRITION_GOAL_OPTIONS } from "./auth/constants.js";
 
 const safeLabel = z.string().trim().min(1).max(80);
 const safeAllergen = z.string().trim().min(1).max(40);
@@ -35,6 +36,13 @@ export const generateRequestSchema = z.object({
   appliances: z.array(z.string().trim().min(1).max(40)).min(0).max(8),
   protein: z.enum(["chicken", "beef", "pork", "turkey", "fish", "seafood", "vegetarian", "any"]),
   healthiness_preference: z.enum(["lean", "balanced", "comfort"]),
+  /**
+   * Nutrition Personalization — session-overridable Nutrition Goal (see
+   * shared/nutrition/goal-scoring.ts). Distinct from + layered on top of
+   * `healthiness_preference` above, which stays the source of truth for the
+   * existing relaxation-message/category-match machinery.
+   */
+  nutrition_goal: z.enum(PROFILE_NUTRITION_GOAL_OPTIONS).optional().default("no_preference"),
   /** Firehall Meals primary browsing category (practical situations). */
   firehall_category: z
     .enum(FIREHALL_CATEGORY_IDS)
@@ -103,6 +111,14 @@ export const generateRequestSchema = z.object({
     .optional()
     .default([]),
   prefer_different_style: z.boolean().optional().default(false),
+  /**
+   * Insight-Driven Personalization — "Personalize for my crew" toggle (see
+   * shared/generator-simplified.ts / server/generation/history-personalization.ts).
+   * Defaults to on; only ever has an effect for a signed-in user entitled to
+   * `meal_memory` who has real cooked history — otherwise a no-op. Never
+   * overrides allergies, dietary restrictions, or any other hard filter.
+   */
+  personalize_with_history: z.boolean().optional().default(true),
   recentSignatures: zRecentSignatures.optional().default([]),
   currentRecipeSignature: zOptionalRecipeSignature,
   /** Client correlation id — required for user-initiated generations */
@@ -401,6 +417,21 @@ export interface ClientRecipeResponse {
   /** When healthiness preference was relaxed to find a match */
   _relaxation_note?: string;
   _healthiness_relaxed?: boolean;
+  /**
+   * Insight-Driven Personalization (deterministic, history-learned soft
+   * signals — NOT AI). `_personalization_used` is true whenever the server
+   * actively considered this signed-in crew's meal history for this
+   * generation (entitled + toggle on + some history exists); the subtle
+   * `_personalization_note` is only ever set when one specific signal
+   * genuinely explains THIS pick (most cards show none — see
+   * server/generation/history-personalization.ts).
+   */
+  _personalization_used?: boolean;
+  _personalization_note?: string;
+  /** Comma-joined signal type keys that fired for this pick (analytics only, never customer-facing copy). */
+  _personalization_signal_types?: string;
+  /** Coarse history-size bucket for analytics (`none`/`sparse`/`moderate`/`strong`) — never exact counts. */
+  _personalization_sample_bucket?: string;
   /** Customer-facing catalog lineage badge */
   /** Customer-facing catalog lineage badge */
   catalog_badge?:

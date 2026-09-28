@@ -12,6 +12,7 @@ import { buildCacheKey, setCachedRecipe } from "../cache-store.js";
 import { pickGolden100ForGenerate, type LocalRecipePick } from "./pick-local-recipes.js";
 import { getCuratedRecipeBySlug } from "../curated-recipe-store.js";
 import { buildRelaxationNote } from "./generator-match.js";
+import { sampleSizeBucket, type HistorySignals } from "./history-personalization.js";
 import { log } from "../logger.js";
 import {
   sourceKindForLayer,
@@ -31,6 +32,8 @@ export interface LocalFirstPipelineContext {
   currentRecipeSignature?: string;
   preferDifferentStyle: boolean;
   startTime: number;
+  /** Insight-Driven Personalization — deterministic history-learned soft signals (see history-personalization.ts). Absent/null = scoring unchanged from before this feature existed. */
+  historySignals?: HistorySignals | null;
 }
 
 export interface LocalFirstPipelineHit {
@@ -98,6 +101,14 @@ function hitFromCurated(
       _healthiness_relaxed: healthinessRelaxed,
       _relaxation_note: relaxationNote ?? undefined,
       _requested_healthiness: ctx.request.healthiness_preference,
+      _personalization_used: Boolean(ctx.historySignals),
+      _personalization_note: pick.personalization?.note ?? undefined,
+      _personalization_signal_types: pick.personalization?.signalTypes?.length
+        ? pick.personalization.signalTypes.join(",")
+        : undefined,
+      _personalization_sample_bucket: ctx.historySignals
+        ? sampleSizeBucket(ctx.historySignals.totalRows)
+        : undefined,
     },
     cacheKey,
     cacheHit: false,
@@ -137,6 +148,7 @@ export async function runLocalFirstGeneratePipeline(
       recentSlugs: ctx.recentSlugs,
       currentRecipeSignature: ctx.currentRecipeSignature,
       varietySeed: `curated150:${ctx.varietySeed}:${i}`,
+      historySignals: ctx.historySignals,
     });
 
     const healthinessRelaxed = (req.healthiness_preference || "balanced") !== requestedHealthiness;

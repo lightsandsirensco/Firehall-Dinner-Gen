@@ -14,13 +14,14 @@ import { requireAuth, type AuthedRequest } from "../auth/auth-middleware.js";
 import { logError } from "../logger.js";
 import { hasFeature } from "../../shared/billing/types.js";
 import { resolveUserBilling } from "../billing/store.js";
-import { mealHistoryCreateSchema } from "../../shared/meal-history/schema.js";
+import { mealHistoryCreateSchema, mealHistoryFeedbackSchema } from "../../shared/meal-history/schema.js";
 import type { MealHistoryListResponse } from "../../shared/meal-history/types.js";
 import {
   deleteMealHistoryEntryForUser,
   initMealHistoryStore,
   listMealHistoryForUser,
   recordMealCookedForUser,
+  submitMealFeedbackForUser,
 } from "./store.js";
 
 let storeReady = false;
@@ -73,15 +74,15 @@ export function registerMealHistoryRoutes(app: Express): void {
         return res.status(400).json({ message: "Invalid recipe" });
       }
 
-      const result = await recordMealCookedForUser(userId, parsed.data.recipe_slug);
+      const { recipe_slug, ...context } = parsed.data;
+      const result = await recordMealCookedForUser(userId, recipe_slug, context);
       if (!result.ok) {
         return res.status(400).json({ message: "Recipe not found" });
       }
 
       // No separate server-side analytics event here — the existing
-      // `meal_cooked` client event (trackMealCooked, fired from the same
-      // Mark-as-Cooked completion in start-cooking-button.tsx) already
-      // covers this per section 17's "reuse existing pattern" — a second,
+      // `meal_cooked`/`meal_logged` client events fire from the same
+      // logging call site (start-cooking-button.tsx) — a second,
       // server-side event for the identical moment would double-count.
       return res.status(201).json({ ok: true, entry: result.entry });
     } catch (err) {
@@ -89,6 +90,47 @@ export function registerMealHistoryRoutes(app: Express): void {
       return res.status(500).json({ message: "Failed to record cooked meal" });
     }
   });
+
+  // Post-meal crew feedback — a partial update onto a history row the user
+  // already owns. Every field optional; safe to call multiple times to edit
+  // rating/note later. Same `meal_memory` gate as creating the row itself.
+  app.patch(
+    "/api/meal-history/:id/feedback",
+    requireCsrf,
+    requireAuth,
+    async (req: AuthedRequest, res: Response) => {
+      try {
+        await ensureStore();
+        const userId = req._authUserId!;
+        const billing = await resolveUserBilling(userId);
+        if (!hasFeature(billing.features, "meal_memory")) {
+          return res.status(403).json({
+            message: "Firehall Meals Pro remembers your cooked meals across devices.",
+          });
+        }
+
+        const id = Number(req.params.id);
+        if (!Number.isInteger(id) || id <= 0) {
+          return res.status(400).json({ message: "Invalid history entry" });
+        }
+
+        const parsed = mealHistoryFeedbackSchema.safeParse(req.body);
+        if (!parsed.success) {
+          return res.status(400).json({ message: "Invalid feedback" });
+        }
+
+        const result = await submitMealFeedbackForUser(userId, id, parsed.data);
+        if (!result.ok) {
+          return res.status(404).json({ message: "History entry not found" });
+        }
+
+        return res.json({ ok: true, entry: result.entry });
+      } catch (err) {
+        logError("meal-history", "feedback failed", err);
+        return res.status(500).json({ message: "Failed to save feedback" });
+      }
+    },
+  );
 
   // Remove one of the signed-in user's own history entries — always
   // allowed regardless of current entitlement (removing your own data is a

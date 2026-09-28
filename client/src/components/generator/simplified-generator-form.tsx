@@ -2,13 +2,16 @@ import type { ReactNode } from "react";
 import { useLocation } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 import { Lock } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
   CREW_BUCKET_LABELS,
   CREW_SIZE_BUCKETS,
-  HEALTHINESS_OPTIONS,
+  NUTRITION_GOAL_LABELS,
+  NUTRITION_GOAL_MICROCOPY,
+  NUTRITION_GOAL_QUICK_PICKS,
   SIMPLIFIED_ALLERGEN_LABELS,
   SIMPLIFIED_ALLERGENS,
   SIMPLIFIED_APPLIANCE_IDS,
@@ -19,17 +22,23 @@ import {
   SIMPLIFIED_PROTEINS,
   formatGeneratorSummary,
   formatApplianceSummary,
+  nutritionGoalToHealthiness,
   type CrewSizeBucketUi,
+  type NutritionGoal,
   type SimplifiedAllergen,
   type SimplifiedApplianceId,
   type SimplifiedDiet,
   type SimplifiedGeneratorFilters,
   type SimplifiedProtein,
 } from "@shared/generator-simplified";
-import type { HealthinessPreference } from "@shared/generator-simplified";
 import { FOOD_PREFERENCE_DEFINITIONS } from "@shared/ingredient-preferences/definitions";
 import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
-import { trackProFeatureClicked } from "@/lib/analytics";
+import {
+  trackProFeatureClicked,
+  trackNutritionGoalSelected,
+  trackNutritionGoalOverride,
+  trackHistoryPersonalizationDisabled,
+} from "@/lib/analytics";
 import { useAuth } from "@/lib/auth/context";
 import {
   ChevronLeft,
@@ -137,9 +146,28 @@ export function SimplifiedGeneratorForm({
   };
 
   const hasFoodPreferences = useFeature("ingredient_preferences");
-  const { authenticated } = useAuth();
+  const hasMealMemory = useFeature("meal_memory");
+  const { authenticated, preferences } = useAuth();
   const recordPaywall = useRecordPaywallView();
   const [, setLocation] = useLocation();
+
+  const savedNutritionGoal = (preferences?.nutrition_goal as NutritionGoal | null) ?? null;
+
+  const onNutritionGoalChange = (goal: NutritionGoal) => {
+    patch({ nutrition_goal: goal, healthiness: nutritionGoalToHealthiness(goal) });
+    trackNutritionGoalSelected({ goal, source: "generator" });
+    if (authenticated && savedNutritionGoal && goal !== savedNutritionGoal) {
+      trackNutritionGoalOverride({ goal, saved_default: savedNutritionGoal });
+    }
+  };
+
+  const togglePersonalizeWithHistory = () => {
+    const next = !filters.personalizeWithHistory;
+    patch({ personalizeWithHistory: next });
+    if (!next) {
+      trackHistoryPersonalizationDisabled({ source: "generator_filter" });
+    }
+  };
 
   const toggleFoodToAvoid = (key: string) => {
     const next = filters.foodsToAvoid.includes(key)
@@ -289,21 +317,32 @@ export function SimplifiedGeneratorForm({
         </div>
 
         <div className="col-span-2 space-y-1">
-          <Label className="text-xs text-muted-foreground">Healthiness</Label>
-          <div className="grid grid-cols-3 gap-1.5">
-            {HEALTHINESS_OPTIONS.map((opt) => (
+          <Label className="text-xs text-muted-foreground">Nutrition goal</Label>
+          <div className="flex flex-wrap gap-1.5" data-testid="nutrition-goal-selector">
+            <Chip
+              active={filters.nutrition_goal === "no_preference"}
+              onClick={() => onNutritionGoalChange("no_preference")}
+              testId="nutrition-goal-no_preference"
+            >
+              {NUTRITION_GOAL_LABELS.no_preference}
+            </Chip>
+            {NUTRITION_GOAL_QUICK_PICKS.map((goal) => (
               <Chip
-                key={opt.value}
-                active={filters.healthiness === opt.value}
-                onClick={() => patch({ healthiness: opt.value as HealthinessPreference })}
-                testId={`health-${opt.value}`}
-                className="w-full justify-center flex-col gap-0.5 py-2.5"
+                key={goal}
+                active={filters.nutrition_goal === goal}
+                onClick={() => onNutritionGoalChange(goal)}
+                testId={`nutrition-goal-${goal}`}
               >
-                <span>{opt.emoji}</span>
-                <span className="text-[10px] sm:text-xs leading-tight text-center">{opt.label}</span>
+                {NUTRITION_GOAL_LABELS[goal]}
               </Chip>
             ))}
           </div>
+          <p
+            className="text-[11px] leading-snug text-muted-foreground/80 px-0.5 pt-0.5"
+            data-testid="text-nutrition-goal-microcopy"
+          >
+            {NUTRITION_GOAL_MICROCOPY[filters.nutrition_goal]}
+          </p>
         </div>
 
         <div className="col-span-2 space-y-1">
@@ -378,6 +417,20 @@ export function SimplifiedGeneratorForm({
           )}
         </div>
       </div>
+
+      {hasMealMemory && (
+        <label
+          className="flex items-center gap-2 rounded-lg border border-border/40 bg-muted/20 px-3 py-2 text-xs text-muted-foreground touch-manipulation cursor-pointer"
+          data-testid="generator-personalize-toggle"
+        >
+          <Checkbox
+            checked={filters.personalizeWithHistory}
+            onCheckedChange={togglePersonalizeWithHistory}
+            data-testid="checkbox-personalize-for-crew"
+          />
+          Personalize for my crew — uses your hall's meal history to fine-tune tonight's pick
+        </label>
+      )}
 
       {!hasRecipe && !compact && (
         <div

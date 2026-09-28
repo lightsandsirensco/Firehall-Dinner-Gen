@@ -23,6 +23,13 @@ export interface UserProfile {
   hall_name: string | null;
   shift_label: string | null;
   crew_size: number | null;
+  /** Slug-safe, unique when set. Not a public-profile handle yet — see profile identity header. */
+  username: string | null;
+  /** Structured location — city/province/postal/country ONLY. Never a street address (see 0002 migration). */
+  city: string | null;
+  province_state: string | null;
+  postal_code: string | null;
+  country: string | null;
 }
 
 export interface UserPreferences {
@@ -31,6 +38,13 @@ export interface UserPreferences {
   appliance_preferences: string[];
   /** Firehall Meals Pro — "Foods to Avoid" personal ingredient preferences (canonical keys only). */
   excluded_ingredients: string[];
+  /** Safety-critical "avoid at all costs" signal — distinct from dietary_restrictions. */
+  allergies: string[];
+  favorite_cuisines: string[];
+  spice_level: string | null;
+  meal_difficulty: string | null;
+  cook_time_preference: string | null;
+  nutrition_goal: string | null;
   shift_reminders_enabled: boolean;
   shift_days: number[];
   shift_reminder_time: string;

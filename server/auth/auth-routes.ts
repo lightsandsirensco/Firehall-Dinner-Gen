@@ -10,12 +10,14 @@ import {
   getAuthMe,
   IdentityOwnershipConflictError,
   initAuthStore,
+  isUsernameAvailable,
   linkIdentity,
   listSavedRecipes,
   resolveOAuthSignIn,
   revokeAuthSession,
   syncSavedRecipes,
   updateUserProfile,
+  UsernameTakenError,
   upsertEmailUser,
 } from "./auth-store.js";
 import { sendMagicLinkEmail, getMagicLinkMailStatus, MAGIC_LINK_EXPIRY_MINUTES } from "./magic-link-mail.js";
@@ -409,8 +411,27 @@ export function registerAuthRoutes(app: Express): void {
         capabilities: getAuthCapabilitiesForUser(me.user, me.billing),
       });
     } catch (err) {
+      if (err instanceof UsernameTakenError) {
+        return res.status(409).json({ message: err.message });
+      }
       logError("auth", "profile update failed", err);
       return res.status(500).json({ message: "Failed to update profile" });
+    }
+  });
+
+  // Live "username unavailable" check for the profile identity edit sheet.
+  // Read-only, no CSRF needed; requires auth so it can never be used to
+  // enumerate usernames anonymously.
+  app.get("/api/auth/username-available", requireAuth, async (req: AuthedRequest, res: Response) => {
+    try {
+      await ensureStore();
+      const raw = String(req.query.u ?? "").trim().toLowerCase();
+      if (!raw) return res.json({ available: false });
+      const available = await isUsernameAvailable(raw, req._authUserId!);
+      return res.json({ available });
+    } catch (err) {
+      logError("auth", "username availability check failed", err);
+      return res.status(500).json({ message: "Failed to check username" });
     }
   });
 
