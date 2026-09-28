@@ -28,7 +28,10 @@ const DrawerOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DrawerPrimitive.Overlay
     ref={ref}
-    className={cn("fixed inset-0 z-50 bg-black/80", className)}
+    // See client/src/components/ui/sheet.tsx SheetOverlay for why
+    // data-[state=closed]:!pointer-events-none is required on every
+    // fixed full-viewport overlay in this app.
+    className={cn("fixed inset-0 z-50 bg-black/80 data-[state=closed]:!pointer-events-none", className)}
     {...props}
   />
 ))

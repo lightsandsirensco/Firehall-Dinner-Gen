@@ -25,6 +25,30 @@ html, body {
   min-height: 100dvh;
 }
 
+/*
+ * Every Radix Dialog/Sheet/AlertDialog in this app uses `react-remove-scroll`
+ * internally, which sets an INLINE `pointer-events: none` on <body> (plus
+ * `data-scroll-locked="1"`) the instant a modal opens, and only clears it
+ * once the modal's exit animation fires an `animationend` event (tied to
+ * Radix's Presence unmount detection). If the tab is backgrounded mid-close
+ * — exactly what happens on mobile when the OS hands the foreground to a
+ * Google/Apple sign-in prompt and the user returns — browsers pause/throttle
+ * CSS animations on hidden tabs, that event can permanently never fire, and
+ * <body> (i.e. the ENTIRE app: bottom nav, every button, everything) is left
+ * frozen with pointer-events: none forever. No hard refresh recovers it on
+ * mobile because there's nothing left to tap.
+ *
+ * The visible overlay already owns "block clicks on the background while a
+ * dialog is genuinely open" (it's a full-viewport, pointer-events:auto div
+ * on top of everything) — body-level locking is redundant defense against
+ * iOS rubber-band scroll bleed-through, not the actual interaction guard.
+ * It is not worth the risk of freezing the whole app, so it's forced back
+ * to normal here regardless of how react-remove-scroll's own cleanup fares.
+ */
+body[data-scroll-locked] {
+  pointer-events: auto !important;
+}
+
 /* LIGHT MODE */
 :root {
   --button-outline: rgba(255,255,255, .10);

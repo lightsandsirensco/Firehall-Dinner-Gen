@@ -21,7 +21,19 @@ const SheetOverlay = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
     className={cn(
-      "fixed inset-0 z-50 bg-black/80 backdrop-blur-sm motion-reduce:!animate-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0",
+      // data-[state=closed]:!pointer-events-none: Radix flips `data-state` to
+      // "closed" synchronously the instant `open` becomes false, but only
+      // removes this fixed full-viewport node from the DOM after its
+      // close-animation fires an animationend event. If the tab is
+      // backgrounded mid-close (exactly what happens on mobile when an
+      // OAuth provider takes over the foreground, e.g. Google sign-in),
+      // browsers throttle/pause that animation and animationend may never
+      // fire — leaving an invisible, still-interactive z-50 overlay that
+      // silently swallows every tap underneath until a hard refresh. This
+      // class makes the overlay stop intercepting pointer events the
+      // moment it's told to close, regardless of whether the exit
+      // animation ever completes.
+      "fixed inset-0 z-50 bg-black/80 backdrop-blur-sm motion-reduce:!animate-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:!pointer-events-none",
       className
     )}
     {...props}
@@ -31,7 +43,9 @@ const SheetOverlay = React.forwardRef<
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName
 
 const sheetVariants = cva(
-  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:!animate-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500",
+  // See the matching note on SheetOverlay above — same stuck-close-animation
+  // risk applies to the panel itself, so it gets the same safety net.
+  "fixed z-50 gap-4 bg-background p-6 shadow-lg transition ease-[cubic-bezier(0.22,1,0.36,1)] motion-reduce:!animate-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:duration-300 data-[state=open]:duration-500 data-[state=closed]:!pointer-events-none",
   {
     variants: {
       side: {
