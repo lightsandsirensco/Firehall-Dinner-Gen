@@ -28,6 +28,9 @@ const HomeFeaturedMeals = lazy(() =>
 const HomeCtaBand = lazy(() =>
   import("@/components/home/home-cta-band").then((m) => ({ default: m.HomeCtaBand })),
 );
+const HomeProCallout = lazy(() =>
+  import("@/components/home/home-pro-callout").then((m) => ({ default: m.HomeProCallout })),
+);
 const HomeSeoIntro = lazy(() =>
   import("@/components/home/home-seo-intro").then((m) => ({ default: m.HomeSeoIntro })),
 );
@@ -109,6 +112,9 @@ export default function Home() {
         </Suspense>
         <Suspense fallback={<SectionFallback minHeight={220} />}>
           <HomeCtaBand />
+        </Suspense>
+        <Suspense fallback={<SectionFallback minHeight={220} />}>
+          <HomeProCallout />
         </Suspense>
 
 

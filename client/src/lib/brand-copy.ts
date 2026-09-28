@@ -10,12 +10,6 @@ export const BRAND_TAGLINE = "Built by Firefighters. Tested in the Firehall.";
 export const BRAND_MISSION =
   "Get rid of the \"What's for Dinner?\" debate every shift.";
 
-/** @deprecated Prefer `@/lib/lights-and-sirens` and brand components */
-export const BRAND_CREDIT = {
-  label: "Built by Lights & Sirens Co.",
-  href: "https://www.lightsandsirensco.com",
-} as const;
-
 export const CTA = {
   /** Canonical dinner CTA — use everywhere on the pick path */
   findDinner: "Pick Tonight's Meal",
@@ -270,6 +264,7 @@ export const NAV = {
   ideas: "Cooking Guides",
   wheel: "Classics Wheel",
   pizza: "Pizza Night",
+  shop: "Shop",
   faq: "FAQ",
   saved: "Saved Meals",
   hall: "Hall",

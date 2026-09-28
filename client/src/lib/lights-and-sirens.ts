@@ -1,14 +1,16 @@
 /**
  * Lights & Sirens Co. — parent firefighter lifestyle brand for Firehall Meals.
+ *
+ * NOTE: lightsandsirensco.com is currently offline. All user-facing links to
+ * that domain have been removed/disabled (see LightsAndSirensLink, which now
+ * renders as plain text, not an <a>). Social links below point at a
+ * different domain and are left intact.
  */
 
 export const LIGHTS_AND_SIRENS = {
   name: "Lights & Sirens Co.",
   builtByLabel: "Built by Lights & Sirens Co.",
   firefighterOwned: "Firefighter-owned",
-  home: "https://www.lightsandsirensco.com",
-  shop: "https://www.lightsandsirensco.com/collections/all",
-  apparel: "https://www.lightsandsirensco.com/collections/all",
   instagram: "https://www.instagram.com/lightsandsirens_co/",
   facebook: "https://www.facebook.com/lightsandsirensco/",
 } as const;
@@ -24,9 +26,6 @@ export const LIGHTS_COPY = {
   footerTagline: "Built by firefighters, for firefighters.",
   footerSub: "From the crew at Lights & Sirens Co.",
   footerBlurb: "More than recipes — firefighter culture, gear, tools, and crew life.",
-  visitCta: "Visit Lights & Sirens Co.",
-  shopCta: "Shop the Brand",
-  gearCta: "More Firefighter Gear",
 } as const;
 
 export type LightsExternalLink = {
@@ -36,8 +35,6 @@ export type LightsExternalLink = {
 };
 
 export const LIGHTS_FOOTER_LINKS: LightsExternalLink[] = [
-  { label: "Lights & Sirens Co.", href: LIGHTS_AND_SIRENS.home, description: "Main site" },
-  { label: "Shop apparel & gear", href: LIGHTS_AND_SIRENS.shop, description: "Firefighter-owned brand" },
   { label: "Instagram", href: LIGHTS_AND_SIRENS.instagram, description: "Crew life & drops" },
   { label: "Facebook", href: LIGHTS_AND_SIRENS.facebook, description: "Community" },
 ];

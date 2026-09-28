@@ -21,6 +21,23 @@ export function isGolden100DevAdminRoute(req: Request): boolean {
 }
 
 /**
+ * Non-blocking version of the requireAdmin check — same header/query
+ * comparison, but returns a boolean instead of responding. Used where admin
+ * access is OPTIONAL (e.g. previewing a draft Shop product on its normal
+ * public-facing route) rather than required for the whole route.
+ */
+export function isAdminRequest(req: Request): boolean {
+  const secret = process.env.ADMIN_SECRET?.trim();
+  if (!secret) return false;
+  const header = req.headers["x-admin-key"];
+  const query = req.query.key;
+  const provided =
+    (typeof header === "string" ? header : Array.isArray(header) ? header[0] : "") ||
+    (typeof query === "string" ? query : "");
+  return Boolean(provided) && provided === secret;
+}
+
+/**
  * Protects /api/admin/* — requires ADMIN_SECRET on the server.
  * Clients must send header `x-admin-key` or query `key` (prefer header).
  *
@@ -32,21 +49,14 @@ export function requireAdmin(req: Request, res: Response, next: NextFunction): v
     return;
   }
 
-  const secret = process.env.ADMIN_SECRET?.trim();
-  if (!secret) {
+  if (!process.env.ADMIN_SECRET?.trim()) {
     res.status(503).json({
       message: "Admin API is disabled. Set ADMIN_SECRET in the server environment.",
     });
     return;
   }
 
-  const header = req.headers["x-admin-key"];
-  const query = req.query.key;
-  const provided =
-    (typeof header === "string" ? header : Array.isArray(header) ? header[0] : "") ||
-    (typeof query === "string" ? query : "");
-
-  if (!provided || provided !== secret) {
+  if (!isAdminRequest(req)) {
     res.status(403).json({ message: "Forbidden — admin only" });
     return;
   }

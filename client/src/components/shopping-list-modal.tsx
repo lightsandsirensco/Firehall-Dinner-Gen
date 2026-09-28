@@ -113,7 +113,7 @@ function buildPrintHtml(shoppingList: ShoppingListResult, recipeTitle: string): 
   ${sectionsHtml}
   ${vegHtml}
   ${budgetHtml}
-  <div class="footer">www.lightsandsirensco.com</div>
+  <div class="footer">Firefighter-owned — built for the fire service.</div>
   <script>window.onload = function() { window.print(); }</script>
 </body>
 </html>`;

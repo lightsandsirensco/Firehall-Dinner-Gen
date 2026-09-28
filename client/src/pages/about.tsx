@@ -36,10 +36,6 @@ import { HOME_FAQ_ITEMS } from "@/lib/seo/home-faq";
 
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
 
-import { LightsAndSirensCtaRow } from "@/components/brand/lights-and-sirens-cta-row";
-
-import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
-
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 
 import { SiteFooter } from "@/components/site-footer";
@@ -175,8 +171,6 @@ export default function AboutPage() {
               We wrote these meals for real firehouse kitchens: realistic prep, food that holds when
               you get interrupted, and dinners a rookie can run without embarrassing the hall.
             </p>
-
-            <LightsAndSirensCtaRow size="sm" />
 
           </section>
 

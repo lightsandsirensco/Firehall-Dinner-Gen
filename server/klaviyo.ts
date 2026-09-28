@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import { log, clip, maskEmail, isProductionEnv } from "./logger";
 
 const KLAVIYO_BASE = "https://a.klaviyo.com/api";
@@ -335,6 +336,86 @@ export async function trackLeadMagnetDownloaded(
     `[klaviyo] event=LeadMagnetDownloaded email=${maskEmail(email)} source="${clip(properties.source, 40)}" magnet="${clip(properties.lead_magnet, 40)}"`,
     "klaviyo",
   );
+}
+
+/**
+ * Creates/updates a Klaviyo PROFILE with safe, non-sensitive properties
+ * only. Deliberately does NOT touch list membership — profile sync and
+ * marketing-list subscription are separate operations on purpose, so a
+ * profile sync (e.g. on Pro plan change or shop purchase) can never
+ * re-subscribe someone who previously unsubscribed. Call subscribeToList()
+ * separately, and only when local Postgres consent is true.
+ */
+export async function upsertKlaviyoProfile(
+  email: string,
+  properties: {
+    account_status?: string;
+    plan?: string;
+    signup_date?: string;
+    city?: string | null;
+    province_state?: string | null;
+    country?: string | null;
+    crew_size?: number | null;
+  },
+): Promise<void> {
+  const safeProps: Record<string, unknown> = {};
+  if (properties.account_status) safeProps.account_status = properties.account_status;
+  if (properties.plan) safeProps.plan = properties.plan;
+  if (properties.signup_date) safeProps.signup_date = properties.signup_date;
+  if (properties.city) safeProps.city = properties.city;
+  if (properties.province_state) safeProps.province_state = properties.province_state;
+  if (properties.country) safeProps.country = properties.country;
+  if (properties.crew_size != null) safeProps.crew_size = properties.crew_size;
+
+  const attributes: Record<string, unknown> = { email };
+  if (Object.keys(safeProps).length > 0) attributes.properties = safeProps;
+
+  const result = await klaviyoFetch(
+    "POST",
+    `${KLAVIYO_BASE}/profile-import/`,
+    { data: { type: "profile", attributes } },
+    `upsertProfile(${email})`,
+  );
+
+  if (!result.ok) {
+    const detail = result.data?.errors?.[0]?.detail || result.raw.substring(0, 200);
+    throw new Error(`Profile upsert failed (${result.status}): ${detail}`);
+  }
+
+  log(`[klaviyo] profile upserted email=${maskEmail(email)} props=${Object.keys(safeProps).join(",")}`, "klaviyo");
+}
+
+/**
+ * Resolves a Klaviyo profile id -> email. Needed because the unsubscribe/
+ * suppression webhook event payload only includes relationships.profile.id
+ * (Klaviyo's internal profile id), not the email address itself.
+ */
+export async function getKlaviyoProfileEmail(profileId: string): Promise<string | null> {
+  const url = `${KLAVIYO_BASE}/profiles/${encodeURIComponent(profileId)}/?fields[profile]=email`;
+  const result = await klaviyoFetch("GET", url, undefined, `getProfileEmail(${profileId})`);
+  if (!result.ok) return null;
+  const email = result.data?.data?.attributes?.email;
+  return typeof email === "string" && email ? email : null;
+}
+
+/**
+ * HMAC-SHA256 signature verification for inbound Klaviyo system webhooks —
+ * see developers.klaviyo.com/en/docs/working_with_system_webhooks.
+ * Klaviyo computes: HMAC-SHA256(secret_key, raw_body_bytes + timestamp_string)
+ * and sends the hex digest in the Klaviyo-Signature header.
+ */
+export function verifyKlaviyoWebhookSignature(rawBody: Buffer, timestamp: string, signature: string): boolean {
+  const secret = process.env.KLAVIYO_WEBHOOK_SECRET;
+  if (!secret || !timestamp || !signature) return false;
+  try {
+    const computed = crypto.createHmac("sha256", secret).update(rawBody).update(timestamp).digest("hex");
+    const a = Buffer.from(computed, "hex");
+    const b = Buffer.from(signature, "hex");
+    if (a.length !== b.length) return false;
+    return crypto.timingSafeEqual(a, b);
+  } catch {
+    return false;
+  }
 }
 
 export async function trackHomepageSubscriber(

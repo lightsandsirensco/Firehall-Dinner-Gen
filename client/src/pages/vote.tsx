@@ -342,12 +342,7 @@ export default function VotePage() {
           >
             Manage the hall
           </Link>
-          <p className="text-[10px] text-muted-foreground/40">
-            Powered by{" "}
-            <a href="https://www.lightsandsirensco.com" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground/60 transition-colors">
-              Lights & Sirens Co.
-            </a>
-          </p>
+          <p className="text-[10px] text-muted-foreground/40">Firefighter-owned</p>
         </footer>
       </main>
     </div>

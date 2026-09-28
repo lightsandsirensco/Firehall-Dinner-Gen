@@ -408,6 +408,7 @@ export async function resolveOAuthSignIn(input: {
 export async function createMagicLink(
   email: string,
   returnTo?: string | null,
+  wantsMarketing?: boolean,
 ): Promise<{ rawToken: string; expiresAt: string }> {
   const normalized = email.trim().toLowerCase();
   const rawToken = crypto.randomBytes(32).toString("base64url");
@@ -417,21 +418,27 @@ export async function createMagicLink(
 
   await pgRun(`DELETE FROM auth_magic_links WHERE email = $1 AND used_at IS NULL`, [normalized]);
   await pgRun(
-    `INSERT INTO auth_magic_links (token_hash, email, expires_at, return_to) VALUES ($1, $2, $3, $4)`,
-    [tokenHash, normalized, expiresAt, safeReturnTo],
+    `INSERT INTO auth_magic_links (token_hash, email, expires_at, return_to, wants_marketing) VALUES ($1, $2, $3, $4, $5)`,
+    [tokenHash, normalized, expiresAt, safeReturnTo, wantsMarketing ? 1 : 0],
   );
 
   return { rawToken, expiresAt };
 }
 
 export type MagicLinkConsumeResult =
-  | { ok: true; email: string; returnTo: string | null }
+  | { ok: true; email: string; returnTo: string | null; wantsMarketing: boolean }
   | { ok: false; reason: "invalid" | "expired" | "used" };
 
 export async function consumeMagicLink(rawToken: string): Promise<MagicLinkConsumeResult> {
   const tokenHash = hashToken(rawToken);
-  const row = await pgOne<{ email: string; expires_at: Date; used_at: Date | null; return_to: string | null }>(
-    `SELECT email, expires_at, used_at, return_to FROM auth_magic_links WHERE token_hash = $1`,
+  const row = await pgOne<{
+    email: string;
+    expires_at: Date;
+    used_at: Date | null;
+    return_to: string | null;
+    wants_marketing: number;
+  }>(
+    `SELECT email, expires_at, used_at, return_to, wants_marketing FROM auth_magic_links WHERE token_hash = $1`,
     [tokenHash],
   );
 
@@ -442,7 +449,7 @@ export async function consumeMagicLink(rawToken: string): Promise<MagicLinkConsu
   }
 
   await pgRun(`UPDATE auth_magic_links SET used_at = now() WHERE token_hash = $1`, [tokenHash]);
-  return { ok: true, email: row.email, returnTo: row.return_to };
+  return { ok: true, email: row.email, returnTo: row.return_to, wantsMarketing: Number(row.wants_marketing) === 1 };
 }
 
 function getUserHalls(userId: string): HallSummary[] {

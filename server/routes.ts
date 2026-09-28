@@ -208,6 +208,8 @@ import { registerHallLogbookRoutes } from "./hall-logbook/routes.js";
 import { initHallEventStore } from "./hall-events/store.js";
 import { initHallMembershipStore } from "./hall-membership/store.js";
 import { registerBillingRoutes } from "./billing/routes.js";
+import { registerShopRoutes } from "./shop/routes.js";
+import { registerMarketingConsentWebhookRoutes } from "./marketing-consent/webhook-routes.js";
 import { initBillingStore, resolveUserBilling } from "./billing/store.js";
 import { registerMealHistoryRoutes } from "./meal-history/routes.js";
 import { registerGoalsRoutes } from "./goals/routes.js";
@@ -367,6 +369,8 @@ export async function registerRoutes(
   registerHallLogbookRoutes(app);
   void initHallEventStore();
   registerBillingRoutes(app);
+  registerShopRoutes(app);
+  registerMarketingConsentWebhookRoutes(app);
   registerMealHistoryRoutes(app);
   registerGoalsRoutes(app);
   registerInsightsRoutes(app);

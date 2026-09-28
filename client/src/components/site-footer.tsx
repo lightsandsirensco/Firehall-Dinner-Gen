@@ -203,21 +203,13 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
           <LegalLinksRow />
         </div>
 
-        <div className="mt-6 pt-6 border-t border-border/15 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left">
+        <div className="mt-6 pt-6 border-t border-border/15 flex flex-col sm:flex-row items-center justify-center sm:justify-start gap-3 text-center sm:text-left">
           <p className="text-xs text-muted-foreground/60">
             © {new Date().getFullYear()} {BRAND_NAME} ·{" "}
             <LightsAndSirensLink variant="inline" className="text-xs">
               {LIGHTS_AND_SIRENS.builtByLabel}
             </LightsAndSirensLink>
           </p>
-          <a
-            href={LIGHTS_AND_SIRENS.home}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-xs font-heading uppercase tracking-wider text-primary hover:text-primary/85"
-          >
-            {LIGHTS_COPY.visitCta} →
-          </a>
         </div>
       </div>
     </footer>

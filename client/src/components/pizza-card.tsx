@@ -215,8 +215,7 @@ function buildPizzaPrintHtml(
   </ol>` : ""}
 
   <div class="footer">
-    www.lightsandsirensco.com<br>
-    <span style="font-size:11px;color:#888">Powered by Lights &amp; Sirens Co.</span>
+    <span style="font-size:11px;color:#888">Firefighter-owned — built for the fire service.</span>
   </div>
 
   <script>window.onload = function() { window.print(); }</script>

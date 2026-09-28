@@ -1,7 +1,6 @@
 import { Flame } from "lucide-react";
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 import { LightsAndSirensLink } from "./lights-and-sirens-link";
-import { LightsAndSirensCtaRow } from "./lights-and-sirens-cta-row";
 
 export function HomeLightsAuthenticity() {
   return (
@@ -27,7 +26,6 @@ export function HomeLightsAuthenticity() {
           <p className="mt-5 text-[15px] sm:text-base text-muted-foreground leading-[1.75] max-w-prose">
             {LIGHTS_COPY.authenticityBody}
           </p>
-          <LightsAndSirensCtaRow className="mt-8" />
         </div>
       </div>
     </section>

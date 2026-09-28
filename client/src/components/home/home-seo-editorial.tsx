@@ -34,9 +34,7 @@ export function HomeSeoEditorial() {
               free to use on your own — no hall membership required.
             </p>
             <p>
-              Shared planning — crew votes, grocery lists, and meal history for the whole
-              station — is rolling out through a private beta. Built by firefighters. Tested on
-              real shifts.
+              Firefighter-owned. Built for the fire service and tested on real shifts.
             </p>
           </div>
           <nav aria-label="Explore firefighter meals" className="mt-8 flex flex-wrap gap-x-6 gap-y-2">

@@ -77,6 +77,12 @@ const AdminSignupsPage = lazy(() => import("@/pages/admin-signups-page"));
 const AdminUserDetailPage = lazy(() => import("@/pages/admin-user-detail"));
 const AdminLeadsPage = lazy(() => import("@/pages/admin-leads"));
 const AdminDealsPage = lazy(() => import("@/pages/admin-deals"));
+const ShopPage = lazy(() => import("@/pages/shop"));
+const ShopProductPage = lazy(() => import("@/pages/shop-product"));
+const ShopOrderSuccessPage = lazy(() => import("@/pages/shop-order-success"));
+const AdminShopPage = lazy(() => import("@/pages/admin-shop"));
+const AdminShopProductEditorPage = lazy(() => import("@/pages/admin-shop-product-editor"));
+const AdminShopOrdersPage = lazy(() => import("@/pages/admin-shop-orders"));
 const TonightDashboardPage = lazy(() => import("@/pages/app-home-page"));
 const MePage = lazy(() => import("@/pages/me-page"));
 const MeHistoryPage = lazy(() => import("@/pages/me-history-page"));
@@ -180,7 +186,15 @@ function AppRoutes() {
       <Route path="/guides/:slug" component={GuideArticlePage} />
       <Route path="/blog/:slug" component={GuideArticlePage} />
       <Route path="/families" component={FamiliesIndexPage} />
+      {/* Firehall Meals Shop — literal routes before the /:slug catch-all */}
+      <Route path="/shop/order-success" component={ShopOrderSuccessPage} />
+      <Route path="/shop/:slug" component={ShopProductPage} />
+      <Route path="/shop" component={ShopPage} />
       {/* Admin: longest paths first — never let /admin swallow sub-routes */}
+      <Route path="/admin/shop/orders" component={AdminShopOrdersPage} />
+      <Route path="/admin/shop/products/new" component={AdminShopProductEditorPage} />
+      <Route path="/admin/shop/products/:id/edit" component={AdminShopProductEditorPage} />
+      <Route path="/admin/shop" component={AdminShopPage} />
       <Route path="/admin/golden-100" component={AdminGolden100Page} />
       <Route path="/admin/catalog" component={AdminCatalogPage} />
       <Route path="/admin/ingestion" component={AdminIngestionPage} />

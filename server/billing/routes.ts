@@ -78,6 +78,8 @@ import {
 
 import { userAlreadyHasProAccess } from "./checkout-guard.js";
 
+import { handleShopCheckoutCompleted } from "../shop/webhook.js";
+
 import { findUserByEmail, getUserById } from "../auth/auth-store.js";
 
 import {
@@ -658,6 +660,16 @@ export function registerBillingRoutes(app: Express): void {
       switch (event.type) {
         case "checkout.session.completed": {
           const session = event.data.object as import("stripe").Stripe.Checkout.Session;
+
+          // Firehall Meals Shop (mode: "payment", one-time merch order) shares
+          // this same webhook rather than duplicating webhook infrastructure —
+          // branch on session.mode / metadata.order_type before falling
+          // through to the Firehall Meals Pro subscription handling below.
+          if (session.mode === "payment" && session.metadata?.order_type === "shop") {
+            await handleShopCheckoutCompleted(session);
+            break;
+          }
+
           const userId =
             session.client_reference_id ?? (session.metadata?.user_id as string | undefined);
           const stripeSubscriptionId =

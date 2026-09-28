@@ -10,6 +10,8 @@ import {
 export const magicLinkRequestSchema = z.object({
   email: z.string().email().max(254),
   return_to: z.string().max(500).optional(),
+  /** Explicit, unchecked-by-default marketing opt-in — never inferred from account creation itself. */
+  marketing_consent: z.boolean().optional(),
 });
 
 export const oauthTokenSchema = z.object({

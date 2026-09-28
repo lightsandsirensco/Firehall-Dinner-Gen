@@ -328,6 +328,10 @@ const MARKETING_PATH_PREFIXES = [
   "/guides",
   "/blog",
   "/recipes",
+  // Shop (storefront + admin's own "Preview Product" link) must always be
+  // reachable — a signed-in user mid-onboarding was otherwise silently
+  // bounced to /tonight before ever seeing a product page or checkout.
+  "/shop",
   "/smoothies",
   "/breakfast",
   "/families",

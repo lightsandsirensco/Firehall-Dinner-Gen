@@ -8,12 +8,18 @@ interface MarketingConsentCheckboxProps {
   onCheckedChange: (checked: boolean) => void;
   disabled?: boolean;
   className?: string;
+  /** Override the default copy for this specific call site (e.g. account signup). */
+  label?: string;
 }
+
+const DEFAULT_LABEL =
+  "Send me new recipes, firefighter meal ideas, and Firehall Meals updates by email.";
 
 /**
  * Shared, unchecked-by-default marketing opt-in for transactional email flows
- * (email-a-recipe, email-shopping-list, lead-magnet PDF). Requesting the
- * transactional action must never require checking this box.
+ * (email-a-recipe, email-shopping-list, lead-magnet PDF) and account
+ * signup. Requesting the transactional action / creating an account must
+ * never require checking this box.
  */
 export function MarketingConsentCheckbox({
   id,
@@ -21,6 +27,7 @@ export function MarketingConsentCheckbox({
   onCheckedChange,
   disabled,
   className,
+  label,
 }: MarketingConsentCheckboxProps) {
   return (
     <div className={cn("flex items-start gap-2.5", className)}>
@@ -36,7 +43,7 @@ export function MarketingConsentCheckbox({
         htmlFor={id}
         className="text-sm font-normal leading-snug text-muted-foreground cursor-pointer"
       >
-        Send me new recipes, firefighter meal ideas, and Firehall Meals updates by email.
+        {label ?? DEFAULT_LABEL}
       </Label>
     </div>
   );

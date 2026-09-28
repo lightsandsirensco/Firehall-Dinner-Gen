@@ -200,12 +200,7 @@ export default function CuratedPackagePage() {
       )}
 
       <footer className="text-center py-6 mt-8 border-t border-border/20">
-        <p className="text-xs text-muted-foreground/50">
-          Powered by{" "}
-          <a href="https://www.lightsandsirensco.com" target="_blank" rel="noopener noreferrer" className="hover:text-muted-foreground transition-colors">
-            Lights &amp; Sirens Co.
-          </a>
-        </p>
+        <p className="text-xs text-muted-foreground/50">Firefighter-owned</p>
       </footer>
     </div>
   );

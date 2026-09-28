@@ -36,7 +36,8 @@ export type SiteHeaderActivePage =
   | "wheel"
   | "pizza"
   | "favorites"
-  | "hall";
+  | "hall"
+  | "shop";
 
 interface SiteHeaderProps {
   activePage: SiteHeaderActivePage;
@@ -69,6 +70,8 @@ function appChromeForPage(activePage: SiteHeaderActivePage): {
       return { title: "Favorites", parentHref: "/me", parentLabel: "Me" };
     case "hall":
       return { title: "Hall" };
+    case "shop":
+      return { title: "Shop" };
     case "home":
       return { title: "Home" };
     case "faq":
@@ -120,6 +123,8 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
     { key: "wheel", label: NAV.wheel, href: "/wheel" },
     { key: "pizza", label: NAV.pizza, href: "/pizza" },
     { key: "guides", label: NAV.ideas, href: "/guides" },
+    // Shop nav entry hidden while the storefront is unlaunched
+    // (SHOP_PUBLIC_ENABLED=false). Re-add once ready to launch publicly.
   ];
 
   const go = (href: string) => {

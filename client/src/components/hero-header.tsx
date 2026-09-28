@@ -172,18 +172,15 @@ export function HeroHeader({
         )}
 
         {!isUtility && (
-          <a
-            href="https://www.lightsandsirensco.com"
-            target="_blank"
-            rel="noopener noreferrer"
+          <span
             className={cn(
-              "text-white/30 uppercase tracking-[0.15em] hover:text-white/50 transition-colors",
+              "text-white/30 uppercase tracking-[0.15em]",
               isFull ? "text-[9px] mt-2" : "text-[8px] mt-1 hidden sm:inline",
             )}
             data-testid="link-powered-by"
           >
-            Powered by Lights & Sirens Co.
-          </a>
+            Firefighter-owned
+          </span>
         )}
       </div>
     </section>

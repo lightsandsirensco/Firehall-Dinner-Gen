@@ -610,7 +610,7 @@ export function shoppingListToText(result: ShoppingListResult, recipeTitle: stri
   }
 
   lines.push("");
-  lines.push("www.lightsandsirensco.com");
+  lines.push("Firefighter-owned — built for the fire service.");
 
   return lines.join("\n");
 }

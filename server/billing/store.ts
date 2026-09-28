@@ -3,6 +3,7 @@ import { verifyPgConnection } from "../db/pg-client.js";
 import { pgAll, pgOne, pgRun } from "../db/pg-sql.js";
 
 import { getStripeConfigStatus } from "./stripe-client.js";
+import { syncKlaviyoProfileForUser } from "../marketing-consent/klaviyo-sync.js";
 
 import {
   BILLING_FEATURES,
@@ -285,6 +286,9 @@ export async function upsertStripeSubscription(params: {
     );
   }
 
+  // Plan property only — marketing consent is never touched by a plan change.
+  void syncKlaviyoProfileForUser(params.userId);
+
   return resolveUserBilling(params.userId);
 }
 
@@ -300,6 +304,10 @@ export async function markStripeSubscriptionCancelledBySubscriptionId(
      WHERE stripe_subscription_id = $1`,
     [stripeSubscriptionId],
   );
+
+  // Plan property only — marketing consent is never touched by a plan change.
+  void syncKlaviyoProfileForUser(userId);
+
   return resolveUserBilling(userId);
 }
 

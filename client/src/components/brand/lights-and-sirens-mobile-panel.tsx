@@ -20,7 +20,7 @@ export function LightsAndSirensMobilePanel() {
       </p>
       <p className="mt-1 text-xs text-muted-foreground leading-relaxed">{LIGHTS_COPY.footerBlurb}</p>
       <ul className="mt-3 flex flex-col gap-2">
-        {LIGHTS_FOOTER_LINKS.slice(0, 3).map((link) => (
+        {LIGHTS_FOOTER_LINKS.map((link) => (
           <li key={link.href}>
             <a
               href={link.href}
@@ -34,14 +34,6 @@ export function LightsAndSirensMobilePanel() {
           </li>
         ))}
       </ul>
-      <a
-        href={LIGHTS_AND_SIRENS.home}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-3 inline-block text-xs font-heading uppercase tracking-wider text-primary"
-      >
-        {LIGHTS_COPY.visitCta} →
-      </a>
     </div>
   );
 }

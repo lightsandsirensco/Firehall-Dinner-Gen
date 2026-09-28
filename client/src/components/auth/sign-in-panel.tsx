@@ -5,6 +5,7 @@ import { SiApple } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { MarketingConsentCheckbox } from "@/components/marketing-consent-checkbox";
 import { apiRequest } from "@/lib/queryClient";
 import { useAuth } from "@/lib/auth/context";
 import { useToast } from "@/hooks/use-toast";
@@ -181,6 +182,7 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
   const [helpOpen, setHelpOpen] = useState(false);
   const [expiresMinutes, setExpiresMinutes] = useState(30);
   const [emailFormOpen, setEmailFormOpen] = useState(false);
+  const [wantsMarketing, setWantsMarketing] = useState(false);
   const inFlightRef = useRef(false);
   const googleWrapRef = useRef<HTMLDivElement>(null);
   const googleButtonRef = useRef<HTMLDivElement>(null);
@@ -299,6 +301,7 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
       const res = await apiRequest("POST", "/api/auth/magic-link", {
         email: trimmed,
         return_to: authReturnTo ?? undefined,
+        marketing_consent: wantsMarketing,
       });
       const body = (await res.json()) as {
         sent?: boolean;
@@ -504,6 +507,14 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
                   No password needed. Link expires in {expiresMinutes} minutes.
                 </p>
               )}
+              <MarketingConsentCheckbox
+                id="sign-in-marketing-consent"
+                checked={wantsMarketing}
+                onCheckedChange={setWantsMarketing}
+                disabled={sending}
+                className="pt-1"
+                label="Send me Firehall Meals recipes, product updates and occasional offers."
+              />
               {showDevNotice ? (
                 <p className="text-xs text-muted-foreground/70" role="status">
                   Dev only: email isn’t configured in this environment — you’ll get an on-screen link.
