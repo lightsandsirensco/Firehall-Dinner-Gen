@@ -1,0 +1,1120 @@
+[
+  {
+    "at": "2026-09-29T01:08:11.224Z",
+    "collection": "breakfast",
+    "slug": "monte-cristo-sandwiches",
+    "hero": "/images/breakfast/monte-cristo-sandwiches.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "thick white bread slices",
+      "sliced deli ham",
+      "sliced deli turkey",
+      "swiss cheese",
+      "powdered sugar",
+      "raspberry jam"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:18:37.343Z",
+    "collection": "breakfast",
+    "slug": "bbq-breakfast-hash",
+    "hero": "/images/breakfast/bbq-breakfast-hash.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "yukon gold potatoes",
+      "large eggs",
+      "pulled pork",
+      "bbq sauce",
+      "shredded cheddar"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:18:39.199Z",
+    "collection": "breakfast",
+    "slug": "bagel-sandwich-line",
+    "hero": "/images/breakfast/bagel-sandwich-line.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "bagels",
+      "breakfast sausage patties",
+      "cooked bacon",
+      "cheddar cheese",
+      "cream cheese",
+      "sliced tomato"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:19:16.211Z",
+    "collection": "hall-expansion",
+    "slug": "best-tuna-melt-for-the-hall",
+    "hero": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "canned tuna",
+      "marbled rye bread",
+      "sharp cheddar cheese",
+      "dill pickles"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:19:20.068Z",
+    "collection": "golden-100",
+    "slug": "breakfast-burrito-bar",
+    "hero": "/images/golden-100/breakfast-burrito-bar.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "scrambled eggs",
+      "breakfast sausage",
+      "bell peppers",
+      "shredded cheddar",
+      "flour tortillas",
+      "salsa"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:19:57.057Z",
+    "collection": "breakfast",
+    "slug": "breakfast-crunchwraps",
+    "hero": "/images/breakfast/breakfast-crunchwraps.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "scrambled eggs",
+      "breakfast sausage",
+      "hash browns",
+      "shredded cheddar",
+      "flour tortillas",
+      "tostada shells"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:19:59.617Z",
+    "collection": "breakfast",
+    "slug": "breakfast-nachos-supreme",
+    "hero": "/images/breakfast/breakfast-nachos-supreme.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "tortilla chips",
+      "scrambled eggs",
+      "bacon",
+      "shredded cheddar",
+      "nacho cheese sauce",
+      "pico de gallo",
+      "avocado",
+      "sour cream"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:20:35.661Z",
+    "collection": "breakfast",
+    "slug": "breakfast-quesadillas",
+    "hero": "/images/breakfast/breakfast-quesadillas.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "quesadilla wedges",
+      "bacon",
+      "scrambled eggs",
+      "pepper jack cheese",
+      "sour cream",
+      "pico de gallo"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:20:40.717Z",
+    "collection": "breakfast",
+    "slug": "breakfast-sliders",
+    "hero": "/images/breakfast/breakfast-sliders.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "Hawaiian sweet rolls",
+      "breakfast sausage patties",
+      "cheddar cheese",
+      "everything bagel seasoning"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:20:41.247Z",
+    "collection": "breakfast",
+    "slug": "breakfast-sandwich-trays",
+    "hero": "/images/breakfast/breakfast-sandwich-trays.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "English muffins",
+      "sausage patties",
+      "sliced cheese",
+      "fried eggs",
+      "hot sauce"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:21:15.700Z",
+    "collection": "breakfast",
+    "slug": "buttermilk-pancakes",
+    "hero": "/images/breakfast/buttermilk-pancakes.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "pancakes",
+      "butter",
+      "syrup",
+      "yogurt"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:21:21.153Z",
+    "collection": "performance-meals",
+    "slug": "chicken-enchilada-skillet-light",
+    "hero": "/images/golden-100/chicken-enchilada-skillet-light.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "shredded chicken",
+      "corn tortillas",
+      "red enchilada sauce",
+      "black beans",
+      "corn",
+      "Monterey Jack cheese",
+      "green chiles"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:21:21.577Z",
+    "collection": "breakfast",
+    "slug": "cast-iron-breakfast-skillet",
+    "hero": "/images/breakfast/cast-iron-breakfast-skillet.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "yukon gold potatoes",
+      "large eggs",
+      "breakfast sausage",
+      "shredded cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:21:55.405Z",
+    "collection": "performance-meals",
+    "slug": "chicken-marsala-lightened",
+    "hero": "/images/golden-100/chicken-marsala-lightened.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chicken thighs",
+      "cremini mushrooms",
+      "sauce",
+      "parsley",
+      "noodles"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:21:59.258Z",
+    "collection": "golden-100",
+    "slug": "chicken-tortilla-soup-for-the-hall",
+    "hero": "/images/golden-100/chicken-tortilla-soup-for-the-hall.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chicken",
+      "tortilla strips",
+      "avocado",
+      "cilantro",
+      "lime",
+      "shredded cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:22:35.433Z",
+    "collection": "hall-expansion",
+    "slug": "chicken-wing-bar-night",
+    "hero": "/images/hall-expansion/chicken-wing-bar-night.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chicken wings",
+      "celery sticks",
+      "baby carrots",
+      "ranch dressing"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:22:38.683Z",
+    "collection": "golden-100",
+    "slug": "chicken-souvlaki",
+    "hero": "/images/golden-100/chicken-souvlaki.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "rice present — not in recipe"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "boneless chicken thighs",
+      "plain greek yogurt",
+      "english cucumber",
+      "fresh dill",
+      "pita bread",
+      "cherry tomatoes",
+      "red onion"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:22:39.523Z",
+    "collection": "golden-100",
+    "slug": "chorizo-breakfast-tacos",
+    "hero": "/images/golden-100/chorizo-breakfast-tacos.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "fresh mexican chorizo",
+      "corn tortillas",
+      "cotija cheese",
+      "fresh cilantro",
+      "white onion",
+      "salsa verde",
+      "lime wedges"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:23:15.779Z",
+    "collection": "breakfast",
+    "slug": "country-fried-steak-eggs",
+    "hero": "/images/breakfast/country-fried-steak-eggs.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "cube steak",
+      "pepper gravy",
+      "mashed potatoes",
+      "fried egg"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:23:18.013Z",
+    "collection": "breakfast",
+    "slug": "cowboy-breakfast-skillet",
+    "hero": "/images/breakfast/cowboy-breakfast-skillet.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "yukon gold potatoes",
+      "mexican chorizo",
+      "large eggs",
+      "ranch-style beans",
+      "cilantro"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:23:54.681Z",
+    "collection": "hall-expansion",
+    "slug": "enchilada-beef-skillet",
+    "hero": "/images/hall-expansion/enchilada-beef-skillet.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "plated enchiladas instead of skillet with torn tortillas"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "ground beef",
+      "flour tortillas",
+      "red enchilada sauce",
+      "shredded cheddar cheese",
+      "fresh cilantro"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:23:57.857Z",
+    "collection": "golden-100",
+    "slug": "game-day-nachos",
+    "hero": "/images/golden-100/game-day-nachos.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "tortilla chips",
+      "ground beef",
+      "shredded cheese",
+      "black beans",
+      "pickled jalapeños",
+      "pico de gallo",
+      "sour cream"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:24:34.733Z",
+    "collection": "hall-expansion",
+    "slug": "hall-blt-sandwich-feed",
+    "hero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "thick-cut bacon",
+      "sandwich bread",
+      "ripe tomatoes",
+      "romaine or iceberg lettuce"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:24:36.108Z",
+    "collection": "breakfast",
+    "slug": "fire-captain-omelette-bar",
+    "hero": "/images/breakfast/fire-captain-omelette-bar.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "bacon and potatoes as side dishes not in the recipe"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "omelette",
+      "shredded cheddar",
+      "diced ham",
+      "sautéed mushrooms",
+      "diced tomatoes",
+      "spinach"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:24:38.110Z",
+    "collection": "breakfast",
+    "slug": "hall-breakfast-burritos",
+    "hero": "/images/breakfast/hall-breakfast-burritos.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "flour tortillas",
+      "shredded cheese",
+      "sausage",
+      "bell peppers",
+      "salsa"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:25:14.193Z",
+    "collection": "breakfast",
+    "slug": "hall-sausage-biscuits-gravy",
+    "hero": "/images/breakfast/hall-sausage-biscuits-gravy.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "biscuits",
+      "sausage gravy",
+      "chopped parsley"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:25:17.052Z",
+    "collection": "hall-expansion",
+    "slug": "hall-sloppy-joe-feed",
+    "hero": "/images/hall-expansion/hall-sloppy-joe-feed.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "ground beef",
+      "hamburger bun",
+      "dill pickle chips",
+      "potato chips"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:25:18.934Z",
+    "collection": "breakfast",
+    "slug": "huevos-rancheros-crew",
+    "hero": "/images/breakfast/huevos-rancheros-crew.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "corn tortillas",
+      "black beans",
+      "fried eggs",
+      "ranchero sauce",
+      "queso fresco",
+      "cilantro",
+      "lime wedge"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:25:52.776Z",
+    "collection": "golden-100",
+    "slug": "jambalaya",
+    "hero": "/images/golden-100/jambalaya.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "andouille sausage",
+      "boneless chicken thighs",
+      "long-grain rice",
+      "crushed tomatoes"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:25:56.937Z",
+    "collection": "hall-expansion",
+    "slug": "loaded-nacho-bar-night",
+    "hero": "/images/hall-expansion/loaded-nacho-bar-night.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "tortilla chips",
+      "ground beef",
+      "queso dip",
+      "shredded cheddar",
+      "black beans",
+      "jalapeño slices",
+      "pico de gallo"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:26:34.983Z",
+    "collection": "breakfast",
+    "slug": "menemen-for-the-crew",
+    "hero": "/images/breakfast/menemen-for-the-crew.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "scrambled eggs",
+      "tomatoes",
+      "green peppers",
+      "chives",
+      "pita bread"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:26:40.504Z",
+    "collection": "breakfast",
+    "slug": "lumberjack-breakfast-platter",
+    "hero": "/images/breakfast/lumberjack-breakfast-platter.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "fried eggs instead of scrambled eggs"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "pancakes",
+      "bacon",
+      "sausage links",
+      "hash browns",
+      "scrambled eggs",
+      "butter"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:27:14.912Z",
+    "collection": "hall-expansion",
+    "slug": "mostaccioli-sausage-bake",
+    "hero": "/images/hall-expansion/mostaccioli-sausage-bake.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "mostaccioli pasta",
+      "hot Italian sausage",
+      "marinara sauce",
+      "shredded mozzarella",
+      "fresh basil"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:27:55.060Z",
+    "collection": "golden-100",
+    "slug": "pad-thai",
+    "hero": "/images/golden-100/pad-thai.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "missing scrambled eggs",
+          "missing lime wedge"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "flat rice noodles",
+      "chicken",
+      "scrambled eggs",
+      "bean sprouts",
+      "green onions",
+      "crushed peanuts",
+      "lime wedge"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:28:26.174Z",
+    "collection": "golden-100",
+    "slug": "pulled-pork",
+    "hero": "/images/golden-100/pulled-pork.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "pulled pork",
+      "brioche bun",
+      "coleslaw"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:28:32.125Z",
+    "collection": "golden-100",
+    "slug": "pancake-short-stack",
+    "hero": "/images/golden-100/pancake-short-stack.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "missing scrambled eggs"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "pancakes",
+      "scrambled eggs",
+      "bacon",
+      "butter",
+      "maple syrup"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:28:32.503Z",
+    "collection": "breakfast",
+    "slug": "quick-egg-tacos",
+    "hero": "/images/breakfast/quick-egg-tacos.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "scrambled eggs",
+      "corn tortillas",
+      "shredded cheese",
+      "salsa",
+      "avocado",
+      "sour cream"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:29:04.648Z",
+    "collection": "golden-100",
+    "slug": "red-beans-and-rice-for-the-hall",
+    "hero": "/images/golden-100/red-beans-and-rice-for-the-hall.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "red beans",
+      "andouille sausage",
+      "green bell pepper",
+      "celery",
+      "rice",
+      "green onions"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:29:09.933Z",
+    "collection": "breakfast",
+    "slug": "shakshuka-for-the-hall",
+    "hero": "/images/breakfast/shakshuka-for-the-hall.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "poached eggs",
+      "spiced tomato sauce",
+      "crumbled feta",
+      "fresh cilantro",
+      "crusty bread"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:29:12.969Z",
+    "collection": "breakfast",
+    "slug": "red-lead-skillet",
+    "hero": "/images/breakfast/red-lead-skillet.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "steak",
+      "eggs",
+      "bell peppers",
+      "potatoes"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:29:43.542Z",
+    "collection": "hall-expansion",
+    "slug": "shawarma-bar-night",
+    "hero": "/images/hall-expansion/shawarma-bar-night.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chicken",
+      "flatbread",
+      "tahini sauce",
+      "pickled turnips"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:29:49.299Z",
+    "collection": "breakfast",
+    "slug": "sheet-pan-breakfast-sandwiches",
+    "hero": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "slider rolls",
+      "sausage patties",
+      "cheese",
+      "everything bagel seasoning"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:29:53.671Z",
+    "collection": "breakfast",
+    "slug": "shrimp-and-grits-breakfast",
+    "hero": "/images/breakfast/shrimp-and-grits-breakfast.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "stone-ground grits",
+      "shrimp",
+      "andouille sausage",
+      "scallions",
+      "lemon wedge"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:30:23.444Z",
+    "collection": "hall-expansion",
+    "slug": "smoked-sausage-platter",
+    "hero": "/images/hall-expansion/smoked-sausage-platter.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "kielbasa links",
+      "andouille sausage",
+      "sweet italian sausage",
+      "bell peppers",
+      "yellow onions",
+      "sauerkraut",
+      "sub rolls",
+      "mustard"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:30:33.734Z",
+    "collection": "breakfast",
+    "slug": "southwest-egg-bake",
+    "hero": "/images/breakfast/southwest-egg-bake.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "egg bake",
+      "sausage",
+      "spinach",
+      "cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:31:05.272Z",
+    "collection": "breakfast",
+    "slug": "veggie-egg-burritos",
+    "hero": "/images/breakfast/veggie-egg-burritos.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "eggs",
+      "shredded cheese",
+      "hash browns",
+      "sausage",
+      "bell peppers",
+      "flour tortillas",
+      "salsa"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:35:52.588Z",
+    "collection": "breakfast",
+    "slug": "breakfast-sliders",
+    "hero": "/images/breakfast/breakfast-sliders.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "Hawaiian sweet rolls",
+      "breakfast sausage patties",
+      "folded eggs",
+      "cheddar cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:36:58.544Z",
+    "collection": "breakfast",
+    "slug": "chorizo-breakfast-hash",
+    "hero": "/images/breakfast/chorizo-breakfast-hash.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "russet potatoes",
+      "mexican chorizo",
+      "large eggs",
+      "onion",
+      "bell peppers",
+      "crumbled cotija",
+      "cilantro"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:37:36.211Z",
+    "collection": "breakfast",
+    "slug": "migas-for-the-crew",
+    "hero": "/images/breakfast/migas-for-the-crew.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "scrambled eggs",
+      "tortilla strips",
+      "poblano peppers",
+      "white onion",
+      "roma tomatoes",
+      "queso fresco",
+      "salsa"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-29T01:37:37.267Z",
+    "collection": "breakfast",
+    "slug": "sheet-pan-breakfast-sandwiches",
+    "hero": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "egg layer not visible"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "slider rolls",
+      "eggs",
+      "sausage patties",
+      "cheese",
+      "everything bagel seasoning"
+    ],
+    "camera_angle": "45_degree"
+  }
+]

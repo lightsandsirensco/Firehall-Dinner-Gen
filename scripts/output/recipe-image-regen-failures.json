@@ -1,0 +1,142 @@
+[
+  {
+    "at": "2026-09-29T01:39:38.765Z",
+    "collection": "breakfast",
+    "slug": "bagel-sandwich-line",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "missing visible egg squares"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": false,
+        "reasons": [
+          "missing visible egg squares"
+        ]
+      },
+      {
+        "attempt": 3,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 4,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-09-29T01:39:52.162Z",
+    "collection": "breakfast",
+    "slug": "maple-sausage-pinwheels",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: OpenAI Images API failed: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 3,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: OpenAI Images API failed: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 4,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-09-29T01:40:27.631Z",
+    "collection": "performance-meals",
+    "slug": "beef-birria-with-consomme",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 3,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: OpenAI Images API failed: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 4,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      }
+    ]
+  },
+  {
+    "at": "2026-09-29T01:41:47.493Z",
+    "collection": "hall-expansion",
+    "slug": "smoked-turkey-breast",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: OpenAI Images API failed: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 3,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: OpenAI Images API failed: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 4,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      }
+    ]
+  }
+]

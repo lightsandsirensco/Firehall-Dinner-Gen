@@ -84,7 +84,7 @@ export const VISUAL_LOCK_BY_PRESET: Record<ImageStylePresetId, VisualLockSpec> =
     lightingRatio: "2:1 soft morning side light, golden fill, gentle steam highlights",
     contrastProfile: "soft contrast, creamy highlights, warm shadow floor",
     cropComposition:
-      "stack or spread center-weighted, yolk/pancake hero in upper-center, 12% margin for mobile",
+      "stack or spread center-weighted, main dish hero in upper-center, 12% margin for mobile",
     plateTableStyling: "warm diner plate or board, consistent morning table tone, generous not dainty",
     colorGradeLock: "soft golden morning grade — consistent across breakfast set",
     lockedNegatives: [

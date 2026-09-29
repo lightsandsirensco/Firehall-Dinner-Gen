@@ -3,7 +3,7 @@
  * All recipe hero images must match this firehall kitchen realism spec.
  */
 
-export const FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION = "1.0" as const;
+export const FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION = "2.0" as const;
 
 /** Active Canadian firehall kitchen — the gold-standard environment. */
 export const FIREHALL_KITCHEN_ENVIRONMENT = {
@@ -30,15 +30,18 @@ export const FIREHALL_KITCHEN_ENVIRONMENT = {
     "prep stations",
   ],
   optional: [
-    "firefighters blurred in background as kitchen staff",
-    "station kitchen activity",
-    "crew preparing food in soft bokeh",
+    "out-of-focus stainless shelving",
+    "soft side window light",
   ],
   feel: "the crew is making dinner after calls — NOT a firefighter marketing photo",
 } as const;
 
 /** Hard exclusions — firehall kitchen photos, NOT firefighting photos. */
 export const FIREHALL_KITCHEN_FORBIDDEN = [
+  "people",
+  "hands",
+  "faces",
+  "blurred kitchen staff",
   "fire trucks",
   "pumpers",
   "aerial apparatus",
@@ -109,40 +112,30 @@ export type FirehallPhotoCategory =
   | "global_meals"
   | "default";
 
+// Styling/vessel cues ONLY. Never list foods here: these lines are injected
+// into every prompt in the category, so any food named here gets painted
+// onto recipes that don't contain it.
 const CATEGORY_RULES: Record<FirehallPhotoCategory, string[]> = {
   breakfast: [
-    "bacon",
-    "eggs",
-    "breakfast sausage",
-    "hash browns",
-    "toast",
-    "pancakes",
-    "biscuits",
-    "griddle cooking",
-    "breakfast station atmosphere",
-    "each breakfast component in its own zone on the plate — never eggs on pancakes",
-    "never bury potatoes or bacon behind other food",
-    "firefighter can identify every breakfast item within one second",
+    "griddle or sheet-pan breakfast-line styling",
+    "each plated component in its own zone",
+    "every component identifiable within one second",
   ],
   bbq: [
-    "smoke",
-    "grill marks",
+    "grill marks or bark only where the recipe is grilled or smoked",
     "carving boards",
-    "smoker or grill environment",
-    "sliced meats",
     "large serving platters",
   ],
   soups_chili: [
     "stock pots",
     "ladles",
     "steam",
-    "bread trays",
     "hall lunch atmosphere",
   ],
   sandwiches: [
     "stacked trays",
     "deli-style serving",
-    "sliced meats",
+    "cut face showing the actual fillings",
     "family-style presentation",
   ],
   global_meals: [
@@ -199,8 +192,9 @@ export function getFirehallKitchenPhotoStandardLines(): string[] {
     `Food styling: ${FIREHALL_FOOD_STYLING.include.slice(0, 6).join(", ")} — ${FIREHALL_FOOD_STYLING.avoid.slice(0, 4).join(", ")} avoided`,
     `Camera: ${FIREHALL_CAMERA_STYLE.lens}, ${FIREHALL_CAMERA_STYLE.lighting}`,
     `Mood: ${FIREHALL_CAMERA_STYLE.mood}`,
-    "Primary subject: THE FOOD and THE FIREHALL KITCHEN — food tack sharp, kitchen supports the story",
-    "Background firefighters only if blurred, in navy station t-shirts, aprons, or uniforms — cooking or prepping, never hero subjects",
+    "Primary subject: THE FOOD — tack sharp, filling most of the frame; kitchen is a quiet out-of-focus backdrop",
+    "No people, hands, or faces anywhere in frame, including blurred background",
+    "RECIPE FIDELITY: show ONLY foods from this recipe's ingredient list and serving instructions — never add eggs, bacon, sausage, extra proteins, side dishes, or garnishes the recipe does not include",
     `Story feel: ${FIREHALL_KITCHEN_ENVIRONMENT.feel}`,
     `Standard version ${FIREHALL_KITCHEN_PHOTO_STANDARD_VERSION}`,
   ];
@@ -218,6 +212,8 @@ export function getFirehallKitchenNegativePromptLines(): string[] {
     "food studio white seamless",
     "tiny tasting portions",
     "duplicate hero reused from another recipe",
+    "fried or poached egg the recipe does not serve",
+    "side dishes not in the recipe",
   ];
 }
 

@@ -32,6 +32,8 @@
     "audit:golden-100": "tsx scripts/audit-golden-100.ts",
     "audit:golden-100-e2e": "tsx scripts/audit-golden-100-e2e.ts",
     "audit:recipe-images": "tsx scripts/audit-recipe-images.ts",
+    "audit:recipe-image-catalog": "tsx scripts/audit-recipe-image-catalog.ts",
+    "images:regen": "tsx scripts/regen-recipe-images.ts",
     "audit:recipe-content": "tsx scripts/audit-recipe-content-quality.ts",
     "audit:recipe-template-language": "tsx scripts/audit-recipe-template-language.ts",
     "audit:recipe-portion-scaling": "tsx scripts/audit-recipe-portion-scaling.ts",

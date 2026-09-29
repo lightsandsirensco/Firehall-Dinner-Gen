@@ -63,15 +63,15 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
     displayName: "Comfort Firehall",
     identity: `${PRESET_PHOTO_CORE} — station-house comfort`,
     lighting:
-      "warm tungsten key from camera-left, soft fill, gentle steam when hot, golden highlights on cheese and sauce",
+      "warm tungsten key from camera-left, soft fill, gentle steam when hot, golden highlights on browned and glossy surfaces",
     cameraAngle: "slightly elevated 40° angle, intimate plate-forward framing",
     mood: "post-shift comfort — familiar, generous, emotionally warm",
     atmosphere: "cozy Canadian firehall kitchen warmth — prep tables, steam tables, evening meal service",
     composition:
-      "crew-sized serving tray, hotel pan, or large platter — melted cheese and sauce gloss where appropriate, center-weighted for 4:5 mobile",
+      "crew-sized serving tray, hotel pan, or large platter — sauce gloss only where the recipe has sauce, center-weighted for 4:5 mobile",
     colorGrading: "cinematic warm amber, rich midtones, soft roll-off in shadows",
     cropPreference: "center",
-    textureEmphasis: "natural melted cheese, controlled sauce sheen, gentle steam, hearty portion density",
+    textureEmphasis: "natural moisture, controlled sheen, gentle steam, hearty portion density",
     avoid: ["clinical white plates", "diet portions", "cold blue cast", "sparse minimalist plating"],
   },
 
@@ -97,14 +97,14 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
     displayName: "Breakfast Shift",
     identity: `${PRESET_PHOTO_CORE} — morning shift breakfast`,
     lighting:
-      "soft morning window light from side, golden yolk highlights, gentle steam from hot elements",
+      "soft morning window light from side, golden highlights on griddled and browned surfaces, gentle steam from hot elements",
     cameraAngle: "slightly above 35° — classic breakfast editorial, approachable",
     mood: "early shift or breakfast-for-dinner — bright, welcoming, hearty",
     atmosphere: "morning firehall station kitchen — griddle and prep table energy, coffee-adjacent warmth without showing cups as hero",
-    composition: "stacked pancakes, hash, eggs, or burrito cross-section on serving tray or sheet pan — generous crew breakfast, not dainty",
+    composition: "the recipe's own dish on a warm plate, serving tray, or sheet pan — generous crew breakfast, not dainty",
     colorGrading: "soft golden highlights, creamy whites, warm shadows, no harsh contrast",
     cropPreference: "top",
-    textureEmphasis: "crispy bacon edges, runny yolk where appropriate, fluffy pancake texture",
+    textureEmphasis: "griddle-browned crusts, natural moisture, true textures of the listed ingredients",
     avoid: ["moody dark BBQ lighting", "tiny brunch portions", "sterile hotel buffet"],
   },
 
@@ -137,7 +137,7 @@ export const IMAGE_STYLE_PRESETS: Record<ImageStylePresetId, ImageStylePreset> =
     composition: "deep bowl or loaded hotel pan on prep surface, toppings centered, steam visible, dark station surround",
     colorGrading: "rich chocolate shadows, amber steam highlights, subdued palette",
     cropPreference: "center",
-    textureEmphasis: "thick stew viscosity, steam, loaded toppings, hearty depth",
+    textureEmphasis: "thick stew viscosity, steam, only the recipe's own toppings, hearty depth",
     avoid: ["bright summer salad energy", "airy fine dining", "tiny portions"],
   },
 };

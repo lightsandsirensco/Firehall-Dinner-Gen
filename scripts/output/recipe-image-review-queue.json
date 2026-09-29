@@ -1,0 +1,4512 @@
+{
+  "generatedAt": "2026-09-29T01:42:28.237Z",
+  "count": 337,
+  "queue": [
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "applewood-pork-shoulder-steaks",
+      "title": "Applewood Grilled Pork Shoulder Steaks",
+      "image": "/images/hall-expansion/applewood-pork-shoulder-steaks.jpg",
+      "issues": [
+        "accuracy: steaks not sliced and fanned as per serving instructions",
+        "consistency: person visible in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/applewood-pork-shoulder-steaks)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "bagel-sandwich-line",
+      "title": "Bagel Sandwich Line",
+      "image": "/images/breakfast/bagel-sandwich-line.jpg",
+      "issues": [
+        "accuracy: missing visible egg squares",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=breakfast/bagel-sandwich-line)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara",
+      "image": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
+      "issues": [
+        "accuracy: spaghetti not in recipe",
+        "accuracy: green beans not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/baked-turkey-meatball-marinara)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "bbq-chicken-bowls",
+      "title": "BBQ Chicken Bowls",
+      "image": "/images/golden-100/bbq-chicken-bowls.jpg",
+      "issues": [
+        "accuracy: missing coleslaw",
+        "accuracy: missing corn",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/bbq-chicken-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "bbq-chicken-sliders",
+      "title": "BBQ Chicken Sliders",
+      "image": "/images/golden-100/bbq-chicken-sliders.jpg",
+      "issues": [
+        "accuracy: cheese on sliders — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/bbq-chicken-sliders)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "bbq-meatball-skewers",
+      "title": "BBQ Meatball Skewers",
+      "image": "/images/hall-expansion/bbq-meatball-skewers.jpg",
+      "issues": [
+        "accuracy: missing pickled red onions",
+        "accuracy: missing shredded cabbage mix",
+        "accuracy: cheese not in recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/bbq-meatball-skewers)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "image": "/images/golden-100/beef-barley-soup.jpg",
+      "issues": [
+        "accuracy: croutons on top — not in the recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/beef-barley-soup)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "beef-broccoli",
+      "title": "Beef and Broccoli",
+      "image": "/images/golden-100/beef-broccoli.jpg",
+      "issues": [
+        "accuracy: missing steamed rice",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/beef-broccoli)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "beer-can-chicken",
+      "title": "Beer Can Chicken",
+      "image": "/images/golden-100/beer-can-chicken.jpg",
+      "issues": [
+        "accuracy: beer can not visible"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/beer-can-chicken)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "belgian-waffle-platter",
+      "title": "Belgian Waffle Platter",
+      "image": "/images/breakfast/belgian-waffle-platter.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: text or logo visible",
+        "consistency: people or hands in frame",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/belgian-waffle-platter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "berry-vanilla-protein-overnight-oats",
+      "title": "Berry Vanilla Protein Overnight Oats",
+      "image": "/images/breakfast/berry-vanilla-protein-overnight-oats.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "biscuit-french-toast-sliders",
+      "title": "Biscuit French Toast Sliders",
+      "image": "/images/breakfast/biscuit-french-toast-sliders.jpg",
+      "issues": [
+        "consistency: text or logo present",
+        "consistency: background includes fire department theme",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/biscuit-french-toast-sliders)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "black-bean-cottage-cheese-enchilada-bake",
+      "title": "Black Bean & Cottage Cheese Enchilada Bake",
+      "image": "/images/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "black-bean-egg-white-breakfast-burritos",
+      "title": "Black Bean & Egg White Breakfast Burritos",
+      "image": "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "blackened-salmon-sweet-potato-bowls",
+      "title": "Blackened Salmon Sweet Potato Bowls",
+      "image": "/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "breakfast-poutine",
+      "title": "Breakfast Poutine",
+      "image": "/images/breakfast/breakfast-poutine.jpg",
+      "issues": [
+        "technical: hero WebP missing",
+        "accuracy: bacon present — not in recipe",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/breakfast-poutine)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "image": "/images/golden-100/breakfast-sausage-pizza.jpg",
+      "issues": [
+        "accuracy: missing shredded cheddar-mozzarella blend"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/breakfast-sausage-pizza)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "breakfast-stromboli-roll",
+      "title": "Breakfast Stromboli Roll",
+      "image": "/images/breakfast/breakfast-stromboli-roll.jpg",
+      "issues": [
+        "accuracy: roasted red pepper missing",
+        "consistency: text or logo visible",
+        "consistency: kitchen setting",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/breakfast-stromboli-roll)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "brisket-style-beef-sandwiches-au-jus",
+      "title": "Brisket-Style Beef Sandwiches",
+      "image": "/images/smoker-catalog/brisket-style-beef-sandwiches-au-jus.jpg",
+      "issues": [
+        "consistency: text or logo in background",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/brisket-style-beef-sandwiches-au-jus)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "image": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "issues": [
+        "accuracy: rice present — not in recipe",
+        "accuracy: missing avocados",
+        "accuracy: missing blue cheese",
+        "accuracy: missing ranch dressing",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/buffalo-chicken-sweet-potato-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "burnt-ends-chili-crew",
+      "title": "Burnt Ends Chili for the Crew",
+      "image": "/images/hall-expansion/burnt-ends-chili-crew.jpg",
+      "issues": [
+        "accuracy: cheese on top — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/burnt-ends-chili-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "burrito-bowl-bar-night",
+      "title": "Burrito Bowl Bar Night",
+      "image": "/images/hall-expansion/burrito-bowl-bar-night.jpg",
+      "issues": [
+        "accuracy: green onions not in recipe",
+        "accuracy: missing black beans",
+        "accuracy: missing corn salsa",
+        "accuracy: missing shredded lettuce",
+        "accuracy: missing flour tortillas",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/burrito-bowl-bar-night)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "cajun-chicken-dirty-rice-bowls",
+      "title": "Cajun Chicken & Dirty Rice Bowls with Remoulade",
+      "image": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
+      "issues": [
+        "accuracy: missing shredded lettuce",
+        "accuracy: missing diced tomato",
+        "accuracy: chicken not sliced",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/cajun-chicken-dirty-rice-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "cajun-lime-shrimp-black-bean-bowls",
+      "title": "Cajun Lime Shrimp & Black Bean Bowls",
+      "image": "/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "caprese-chicken-bake",
+      "title": "Caprese Chicken Bake",
+      "image": "/images/golden-100/caprese-chicken-bake.jpg",
+      "issues": [
+        "accuracy: rice as a side dish not in the recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/caprese-chicken-bake)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas",
+      "image": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
+      "issues": [
+        "accuracy: melted cheese not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/cast-iron-chicken-fajitas)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "title": "Cast Iron Skirt Steak Sizzlers",
+      "image": "/images/smoker-catalog/cast-iron-steak-fajita-sizzlers.jpg",
+      "issues": [
+        "accuracy: missing corn tortillas",
+        "accuracy: missing queso fresco",
+        "accuracy: missing pickled red onions",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/cast-iron-steak-fajita-sizzlers)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "charred-broccolini-lemon-tray",
+      "title": "Sicilian Anchovy Broccolini Tray",
+      "image": "/images/smoker-catalog/charred-broccolini-lemon-tray.jpg",
+      "issues": [
+        "accuracy: missing golden raisins",
+        "accuracy: missing red pepper flakes",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/charred-broccolini-lemon-tray)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "chicken-cacciatore-crew",
+      "title": "Chicken Cacciatore for the Crew",
+      "image": "/images/hall-expansion/chicken-cacciatore-crew.jpg",
+      "issues": [
+        "accuracy: black olives not in recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/chicken-cacciatore-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "chicken-dumpling-soup",
+      "title": "Chicken and Dumplings",
+      "image": "/images/golden-100/chicken-dumpling-soup.jpg",
+      "issues": [
+        "accuracy: bone-in, skin-on chicken thighs not visible",
+        "consistency: people or hands visible",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/chicken-dumpling-soup)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "chicken-paprikash-hall",
+      "title": "Chicken Paprikash for the Hall",
+      "image": "/images/hall-expansion/chicken-paprikash-hall.jpg",
+      "issues": [
+        "accuracy: missing visible red bell pepper",
+        "accuracy: missing visible yellow onion",
+        "accuracy: missing visible fresh parsley"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/chicken-paprikash-hall)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "chicken-shawarma-pitas",
+      "title": "Chicken Shawarma Pitas",
+      "image": "/images/hall-expansion/chicken-shawarma-pitas.jpg",
+      "issues": [
+        "accuracy: side dish of rice and salad not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/chicken-shawarma-pitas)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "chickpea-pasta-primavera-white-beans",
+      "title": "Chickpea Pasta Primavera with White Beans",
+      "image": "/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/chickpea-pasta-primavera-white-beans.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/chickpea-pasta-primavera-white-beans.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/chickpea-pasta-primavera-white-beans.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "chilaquiles-verde-bake",
+      "title": "Chilaquiles Verde Bake",
+      "image": "/images/breakfast/chilaquiles-verde-bake.jpg",
+      "issues": [
+        "consistency: brightness outlier (+3.6σ vs catalog)",
+        "consistency: text or logo on mug",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/chilaquiles-verde-bake)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "chipotle-lime-chicken-tacos",
+      "title": "Chipotle Lime Chicken Tacos",
+      "image": "/images/golden-100/chipotle-lime-chicken-tacos.jpg",
+      "issues": [
+        "accuracy: rice not in recipe",
+        "accuracy: missing slaw",
+        "accuracy: missing lime crema",
+        "consistency: people in background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/chipotle-lime-chicken-tacos)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "classic-patty-melt-for-the-crew",
+      "title": "Classic Patty Melt for the Crew",
+      "image": "/images/hall-expansion/classic-patty-melt-for-the-crew.jpg",
+      "issues": [
+        "accuracy: French fries present — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/classic-patty-melt-for-the-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "competition-bbq-chicken-thighs",
+      "title": "Competition BBQ Chicken Thighs",
+      "image": "/images/smoker-catalog/competition-bbq-chicken-thighs.jpg",
+      "issues": [
+        "consistency: text/logos present",
+        "consistency: BBQ branding props",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/competition-bbq-chicken-thighs)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "coq-au-vin-batch",
+      "title": "Coq au Vin Batch",
+      "image": "/images/hall-expansion/coq-au-vin-batch.jpg",
+      "issues": [
+        "accuracy: potatoes missing — recipe serves chicken over potatoes"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/coq-au-vin-batch)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "cottage-cheese-protein-pasta",
+      "title": "Protein Pasta Bake",
+      "image": "/images/golden-100/cottage-cheese-protein-pasta.jpg",
+      "issues": [
+        "accuracy: broccoli side not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/cottage-cheese-protein-pasta)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "cottage-cheese-spinach-stuffed-shells",
+      "title": "Cottage Cheese & Spinach Stuffed Shells",
+      "image": "/images/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "cottage-cheese-veggie-egg-bake",
+      "title": "Cottage Cheese Veggie Egg Bake",
+      "image": "/images/breakfast/cottage-cheese-veggie-egg-bake.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "cottage-pie-for-the-crew",
+      "title": "Cottage Pie for the Crew",
+      "image": "/images/hall-expansion/cottage-pie-for-the-crew.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+3.0σ vs catalog)",
+        "accuracy: side of peas not in recipe",
+        "consistency: side of peas not in recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/cottage-pie-for-the-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "cuban-beef-picadillo-bowls",
+      "title": "Cuban-Style Beef Picadillo Bowls",
+      "image": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+      "issues": [
+        "accuracy: black beans missing",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/cuban-beef-picadillo-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "dirty-rice-crew-skillet",
+      "title": "Dirty Rice Crew Skillet",
+      "image": "/images/hall-expansion/dirty-rice-crew-skillet.jpg",
+      "issues": [
+        "accuracy: melted cheese on top — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/dirty-rice-crew-skillet)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "dutch-oven-pot-roast",
+      "title": "Dutch Oven Pot Roast",
+      "image": "/images/hall-expansion/dutch-oven-pot-roast.jpg",
+      "issues": [
+        "accuracy: melted cheese on top — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/dutch-oven-pot-roast)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "image": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "issues": [
+        "accuracy: missing visible eggs",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/egg-roll-in-a-bowl-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "egg-white-black-bean-breakfast-quesadillas",
+      "title": "Egg White & Black Bean Breakfast Quesadillas",
+      "image": "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "enchilada-casserole",
+      "title": "Chicken Enchilada Casserole",
+      "image": "/images/golden-100/enchilada-casserole.jpg",
+      "issues": [
+        "recipe-data: title says \"chicken\" but the ingredient list has none",
+        "accuracy: rolled enchiladas instead of casserole",
+        "accuracy: missing ground beef",
+        "accuracy: missing black olives",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "fajita-bar-night",
+      "title": "Fajita Bar Night",
+      "image": "/images/hall-expansion/fajita-bar-night.jpg",
+      "issues": [
+        "accuracy: missing sour cream",
+        "accuracy: missing guacamole",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/fajita-bar-night)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "farmers-breakfast-casserole",
+      "title": "Farmer's Breakfast Casserole",
+      "image": "/images/breakfast/farmers-breakfast-casserole.jpg",
+      "issues": [
+        "consistency: text or logo on mug",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/farmers-breakfast-casserole)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "fast-philly-skillet",
+      "title": "Quick Philly Skillet",
+      "image": "/images/golden-100/fast-philly-skillet.jpg",
+      "issues": [
+        "accuracy: missing hoagie rolls"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=golden-100/fast-philly-skillet)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "filipino-chicken-adobo",
+      "title": "Filipino-Style Chicken Adobo",
+      "image": "/images/golden-100/filipino-chicken-adobo.jpg",
+      "issues": [
+        "accuracy: broccoli not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/filipino-chicken-adobo)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "firehall-antipasto-pasta-salad",
+      "title": "Mortadella Farfalle Antipasto Tray",
+      "image": "/images/smoker-catalog/firehall-antipasto-pasta-salad.jpg",
+      "issues": [
+        "accuracy: grilled eggplant present — not listed in the recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/firehall-antipasto-pasta-salad)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "firehall-breakfast-pizza",
+      "title": "Firehall Breakfast Pizza",
+      "image": "/images/breakfast/firehall-breakfast-pizza.jpg",
+      "issues": [
+        "technical: hero WebP missing",
+        "accuracy: missing sheet-pan format",
+        "accuracy: missing visible country gravy",
+        "consistency: off-standard angle for sheet-pan pizza"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/firehall-breakfast-pizza)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "firehall-burnt-ends-platter",
+      "title": "Firehall Burnt Ends Platter",
+      "image": "/images/smoker-catalog/firehall-burnt-ends-platter.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (-2.6σ vs catalog)",
+        "accuracy: missing dill pickle chips",
+        "accuracy: missing white bread",
+        "consistency: text or logo visible in background",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/firehall-burnt-ends-platter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehall-donair-platter",
+      "title": "Firehall Donair Platter",
+      "image": "/images/hall-expansion/firehall-donair-platter.jpg",
+      "issues": [
+        "accuracy: lettuce garnish not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/firehall-donair-platter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehall-greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "image": "/images/hall-expansion/firehall-greek-chicken-bowls.jpg",
+      "issues": [
+        "accuracy: missing romaine",
+        "accuracy: missing feta",
+        "accuracy: missing tzatziki",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/firehall-greek-chicken-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "title": "Teppan Shrimp and Pork Belly Mixed Grill",
+      "image": "/images/smoker-catalog/firehall-hibachi-mixed-grill-crew.jpg",
+      "issues": [
+        "accuracy: missing fried rice",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/firehall-hibachi-mixed-grill-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehall-korean-beef-bowls",
+      "title": "Korean Beef Bowls",
+      "image": "/images/hall-expansion/firehall-korean-beef-bowls.jpg",
+      "issues": [
+        "accuracy: missing kimchi",
+        "accuracy: missing fried eggs",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/firehall-korean-beef-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "image": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "issues": [
+        "accuracy: missing pico de gallo",
+        "accuracy: missing sour cream",
+        "accuracy: missing guacamole",
+        "accuracy: missing tortilla strips",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/firehall-taco-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "firehouse-breakfast-protein-bowls",
+      "title": "Firehouse Breakfast Protein Bowls",
+      "image": "/images/breakfast/firehouse-breakfast-protein-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/firehouse-breakfast-protein-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/firehouse-breakfast-protein-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/firehouse-breakfast-protein-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/firehouse-breakfast-protein-bowls.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehouse-chicken-black-bean-bowls",
+      "title": "Firehouse Chicken & Black Bean Bowls",
+      "image": "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehouse-dense-bean-salad",
+      "title": "Firehouse Dense Bean Salad",
+      "image": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/firehouse-dense-bean-salad.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/firehouse-dense-bean-salad.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/firehouse-dense-bean-salad.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/firehouse-dense-bean-salad.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehouse-diner-burger-bowls",
+      "title": "Firehouse Diner Burger Bowls",
+      "image": "/images/hall-expansion/firehouse-diner-burger-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/firehouse-diner-burger-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/firehouse-diner-burger-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/firehouse-diner-burger-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/firehouse-diner-burger-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehouse-lentil-chili",
+      "title": "Firehouse Lentil Chili",
+      "image": "/images/hall-expansion/firehouse-lentil-chili.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/firehouse-lentil-chili.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/firehouse-lentil-chili.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/firehouse-lentil-chili.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/firehouse-lentil-chili.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehouse-sweet-potato-beef-protein-bowls",
+      "title": "Firehouse Sweet Potato & Beef Protein Bowls",
+      "image": "/images/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "firehouse-turkey-white-bean-soup",
+      "title": "Firehouse Turkey & White Bean Soup",
+      "image": "/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/firehouse-turkey-white-bean-soup.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/firehouse-turkey-white-bean-soup.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/firehouse-turkey-white-bean-soup.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "flank-chimichurri",
+      "title": "Flank Steak with Chimichurri",
+      "image": "/images/golden-100/flank-chimichurri.jpg",
+      "issues": [
+        "accuracy: roasted potatoes not in recipe",
+        "accuracy: greens not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/flank-chimichurri)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "four-step-chicken-piccata",
+      "title": "Four-Step Chicken Piccata",
+      "image": "/images/golden-100/four-step-chicken-piccata.jpg",
+      "issues": [
+        "accuracy: broccoli not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/four-step-chicken-piccata)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
+      "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
+      "image": "/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "image": "/images/golden-100/ginger-salmon-bowls.jpg",
+      "issues": [
+        "accuracy: cucumber not in recipe",
+        "accuracy: carrot not in recipe",
+        "accuracy: missing sesame seeds"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/ginger-salmon-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "title": "Ginger Soy Chicken Rice Bowls",
+      "image": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
+      "issues": [
+        "accuracy: missing broccoli florets",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/ginger-soy-chicken-rice-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "gochujang-beef-skewers-crew",
+      "title": "Seoul Chili Pear Beef Cubes",
+      "image": "/images/smoker-catalog/gochujang-beef-skewers-crew.jpg",
+      "issues": [
+        "accuracy: missing daikon radish",
+        "accuracy: missing shiitake mushrooms",
+        "accuracy: missing crushed roasted soybeans",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/gochujang-beef-skewers-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Bowls",
+      "image": "/images/golden-100/greek-chicken-bowls.jpg",
+      "issues": [
+        "accuracy: tzatziki sauce missing",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/greek-chicken-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "image": "/images/hall-expansion/greek-chicken-pitas.jpg",
+      "issues": [
+        "accuracy: potato wedges not in recipe",
+        "accuracy: broccoli not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/greek-chicken-pitas)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
+      "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
+      "image": "/images/golden-100/greek-spiced-beef-burger-bowls-tzatziki-slaw.jpg",
+      "issues": [
+        "accuracy: green onions not in recipe",
+        "accuracy: sesame seeds not in recipe",
+        "accuracy: missing cherry tomatoes",
+        "accuracy: missing extra crumbled feta",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/greek-spiced-beef-burger-bowls-tzatziki-slaw)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "greek-yogurt-white-bean-power-bowls",
+      "title": "Greek Yogurt & White Bean Power Bowls",
+      "image": "/images/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "green-chile-breakfast-burritos",
+      "title": "Green Chile Breakfast Burritos",
+      "image": "/images/breakfast/green-chile-breakfast-burritos.jpg",
+      "issues": [
+        "consistency: text or logo visible in the background",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/green-chile-breakfast-burritos)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "green-chile-chicken-stew",
+      "title": "Green Chile Chicken Stew",
+      "image": "/images/hall-expansion/green-chile-chicken-stew.jpg",
+      "issues": [
+        "accuracy: cheese on top — not in recipe",
+        "accuracy: tomatoes on top — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/green-chile-chicken-stew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "grilled-peach-burrata-salad",
+      "title": "Pistachio Peach and Burrata Salad",
+      "image": "/images/smoker-catalog/grilled-peach-burrata-salad.jpg",
+      "issues": [
+        "accuracy: missing prosciutto di parma",
+        "accuracy: missing fresh mint",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/grilled-peach-burrata-salad)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "grilled-shrimp-quinoa-bowls",
+      "title": "Shrimp and Quinoa Bowls",
+      "image": "/images/golden-100/grilled-shrimp-quinoa-bowls.jpg",
+      "issues": [
+        "accuracy: flatbread not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/grilled-shrimp-quinoa-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "hall-taco-bar",
+      "title": "Taco Bar",
+      "image": "/images/golden-100/hall-taco-bar.jpg",
+      "issues": [
+        "accuracy: cheese present — not in recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/hall-taco-bar)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "herb-roasted-thighs",
+      "title": "Herb Roasted Chicken Thighs",
+      "image": "/images/golden-100/herb-roasted-thighs.jpg",
+      "issues": [
+        "accuracy: broccoli and carrots not in recipe",
+        "accuracy: rice not in recipe",
+        "consistency: off-standard angle for this dish type",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/herb-roasted-thighs)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "hickory-smoked-chicken-breast",
+      "title": "Hickory Smoked Chicken Breast",
+      "image": "/images/smoker-catalog/hickory-smoked-chicken-breast.jpg",
+      "issues": [
+        "consistency: text/logos present",
+        "consistency: background includes BBQ theme setting",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/hickory-smoked-chicken-breast)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "hickory-turkey-legs",
+      "title": "Hickory Smoked Turkey Legs",
+      "image": "/images/hall-expansion/hickory-turkey-legs.jpg",
+      "issues": [
+        "accuracy: corn on the cob missing"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/hickory-turkey-legs)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "high-protein-breakfast-burrito-bowls",
+      "title": "High-Protein Breakfast Burrito Bowls",
+      "image": "/images/breakfast/high-protein-breakfast-burrito-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "high-protein-chicken-fried-rice",
+      "title": "High-Protein Chicken Fried Rice",
+      "image": "/images/golden-100/high-protein-chicken-fried-rice.jpg",
+      "issues": [
+        "accuracy: missing visible scrambled egg",
+        "accuracy: missing visible scallions",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/high-protein-chicken-fried-rice)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
+      "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
+      "image": "/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "honey-chipotle-chicken-thighs",
+      "title": "Honey Chipotle Grilled Chicken Thighs",
+      "image": "/images/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
+      "issues": [
+        "consistency: text/logo visible in background",
+        "consistency: dark lighting",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/honey-chipotle-chicken-thighs)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Bowls",
+      "image": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "issues": [
+        "accuracy: missing broccoli",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/honey-garlic-chicken-rice-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "honey-mustard-turkey-meatball-bowls",
+      "title": "Honey Mustard Turkey Meatball Bowls",
+      "image": "/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "image": "/images/golden-100/honey-soppressata-pizza.jpg",
+      "issues": [
+        "accuracy: missing hot honey drizzle",
+        "accuracy: missing red pepper flakes",
+        "accuracy: missing grated parmesan"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/honey-soppressata-pizza)"
+    },
+    {
+      "priority": "P1",
+      "collection": "pizza-night",
+      "slug": "honey-soppressata-pizza",
+      "title": "Hot Honey Soppressata Pizza",
+      "image": "/images/golden-100/honey-soppressata-pizza.jpg",
+      "issues": [
+        "accuracy: missing hot honey drizzle",
+        "accuracy: missing red pepper flakes",
+        "accuracy: missing grated parmesan"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=pizza-night/honey-soppressata-pizza)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "title": "Hot Honey Grilled Sausage & Peppers",
+      "image": "/images/smoker-catalog/hot-honey-grilled-sausage-peppers.jpg",
+      "issues": [
+        "consistency: text/logo on bottle",
+        "consistency: background includes BBQ equipment",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/hot-honey-grilled-sausage-peppers)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "hummus-chicken-platter",
+      "title": "Hummus Chicken Platter",
+      "image": "/images/golden-100/hummus-chicken-platter.jpg",
+      "issues": [
+        "accuracy: rice present — not in recipe",
+        "accuracy: pita missing",
+        "consistency: people in background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/hummus-chicken-platter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "hungarian-goulash-crew",
+      "title": "Hungarian Goulash for the Crew",
+      "image": "/images/hall-expansion/hungarian-goulash-crew.jpg",
+      "issues": [
+        "accuracy: noodles instead of potatoes",
+        "accuracy: missing sour cream",
+        "accuracy: missing rye bread",
+        "consistency: off-standard background with firehall setting",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=hall-expansion/hungarian-goulash-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "irish-breakfast-fry-up",
+      "title": "Irish Breakfast Fry-Up",
+      "image": "/images/breakfast/irish-breakfast-fry-up.jpg",
+      "issues": [
+        "accuracy: baked beans present — not in recipe",
+        "consistency: people visible",
+        "consistency: eye-level angle instead of 45-degree",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/irish-breakfast-fry-up)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "italian-beef-slow-cooker",
+      "title": "Italian Beef Slow Cooker Sandwiches",
+      "image": "/images/hall-expansion/italian-beef-slow-cooker.jpg",
+      "issues": [
+        "accuracy: broccoli and mashed potatoes not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/italian-beef-slow-cooker)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "jalapeno-cheddar-smoked-sausages",
+      "title": "Jalapeño Cheddar Smoked Sausages",
+      "image": "/images/smoker-catalog/jalapeno-cheddar-smoked-sausages.jpg",
+      "issues": [
+        "accuracy: missing bell peppers",
+        "accuracy: missing yellow onions",
+        "accuracy: missing sub rolls",
+        "accuracy: missing mustard",
+        "accuracy: missing pickled jalapeños",
+        "consistency: text/logo present",
+        "consistency: dark lighting",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/jalapeno-cheddar-smoked-sausages)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "jalapeno-popper-dip",
+      "title": "Jalapeño Popper Dip",
+      "image": "/images/hall-expansion/jalapeno-popper-dip.jpg",
+      "issues": [
+        "accuracy: missing tortilla chips",
+        "accuracy: missing baguette"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/jalapeno-popper-dip)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "korean-bulgogi-grill-night",
+      "title": "Korean Bulgogi Grill Night",
+      "image": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
+      "issues": [
+        "accuracy: rice present — not in recipe",
+        "accuracy: garlic visible — not in recipe",
+        "consistency: people or hands visible",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/korean-bulgogi-grill-night)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "lamb-merguez-skewers-crew",
+      "title": "North African Urfa Lamb Merguez Logs",
+      "image": "/images/smoker-catalog/lamb-merguez-skewers-crew.jpg",
+      "issues": [
+        "accuracy: naan bread missing",
+        "accuracy: pomegranate seeds missing",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/lamb-merguez-skewers-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "lean-turkey-bean-chili",
+      "title": "Lean Turkey and Bean Chili",
+      "image": "/images/golden-100/lean-turkey-bean-chili.jpg",
+      "issues": [
+        "accuracy: cheese on top — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/lean-turkey-bean-chili)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "lebanese-chicken-shish-platter",
+      "title": "Lebanese Chicken Shish Platter",
+      "image": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "issues": [
+        "consistency: brightness outlier (+3.9σ vs catalog)",
+        "accuracy: salad present — not in recipe",
+        "accuracy: missing tabbouleh"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/lebanese-chicken-shish-platter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "leftover-roast-beef-bowls",
+      "title": "Leftover Roast Beef Bowls",
+      "image": "/images/hall-expansion/leftover-roast-beef-bowls.jpg",
+      "issues": [
+        "accuracy: rice instead of potatoes",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/leftover-roast-beef-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "lemon-garlic-chicken-tray",
+      "title": "Lemon Garlic Chicken Tray",
+      "image": "/images/golden-100/lemon-garlic-chicken-tray.jpg",
+      "issues": [
+        "accuracy: chicken drumsticks instead of bone-in chicken thighs",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=performance-meals/lemon-garlic-chicken-tray)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "lemon-herb-cod-roasted-vegetables",
+      "title": "Lemon-Herb Cod with Roasted Vegetables",
+      "image": "/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "lemon-herb-salmon",
+      "title": "Lemon Herb Salmon",
+      "image": "/images/golden-100/lemon-herb-salmon.jpg",
+      "issues": [
+        "accuracy: vegetables not in recipe",
+        "accuracy: rice not in recipe",
+        "consistency: off-standard angle for this dish type",
+        "consistency: background not on-brand",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/lemon-herb-salmon)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "loaded-firehouse-sweet-potatoes",
+      "title": "Loaded Firehouse Sweet Potatoes",
+      "image": "/images/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/loaded-firehouse-sweet-potatoes.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/loaded-firehouse-sweet-potatoes.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/loaded-firehouse-sweet-potatoes.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/loaded-firehouse-sweet-potatoes.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "loaded-nacho-skillet",
+      "title": "Nacho Skillet",
+      "image": "/images/golden-100/loaded-nacho-skillet.jpg",
+      "issues": [
+        "accuracy: diced tomatoes present — not in recipe",
+        "accuracy: missing black beans",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/loaded-nacho-skillet)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "loaded-potato-feed",
+      "title": "Potato Bar Feed",
+      "image": "/images/golden-100/loaded-potato-feed.jpg",
+      "issues": [
+        "accuracy: mashed potatoes instead of whole russet potatoes",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=golden-100/loaded-potato-feed)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "mac-and-cheese-bake",
+      "title": "Baked Mac and Cheese",
+      "image": "/images/golden-100/mac-and-cheese-bake.jpg",
+      "issues": [
+        "accuracy: garlic bread side not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/mac-and-cheese-bake)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "malaysian-laksa-soup",
+      "title": "Malaysian Laksa Soup",
+      "image": "/images/hall-expansion/malaysian-laksa-soup.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+2.5σ vs catalog)",
+        "accuracy: tofu puffs not in recipe",
+        "accuracy: missing visible chicken",
+        "consistency: tofu puffs not in recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/malaysian-laksa-soup)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "maple-cured-salmon-plank",
+      "title": "Maple-Cured Salmon Plank",
+      "image": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
+      "issues": [
+        "accuracy: missing asparagus",
+        "accuracy: missing Greek yogurt sauce"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/maple-cured-salmon-plank)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "meatloaf-mashed",
+      "title": "Meatloaf and Mashed Potatoes",
+      "image": "/images/golden-100/meatloaf-mashed.jpg",
+      "issues": [
+        "accuracy: gravy not listed in recipe",
+        "accuracy: parsley garnish not listed in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/meatloaf-mashed)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Baked Cod Tray",
+      "image": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "issues": [
+        "accuracy: side salad visible — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/mediterranean-baked-fish-tray)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "mediterranean-beef-bowls",
+      "title": "Mediterranean Beef Bowls",
+      "image": "/images/hall-expansion/mediterranean-beef-bowls.jpg",
+      "issues": [
+        "accuracy: missing hummus",
+        "accuracy: missing feta",
+        "accuracy: missing tzatziki",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/mediterranean-beef-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "mediterranean-beef-kofta-bowls",
+      "title": "Mediterranean Beef Kofta Bowls",
+      "image": "/images/golden-100/mediterranean-beef-kofta-bowls.jpg",
+      "issues": [
+        "accuracy: missing tomato-cucumber salad",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/mediterranean-beef-kofta-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "mediterranean-chicken-farro-bowls",
+      "title": "Mediterranean Chicken Farro Bowls",
+      "image": "/images/hall-expansion/mediterranean-chicken-farro-bowls.jpg",
+      "issues": [
+        "accuracy: missing cucumber",
+        "accuracy: missing cherry tomatoes",
+        "accuracy: missing kalamata olives",
+        "accuracy: missing hummus",
+        "accuracy: missing feta cheese",
+        "accuracy: unlisted green garnish",
+        "accuracy: unlisted sauce",
+        "consistency: people in background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=hall-expansion/mediterranean-chicken-farro-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "mediterranean-chicken-white-bean-skillet",
+      "title": "Mediterranean Chicken & White Bean Skillet",
+      "image": "/images/golden-100/mediterranean-chicken-white-bean-skillet.jpg",
+      "issues": [
+        "accuracy: missing feta cheese",
+        "accuracy: missing kalamata olives",
+        "accuracy: missing spinach",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/mediterranean-chicken-white-bean-skillet)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "mediterranean-feast-night",
+      "title": "Mediterranean Feast Night",
+      "image": "/images/hall-expansion/mediterranean-feast-night.jpg",
+      "issues": [
+        "accuracy: cauliflower not in recipe",
+        "accuracy: rice not in recipe",
+        "accuracy: missing hummus",
+        "accuracy: missing tzatziki",
+        "accuracy: missing pita bread",
+        "accuracy: missing feta cheese",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=hall-expansion/mediterranean-feast-night)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "mesquite-chuck-roast",
+      "title": "Mesquite Smoked Chuck Roast",
+      "image": "/images/hall-expansion/mesquite-chuck-roast.jpg",
+      "issues": [
+        "accuracy: missing soft potato rolls",
+        "accuracy: missing pickles",
+        "accuracy: missing extra pepper",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/mesquite-chuck-roast)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "miso-ramen-bar",
+      "title": "Miso Ramen Bar",
+      "image": "/images/hall-expansion/miso-ramen-bar.jpg",
+      "issues": [
+        "accuracy: missing chicken thighs",
+        "accuracy: missing soft-boiled eggs",
+        "accuracy: nori not in recipe",
+        "consistency: people or hands visible",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/miso-ramen-bar)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "mississippi-pot-roast-crew",
+      "title": "Mississippi Pot Roast for the Crew",
+      "image": "/images/hall-expansion/mississippi-pot-roast-crew.jpg",
+      "issues": [
+        "accuracy: cheese on top — not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/mississippi-pot-roast-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "mushroom-swiss-steak-pan",
+      "title": "Mushroom Swiss Steak Pan",
+      "image": "/images/hall-expansion/mushroom-swiss-steak-pan.jpg",
+      "issues": [
+        "accuracy: Swiss cheese on top — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/mushroom-swiss-steak-pan)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "ny-strip-herb-butter",
+      "title": "NY Strip with Herb Butter",
+      "image": "/images/golden-100/ny-strip-herb-butter.jpg",
+      "issues": [
+        "accuracy: baby potatoes not in recipe",
+        "accuracy: broccoli not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/ny-strip-herb-butter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "one-pot-chicken-rice",
+      "title": "Chicken and Rice",
+      "image": "/images/golden-100/one-pot-chicken-rice.jpg",
+      "issues": [
+        "accuracy: missing peas and carrots",
+        "accuracy: missing lemon wedges",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/one-pot-chicken-rice)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "overnight-sausage-strata",
+      "title": "Overnight Sausage Strata",
+      "image": "/images/breakfast/overnight-sausage-strata.jpg",
+      "issues": [
+        "consistency: text or logo visible",
+        "consistency: background includes fire truck",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/overnight-sausage-strata)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "paneer-tikka-masala-bowls",
+      "title": "Paneer Tikka Masala Bowls",
+      "image": "/images/hall-expansion/paneer-tikka-masala-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/paneer-tikka-masala-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/paneer-tikka-masala-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/paneer-tikka-masala-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/paneer-tikka-masala-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "pasta-bar-night",
+      "title": "Pasta Bar Night",
+      "image": "/images/hall-expansion/pasta-bar-night.jpg",
+      "issues": [
+        "accuracy: spaghetti instead of penne",
+        "accuracy: missing visible sauces",
+        "accuracy: missing garlic bread",
+        "consistency: off-standard angle for pasta bar",
+        "consistency: missing pasta bar setup",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=hall-expansion/pasta-bar-night)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "pasta-e-fagioli-hall",
+      "title": "Pasta e Fagioli for the Hall",
+      "image": "/images/hall-expansion/pasta-e-fagioli-hall.jpg",
+      "issues": [
+        "accuracy: grated cheese on top — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/pasta-e-fagioli-hall)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "peanut-butter-protein-overnight-oats",
+      "title": "Peanut Butter Protein Overnight Oats",
+      "image": "/images/breakfast/peanut-butter-protein-overnight-oats.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/peanut-butter-protein-overnight-oats.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/peanut-butter-protein-overnight-oats.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/peanut-butter-protein-overnight-oats.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/peanut-butter-protein-overnight-oats.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "pellet-smoked-chicken-quarters",
+      "title": "Pellet Smoked Chicken Quarters",
+      "image": "/images/hall-expansion/pellet-smoked-chicken-quarters.jpg",
+      "issues": [
+        "accuracy: missing baked beans",
+        "accuracy: missing cornbread",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/pellet-smoked-chicken-quarters)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "pepper-steak-onions",
+      "title": "Pepper Steak with Onions",
+      "image": "/images/hall-expansion/pepper-steak-onions.jpg",
+      "issues": [
+        "accuracy: broccoli side — not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/pepper-steak-onions)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "performance-burrito-bowls",
+      "title": "Chicken Burrito Bowls",
+      "image": "/images/golden-100/performance-burrito-bowls.jpg",
+      "issues": [
+        "accuracy: shredded cheese present — not in recipe",
+        "accuracy: missing corn",
+        "accuracy: missing pico de gallo",
+        "accuracy: missing lime wedges"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/performance-burrito-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "peri-peri-chicken-platter",
+      "title": "Peri Peri Chicken Platter",
+      "image": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+4.6σ vs catalog)",
+        "accuracy: french fries present — not in recipe",
+        "accuracy: missing grilled red bell peppers",
+        "accuracy: missing grilled yellow onion",
+        "accuracy: missing visible fresh cilantro"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/peri-peri-chicken-platter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "peruvian-sheet-pan-chicken-aji-verde",
+      "title": "Peruvian-Style Sheet-Pan Chicken with Aji Verde",
+      "image": "/images/golden-100/peruvian-sheet-pan-chicken-aji-verde.jpg",
+      "issues": [
+        "accuracy: broccoli not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/peruvian-sheet-pan-chicken-aji-verde)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Chicken Tray",
+      "image": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "issues": [
+        "accuracy: zucchini missing",
+        "accuracy: bone-in chicken thighs expected but boneless shown",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/pesto-tomato-chicken-tray)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "image": "/images/golden-100/philly-cheesesteak-skillet.jpg",
+      "issues": [
+        "accuracy: missing hoagie rolls"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/philly-cheesesteak-skillet)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "image": "/images/golden-100/philly-egg-rolls.jpg",
+      "issues": [
+        "accuracy: egg rolls instead of hoagie rolls",
+        "accuracy: missing visible eggs",
+        "consistency: wrong dish format",
+        "consistency: missing visible eggs",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=golden-100/philly-egg-rolls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "pollo-asado-citrus-platter",
+      "title": "Yucatán Achiote Pollo Asado Spread",
+      "image": "/images/smoker-catalog/pollo-asado-citrus-platter.jpg",
+      "issues": [
+        "accuracy: missing habanero salsa",
+        "accuracy: missing corn tortillas",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/pollo-asado-citrus-platter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "pork-carnitas-tacos",
+      "title": "Pork Carnitas Tacos",
+      "image": "/images/golden-100/pork-carnitas-tacos.jpg",
+      "issues": [
+        "recipe-data: title says \"pork\" but the ingredient list has none",
+        "accuracy: cheese on tacos — not in recipe",
+        "accuracy: sauce on tacos — not in recipe",
+        "accuracy: pork carnitas instead of chicken thighs",
+        "consistency: off-standard angle for tacos",
+        "consistency: cheese and sauce not in recipe",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "pork-satay-skewers-crew",
+      "title": "Indonesian Tamarind Pork Satay Batches",
+      "image": "/images/smoker-catalog/pork-satay-skewers-crew.jpg",
+      "issues": [
+        "accuracy: missing peanut sauce",
+        "accuracy: missing jasmine rice",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/pork-satay-skewers-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "red-lead-skillet",
+      "title": "Red Lead Skillet",
+      "image": "/images/breakfast/red-lead-skillet.jpg",
+      "issues": [
+        "accuracy: missing red onion",
+        "accuracy: missing shredded pepper jack"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/red-lead-skillet)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "red-lentil-paneer-dal",
+      "title": "Red Lentil & Paneer Dal",
+      "image": "/images/hall-expansion/red-lentil-paneer-dal.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/red-lentil-paneer-dal.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/red-lentil-paneer-dal.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/red-lentil-paneer-dal.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/red-lentil-paneer-dal.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "reverse-seared-ribeye-crew",
+      "title": "Reverse-Seared Ribeye for the Crew",
+      "image": "/images/smoker-catalog/reverse-seared-ribeye-crew.jpg",
+      "issues": [
+        "consistency: text or logo visible in background",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/reverse-seared-ribeye-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "rice-bowl-bar-night",
+      "title": "Rice Bowl Bar Night",
+      "image": "/images/hall-expansion/rice-bowl-bar-night.jpg",
+      "issues": [
+        "accuracy: missing broccoli florets",
+        "accuracy: missing carrots",
+        "accuracy: missing edamame",
+        "accuracy: missing pickled ginger",
+        "accuracy: missing sesame seeds",
+        "accuracy: missing sriracha mayo",
+        "accuracy: missing soy sauce",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/rice-bowl-bar-night)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "salsa-verde-crock-chicken",
+      "title": "Salsa Verde Crock Chicken",
+      "image": "/images/golden-100/salsa-verde-crock-chicken.jpg",
+      "issues": [
+        "accuracy: rice not in recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/salsa-verde-crock-chicken)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "sandwich-board-night",
+      "title": "Sandwich Board Night",
+      "image": "/images/hall-expansion/sandwich-board-night.jpg",
+      "issues": [
+        "accuracy: missing provolone cheese",
+        "accuracy: missing Swiss cheese",
+        "accuracy: missing mayonnaise",
+        "accuracy: missing mustard assortment",
+        "accuracy: missing lettuce and tomato",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/sandwich-board-night)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "santa-maria-tri-tip-roast",
+      "title": "Santa Maria Tri-Tip Roast",
+      "image": "/images/smoker-catalog/santa-maria-tri-tip-roast.jpg",
+      "issues": [
+        "accuracy: grilled bread instead of flour tortillas",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/santa-maria-tri-tip-roast)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "sausage-egg-cheese-sandwiches",
+      "title": "Sausage Egg & Cheese Sandwiches",
+      "image": "/images/breakfast/sausage-egg-cheese-sandwiches.jpg",
+      "issues": [
+        "accuracy: bacon strips present — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/sausage-egg-cheese-sandwiches)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "image": "/images/golden-100/sausage-peppers-onions.jpg",
+      "issues": [
+        "accuracy: skillet presentation instead of hoagie rolls",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/sausage-peppers-onions)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "savory-cottage-cheese-breakfast-bowls",
+      "title": "Savory Cottage Cheese Breakfast Bowls",
+      "image": "/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "sesame-ginger-tofu-bowls",
+      "title": "Sesame Ginger Tofu Bowls",
+      "image": "/images/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/sesame-ginger-tofu-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/sesame-ginger-tofu-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/sesame-ginger-tofu-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/sesame-ginger-tofu-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "shawarma-chicken-rice-bowls",
+      "title": "Shawarma Chicken Bowls",
+      "image": "/images/golden-100/shawarma-chicken-rice-bowls.jpg",
+      "issues": [
+        "accuracy: missing cherry tomatoes",
+        "accuracy: missing red onion"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/shawarma-chicken-rice-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "sheet-pan-chicken-fajitas-lite",
+      "title": "Chicken Fajitas",
+      "image": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
+      "issues": [
+        "accuracy: shredded cheese not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/sheet-pan-chicken-fajitas-lite)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs & Sausage",
+      "image": "/images/breakfast/sheet-pan-eggs-sausage-crew.jpg",
+      "issues": [
+        "accuracy: whole sausages instead of bulk or casings removed",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=breakfast/sheet-pan-eggs-sausage-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "sheet-pan-full-english",
+      "title": "Sheet Pan Full English",
+      "image": "/images/breakfast/sheet-pan-full-english.jpg",
+      "issues": [
+        "accuracy: missing white bread for toast",
+        "consistency: off-standard angle for sheet pan",
+        "consistency: kitchen setting with visible fireplace"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/sheet-pan-full-english)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+      "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
+      "image": "/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "sheet-pan-meal-prep",
+      "title": "Chicken Meal Prep Trays",
+      "image": "/images/golden-100/sheet-pan-meal-prep.jpg",
+      "issues": [
+        "accuracy: bell peppers not in recipe",
+        "accuracy: onions not in recipe",
+        "accuracy: lime not in recipe",
+        "accuracy: missing sweet potatoes",
+        "accuracy: missing broccoli",
+        "accuracy: missing rice",
+        "consistency: people in background",
+        "consistency: off-standard angle for meal prep trays",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=golden-100/sheet-pan-meal-prep)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "title": "Sheet Pan Parmesan-Dijon Chicken Thigh Dinner",
+      "image": "/images/golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner.jpg",
+      "issues": [
+        "technical: hero WebP missing",
+        "accuracy: chicken breast instead of bone-in, skin-on chicken thighs",
+        "accuracy: broccoli not in recipe",
+        "accuracy: carrots not in recipe",
+        "consistency: off-standard angle for sheet pan meal",
+        "consistency: broccoli and carrots not part of the recipe",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=golden-100/sheet-pan-parmesan-dijon-chicken-thigh-dinner)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sausage and Peppers",
+      "image": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+      "issues": [
+        "accuracy: melted cheese on top — not in the recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/sheet-pan-sausage-peppers)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "image": "/images/golden-100/shepherds-pie.jpg",
+      "issues": [
+        "accuracy: Greek salad on the side — not in the recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/shepherds-pie)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "smoked-baked-beans-crew",
+      "title": "Smoked Baked Beans for the Crew",
+      "image": "/images/smoker-catalog/smoked-baked-beans-crew.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (-3.1σ vs catalog)",
+        "consistency: text or logo visible",
+        "consistency: dark lighting",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/smoked-baked-beans-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "smoked-bbq-chicken-wings-tray",
+      "title": "Smoked BBQ Chicken Wings Tray",
+      "image": "/images/smoker-catalog/smoked-bbq-chicken-wings-tray.jpg",
+      "issues": [
+        "consistency: text or logo visible",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/smoked-bbq-chicken-wings-tray)"
+    },
+    {
+      "priority": "P1",
+      "collection": "pizza-night",
+      "slug": "smoked-brisket-bbq-pizza",
+      "title": "Smoked Brisket BBQ Pizza",
+      "image": "/images/golden-100/smoked-brisket-bbq-pizza.jpg",
+      "issues": [
+        "accuracy: missing coleslaw"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=pizza-night/smoked-brisket-bbq-pizza)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "smoked-chicken-quarters-white-sauce",
+      "title": "Smoked Chicken Quarters with White Sauce",
+      "image": "/images/smoker-catalog/smoked-chicken-quarters-white-sauce.jpg",
+      "issues": [
+        "consistency: text or logo on sauce bottle",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/smoked-chicken-quarters-white-sauce)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "smoked-corned-beef",
+      "title": "Smoked Corned Beef Brisket",
+      "image": "/images/hall-expansion/smoked-corned-beef.jpg",
+      "issues": [
+        "accuracy: missing cabbage",
+        "accuracy: missing potatoes",
+        "accuracy: missing rye bread",
+        "accuracy: missing swiss cheese",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/smoked-corned-beef)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "smoked-mac-and-cheese-crew",
+      "title": "Smoked Mac and Cheese for the Crew",
+      "image": "/images/smoker-catalog/smoked-mac-and-cheese-crew.jpg",
+      "issues": [
+        "consistency: text or logo visible",
+        "consistency: background includes BBQ equipment",
+        "consistency: text or logo in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/smoked-mac-and-cheese-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "smoked-picanha-steak-platter",
+      "title": "Smoked Picanha Steak Platter",
+      "image": "/images/smoker-catalog/smoked-picanha-steak-platter.jpg",
+      "issues": [
+        "consistency: text or logo visible in background",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/smoked-picanha-steak-platter)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "smoked-potato-salad-tray",
+      "title": "Smoked Potato Salad Tray",
+      "image": "/images/smoker-catalog/smoked-potato-salad-tray.jpg",
+      "issues": [
+        "accuracy: mayonnaise not clearly visible",
+        "accuracy: yellow mustard not clearly visible",
+        "accuracy: apple cider vinegar not clearly visible",
+        "accuracy: hard-boiled eggs not clearly visible",
+        "consistency: text or logo present",
+        "consistency: background includes firehall equipment",
+        "consistency: text or logo in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/smoked-potato-salad-tray)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "smoked-tri-tip",
+      "title": "Smoked Tri-Tip Roast",
+      "image": "/images/hall-expansion/smoked-tri-tip.jpg",
+      "issues": [
+        "accuracy: missing chimichurri",
+        "accuracy: missing grilled crusty bread",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/smoked-tri-tip)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "soft-pretzel-dogs",
+      "title": "Soft Pretzel Hot Dogs",
+      "image": "/images/hall-expansion/soft-pretzel-dogs.jpg",
+      "issues": [
+        "accuracy: missing spicy brown mustard",
+        "accuracy: missing sauerkraut",
+        "accuracy: missing cheddar cheese sauce"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/soft-pretzel-dogs)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "southwest-beef-sweet-potato-skillet",
+      "title": "Southwest Beef & Sweet Potato Skillet",
+      "image": "/images/golden-100/southwest-beef-sweet-potato-skillet.jpg",
+      "issues": [
+        "accuracy: cheese topping not in recipe",
+        "accuracy: parsley garnish not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/southwest-beef-sweet-potato-skillet)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "southwest-black-bean-corn-bowls",
+      "title": "Southwest Black Bean & Corn Bowls",
+      "image": "/images/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/southwest-black-bean-corn-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/southwest-black-bean-corn-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/southwest-black-bean-corn-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/southwest-black-bean-corn-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "southwest-steak-bowls",
+      "title": "Southwest Steak Bowls",
+      "image": "/images/hall-expansion/southwest-steak-bowls.jpg",
+      "issues": [
+        "accuracy: missing bell peppers",
+        "accuracy: missing chipotle crema",
+        "accuracy: missing limes",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/southwest-steak-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "spanish-chicken-chorizo-rice",
+      "title": "Chicken and Chorizo Rice",
+      "image": "/images/golden-100/spanish-chicken-chorizo-rice.jpg",
+      "issues": [
+        "accuracy: side salad present — not in recipe",
+        "consistency: people in background",
+        "consistency: side salad present — not in recipe",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/spanish-chicken-chorizo-rice)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "spatchcock-lemon-roast-chicken",
+      "title": "Spatchcock Lemon Roast Chicken",
+      "image": "/images/hall-expansion/spatchcock-lemon-roast-chicken.jpg",
+      "issues": [
+        "accuracy: missing visible carrots",
+        "accuracy: missing visible onions",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/spatchcock-lemon-roast-chicken)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "title": "Spicy Tomato Bisque with Grilled Brie Toast",
+      "image": "/images/golden-100/spicy-tomato-bisque-grilled-brie-toast.jpg",
+      "issues": [
+        "technical: hero WebP missing",
+        "accuracy: sour cream and chives on bisque — not in recipe",
+        "accuracy: missing brie cheese on toast",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=golden-100/spicy-tomato-bisque-grilled-brie-toast)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "steak-sandwiches",
+      "title": "Philly-Style Cheesesteaks",
+      "image": "/images/golden-100/steak-sandwiches.jpg",
+      "issues": [
+        "accuracy: brioche buns instead of hoagie rolls",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/steak-sandwiches)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "street-corn-chicken",
+      "title": "Street Corn Chicken Bowls",
+      "image": "/images/golden-100/street-corn-chicken.jpg",
+      "issues": [
+        "accuracy: missing cotija cheese",
+        "accuracy: missing lime wedges",
+        "accuracy: missing mayonnaise"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/street-corn-chicken)"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "stuffed-peppers",
+      "title": "Quinoa Stuffed Peppers",
+      "image": "/images/golden-100/stuffed-peppers.jpg",
+      "issues": [
+        "recipe-data: title says \"quinoa\" but the ingredient list has none",
+        "accuracy: quinoa instead of rice",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
+    },
+    {
+      "priority": "P1",
+      "collection": "pizza-night",
+      "slug": "taco-pizza",
+      "title": "Taco Pizza",
+      "image": "/images/golden-100/taco-pizza.jpg",
+      "issues": [
+        "accuracy: missing sour cream",
+        "accuracy: missing pickled jalapeños",
+        "accuracy: missing refried beans",
+        "accuracy: missing mozzarella",
+        "accuracy: missing cheddar"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=pizza-night/taco-pizza)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "tempeh-peanut-buddha-bowls",
+      "title": "Tempeh Peanut Buddha Bowls",
+      "image": "/images/hall-expansion/tempeh-peanut-buddha-bowls.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/hall-expansion/tempeh-peanut-buddha-bowls.jpg)",
+        "technical: thumbnail missing (/images/thumbs/hall-expansion/tempeh-peanut-buddha-bowls.jpg)",
+        "technical: mobile variant missing (/images/mobile/hall-expansion/tempeh-peanut-buddha-bowls.jpg)",
+        "technical: rail variant missing (/images/rails/hall-expansion/tempeh-peanut-buddha-bowls.jpg)"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "teriyaki-salmon-grill",
+      "title": "Teriyaki Salmon",
+      "image": "/images/golden-100/teriyaki-salmon-grill.jpg",
+      "issues": [
+        "accuracy: broccoli and rice not in recipe",
+        "accuracy: missing cedar plank",
+        "consistency: off-standard angle for this dish type",
+        "consistency: background setting not matching house standard",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=golden-100/teriyaki-salmon-grill)"
+    },
+    {
+      "priority": "P1",
+      "collection": "bbq",
+      "slug": "texas-central-brisket-crew",
+      "title": "Texas Central Brisket for the Crew",
+      "image": "/images/smoker-catalog/texas-central-brisket-crew.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (-2.7σ vs catalog)",
+        "consistency: text or logo visible in the background",
+        "consistency: text or logo in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=bbq/texas-central-brisket-crew)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "thai-peanut-chicken-crock",
+      "title": "Thai Peanut Chicken Crock",
+      "image": "/images/hall-expansion/thai-peanut-chicken-crock.jpg",
+      "issues": [
+        "accuracy: melted cheese on chicken — not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/thai-peanut-chicken-crock)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "turkey-bacon-white-bean-breakfast-hash",
+      "title": "Turkey Bacon & White Bean Breakfast Hash",
+      "image": "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "image": "/images/golden-100/turkey-burgers.jpg",
+      "issues": [
+        "recipe-data: title says \"turkey\" but the ingredient list has none",
+        "recipe-data: title says \"black bean\" but the ingredient list has none",
+        "accuracy: lettuce and tomato present — not in recipe",
+        "accuracy: burger patty appears to be turkey or black bean — recipe uses ground beef",
+        "consistency: off-standard angle for a burger",
+        "consistency: lettuce and tomato not in recipe",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
+    },
+    {
+      "priority": "P1",
+      "collection": "golden-100",
+      "slug": "turkey-chili",
+      "title": "Turkey Chili",
+      "image": "/images/golden-100/turkey-chili.jpg",
+      "issues": [
+        "accuracy: shredded cheese on top — recipe lists it as optional topping",
+        "accuracy: sour cream on top — recipe lists it as optional topping",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/turkey-chili)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "turkey-quinoa-stuffed-peppers",
+      "title": "Turkey Stuffed Peppers",
+      "image": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
+      "issues": [
+        "accuracy: mashed potatoes and broccoli sides not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/turkey-quinoa-stuffed-peppers)"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "turkey-sausage-burritos",
+      "title": "Turkey Sausage Breakfast Burritos",
+      "image": "/images/breakfast/turkey-sausage-burritos.jpg",
+      "issues": [
+        "recipe-data: title says \"turkey\" but the ingredient list has none",
+        "accuracy: wrong dish format — bowl instead of burrito",
+        "accuracy: wrong main protein — beef instead of turkey sausage",
+        "accuracy: lentils not in recipe",
+        "consistency: wrong dish format",
+        "consistency: wrong main protein",
+        "consistency: lentils not in recipe",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "turkey-sausage-egg-white-sandwiches",
+      "title": "Turkey Sausage Egg White Breakfast Sandwiches",
+      "image": "/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
+      "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
+      "image": "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "breakfast",
+      "slug": "turkey-sausage-sweet-potato-skillet",
+      "title": "Turkey Sausage & Sweet Potato Breakfast Skillet",
+      "image": "/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
+      "issues": [
+        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
+        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
+        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
+        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
+        "technical: hero WebP missing"
+      ],
+      "recommended_action": "fix broken/missing hero, then re-audit"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's Pie",
+      "image": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
+      "issues": [
+        "accuracy: side salad present — not in recipe",
+        "consistency: people in background",
+        "consistency: side salad present",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/turkey-shepherds-sweet-potato)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "image": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "issues": [
+        "accuracy: missing shredded lettuce",
+        "accuracy: missing pico de gallo",
+        "accuracy: missing sour cream",
+        "accuracy: missing tortilla strips",
+        "accuracy: green onions not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/turkey-taco-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "unstuffed-cabbage-roll-skillet",
+      "title": "Unstuffed Cabbage Roll Skillet",
+      "image": "/images/golden-100/unstuffed-cabbage-roll-skillet.jpg",
+      "issues": [
+        "accuracy: melted cheese on top — not in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/unstuffed-cabbage-roll-skillet)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "veggie-egg-casserole-tray",
+      "title": "Veggie Egg Casserole",
+      "image": "/images/golden-100/veggie-egg-casserole-tray.jpg",
+      "issues": [
+        "accuracy: broccoli present — not in recipe",
+        "accuracy: mushrooms present — not in recipe",
+        "accuracy: missing spinach",
+        "accuracy: missing feta cheese",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=performance-meals/veggie-egg-casserole-tray)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "vietnamese-caramel-braised-chicken-bowls",
+      "title": "Vietnamese Caramel-Braised Chicken Bowls",
+      "image": "/images/golden-100/vietnamese-caramel-braised-chicken-bowls.jpg",
+      "issues": [
+        "accuracy: missing pickled vegetables",
+        "accuracy: missing fresh herbs",
+        "accuracy: missing sliced chili",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/vietnamese-caramel-braised-chicken-bowls)"
+    },
+    {
+      "priority": "P1",
+      "collection": "hall-expansion",
+      "slug": "warm-spinach-chicken-salad",
+      "title": "Warm Spinach Chicken Salad",
+      "image": "/images/hall-expansion/warm-spinach-chicken-salad.jpg",
+      "issues": [
+        "accuracy: missing bacon",
+        "accuracy: missing mushrooms",
+        "accuracy: missing hard-boiled eggs",
+        "accuracy: red peppers not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=hall-expansion/warm-spinach-chicken-salad)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili",
+      "image": "/images/golden-100/white-bean-chicken-chili.jpg",
+      "issues": [
+        "accuracy: cheddar cheese topping not in recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/white-bean-chicken-chili)"
+    },
+    {
+      "priority": "P1",
+      "collection": "performance-meals",
+      "slug": "zaatar-roasted-chicken-thighs",
+      "title": "Za'atar Chicken Thighs",
+      "image": "/images/golden-100/zaatar-roasted-chicken-thighs.jpg",
+      "issues": [
+        "accuracy: rice not in recipe"
+      ],
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/zaatar-roasted-chicken-thighs)"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "title": "30-Minute Pasta e Fagioli for the Hall",
+      "image": "/images/golden-100/30-minute-pasta-e-fagioli-for-the-hall.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "andouille-po-boy-rolls-crew",
+      "title": "Andouille Po Boy Rolls for the Crew",
+      "image": "/images/smoker-catalog/andouille-po-boy-rolls-crew.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "bagel-lox-breakfast-board",
+      "title": "Bagel and Lox Breakfast Board",
+      "image": "/images/breakfast/bagel-lox-breakfast-board.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Falafel Bowls",
+      "image": "/images/golden-100/baked-falafel-hall-bowls.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "image": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "image": "/images/golden-100/baked-ziti.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "bbq-brisket-burnt-ends",
+      "title": "BBQ Burnt Ends",
+      "image": "/images/golden-100/bbq-brisket-burnt-ends.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "bbq-chicken-mac-and-cheese",
+      "title": "BBQ Chicken Mac and Cheese",
+      "image": "/images/golden-100/bbq-chicken-mac-and-cheese.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "image": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+2.8σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "pizza-night",
+      "slug": "bbq-chicken-pizza",
+      "title": "BBQ Chicken Pizza",
+      "image": "/images/golden-100/bbq-chicken-pizza.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+2.8σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "bbq-pulled-pork-bowls",
+      "title": "BBQ Pulled Pork Bowls",
+      "image": "/images/hall-expansion/bbq-pulled-pork-bowls.jpg",
+      "issues": [
+        "accuracy: missing crispy onions",
+        "accuracy: missing cheddar cheese",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "beef-dip",
+      "title": "Beef Dip Sandwiches",
+      "image": "/images/golden-100/beef-dip.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "image": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "image": "/images/golden-100/beef-stroganoff.jpg",
+      "issues": [
+        "accuracy: missing visible mushrooms",
+        "accuracy: missing visible onions",
+        "accuracy: missing visible garlic",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "big-chili",
+      "title": "Firehall Chili",
+      "image": "/images/golden-100/big-chili.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "boneless-chicken-thighs-sweet-potato-spinach",
+      "title": "Chicken Thighs with Sweet Potato and Spinach",
+      "image": "/images/golden-100/boneless-chicken-thighs-sweet-potato-spinach.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "breakfast-enchiladas",
+      "title": "Breakfast Enchiladas for the Crew",
+      "image": "/images/breakfast/breakfast-enchiladas.jpg",
+      "issues": [
+        "accuracy: missing visible cilantro and cotija or feta",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "image": "/images/golden-100/buffalo-chicken-dip.jpg",
+      "issues": [
+        "accuracy: green garnish not listed in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "pizza-night",
+      "slug": "buffalo-chicken-pizza",
+      "title": "Buffalo Chicken Pizza",
+      "image": "/images/golden-100/buffalo-chicken-pizza.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+3.3σ vs catalog)",
+        "accuracy: missing ranch dressing drizzle",
+        "accuracy: missing green onions"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "buffalo-chicken-wraps",
+      "title": "Buffalo Chicken Wraps",
+      "image": "/images/hall-expansion/buffalo-chicken-wraps.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "bulgogi-bowls",
+      "title": "Bulgogi Bowls",
+      "image": "/images/golden-100/bulgogi-bowls.jpg",
+      "issues": [
+        "accuracy: green onions not listed in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "butter-chicken",
+      "title": "Butter Chicken",
+      "image": "/images/golden-100/butter-chicken.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "cajun-chicken-rice-bowl",
+      "title": "Cajun Chicken and Rice",
+      "image": "/images/golden-100/cajun-chicken-rice-bowl.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "cajun-chicken-rice-skillet",
+      "title": "Cajun Chicken and Rice Skillet",
+      "image": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "image": "/images/smoker-catalog/cajun-grilled-cod-crew.jpg",
+      "issues": [
+        "accuracy: missing lemon wedges",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "cajun-shrimp-rice-bowls",
+      "title": "Cajun Shrimp Rice Bowls",
+      "image": "/images/hall-expansion/cajun-shrimp-rice-bowls.jpg",
+      "issues": [
+        "accuracy: green onions visible — not listed in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "caprese-steak-skewers-crew",
+      "title": "Heirloom Tomato Bocconcini Sirloin Stacks",
+      "image": "/images/smoker-catalog/caprese-steak-skewers-crew.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "cheesy-chicken-broccoli-rice",
+      "title": "Cheesy Chicken Broccoli Rice",
+      "image": "/images/hall-expansion/cheesy-chicken-broccoli-rice.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "chicken-alfredo-bake",
+      "title": "Chicken Alfredo Bake",
+      "image": "/images/golden-100/chicken-alfredo-bake.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "chicken-and-waffles-crew",
+      "title": "Chicken and Waffles for the Crew",
+      "image": "/images/breakfast/chicken-and-waffles-crew.jpg",
+      "issues": [
+        "consistency: brightness outlier (+3.3σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "chicken-caesar",
+      "title": "Chicken Caesar Salad",
+      "image": "/images/golden-100/chicken-caesar.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "chicken-parm",
+      "title": "Chicken Parmesan",
+      "image": "/images/golden-100/chicken-parm.jpg",
+      "issues": [
+        "accuracy: parsley garnish instead of basil",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "image": "/images/golden-100/chicken-quesadillas.jpg",
+      "issues": [
+        "accuracy: missing red bell peppers",
+        "accuracy: missing yellow onions",
+        "accuracy: missing sour cream",
+        "accuracy: missing limes",
+        "consistency: off-standard angle for quesadillas",
+        "consistency: missing sour cream bowl",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "chicken-thigh-stretch-dinner",
+      "title": "Chicken Thigh Stretch Dinner",
+      "image": "/images/hall-expansion/chicken-thigh-stretch-dinner.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "chicken-tikka-masala",
+      "title": "Chicken Tikka Masala",
+      "image": "/images/golden-100/chicken-tikka-masala.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "chili-lime-grilled-tilapia",
+      "title": "Ancho-Tilapia with Charred Corn Salsa",
+      "image": "/images/smoker-catalog/chili-lime-grilled-tilapia.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "chili-mac",
+      "title": "Chili Mac Skillet",
+      "image": "/images/golden-100/chili-mac.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "chipotle-chicken-burrito-bowls",
+      "title": "Chipotle Chicken Burrito Bowls",
+      "image": "/images/hall-expansion/chipotle-chicken-burrito-bowls.jpg",
+      "issues": [
+        "accuracy: missing guacamole",
+        "accuracy: missing sour cream",
+        "accuracy: missing onions",
+        "accuracy: missing cilantro",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "costco-rotisserie-remix",
+      "title": "Costco Rotisserie Chicken Remix",
+      "image": "/images/hall-expansion/costco-rotisserie-remix.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "creamy-chicken-penne-alfredo",
+      "title": "Creamy Chicken Penne Alfredo",
+      "image": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "crew-french-toast-bake",
+      "title": "Crew French Toast Bake",
+      "image": "/images/breakfast/crew-french-toast-bake.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "crispy-chicken-cutlets",
+      "title": "Crispy Chicken Cutlets Marinara",
+      "image": "/images/golden-100/crispy-chicken-cutlets.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "crock-barbacoa-chicken",
+      "title": "Barbacoa Chicken",
+      "image": "/images/golden-100/crock-barbacoa-chicken.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "denver-breakfast-casserole",
+      "title": "Denver Breakfast Casserole",
+      "image": "/images/breakfast/denver-breakfast-casserole.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "eggs-benedict-hall-style",
+      "title": "Eggs Benedict Hall Style",
+      "image": "/images/breakfast/eggs-benedict-hall-style.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "firehall-gyro-bowls",
+      "title": "Firehall Gyro Bowls",
+      "image": "/images/hall-expansion/firehall-gyro-bowls.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "firehall-street-elote-cups",
+      "title": "Epazote Esquites Street Cups",
+      "image": "/images/smoker-catalog/firehall-street-elote-cups.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "image": "/images/golden-100/five-ingredient-pasta.jpg",
+      "issues": [
+        "accuracy: parmesan cheese not visible",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "title": "Cooper Sharp Chopped Ribeye Hoagies",
+      "image": "/images/smoker-catalog/flat-top-philly-cheesesteaks-crew.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "french-onion-soup-for-the-hall",
+      "title": "French Onion Soup for the Hall",
+      "image": "/images/golden-100/french-onion-soup-for-the-hall.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "general-tsos-baked-chicken",
+      "title": "General Tso's-Style Baked Chicken",
+      "image": "/images/golden-100/general-tsos-baked-chicken.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "german-potato-breakfast-skillet",
+      "title": "German Potato Breakfast Skillet",
+      "image": "/images/breakfast/german-potato-breakfast-skillet.jpg",
+      "issues": [
+        "consistency: background includes a kitchen setting with visible objects"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "greek-beef-keftedes-lemon-orzo-tzatziki",
+      "title": "Greek Beef Meatballs (Keftedes) with Lemon Orzo & Tzatziki",
+      "image": "/images/golden-100/greek-beef-keftedes-lemon-orzo-tzatziki.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Lemon Chicken and Potatoes",
+      "image": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "griddle-smash-sausage-peppers",
+      "title": "Giardiniera Smash Sausage Hoagies",
+      "image": "/images/smoker-catalog/griddle-smash-sausage-peppers.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "title": "Sun-Dried Tomato Pesto Panini Press",
+      "image": "/images/smoker-catalog/grilled-chicken-pesto-panini-crew.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
+      "image": "/images/smoker-catalog/grilled-cod-lemon-packets.jpg",
+      "issues": [
+        "consistency: people or hands visible",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "grilled-corn-cotija",
+      "title": "Street Corn with Cotija",
+      "image": "/images/golden-100/grilled-corn-cotija.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "grilled-flank-fajita-bar",
+      "title": "Grilled Flank Fajita Bar",
+      "image": "/images/hall-expansion/grilled-flank-fajita-bar.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "grilled-reuben-sandwiches-crew",
+      "title": "Grilled Reuben Sandwiches for the Crew",
+      "image": "/images/smoker-catalog/grilled-reuben-sandwiches-crew.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "hall-burger-bar",
+      "title": "Hall Burger Bar",
+      "image": "/images/hall-expansion/hall-burger-bar.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "hall-chicken-noodle-soup",
+      "title": "Hall Chicken Noodle Soup",
+      "image": "/images/hall-expansion/hall-chicken-noodle-soup.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "image": "/images/breakfast/hash-brown-breakfast-casserole.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "image": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "herb-marinated-flank-steak-chimichurri-farro",
+      "title": "Herb-Marinated Flank Steak with Chimichurri Farro",
+      "image": "/images/golden-100/herb-marinated-flank-steak-chimichurri-farro.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "image": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "honey-mustard-oven-chicken-thighs",
+      "title": "Honey Mustard Baked Chicken Thighs",
+      "image": "/images/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "honey-sriracha-shrimp-skewers",
+      "title": "Palm Sugar Lime Shrimp Skewers",
+      "image": "/images/smoker-catalog/honey-sriracha-shrimp-skewers.jpg",
+      "issues": [
+        "accuracy: missing visible fried shallots",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "italian-sausage-veg-sheet-pan",
+      "title": "Sausage, Peppers & Zucchini Sheet Pan",
+      "image": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "jerk-chicken",
+      "title": "Jerk Chicken & Rice and Peas",
+      "image": "/images/golden-100/jerk-chicken.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "johnnycakes-with-syrup",
+      "title": "Johnnycakes with Maple Syrup",
+      "image": "/images/breakfast/johnnycakes-with-syrup.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "image": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "image": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "kung-pao-chicken-rice-bowls",
+      "title": "Kung Pao Chicken & Rice Bowls",
+      "image": "/images/golden-100/kung-pao-chicken-rice-bowls.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "lamb-kofta-skewer-platter",
+      "title": "Lamb Kofta Skewer Platter",
+      "image": "/images/hall-expansion/lamb-kofta-skewer-platter.jpg",
+      "issues": [
+        "consistency: brightness outlier (+3.0σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "lean-beef-broccoli-rice",
+      "title": "Beef and Broccoli Rice",
+      "image": "/images/golden-100/lean-beef-broccoli-rice.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "lemon-chicken-orzo-soup",
+      "title": "Lemon Chicken Orzo Soup",
+      "image": "/images/golden-100/lemon-chicken-orzo-soup.jpg",
+      "issues": [
+        "accuracy: lemon slices visible instead of zest",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "loaded-baked-potato-soup-crock",
+      "title": "Loaded Baked Potato Soup Crock",
+      "image": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "loaded-ranch-potato-salad-crew",
+      "title": "Blue Cheese Fingerling Ranch Tray",
+      "image": "/images/smoker-catalog/loaded-ranch-potato-salad-crew.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "maple-bourbon-grilled-trout",
+      "title": "Pecan Bourbon Whole Trout Board",
+      "image": "/images/smoker-catalog/maple-bourbon-grilled-trout.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "meatball-hoagies",
+      "title": "Meatball Hoagies",
+      "image": "/images/golden-100/meatball-hoagies.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "image": "/images/golden-100/mediterranean-chickpea.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "memphis-dry-rub-ribs",
+      "title": "Memphis Dry Rub Ribs",
+      "image": "/images/golden-100/memphis-dry-rub-ribs.jpg",
+      "issues": [
+        "consistency: off-standard angle for this dish type",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "mixed-lamb-chop-grill-board",
+      "title": "Za'atar Loin and Shoulder Lamb Board",
+      "image": "/images/smoker-catalog/mixed-lamb-chop-grill-board.jpg",
+      "issues": [
+        "accuracy: missing pita breads",
+        "accuracy: missing za'atar",
+        "accuracy: missing sumac",
+        "accuracy: missing pomegranate molasses",
+        "accuracy: missing aleppo pepper",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "molasses-bourbon-pork-ribs",
+      "title": "Molasses Bourbon Pork Ribs",
+      "image": "/images/hall-expansion/molasses-bourbon-pork-ribs.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "mongolian-beef-flat-top-crew",
+      "title": "Scallion Crisp Mongolian Flank Tray",
+      "image": "/images/smoker-catalog/mongolian-beef-flat-top-crew.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken and Chickpeas",
+      "image": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
+      "issues": [
+        "consistency: off-brand colour grading",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "one-pot-beef-orzo-skillet-spinach-feta",
+      "title": "One-Pot Beef & Orzo Skillet with Spinach and Feta",
+      "image": "/images/golden-100/one-pot-beef-orzo-skillet-spinach-feta.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "overnight-french-toast-bake",
+      "title": "Overnight French Toast Bake",
+      "image": "/images/breakfast/overnight-french-toast-bake.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "overnight-oat-bar-crew",
+      "title": "Overnight Oat Bar for the Crew",
+      "image": "/images/breakfast/overnight-oat-bar-crew.jpg",
+      "issues": [
+        "accuracy: missing sliced bananas",
+        "accuracy: missing cinnamon",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "paprika-roasted-chicken-quarters",
+      "title": "Paprika Roasted Chicken Quarters",
+      "image": "/images/hall-expansion/paprika-roasted-chicken-quarters.jpg",
+      "issues": [
+        "accuracy: missing lemon wedges",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "parm-hero-subs",
+      "title": "Parm Hero Subs",
+      "image": "/images/golden-100/parm-hero-subs.jpg",
+      "issues": [
+        "consistency: off-standard angle for this dish type",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "pasta-e-ceci-for-the-hall",
+      "title": "Pasta e Ceci (Pasta with Chickpeas)",
+      "image": "/images/golden-100/pasta-e-ceci-for-the-hall.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "peanut-chicken-rice-bowls",
+      "title": "Peanut Chicken Rice Bowls",
+      "image": "/images/hall-expansion/peanut-chicken-rice-bowls.jpg",
+      "issues": [
+        "accuracy: green onions and sesame seeds not listed in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "pepperoni-pizza-night",
+      "title": "Pepperoni Pizza",
+      "image": "/images/golden-100/pepperoni-pizza-night.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+2.6σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "pizza-night",
+      "slug": "pepperoni-pizza-night",
+      "title": "Classic Pepperoni Pizza",
+      "image": "/images/golden-100/pepperoni-pizza-night.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+2.6σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "pork-belly-burnt-ends",
+      "title": "Pork Belly Burnt Ends",
+      "image": "/images/hall-expansion/pork-belly-burnt-ends.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "portuguese-linguica-grill-platter",
+      "title": "Lisbon Piri-Piri Linguica Spread",
+      "image": "/images/smoker-catalog/portuguese-linguica-grill-platter.jpg",
+      "issues": [
+        "accuracy: piri-piri sauce not visible",
+        "accuracy: whole-grain mustard not visible",
+        "accuracy: fresh parsley not visible",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "pressed-cuban-sandwiches-crew",
+      "title": "Pressed Cuban Sandwiches for the Crew",
+      "image": "/images/smoker-catalog/pressed-cuban-sandwiches-crew.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "image": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "issues": [
+        "accuracy: green onions not listed in recipe",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "salsa-verde-chicken-crock",
+      "title": "Salsa Verde Chicken Crock",
+      "image": "/images/hall-expansion/salsa-verde-chicken-crock.jpg",
+      "issues": [
+        "accuracy: cheese on chicken — not in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "image": "/images/golden-100/sausage-egg-bake.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "sausage-gnocchi-skillet",
+      "title": "Sausage Gnocchi Skillet",
+      "image": "/images/hall-expansion/sausage-gnocchi-skillet.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "sausage-peppers-on-buns",
+      "title": "Sausage & Peppers on Buns",
+      "image": "/images/hall-expansion/sausage-peppers-on-buns.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "scrapple-and-eggs-skillet",
+      "title": "Scrapple and Eggs Skillet",
+      "image": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
+      "issues": [
+        "accuracy: toast not cut into triangles",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "sheet-pan-breakfast-hash",
+      "title": "Sheet Pan Breakfast Hash",
+      "image": "/images/breakfast/sheet-pan-breakfast-hash.jpg",
+      "issues": [
+        "accuracy: yellow onion not visible",
+        "accuracy: shredded cheddar not visible",
+        "consistency: off-standard angle for sheet pan dish",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
+      "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
+      "image": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "pizza-night",
+      "slug": "sicilian-sheet-pizza",
+      "title": "Sicilian Sheet Pan Pizza",
+      "image": "/images/golden-100/sicilian-sheet-pizza.jpg",
+      "issues": [
+        "consistency: colour temperature outlier (+2.5σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "image": "/images/golden-100/smash-burgers.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "smoked-meatloaf",
+      "title": "Smoked Meatloaf with Glaze",
+      "image": "/images/hall-expansion/smoked-meatloaf.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "smoked-queso-fundido",
+      "title": "Smoked Queso Fundido",
+      "image": "/images/hall-expansion/smoked-queso-fundido.jpg",
+      "issues": [
+        "consistency: missing tortilla chips and flour tortillas"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "smoked-wings-white-sauce",
+      "title": "Smoked Wings with White Sauce",
+      "image": "/images/golden-100/smoked-wings-white-sauce.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "smoker-nachos-crew",
+      "title": "Smoker Nachos for the Crew",
+      "image": "/images/hall-expansion/smoker-nachos-crew.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "smoky-lentil-kale-soup",
+      "title": "Lentil and Kale Soup",
+      "image": "/images/golden-100/smoky-lentil-kale-soup.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "title": "Spaghetti Aglio e Olio for the Hall",
+      "image": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "spanish-rice-chicken-one-pot",
+      "title": "Spanish Rice Chicken One Pot",
+      "image": "/images/hall-expansion/spanish-rice-chicken-one-pot.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "spiedie-chicken-platter-crew",
+      "title": "Binghamton White-Wine Spiedie Tray",
+      "image": "/images/smoker-catalog/spiedie-chicken-platter-crew.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "station-cobb-salad",
+      "title": "Station Cobb Salad",
+      "image": "/images/hall-expansion/station-cobb-salad.jpg",
+      "issues": [
+        "accuracy: missing avocado",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "tandoori-lamb-chop-platter",
+      "title": "Kashmiri Mustard-Oil Lamb Chop Feast",
+      "image": "/images/smoker-catalog/tandoori-lamb-chop-platter.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "breakfast",
+      "slug": "tater-tot-breakfast-casserole",
+      "title": "Tater Tot Breakfast Casserole",
+      "image": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
+      "issues": [
+        "consistency: brightness outlier (+2.8σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "teriyaki-chicken-rice-bowls",
+      "title": "Teriyaki Chicken Rice Bowls",
+      "image": "/images/hall-expansion/teriyaki-chicken-rice-bowls.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Chicken Donburi",
+      "image": "/images/golden-100/teriyaki-donburi.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "image": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "image": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "tonkotsu-ramen-crew",
+      "title": "Tonkotsu Ramen for the Crew",
+      "image": "/images/hall-expansion/tonkotsu-ramen-crew.jpg",
+      "issues": [
+        "consistency: people or hands visible",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "tourtiere-for-the-crew",
+      "title": "Tourtière for the Crew",
+      "image": "/images/hall-expansion/tourtiere-for-the-crew.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "image": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+      "issues": [
+        "consistency: people or hands in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "golden-100",
+      "slug": "turkey-meatball-zoodles",
+      "title": "Turkey Meatballs with Zucchini Noodles",
+      "image": "/images/golden-100/turkey-meatball-zoodles.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "turkey-sweet-potato-chili",
+      "title": "Turkey Sweet Potato Chili",
+      "image": "/images/golden-100/turkey-sweet-potato-chili.jpg",
+      "issues": [
+        "accuracy: unlisted garnish on top",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "weeknight-bbq-ribs-crew",
+      "title": "Weeknight BBQ Ribs for the Crew",
+      "image": "/images/hall-expansion/weeknight-bbq-ribs-crew.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "performance-meals",
+      "slug": "white-bean-kale-soup",
+      "title": "White Bean and Kale Soup",
+      "image": "/images/golden-100/white-bean-kale-soup.jpg",
+      "issues": [
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "white-chicken-chili-crock",
+      "title": "White Chicken Chili Crock",
+      "image": "/images/hall-expansion/white-chicken-chili-crock.jpg",
+      "issues": [
+        "accuracy: cilantro garnish not listed in recipe",
+        "consistency: people in background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "hall-expansion",
+      "slug": "wonton-noodle-soup-crew",
+      "title": "Wonton Noodle Soup for the Crew",
+      "image": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
+      "issues": [
+        "consistency: brightness outlier (+4.2σ vs catalog)"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    },
+    {
+      "priority": "P2",
+      "collection": "bbq",
+      "slug": "yakiniku-grill-platter-crew",
+      "title": "Tokyo Tare Ribeye Yakiniku Board",
+      "image": "/images/smoker-catalog/yakiniku-grill-platter-crew.jpg",
+      "issues": [
+        "accuracy: missing visible tare glaze",
+        "accuracy: missing visible yuzu kosho",
+        "accuracy: missing visible sesame seeds",
+        "accuracy: missing visible rice",
+        "consistency: people in the background",
+        "consistency: people or hands in frame"
+      ],
+      "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
+    }
+  ]
+}

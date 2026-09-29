@@ -148,14 +148,14 @@ export function buildPlatingPromptLine(
       }
       return `${dish} in wide salad bowl, protein forward on greens — NOT burger bun, NOT taco shell`;
     case "sandwich":
-      return `${dish} — closed sandwich on bun or roll with named side (fries, wedges, slaw, or salad) on same frame, fillings visible — NOT rice bowl, NOT toast-only unless titled toast`;
+      return `${dish} — sandwich on the exact bread the recipe specifies (bun, roll, or sliced/griddled bread), cut face showing the listed fillings; a side appears only if the recipe serves one — NOT rice bowl`;
     case "rice_plate":
       return `${dish} — charred or sauced protein beside a visible bed of rice (and peas/beans when titled), sauce in its own zone, ${cuisine} firehall spread — rice must read clearly, NOT a sauce-only bowl`;
     default:
       if (isBreakfastTitle(dish)) {
-        return `${dish} — breakfast tray with separate zones for eggs, bacon or sausage, potatoes/hash browns, and toast or pancakes — each component in its own area, NOT stacked`;
+        return `${dish} — only this recipe's own components on a tray or plate, each in its own area and identifiable, NOT stacked`;
       }
-      return `${dish} on single generous plate — protein 40–50%, starch 25–35%, veg/side 15–25%, all sides visible at edges, firehall portion scale`;
+      return `${dish} on single generous plate — only the components this recipe includes, each clearly visible, firehall portion scale`;
   }
 }
 

@@ -41,6 +41,8 @@ export interface BuildEditorialImagePromptInput {
   moodTags?: string[];
   ingredientHints?: string[];
   hookLine?: string;
+  /** Recipe-specific foods that must NOT appear (common model failures for this dish). */
+  avoidItems?: string[];
 }
 
 export interface EditorialImagePromptResult {
@@ -58,7 +60,8 @@ const EDITORIAL_QUALITY_RULES = [
   "Must look like a real photograph — no AI slop, no waxy textures, no synthetic gloss, no HDR neon food, no stock photo sterility",
   "Food is primary subject — THE FOOD and THE FIREHALL KITCHEN, not firefighter marketing imagery",
   "Mobile-first hero crop — subject centered with safe margins for 4:5 vertical cards, not extreme macro close-up",
-  "No text, logos, watermarks, fire trucks, bunker gear, or recruitment imagery; blurred background kitchen staff optional",
+  "No text, logos, watermarks, fire trucks, bunker gear, or recruitment imagery; no people, hands, or faces anywhere in frame",
+  "Recipe fidelity — every visible food must come from the listed ingredients; no added eggs, meats, sides, or garnishes",
 ] as const;
 
 function stablePromptSeed(input: BuildEditorialImagePromptInput, presetId: ImageStylePresetId): string {
@@ -131,7 +134,9 @@ export function buildEditorialImagePrompt(
   }
 
   const platingType = inferPlatingType(dish, input.mealFormat);
+  const avoidItems = input.avoidItems?.filter(Boolean) ?? [];
   const negativeParts = [
+    ...(avoidItems.length ? [`NOT IN THIS RECIPE — do not show: ${avoidItems.join(", ")}`] : []),
     getEditorialNegativePromptBlock([buildMasterNegativePrompt()]),
     ...getVisualLockNegatives(presetId),
     ...preset.avoid,

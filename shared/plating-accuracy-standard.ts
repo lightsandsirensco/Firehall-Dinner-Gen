@@ -35,8 +35,8 @@ export const PLATING_ACCURACY_CURRY_RULES = [
 ].join(" ");
 
 export const PLATING_ACCURACY_SANDWICH_RULES = [
-  "SANDWICH PLATING: Closed sandwich on proper bun or roll (not loose toast slices unless titled toast).",
-  "Named side (fries, wedges, slaw, salad) on the same frame — never crop out the side.",
+  "SANDWICH PLATING: Bread exactly as the recipe specifies (bun, roll, or sliced/griddled bread), fillings visible in the cut face.",
+  "Show a side only when the recipe serves one — never invent fries, wedges, slaw, or salad.",
 ].join(" ");
 
 export const PLATING_ACCURACY_FAIL_EXAMPLES = [

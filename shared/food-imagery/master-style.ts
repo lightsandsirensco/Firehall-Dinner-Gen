@@ -18,7 +18,7 @@ export const FIREHALL_PHOTO_BASELINE =
 export const FIREHALL_MASTER_EDITORIAL_STYLE = {
   brand: "Firehall Meals editorial food photography",
   reference:
-    "Firehall kitchen realism — crew-sized family-style portions in a busy Canadian station kitchen, documentary food photography not restaurant marketing",
+    "Firehall kitchen realism — crew-sized family-style portions in a Canadian station kitchen, documentary food photography not restaurant marketing",
   camera:
     "50mm prime lens, f/2.8, full-frame sensor, natural depth of field, subtle film grain, no fisheye, no HDR processing",
   lighting:
@@ -26,7 +26,7 @@ export const FIREHALL_MASTER_EDITORIAL_STYLE = {
   shadows:
     "one consistent shadow direction under the plate, contact shadows where food meets surface, no floating elements",
   background:
-    "active Canadian firehall kitchen — commercial stainless prep tables, steam tables, sheet pans, industrial lighting, brushed steel and pantry shelving softly out of focus",
+    "empty Canadian firehall kitchen — dark brushed stainless or warm worn wood prep surface, steel and pantry shelving softly out of focus, no people",
   colorGrade:
     "natural true-to-food color — restrained saturation, no neon, no cold blue cast, no oversharpened HDR glow, no AI color pop",
   realism:
@@ -39,7 +39,7 @@ export const FIREHALL_MASTER_EDITORIAL_STYLE = {
   props:
     "serving trays, hotel pans, cutting boards, sheet pans, carving boards — crew-sized presentation, no garnish explosions",
   restrictions:
-    "no text, no logos, no watermarks, no fire trucks or firefighting gear, no recruitment imagery, no hands or faces in focus, no utensils dominating frame; blurred background kitchen staff in navy station shirts or aprons optional",
+    "no text, no logos, no watermarks, no fire trucks or firefighting gear, no recruitment imagery, no people, hands, or faces anywhere in frame (including blurred background), no utensils dominating frame",
 } as const;
 
 /** Ordered lines injected into every positive prompt in this exact sequence. */
