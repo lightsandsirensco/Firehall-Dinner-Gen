@@ -2001,5 +2001,105 @@
       "green onions"
     ],
     "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T18:01:58.132Z",
+    "collection": "breakfast",
+    "slug": "turkey-sausage-burritos",
+    "hero": "/images/breakfast/turkey-sausage-burritos.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "shredded cheese",
+      "hash browns",
+      "turkey sausage",
+      "yellow onion",
+      "bell peppers",
+      "flour tortillas",
+      "salsa"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T18:02:00.542Z",
+    "collection": "golden-100",
+    "slug": "enchilada-casserole",
+    "hero": "/images/golden-100/enchilada-casserole.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "cooked shredded chicken",
+      "corn tortillas",
+      "red enchilada sauce",
+      "shredded cheddar",
+      "black olives"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T18:03:51.509Z",
+    "collection": "performance-meals",
+    "slug": "turkey-taco-skillet",
+    "hero": "/images/golden-100/turkey-taco-skillet.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "wrong dish format — recipe is skillet but image shows taco",
+          "served as tacos instead of skillet"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "lean ground turkey",
+      "red bell pepper",
+      "yellow onion",
+      "frozen corn",
+      "black beans",
+      "diced tomatoes with green chiles",
+      "shredded cheddar"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T18:21:14.449Z",
+    "collection": "hall-expansion",
+    "slug": "sheet-pan-meatball-marinara",
+    "hero": "/images/hall-expansion/sheet-pan-meatball-marinara.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "ground beef",
+      "breadcrumbs",
+      "grated parmesan",
+      "garlic cloves",
+      "marinara sauce",
+      "spaghetti",
+      "fresh basil",
+      "sub rolls",
+      "shredded mozzarella"
+    ],
+    "camera_angle": "45_degree"
   }
 ]

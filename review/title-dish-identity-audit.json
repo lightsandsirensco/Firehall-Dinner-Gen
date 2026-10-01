@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-30T23:37:23.232Z",
+  "generatedAt": "2026-10-01T18:05:32.980Z",
   "totals": {
-    "audited": 415,
-    "passed": 415,
+    "audited": 427,
+    "passed": 427,
     "failed": 0
   },
   "failedRecipes": [],
@@ -212,6 +212,12 @@
       "pass": true
     },
     {
+      "slug": "berry-vanilla-protein-overnight-oats",
+      "title": "Berry Vanilla Protein Overnight Oats",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
       "slug": "best-tuna-melt-for-the-hall",
       "title": "Best Tuna Melt for the Hall (Diner Style)",
       "kind": "hall_expansion",
@@ -233,6 +239,12 @@
       "slug": "black-bean-cottage-cheese-enchilada-bake",
       "title": "Black Bean & Cottage Cheese Enchilada Bake",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "black-bean-egg-white-breakfast-burritos",
+      "title": "Black Bean & Egg White Breakfast Burritos",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -746,6 +758,12 @@
       "pass": true
     },
     {
+      "slug": "cottage-cheese-veggie-egg-bake",
+      "title": "Cottage Cheese Veggie Egg Bake",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
       "kind": "hall_expansion",
@@ -815,6 +833,12 @@
       "slug": "egg-roll-in-a-bowl-crew",
       "title": "Egg Roll in a Bowl for the Crew",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "egg-white-black-bean-breakfast-quesadillas",
+      "title": "Egg White & Black Bean Breakfast Quesadillas",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -899,6 +923,12 @@
       "slug": "firehall-taco-bowls",
       "title": "Firehall Taco Bowls",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "firehouse-breakfast-protein-bowls",
+      "title": "Firehouse Breakfast Protein Bowls",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -1157,6 +1187,12 @@
       "slug": "hickory-turkey-legs",
       "title": "Hickory Smoked Turkey Legs",
       "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "high-protein-breakfast-burrito-bowls",
+      "title": "High-Protein Breakfast Burrito Bowls",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -1712,6 +1748,12 @@
       "pass": true
     },
     {
+      "slug": "peanut-butter-protein-overnight-oats",
+      "title": "Peanut Butter Protein Overnight Oats",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
       "slug": "peanut-chicken-rice-bowls",
       "title": "Peanut Chicken Rice Bowls",
       "kind": "hall_expansion",
@@ -1937,6 +1979,12 @@
       "slug": "sausage-peppers-onions",
       "title": "Sausage Peppers and Onions",
       "kind": "firehall_catalog",
+      "pass": true
+    },
+    {
+      "slug": "savory-cottage-cheese-breakfast-bowls",
+      "title": "Savory Cottage Cheese Breakfast Bowls",
+      "kind": "breakfast_catalog",
       "pass": true
     },
     {
@@ -2354,6 +2402,12 @@
       "pass": true
     },
     {
+      "slug": "turkey-bacon-white-bean-breakfast-hash",
+      "title": "Turkey Bacon & White Bean Breakfast Hash",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
       "slug": "turkey-chili",
       "title": "Turkey Chili",
       "kind": "firehall_catalog",
@@ -2372,8 +2426,26 @@
       "pass": true
     },
     {
+      "slug": "turkey-sausage-sweet-potato-skillet",
+      "title": "Turkey Sausage & Sweet Potato Breakfast Skillet",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
       "slug": "turkey-sausage-burritos",
       "title": "Turkey Sausage Breakfast Burritos",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
+      "slug": "turkey-sausage-egg-white-sandwiches",
+      "title": "Turkey Sausage Egg White Breakfast Sandwiches",
+      "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
+      "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
+      "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
       "kind": "breakfast_catalog",
       "pass": true
     },

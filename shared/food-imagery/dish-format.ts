@@ -183,12 +183,12 @@ const FORMAT_COMPATIBILITY: Record<Exclude<DishFormat, "unclear" | "plated">, { 
   taco: { ok: ["taco"], ambiguous: [] },
   nachos: { ok: ["nachos"], ambiguous: ["sheet_pan", "casserole", "skillet"] },
   pasta: { ok: ["pasta", "bowl"], ambiguous: ["casserole", "skillet", "soup", "plated"] },
-  casserole: { ok: ["casserole", "sheet_pan"], ambiguous: ["skillet", "pasta", "plated", "bowl"] },
+  casserole: { ok: ["casserole", "sheet_pan"], ambiguous: ["skillet", "pasta", "plated", "bowl", "nachos"] },
   rolled: { ok: ["rolled", "casserole"], ambiguous: ["wrap", "plated"] },
   soup: { ok: ["soup"], ambiguous: ["bowl"] },
   salad: { ok: ["salad", "bowl"], ambiguous: ["meal_prep"] },
-  skillet: { ok: ["skillet"], ambiguous: ["bowl", "plated", "casserole", "pasta", "sheet_pan"] },
-  sheet_pan: { ok: ["sheet_pan", "casserole"], ambiguous: ["plated", "skillet", "bowl"] },
+  skillet: { ok: ["skillet"], ambiguous: ["bowl", "plated", "casserole", "pasta", "sheet_pan", "nachos"] },
+  sheet_pan: { ok: ["sheet_pan", "casserole"], ambiguous: ["plated", "skillet", "bowl", "nachos"] },
   pizza: { ok: ["pizza"], ambiguous: [] },
 };
 
@@ -250,7 +250,7 @@ export function combineFidelity(
 }
 
 const PASTA_WORDS =
-  /\b(pasta|spaghetti|penne|rigatoni|fettuccine|linguine|ziti|macaroni|mac (?:and|&|n) cheese|noodles?|lo mein|orzo|tortellini|ravioli|gnocchi|lasagna)\b/i;
+  /\b(pasta|spaghetti|penne|rigatoni|fettuccine|linguine|ziti|macaroni|elbows?|mac (?:and|&|n) cheese|noodles?|lo mein|orzo|ditalini|orecchiette|farfalle|bow[- ]?ties?|rotini|fusilli|cavatappi|shells|bucatini|pappardelle|tagliatelle|angel hair|vermicelli|udon|ramen|soba|tortellini|ravioli|gnocchi|lasagna)\b/i;
 
 /** Components a title names that must read clearly in the photo ("… Bowls with Rice" → rice). */
 const REQUIRED_COMPONENTS: Array<{ component: string; title: RegExp; visible: RegExp }> = [

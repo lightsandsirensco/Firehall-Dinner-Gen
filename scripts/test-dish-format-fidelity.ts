@@ -103,6 +103,13 @@ check("title-promised components and foreign carriers decide the format", () => 
   assert.equal(checkStructuralCues("Meatball Subs", "meatballs sub rolls", ["meatballs", "sub rolls", "marinara"]).verdict, "match");
   assert.equal(checkStructuralCues("Chicken and Rice Soup", "chicken rice broth", ["chicken", "broth", "carrots"]).verdict, "inconclusive");
   assert.equal(checkStructuralCues("Herb Roasted Thighs", "", ["chicken"]).verdict, "not_applicable");
+  assert.equal(checkStructuralCues("Pasta e Ceci for the Hall", "ditalini chickpeas", ["ditalini", "chickpeas", "rosemary"]).verdict, "match");
+});
+check("nachos baked in a skillet or pan is reviewed, never auto-failed; nachos for a bowl always fail", () => {
+  assert.equal(compareDishFormat("skillet", "nachos", 90).verdict, "inconclusive");
+  assert.equal(compareDishFormat("casserole", "nachos", 100).verdict, "inconclusive");
+  assert.equal(compareDishFormat("bowl", "nachos", 90).verdict, "mismatch");
+  assert.equal(compareDishFormat("casserole", "rolled", 100).verdict, "mismatch");
 });
 
 check("ingredient overlap never overrides a format mismatch (content PASS + sandwich → FAIL)", () => {

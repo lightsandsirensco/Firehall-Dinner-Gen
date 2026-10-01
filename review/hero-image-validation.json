@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-01T17:40:51.954Z",
+  "generatedAt": "2026-10-01T18:19:48.803Z",
   "totals": {
     "recipes": 408,
-    "pass": 363,
-    "fail": 45,
+    "pass": 369,
+    "fail": 39,
     "fileFailures": 0,
     "metadataFailures": 0,
     "missingHero": 0,
     "duplicateConflict": 0,
     "metadataWarnings": 1,
     "semanticWarnings": 0,
-    "semanticPass": 270,
-    "semanticFail": 45,
-    "semanticNotVerified": 93,
-    "needsNewImage": 45
+    "semanticPass": 268,
+    "semanticFail": 39,
+    "semanticNotVerified": 101,
+    "needsNewImage": 39
   },
   "rows": [
     {
@@ -236,7 +236,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing corn kernels; missing coleslaw mix; green onions not in recipe; sesame seeds not in recipe"
+        "vision inconclusive (MAJOR) — needs human review: missing corn kernels; missing coleslaw mix; extra green onions; extra sesame seeds"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -377,7 +377,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: format may not match — recipe is skillet, image looks like hot plated entrée; diced tomatoes not in recipe; missing black beans; missing pickled jalapeños"
+        "vision inconclusive (MAJOR) — needs human review: format may not match — recipe is skillet, image looks like nachos (loaded tortilla chips); diced tomatoes present — not in recipe; missing black beans — listed in recipe; missing pickled jalapeños — listed in recipe"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -881,7 +881,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli not in recipe; rice not in recipe"
+        "vision inconclusive (MAJOR) — needs human review: broccoli and rice not in recipe"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -945,13 +945,15 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "not_verified",
+      "semanticStatus": "fail",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: format may not match — recipe is pasta, image looks like casserole; garlic bread side not in recipe"
+        "garlic bread side — not in recipe"
       ],
-      "hardFailures": [],
-      "needsNewImage": false,
-      "pass": true
+      "hardFailures": [
+        "vision: garlic bread side — not in recipe"
+      ],
+      "needsNewImage": true,
+      "pass": false
     },
     {
       "slug": "shepherds-pie",
@@ -1277,7 +1279,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is casserole, image looks like pasta"
+        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is casserole, image looks like bowl"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1341,8 +1343,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (PASS) — needs human review: format may not match — recipe is pasta, image looks like casserole"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1441,7 +1445,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: sour cream and chives on top — not in recipe; missing brie cheese on toast"
+        "vision inconclusive (MAJOR) — needs human review: sour cream and chives on top — not in recipe; bread does not appear to have brie cheese"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1571,8 +1575,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (MAJOR) — needs human review: tzatziki sauce missing"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1605,14 +1611,14 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "shredded cheese on top — not listed in the recipe",
-        "sour cream on top — not listed in the recipe",
-        "cilantro on top — not listed in the recipe"
+        "shredded cheese on top — recipe does not include cheese as a main ingredient",
+        "sour cream on top — recipe does not include sour cream as a main ingredient",
+        "cilantro on top — recipe does not include cilantro as a main ingredient"
       ],
       "hardFailures": [
-        "vision: shredded cheese on top — not listed in the recipe",
-        "vision: sour cream on top — not listed in the recipe",
-        "vision: cilantro on top — not listed in the recipe"
+        "vision: shredded cheese on top — recipe does not include cheese as a main ingredient",
+        "vision: sour cream on top — recipe does not include sour cream as a main ingredient",
+        "vision: cilantro on top — recipe does not include cilantro as a main ingredient"
       ],
       "needsNewImage": true,
       "pass": false
@@ -1645,7 +1651,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée; chicken strips instead of boneless chicken thighs"
+        "vision inconclusive (PASS) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1743,7 +1749,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: lettuce and tomato not in recipe"
+        "vision inconclusive (MAJOR) — needs human review: lettuce and tomato not in recipe; missing mayonnaise and mustard"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1841,15 +1847,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "served in a baking dish — recipe serves in shallow bowls"
+        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is pasta, image looks like casserole"
       ],
-      "hardFailures": [
-        "vision: served in a baking dish — recipe serves in shallow bowls"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "turkey-meatball-zoodles",
@@ -2083,8 +2087,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (MAJOR) — needs human review: missing steamed rice"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2183,10 +2189,12 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "cheese on tacos — not in recipe"
+        "cheese not in recipe",
+        "sauce not in recipe"
       ],
       "hardFailures": [
-        "vision: cheese on tacos — not in recipe"
+        "vision: cheese not in recipe",
+        "vision: sauce not in recipe"
       ],
       "needsNewImage": true,
       "pass": false
@@ -2249,15 +2257,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "served in a bowl — recipe is a skillet"
+        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is skillet, image looks like bowl"
       ],
-      "hardFailures": [
-        "vision: served in a bowl — recipe is a skillet"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "pad-thai",
@@ -2319,21 +2325,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "broccoli not in recipe",
-        "carrots not in recipe",
-        "missing green beans",
-        "missing sheet pan presentation"
+        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée; broccoli and carrots not in recipe; missing green beans"
       ],
-      "hardFailures": [
-        "vision: broccoli not in recipe",
-        "vision: carrots not in recipe",
-        "vision: missing green beans",
-        "vision: missing sheet pan presentation"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "30-minute-pasta-e-fagioli-for-the-hall",
@@ -2621,7 +2619,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing shredded cheddar-mozzarella blend"
+        "vision inconclusive (MAJOR) — needs human review: Missing shredded cheddar-mozzarella blend"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2745,7 +2743,7 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "d58b8712b0828548708bf0a3e854291b",
+        "heroMd5": "23cd469be930aec09a8da9c4de8b3d15",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -2753,15 +2751,11 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
-      "semanticReasons": [
-        "wrong dish format — recipe is casserole but image shows individually rolled items"
-      ],
-      "hardFailures": [
-        "vision: wrong dish format — recipe is casserole but image shows individually rolled items"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "semanticStatus": "pass",
+      "semanticReasons": [],
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "sausage-egg-bake",
@@ -3152,7 +3146,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing cotija cheese; missing lime wedges; unlisted green garnish"
+        "vision inconclusive (MAJOR) — needs human review: Missing cotija cheese; Missing lime wedges; Presence of green garnish not in recipe"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -3248,10 +3242,8 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "not_verified",
-      "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: wrong dish format — recipe is bowl but image shows sheet pan (format from meal tag, not title — review)"
-      ],
+      "semanticStatus": "pass",
+      "semanticReasons": [],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3396,18 +3388,18 @@
         "missing sweet potatoes",
         "missing broccoli",
         "missing long-grain rice",
-        "unexpected bell peppers",
-        "unexpected onions",
-        "unexpected lime"
+        "extra bell peppers",
+        "extra onions",
+        "extra lime"
       ],
       "hardFailures": [
         "vision: wrong dish format — recipe is meal-prep containers but image shows sheet pan",
         "vision: missing sweet potatoes",
         "vision: missing broccoli",
         "vision: missing long-grain rice",
-        "vision: unexpected bell peppers",
-        "vision: unexpected onions",
-        "vision: unexpected lime"
+        "vision: extra bell peppers",
+        "vision: extra onions",
+        "vision: extra lime"
       ],
       "needsNewImage": true,
       "pass": false
@@ -3438,10 +3430,8 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "not_verified",
-      "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing peas and carrots; missing lemon wedges"
-      ],
+      "semanticStatus": "pass",
+      "semanticReasons": [],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3705,11 +3695,11 @@
       "semanticStatus": "fail",
       "semanticReasons": [
         "broccoli side — not in recipe",
-        "plated format — expected casserole"
+        "not baked in a casserole dish"
       ],
       "hardFailures": [
         "vision: broccoli side — not in recipe",
-        "vision: plated format — expected casserole"
+        "vision: not baked in a casserole dish"
       ],
       "needsNewImage": true,
       "pass": false
@@ -3742,7 +3732,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli crowns missing"
+        "vision inconclusive (MAJOR) — needs human review: missing broccoli"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -3992,7 +3982,7 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "f6fa32ddb0263479677abdb23e17de6b",
+        "heroMd5": "1e56f35dcc1cf6811defe427c848a8f8",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -4000,15 +3990,11 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
-      "semanticReasons": [
-        "wrong dish format — recipe is skillet but image shows taco"
-      ],
-      "hardFailures": [
-        "vision: wrong dish format — recipe is skillet but image shows taco"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "semanticStatus": "pass",
+      "semanticReasons": [],
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "maple-soy-salmon-bowls",
@@ -4526,19 +4512,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "chicken breasts instead of bone-in chicken thighs",
-        "missing zucchini",
-        "missing cherry tomatoes"
+        "vision inconclusive (MAJOR) — needs human review: zucchini missing; bone-in chicken thighs expected but not visible"
       ],
-      "hardFailures": [
-        "vision: chicken breasts instead of bone-in chicken thighs",
-        "vision: missing zucchini",
-        "vision: missing cherry tomatoes"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "boneless-chicken-thighs-sweet-potato-spinach",
@@ -4600,7 +4580,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: side salad present — not in recipe; bread present — not in recipe"
+        "vision inconclusive (MAJOR) — needs human review: side salad present — not in recipe"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4828,7 +4808,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: flatbread not in recipe"
+        "vision inconclusive (MAJOR) — needs human review: flatbread present — not in recipe; missing feta cheese; missing fresh parsley"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5243,8 +5223,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (MAJOR) — needs human review: missing black beans"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5343,7 +5325,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is skillet, image looks like bowl"
+        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is skillet, image looks like bowl"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5609,8 +5591,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (MAJOR) — needs human review: missing red onion; missing rice"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5909,7 +5893,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: corn on the cob missing"
+        "vision inconclusive (MAJOR) — needs human review: missing corn on the cob"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5943,7 +5927,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing chimichurri; missing grilled crusty bread"
+        "vision inconclusive (MAJOR) — needs human review: missing grilled crusty bread; missing chimichurri"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5977,7 +5961,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing cabbage-potato packets; missing rye bread; missing swiss cheese"
+        "vision inconclusive (MAJOR) — needs human review: missing cabbage; missing potatoes; missing rye bread; missing swiss cheese"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6349,7 +6333,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is casserole, image looks like hot plated entrée"
+        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is casserole, image looks like nachos (loaded tortilla chips)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6479,10 +6463,14 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "spaghetti instead of penne pasta"
+        "spaghetti instead of penne pasta",
+        "missing visible sauces",
+        "missing garlic bread"
       ],
       "hardFailures": [
-        "vision: spaghetti instead of penne pasta"
+        "vision: spaghetti instead of penne pasta",
+        "vision: missing visible sauces",
+        "vision: missing garlic bread"
       ],
       "needsNewImage": true,
       "pass": false
@@ -6547,8 +6535,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (MAJOR) — needs human review: missing provolone cheese; missing swiss cheese; missing mayonnaise; missing mustard assortment; missing lettuce and tomato"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6581,20 +6571,22 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "sauced chicken instead of plain chicken thighs",
         "missing hummus",
         "missing tzatziki",
         "missing pita bread",
+        "missing feta cheese",
         "extra cauliflower",
-        "extra rice"
+        "extra rice",
+        "sauce not in recipe"
       ],
       "hardFailures": [
-        "vision: sauced chicken instead of plain chicken thighs",
         "vision: missing hummus",
         "vision: missing tzatziki",
         "vision: missing pita bread",
+        "vision: missing feta cheese",
         "vision: extra cauliflower",
-        "vision: extra rice"
+        "vision: extra rice",
+        "vision: sauce not in recipe"
       ],
       "needsNewImage": true,
       "pass": false
@@ -6791,7 +6783,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: steaks not sliced and fanned as per serving step"
+        "vision inconclusive (MAJOR) — needs human review: steaks not sliced or fanned as per serving step"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6857,7 +6849,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing visible onions; missing visible carrots"
+        "vision inconclusive (MAJOR) — needs human review: missing yellow onion; missing carrots"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7255,7 +7247,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing bacon; missing mushrooms; missing hard-boiled eggs; red peppers not in recipe"
+        "vision inconclusive (MAJOR) — needs human review: missing bacon; missing mushrooms; missing hard-boiled eggs; presence of red peppers not in recipe; presence of onions not in recipe"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7491,12 +7483,10 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "wrong dish format — recipe is sheet pan but image shows sandwich",
-        "spaghetti not visible"
+        "wrong dish format — recipe is sheet pan but image shows sandwich"
       ],
       "hardFailures": [
-        "vision: wrong dish format — recipe is sheet pan but image shows sandwich",
-        "vision: spaghetti not visible"
+        "vision: wrong dish format — recipe is sheet pan but image shows sandwich"
       ],
       "needsNewImage": true,
       "pass": false
@@ -7659,7 +7649,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing asparagus; missing Greek yogurt sauce"
+        "vision inconclusive (MAJOR) — needs human review: missing asparagus; missing yogurt sauce"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7759,7 +7749,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: wrong dish format — recipe is soup but image shows hot plated entrée (format from meal tag, not title — review)"
+        "vision inconclusive (MAJOR) — needs human review: wrong dish format — recipe is soup but image shows hot plated entrée (format from meal tag, not title — review); missing red bell pepper; missing yellow onion; missing fresh parsley"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7827,7 +7817,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: yukon gold potatoes missing"
+        "vision inconclusive (MAJOR) — needs human review: potatoes missing — recipe serves over potatoes"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7862,13 +7852,13 @@
       "semanticStatus": "fail",
       "semanticReasons": [
         "pasta instead of potatoes",
-        "missing rye bread",
-        "missing sour cream"
+        "missing sour cream",
+        "missing rye bread"
       ],
       "hardFailures": [
         "vision: pasta instead of potatoes",
-        "vision: missing rye bread",
-        "vision: missing sour cream"
+        "vision: missing sour cream",
+        "vision: missing rye bread"
       ],
       "needsNewImage": true,
       "pass": false
@@ -8066,11 +8056,15 @@
       "semanticStatus": "fail",
       "semanticReasons": [
         "french fries present — not in recipe",
-        "missing grilled vegetables"
+        "missing grilled red bell peppers",
+        "missing grilled yellow onion",
+        "missing fresh cilantro"
       ],
       "hardFailures": [
         "vision: french fries present — not in recipe",
-        "vision: missing grilled vegetables"
+        "vision: missing grilled red bell peppers",
+        "vision: missing grilled yellow onion",
+        "vision: missing fresh cilantro"
       ],
       "needsNewImage": true,
       "pass": false
@@ -8199,7 +8193,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: salad not in recipe"
+        "vision inconclusive (MAJOR) — needs human review: salad present — recipe specifies tabbouleh"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -8233,10 +8227,10 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "French fries present — not in recipe"
+        "French fries present — not in the recipe"
       ],
       "hardFailures": [
-        "vision: French fries present — not in recipe"
+        "vision: French fries present — not in the recipe"
       ],
       "needsNewImage": true,
       "pass": false
@@ -8768,8 +8762,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (MAJOR) — needs human review: missing hummus; missing feta; missing tzatziki"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9026,7 +9022,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: rice present — not listed in the recipe"
+        "vision inconclusive (MAJOR) — needs human review: rice present — not in recipe"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -9060,10 +9056,10 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "cheese on top — not in the recipe"
+        "cheese on top — not in recipe"
       ],
       "hardFailures": [
-        "vision: cheese on top — not in the recipe"
+        "vision: cheese on top — not in recipe"
       ],
       "needsNewImage": true,
       "pass": false
@@ -9128,10 +9124,10 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "broccoli and mashed potatoes not in recipe"
+        "broccoli and mashed potatoes are not in the recipe"
       ],
       "hardFailures": [
-        "vision: broccoli and mashed potatoes not in recipe"
+        "vision: broccoli and mashed potatoes are not in the recipe"
       ],
       "needsNewImage": true,
       "pass": false
@@ -9460,15 +9456,11 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
-      "semanticReasons": [
-        "grated cheese on top — not in recipe"
-      ],
-      "hardFailures": [
-        "vision: grated cheese on top — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "semanticStatus": "pass",
+      "semanticReasons": [],
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "dirty-rice-crew-skillet",
@@ -9498,10 +9490,10 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "melted cheese not in recipe"
+        "melted cheese on top — not in recipe"
       ],
       "hardFailures": [
-        "vision: melted cheese not in recipe"
+        "vision: melted cheese on top — not in recipe"
       ],
       "needsNewImage": true,
       "pass": false
@@ -10722,10 +10714,10 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "bacon strips present — not in recipe"
+        "bacon present — not in recipe"
       ],
       "hardFailures": [
-        "vision: bacon strips present — not in recipe"
+        "vision: bacon present — not in recipe"
       ],
       "needsNewImage": true,
       "pass": false
@@ -10820,15 +10812,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "missing visible eggs"
+        "vision inconclusive (MAJOR) — needs human review: Missing visible eggs"
       ],
-      "hardFailures": [
-        "vision: missing visible eggs"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "breakfast-stromboli-roll",
@@ -11801,13 +11791,15 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "not_verified",
+      "semanticStatus": "fail",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: side of tortilla strips dominates"
+        "fries on the side — not in the recipe"
       ],
-      "hardFailures": [],
-      "needsNewImage": false,
-      "pass": true
+      "hardFailures": [
+        "vision: fries on the side — not in the recipe"
+      ],
+      "needsNewImage": true,
+      "pass": false
     },
     {
       "slug": "monte-cristo-sandwiches",
@@ -12029,12 +12021,10 @@
       "semanticWarnings": [],
       "semanticStatus": "fail",
       "semanticReasons": [
-        "bacon strips present — not in recipe",
-        "missing visible eggs"
+        "bacon strips present — not in recipe"
       ],
       "hardFailures": [
-        "vision: bacon strips present — not in recipe",
-        "vision: missing visible eggs"
+        "vision: bacon strips present — not in recipe"
       ],
       "needsNewImage": true,
       "pass": false
@@ -12163,7 +12153,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée"
+        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée; Missing yellow onion; Missing shredded cheddar"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -12227,8 +12217,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (MAJOR) — needs human review: missing white bread"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12259,13 +12251,15 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "not_verified",
+      "semanticStatus": "fail",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: whole sausages instead of bulk sausage"
+        "whole sausages instead of bulk or casings removed"
       ],
-      "hardFailures": [],
-      "needsNewImage": false,
-      "pass": true
+      "hardFailures": [
+        "vision: whole sausages instead of bulk or casings removed"
+      ],
+      "needsNewImage": true,
+      "pass": false
     },
     {
       "slug": "shrimp-and-grits-breakfast",
@@ -12477,7 +12471,7 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "3789c6078bcc250c4ba4f71dadfea795",
+        "heroMd5": "43fe48cdd6958dc35dc011f9ce78484b",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -12485,17 +12479,11 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
-      "semanticReasons": [
-        "wrong dish format — recipe is wrapped burrito/wrap but image shows soup",
-        "wrong dish — soup instead of burritos"
-      ],
-      "hardFailures": [
-        "vision: wrong dish format — recipe is wrapped burrito/wrap but image shows soup",
-        "vision: wrong dish — soup instead of burritos"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "semanticStatus": "pass",
+      "semanticReasons": [],
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "turkey-sausage-egg-white-sandwiches",
@@ -12971,8 +12959,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision inconclusive (MAJOR) — needs human review: missing italian sausage; missing bacon; missing grated parmesan"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13133,7 +13123,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: coleslaw missing"
+        "vision inconclusive (MAJOR) — needs human review: missing coleslaw"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -13229,10 +13219,8 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "not_verified",
-      "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing spinach; missing ricotta dollops"
-      ],
+      "semanticStatus": "pass",
+      "semanticReasons": [],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
