@@ -118,10 +118,19 @@ check("format/vessel complaints are separated from food complaints", () => {
     "Dish is rolled, not a casserole",
     "wrong dish format — sandwich instead of bowl",
     "soup instead of wrap",
+    "served in a bowl — recipe is a skillet",
+    "served in a baking dish — recipe serves in shallow bowls",
+    "plated format — expected casserole",
   ]) {
     assert.ok(isFormatIssue(issue), issue);
   }
-  for (const issue of ["chicken wings instead of turkey breast", "cheese on top — not in recipe", "missing spaghetti", "spaghetti instead of penne pasta"]) {
+  for (const issue of [
+    "chicken wings instead of turkey breast",
+    "cheese on top — not in recipe",
+    "missing spaghetti",
+    "spaghetti instead of penne pasta",
+    "served on a plate with fries — fries not in recipe",
+  ]) {
     assert.ok(!isFormatIssue(issue), issue);
   }
 });

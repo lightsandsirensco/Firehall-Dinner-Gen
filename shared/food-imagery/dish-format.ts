@@ -257,13 +257,19 @@ export function dishFormatRubricLines(): string[] {
 const FORMAT_NOUN =
   "(?:skillet|casserole|baking dish|bowl|plate|plated|sheet[-_ ]?pan|tray|pan|wrap|sandwich|soup|stew|meal[-_ ]?prep|containers?|format|bake)";
 const FORMAT_ISSUE = new RegExp(
-  `wrong (?:dish )?format|\\b(?:instead of|rather than|not)\\s+(?:(?:a|an|the|in|on|served|plated|in a|on a)\\s+)*(?:[\\w']+[- ])?${FORMAT_NOUN}\\b`,
+  [
+    `wrong (?:dish )?format`,
+    `\\b(?:instead of|rather than|not)\\s+(?:(?:a|an|the|in|on|served|plated|in a|on a)\\s+)*(?:[\\w']+[- ])?${FORMAT_NOUN}\\b`,
+    `\\b(?:served|presented|plated)\\s+(?:in|on|as)\\s+(?:(?:a|an|the)\\s+)?(?:[\\w']+[- ])?${FORMAT_NOUN}\\b`,
+    `\\b${FORMAT_NOUN}\\s+format\\b`,
+  ].join("|"),
   "i",
 );
+const FOOD_COMPLAINT = /\bnot (?:in|listed in|part of) (?:the )?recipe\b|\bmissing\b/i;
 
 /** Vision issues that are about serving format/vessel — these are adjudicated by the format check, not by content. */
 export function isFormatIssue(issue: string): boolean {
-  return FORMAT_ISSUE.test(issue);
+  return FORMAT_ISSUE.test(issue) && !FOOD_COMPLAINT.test(issue);
 }
 
 /** Recipe-side line for the vision brief. */
