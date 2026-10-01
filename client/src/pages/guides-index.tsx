@@ -71,11 +71,11 @@ export default function GuidesIndexPage() {
         </div>
 
         <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl">
-          Firefighter Meal Guides
+          Firefighter Meal &amp; Firehouse Cooking Guides
         </h1>
         <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl text-[15px] sm:text-base">
-          Shift nutrition, station culture, and kitchen how-tos — written for crews, not algorithms.
-          Each guide links to real meals you can cook tonight.
+          How much to cook for a crew, how to time it, how to hold it through a call, and how to keep it
+          safe. Each guide links to recipes you can cook tonight.
         </p>
 
         {isLoading && (

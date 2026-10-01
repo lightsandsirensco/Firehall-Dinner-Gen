@@ -10,6 +10,7 @@ import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { buildAllApprovedCatalogEntries } from "../server/approved-catalog.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const OUT = path.join("review", "approved-duplicate-heroes-audit.json");
@@ -55,7 +56,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
-  fs.writeFileSync(OUT, `${JSON.stringify(report, null, 2)}\n`);
+  writeFileAtomicSync(OUT, `${JSON.stringify(report, null, 2)}\n`);
 
   console.log(
     `[audit:approved-duplicate-heroes] groups=${report.totals.duplicateGroups} recipes=${report.totals.recipesInDuplicateGroups}`,

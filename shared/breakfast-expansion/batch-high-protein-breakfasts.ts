@@ -364,7 +364,7 @@ export const BATCH_HIGH_PROTEIN_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     ],
     heroImage: hero("turkey-sausage-sweet-potato-skillet"),
     thumbImage: thumb("turkey-sausage-sweet-potato-skillet"),
-    imageAlt: "Cast-iron skillet with turkey sausage, sweet potato, and eggs for the crew",
+    imageAlt: "Cast-iron skillet with turkey sausage, sweet potato, bell pepper, eggs, and cheese",
     publishedAt: now,
     updatedAt: now,
     readMinutes: 6,

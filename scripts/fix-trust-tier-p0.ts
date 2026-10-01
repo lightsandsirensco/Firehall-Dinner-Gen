@@ -21,7 +21,8 @@ import {
   hallExpansionThumbPath,
 } from "../shared/hall-expansion/recipe-page-paths.js";
 import { getMobileCropRule } from "../shared/mobile-crop-rules.js";
-import { loadSharp } from "../server/imagery/sharp-utils.js";
+import { encodeJpeg, JPEG_OUTPUT, requireSharp } from "../server/imagery/sharp-utils.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const TIER_REPORT = path.join("review", "meal-image-trust-tier-report.json");
@@ -77,16 +78,8 @@ async function resizeVariant(
   height: number,
   position: string,
 ): Promise<Buffer> {
-  const sharp = await loadSharp();
-  if (!sharp) return buffer;
-  try {
-    return await sharp(buffer)
-      .resize(width, height, { fit: "cover", position })
-      .jpeg({ quality: 88, mozjpeg: true })
-      .toBuffer();
-  } catch {
-    return buffer;
-  }
+  const sharp = await requireSharp();
+  return sharp(buffer).resize(width, height, { fit: "cover", position }).jpeg(JPEG_OUTPUT).toBuffer();
 }
 
 async function mirrorSmokerCatalogVariants(slug: string, heroBuffer: Buffer): Promise<string> {
@@ -116,7 +109,7 @@ async function mirrorSmokerCatalogVariants(slug: string, heroBuffer: Buffer): Pr
     thumb: `/images/thumbs/smoker-catalog/${slug}.jpg`,
     rail: `/images/rails/smoker-catalog/${slug}.jpg`,
   };
-  const buffers = [heroBuffer, mobileBuf, thumbBuf, railBuf];
+  const buffers = [await encodeJpeg(heroBuffer), mobileBuf, thumbBuf, railBuf];
   const rels = [paths.hero, paths.mobile, paths.thumb, paths.rail];
   for (let i = 0; i < rels.length; i += 1) {
     const abs = publicPath(rels[i]!);
@@ -153,7 +146,7 @@ async function mirrorHallExpansionVariants(slug: string, heroBuffer: Buffer): Pr
     hallExpansionThumbPath(slug),
     hallExpansionRailPath(slug),
   ];
-  const buffers = [heroBuffer, mobileBuf, thumbBuf, railBuf];
+  const buffers = [await encodeJpeg(heroBuffer), mobileBuf, thumbBuf, railBuf];
   for (let i = 0; i < rels.length; i += 1) {
     const abs = publicPath(rels[i]!);
     fs.mkdirSync(path.dirname(abs), { recursive: true });
@@ -288,7 +281,7 @@ async function main(): Promise<void> {
 
   const slugsFile = path.join("review", "trust-tier-p0-regen-slugs.txt");
   fs.mkdirSync(path.dirname(slugsFile), { recursive: true });
-  fs.writeFileSync(slugsFile, `${regenList.join("\n")}\n`);
+  writeFileAtomicSync(slugsFile, `${regenList.join("\n")}\n`);
 
   if (dryRun) {
     console.log(`[fix-trust-tier-p0] would regen ${regenList.length} slugs → ${slugsFile}`);
@@ -316,7 +309,7 @@ async function main(): Promise<void> {
 
 function writeReport(fixes: FixLog[]): void {
   const out = path.join("review", "trust-tier-p0-fix-log.json");
-  fs.writeFileSync(
+  writeFileAtomicSync(
     out,
     JSON.stringify({ generatedAt: new Date().toISOString(), fixes }, null, 2),
   );

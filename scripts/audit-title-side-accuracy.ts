@@ -16,6 +16,7 @@ import {
   hasImageTitleMismatch,
 } from "../shared/curated-image-governance/title-primary-side-rules.js";
 import { loadTrustAuditTargets } from "../shared/curated-image-governance/trust-audit-targets.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const JSON_OUT = path.join("review", "title-side-accuracy-audit.json");
 const MD_OUT = path.join("review", "title-side-accuracy-audit.md");
@@ -193,7 +194,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
 
   const md = `# Title + Side Accuracy Audit
 
@@ -222,7 +223,7 @@ ${failed.length ? failed.map((r) => `- \`${r.slug}\` (${r.collection}) — **${r
 ${sidePairingRows.map((r) => `- \`${r.slug}\` — ${r.title}${r.fail ? " **FAIL**" : ""}`).join("\n") || "_None_"}
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
   console.log(`[audit:title-side-accuracy] wrote ${JSON_OUT} and ${MD_OUT}`);
   console.log(
     `[audit:title-side-accuracy] with-titles=${rows.length} side-pairing=${sidePairingRows.length} failed=${failed.length}`,

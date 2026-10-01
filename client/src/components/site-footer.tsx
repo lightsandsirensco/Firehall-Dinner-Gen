@@ -1,4 +1,4 @@
-import { Flame, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { Link } from "wouter";
 import { cn } from "@/lib/utils";
 import { BRAND_NAME, BRAND_TAGLINE, CTA } from "@/lib/brand-copy";
@@ -8,6 +8,7 @@ import {
   LIGHTS_FOOTER_LINKS,
 } from "@/lib/lights-and-sirens";
 import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { HALL_FEEDBACK_COPY } from "@shared/hall-feedback/copy";
 import { HallFeedbackFooterLink } from "@/components/hall-feedback/hall-feedback-footer-link";
 
@@ -82,7 +83,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
               data-testid="footer-logo"
               aria-label={`${BRAND_NAME} — Home`}
             >
-              <Flame className="w-5 h-5 text-primary" aria-hidden />
+              <BrandLogo className="h-7 w-7" />
               <p className="font-heading text-lg tracking-wide text-foreground">{BRAND_NAME}</p>
             </Link>
             <p className="mt-2 text-[10px] uppercase tracking-[0.28em] text-muted-foreground/70">

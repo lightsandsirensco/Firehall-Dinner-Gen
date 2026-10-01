@@ -35,6 +35,7 @@ import {
 import { GOLDEN_SET_TAG } from "../shared/golden-100/types.js";
 import { isApprovedCatalogSlug } from "../shared/hall-catalog/gate.js";
 import { flushSqliteToDisk, releaseSqliteTimersForTests } from "../server/sqlite.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const MD_OUT = path.join(ROOT, "review", "generator-simplification-qa.json");
@@ -205,7 +206,7 @@ const report = {
 };
 
 fs.mkdirSync(path.dirname(MD_OUT), { recursive: true });
-fs.writeFileSync(MD_OUT, JSON.stringify(report, null, 2));
+writeFileAtomicSync(MD_OUT, JSON.stringify(report, null, 2));
 
 console.log(`[test-generator-simplified-qa] combos=${combos.length} pass=${pass} fail=${fail}`);
 console.log(`[test-generator-simplified-qa] metadata gaps=${metadataGaps.length}`);

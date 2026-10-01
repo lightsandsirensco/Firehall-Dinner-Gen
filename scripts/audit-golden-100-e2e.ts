@@ -19,6 +19,7 @@ import { goldenRecipePageSchema } from "../shared/golden-100/recipe-page-schema.
 import { validateGoldenRecipePage } from "../server/golden-100/recipe-page-validator.js";
 import { initCuratedRecipeStore, getCuratedRecipeById } from "../server/curated-recipe-store.js";
 import { getSharedLocalDb } from "../server/sqlite.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type Severity = "fail" | "warn";
 
@@ -298,7 +299,7 @@ async function main(): Promise<void> {
   const outJson = path.join(outDir, "golden-100-e2e-audit.json");
   const outMd = path.join(outDir, "golden-100-e2e-audit.md");
 
-  fs.writeFileSync(
+  writeFileAtomicSync(
     outJson,
     JSON.stringify(
       {
@@ -340,7 +341,7 @@ async function main(): Promise<void> {
       md.push("");
     }
   }
-  fs.writeFileSync(outMd, `${md.join("\n")}\n`);
+  writeFileAtomicSync(outMd, `${md.join("\n")}\n`);
 
   console.log(`[golden-100-e2e] wrote ${outJson}`);
   console.log(`[golden-100-e2e] wrote ${outMd}`);

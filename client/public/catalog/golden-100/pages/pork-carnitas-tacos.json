@@ -13,10 +13,10 @@
   "cookTime": 35,
   "prepTime": 15,
   "difficulty": "easy",
-  "calories": 529,
-  "protein": 39,
+  "calories": 639,
+  "protein": 51,
   "carbs": 49,
-  "fats": 20,
+  "fats": 27,
   "tags": [
     "protein:pork",
     "format:tacos",
@@ -32,7 +32,7 @@
   ],
   "ingredients": [
     {
-      "name": "Boneless Chicken Thighs",
+      "name": "Boneless Pork Shoulder, Cut Into 1/2-Inch Pieces",
       "quantity": "3",
       "unit": "Lb",
       "group": "Main"
@@ -79,7 +79,7 @@
     {
       "stepNumber": 2,
       "title": "Cook the filling",
-      "instruction": "Season protein with salt and cumin. Sear over medium-high until cooked through (chicken 165°F, steak 130°F then rest). Rest steak 8 minutes; slice thin against the grain.",
+      "instruction": "Season pork with salt and cumin. Sear in batches over medium-high, without crowding, until edges are browned and crisp and pork reaches at least 145°F. Hold on the warm sheet tray.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
@@ -119,10 +119,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "easy",
   "nutrition": {
-    "calories": 529,
-    "protein": 39,
+    "calories": 639,
+    "protein": 51,
     "carbs": 49,
-    "fats": 20,
+    "fats": 27,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -136,12 +136,12 @@
     },
     "badgeCandidates": {
       "highProtein": true,
-      "lighterOption": true,
-      "performanceMeal": true
+      "lighterOption": false,
+      "performanceMeal": false
     }
   },
   "heroImage": "/images/golden-100/pork-carnitas-tacos.jpg",
-  "heroImageAlt": "Pork Carnitas Tacos — mexican tacos plated for a firehall crew",
+  "heroImageAlt": "Pork Carnitas Tacos — tortillas, cilantro, sauce, and cheese",
   "mobileImage": "/images/mobile/pork-carnitas-tacos.jpg",
   "thumbImage": "/images/thumbs/pork-carnitas-tacos.jpg",
   "railImage": "/images/rails/pork-carnitas-tacos.jpg",
@@ -177,6 +177,12 @@
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
+        "name": "Boneless Pork Shoulder, Cut Into 1/2-Inch Pieces",
+        "allergens": [
+          "pork"
+        ]
+      },
+      {
         "name": "Flour Or Corn Tortillas",
         "allergens": [
           "gluten"
@@ -192,7 +198,7 @@
       "soyFree": true,
       "shellfishFree": true,
       "fishFree": true,
-      "porkFree": true,
+      "porkFree": false,
       "vegetarian": false,
       "vegan": false
     },
@@ -203,7 +209,7 @@
         "note": "Use a 1:1 gluten-free all-purpose flour blend."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-09-29T01:53:49.503Z"
   },
   "avoidTags": [
     "onions",

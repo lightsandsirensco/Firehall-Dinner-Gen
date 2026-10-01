@@ -1,103 +1,291 @@
 {
   "slug": "firehall-taco-night-ideas",
-  "title": "Firehall Taco Night Ideas",
-  "subtitle": "Lines, proteins, and toppings that keep peace",
-  "description": "Ground beef bars, carnitas, chicken, and toppings that let ten people build without kitchen chaos.",
-  "topic": "meal_planning",
+  "title": "Firehall Taco Night Ideas: How to Run a Taco Bar for a Crew",
+  "subtitle": "How much meat, tortillas and toppings for 8 or 12, taco meat that isn't greasy, proteins that hold on a line, and keeping tortillas warm.",
+  "description": "Taco bar for a crowd: how much meat, tortillas and toppings for 8 to 12, taco seasoning ratios, keeping tortillas warm, and holding the line safely.",
+  "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "Taco night works because it is a line, not a plating job. Firehall taco night ideas center on two proteins max, warm tortillas in a cooler, and toppings in bowls with spoons — not one cook assembling to order. Below: what halls actually cook for firehall taco night — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "A taco bar is one of the easiest ways to feed a crew because people build their own plates, which handles different appetites and dietary needs without extra cooking. It goes wrong in three places: running out of tortillas, meat that is greasy or bland, and tortillas that crack because they were not heated properly. Plan on 1/3 lb (150 g) of raw ground meat and three tortillas per person, keep to two proteins at most (one meat that holds well, plus beans), and put most of your effort into warm tortillas and cold, fresh toppings. This guide gives the amounts for 8 and 12, a seasoning ratio, proteins that hold on a line, and the setup.",
   "sections": [
     {
-      "id": "proteins",
-      "heading": "Pick your proteins",
+      "id": "quantities",
+      "heading": "How much to make for 8 and 12 people",
       "paragraphs": [
-        "Ground beef seasoned simple, shredded chicken, or carnitas for busy nights. Veg option: seasoned beans in its own pan.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "These amounts assume adults eating three tacos each with beans and rice on the side. If you serve two meats, make about two-thirds of the listed amount of each rather than the full amount of both. Buy 10 percent more tortillas than the count, because a few always tear."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
-      ]
+      "table": {
+        "caption": "Taco bar quantities for 8 and 12 people",
+        "columns": [
+          "Item",
+          "Per person",
+          "8 people",
+          "12 people"
+        ],
+        "rows": [
+          [
+            "Raw ground beef or turkey",
+            "1/3 lb (150 g)",
+            "2 3/4 lb",
+            "4 lb"
+          ],
+          [
+            "6 in (15 cm) corn or flour tortillas",
+            "3",
+            "24, plus a few spare",
+            "36, plus a few spare"
+          ],
+          [
+            "Shredded cheese",
+            "2 oz (55 g)",
+            "1 lb",
+            "1 1/2 lb"
+          ],
+          [
+            "Shredded lettuce or cabbage",
+            "1/2 cup",
+            "4 cups (1 small head)",
+            "6 cups"
+          ],
+          [
+            "Diced tomato or pico de gallo",
+            "1/4 cup",
+            "2 cups",
+            "3 cups"
+          ],
+          [
+            "Salsa",
+            "1/4 cup",
+            "16 oz (450 g)",
+            "24 oz (680 g)"
+          ],
+          [
+            "Sour cream",
+            "2 tbsp",
+            "1 cup",
+            "1 1/2 cups"
+          ],
+          [
+            "Canned black or pinto beans",
+            "1/2 cup",
+            "2 cans, 15 oz each",
+            "3 cans"
+          ],
+          [
+            "Raw rice for a side",
+            "1/3 cup",
+            "2 2/3 cups",
+            "4 cups"
+          ],
+          [
+            "Limes",
+            "1/2",
+            "4",
+            "6"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "taco-meat",
+      "heading": "Taco meat that isn't greasy or bland",
+      "paragraphs": [
+        "Greasy taco meat comes from crowding: too much meat in the pan stews in its own fat instead of browning. Brown no more than 1 1/2 lb at a time in a 12-inch skillet, or brown in batches in a wide pot, until deep brown with crisp bits, then drain off most of the fat. Ground beef is safe at 160°F (71°C) and ground turkey at 165°F (74°C).",
+        "Bland taco meat usually lacks salt and hasn't had its spices cooked. Add the seasoning to the drained meat with a little of the fat and stir it over the heat for 30 seconds so the spices toast. Then add liquid and tomato paste and simmer until it glazes the meat. The liquid is what keeps it moist when it sits covered on low for an hour."
+      ],
+      "table": {
+        "caption": "Homemade taco seasoning and sauce, per 1 lb (450 g) of raw ground meat",
+        "columns": [
+          "Ingredient",
+          "Amount per lb",
+          "For 4 lb (12 people)"
+        ],
+        "rows": [
+          [
+            "Chili powder",
+            "1 tbsp",
+            "1/4 cup"
+          ],
+          [
+            "Ground cumin",
+            "1 tsp",
+            "4 tsp"
+          ],
+          [
+            "Garlic powder, onion powder, smoked paprika, dried oregano",
+            "1/2 tsp each",
+            "2 tsp each"
+          ],
+          [
+            "Salt",
+            "3/4 tsp",
+            "1 tbsp"
+          ],
+          [
+            "Tomato paste",
+            "1 tbsp",
+            "1/4 cup"
+          ],
+          [
+            "Water or stock",
+            "1/2 cup",
+            "2 cups"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "proteins",
+      "heading": "Proteins that suit a taco line",
+      "paragraphs": [
+        "The best taco bar protein is one that stays good for an hour in a covered pan. Braised and sauced meats do; seared steak and fish do not, so if you want those, cook them last and serve them straight from the pan. A pot of seasoned beans makes the second protein and covers anyone who doesn't eat meat."
+      ],
+      "table": {
+        "caption": "Taco proteins, how to cook them and how well they hold",
+        "columns": [
+          "Protein",
+          "Method",
+          "Time",
+          "Holding on the line"
+        ],
+        "rows": [
+          [
+            "Seasoned ground beef or turkey",
+            "Brown in batches, season, simmer with liquid",
+            "25 to 30 min",
+            "Holds 1 to 2 hours covered on low; add a splash of water"
+          ],
+          [
+            "Shredded chicken thighs",
+            "Simmer boneless thighs in salsa until tender, then shred",
+            "25 to 30 min",
+            "Holds well in its sauce"
+          ],
+          [
+            "Pork carnitas",
+            "Braise shoulder chunks 2 to 2 1/2 hours, then crisp under the broiler",
+            "2 1/2 to 3 hours",
+            "Holds in its juices; crisp just before serving"
+          ],
+          [
+            "Flank or skirt steak",
+            "Marinate, sear very hot, rest 5 to 10 min, slice across the grain",
+            "15 min plus resting",
+            "Poor; serve straight after slicing"
+          ],
+          [
+            "Fish fillets",
+            "Season and sear or bake at 425°F (220°C)",
+            "8 to 12 min",
+            "Poor; cook last"
+          ],
+          [
+            "Black or pinto beans",
+            "Simmer canned beans with onion and cumin, mash a third",
+            "15 min",
+            "Holds all evening; thin with water as needed"
+          ]
+        ]
+      }
     },
     {
       "id": "tortillas",
-      "heading": "Tortillas and toppings",
+      "heading": "Keeping tortillas warm and pliable",
       "paragraphs": [
-        "Warm tortillas in a cooler, keep cold toppings cold, and put hot salsa where people expect heat. Two tortillas per person in the warmer.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "Corn tortillas crack when they are cold or dry; heat and a little moisture make them soft. The best method is a dry, hot skillet or griddle, about 30 seconds per side until they are pliable with a few brown spots, then straight into a clean kitchen towel inside a lidded container or small cooler. Stacked and wrapped, they steam each other soft and stay warm for about an hour. For a crowd, the oven is faster: wrap stacks of 10 to 12 in foil, with a damp paper towel inside for corn tortillas, and heat at 350°F (175°C) for 15 minutes.",
+        "Microwaving works only in small batches: 10 tortillas between damp paper towels for 30 to 60 seconds, eaten right away, since they toughen as they cool. For street-style tacos, double up small corn tortillas so the filling doesn't break through."
       ]
     },
     {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
+      "id": "setup",
+      "heading": "Setting up the line",
       "paragraphs": [
-        "For firehall taco night, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
-      ],
-      "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
+        "Order the line so people fill plates with the cheaper items first: plates, tortillas, beans and rice, meat, cheese, then cold toppings, salsas and limes. Keep hot items together on one end and cold on the other. Put cold toppings in small bowls set into larger bowls of ice, or bring out small refills from the fridge rather than one large bowl, because anything perishable left out more than two hours has to be thrown out.",
+        "Label mild and hot salsas, and put dairy (cheese and sour cream) at the end with its own spoons so anyone avoiding it can skip it easily. Make guacamole close to serving time and press plastic wrap directly onto the surface to slow browning. Leftover taco meat keeps 3 to 4 days in the fridge and becomes nachos, taco bowls or quesadillas the next day."
       ]
     }
   ],
   "practicalAdvice": [
-    "Two tortillas per person in the warmer.",
-    "Keep lettuce and tomato cold — separate from hot line.",
-    "Label mild vs hot salsa — prevents drama.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "Plan 1/3 lb (150 g) of raw ground meat and three tortillas per person, plus 10 percent spare tortillas.",
+    "Brown ground meat in 1 1/2 lb batches and drain it before seasoning.",
+    "Toast the spices in the fat, then simmer with water and tomato paste so the meat stays moist on the line.",
+    "Warm tortillas on a dry griddle and stack them in a towel in a closed container.",
+    "Keep cold toppings on ice or refill from the fridge; nothing perishable should sit out more than two hours."
   ],
   "mealRecommendations": [
     {
       "slug": "hall-taco-bar",
       "title": "Taco Bar",
-      "blurb": "The baseline hall taco spread."
+      "blurb": "The full taco bar recipe with ground beef, beans and toppings."
     },
     {
       "slug": "pork-carnitas-tacos",
       "title": "Pork Carnitas Tacos",
-      "blurb": "Crispy pork — fast line."
+      "blurb": "Braise ahead, crisp under the broiler right before serving."
     },
     {
       "slug": "steak-tacos",
       "title": "Steak Tacos",
-      "blurb": "Steak night upgrade."
+      "blurb": "Cook and slice the steak last; it doesn't hold."
     },
     {
       "slug": "street-corn-chicken",
       "title": "Street Corn Chicken Bowls",
-      "blurb": "Bright street-corn vibe."
+      "blurb": "Chicken that holds in its sauce, with a charred corn topping."
     },
     {
       "slug": "sheet-pan-fajitas",
       "title": "Chicken Fajitas",
-      "blurb": "Fajita filling crossover."
+      "blurb": "An oven method that frees the stovetop for tortillas."
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Game Day Nachos",
+      "blurb": "The best use of leftover taco meat the next day."
     }
   ],
   "faqs": [
     {
-      "question": "How many proteins should you run on taco night?",
-      "answer": "Two max — ground beef and shredded chicken, or beef and carnitas — plus a seasoned bean option for anyone skipping meat. More than two proteins turns a simple line into a second kitchen to manage."
-    },
-    {
-      "question": "How do you keep a taco line moving for ten-plus people?",
-      "answer": "Warm tortillas in a cooler instead of a microwave stack, keep cold toppings separate from the hot line, and label the mild and hot salsa. Two tortillas per person in the warmer keeps the line from running out mid-service."
+      "question": "How many tacos per person should I plan for a taco bar?",
+      "answer": "Three per adult is a safe average with beans and rice on the side, and four for a crew that has been working all day. That works out to about 1/3 lb (150 g) of raw ground meat per person. If you are serving two meats, make two-thirds of the amount of each."
     }
   ],
   "relatedArticleSlugs": [
-    "best-firehall-meals-busy-nights"
+    "cooking-for-10-firefighters",
+    "firehall-grocery-planning",
+    "best-firefighter-crockpot-meals",
+    "fast-firehall-meals-under-30-minutes"
   ],
   "keywords": [
+    "taco bar for a crowd",
     "firehall taco night",
-    "taco bar fire station",
-    "firefighter tacos",
-    "crew taco night"
+    "how much taco meat per person",
+    "keeping tortillas warm",
+    "taco bar quantities"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Firehall Taco Night Ideas — firehall taco night tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "Taco Bar for a Crowd: How Much to Make and How to Serve It",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    },
+    {
+      "label": "\"Danger Zone\" (40°F - 140°F)",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f"
+    },
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    }
+  ]
 }

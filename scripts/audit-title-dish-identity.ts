@@ -13,6 +13,7 @@ import type { ApprovedCatalogEntry } from "../shared/approved-catalog.js";
 import type { GoldenRecipePage } from "../shared/golden-100/recipe-page-schema.js";
 import { breakfastPageToGolden, smoothiePageToGolden } from "../shared/golden-100/recipe-quality/detail-rewrite-engine.js";
 import { titleMatchesDishIdentity } from "../shared/meal-format-contract.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -110,7 +111,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
-  fs.writeFileSync(OUT, `${JSON.stringify(report, null, 2)}\n`);
+  writeFileAtomicSync(OUT, `${JSON.stringify(report, null, 2)}\n`);
 
   console.log(
     `[audit:title-dish-identity] audited=${report.totals.audited} pass=${report.totals.passed} fail=${report.totals.failed}`,

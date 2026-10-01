@@ -13,6 +13,7 @@ import path from "node:path";
 import { initCuratedRecipeStore } from "../server/curated-recipe-store.js";
 import { listCuratedRecipesForEditorialQa, runCatalogEditorialQa } from "../server/curated-recipe-qa.js";
 import { flushSqliteToDisk, releaseSqliteTimersForTests } from "../server/sqlite.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 async function main(): Promise<void> {
   await initCuratedRecipeStore();
@@ -29,7 +30,7 @@ async function main(): Promise<void> {
     notPublishReady: reports.filter((r) => !r.publishReady).length,
     reports,
   };
-  fs.writeFileSync(outPath, JSON.stringify(payload, null, 2));
+  writeFileAtomicSync(outPath, JSON.stringify(payload, null, 2));
 
   const byScore = [...reports].sort((a, b) => a.overallScore - b.overallScore);
   console.log(`[editorial-qa] ${reports.length} recipes audited`);

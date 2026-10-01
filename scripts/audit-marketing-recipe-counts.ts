@@ -11,6 +11,7 @@ import {
   CURATED_RECIPE_MARKETING_FLOOR,
   marketingRecipeCount,
 } from "../shared/meal-catalog/curated-count.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, "..");
@@ -112,7 +113,7 @@ function main() {
   ].join("\n");
 
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-  fs.writeFileSync(reportPath, body, "utf8");
+  writeFileAtomicSync(reportPath, body, "utf8");
 
   if (errors.length > 0) {
     console.error("[audit:marketing-recipe-counts] FAIL");

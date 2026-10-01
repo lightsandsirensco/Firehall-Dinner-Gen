@@ -13,6 +13,7 @@ import {
   validateCuratedImageGovernance,
 } from "../shared/curated-image-governance/index.js";
 import { resolveExistingSlugImage } from "../shared/explore-image-paths.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 
@@ -132,7 +133,7 @@ function main() {
   };
 
   const out = path.join(ROOT, "review", "catalog-250-full-transparency.json");
-  fs.writeFileSync(out, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(out, JSON.stringify(report, null, 2), "utf8");
   console.log(`[transparency] batch-250=${report.batch250Slugs.length}`);
   console.log(`[transparency] dup-pairs-70+=${dupPairs.length}`);
   console.log(`[transparency] image-match-conf<90=${lowImageConf.length}`);

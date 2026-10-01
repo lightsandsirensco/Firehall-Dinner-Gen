@@ -46,6 +46,7 @@ import {
   performancePageRailPath,
 } from "../shared/performance-meals/recipe-page-paths.js";
 import { goldenRecipePageSchema, goldenCatalogIndexSchema } from "../shared/golden-100/recipe-page-schema.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -303,7 +304,7 @@ async function main(): Promise<void> {
   }
 
   fs.mkdirSync(path.dirname(REPORT_OUT), { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     REPORT_OUT,
     JSON.stringify({ generatedAt: new Date().toISOString(), dryRun: DRY_RUN, ok, fail, results }, null, 2),
   );

@@ -160,7 +160,7 @@ export default function SmoothieRecipePage() {
           {page.heroImage ? (
             <img
               src={page.heroImage}
-              alt={page.title}
+              alt={page.heroImageAlt?.trim() || page.title}
               className="w-full h-full object-cover"
             />
           ) : null}

@@ -15,6 +15,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { initCuratedRecipeStore } from "../server/curated-recipe-store.js";
 import { getSharedLocalDb, flushSqliteToDisk, releaseSqliteTimersForTests } from "../server/sqlite.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 import { loadMergedHallCatalogIndex, resolveHallRecipePage } from "../server/meal-catalog/load-index.js";
 import { parseEditorialImageMetadata } from "../shared/editorial-image-metadata.js";
 import {
@@ -238,7 +239,7 @@ async function main(): Promise<void> {
   fs.mkdirSync(reviewDir, { recursive: true });
   const jsonPath = path.join(reviewDir, "curated-image-governance-report.json");
   const mdPath = path.join(reviewDir, "curated-image-governance-report.md");
-  fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(jsonPath, JSON.stringify(report, null, 2));
 
   const md: string[] = [
     "# Curated image governance audit",
@@ -276,7 +277,7 @@ async function main(): Promise<void> {
     }
   }
 
-  fs.writeFileSync(mdPath, md.join("\n"));
+  writeFileAtomicSync(mdPath, md.join("\n"));
 
   if (asJson) {
     console.log(JSON.stringify(report, null, 2));

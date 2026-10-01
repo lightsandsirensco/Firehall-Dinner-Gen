@@ -16,6 +16,7 @@ import {
   breakfastPageToGolden,
   smoothiePageToGolden,
 } from "../shared/golden-100/recipe-quality/detail-rewrite-engine.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 
@@ -78,7 +79,7 @@ const report = {
 };
 
 fs.mkdirSync(path.join(process.cwd(), "review"), { recursive: true });
-fs.writeFileSync(
+writeFileAtomicSync(
   path.join(process.cwd(), "review", "library-overhaul-worklist.json"),
   `${JSON.stringify(report, null, 2)}\n`,
 );

@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import {
   SEO_CANONICAL_ORIGIN,
-  SEO_DEFAULT_OG_IMAGE_PATH,
   SEO_SITE_NAME,
+  SEO_SITE_SHARE_IMAGE_PATH,
 } from "@shared/seo/constants";
 import { getHallVoteOgMeta } from "./hall-vote-store";
 
@@ -41,7 +41,7 @@ export function buildHallVoteOgHtml(indexHtml: string, voteId: string): string |
   const pageUrl = `${SEO_CANONICAL_ORIGIN}/vote/${voteId}`;
   const ogImage = meta.image.startsWith("http")
     ? meta.image
-    : `${SEO_CANONICAL_ORIGIN}${meta.image.startsWith("/") ? meta.image : SEO_DEFAULT_OG_IMAGE_PATH}`;
+    : `${SEO_CANONICAL_ORIGIN}${meta.image.startsWith("/") ? meta.image : SEO_SITE_SHARE_IMAGE_PATH}`;
 
   let html = indexHtml;
   html = replaceTitle(html, meta.title);

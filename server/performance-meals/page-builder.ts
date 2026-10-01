@@ -4,8 +4,9 @@
 
 import type { GoldenRecipePage } from "../../shared/golden-100/recipe-page-schema.js";
 import { GOLDEN_RECIPE_PAGE_CONTENT_VERSION } from "../../shared/golden-100/recipe-page-schema.js";
-import { buildFirehallHeroImageAlt } from "../../shared/curated-image-governance/firehall-hero-alt.js";
+import { buildRecipeImageAlt } from "../imagery/recipe-image-prompt.js";
 import { PHASE5_REMOVED_SLUGS } from "../../shared/catalog-consolidation/phase5-redirects.js";
+import { resolveCatalogSlug } from "../../shared/catalog-slug-redirects.js";
 import { PERFORMANCE_ADAPTED_RECIPES } from "../../shared/performance-meals/adapted/index.js";
 import { performancePageImageSet } from "../../shared/performance-meals/recipe-page-paths.js";
 import { PERFORMANCE_PAGE_CATEGORY, PERFORMANCE_SET_TAG } from "../../shared/performance-meals/types.js";
@@ -68,14 +69,14 @@ export function buildPerformanceRecipePage(
     "healthy",
   ];
 
-  const relatedSlugs = PERFORMANCE_ADAPTED_RECIPES.filter(
-    (r) =>
-      r.manifest.slug !== manifest.slug &&
-      (r.manifest.mealFormat === manifest.mealFormat ||
-        r.manifest.protein === manifest.protein),
-  )
-    .slice(0, 6)
-    .map((r) => r.manifest.slug);
+  const relatedSlugs: string[] = [];
+  for (const r of PERFORMANCE_ADAPTED_RECIPES) {
+    if (r.manifest.mealFormat !== manifest.mealFormat && r.manifest.protein !== manifest.protein) continue;
+    const slug = resolveCatalogSlug(r.manifest.slug);
+    if (slug === manifest.slug || relatedSlugs.includes(slug)) continue;
+    relatedSlugs.push(slug);
+    if (relatedSlugs.length === 6) break;
+  }
 
   return {
     slug: manifest.slug,
@@ -118,7 +119,12 @@ export function buildPerformanceRecipePage(
       label: n.label ?? `~${n.calories} cal/serving · ${n.protein}g protein · ${fiber}g fiber (est.)`,
     },
     heroImage: images.heroImage,
-    heroImageAlt: buildFirehallHeroImageAlt(manifest.title, recipe.tonightSpread),
+    heroImageAlt: buildRecipeImageAlt({
+      slug: manifest.slug,
+      title: manifest.title,
+      subtitle: manifest.subtitle,
+      description: buildDescription(recipe),
+    }),
     mobileImage: images.mobileImage,
     thumbImage: images.thumbImage,
     railImage: images.railImage,

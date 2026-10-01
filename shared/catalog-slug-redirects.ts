@@ -27,3 +27,6 @@ export function getCatalogSlugRedirect(from: string): string | null {
 export function isConsolidatedAwaySlug(slug: string): boolean {
   return Boolean(getCatalogSlugRedirect(slug));
 }
+
+/** Every retired slug (it redirects elsewhere) — resolvable by URL, never surfaced for discovery or picks. */
+export const RETIRED_CATALOG_SLUGS: readonly string[] = Object.keys(ALL_REDIRECTS).filter(isConsolidatedAwaySlug);

@@ -14,6 +14,7 @@ import {
   type PortionFix,
 } from "../shared/recipe/crew-portion-limits.js";
 import type { GoldenRecipePageIngredient } from "../shared/golden-100/recipe-page-schema.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const FIX = process.argv.includes("--fix");
 
@@ -108,7 +109,7 @@ function main(): void {
   };
 
   fs.mkdirSync("review", { recursive: true });
-  fs.writeFileSync("review/recipe-portion-scaling-audit.json", `${JSON.stringify(report, null, 2)}\n`);
+  writeFileAtomicSync("review/recipe-portion-scaling-audit.json", `${JSON.stringify(report, null, 2)}\n`);
 
   const mdLines = [
     "# Recipe portion scaling audit",
@@ -127,7 +128,7 @@ function main(): void {
         `| ${f.name.split(": ")[0]} | ${f.crewSize} | ${f.oldQuantity} | ${f.newQuantity} | ${f.reason} |`,
     ),
   ];
-  fs.writeFileSync("review/recipe-portion-scaling-audit.md", `${mdLines.join("\n")}\n`);
+  writeFileAtomicSync("review/recipe-portion-scaling-audit.md", `${mdLines.join("\n")}\n`);
 
   console.log(`[audit-recipe-portion-scaling] pages=${report.pagesScanned} fixes=${report.ingredientFixes} mode=${report.mode}`);
   if (!FIX && outliers.length) {

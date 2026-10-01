@@ -21,6 +21,7 @@ import { normalizeGoldenRecipePageCopy, normalizeRecipeSpacing } from "../shared
 import { detectGenericAiWording } from "../shared/curated-recipe/qa-engine/wording.js";
 import { isRoboticTitle } from "../shared/generation-reliability.js";
 import { scoreRecipeTitle } from "../shared/recipe-title-quality.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type CatalogKind = "golden-100" | "performance-meals";
 type Severity = "critical" | "warning" | "info";
@@ -423,7 +424,7 @@ async function main(): Promise<void> {
   };
 
   const jsonPath = path.join(REVIEW_DIR, "full-editorial-audit.json");
-  fs.writeFileSync(jsonPath, JSON.stringify({ summary, rows }, null, 2) + "\n", "utf8");
+  writeFileAtomicSync(jsonPath, JSON.stringify({ summary, rows }, null, 2) + "\n", "utf8");
 
   const md: string[] = [
     "# Full curated editorial audit",
@@ -480,7 +481,7 @@ async function main(): Promise<void> {
   ];
 
   const mdPath = path.join(REVIEW_DIR, "full-editorial-audit.md");
-  fs.writeFileSync(mdPath, md.join("\n") + "\n", "utf8");
+  writeFileAtomicSync(mdPath, md.join("\n") + "\n", "utf8");
 
   console.log(`[curated-full-editorial-audit] total=${rows.length} fixed=${fixedRows.length} critical=${critical.length} manual=${manual.length}`);
   console.log(`[curated-full-editorial-audit] report → ${path.relative(ROOT, mdPath)}`);

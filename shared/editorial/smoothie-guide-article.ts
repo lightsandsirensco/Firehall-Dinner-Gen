@@ -1,159 +1,165 @@
 /**
  * Editorial guide: 10 Healthy Smoothies to Make at the Hall
- * Recipe bodies live in fuel catalog — guide embeds reference the same source.
+ * Recipe bodies live in the fuel catalog; guide embeds reference the same source.
  */
 
 import type { EditorialArticle } from "./content-schema.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../fuel-catalog/smoothies/catalog-data.js";
 import { smoothieCatalogToEmbedded } from "../fuel-catalog/smoothies/to-editorial.js";
+import { SRC } from "./guide-sources.js";
 
 const PUBLISHED = "2026-05-28T12:00:00.000Z";
+const UPDATED = "2026-09-30T12:00:00.000Z";
 
 const EMBEDDED_SMOOTHIES = SMOOTHIE_CATALOG_ITEMS.map(smoothieCatalogToEmbedded);
 
 export const HEALTHY_HALL_SMOOTHIES_ARTICLE: EditorialArticle = {
   slug: "healthy-smoothies-at-the-hall",
   title: "10 Healthy Smoothies to Make at the Hall",
-  subtitle: "Fast protein, easy cleanup, and flavors crews actually finish",
-  seoTitle: "Healthy Smoothies for Firefighters",
+  subtitle:
+    "Ten batch recipes built on frozen fruit, Greek yogurt and milk, with freezer packs, safe holding times and allergen notes for a shared blender.",
+  seoTitle: "10 Healthy Smoothie Recipes and How to Batch Them",
   description:
-    "Ten healthy smoothies adapted for fire station kitchens: high-protein, recovery, breakfast, and green options with realistic ingredients and shift-friendly cleanup.",
+    "Ten healthy smoothies for a fire station kitchen, with batch sizes, freezer packs, safe holding times and allergen tips for a shared blender.",
   topic: "nutrition_performance",
   pillar: "nutrition_performance",
   readMinutes: 12,
   publishedAt: PUBLISHED,
-  updatedAt: PUBLISHED,
+  updatedAt: UPDATED,
   keywords: [
     "healthy smoothies",
     "smoothies for firefighters",
-    "firefighter breakfast ideas",
     "high protein smoothies",
     "shift worker smoothies",
-    "firehall breakfast",
     "station blender recipes",
   ],
   heroImage: "/images/smoothies/mixed-berry-protein.webp",
-  heroImageAlt: "Assorted healthy smoothies on a fire station kitchen counter",
+  heroImageAlt: "Glass of mixed berry smoothie with fresh raspberries and blueberries on a dark plate",
   intro:
-    "Smoothies are not dinner, and at a fire station they don't need to be. Their job is narrower: something fast after a workout, real food on a rushed morning, or a stand-in when the next meal is hours away and nobody knows when the next call is coming. A blender, frozen fruit, and yogurt or milk beat a gas-station shake on both price and protein, and a jar rinsed right after pouring keeps cleanup out of the way. The ten recipes below use ingredients most stations already stock — no specialty powders required — and range from about 160 to 340 calories with up to 22 grams of protein per serving, depending on the blend.",
+    "At a station, a smoothie does three jobs well: breakfast when there is no time to cook, something after training, and a stopgap when a call pushes dinner back. It does not replace a cooked crew dinner. The ten recipes below are written as batches of roughly four 12 oz (350 ml) glasses and use what most station kitchens already keep: frozen fruit, plain Greek yogurt, milk, bananas and oats. Only the mocha calls for protein powder. The blends built on Greek yogurt and milk carry the most protein and keep people full longest. The fruit-only blends, like citrus ginger and green pineapple, are snacks.",
   practicalAdvice: [
-    "Rinse the blender jar immediately after pouring — dried yogurt is the enemy on busy shifts.",
-    "Stock frozen fruit, bananas, Greek yogurt, and milk before buying exotic add-ins.",
-    "Blend liquids and greens first, then frozen fruit — fewer air pockets and less blade strain.",
-    "Label a hall protein powder tub if you use one — unmarked powder causes trust issues.",
-    "Pour into cups before the next call; smoothies separate and thicken oddly after an hour in the fridge.",
-    "Freeze pre-portioned fruit-and-greens packs in quart bags, and add yogurt or milk fresh at blend time — the packs keep for weeks; a finished smoothie doesn't.",
+    "Load the jar in this order: liquid, yogurt, greens, then frozen fruit and ice on top. The blade catches the liquid first and pulls the frozen fruit down.",
+    "If the blender stalls, add liquid 1/4 cup (60 ml) at a time. More ice makes a stall worse.",
+    "Rinse the jar, lid and blade as soon as you pour. Dried yogurt and banana take several times longer to scrub off.",
+    "Peel and slice overripe bananas, then freeze them flat on a tray before bagging so the slices don't fuse into one block.",
+    "Use plain yogurt and taste the batch before adding honey. Ripe fruit usually makes it sweet enough.",
+    "Fill the jar only to its maximum line. An overfilled jar pushes out through the lid when the blender speeds up.",
   ],
   sections: [
     {
-      id: "station-setup",
-      heading: "What equipment a station kitchen actually needs",
+      id: "batch-sizes",
+      heading: "How much to make for a crew",
       paragraphs: [
-        "A 48-ounce or larger blender, a rubber spatula, and freezer space for fruit bags cover most of it. Immersion blenders work for a single serving but slow things down when making six or eight cups at once.",
-        "Keep one cutting board reserved for fruit and ginger if raw chicken or other proteins are prepped on the same counter — cross-contamination is the more likely failure point than anything in the smoothie itself.",
+        "Each recipe here makes about four 12 oz (350 ml) glasses. Loaded with frozen fruit, one batch nearly fills a standard 64 oz (1.9 L) blender jar, so blend one batch at a time, and split it in half if your jar is smaller. For eight people, run two batches back to back. A jar filled past the maximum line blends unevenly, leaves frozen chunks at the top and can force the lid off.",
+        "Plan on one glass per person. If the smoothie is breakfast rather than a snack, use one of the Greek yogurt and milk recipes, and put out toast, eggs or the breakfast burritos below for anyone who needs more.",
       ],
-      tips: [
-        "Freeze overripe bananas, peeled, in zip bags — they're the most reliable thickener on hand.",
-        "Post a short shopping list on the whiteboard: yogurt, milk, frozen berries, spinach.",
+      steps: [
+        "Pour in the milk, juice or coconut water first.",
+        "Add the yogurt, nut butter and any greens or oats.",
+        "Add the frozen fruit and ice last.",
+        "Start on low for 10 to 15 seconds, then run on high for 30 to 60 seconds until smooth.",
+        "Pour straight into glasses, then fill the jar with warm water and a drop of soap and run it for 10 seconds to clean it.",
       ],
     },
     {
-      id: "breakfast-or-recovery",
-      heading: "Breakfast smoothie or post-workout recovery drink?",
+      id: "filling-smoothie",
+      heading: "What makes a smoothie fill you up",
       paragraphs: [
-        "The two jobs call for slightly different builds. A breakfast smoothie needs staying power, since the next meal might be hours off — that means yogurt or milk for protein, oats or a whole banana for slower-digesting carbohydrate, and a spoon of nut butter or chia for fat. A post-workout smoothie can lean lighter: fruit for quick carbohydrate, a protein source, less fat, so it clears the stomach faster before the next set of calls.",
-        "A smoothie built from juice and ice alone struggles at either job — it digests fast, and people are hungry again within the hour. Yogurt, milk, or a scoop of protein powder is what turns a fruit slush into something that actually holds someone over.",
+        "Protein and fiber are what keep a smoothie from wearing off within the hour. Plain Greek yogurt and milk are the cheapest protein sources on the shelf. Oats, whole bananas and chia seeds add fiber. A blend of juice, fruit and ice has neither, so treat it as a drink rather than a meal.",
+        "For a glass with more protein and no powder, blend 1 cup (250 ml) of milk with 3/4 cup (170 g) of plain Greek yogurt. Together they give roughly 25 g of protein, based on USDA FoodData Central values. A tablespoon of peanut or almond butter adds another 3 to 4 g.",
+        "Each recipe card below lists an estimated calorie and protein figure per glass. They are planning estimates that change with brands and portion sizes, and they are not medical or dietary advice.",
       ],
       tips: [
-        "For breakfast, add oats or half an avocado if the crew tends to get hungry again before lunch.",
-        "Right after a workout, go lighter on added fat — it slows how fast the protein and carbs get absorbed.",
+        "For a breakfast smoothie, add 1/4 cup (25 g) of rolled oats per glass.",
+        "Swap flavored yogurt for plain. Flavored yogurt can add several teaspoons of sugar per cup.",
       ],
     },
     {
-      id: "snack-vs-meal",
-      heading: "Smoothie as a snack, light meal, or meal replacement?",
+      id: "freezer-packs",
+      heading: "Freezer packs for fast mornings",
       paragraphs: [
-        "A smoothie works fine as a snack between calls or as a light meal when a full cook isn't happening — but fruit and ice with nothing else in it is a poor stand-in for dinner on a 24-hour shift. The recipes below built on Greek yogurt, milk, and a fat source land closer to 250–340 calories with roughly 16 to 22 grams of protein, which is substantial enough to cover breakfast or a delayed meal. The lighter, mostly-fruit blends are better treated as a snack or a between-meals top-up than a meal replacement.",
-        "On a 24-hour tour, a smoothie works best as a bridge, not the anchor. Use it to cover a gap — after training, before a delayed dinner, or first thing in the morning — and still plan a cooked meal for the crew later in the tour.",
+        "The fastest way to make smoothies on a busy morning is to prep the solid ingredients ahead, not the finished drink. For each batch, put the frozen fruit, greens, oats and any chia or cocoa into a gallon freezer bag, press out the air and write the recipe name and date on it. At blend time, tip the bag into the jar and add the milk and yogurt fresh.",
+        "Food kept at 0°F (-18°C) stays safe indefinitely, according to USDA. The limit is quality: fruit packs develop ice crystals and freezer burn over time, so use them within a few months.",
       ],
     },
     {
-      id: "make-ahead-safety",
-      heading: "Prepping and storing smoothies safely at the station",
+      id: "holding-storage",
+      heading: "How long a finished smoothie can sit out",
       paragraphs: [
-        "The fastest way to speed up smoothie mornings is prepping the solid ingredients ahead, not the finished drink. Portion fruit and greens into quart freezer bags, one bag per serving, and add yogurt, milk, or protein powder fresh at blend time. The fruit keeps for weeks in the freezer; a fully blended smoothie does not.",
-        "Treat a finished smoothie like any other dairy-based drink: refrigerate it right away if it isn't being served immediately, keep it covered, and don't leave it sitting on the counter through a shift's worth of interruptions. A same-day smoothie kept cold is fine; one left out for hours, or held more than a day or two in the fridge, is a food-safety risk rather than a convenience.",
-        "For a full crew, double or triple the base recipe rather than running the blender twice — most station blenders handle a 48-to-64-ounce batch without trouble, and pouring once means less standing at the counter before the next call.",
+        "A smoothie made with milk or yogurt is perishable. USDA's limit for perishable food at room temperature is 2 hours, or 1 hour above 90°F (32°C). If the crew gets called out mid-pour, put the jar or glasses in the fridge before you leave. A glass left on the counter through a long call should be thrown out.",
+        "Covered in the fridge, drink it within about a day. That limit is about quality: it separates and thickens, and a quick re-blend or stir brings it back. In a shared fridge, label it with your name and the date. For anything that won't be finished within a day, pour it into popsicle molds and freeze it.",
       ],
-      tips: [
-        "Write the date on any smoothie packs you freeze — rotation keeps the freezer from turning into a guessing game.",
-        "If a batch won't be finished within a day, freeze the extra in a popsicle mold instead of holding it in the fridge.",
+    },
+    {
+      id: "allergens",
+      heading: "Allergies and a shared blender",
+      paragraphs: [
+        "Several of these recipes contain milk, peanuts or tree nuts (almond butter), all of which are major food allergens. A blender jar is hard to clean completely around the blade and gasket. If someone on the crew has a nut allergy, make their smoothie first in a freshly washed jar, or keep a separate jar for nut-free blends.",
+        "If the station keeps a shared tub of protein powder, leave it in its original container with the ingredient label visible so anyone with an allergy can check it.",
       ],
     },
   ],
   embeddedRecipes: EMBEDDED_SMOOTHIES,
   mealRecommendations: [
     {
-      slug: "breakfast-burrito-bar",
-      title: "Breakfast Burrito Bar",
-      blurb: "When the crew needs more than a shake — full breakfast line.",
+      slug: "hall-breakfast-burritos",
+      title: "Hall Breakfast Burritos",
+      blurb: "A full breakfast line for mornings when a smoothie isn't enough.",
+      catalog: "breakfast",
     },
     {
-      slug: "pancake-short-stack",
-      title: "Pancake Short Stack",
-      blurb: "Classic hall morning after smoothies are not enough.",
+      slug: "buttermilk-pancakes",
+      title: "Buttermilk Pancakes for the Crew",
+      blurb: "A cooked breakfast that feeds the whole crew from one griddle.",
+      catalog: "breakfast",
     },
     {
       slug: "sausage-egg-bake",
       title: "Sausage Egg Bake",
-      blurb: "Batch protein for the whole tour — oven, not blender.",
+      blurb: "A make-ahead egg bake that feeds the crew from the oven.",
     },
     {
       slug: "greek-chicken-bowls",
       title: "Greek Chicken Power Bowls",
-      blurb: "Lunch or dinner — protein-forward when smoothies were morning only.",
+      blurb: "A protein-forward lunch or dinner for later in the shift.",
     },
     {
       slug: "turkey-chili",
       title: "High-Protein Turkey Chili",
-      blurb: "Hearty pot for later in the tour — balances a light smoothie morning.",
+      blurb: "A big pot for dinner that holds on low heat.",
     },
     {
       slug: "performance-burrito-bowls",
       title: "Performance Chicken Burrito Bowls",
-      blurb: "Macros-friendly bowl line when the shift turns serious.",
+      blurb: "A build-your-own bowl line where everyone sets their own portions.",
     },
   ],
   faqs: [
     {
       question: "Do we need an expensive blender?",
       answer:
-        "No. A commercial-duty consumer blender (Vitamix-style) helps with frozen fruit, but a mid-range blender works if you add liquid first and do not overload ice. Replace blades when smoothies stay chunky — dull blades are the usual problem.",
+        "No. A mid-range blender with a 64 oz (1.9 L) jar handles these recipes if you add the liquid first and don't overload it with ice. If smoothies stay chunky even with enough liquid, the blade assembly is usually worn and is cheaper to replace than the blender.",
     },
     {
-      question: "Are smoothies enough after a hard call?",
+      question: "Can a smoothie replace a meal on shift?",
       answer:
-        "Sometimes for a short window — but after heavy work most crews need salt, starch, and more calories. Use smoothies as a bridge, then cook or reheat a real meal when the board allows.",
+        "Occasionally, if it is built like one: Greek yogurt or milk for protein, whole fruit, and oats or nut butter. That covers breakfast or a delayed lunch. It is not a substitute for a cooked crew dinner.",
     },
     {
-      question: "How do we keep sugar reasonable?",
+      question: "How do we keep the sugar down?",
       answer:
-        "Use ripe fruit for sweetness, plain yogurt instead of flavored, and add honey only after tasting. Flavored yogurt and juice blends are where sugar sneaks in.",
+        "Use plain yogurt instead of flavored, use water or milk instead of juice where the recipe allows, and taste before adding honey. Ripe or frozen bananas add enough sweetness for most blends.",
     },
     {
-      question: "Can a smoothie replace a full meal on shift?",
+      question: "How long can a smoothie sit out if we get a call?",
       answer:
-        "Occasionally, if it's built like one. Greek yogurt or milk, whole fruit, and a fat source can land around 250–340 calories with 16 to 22 grams of protein — enough to cover breakfast or a delayed lunch. It's not a substitute for a cooked crew dinner on a regular basis; use it as a stand-in when timing is tight, not as the default.",
-    },
-    {
-      question: "How long can a finished smoothie sit before it's unsafe to drink?",
-      answer:
-        "Treat it like any dairy-based drink: refrigerate it promptly if you're not drinking it right away, and don't leave it out on the counter for hours between calls. A smoothie kept cold and covered is fine for same-day drinking; one left at room temperature for an extended stretch, or held more than a day or two in the fridge, should be tossed.",
+        "Up to 2 hours at room temperature, or 1 hour above 90°F (32°C), which is USDA's limit for perishable food. After that, throw it out. Kept covered in the fridge, drink it within about a day.",
     },
   ],
+  sources: [SRC.usdaDangerZone, SRC.usdaFreezing, SRC.fdaAllergies, SRC.usdaFoodData],
   relatedArticleSlugs: [
-    "eating-well-on-24-hour-shifts",
+    "best-meals-24-hour-shift",
     "healthy-station-snacks",
-    "firefighter-breakfast-ideas",
+    "firefighter-breakfast-guide",
   ],
 };

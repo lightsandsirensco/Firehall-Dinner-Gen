@@ -4,6 +4,7 @@ import { normalizeGoldenRecipePageCopy, normalizeRecipeSpacing } from "../shared
 import { isRoboticTitle } from "../shared/generation-reliability.js";
 import { detectGenericAiWording } from "../shared/curated-recipe/qa-engine/wording.js";
 import { scoreRecipeTitle } from "../shared/recipe-title-quality.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type Severity = "critical" | "warning" | "info";
 
@@ -279,7 +280,7 @@ function main() {
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
   const jsonPath = path.join(outDir, "editorial-audit-150.json");
-  fs.writeFileSync(jsonPath, JSON.stringify({ total, bySeverity, rows }, null, 2) + "\n", "utf8");
+  writeFileAtomicSync(jsonPath, JSON.stringify({ total, bySeverity, rows }, null, 2) + "\n", "utf8");
 
   const md: string[] = [];
   md.push(`# Editorial Audit (150)\n`);
@@ -310,7 +311,7 @@ function main() {
   }
 
   const mdPath = path.join(outDir, "editorial-audit-150.md");
-  fs.writeFileSync(mdPath, md.join("\n") + "\n", "utf8");
+  writeFileAtomicSync(mdPath, md.join("\n") + "\n", "utf8");
 
   // eslint-disable-next-line no-console
   console.log("[audit-editorial-150] wrote", path.relative(ROOT, mdPath), "and", path.relative(ROOT, jsonPath));

@@ -12,6 +12,7 @@ import {
   approvedStapleProteins,
 } from "../shared/catalog-governance/protein-realism.js";
 import { GOLDEN_100_TARGET_BY_CATEGORY, GOLDEN_100_RECIPES } from "../shared/golden-100/recipes-data.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const JSON_OUT = path.join("review", "protein-realism-audit.json");
 const MD_OUT = path.join("review", "protein-realism-audit.md");
@@ -146,7 +147,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
 
   const md = `# Protein Realism Audit
 
@@ -197,7 +198,7 @@ ${Object.entries(collectionCounts)
 ${failures.length ? failures.map((f) => `- \`${f.slug}\` (${f.collection}) — ${f.hits.map((h) => h.term).join(", ")}`).join("\n") : "_None — all curated recipes pass._"}
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
   console.log(`[audit:protein-realism] wrote ${JSON_OUT} and ${MD_OUT}`);
   console.log(`[audit:protein-realism] failures=${failures.length}`);
   if (failures.length) process.exitCode = 1;

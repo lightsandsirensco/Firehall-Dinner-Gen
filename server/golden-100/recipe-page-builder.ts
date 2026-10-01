@@ -39,7 +39,7 @@ import {
 import { getMealSpecificPack } from "../../shared/golden-100/recipe-quality/meal-specific-packs.js";
 import { clampGoldenIngredientsForCrew } from "../../shared/recipe/crew-portion-limits.js";
 import { resolveGoldenSlugTiming } from "../../shared/golden-100/recipe-quality/slug-timing-overrides.js";
-import { buildFirehallHeroImageAlt } from "../../shared/curated-image-governance/firehall-hero-alt.js";
+import { buildRecipeImageAlt } from "../imagery/recipe-image-prompt.js";
 
 const CREW_SIZE_DEFAULT = 8;
 const BASE_SERVINGS_DEFAULT = 8;
@@ -338,6 +338,7 @@ export function buildGoldenRecipePage(
   const titleFields = buildRecipeTitleFields(def);
   const editorial = buildEditorialMeta(def, curatedUsable ? curated : null);
   const tonightSpread = buildTonightSpread(def);
+  const description = buildDescription(def, curatedUsable ? curated : null, pkg);
 
   const page: GoldenRecipePage = {
     slug: def.slug,
@@ -348,7 +349,7 @@ export function buildGoldenRecipePage(
     subtitle: def.hookLine,
     category: def.masterCategoryId,
     cuisine: def.cuisine,
-    description: buildDescription(def, curatedUsable ? curated : null, pkg),
+    description,
     crewSize,
     baseServings: BASE_SERVINGS_DEFAULT,
     prepTime: prepTime ?? timing.prep,
@@ -364,7 +365,7 @@ export function buildGoldenRecipePage(
     steps,
     proTips: uniqueProTips,
     tonightSpread,
-    heroImageAlt: buildFirehallHeroImageAlt(titleFields.displayTitle, tonightSpread),
+    heroImageAlt: buildRecipeImageAlt({ slug: def.slug, title: titleFields.displayTitle, subtitle: def.hookLine, description }),
     leftovers: buildLeftoversStrategy(def),
     whyCrewsLikeIt: editorial.whyCrewsLikeIt,
     mealPrepNotes: editorial.mealPrepNotes,

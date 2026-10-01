@@ -14,11 +14,11 @@ import {
   auditCategoryMealFormat,
 } from "../shared/curated-image-governance/image-accuracy-rules.js";
 import { auditTitlePrimarySideAlignment } from "../shared/curated-image-governance/title-primary-side-rules.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type Verdict = "PASS" | "FIX BEFORE PUSH" | "BLOCKER";
 
 const BATCH = [
-  { slug: "chicken-caesar-wraps", collection: "hall_expansion" as const, title: "Chicken Caesar Wraps", donors: ["chicken-caesar"] },
   { slug: "buffalo-chicken-wraps", collection: "hall_expansion" as const, title: "Buffalo Chicken Wraps", donors: ["buffalo-chicken-dip"] },
   { slug: "greek-chicken-pitas", collection: "hall_expansion" as const, title: "Greek Chicken Pitas", donors: ["chicken-souvlaki", "greek-chicken-bowls"] },
   { slug: "beef-gyros-for-the-hall", collection: "hall_expansion" as const, title: "Beef Gyros", donors: ["steak-sandwiches", "philly-cheesesteak-skillet"] },
@@ -258,7 +258,7 @@ const report = {
 
 const outDir = path.join(process.cwd(), "review");
 fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, "batch-handheld-image-trust-audit.json"), JSON.stringify(report, null, 2));
+writeFileAtomicSync(path.join(outDir, "batch-handheld-image-trust-audit.json"), JSON.stringify(report, null, 2));
 
 console.log(JSON.stringify(report, null, 2));
 process.exit(rows.some((r) => r.overall !== "PASS") ? 1 : 0);

@@ -14,6 +14,7 @@ import { buildGoldenRecipePage } from "../server/golden-100/recipe-page-builder.
 import { validateGoldenRecipePage } from "../server/golden-100/recipe-page-validator.js";
 import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
 import { auditGoldenRecipeContent } from "../shared/golden-100/recipe-quality/audit.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const reportArg = process.argv.find((a) => a.startsWith("--fix-report="));
@@ -82,7 +83,7 @@ async function main(): Promise<void> {
 
   const out = join(root, reportPath);
   mkdirSync(dirname(out), { recursive: true });
-  writeFileSync(out, lines.join("\n"), "utf8");
+  writeFileAtomicSync(out, lines.join("\n"), "utf8");
 
   console.log(`[audit:recipe-content] pass=${pass}/${results.length} fail=${fail.length} manual=${manual.length}`);
   console.log(`[audit:recipe-content] report → ${out}`);

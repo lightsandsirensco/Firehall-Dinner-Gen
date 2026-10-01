@@ -48,7 +48,7 @@ const ROUTES: RouteCheck[] = [
   { label: "breakfast", path: "/breakfast/bagel-lox-breakfast-board", expectJsonLdTypes: ["Recipe"], minBodyLen: 300 },
   { label: "breakfast index", path: "/breakfast", minBodyLen: 300 },
   { label: "guide 1", path: "/guides/feeding-a-firehall-crew", expectJsonLdTypes: ["Article"], minBodyLen: 500 },
-  { label: "guide 2", path: "/guides/quick-meals-between-calls", expectJsonLdTypes: ["Article"], minBodyLen: 500 },
+  { label: "guide 2", path: "/guides/fast-firehall-meals-under-30-minutes", expectJsonLdTypes: ["Article"], minBodyLen: 500 },
   { label: "guide 3", path: "/guides/bbq-night-at-the-station", expectJsonLdTypes: ["Article"], minBodyLen: 500 },
   { label: "guides index", path: "/guides", minBodyLen: 300 },
   { label: "pizza index", path: "/pizza", minBodyLen: 300 },

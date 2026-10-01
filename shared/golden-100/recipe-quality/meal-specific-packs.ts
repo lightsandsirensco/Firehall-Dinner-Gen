@@ -394,29 +394,29 @@ const PACKS: Record<string, (scale: number, def: GoldenRecipeDefinition) => Pack
     ingredients: [
       m("Bell peppers, halved and seeded", mult(12, scale), "count", "Main"),
       m("Ground beef (85/15)", mult(3, scale), "lb", "Filling"),
-      m("Cooked rice", mult(3, scale), "cups", "Filling"),
+      m("Cooked quinoa", mult(3, scale), "cups", "Filling"),
       m("Crushed tomatoes", mult(1, scale), "can", "Sauce"),
       m("Shredded mozzarella", mult(12, scale), "oz", "Topping"),
     ],
     steps: [
       step(1, "Prep pepper boats", "Halve bell peppers lengthwise; remove seeds. Blanch in boiling water 3 minutes; drain cut-side down on towels.", 12, "medium"),
-      step(2, "Brown beef filling", "Brown ground beef with onion and garlic. Stir in cooked rice, crushed tomatoes, and Italian seasoning; simmer 10 minutes until thick.", 18, "medium-high"),
-      step(3, "Fill and top", "Mound beef-rice filling into pepper halves on sheet pans. Top with shredded mozzarella.", 12),
+      step(2, "Brown beef filling", "Brown ground beef with onion and garlic. Stir in cooked quinoa, crushed tomatoes, and Italian seasoning; simmer 10 minutes until thick.", 18, "medium-high"),
+      step(3, "Fill and top", "Mound beef-quinoa filling into pepper halves on sheet pans. Top with shredded mozzarella.", 12),
       step(4, "Bake until tender", "Bake at 375°F 25–30 minutes until peppers are tender and cheese bubbles. Stuffed Peppers slice cleanly if filling is tight — drain excess liquid before baking.", 30, "medium"),
     ],
   }),
 
   "enchilada-casserole": (scale) => ({
     ingredients: [
-      m("Ground beef (80/20)", mult(3, scale), "lb", "Main"),
+      m("Cooked shredded chicken", mult(3, scale), "lb", "Main"),
       m("Corn tortillas", mult(24, scale), "count", "Layers"),
       m("Red enchilada sauce", mult(4, scale), "cups", "Sauce"),
       m("Shredded cheddar", mult(16, scale), "oz", "Cheese"),
       m("Black olives, sliced", mult(1, scale), "cup", "Topping"),
     ],
     steps: [
-      step(1, "Brown seasoned beef", "Brown ground beef with taco seasoning and diced onion. Drain grease; stir in 1 cup enchilada sauce.", 15, "medium-high"),
-      step(2, "Layer the casserole", "In a deep baking dish: sauce, tortillas torn to fit, beef, cheese — repeat twice. Finish with sauce and cheese on top.", 15),
+      step(1, "Season the chicken", "Soften diced onion with taco seasoning. Stir in shredded chicken and 1 cup enchilada sauce; heat through until coated.", 15, "medium-high"),
+      step(2, "Layer the casserole", "In a deep baking dish: sauce, tortillas torn to fit, chicken, cheese — repeat twice. Finish with sauce and cheese on top.", 15),
       step(3, "Bake until bubbling", "Bake covered at 375°F 30 minutes; uncover and bake 15 more until cheese browns at edges.", 45, "medium"),
       step(4, "Rest and scoop", "Rest 10 minutes so layers set. Scoop Enchilada Casserole with a square spatula — it should hold its shape, not slide like soup.", 10, "low"),
     ],

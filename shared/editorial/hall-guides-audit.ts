@@ -74,8 +74,18 @@ const FACT_RISK_PATTERNS: Array<{ label: string; re: RegExp }> = [
   { label: "definitive health promise", re: /\bwill (?:lose|gain|burn) \d+/i },
 ];
 
-const FIREFIGHTER_VOICE_MARKERS =
-  /\b(shift|tones|crew|hall|station kitchen|whiteboard|apparatus bay|on duty|mutual aid|prep table|hotel pan|line setup|second helpings)\b/i;
+/**
+ * Practical crew-cooking context — the things that make a guide useful in a
+ * station kitchen (holding, reheating, pan capacity, crew size). Fire-service
+ * jargon ("tones", "whiteboard", "apparatus bay") deliberately earns nothing:
+ * rewarding it trained guides to sprinkle it in instead of teaching.
+ */
+const CREW_COOKING_MARKERS =
+  /\b(for (?:4|6|8|10|12)\b|crew of \d+|(?:\d+|six|eight|ten|twelve) (?:people|firefighters)|hotel pan|sheet pan|dutch oven|slow cooker|griddle|hold(?:s|ing)? (?:warm|hot|well)|reheat\w*|call comes in|leave mid-|pan capacity|batch(?:es)?|scal(?:e|ing))\b/gi;
+
+/** Measurable specifics: temperatures, weights, volumes, times. */
+const SPECIFICITY_MARKERS =
+  /\b\d+(?:[.,/–-]\d+)?\s?(?:°[FC]|degrees|lb|lbs|pounds?|oz|ounces?|g|kg|cups?|quarts?|qt|litres?|liters?|tbsp|tsp|minutes?|min|hours?|inch(?:es)?|cm|days?)\b/gi;
 
 const GENERIC_BLOG_MARKERS =
   /\b(self-care journey|mindful eating|wellness journey|holistic approach|lifestyle brand|in today's society)\b/i;
@@ -89,7 +99,13 @@ export function collectGuideProse(article: EditorialArticle): string {
     article.intro,
     article.subtitle,
     article.description,
-    ...article.sections.flatMap((s) => [s.heading, ...s.paragraphs, ...(s.tips ?? [])]),
+    ...article.sections.flatMap((s) => [
+      s.heading,
+      ...s.paragraphs,
+      ...(s.steps ?? []),
+      ...(s.table ? [s.table.caption, ...s.table.rows.flat()] : []),
+      ...(s.tips ?? []),
+    ]),
     ...article.practicalAdvice,
     ...article.faqs.flatMap((f) => [f.question, f.answer]),
     ...article.mealRecommendations.map((m) => `${m.title} ${m.blurb}`),
@@ -210,12 +226,9 @@ function scoreSeo(article: EditorialArticle, prose: string): { score: number; no
     score -= 8;
     notes.push("Duplicate section headings");
   }
-  if (!article.heroImageAlt?.trim()) {
+  if (article.heroImage && !article.heroImageAlt?.trim()) {
     score -= 5;
-    notes.push("Add descriptive heroImageAlt with keyword context");
-  } else if (!keywordInText(pk, article.heroImageAlt)) {
-    score -= 3;
-    notes.push("Hero alt could include primary keyword naturally");
+    notes.push("Hero image needs descriptive alt text");
   }
   if (article.mealRecommendations.length < 3) {
     score -= 8;
@@ -236,7 +249,10 @@ function scoreHumanVoice(prose: string, aiFlags: string[], article: EditorialArt
   const copyIssues = auditEditorialArticleCopy(article);
   score -= copyIssues.filter((i) => i.severity === "error").length * 10;
   score -= copyIssues.filter((i) => i.severity === "warn").length * 4;
-  if (!FIREFIGHTER_VOICE_MARKERS.test(prose)) score -= 20;
+  const words = Math.max(countWords(prose), 1);
+  const emDashesPer100 = ((prose.match(/—/g) ?? []).length / words) * 100;
+  if (emDashesPer100 > 1.2) score -= 15;
+  else if (emDashesPer100 > 0.6) score -= 6;
   const youRatio = (prose.match(/\byou\b/gi) ?? []).length;
   const weRatio = (prose.match(/\b(we|our hall)\b/gi) ?? []).length;
   if (youRatio + weRatio < 2) score -= 8;
@@ -259,11 +275,15 @@ function scoreTrust(factFlags: string[], article: EditorialArticle): number {
 }
 
 function scoreFirefighterRelevance(prose: string): number {
-  const hits = (prose.match(FIREFIGHTER_VOICE_MARKERS) ?? []).length;
+  const hits = (prose.match(CREW_COOKING_MARKERS) ?? []).length;
   if (hits >= 8) return 95;
   if (hits >= 4) return 82;
   if (hits >= 2) return 68;
   return 45;
+}
+
+function specificityCount(prose: string): number {
+  return (prose.match(SPECIFICITY_MARKERS) ?? []).length;
 }
 
 function scoreSearchIntent(article: EditorialArticle, prose: string, wordCount: number): number {
@@ -306,10 +326,12 @@ function scoreConversion(article: EditorialArticle): number {
 }
 
 function scoreEeat(prose: string, article: EditorialArticle): number {
-  let score = 72;
-  if (FIREFIGHTER_VOICE_MARKERS.test(prose)) score += 12;
-  if (article.practicalAdvice.some((t) => /assign|tones|shift|crew|hall/i.test(t))) score += 8;
-  if (/\b(hall-tested|on our hall|crews actually|station kitchen)\b/i.test(prose)) score += 8;
+  let score = 70;
+  if (article.sources?.length) score += 12;
+  const specifics = specificityCount(prose);
+  if (specifics >= 15) score += 12;
+  else if (specifics >= 6) score += 6;
+  if (article.sections.some((s) => s.table || s.steps)) score += 6;
   if (GENERIC_BLOG_MARKERS.test(prose)) score -= 15;
   return Math.max(0, Math.min(100, score));
 }
@@ -398,10 +420,10 @@ export function auditHallGuide(article: EditorialArticle): HallGuideAuditRow {
     ...factFlags.map((f) => `Fact-check: ${f}`),
   ];
   if (humanWritingScore < 75) {
-    recommendedChanges.push("Rewrite intro + one section in direct hall voice (short sentences, crew scenarios)");
+    recommendedChanges.push("Rewrite intro + one section: cut stock phrasing and em dashes, state what to do and why");
   }
   if (depthScore < 70) {
-    recommendedChanges.push("Expand thin sections with station-specific examples and timing notes");
+    recommendedChanges.push("Expand thin sections with quantities, temperatures, timing, and a worked crew-size example");
   }
   if (searchIntentScore < 75) {
     recommendedChanges.push("Answer the search query in the first 2 paragraphs — less preamble");

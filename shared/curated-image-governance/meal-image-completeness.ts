@@ -342,9 +342,7 @@ export function auditMealImageCompleteness(input: {
     }
   }
 
-  // Firehall framing — complete meals need wide family-style cues in metadata
-  const firehallFraming =
-    /\b(wide|platter|family|crew|hotel pan|sheet pan|prep table|firehall|station kitchen|serving tray|family-style|bowl of|beside)\b/i;
+  // Framing is judged by vision QA; alt text should describe food, not composition.
   const tightCrop =
     /\b(macro only|extreme close|tight crop|single portion|amuse bouche|fine dining|garnish only|studio seamless|white background|restaurant marketing)\b/i;
 
@@ -356,20 +354,6 @@ export function auditMealImageCompleteness(input: {
         90,
       ),
     );
-  }
-
-  if (req.requiresCompleteMeal && !firehallFraming.test(blob) && sidesToCheck.length > 0) {
-    const isSmoothie =
-      input.mealFormat === "smoothie" || /\bsmoothie\b/i.test(input.title);
-    if (!isSmoothie) {
-      issues.push(
-        issue(
-          "food_realism_red_flag",
-          "Complete meal title needs wide family-style hero metadata (platter, crew, beside, bowl of)",
-          75,
-        ),
-      );
-    }
   }
 
   return issues;

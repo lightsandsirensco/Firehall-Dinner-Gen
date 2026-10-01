@@ -16,6 +16,7 @@ import {
 } from "../shared/recipe-quality/master-recipe-audit.js";
 import { breakfastPageToGolden, smoothiePageToGolden } from "../shared/golden-100/recipe-quality/detail-rewrite-engine.js";
 import { GOLDEN_100_TARGET_BY_CATEGORY, GOLDEN_100_RECIPES } from "../shared/golden-100/recipes-data.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const JSON_OUT = path.join("review", "master-recipe-audit.json");
 const MD_OUT = path.join("review", "master-recipe-audit.md");
@@ -109,7 +110,7 @@ function main(): void {
   }
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify({ ...report, scope, golden100: { total: GOLDEN_100_RECIPES.length, targets: GOLDEN_100_TARGET_BY_CATEGORY, byCategory: goldenByCat } }, null, 2));
+  writeFileAtomicSync(JSON_OUT, JSON.stringify({ ...report, scope, golden100: { total: GOLDEN_100_RECIPES.length, targets: GOLDEN_100_TARGET_BY_CATEGORY, byCategory: goldenByCat } }, null, 2));
 
   const gradeD = rows.filter((r) => r.grade === "D");
   const gradeC = rows.filter((r) => r.grade === "C");
@@ -165,7 +166,7 @@ ${gradeC.length > 25 ? `\n_…and ${gradeC.length - 25} more (see JSON)._` : ""}
 ${rows.filter((r) => r.grade === "A").slice(0, 10).map((r) => `- \`${r.slug}\``).join("\n") || "_None yet_"}
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
   console.log(`[audit:master-recipes] wrote ${JSON_OUT} and ${MD_OUT}`);
   console.log(
     `[audit:master-recipes] scope=${scope} recipes=${report.totals.recipes} A=${report.totals.gradeA} B=${report.totals.gradeB} C=${report.totals.gradeC} D=${report.totals.gradeD}`,

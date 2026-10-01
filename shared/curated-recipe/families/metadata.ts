@@ -12,7 +12,7 @@ export function buildArchetypeMetadata(family: HallArchetypeFamily): RecipeArche
   return {
     slug,
     displayName: def.displayName,
-    description: `${def.tagline}. Curated FirehallMeals recipes in the ${def.displayName} family.`,
+    description: `${def.tagline}. Curated Firehall Meals recipes in the ${def.displayName} family.`,
     hubPath: `/families/${slug}`,
     keywords: [def.displayName, ...def.explorePools, ...def.proteins],
     schemaType: "CollectionPage",

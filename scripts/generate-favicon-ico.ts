@@ -6,20 +6,21 @@
  *
  * The prior `favicon.ico` was a raw 32x32 PNG renamed with a `.ico`
  * extension (no ICONDIR header at all), which some strict ICO parsers
- * reject or mishandle. Source: highest-res PWA icon already in the repo.
+ * reject or mishandle. Source: the vector logo, rendered with a transparent
+ * background so the circular mark doesn't sit in a dark square.
  */
 import fs from "fs";
 import path from "path";
 import sharp from "sharp";
 
 const ROOT = path.resolve(process.cwd());
-const SOURCE = path.join(ROOT, "client", "public", "pwa", "icon-512.png");
+const SOURCE = path.join(ROOT, "client", "public", "pwa", "icon.svg");
 const OUT_ICO = path.join(ROOT, "client", "public", "favicon.ico");
 const SIZES = [16, 32, 48];
 
 async function buildIco(): Promise<void> {
   const frames = await Promise.all(
-    SIZES.map((size) => sharp(SOURCE).resize(size, size, { fit: "cover" }).png().toBuffer()),
+    SIZES.map((size) => sharp(SOURCE).resize(size, size, { fit: "contain", background: { r: 0, g: 0, b: 0, alpha: 0 } }).png().toBuffer()),
   );
 
   const ICONDIR_SIZE = 6;

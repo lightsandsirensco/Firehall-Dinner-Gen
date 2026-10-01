@@ -17,9 +17,7 @@
  *     crew dinners" framing)
  *   - `crew_culture` + `shift_operations` -> "firehall-dinners" (every guide
  *     in both buckets is about dinner logistics/comfort food — confirmed
- *     against each guide's own title/keywords, e.g. `organize-firehall-dinners`
- *     keywords include "firehall dinner planning"; `comfort-food-after-a-long-shift`
- *     keywords include "station dinner")
+ *     against each guide's own title/keywords)
  *
  * `station_lifestyle` (9 guides) is the one bucket that does NOT map
  * cleanly to a single cluster — it genuinely spans two different
@@ -53,19 +51,13 @@ const TOPIC_TO_CLUSTER: Record<Exclude<EditorialTopic, "station_lifestyle">, Gui
  * NOT listed here).
  */
 export const STATION_LIFESTYLE_DINNER_SLUGS = new Set<string>([
-  "10-classic-firehall-meals", // keywords include "firefighter dinner ideas"
-  "legendary-firehall-meals", // "the dishes halls still talk about"
-  "meals-every-firefighter-knows", // "the short list — chili, burgers, tacos, pasta"
-  "feeding-ten-firefighters", // keywords include "large crew dinner"
-  "busy-shift-dinner-strategies", // "dinner when the board will not cooperate"
+  "10-classic-firehall-meals", // the Classics Wheel dinners
 ]);
 
 /** Remaining `station_lifestyle` guides — station/kitchen culture & workflow. */
 export const STATION_LIFESTYLE_CULTURE_SLUGS = new Set<string>([
   "firehall-kitchen-culture",
-  "how-crews-split-groceries",
   "rookie-cooking-mistakes",
-  "better-station-food-culture",
 ]);
 
 export interface ClusterableGuide {

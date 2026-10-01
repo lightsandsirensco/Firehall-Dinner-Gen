@@ -33,6 +33,7 @@ import { assertImageReuseAllowed } from "../shared/scripts/assert-image-reuse-al
 import { breakfastCatalogHeroPath } from "../shared/breakfast-catalog/slug-registry.js";
 import { attachEditorialImagesToSlug } from "../server/imagery/update-recipe-images.js";
 import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type Row = {
   recipe_id: string;
@@ -207,7 +208,7 @@ async function main(): Promise<void> {
 
   const report = { dryRun, fixed, demoted, skipped, total: rows.length, results };
   fs.mkdirSync(path.dirname(REVIEW), { recursive: true });
-  fs.writeFileSync(REVIEW, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(REVIEW, JSON.stringify(report, null, 2));
   console.log(`[remediate:explore-missing-images] fixed=${fixed} demoted=${demoted} skipped=${skipped}`);
   console.log(`[remediate:explore-missing-images] wrote ${REVIEW}`);
 

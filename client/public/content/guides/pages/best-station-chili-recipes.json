@@ -1,103 +1,203 @@
 {
   "slug": "best-station-chili-recipes",
-  "title": "Best Station Chili Recipes",
-  "subtitle": "The hall's default batch — beef, turkey, and big pots",
-  "description": "Best station chili recipes for firefighters: classic beef chili, turkey lean batch, and hall-sized pots that hold across the shift.",
+  "title": "Chili for a Crowd: How to Make, Hold, and Cool a Big Batch",
+  "subtitle": "Quantities for 6 to 12, how to brown and season a big pot properly, how to hold it on a busy night, and how to cool the leftovers safely.",
+  "description": "How to make chili for a crowd: quantities for 6 to 12 people, browning and seasoning a big pot, holding it hot, and cooling and storing leftovers safely.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Chili is the station's universal backup plan. It scales, holds on the stove, tops potatoes or hot dogs, and tastes better the next day. The best station chili recipes are not secret — they are consistent batches with enough seasoning to stand up to cheese and crackers. Below: what halls actually cook for station chili recipes — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "For 10 people, a big pot of chili starts with about 3 1/2 lb (1.6 kg) of ground beef, three cans of beans and two large cans of crushed tomatoes, which makes around 5 quarts (4.7 L), enough for a generous bowl each with seconds. Chili is a natural station meal because it holds for hours on low heat and reheats well, but big batches have their own problems: meat that steams instead of browning, seasoning that doesn't scale evenly, a scorched bottom, and a pot that takes too long to cool.",
   "sections": [
     {
-      "id": "variations",
-      "heading": "Beef vs turkey vs double pot",
+      "id": "quantities",
+      "heading": "How much chili for 6 to 12 people",
       "paragraphs": [
-        "Beef for classic nights, turkey when the crew wants leaner, double pot when appetite is unknown. Same line setup for all three.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "Plan about 1 1/2 cups (350 ml) of chili per serving, plus extra if the crew goes back for seconds. Use a pot that holds at least half as much again as the finished chili so you can stir without slopping it over: an 8 qt Dutch oven or stockpot for 10 people."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      "table": {
+        "caption": "Chili quantities by crew size (can sizes: beans 15 oz / 540 ml, tomatoes 28 oz / 796 ml)",
+        "columns": [
+          "Crew",
+          "Ground beef",
+          "Cans of beans",
+          "Cans of crushed tomatoes",
+          "Onions",
+          "Finished yield"
+        ],
+        "rows": [
+          [
+            "6",
+            "2 lb (900 g)",
+            "2",
+            "1",
+            "1 large",
+            "About 3 qt"
+          ],
+          [
+            "8",
+            "2 3/4 lb (1.2 kg)",
+            "3",
+            "2",
+            "2",
+            "About 4 qt"
+          ],
+          [
+            "10",
+            "3 1/2 lb (1.6 kg)",
+            "3",
+            "2",
+            "2",
+            "About 5 qt"
+          ],
+          [
+            "12",
+            "4 lb (1.8 kg)",
+            "4",
+            "3",
+            "3",
+            "About 6 qt"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "method",
+      "heading": "Browning, blooming, and simmering a big pot",
+      "paragraphs": [
+        "Brown the meat in batches of about 1 to 1 1/2 lb. Put all 3 1/2 lb in the pot at once and it releases more water than the pan can evaporate, so it turns grey and simmers instead of browning, and you lose the savoury depth that makes chili taste like chili. Move each batch out as it browns, pour off most of the fat, and soften the onions in what is left.",
+        "Add the chili powder, cumin and other dried spices to the hot fat for 30 to 60 seconds before the liquid goes in. Many of the flavour compounds in dried spices dissolve in fat, and a short time in hot oil makes them noticeably stronger and less dusty. Keep it moving so the spices don't scorch.",
+        "Then add the meat back with the tomatoes and beans, and simmer uncovered for at least 45 minutes to an hour for ground beef, or 2 1/2 to 3 hours if you are using cubed chuck. A big pot needs longer than a small one to reduce and concentrate. Stir from the bottom every 10 to 15 minutes; thick chili scorches easily where it touches the base of the pot."
       ]
     },
     {
-      "id": "toppings",
-      "heading": "Toppings bar that actually gets used",
+      "id": "seasoning",
+      "heading": "Seasoning a scaled-up pot",
       "paragraphs": [
-        "Cheese, onion, jalapeño, sour cream, and something crunchy. Label mild vs hot — it prevents the usual salsa argument.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "If you are multiplying a smaller recipe, start with about three-quarters of the scaled chili powder, cayenne and salt. A large pot evaporates less liquid for its volume than a small one, so the flavour concentrates less, and heat and salt are easy to add but impossible to remove. Taste after 30 minutes of simmering and adjust.",
+        "To thicken, stir in a slurry of masa harina and water for the last 10 minutes; it thickens and adds a light corn flavour. Finish with salt and a squeeze of lime or a splash of vinegar. A little acid at the end is often what a chili that tastes flat is missing."
       ]
     },
     {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
+      "id": "beans",
+      "heading": "Canned or dried beans",
       "paragraphs": [
-        "For station chili recipes, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+        "Canned beans are fully cooked and can go straight into the pot. If you use dried red kidney beans, soak them and boil them in fresh water first. Raw kidney beans contain a toxin that boiling destroys and lower temperatures don't, which matters most if the chili is going into a slow cooker."
+      ]
+    },
+    {
+      "id": "holding",
+      "heading": "Holding chili on a busy night",
+      "paragraphs": [
+        "Chili holds for a couple of hours covered on the lowest heat or in a slow cooker on warm, as long as it stays at 140°F (60°C) or above. Stir it when you pass, and add a splash of water as it thickens. Keep the toppings (cheese, onions, sour cream) in the fridge until serving rather than sitting out beside the pot."
+      ]
+    },
+    {
+      "id": "cooling",
+      "heading": "Cooling and storing the leftovers",
+      "paragraphs": [
+        "A full pot of chili is one of the slowest things in a kitchen to cool, because the centre is insulated by everything around it. Don't put the pot in the fridge. Commercial kitchens follow the FDA Food Code, which requires cooked food to get from 135°F to 70°F (57 to 21°C) within 2 hours and to 41°F (5°C) within 6 hours in total; the home guidance from USDA and Health Canada is to refrigerate within two hours."
       ],
-      "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
+      "steps": [
+        "Stir the pot in a sink of ice water for a few minutes to take the heat off.",
+        "Divide the chili into shallow containers no more than 2 in (5 cm) deep.",
+        "Refrigerate them uncovered or loosely covered until cold, then seal and label with the date.",
+        "Eat within 2 to 3 days (Health Canada) or 3 to 4 days (USDA), or freeze in 1 quart containers or flat bags.",
+        "Reheat to a rolling boil, stirring, before serving."
       ]
     }
   ],
   "practicalAdvice": [
-    "Brown meat before the pot — depth matters.",
-    "Simmer longer than you think after adding beans.",
-    "Offer toppings bar: cheese, onion, jalapeño, Fritos — crew happiness multiplier.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "For 10 people, use about 3 1/2 lb (1.6 kg) of ground beef in an 8 qt pot.",
+    "Brown the meat in batches and bloom the spices in the fat before adding liquid.",
+    "Start with three-quarters of the scaled spices and salt, then taste after 30 minutes.",
+    "Cool leftovers in shallow containers, never in the pot, and refrigerate within two hours."
   ],
   "mealRecommendations": [
     {
-      "slug": "chili-mac",
-      "title": "Firehall Chili",
-      "blurb": "Garlic bread night pairing built in."
-    },
-    {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Maximum batch when appetite is unknown."
+      "blurb": "The classic crew pot, scaled for a full table."
     },
     {
       "slug": "turkey-chili",
       "title": "Turkey Chili",
-      "blurb": "Leaner pot — still hearty."
+      "blurb": "A lighter version that still holds on low and freezes well."
     },
     {
-      "slug": "white-bean-chicken-chili",
-      "title": "Sunday Batch Chili",
-      "blurb": "Meal-prep chili base."
+      "slug": "chili-mac",
+      "title": "Chili Mac",
+      "blurb": "Turns leftover chili into a second dinner with pasta and cheese."
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Baked Potato Bar",
+      "blurb": "Chili over baked potatoes stretches one pot across more people."
     },
     {
       "slug": "loaded-potato-feed",
       "title": "Potato Bar Feed",
-      "blurb": "Chili topping option on potato bar."
+      "blurb": "Another potato-based way to make a batch of chili go further."
+    },
+    {
+      "slug": "game-day-nachos",
+      "title": "Game Day Nachos",
+      "blurb": "A good use for the last quart of chili."
     }
   ],
   "faqs": [
     {
-      "question": "What's the difference between beef and turkey station chili?",
-      "answer": "Beef chili is the classic, heavier pick for a cold or rough shift; turkey chili is leaner but still holds up with the same seasoning and simmer time. A double pot of both covers a crew when appetite is unknown."
+      "question": "How much chili do I need for 10 people?",
+      "answer": "About 5 quarts (4.7 L), which allows roughly 1 1/2 cups per person with some seconds. That takes around 3 1/2 lb (1.6 kg) of ground beef, three 15 oz (540 ml) cans of beans and two 28 oz (796 ml) cans of crushed tomatoes."
     },
     {
-      "question": "What toppings should a chili bar have?",
-      "answer": "Cheese, diced onion, jalapeño, sour cream, and something crunchy like Fritos or crackers. Label a mild and a hot pot separately — it heads off the usual argument about spice level before it starts."
+      "question": "How do I thicken chili?",
+      "answer": "Simmer it uncovered longer so more liquid evaporates, or stir in a slurry of masa harina and water for the last 10 minutes. Mashing some of the beans against the side of the pot also thickens it."
+    },
+    {
+      "question": "Why does my chili burn on the bottom?",
+      "answer": "Thick chili doesn't circulate much, so the layer touching the base of the pot sits over direct heat. Use a heavy-bottomed pot, keep the heat at a gentle simmer, and scrape the bottom every 10 to 15 minutes."
+    },
+    {
+      "question": "How long does chili last in the fridge?",
+      "answer": "Health Canada recommends eating refrigerated leftovers within 2 to 3 days; USDA says 3 to 4 days. Frozen chili keeps its quality for about 3 to 4 months. Reheat it to a rolling boil."
     }
   ],
   "relatedArticleSlugs": [
+    "firehall-meal-prep-ideas",
+    "cooking-for-10-firefighters",
+    "best-firefighter-crockpot-meals",
     "firehouse-comfort-meals"
   ],
   "keywords": [
+    "chili for a crowd",
+    "how much chili for 10 people",
     "station chili recipes",
-    "firefighter chili",
-    "fire hall chili",
-    "batch chili"
+    "firehouse chili",
+    "big batch chili"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Best Station Chili Recipes — station chili recipes tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "Chili for a Crowd: Quantities, Method and Safe Cooling",
+  "sources": [
+    {
+      "label": "Food safety tips for leftovers",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/food-safety-tips-leftovers.html"
+    },
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    },
+    {
+      "label": "Food Code Fact Sheet #31: Cooling (FDA Food Code §3-501.14)",
+      "publisher": "Oregon Health Authority",
+      "url": "https://www.oregon.gov/oha/PH/HEALTHYENVIRONMENTS/FOODSAFETY/Documents/FactSheet31Cooling.pdf"
+    },
+    {
+      "label": "Cooking Dry Beans Safely (summarizing FDA guidance on kidney bean lectin)",
+      "publisher": "Kansas State University Research and Extension",
+      "url": "https://enewsletters.k-state.edu/youaskedit/2017/10/13/cooking-dry-beans-safely/"
+    }
+  ]
 }

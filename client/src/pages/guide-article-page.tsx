@@ -14,7 +14,7 @@ import {
   buildBreadcrumbListSchema,
   buildGuideArticleBreadcrumbs,
 } from "@shared/seo/schema";
-import { guidePath } from "@shared/editorial/content-schema";
+import { guideFaqSchemaItems, guidePath } from "@shared/editorial/content-schema";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { PILLAR_LABELS, type EditorialPillar } from "@shared/editorial/content-pillar";
 import { getGuideLandingLink } from "@shared/seo/guide-authority-links";
@@ -92,7 +92,7 @@ function GuidePracticalAdvice({ tips, className }: { tips: string[]; className?:
       aria-labelledby="practical-advice-heading"
     >
       <h2 id="practical-advice-heading" className="font-heading text-lg">
-        Practical advice for the shift
+        Key points
       </h2>
       <ul className="mt-3 space-y-2 text-[15px] text-foreground/85 leading-relaxed list-disc pl-5">
         {tips.map((tip) => (
@@ -124,6 +124,48 @@ function GuideBodySections({ sections }: { sections: EditorialSection[] }) {
               <p key={i}>{p}</p>
             ))}
           </div>
+          {section.steps && section.steps.length > 0 && (
+            <ol className="mt-4 space-y-2 text-[15px] text-foreground/85 leading-relaxed list-decimal pl-5 max-w-prose">
+              {section.steps.map((s) => (
+                <li key={s.slice(0, 40)}>{s}</li>
+              ))}
+            </ol>
+          )}
+          {section.table && (
+            <div className="mt-5 overflow-x-auto rounded-xl border border-border/25">
+              <table className="w-full text-sm text-left">
+                <caption className="caption-top px-4 pt-3 pb-2 text-left text-xs text-muted-foreground">
+                  {section.table.caption}
+                </caption>
+                <thead className="bg-muted/20">
+                  <tr>
+                    {section.table.columns.map((c) => (
+                      <th key={c} scope="col" className="px-4 py-2 font-semibold text-foreground whitespace-nowrap">
+                        {c}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {section.table.rows.map((row, ri) => (
+                    <tr key={ri} className="border-t border-border/20">
+                      {row.map((cell, ci) =>
+                        ci === 0 ? (
+                          <th key={ci} scope="row" className="px-4 py-2 font-medium text-foreground">
+                            {cell}
+                          </th>
+                        ) : (
+                          <td key={ci} className="px-4 py-2 text-muted-foreground">
+                            {cell}
+                          </td>
+                        ),
+                      )}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
           {section.tips && section.tips.length > 0 && (
             <ul className="mt-3 space-y-2 text-sm text-muted-foreground list-disc pl-5">
               {section.tips.map((t) => (
@@ -162,7 +204,7 @@ export default function GuideArticlePage() {
     if (!article) return undefined;
     return [
       buildArticleSchema(origin, article),
-      buildFaqPageSchema(article.faqs),
+      ...(guideFaqSchemaItems(article).length ? [buildFaqPageSchema(guideFaqSchemaItems(article))] : []),
       buildBreadcrumbListSchema(origin, buildGuideArticleBreadcrumbs(origin, article)),
     ];
   }, [article, origin]);
@@ -299,7 +341,14 @@ export default function GuideArticlePage() {
                 </span>
                 <span className="inline-flex items-center gap-1.5">
                   <ChefHat className="w-4 h-4" aria-hidden />
-                  Hall-tested perspective
+                  Updated{" "}
+                  <time dateTime={article.updatedAt}>
+                    {new Date(article.updatedAt).toLocaleDateString("en-CA", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
+                  </time>
                 </span>
               </div>
             </header>
@@ -357,8 +406,8 @@ export default function GuideArticlePage() {
                 Get rid of the &ldquo;What&apos;s for Dinner?&rdquo; debate
               </h2>
               <p className="mt-3 text-[15px] text-foreground/85 leading-relaxed">
-                Built by Firefighters. Tested in the Firehall. Browse crew-sized recipes or use Find a Meal when
-                the whiteboard goes quiet.
+                Built by Firefighters. Tested in the Firehall. Browse crew-sized recipes, or tell Find a Meal your
+                crew size and time and get a dinner that fits.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">
                 <Link
@@ -376,19 +425,39 @@ export default function GuideArticlePage() {
               </div>
             </aside>
 
-            <section className="mt-12" aria-labelledby="faq-heading">
-              <h2 id="faq-heading" className="font-heading text-xl sm:text-2xl">
-                FAQ
-              </h2>
-              <dl className="mt-6 space-y-6">
-                {(article.faqs ?? []).map((f) => (
-                  <div key={f.question} className="border-t border-border/20 pt-6 first:border-t-0 first:pt-0">
-                    <dt className="font-semibold text-foreground">{f.question}</dt>
-                    <dd className="mt-2 text-muted-foreground leading-relaxed">{f.answer}</dd>
-                  </div>
-                ))}
-              </dl>
-            </section>
+            {article.faqs && article.faqs.length > 0 && (
+              <section className="mt-12" aria-labelledby="faq-heading">
+                <h2 id="faq-heading" className="font-heading text-xl sm:text-2xl">
+                  FAQ
+                </h2>
+                <dl className="mt-6 space-y-6">
+                  {article.faqs.map((f) => (
+                    <div key={f.question} className="border-t border-border/20 pt-6 first:border-t-0 first:pt-0">
+                      <dt className="font-semibold text-foreground">{f.question}</dt>
+                      <dd className="mt-2 text-muted-foreground leading-relaxed">{f.answer}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </section>
+            )}
+
+            {article.sources && article.sources.length > 0 && (
+              <section className="mt-12" aria-labelledby="sources-heading">
+                <h2 id="sources-heading" className="font-heading text-lg">
+                  Sources
+                </h2>
+                <ul className="mt-3 space-y-1.5 text-sm text-muted-foreground list-disc pl-5">
+                  {article.sources.map((s) => (
+                    <li key={s.url}>
+                      <a href={s.url} className="text-primary hover:underline" rel="noopener" target="_blank">
+                        {s.label}
+                      </a>{" "}
+                      — {s.publisher}
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            )}
 
             {relatedArticles.length > 0 && (
               <section className="mt-12 pt-8 border-t border-border/20" aria-labelledby="related-guides">

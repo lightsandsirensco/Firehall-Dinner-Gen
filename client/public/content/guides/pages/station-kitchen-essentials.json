@@ -1,93 +1,196 @@
 {
   "slug": "station-kitchen-essentials",
-  "title": "Station Kitchen Essentials",
-  "subtitle": "What every hall should have before dinner night",
-  "description": "Fire station kitchen essentials: pans, thermometers, foil, storage, and tools that make crew cooking possible without borrowing from three trucks.",
+  "title": "Station Kitchen Equipment: What You Need to Cook for 8 to 12",
+  "subtitle": "The pans, pots and tools that matter when every meal feeds a crew, in the sizes that actually hold enough food.",
+  "description": "Kitchen equipment for cooking for a crowd of 8 to 12: pan and pot sizes, what each piece is for, and the one tool that matters most.",
   "topic": "station_cooking",
   "pillar": "operations_how_to",
-  "intro": "A hall kitchen without basics turns every meal into improvisation. Station kitchen essentials are not luxury — they are force multipliers: sheet pans, a large pot, a probe thermometer, and enough foil to survive a week of holds. Below: what halls actually cook for fire station kitchen equipment — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "Cooking for a crew needs capacity more than gadgets. The short list is an instant-read thermometer, at least four half sheet pans with racks, a 7 to 9 qt Dutch oven, a 16 to 20 qt stockpot, two 12 in skillets, a couple of 9 x 13 in baking dishes, and plenty of shallow storage containers. With those, a station kitchen can handle almost any crew dinner without cooking in endless batches.",
   "sections": [
     {
-      "id": "gear",
-      "heading": "Gear worth funding",
+      "id": "the-list",
+      "heading": "The essentials, in sizes that feed 8 to 12",
       "paragraphs": [
-        "Dutch oven or large stock pot, cast iron or flat-top spatula, tongs, ladle, and a sharp chef knife someone actually maintains.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "Household equipment is sized for four people. The most common problem in a station kitchen is not a missing tool but a pan that is too small, which forces crowding and batch cooking. Buy fewer, larger, heavier pieces."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      "table": {
+        "caption": "Core equipment for a crew kitchen",
+        "columns": [
+          "Item",
+          "Size",
+          "What it's for"
+        ],
+        "rows": [
+          [
+            "Instant-read thermometer",
+            "Digital probe",
+            "Checking doneness, reheating and hot-holding temperatures"
+          ],
+          [
+            "Half sheet pans, with wire racks",
+            "18 x 13 in (46 x 33 cm), at least 4",
+            "Roasting, oven bacon, sheet-pan dinners, holding fried food crisp"
+          ],
+          [
+            "Dutch oven",
+            "7 to 9 qt (6.6 to 8.5 L)",
+            "Chili, braises, soups; goes from stovetop to oven"
+          ],
+          [
+            "Stockpot, heavy base",
+            "16 to 20 qt (15 to 19 L)",
+            "Pasta for 10 to 12, big soups, blanching vegetables"
+          ],
+          [
+            "Skillets, cast iron or stainless",
+            "Two at 12 in (30 cm)",
+            "Searing and browning; two pans halve the batch time"
+          ],
+          [
+            "Baking dishes",
+            "9 x 13 in (23 x 33 cm), at least 2",
+            "Baked pasta, casseroles, egg bakes; about 8 hungry portions each"
+          ],
+          [
+            "Slow cooker",
+            "7 to 8 qt (6.6 to 7.6 L)",
+            "Hands-off dinners and keeping food hot for late eaters"
+          ],
+          [
+            "Griddle",
+            "Two-burner or electric",
+            "Pancakes, eggs and smash burgers in large batches"
+          ],
+          [
+            "Chef's knife and sharpener",
+            "8 to 10 in (20 to 25 cm)",
+            "A sharp knife is faster and safer than a dull one"
+          ],
+          [
+            "Cutting boards",
+            "Large, with one kept for raw meat",
+            "Keeping raw meat away from ready-to-eat food"
+          ],
+          [
+            "Shallow storage containers",
+            "No more than 2 in (5 cm) deep",
+            "Cooling leftovers quickly and storing them safely"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "thermometer",
+      "heading": "The thermometer matters most",
+      "paragraphs": [
+        "If a station kitchen buys only one thing, it should be a digital instant-read thermometer. It is the only reliable way to know that chicken has reached 165°F (74°C), that leftovers have been reheated to 165°F (74°C), and that food held for late eaters is still at 140°F (60°C) or above. It also stops the opposite problem, overcooking everything to be safe, which is where most dry chicken and tough pork chops come from. Check its accuracy occasionally in a glass of ice water, where it should read 32°F (0°C)."
       ]
     },
     {
-      "id": "storage",
-      "heading": "Storage and hold",
+      "id": "pans",
+      "heading": "Getting more out of the pans you have",
       "paragraphs": [
-        "Half-sheet pans with lids, a roll of foil, and labeled containers turn leftovers into tomorrow's lunch instead of science experiments.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "Preheat pans properly before food goes in; a heavy pan holds its heat when cold food hits it, which is what makes browning possible. Use two skillets at once rather than one skillet twice. In the oven, swap sheet pans between racks halfway through, because most ovens have hot spots and the pan on the top rack usually browns differently from the one below.",
+        "Full-size hotel pans (roughly 12 x 20 in) are useful for holding food on a serving line, but measure the oven's interior before buying them; many residential ovens only fit half-size pans. Half sheet pans and half-size hotel pans fit almost anything."
       ]
     },
     {
-      "id": "line-setup",
-      "heading": "Line setup and second helpings",
+      "id": "shared-kitchen",
+      "heading": "Keeping a shared kitchen usable",
       "paragraphs": [
-        "Station cooking is line discipline. For fire station kitchen equipment, hot food hot, cold food cold, sauces on the side. Runners refill starch and drinks so the cook stays on heat.",
-        "Plan second helpings before you portion — extra rice, buns, or potatoes cost less than cooking a second main at 21:00."
-      ],
-      "tips": [
-        "Probe temps on poultry and pork — guessing is how halls serve pink chicken.",
-        "Empty grease traps before grill night; keep the right extinguisher class within reach."
+        "Equipment in a shared kitchen wears out faster when nobody owns it. Give knives a dedicated block or magnetic strip so they don't dull in a drawer, dry cast iron on a warm burner and wipe it with a little oil after washing, and keep a roll of tape and a marker with the storage containers so every leftover gets a date. A labelled shelf in the fridge for each shift stops food being thrown out by mistake, or eaten past its time."
       ]
     }
   ],
   "practicalAdvice": [
-    "Two large sheet pans minimum — one pan crowds food.",
-    "Probe thermometer — stops pink chicken debates.",
-    "Large aluminum foil and zip bags — hold and storage.",
-    "Label maker or tape — dates on leftovers."
+    "Buy capacity first: half sheet pans, a 7 to 9 qt Dutch oven and a 16 to 20 qt stockpot.",
+    "Make a digital instant-read thermometer the first purchase and check it in ice water.",
+    "Use two skillets instead of one to halve browning time.",
+    "Keep shallow containers, tape and a marker together so every leftover is dated."
   ],
   "mealRecommendations": [
     {
       "slug": "sheet-pan-fajitas",
       "title": "Chicken Fajitas",
-      "blurb": "Uses the pans you should already own."
+      "blurb": "Two half sheet pans feed a crew with no batch searing."
     },
     {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Tests your largest pot."
+      "blurb": "Built for an 8 qt Dutch oven."
+    },
+    {
+      "slug": "batch-lasagna",
+      "title": "Batch Lasagna",
+      "blurb": "Two 9 x 13 in dishes for a full table."
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "blurb": "Sear the beef and simmer the soup in the same Dutch oven."
     },
     {
       "slug": "one-pot-chicken-rice",
       "title": "Chicken and Rice",
-      "blurb": "Minimal tools — one pot dinner."
+      "blurb": "Makes the most of a single large pot."
+    },
+    {
+      "slug": "buttermilk-pancakes",
+      "title": "Buttermilk Pancakes for the Crew",
+      "blurb": "A griddle and a rack in a low oven are all you need to feed everyone at once.",
+      "catalog": "breakfast"
     }
   ],
   "faqs": [
     {
-      "question": "What kitchen equipment does a fire station actually need?",
-      "answer": "Two large sheet pans (one pan crowds food), a big stock pot or Dutch oven, a probe thermometer, and enough foil and containers to hold leftovers for a week. These are force multipliers, not luxuries — most bad hall dinners trace back to missing one of these."
+      "question": "What size Dutch oven do I need for 10 people?",
+      "answer": "7 to 9 qt (6.6 to 8.5 L). That fits about 5 quarts of chili or stew with room to stir, or a 4 to 5 lb roast with vegetables."
     },
     {
-      "question": "Why does a probe thermometer matter more at a station than at home?",
-      "answer": "Because you're cooking chicken and pork for a crowd, and guessing wrong means raw centers or dried-out meat for ten people instead of two. A cheap probe thermometer ends the 'is this done' debate every time."
+      "question": "What size pot do I need to cook 3 lb of pasta?",
+      "answer": "A 16 to 20 qt (15 to 19 L) stockpot, or split the pasta between two 8 to 12 qt pots. Two pots on two burners often boil faster than one very large one."
+    },
+    {
+      "question": "Do full-size hotel pans fit in a home oven?",
+      "answer": "Often not. A full-size pan is roughly 12 x 20 in, and many residential ovens are too narrow or shallow for it. Measure the oven interior first, or use half-size hotel pans and half sheet pans, which fit almost any oven."
+    },
+    {
+      "question": "What is the most important tool in a station kitchen?",
+      "answer": "A digital instant-read thermometer. It is the only reliable way to confirm meat is cooked to a safe temperature, leftovers are reheated to 165°F (74°C), and held food is still at 140°F (60°C) or above."
     }
   ],
   "relatedArticleSlugs": [
-    "feeding-a-firehall-crew",
-    "organize-firehall-dinners"
+    "cooking-for-10-firefighters",
+    "rookie-cooking-mistakes",
+    "firehall-kitchen-culture",
+    "feeding-a-firehall-crew"
   ],
   "keywords": [
+    "kitchen equipment for cooking for a crowd",
     "fire station kitchen equipment",
-    "hall kitchen essentials",
-    "station cooking tools"
+    "station kitchen essentials",
+    "what size dutch oven for 10 people",
+    "sheet pans for a crowd"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-09-30T18:00:00.000Z",
   "readMinutes": 7,
-  "heroImageAlt": "Station Kitchen Essentials — fire station kitchen equipment tips for fire station kitchens and crew-sized meals"
+  "seoTitle": "Kitchen Equipment for Cooking for a Crowd (8 to 12)",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    },
+    {
+      "label": "Food Code Fact Sheet #31: Cooling (FDA Food Code §3-501.14)",
+      "publisher": "Oregon Health Authority",
+      "url": "https://www.oregon.gov/oha/PH/HEALTHYENVIRONMENTS/FOODSAFETY/Documents/FactSheet31Cooling.pdf"
+    }
+  ]
 }

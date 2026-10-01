@@ -1,102 +1,224 @@
 {
   "slug": "one-pot-firehall-meals",
-  "title": "One-Pot Firehall Meals",
-  "subtitle": "Fewer dishes, fewer arguments, faster cleanup",
-  "description": "One-pot firehall meals: jambalaya, chicken and rice, chili, and skillets that keep the crew fed and the sink empty.",
-  "topic": "meal_planning",
+  "title": "One-Pot Firehall Meals: Rice, Pasta and Stews for a Crew in a Single Pot",
+  "subtitle": "Pot and Dutch oven sizes for 4 to 12, liquid ratios for rice and pasta cooked in the pot, the order to add ingredients, and how to stop scorching.",
+  "description": "One-pot meals for a crowd: pot and Dutch oven sizes for 4 to 12, liquid ratios for rice and pasta cooked in the pot, ingredient order, and scorching fixes.",
+  "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "Cleanup drives what halls cook more than cookbooks admit. One-pot firehall meals trade a little browning glamour for dishes that fit in one sink. On busy nights, that trade is always worth it. Below: what halls actually cook for one pot firehall meals — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "One-pot cooking works when three things are right: a pot big and wide enough for the crew, the correct amount of liquid when rice or pasta cooks in the sauce, and the order the ingredients go in, based on how long each one takes. Get those right and one-pot chicken and rice or jambalaya comes out evenly cooked, with the browned flavor of a dinner that used several pans and only one pot to wash. Get the liquid wrong and the rice is crunchy or mushy; get the pot wrong and the bottom scorches before the top cooks. This guide covers pot and Dutch oven sizes, liquid ratios by grain, a step order that works for most one-pot dishes, and how to prevent scorching.",
   "sections": [
     {
-      "id": "types",
-      "heading": "Skillet vs Dutch oven vs deep pot",
+      "id": "pot-size",
+      "heading": "Choose the right pot or Dutch oven",
       "paragraphs": [
-        "Skillets for fast. Dutch ovens and stock pots for simmer. Pick one vessel and commit — do not migrate mid-recipe.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "For soups, stews and chili, volume matters most. For anything with rice or pasta cooked in the pot, width matters as much as volume: the grain should sit no more than about 2 in (5 cm) deep so heat and liquid reach it evenly. In a tall, narrow stockpot, the bottom layer scorches while the top is still raw, so rice dishes need a wide Dutch oven or a braiser.",
+        "Heavy enameled or cast-iron Dutch ovens are the best one-pot tool because they hold heat evenly, brown well on the stove, and go straight into the oven. Beyond about 8 quarts they become too heavy to lift safely when full, so for 12 people use two pots or a wide 12- to 15-quart rondeau."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      "table": {
+        "caption": "Pot sizes for one-pot meals",
+        "columns": [
+          "Crew size",
+          "Rice or pasta dishes",
+          "Soup, stew or chili"
+        ],
+        "rows": [
+          [
+            "4",
+            "5 to 6 qt Dutch oven",
+            "6 qt pot"
+          ],
+          [
+            "6 to 8",
+            "7 to 8 qt Dutch oven, at least 11 in (28 cm) across",
+            "8 qt pot"
+          ],
+          [
+            "10 to 12",
+            "Two 7 qt Dutch ovens, or a 12 to 15 qt rondeau",
+            "12 to 16 qt stockpot"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "ratios",
+      "heading": "Liquid ratios when the starch cooks in the pot",
+      "paragraphs": [
+        "Everything wet counts toward the liquid: canned tomatoes, their juice, and the water that vegetables release. When a one-pot recipe includes a can of diced tomatoes, count about 1 cup of it as liquid and reduce the stock by the same amount. Toast rice in the hot fat for 2 minutes before adding liquid; the coated grains stay separate instead of turning sticky.",
+        "Pasta cooked in the pot needs stirring every couple of minutes, uncovered, because it sinks and sticks. Rice is the opposite: once the liquid boils and the lid goes on, leave it alone until it is done. Every time you lift the lid and stir, steam escapes and the rice cooks unevenly."
+      ],
+      "table": {
+        "caption": "Liquid ratios and times for starches cooked in a one-pot dish",
+        "columns": [
+          "Starch",
+          "Liquid",
+          "Time",
+          "Notes"
+        ],
+        "rows": [
+          [
+            "Long-grain white rice",
+            "1 3/4 cups per cup of rice",
+            "18 to 20 min covered, then 10 min rest",
+            "Includes liquid from tomatoes and vegetables"
+          ],
+          [
+            "Brown rice",
+            "2 1/4 to 2 1/2 cups per cup",
+            "40 to 45 min covered, then 10 min rest",
+            "Better finished in a 350°F (175°C) oven"
+          ],
+          [
+            "Short pasta (penne, rotini)",
+            "About 4 1/2 cups (1.1 L) per lb (450 g)",
+            "10 to 14 min uncovered, stirring often",
+            "Includes thin sauce; add hot water if it gets dry"
+          ],
+          [
+            "Orzo",
+            "2 cups per cup (about 6 oz)",
+            "10 to 12 min, stirring",
+            "Turns creamy like risotto"
+          ],
+          [
+            "Pearl barley",
+            "3 cups per cup",
+            "40 to 50 min",
+            "Keeps absorbing liquid as it sits"
+          ],
+          [
+            "Brown or green lentils",
+            "3 cups per cup",
+            "25 to 30 min",
+            "No soaking needed"
+          ],
+          [
+            "Potatoes, 3/4 in (2 cm) dice",
+            "Just covered with liquid",
+            "20 to 25 min",
+            "Waxy potatoes hold their shape best"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "order",
+      "heading": "Add ingredients in order of cooking time",
+      "paragraphs": [
+        "Almost every one-pot dish follows the same sequence. The brown film left by searing meat is the base of the flavor, so it has to be built first and dissolved into the liquid, and quick-cooking ingredients go in at the end so they don't turn to mush while the grain finishes."
+      ],
+      "steps": [
+        "Brown the meat in batches in a little oil over medium-high heat, with space between pieces, and set it aside.",
+        "Soften onions, peppers and celery in the fat for 5 to 8 minutes. Add garlic for the last minute.",
+        "Stir in spices and tomato paste for 1 to 2 minutes until they darken slightly.",
+        "Pour in about 1 cup of the liquid and scrape up everything stuck to the bottom of the pot.",
+        "Stir in the rice or grain with the rest of the liquid and bring to a boil. Return the meat, pushing chicken pieces into the rice.",
+        "Cover, lower the heat to a bare simmer, and cook for the grain's time. Boneless chicken thigh pieces cook through in the same 20 minutes as white rice; check that they reach 165°F (74°C).",
+        "Scatter quick-cooking additions such as peas, spinach or shrimp on top for the last 3 to 5 minutes. Rest 10 minutes off the heat, covered, before serving."
       ]
     },
     {
-      "id": "cleanup",
-      "heading": "Cleanup is the real win",
+      "id": "scorching",
+      "heading": "Why one-pot dishes scorch, and how to stop it",
       "paragraphs": [
-        "One pot means one soak. Assign washer before you start cooking — otherwise the cook owns dishes and morale drops.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "Starch and sugar settle to the bottom of the pot, and that is where scorching starts. Thick, starchy mixtures such as tomato sauces with pasta, beans and rice dishes are the most prone. A heavy-bottomed pot spreads heat more evenly than a thin one. Bring the pot to a boil, then turn it down to the lowest simmer that still shows a few bubbles. Stir pasta and bean dishes from the bottom with a flat spatula every few minutes.",
+        "For rice dishes and braises, the oven is the easier option. Once the pot boils, cover it and move it to a 350°F (175°C) oven, which heats from all sides instead of just the bottom. If the bottom does catch, don't scrape it: spoon the unburned food into a clean pot and leave the scorched layer behind, since stirring it in spreads the burnt taste through the whole dish."
       ]
     },
     {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
+      "id": "dutch-oven-braising",
+      "heading": "Dutch oven braising: stews and pot roast in the oven",
       "paragraphs": [
-        "For one pot firehall meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
-      ],
-      "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
+        "A Dutch oven with a heavy lid is designed for braising: brown the meat on the stove, add liquid to come about halfway up the meat, cover, and cook in a 300 to 325°F (150 to 165°C) oven. The steady, gentle heat softens chuck roast, short ribs and pork shoulder without the boiling that toughens them. A 3 to 4 lb (1.4 to 1.8 kg) chuck roast takes about 3 to 3 1/2 hours and feeds 6 to 8; for 10 to 12, use two roasts in a 7 to 8 qt pot, or two pots.",
+        "Outdoors, a cast-iron camp Dutch oven with legs and a flat, rimmed lid cooks over charcoal. A common starting point for baking at about 350°F (175°C) is to take the pot's diameter in inches, double it for the total number of briquettes, and place about two-thirds on the lid and one-third underneath. Wind and cold air change that a lot, so check the food and rotate the pot and lid a quarter turn in opposite directions every 15 minutes to avoid hot spots."
+      ]
+    },
+    {
+      "id": "scaling",
+      "heading": "Scaling a one-pot recipe up",
+      "paragraphs": [
+        "Doubling the ingredients of a one-pot rice recipe works only if the pot is wide enough to keep the rice at about the original depth. In a wider pot, cooking time stays about the same. In a deeper one it doesn't, and the rice cooks unevenly. A doubled pot also loses proportionally less liquid to evaporation, so reduce the liquid by about 10 percent when doubling and add a splash of hot stock at the end if it looks dry.",
+        "Above 12 people, split the batch across two pots, or bake it in hotel pans: bring the rice and liquid to a boil on the stove, pour into the pans, cover tightly with foil, and bake at 350°F (175°C) for 25 to 30 minutes."
       ]
     }
   ],
   "practicalAdvice": [
-    "Brown in the pot before liquid — always.",
-    "Add a splash of stock or water to the hot pan and scrape up the browned bits stuck to the bottom — free flavor.",
-    "Serve from the pot or one large container — not twelve individual pans.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "Use a wide pot for rice dishes, keeping the rice no more than about 2 in (5 cm) deep.",
+    "Count canned tomatoes and their juice as part of the liquid.",
+    "Build flavor in order: brown meat, soften aromatics, toast spices, deglaze, then add grain and liquid.",
+    "Once rice is covered, leave the lid on until it is done, then rest 10 minutes.",
+    "Braise tough cuts covered in a 300 to 325°F (150 to 165°C) oven rather than on a high burner."
   ],
   "mealRecommendations": [
     {
       "slug": "one-pot-chicken-rice",
       "title": "Chicken and Rice",
-      "blurb": "Hall rookie classic."
+      "blurb": "The basic pattern: browned thighs, toasted rice, 1 3/4 cups liquid per cup."
     },
     {
       "slug": "jambalaya",
       "title": "Jambalaya",
-      "blurb": "Deep pot — big flavor."
+      "blurb": "Sausage, chicken and rice in a wide Dutch oven."
     },
     {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "One deep pot — holds hot across the shift."
+      "blurb": "A one-pot stew that holds on low for an hour."
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "blurb": "Barley cooks in the soup; add stock when reheating."
     },
     {
       "slug": "sausage-peppers-onions",
-      "title": "Sausage Peppers and Onions",
-      "blurb": "Skillet one-pan — low dish count."
+      "title": "Sausage, Peppers and Onions",
+      "blurb": "A one-skillet dinner with no starch cooked in the pan."
     },
     {
       "slug": "pad-thai",
       "title": "Pad Thai",
-      "blurb": "One wok finish — one wash."
+      "blurb": "One wok or wide skillet, cooked in two batches for a crew."
+    },
+    {
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "blurb": "Filling and potato top in one ovenproof skillet or Dutch oven."
     }
   ],
   "faqs": [
     {
-      "question": "What are the best one-pot meals for a fire station kitchen?",
-      "answer": "Jambalaya, chicken and rice, and firehall chili — all built in a single pot or skillet so there's one thing to soak afterward instead of a stack of pans. Brown the protein in the pot first, then build the rest of the dish on top of that flavor."
-    },
-    {
-      "question": "Why do one-pot meals work so well for busy shifts?",
-      "answer": "Cleanup drives more of what halls cook than most people admit. A one-pot meal means one soak and one washer assigned before cooking starts — not the cook stuck doing dishes after everyone else has left the kitchen."
+      "question": "Can I make one-pot chicken and rice for 12 in a single pot?",
+      "answer": "Only in a wide pot, such as a 12 to 15 quart rondeau, where the rice stays about 2 in (5 cm) deep. In a tall stockpot the rice at the bottom scorches before the top cooks. Otherwise, use two 7 quart Dutch ovens, or bring the rice and liquid to a boil and bake it covered in hotel pans at 350°F (175°C)."
     }
   ],
   "relatedArticleSlugs": [
-    "easy-firehall-pasta-recipes"
+    "easy-firehall-pasta-recipes",
+    "station-kitchen-essentials",
+    "firehouse-comfort-meals",
+    "best-firefighter-crockpot-meals"
   ],
   "keywords": [
+    "one pot meals for a crowd",
     "one pot firehall meals",
-    "one pot firefighter dinner",
-    "single pot crew meal"
+    "dutch oven meals for a crowd",
+    "one pot pasta ratio",
+    "one pot rice ratio"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "One-Pot Firehall Meals — one pot firehall meals tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 9,
+  "seoTitle": "One-Pot Meals for a Crowd: Pot Sizes, Ratios and Timing",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    }
+  ]
 }

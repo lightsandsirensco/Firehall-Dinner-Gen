@@ -1,107 +1,221 @@
 {
   "slug": "cheap-firehall-meals",
   "title": "Cheap Firehall Meals That Still Taste Good",
-  "subtitle": "Stretch the grocery budget without crew complaints",
-  "description": "Pasta, chili, tacos, egg bakes, and chicken thighs that taste good on a tight budget — flavor from technique, not price tags.",
+  "subtitle": "The proteins that cost least per serving, how to stretch meat with beans and grains, cooking dried beans safely, and five budget dinners for 10.",
+  "description": "Cheap meals for a crowd that still taste good: low-cost proteins, stretching meat with beans and lentils, cooking dried beans safely, and budget menus.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Budget nights are normal — dues, fundraisers, and 'we already spent too much this month' happen. Cheap firehall meals lean on pasta, beans, chicken thighs, ground beef, and eggs. Flavor comes from browning, acid, and salt — not expensive cuts. Below: what halls actually cook for cheap firehall meals — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "Budget crew dinners get cheaper in two ways: choosing proteins that cost less per serving, and letting beans, grains and vegetables carry more of the plate. Bone-in chicken, pork shoulder, eggs, dried beans and ground meat stretched with lentils cover most tight weeks. None of them needs expensive ingredients to taste good; they need browning, enough salt, and something acidic at the end. Prices vary by region and week, so this guide compares proteins by cost per serving rather than listing prices, and the shelf tag's unit price (per pound or per kilogram) is the number to check. The guide also covers how to stretch meat without anyone noticing, dried beans done safely, and five budget dinners for 10.",
   "sections": [
     {
+      "id": "proteins",
+      "heading": "Cheaper proteins and how to cook them well",
+      "paragraphs": [
+        "The cheapest cuts are usually the ones with bone, skin or connective tissue, and that is also why they taste better when cooked properly. Chicken thighs are safe at 165°F (74°C) but more tender at 175 to 185°F (80 to 85°C), because their extra connective tissue softens with the higher heat. Pork shoulder needs even longer: it becomes tender for pulling at about 200°F (93°C)."
+      ],
+      "table": {
+        "caption": "Low-cost proteins for a crew",
+        "columns": [
+          "Protein",
+          "Why it's cheaper",
+          "Best method",
+          "Watch for"
+        ],
+        "rows": [
+          [
+            "Bone-in chicken thighs and drumsticks",
+            "Bone and skin cost less per pound than boneless breast",
+            "Roast at 425°F (220°C) for 35 to 45 min",
+            "Cook to 175 to 185°F for tenderness; safe from 165°F (74°C)"
+          ],
+          [
+            "Whole chickens",
+            "Lowest price per pound of any chicken",
+            "Spatchcock and roast at 425°F (220°C) for 45 to 55 min",
+            "Health Canada gives 180°F (82°C) for whole birds; save the carcass for stock"
+          ],
+          [
+            "Pork shoulder",
+            "A tough cut that needs time instead of money",
+            "Braise or slow-roast at 300°F (150°C) in chunks, 3 1/2 to 4 1/2 hours",
+            "Loses 40 to 50 percent of its weight in cooking"
+          ],
+          [
+            "Ground beef, pork or turkey",
+            "Cheap, and easy to stretch",
+            "Brown hard in batches, then build a sauce",
+            "160°F (71°C) for beef and pork; 165°F (74°C) for poultry"
+          ],
+          [
+            "Eggs",
+            "Low cost per gram of protein",
+            "Frittata, fried rice, egg bakes",
+            "Cook egg dishes to 160°F (71°C)"
+          ],
+          [
+            "Dried beans and lentils",
+            "The lowest cost per serving",
+            "Simmer after soaking; lentils need no soak",
+            "Red kidney beans must boil hard before simmering (see below)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "stretch",
+      "heading": "Stretch meat with beans, lentils and mushrooms",
+      "paragraphs": [
+        "In any dish where ground meat is cooked into a sauce, such as chili, tacos, sloppy joes, shepherd's pie or pasta sauce, you can replace about a third of the meat with cooked lentils, beans or finely chopped mushrooms. For 10 people, that means 2 1/4 lb (1 kg) of ground beef plus 3 cups of cooked lentils or two 15 oz (425 g) cans of beans instead of 3 1/2 lb of beef. Brown the meat well on its own first so the dish keeps its meaty flavor, then add the lentils or beans with the liquid so they absorb the seasoning.",
+        "Brown or green lentils hold their shape and blend into ground meat best; red lentils break down and are better for thickening a sauce. Mushrooms chopped to the size of the meat and cooked until their liquid evaporates add a savory depth that makes a lighter sauce taste richer. Grains do the same job on the plate: a big pot of rice, potatoes or bread lets a smaller amount of protein feed the same number of people."
+      ]
+    },
+    {
+      "id": "dried-beans",
+      "heading": "Cooking dried beans for a crowd",
+      "paragraphs": [
+        "One pound (450 g) of dried beans makes about 6 cups cooked, roughly the same as four 15 oz cans, usually for well under the price. For 10 people, 1 lb is a generous side and 2 lb makes beans the main dish. Red kidney beans need one extra step: they contain a natural toxin that is only destroyed by boiling, and cooking them at a gentle simmer or in a slow cooker can make it worse. Soaked kidney beans must be boiled hard for at least 10 minutes, and 30 minutes is recommended."
+      ],
+      "steps": [
+        "Sort out any stones or shriveled beans, then rinse.",
+        "Soak in three times their volume of water for at least 5 hours or overnight, or quick-soak: boil 2 minutes, cover, and leave off the heat for 1 hour.",
+        "Drain, cover with fresh water by 2 in (5 cm), and bring to a hard boil. Boil kidney beans for at least 10 minutes before lowering the heat.",
+        "Simmer gently, partly covered, for 1 to 2 hours depending on the bean, until creamy all the way through. Salt the water once they begin to soften.",
+        "Cool in their liquid, then refrigerate or freeze in 2-cup portions, which match a standard can."
+      ]
+    },
+    {
       "id": "flavor",
-      "heading": "Cheap does not mean bland",
+      "heading": "Where the flavor comes from when the budget is tight",
       "paragraphs": [
-        "Toast spices, brown meat, finish with lemon or vinegar. Crews notice technique more than truffle oil.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "Cheap food tastes cheap when it is under-browned and under-seasoned. Brown meat hard, in batches; the browned crust and the brown film left in the pan are most of the flavor in a stew or sauce, so deglaze the pan with a splash of stock or water and scrape it up. Cook spices and tomato paste in the hot fat for a minute before adding liquid, which makes them taste fuller. Season with salt in stages, and finish with something acidic, such as a squeeze of lime, a spoon of vinegar or pickled onions, which makes a heavy dish taste brighter.",
+        "Some of the best flavor boosters cost almost nothing: a Parmesan rind simmered in soup, the chicken carcass from a roast turned into stock (simmer 3 to 4 hours with an onion and a carrot), and one bunch of fresh herbs used across two dinners."
       ]
     },
     {
-      "id": "shop-smart",
-      "heading": "Shop smart for the hall",
+      "id": "menus",
+      "heading": "Five budget dinners for 10",
       "paragraphs": [
-        "Buy in bulk for staples, thighs over breasts when appropriate, and one 'splurge' topping so budget night still feels intentional.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "Each of these uses one of the cheaper proteins above, and several leave something useful for the next meal. Quantities assume 10 hungry adults with the starch listed."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
-      ]
-    },
-    {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
-      "paragraphs": [
-        "For cheap firehall meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
-      ],
-      "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
-      ]
+      "table": {
+        "caption": "Budget dinners for 10 and what each leaves over",
+        "columns": [
+          "Dinner",
+          "Main ingredients",
+          "Leftover use"
+        ],
+        "rows": [
+          [
+            "Roast chicken thighs, rice and roasted carrots",
+            "7 1/2 lb bone-in thighs, 5 cups rice, 3 lb carrots",
+            "Shred extra chicken for tacos or soup; carcass bones for stock"
+          ],
+          [
+            "Beef and lentil chili",
+            "2 1/4 lb ground beef, 1 1/2 cups dry lentils, 2 cans beans, 2 cans tomatoes",
+            "Chili over baked potatoes or in burritos"
+          ],
+          [
+            "Pulled pork sandwiches and slaw",
+            "5 lb bone-in pork shoulder, 15 buns, 1 cabbage",
+            "Pork fried rice or quesadillas"
+          ],
+          [
+            "Pasta with meat and mushroom sauce",
+            "2 1/2 lb dry pasta, 1 1/2 lb ground beef, 1 lb mushrooms, 3 cans tomatoes",
+            "Bake leftovers with cheese the next day"
+          ],
+          [
+            "Egg fried rice with vegetables",
+            "18 eggs, 8 cups cold cooked rice, 2 lb frozen mixed vegetables",
+            "Uses up leftover rice from an earlier meal"
+          ]
+        ]
+      }
     }
   ],
   "practicalAdvice": [
-    "Buy whole birds or thighs instead of breasts when appropriate.",
-    "Beans and lentils stretch chili without complaint if seasoned boldly.",
-    "Frozen veg and bulk rice are hall allies.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "Compare proteins by the unit price on the shelf tag, not by the package price.",
+    "Replace up to a third of the ground meat in sauces and chili with lentils, beans or mushrooms.",
+    "One pound of dried beans makes about 6 cups cooked; boil kidney beans hard for at least 10 minutes.",
+    "Brown meat hard, deglaze the pan, and finish with acid to make inexpensive dishes taste fuller.",
+    "Turn roast chicken carcasses into stock for the next soup or rice."
   ],
   "mealRecommendations": [
     {
-      "slug": "five-ingredient-pasta",
-      "title": "Garlic Butter Pasta",
-      "blurb": "Low cost — high return."
-    },
-    {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Bean and beef stretch far."
+      "blurb": "Beans already carry part of the load; add lentils to stretch it further."
+    },
+    {
+      "slug": "pulled-pork",
+      "title": "Pulled Pork Sandwiches",
+      "blurb": "Shoulder is one of the cheapest cuts per serving."
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "Chicken and Rice",
+      "blurb": "Bone-in thighs and rice in a single pot."
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "blurb": "Pantry ingredients only, for the end of a tight month."
     },
     {
       "slug": "hall-taco-bar",
       "title": "Taco Bar",
-      "blurb": "Ground beef line — economical."
-    },
-    {
-      "slug": "sausage-egg-bake",
-      "title": "Sausage Egg Bake",
-      "blurb": "Cheap breakfast for many."
-    },
-    {
-      "slug": "turkey-chili",
-      "title": "Turkey Chili",
-      "blurb": "Lean and budget-friendly."
+      "blurb": "Stretch the taco meat with beans and let tortillas and toppings fill the plate."
     },
     {
       "slug": "baked-ziti",
       "title": "Baked Ziti",
-      "blurb": "Tray feed — crowd pleaser."
+      "blurb": "Pasta and ricotta carry the dish; the meat is optional."
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Baked Potato Bar",
+      "blurb": "Potatoes are cheap and filling; top them with leftover chili."
     }
   ],
   "faqs": [
     {
-      "question": "What's a cheap meal that still feeds a big crew well?",
-      "answer": "Chili, tacos, and baked pasta stretch a grocery budget the furthest — beans and lentils can stretch chili while keeping it filling, and thighs cost less than breasts for a similar amount of protein. Flavor comes from browning the meat and finishing with acid, not from spending more."
-    },
-    {
-      "question": "How do you keep a budget meal from tasting cheap?",
-      "answer": "Toast your spices, brown the meat properly, and finish with lemon or vinegar — technique reads louder than ingredient cost. One inexpensive splurge topping, like real cheese or good bread, makes a budget dinner feel intentional instead of like a compromise."
+      "question": "What is the cheapest protein for feeding a crowd?",
+      "answer": "Dried beans and lentils are the cheapest per serving, followed in most stores by eggs, chicken leg quarters or thighs, whole chickens, and pork shoulder. Prices move with the season, so compare the unit price per pound or kilogram on the shelf tag rather than the price of the package."
     }
   ],
   "relatedArticleSlugs": [
-    "feeding-a-firehall-crew"
+    "firehall-grocery-planning",
+    "best-station-chili-recipes",
+    "cooking-for-10-firefighters",
+    "firehall-meal-prep-ideas"
   ],
   "keywords": [
+    "cheap meals for a crowd",
     "cheap firehall meals",
-    "budget fire station meals",
-    "affordable crew dinner"
+    "budget meals for a large group",
+    "stretch ground beef",
+    "cooking dried beans"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Cheap Firehall Meals That Still Taste Good — cheap firehall meals tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "Cheap Meals for a Crowd That Still Taste Good",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    },
+    {
+      "label": "Cooking Dry Beans Safely (summarizing FDA guidance on kidney bean lectin)",
+      "publisher": "Kansas State University Research and Extension",
+      "url": "https://enewsletters.k-state.edu/youaskedit/2017/10/13/cooking-dry-beans-safely/"
+    }
+  ]
 }

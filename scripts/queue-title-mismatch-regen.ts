@@ -22,6 +22,7 @@ import {
   buildRequiredVisibleSidesPromptLine,
 } from "../shared/curated-image-governance/title-primary-side-rules.js";
 import type { CuratedRecipeInsert } from "../shared/curated-recipe/types.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const AUDIT_PATH = path.join(process.cwd(), "review", "image-accuracy-audit.json");
 const QUEUE_PATH = path.join(process.cwd(), "review", "title-mismatch-regen-queue.json");
@@ -102,7 +103,7 @@ async function main(): Promise<void> {
   queue = queue.slice(0, limit);
 
   fs.mkdirSync(path.dirname(QUEUE_PATH), { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     QUEUE_PATH,
     JSON.stringify({ generatedAt: new Date().toISOString(), count: queue.length, rows: queue }, null, 2),
   );

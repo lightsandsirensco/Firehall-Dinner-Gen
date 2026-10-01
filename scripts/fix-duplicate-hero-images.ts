@@ -25,6 +25,7 @@ import {
   writeHallExpansionCatalogImageVariants,
   writeBreakfastCatalogImageVariants,
 } from "../server/imagery/variants.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 applyDevOpenAiTlsIfAllowed();
 
@@ -209,7 +210,7 @@ async function main(): Promise<void> {
     }
   }
 
-  fs.writeFileSync(
+  writeFileAtomicSync(
     REPORT_OUT,
     JSON.stringify({ generatedAt: new Date().toISOString(), dryRun: DRY_RUN, ok, fail, results }, null, 2),
   );

@@ -9,6 +9,7 @@ import "dotenv/config";
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const AUDIT_JSON = path.join("review", "meal-image-trust-audit.json");
@@ -88,7 +89,7 @@ function writeReport(): void {
 
   lines.push("", "## Commands", "", "```bash", "npm run audit:firehall-image-accuracy", "npm run fix:meal-hero-alt", "npm run run:meal-image-trust-fix -- --apply --vision", "```");
 
-  fs.writeFileSync(FINAL_MD, lines.join("\n"));
+  writeFileAtomicSync(FINAL_MD, lines.join("\n"));
   console.log(`[audit:firehall-image-accuracy] report → ${FINAL_MD}`);
 }
 

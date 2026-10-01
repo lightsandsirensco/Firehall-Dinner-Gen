@@ -63,6 +63,7 @@ import {
 import { readGoldenRecipePage, writeGoldenRecipePage } from "../server/golden-100/page-store.js";
 import { buildGoldenRecipePage } from "../server/golden-100/recipe-page-builder.js";
 import { getGoldenRecipeBySlug } from "../shared/golden-100/manifest.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const AUDIT_PATH = path.join(process.cwd(), "review", "meal-image-trust-audit.json");
 
@@ -251,7 +252,7 @@ function updateAuditRow(slug: string, result: RegenResult): void {
     }));
   audit.totals.passed = audit.rows.filter((r) => r.pass).length;
   audit.totals.failed = audit.rows.filter((r) => !r.pass).length;
-  fs.writeFileSync(AUDIT_PATH, JSON.stringify(audit, null, 2));
+  writeFileAtomicSync(AUDIT_PATH, JSON.stringify(audit, null, 2));
 }
 
 async function main(): Promise<void> {
@@ -431,7 +432,7 @@ async function main(): Promise<void> {
 
   const reportPath = path.join("review", "meal-image-trust-regen-report.json");
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     reportPath,
     JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2),
   );

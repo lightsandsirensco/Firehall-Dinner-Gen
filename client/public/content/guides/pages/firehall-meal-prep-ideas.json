@@ -1,98 +1,226 @@
 {
   "slug": "firehall-meal-prep-ideas",
-  "title": "Firehall Meal Prep Ideas",
-  "subtitle": "Cook once on a slow day — feed the loud ones",
-  "description": "Firehall meal prep ideas: batch chili, sheet-pan components, pulled pork, and rice bases that reheat clean on busy shifts.",
+  "title": "Firehouse Meal Prep: Cook Ahead, Store Safely, Reheat Without Ruining It",
+  "subtitle": "What to prep ahead, how to cool a big batch quickly, how long leftovers keep, and the best way to reheat each kind of food.",
+  "description": "Firehouse meal prep: what to cook ahead, how to cool big batches, how long leftovers keep, and how to reheat each food without ruining it.",
   "topic": "meal_planning",
-  "pillar": "recipes_meals",
-  "intro": "Meal prep at a station means cooking components when the board is quiet so busy nights are assembly, not invention. Firehall meal prep ideas focus on proteins and sauces that reheat — not pre-plated meals that dry out. Below: what halls actually cook for firehall meal prep — formats, timing, and recipe picks that survive a busy board.",
+  "pillar": "operations_how_to",
+  "intro": "Meal prep at a station is less about lining up identical containers and more about three habits: prepping the components that save time later, cooling big batches fast enough to be safe, and reheating each food in a way that doesn't ruin it. Because different shifts share the same fridge, labelling matters as much as cooking. Nobody on the next shift knows when your chili was made unless the container says so.",
   "sections": [
     {
-      "id": "components",
-      "heading": "Components that reheat clean",
+      "id": "what-to-prep",
+      "heading": "What to prep ahead, and what not to",
       "paragraphs": [
-        "Chili, pulled pork, roasted chicken thighs, cooked rice, roasted veg. Combine into bowls, tacos, or bakes in under thirty minutes.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "The best prep-ahead items either hold their texture in the fridge or improve as they sit. Chili, soups, stews, braises and cooked grains all reheat well. Sauces, marinades and chopped aromatics like onions and peppers save a lot of time at the start of a busy dinner. Baked pastas and casseroles can be assembled and refrigerated unbaked, then baked when the crew is ready.",
+        "Skip anything that depends on being crisp or freshly dressed. Fried food, dressed salads, pasta already mixed with its sauce, and cut avocado or apple all degrade quickly in the fridge. Prep the parts separately, such as the washed greens, the dressing and the croutons, and combine them at serving time."
       ]
     },
     {
-      "id": "labels",
-      "heading": "Label and rotate",
+      "id": "cooling",
+      "heading": "Cooling a big batch quickly",
       "paragraphs": [
-        "Date everything, freeze what you will not use in three days, and post a fridge map so the next shift does not duplicate prep.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "A full stockpot of chili cools very slowly because the centre is insulated by everything around it, and that slow cooling keeps food in the temperature range where bacteria grow. Commercial kitchens follow the FDA Food Code's two-stage rule: from 135°F to 70°F (57 to 21°C) within 2 hours, and down to 41°F (5°C) within 6 hours in total. At a station, the practical guidance from USDA and Health Canada is to get cooked food into the fridge within two hours, in shallow containers."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      "steps": [
+        "Divide the batch into shallow containers, ideally no more than 2 in (5 cm) deep. Metal pans cool faster than plastic.",
+        "For a large pot, stir it in a sink of ice water for a few minutes first to take the heat off quickly.",
+        "Refrigerate with the lid off or loosely covered until the food is cold, then seal it.",
+        "Leave space around the containers; an overstuffed fridge can't circulate cold air.",
+        "Label each container with what it is and the date it was cooked."
       ]
     },
     {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
+      "id": "how-long",
+      "heading": "How long cooked food keeps",
       "paragraphs": [
-        "For firehall meal prep, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+        "USDA and Health Canada give slightly different fridge times for leftovers, so the table shows both. At a station where shifts rotate and the next crew may not know when something was cooked, the shorter window is the easier rule to follow. Freezing keeps food safe indefinitely, but quality drops after a few months."
       ],
+      "table": {
+        "caption": "Storage guidance for cooked leftovers",
+        "columns": [
+          "Guideline",
+          "USDA",
+          "Health Canada"
+        ],
+        "rows": [
+          [
+            "Fridge temperature",
+            "40°F (4°C) or below",
+            "4°C (40°F) or below"
+          ],
+          [
+            "Freezer temperature",
+            "0°F (-18°C)",
+            "-18°C (0°F) or below"
+          ],
+          [
+            "Cooked leftovers in the fridge",
+            "3 to 4 days",
+            "2 to 3 days (2 to 4 days for poultry)"
+          ],
+          [
+            "Frozen leftovers, best quality",
+            "3 to 4 months",
+            "Freeze promptly if not eaten in time"
+          ],
+          [
+            "Maximum time at room temperature",
+            "2 hours (1 hour above 90°F)",
+            "2 hours"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "reheating",
+      "heading": "Reheating each type of food",
+      "paragraphs": [
+        "Leftovers should be reheated to 165°F (74°C), and soups, sauces and gravies should be brought to a rolling boil. Health Canada also advises reheating leftovers only once, so heat what the crew will actually eat rather than the whole container. Within those rules, the method makes a big difference to texture."
+      ],
+      "table": {
+        "caption": "Best reheating method by food",
+        "columns": [
+          "Food",
+          "Best method",
+          "Why"
+        ],
+        "rows": [
+          [
+            "Chili, soup, stew, sauces",
+            "Stovetop, brought to a rolling boil, stirring",
+            "Add a splash of water; starches thicken them in the fridge"
+          ],
+          [
+            "Baked pasta, casseroles",
+            "Covered in a 350°F (175°C) oven with a splash of liquid",
+            "Covering keeps moisture in; uncover for the last 10 minutes to recrisp the top"
+          ],
+          [
+            "Rice",
+            "Microwave, covered, with 1 to 2 tbsp water per cup",
+            "The added water steams it back to soft"
+          ],
+          [
+            "Fried or breaded food",
+            "400°F (200°C) oven or air fryer, on a rack",
+            "Dry heat recrisps; the microwave makes crusts soggy"
+          ],
+          [
+            "Roast chicken, pulled pork",
+            "Covered in the oven with a little broth, or in sauce on the stove",
+            "Liquid stops the meat drying out as it heats through"
+          ],
+          [
+            "Steak, chops",
+            "Serve cold in salads or sandwiches",
+            "Reheating fully will take them well past their original doneness"
+          ]
+        ]
+      },
       "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
+        "Microwaves heat unevenly: cover the dish, stir or rotate halfway, let it stand, and check the temperature in several places.",
+        "Reheat frozen soups, stews and casseroles straight from frozen if you are short on time; it is safe, it just takes longer."
       ]
     }
   ],
   "practicalAdvice": [
-    "Prep proteins and sauces — assemble day-of.",
-    "Date and label everything — rotation prevents science experiments.",
-    "One prep cook, one list — avoid three people 'helping' differently.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "Prep components (sauces, grains, chopped aromatics, assembled casseroles), not dressed or crisp food.",
+    "Cool big batches in shallow containers no more than 2 in (5 cm) deep and refrigerate within two hours.",
+    "Label everything with the contents and the date, and use leftovers within 2 to 3 days.",
+    "Reheat to 165°F (74°C), only once, using the method that suits the food."
   ],
   "mealRecommendations": [
     {
       "slug": "turkey-chili",
       "title": "Turkey Chili",
-      "blurb": "Prep star — multi-day use."
+      "blurb": "Cools well in shallow pans and reheats to a boil without losing texture."
     },
     {
       "slug": "sheet-pan-meal-prep",
       "title": "Chicken Meal Prep Trays",
-      "blurb": "Components for bowls — reheat clean."
+      "blurb": "Protein and vegetables roasted together and portioned for the next few meals."
     },
     {
       "slug": "pulled-pork",
-      "title": "Pulled Pork Mac",
-      "blurb": "Uses prep-friendly pulled pork."
+      "title": "Pulled Pork",
+      "blurb": "Store it with its juices so it reheats moist."
     },
     {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Big pot Sunday — feeds the week."
+      "blurb": "A big batch that freezes well in 1 quart containers."
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "blurb": "Thickens overnight; loosen with water when you reheat."
+    },
+    {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "blurb": "Assemble unbaked and refrigerate, then bake on the shift you need it."
     }
   ],
   "faqs": [
     {
-      "question": "What components are worth prepping ahead at a fire station?",
-      "answer": "Chili, pulled pork, roasted chicken thighs, cooked rice, and roasted vegetables — proteins and bases that reheat clean instead of drying out. Combine them into bowls, tacos, or bakes in under thirty minutes on a busy night."
+      "question": "How long do leftovers last in the station fridge?",
+      "answer": "Health Canada recommends eating refrigerated leftovers within 2 to 3 days (2 to 4 for poultry); USDA says 3 to 4 days. With shifts rotating through the same fridge, labelling everything with the date and using the shorter window is the simplest rule."
     },
     {
-      "question": "How do you keep prepped food from getting lost in the fridge?",
-      "answer": "Date and label everything the same night you cook it, and post a simple fridge map so the next shift doesn't duplicate the same prep. One prep cook working off one list beats three people helping in different directions."
+      "question": "Can I put hot food straight into the fridge?",
+      "answer": "Yes. USDA says hot food can go directly into the fridge, and Health Canada suggests letting very hot food stop steaming first. What matters is dividing it into shallow containers and not putting a whole stockpot in, because a big pot cools too slowly and warms everything around it."
+    },
+    {
+      "question": "Can you reheat leftovers more than once?",
+      "answer": "Health Canada advises against reheating the same leftovers more than once. Take out and reheat only the portion that will be eaten, and leave the rest in the fridge."
+    },
+    {
+      "question": "How do you cool a big pot of chili quickly?",
+      "answer": "Stir the pot in a sink of ice water for a few minutes, then divide the chili into shallow containers no more than 2 in (5 cm) deep and refrigerate them uncovered or loosely covered until cold. The goal is to get it below 40°F (4°C) as quickly as possible."
     }
   ],
   "relatedArticleSlugs": [
-    "meal-prep-for-shift-workers",
-    "firehall-meal-prep-ideas"
+    "best-meals-24-hour-shift",
+    "best-station-chili-recipes",
+    "feeding-a-firehall-crew",
+    "best-firefighter-crockpot-meals"
   ],
   "keywords": [
-    "firehall meal prep",
-    "fire station meal prep",
-    "shift meal prep firefighters"
+    "firehouse meal prep",
+    "meal prep for a crew",
+    "how long do leftovers last",
+    "reheating leftovers",
+    "cooling food quickly"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Firehall Meal Prep Ideas — firehall meal prep tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 9,
+  "seoTitle": "Meal Prep for a Crew: Storing and Reheating Safely",
+  "sources": [
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    },
+    {
+      "label": "Food safety tips for leftovers",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/food-safety-tips-leftovers.html"
+    },
+    {
+      "label": "Safe food handling in the home",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-food-handling-home.html"
+    },
+    {
+      "label": "Poultry safety",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/meat-poultry-fish-seafood-safety/poultry-safety.html"
+    },
+    {
+      "label": "Food Code Fact Sheet #31: Cooling (FDA Food Code §3-501.14)",
+      "publisher": "Oregon Health Authority",
+      "url": "https://www.oregon.gov/oha/PH/HEALTHYENVIRONMENTS/FOODSAFETY/Documents/FactSheet31Cooling.pdf"
+    }
+  ]
 }

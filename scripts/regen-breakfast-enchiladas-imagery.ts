@@ -25,6 +25,7 @@ import {
   BREAKFAST_ENCHILADAS_IMAGE_NEGATIVES,
   BREAKFAST_ENCHILADAS_IMAGE_PROMPT,
 } from "../shared/food-imagery/title-locked-prompts.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const SLUG = "breakfast-enchiladas";
 const PAGE_PATH = path.join(process.cwd(), "client/public/catalog/breakfast/pages/breakfast-enchiladas.json");
@@ -253,7 +254,7 @@ async function main(): Promise<void> {
     passed: replaced,
   };
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
-  fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(REPORT_PATH, JSON.stringify(report, null, 2));
 
   if (!replaced) {
     console.error("\n✗ Did not replace — vision QA failed. See review/breakfast-enchiladas-image-audit.json");

@@ -26,6 +26,7 @@ import {
 import { isApprovedCatalogSlug } from "../shared/hall-catalog/gate.js";
 import { CREW_SIZE_OPTIONS } from "../shared/recipe/crew-scaling-config.js";
 import { flushSqliteToDisk, releaseSqliteTimersForTests } from "../server/sqlite.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -480,7 +481,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(MD_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
   const md = `# Generator Stress Test — Firehall Meals
 
@@ -623,7 +624,7 @@ npm run test:generator-stress -- --count=50
 \`\`\`
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
 
   flushSqliteToDisk();
   releaseSqliteTimersForTests();

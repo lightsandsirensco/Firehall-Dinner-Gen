@@ -8,6 +8,7 @@
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const FINAL_MD = path.join("review", "meal-image-trust-final-report.md");
@@ -89,7 +90,7 @@ function writeFinalReport(): void {
     lines.push("| _All recipes passed_ | — | — | pass |");
   }
 
-  fs.writeFileSync(FINAL_MD, lines.join("\n"));
+  writeFileAtomicSync(FINAL_MD, lines.join("\n"));
   console.log(`\n[trust-fix] final report → ${FINAL_MD}`);
 }
 

@@ -1,0 +1,779 @@
+{
+  "note": "Frozen catalog data for 11 recipes whose hero images were visually confirmed correct but were flagged by title/alt wording heuristics. Must never hard-fail on wording alone.",
+  "confirmedCorrectAt": "2026-09-30",
+  "targets": [
+    {
+      "collection": "performance_meals",
+      "slug": "trinidadian-curry-chicken-potatoes",
+      "title": "Trinidadian-Style Curry Chicken with Potatoes",
+      "protein": "chicken",
+      "mealFormat": "one_pot",
+      "cuisine": "Caribbean",
+      "heroImage": "/images/golden-100/trinidadian-curry-chicken-potatoes.jpg",
+      "heroAlt": "Trinidadian-Style Curry Chicken with Potatoes — caribbean one pot plated for a firehall crew",
+      "ingredients": [
+        {
+          "name": "bone-in, skin-on chicken thighs",
+          "quantity": "4",
+          "unit": "lb",
+          "notes": "skin removed"
+        },
+        {
+          "name": "Caribbean-style curry powder",
+          "quantity": "0.33",
+          "unit": "cup"
+        },
+        {
+          "name": "yellow onion",
+          "quantity": "1",
+          "unit": "large",
+          "notes": "diced"
+        },
+        {
+          "name": "garlic cloves",
+          "quantity": "8",
+          "unit": "cloves",
+          "notes": "minced"
+        },
+        {
+          "name": "fresh ginger",
+          "quantity": "2",
+          "unit": "tbsp",
+          "notes": "minced"
+        },
+        {
+          "name": "Scotch bonnet or habanero pepper",
+          "quantity": "1",
+          "unit": "whole",
+          "notes": "left whole for aroma, pierced once"
+        },
+        {
+          "name": "russet potatoes",
+          "quantity": "1.5",
+          "unit": "lb",
+          "notes": "peeled, cut into 1.5-inch chunks"
+        },
+        {
+          "name": "chicken broth",
+          "quantity": "2",
+          "unit": "cups",
+          "notes": "low sodium"
+        },
+        {
+          "name": "fresh thyme",
+          "quantity": "2",
+          "unit": "tsp"
+        },
+        {
+          "name": "long-grain white rice",
+          "quantity": "2.5",
+          "unit": "cups",
+          "notes": "dry"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": "3",
+          "unit": "tbsp"
+        },
+        {
+          "name": "kosher salt",
+          "quantity": "2",
+          "unit": "tsp"
+        }
+      ],
+      "tonightSpread": [
+        "Steamed white rice.",
+        "Simple cucumber and tomato salad."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "lumberjack-breakfast-platter",
+      "title": "Lumberjack Breakfast Platter",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/lumberjack-breakfast-platter.jpg",
+      "heroAlt": "Lumberjack breakfast platter with pancakes, bacon, sausage, hash browns, and eggs",
+      "ingredients": [
+        {
+          "name": "pancake mix",
+          "quantity": "4 cups",
+          "unit": "",
+          "group": "Pancakes",
+          "notes": "prepared per package for 24 silver-dollar cakes"
+        },
+        {
+          "name": "whole milk",
+          "quantity": "3 cups",
+          "unit": "",
+          "group": "Pancakes",
+          "notes": "for batter"
+        },
+        {
+          "name": "thick-cut bacon",
+          "quantity": "2 lb",
+          "unit": "",
+          "group": "Meats",
+          "notes": "16 slices"
+        },
+        {
+          "name": "pork sausage links",
+          "quantity": "2 lb",
+          "unit": "",
+          "group": "Meats",
+          "notes": "16 links"
+        },
+        {
+          "name": "frozen hash browns",
+          "quantity": "2 lb",
+          "unit": "",
+          "group": "Hash",
+          "notes": "shredded, crisped on griddle"
+        },
+        {
+          "name": "large eggs",
+          "quantity": "8",
+          "unit": "",
+          "group": "Protein",
+          "notes": "fried or scrambled to order"
+        },
+        {
+          "name": "maple syrup",
+          "quantity": "2 cups",
+          "unit": "",
+          "group": "Serve",
+          "notes": "warmed"
+        },
+        {
+          "name": "unsalted butter",
+          "quantity": "1/2 cup",
+          "unit": "",
+          "group": "Serve",
+          "notes": "for pancakes and griddle"
+        }
+      ],
+      "tonightSpread": []
+    },
+    {
+      "collection": "hall_expansion",
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "protein": "seafood",
+      "mealFormat": "sandwich",
+      "cuisine": "crew_feeders",
+      "heroImage": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "heroAlt": "Best Tuna Melt for the Hall (Diner Style) — open-faced tuna melts on rye with cheddar — sheet-pan batch for the crew",
+      "ingredients": [
+        {
+          "name": "canned tuna",
+          "quantity": "48",
+          "unit": "oz",
+          "notes": "in water, drained and pressed dry",
+          "group": "Salad"
+        },
+        {
+          "name": "mayonnaise",
+          "quantity": "1",
+          "unit": "cup",
+          "group": "Salad"
+        },
+        {
+          "name": "celery stalks",
+          "quantity": "4",
+          "unit": "count",
+          "notes": "finely diced",
+          "group": "Salad"
+        },
+        {
+          "name": "red onion",
+          "quantity": "0.5",
+          "unit": "cup",
+          "notes": "finely diced",
+          "group": "Salad"
+        },
+        {
+          "name": "lemon juice",
+          "quantity": "2",
+          "unit": "tbsp",
+          "group": "Salad"
+        },
+        {
+          "name": "Dijon mustard",
+          "quantity": "1",
+          "unit": "tbsp",
+          "group": "Salad"
+        },
+        {
+          "name": "marbled rye bread",
+          "quantity": "16",
+          "unit": "slices",
+          "group": "Bread"
+        },
+        {
+          "name": "sharp cheddar cheese",
+          "quantity": "1.5",
+          "unit": "lb",
+          "notes": "grated or 16 slices",
+          "group": "Cheese"
+        },
+        {
+          "name": "unsalted butter",
+          "quantity": "0.5",
+          "unit": "cup",
+          "notes": "softened",
+          "group": "Toast"
+        },
+        {
+          "name": "kosher salt and black pepper",
+          "quantity": "1",
+          "unit": "batch",
+          "group": "Seasoning"
+        },
+        {
+          "name": "paprika",
+          "quantity": "1",
+          "unit": "tsp",
+          "notes": "optional dusting before broil",
+          "group": "Finish"
+        },
+        {
+          "name": "dill pickles",
+          "quantity": "2",
+          "unit": "cups",
+          "notes": "sliced, for the line",
+          "group": "Sides"
+        }
+      ],
+      "tonightSpread": [
+        "Open-faced tuna melts with pickle chips and tomato soup on the side if available.",
+        "Simple potato chips or slaw — this sandwich is the main event."
+      ]
+    },
+    {
+      "collection": "breakfast",
+      "slug": "bagel-lox-breakfast-board",
+      "title": "Bagel and Lox Breakfast Board",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/bagel-lox-breakfast-board.jpg",
+      "heroAlt": "Bagel and lox breakfast board with cream cheese, capers, and fresh fixings",
+      "ingredients": [
+        {
+          "name": "bagels",
+          "quantity": "10",
+          "unit": "",
+          "group": "Base",
+          "notes": "assorted flavors, split"
+        },
+        {
+          "name": "smoked salmon lox",
+          "quantity": "2 lb",
+          "unit": "",
+          "group": "Fish",
+          "notes": "sliced thin"
+        },
+        {
+          "name": "cream cheese",
+          "quantity": "2 cups",
+          "unit": "",
+          "group": "Spread",
+          "notes": "plain and scallion whipped"
+        },
+        {
+          "name": "whipped butter",
+          "quantity": "1/2 cup",
+          "unit": "",
+          "group": "Spread",
+          "notes": "optional for plain bagels"
+        },
+        {
+          "name": "capers",
+          "quantity": "1/2 cup",
+          "unit": "",
+          "group": "Fixings",
+          "notes": "drained"
+        },
+        {
+          "name": "red onions",
+          "quantity": "2",
+          "unit": "",
+          "group": "Fixings",
+          "notes": "thinly sliced"
+        },
+        {
+          "name": "Roma tomatoes",
+          "quantity": "4",
+          "unit": "",
+          "group": "Fixings",
+          "notes": "sliced"
+        },
+        {
+          "name": "English cucumbers",
+          "quantity": "2",
+          "unit": "",
+          "group": "Fixings",
+          "notes": "sliced thin, plus lemon wedges"
+        }
+      ],
+      "tonightSpread": []
+    },
+    {
+      "collection": "breakfast",
+      "slug": "baked-oatmeal-mixed-berries",
+      "title": "Baked Oatmeal with Mixed Berries",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/baked-oatmeal-mixed-berries.jpg",
+      "heroAlt": "Golden baked oatmeal squares with mixed berries in a 9x13 pan",
+      "ingredients": [
+        {
+          "name": "cups quick oats",
+          "quantity": "4",
+          "unit": "",
+          "group": "Bake",
+          "notes": "not steel-cut"
+        },
+        {
+          "name": "cup brown sugar",
+          "quantity": "0.75",
+          "unit": "",
+          "group": "Bake",
+          "notes": "light or dark"
+        },
+        {
+          "name": "tsp baking powder",
+          "quantity": "2",
+          "unit": "",
+          "group": "Bake"
+        },
+        {
+          "name": "tsp cinnamon",
+          "quantity": "1.5",
+          "unit": "",
+          "group": "Bake"
+        },
+        {
+          "name": "tsp kosher salt",
+          "quantity": "0.5",
+          "unit": "",
+          "group": "Bake"
+        },
+        {
+          "name": "cups whole milk",
+          "quantity": "3",
+          "unit": "",
+          "group": "Wet"
+        },
+        {
+          "name": "large eggs",
+          "quantity": "2",
+          "unit": "",
+          "group": "Wet"
+        },
+        {
+          "name": "cup melted butter",
+          "quantity": "0.25",
+          "unit": "",
+          "group": "Wet",
+          "notes": "plus spray for the dish"
+        },
+        {
+          "name": "cups mixed berries",
+          "quantity": "3",
+          "unit": "",
+          "group": "Fruit",
+          "notes": "fresh or frozen, thawed and drained"
+        },
+        {
+          "name": "cup maple syrup",
+          "quantity": "1",
+          "unit": "",
+          "group": "Line",
+          "notes": "for serving"
+        },
+        {
+          "name": "cups Greek yogurt",
+          "quantity": "2",
+          "unit": "",
+          "group": "Line",
+          "notes": "optional at the line"
+        }
+      ],
+      "tonightSpread": []
+    },
+    {
+      "collection": "breakfast",
+      "slug": "black-bean-egg-white-breakfast-burritos",
+      "title": "Black Bean & Egg White Breakfast Burritos",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+      "heroAlt": "Black Bean & Egg White Breakfast Burritos — vegetarian breakfast burritos built on egg whites, black beans, and pepper jack",
+      "ingredients": [
+        {
+          "name": "egg whites",
+          "quantity": "24",
+          "unit": "",
+          "group": "Eggs",
+          "notes": "or 3 cups liquid egg whites"
+        },
+        {
+          "name": "black beans",
+          "quantity": "2 cans",
+          "unit": "",
+          "group": "Fillings",
+          "notes": "drained, rinsed"
+        },
+        {
+          "name": "bell pepper",
+          "quantity": "2",
+          "unit": "",
+          "group": "Fillings",
+          "notes": "diced"
+        },
+        {
+          "name": "yellow onion",
+          "quantity": "1",
+          "unit": "",
+          "group": "Fillings",
+          "notes": "diced"
+        },
+        {
+          "name": "pepper jack cheese",
+          "quantity": "1 1/2 cups",
+          "unit": "",
+          "group": "Fillings",
+          "notes": "shredded"
+        },
+        {
+          "name": "flour tortilla",
+          "quantity": "12",
+          "unit": "",
+          "group": "Build",
+          "notes": "10-inch"
+        },
+        {
+          "name": "salsa",
+          "quantity": "1 cup",
+          "unit": "",
+          "group": "Build"
+        },
+        {
+          "name": "hot sauce",
+          "quantity": "1",
+          "unit": "",
+          "group": "Build"
+        }
+      ],
+      "tonightSpread": []
+    },
+    {
+      "collection": "breakfast",
+      "slug": "country-fried-steak-eggs",
+      "title": "Country Fried Steak and Eggs Breakfast",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/country-fried-steak-eggs.jpg",
+      "heroAlt": "Country fried steak with pepper gravy, mashed potatoes, and a fried egg",
+      "ingredients": [
+        {
+          "name": "cube steak",
+          "quantity": "3 lb",
+          "unit": "",
+          "group": "Steak",
+          "notes": "pounded 1/4-inch thin"
+        },
+        {
+          "name": "all-purpose flour",
+          "quantity": "2 cups",
+          "unit": "",
+          "group": "Steak",
+          "notes": "seasoned with salt, pepper, garlic powder"
+        },
+        {
+          "name": "buttermilk",
+          "quantity": "2 cups",
+          "unit": "",
+          "group": "Steak",
+          "notes": "for dredge"
+        },
+        {
+          "name": "pan drippings",
+          "quantity": "1/4 cup",
+          "unit": "",
+          "group": "Gravy",
+          "notes": "plus 1/4 cup flour for roux"
+        },
+        {
+          "name": "whole milk",
+          "quantity": "4 cups",
+          "unit": "",
+          "group": "Gravy",
+          "notes": "warm"
+        },
+        {
+          "name": "coarse black pepper",
+          "quantity": "2 tsp",
+          "unit": "",
+          "group": "Gravy",
+          "notes": "freshly cracked"
+        },
+        {
+          "name": "Yukon gold potatoes",
+          "quantity": "5 lb",
+          "unit": "",
+          "group": "Sides",
+          "notes": "peeled, boiled, and mashed with butter"
+        },
+        {
+          "name": "large eggs",
+          "quantity": "8",
+          "unit": "",
+          "group": "Protein",
+          "notes": "fried sunny-side up"
+        }
+      ],
+      "tonightSpread": []
+    },
+    {
+      "collection": "breakfast",
+      "slug": "egg-white-black-bean-breakfast-quesadillas",
+      "title": "Egg White & Black Bean Breakfast Quesadillas",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+      "heroAlt": "Sliced egg white breakfast quesadilla with black beans and pepper jack cheese",
+      "ingredients": [
+        {
+          "name": "egg whites",
+          "quantity": "20",
+          "unit": "",
+          "group": "Eggs",
+          "notes": "or 2.5 cups liquid egg whites"
+        },
+        {
+          "name": "black beans",
+          "quantity": "1 can",
+          "unit": "",
+          "group": "Fillings",
+          "notes": "drained, rinsed"
+        },
+        {
+          "name": "pepper jack cheese",
+          "quantity": "2 cups",
+          "unit": "",
+          "group": "Fillings",
+          "notes": "shredded"
+        },
+        {
+          "name": "salsa",
+          "quantity": "1/2 cup",
+          "unit": "",
+          "group": "Fillings"
+        },
+        {
+          "name": "flour tortilla",
+          "quantity": "8",
+          "unit": "",
+          "group": "Build",
+          "notes": "10-inch"
+        },
+        {
+          "name": "olive oil",
+          "quantity": "2 tbsp",
+          "unit": "",
+          "group": "Build",
+          "notes": "for the griddle"
+        }
+      ],
+      "tonightSpread": []
+    },
+    {
+      "collection": "breakfast",
+      "slug": "scrapple-and-eggs-skillet",
+      "title": "Scrapple and Eggs Skillet",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/scrapple-and-eggs-skillet.jpg",
+      "heroAlt": "Crisp scrapple slices with fried eggs and buttered toast points",
+      "ingredients": [
+        {
+          "name": "scrapple loaf",
+          "quantity": "2 lb",
+          "unit": "",
+          "group": "Scrapple",
+          "notes": "cut into 1/2-inch slices"
+        },
+        {
+          "name": "large eggs",
+          "quantity": "8",
+          "unit": "",
+          "group": "Protein"
+        },
+        {
+          "name": "white bread",
+          "quantity": "8 slices",
+          "unit": "",
+          "group": "Toast",
+          "notes": "cut into triangles"
+        },
+        {
+          "name": "vegetable oil",
+          "quantity": "3 tbsp",
+          "unit": "",
+          "group": "Fat",
+          "notes": "for scrapple, plus butter"
+        },
+        {
+          "name": "black pepper",
+          "quantity": "1/2 tsp",
+          "unit": "",
+          "group": "Seasoning",
+          "notes": "scrapple is seasoned—taste before salting"
+        },
+        {
+          "name": "unsalted butter",
+          "quantity": "4 tbsp",
+          "unit": "",
+          "group": "Finish",
+          "notes": "for toast and eggs"
+        },
+        {
+          "name": "apple butter",
+          "quantity": "1/2 cup",
+          "unit": "",
+          "group": "Optional",
+          "notes": "for serving"
+        },
+        {
+          "name": "maple syrup",
+          "quantity": "1/4 cup",
+          "unit": "",
+          "group": "Optional",
+          "notes": "Pennsylvania sweet-savory tradition"
+        }
+      ],
+      "tonightSpread": []
+    },
+    {
+      "collection": "breakfast",
+      "slug": "turkey-bacon-white-bean-breakfast-hash",
+      "title": "Turkey Bacon & White Bean Breakfast Hash",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+      "heroAlt": "Skillet of turkey bacon and white bean breakfast hash with eggs cooked on top",
+      "ingredients": [
+        {
+          "name": "russet potato",
+          "quantity": "3 lb",
+          "unit": "",
+          "group": "Base",
+          "notes": "diced 1/2-inch"
+        },
+        {
+          "name": "turkey bacon",
+          "quantity": "1 lb",
+          "unit": "",
+          "group": "Protein",
+          "notes": "diced"
+        },
+        {
+          "name": "white beans",
+          "quantity": "2 cans",
+          "unit": "",
+          "group": "Protein",
+          "notes": "drained, rinsed"
+        },
+        {
+          "name": "large eggs",
+          "quantity": "14",
+          "unit": "",
+          "group": "Protein"
+        },
+        {
+          "name": "yellow onion",
+          "quantity": "1",
+          "unit": "",
+          "group": "Aromatics",
+          "notes": "diced"
+        },
+        {
+          "name": "bell pepper",
+          "quantity": "1",
+          "unit": "",
+          "group": "Aromatics",
+          "notes": "diced"
+        },
+        {
+          "name": "olive oil",
+          "quantity": "2 tbsp",
+          "unit": "",
+          "group": "Aromatics"
+        }
+      ],
+      "tonightSpread": []
+    },
+    {
+      "collection": "breakfast",
+      "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
+      "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
+      "protein": "any",
+      "mealFormat": "breakfast",
+      "cuisine": "american",
+      "heroImage": "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+      "heroAlt": "Skillet of turkey sausage, spinach, and feta egg white scramble",
+      "ingredients": [
+        {
+          "name": "turkey sausage",
+          "quantity": "2 lb",
+          "unit": "",
+          "group": "Protein",
+          "notes": "casings removed"
+        },
+        {
+          "name": "egg whites",
+          "quantity": "28",
+          "unit": "",
+          "group": "Eggs",
+          "notes": "or 3.5 cups liquid egg whites"
+        },
+        {
+          "name": "baby spinach",
+          "quantity": "8 oz",
+          "unit": "",
+          "group": "Vegetables"
+        },
+        {
+          "name": "feta cheese",
+          "quantity": "1 1/2 cups",
+          "unit": "",
+          "group": "Cheese",
+          "notes": "crumbled"
+        },
+        {
+          "name": "yellow onion",
+          "quantity": "1",
+          "unit": "",
+          "group": "Aromatics",
+          "notes": "diced"
+        },
+        {
+          "name": "olive oil",
+          "quantity": "2 tbsp",
+          "unit": "",
+          "group": "Aromatics"
+        }
+      ],
+      "tonightSpread": []
+    }
+  ]
+}

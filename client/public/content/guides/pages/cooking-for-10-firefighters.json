@@ -1,102 +1,333 @@
 {
   "slug": "cooking-for-10-firefighters",
-  "title": "Cooking for 10 Firefighters",
-  "subtitle": "Portion math, line setup, and recipes that scale without chaos",
-  "description": "A practical guide to cooking for 10 firefighters: pick the right format, scale ingredients, and use hall-tested recipes built for volume and hold time.",
+  "title": "Cooking for 10 Firefighters: How Much Food, Which Pans, and How to Time It",
+  "subtitle": "Per-person quantities for crews of 4 to 12, what not to multiply when you scale a recipe, and how to get every component to the table hot.",
+  "description": "Cooking for 10 people: how much meat, pasta and rice to make for 4 to 12, what not to multiply when scaling a recipe, and how to time dinner.",
   "topic": "station_cooking",
   "pillar": "operations_how_to",
-  "intro": "Cooking for ten is not just doubling a recipe. It is choosing a format that scales, buying the right quantities, and setting up service so dinner does not turn into a traffic jam. The best meals for ten firefighters are forgiving: big pots, trays, and build-your-own lines that stay hot when the board interrupts everything.",
+  "intro": "For 10 hungry adults, plan on about 5 lb (2.3 kg) of boneless meat for a meat-forward main, or 3 1/2 lb (1.6 kg) of ground meat in chili, tacos or a meat sauce. For starch, that is 2 1/2 lb (1.1 kg) of dry pasta as the main, or 5 cups of raw rice as a side. Those numbers are deliberately higher than package serving sizes: a crew that has been working all day eats more than a nutrition label assumes, and running out halfway down the line is a worse outcome than leftovers. The quantities are the easy part. The harder problems at 10 are pan space, seasoning that does not scale in a straight line, and getting three components hot at the same moment.",
   "sections": [
     {
-      "id": "choose-format",
-      "heading": "Pick the right format first",
+      "id": "how-much-per-person",
+      "heading": "How much food to cook per person",
       "paragraphs": [
-        "For ten people, formats beat fancy menus. Big pot (chili, soup), tray bake (ziti, lasagna), and bar night (tacos, loaded potatoes) are the station defaults because they survive interruptions.",
-        "Avoid anything that needs precise batch timing in small pans. If it requires eight separate finish steps, it will fail when the tones drop."
+        "The table uses raw weights and assumes adults with big appetites and one or two sides. If you are serving a heavy starch, bread and a salad, you can come down about 20 percent on the protein. If the crew reliably goes back for seconds, round the protein up rather than the sides, because protein is what runs out first and it is the hardest thing to stretch at the last minute.",
+        "Boneless and bone-in weights differ because bone and skin can be a third or more of the weight of chicken pieces. Ground meat in a mixed dish needs less per person than a steak or thigh on the plate, since beans, tomatoes, tortillas or pasta carry part of the meal."
       ],
-      "tips": [
-        "If you can hold it on low heat for 30–60 minutes, it is a good choice for ten.",
-        "If everyone can build their own plate, you just solved picky eaters and portion differences."
+      "table": {
+        "caption": "Planning quantities for hungry adults (raw weight, per person in brackets)",
+        "columns": [
+          "Food",
+          "Per person",
+          "4",
+          "6",
+          "8",
+          "10",
+          "12"
+        ],
+        "rows": [
+          [
+            "Boneless meat, meat-forward main",
+            "1/2 lb (225 g)",
+            "2 lb",
+            "3 lb",
+            "4 lb",
+            "5 lb",
+            "6 lb"
+          ],
+          [
+            "Ground meat in chili, tacos, sauce",
+            "1/3 lb (150 g)",
+            "1 1/3 lb",
+            "2 lb",
+            "2 3/4 lb",
+            "3 1/2 lb",
+            "4 lb"
+          ],
+          [
+            "Bone-in chicken pieces",
+            "3/4 lb (340 g)",
+            "3 lb",
+            "4 1/2 lb",
+            "6 lb",
+            "7 1/2 lb",
+            "9 lb"
+          ],
+          [
+            "Dry pasta as the main",
+            "4 oz (115 g)",
+            "1 lb",
+            "1 1/2 lb",
+            "2 lb",
+            "2 1/2 lb",
+            "3 lb"
+          ],
+          [
+            "Raw long-grain rice as a side",
+            "1/2 cup (90 g)",
+            "2 cups",
+            "3 cups",
+            "4 cups",
+            "5 cups",
+            "6 cups"
+          ],
+          [
+            "Potatoes",
+            "1/2 lb (225 g)",
+            "2 lb",
+            "3 lb",
+            "4 lb",
+            "5 lb",
+            "6 lb"
+          ],
+          [
+            "Salad greens",
+            "1 1/2 oz (40 g)",
+            "6 oz",
+            "9 oz",
+            "12 oz",
+            "15 oz",
+            "18 oz"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "what-not-to-multiply",
+      "heading": "What not to multiply when you scale a recipe",
+      "paragraphs": [
+        "Multiplying the main ingredients of a recipe for 4 by 2.5 works. Multiplying everything does not, because several things in a recipe depend on the pot and the pan rather than on the amount of food.",
+        "The biggest one is evaporation. Liquid evaporates from the surface, so when you make two and a half times the chili in a pot that is only a little wider, you have far more liquid but not much more surface. The pot reduces more slowly, the sauce ends up thinner, and the flavour is less concentrated than the small recipe you are copying. That is why a scaled recipe often tastes flat even though every spice was multiplied correctly, and why it can also taste too salty if the recipe relied on the salt concentrating as it reduced."
+      ],
+      "table": {
+        "caption": "How common ingredients and steps behave when you scale up",
+        "columns": [
+          "Ingredient or step",
+          "How it scales",
+          "What to do"
+        ],
+        "rows": [
+          [
+            "Salt, dried chiles, strong spices",
+            "Less than linear in a big pot",
+            "Add about three-quarters of the scaled amount, taste near the end, then adjust"
+          ],
+          [
+            "Oil for searing",
+            "Depends on pan surface, not food weight",
+            "Use enough to film the pan for each batch instead of multiplying the recipe amount"
+          ],
+          [
+            "Liquid in soups, braises, sauces",
+            "Reduces more slowly in a deep pot",
+            "Start with about 90 percent of the scaled liquid and add more if it thickens too fast"
+          ],
+          [
+            "Flour or cornstarch thickener",
+            "Roughly linear",
+            "Scale it fully; if the sauce is still thin, add a slurry at the end"
+          ],
+          [
+            "Baking powder, baking soda, yeast",
+            "Linear by weight, but pan depth changes baking",
+            "Scale by weight, and bake in several pans of the original depth rather than one deep pan"
+          ],
+          [
+            "Cooking time",
+            "Depends on thickness, not total quantity",
+            "Two pans at the original depth take about the original time; one pan twice as deep takes much longer and cooks unevenly"
+          ],
+          [
+            "Pan space for browning",
+            "Fixed",
+            "Brown in batches with space between pieces"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "formats-that-scale",
+      "heading": "Choose a format that scales",
+      "paragraphs": [
+        "At 10 people the format matters more than the recipe. A big pot (chili, stew, soup), a tray bake (baked ziti, lasagna, enchiladas), a sheet-pan dinner, or a build-your-own line (tacos, baked potatoes, rice bowls) all have one thing in common: the cooking happens in one or two vessels and the finish is simple. Anything that needs several small pans finished at the same minute, like individually seared steaks or pan sauces, gets harder with every extra person.",
+        "Know the capacity of your pans. A half sheet pan (18 x 13 in, 46 x 33 cm) fits roughly 3 lb of boneless chicken thighs in a single layer with space between the pieces, which is what lets them brown instead of steam. For 5 lb, use two pans and swap their oven positions halfway through. A 9 x 13 in (23 x 33 cm) baking dish of baked pasta gives about eight hungry portions, so make two for 10 and freeze whatever is left."
       ]
     },
     {
-      "id": "portion-math",
-      "heading": "Portion math crews actually use",
+      "id": "timing",
+      "heading": "Timing: work backward from when you want to eat",
       "paragraphs": [
-        "Protein disappears first. Plan protein for ten, then backfill with starch and a cooked vegetable or salad. If you are short, the meal feels light no matter how many sides you make.",
-        "The fastest way to keep portions fair is to run a line: protein first, then starch, then toppings. People pace themselves when the order is consistent."
+        "Getting everything done together is a scheduling problem, not a cooking one. Write down each component, how long it takes, and how well it holds once it is done. Then start the slowest and most forgiving item first and finish with the things that are ruined by waiting."
+      ],
+      "steps": [
+        "Pick the serving time and count back from it for each component.",
+        "Start the long, forgiving item first: a braise, chili, or baked pasta that can sit covered once it is done.",
+        "Start starches that hold next. Rice keeps well in a covered pot off the heat for 20 to 30 minutes; roasted potatoes hold in a low oven.",
+        "Leave the fast, fragile items for the last 15 minutes: green vegetables, anything seared, garlic bread, and dressing the salad.",
+        "Hold finished food covered in a low oven or on low heat. Hot food should stay at 140°F (60°C) or above until it is served."
       ]
     },
     {
-      "id": "service-and-hold",
-      "heading": "Service flow and hold time",
+      "id": "worked-examples",
+      "heading": "Two complete shopping lists for 10",
       "paragraphs": [
-        "Ten people rarely sit down at the exact same minute. Plan for staggered eating: a pot on low, an oven on warm, or covered trays. Dinner should still be good after the second run comes back.",
-        "Label one tray \"late eaters\" and keep it covered in a warm oven. You will prevent the pan-picking that makes a meal look wrecked."
+        "Per-person numbers are easier to trust once you see them turned into a full list. These two dinners are the formats crews cook most for a table of 10, with enough margin for second helpings and one or two extra people who turn up at the table. If your crew regularly has visitors from another company or the day shift stays late, shop for 12 rather than 10.",
+        "Baked ziti needs less dry pasta than a plain pasta dinner, because the pasta shares the pan with meat, ricotta and mozzarella. Two 9 x 13 in (23 x 33 cm) dishes hold it comfortably, with room for leftovers."
+      ],
+      "table": {
+        "caption": "Taco night and baked ziti for 10 hungry adults",
+        "columns": [
+          "Taco night",
+          "Amount",
+          "Baked ziti night",
+          "Amount"
+        ],
+        "rows": [
+          [
+            "Ground beef",
+            "3 1/2 lb (1.6 kg)",
+            "Dry ziti or penne",
+            "2 lb (900 g)"
+          ],
+          [
+            "6 in (15 cm) tortillas",
+            "30 (3 per person)",
+            "Italian sausage or ground beef",
+            "1 1/2 lb (680 g)"
+          ],
+          [
+            "Shredded cheese",
+            "1 1/4 lb (570 g)",
+            "Marinara",
+            "3 jars, 24 oz (680 g) each"
+          ],
+          [
+            "Canned black or pinto beans",
+            "3 cans, 15 oz (425 g) each",
+            "Ricotta",
+            "2 lb (900 g)"
+          ],
+          [
+            "Long-grain rice",
+            "3 cups raw",
+            "Mozzarella",
+            "1 1/2 lb (680 g)"
+          ],
+          [
+            "Lettuce, tomato, onion",
+            "1 head, 4 tomatoes, 1 onion",
+            "Parmesan",
+            "1 cup grated"
+          ],
+          [
+            "Salsa and sour cream",
+            "32 oz (900 g) each",
+            "Garlic bread and salad greens",
+            "2 loaves, 15 oz (425 g)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "serving-ten",
+      "heading": "Serving 10 without running out",
+      "paragraphs": [
+        "At 10, run a line instead of plating. Put the plates first, then starches and sides, then the protein, then sauces and toppings, so plates fill with the cheaper food before they reach the part most likely to run short. One person serving the protein keeps portions even and keeps everyone else away from the stove, which matters in a small station kitchen.",
+        "When protein is tight, portion it before service starts: count the chicken thighs, slice the roast, or put a card at the pan that says two tacos' worth or one ladle. Set a covered plate aside in a low oven for anyone who is out on a call.",
+        "Anything that will not be eaten within two hours of coming off the heat or out of the warm oven needs to go into the fridge. Put leftovers into shallow containers so they cool quickly, and reheat them to 165°F (74°C)."
       ]
     }
   ],
   "practicalAdvice": [
-    "Start the cook with the hold plan: where does the food live if the tones drop?",
-    "Scale protein first. The rest of the plate is easier to stretch.",
-    "Use trays and sheet pans for sides. Keep the stove for the main.",
-    "Run a line when possible: protein first, then starch, then toppings."
+    "Plan 1/2 lb (225 g) of raw boneless meat per person for a meat-forward main and 1/3 lb (150 g) of ground meat for chili, tacos or sauces.",
+    "When you scale a recipe, scale the main ingredients fully but start with about three-quarters of the salt and strong spices.",
+    "Brown meat in batches and use two sheet pans instead of one crowded pan.",
+    "Start the most forgiving dish first and finish with anything seared, dressed or fried."
   ],
   "mealRecommendations": [
     {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "A true big-crew feeder that holds hot and improves over the shift."
+      "blurb": "Scales in one pot, holds on low for an hour, and uses the ground-meat quantities above."
     },
     {
       "slug": "baked-ziti",
       "title": "Baked Ziti",
-      "blurb": "Tray-format, easy to portion, and rookie-proof once it is in the oven."
+      "blurb": "Two 9 x 13 pans feed 10 to 12; assemble early and bake when the crew is close."
     },
     {
       "slug": "batch-lasagna",
       "title": "Batch Lasagna",
-      "blurb": "Comfort-night volume with a clean service line."
+      "blurb": "A tray bake that slices cleanly and reheats well the next shift."
     },
     {
       "slug": "hall-taco-bar",
       "title": "Taco Bar",
-      "blurb": "Build-your-own solves preferences and keeps the kitchen from getting crowded."
+      "blurb": "Build-your-own service: one pan of seasoned meat and a line of toppings handles different appetites."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "blurb": "Two sheet pans in the oven at once, no batch searing at the stove."
     },
     {
       "slug": "loaded-baked-potato-bar",
       "title": "Baked Potato Bar",
-      "blurb": "Cheap to scale, filling, and the topping line keeps plates consistent."
+      "blurb": "Potatoes bake unattended and hold in the oven; toppings go on the line."
     },
     {
       "slug": "pulled-pork",
       "title": "Pulled Pork",
-      "blurb": "Hold food for busy boards — serve as sandwiches or bowls."
+      "blurb": "Cooks for hours without attention and holds moist in its juices."
     }
   ],
   "faqs": [
     {
-      "question": "What's the biggest mistake when cooking for 10 people instead of 4?",
-      "answer": "Treating it like a bigger version of a small recipe. At ten, you need a format that scales — a big pot, a tray bake, or a build-your-own line — not eight separate finish steps that all need to land at the same minute."
+      "question": "How much ground beef do I need for tacos for 10 people?",
+      "answer": "About 3 to 3 1/2 lb (1.4 to 1.6 kg) of raw ground beef, which is roughly 1/3 lb per person. Tacos come with tortillas, beans, cheese and toppings, so you need less meat per person than for a plated main. Go to 4 lb if the crew eats big or if you have no beans or rice on the side."
     },
     {
-      "question": "How do you keep food warm when people don't all sit down at once?",
-      "answer": "Hold it on low heat or in a warm oven, and label one tray 'late eaters' so nobody picks through the pan looking for a good piece. A pot on low for 30–60 minutes beats trying to time a fresh finish for the second wave."
+      "question": "How much pasta should I cook for 10 adults?",
+      "answer": "2 1/2 lb (1.1 kg) of dry pasta when pasta is the main dish, or about 1 1/4 lb (570 g) as a side. The 2 oz serving on the box is a side portion and runs short for hungry adults."
+    },
+    {
+      "question": "Can I just multiply a recipe for 4 by 2.5?",
+      "answer": "Multiply the main ingredients, but not everything. Start with about three-quarters of the salt and strong spices and adjust at the end, use pan-sized amounts of oil for searing rather than a multiplied amount, and reduce the liquid slightly because a big pot evaporates less. Split the food across more pans instead of making one deeper pan, or the cooking time and texture will change."
+    },
+    {
+      "question": "How do I keep dinner hot for people who eat at different times?",
+      "answer": "Keep finished food covered at 140°F (60°C) or above: on the stove on low, in a slow cooker on warm, or in a low oven. Covering stops it drying out. Anything that has sat at room temperature for more than two hours should go in the fridge, and leftovers should be reheated to 165°F (74°C)."
     }
   ],
   "relatedArticleSlugs": [
-    "feeding-a-firehall-crew",
     "best-firehouse-meals-large-crews",
-    "meals-feeding-10-firefighters"
+    "feeding-a-firehall-crew",
+    "firehall-grocery-planning",
+    "easy-firehall-pasta-recipes",
+    "station-kitchen-essentials"
   ],
   "keywords": [
+    "cooking for 10 people",
+    "how much food for 10 people",
     "cooking for 10 firefighters",
-    "feeding a firehall crew",
-    "firehouse meals for large crews",
-    "station cooking"
+    "feeding 10 firefighters",
+    "how much meat per person",
+    "scaling recipes for a crowd"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 8,
-  "heroImageAlt": "Cooking for 10 Firefighters — cooking for 10 firefighters tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 9,
+  "seoTitle": "Cooking for 10 People: Quantities, Pans and Timing",
+  "sources": [
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    },
+    {
+      "label": "Safe food handling in the home",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-food-handling-home.html"
+    }
+  ]
 }

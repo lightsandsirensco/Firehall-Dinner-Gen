@@ -624,18 +624,18 @@ export const batch07: PerformanceAdaptedRecipe[] = [
         minutes: 8,
       },
       {
-        title: "Season and sear the chicken",
-        instruction:
-          "Combine paprika, garlic powder, onion powder, thyme, cayenne, and salt; coat chicken breasts evenly. Sear in oil in a hot cast iron skillet 4–5 minutes per side until deeply charred and 165°F at the center. Rest 5 minutes, then slice.",
-        minutes: 15,
-        heatLevel: "high",
-      },
-      {
         title: "Build the dirty rice",
         instruction:
           "Cook onion, bell pepper, and celery in oil over medium 5–6 minutes until softened. Add garlic and Cajun seasoning, cook 1 minute. Add rice, broth, and black-eyed peas; bring to a boil, cover, and simmer 18–20 minutes until rice is tender and liquid is absorbed.",
         minutes: 22,
         heatLevel: "medium-low",
+      },
+      {
+        title: "Season and sear the chicken",
+        instruction:
+          "While the rice simmers, combine paprika, garlic powder, onion powder, thyme, cayenne, and salt; coat chicken breasts evenly. Sear in oil in a hot cast iron skillet 4–5 minutes per side until deeply charred and 165°F at the center. Rest 5 minutes, then slice.",
+        minutes: 15,
+        heatLevel: "high",
       },
       {
         title: "Build the bowls",

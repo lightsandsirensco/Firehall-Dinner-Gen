@@ -17,6 +17,7 @@ import {
   normalizeGoldenRecipePageCopy,
   normalizeRecipeSpacing,
 } from "../shared/recipe/spacing.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 interface ChangeSample {
   slug: string;
@@ -207,7 +208,7 @@ function writeExamplesReport(): void {
     lines.push("**Before:**", "", `\`${s.before.replace(/`/g, "'")}\``, "");
     lines.push("**After:**", "", `\`${s.after.replace(/`/g, "'")}\``, "");
   }
-  fs.writeFileSync(outPath, lines.join("\n"));
+  writeFileAtomicSync(outPath, lines.join("\n"));
   console.log(`[spacing] wrote ${outPath}`);
 }
 

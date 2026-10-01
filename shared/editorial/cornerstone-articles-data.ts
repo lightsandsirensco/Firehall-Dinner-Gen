@@ -1,480 +1,365 @@
 /**
- * Cornerstone blog content — shareable hall culture guides at /blog/{slug}.
+ * Cornerstone guides: the Classics Wheel companion, the most-cooked crew
+ * dinners, and a first-time cook's starter list.
  */
 
+import { SRC } from "./guide-sources.js";
 import { buildSeoGuide, meal } from "./seo-article-build.js";
+
+const UPDATED = "2026-09-30T18:00:00.000Z";
 
 export const CORNERSTONE_BLOG_ARTICLES = [
   buildSeoGuide({
     slug: "10-classic-firehall-meals",
-    seoTitle: "10 Classic Firehall Meals Firefighters Actually Cook",
+    seoTitle: "10 Classic Firehall Meals: Quantities and How to Cook Them",
     title: "10 Classic Firehall Meals Firefighters Actually Cook",
-    subtitle: "Ten hall-tested dinners — pick one and open the full recipe",
+    subtitle:
+      "The ten dinners on the Classics Wheel, with quantities for 8, the step that makes each one work, and which ones hold if dinner runs late.",
     description:
-      "A practical list of classic firehall meals, from jerk chicken and rice and peas to chili, steak sandwiches, BBQ chicken mac and cheese, and more.",
+      "Ten classic firehall meals from the Classics Wheel, with quantities for 8, the technique that makes each work, and which hold if dinner runs late.",
     keywords: [
       "classic firehall meals",
-      "firefighter meals",
-      "fire station food",
       "classics wheel",
-      "firefighter dinner ideas",
+      "fire station dinner classics",
+      "crew dinner recipes",
     ],
     topic: "station_lifestyle",
     pillar: "station_lifestyle",
-    readMinutes: 5,
+    readMinutes: 8,
+    updatedAt: UPDATED,
     intro:
-      "Ten dinners crews actually cook on shift — jerk chicken, BBQ mac, steak sandwiches, smash burgers, parm, pulled pork, chili, caesar, beef dip, and steak tacos. Each link below is a full crew-sized recipe.",
-    practicalAdvice: [
-      "Open the recipe first — check headcount and gear before you shop.",
-      "One cook, one runner; sauces and buns on the side for post-call eaters.",
-      "Same ten meals as the Classics Wheel at /wheel if the crew wants a random pick.",
-    ],
+      "These ten classic firehall meals are the same ten on the Classics Wheel: jerk chicken with rice and peas, BBQ chicken mac and cheese, steak sandwiches, smash burgers, chicken parm, pulled pork, chili with garlic bread, chicken Caesar, beef dip and steak tacos. They are here as a list for when you want to choose rather than spin. What they share is that each one feeds a crew from one or two pans without a fussy finish. They differ in how well they hold, and that matters most when choosing on a given night. This guide gives quantities for 8, the step that makes each dish work, and which ones can wait if people are late.",
     sections: [
       {
-        id: "tonight",
-        heading: "Quick shift notes",
+        id: "at-a-glance",
+        heading: "The ten at a glance: quantities for 8",
         paragraphs: [
-          "Assign one cook and one runner before prep starts. Everyone else stays out until called.",
+          "Quantities are for 8 hungry adults with the usual sides. Active time is hands-on work; several of these have long unattended stretches in the oven or on the grill. The full recipe for each is linked below, with crew-size scaling.",
+        ],
+        table: {
+          caption: "The ten Classics Wheel meals for 8 people",
+          columns: ["Meal", "Main quantities for 8", "Active time", "Holds?"],
+          rows: [
+            ["Jerk chicken with rice and peas", "6 lb bone-in thighs, 3 cups rice, 1 can coconut milk, 1 can kidney beans", "40 min, plus marinating", "About 30 min, covered"],
+            ["BBQ chicken mac and cheese", "3 lb chicken thighs, 1 1/2 lb pasta, 1 1/2 lb cheese", "45 min", "Well, covered in a low oven"],
+            ["Steak sandwiches", "4 lb sirloin, 8 rolls, 2 onions", "30 min", "No; slice as you serve"],
+            ["Smash burgers", "4 lb 80/20 ground beef as 16 balls, 8 buns", "25 min", "No; cook to order"],
+            ["Chicken parm", "3 lb chicken breast as 8 cutlets, 2 lb pasta, 1 jar marinara, 1 lb mozzarella", "50 min", "About 20 min, uncovered"],
+            ["Pulled pork", "5 lb bone-in pork shoulder, 12 buns, 1 cabbage for slaw", "30 min, plus 8 hours cooking", "Hours, in its juices"],
+            ["Chili with garlic bread", "2 3/4 lb ground beef, 2 cans beans, 2 cans tomatoes, 2 loaves", "40 min, plus simmering", "Hours, on low"],
+            ["Chicken Caesar", "3 lb chicken breast, 3 heads romaine, 1 cup Parmesan", "35 min", "Chicken holds; dress the salad at serving"],
+            ["Beef dip", "4 lb sirloin tip or inside round roast, 8 rolls, 4 cups beef stock", "30 min, plus roasting", "Jus holds; slice the beef to order"],
+            ["Steak tacos", "3 lb flank or skirt steak, 24 small tortillas", "30 min", "No; cook and slice last"],
+          ],
+        },
+      },
+      {
+        id: "hold-or-order",
+        heading: "Hold-friendly or cook-to-order",
+        paragraphs: [
+          "The ten split into two groups, and on any given night, which group to pick from matters more than which dish. Chili, pulled pork, BBQ chicken mac and cheese, and the jus for beef dip all hold for an hour or more with the heat on low and a lid on, so they suit nights when people may eat in waves. Chicken parm and jerk chicken hold for a shorter time before the coating softens or the chicken dries.",
+          "Smash burgers, steak sandwiches, steak tacos and a dressed Caesar are best eaten within minutes. They are quick to cook but need someone at the griddle or grill at serving time. If the wheel lands on one of these on a night when people are likely to be late, cook the parts that hold (onions, sauces, toppings) and leave the meat until everyone is back.",
+        ],
+      },
+      {
+        id: "technique",
+        heading: "The step that makes each one work",
+        paragraphs: [
+          "Each of these has one step that decides whether it comes out right. Get that step right and the rest of the recipe is forgiving. Beef temperatures below are USDA's minimum of 145°F (63°C) with a 3-minute rest for whole cuts, and 160°F (71°C) for ground beef; chicken is 165°F (74°C).",
+        ],
+        table: {
+          caption: "The key step for each classic",
+          columns: ["Meal", "The step that matters", "Why"],
+          rows: [
+            ["Jerk chicken", "Marinate at least 4 hours, then start over indirect heat and char at the end", "The marinade needs time to reach the meat; direct heat alone burns the outside first"],
+            ["BBQ chicken mac and cheese", "Toss the chicken in sauce separately and fold it in at the end", "Acidic sauce stirred into the cheese sauce can make it grainy"],
+            ["Steak sandwiches", "Rest the steak 5 to 10 minutes, then slice thin across the grain", "Short fibers make even a firmer cut tender to bite"],
+            ["Smash burgers", "Smash hard within the first 30 seconds on a very hot griddle, then leave them alone", "Wide contact while the fat is cold builds the crust"],
+            ["Chicken parm", "Bake breaded cutlets on a wire rack and put sauce under the cheese", "Air under the cutlet and cheese over the sauce keep the crust crisp"],
+            ["Pulled pork", "Cook to about 200°F (93°C), well past the 145°F safety point", "Connective tissue needs the extra heat before the meat will pull"],
+            ["Chili", "Brown the meat in batches and toast the spices in the fat", "Browning and toasted spices give it depth"],
+            ["Chicken Caesar", "Dress the lettuce just before serving and keep croutons separate", "Dressing wilts romaine within about 20 minutes"],
+            ["Beef dip", "Slice the roast paper-thin and build the jus from the pan drippings", "Thin slices soak up jus; drippings give it body"],
+            ["Steak tacos", "Very high heat for a short time, then rest and slice across the grain", "Flank and skirt are tender only when sliced thin"],
+          ],
+        },
+      },
+      {
+        id: "wheel",
+        heading: "Using the list with the Classics Wheel",
+        paragraphs: [
+          "The wheel is for nights when the crew can't decide and nobody wants to argue about it; this list is for when you want to choose deliberately, usually because of the time available or how the night is likely to go. Both use the same ten recipes.",
+          "A practical rule for the wheel is to allow one re-spin if it lands on a cook-to-order meal on a night when calls are likely, or on something that needs a long cook when there's less than an hour left. The recipe pages scale each dish to your crew size, so quantities for 4 or 12 are one click from the numbers above.",
         ],
       },
     ],
+    practicalAdvice: [
+      "Pick from the hold-friendly group (chili, pulled pork, BBQ chicken mac) on nights when people may eat late.",
+      "Cook smash burgers, steak sandwiches and steak tacos last, once everyone is at the table.",
+      "Rest steaks and roasts before slicing, and slice across the grain.",
+      "Dress salads and add crisp toppings at serving time, not before.",
+    ],
     mealRecommendations: [
-      meal(
-        "jerk-chicken",
-        "Jerk Chicken & Rice and Peas",
-        "Grill-night heat with coconut rice — charred thighs, island sides, feeds eight without a fussy pass.",
-      ),
-      meal(
-        "bbq-chicken-mac-and-cheese",
-        "BBQ Chicken Mac and Cheese",
-        "Smoky shredded chicken folded into baked mac — tray comfort when the hall wants calories and zero drama.",
-      ),
-      meal(
-        "steak-sandwiches",
-        "Steak Sandwiches",
-        "Sliced sirloin on toasted buns with fries and salad — flat-top speed, handheld portions, line-friendly.",
-      ),
-      meal(
-        "smash-burgers",
-        "Smash Burgers",
-        "Double patties, lacy edges, potato buns — loud flat-top night everyone recognizes.",
-      ),
-      meal(
-        "chicken-parm",
-        "Chicken Parmesan",
-        "Breaded cutlets, red sauce, melted cheese, pasta — Italian night that forgives rookie timing.",
-      ),
-      meal(
-        "pulled-pork",
-        "Pulled Pork Sandwiches",
-        "Low-stress once the pork is done — buns and slaw do the portion work on the line.",
-      ),
-      meal(
-        "big-chili",
-        "Firehall Chili & Garlic Bread",
-        "Smoky beef chili with cheesy garlic pull-apart — the pot waits when tones drop mid-prep.",
-      ),
-      meal(
-        "chicken-caesar",
-        "Chicken Caesar Salad",
-        "Grilled chicken over big romaine bowls — lighter night that still feels like a real feed.",
-      ),
-      meal(
-        "beef-dip",
-        "Beef Dip Sandwiches",
-        "Au jus on the counter, pile of beef, soft rolls — Canadian hall legend, dip mandatory.",
-      ),
-      meal(
-        "steak-tacos",
-        "Street-Style Chimichurri Steak Tacos",
-        "Charred steak, bright chimichurri, pickled onions — taco line energy without a rice side distraction.",
-      ),
-      meal(
-        "classic-patty-melt-for-the-crew",
-        "Classic Patty Melt for the Crew",
-        "Griddled beef patties with caramelized onions and Swiss on rye.",
-      ),
+      meal("jerk-chicken", "Jerk Chicken and Rice and Peas", "Bone-in thighs marinated ahead and finished over direct heat."),
+      meal("bbq-chicken-mac-and-cheese", "BBQ Chicken Mac and Cheese", "A tray bake that holds covered in a low oven."),
+      meal("steak-sandwiches", "Steak Sandwiches", "Sirloin sliced thin across the grain on toasted rolls."),
+      meal("smash-burgers", "Smash Burgers", "Griddle burgers cooked to order in a few minutes each."),
+      meal("chicken-parm", "Chicken Parmesan", "Cutlets baked on a rack so the crust stays crisp under the sauce."),
+      meal("pulled-pork", "Pulled Pork Sandwiches", "The most forgiving of the ten; holds for hours."),
+      meal("big-chili", "Firehall Chili and Garlic Bread", "Holds on low for as long as the night needs."),
+      meal("chicken-caesar", "Chicken Caesar Salad", "Grilled chicken with the salad dressed just before serving."),
+      meal("beef-dip", "Beef Dip Sandwiches", "Thin-sliced roast beef with jus from the pan drippings."),
+      meal("steak-tacos", "Chimichurri Steak Tacos", "Flank or skirt seared hot and sliced last."),
+      meal("classic-patty-melt-for-the-crew", "Classic Patty Melt for the Crew", "Not on the wheel, but a griddle alternative to smash burgers."),
     ],
     faqs: [
       {
-        question: "Are these the same meals on the Classics Wheel?",
+        question: "Are these the same meals as the Classics Wheel?",
         answer:
-          "Yes. Same ten slugs, same recipes. Use the wheel when you want random; use this list when you want to pick deliberately.",
-      },
-      {
-        question: "What if we only have four on duty tonight?",
-        answer:
-          "Each recipe scales — open the page, set your crew size, and follow the portions. Line meals like tacos and sandwiches stretch easiest when eaters trickle in.",
-      },
-      {
-        question: "How do you decide which of these ten to cook tonight?",
-        answer:
-          "Match it to the board. Jerk chicken and steak tacos need someone at the grill or flat-top the whole time, while firehall chili and BBQ chicken mac and cheese hold on their own if a call pulls you away. Save the two-cook meals for a quieter night.",
+          "Yes. The first ten recipes here are the ten on the wheel. Use the wheel when you want a random pick and this list when you want to choose by time, crew size or how well a dish holds.",
       },
     ],
     relatedArticleSlugs: [
-      "legendary-firehall-meals",
-      "meals-every-firefighter-knows",
       "most-popular-firefighter-meals",
+      "planning-tonights-station-dinner",
+      "bbq-night-at-the-station",
     ],
+    sources: [SRC.usdaTemps, SRC.hcTemps],
   }),
 
   buildSeoGuide({
     slug: "most-popular-firefighter-meals",
-    seoTitle: "20 Most Popular Firefighter Meals for Station Kitchens",
+    seoTitle: "20 Most Popular Firefighter Meals, Grouped by Format",
     title: "20 Most Popular Firefighter Meals",
-    subtitle: "What crews actually cook — not what sounds good in a survey",
+    subtitle:
+      "The dinners crews cook most, grouped by format, with quantities for 10 for the top five and what makes each format work for a crew.",
     description:
-      "The 20 most popular firefighter meals in station kitchens: big batches, line meals, and crew feeds that scale to 6–12 and survive interrupted dinners.",
+      "The 20 most popular firefighter meals grouped by format, with quantities for 10, how well each holds, and why these dinners suit station crews.",
     keywords: [
       "most popular firefighter meals",
-      "fire station meals",
-      "firehall dinner ideas",
-      "crew meals",
-      "feed a fire crew",
+      "meals firefighters cook",
+      "popular crew dinners",
     ],
     topic: "meal_planning",
     pillar: "recipes_meals",
-    readMinutes: 11,
+    readMinutes: 9,
+    updatedAt: UPDATED,
     intro:
-      "Popular firefighter meals share the same DNA: they feed six to twelve without a catering budget, survive tones mid-cook, and do not require everyone to eat at the same minute. This list is what we see on whiteboards and group chats — batch pots, sheet pans, lines, and handhelds that crews actually finish.",
-    practicalAdvice: [
-      "Round up on starches and lines before you cheap out on protein — hungry crews notice bread and rice first.",
-      "Pick one hold-friendly format when the board feels loud — chili beats seared fish on busy nights.",
-      "Post allergens on the line once — saves ten conversations during the meal.",
-    ],
+      "The most popular firefighter meals are not a secret list. Chili, tacos, burgers, pulled pork, lasagna and a few others come up again and again because they share practical traits: they scale in one pot or pan, their parts can be held separately, their doneness is forgiving, and cheap starches fill out the plate. This guide groups the 20 most common crew dinners by format, since the format decides how a meal behaves on a busy night more than the recipe does. It gives quantities for 10 for the five most common, explains why each format works for a crew, and suggests how to choose among them.",
     sections: [
       {
-        id: "why-popular",
-        heading: "Why firefighters love these meals",
+        id: "by-format",
+        heading: "The 20, grouped by format",
         paragraphs: [
-          "Volume, flavor, and forgiveness. A popular hall meal still eats well at lukewarm, portions fast, and leaves room for seconds without recooking. Nobody wants a beautiful plate that dies the minute the tones drop.",
+          "Almost every popular crew dinner falls into one of five formats. Pot meals and oven bakes hold longest; lines handle mixed appetites and dietary needs best; handhelds are fastest but mostly need to be cooked close to serving; sheet-pan dinners and shareables sit in between. Knowing the format tells you most of what you need about timing and holding before you open the recipe.",
+        ],
+        table: {
+          caption: "The 20 most popular crew dinners by format",
+          columns: ["Format", "Meals", "Best when", "How it holds"],
+          rows: [
+            ["Pot meals", "Beef and bean chili, turkey chili, one-pot chicken and rice", "The night is unpredictable; 8 to 30 people", "Hours on low, covered"],
+            ["Oven bakes", "Batch lasagna, enchilada casserole, baked mac and cheese, chicken parm", "You can assemble ahead", "30 to 60 minutes covered in a low oven"],
+            ["Lines", "Taco bar, baked potato bar, teriyaki donburi, BBQ chicken bowls, slider bar", "Appetites and diets vary", "Components hold separately"],
+            ["Handhelds", "Smash burgers, pulled pork, Philly cheesesteak skillet, quesadillas, carnitas tacos", "Time is short, or pulled pork was cooked ahead", "Pulled pork and carnitas hold; the rest are cook-to-order"],
+            ["Sheet pan and shareables", "Sheet-pan fajitas, game-day nachos, buffalo chicken dip", "One oven and little time for dishes", "20 to 30 minutes; nachos only minutes"],
+          ],
+        },
+      },
+      {
+        id: "why",
+        heading: "Why these dinners keep coming back",
+        paragraphs: [
+          "The popular meals are the ones that don't get harder as the crew gets bigger. A pot of chili for 12 takes about the same effort as one for 6; a taco line takes a few more minutes to set up but the same cooking. Compare that with pan-seared fish or individually plated steaks, where each extra person adds another piece to cook at the last minute. Formats where the work stays roughly the same as the numbers grow win in a station kitchen.",
+          "The second reason is forgiving doneness. Braised and simmered dishes, bakes and pulled meats are cooked well past the point where a few extra minutes matter, so a 20-minute delay doesn't ruin them. The third is that the meat, starch and sauce can be kept apart. On a line, tortillas, rice and toppings wait separately, so nothing goes soggy while people are late.",
         ],
       },
       {
-        id: "prep",
-        heading: "Prep practicality on shift",
+        id: "top-five",
+        heading: "Quantities for 10: the five most common",
         paragraphs: [
-          "The meals below split into three hall formats: batch and hold (chili, pulled pork), oven hands-off (lasagna, enchilada bake), and lines (tacos, bowls, potato bar). Match the format to your clock — not your ambition.",
-          "Buy pre-cut veg when labor matters more than cost. On a busy night, fajita strips from the bag beat a hero knife session.",
+          "These are shopping amounts for 10 hungry adults for the five dinners crews cook most. They use the same per-person planning figures as the 10-person guide, which covers scaling in more detail.",
+        ],
+        table: {
+          caption: "Shopping amounts for 10 people",
+          columns: ["Dinner", "Protein", "Starch", "Also buy"],
+          rows: [
+            ["Taco bar", "3 1/2 lb (1.6 kg) ground beef", "30 small tortillas, 3 cups raw rice", "1 1/4 lb cheese, 3 cans beans, lettuce, tomatoes, salsa, sour cream"],
+            ["Beef and bean chili", "3 1/2 lb (1.6 kg) ground beef", "2 loaves bread or 5 cups raw rice", "3 cans beans, 3 cans tomatoes, 2 onions, chili powder, cumin"],
+            ["Batch lasagna", "2 lb (900 g) Italian sausage or beef", "1 1/2 lb (680 g) lasagna noodles", "3 jars marinara, 2 lb ricotta, 2 lb mozzarella, Parmesan"],
+            ["Pulled pork", "6 lb (2.7 kg) bone-in pork shoulder", "15 buns", "1 cabbage for slaw, barbecue sauce"],
+            ["Smash burgers", "5 lb (2.3 kg) 80/20 ground beef", "20 buns", "Cheese slices, onions, pickles, lettuce"],
+          ],
+        },
+      },
+      {
+        id: "choosing",
+        heading: "Choosing between them tonight",
+        paragraphs: [
+          "Choose the format first. With under 45 minutes, the handhelds and sheet-pan dinners are realistic. With an hour or more, the bakes. If the night is likely to be interrupted, choose a pot meal or a line, because both hold and let people eat when they can. If a few people on the crew have allergies or eat differently, a line solves it without cooking a second dinner.",
+          "Rotation matters too. Many crews settle into the same four or five dinners; that is not a problem if the shopping and cooking get faster each time, but mixing in one different format a week keeps it from feeling repetitive. The planning guide covers the decision in more detail, including what to do when the meat is still frozen.",
         ],
       },
       {
-        id: "crew-size",
-        heading: "Crew-size and interruption math",
+        id: "better",
+        heading: "Small changes that make the classics better",
         paragraphs: [
-          "Plan for everyone on duty plus one floater from a neighboring rig. Batch meals need a deep pot or two large baking dishes — not a home-sized Dutch oven pretending it is enough.",
-          "If you expect calls during dinner, avoid meals with a thirty-second finish window. Choose food that waits: pulled pork, baked pasta, rice bowls with protein held separately.",
+          "The popular meals get cooked so often that small improvements pay off. Brown ground meat harder and in batches, rather than stirring grey meat in a crowded pan. Toast burger and sandwich buns cut side down for a minute; they stay firmer under sauce. Salt pasta water until it tastes seasoned. Finish rich dishes with something sharp, such as pickled onions on pulled pork or tacos, or lime on chili. Rest roasts and steaks before slicing so the juices stay in the meat.",
         ],
       },
     ],
+    practicalAdvice: [
+      "Choose the format first: pot, bake, line, handheld or sheet pan.",
+      "On unpredictable nights, choose pot meals or lines, which hold and let people eat when they can.",
+      "Use a line when crew members have allergies or different diets.",
+      "Brown meat in batches and toast the buns; both improve the most common dinners.",
+    ],
     mealRecommendations: [
-      meal("hall-taco-bar", "Hall Taco Bar Night", "Most halls run a taco line monthly — fast custom plates, easy scale, broad appeal."),
-      meal("big-chili", "Hall-Sized Beef and Bean Chili", "Top pot meal — cheap stretch, holds for late eaters, tops dogs and potatoes day two."),
-      meal("pulled-pork", "Pulled Pork Sandwiches", "Feeds a crowd from one shoulder — buns portion for you, sauce on the side."),
-      meal("smash-burgers", "Double Smash Burgers", "Flat-top speed — eight burgers faster than eight plated steaks."),
-      meal("batch-lasagna", "Giant Batch Lasagna", "Oven batch — one cut, many plates, minimal active time once it is in."),
-      meal("chicken-parm", "Chicken Parm", "Crowd Italian — cutlets in pans, cheese melts, crew eats family-style."),
-      meal("sheet-pan-fajitas", "Sheet Pan Fajitas", "One pan protein and peppers — tortillas turn it into a line."),
-      meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Rookie-friendly batch — one pot, predictable timing, easy cleanup."),
-      meal("buffalo-chicken-dip", "Buffalo Chicken Dip", "Game-day share — stays hot in a low oven, chips do the work."),
-      meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Self-serve — baked potatoes hold in warmers while toppings stay cold."),
-      meal("turkey-chili", "Sunday Batch Chili", "Weekend batch — same chili logic, bigger pot, slower shift pace."),
-      meal("enchilada-casserole", "Enchilada Casserole", "Stack-and-bake — feeds heavy, slices like lasagna, mild by default."),
-      meal("teriyaki-donburi", "Teriyaki Donburi", "Bowl line — rice base, protein, veg, sauce — everyone builds their ratio."),
-      meal("bbq-chicken-bowls", "BBQ Chicken Bowls", "Line bowls — grilled or roasted chicken over rice with sharp slaw."),
-      meal("fast-philly-skillet", "Fast Philly Cheesesteak Skillet", "Flat-top cheesesteak without the food-truck wait — feeds fast."),
-      meal("chicken-quesadillas", "Chicken Quesadillas", "Handheld stagger eating — griddle in batches, slice into wedges."),
-      meal("game-day-nachos", "Game Day Nachos", "Sheet nachos — build layers, broil, feed the couch crew at the hall."),
-      meal("pork-carnitas-tacos", "Pork Carnitas Tacos", "Crisp-edged pork — line tacos with bold flavor, holds in a warmer."),
-      meal("mac-and-cheese-bake", "Baked Mac and Cheese", "Comfort anchor — pairs with anything grilled or smoked."),
-      meal("slider-bar", "Slider Bar Night", "Mini sandwiches — two proteins, one line, fast second helpings."),
+      meal("hall-taco-bar", "Hall Taco Bar Night", "The most common line meal; scales from 6 to 30."),
+      meal("big-chili", "Hall-Sized Beef and Bean Chili", "The standard pot meal; holds on low for hours."),
+      meal("pulled-pork", "Pulled Pork Sandwiches", "Cook ahead and reheat in its juices."),
+      meal("smash-burgers", "Double Smash Burgers", "Fast on a griddle, cooked to order."),
+      meal("batch-lasagna", "Giant Batch Lasagna", "Assemble ahead and bake when the crew is close."),
+      meal("chicken-parm", "Chicken Parm", "Cutlets baked on racks, sauce under the cheese."),
+      meal("sheet-pan-fajitas", "Sheet Pan Fajitas", "Two pans in the oven, tortillas warming alongside."),
+      meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "One pot, predictable timing."),
+      meal("buffalo-chicken-dip", "Buffalo Chicken Dip", "A shareable that stays hot in a low oven."),
+      meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Potatoes hold in the oven while toppings stay cold."),
+      meal("turkey-chili", "Turkey Chili", "A leaner pot meal that holds like beef chili."),
+      meal("enchilada-casserole", "Enchilada Casserole", "Stacks and slices like lasagna."),
+      meal("teriyaki-donburi", "Teriyaki Donburi", "A rice bowl line with the sauce on the side."),
+      meal("bbq-chicken-bowls", "BBQ Chicken Bowls", "Chicken over rice with a sharp slaw."),
+      meal("fast-philly-skillet", "Fast Philly Cheesesteak Skillet", "Thin-sliced beef cooked hot in batches."),
+      meal("chicken-quesadillas", "Chicken Quesadillas", "Griddled in batches and cut into wedges."),
+      meal("game-day-nachos", "Game Day Nachos", "Built in layers on sheet pans and broiled."),
+      meal("pork-carnitas-tacos", "Pork Carnitas Tacos", "Braised ahead and crisped before serving."),
+      meal("mac-and-cheese-bake", "Baked Mac and Cheese", "A side or a main that holds covered."),
+      meal("slider-bar", "Slider Bar Night", "Two proteins on one line, with quick second helpings."),
     ],
     faqs: [
       {
-        question: "How do you avoid coming up short on a typical firehall dinner?",
+        question: "What is the most common dinner cooked at fire stations?",
         answer:
-          "Round up on protein rather than portioning exactly, and lean on cheap starches as backup — extra rice, bread, or tortillas fill in fast if the main runs short. It's easier to have a little extra chicken or beef left over than to come up short with people still in line.",
-      },
-      {
-        question: "What meals hold up best if tones drop during dinner?",
-        answer:
-          "Chili, pulled pork, baked pasta, and line meals with components held separately. Avoid crispy-only mains that turn soggy in a warmer — fry to order or serve sauce on the side.",
-      },
-      {
-        question: "Are these meals only for big career halls?",
-        answer:
-          "No — volunteer and combination halls run the same formats with smaller pots. Scale down the batch, keep the format. A taco line for six beats a fragile plated dinner for six.",
-      },
-      {
-        question: "What's the easiest meal on this list for a first-time hall cook?",
-        answer:
-          "One-pot chicken and rice or a taco bar — both forgive imprecise timing and scale by adding more to the pot or line. Save the flat-top cheesesteaks and smash burgers for once you're comfortable managing multiple things on high heat at the same time.",
+          "Chili and taco nights are the most common, followed closely by burgers, pulled pork and baked pasta. They all scale easily, hold well or can be kept in separate parts, and rely on inexpensive starches.",
       },
     ],
     relatedArticleSlugs: [
       "10-classic-firehall-meals",
-      "feeding-a-firehall-crew",
-      "25-firefighter-dinner-ideas",
-    ],
-  }),
-
-  buildSeoGuide({
-    slug: "firefighter-breakfast-guide",
-    seoTitle: "Firefighter Breakfast Guide: 10 Hall Morning Meals",
-    title: "The Firefighter Breakfast Guide",
-    subtitle: "Sunday mornings, post-call fuel, and feeding a crew that eats in waves",
-    description:
-      "Firefighter breakfast guide for station mornings: why the meal matters, weekend hall culture, feeding large crews, and ten hall-tested breakfasts with crew-sized recipes.",
-    keywords: [
-      "firefighter breakfast",
-      "fire station breakfast",
-      "firehall breakfast",
-      "Sunday breakfast shift",
-      "crew breakfast",
-    ],
-    topic: "station_cooking",
-    pillar: "recipes_meals",
-    readMinutes: 10,
-    intro:
-      "Breakfast at the hall is more than calories — it is the table where the crew lands before the day gets loud. Coffee, eggs, something sizzling on the flat-top, guys giving each other a hard time while the news plays in the background. A good firefighter breakfast feeds people who eat at 07:00 and people who wander in at 09:30 after apparatus checks. This guide covers why that meal matters, how Sunday tradition shows up in kitchens, and ten breakfasts that actually work on shift.",
-    practicalAdvice: [
-      "Run a line or a bake — not eight individual omelette orders unless someone volunteered their sanity.",
-      "Cook bacon and sausage on sheet pans — controls splatter in a shared kitchen.",
-      "Coffee owner is a real assignment — assign it before the eggs go on.",
-    ],
-    sections: [
-      {
-        id: "why-breakfast",
-        heading: "Why breakfast matters on shift",
-        paragraphs: [
-          "Morning is when the crew syncs — who is tired, who is wired, who forgot lunch money. A real breakfast steadies the room before training, inspections, and whatever the board throws at you. It is also practical fuel: you may not get a proper sit-down meal again until dinner.",
-          "Post-night-call breakfasts hit different. After a long run, hot food at the table beats protein bars in the rig bay. The meal does not need to be fancy — it needs to be hot, plentiful, and ready when people sit.",
-        ],
-      },
-      {
-        id: "sunday-culture",
-        heading: "Weekend firehall breakfast culture",
-        paragraphs: [
-          "Lots of halls treat Sunday like pancake-and-egg day — slower start, more people in the kitchen, someone on coffee detail. It is part commissary, part tradition. The cook is often whoever got roped in last night, but the food still lands because the format is forgiving.",
-          "Red lead skillets, big bakes, and burrito lines show up on Sundays because they feed the whole hall from one or two pans. That is the point — nobody should still be flipping single orders when the church bells stop and the tones might drop.",
-        ],
-      },
-      {
-        id: "large-crews",
-        heading: "Feeding large crews in the morning",
-        paragraphs: [
-          "Count who is eating, then add two — visitors, training staff, the officer who smelled bacon from the office. Bakes and lines scale; made-to-order plates do not.",
-          "Hold proteins warm in a low oven, keep cold toppings cold, and put tortillas in a warmer not a microwave stack. Staggered eating is normal — design for it.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal(
-        "sausage-egg-bake",
-        "1. Sausage and Egg Bake",
-        "Senior-cook eggs, sausage, and cheese in one large baking dish — the post-call showpiece.",
-      ),
-      meal(
-        "breakfast-burrito-bar",
-        "2. Hall Breakfast Burritos",
-        "Wrap-and-go line — scramble, protein, cheese, salsa; handles staggered eaters.",
-      ),
-      meal(
-        "french-toast-casserole",
-        "3. Overnight French Toast Bake",
-        "Prep the night before, bake in the morning — slice and feed without griddle chaos.",
-      ),
-      meal(
-        "sausage-egg-bake",
-        "4. Sheet Pan Breakfast Bake",
-        "Eggs, cheese, and sausage from one pan — portion control built in.",
-      ),
-      meal(
-        "breakfast-burrito-bar",
-        "5. Hall Breakfast Wraps",
-        "Warm tortilla line — lighter than burritos, still scales for eight-plus.",
-      ),
-      meal(
-        "pancake-short-stack",
-        "6. Firehall Pancakes",
-        "Short stack held warm between waves — syrup on the table, not on the plates.",
-      ),
-      meal(
-        "chorizo-breakfast-tacos",
-        "7. Chorizo Breakfast Hash",
-        "Crisp potato base with bold sausage — one skillet, big flavor, easy double batch.",
-      ),
-      meal(
-        "cast-iron-breakfast-skillet",
-        "8. Loaded Breakfast Hash",
-        "Bacon, potato, and egg in one pan — the everything-in-the-skillet morning feed.",
-      ),
-      meal(
-        "hall-sausage-biscuits-gravy",
-        "9. Sausage Gravy and Biscuits",
-        "Southern hall favorite — gravy hides timing mistakes if the biscuits are warm.",
-      ),
-      meal("breakfast-burrito-bar", "10. Breakfast Burrito Bar (Hall Classic)", "Golden-catalog line format — same burrito logic crews already know from dinner planning."),
-    ],
-    faqs: [
-      {
-        question: "What is the easiest breakfast for a rookie cook on Sunday?",
-        answer:
-          "Overnight French toast bake or a burrito line. Both forgive timing, scale cleanly, and do not require flipping twelve individual omelettes while the crew watches.",
-      },
-      {
-        question: "How early should we start cooking for a big hall breakfast?",
-        answer:
-          "For a bake, prep the night before and start the oven sixty to seventy-five minutes before you want to eat. For a line, cook components in the hour before — assemble at the counter so latecomers still get hot food.",
-      },
-      {
-        question: "Does breakfast matter on a busy shift?",
-        answer:
-          "Yes — even a simple line beats running empty until lunch. A fifteen-minute burrito assembly saves morale and keeps people from living on gas station pastries.",
-      },
-      {
-        question: "What's the best hall breakfast when the crew is eating in waves?",
-        answer:
-          "A bake or a burrito bar — both hold warm and let people build a plate whenever they surface, whether that's 07:00 or 09:30 after apparatus checks. Made-to-order eggs only work if one cook can dedicate the whole morning to the stove.",
-      },
-    ],
-    relatedArticleSlugs: [
-      "firehall-breakfast-and-brunch",
-      "firefighter-breakfast-ideas",
+      "planning-tonights-station-dinner",
+      "cooking-for-10-firefighters",
       "feeding-a-firehall-crew",
     ],
   }),
 
   buildSeoGuide({
     slug: "rookie-firefighter-meal-guide",
-    seoTitle: "10 Rookie-Proof Firehall Meals | Firehall Meals",
+    seoTitle: "10 Rookie-Proof Firehall Meals for a First-Time Crew Cook",
     title: "10 Rookie-Proof Firehall Meals",
-    subtitle: "Build confidence, feed the crew, and avoid the legendary kitchen disaster",
+    subtitle:
+      "Ten crew dinners that are hard to ruin, a plan for your first cook, and what each meal teaches you about cooking at crew scale.",
     description:
-      "Ten rookie-proof firehall meals: chili, pulled pork, tacos, lasagna, and more — hard to ruin, crew-sized, with common mistakes and success tips for new firefighters cooking on shift.",
+      "Ten rookie-proof firehall meals for a first-time crew cook: forgiving dishes, a step-by-step plan for your first dinner, and the skill each one teaches.",
     keywords: [
       "rookie firefighter meals",
-      "fire station cooking for beginners",
+      "easy meals for a crowd",
+      "first time cooking for a crew",
       "easy firehall meals",
-      "first time cooking at the hall",
-      "crew dinner rookie",
+      "beginner crowd recipes",
     ],
     topic: "station_cooking",
     pillar: "recipes_meals",
-    readMinutes: 9,
+    readMinutes: 8,
+    updatedAt: UPDATED,
     intro:
-      "Every hall has a story about a rookie who burned the garlic or salted the chili twice. You will cook on shift — that is part of the job. These ten meals are hard to ruin, feed a crew, and build confidence without culinary school. Read the full recipe before you start, grab a partner your first time, and remember: the crew cares more about hot food and a clean kitchen than perfect plating.",
-    practicalAdvice: [
-      "Read the recipe end-to-end before you touch a knife — surprises mid-cook are how pans get burned.",
-      "Taste and season in layers — salt at the start, acid at the finish.",
-      "Start cleanup while things hold — leaving the kitchen a mess wipes out a good meal.",
-      "Post who is cooking on the whiteboard so late eaters know what is holding warm.",
-    ],
+      "Cooking for a crew for the first time is mostly a planning job. The ten rookie-proof meals here are hard to ruin for the same reasons: their doneness is forgiving, they cook in one pot, tray or line, and they still taste good if people come to the table late. Each one also teaches a skill that carries over to harder dishes, such as browning in batches, seasoning a big pot, or timing several components to finish together. This guide explains what makes a meal forgiving, gives a step-by-step plan for your first cook, lists what each of the ten teaches, and covers quick fixes for the most common problems.",
     sections: [
       {
-        id: "pick-rookie",
-        heading: "What makes a meal rookie-proof",
+        id: "forgiving",
+        heading: "What makes a meal hard to ruin",
         paragraphs: [
-          "Forgiving timing, simple ingredients, one main pot or line, and food that still eats well if someone shows up twenty minutes late. If the recipe dies the moment it sits, wait until you have a quiet board.",
-          "Big chili is the usual first win — it simmers, forgives, and the toppings hide a lot. Hall taco bar night teaches line setup without a fragile finish. Save the brisket ego project for year two.",
+          "Forgiving meals have a wide window between done and overdone. A braise, a pot of chili or a tray of lasagna is fine at 2 hours or 2 1/2, and fine eaten at 18:00 or 18:40. A seared steak or a piece of fish is right for a minute or two, which is a hard target the first time you cook for 10. Forgiving meals also cook in one vessel or as a line, so there's one thing to watch rather than four, and the pieces that could go soggy stay separate until serving.",
+          "Save the smoker, the fryer and anything cooked to order for later. Start with dishes that simmer, bake or braise, and build up to the griddle once you're comfortable timing a meal.",
         ],
       },
       {
-        id: "partner",
-        heading: "Cook with a partner the first time",
+        id: "first-cook",
+        heading: "A plan for your first crew dinner",
         paragraphs: [
-          "One cook, one runner, one person reading the next step aloud. Ask whichever senior always runs chili to stand in the kitchen with you once — not to take over, just to catch you before you double the salt.",
-          "Nobody expects a Michelin plate. They expect you to own cleanup when it is done. I have seen rookies save a salty batch with beans and broth and earn more respect than the guy who ordered pizza and left the boxes.",
+          "The most common first-cook problems are starting too late, discovering a missing ingredient halfway, and running out of pan space. A short plan heads off all three. If you can, cook the first one with someone who has done it before; ask them to stay nearby rather than take over.",
+        ],
+        steps: [
+          "Read the whole recipe, including the method, before you shop, and note every pan and appliance it needs.",
+          "Check crew size and scale the recipe on its page. Buy a little extra starch rather than extra protein.",
+          "Write down the serving time and count back to your start time. Add 20 minutes, because first cooks run long.",
+          "Prep everything before you turn on the heat: chop, measure spices, open cans.",
+          "Brown meat in batches with space between pieces, and use two pans instead of one crowded one.",
+          "Taste before serving and adjust salt and acid. Check meat and poultry with a thermometer.",
+          "Start cleanup while the dish simmers or bakes, so the pile at the end is small.",
         ],
       },
       {
-        id: "recover",
-        heading: "When dinner goes sideways",
+        id: "skills",
+        heading: "What each meal teaches",
         paragraphs: [
-          "Own it early. Thin oversalted chili with more beans and stock. Order backup bread if the main is fine but light. Do not disappear after service — halls remember who stayed to scrub.",
-          "Probe poultry and pork. Guessing is how you serve pink chicken and get roasted in the bay for a month. Empty the grease trap before slider night; keep the right extinguisher where the grill cook can see it.",
+          "Working through the list roughly in order builds the skills needed for most crew cooking. None of these dishes needs special equipment beyond a large pot, a sheet pan and a 9 x 13 in baking dish.",
+        ],
+        table: {
+          caption: "The skill each rookie-proof meal teaches",
+          columns: ["Meal", "Skill it teaches", "The thing to watch"],
+          rows: [
+            ["Beef and bean chili", "Browning in batches and seasoning a big pot", "Add salt late; the pot reduces and concentrates it"],
+            ["Pulled pork", "Low-and-slow cooking to a target temperature", "Cook to about 200°F (93°C) so it pulls; rest before shredding"],
+            ["Taco bar", "Setting up and running a line", "Put out cold toppings before the meat is done"],
+            ["Batch lasagna", "Assembling ahead and baking a deep tray", "Rest 15 minutes before cutting or the slices slide"],
+            ["Chicken parm", "Breading and baking cutlets evenly", "Bake on a rack at 425°F (220°C) until 165°F (74°C)"],
+            ["Beef dip", "Roasting and resting a whole cut", "Rest 15 minutes, then slice thin across the grain"],
+            ["Breakfast burritos", "Cooking eggs and fillings in batches", "Warm tortillas first so they fold without tearing"],
+            ["Beef barley soup", "Simmering gently without boiling", "A hard boil toughens the beef; keep a bare simmer"],
+            ["One-pot chicken and rice", "Liquid ratios and leaving the lid on", "Don't lift the lid for the 18 to 20 minute cook"],
+            ["Slider bar", "Timing two proteins on one line", "Toast the buns; keep to two proteins"],
+          ],
+        },
+      },
+      {
+        id: "fixes",
+        heading: "Quick fixes when something goes wrong",
+        paragraphs: [
+          "Most first-cook problems can be fixed before the food reaches the table. Too salty: add more of the unsalted base (another can of beans and tomatoes to chili, more unsalted stock to soup) rather than water alone, which thins the flavor. Too thin: simmer uncovered for 10 to 15 minutes, or stir in a slurry of 1 tbsp cornstarch per cup of liquid mixed with cold water and bring it back to a simmer. Bland: add salt first, then a squeeze of lemon or a splash of vinegar.",
+          "If the bottom of a pot scorches, stop stirring and move the unburned food to a clean pot without scraping the bottom. If chicken is underdone at the center, put it back in the oven and check it again in 5 to 10 minutes. If everything is running late, serve the parts that are ready and hold the rest covered. The common-mistakes guide covers these and others in more detail.",
         ],
       },
     ],
+    practicalAdvice: [
+      "Start with dishes that simmer, bake or braise; leave cook-to-order meals for later.",
+      "Read the full recipe before shopping and add 20 minutes to your first timeline.",
+      "Prep everything before the heat goes on, and brown meat in batches.",
+      "Check meat and poultry with a thermometer rather than by the clock.",
+      "Start cleaning while the dish cooks.",
+    ],
     mealRecommendations: [
-      meal(
-        "big-chili",
-        "1. Hall-Sized Beef and Bean Chili",
-        "Simmers — season late so you do not oversalt before it reduces. Hold on low; toppings fix a lot.",
-      ),
-      meal(
-        "pulled-pork",
-        "2. Pulled Pork Sandwiches",
-        "Pork forgives long holds. Rest before you shred; sauce on the side.",
-      ),
-      meal(
-        "hall-taco-bar",
-        "3. Hall Taco Bar Night",
-        "Lay out cold toppings before the meat hits — assembly, not plating stress.",
-      ),
-      meal(
-        "batch-lasagna",
-        "4. Giant Batch Lasagna",
-        "Oven does the work. Rest ten minutes before you cut or the slices slide.",
-      ),
-      meal(
-        "chicken-parm",
-        "5. Chicken Parm",
-        "Sear cutlets in batches — crowding steams instead of browning.",
-      ),
-      meal(
-        "beef-dip",
-        "6. Beef Dip Sandwiches",
-        "Rest the roast before slice. Warm au jus separate from the rolls.",
-      ),
-      meal(
-        "breakfast-burrito-bar",
-        "7. Breakfast Burrito Bar",
-        "Warm tortillas first or they tear when the line rush hits.",
-      ),
-      meal(
-        "beef-barley-soup",
-        "8. Beef Barley Soup (Soup Night)",
-        "Low simmer — boiling makes the meat tough. Taste before the final salt.",
-      ),
-      meal(
-        "one-pot-chicken-rice",
-        "9. One-Pot Chicken and Rice",
-        "Set a timer; lifting the lid every two minutes turns rice mushy.",
-      ),
-      meal(
-        "slider-bar",
-        "10. Slider Bar Night",
-        "Toast the buns. Two proteins max so you are not running three flat-tops.",
-      ),
-      meal(
-        "four-step-chicken-piccata",
-        "Four-Step Chicken Piccata",
-        "Lemon-caper pan sauce in four straightforward steps.",
-      ),
+      meal("big-chili", "1. Hall-Sized Beef and Bean Chili", "Simmers for as long as you need; season late so it doesn't end up too salty."),
+      meal("pulled-pork", "2. Pulled Pork Sandwiches", "Very forgiving: cook it to temperature, rest it, shred it."),
+      meal("hall-taco-bar", "3. Hall Taco Bar Night", "Teaches line setup without a fragile finish."),
+      meal("batch-lasagna", "4. Giant Batch Lasagna", "The oven does the work; rest before cutting."),
+      meal("chicken-parm", "5. Chicken Parm", "Bread in an assembly line and bake on racks."),
+      meal("beef-dip", "6. Beef Dip Sandwiches", "Roast, rest, and slice thin; the jus holds on low."),
+      meal("hall-breakfast-burritos", "7. Hall Breakfast Burritos", "Eggs and fillings on sheet pans; warm the tortillas first.", "breakfast"),
+      meal("beef-barley-soup", "8. Beef Barley Soup", "A gentle simmer; taste before the final salt."),
+      meal("one-pot-chicken-rice", "9. One-Pot Chicken and Rice", "Set a timer and leave the lid on."),
+      meal("slider-bar", "10. Slider Bar Night", "Two proteins and toasted buns on one line."),
     ],
     faqs: [
       {
-        question: "What should a rookie cook first at the hall?",
+        question: "What should I cook the first time I cook for the crew?",
         answer:
-          "Chili or a taco bar. Both teach batch thinking and line setup without a fragile finish. Cook alongside someone who has done it before — ask questions before the pot is on, not after.",
-      },
-      {
-        question: "How do I recover if I mess up dinner?",
-        answer:
-          "Own it, fix what you can — thin salty chili with more beans and broth, order backup bread if the main is fine but light — and finish cleanup without being asked. Halls remember attitude more than one bad night.",
-      },
-      {
-        question: "Should rookies avoid the grill and smoker?",
-        answer:
-          "Start on batches and lines. Move to grill night once you are comfortable with temps and probe checks. Pull pork and burgers are fine first grill projects with a partner; brisket can wait.",
+          "Chili or a taco bar. Both are forgiving, feed any crew size, and teach the basics of browning in batches and setting up a line. Read the recipe fully, prep everything before you start, and give yourself an extra 20 minutes.",
       },
     ],
     relatedArticleSlugs: [
       "rookie-cooking-mistakes",
-      "feeding-a-firehall-crew",
+      "cooking-for-10-firefighters",
       "10-classic-firehall-meals",
+      "firehall-kitchen-culture",
     ],
+    sources: [SRC.usdaTemps, SRC.hcTemps],
   }),
 ];

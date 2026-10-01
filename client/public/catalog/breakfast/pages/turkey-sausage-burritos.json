@@ -38,7 +38,7 @@
       "group": "Fillings"
     },
     {
-      "name": "breakfast sausage or chorizo",
+      "name": "bulk turkey sausage",
       "quantity": "1 1/2 lb",
       "notes": "browned and drained",
       "group": "Fillings"
@@ -82,7 +82,7 @@
     {
       "stepNumber": 2,
       "title": "Brown the meat + veg",
-      "instruction": "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy.",
+      "instruction": "In the same pan, brown the turkey sausage, breaking it into crumbles. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy.",
       "minutes": 10
     },
     {
@@ -105,17 +105,17 @@
     }
   ],
   "nutrition": {
-    "calories": 874,
-    "protein": 42,
-    "carbs": 76,
-    "fat": 44,
+    "calories": 742,
+    "protein": 46,
+    "carbs": 74,
+    "fat": 28,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "estimateAvailable": true,
     "filterFlags": {
       "highProtein": true,
       "under700Calories": false,
-      "under30gFat": false,
+      "under30gFat": true,
       "highCarb": true,
       "lowCarb": false,
       "mealPrepFriendly": true
@@ -141,7 +141,7 @@
   ],
   "heroImage": "/images/breakfast/turkey-sausage-burritos.jpg",
   "thumbImage": "/images/thumbs/breakfast/turkey-sausage-burritos.jpg",
-  "imageAlt": "Wide firehall crew platter of Turkey Sausage Breakfast Burritos beside eggs on a station prep table, family-style",
+  "imageAlt": "Turkey sausage breakfast burritos wrapped in flour tortillas",
   "publishedAt": "2026-09-26T19:26:57.127Z",
   "updatedAt": "2026-09-26T19:26:57.127Z",
   "readMinutes": 7,
@@ -166,12 +166,6 @@
         ]
       },
       {
-        "name": "breakfast sausage or chorizo",
-        "allergens": [
-          "pork"
-        ]
-      },
-      {
         "name": "10-inch flour tortillas",
         "allergens": [
           "gluten"
@@ -187,7 +181,7 @@
       "soyFree": true,
       "shellfishFree": true,
       "fishFree": true,
-      "porkFree": false,
+      "porkFree": true,
       "vegetarian": false,
       "vegan": false
     },
@@ -201,13 +195,8 @@
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
         "note": "Use a dairy-free cheese shred/block alternative."
-      },
-      {
-        "flag": "pork",
-        "label": "Pork-Free Adaptable",
-        "note": "Swap in chicken or turkey sausage."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-09-29T01:53:49.550Z"
   }
 }

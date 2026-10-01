@@ -1,111 +1,268 @@
 {
   "slug": "10-classic-firehall-meals",
   "title": "10 Classic Firehall Meals Firefighters Actually Cook",
-  "subtitle": "Ten hall-tested dinners — pick one and open the full recipe",
-  "description": "A practical list of classic firehall meals, from jerk chicken and rice and peas to chili, steak sandwiches, BBQ chicken mac and cheese, and more.",
+  "subtitle": "The ten dinners on the Classics Wheel, with quantities for 8, the step that makes each one work, and which ones hold if dinner runs late.",
+  "description": "Ten classic firehall meals from the Classics Wheel, with quantities for 8, the technique that makes each work, and which hold if dinner runs late.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "Ten dinners crews actually cook on shift — jerk chicken, BBQ mac, steak sandwiches, smash burgers, parm, pulled pork, chili, caesar, beef dip, and steak tacos. Each link below is a full crew-sized recipe.",
+  "intro": "These ten classic firehall meals are the same ten on the Classics Wheel: jerk chicken with rice and peas, BBQ chicken mac and cheese, steak sandwiches, smash burgers, chicken parm, pulled pork, chili with garlic bread, chicken Caesar, beef dip and steak tacos. They are here as a list for when you want to choose rather than spin. What they share is that each one feeds a crew from one or two pans without a fussy finish. They differ in how well they hold, and that matters most when choosing on a given night. This guide gives quantities for 8, the step that makes each dish work, and which ones can wait if people are late.",
   "sections": [
     {
-      "id": "tonight",
-      "heading": "Quick shift notes",
+      "id": "at-a-glance",
+      "heading": "The ten at a glance: quantities for 8",
       "paragraphs": [
-        "Assign one cook and one runner before prep starts. Everyone else stays out until called."
+        "Quantities are for 8 hungry adults with the usual sides. Active time is hands-on work; several of these have long unattended stretches in the oven or on the grill. The full recipe for each is linked below, with crew-size scaling."
+      ],
+      "table": {
+        "caption": "The ten Classics Wheel meals for 8 people",
+        "columns": [
+          "Meal",
+          "Main quantities for 8",
+          "Active time",
+          "Holds?"
+        ],
+        "rows": [
+          [
+            "Jerk chicken with rice and peas",
+            "6 lb bone-in thighs, 3 cups rice, 1 can coconut milk, 1 can kidney beans",
+            "40 min, plus marinating",
+            "About 30 min, covered"
+          ],
+          [
+            "BBQ chicken mac and cheese",
+            "3 lb chicken thighs, 1 1/2 lb pasta, 1 1/2 lb cheese",
+            "45 min",
+            "Well, covered in a low oven"
+          ],
+          [
+            "Steak sandwiches",
+            "4 lb sirloin, 8 rolls, 2 onions",
+            "30 min",
+            "No; slice as you serve"
+          ],
+          [
+            "Smash burgers",
+            "4 lb 80/20 ground beef as 16 balls, 8 buns",
+            "25 min",
+            "No; cook to order"
+          ],
+          [
+            "Chicken parm",
+            "3 lb chicken breast as 8 cutlets, 2 lb pasta, 1 jar marinara, 1 lb mozzarella",
+            "50 min",
+            "About 20 min, uncovered"
+          ],
+          [
+            "Pulled pork",
+            "5 lb bone-in pork shoulder, 12 buns, 1 cabbage for slaw",
+            "30 min, plus 8 hours cooking",
+            "Hours, in its juices"
+          ],
+          [
+            "Chili with garlic bread",
+            "2 3/4 lb ground beef, 2 cans beans, 2 cans tomatoes, 2 loaves",
+            "40 min, plus simmering",
+            "Hours, on low"
+          ],
+          [
+            "Chicken Caesar",
+            "3 lb chicken breast, 3 heads romaine, 1 cup Parmesan",
+            "35 min",
+            "Chicken holds; dress the salad at serving"
+          ],
+          [
+            "Beef dip",
+            "4 lb sirloin tip or inside round roast, 8 rolls, 4 cups beef stock",
+            "30 min, plus roasting",
+            "Jus holds; slice the beef to order"
+          ],
+          [
+            "Steak tacos",
+            "3 lb flank or skirt steak, 24 small tortillas",
+            "30 min",
+            "No; cook and slice last"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "hold-or-order",
+      "heading": "Hold-friendly or cook-to-order",
+      "paragraphs": [
+        "The ten split into two groups, and on any given night, which group to pick from matters more than which dish. Chili, pulled pork, BBQ chicken mac and cheese, and the jus for beef dip all hold for an hour or more with the heat on low and a lid on, so they suit nights when people may eat in waves. Chicken parm and jerk chicken hold for a shorter time before the coating softens or the chicken dries.",
+        "Smash burgers, steak sandwiches, steak tacos and a dressed Caesar are best eaten within minutes. They are quick to cook but need someone at the griddle or grill at serving time. If the wheel lands on one of these on a night when people are likely to be late, cook the parts that hold (onions, sauces, toppings) and leave the meat until everyone is back."
+      ]
+    },
+    {
+      "id": "technique",
+      "heading": "The step that makes each one work",
+      "paragraphs": [
+        "Each of these has one step that decides whether it comes out right. Get that step right and the rest of the recipe is forgiving. Beef temperatures below are USDA's minimum of 145°F (63°C) with a 3-minute rest for whole cuts, and 160°F (71°C) for ground beef; chicken is 165°F (74°C)."
+      ],
+      "table": {
+        "caption": "The key step for each classic",
+        "columns": [
+          "Meal",
+          "The step that matters",
+          "Why"
+        ],
+        "rows": [
+          [
+            "Jerk chicken",
+            "Marinate at least 4 hours, then start over indirect heat and char at the end",
+            "The marinade needs time to reach the meat; direct heat alone burns the outside first"
+          ],
+          [
+            "BBQ chicken mac and cheese",
+            "Toss the chicken in sauce separately and fold it in at the end",
+            "Acidic sauce stirred into the cheese sauce can make it grainy"
+          ],
+          [
+            "Steak sandwiches",
+            "Rest the steak 5 to 10 minutes, then slice thin across the grain",
+            "Short fibers make even a firmer cut tender to bite"
+          ],
+          [
+            "Smash burgers",
+            "Smash hard within the first 30 seconds on a very hot griddle, then leave them alone",
+            "Wide contact while the fat is cold builds the crust"
+          ],
+          [
+            "Chicken parm",
+            "Bake breaded cutlets on a wire rack and put sauce under the cheese",
+            "Air under the cutlet and cheese over the sauce keep the crust crisp"
+          ],
+          [
+            "Pulled pork",
+            "Cook to about 200°F (93°C), well past the 145°F safety point",
+            "Connective tissue needs the extra heat before the meat will pull"
+          ],
+          [
+            "Chili",
+            "Brown the meat in batches and toast the spices in the fat",
+            "Browning and toasted spices give it depth"
+          ],
+          [
+            "Chicken Caesar",
+            "Dress the lettuce just before serving and keep croutons separate",
+            "Dressing wilts romaine within about 20 minutes"
+          ],
+          [
+            "Beef dip",
+            "Slice the roast paper-thin and build the jus from the pan drippings",
+            "Thin slices soak up jus; drippings give it body"
+          ],
+          [
+            "Steak tacos",
+            "Very high heat for a short time, then rest and slice across the grain",
+            "Flank and skirt are tender only when sliced thin"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "wheel",
+      "heading": "Using the list with the Classics Wheel",
+      "paragraphs": [
+        "The wheel is for nights when the crew can't decide and nobody wants to argue about it; this list is for when you want to choose deliberately, usually because of the time available or how the night is likely to go. Both use the same ten recipes.",
+        "A practical rule for the wheel is to allow one re-spin if it lands on a cook-to-order meal on a night when calls are likely, or on something that needs a long cook when there's less than an hour left. The recipe pages scale each dish to your crew size, so quantities for 4 or 12 are one click from the numbers above."
       ]
     }
   ],
   "practicalAdvice": [
-    "Open the recipe first — check headcount and gear before you shop.",
-    "One cook, one runner; sauces and buns on the side for post-call eaters.",
-    "Same ten meals as the Classics Wheel at /wheel if the crew wants a random pick."
+    "Pick from the hold-friendly group (chili, pulled pork, BBQ chicken mac) on nights when people may eat late.",
+    "Cook smash burgers, steak sandwiches and steak tacos last, once everyone is at the table.",
+    "Rest steaks and roasts before slicing, and slice across the grain.",
+    "Dress salads and add crisp toppings at serving time, not before."
   ],
   "mealRecommendations": [
     {
       "slug": "jerk-chicken",
       "title": "Jerk Chicken & Rice and Peas",
-      "blurb": "Grill-night heat with coconut rice — charred thighs, island sides, feeds eight without a fussy pass."
+      "blurb": "Bone-in thighs marinated ahead and finished over direct heat."
     },
     {
       "slug": "bbq-chicken-mac-and-cheese",
       "title": "BBQ Chicken Mac and Cheese",
-      "blurb": "Smoky shredded chicken folded into baked mac — tray comfort when the hall wants calories and zero drama."
+      "blurb": "A tray bake that holds covered in a low oven."
     },
     {
       "slug": "steak-sandwiches",
       "title": "Steak Sandwiches",
-      "blurb": "Sliced sirloin on toasted buns with fries and salad — flat-top speed, handheld portions, line-friendly."
+      "blurb": "Sirloin sliced thin across the grain on toasted rolls."
     },
     {
       "slug": "smash-burgers",
       "title": "Double Smash Burgers",
-      "blurb": "Double patties, lacy edges, potato buns — loud flat-top night everyone recognizes."
+      "blurb": "Griddle burgers cooked to order in a few minutes each."
     },
     {
       "slug": "chicken-parm",
       "title": "Chicken Parmesan",
-      "blurb": "Breaded cutlets, red sauce, melted cheese, pasta — Italian night that forgives rookie timing."
+      "blurb": "Cutlets baked on a rack so the crust stays crisp under the sauce."
     },
     {
       "slug": "pulled-pork",
       "title": "Pulled Pork Sandwiches",
-      "blurb": "Low-stress once the pork is done — buns and slaw do the portion work on the line."
+      "blurb": "The most forgiving of the ten; holds for hours."
     },
     {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Smoky beef chili with cheesy garlic pull-apart — the pot waits when tones drop mid-prep."
+      "blurb": "Holds on low for as long as the night needs."
     },
     {
       "slug": "chicken-caesar",
       "title": "Chicken Caesar Salad",
-      "blurb": "Grilled chicken over big romaine bowls — lighter night that still feels like a real feed."
+      "blurb": "Grilled chicken with the salad dressed just before serving."
     },
     {
       "slug": "beef-dip",
       "title": "Beef Dip Sandwiches",
-      "blurb": "Au jus on the counter, pile of beef, soft rolls — Canadian hall legend, dip mandatory."
+      "blurb": "Thin-sliced roast beef with jus from the pan drippings."
     },
     {
       "slug": "steak-tacos",
       "title": "Steak Tacos",
-      "blurb": "Charred steak, bright chimichurri, pickled onions — taco line energy without a rice side distraction."
+      "blurb": "Flank or skirt seared hot and sliced last."
     },
     {
       "slug": "classic-patty-melt-for-the-crew",
       "title": "Classic Patty Melt for the Crew",
-      "blurb": "Griddled beef patties with caramelized onions and Swiss on rye."
+      "blurb": "Not on the wheel, but a griddle alternative to smash burgers."
     }
   ],
   "faqs": [
     {
-      "question": "Are these the same meals on the Classics Wheel?",
-      "answer": "Yes. Same ten slugs, same recipes. Use the wheel when you want random; use this list when you want to pick deliberately."
-    },
-    {
-      "question": "What if we only have four on duty tonight?",
-      "answer": "Each recipe scales — open the page, set your crew size, and follow the portions. Line meals like tacos and sandwiches stretch easiest when eaters trickle in."
-    },
-    {
-      "question": "How do you decide which of these ten to cook tonight?",
-      "answer": "Match it to the board. Jerk chicken and steak tacos need someone at the grill or flat-top the whole time, while firehall chili and BBQ chicken mac and cheese hold on their own if a call pulls you away. Save the two-cook meals for a quieter night."
+      "question": "Are these the same meals as the Classics Wheel?",
+      "answer": "Yes. The first ten recipes here are the ten on the wheel. Use the wheel when you want a random pick and this list when you want to choose by time, crew size or how well a dish holds."
     }
   ],
   "relatedArticleSlugs": [
-    "legendary-firehall-meals",
-    "meals-every-firefighter-knows",
-    "most-popular-firefighter-meals"
+    "most-popular-firefighter-meals",
+    "planning-tonights-station-dinner",
+    "bbq-night-at-the-station"
   ],
   "keywords": [
     "classic firehall meals",
-    "firefighter meals",
-    "fire station food",
     "classics wheel",
-    "firefighter dinner ideas"
+    "fire station dinner classics",
+    "crew dinner recipes"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 5,
-  "seoTitle": "10 Classic Firehall Meals Firefighters Actually Cook",
-  "heroImageAlt": "10 Classic Firehall Meals Firefighters Actually Cook — classic firehall meals tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "10 Classic Firehall Meals: Quantities and How to Cook Them",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    }
+  ]
 }

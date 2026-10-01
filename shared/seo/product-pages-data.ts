@@ -127,8 +127,8 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
     guideSlugs: [
       { slug: "planning-tonights-station-dinner", label: "Planning tonight’s station dinner" },
       { slug: "feeding-a-firehall-crew", label: "Feeding a firehall crew" },
-      { slug: "best-firehall-meals-busy-nights", label: "Best firehall meals for busy nights" },
-      { slug: "meals-feeding-10-firefighters", label: "Meals for feeding 10 firefighters" },
+      { slug: "fast-firehall-meals-under-30-minutes", label: "Fast firehall meals under 30 minutes" },
+      { slug: "cooking-for-10-firefighters", label: "Cooking for 10 firefighters" },
     ],
     relatedProducts: [
       { slug: "firefighter-dinner-vote", label: "Dinner Voting" },
@@ -236,8 +236,8 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
     ],
     guideSlugs: [
       { slug: "planning-tonights-station-dinner", label: "Planning tonight’s station dinner" },
-      { slug: "meals-firefighters-actually-cook", label: "Meals firefighters actually cook" },
-      { slug: "25-firefighter-dinner-ideas", label: "25 firefighter dinner ideas" },
+      { slug: "most-popular-firefighter-meals", label: "Most popular firefighter meals" },
+      { slug: "10-classic-firehall-meals", label: "10 classic firehall meals" },
       { slug: "firehall-taco-night-ideas", label: "Firehall taco night ideas" },
     ],
     relatedProducts: [
@@ -347,7 +347,7 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
       { slug: "cheap-firehall-meals", label: "Cheap firehall meals" },
       { slug: "firehall-meal-prep-ideas", label: "Firehall meal prep ideas" },
       { slug: "one-pot-firehall-meals", label: "One-pot firehall meals" },
-      { slug: "avoid-living-on-takeout", label: "Avoid living on takeout" },
+      { slug: "firehall-grocery-planning", label: "Firehall grocery planning" },
     ],
     relatedProducts: [
       { slug: "canteen-manager", label: "Canteen Manager" },
@@ -457,7 +457,7 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
       { slug: "cheap-firehall-meals", label: "Cheap firehall meals" },
       { slug: "feeding-a-firehall-crew", label: "Feeding a firehall crew" },
       { slug: "firehall-meal-prep-ideas", label: "Firehall meal prep ideas" },
-      { slug: "meals-feeding-10-firefighters", label: "Meals for feeding 10 firefighters" },
+      { slug: "cooking-for-10-firefighters", label: "Cooking for 10 firefighters" },
     ],
     relatedProducts: [
       { slug: "fire-hall-pantry", label: "Fire Hall Pantry" },
@@ -565,9 +565,9 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
     ],
     guideSlugs: [
       { slug: "cheap-firehall-meals", label: "Cheap firehall meals" },
-      { slug: "meals-feeding-10-firefighters", label: "Meals for feeding 10 firefighters" },
+      { slug: "cooking-for-10-firefighters", label: "Cooking for 10 firefighters" },
       { slug: "feeding-a-firehall-crew", label: "Feeding a firehall crew" },
-      { slug: "avoid-living-on-takeout", label: "Avoid living on takeout" },
+      { slug: "firehall-grocery-planning", label: "Firehall grocery planning" },
     ],
     relatedProducts: [
       { slug: "crew-grocery-budget", label: "Hall Grocery Budget" },
@@ -784,7 +784,7 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
     ],
     guideSlugs: [
       { slug: "one-pot-firehall-meals", label: "One-pot firehall meals" },
-      { slug: "dutch-oven-meals-firefighters", label: "Dutch oven meals for firefighters" },
+      { slug: "firehouse-comfort-meals", label: "Firehouse comfort meals" },
       { slug: "best-firefighter-crockpot-meals", label: "Best firefighter crockpot meals" },
       { slug: "bbq-night-at-the-station", label: "BBQ night at the station" },
     ],
@@ -892,7 +892,7 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
       "bbq-chicken-bowls",
     ],
     guideSlugs: [
-      { slug: "meal-prep-for-shift-workers", label: "Meal prep for shift workers" },
+      { slug: "firehall-grocery-planning", label: "Firehall grocery planning" },
       { slug: "best-meals-24-hour-shift", label: "Best meals for a 24-hour shift" },
       { slug: "planning-tonights-station-dinner", label: "Planning tonight’s station dinner" },
       { slug: "firehall-meal-prep-ideas", label: "Firehall meal prep ideas" },
@@ -1002,8 +1002,8 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
     ],
     guideSlugs: [
       { slug: "cheap-firehall-meals", label: "Cheap firehall meals" },
-      { slug: "avoid-living-on-takeout", label: "Avoid living on takeout" },
-      { slug: "meals-feeding-10-firefighters", label: "Meals for feeding 10 firefighters" },
+      { slug: "firehall-grocery-planning", label: "Firehall grocery planning" },
+      { slug: "cooking-for-10-firefighters", label: "Cooking for 10 firefighters" },
       { slug: "feeding-a-firehall-crew", label: "Feeding a firehall crew" },
     ],
     relatedProducts: [
@@ -1114,8 +1114,8 @@ export const PRODUCT_SEO_PAGES: ProductSeoPageDef[] = [
       "bbq-chicken-bowls",
     ],
     guideSlugs: [
-      { slug: "meals-firefighters-actually-cook", label: "Meals firefighters actually cook" },
-      { slug: "25-firefighter-dinner-ideas", label: "25 firefighter dinner ideas" },
+      { slug: "most-popular-firefighter-meals", label: "Most popular firefighter meals" },
+      { slug: "10-classic-firehall-meals", label: "10 classic firehall meals" },
       { slug: "planning-tonights-station-dinner", label: "Planning tonight’s station dinner" },
       { slug: "best-station-chili-recipes", label: "Best station chili recipes" },
     ],

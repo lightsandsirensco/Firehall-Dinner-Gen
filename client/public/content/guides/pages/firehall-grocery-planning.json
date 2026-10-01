@@ -1,93 +1,146 @@
 {
   "slug": "firehall-grocery-planning",
-  "title": "Firehall Grocery Planning",
-  "subtitle": "Lists that match crew size — not random cart chaos",
-  "description": "Firehall grocery planning for station dinners: quantity lists, staple pantry, and shopping once for the week instead of three emergency runs.",
+  "title": "Grocery Planning for a Firehouse Crew: How Much to Buy and How to Shop",
+  "subtitle": "Turn a menu into a shopping list, buy protein by weight, thaw it in time, and keep a pantry that covers the nights the plan falls apart.",
+  "description": "Build a firehouse grocery list from the menu: per-person quantities, buying and thawing bulk meat safely, and pantry staples for bad nights.",
   "topic": "meal_planning",
   "pillar": "operations_how_to",
-  "intro": "Grocery planning for the hall is half the battle. A list tied to one meal beats a cart full of 'maybe.' Start with crew count, pick a format (batch, line, grill), then buy protein first and starch second — everything else supports those two. Below: what halls actually cook for firehall grocery list — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "Good crew grocery planning starts with a menu and a head count, not a trip down the aisles. Decide what you are cooking, multiply by the number of people eating, and buy protein by weight first because it is the most expensive item and the one you can't improvise. Then make sure frozen meat has time to thaw, which is the step crews most often forget: even a 1 lb package needs about a full day in the fridge.",
   "sections": [
     {
-      "id": "list",
-      "heading": "Build the list from the meal",
+      "id": "menu-to-list",
+      "heading": "Turn the menu into a list",
       "paragraphs": [
-        "Chili: meat, beans, tomatoes, onions, spices. Taco bar: protein, tortillas, toppings. Sheet pan: protein, peppers, oil, seasoning.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "Work from the meals, not from memory. A shift that covers dinner and breakfast for six needs very different quantities from a lunch for four, and guessing at the store is how you end up with three bags of onions and no garlic."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      "steps": [
+        "Count who is eating each meal, including anyone detailed in for the shift.",
+        "Choose the meals and write the main ingredients for each one.",
+        "Convert to quantities with per-person numbers: about 1/2 lb (225 g) of raw boneless meat, 1/3 lb (150 g) of ground meat in mixed dishes, 4 oz (115 g) of dry pasta, or 1/2 cup of raw rice per hungry adult.",
+        "Check the station fridge, freezer and pantry, and cross off what you already have.",
+        "Group the list by store section (produce, meat, dairy, pantry, frozen) so one pass through the store covers it."
+      ]
+    },
+    {
+      "id": "protein",
+      "heading": "Buy protein by weight, and plan the thaw",
+      "paragraphs": [
+        "Protein is where the money goes and where shortages are most obvious, so buy it first and buy it by weight. Family packs are usually cheaper per pound; portion the extra into meal-sized bags, press them flat, and freeze. Flat bags stack neatly and thaw much faster than a solid block.",
+        "Thawing is where plans fail. In the fridge, which is the safest method, USDA says even a pound of ground meat or boneless chicken needs a full day, and large items need about 24 hours for every 5 lb. If dinner is tonight and the meat is still frozen, thaw it in cold water: keep it in a leak-proof bag, submerge it, and change the water every 30 minutes. A 1 lb package can thaw in an hour or less and a 3 to 4 lb package in 2 to 3 hours. Food thawed in cold water or the microwave should be cooked right away.",
+        "You can also cook many things straight from frozen. USDA estimates it takes about 50 percent longer. The exception is the slow cooker: thaw meat before it goes in, because a slow cooker heats up too gradually to start from frozen safely."
       ]
     },
     {
       "id": "pantry",
-      "heading": "Pantry staples to keep stocked",
+      "heading": "Pantry staples that rescue a bad night",
       "paragraphs": [
-        "Oil, salt, pepper, garlic, onions, rice, pasta, canned tomatoes, and foil. When these exist, dinner is a decision — not a store run.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "A small set of long-lasting staples means the crew can still eat well when groceries didn't happen or the planned meal got derailed. With the list below you can make chili, fried rice, pasta with a quick tomato sauce, tacos, a frittata, or bean and cheese quesadillas without a shopping trip."
       ],
       "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "Dry goods: rice, dry pasta, flour, oats, tortillas (they freeze well).",
+        "Cans and jars: crushed tomatoes, beans, broth, salsa, peanut butter.",
+        "Keepers: onions, garlic, potatoes, eggs, a block of cheese, frozen vegetables.",
+        "Flavour: salt, pepper, cumin, chili powder, smoked paprika, oregano, soy sauce, hot sauce, vinegar, oil."
       ]
     },
     {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
+      "id": "cost",
+      "heading": "Keeping the cost down without cooking worse food",
       "paragraphs": [
-        "For firehall grocery list, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+        "The cheaper cuts are often the better choice at a station anyway. Chicken thighs, pork shoulder and beef chuck cost less than breasts, loins and steaks, and they stay moist when dinner gets held or reheated, while lean cuts dry out. Compare unit prices rather than package prices, build meals around what is on sale that week, and use the pantry staples above to stretch expensive protein with beans, rice and potatoes."
+      ]
+    },
+    {
+      "id": "splitting-the-cost",
+      "heading": "Splitting the cost fairly",
+      "paragraphs": [
+        "Most crews that cook together split the bill for each meal among the people who ate it. It is simple, and it avoids charging someone who was off sick or detailed elsewhere. The part that goes wrong is the staples: oil, salt, spices, foil and coffee get used by everyone but bought by whoever happened to shop. A small fixed amount added to each person's share, kept in a separate staples fund, pays for them without anyone keeping a ledger of who used how much cumin.",
+        "As a worked example: a dinner for 8 costs 96 in groceries, which is 12 per person. Add 1 each for the staples fund and everyone pays 13. When the fund runs low, whoever shops next restocks the staples from it."
       ],
-      "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
+      "steps": [
+        "Photograph the receipt and post it for the crew before you put the groceries away.",
+        "Divide the meal's cost by the number of people eating, not by the number on shift.",
+        "Add a small fixed staples amount per person and keep it in its own fund or card.",
+        "Settle up the same shift, through one shared payment app or card rather than cash owed later.",
+        "Rotate who shops, so one person isn't always fronting the money and prices get a second set of eyes."
       ]
     }
   ],
   "practicalAdvice": [
-    "Shop protein and starch first — veg and extras follow.",
-    "Buy one extra pound of protein — surprise visitors are normal.",
-    "Keep a laminated pantry list on the fridge.",
-    "Photo the receipt before you leave the store."
+    "Build the list from the menu and head count, then check the station stock before you shop.",
+    "Buy protein by weight first; freeze extra in flat, meal-sized bags.",
+    "Move frozen meat to the fridge a day ahead; use cold water, changed every 30 minutes, if you forgot.",
+    "Keep a pantry that can produce three or four meals without a shopping trip."
   ],
   "mealRecommendations": [
     {
       "slug": "hall-taco-bar",
       "title": "Taco Bar",
-      "blurb": "Predictable shopping list."
+      "blurb": "Ground meat, tortillas and pantry toppings; easy to shop for and hard to run short on."
     },
     {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Staple batch — repeat monthly."
+      "blurb": "Mostly pantry ingredients plus ground beef; stretches well with extra beans."
     },
     {
       "slug": "sheet-pan-fajitas",
       "title": "Chicken Fajitas",
-      "blurb": "Short grocery list — one pan."
+      "blurb": "Chicken thighs and peppers, a short list that scales by the pound."
+    },
+    {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "blurb": "Dry pasta, canned tomatoes and cheese, with room to add whatever meat is on sale."
+    },
+    {
+      "slug": "loaded-baked-potato-bar",
+      "title": "Baked Potato Bar",
+      "blurb": "Potatoes are cheap per serving, and the toppings clear out the fridge."
     }
   ],
   "faqs": [
     {
-      "question": "How do you build a grocery list for a station dinner?",
-      "answer": "Start from the meal, not a blank cart. Chili needs meat, beans, tomatoes, onions, and spices; a taco bar needs protein, tortillas, and toppings — list what the recipe actually needs and buy protein and starch first."
+      "question": "How much food should I buy for a 24-hour shift for six people?",
+      "answer": "For dinner, about 3 lb (1.4 kg) of raw boneless meat or 2 lb (900 g) of ground meat in a mixed dish, plus 1 1/2 lb of dry pasta or 3 cups of raw rice. For breakfast, plan 12 to 18 eggs, around 1 lb of bacon or sausage, and bread or potatoes. Add whatever lunch the crew eats together, and check what is already at the station first."
     },
     {
-      "question": "What pantry staples should a fire station always have on hand?",
-      "answer": "Oil, salt, pepper, garlic, onions, rice, pasta, canned tomatoes, and foil. When these are already stocked, dinner becomes a decision instead of a store run every single night."
+      "question": "How long does frozen ground beef take to thaw?",
+      "answer": "About a full day per pound in the fridge, according to USDA. In cold water, in a leak-proof bag with the water changed every 30 minutes, a 1 lb package can thaw in an hour or less. Cook meat thawed in cold water right away."
+    },
+    {
+      "question": "Can we cook meat straight from frozen?",
+      "answer": "Yes, in the oven, on the stove or on the grill. Expect it to take about 50 percent longer, according to USDA, and check the final temperature with a thermometer. Don't put frozen meat in a slow cooker; thaw it first."
     }
   ],
   "relatedArticleSlugs": [
-    "how-crews-split-groceries",
-    "feeding-a-firehall-crew"
+    "cooking-for-10-firefighters",
+    "cheap-firehall-meals",
+    "planning-tonights-station-dinner",
+    "firehall-meal-prep-ideas"
   ],
   "keywords": [
-    "firehall grocery list",
-    "fire station shopping",
-    "crew grocery planning"
+    "firehouse grocery list",
+    "grocery planning for a crew",
+    "how much food to buy for a group",
+    "fire station groceries",
+    "splitting grocery costs",
+    "thawing meat safely"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Firehall Grocery Planning — firehall grocery list tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "Grocery Planning for a Crew: How Much Food to Buy",
+  "sources": [
+    {
+      "label": "The Big Thaw: Safe Defrosting Methods",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/big-thaw-safe-defrosting-methods"
+    },
+    {
+      "label": "Slow Cookers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/slow-cookers-and-food-safety"
+    }
+  ]
 }

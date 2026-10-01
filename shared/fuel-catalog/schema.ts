@@ -70,6 +70,7 @@ export const fuelRecipePageSchema = z.object({
   shiftNote: z.string().trim().min(25).max(500),
   heroImage: z.string().trim().max(200),
   thumbImage: z.string().trim().max(200),
+  heroImageAlt: z.string().trim().min(3).max(160).optional(),
   tags: z.array(z.string().trim().min(1).max(48)).max(16),
   searchTerms: z.array(z.string().trim().min(1).max(80)).max(20),
   relatedSlugs: z.array(slugSchema).max(6),

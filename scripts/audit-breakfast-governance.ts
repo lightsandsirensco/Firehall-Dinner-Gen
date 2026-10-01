@@ -12,6 +12,7 @@ import {
   isPerformanceBreakfastSlug,
 } from "../shared/breakfast-catalog/governance.js";
 import { readBreakfastCatalogIndexFromDisk } from "../server/breakfast-catalog/page-store.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const JSON_OUT = path.join("review", "breakfast-governance-audit.json");
 const MD_OUT = path.join("review", "breakfast-governance-audit.md");
@@ -76,7 +77,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
 
   const md = `# Breakfast Collection Governance Audit
 
@@ -139,7 +140,7 @@ ${records
   .join("\n")}
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
   console.log(`[breakfast-governance] wrote ${JSON_OUT} and ${MD_OUT}`);
 }
 

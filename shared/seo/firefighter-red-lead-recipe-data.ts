@@ -111,8 +111,8 @@ export const FIREFIGHTER_RED_LEAD_FAQS: FaqItem[] = [
 
 export const FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS: InternalRecipeLink[] = [
   {
-    href: "/breakfast/bacon-egg-hash-skillet",
-    label: "Bacon & Egg Hash Skillet",
+    href: "/breakfast/cast-iron-breakfast-skillet",
+    label: "Cast Iron Breakfast Skillet",
     description: "Good potato side for a big Sunday table",
   },
   {
@@ -126,8 +126,8 @@ export const FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS: InternalRecipeLink[] = [
     description: "When the crew wants a stack",
   },
   {
-    href: "/breakfast/high-protein-parfaits",
-    label: "High-Protein Parfaits",
+    href: "/breakfast/berry-vanilla-protein-overnight-oats",
+    label: "Berry Vanilla Protein Overnight Oats",
     description: "Lighter option for anyone skipping the heavy stuff",
   },
   {
@@ -142,7 +142,7 @@ export const FIREFIGHTER_RED_LEAD_CLASSIC_LINKS: InternalRecipeLink[] = [
   { href: "/recipes/smash-burgers", label: "Smash Burgers" },
   { href: "/recipes/beef-dip", label: "Beef Dip Sandwiches" },
   { href: "/recipes/pulled-pork", label: "Pulled Pork" },
-  { href: "/recipes/biscuits-gravy", label: "Biscuits & Gravy" },
+  { href: "/recipes/big-chili", label: "Hall-Sized Chili" },
   { href: "/wheel", label: "Classics Wheel", description: "Spin a hall classic" },
 ];
 

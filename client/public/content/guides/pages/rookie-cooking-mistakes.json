@@ -1,93 +1,193 @@
 {
   "slug": "rookie-cooking-mistakes",
-  "title": "Rookie Cooking Mistakes at the Hall",
-  "subtitle": "What to skip your first year on the stove",
-  "description": "Common rookie cooking mistakes in fire station kitchens: oversalting, crowding pans, ambitious menus, and cleanup failures that hurt trust.",
-  "topic": "station_lifestyle",
-  "pillar": "station_lifestyle",
-  "intro": "Rookies want to impress. The hall wants dinner on time and the kitchen usable after. Rookie cooking mistakes usually come from trying too hard — twelve-ingredient fusion on a busy night — or from basics: crowded pans, raw centers, and dishes left for 'later.' Below: what halls actually cook for rookie firefighter cooking — formats, timing, and recipe picks that survive a busy board.",
+  "title": "Rookie Cooking Mistakes at the Firehall, and How to Fix Them",
+  "subtitle": "Grey ground beef, bland chili, dry chicken: the handful of technique errors behind most bad crew dinners, and what is actually going wrong.",
+  "description": "The cooking mistakes behind most bad crew dinners, from crowded pans to guessing doneness, with the reason each one happens and a safe-temperature chart.",
+  "topic": "station_cooking",
+  "pillar": "operations_how_to",
+  "intro": "Most disappointing crew dinners come from the same few technique problems, and almost none of them have to do with the recipe. Crowded pans steam meat instead of browning it. A recipe scaled up for ten tastes flat because the salt and liquid didn't scale the way the cook expected. Chicken is dry because nobody used a thermometer and it was cooked \"to be safe\". Each of these has a simple fix once you know what is happening in the pan.",
   "sections": [
     {
-      "id": "mistakes",
-      "heading": "Mistakes halls remember",
+      "id": "crowding",
+      "heading": "Crowding the pan",
       "paragraphs": [
-        "Undercooked chicken, oversalted pasta water, smoke from oil past smoke point, and 'I'll do dishes tomorrow.'",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "Meat and vegetables release water as they heat. In a pan with space between the pieces, that water evaporates almost instantly and the surface gets hot enough to brown. Pile 3 lb of ground beef into one skillet and the water comes out faster than it can evaporate: the pan temperature drops, the meat simmers in its own liquid, and it turns grey instead of brown. You lose the browned flavour that makes chili and taco meat taste savoury.",
+        "For a crew, brown in batches. In a 12 in (30 cm) skillet that means about 1 to 1 1/2 lb of ground meat at a time, or chicken pieces with an inch of space around each one. Move each browned batch to a sheet pan and keep going. It takes longer at the stove, but the result is noticeably better."
       ]
     },
     {
-      "id": "recovery",
-      "heading": "Recovering trust",
+      "id": "wet-surface",
+      "heading": "Putting wet meat in the pan",
       "paragraphs": [
-        "A bad meal is fixable with honesty and cleanup. Own the miss, feed the crew something simple next time, and cook with a partner until basics are solid.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "Browning can't start until the surface water has boiled off, because water can't get much hotter than 212°F (100°C) and browning happens at much higher temperatures. Patting meat dry with paper towels means the pan's heat goes into browning rather than evaporating water. It matters most for chicken thighs, pork chops and anything that came out of a marinade. There is no need to rinse raw chicken first; it adds water and splashes raw juices around the sink."
       ]
     },
     {
-      "id": "hall-tonight",
-      "heading": "What this looks like on the hall tonight",
+      "id": "pan-temperature",
+      "heading": "Starting in a cold pan and moving food too soon",
       "paragraphs": [
-        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For rookie firefighter cooking, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
-        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+        "Preheat the pan before the oil and the oil before the food. A properly hot pan sears the surface quickly; a lukewarm one lets proteins bond to the metal before a crust forms, which is why food sticks. Once the meat is in, leave it alone. It releases on its own when the crust has formed, usually after a few minutes. If it is still stuck, it isn't ready to turn."
+      ]
+    },
+    {
+      "id": "seasoning",
+      "heading": "Seasoning only at the end, or all at once when scaling",
+      "paragraphs": [
+        "Salt added at the end sits on the surface and tastes harsh; salt added during cooking seasons the food all the way through. Season meat well ahead when you can, an hour or even overnight in the fridge, so the salt has time to dissolve and move into the meat. Season each component as you go rather than trying to fix the whole plate at the table.",
+        "When you scale a recipe up for a crew, start with about three-quarters of the multiplied salt and strong spices. A big pot reduces more slowly than a small one, so seasoning concentrates less, and salt is easy to add but impossible to take out. If a big pot of chili or soup still tastes flat after the salt is right, it usually needs acid: a squeeze of lime or a splash of vinegar brightens it more than extra spice."
+      ]
+    },
+    {
+      "id": "doneness",
+      "heading": "Guessing doneness instead of measuring it",
+      "paragraphs": [
+        "Colour and cutting-to-check are unreliable, and they tend to push cooks toward overcooking \"to be safe\". A digital instant-read thermometer takes the guesswork out: cook to the target, then stop. Insert it into the thickest part of the meat, away from bone, fat and gristle.",
+        "USDA and Health Canada agree on most targets but not all. They differ on whole pork cuts, whole poultry, fish and egg dishes, so the table shows both. Follow the guidance that applies where you cook."
       ],
-      "tips": [
-        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
-        "Write grocery splits on the receipt photo the same night you shop."
+      "table": {
+        "caption": "Safe minimum internal temperatures, USDA and Health Canada",
+        "columns": [
+          "Food",
+          "USDA",
+          "Health Canada"
+        ],
+        "rows": [
+          [
+            "Chicken and turkey pieces, ground poultry",
+            "165°F (74°C)",
+            "74°C (165°F)"
+          ],
+          [
+            "Whole chicken or turkey",
+            "165°F (74°C)",
+            "82°C (180°F)"
+          ],
+          [
+            "Ground beef or pork (burgers, meatballs)",
+            "160°F (71°C)",
+            "71°C (160°F)"
+          ],
+          [
+            "Beef, veal, lamb steaks and roasts",
+            "145°F (63°C) and rest 3 minutes",
+            "63°C (145°F) for medium-rare"
+          ],
+          [
+            "Pork chops, loin and roasts",
+            "145°F (63°C) and rest 3 minutes",
+            "71°C (160°F)"
+          ],
+          [
+            "Fish",
+            "145°F (63°C)",
+            "70°C (158°F)"
+          ],
+          [
+            "Egg dishes",
+            "160°F (71°C)",
+            "74°C (165°F)"
+          ],
+          [
+            "Leftovers and casseroles",
+            "165°F (74°C)",
+            "74°C (165°F)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "resting",
+      "heading": "Cutting into meat straight off the heat",
+      "paragraphs": [
+        "Meat keeps cooking after it comes off the heat, because the hot outside keeps pushing heat toward the cooler centre. For a thick roast, the internal temperature can climb several degrees while it rests. Resting also gives the juices a chance to thicken slightly, so less of them run out onto the board when you slice. Rest steaks and chops for about 5 minutes and roasts for 10 to 20, loosely covered with foil."
+      ]
+    },
+    {
+      "id": "other-mistakes",
+      "heading": "Three smaller mistakes worth fixing",
+      "paragraphs": [
+        "Garlic added with the onions at high heat burns long before the onions soften, and burnt garlic makes the whole dish bitter; add it once the onions are soft and cook it for under a minute. A dull knife slips off onions and tomatoes instead of cutting them, which is slower and more dangerous than a sharp one. And starting every component at the same time guarantees that something waits too long: work backward from the serving time and start the most forgiving dish first."
       ]
     }
   ],
   "practicalAdvice": [
-    "Cook with a senior on your first three hall meals.",
-    "Pick one-pot or line formats — not a timing puzzle.",
-    "Taste before you serve — salt is fixable before the line opens.",
-    "Cleanup starts while food cooks — not after everyone leaves."
+    "Brown meat in batches with space between the pieces; crowded meat steams and turns grey.",
+    "Pat meat dry before it goes in a hot pan.",
+    "Season during cooking, and start with three-quarters of the salt when you scale a recipe up.",
+    "Use a thermometer and pull meat when it hits the target instead of overcooking it to be safe."
   ],
   "mealRecommendations": [
     {
-      "slug": "one-pot-chicken-rice",
-      "title": "Chicken and Rice",
-      "blurb": "Forgiving first cook."
-    },
-    {
-      "slug": "hall-taco-bar",
-      "title": "Taco Bar",
-      "blurb": "Hard to ruin the whole meal."
+      "slug": "sheet-pan-parmesan-dijon-chicken-thigh-dinner",
+      "title": "Sheet-Pan Parmesan Dijon Chicken Thighs",
+      "blurb": "A forgiving first crew dinner: dry the thighs well, space them out, and check with a thermometer."
     },
     {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Teaches batch timing."
+      "blurb": "Good practice for browning in batches and seasoning a big pot."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Taco Bar",
+      "blurb": "Brown the meat properly and the rest is assembly."
+    },
+    {
+      "slug": "one-pot-chicken-rice",
+      "title": "Chicken and Rice",
+      "blurb": "One pan, one timer, and a chance to practise searing before the rice goes in."
+    },
+    {
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "blurb": "Hard to get wrong once you undercook the pasta slightly before baking."
     }
   ],
   "faqs": [
     {
-      "question": "What's the most common mistake a rookie makes cooking their first hall meal?",
-      "answer": "Trying too hard — a twelve-ingredient fusion dish on a busy night instead of something forgiving. Basics like crowded pans, undercooked chicken, and oversalted pasta water trip up rookies more than an ambitious menu does."
+      "question": "Why does my ground beef turn grey instead of brown?",
+      "answer": "The pan is overcrowded. The meat releases water faster than it can evaporate, so it simmers instead of searing. Brown it in batches of about 1 to 1 1/2 lb in a 12 in skillet over medium-high heat, and don't stir it for the first few minutes."
     },
     {
-      "question": "How do you recover from a bad meal in front of the whole crew?",
-      "answer": "Own it, clean up without complaint, and cook something simple and reliable next time — a one-pot chicken and rice or a taco bar. Cooking with a partner for the next few meals rebuilds trust faster than over-explaining what went wrong."
+      "question": "What temperature should chicken be cooked to?",
+      "answer": "165°F (74°C) for chicken pieces and ground chicken, according to both USDA and Health Canada. For a whole bird, Health Canada recommends 82°C (180°F), while USDA uses 165°F (74°C). Measure in the thickest part, away from the bone."
+    },
+    {
+      "question": "Why does my chili taste bland even though I followed the recipe?",
+      "answer": "Scaled recipes often end up under-reduced and under-seasoned, because a big pot evaporates less than a small one. Simmer it longer uncovered to concentrate it, then adjust the salt at the end and add a splash of acid such as lime juice or vinegar."
+    },
+    {
+      "question": "Do I really need to rest meat after cooking?",
+      "answer": "For steaks, chops and roasts, yes. The temperature keeps rising as the meat rests, and the juices thicken slightly so less runs out when you slice. About 5 minutes for steaks and chops and 10 to 20 minutes for roasts is enough."
     }
   ],
   "relatedArticleSlugs": [
-    "feeding-a-firehall-crew",
-    "firehall-kitchen-culture"
+    "cooking-for-10-firefighters",
+    "station-kitchen-essentials",
+    "rookie-firefighter-meal-guide",
+    "feeding-a-firehall-crew"
   ],
   "keywords": [
+    "common cooking mistakes",
     "rookie firefighter cooking",
-    "station kitchen mistakes",
-    "first hall meal"
+    "why is my meat grey",
+    "safe cooking temperatures",
+    "cooking for a crew"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Rookie Cooking Mistakes at the Hall — rookie firefighter cooking tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 9,
+  "seoTitle": "Common Cooking Mistakes and How to Fix Them",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    }
+  ]
 }

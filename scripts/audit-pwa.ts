@@ -8,6 +8,7 @@
 import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const CLIENT_PUBLIC = path.join(ROOT, "client", "public");
@@ -152,7 +153,7 @@ function writeReport(): void {
 ${issues.length === 0 ? "_None_" : issues.map((i) => `- **${i.severity.toUpperCase()}:** ${i.message}`).join("\n")}
 `;
   fs.mkdirSync(path.dirname(MD_OUT), { recursive: true });
-  fs.writeFileSync(MD_OUT, md);
+  writeFileAtomicSync(MD_OUT, md);
 }
 
 function main(): void {

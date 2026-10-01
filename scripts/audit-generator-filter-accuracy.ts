@@ -27,6 +27,7 @@ import {
 } from "../shared/generator-simplified.js";
 import { flushSqliteToDisk, releaseSqliteTimersForTests } from "../server/sqlite.js";
 import type { DietaryFilterKey } from "../shared/dietary/schema.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const TIME_BUCKETS = ["15-25", "20-30", "25-40", "30-45", "45-60", "60-90"] as const;
 const RUNS_PER_COMBO = 6;
@@ -196,7 +197,7 @@ async function main() {
   console.log("RESULT:", totalFalsePositives === 0 ? "PASS ✅" : "FAIL ❌");
 
   fs.mkdirSync(path.dirname(OUT_JSON), { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     OUT_JSON,
     JSON.stringify({ generatedAt: new Date().toISOString(), totalRuns, totalMatches, totalFalsePositives, totalEmpty, results }, null, 2),
   );

@@ -25,6 +25,7 @@ import {
   patchInternalTemps,
   patchUnusedIngredients,
 } from "../shared/recipe-quality/curated-recipe-quality-audit.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -230,7 +231,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.join(ROOT, "review"), { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     path.join(ROOT, "review", "recipe-quality-fixes.json"),
     `${JSON.stringify(report, null, 2)}\n`,
   );
@@ -260,7 +261,7 @@ function main(): void {
     ),
   ];
 
-  fs.writeFileSync(path.join(ROOT, "review", "recipe-quality-fixes.md"), `${md.join("\n")}\n`);
+  writeFileAtomicSync(path.join(ROOT, "review", "recipe-quality-fixes.md"), `${md.join("\n")}\n`);
 
   console.log(
     `[apply:recipe-quality-fixes] modified=${modified} spelling=${spellingTotal} ingredients=${ingredientTotal} rewrites=${stepsTotal}${DRY_RUN ? " (dry-run)" : ""}`,

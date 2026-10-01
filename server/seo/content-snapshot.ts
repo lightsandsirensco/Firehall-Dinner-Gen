@@ -503,7 +503,14 @@ export interface ArticleSnapshotData {
   heroImageAlt?: string;
   readMinutes?: number;
   intro: string;
-  sections: Array<{ heading: string; paragraphs: string[]; tips?: string[] }>;
+  sections: Array<{
+    heading: string;
+    paragraphs: string[];
+    steps?: string[];
+    table?: { caption: string; columns: string[]; rows: string[][] };
+    tips?: string[];
+  }>;
+  sources?: Array<{ label: string; publisher: string; url: string }>;
   /** Categorized recipe grids rendered right after `sections` — e.g.
    * "Popular Firefighter Meals" / "Quick Firehouse Meals" on the
    * `/firefighter-meals` hub. Rendered as heading + intro + crawlable
@@ -533,12 +540,33 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
   const sections = data.sections
     .map((section) => {
       const paragraphs = section.paragraphs.map((p) => `<p>${escapeHtml(p)}</p>`).join("");
+      const steps = section.steps?.length
+        ? `<ol>${section.steps.map((s) => `<li>${escapeHtml(s)}</li>`).join("")}</ol>`
+        : "";
+      const table = section.table
+        ? `<table><caption>${escapeHtml(section.table.caption)}</caption><thead><tr>${section.table.columns
+            .map((c) => `<th scope="col">${escapeHtml(c)}</th>`)
+            .join("")}</tr></thead><tbody>${section.table.rows
+            .map(
+              (row) =>
+                `<tr>${row
+                  .map((cell, i) => (i === 0 ? `<th scope="row">${escapeHtml(cell)}</th>` : `<td>${escapeHtml(cell)}</td>`))
+                  .join("")}</tr>`,
+            )
+            .join("")}</tbody></table>`
+        : "";
       const tips = section.tips?.length
         ? `<ul>${section.tips.map((t) => `<li class="fh-tip">${escapeHtml(t)}</li>`).join("")}</ul>`
         : "";
-      return `<h2>${escapeHtml(section.heading)}</h2>${paragraphs}${tips}`;
+      return `<h2>${escapeHtml(section.heading)}</h2>${paragraphs}${steps}${table}${tips}`;
     })
     .join("");
+
+  const sources = data.sources?.length
+    ? `<h2>Sources</h2><ul>${data.sources
+        .map((s) => `<li><a href="${escapeHtml(s.url)}">${escapeHtml(s.label)}</a> (${escapeHtml(s.publisher)})</li>`)
+        .join("")}</ul>`
+    : "";
 
   const recipeGridSections = (data.recipeGridSections ?? [])
     .filter((s) => s.links.length > 0)
@@ -566,7 +594,7 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
     : "";
 
   const advice = data.practicalAdvice.length
-    ? `<h2>Practical advice</h2><ul>${data.practicalAdvice.map((a) => `<li>${escapeHtml(a)}</li>`).join("")}</ul>`
+    ? `<h2>Key points</h2><ul>${data.practicalAdvice.map((a) => `<li>${escapeHtml(a)}</li>`).join("")}</ul>`
     : "";
 
   const faqs = data.faqs.length
@@ -592,6 +620,7 @@ export function renderArticleSnapshotHtml(origin: string, data: ArticleSnapshotD
     generatorCta,
     advice,
     faqs,
+    sources,
     linkSections,
     `</div>`,
   ]
@@ -688,6 +717,7 @@ export function editorialArticleSnapshot(
     readMinutes: article.readMinutes,
     intro: article.intro,
     sections: article.sections,
+    sources: article.sources,
     practicalAdvice: article.practicalAdvice,
     faqs: article.faqs,
     linkSections: [

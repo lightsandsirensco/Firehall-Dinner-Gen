@@ -8,6 +8,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { stripBannedInstructionPhrases } from "../shared/firehall-instruction-voice.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public", "catalog");
 
@@ -115,7 +116,7 @@ function main(): void {
 
   const outPath = path.join("review", "master-recipe-copy-fixes.json");
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(outPath, JSON.stringify(report, null, 2), "utf8");
   console.log(`[apply:master-recipe-copy-fixes] ${dryRun ? "would change" : "changed"} ${changedFiles.length} files`);
   if (changedFiles.length) console.log(changedFiles.slice(0, 20).join("\n"));
 }

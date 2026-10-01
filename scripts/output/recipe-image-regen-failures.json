@@ -138,5 +138,33 @@
         ]
       }
     ]
+  },
+  {
+    "at": "2026-09-29T01:59:38.766Z",
+    "collection": "breakfast",
+    "slug": "high-protein-breakfast-burrito-bowls",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: OpenAI Images API failed: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: OpenAI Images API failed: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      },
+      {
+        "attempt": 3,
+        "ok": false,
+        "reasons": [
+          "generation/QA error: OpenAI Images API failed: 429 You have no credits remaining. Add credits to continue using the API at https://platform.openai.com/settings/organization/billing/."
+        ]
+      }
+    ]
   }
 ]

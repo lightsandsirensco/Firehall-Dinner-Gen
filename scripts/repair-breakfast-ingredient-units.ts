@@ -21,6 +21,7 @@ import { BATCH_25_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-25
 import { BATCH_A_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-a-breakfast-pages.js";
 import { BATCH_WAVE1_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-wave1-breakfast-pages.js";
 import { getAlgorithmicBreakfastSource } from "./generate-breakfast-catalog.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const FIX = process.argv.includes("--fix");
@@ -126,7 +127,7 @@ function main(): void {
     ]),
   ];
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
-  fs.writeFileSync(REPORT_PATH, md.join("\n"), "utf8");
+  writeFileAtomicSync(REPORT_PATH, md.join("\n"), "utf8");
 
   console.log(
     `[repair-breakfast-units] scanned=${filesScanned} recipesFixed=${rows.length} mode=${FIX ? "fix" : "report"}`,

@@ -1,30 +1,30 @@
 {
-  "generatedAt": "2026-09-29T01:34:50.717Z",
+  "generatedAt": "2026-09-30T19:38:58.919Z",
   "qaVersion": "qa3+std1.0",
   "model": "gpt-4o",
   "totals": {
     "audited": 462,
-    "PASS": 81,
-    "P0": 3,
-    "P1": 203,
+    "PASS": 102,
+    "P0": 4,
+    "P1": 181,
     "P2": 134,
     "P3": 41,
     "accuracy": {
-      "PASS": 219,
-      "MINOR": 52,
-      "MAJOR": 130,
-      "CRITICAL": 26,
+      "PASS": 240,
+      "MINOR": 56,
+      "MAJOR": 129,
+      "CRITICAL": 22,
       "ERROR": 0,
-      "NOT_CHECKED": 35
+      "NOT_CHECKED": 15
     },
     "consistency": {
-      "PASS": 163,
-      "REVIEW": 239,
+      "PASS": 186,
+      "REVIEW": 236,
       "REPLACE": 25,
       "ERROR": 0,
-      "NOT_CHECKED": 35
+      "NOT_CHECKED": 15
     },
-    "technicalIssues": 135
+    "technicalIssues": 111
   },
   "records": [
     {
@@ -54,6 +54,31 @@
         "broccoli",
         "carrots",
         "consommé"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "enchilada-casserole",
+      "collection": "golden-100",
+      "title": "Chicken Enchilada Casserole",
+      "image": "/images/golden-100/enchilada-casserole.jpg",
+      "accuracy_status": "CRITICAL",
+      "consistency_status": "REVIEW",
+      "technical_status": "ISSUES",
+      "issues": [
+        "accuracy: rolled enchiladas instead of stacked casserole",
+        "consistency: people in the background",
+        "consistency: people or hands in frame",
+        "technical: alt text does not match the visible food"
+      ],
+      "recommended_action": "auto-regenerate from recipe (npm run images:regen -- --from-audit)",
+      "priority": "P0",
+      "hero_sha256": "9b6f0abc2c4f811c3756e943906df10477f380d793c672dbc2f2e337af0ef3e7",
+      "visible_foods": [
+        "cooked shredded chicken",
+        "corn tortillas",
+        "red enchilada sauce",
+        "shredded cheddar"
       ],
       "camera_angle": "45_degree"
     },
@@ -343,24 +368,6 @@
       "camera_angle": "45_degree"
     },
     {
-      "slug": "berry-vanilla-protein-overnight-oats",
-      "collection": "breakfast",
-      "title": "Berry Vanilla Protein Overnight Oats",
-      "image": "/images/breakfast/berry-vanilla-protein-overnight-oats.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
       "slug": "biscuit-french-toast-sliders",
       "collection": "breakfast",
       "title": "Biscuit French Toast Sliders",
@@ -395,41 +402,6 @@
         "technical: thumbnail missing (/images/thumbs/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)",
         "technical: mobile variant missing (/images/mobile/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)",
         "technical: rail variant missing (/images/rails/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
-      "slug": "black-bean-egg-white-breakfast-burritos",
-      "collection": "breakfast",
-      "title": "Black Bean & Egg White Breakfast Burritos",
-      "image": "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
-      "slug": "blackened-salmon-sweet-potato-bowls",
-      "collection": "hall-expansion",
-      "title": "Blackened Salmon Sweet Potato Bowls",
-      "image": "/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)"
       ],
       "recommended_action": "fix broken/missing hero, then re-audit",
       "priority": "P1"
@@ -643,23 +615,6 @@
         "remoulade"
       ],
       "camera_angle": "45_degree"
-    },
-    {
-      "slug": "cajun-lime-shrimp-black-bean-bowls",
-      "collection": "hall-expansion",
-      "title": "Cajun Lime Shrimp & Black Bean Bowls",
-      "image": "/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
     },
     {
       "slug": "caprese-chicken-bake",
@@ -886,7 +841,7 @@
       "consistency_status": "REPLACE",
       "technical_status": "PASS",
       "issues": [
-        "consistency: brightness outlier (+3.6σ vs catalog)",
+        "consistency: brightness outlier (+3.7σ vs catalog)",
         "consistency: text or logo on mug",
         "consistency: text or logo in frame"
       ],
@@ -1041,24 +996,6 @@
       "priority": "P1"
     },
     {
-      "slug": "cottage-cheese-veggie-egg-bake",
-      "collection": "breakfast",
-      "title": "Cottage Cheese Veggie Egg Bake",
-      "image": "/images/breakfast/cottage-cheese-veggie-egg-bake.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
       "slug": "cottage-pie-for-the-crew",
       "collection": "hall-expansion",
       "title": "Cottage Pie for the Crew",
@@ -1179,51 +1116,6 @@
         "coleslaw mix",
         "rice",
         "green onions"
-      ],
-      "camera_angle": "45_degree"
-    },
-    {
-      "slug": "egg-white-black-bean-breakfast-quesadillas",
-      "collection": "breakfast",
-      "title": "Egg White & Black Bean Breakfast Quesadillas",
-      "image": "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
-      "slug": "enchilada-casserole",
-      "collection": "golden-100",
-      "title": "Chicken Enchilada Casserole",
-      "image": "/images/golden-100/enchilada-casserole.jpg",
-      "accuracy_status": "CRITICAL",
-      "consistency_status": "REVIEW",
-      "technical_status": "ISSUES",
-      "issues": [
-        "recipe-data: title says \"chicken\" but the ingredient list has none",
-        "accuracy: rolled enchiladas instead of casserole",
-        "accuracy: missing ground beef",
-        "accuracy: missing black olives",
-        "consistency: people in the background",
-        "consistency: people or hands in frame",
-        "technical: alt text does not match the visible food"
-      ],
-      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed",
-      "priority": "P1",
-      "hero_sha256": "9b6f0abc2c4f811c3756e943906df10477f380d793c672dbc2f2e337af0ef3e7",
-      "visible_foods": [
-        "tortillas",
-        "enchilada sauce",
-        "shredded cheese"
       ],
       "camera_angle": "45_degree"
     },
@@ -1533,41 +1425,6 @@
       "camera_angle": "45_degree"
     },
     {
-      "slug": "firehouse-breakfast-protein-bowls",
-      "collection": "breakfast",
-      "title": "Firehouse Breakfast Protein Bowls",
-      "image": "/images/breakfast/firehouse-breakfast-protein-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/firehouse-breakfast-protein-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/firehouse-breakfast-protein-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/firehouse-breakfast-protein-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/firehouse-breakfast-protein-bowls.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
-      "slug": "firehouse-chicken-black-bean-bowls",
-      "collection": "hall-expansion",
-      "title": "Firehouse Chicken & Black Bean Bowls",
-      "image": "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
       "slug": "firehouse-dense-bean-salad",
       "collection": "hall-expansion",
       "title": "Firehouse Dense Bean Salad",
@@ -1702,23 +1559,6 @@
         "broccoli"
       ],
       "camera_angle": "45_degree"
-    },
-    {
-      "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
-      "collection": "hall-expansion",
-      "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
-      "image": "/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
     },
     {
       "slug": "ginger-salmon-bowls",
@@ -2091,24 +1931,6 @@
       "camera_angle": "45_degree"
     },
     {
-      "slug": "high-protein-breakfast-burrito-bowls",
-      "collection": "breakfast",
-      "title": "High-Protein Breakfast Burrito Bowls",
-      "image": "/images/breakfast/high-protein-breakfast-burrito-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
       "slug": "high-protein-chicken-fried-rice",
       "collection": "performance-meals",
       "title": "High-Protein Chicken Fried Rice",
@@ -2132,23 +1954,6 @@
         "carrots"
       ],
       "camera_angle": "45_degree"
-    },
-    {
-      "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
-      "collection": "hall-expansion",
-      "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
-      "image": "/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
     },
     {
       "slug": "honey-chipotle-chicken-thighs",
@@ -2196,23 +2001,6 @@
         "toasted sesame seeds"
       ],
       "camera_angle": "45_degree"
-    },
-    {
-      "slug": "honey-mustard-turkey-meatball-bowls",
-      "collection": "hall-expansion",
-      "title": "Honey Mustard Turkey Meatball Bowls",
-      "image": "/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
     },
     {
       "slug": "honey-soppressata-pizza",
@@ -2532,7 +2320,7 @@
       "consistency_status": "PASS",
       "technical_status": "PASS",
       "issues": [
-        "consistency: brightness outlier (+3.9σ vs catalog)",
+        "consistency: brightness outlier (+4.0σ vs catalog)",
         "accuracy: salad present — not in recipe",
         "accuracy: missing tabbouleh"
       ],
@@ -2597,23 +2385,6 @@
         "lemon slices"
       ],
       "camera_angle": "45_degree"
-    },
-    {
-      "slug": "lemon-herb-cod-roasted-vegetables",
-      "collection": "hall-expansion",
-      "title": "Lemon-Herb Cod with Roasted Vegetables",
-      "image": "/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
     },
     {
       "slug": "lemon-herb-salmon",
@@ -2741,7 +2512,7 @@
       "consistency_status": "REVIEW",
       "technical_status": "PASS",
       "issues": [
-        "consistency: colour temperature outlier (+2.5σ vs catalog)",
+        "consistency: colour temperature outlier (+2.6σ vs catalog)",
         "accuracy: tofu puffs not in recipe",
         "accuracy: missing visible chicken",
         "consistency: tofu puffs not in recipe"
@@ -3219,24 +2990,6 @@
       "camera_angle": "45_degree"
     },
     {
-      "slug": "peanut-butter-protein-overnight-oats",
-      "collection": "breakfast",
-      "title": "Peanut Butter Protein Overnight Oats",
-      "image": "/images/breakfast/peanut-butter-protein-overnight-oats.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/peanut-butter-protein-overnight-oats.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/peanut-butter-protein-overnight-oats.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/peanut-butter-protein-overnight-oats.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/peanut-butter-protein-overnight-oats.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
       "slug": "pellet-smoked-chicken-quarters",
       "collection": "hall-expansion",
       "title": "Pellet Smoked Chicken Quarters",
@@ -3320,7 +3073,7 @@
       "consistency_status": "PASS",
       "technical_status": "PASS",
       "issues": [
-        "consistency: colour temperature outlier (+4.6σ vs catalog)",
+        "consistency: colour temperature outlier (+4.7σ vs catalog)",
         "accuracy: french fries present — not in recipe",
         "accuracy: missing grilled red bell peppers",
         "accuracy: missing grilled yellow onion",
@@ -3461,24 +3214,21 @@
       "collection": "golden-100",
       "title": "Pork Carnitas Tacos",
       "image": "/images/golden-100/pork-carnitas-tacos.jpg",
-      "accuracy_status": "CRITICAL",
-      "consistency_status": "REVIEW",
-      "technical_status": "ISSUES",
+      "accuracy_status": "MAJOR",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
       "issues": [
-        "recipe-data: title says \"pork\" but the ingredient list has none",
         "accuracy: cheese on tacos — not in recipe",
         "accuracy: sauce on tacos — not in recipe",
-        "accuracy: pork carnitas instead of chicken thighs",
-        "consistency: off-standard angle for tacos",
-        "consistency: cheese and sauce not in recipe",
-        "technical: alt text does not match the visible food"
+        "accuracy: missing onion",
+        "accuracy: missing lime"
       ],
-      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed",
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/pork-carnitas-tacos)",
       "priority": "P1",
       "hero_sha256": "91154cf9df72ba8ed4f7c3977487156a4a7f089d92cef5288c36e6f3489b06c9",
       "visible_foods": [
+        "pork",
         "tortillas",
-        "meat",
         "cilantro",
         "sauce",
         "cheese"
@@ -3726,24 +3476,6 @@
       "camera_angle": "45_degree"
     },
     {
-      "slug": "savory-cottage-cheese-breakfast-bowls",
-      "collection": "breakfast",
-      "title": "Savory Cottage Cheese Breakfast Bowls",
-      "image": "/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
       "slug": "sesame-ginger-tofu-bowls",
       "collection": "hall-expansion",
       "title": "Sesame Ginger Tofu Bowls",
@@ -3860,23 +3592,6 @@
         "large eggs"
       ],
       "camera_angle": "45_degree"
-    },
-    {
-      "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
-      "collection": "hall-expansion",
-      "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
-      "image": "/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
     },
     {
       "slug": "sheet-pan-meal-prep",
@@ -4414,30 +4129,6 @@
       "camera_angle": "45_degree"
     },
     {
-      "slug": "stuffed-peppers",
-      "collection": "golden-100",
-      "title": "Quinoa Stuffed Peppers",
-      "image": "/images/golden-100/stuffed-peppers.jpg",
-      "accuracy_status": "CRITICAL",
-      "consistency_status": "PASS",
-      "technical_status": "ISSUES",
-      "issues": [
-        "recipe-data: title says \"quinoa\" but the ingredient list has none",
-        "accuracy: quinoa instead of rice",
-        "technical: alt text does not match the visible food"
-      ],
-      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed",
-      "priority": "P1",
-      "hero_sha256": "1e520a901160de4c8bca52a0c46fb85b1905f9f7e1043e9361d19213b808e2b4",
-      "visible_foods": [
-        "bell peppers",
-        "ground beef",
-        "quinoa",
-        "shredded mozzarella"
-      ],
-      "camera_angle": "45_degree"
-    },
-    {
       "slug": "taco-pizza",
       "collection": "pizza-night",
       "title": "Taco Pizza",
@@ -4556,24 +4247,6 @@
       "camera_angle": "45_degree"
     },
     {
-      "slug": "turkey-bacon-white-bean-breakfast-hash",
-      "collection": "breakfast",
-      "title": "Turkey Bacon & White Bean Breakfast Hash",
-      "image": "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
       "slug": "turkey-burgers",
       "collection": "golden-100",
       "title": "Black Bean Turkey Burgers",
@@ -4667,79 +4340,22 @@
       "consistency_status": "REPLACE",
       "technical_status": "ISSUES",
       "issues": [
-        "recipe-data: title says \"turkey\" but the ingredient list has none",
-        "accuracy: wrong dish format — bowl instead of burrito",
-        "accuracy: wrong main protein — beef instead of turkey sausage",
-        "accuracy: lentils not in recipe",
+        "accuracy: bowl of stew instead of burritos",
         "consistency: wrong dish format",
-        "consistency: wrong main protein",
-        "consistency: lentils not in recipe",
+        "consistency: bowl instead of platter",
+        "consistency: stew instead of burritos",
         "technical: alt text does not match the visible food"
       ],
-      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed",
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=breakfast/turkey-sausage-burritos)",
       "priority": "P1",
       "hero_sha256": "b1a7cd81522d6853f81d32465cbfb3a41a6afa264316ee8647a92ade92246a3b",
       "visible_foods": [
         "beef chunks",
         "lentils",
         "parsley",
-        "broth"
+        "carrots"
       ],
       "camera_angle": "45_degree"
-    },
-    {
-      "slug": "turkey-sausage-egg-white-sandwiches",
-      "collection": "breakfast",
-      "title": "Turkey Sausage Egg White Breakfast Sandwiches",
-      "image": "/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
-      "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
-      "collection": "breakfast",
-      "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
-      "image": "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
-    },
-    {
-      "slug": "turkey-sausage-sweet-potato-skillet",
-      "collection": "breakfast",
-      "title": "Turkey Sausage & Sweet Potato Breakfast Skillet",
-      "image": "/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
-      "accuracy_status": "NOT_CHECKED",
-      "consistency_status": "NOT_CHECKED",
-      "technical_status": "ISSUES",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit",
-      "priority": "P1"
     },
     {
       "slug": "turkey-shepherds-sweet-potato",
@@ -7204,7 +6820,7 @@
       "consistency_status": "PASS",
       "technical_status": "PASS",
       "issues": [
-        "consistency: colour temperature outlier (+2.6σ vs catalog)"
+        "consistency: colour temperature outlier (+2.7σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier",
       "priority": "P2",
@@ -7226,7 +6842,7 @@
       "consistency_status": "PASS",
       "technical_status": "PASS",
       "issues": [
-        "consistency: colour temperature outlier (+2.6σ vs catalog)"
+        "consistency: colour temperature outlier (+2.7σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier",
       "priority": "P2",
@@ -7511,7 +7127,7 @@
       "consistency_status": "PASS",
       "technical_status": "PASS",
       "issues": [
-        "consistency: colour temperature outlier (+2.5σ vs catalog)"
+        "consistency: colour temperature outlier (+2.6σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier",
       "priority": "P2",
@@ -7791,7 +7407,7 @@
       "consistency_status": "PASS",
       "technical_status": "PASS",
       "issues": [
-        "consistency: brightness outlier (+2.8σ vs catalog)"
+        "consistency: brightness outlier (+2.9σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier",
       "priority": "P2",
@@ -8098,7 +7714,7 @@
       "consistency_status": "PASS",
       "technical_status": "PASS",
       "issues": [
-        "consistency: brightness outlier (+4.2σ vs catalog)"
+        "consistency: brightness outlier (+4.3σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier",
       "priority": "P2",
@@ -8158,6 +7774,30 @@
         "butter lettuce",
         "green onions",
         "hoisin sauce"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "black-bean-egg-white-breakfast-burritos",
+      "collection": "breakfast",
+      "title": "Black Bean & Egg White Breakfast Burritos",
+      "image": "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+      "accuracy_status": "MINOR",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [
+        "accuracy: yellow onion not visible",
+        "accuracy: pepper jack cheese not visible"
+      ],
+      "recommended_action": "none required (harmless garnish)",
+      "priority": "P3",
+      "hero_sha256": "eda2c35ba34abc9d6b1dfc1736a21472bb751972c203e4587527f15c3b7893fd",
+      "visible_foods": [
+        "egg whites",
+        "black beans",
+        "bell pepper",
+        "flour tortilla",
+        "salsa"
       ],
       "camera_angle": "45_degree"
     },
@@ -8232,15 +7872,21 @@
       "collection": "breakfast",
       "title": "Breakfast Sliders",
       "image": "/images/breakfast/breakfast-sliders.jpg",
-      "accuracy_status": "PASS",
+      "accuracy_status": "MINOR",
       "consistency_status": "PASS",
-      "technical_status": "ISSUES",
+      "technical_status": "PASS",
       "issues": [
-        "audit: replaced after this audit pass - publish-gate vision verdict PASS + manual art-director review; re-run vision audit when OpenAI credits are restored"
+        "accuracy: Missing visible glaze and everything bagel seasoning"
       ],
-      "recommended_action": "re-run audit for this slug",
+      "recommended_action": "none required (harmless garnish)",
       "priority": "P3",
-      "hero_sha256": "ba17cbfede26a96f979f0fd7ac87845c57c676ad19afd1c43065b63998b2c9ca",
+      "hero_sha256": "fd893c339ece468ca95765adc374b44a24de06a45f6d8870420ad7c792d3d4e9",
+      "visible_foods": [
+        "Hawaiian sweet rolls",
+        "sausage patties",
+        "folded eggs",
+        "cheddar cheese"
+      ],
       "camera_angle": "45_degree"
     },
     {
@@ -8266,6 +7912,31 @@
         "sirloin steak",
         "bean sprouts",
         "thai basil"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "cajun-lime-shrimp-black-bean-bowls",
+      "collection": "hall-expansion",
+      "title": "Cajun Lime Shrimp & Black Bean Bowls",
+      "image": "/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
+      "accuracy_status": "MINOR",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [
+        "accuracy: lime wedge instead of lime juice"
+      ],
+      "recommended_action": "none required (harmless garnish)",
+      "priority": "P3",
+      "hero_sha256": "bdaef18dafa437401c0d6e32aa891665813f1c71a89642e5513918eb3ea335bd",
+      "visible_foods": [
+        "shrimp",
+        "jasmine rice",
+        "black beans",
+        "corn",
+        "bell pepper",
+        "lime wedge",
+        "fresh cilantro"
       ],
       "camera_angle": "45_degree"
     },
@@ -8335,22 +8006,6 @@
         "banana slices",
         "chocolate smoothie"
       ],
-      "camera_angle": "45_degree"
-    },
-    {
-      "slug": "chorizo-breakfast-hash",
-      "collection": "breakfast",
-      "title": "Chorizo Breakfast Hash",
-      "image": "/images/breakfast/chorizo-breakfast-hash.jpg",
-      "accuracy_status": "PASS",
-      "consistency_status": "PASS",
-      "technical_status": "PASS",
-      "issues": [
-        "audit: replaced after this audit pass - publish-gate vision verdict PASS + manual art-director review; re-run vision audit when OpenAI credits are restored"
-      ],
-      "recommended_action": "re-run audit for this slug",
-      "priority": "P3",
-      "hero_sha256": "71aa232a7a38b69075555855d105cabbeb3cb1bc59d13cc0c4c2ba406b24fb6f",
       "camera_angle": "45_degree"
     },
     {
@@ -8569,6 +8224,30 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "lemon-herb-cod-roasted-vegetables",
+      "collection": "hall-expansion",
+      "title": "Lemon-Herb Cod with Roasted Vegetables",
+      "image": "/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+      "accuracy_status": "MINOR",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [
+        "accuracy: lemon slices visible — recipe uses lemon juice"
+      ],
+      "recommended_action": "none required (harmless garnish)",
+      "priority": "P3",
+      "hero_sha256": "9928c0892520f8896c812be1c35a91083ab0e84da6f73c818858b678a7623ee8",
+      "visible_foods": [
+        "cod fillet",
+        "baby potatoes",
+        "zucchini",
+        "cherry tomatoes",
+        "lemon slices",
+        "parsley"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "lentil-mushroom-bolognese",
       "collection": "performance-meals",
       "title": "Lentil Bolognese",
@@ -8691,22 +8370,6 @@
       "camera_angle": "45_degree"
     },
     {
-      "slug": "migas-for-the-crew",
-      "collection": "breakfast",
-      "title": "Migas for the Crew",
-      "image": "/images/breakfast/migas-for-the-crew.jpg",
-      "accuracy_status": "PASS",
-      "consistency_status": "PASS",
-      "technical_status": "ISSUES",
-      "issues": [
-        "audit: replaced after this audit pass - publish-gate vision verdict PASS + manual art-director review; re-run vision audit when OpenAI credits are restored"
-      ],
-      "recommended_action": "re-run audit for this slug",
-      "priority": "P3",
-      "hero_sha256": "cb2478e051ff37fa86c5e186d89eba5472fec605984d906c827aa79d86f6b46b",
-      "camera_angle": "45_degree"
-    },
-    {
       "slug": "mixed-berry-protein",
       "collection": "smoothies",
       "title": "Mixed Berry Protein Smoothie",
@@ -8816,22 +8479,6 @@
         "banana slices",
         "cocoa powder"
       ],
-      "camera_angle": "45_degree"
-    },
-    {
-      "slug": "sheet-pan-breakfast-sandwiches",
-      "collection": "breakfast",
-      "title": "Sheet Pan Breakfast Sandwiches",
-      "image": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
-      "accuracy_status": "PASS",
-      "consistency_status": "PASS",
-      "technical_status": "PASS",
-      "issues": [
-        "audit: replaced after this audit pass - publish-gate vision verdict PASS + manual art-director review; re-run vision audit when OpenAI credits are restored"
-      ],
-      "recommended_action": "re-run audit for this slug",
-      "priority": "P3",
-      "hero_sha256": "5edf2d557695fc00ee58c2c58a889eed4472e4dc7cfb7b4d1bbc1a6d46db374d",
       "camera_angle": "45_degree"
     },
     {
@@ -9107,6 +8754,26 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "berry-vanilla-protein-overnight-oats",
+      "collection": "breakfast",
+      "title": "Berry Vanilla Protein Overnight Oats",
+      "image": "/images/breakfast/berry-vanilla-protein-overnight-oats.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "4b8b228b52f217c46b0281eb744d8e8abd2afba7188a37dc8836fc153960dda3",
+      "visible_foods": [
+        "rolled oats",
+        "greek yogurt",
+        "mixed berries",
+        "chia seeds"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "best-tuna-melt-for-the-hall",
       "collection": "hall-expansion",
       "title": "Best Tuna Melt for the Hall (Diner Style)",
@@ -9123,6 +8790,26 @@
         "cheddar cheese",
         "marbled rye bread",
         "dill pickles"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "blackened-salmon-sweet-potato-bowls",
+      "collection": "hall-expansion",
+      "title": "Blackened Salmon Sweet Potato Bowls",
+      "image": "/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "74bb59225be34cc0e7c6a7bc887c876bc9721f390e00a345fd960b7db92bd7ae",
+      "visible_foods": [
+        "sweet potato",
+        "salmon fillet",
+        "baby spinach",
+        "yogurt drizzle"
       ],
       "camera_angle": "45_degree"
     },
@@ -9450,6 +9137,29 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "chorizo-breakfast-hash",
+      "collection": "breakfast",
+      "title": "Chorizo Breakfast Hash",
+      "image": "/images/breakfast/chorizo-breakfast-hash.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "3aeb65ffeb70aa31ee740c0de2cef88a70b27ed018d68d25194b54177c2d0b06",
+      "visible_foods": [
+        "russet potatoes",
+        "mexican chorizo",
+        "eggs",
+        "onion",
+        "bell peppers",
+        "cotija",
+        "cilantro"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "chorizo-breakfast-tacos",
       "collection": "golden-100",
       "title": "Chorizo Breakfast Tacos",
@@ -9509,6 +9219,28 @@
         "yellow onions",
         "large eggs",
         "fresh parsley"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "cottage-cheese-veggie-egg-bake",
+      "collection": "breakfast",
+      "title": "Cottage Cheese Veggie Egg Bake",
+      "image": "/images/breakfast/cottage-cheese-veggie-egg-bake.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "1032490219c132ef88157b3b658c4f96a906b34eeedc16bb0e62618b8b7a562a",
+      "visible_foods": [
+        "eggs",
+        "cottage cheese",
+        "yellow onion",
+        "bell pepper",
+        "baby spinach",
+        "shredded cheese"
       ],
       "camera_angle": "45_degree"
     },
@@ -9633,6 +9365,27 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "egg-white-black-bean-breakfast-quesadillas",
+      "collection": "breakfast",
+      "title": "Egg White & Black Bean Breakfast Quesadillas",
+      "image": "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "3089b5fd4c802cf35999181ac6c2f08ff024d80e96d823f9948e6109a8662e0c",
+      "visible_foods": [
+        "egg whites",
+        "black beans",
+        "pepper jack cheese",
+        "salsa",
+        "flour tortilla"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "fire-captain-omelette-bar",
       "collection": "breakfast",
       "title": "Fire Captain Omelette Bar",
@@ -9674,6 +9427,52 @@
         "bell peppers",
         "yellow onion",
         "mushrooms"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "firehouse-breakfast-protein-bowls",
+      "collection": "breakfast",
+      "title": "Firehouse Breakfast Protein Bowls",
+      "image": "/images/breakfast/firehouse-breakfast-protein-bowls.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "decc9e43d1c39769ea32809ed31cd042e25b852c1aa2677f4c9c21bccd6f3d40",
+      "visible_foods": [
+        "sweet potato",
+        "scrambled eggs",
+        "chicken sausage",
+        "cottage cheese",
+        "salsa",
+        "green onions",
+        "avocado"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "firehouse-chicken-black-bean-bowls",
+      "collection": "hall-expansion",
+      "title": "Firehouse Chicken & Black Bean Bowls",
+      "image": "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "f31632d2773a92cf4e7bf39dc3ba4e1644cc8bf6e467c4b9252135c01012663c",
+      "visible_foods": [
+        "chicken breast",
+        "brown rice",
+        "black beans",
+        "corn",
+        "avocado",
+        "plain greek yogurt",
+        "lime"
       ],
       "camera_angle": "45_degree"
     },
@@ -9735,6 +9534,27 @@
         "garlic butter",
         "parsley",
         "lemon juice"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
+      "collection": "hall-expansion",
+      "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
+      "image": "/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "1d4be775019c1209b71fa7d1d21651ba6991bfa3ce500a4172856bc27980dfb1",
+      "visible_foods": [
+        "sirloin steak",
+        "jasmine rice",
+        "broccoli florets",
+        "cottage cheese",
+        "fresh chives"
       ],
       "camera_angle": "45_degree"
     },
@@ -9860,6 +9680,50 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "high-protein-breakfast-burrito-bowls",
+      "collection": "breakfast",
+      "title": "High-Protein Breakfast Burrito Bowls",
+      "image": "/images/breakfast/high-protein-breakfast-burrito-bowls.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "59f244f5d4567f8884e5da0bfe8a0dac8631734d6ac2a4e3b0b81837bf6fd8dc",
+      "visible_foods": [
+        "brown rice",
+        "ground turkey",
+        "scrambled eggs",
+        "black beans",
+        "pico de gallo",
+        "shredded cheese",
+        "avocado",
+        "greek yogurt"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
+      "collection": "hall-expansion",
+      "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
+      "image": "/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "f95fe17f90b5c934c178fdde8378be46e85b2479b07e5438659f56d03b8e5486",
+      "visible_foods": [
+        "chicken thighs",
+        "quinoa",
+        "broccoli florets",
+        "bell pepper"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "honey-garlic-pork-tenderloin",
       "collection": "golden-100",
       "title": "Honey Garlic Pork Tenderloin",
@@ -9873,6 +9737,26 @@
       "hero_sha256": "5d9bb9361bcc08d36e8cc3b91ace4cb644b167b65100d1c7f48c7db87c9b5cd5",
       "visible_foods": [
         "pork tenderloin"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "honey-mustard-turkey-meatball-bowls",
+      "collection": "hall-expansion",
+      "title": "Honey Mustard Turkey Meatball Bowls",
+      "image": "/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "08d2823255688e4637ae7574b5a69b09d16d9f2b63275a2e40e324cc278b1deb",
+      "visible_foods": [
+        "turkey meatballs",
+        "jasmine rice",
+        "green beans",
+        "honey mustard sauce"
       ],
       "camera_angle": "45_degree"
     },
@@ -10130,6 +10014,29 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "migas-for-the-crew",
+      "collection": "breakfast",
+      "title": "Migas for the Crew",
+      "image": "/images/breakfast/migas-for-the-crew.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "f7bfeb21c1b0e5e2a489315d06ff58e4792bdf2896609437678448823f40ba15",
+      "visible_foods": [
+        "scrambled eggs",
+        "corn tortillas",
+        "poblano peppers",
+        "white onion",
+        "roma tomatoes",
+        "queso fresco",
+        "salsa"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "monte-cristo-sandwiches",
       "collection": "breakfast",
       "title": "Monte Cristo Sandwiches",
@@ -10254,6 +10161,25 @@
         "bacon",
         "butter",
         "maple syrup"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "peanut-butter-protein-overnight-oats",
+      "collection": "breakfast",
+      "title": "Peanut Butter Protein Overnight Oats",
+      "image": "/images/breakfast/peanut-butter-protein-overnight-oats.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "6dde2ad3fa24f17eec1cc061ca2226a1d43026508201219da4cdc10e001848b0",
+      "visible_foods": [
+        "rolled oats",
+        "peanut butter",
+        "banana"
       ],
       "camera_angle": "45_degree"
     },
@@ -10424,6 +10350,28 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "savory-cottage-cheese-breakfast-bowls",
+      "collection": "breakfast",
+      "title": "Savory Cottage Cheese Breakfast Bowls",
+      "image": "/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "d079fb55d3a1838627b88a6deae6147cca0804ed5724c53afcafff2563202ea0",
+      "visible_foods": [
+        "cottage cheese",
+        "cucumber",
+        "cherry tomatoes",
+        "avocado",
+        "everything bagel seasoning",
+        "hot sauce"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "shakshuka-for-the-hall",
       "collection": "breakfast",
       "title": "Shakshuka for the Hall",
@@ -10465,6 +10413,27 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "sheet-pan-breakfast-sandwiches",
+      "collection": "breakfast",
+      "title": "Sheet Pan Breakfast Sandwiches",
+      "image": "/images/breakfast/sheet-pan-breakfast-sandwiches.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "7e8613b98769bb851327704d8005d6186add634ef9cb15ae6e60e4b2885876c7",
+      "visible_foods": [
+        "slider rolls",
+        "eggs",
+        "sausage patties",
+        "cheese",
+        "everything bagel seasoning"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "sheet-pan-fajitas",
       "collection": "golden-100",
       "title": "Chicken Fajitas",
@@ -10480,6 +10449,26 @@
         "chicken strips",
         "bell peppers",
         "red onion"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+      "collection": "hall-expansion",
+      "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
+      "image": "/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "3a5b498b3ddbc39331cf997281805d56e5aa3a028670a141e24c74343a718c73",
+      "visible_foods": [
+        "chicken breast",
+        "sweet potato",
+        "broccoli florets",
+        "lemon"
       ],
       "camera_angle": "45_degree"
     },
@@ -10611,6 +10600,27 @@
       "camera_angle": "45_degree"
     },
     {
+      "slug": "stuffed-peppers",
+      "collection": "golden-100",
+      "title": "Quinoa Stuffed Peppers",
+      "image": "/images/golden-100/stuffed-peppers.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "1e520a901160de4c8bca52a0c46fb85b1905f9f7e1043e9361d19213b808e2b4",
+      "visible_foods": [
+        "bell peppers",
+        "ground beef",
+        "cooked quinoa",
+        "crushed tomatoes",
+        "shredded mozzarella"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
       "slug": "texas-beef-ribs",
       "collection": "golden-100",
       "title": "Texas-Style Beef Ribs",
@@ -10644,6 +10654,28 @@
         "boneless chicken thighs",
         "red bell peppers",
         "thai basil leaves"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "turkey-bacon-white-bean-breakfast-hash",
+      "collection": "breakfast",
+      "title": "Turkey Bacon & White Bean Breakfast Hash",
+      "image": "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "c6d819f218158055e625690614fc8215d25773837cd225c910c3487200a3f2c5",
+      "visible_foods": [
+        "russet potato",
+        "turkey bacon",
+        "white beans",
+        "large eggs",
+        "yellow onion",
+        "bell pepper"
       ],
       "camera_angle": "45_degree"
     },
@@ -10686,6 +10718,69 @@
         "spinach",
         "red bell pepper",
         "cheddar cheese"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "turkey-sausage-egg-white-sandwiches",
+      "collection": "breakfast",
+      "title": "Turkey Sausage Egg White Breakfast Sandwiches",
+      "image": "/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "5f67479dee68c8efa76ac39d6b14d87755e05799e88b48b5def89383c3cf573b",
+      "visible_foods": [
+        "turkey sausage",
+        "egg whites",
+        "english muffin",
+        "cheddar cheese",
+        "hot sauce"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
+      "collection": "breakfast",
+      "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
+      "image": "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "c8c5211d81771516826ed11a492b284dd50ec48c7cebb74747ec380de2a298b3",
+      "visible_foods": [
+        "turkey sausage",
+        "egg whites",
+        "baby spinach",
+        "feta cheese"
+      ],
+      "camera_angle": "45_degree"
+    },
+    {
+      "slug": "turkey-sausage-sweet-potato-skillet",
+      "collection": "breakfast",
+      "title": "Turkey Sausage & Sweet Potato Breakfast Skillet",
+      "image": "/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
+      "accuracy_status": "PASS",
+      "consistency_status": "PASS",
+      "technical_status": "PASS",
+      "issues": [],
+      "recommended_action": "none",
+      "priority": "PASS",
+      "hero_sha256": "994d2606a10b07b45e52c6069308262637686b204beba9a09917dd21eec7d6a0",
+      "visible_foods": [
+        "sweet potato",
+        "turkey sausage",
+        "eggs",
+        "yellow onion",
+        "bell pepper",
+        "shredded cheese"
       ],
       "camera_angle": "45_degree"
     },

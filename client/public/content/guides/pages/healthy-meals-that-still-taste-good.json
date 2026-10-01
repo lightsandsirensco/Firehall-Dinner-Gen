@@ -1,106 +1,268 @@
 {
   "slug": "healthy-meals-that-still-taste-good",
-  "title": "Healthy Meals That Still Taste Good",
-  "subtitle": "Protein-forward hall dinners that feel like dinner — not a lecture",
-  "description": "Healthy firefighter meals do not have to be sad salads. Practical station-friendly ways to keep meals lighter without losing flavor, plus recipe picks crews actually finish.",
+  "title": "Healthy Meals That Still Taste Good: Cooking Lighter for a Crew",
+  "subtitle": "Keeping lean chicken, pork and fish juicy, roasting vegetables people actually eat, sauces with big flavor, and a bowl line for 10.",
+  "description": "Healthy meals that still taste good for a crew: keeping lean chicken and fish juicy, roasting vegetables properly, bold sauces, and bowl lines.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "Most crews are not asking for diet food. They are asking for dinner that tastes good and does not leave everyone wrecked at 21:00. The best “healthy” hall meals are balanced and operational: enough protein to satisfy, smart carbs you can scale, and sauces that carry flavor without turning everything into a sugar bomb. Below: what halls actually cook for healthy firefighter meals — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "Lighter cooking has a reputation for tasting like a compromise, and usually that is a cooking problem rather than an ingredient problem. Lean meat dries out because it has little fat to protect it, vegetables taste flat when they are steamed or crowded onto a pan, and lower-fat dishes lose flavor when nothing replaces the richness. Each of those has a fix: salt lean protein ahead and pull it at the right temperature, roast vegetables hot and spread out, and let bold sauces carry the flavor. Serving it as a bowl line lets everyone choose their own portions of each part. This is cooking guidance for a crew, not medical or dietary advice.",
   "sections": [
     {
-      "id": "what-healthy-means",
-      "heading": "What \"healthy\" looks like at the station",
+      "id": "lean-protein",
+      "heading": "Keep lean protein juicy",
       "paragraphs": [
-        "Healthy does not mean low-calorie. For most crews it means protein-forward, vegetables that are actually cooked well, and portions that do not knock you out for the rest of the tour.",
-        "The station constraint is real: you need food that holds for late eaters, survives interruptions, and does not require perfect prep to taste good."
+        "Chicken breast, pork loin and white fish have very little fat or connective tissue, so there is no margin once they pass their target temperature. Three habits keep them moist. Salt them ahead: about 3/4 tsp of kosher salt per pound (450 g), at least an hour or up to a day ahead in the fridge, which helps the meat hold onto its juices as it cooks. Even out the thickness, pounding breasts to about 3/4 in (2 cm) so the thin end doesn't overcook while the thick end finishes. And use a thermometer, pulling the meat as soon as it reaches temperature.",
+        "The temperatures below are USDA minimums, with Health Canada's figure where it differs. Pork loin at 145°F (63°C) with a 3-minute rest is slightly pink and much juicier than pork cooked to the old 160°F standard."
       ],
-      "tips": [
-        "Keep the base simple: rice, potatoes, or tortillas — then win with protein + sauce.",
-        "Use sheet pans and grills when the board is loud. Hands-off cooking beats stress eating."
+      "table": {
+        "caption": "Cooking lean proteins without drying them out",
+        "columns": [
+          "Protein",
+          "Best method",
+          "Done at",
+          "What helps"
+        ],
+        "rows": [
+          [
+            "Chicken breast, pounded to 3/4 in",
+            "Roast at 425°F (220°C) 15 to 18 min, or grill over medium",
+            "165°F (74°C)",
+            "Salt ahead; slice across the grain after 5 minutes' rest"
+          ],
+          [
+            "Pork tenderloin or loin",
+            "Sear, then roast at 400°F (200°C)",
+            "145°F (63°C) plus 3 min rest; Health Canada 160°F (71°C)",
+            "A mustard or spice rub adds flavor without fat"
+          ],
+          [
+            "Salmon fillets",
+            "Roast at 425°F (220°C) 10 to 12 min",
+            "145°F (63°C); Health Canada 158°F (70°C)",
+            "Skin side down on the pan protects the flesh"
+          ],
+          [
+            "Cod, haddock, other white fish",
+            "Roast at 425°F (220°C) 8 to 12 min",
+            "145°F (63°C); Health Canada 158°F (70°C)",
+            "Flakes easily when done; top with a crumb or herb crust"
+          ],
+          [
+            "93% lean ground turkey",
+            "Brown in batches",
+            "165°F (74°C)",
+            "Add tomato paste and a splash of stock; it is drier than beef"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "vegetables",
+      "heading": "Roast vegetables so people eat them",
+      "paragraphs": [
+        "Vegetables get eaten when they are browned and seasoned, not when they are soft and grey. Roast them at 425 to 450°F (220 to 230°C), cut to an even size, patted dry, and tossed with about 1 tbsp oil and 1/2 tsp salt per pound. Spread them in a single layer with space between pieces: crowded vegetables release water and steam instead of browning, which is the same problem as crowding meat. For 10 people, plan on 4 to 5 lb (1.8 to 2.3 kg) of vegetables across two half sheet pans.",
+        "Finish them after they come out of the oven. A squeeze of lemon, a splash of vinegar, grated Parmesan or chopped herbs make a plain tray taste considered."
+      ],
+      "table": {
+        "caption": "Roasting times at 425°F (220°C) in a single layer",
+        "columns": [
+          "Vegetable",
+          "Cut",
+          "Time"
+        ],
+        "rows": [
+          [
+            "Broccoli or cauliflower",
+            "1 1/2 in (4 cm) florets",
+            "18 to 25 min"
+          ],
+          [
+            "Carrots",
+            "1/2 in (1 cm) coins or sticks",
+            "25 to 30 min"
+          ],
+          [
+            "Potatoes or sweet potatoes",
+            "3/4 in (2 cm) cubes",
+            "30 to 40 min, turning once"
+          ],
+          [
+            "Brussels sprouts",
+            "Halved, cut side down",
+            "20 to 25 min"
+          ],
+          [
+            "Bell peppers and onions",
+            "1/2 in (1 cm) strips",
+            "20 to 25 min"
+          ],
+          [
+            "Zucchini",
+            "3/4 in (2 cm) half moons",
+            "15 to 20 min"
+          ],
+          [
+            "Green beans",
+            "Trimmed, whole",
+            "12 to 15 min"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "sauces",
+      "heading": "Sauces that carry the flavor",
+      "paragraphs": [
+        "A strong sauce is what makes a simple grilled chicken or roasted salmon taste like a finished dish. Herb, yogurt and citrus sauces add a lot of flavor for little fat, and they are all made ahead in a few minutes. Serve them on the side so people use as much as they like, and make more than you think you need; on a bowl line, the sauce runs out before anything else."
+      ],
+      "table": {
+        "caption": "Make-ahead sauces for 10",
+        "columns": [
+          "Sauce",
+          "Quantities for 10",
+          "Goes with",
+          "Keeps in the fridge"
+        ],
+        "rows": [
+          [
+            "Tzatziki",
+            "2 cups Greek yogurt, 1 grated cucumber squeezed dry, 2 garlic cloves, 2 tbsp lemon juice, dill, salt",
+            "Chicken, lamb, souvlaki, grain bowls",
+            "3 to 4 days"
+          ],
+          [
+            "Chimichurri",
+            "2 cups parsley, 4 garlic cloves, 1/2 cup olive oil, 1/4 cup red wine vinegar, chili flakes, salt",
+            "Steak, chicken, roasted potatoes",
+            "3 days"
+          ],
+          [
+            "Ginger-scallion",
+            "1 cup sliced scallions, 1/4 cup grated ginger, 1/3 cup neutral oil, 1 tsp salt",
+            "Rice bowls, salmon, chicken",
+            "4 days"
+          ],
+          [
+            "Peanut-lime",
+            "1/2 cup peanut butter, 1/4 cup soy sauce, 1/4 cup lime juice, 2 tbsp honey, warm water to thin",
+            "Noodle and rice bowls, grilled chicken",
+            "5 days"
+          ],
+          [
+            "Salsa verde (tomatillo)",
+            "2 lb tomatillos broiled, 1 onion, 2 jalapeños, cilantro, lime, salt, blended",
+            "Tacos, chicken, eggs",
+            "5 days"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "bowl-line",
+      "heading": "Build a bowl line for 10",
+      "paragraphs": [
+        "A bowl line is the easiest way to serve a lighter dinner to a crew with different appetites. Everyone takes the same components but builds their own ratio, so nobody gets a fixed small plate. Set it up in this order: grain, protein, a cooked vegetable, a raw or crunchy vegetable, sauce, then toppings. Most of it can be made ahead, and leftovers become lunch the next day."
+      ],
+      "steps": [
+        "Grain: 5 cups raw rice, farro or quinoa, cooked ahead and kept covered and warm.",
+        "Protein: 4 to 5 lb (1.8 to 2.3 kg) raw boneless chicken, salmon or pork, roasted or grilled and sliced.",
+        "Cooked vegetable: 4 lb of vegetables roasted on two half sheet pans.",
+        "Crunchy vegetable: shredded cabbage, sliced cucumber or quick-pickled onions (1 sliced red onion in 1/2 cup vinegar, 1 tbsp sugar and 1 tsp salt for 20 minutes).",
+        "Sauce: two from the table above, one creamy and one sharp.",
+        "Toppings: lime wedges, herbs, toasted seeds, crumbled feta, hot sauce."
       ]
     },
     {
-      "id": "flavor-without-bloat",
-      "heading": "Flavor without the \"food coma\"",
+      "id": "swaps",
+      "heading": "Lighter swaps that don't cost flavor",
       "paragraphs": [
-        "Most post-dinner crashes come from heavy fat + heavy starch + heavy portions, not one ingredient. Shift the ratio: more lean protein, a normal carb portion, and sauce that tastes intentional.",
-        "Use acid and spice the right way: citrus, vinegar, yogurt, herbs, and chiles. That is how you get big flavor without drowning everything in sugar or cheese."
-      ]
-    },
-    {
-      "id": "formats",
-      "heading": "Formats that work when you are short on time",
-      "paragraphs": [
-        "Bowls, trays, and grills win because they scale. They also let each person self-serve, which fixes portions without a lecture.",
-        "If the crew is split between comfort and performance, keep the main plate balanced and make indulgent extras optional at the end of the line."
+        "Some swaps work well and some don't. Greek yogurt can replace half the sour cream in a dip or topping without anyone noticing. Breaded cutlets baked on a wire rack at 425°F (220°C) stay crisp on both sides, which frying doesn't manage without a lot of oil. Chili and pasta sauce can take an extra pound of vegetables or a can of beans. Ground turkey can stand in for beef if it is browned well and seasoned more boldly, since it has less fat carrying the flavor.",
+        "Swaps that usually disappoint include fat-free cheese, which doesn't melt, and replacing all the pasta or rice with vegetable noodles for a hungry crew. It is better to keep the starch at a normal portion and make the vegetable side larger."
       ]
     }
   ],
   "practicalAdvice": [
-    "Do not announce “healthy night.” Just cook a meal that tastes good and moves well.",
-    "Make sauce a real component: yogurt, citrus, garlic, herbs — not a vague drizzle.",
-    "If you need speed, go grill or sheet-pan. Hands-off beats heroic stovetop work on busy tours.",
-    "If you want seconds, make the vegetable side bigger — not the rice pot."
+    "Salt lean meat at least an hour ahead and pull it as soon as it reaches temperature.",
+    "Roast vegetables at 425 to 450°F (220 to 230°C) in a single layer with space between pieces.",
+    "Serve at least one strong sauce on the side; make more than seems necessary.",
+    "Serve lighter dinners as a bowl line so people build their own portions.",
+    "Make the vegetable side bigger rather than shrinking the starch."
   ],
   "mealRecommendations": [
     {
       "slug": "greek-chicken-bowls",
       "title": "Greek Chicken Power Bowls",
-      "blurb": "Balanced bowls with real flavor — easy to portion."
+      "blurb": "The bowl line above with tzatziki and a crunchy salad."
     },
     {
       "slug": "ginger-salmon-bowls",
       "title": "Ginger Salmon Rice Bowls",
-      "blurb": "Lighter-feeling dinner that still eats like a real plate."
+      "blurb": "Salmon roasted skin side down, with a ginger sauce."
     },
     {
-      "slug": "sheet-pan-fajitas",
-      "title": "Chicken Fajitas",
-      "blurb": "Hands-off and fast; build-your-own keeps everyone happy."
+      "slug": "chicken-souvlaki",
+      "title": "Chicken Souvlaki",
+      "blurb": "Marinated skewers that stay juicy over medium heat."
     },
     {
       "slug": "lemon-herb-salmon",
       "title": "Lemon Herb Salmon",
-      "blurb": "Premium-feeling hall meal that stays clean and bright."
+      "blurb": "A simple fish dinner finished with lemon and herbs."
     },
     {
-      "slug": "turkey-chili",
-      "title": "Turkey Chili",
-      "blurb": "Chili still counts — leaner batch that holds all shift."
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "blurb": "Chicken and peppers roasted hot on two pans."
     },
     {
       "slug": "mediterranean-chickpea",
-      "title": "Mediterranean Chickpea Bowl Night",
-      "blurb": "Plant-forward option that still feels like dinner."
+      "title": "Mediterranean Chickpea Bowls",
+      "blurb": "A meatless bowl that still fills a plate."
+    },
+    {
+      "slug": "turkey-burgers",
+      "title": "Black Bean Turkey Burgers",
+      "blurb": "Beans keep lean turkey patties moist."
+    },
+    {
+      "slug": "teriyaki-donburi",
+      "title": "Teriyaki Donburi",
+      "blurb": "A rice bowl with a glaze that carries the flavor."
     }
   ],
   "faqs": [
     {
-      "question": "Is this medical advice?",
-      "answer": "No. This is practical shift nutrition for station kitchens. Follow your department's health guidance and consult professionals for personal medical questions."
-    },
-    {
-      "question": "What makes a firefighter meal healthy without turning it into diet food?",
-      "answer": "Protein-forward plates with real sauce — yogurt, citrus, garlic — instead of dry, under-seasoned chicken. Greek chicken bowls and ginger salmon rice bowls hit that mark: a full plate with real flavor, not a diet-plate stand-in."
-    },
-    {
-      "question": "How do you keep dinner lighter without leaving the crew hungry?",
-      "answer": "Make the vegetable side bigger instead of shrinking the rice or protein. Bowls work well because everyone builds their own ratio — protein, grain, veg, sauce — so nobody ends up with a sad, small plate."
+      "question": "How do I keep chicken breast from drying out when cooking for a crowd?",
+      "answer": "Pound the breasts to an even 3/4 in (2 cm), salt them at least an hour ahead, and roast them at 425°F (220°C) on sheet pans with space between them. Start checking at 15 minutes and pull them at 165°F (74°C). Let them rest 5 minutes before slicing across the grain."
     }
   ],
   "relatedArticleSlugs": [
-    "healthy-meals-for-active-crews",
     "high-protein-firehall-meals",
-    "meals-wont-wreck-energy-levels"
+    "healthy-station-snacks",
+    "healthy-smoothies-at-the-hall",
+    "bbq-night-at-the-station"
   ],
   "keywords": [
-    "healthy firefighter meals",
+    "healthy meals that taste good",
     "healthy firehall meals",
-    "high protein dinners",
-    "station cooking"
+    "healthy meals for a crowd",
+    "how to keep chicken breast juicy",
+    "roasted vegetable times"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Healthy Meals That Still Taste Good — healthy firefighter meals tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "Healthy Meals That Taste Good: Lighter Cooking for a Crowd",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    }
+  ]
 }

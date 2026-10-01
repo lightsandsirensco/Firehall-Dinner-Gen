@@ -1,13 +1,13 @@
 {
-  "generatedAt": "2026-07-30T20:40:03.398Z",
+  "generatedAt": "2026-10-01T14:51:41.108Z",
   "threshold": 72,
   "totals": {
-    "recipes": 773,
-    "hallCatalog": 284,
+    "recipes": 791,
+    "hallCatalog": 302,
     "exploreCurated": 489,
-    "failed": 81,
+    "failed": 83,
     "buildBlockers": 0,
-    "duplicateHeroPaths": 252
+    "duplicateHeroPaths": 247
   },
   "duplicateHeroPaths": [
     {
@@ -137,13 +137,6 @@
         "beef-broccoli",
         "beef-broccoli",
         "sheet-pan-dinner-hanger-steak-with-mushrooms-and-carrots"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/lean-beef-broccoli-rice.jpg",
-      "slugs": [
-        "lean-beef-broccoli-rice",
-        "lean-beef-broccoli-rice"
       ]
     },
     {
@@ -428,13 +421,6 @@
       "slugs": [
         "sheet-pan-fajitas",
         "sheet-pan-fajitas"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
-      "slugs": [
-        "sheet-pan-chicken-fajitas-lite",
-        "sheet-pan-chicken-fajitas-lite"
       ]
     },
     {
@@ -925,13 +911,6 @@
       "slugs": [
         "lamb-kofta-skewer-platter",
         "lamb-kofta-skewer-platter"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/lean-turkey-bean-chili.jpg",
-      "slugs": [
-        "lean-turkey-bean-chili",
-        "lean-turkey-bean-chili"
       ]
     },
     {
@@ -1427,13 +1406,6 @@
       ]
     },
     {
-      "hero": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
-      "slugs": [
-        "italian-sausage-veg-sheet-pan",
-        "italian-sausage-veg-sheet-pan"
-      ]
-    },
-    {
       "hero": "/images/hall-expansion/shawarma-bar-night.jpg",
       "slugs": [
         "shawarma-bar-night",
@@ -1676,13 +1648,6 @@
       "slugs": [
         "turkey-shepherds-sweet-potato",
         "turkey-shepherds-sweet-potato"
-      ]
-    },
-    {
-      "hero": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
-      "slugs": [
-        "turkey-quinoa-stuffed-peppers",
-        "turkey-quinoa-stuffed-peppers"
       ]
     },
     {
@@ -1972,6 +1937,32 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "firehouse-diner-burger-bowls",
+      "title": "Firehouse Diner Burger Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/firehouse-diner-burger-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehouse-diner-burger-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehouse-diner-burger-bowls.jpg",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Firehouse Diner Burger Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts burger but meal requires bowl (Firehouse Diner Burger Bowls)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "greek-spiced-beef-burger-bowls-tzatziki-slaw",
       "title": "Greek-Spiced Beef Burger Bowls with Tzatziki Slaw",
       "protein": "beef",
@@ -2019,6 +2010,27 @@
           "code": "format_mismatch",
           "severity": "critical",
           "message": "image depicts skillet but meal is pasta (Lemon Salmon Orzo)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "paneer-tikka-masala-bowls",
+      "title": "Paneer Tikka Masala Bowls",
+      "protein": "vegetarian",
+      "mealFormat": "bowl",
+      "cuisine": "indian",
+      "heroImage": "/images/hall-expansion/paneer-tikka-masala-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/paneer-tikka-masala-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/paneer-tikka-masala-bowls.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible"
         }
       ]
     },
@@ -4588,21 +4600,6 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "lean-beef-broccoli-rice",
-      "title": "Beef and Broccoli Rice",
-      "protein": "beef",
-      "mealFormat": "stir_fry",
-      "cuisine": "Chinese-American",
-      "heroImage": "/images/golden-100/lean-beef-broccoli-rice.jpg",
-      "thumbImage": "/images/thumbs/lean-beef-broccoli-rice.jpg",
-      "mobileImage": "/images/mobile/lean-beef-broccoli-rice.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
       "slug": "beef-barley-soup",
       "title": "Beef Barley Soup",
       "protein": "beef",
@@ -4738,6 +4735,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "black-bean-cottage-cheese-enchilada-bake",
+      "title": "Black Bean & Cottage Cheese Enchilada Bake",
+      "protein": "vegetarian",
+      "mealFormat": "bake",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "turkey-burgers",
       "title": "Black Bean Turkey Burgers",
       "protein": "turkey",
@@ -4761,6 +4773,21 @@
       "heroImage": "/images/golden-100/blackened-cod-taco-night.jpg",
       "thumbImage": "/images/thumbs/blackened-cod-taco-night.jpg",
       "mobileImage": "/images/mobile/blackened-cod-taco-night.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "blackened-salmon-sweet-potato-bowls",
+      "title": "Blackened Salmon Sweet Potato Bowls",
+      "protein": "salmon",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -4974,6 +5001,21 @@
       "heroImage": "/images/hall-expansion/cajun-chicken-rice-skillet.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/cajun-chicken-rice-skillet.jpg",
       "mobileImage": "/images/mobile/hall-expansion/cajun-chicken-rice-skillet.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "cajun-lime-shrimp-black-bean-bowls",
+      "title": "Cajun Lime Shrimp & Black Bean Bowls",
+      "protein": "seafood",
+      "mealFormat": "bowl",
+      "cuisine": "cajun",
+      "heroImage": "/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5274,21 +5316,6 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Chicken Fajitas",
-      "protein": "chicken",
-      "mealFormat": "sheet_pan",
-      "cuisine": "Mexican",
-      "heroImage": "/images/golden-100/sheet-pan-chicken-fajitas-lite.jpg",
-      "thumbImage": "/images/thumbs/sheet-pan-chicken-fajitas-lite.jpg",
-      "mobileImage": "/images/mobile/sheet-pan-chicken-fajitas-lite.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
       "slug": "asian-chicken-lettuce-cups",
       "title": "Chicken Lettuce Cups",
       "protein": "chicken",
@@ -5511,6 +5538,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "chickpea-pasta-primavera-white-beans",
+      "title": "Chickpea Pasta Primavera with White Beans",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "chili-mac",
       "title": "Chili Mac Skillet",
       "protein": "beef",
@@ -5624,6 +5666,21 @@
       "heroImage": "/images/hall-expansion/costco-rotisserie-remix.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/costco-rotisserie-remix.jpg",
       "mobileImage": "/images/mobile/hall-expansion/costco-rotisserie-remix.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "cottage-cheese-spinach-stuffed-shells",
+      "title": "Cottage Cheese & Spinach Stuffed Shells",
+      "protein": "vegetarian",
+      "mealFormat": "pasta",
+      "cuisine": "italian",
+      "heroImage": "/images/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -5897,6 +5954,107 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "firehouse-chicken-black-bean-bowls",
+      "title": "Firehouse Chicken & Black Bean Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "firehouse-dense-bean-salad",
+      "title": "Firehouse Dense Bean Salad",
+      "protein": "vegetarian",
+      "mealFormat": "salad",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "firehouse-diner-burger-bowls",
+      "title": "Firehouse Diner Burger Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/firehouse-diner-burger-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehouse-diner-burger-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehouse-diner-burger-bowls.jpg",
+      "mismatchConfidence": 92,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "path_title_conflict",
+          "severity": "critical",
+          "message": "hero path conflicts with meal title/format (Firehouse Diner Burger Bowls)"
+        },
+        {
+          "code": "plating_mismatch",
+          "severity": "critical",
+          "message": "hero depicts burger but meal requires bowl (Firehouse Diner Burger Bowls)"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "firehouse-lentil-chili",
+      "title": "Firehouse Lentil Chili",
+      "protein": "vegetarian",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/firehouse-lentil-chili.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehouse-lentil-chili.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehouse-lentil-chili.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "firehouse-sweet-potato-beef-protein-bowls",
+      "title": "Firehouse Sweet Potato & Beef Protein Bowls",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "firehouse-turkey-white-bean-soup",
+      "title": "Firehouse Turkey & White Bean Soup",
+      "protein": "turkey",
+      "mealFormat": "soup_chili",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "crispy-fish-taco-night",
       "title": "Fish Tacos",
       "protein": "fish",
@@ -6017,6 +6175,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
+      "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
+      "protein": "beef",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "general-tsos-baked-chicken",
       "title": "General Tso's-Style Baked Chicken",
       "protein": "chicken",
@@ -6115,6 +6288,21 @@
       "heroImage": "/images/hall-expansion/greek-chicken-pitas.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/greek-chicken-pitas.jpg",
       "mobileImage": "/images/mobile/hall-expansion/greek-chicken-pitas.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "greek-yogurt-white-bean-power-bowls",
+      "title": "Greek Yogurt & White Bean Power Bowls",
+      "protein": "vegetarian",
+      "mealFormat": "bowl",
+      "cuisine": "mediterranean",
+      "heroImage": "/images/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -6298,6 +6486,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
+      "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
+      "protein": "chicken",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "high-protein-chicken-fried-rice",
       "title": "High-Protein Chicken Fried Rice",
       "protein": "chicken",
@@ -6366,6 +6569,21 @@
       "heroImage": "/images/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
       "mobileImage": "/images/mobile/hall-expansion/honey-mustard-oven-chicken-thighs.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "honey-mustard-turkey-meatball-bowls",
+      "title": "Honey Mustard Turkey Meatball Bowls",
+      "protein": "turkey",
+      "mealFormat": "bowl",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -6574,21 +6792,6 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "lean-turkey-bean-chili",
-      "title": "Lean Turkey and Bean Chili",
-      "protein": "turkey",
-      "mealFormat": "slow_cooker",
-      "cuisine": "American",
-      "heroImage": "/images/golden-100/lean-turkey-bean-chili.jpg",
-      "thumbImage": "/images/thumbs/lean-turkey-bean-chili.jpg",
-      "mobileImage": "/images/mobile/lean-turkey-bean-chili.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
       "slug": "lebanese-chicken-shish-platter",
       "title": "Lebanese Chicken Shish Platter",
       "protein": "chicken",
@@ -6720,6 +6923,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "lemon-herb-cod-roasted-vegetables",
+      "title": "Lemon-Herb Cod with Roasted Vegetables",
+      "protein": "seafood",
+      "mealFormat": "bake",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "smoky-lentil-kale-soup",
       "title": "Lentil and Kale Soup",
       "protein": "plant",
@@ -6758,6 +6976,21 @@
       "heroImage": "/images/hall-expansion/loaded-baked-potato-soup-crock.jpg",
       "thumbImage": "/images/thumbs/hall-expansion/loaded-baked-potato-soup-crock.jpg",
       "mobileImage": "/images/mobile/hall-expansion/loaded-baked-potato-soup-crock.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "loaded-firehouse-sweet-potatoes",
+      "title": "Loaded Firehouse Sweet Potatoes",
+      "protein": "beef",
+      "mealFormat": "bake",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -7215,6 +7448,27 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "paneer-tikka-masala-bowls",
+      "title": "Paneer Tikka Masala Bowls",
+      "protein": "vegetarian",
+      "mealFormat": "bowl",
+      "cuisine": "indian",
+      "heroImage": "/images/hall-expansion/paneer-tikka-masala-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/paneer-tikka-masala-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/paneer-tikka-masala-bowls.jpg",
+      "mismatchConfidence": 93,
+      "pass": false,
+      "needsManualReview": true,
+      "mismatches": [
+        {
+          "code": "image_title_mismatch",
+          "severity": "critical",
+          "message": "plating accuracy: curry_fail: rice not clearly visible"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "paprika-roasted-chicken-quarters",
       "title": "Paprika Roasted Chicken Quarters",
       "protein": "chicken",
@@ -7575,6 +7829,27 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "red-lentil-paneer-dal",
+      "title": "Red Lentil & Paneer Dal",
+      "protein": "vegetarian",
+      "mealFormat": "soup_chili",
+      "cuisine": "indian",
+      "heroImage": "/images/hall-expansion/red-lentil-paneer-dal.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/red-lentil-paneer-dal.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/red-lentil-paneer-dal.jpg",
+      "mismatchConfidence": 55,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": [
+        {
+          "code": "format_mismatch",
+          "severity": "warning",
+          "message": "soup/chili recipe but hero lacks soup/stew visual cues — manual review"
+        }
+      ]
+    },
+    {
+      "source": "hall_catalog",
       "slug": "rice-bowl-bar-night",
       "title": "Rice Bowl Bar Night",
       "protein": "chicken",
@@ -7746,14 +8021,14 @@
     },
     {
       "source": "hall_catalog",
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Sausage, Peppers & Zucchini Sheet Pan",
-      "protein": "pork",
-      "mealFormat": "sheet_pan",
-      "cuisine": "Italian",
-      "heroImage": "/images/golden-100/italian-sausage-veg-sheet-pan.jpg",
-      "thumbImage": "/images/thumbs/italian-sausage-veg-sheet-pan.jpg",
-      "mobileImage": "/images/mobile/italian-sausage-veg-sheet-pan.jpg",
+      "slug": "sesame-ginger-tofu-bowls",
+      "title": "Sesame Ginger Tofu Bowls",
+      "protein": "vegetarian",
+      "mealFormat": "bowl",
+      "cuisine": "asian",
+      "heroImage": "/images/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/sesame-ginger-tofu-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -7829,6 +8104,21 @@
       "heroImage": "/images/golden-100/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
       "thumbImage": "/images/thumbs/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
       "mobileImage": "/images/mobile/sheet-pan-chimichurri-chicken-charred-vegetables.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+      "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
+      "protein": "chicken",
+      "mealFormat": "sheet_pan",
+      "cuisine": "american",
+      "heroImage": "/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -8037,6 +8327,21 @@
     },
     {
       "source": "hall_catalog",
+      "slug": "southwest-black-bean-corn-bowls",
+      "title": "Southwest Black Bean & Corn Bowls",
+      "protein": "vegetarian",
+      "mealFormat": "salad",
+      "cuisine": "mexican",
+      "heroImage": "/images/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
       "slug": "southwest-steak-bowls",
       "title": "Southwest Steak Bowls",
       "protein": "beef",
@@ -8180,6 +8485,21 @@
       "heroImage": "/images/golden-100/hall-taco-bar.jpg",
       "thumbImage": "/images/thumbs/hall-taco-bar.jpg",
       "mobileImage": "/images/mobile/hall-taco-bar.jpg",
+      "mismatchConfidence": 0,
+      "pass": true,
+      "needsManualReview": false,
+      "mismatches": []
+    },
+    {
+      "source": "hall_catalog",
+      "slug": "tempeh-peanut-buddha-bowls",
+      "title": "Tempeh Peanut Buddha Bowls",
+      "protein": "vegetarian",
+      "mealFormat": "bowl",
+      "cuisine": "asian",
+      "heroImage": "/images/hall-expansion/tempeh-peanut-buddha-bowls.jpg",
+      "thumbImage": "/images/thumbs/hall-expansion/tempeh-peanut-buddha-bowls.jpg",
+      "mobileImage": "/images/mobile/hall-expansion/tempeh-peanut-buddha-bowls.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,
@@ -8416,21 +8736,6 @@
       "heroImage": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
       "thumbImage": "/images/thumbs/turkey-shepherds-sweet-potato.jpg",
       "mobileImage": "/images/mobile/turkey-shepherds-sweet-potato.jpg",
-      "mismatchConfidence": 0,
-      "pass": true,
-      "needsManualReview": false,
-      "mismatches": []
-    },
-    {
-      "source": "hall_catalog",
-      "slug": "turkey-quinoa-stuffed-peppers",
-      "title": "Turkey Stuffed Peppers",
-      "protein": "turkey",
-      "mealFormat": "bake",
-      "cuisine": "American",
-      "heroImage": "/images/golden-100/turkey-quinoa-stuffed-peppers.jpg",
-      "thumbImage": "/images/thumbs/turkey-quinoa-stuffed-peppers.jpg",
-      "mobileImage": "/images/mobile/turkey-quinoa-stuffed-peppers.jpg",
       "mismatchConfidence": 0,
       "pass": true,
       "needsManualReview": false,

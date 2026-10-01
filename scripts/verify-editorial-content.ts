@@ -5,9 +5,9 @@ import { EDITORIAL_ARTICLES } from "../shared/editorial/articles-data.js";
 import { editorialArticleSchema } from "../shared/editorial/content-schema.js";
 import { auditEditorialArticleCopy } from "../shared/editorial/editorial-copy-audit.js";
 import { validateArticleMealRecommendations } from "../shared/editorial/recommendation-rules.js";
-import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
+import { getApprovedCatalog } from "../server/approved-catalog-cache.js";
 
-const goldenSlugs = new Set(GOLDEN_100_RECIPES.map((r) => r.slug));
+const recipeSlugs = new Set(getApprovedCatalog().recipes.map((r) => r.slug));
 const breakfastIndexPath = path.join(process.cwd(), "client/public/catalog/breakfast/index.json");
 const breakfastSlugs = new Set<string>();
 if (fs.existsSync(breakfastIndexPath)) {
@@ -19,7 +19,6 @@ if (fs.existsSync(breakfastIndexPath)) {
 
 const MEAL_COUNT_RULES: Record<string, number> = {
   "rookie-firefighter-meal-guide": 10,
-  "firefighter-breakfast-guide": 10,
 };
 
 let fail = 0;
@@ -47,7 +46,7 @@ for (const article of EDITORIAL_ARTICLES) {
         console.error(`  ✗ ${article.slug}: unknown breakfast slug ${meal.slug}`);
         fail++;
       }
-    } else if (!goldenSlugs.has(meal.slug)) {
+    } else if (!recipeSlugs.has(meal.slug)) {
       console.error(`  ✗ ${article.slug}: unknown recipe slug ${meal.slug}`);
       fail++;
     }

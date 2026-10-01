@@ -22,6 +22,7 @@ import { getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
 import { defaultRecipeServings } from "../shared/nutrition/servings.js";
 import type { RecipeNutritionRecord } from "../shared/nutrition/types.js";
 import type { PerServingSuspicion } from "../shared/nutrition/per-serving-audit.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const FIX = process.argv.includes("--fix");
@@ -318,7 +319,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`);
+  writeFileAtomicSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`);
 
   const md = [
     "# Nutrition Per-Serving Audit",
@@ -361,7 +362,7 @@ function main(): void {
   if (!hiddenRows.length) md.push("_None._");
   else hiddenRows.forEach((r) => md.push(`- \`${r.slug}\` — ${r.title}`));
 
-  fs.writeFileSync(MD_OUT, `${md.join("\n")}\n`);
+  writeFileAtomicSync(MD_OUT, `${md.join("\n")}\n`);
 
   console.log(
     `[audit:nutrition-per-serving] audited=${report.totals.recipesAudited} fixed=${fixed} hidden=${hidden} suspicious=${report.totals.suspiciousRemaining}`,

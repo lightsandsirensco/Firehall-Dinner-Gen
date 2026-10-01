@@ -63,7 +63,7 @@ import {
   FIREFIGHTER_RED_LEAD_SERVING_SUGGESTIONS,
 } from "../../shared/seo/firefighter-red-lead-recipe-data.js";
 import { absoluteImageUrl, absoluteUrl, recipePath } from "../../shared/seo/urls.js";
-import { SEO_TWITTER_HANDLE } from "../../shared/seo/constants.js";
+import { SEO_HOME_H1, SEO_HOME_H1_SUPPORT, SEO_TWITTER_HANDLE } from "../../shared/seo/constants.js";
 import { HOME_FAQ_ITEMS } from "../../shared/seo/home-faq-items.js";
 import { FIREHALL_CATEGORY_LABEL, type FirehallCategoryId } from "../../shared/firehall-categories.js";
 import { firehallCategoryExplorePath } from "../../shared/browse-canonical.js";
@@ -82,7 +82,7 @@ import { readSmoothieRecipePage } from "../fuel-catalog/page-store.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../../shared/fuel-catalog/smoothies/catalog-data.js";
 import { readEditorialArticle } from "../editorial/page-store.js";
 import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../../shared/editorial/articles-data.js";
-import { guidePath } from "../../shared/editorial/content-schema.js";
+import { guideFaqSchemaItems, guidePath } from "../../shared/editorial/content-schema.js";
 import { guidesInCluster } from "../../shared/editorial/topic-clusters.js";
 import { getApprovedCatalog } from "../approved-catalog-cache.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
@@ -259,8 +259,8 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         buildFaqPageSchema(HOME_FAQ_ITEMS),
       ],
       bodyHtml: renderIndexSnapshotHtml({
-        h1: "Firehall Meals",
-        intro: seo.description,
+        h1: SEO_HOME_H1,
+        intro: SEO_HOME_H1_SUPPORT,
         sections: [categoryLinkSection(), popularRecipeLinks(10), ...moreResourcesLinkSections()],
       }),
     };
@@ -818,7 +818,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
       seo: buildGuideArticleSeo(article),
       jsonLd: [
         buildArticleSchema(origin, article),
-        buildFaqPageSchema(article.faqs),
+        ...(guideFaqSchemaItems(article).length ? [buildFaqPageSchema(guideFaqSchemaItems(article))] : []),
         buildBreadcrumbListSchema(origin, buildGuideArticleBreadcrumbs(origin, article)),
       ],
       bodyHtml: renderArticleSnapshotHtml(origin, editorialArticleSnapshot(article, knownRecipeSlugsSet())),

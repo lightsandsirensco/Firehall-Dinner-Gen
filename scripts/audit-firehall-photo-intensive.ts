@@ -9,6 +9,7 @@
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const REVIEW = path.join(process.cwd(), "review");
 const OUT_JSON = path.join(REVIEW, "firehall-photo-intensive-audit.json");
@@ -139,7 +140,7 @@ function main(): void {
     },
   };
 
-  fs.writeFileSync(OUT_JSON, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(OUT_JSON, JSON.stringify(report, null, 2));
 
   const md = [
     "# Firehall Photo Intensive Audit",
@@ -177,7 +178,7 @@ function main(): void {
     "",
   ].join("\n");
 
-  fs.writeFileSync(OUT_MD, md);
+  writeFileAtomicSync(OUT_MD, md);
 
   console.log(`[audit:firehall-photo-intensive] wrote ${OUT_JSON}`);
   console.log(`[audit:firehall-photo-intensive] wrote ${OUT_MD}`);

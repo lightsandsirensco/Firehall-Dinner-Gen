@@ -44,7 +44,6 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Works when the crew wants something cold and filling between meals without firing up the stove. Cleanup is one blender jar.",
     imagePath: SMOOTHIE_IMAGE("mixed-berry-protein"),
-    imageAlt: "Mixed berry protein smoothie in a glass on a station counter",
   },
   {
     id: "peanut-butter-banana-recovery",
@@ -75,7 +74,7 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Higher in calories by design — good after workouts, yard work, or a physically heavy call when someone needs fuel fast.",
     imagePath: SMOOTHIE_IMAGE("peanut-butter-banana-recovery"),
-    imageAlt: "Peanut butter banana recovery shake in a tall glass",
+    imageAlt: "Peanut butter banana recovery shake with banana slices and cocoa powder",
   },
   {
     id: "tropical-mango-greek",
@@ -106,7 +105,7 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Bright flavor helps on afternoon shifts when coffee alone is not cutting it. No cooking, minimal dishes.",
     imagePath: SMOOTHIE_IMAGE("tropical-mango-greek"),
-    imageAlt: "Tropical mango Greek yogurt smoothie with lime",
+    imageAlt: "Tropical mango Greek yogurt smoothie with mango chunks, shredded coconut, and a lime slice",
   },
   {
     id: "green-pineapple",
@@ -137,7 +136,7 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Light enough for early morning or post-call when heavy food sounds wrong. Good “reset” option.",
     imagePath: SMOOTHIE_IMAGE("green-pineapple"),
-    imageAlt: "Green pineapple spinach smoothie in a clear glass",
+    imageAlt: "Green pineapple smoothie with pineapple chunks, spinach, and a lime wedge",
   },
   {
     id: "strawberry-oat-breakfast",
@@ -169,7 +168,7 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Strong choice for breakfast handoff or crews eating light before a busy morning block.",
     imagePath: SMOOTHIE_IMAGE("strawberry-oat-breakfast"),
-    imageAlt: "Strawberry oatmeal breakfast smoothie with cinnamon",
+    imageAlt: "Strawberry oatmeal breakfast smoothie with frozen strawberries and rolled oats",
   },
   {
     id: "mocha-protein",
@@ -201,7 +200,7 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Caffeine plus protein in one cup — useful when the pot is empty but the board is not.",
     imagePath: SMOOTHIE_IMAGE("mocha-protein"),
-    imageAlt: "Mocha protein smoothie with foam on top",
+    imageAlt: "Mocha protein smoothie with banana and cocoa powder",
   },
   {
     id: "blueberry-almond",
@@ -232,7 +231,7 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Berries hide in the freezer well — good pantry item for halls trying to stock healthier grab-and-go options.",
     imagePath: SMOOTHIE_IMAGE("blueberry-almond"),
-    imageAlt: "Blueberry almond smoothie with purple color",
+    imageAlt: "Blueberry almond smoothie with blueberries, sliced almonds, and rolled oats",
   },
   {
     id: "chocolate-banana-recovery",
@@ -264,7 +263,7 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "This one works well after workouts or overnight calls because it is higher in protein but still light.",
     imagePath: SMOOTHIE_IMAGE("chocolate-banana-recovery"),
-    imageAlt: "Chocolate banana recovery smoothie",
+    imageAlt: "Chocolate banana recovery smoothie with banana slices",
   },
   {
     id: "citrus-ginger",
@@ -295,7 +294,7 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Hydration-forward option on hot days or after heat exposure — not a meal replacement, but a solid bridge.",
     imagePath: SMOOTHIE_IMAGE("citrus-ginger"),
-    imageAlt: "Citrus ginger smoothie with orange color",
+    imageAlt: "Citrus ginger smoothie with orange, ginger, carrot, and pineapple",
   },
   {
     id: "strawberry-spinach",
@@ -326,6 +325,6 @@ export const SMOOTHIE_RECIPES_SOURCE: EditorialEmbeddedRecipe[] = [
     shiftNote:
       "Easy sell to crews skeptical of green food — looks and tastes like a berry shake.",
     imagePath: SMOOTHIE_IMAGE("strawberry-spinach"),
-    imageAlt: "Strawberry spinach smoothie pink color",
+    imageAlt: "Strawberry spinach smoothie with frozen strawberries and baby spinach",
   },
 ];

@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-29T01:42:28.237Z",
-  "count": 337,
+  "generatedAt": "2026-09-30T19:38:58.919Z",
+  "count": 315,
   "queue": [
     {
       "priority": "P1",
@@ -137,21 +137,6 @@
     {
       "priority": "P1",
       "collection": "breakfast",
-      "slug": "berry-vanilla-protein-overnight-oats",
-      "title": "Berry Vanilla Protein Overnight Oats",
-      "image": "/images/breakfast/berry-vanilla-protein-overnight-oats.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/berry-vanilla-protein-overnight-oats.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
-      "collection": "breakfast",
       "slug": "biscuit-french-toast-sliders",
       "title": "Biscuit French Toast Sliders",
       "image": "/images/breakfast/biscuit-french-toast-sliders.jpg",
@@ -173,35 +158,6 @@
         "technical: thumbnail missing (/images/thumbs/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)",
         "technical: mobile variant missing (/images/mobile/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)",
         "technical: rail variant missing (/images/rails/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
-      "collection": "breakfast",
-      "slug": "black-bean-egg-white-breakfast-burritos",
-      "title": "Black Bean & Egg White Breakfast Burritos",
-      "image": "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/black-bean-egg-white-breakfast-burritos.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
-      "collection": "hall-expansion",
-      "slug": "blackened-salmon-sweet-potato-bowls",
-      "title": "Blackened Salmon Sweet Potato Bowls",
-      "image": "/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg)"
       ],
       "recommended_action": "fix broken/missing hero, then re-audit"
     },
@@ -317,20 +273,6 @@
         "consistency: people or hands in frame"
       ],
       "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/cajun-chicken-dirty-rice-bowls)"
-    },
-    {
-      "priority": "P1",
-      "collection": "hall-expansion",
-      "slug": "cajun-lime-shrimp-black-bean-bowls",
-      "title": "Cajun Lime Shrimp & Black Bean Bowls",
-      "image": "/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
     },
     {
       "priority": "P1",
@@ -461,7 +403,7 @@
       "title": "Chilaquiles Verde Bake",
       "image": "/images/breakfast/chilaquiles-verde-bake.jpg",
       "issues": [
-        "consistency: brightness outlier (+3.6σ vs catalog)",
+        "consistency: brightness outlier (+3.7σ vs catalog)",
         "consistency: text or logo on mug",
         "consistency: text or logo in frame"
       ],
@@ -549,21 +491,6 @@
     },
     {
       "priority": "P1",
-      "collection": "breakfast",
-      "slug": "cottage-cheese-veggie-egg-bake",
-      "title": "Cottage Cheese Veggie Egg Bake",
-      "image": "/images/breakfast/cottage-cheese-veggie-egg-bake.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/cottage-cheese-veggie-egg-bake.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
       "collection": "hall-expansion",
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
@@ -626,38 +553,6 @@
         "consistency: people or hands in frame"
       ],
       "recommended_action": "regenerate after manual review (npm run images:regen -- --only=hall-expansion/egg-roll-in-a-bowl-crew)"
-    },
-    {
-      "priority": "P1",
-      "collection": "breakfast",
-      "slug": "egg-white-black-bean-breakfast-quesadillas",
-      "title": "Egg White & Black Bean Breakfast Quesadillas",
-      "image": "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
-      "collection": "golden-100",
-      "slug": "enchilada-casserole",
-      "title": "Chicken Enchilada Casserole",
-      "image": "/images/golden-100/enchilada-casserole.jpg",
-      "issues": [
-        "recipe-data: title says \"chicken\" but the ingredient list has none",
-        "accuracy: rolled enchiladas instead of casserole",
-        "accuracy: missing ground beef",
-        "accuracy: missing black olives",
-        "consistency: people in the background",
-        "consistency: people or hands in frame",
-        "technical: alt text does not match the visible food"
-      ],
-      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
     },
     {
       "priority": "P1",
@@ -827,35 +722,6 @@
     },
     {
       "priority": "P1",
-      "collection": "breakfast",
-      "slug": "firehouse-breakfast-protein-bowls",
-      "title": "Firehouse Breakfast Protein Bowls",
-      "image": "/images/breakfast/firehouse-breakfast-protein-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/firehouse-breakfast-protein-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/firehouse-breakfast-protein-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/firehouse-breakfast-protein-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/firehouse-breakfast-protein-bowls.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
-      "collection": "hall-expansion",
-      "slug": "firehouse-chicken-black-bean-bowls",
-      "title": "Firehouse Chicken & Black Bean Bowls",
-      "image": "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/firehouse-chicken-black-bean-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
       "collection": "hall-expansion",
       "slug": "firehouse-dense-bean-salad",
       "title": "Firehouse Dense Bean Salad",
@@ -951,20 +817,6 @@
         "consistency: people or hands in frame"
       ],
       "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/four-step-chicken-piccata)"
-    },
-    {
-      "priority": "P1",
-      "collection": "hall-expansion",
-      "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
-      "title": "Garlic Steak & Broccoli Bowls with Herbed Cottage Cheese",
-      "image": "/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
     },
     {
       "priority": "P1",
@@ -1171,21 +1023,6 @@
     },
     {
       "priority": "P1",
-      "collection": "breakfast",
-      "slug": "high-protein-breakfast-burrito-bowls",
-      "title": "High-Protein Breakfast Burrito Bowls",
-      "image": "/images/breakfast/high-protein-breakfast-burrito-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/high-protein-breakfast-burrito-bowls.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
       "collection": "performance-meals",
       "slug": "high-protein-chicken-fried-rice",
       "title": "High-Protein Chicken Fried Rice",
@@ -1197,20 +1034,6 @@
         "consistency: people or hands in frame"
       ],
       "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/high-protein-chicken-fried-rice)"
-    },
-    {
-      "priority": "P1",
-      "collection": "hall-expansion",
-      "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
-      "title": "High-Protein Chicken & Quinoa Meal-Prep Bowls",
-      "image": "/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
     },
     {
       "priority": "P1",
@@ -1237,20 +1060,6 @@
         "consistency: people or hands in frame"
       ],
       "recommended_action": "regenerate after manual review (npm run images:regen -- --only=performance-meals/honey-garlic-chicken-rice-bowls)"
-    },
-    {
-      "priority": "P1",
-      "collection": "hall-expansion",
-      "slug": "honey-mustard-turkey-meatball-bowls",
-      "title": "Honey Mustard Turkey Meatball Bowls",
-      "image": "/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
     },
     {
       "priority": "P1",
@@ -1427,7 +1236,7 @@
       "title": "Lebanese Chicken Shish Platter",
       "image": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
       "issues": [
-        "consistency: brightness outlier (+3.9σ vs catalog)",
+        "consistency: brightness outlier (+4.0σ vs catalog)",
         "accuracy: salad present — not in recipe",
         "accuracy: missing tabbouleh"
       ],
@@ -1458,20 +1267,6 @@
         "consistency: people or hands in frame"
       ],
       "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=performance-meals/lemon-garlic-chicken-tray)"
-    },
-    {
-      "priority": "P1",
-      "collection": "hall-expansion",
-      "slug": "lemon-herb-cod-roasted-vegetables",
-      "title": "Lemon-Herb Cod with Roasted Vegetables",
-      "image": "/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
     },
     {
       "priority": "P1",
@@ -1549,7 +1344,7 @@
       "title": "Malaysian Laksa Soup",
       "image": "/images/hall-expansion/malaysian-laksa-soup.jpg",
       "issues": [
-        "consistency: colour temperature outlier (+2.5σ vs catalog)",
+        "consistency: colour temperature outlier (+2.6σ vs catalog)",
         "accuracy: tofu puffs not in recipe",
         "accuracy: missing visible chicken",
         "consistency: tofu puffs not in recipe"
@@ -1820,21 +1615,6 @@
     },
     {
       "priority": "P1",
-      "collection": "breakfast",
-      "slug": "peanut-butter-protein-overnight-oats",
-      "title": "Peanut Butter Protein Overnight Oats",
-      "image": "/images/breakfast/peanut-butter-protein-overnight-oats.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/peanut-butter-protein-overnight-oats.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/peanut-butter-protein-overnight-oats.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/peanut-butter-protein-overnight-oats.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/peanut-butter-protein-overnight-oats.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
       "collection": "hall-expansion",
       "slug": "pellet-smoked-chicken-quarters",
       "title": "Pellet Smoked Chicken Quarters",
@@ -1881,7 +1661,7 @@
       "title": "Peri Peri Chicken Platter",
       "image": "/images/hall-expansion/peri-peri-chicken-platter.jpg",
       "issues": [
-        "consistency: colour temperature outlier (+4.6σ vs catalog)",
+        "consistency: colour temperature outlier (+4.7σ vs catalog)",
         "accuracy: french fries present — not in recipe",
         "accuracy: missing grilled red bell peppers",
         "accuracy: missing grilled yellow onion",
@@ -1963,15 +1743,12 @@
       "title": "Pork Carnitas Tacos",
       "image": "/images/golden-100/pork-carnitas-tacos.jpg",
       "issues": [
-        "recipe-data: title says \"pork\" but the ingredient list has none",
         "accuracy: cheese on tacos — not in recipe",
         "accuracy: sauce on tacos — not in recipe",
-        "accuracy: pork carnitas instead of chicken thighs",
-        "consistency: off-standard angle for tacos",
-        "consistency: cheese and sauce not in recipe",
-        "technical: alt text does not match the visible food"
+        "accuracy: missing onion",
+        "accuracy: missing lime"
       ],
-      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
+      "recommended_action": "regenerate after manual review (npm run images:regen -- --only=golden-100/pork-carnitas-tacos)"
     },
     {
       "priority": "P1",
@@ -2115,21 +1892,6 @@
     },
     {
       "priority": "P1",
-      "collection": "breakfast",
-      "slug": "savory-cottage-cheese-breakfast-bowls",
-      "title": "Savory Cottage Cheese Breakfast Bowls",
-      "image": "/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/savory-cottage-cheese-breakfast-bowls.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
       "collection": "hall-expansion",
       "slug": "sesame-ginger-tofu-bowls",
       "title": "Sesame Ginger Tofu Bowls",
@@ -2193,20 +1955,6 @@
         "consistency: kitchen setting with visible fireplace"
       ],
       "recommended_action": "regenerate after manual review (npm run images:regen -- --only=breakfast/sheet-pan-full-english)"
-    },
-    {
-      "priority": "P1",
-      "collection": "hall-expansion",
-      "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
-      "title": "Sheet-Pan Lemon Chicken with Broccoli & Sweet Potatoes",
-      "image": "/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
-        "technical: thumbnail missing (/images/thumbs/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
-        "technical: mobile variant missing (/images/mobile/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)",
-        "technical: rail variant missing (/images/rails/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg)"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
     },
     {
       "priority": "P1",
@@ -2521,19 +2269,6 @@
     },
     {
       "priority": "P1",
-      "collection": "golden-100",
-      "slug": "stuffed-peppers",
-      "title": "Quinoa Stuffed Peppers",
-      "image": "/images/golden-100/stuffed-peppers.jpg",
-      "issues": [
-        "recipe-data: title says \"quinoa\" but the ingredient list has none",
-        "accuracy: quinoa instead of rice",
-        "technical: alt text does not match the visible food"
-      ],
-      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
-    },
-    {
-      "priority": "P1",
       "collection": "pizza-night",
       "slug": "taco-pizza",
       "title": "Taco Pizza",
@@ -2604,21 +2339,6 @@
     },
     {
       "priority": "P1",
-      "collection": "breakfast",
-      "slug": "turkey-bacon-white-bean-breakfast-hash",
-      "title": "Turkey Bacon & White Bean Breakfast Hash",
-      "image": "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
       "collection": "golden-100",
       "slug": "turkey-burgers",
       "title": "Black Bean Turkey Burgers",
@@ -2668,61 +2388,13 @@
       "title": "Turkey Sausage Breakfast Burritos",
       "image": "/images/breakfast/turkey-sausage-burritos.jpg",
       "issues": [
-        "recipe-data: title says \"turkey\" but the ingredient list has none",
-        "accuracy: wrong dish format — bowl instead of burrito",
-        "accuracy: wrong main protein — beef instead of turkey sausage",
-        "accuracy: lentils not in recipe",
+        "accuracy: bowl of stew instead of burritos",
         "consistency: wrong dish format",
-        "consistency: wrong main protein",
-        "consistency: lentils not in recipe",
+        "consistency: bowl instead of platter",
+        "consistency: stew instead of burritos",
         "technical: alt text does not match the visible food"
       ],
-      "recommended_action": "editorial: resolve recipe title vs ingredients first — do not regenerate the image until the recipe is fixed"
-    },
-    {
-      "priority": "P1",
-      "collection": "breakfast",
-      "slug": "turkey-sausage-egg-white-sandwiches",
-      "title": "Turkey Sausage Egg White Breakfast Sandwiches",
-      "image": "/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-egg-white-sandwiches.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
-      "collection": "breakfast",
-      "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
-      "title": "Turkey Sausage, Spinach & Feta Egg White Scramble",
-      "image": "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
-    },
-    {
-      "priority": "P1",
-      "collection": "breakfast",
-      "slug": "turkey-sausage-sweet-potato-skillet",
-      "title": "Turkey Sausage & Sweet Potato Breakfast Skillet",
-      "image": "/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
-      "issues": [
-        "technical: hero missing or broken path (/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
-        "technical: thumbnail missing (/images/thumbs/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
-        "technical: mobile variant missing (/images/mobile/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
-        "technical: rail variant missing (/images/rails/breakfast/turkey-sausage-sweet-potato-skillet.jpg)",
-        "technical: hero WebP missing"
-      ],
-      "recommended_action": "fix broken/missing hero, then re-audit"
+      "recommended_action": "confirm model call, then regenerate after manual review (npm run images:regen -- --only=breakfast/turkey-sausage-burritos)"
     },
     {
       "priority": "P1",
@@ -4023,7 +3695,7 @@
       "title": "Pepperoni Pizza",
       "image": "/images/golden-100/pepperoni-pizza-night.jpg",
       "issues": [
-        "consistency: colour temperature outlier (+2.6σ vs catalog)"
+        "consistency: colour temperature outlier (+2.7σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
     },
@@ -4034,7 +3706,7 @@
       "title": "Classic Pepperoni Pizza",
       "image": "/images/golden-100/pepperoni-pizza-night.jpg",
       "issues": [
-        "consistency: colour temperature outlier (+2.6σ vs catalog)"
+        "consistency: colour temperature outlier (+2.7σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
     },
@@ -4186,7 +3858,7 @@
       "title": "Sicilian Sheet Pan Pizza",
       "image": "/images/golden-100/sicilian-sheet-pizza.jpg",
       "issues": [
-        "consistency: colour temperature outlier (+2.5σ vs catalog)"
+        "consistency: colour temperature outlier (+2.6σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
     },
@@ -4330,7 +4002,7 @@
       "title": "Tater Tot Breakfast Casserole",
       "image": "/images/breakfast/tater-tot-breakfast-casserole.jpg",
       "issues": [
-        "consistency: brightness outlier (+2.8σ vs catalog)"
+        "consistency: brightness outlier (+2.9σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
     },
@@ -4488,7 +4160,7 @@
       "title": "Wonton Noodle Soup for the Crew",
       "image": "/images/hall-expansion/wonton-noodle-soup-crew.jpg",
       "issues": [
-        "consistency: brightness outlier (+4.2σ vs catalog)"
+        "consistency: brightness outlier (+4.3σ vs catalog)"
       ],
       "recommended_action": "manual review — keep unless reviewer confirms it is an outlier"
     },

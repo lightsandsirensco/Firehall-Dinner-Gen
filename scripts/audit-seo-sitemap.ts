@@ -35,6 +35,7 @@ import type { GoldenRecipePage } from "../shared/golden-100/recipe-page-schema.j
 import type { EditorialArticle } from "../shared/editorial/content-schema.js";
 import type { BreakfastRecipePage } from "../shared/breakfast-schema.js";
 import type { FuelRecipePage } from "../shared/fuel-catalog/schema.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -741,7 +742,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
 
   const md = `# SEO Sitemap Audit Report
 
@@ -788,7 +789,7 @@ ${issues.length ? issues.slice(0, 40).map((i) => `- [${i.phase}/${i.code}] ${i.s
 ${issues.length > 40 ? `\n… and ${issues.length - 40} more (see JSON).` : ""}
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
 
   if (JSON_MODE) {
     console.log(JSON.stringify(report, null, 2));

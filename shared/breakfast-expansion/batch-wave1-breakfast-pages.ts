@@ -209,7 +209,7 @@ export const BATCH_WAVE1_BREAKFAST_PAGES: BreakfastRecipePageDraft[] = [
     ],
     heroImage: hero("overnight-oat-bar-crew"),
     thumbImage: thumb("overnight-oat-bar-crew"),
-    imageAlt: "Crew-sized overnight oat bar with berries, banana, nut butter, granola, and scoop-and-go bowls",
+    imageAlt: "Overnight oat bar with rolled oats, mixed berries, peanut butter, chia seeds, and chopped nuts",
     publishedAt: now,
     updatedAt: now,
     readMinutes: 6,

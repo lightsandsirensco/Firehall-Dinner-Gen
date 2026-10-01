@@ -5,7 +5,6 @@ import path from "node:path";
 import { hallExpansionPageImageSet } from "../shared/hall-expansion/recipe-page-paths.js";
 
 const HANDHELD = [
-  "chicken-caesar-wraps",
   "buffalo-chicken-wraps",
   "greek-chicken-pitas",
   "beef-gyros-for-the-hall",

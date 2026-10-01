@@ -15,7 +15,7 @@ import {
   thumbImagePath,
   railPreviewPath,
 } from "./paths.js";
-import { loadSharp } from "./sharp-utils.js";
+import { assertJpegBuffer, encodeJpeg, JPEG_OUTPUT, requireSharp } from "./sharp-utils.js";
 
 export interface EditorialImageVariantResult {
   hero: string;
@@ -36,19 +36,13 @@ async function resizeVariant(
   height: number,
   position: string,
   format: "jpeg" | "webp",
-): Promise<Buffer | null> {
-  const sharp = await loadSharp();
-  if (!sharp) return null;
-
-  try {
-    const pipeline = sharp(buffer).resize(width, height, { fit: "cover", position });
-    if (format === "webp") {
-      return await pipeline.webp({ quality: 82 }).toBuffer();
-    }
-    return await pipeline.jpeg({ quality: 88, mozjpeg: true }).toBuffer();
-  } catch {
-    return null;
+): Promise<Buffer> {
+  const sharp = await requireSharp();
+  const pipeline = sharp(buffer).resize(width, height, { fit: "cover", position });
+  if (format === "webp") {
+    return pipeline.webp({ quality: 82 }).toBuffer();
   }
+  return pipeline.jpeg(JPEG_OUTPUT).toBuffer();
 }
 
 /**
@@ -64,38 +58,35 @@ export async function writeEditorialImageVariants(
   const cropRule = getMobileCropRule(stylePreset);
   const specs = cropRule.variants;
 
-  const heroWrite = mirrorEditorialImageFile(heroSubdir, slug, heroBuffer);
+  const heroWrite = mirrorEditorialImageFile(heroSubdir, slug, await encodeJpeg(heroBuffer), "jpg");
 
-  const mobileBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.mobile.width,
-      specs.mobile.height,
-      specs.mobile.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
+  const mobileBuf = await resizeVariant(
+    heroBuffer,
+    specs.mobile.width,
+    specs.mobile.height,
+    specs.mobile.cropPosition,
+    "jpeg",
+  );
 
-  const thumbBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.thumb.width,
-      specs.thumb.height,
-      specs.thumb.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
+  const thumbBuf = await resizeVariant(
+    heroBuffer,
+    specs.thumb.width,
+    specs.thumb.height,
+    specs.thumb.cropPosition,
+    "jpeg",
+  );
 
-  const railBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.rail.width,
-      specs.rail.height,
-      specs.rail.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
+  const railBuf = await resizeVariant(
+    heroBuffer,
+    specs.rail.width,
+    specs.rail.height,
+    specs.rail.cropPosition,
+    "jpeg",
+  );
 
-  mirrorEditorialImageFile("mobile", slug, mobileBuf);
-  mirrorEditorialImageFile("thumbs", slug, thumbBuf);
-  mirrorEditorialImageFile("rails", slug, railBuf);
+  mirrorEditorialImageFile("mobile", slug, mobileBuf, "jpg");
+  mirrorEditorialImageFile("thumbs", slug, thumbBuf, "jpg");
+  mirrorEditorialImageFile("rails", slug, railBuf, "jpg");
 
   let heroWebp: string | undefined;
   let mobileWebp: string | undefined;
@@ -183,18 +174,23 @@ export interface BreakfastCatalogImageVariantResult {
   rail: string;
 }
 
+function writeCatalogImageFile(subdir: string, slug: string, buffer: Buffer, format: "jpeg" | "webp"): string {
+  const ext = format === "webp" ? "webp" : "jpg";
+  const filename = `${slug}.${ext}`;
+  if (ext === "jpg") assertJpegBuffer(buffer, `${subdir}/${filename}`);
+  const dir = path.join(process.cwd(), "client", "public", "images", subdir);
+  fs.mkdirSync(dir, { recursive: true });
+  fs.writeFileSync(path.join(dir, filename), buffer);
+  return `/images/${subdir}/${filename}`;
+}
+
 function mirrorBreakfastImageFile(
   subdir: "breakfast" | "thumbs/breakfast" | "mobile/breakfast" | "rails/breakfast",
   slug: string,
   buffer: Buffer,
   format: "jpeg" | "webp" = "jpeg",
 ): string {
-  const ext = format === "webp" ? "webp" : "jpg";
-  const filename = `${slug}.${ext}`;
-  const dir = path.join(process.cwd(), "client", "public", "images", subdir);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, filename), buffer);
-  return `/images/${subdir}/${filename}`;
+  return writeCatalogImageFile(subdir, slug, buffer, format);
 }
 
 /** Breakfast catalog — hero/thumb/mobile/rail under breakfast subfolders. */
@@ -207,32 +203,29 @@ export async function writeBreakfastCatalogImageVariants(
   const cropRule = getMobileCropRule(stylePreset);
   const specs = cropRule.variants;
 
-  const hero = mirrorBreakfastImageFile("breakfast", slug, heroBuffer);
+  const hero = mirrorBreakfastImageFile("breakfast", slug, await encodeJpeg(heroBuffer));
 
-  const mobileBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.mobile.width,
-      specs.mobile.height,
-      specs.mobile.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
-  const thumbBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.thumb.width,
-      specs.thumb.height,
-      specs.thumb.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
-  const railBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.rail.width,
-      specs.rail.height,
-      specs.rail.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
+  const mobileBuf = await resizeVariant(
+    heroBuffer,
+    specs.mobile.width,
+    specs.mobile.height,
+    specs.mobile.cropPosition,
+    "jpeg",
+  );
+  const thumbBuf = await resizeVariant(
+    heroBuffer,
+    specs.thumb.width,
+    specs.thumb.height,
+    specs.thumb.cropPosition,
+    "jpeg",
+  );
+  const railBuf = await resizeVariant(
+    heroBuffer,
+    specs.rail.width,
+    specs.rail.height,
+    specs.rail.cropPosition,
+    "jpeg",
+  );
 
   const mobile = mirrorBreakfastImageFile("mobile/breakfast", slug, mobileBuf);
   const thumb = mirrorBreakfastImageFile("thumbs/breakfast", slug, thumbBuf);
@@ -284,12 +277,7 @@ function mirrorBbqImageFile(
   buffer: Buffer,
   format: "jpeg" | "webp" = "jpeg",
 ): string {
-  const ext = format === "webp" ? "webp" : "jpg";
-  const filename = `${slug}.${ext}`;
-  const dir = path.join(process.cwd(), "client", "public", "images", subdir);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, filename), buffer);
-  return `/images/${subdir}/${filename}`;
+  return writeCatalogImageFile(subdir, slug, buffer, format);
 }
 
 export interface BbqCatalogImageVariantResult {
@@ -309,32 +297,29 @@ export async function writeBbqCatalogImageVariants(
   const cropRule = getMobileCropRule(stylePreset);
   const specs = cropRule.variants;
 
-  const hero = mirrorBbqImageFile("smoker-catalog", slug, heroBuffer);
+  const hero = mirrorBbqImageFile("smoker-catalog", slug, await encodeJpeg(heroBuffer));
 
-  const mobileBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.mobile.width,
-      specs.mobile.height,
-      specs.mobile.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
-  const thumbBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.thumb.width,
-      specs.thumb.height,
-      specs.thumb.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
-  const railBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.rail.width,
-      specs.rail.height,
-      specs.rail.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
+  const mobileBuf = await resizeVariant(
+    heroBuffer,
+    specs.mobile.width,
+    specs.mobile.height,
+    specs.mobile.cropPosition,
+    "jpeg",
+  );
+  const thumbBuf = await resizeVariant(
+    heroBuffer,
+    specs.thumb.width,
+    specs.thumb.height,
+    specs.thumb.cropPosition,
+    "jpeg",
+  );
+  const railBuf = await resizeVariant(
+    heroBuffer,
+    specs.rail.width,
+    specs.rail.height,
+    specs.rail.cropPosition,
+    "jpeg",
+  );
 
   const mobile = mirrorBbqImageFile("mobile/smoker-catalog", slug, mobileBuf);
   const thumb = mirrorBbqImageFile("thumbs/smoker-catalog", slug, thumbBuf);
@@ -354,12 +339,7 @@ function mirrorHallExpansionImageFile(
   buffer: Buffer,
   format: "jpeg" | "webp" = "jpeg",
 ): string {
-  const ext = format === "webp" ? "webp" : "jpg";
-  const filename = `${slug}.${ext}`;
-  const dir = path.join(process.cwd(), "client", "public", "images", subdir);
-  fs.mkdirSync(dir, { recursive: true });
-  fs.writeFileSync(path.join(dir, filename), buffer);
-  return `/images/${subdir}/${filename}`;
+  return writeCatalogImageFile(subdir, slug, buffer, format);
 }
 
 export interface HallExpansionCatalogImageVariantResult {
@@ -379,32 +359,29 @@ export async function writeHallExpansionCatalogImageVariants(
   const cropRule = getMobileCropRule(stylePreset);
   const specs = cropRule.variants;
 
-  const hero = mirrorHallExpansionImageFile("hall-expansion", slug, heroBuffer);
+  const hero = mirrorHallExpansionImageFile("hall-expansion", slug, await encodeJpeg(heroBuffer));
 
-  const mobileBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.mobile.width,
-      specs.mobile.height,
-      specs.mobile.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
-  const thumbBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.thumb.width,
-      specs.thumb.height,
-      specs.thumb.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
-  const railBuf =
-    (await resizeVariant(
-      heroBuffer,
-      specs.rail.width,
-      specs.rail.height,
-      specs.rail.cropPosition,
-      "jpeg",
-    )) ?? heroBuffer;
+  const mobileBuf = await resizeVariant(
+    heroBuffer,
+    specs.mobile.width,
+    specs.mobile.height,
+    specs.mobile.cropPosition,
+    "jpeg",
+  );
+  const thumbBuf = await resizeVariant(
+    heroBuffer,
+    specs.thumb.width,
+    specs.thumb.height,
+    specs.thumb.cropPosition,
+    "jpeg",
+  );
+  const railBuf = await resizeVariant(
+    heroBuffer,
+    specs.rail.width,
+    specs.rail.height,
+    specs.rail.cropPosition,
+    "jpeg",
+  );
 
   const mobile = mirrorHallExpansionImageFile("mobile/hall-expansion", slug, mobileBuf);
   const thumb = mirrorHallExpansionImageFile("thumbs/hall-expansion", slug, thumbBuf);

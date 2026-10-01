@@ -1,7 +1,12 @@
 /**
  * Hero image validation — metadata, cross-recipe MD5 conflicts, and optional vision QA.
  * Catches wrong pixels at correct slug-locked paths (bootstrap donor copies, etc.).
+ *
+ * Deterministic file/metadata checks can fail a recipe. Whether the picture shows the right
+ * dish is only decided by vision; title/alt wording heuristics are warnings.
  */
+import fs from "node:fs";
+import path from "node:path";
 
 import {
   auditCategoryMealFormat,
@@ -23,26 +28,47 @@ import {
   validateExploreImageMapping,
   type ExploreImageMappingRow,
 } from "./explore-image-mapping.js";
-import { imageFileExists } from "./explore-image-paths.js";
+import { imageFileExists, publicImageAbsolute } from "./explore-image-paths.js";
 import { normalizeCatalogSlug } from "./hall-catalog/gate.js";
 import type { TrustAuditCollection } from "./curated-image-governance/trust-audit-targets.js";
 import { resolveApprovedCatalogKind } from "./approved-catalog.js";
 import type { ExploreCatalogImageKind } from "./explore-image-paths.js";
 
-export type HeroImageValidationRow = {
+/** `pass`/`fail` only ever come from inspecting pixels (vision); wording never decides it. */
+export type HeroSemanticStatus = "pass" | "fail" | "not_verified";
+
+export type HeroVisionResult = { pass: boolean | null; skipped: boolean; reasons: string[] };
+
+export type HeroImageValidationBase = {
   slug: string;
   title: string;
   collection: string;
   heroImage: string;
+  /** Alt as rendered: configured heroImageAlt, else the recipe title. */
   heroAlt: string;
+  heroAltConfigured: boolean;
   heroOnDisk: boolean;
   exploreMapping: ExploreImageMappingRow;
+  /** Raw title/alt/path wording issues and duplicate-byte issues. */
   metadataIssues: ImageAccuracyIssue[];
-  visionPass: boolean | null;
-  visionSkipped: boolean;
-  visionReasons: string[];
+  /** Deterministic: malformed path, missing/empty/non-image file. */
+  fileFailures: string[];
+  /** Deterministic: empty/placeholder alt, alt contradicting the title's protein/dish. */
+  metadataFailures: string[];
+  /** Deterministic but non-blocking metadata quality notes. */
+  metadataWarnings: string[];
+};
+
+export type HeroImageValidationRow = HeroImageValidationBase & {
+  /** Title/alt/path wording heuristics — possible mismatch signals, never failures on their own. */
+  semanticWarnings: string[];
+  semanticStatus: HeroSemanticStatus;
+  /** Vision fail reasons, or why semantic correctness was not verified. */
+  semanticReasons: string[];
+  hardFailures: string[];
+  /** Image bytes are missing/invalid, conflict with another recipe, or vision saw the wrong dish. */
+  needsNewImage: boolean;
   pass: boolean;
-  criticalReasons: string[];
 };
 
 export type HeroImageValidationReport = {
@@ -51,11 +77,16 @@ export type HeroImageValidationReport = {
     recipes: number;
     pass: number;
     fail: number;
+    fileFailures: number;
+    metadataFailures: number;
     missingHero: number;
-    metadataFail: number;
     duplicateConflict: number;
-    visionFail: number;
-    visionSkipped: number;
+    metadataWarnings: number;
+    semanticWarnings: number;
+    semanticPass: number;
+    semanticFail: number;
+    semanticNotVerified: number;
+    needsNewImage: number;
   };
   rows: HeroImageValidationRow[];
 };
@@ -128,10 +159,11 @@ export function auditHeroAltAlignment(
 
   for (const { re, label } of titleProteins) {
     if (!re.test(titleBlob)) continue;
+    // "parm" is the dish shorthand; "parmesan" alone is usually the cheese on top.
     const altClaimsOther =
-      (label !== "chicken" && /\bchicken\b|\bparm\b|\bparmesan\b/i.test(altBlob)) ||
+      (label !== "chicken" && /\bchicken\b|\bparm\b|\bparmigiana\b/i.test(altBlob)) ||
       (label !== "tuna" && /\btuna\b/i.test(altBlob) && !re.test(altBlob)) ||
-      (label === "tuna" && /\b(chicken|parm|parmesan|beef|pork)\b/i.test(altBlob));
+      (label === "tuna" && /\b(chicken|parm|parmigiana|beef|pork)\b/i.test(altBlob));
     if (altClaimsOther) {
       issues.push({
         code: "image_title_mismatch",
@@ -152,6 +184,82 @@ export function auditHeroAltAlignment(
   }
 
   return issues;
+}
+
+const HERO_PATH_SHAPE = /^\/images\/[A-Za-z0-9/_.-]+\.(jpe?g|png|webp)$/i;
+
+function sniffImageFormat(head: Buffer): "jpg" | "png" | "webp" | null {
+  if (head[0] === 0xff && head[1] === 0xd8 && head[2] === 0xff) return "jpg";
+  if (head.subarray(0, 4).toString("hex") === "89504e47") return "png";
+  if (head.subarray(0, 4).toString("ascii") === "RIFF" && head.subarray(8, 12).toString("ascii") === "WEBP") return "webp";
+  return null;
+}
+
+function readHead(abs: string): Buffer {
+  const fd = fs.openSync(abs, "r");
+  try {
+    const head = Buffer.alloc(12);
+    fs.readSync(fd, head, 0, 12, 0);
+    return head;
+  } finally {
+    fs.closeSync(fd);
+  }
+}
+
+/** Hard failures about the configured hero file itself. Format is sniffed from bytes, not the extension. */
+export function auditHeroFile(heroImage: string, publicRoot?: string): string[] {
+  const trimmed = (heroImage || "").trim();
+  if (!trimmed) return ["hero image path is empty"];
+  if (!HERO_PATH_SHAPE.test(trimmed) || trimmed.includes("..")) return [`hero image path is malformed: "${trimmed}"`];
+  if (!imageFileExists(trimmed, publicRoot)) return ["hero image file missing"];
+
+  const abs = publicImageAbsolute(trimmed, publicRoot);
+  if (fs.statSync(abs).size === 0) return ["hero image file is empty (0 bytes)"];
+  return sniffImageFormat(readHead(abs)) ? [] : ["hero image file is not a valid JPEG, PNG or WebP image"];
+}
+
+/** Browsers still render a mismatched file, so this is a warning; the fix is a re-encode, not a new image. */
+export function auditHeroFileFormat(heroImage: string, publicRoot?: string): string[] {
+  const trimmed = (heroImage || "").trim();
+  if (!HERO_PATH_SHAPE.test(trimmed) || !imageFileExists(trimmed, publicRoot)) return [];
+  const abs = publicImageAbsolute(trimmed, publicRoot);
+  if (fs.statSync(abs).size === 0) return [];
+  const actual = sniffImageFormat(readHead(abs));
+  const declared = path.extname(trimmed).slice(1).toLowerCase().replace("jpeg", "jpg");
+  if (!actual || actual === declared) return [];
+  return [`hero .${declared} file contains ${actual.toUpperCase()} data (re-encode: npm run images:fix-jpeg-format)`];
+}
+
+export const TEMPLATE_ALT =
+  /plated for a firehall crew|on a (?:station|crew) prep table|crew-sized BBQ spread with visible smoke and bark|^Wide (?:firehall|baking dish)\b/i;
+
+const PLACEHOLDER_ALT = /^(image|photo|picture|hero|hero image|placeholder|alt|alt text|untitled|undefined|null|none|todo|tbd|\[object object\])$/i;
+
+/** Deterministic alt-text checks. Wording that merely lacks title tokens is not checked here. */
+export function auditHeroAltText(input: {
+  configuredAlt?: string;
+  title: string;
+  slug: string;
+  heroImage: string;
+}): { failures: string[]; warnings: string[] } {
+  const configured = (input.configuredAlt ?? "").trim();
+  const effective = configured || input.title.trim();
+  const failures: string[] = [];
+  const warnings: string[] = [];
+
+  const fileStem = path.basename(input.heroImage).replace(/\.[a-z0-9]+$/i, "");
+  if (!effective) failures.push("hero alt text is empty (no heroImageAlt and no title)");
+  else if (PLACEHOLDER_ALT.test(effective) || effective === input.slug || effective === fileStem) {
+    failures.push(`hero alt text is a placeholder: "${effective}"`);
+  }
+
+  if (!configured && effective) warnings.push("no heroImageAlt configured — alt falls back to the recipe title");
+  const token = /\b[a-z]+_[a-z]+\b/.exec(configured)?.[0];
+  if (token) warnings.push(`hero alt text contains internal taxonomy token "${token}"`);
+  const template = TEMPLATE_ALT.exec(configured)?.[0];
+  if (template) warnings.push(`hero alt text contains image-prompt template wording "${template}"`);
+
+  return { failures, warnings };
 }
 
 export function buildGlobalHeroPeerLookup(
@@ -237,15 +345,26 @@ export function hasHeroValidationFailure(issues: ImageAccuracyIssue[]): boolean 
   );
 }
 
+/** Issues backed by image bytes rather than title/alt/path wording. */
+function isByteEvidenceIssue(issue: ImageAccuracyIssue): boolean {
+  return issue.code === "duplicate_hero_hash";
+}
+
+/** Title/alt/path wording issues — signals of a possible mismatch, never proof. */
+export function collectHeuristicHeroIssues(issues: ImageAccuracyIssue[]): ImageAccuracyIssue[] {
+  return issues.filter((issue) => !isByteEvidenceIssue(issue));
+}
+
 export function validateHeroImageTarget(
   target: TrustAuditTarget,
   context: ReturnType<typeof buildExploreImageMappingContext>,
   peerLookup: Map<string, Pick<TrustAuditTarget, "title" | "mealFormat">>,
   publicRoot?: string,
-): Omit<HeroImageValidationRow, "visionPass" | "visionSkipped" | "visionReasons" | "pass" | "criticalReasons"> {
+): HeroImageValidationBase {
   const slug = normalizeCatalogSlug(target.slug);
   const kind = resolveKindForHeroValidation(slug, target.collection);
   const heroAlt = (target.heroAlt || target.title).trim();
+  const fileFailures = auditHeroFile(target.heroImage, publicRoot);
   const heroOnDisk = imageFileExists(target.heroImage, publicRoot);
 
   const exploreMapping = validateExploreImageMapping(
@@ -262,11 +381,14 @@ export function validateHeroImageTarget(
     { peerLookup },
   );
 
-  const metadataIssues = [
-    ...auditHeroMetadata(target),
-    ...auditHeroAltAlignment(target.title, heroAlt, target.heroImage),
-    ...auditCrossRecipeHeroDuplicates(target, context, peerLookup),
-  ];
+  const alt = auditHeroAltText({
+    configuredAlt: target.heroAlt,
+    title: target.title,
+    slug,
+    heroImage: target.heroImage,
+  });
+  const altContradictions = auditHeroAltAlignment(target.title, heroAlt, target.heroImage);
+  const duplicates = auditCrossRecipeHeroDuplicates(target, context, peerLookup);
 
   return {
     slug,
@@ -274,61 +396,86 @@ export function validateHeroImageTarget(
     collection: target.collection,
     heroImage: target.heroImage,
     heroAlt,
+    heroAltConfigured: Boolean(target.heroAlt?.trim()),
     heroOnDisk,
     exploreMapping,
-    metadataIssues,
+    metadataIssues: [...auditHeroMetadata(target), ...duplicates],
+    fileFailures,
+    metadataFailures: [...alt.failures, ...altContradictions.map((issue) => issue.message)],
+    metadataWarnings: [
+      ...auditHeroFileFormat(target.heroImage, publicRoot),
+      ...alt.warnings,
+      ...duplicates.filter((issue) => issue.severity !== "critical").map((issue) => issue.message),
+    ],
   };
 }
 
-export function finalizeHeroValidationRow(
-  base: Omit<
-    HeroImageValidationRow,
-    "visionPass" | "visionSkipped" | "visionReasons" | "pass" | "criticalReasons"
-  >,
-  vision: { pass: boolean | null; skipped: boolean; reasons: string[] },
-): HeroImageValidationRow {
-  const metadataCritical = collectCriticalHeroIssues(base.metadataIssues);
-  const mappingCritical = base.exploreMapping.issues;
-  const metadataBlocksSurface =
-    metadataCritical.length > 0 || hasMealCompletenessFailure(base.metadataIssues) || vision.pass === false;
+function semanticVerdict(vision: HeroVisionResult): { status: HeroSemanticStatus; reasons: string[] } {
+  if (vision.pass === true) return { status: "pass", reasons: [] };
+  if (vision.pass === false) {
+    return { status: "fail", reasons: vision.reasons.length ? vision.reasons : ["vision: image does not match recipe"] };
+  }
+  const why = vision.reasons.filter(Boolean);
+  return { status: "not_verified", reasons: why.length ? why : ["vision check not run"] };
+}
 
-  const criticalReasons = [
-    ...mappingCritical.map((issue) => issue.message),
-    ...metadataCritical.map((issue) => issue.message),
-    ...(vision.pass === false ? vision.reasons : []),
+export function finalizeHeroValidationRow(
+  base: HeroImageValidationBase,
+  vision: HeroVisionResult,
+): HeroImageValidationRow {
+  const byteConflicts = base.metadataIssues
+    .filter((issue) => isByteEvidenceIssue(issue) && issue.severity === "critical")
+    .map((issue) => issue.message);
+  const mappingFailures = base.exploreMapping.issues.map((issue) => issue.message);
+  const semantic = semanticVerdict(vision);
+
+  // Mapping/duplicate issues on recipes excluded from Explore are already gated by mapping
+  // policy; file and alt failures apply either way.
+  const surfaceFailures = base.exploreMapping.exploreEligible ? [...mappingFailures, ...byteConflicts] : [];
+  const hardFailures = [
+    ...base.fileFailures,
+    ...base.metadataFailures,
+    ...surfaceFailures,
+    ...(semantic.status === "fail" ? semantic.reasons.map((reason) => `vision: ${reason}`) : []),
   ];
 
-  // Recipes excluded from Explore/detail hero surfaces are already gated by mapping policy.
-  const pass = base.exploreMapping.exploreEligible
-    ? base.heroOnDisk && mappingCritical.length === 0 && !metadataBlocksSurface
-    : true;
+  // A vision pass is direct evidence the picture is right, so wording heuristics are moot.
+  const semanticWarnings =
+    semantic.status === "pass" ? [] : collectHeuristicHeroIssues(base.metadataIssues).map((issue) => issue.message);
 
   return {
     ...base,
-    visionPass: vision.pass,
-    visionSkipped: vision.skipped,
-    visionReasons: vision.reasons,
-    pass,
-    criticalReasons: [...new Set(criticalReasons)],
+    semanticWarnings: [...new Set(semanticWarnings)],
+    semanticStatus: semantic.status,
+    semanticReasons: semantic.reasons,
+    hardFailures: [...new Set(hardFailures)],
+    needsNewImage: base.fileFailures.length > 0 || byteConflicts.length > 0 || semantic.status === "fail",
+    pass: hardFailures.length === 0,
   };
 }
 
 export function buildHeroImageValidationReport(
   rows: HeroImageValidationRow[],
 ): HeroImageValidationReport {
+  const count = (pred: (row: HeroImageValidationRow) => boolean) => rows.filter(pred).length;
   return {
     generatedAt: new Date().toISOString(),
     totals: {
       recipes: rows.length,
-      pass: rows.filter((row) => row.pass).length,
-      fail: rows.filter((row) => !row.pass).length,
-      missingHero: rows.filter((row) => !row.heroOnDisk).length,
-      metadataFail: rows.filter((row) => hasHeroValidationFailure(row.metadataIssues)).length,
-      duplicateConflict: rows.filter((row) =>
+      pass: count((row) => row.pass),
+      fail: count((row) => !row.pass),
+      fileFailures: count((row) => row.fileFailures.length > 0),
+      metadataFailures: count((row) => row.metadataFailures.length > 0),
+      missingHero: count((row) => !row.heroOnDisk),
+      duplicateConflict: count((row) =>
         row.metadataIssues.some((issue) => issue.code === "duplicate_hero_hash" && issue.severity === "critical"),
-      ).length,
-      visionFail: rows.filter((row) => row.visionPass === false).length,
-      visionSkipped: rows.filter((row) => row.visionSkipped).length,
+      ),
+      metadataWarnings: count((row) => row.metadataWarnings.length > 0),
+      semanticWarnings: count((row) => row.semanticWarnings.length > 0),
+      semanticPass: count((row) => row.semanticStatus === "pass"),
+      semanticFail: count((row) => row.semanticStatus === "fail"),
+      semanticNotVerified: count((row) => row.semanticStatus === "not_verified"),
+      needsNewImage: count((row) => row.needsNewImage),
     },
     rows,
   };

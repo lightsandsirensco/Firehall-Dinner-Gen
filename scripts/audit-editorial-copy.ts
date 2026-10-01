@@ -5,7 +5,7 @@
  *   npm run audit:editorial-copy
  *   npm run audit:editorial-copy -- --report=review/editorial-copy-audit.md
  */
-import { mkdirSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { EDITORIAL_ARTICLES } from "../shared/editorial/articles-data.js";
@@ -15,13 +15,21 @@ import {
   type EditorialCopyIssue,
 } from "../shared/editorial/editorial-copy-audit.js";
 import { validateArticleMealRecommendations } from "../shared/editorial/recommendation-rules.js";
-import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
+import { getApprovedCatalog } from "../server/approved-catalog-cache.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const reportArg = process.argv.find((a) => a.startsWith("--report="));
 const reportPath = reportArg?.replace("--report=", "") ?? "review/editorial-copy-audit.md";
 
-const goldenSlugs = new Set(GOLDEN_100_RECIPES.map((r) => r.slug));
+const recipeSlugs = new Set(getApprovedCatalog().recipes.map((r) => r.slug));
+const breakfastIndexPath = join(root, "client/public/catalog/breakfast/index.json");
+const breakfastSlugs = new Set<string>(
+  existsSync(breakfastIndexPath)
+    ? ((JSON.parse(readFileSync(breakfastIndexPath, "utf8")) as { recipes?: Array<{ slug: string }> })
+        .recipes ?? []).map((r) => r.slug)
+    : [],
+);
 
 function main(): void {
   const schemaFails: string[] = [];
@@ -34,7 +42,8 @@ function main(): void {
       schemaFails.push(`${article.slug}: ${parsed.error.message.slice(0, 120)}`);
     }
     for (const pick of article.mealRecommendations) {
-      if (!goldenSlugs.has(pick.slug)) {
+      const known = pick.catalog === "breakfast" ? breakfastSlugs : recipeSlugs;
+      if (!known.has(pick.slug)) {
         slugFails.push(`${article.slug}: unknown recipe ${pick.slug}`);
       }
     }
@@ -81,7 +90,7 @@ function main(): void {
   ];
 
   mkdirSync(dirname(join(root, reportPath)), { recursive: true });
-  writeFileSync(join(root, reportPath), lines.join("\n"), "utf8");
+  writeFileAtomicSync(join(root, reportPath), lines.join("\n"), "utf8");
 
   console.log(`[audit:editorial-copy] articles=${EDITORIAL_ARTICLES.length} pass=${pass}`);
   if (!pass) {

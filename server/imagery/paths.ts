@@ -22,6 +22,8 @@ import {
 
 import type { EditorialVariantRole } from "../../shared/mobile-crop-rules.js";
 
+import { assertJpegBuffer } from "./sharp-utils.js";
+
 
 
 export const EDITORIAL_IMAGE_DIRS = {
@@ -154,6 +156,8 @@ export function mirrorEditorialImageFile(
     format ?? (buffer[8] === 0x57 && buffer[9] === 0x45 ? "webp" : "jpg");
 
   const filename = editorialSlugFilename(slug, ext);
+
+  if (ext === "jpg") assertJpegBuffer(buffer, `${subdir}/${filename}`);
 
   const dirs = [clientPublicImageDir(subdir)];
 

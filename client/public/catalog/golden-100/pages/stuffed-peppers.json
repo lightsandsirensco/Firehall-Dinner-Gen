@@ -43,7 +43,7 @@
       "group": "Filling"
     },
     {
-      "name": "Cooked Rice",
+      "name": "Cooked Quinoa",
       "quantity": "3",
       "unit": "Cups",
       "group": "Filling"
@@ -72,14 +72,14 @@
     {
       "stepNumber": 2,
       "title": "Brown beef filling",
-      "instruction": "Brown ground beef with onion and garlic. Stir in cooked rice, crushed tomatoes, and Italian seasoning; simmer 10 minutes until thick.",
+      "instruction": "Brown ground beef with onion and garlic. Stir in cooked quinoa, crushed tomatoes, and Italian seasoning; simmer 10 minutes until thick.",
       "minutes": 18,
       "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
       "title": "Fill and top",
-      "instruction": "Mound beef-rice filling into pepper halves on sheet pans. Top with shredded mozzarella.",
+      "instruction": "Mound beef-quinoa filling into pepper halves on sheet pans. Top with shredded mozzarella.",
       "minutes": 12,
       "heatLevel": ""
     },
@@ -133,7 +133,7 @@
     }
   },
   "heroImage": "/images/golden-100/stuffed-peppers.jpg",
-  "heroImageAlt": "Quinoa Stuffed Peppers — american plated main plated for a firehall crew",
+  "heroImageAlt": "Quinoa Stuffed Peppers — bell peppers, ground beef, cooked quinoa, crushed tomatoes, and shredded mozzarella",
   "mobileImage": "/images/mobile/stuffed-peppers.jpg",
   "thumbImage": "/images/thumbs/stuffed-peppers.jpg",
   "railImage": "/images/rails/stuffed-peppers.jpg",
@@ -195,7 +195,7 @@
         "note": "Use a dairy-free cheese shred/block alternative."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-09-29T01:53:49.515Z"
   },
   "avoidTags": [
     "bell_peppers"

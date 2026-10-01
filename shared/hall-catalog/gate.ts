@@ -27,7 +27,7 @@ import {
   getBbqCatalogTitle,
   isBbqCatalogSlug,
 } from "../bbq-catalog/slug-registry.js";
-import { PHASE5_REMOVED_SLUGS } from "../catalog-consolidation/phase5-redirects.js";
+import { isConsolidatedAwaySlug } from "../catalog-slug-redirects.js";
 import type { RecipeSourceAttribution } from "../canonical-recipe.js";
 
 /** Internal editorial collection ids (admin / telemetry only). */
@@ -128,7 +128,7 @@ export { isBreakfastCatalogSlug, isBbqCatalogSlug };
 
 export function isApprovedCatalogSlug(slug: string | null | undefined): boolean {
   const s = normalizeCatalogSlug(slug);
-  if (PHASE5_REMOVED_SLUGS.has(s)) return false;
+  if (isConsolidatedAwaySlug(s)) return false;
   return (
     isGolden100Slug(slug) ||
     isPerformance50Slug(slug) ||
@@ -498,7 +498,7 @@ export function searchHallCatalog(query: string, limit = 15): HallCatalogSearchH
       mealFormat: r.mealFormat,
       collection: "hall_expansion_74" as const,
     })),
-  ];
+  ].filter((hit) => isApprovedCatalogSlug(hit.slug));
 
   return hits.slice(0, Math.max(1, limit));
 }

@@ -14,6 +14,7 @@ import {
 } from "../../shared/hall-expansion/types.js";
 import { CANONICAL_BASE_SERVINGS } from "../../shared/recipe/crew-scaling-config.js";
 import { scaleGoldenIngredients } from "../../shared/golden-100/recipe-quality/crew-scale.js";
+import { buildRecipeImageAlt } from "../imagery/recipe-image-prompt.js";
 
 function buildSeoTitle(title: string): string {
   const t = `${title} | Firefighter Meal`;
@@ -126,7 +127,12 @@ export function buildHallExpansionRecipePage(
       },
     },
     heroImage: images.heroImage,
-    heroImageAlt: `${recipe.title} — ${recipe.cuisine} ${recipe.mealFormat} plated for a firehall crew`,
+    heroImageAlt: buildRecipeImageAlt({
+      slug: recipe.slug,
+      title: recipe.title,
+      subtitle: recipe.subtitle,
+      description: recipe.description,
+    }),
     mobileImage: images.mobileImage,
     thumbImage: images.thumbImage,
     railImage: images.railImage,

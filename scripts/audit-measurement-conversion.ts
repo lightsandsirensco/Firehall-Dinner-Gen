@@ -17,6 +17,7 @@ import {
   formatIngredientDisplayName,
   isTitleCaseIngredientName,
 } from "../shared/measurements/ingredient-names.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const CATALOG_DIRS = [
@@ -140,8 +141,8 @@ const report = {
 
 const outJson = join(ROOT, "review", "measurement-conversion-audit.json");
 const outMd = join(ROOT, "review", "measurement-conversion-audit.md");
-writeFileSync(outJson, JSON.stringify(report, null, 2));
-writeFileSync(
+writeFileAtomicSync(outJson, JSON.stringify(report, null, 2));
+writeFileAtomicSync(
   outMd,
   [
     "# Measurement conversion audit",

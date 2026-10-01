@@ -24,6 +24,7 @@ import { getVerifiedPerServingNutrition } from "../shared/nutrition/verified-per
 import { getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
 import { defaultRecipeServings } from "../shared/nutrition/servings.js";
 import type { RecipeNutritionRecord } from "../shared/nutrition/types.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const FIX = process.argv.includes("--fix");
@@ -409,8 +410,8 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(MD_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
-  fs.writeFileSync(
+  writeFileAtomicSync(JSON_OUT, `${JSON.stringify(payload, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(
     MD_OUT,
     renderMd(summary, results, FIX ? "fix + re-audit" : "audit", fixed, crewInvariantOk),
   );

@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-09-26T18:46:10.059Z",
+  "generatedAt": "2026-09-30T23:37:23.232Z",
   "totals": {
-    "audited": 409,
-    "passed": 409,
+    "audited": 415,
+    "passed": 415,
     "failed": 0
   },
   "failedRecipes": [],
@@ -227,6 +227,12 @@
       "slug": "biscuit-french-toast-sliders",
       "title": "Biscuit French Toast Sliders",
       "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
+      "slug": "black-bean-cottage-cheese-enchilada-bake",
+      "title": "Black Bean & Cottage Cheese Enchilada Bake",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -734,6 +740,12 @@
       "pass": true
     },
     {
+      "slug": "cottage-cheese-spinach-stuffed-shells",
+      "title": "Cottage Cheese & Spinach Stuffed Shells",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "cottage-pie-for-the-crew",
       "title": "Cottage Pie for the Crew",
       "kind": "hall_expansion",
@@ -1024,6 +1036,12 @@
     {
       "slug": "greek-chicken-pitas",
       "title": "Greek Chicken Pitas",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
+      "slug": "greek-yogurt-white-bean-power-bowls",
+      "title": "Greek Yogurt & White Bean Power Bowls",
       "kind": "hall_expansion",
       "pass": true
     },
@@ -1652,6 +1670,12 @@
       "pass": true
     },
     {
+      "slug": "paneer-tikka-masala-bowls",
+      "title": "Paneer Tikka Masala Bowls",
+      "kind": "hall_expansion",
+      "pass": true
+    },
+    {
       "slug": "paprika-roasted-chicken-quarters",
       "title": "Paprika Roasted Chicken Quarters",
       "kind": "hall_expansion",
@@ -1823,6 +1847,12 @@
       "slug": "red-beans-and-rice-for-the-hall",
       "title": "Red Beans and Rice for the Hall",
       "kind": "firehall_catalog",
+      "pass": true
+    },
+    {
+      "slug": "red-lentil-paneer-dal",
+      "title": "Red Lentil & Paneer Dal",
+      "kind": "hall_expansion",
       "pass": true
     },
     {
@@ -2225,6 +2255,12 @@
       "slug": "tater-tot-breakfast-casserole",
       "title": "Tater Tot Breakfast Casserole",
       "kind": "breakfast_catalog",
+      "pass": true
+    },
+    {
+      "slug": "tempeh-peanut-buddha-bowls",
+      "title": "Tempeh Peanut Buddha Bowls",
+      "kind": "hall_expansion",
       "pass": true
     },
     {

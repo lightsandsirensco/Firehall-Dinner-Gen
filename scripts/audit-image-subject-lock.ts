@@ -12,6 +12,7 @@ import { initCuratedRecipeStore, listCuratedSummariesByTag } from "../server/cur
 import { getCuratedRecipeBySlug } from "../server/curated-recipe-store.js";
 import { scoreImageIntegrity, IMAGE_INTEGRITY_PASS_THRESHOLD } from "../shared/image-integrity.js";
 import { validateCuratedImageGovernance, buildCuratedMealImageProfile } from "../shared/curated-image-governance/index.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 interface AuditRow {
   slug: string;
@@ -95,7 +96,7 @@ async function main(): Promise<void> {
   const outDir = join(process.cwd(), "review");
   mkdirSync(outDir, { recursive: true });
   const jsonPath = join(outDir, "image-subject-lock-audit.json");
-  writeFileSync(
+  writeFileAtomicSync(
     jsonPath,
     JSON.stringify(
       {

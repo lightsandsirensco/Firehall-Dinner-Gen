@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Flame, Heart, Menu, User } from "lucide-react";
+import { Heart, Menu, User } from "lucide-react";
 import { Link, useLocation } from "wouter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -17,6 +17,7 @@ import { hapticLight } from "@/lib/haptics";
 import { BRAND_NAME, CTA, NAV } from "@/lib/brand-copy";
 import { LightsAndSirensMobilePanel } from "@/components/brand/lights-and-sirens-mobile-panel";
 import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import {
   getHallFavoritesCount,
   HALL_FAVORITES_CHANGED_EVENT,
@@ -143,7 +144,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
 
   const brand = (
     <>
-      <Flame className="w-5 h-5 sm:w-6 sm:h-6 text-primary transition-transform group-active:scale-95 shrink-0" />
+      <BrandLogo className="h-7 w-7 sm:h-8 sm:w-8 transition-transform group-active:scale-95" />
       <span className="font-heading text-base sm:text-lg leading-none tracking-wide text-foreground whitespace-nowrap">
         {BRAND_NAME}
       </span>
@@ -312,7 +313,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
               <SheetContent side="right" className="w-[min(100vw-2rem,300px)] pb-safe scroll-momentum">
                 <SheetHeader>
                   <SheetTitle className="font-heading text-left text-xl tracking-wide flex items-center gap-2">
-                    <Flame className="w-5 h-5 text-primary" />
+                    <BrandLogo className="h-7 w-7" />
                     {BRAND_NAME}
                   </SheetTitle>
                 </SheetHeader>

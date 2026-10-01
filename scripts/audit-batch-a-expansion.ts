@@ -11,6 +11,7 @@ import { inferRecipeInstructionClass } from "../shared/golden-100/recipe-quality
 import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
 import { titleMatchesDishIdentity } from "../shared/meal-format-contract.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const BATCH_A = [
   { slug: "shakshuka-for-the-hall", collection: "breakfast", title: "Shakshuka for the Hall" },
@@ -223,7 +224,7 @@ for (const item of BATCH_A) {
 const out = { generatedAt: new Date().toISOString(), rows };
 const outPath = path.join(process.cwd(), "review/batch-a-expansion-audit.json");
 fs.mkdirSync(path.dirname(outPath), { recursive: true });
-fs.writeFileSync(outPath, JSON.stringify(out, null, 2));
+writeFileAtomicSync(outPath, JSON.stringify(out, null, 2));
 
 console.log(JSON.stringify(out, null, 2));
 const blockers = rows.filter((r) => r.overall === "BLOCKER");

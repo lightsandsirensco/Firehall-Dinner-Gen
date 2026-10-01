@@ -7,13 +7,14 @@
 import fs from "node:fs";
 import path from "node:path";
 import { buildDuplicateReport } from "../shared/catalog-duplicate-audit/build-report.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const OUT_PATH = path.join(process.cwd(), "review", "duplicate-report.json");
 
 function main(): void {
   const report = buildDuplicateReport();
   fs.mkdirSync(path.dirname(OUT_PATH), { recursive: true });
-  fs.writeFileSync(OUT_PATH, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(OUT_PATH, JSON.stringify(report, null, 2));
 
   const s = report.catalogSummary;
   console.log("=== Firehall Catalog Duplicate Audit ===");

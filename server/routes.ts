@@ -104,6 +104,7 @@ import { getEditorialArticleBySlug, EDITORIAL_ARTICLES } from "../shared/editori
 import { getCatalogSlugRedirect } from "../shared/catalog-slug-redirects.js";
 import { approvedCatalogRecipePath } from "../shared/approved-catalog.js";
 import { guidePath } from "../shared/editorial/content-schema.js";
+import { getRetiredGuide } from "../shared/editorial/retired-guides.js";
 import { fetchExploreRecipeDetailPayload } from "./explore-recipe-detail.js";
 import {
   parseGenerationRateContext,
@@ -2487,6 +2488,17 @@ export async function registerRoutes(
   // this a real 301 before that injector ever runs.
   app.get(["/guides/top-firehall-classics", "/blog/top-firehall-classics"], (_req: Request, res: Response) => {
     return res.redirect(301, "/guides/10-classic-firehall-meals");
+  });
+
+  // Guides retired in the Phase 2 consolidation (see shared/editorial/retired-guides.ts).
+  // Both URL prefixes go straight to the absorbing guide in one hop; topics with no
+  // cooking equivalent return 410 so they drop out of the index.
+  app.get(["/guides/:slug", "/blog/:slug"], (req: Request, res: Response, next: NextFunction) => {
+    const retired = getRetiredGuide(routeParam(req.params.slug).trim().toLowerCase());
+    if (!retired) return next();
+    if (retired.target) return res.redirect(301, guidePath(retired.target));
+    res.setHeader("X-Robots-Tag", "noindex");
+    return res.status(410).type("text/plain").send("This guide has been removed.");
   });
 
   // "/classics-wheel" was a separate SEO explainer page describing the same

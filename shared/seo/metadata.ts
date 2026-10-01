@@ -12,9 +12,9 @@ import {
 } from "../meal-catalog/curated-count.js";
 import {
   SEO_DEFAULT_DESCRIPTION,
-  SEO_DEFAULT_OG_IMAGE_PATH,
   SEO_DEFAULT_TITLE,
   SEO_SITE_NAME,
+  SEO_SITE_SHARE_IMAGE_PATH,
   SEO_TARGET_KEYWORDS,
 } from "./constants.js";
 import { absoluteImageUrl, normalizePath, recipePath } from "./urls.js";
@@ -62,6 +62,7 @@ export function buildHomeSeo(): PageSeoConfig {
     description: SEO_DEFAULT_DESCRIPTION,
     canonicalPath: "/",
     ogType: "website",
+    ogImage: SEO_SITE_SHARE_IMAGE_PATH,
     keywords: [...SEO_TARGET_KEYWORDS],
   };
 }
@@ -305,7 +306,7 @@ export function buildRecipePageSeo(page: GoldenRecipePage, origin: string): Page
   // verified image yet, or was sanitized because its hero conflicted with
   // another recipe) — that guessed path is exactly the file that's missing
   // or wrong. Fall back to the site's known-good default OG image instead.
-  const hero = page.heroImage?.trim() || SEO_DEFAULT_OG_IMAGE_PATH;
+  const hero = page.heroImage?.trim() || SEO_SITE_SHARE_IMAGE_PATH;
 
   return {
     title,
@@ -326,9 +327,9 @@ export function buildRecipePageSeo(page: GoldenRecipePage, origin: string): Page
 
 export function buildGuidesIndexSeo(articleCount = 8): PageSeoConfig {
   return {
-    title: `Firefighter Meal & Nutrition Guides | ${SEO_SITE_NAME}`,
+    title: `Firefighter Meal & Firehouse Cooking Guides | ${SEO_SITE_NAME}`,
     description: clipDescription(
-      `${articleCount} guides for station meals, shift nutrition, hall culture, and crew cooking — with recipes that match real shift timing.`,
+      `${articleCount} guides to cooking for a fire station crew: quantities, timing, holding food through calls, and food safety, each linked to recipes.`,
     ),
     canonicalPath: guidesIndexPath(),
     ogType: "website",
@@ -385,7 +386,7 @@ export function buildGuideArticleSeo(article: EditorialArticle): PageSeoConfig {
     canonicalPath: guidePath(article.slug),
     ogType: "article",
     ogImage: article.heroImage,
-    keywords: [...SEO_TARGET_KEYWORDS, ...article.keywords],
+    keywords: article.keywords,
   };
 }
 
@@ -426,7 +427,7 @@ export function buildFirefighterRedLeadRecipeSeo(): PageSeoConfig {
 }
 
 export function defaultOgImage(origin: string): string {
-  return absoluteImageUrl(origin, SEO_DEFAULT_OG_IMAGE_PATH);
+  return absoluteImageUrl(origin, SEO_SITE_SHARE_IMAGE_PATH);
 }
 
 export function normalizeCanonicalPath(path: string): string {

@@ -1,128 +1,237 @@
 {
   "slug": "firefighter-breakfast-guide",
-  "title": "The Firefighter Breakfast Guide",
-  "subtitle": "Sunday mornings, post-call fuel, and feeding a crew that eats in waves",
-  "description": "Firefighter breakfast guide for station mornings: why the meal matters, weekend hall culture, feeding large crews, and ten hall-tested breakfasts with crew-sized recipes.",
+  "title": "Firehouse Breakfast for a Crowd: Eggs, Bacon, and Pancakes for 8 to 12",
+  "subtitle": "Quantities for 8 and 12, oven bacon, eggs that hold, make-ahead bakes, and how to time a crew breakfast around shift change.",
+  "description": "Breakfast for a crowd of 8 to 12: egg and bacon quantities, oven bacon, eggs that hold, overnight egg bakes, and pancakes that don't go soggy.",
   "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "Breakfast at the hall is more than calories — it is the table where the crew lands before the day gets loud. Coffee, eggs, something sizzling on the flat-top, guys giving each other a hard time while the news plays in the background. A good firefighter breakfast feeds people who eat at 07:00 and people who wander in at 09:30 after apparatus checks. This guide covers why that meal matters, how Sunday tradition shows up in kitchens, and ten breakfasts that actually work on shift.",
+  "intro": "Cooking breakfast for a crew is mostly about moving work off the stovetop. Bacon goes on sheet pans in the oven, eggs are either baked in a pan or scrambled at the last minute, and anything assembled the night before, like an egg bake or French toast casserole, only needs oven time in the morning. For 12 people, plan on roughly 2 to 3 dozen eggs, 36 slices of bacon or sausage links, and potatoes or bread on the side.",
   "sections": [
     {
-      "id": "why-breakfast",
-      "heading": "Why breakfast matters on shift",
+      "id": "quantities",
+      "heading": "How much to make for 8 and 12",
       "paragraphs": [
-        "Morning is when the crew syncs — who is tired, who is wired, who forgot lunch money. A real breakfast steadies the room before training, inspections, and whatever the board throws at you. It is also practical fuel: you may not get a proper sit-down meal again until dinner.",
-        "Post-night-call breakfasts hit different. After a long run, hot food at the table beats protein bars in the rig bay. The meal does not need to be fancy — it needs to be hot, plentiful, and ready when people sit."
+        "These amounts assume a full breakfast with two or three components. If eggs are the only protein, stay at the top of the egg range; if there is bacon, sausage and potatoes, the low end is plenty."
+      ],
+      "table": {
+        "caption": "Breakfast quantities for a hungry crew",
+        "columns": [
+          "Item",
+          "Per person",
+          "For 8",
+          "For 12"
+        ],
+        "rows": [
+          [
+            "Eggs, scrambled or baked",
+            "2 to 3",
+            "16 to 24",
+            "24 to 36"
+          ],
+          [
+            "Bacon",
+            "3 slices",
+            "24 slices (about 1 1/2 to 2 lb)",
+            "36 slices (about 2 1/2 to 3 lb)"
+          ],
+          [
+            "Sausage links",
+            "2 to 3",
+            "16 to 24",
+            "24 to 36"
+          ],
+          [
+            "Pancakes, 4 in (10 cm)",
+            "3",
+            "24",
+            "36"
+          ],
+          [
+            "Hash browns or potatoes",
+            "1/3 lb (150 g)",
+            "2 3/4 lb",
+            "4 lb"
+          ],
+          [
+            "Toast, muffins or biscuits",
+            "2",
+            "16",
+            "24"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "oven-bacon",
+      "heading": "Cook bacon in the oven, not in a skillet",
+      "paragraphs": [
+        "Pan-frying 36 slices means six or seven batches and a stovetop covered in grease. In the oven, four sheet pans cook the whole lot at once and the bacon cooks more evenly because it lies flat. Line the pans with foil for easy cleanup, lay the slices close together without overlapping, and cook at 400°F (200°C) for about 15 to 20 minutes for regular bacon, longer for thick-cut. There's no need to flip it. Swap the pans between racks halfway, because most ovens run hotter in some spots. For crisper bacon, cook it on a wire rack set in the pan."
       ]
     },
     {
-      "id": "sunday-culture",
-      "heading": "Weekend firehall breakfast culture",
+      "id": "eggs",
+      "heading": "Eggs that hold, and eggs that don't",
       "paragraphs": [
-        "Lots of halls treat Sunday like pancake-and-egg day — slower start, more people in the kitchen, someone on coffee detail. It is part commissary, part tradition. The cook is often whoever got roped in last night, but the food still lands because the format is forgiving.",
-        "Red lead skillets, big bakes, and burrito lines show up on Sundays because they feed the whole hall from one or two pans. That is the point — nobody should still be flipping single orders when the church bells stop and the tones might drop."
+        "Scrambled eggs are best in the first few minutes. As they sit, the proteins keep tightening and squeeze out water, which is why a hotel pan of scrambled eggs turns rubbery with a puddle underneath. If the crew eats together, scramble in batches over medium-low heat and pull them while they still look slightly wet, since they finish cooking on the way to the table.",
+        "If people will be eating over an hour, bake the eggs instead. Whisk 18 to 24 eggs with a splash of milk and seasoning, pour them into a greased half sheet pan, and bake at 350°F (175°C) until the centre is just set. Cut them into squares for breakfast sandwiches or burritos. They hold and reheat far better than scrambled eggs. For egg bakes and casseroles, USDA's safe temperature is 160°F (71°C) and Health Canada's is 74°C (165°F)."
       ]
     },
     {
-      "id": "large-crews",
-      "heading": "Feeding large crews in the morning",
+      "id": "make-ahead",
+      "heading": "Make-ahead bakes for shift change",
       "paragraphs": [
-        "Count who is eating, then add two — visitors, training staff, the officer who smelled bacon from the office. Bakes and lines scale; made-to-order plates do not.",
-        "Hold proteins warm in a low oven, keep cold toppings cold, and put tortillas in a warmer not a microwave stack. Staggered eating is normal — design for it."
+        "An egg bake or French toast casserole assembled the evening before is the easiest way to serve a hot breakfast at shift change. The bread soaks up the custard overnight, which is what gives French toast casserole its texture. In the morning, put the dish in the oven straight from the fridge. A cold dish takes longer than the recipe's time, so bake it covered for most of the time, uncover it to brown, and check that the centre has reached a safe temperature rather than relying on the clock."
+      ]
+    },
+    {
+      "id": "pancakes",
+      "heading": "Pancakes for a crowd without a queue",
+      "paragraphs": [
+        "Mix the batter just until the flour disappears; a few lumps are fine. Overmixing develops gluten, which makes pancakes tough and flat. A large griddle at about 375°F (190°C) cooks eight or more at a time. As each batch finishes, move it to a wire rack in a 200°F (95°C) oven in a single layer. Stacking pancakes traps steam and turns them soggy; a rack lets the steam escape."
+      ]
+    },
+    {
+      "id": "hash-browns",
+      "heading": "Hash browns that actually crisp",
+      "paragraphs": [
+        "Wet potatoes steam instead of browning. Squeeze freshly shredded potatoes hard in a clean towel to get the water out, then spread them in a thin layer in a hot, well-oiled pan and leave them alone for several minutes before turning. For a crew, spread frozen or squeezed shredded potatoes on oiled sheet pans and roast them at 425°F (220°C), which frees up the griddle for eggs and pancakes."
+      ]
+    },
+    {
+      "id": "burrito-line",
+      "heading": "A breakfast burrito line for people eating at different times",
+      "paragraphs": [
+        "When the crew will drift in over an hour or more, a burrito line beats any plated breakfast. Every filling can be cooked in the oven and held: baked eggs cut into strips, sausage or bacon from the sheet pans, and roasted potatoes. Put them out in shallow pans with cheese, salsa and hot sauce, and warm large 10 to 12 in (25 to 30 cm) flour tortillas just before the line opens. Wrapped in a clean towel inside a covered dish or a small cooler, warm tortillas stay soft for about an hour; cold ones crack when they are folded.",
+        "Burritos can also be rolled ahead. Wrap each one tightly in foil and hold them in a 200°F (95°C) oven for up to about an hour, or chill them and reheat to 165°F (74°C) for the next morning. Leave salsa and sour cream out of any burrito you plan to hold, because they make the tortilla soggy.",
+        "Breakfast usually overlaps with the shift change, so clear up before the next crew needs the kitchen. Soak sheet pans as soon as they are empty, scrape the griddle while it is still warm, and put leftover fillings in shallow, labelled containers in the fridge within two hours."
+      ]
+    },
+    {
+      "id": "timing",
+      "heading": "Timing breakfast around shift change",
+      "paragraphs": [
+        "Work backward from when the crew sits down, and keep the stovetop for the last 15 minutes."
+      ],
+      "steps": [
+        "The night before: assemble any egg bake or French toast casserole, and mix the dry ingredients for pancakes.",
+        "About an hour out: preheat the oven and put in the make-ahead bake.",
+        "About 30 minutes out: bacon and sheet-pan potatoes go in the oven.",
+        "About 15 minutes out: start pancakes on the griddle, holding them on a rack in the low oven.",
+        "Last 5 minutes: scramble eggs if you are making them, so they go to the table straight from the pan."
       ]
     }
   ],
   "practicalAdvice": [
-    "Run a line or a bake — not eight individual omelette orders unless someone volunteered their sanity.",
-    "Cook bacon and sausage on sheet pans — controls splatter in a shared kitchen.",
-    "Coffee owner is a real assignment — assign it before the eggs go on.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "Plan 2 to 3 eggs and 3 slices of bacon per person.",
+    "Cook bacon on sheet pans at 400°F (200°C) and swap the pans halfway.",
+    "Bake eggs in a sheet pan if the crew will eat over an hour; scrambled eggs don't hold.",
+    "Hold pancakes on a wire rack in a 200°F (95°C) oven, never stacked."
   ],
   "mealRecommendations": [
     {
       "slug": "sausage-egg-bake",
       "title": "Sausage Egg Bake",
-      "blurb": "Senior-cook eggs, sausage, and cheese in one large baking dish — the post-call showpiece."
+      "blurb": "Assemble the night before and bake at shift change."
     },
     {
-      "slug": "breakfast-burrito-bar",
-      "title": "2. Hall Breakfast Burritos",
-      "blurb": "Wrap-and-go line — scramble, protein, cheese, salsa; handles staggered eaters."
+      "slug": "overnight-french-toast-bake",
+      "title": "Overnight French Toast Bake",
+      "blurb": "Soaks overnight; one dish feeds a table.",
+      "catalog": "breakfast"
     },
     {
-      "slug": "french-toast-casserole",
-      "title": "3. Overnight French Toast Bake",
-      "blurb": "Prep the night before, bake in the morning — slice and feed without griddle chaos."
+      "slug": "hall-breakfast-burritos",
+      "title": "Hall Breakfast Burritos",
+      "blurb": "Sheet-pan eggs, potatoes and sausage on a line; burritos can be wrapped and held.",
+      "catalog": "breakfast"
     },
     {
-      "slug": "sausage-egg-bake",
-      "title": "Sausage Egg Bake",
-      "blurb": "Eggs, cheese, and sausage from one pan — portion control built in."
+      "slug": "buttermilk-pancakes",
+      "title": "Buttermilk Pancakes for the Crew",
+      "blurb": "Use the rack-in-the-oven method to feed everyone at once.",
+      "catalog": "breakfast"
     },
     {
-      "slug": "breakfast-burrito-bar",
-      "title": "5. Hall Breakfast Wraps",
-      "blurb": "Warm tortilla line — lighter than burritos, still scales for eight-plus."
+      "slug": "sheet-pan-eggs-sausage-crew",
+      "title": "Sheet-Pan Eggs and Sausage",
+      "blurb": "The baked-egg method from this guide, with sausage on the same pan.",
+      "catalog": "breakfast"
     },
     {
-      "slug": "pancake-short-stack",
-      "title": "Pancake Short Stack",
-      "blurb": "Short stack held warm between waves — syrup on the table, not on the plates."
-    },
-    {
-      "slug": "chorizo-breakfast-tacos",
-      "title": "7. Chorizo Breakfast Hash",
-      "blurb": "Crisp potato base with bold sausage — one skillet, big flavor, easy double batch."
+      "slug": "hash-brown-breakfast-casserole",
+      "title": "Hash Brown Breakfast Casserole",
+      "blurb": "Assemble the night before; the potatoes crisp on top as it bakes.",
+      "catalog": "breakfast"
     },
     {
       "slug": "cast-iron-breakfast-skillet",
-      "title": "8. Loaded Breakfast Hash",
-      "blurb": "Bacon, potato, and egg in one pan — the everything-in-the-skillet morning feed."
+      "title": "Cast Iron Breakfast Skillet",
+      "blurb": "A one-pan breakfast for a smaller crew.",
+      "catalog": "breakfast"
     },
     {
       "slug": "hall-sausage-biscuits-gravy",
-      "title": "9. Sausage Gravy and Biscuits",
-      "blurb": "Southern hall favorite — gravy hides timing mistakes if the biscuits are warm."
+      "title": "Sausage Biscuits and Gravy",
+      "blurb": "The gravy holds on low heat; bake the biscuits right before serving.",
+      "catalog": "breakfast"
     },
     {
-      "slug": "breakfast-burrito-bar",
-      "title": "10. Breakfast Burrito Bar (Hall Classic)",
-      "blurb": "Golden-catalog line format — same burrito logic crews already know from dinner planning."
+      "slug": "chorizo-breakfast-hash",
+      "title": "Chorizo Breakfast Hash",
+      "blurb": "Chorizo and potatoes on a sheet pan or in a big skillet; scales by the pound.",
+      "catalog": "breakfast"
     }
   ],
   "faqs": [
     {
-      "question": "What is the easiest breakfast for a rookie cook on Sunday?",
-      "answer": "Overnight French toast bake or a burrito line. Both forgive timing, scale cleanly, and do not require flipping twelve individual omelettes while the crew watches."
+      "question": "How many eggs do I need for 12 people?",
+      "answer": "24 to 36 eggs, or 2 to 3 per person. Use the lower number if you are also serving bacon or sausage and potatoes, and the higher number if eggs are the main protein."
     },
     {
-      "question": "How early should we start cooking for a big hall breakfast?",
-      "answer": "For a bake, prep the night before and start the oven sixty to seventy-five minutes before you want to eat. For a line, cook components in the hour before — assemble at the counter so latecomers still get hot food."
+      "question": "How do you keep scrambled eggs warm for a crowd?",
+      "answer": "They don't hold well; after 15 to 20 minutes they turn rubbery and watery. Pull them from the heat while slightly underdone and keep them covered in a low oven only briefly. If the crew will eat over a longer stretch, bake the eggs in a sheet pan instead, which holds and reheats much better."
     },
     {
-      "question": "Does breakfast matter on a busy shift?",
-      "answer": "Yes — even a simple line beats running empty until lunch. A fifteen-minute burrito assembly saves morale and keeps people from living on gas station pastries."
+      "question": "Can I make a breakfast casserole the night before?",
+      "answer": "Yes, and it is usually better for it, because the bread has time to soak up the eggs. Refrigerate it covered, then bake it straight from the fridge, allowing extra time. Check the centre with a thermometer: 160°F (71°C) by USDA guidance, or 74°C (165°F) by Health Canada's."
     },
     {
-      "question": "What's the best hall breakfast when the crew is eating in waves?",
-      "answer": "A bake or a burrito bar — both hold warm and let people build a plate whenever they surface, whether that's 07:00 or 09:30 after apparatus checks. Made-to-order eggs only work if one cook can dedicate the whole morning to the stove."
+      "question": "What's the best way to cook bacon for a crowd?",
+      "answer": "On foil-lined sheet pans in a 400°F (200°C) oven for about 15 to 20 minutes, without flipping. Swap the pans between racks halfway for even cooking, and use a wire rack in the pan if you like it extra crisp."
     }
   ],
   "relatedArticleSlugs": [
-    "firehall-breakfast-and-brunch",
-    "firefighter-breakfast-ideas",
-    "feeding-a-firehall-crew"
+    "best-meals-24-hour-shift",
+    "healthy-smoothies-at-the-hall",
+    "cooking-for-10-firefighters"
   ],
   "keywords": [
+    "breakfast for a crowd",
     "firefighter breakfast",
     "fire station breakfast",
-    "firehall breakfast",
-    "Sunday breakfast shift",
-    "crew breakfast"
+    "breakfast burrito bar for a crowd",
+    "how many eggs for 12 people",
+    "bacon in the oven for a crowd"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 10,
-  "seoTitle": "Firefighter Breakfast Guide: 10 Hall Morning Meals",
-  "heroImageAlt": "The Firefighter Breakfast Guide — firefighter breakfast tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 9,
+  "seoTitle": "Breakfast for a Crowd: Eggs, Bacon and Pancakes for 12",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    },
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    }
+  ]
 }

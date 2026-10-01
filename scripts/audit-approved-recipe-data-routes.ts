@@ -10,7 +10,7 @@ import path from "node:path";
 import { buildApprovedCatalog } from "../server/approved-catalog.js";
 import { approvedCatalogRecipePath } from "../shared/approved-catalog.js";
 import { breakfastPageJsonPath } from "../shared/fuel-catalog/paths.js";
-import { smoothiePageJsonPath } from "../shared/fuel-catalog/paths.js";
+import { smoothiePageJsonPath, smoothieRecipePath } from "../shared/fuel-catalog/paths.js";
 import { goldenPageJsonPath } from "../shared/golden-100/recipe-page-paths.js";
 import { performancePageJsonPath } from "../shared/performance-meals/recipe-page-paths.js";
 import { hallExpansionCatalogPagePath } from "../shared/hall-expansion/recipe-page-paths.js";
@@ -77,8 +77,8 @@ function assertRoutePath(slug: string, kind: string, errors: string[]): void {
   if (kind === "breakfast_catalog" && !route.startsWith("/breakfast/")) {
     errors.push(`Breakfast slug ${slug} should route to /breakfast/*, got ${route}`);
   }
-  if (kind === "smoothie" && !route.startsWith("/recipes/")) {
-    errors.push(`Smoothie slug ${slug} should route to /recipes/*, got ${route}`);
+  if (kind === "smoothie" && route !== smoothieRecipePath(slug)) {
+    errors.push(`Smoothie slug ${slug} should route to ${smoothieRecipePath(slug)}, got ${route}`);
   }
   if (
     kind !== "breakfast_catalog" &&

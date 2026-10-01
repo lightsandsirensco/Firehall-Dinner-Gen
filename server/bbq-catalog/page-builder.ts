@@ -12,6 +12,7 @@ import type { BbqRecipe } from "../../shared/bbq-30/types.js";
 import { BBQ_30_PAGE_CATEGORY } from "../../shared/bbq-30/types.js";
 import { bbqCatalogHeroPath, bbqCatalogThumbPath } from "../../shared/bbq-catalog/slug-registry.js";
 import { calculateNutritionFromIngredients } from "../../shared/nutrition/calculate.js";
+import { buildRecipeImageAlt } from "../imagery/recipe-image-prompt.js";
 
 function capStepMinutes(minutes: number | undefined): number | undefined {
   if (minutes == null || minutes <= 0) return undefined;
@@ -107,7 +108,7 @@ export function buildBbqCatalogRecipePage(
       source: "estimated",
     },
     heroImage: hero,
-    heroImageAlt: `${recipe.manifest.title} — crew-sized BBQ spread with visible smoke and bark`,
+    heroImageAlt: buildRecipeImageAlt({ slug, title: recipe.manifest.title, subtitle: recipe.manifest.subtitle, description: recipe.description }),
     mobileImage: mobile,
     thumbImage: thumb,
     railImage: rail,

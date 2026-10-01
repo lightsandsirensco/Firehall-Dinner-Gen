@@ -20,6 +20,7 @@ import { CURATED_HALL_PACKAGES, getCuratedPackageDef } from "../shared/curated-h
 import { slugLockedImagePaths } from "../shared/explore-image-paths.js";
 import { CLASSIC_HALL_MEALS, resolveClassicWheelImagery } from "../shared/classic-hall-meals.js";
 import type { ApprovedCatalogEntry } from "../shared/approved-catalog.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -627,7 +628,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(MD_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
   const md = `# 404 Audit — Firehall Meals
 
@@ -726,7 +727,7 @@ npm run audit:approved-recipe-data-routes
 \`\`\`
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
 
   const notFoundPaths = report.notFoundPaths;
   console.log(

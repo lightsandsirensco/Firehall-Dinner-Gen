@@ -1,93 +1,211 @@
 {
   "slug": "firehall-kitchen-culture",
-  "title": "Firehall Kitchen Culture",
-  "subtitle": "How meals build (or break) a crew",
-  "description": "Firehall kitchen culture: who cooks, who cleans, how dinner decisions get made, and why food matters beyond calories on shift.",
+  "title": "Firehall Kitchen Culture: Running a Shared Station Kitchen That Works",
+  "subtitle": "A fair cook rotation, cleanup in the right order, shared-fridge rules, handling allergies, and writing the crew's recipes down so they outlast transfers.",
+  "description": "Firehall kitchen culture that works: a fair cook rotation, cleanup order, shared-fridge labelling, handling allergies, and writing recipes down.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "Every hall has a kitchen culture whether anyone writes it down or not. Some stations rotate cooks; others have one person who always ends up at the stove. The culture shows up in who cleans, who shops, and whether rookies learn or get hazed. Good kitchen culture is fair, predictable, and good-natured — not competitive suffering.",
+  "intro": "A shared station kitchen works when a few things are settled and written down: who cooks and when, who cleans, how the fridge is labelled, and how allergies are handled. Most of the friction in a firehall kitchen comes from the same places: dishes left for the next shift, unlabelled containers nobody will admit to, and the same two people always cooking. Each of those has a simple system that fixes it, and several of them are also food-safety rules. This guide covers a fair rotation, the order to clean in, shared-fridge rules, allergies, keeping a crew recipe file, and bringing new cooks along.",
   "sections": [
     {
-      "id": "roles",
-      "heading": "Roles that prevent resentment",
+      "id": "rotation",
+      "heading": "A cook rotation that stays fair",
       "paragraphs": [
-        "Cook, cleanup lead, grocery shopper — three jobs, can be three people. When everyone 'helps' with no owner, dishes sit until morning.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "Fix cleanup before anything else. When the person who cooked also ends up washing every pot, cooking starts to feel like a penalty and volunteers disappear. The simplest rule that works is that the cook never does the dishes. Split the kitchen into a few named jobs, rotate them on a posted schedule by shift, and allow swaps as long as the board is updated.",
+        "New cooks should do their first two turns paired with someone experienced, on a forgiving dish such as chili, a taco bar or a sheet-pan dinner. A stocked pantry makes the rotation fairer too: when rice, pasta, canned tomatoes, beans, oil and spices are always there, whoever is cooking isn't starting from nothing."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      "table": {
+        "caption": "Kitchen jobs to rotate",
+        "columns": [
+          "Job",
+          "What it covers"
+        ],
+        "rows": [
+          [
+            "Cook",
+            "Menu, shopping list, timing, checking allergies, food temperatures"
+          ],
+          [
+            "Prep helper",
+            "Chopping, setting the table or line, keeping the counters clear while cooking"
+          ],
+          [
+            "Cleanup lead (never the cook)",
+            "Dishes, pots, stovetop, counters, trash and recycling"
+          ],
+          [
+            "Shopper",
+            "Buying the list, keeping receipts for the grocery split"
+          ],
+          [
+            "Weekly fridge check",
+            "Clearing out expired leftovers and wiping shelves on a fixed day"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cleanup",
+      "heading": "Cleanup in the right order",
+      "paragraphs": [
+        "Cleaning in a set order is faster and keeps raw-meat contamination away from things people eat from. Soak pots and sheet pans in hot water as soon as they are empty, while people are eating, so nothing dries on. Wash the cleanest things first, when the water is hottest and cleanest, and finish with anything that touched raw meat.",
+        "Washing removes dirt and grease; sanitizing kills what is left. USDA's solution for boards and counters is 1 tablespoon of unscented liquid chlorine bleach per gallon (4 L) of water: flood the surface, leave it for several minutes, rinse, then air-dry. Use separate cutting boards for raw meat and for bread, fruit and vegetables, and replace boards once they have deep grooves that are hard to clean."
+      ],
+      "steps": [
+        "Scrape plates into the trash or compost and stack them by type.",
+        "Wash glasses and mugs, then cutlery, then plates and bowls, then serving dishes.",
+        "Wash pots and pans, starting with the ones that soaked longest.",
+        "Wash raw-meat boards, knives and tongs last, then sanitize them.",
+        "Wipe the stovetop and griddle while still warm, then sanitize counters and the sink.",
+        "Put dishcloths in the laundry and hang out fresh ones for the next shift."
       ]
     },
     {
-      "id": "tone",
-      "heading": "Tone at the table",
+      "id": "fridge",
+      "heading": "Shared fridge rules",
       "paragraphs": [
-        "Meals are where crews decompress. Complaining about the food while someone cooked is a fast way to end volunteer cooks.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "A shared fridge needs three rules: everything is labelled, raw meat goes on the bottom, and there is a fixed clear-out day. Labels should show what the food is, the date it was cooked, and whose it is or which shift made it. Store raw meat and poultry on the lowest shelf in a pan or tray, so it can't drip onto food that won't be cooked again, and keep ready-to-eat food and leftovers above it.",
+        "Keep a thermometer inside and check it stays at 40°F (4°C) or below; a crowded door that is opened constantly on a busy shift can drift warmer. USDA gives 3 to 4 days for cooked leftovers and Health Canada 2 to 3 days. In a station where several crews share one fridge, the shorter window is easier to apply, and the weekly check clears anything older. Personal food goes in one labelled bin per person so it doesn't get mixed up with crew food."
       ]
     },
     {
-      "id": "hall-tonight",
-      "heading": "What this looks like on the hall tonight",
+      "id": "allergies",
+      "heading": "Allergies and dietary needs",
       "paragraphs": [
-        "Kitchen culture shows up in small moves: who shops, who cleans, whether rookies get coached or roasted. For firehall kitchen culture, fairness beats perfection — rotate the jobs that nobody wants twice in a row.",
-        "Meals are morale. A crew that trusts the kitchen cooks more often and complains less about grocery splits. Keep the tone direct and the help real."
+        "Ask about allergies once, write them on a list the cook can see, and update it when the crew changes. Asking every shift gets tiresome, but relying on memory is how mistakes happen. The FDA lists nine major allergens in the US (milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, soybeans and sesame), and Health Canada's priority list also includes mustard and sulphites.",
+        "Cooking for someone with an allergy mostly comes down to separation. Set aside their portion before an allergen is stirred in, use a clean board, pan and utensils, and give every dish on a line its own serving spoon so ingredients don't travel between them. Put allergens such as cheese, sour cream and nuts at the end of the line or on the side instead of mixing them in, and label anything that contains a hidden one."
+      ]
+    },
+    {
+      "id": "recipe-file",
+      "heading": "Write the crew's recipes down",
+      "paragraphs": [
+        "Every crew has a few dishes people ask for again, and they often exist only in one person's head. When that person transfers or retires, the recipe goes with them. Writing it down with the details that matter at crew scale (pan sizes, weights, times and how it holds) means anyone on the rotation can cook it. Keep the file in a binder in the kitchen or a shared document, and add notes each time someone makes it."
       ],
-      "tips": [
-        "Praise the cook in the bay — fix critiques one-on-one after cleanup.",
-        "Write grocery splits on the receipt photo the same night you shop."
+      "table": {
+        "caption": "What to include in a crew recipe card",
+        "columns": [
+          "Field",
+          "Why it matters"
+        ],
+        "rows": [
+          [
+            "Yield and crew size",
+            "Tells the next cook whether to scale it"
+          ],
+          [
+            "Ingredients by weight",
+            "\"3 lb chuck\" repeats; \"a big pack\" doesn't"
+          ],
+          [
+            "Pot, pan and dish sizes",
+            "Cooking time depends on depth, so the pan is part of the recipe"
+          ],
+          [
+            "Oven temperature and time",
+            "With a note if the station oven runs hot or cold"
+          ],
+          [
+            "Doneness temperature",
+            "The reliable check, whoever is cooking"
+          ],
+          [
+            "Holding and reheating notes",
+            "How long it keeps on low, and how to reheat leftovers"
+          ],
+          [
+            "Allergens",
+            "Listed once so the cook doesn't have to work it out"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "teaching",
+      "heading": "Bringing new cooks along",
+      "paragraphs": [
+        "Most people who say they can't cook for a crew have never been shown the few things that change at scale: browning in batches, using two pans instead of one crowded one, seasoning in stages, and checking temperatures instead of guessing. Teach one of those per turn, on a dish that forgives mistakes, and let the new cook run the next one with help nearby rather than taking over.",
+        "Keep feedback on the food specific and private, and save public comments for what went well. A crew that complains at the table about a dinner someone else cooked soon finds that nobody wants to cook."
       ]
     }
   ],
   "practicalAdvice": [
-    "Write unwritten rules on a whiteboard: cook rotation, cleanup owner, grocery day.",
-    "Praise the cook publicly — criticism belongs one-on-one.",
-    "Rookies cook with a partner, not alone on their first big meal.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "Rotate named kitchen jobs on a posted schedule, and never make the cook do the dishes.",
+    "Wash in order from cleanest to dirtiest, and sanitize raw-meat boards last.",
+    "Label every container with contents, date and owner; raw meat goes on the bottom shelf.",
+    "Keep a written allergy list and separate allergen-free portions before mixing.",
+    "Write down the dishes the crew likes, with pan sizes, weights and holding notes."
   ],
   "mealRecommendations": [
     {
-      "slug": "hall-taco-bar",
-      "title": "Taco Bar",
-      "blurb": "Line meals teach rookies assembly, not plating."
-    },
-    {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Batch cooking teaches timing and cleanup."
+      "blurb": "A forgiving first dish for a new cook on the rotation."
+    },
+    {
+      "slug": "hall-taco-bar",
+      "title": "Taco Bar",
+      "blurb": "A line meal that keeps allergens easy to separate."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "blurb": "Two pans in the oven and little to wash afterward."
     },
     {
       "slug": "one-pot-chicken-rice",
       "title": "Chicken and Rice",
-      "blurb": "Forgiving format for new cooks."
+      "blurb": "One pot to clean, and simple to write up as a crew recipe."
     }
   ],
   "faqs": [
     {
-      "question": "Who should be in charge of cooking at a fire station?",
-      "answer": "Rotate it — one person on cook, one on cleanup, one on groceries, and switch weekly. When everyone 'helps' with no single owner, dishes sit until morning and resentment builds fast."
-    },
-    {
-      "question": "How do you teach a rookie to cook for the crew without embarrassing them?",
-      "answer": "Pair them with a senior firefighter for their first few meals and pick a forgiving format like one-pot chicken and rice or a taco bar. Praise what goes well in front of the crew; save corrections for a one-on-one afterward."
+      "question": "How long can leftovers stay in a shared station fridge?",
+      "answer": "USDA gives 3 to 4 days for cooked leftovers kept at 40°F (4°C) or below, and Health Canada 2 to 3 days. In a fridge shared by several crews, label everything with the date it was cooked, follow the shorter window, and clear out anything older on a fixed day each week."
     }
   ],
   "relatedArticleSlugs": [
-    "better-station-food-culture",
-    "how-crews-split-groceries"
+    "planning-tonights-station-dinner",
+    "firehall-grocery-planning",
+    "rookie-cooking-mistakes",
+    "firehall-meal-prep-ideas"
   ],
   "keywords": [
     "firehall kitchen culture",
-    "fire station cooking culture",
-    "crew meals"
+    "fire station kitchen rules",
+    "shared kitchen cleaning schedule",
+    "shared fridge labeling",
+    "cook rotation"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Firehall Kitchen Culture — firehall kitchen culture tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "Firehall Kitchen Culture: Cooking, Cleanup and Fridge Rules",
+  "sources": [
+    {
+      "label": "Cutting Boards and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/cutting-boards"
+    },
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    },
+    {
+      "label": "Food safety tips for leftovers",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/food-safety-tips-leftovers.html"
+    },
+    {
+      "label": "Food Allergies: What You Need to Know",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-allergies-what-you-need-know"
+    },
+    {
+      "label": "Food allergies",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/food-allergies-intolerances/food-allergies.html"
+    }
+  ]
 }

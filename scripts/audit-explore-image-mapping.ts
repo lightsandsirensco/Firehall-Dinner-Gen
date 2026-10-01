@@ -17,6 +17,7 @@ import {
 } from "../shared/explore-image-mapping.js";
 import { slugLockedImagePaths } from "../shared/explore-image-paths.js";
 import { normalizeCatalogSlug } from "../shared/hall-catalog/gate.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const JSON_OUT = path.join("review", "explore-image-mapping-audit.json");
@@ -163,7 +164,7 @@ function writeMarkdown(report: ReturnType<typeof auditExploreImageMappings>): vo
   }
 
   fs.mkdirSync(path.dirname(MD_OUT), { recursive: true });
-  fs.writeFileSync(MD_OUT, `${lines.join("\n")}\n`, "utf8");
+  writeFileAtomicSync(MD_OUT, `${lines.join("\n")}\n`, "utf8");
 }
 
 function main(): void {
@@ -179,7 +180,7 @@ function main(): void {
   const report = auditExploreImageMappings(entries, PUBLIC, crossCatalog);
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
   writeMarkdown(report);
 
   console.log("[audit:explore-image-mapping] Summary");

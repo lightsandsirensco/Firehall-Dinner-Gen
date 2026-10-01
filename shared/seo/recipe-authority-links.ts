@@ -63,8 +63,8 @@ export function pickRecipeGuideLink(page: RecipeLinkInput): AuthorityLink {
 
   if (/breakfast|brunch|egg/.test(h) || page.mealFormat === "breakfast") {
     return {
-      href: guidePath("firefighter-breakfast-ideas"),
-      label: "Firefighter breakfast ideas",
+      href: guidePath("firefighter-breakfast-guide"),
+      label: "Breakfast for a crowd",
     };
   }
   if (/bbq|smoker|grill|brisket|rib/.test(h) || page.category === "bbq_grill_nights") {
@@ -75,26 +75,26 @@ export function pickRecipeGuideLink(page: RecipeLinkInput): AuthorityLink {
   }
   if (/healthy|performance|macro|lean/.test(h) || page.category === "healthy_performance") {
     return {
-      href: guidePath("healthy-meals-for-active-crews"),
-      label: "Healthy meals for active crews",
+      href: guidePath("healthy-meals-that-still-taste-good"),
+      label: "Healthy meals that still taste good",
     };
   }
   if (/quick|skillet|sheet.?pan|under.?45|busy/.test(h) || page.category === "quick_shift_meals") {
     return {
-      href: guidePath("quick-meals-between-calls"),
-      label: "Quick meals between calls",
+      href: guidePath("fast-firehall-meals-under-30-minutes"),
+      label: "Fast meals under 30 minutes",
     };
   }
   if (/bowl|burrito|build.?your.?own/.test(h) || page.mealFormat === "bowl") {
     return {
-      href: guidePath("25-firefighter-dinner-ideas"),
-      label: "25 firefighter dinner ideas",
+      href: guidePath("most-popular-firefighter-meals"),
+      label: "Most popular firefighter meals",
     };
   }
   if (/comfort|chili|casserole|stew|soup/.test(h)) {
     return {
-      href: guidePath("comfort-food-after-a-long-shift"),
-      label: "Comfort food after a long shift",
+      href: guidePath("firehouse-comfort-meals"),
+      label: "Firehouse comfort meals",
     };
   }
   if (/crew|large|feed|batch|scale/.test(h)) {

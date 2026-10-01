@@ -25,6 +25,7 @@ import {
   classicHallGoldenHeroPath,
 } from "../shared/golden-100/recipe-quality/classics-wheel-fixes.js";
 import { scoreRecipeTitle } from "../shared/recipe-title-quality.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -442,7 +443,7 @@ function main(): void {
   };
 
   const jsonPath = path.join(REVIEW_DIR, "classics-wheel-audit.json");
-  fs.writeFileSync(jsonPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(jsonPath, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
   const md = [
     "# Classics Wheel full audit",
@@ -490,7 +491,7 @@ function main(): void {
   ].join("\n");
 
   const mdPath = path.join(REVIEW_DIR, "classics-wheel-audit.md");
-  fs.writeFileSync(mdPath, `${md}\n`, "utf8");
+  writeFileAtomicSync(mdPath, `${md}\n`, "utf8");
 
   console.log(`\nReport → ${path.relative(ROOT, mdPath)}`);
 

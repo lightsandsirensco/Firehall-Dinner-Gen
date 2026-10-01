@@ -1,32 +1,32 @@
 {
-  "generatedAt": "2026-09-25T23:31:52.708Z",
+  "generatedAt": "2026-10-01T01:47:43.612Z",
   "origin": "https://www.firehallmeals.com",
   "liveFetch": false,
   "phase1": {
-    "totalUrlsAudited": 513,
+    "totalUrlsAudited": 518,
     "duplicateLocs": 0
   },
   "phase2": {
     "collections": {
       "golden100": 104,
       "performanceMeals": 71,
-      "hallExpansion": 115,
+      "hallExpansion": 138,
       "pizzaNight": 20,
-      "breakfast": 62,
+      "breakfast": 74,
       "breakfastPerformance": 5,
       "smoothies": 10,
       "bbq": 45,
-      "approvedCatalog": 392,
-      "curatedCollections": 404
+      "approvedCatalog": 427,
+      "curatedCollections": 439
     },
-    "totalRecipeUrls": 415,
-    "recipesInSitemap": 415,
+    "totalRecipeUrls": 450,
+    "recipesInSitemap": 450,
     "recipesMissingFromSitemap": 0,
     "recipesMissingSlugs": []
   },
   "phase3": {
-    "articlesFound": 57,
-    "articlesInSitemap": 57,
+    "articlesFound": 27,
+    "articlesInSitemap": 27,
     "articlesMissingFromSitemap": 0
   },
   "phase4": {
@@ -84,16 +84,12 @@
       "firefighter breakfast recipes": [
         "/breakfast",
         "/firefighter-breakfast-recipes",
-        "/guides/firefighter-breakfast-guide",
-        "/guides/firefighter-breakfast-ideas",
-        "/guides/firehall-breakfast-and-brunch"
+        "/guides/firefighter-breakfast-guide"
       ],
       "firehall breakfast": [
         "/breakfast",
         "/firefighter-breakfast-recipes",
-        "/guides/firefighter-breakfast-guide",
-        "/guides/firefighter-breakfast-ideas",
-        "/guides/firehall-breakfast-and-brunch"
+        "/guides/firefighter-breakfast-guide"
       ],
       "firefighter dinner ideas": [
         "/firefighter-dinner-ideas"
@@ -111,7 +107,7 @@
     ]
   },
   "phase9": {
-    "finalSitemapUrlCount": 513,
+    "finalSitemapUrlCount": 518,
     "invalidUrlsRemoved": 0
   },
   "issues": [
@@ -119,6 +115,12 @@
       "phase": "recipes",
       "code": "duplicate_title",
       "message": "Duplicate title with greek-chicken-bowls",
+      "slug": "firehall-greek-chicken-bowls"
+    },
+    {
+      "phase": "recipes",
+      "code": "duplicate_meta_title",
+      "message": "Duplicate meta title with greek-chicken-bowls",
       "slug": "firehall-greek-chicken-bowls"
     }
   ],

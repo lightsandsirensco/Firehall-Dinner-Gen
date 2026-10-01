@@ -21,11 +21,6 @@ type CopySpec = {
 
 const SPECS: CopySpec[] = [
   {
-    slug: "chicken-caesar-wraps",
-    collection: "hall-expansion",
-    donor: { collection: "golden-100", slug: "chicken-caesar" },
-  },
-  {
     slug: "buffalo-chicken-wraps",
     collection: "hall-expansion",
     donor: { collection: "golden-100", slug: "buffalo-chicken-dip" },

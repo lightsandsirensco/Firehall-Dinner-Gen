@@ -7,8 +7,11 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import path from "node:path";
 import {
+  buildRecipeImageAlt,
   buildRecipeImagePromptInput,
   deriveAvoidItems,
+  inferMealFormat,
+  inferProteinLabel,
   plateEggStyle,
   titleIngredientConflicts,
   visibleIngredientHints,
@@ -47,8 +50,36 @@ assert.ok(visibleIngredientHints(bagel).some((h) => /egg/.test(h)));
 assert.ok(deriveAvoidItems(bagel).includes("fried egg"));
 
 // Title/ingredient conflicts block regeneration.
-assert.ok(titleIngredientConflicts(load("golden-100/pages/pork-carnitas-tacos.json")).length > 0);
+assert.ok(titleIngredientConflicts(load("golden-100/pages/turkey-burgers.json")).length > 0);
 assert.deepEqual(titleIngredientConflicts(monte), []);
+assert.deepEqual(titleIngredientConflicts(load("golden-100/pages/pork-carnitas-tacos.json")), []);
+
+// Bowl titles stay bowls; broth never counts as a visible protein.
+assert.equal(inferMealFormat("High-Protein Breakfast Burrito Bowls"), "bowl");
+assert.equal(inferMealFormat("Firehouse Diner Burger Bowls"), "bowl");
+assert.equal(inferProteinLabel({ title: "Turkey White Bean Soup", ingredients: [{ name: "ground turkey" }, { name: "chicken broth" }] }), "turkey");
+
+// Spices and broth stay hidden so real toppings survive the capped ingredient line;
+// holding/leftover steps never become the serving description.
+const lentilChili = load("hall-expansion/pages/firehouse-lentil-chili.json");
+const chiliHints = visibleIngredientHints(lentilChili);
+assert.ok(chiliHints.slice(0, 8).includes("shredded cheddar") && chiliHints.slice(0, 8).includes("green onions"));
+assert.ok(!chiliHints.some((h) => /cumin|chili powder|paprika|broth/.test(h)));
+const chiliPrompt = buildEditorialModelPrompt(buildRecipeImagePromptInput(lentilChili, "hall-expansion"));
+assert.ok(!chiliPrompt.includes("shallow baking dish within two hours"), "leftover step leaked into Served:");
+
+// Alt text names the foods vision saw, minus ones the title already names, and never truncates mid-word.
+const alt = (title: string, foods?: string[], subtitle?: string) => buildRecipeImageAlt({ slug: "x", title, subtitle }, foods);
+assert.equal(alt("Hickory Smoked Chicken Breast", ["chicken breasts", "herb butter"]), "Hickory Smoked Chicken Breast — herb butter");
+assert.equal(alt("Batch Lasagna", ["lasagna noodles", "marinara sauce", "mozzarella"]), "Batch Lasagna — lasagna noodles, marinara sauce, and mozzarella");
+assert.equal(alt("Firehall Chili", ["chili"]), "Firehall Chili");
+assert.equal(alt("Baked Ziti", undefined, "Cheesy pasta bake for the table."), "Baked Ziti — cheesy pasta bake for the table");
+assert.equal(alt("Pasta Bar Night", undefined, "Choose-your-sauce pasta bar with garlic bread for ten"), "Pasta Bar Night — choose-your-sauce pasta bar with garlic bread");
+assert.equal(alt("Buttermilk Pancakes", undefined, "Fluffy griddle pancakes stacked for a hungry crew."), "Buttermilk Pancakes — fluffy griddle pancakes stacked");
+assert.equal(alt("Tuna Melt", undefined, "Open-faced tuna melts on rye with cheddar — sheet-pan batch for the crew"), "Tuna Melt — open-faced tuna melts on rye with cheddar");
+assert.equal(alt("Bean Salad", undefined, "Mixed beans and a lemon vinaigrette in a make-ahead salad"), "Bean Salad — mixed beans and a lemon vinaigrette");
+const longAlt = alt("Tacos", Array.from({ length: 30 }, (_, i) => `topping number ${i}`));
+assert.ok(longAlt.length <= 160 && /, and topping number \d+$/.test(longAlt), longAlt);
 
 if (process.argv.includes("--list-conflicts")) {
   for (const col of fs.readdirSync(CATALOG)) {

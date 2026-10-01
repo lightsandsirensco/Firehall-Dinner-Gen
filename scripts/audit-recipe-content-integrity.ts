@@ -10,6 +10,7 @@
 import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const CATALOG_DIR = path.join(ROOT, "client", "public", "catalog");
@@ -158,7 +159,7 @@ function main() {
         recipes: list.map((p) => ({ collection: p.collection, slug: p.slug, title: p.title })),
       })),
   };
-  fs.writeFileSync(
+  writeFileAtomicSync(
     path.join(reviewDir, "recipe-content-integrity-audit.json"),
     JSON.stringify(report, null, 2) + "\n",
     "utf8",

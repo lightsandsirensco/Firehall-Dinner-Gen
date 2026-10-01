@@ -12,6 +12,7 @@ import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
 import { titleMatchesDishIdentity } from "../shared/meal-format-contract.js";
 import { FIREHALL_CREW_SCALE_SIZES } from "../shared/recipe-sourcing-policy.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const BATCH_B = [
   { slug: "classic-patty-melt-for-the-crew", collection: "hall-expansion" as const, title: "Classic Patty Melt for the Crew" },
@@ -308,9 +309,9 @@ const duplicateReport = {
 
 const reviewDir = path.join(process.cwd(), "review");
 fs.mkdirSync(reviewDir, { recursive: true });
-fs.writeFileSync(path.join(reviewDir, "batch-b-recipe-audit.json"), JSON.stringify(recipeAudit, null, 2));
-fs.writeFileSync(path.join(reviewDir, "batch-b-image-audit.json"), JSON.stringify(imageAudit, null, 2));
-fs.writeFileSync(path.join(reviewDir, "batch-b-duplicate-report.json"), JSON.stringify(duplicateReport, null, 2));
+writeFileAtomicSync(path.join(reviewDir, "batch-b-recipe-audit.json"), JSON.stringify(recipeAudit, null, 2));
+writeFileAtomicSync(path.join(reviewDir, "batch-b-image-audit.json"), JSON.stringify(imageAudit, null, 2));
+writeFileAtomicSync(path.join(reviewDir, "batch-b-duplicate-report.json"), JSON.stringify(duplicateReport, null, 2));
 
 console.log(JSON.stringify(recipeAudit, null, 2));
 process.exit(rows.some((r) => r.overall === "BLOCKER") ? 1 : 0);

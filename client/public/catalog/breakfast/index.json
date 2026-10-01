@@ -3430,7 +3430,7 @@
           "soyFree": true,
           "shellfishFree": true,
           "fishFree": true,
-          "porkFree": false,
+          "porkFree": true,
           "vegetarian": false,
           "vegan": false
         },
@@ -3444,11 +3444,6 @@
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
             "note": "Use a dairy-free cheese shred/block alternative."
-          },
-          {
-            "flag": "pork",
-            "label": "Pork-Free Adaptable",
-            "note": "Swap in chicken or turkey sausage."
           }
         ]
       }

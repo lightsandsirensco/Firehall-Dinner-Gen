@@ -3,6 +3,7 @@
  */
 
 import { normalizeFormatKey } from "./meal-format-contract.js";
+import { dishFormatNegativeHints, expectedDishFormat } from "./food-imagery/dish-format.js";
 import {
   buildPlatingAccuracyNegativeHints,
   buildPlatingAccuracyPromptLines,
@@ -123,9 +124,9 @@ export function buildPlatingPromptLine(
   const dish = title.trim();
   switch (platingType) {
     case "bowl":
-      return `${dish} served in a deep matte bowl with distinct rice/grain base zones, glazed protein on top, green onion and sesame garnish — NOT lettuce wraps, NOT tacos, NOT handheld`;
+      return `${dish} served in a deep matte bowl — the recipe's base layer visible with its listed toppings arranged in distinct zones on top — eaten with a fork from the bowl, NOT a sandwich, sub or roll, NOT lettuce wraps, NOT tacos, NOT handheld, no bread unless the recipe lists it`;
     case "wrap":
-      return `${dish} as filled lettuce cups or wraps on a dark plate, visible filling in crisp lettuce leaves — NOT a rice bowl, NOT deep bowl service`;
+      return `${dish} as rolled or folded wraps on a dark plate, one cut in half to show the listed filling — lettuce only if the recipe lists it — NOT a rice bowl, NOT deep bowl service`;
     case "taco":
       return `${dish} as street-style tacos on a dark plate, visible tortillas and filling — NOT a bowl, NOT lettuce-only cups unless titled wraps`;
     case "burger":
@@ -141,12 +142,12 @@ export function buildPlatingPromptLine(
     case "tray":
       return `${dish} on sheet pan or tray bake, even browning, crew-scale portions — NOT handheld wrap`;
     case "casserole":
-      return `${dish} in rectangular baking dish with scooped serving, melted top — NOT taco, NOT wrap`;
+      return `${dish} in rectangular baking dish with one scooped serving showing the layers, browned top — NOT taco, NOT wrap`;
     case "salad":
       if (/\bchicken\b/i.test(dish) && /\bcaesar\b/i.test(dish)) {
         return `${dish} in wide salad bowl with chopped romaine, Caesar dressing, parmesan, and croutons — grilled chicken sliced and diced in bite-sized pieces mixed through the greens, NOT a whole breast resting on top`;
       }
-      return `${dish} in wide salad bowl, protein forward on greens — NOT burger bun, NOT taco shell`;
+      return `${dish} in wide salad bowl, the listed salad ingredients tossed together — greens only if the recipe lists them — NOT burger bun, NOT taco shell`;
     case "sandwich":
       return `${dish} — sandwich on the exact bread the recipe specifies (bun, roll, or sliced/griddled bread), cut face showing the listed fillings; a side appears only if the recipe serves one — NOT rice bowl`;
     case "rice_plate":
@@ -191,7 +192,9 @@ export function platingNegativeHints(
     }
   })();
 
-  return [...common, ...typeSpecific, ...accuracy];
+  const format = title.trim() ? dishFormatNegativeHints(expectedDishFormat(title, mealFormat)) : [];
+
+  return [...new Set([...common, ...typeSpecific, ...format, ...accuracy])];
 }
 
 /** Full plating line for prompts — vessel + accuracy standard. */

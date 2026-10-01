@@ -1,4 +1,5 @@
-import { Flame, UtensilsCrossed } from "lucide-react";
+import { UtensilsCrossed } from "lucide-react";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { Link, useLocation } from "wouter";
 import { BRAND_NAME } from "@/lib/brand-copy";
 import { app } from "@/lib/design-tokens";
@@ -57,7 +58,7 @@ export function AppTopBar({
             data-testid="app-top-logo"
             aria-label={`${BRAND_NAME} — Home`}
           >
-            <Flame className="h-5 w-5 text-primary transition-transform group-active:scale-95" aria-hidden />
+            <BrandLogo className="h-7 w-7 transition-transform group-active:scale-95" />
             <span className="font-heading text-base tracking-wide sm:text-lg">{BRAND_NAME}</span>
           </Link>
 

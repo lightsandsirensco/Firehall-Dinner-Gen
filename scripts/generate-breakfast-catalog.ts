@@ -14,7 +14,7 @@ import { BATCH_WAVE1_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch
 import { BATCH_HIGH_PROTEIN_BREAKFAST_PAGES } from "../shared/breakfast-expansion/batch-high-protein-breakfasts.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
 import { PHASE5_REMOVED_SLUGS } from "../shared/catalog-consolidation/phase5-redirects.js";
-import { buildFirehallHeroImageAlt } from "../shared/curated-image-governance/firehall-hero-alt.js";
+import { buildRecipeImageAlt } from "../server/imagery/recipe-image-prompt.js";
 import { getBreakfastGovernanceMap } from "../shared/breakfast-catalog/governance.js";
 import { isPerformanceBreakfastSlug } from "../shared/breakfast-catalog/governance-types.js";
 import fs from "node:fs";
@@ -145,10 +145,11 @@ function build(seed: Seed): BreakfastRecipePage {
 
   switch (seed.kind) {
     case "burritos": {
+      const turkey = seed.tags.includes("turkey");
       add({ group: "Eggs", quantity: eggCount, name: "large eggs", notes: "whisked with a pinch of salt" });
       add({ group: "Eggs", quantity: seed.crewSize >= 10 ? "2 cups" : "1 1/2 cups", name: "shredded cheddar or pepper jack" });
       add({ group: "Fillings", quantity: potato, name: "frozen hash browns", notes: "or diced par-cooked potatoes" });
-      add({ group: "Fillings", quantity: seed.crewSize >= 10 ? "2 lb" : "1 1/2 lb", name: "breakfast sausage or chorizo", notes: "browned and drained" });
+      add({ group: "Fillings", quantity: seed.crewSize >= 10 ? "2 lb" : "1 1/2 lb", name: turkey ? "bulk turkey sausage" : "breakfast sausage or chorizo", notes: "browned and drained" });
       add({ group: "Fillings", quantity: "1", name: "yellow onion", notes: "diced" });
       add({ group: "Fillings", quantity: "1–2", name: "bell peppers", notes: "diced" });
       add({ group: "Build", quantity: seed.crewSize >= 10 ? "16" : "12", name: "10-inch flour tortillas" });
@@ -156,7 +157,7 @@ function build(seed: Seed): BreakfastRecipePage {
       add({ group: "Build", quantity: "1", name: "hot sauce", optional: true });
 
       step({ stepNumber: 1, title: "Crisp the potatoes", minutes: 12, instruction: "Heat a large skillet or griddle over medium-high. Add hash browns in an even layer; press with a spatula. Let them sit until browned, flip in sections, and season with salt and pepper. Move to a warm tray." });
-      step({ stepNumber: 2, title: "Brown the meat + veg", minutes: 10, instruction: "In the same pan, brown sausage/chorizo. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy." });
+      step({ stepNumber: 2, title: "Brown the meat + veg", minutes: 10, instruction: `In the same pan, brown ${turkey ? "the turkey sausage, breaking it into crumbles" : "sausage/chorizo"}. Add onion and peppers; cook until softened. Drain excess fat if needed so burritos don’t get greasy.` });
       step({ stepNumber: 3, title: "Soft-scramble the eggs", minutes: 6, instruction: "Lower heat to medium. Add a touch of butter, then the eggs. Stir gently until just set (slightly glossy). Fold in cheese off heat so it melts without overcooking." });
       step({ stepNumber: 4, title: "Build and wrap for the line", minutes: 10, instruction: "Warm tortillas briefly. Add potatoes, meat/veg, eggs, and a spoon of salsa. Roll tight: fold sides, then roll forward. Hold wrapped burritos seam-side down on a warm sheet pan." });
       step({ stepNumber: 5, title: "Serve + hold", minutes: 0, instruction: "Keep burritos warm in a 200°F oven (uncovered for crispy tortillas; covered for softer). If you’re feeding in waves, build half, serve, then build the rest." });
@@ -354,7 +355,7 @@ function build(seed: Seed): BreakfastRecipePage {
     stationWorkflow: notes.stationWorkflow,
     cleanupNotes: notes.cleanupNotes,
     leftovers: notes.leftovers,
-    imageAlt: buildFirehallHeroImageAlt(seed.title, [`Main: ${seed.title}`, "Sides: eggs, toast, and fruit on the line"]),
+    imageAlt: buildRecipeImageAlt({ slug: base.slug, title: seed.title, subtitle, description }),
     publishedAt: iso,
     updatedAt: iso,
     readMinutes,

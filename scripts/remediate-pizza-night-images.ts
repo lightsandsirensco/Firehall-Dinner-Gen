@@ -28,6 +28,7 @@ import { writeEditorialImageVariants } from "../server/imagery/variants.js";
 import { scoreEditorialImageQuality } from "../server/imagery/score-image-quality.js";
 import { DEFAULT_HERO_GENERATION_SIZE } from "../server/lib/image-sizes.js";
 import type { GoldenRecipeDefinition } from "../shared/golden-100/types.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client/public");
@@ -250,7 +251,7 @@ async function main(): Promise<void> {
   }
 
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
-  fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(REPORT_PATH, JSON.stringify(report, null, 2));
 
   console.log(
     `[pizza-night-images] audited ${report.totalRecipes} recipes — ${report.issueCount} issue(s), ${report.uniqueHeroHashes} unique hero hash(es)`,

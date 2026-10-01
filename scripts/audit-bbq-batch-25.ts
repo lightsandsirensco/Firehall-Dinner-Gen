@@ -13,7 +13,8 @@ import { isBbqCatalogSlug } from "../shared/bbq-catalog/slug-registry.js";
 import { bbqCatalogHeroPath, bbqCatalogThumbPath } from "../shared/bbq-catalog/slug-registry.js";
 import { imageFileExists } from "../shared/explore-image-paths.js";
 import { validateExploreImageMapping, buildExploreImageMappingContext } from "../shared/explore-image-mapping.js";
-import { resolveApprovedCatalogKind } from "../shared/approved-catalog.js";
+import { resolveApprovedCatalogKind } from "../shared/approved-catalog.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const PAGES_DIR = path.join(PUBLIC, "catalog", "bbq", "pages");
@@ -122,7 +123,7 @@ function main(): void {
     failures,
   };
   fs.mkdirSync("review", { recursive: true });
-  fs.writeFileSync("review/bbq-catalog-audit.json", `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync("review/bbq-catalog-audit.json", `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
   console.log("[audit:bbq-batch-25] Summary");
   console.log(`  Recipes: ${slugs.length} (${BBQ_CATALOG_RECIPE_COUNT} expected)`);

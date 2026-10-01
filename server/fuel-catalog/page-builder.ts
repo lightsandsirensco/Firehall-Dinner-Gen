@@ -69,6 +69,7 @@ export function buildSmoothieRecipePage(item: SmoothieCatalogItem): FuelRecipePa
     shiftNote: item.shiftNote,
     heroImage: item.heroImage,
     thumbImage: item.thumbImage,
+    ...(item.imageAlt !== item.title ? { heroImageAlt: item.imageAlt } : {}),
     tags: [
       FUEL_SET_TAG_SMOOTHIE,
       `taxonomy:${item.taxonomyCategory}`,

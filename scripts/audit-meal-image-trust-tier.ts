@@ -22,6 +22,7 @@ import {
   inferPlatingTypeFromHeroPath,
   platingTypesConflict,
 } from "../shared/plating-type.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const JSON_OUT = path.join("review", "meal-image-trust-tier-report.json");
@@ -281,7 +282,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(payload, null, 2));
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(payload, null, 2));
 
   const md: string[] = [
     "# Meal Image Trust Tier Report",
@@ -331,7 +332,7 @@ function main(): void {
     md.push(`- \`${g.hash.slice(0, 8)}…\` (${g.count}): ${g.titles.join(" · ")}`);
   }
 
-  fs.writeFileSync(MD_OUT, md.join("\n"));
+  writeFileAtomicSync(MD_OUT, md.join("\n"));
   console.log(`[audit:meal-image-trust-tier] P0=${p0.length} P1=${p1.length} → ${JSON_OUT}`);
 }
 

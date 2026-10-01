@@ -1,6 +1,7 @@
 #!/usr/bin/env tsx
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type Entry = {
   slug: string;
@@ -86,7 +87,7 @@ console.log(JSON.stringify({
 }, null, 2));
 
 // export slug list for dedupe
-fs.writeFileSync(
+writeFileAtomicSync(
   path.join("review", "catalog-slugs-expansion-dedupe.json"),
   JSON.stringify(all.map((r) => ({ slug: r.slug, title: r.title, catalog: r.catalog })), null, 2),
 );

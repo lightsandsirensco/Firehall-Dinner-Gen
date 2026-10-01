@@ -25,6 +25,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const BASE = (process.env.TARGET_BASE_URL || "https://www.firehallmeals.com").replace(/\/+$/, "");
 const MAX_PAGES = Number(process.env.CRAWL_MAX_PAGES || 5000);
@@ -404,7 +405,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
 
   const collectionRows = [...collections.entries()]
     .sort((a, b) => b[1].total - a[1].total)
@@ -452,7 +453,7 @@ ${sitemapOnly.length ? sitemapOnly.slice(0, 60).map((e) => `- ${e.path}`).join("
 ${sitemapOnly.length > 60 ? `\n… and ${sitemapOnly.length - 60} more (see JSON).` : ""}
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
 
   if (JSON_MODE) {
     console.log(JSON.stringify(report, null, 2));

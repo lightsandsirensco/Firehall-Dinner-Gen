@@ -9,6 +9,7 @@ import { GOLDEN_100_RECIPES } from "../shared/golden-100/index.js";
 import { PERFORMANCE_ADAPTED_RECIPES } from "../shared/performance-meals/adapted/index.js";
 import { CLASSIC_HALL_MEALS } from "../shared/classic-hall-meals.js";
 import { HUMAN_RECIPE_TITLES } from "../shared/recipe-human-titles.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 /** Manifest titles before humanRecipeTitle() overrides (from recipes-data / batch sources). */
 const GOLDEN_SOURCE_TITLE: Record<string, string> = {
@@ -131,7 +132,7 @@ function main(): void {
 
   const outPath = path.join("review", "recipe-title-human-realism-report.md");
   fs.mkdirSync(path.dirname(outPath), { recursive: true });
-  fs.writeFileSync(outPath, md, "utf8");
+  writeFileAtomicSync(outPath, md, "utf8");
   console.log(`[report] ${changes.length} rewrites → ${outPath}`);
   for (const r of changes) {
     console.log(`  ${r.slug}: "${r.oldTitle}" → "${r.newTitle}"`);

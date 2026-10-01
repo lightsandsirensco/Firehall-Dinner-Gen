@@ -32,10 +32,6 @@ const RULES: Rule[] = [
     requireFast: true,
   },
   {
-    match: (s) => s === "best-meals-after-busy-shift" || s === "best-firehall-meals-busy-nights",
-    forbidSlow: true,
-  },
-  {
     match: (s) => /crockpot|slow-cooker/.test(s),
     forbidSlugs: ["smoked-brisket", "texas-beef-ribs"],
   },

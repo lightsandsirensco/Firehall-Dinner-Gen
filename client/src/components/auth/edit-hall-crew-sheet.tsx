@@ -88,7 +88,7 @@ export function EditHallCrewSheet({ open, onOpenChange }: EditHallCrewSheetProps
             <Label htmlFor="edit-department">Department / service name</Label>
             <Input
               id="edit-department"
-              placeholder="Toronto Fire Services"
+              placeholder="Add your department"
               value={department}
               onChange={(e) => setDepartment(e.target.value)}
             />
@@ -97,7 +97,7 @@ export function EditHallCrewSheet({ open, onOpenChange }: EditHallCrewSheetProps
             <Label htmlFor="edit-hall-name">Hall / station name</Label>
             <Input
               id="edit-hall-name"
-              placeholder="Station 214"
+              placeholder="Add your hall or station"
               value={hallName}
               onChange={(e) => setHallName(e.target.value)}
             />
@@ -107,7 +107,7 @@ export function EditHallCrewSheet({ open, onOpenChange }: EditHallCrewSheetProps
               <Label htmlFor="edit-shift">Shift / crew name</Label>
               <Input
                 id="edit-shift"
-                placeholder="A Shift"
+                placeholder="Add your shift or crew"
                 value={shiftLabel}
                 onChange={(e) => setShiftLabel(e.target.value)}
               />

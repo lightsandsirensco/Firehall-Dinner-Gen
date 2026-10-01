@@ -16,6 +16,7 @@ import { auditGoldenRecipeContent } from "../shared/golden-100/recipe-quality/au
 import { listHallExpansionPageSlugs, HALL_EXPANSION_CATALOG_PAGES_DIR } from "../server/hall-expansion/page-store.js";
 import { GOLDEN_CATALOG_PUBLIC_DIR } from "../server/golden-100/page-store.js";
 import { PERFORMANCE_CATALOG_PUBLIC_DIR } from "../server/performance-meals/page-store.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const BREAKFAST_DIR = path.join(ROOT, "client/public/catalog/breakfast/pages");
@@ -299,7 +300,7 @@ function main(): void {
   };
 
   fs.mkdirSync(REVIEW_DIR, { recursive: true });
-  fs.writeFileSync(path.join(REVIEW_DIR, "expansion-production-audit.json"), JSON.stringify(report, null, 2));
+  writeFileAtomicSync(path.join(REVIEW_DIR, "expansion-production-audit.json"), JSON.stringify(report, null, 2));
 
   const md = [
     "# Expansion Production Audit",
@@ -338,7 +339,7 @@ function main(): void {
     warns.length > 30 ? `\n_…and ${warns.length - 30} more warnings_` : "",
   ].join("\n");
 
-  fs.writeFileSync(path.join(REVIEW_DIR, "expansion-production-audit.md"), md);
+  writeFileAtomicSync(path.join(REVIEW_DIR, "expansion-production-audit.md"), md);
 
   console.log(`[audit:expansion-production] audited=${inventory.length} errors=${errors.length} warnings=${warns.length} score=${score}%`);
   if (jsonOut) console.log(JSON.stringify(report.totals, null, 2));

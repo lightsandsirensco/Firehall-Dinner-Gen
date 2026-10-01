@@ -4,9 +4,9 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PROPOSED = [
-  { slug: "chicken-caesar-wraps", title: "Chicken Caesar Wraps", format: "wrap" },
   { slug: "buffalo-chicken-wraps", title: "Buffalo Chicken Wraps", format: "wrap" },
   { slug: "greek-chicken-pitas", title: "Greek Chicken Pitas", format: "pita" },
   { slug: "beef-gyros-for-the-hall", title: "Beef Gyros", format: "pita" },
@@ -84,5 +84,5 @@ for (const p of PROPOSED) {
 }
 
 const outPath = path.join(process.cwd(), "review/handheld-prebuild-audit.json");
-fs.writeFileSync(outPath, JSON.stringify(report, null, 2));
+writeFileAtomicSync(outPath, JSON.stringify(report, null, 2));
 console.log(JSON.stringify(report, null, 2));

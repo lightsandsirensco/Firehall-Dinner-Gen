@@ -2,7 +2,6 @@
  * Helpers for editorial guides — consistent structure, human voice defaults.
  */
 
-import { enrichGuideArticle } from "./guide-depth-enrichment.js";
 import { humanRecipeTitle } from "../recipe-human-titles.js";
 import type { EditorialPillar } from "./content-pillar.js";
 import type {
@@ -10,8 +9,10 @@ import type {
   EditorialFaq,
   EditorialMealPick,
   EditorialSection,
+  EditorialSource,
   EditorialTopic,
 } from "./content-schema.js";
+import { collectGuideProse } from "./hall-guides-audit.js";
 
 const PUBLISHED = "2026-05-27T18:00:00.000Z";
 
@@ -80,6 +81,41 @@ function assertGuideSpecificFaqs(slug: string, faqs: EditorialFaq[]): void {
   }
 }
 
+/**
+ * Stock phrases that read as filler or forced fire-service colour rather than
+ * cooking instruction. Guides fail to publish if they contain any of these —
+ * say what the cook should actually do instead ("if a call comes in, pull the
+ * pan off the heat and cover it").
+ */
+export const BANNED_GUIDE_PHRASES: Array<{ label: string; re: RegExp }> = [
+  { label: "tones drop", re: /\btones? (?:drop|dropped|dropping|go(?:es)? off)\b/i },
+  { label: "busy board", re: /\b(?:busy|the) board (?:interrupts|lights up|goes)\b|\bbusy boards?\b/i },
+  { label: "morale", re: /\bmorale\b/i },
+  { label: "food-blog comparison", re: /\b(?:food|home)[- ]blog\b/i },
+  { label: "whether you're X or Y", re: /\bwhether you(?:'re| are)\b/i },
+  { label: "it's not just X", re: /\b(?:it|this|that|dinner|cooking)(?:'s| is) not just\b|\bisn't just about\b/i },
+  { label: "ultimate/comprehensive guide", re: /\b(?:ultimate|comprehensive) guide\b/i },
+  { label: "game-changer", re: /\bgame[- ]?changer\b/i },
+  { label: "fuel the shift", re: /\bfuel(?:s|ing)? (?:the|your|a long|long) (?:shift|crew|body)\b/i },
+  { label: "hall-tested claim", re: /\bhall-tested\b/i },
+];
+
+function assertNoBannedPhrases(article: EditorialArticle): void {
+  const prose = collectGuideProse(article);
+  const hits = BANNED_GUIDE_PHRASES.filter(({ re }) => re.test(prose)).map((p) => p.label);
+  if (hits.length) {
+    throw new Error(`[guide-copy-guard] "${article.slug}" uses banned stock phrasing: ${hits.join(", ")}`);
+  }
+}
+
+function finalizeGuide(article: EditorialArticle): EditorialArticle {
+  assertGuideSpecificFaqs(article.slug, article.faqs);
+  assertNoBannedPhrases(article);
+  const heroImageAlt = article.heroImage ? article.heroImageAlt?.trim() || article.title : undefined;
+  const { heroImageAlt: _drop, ...rest } = article;
+  return heroImageAlt ? { ...rest, heroImageAlt } : rest;
+}
+
 export function buildSeoGuide(input: {
   slug: string;
   title: string;
@@ -90,23 +126,21 @@ export function buildSeoGuide(input: {
   sections: EditorialSection[];
   practicalAdvice: string[];
   mealRecommendations: EditorialMealPick[];
-  faqs: EditorialFaq[];
+  faqs?: EditorialFaq[];
   relatedArticleSlugs?: string[];
   topic?: EditorialTopic;
   pillar?: EditorialPillar;
   readMinutes?: number;
   seoTitle?: string;
+  heroImage?: string;
   heroImageAlt?: string;
+  sources?: EditorialSource[];
+  updatedAt?: string;
 }): EditorialArticle {
   const topic = input.topic ?? "meal_planning";
-  const pk = input.keywords[0] ?? input.title;
-  const faqs =
-    topic === "nutrition_performance" && !input.faqs.some((f) => /medical/i.test(f.question))
-      ? [...input.faqs, STANDARD_FAQS.nutrition]
-      : input.faqs;
-  assertGuideSpecificFaqs(input.slug, faqs);
+  const faqs = input.faqs ?? [];
 
-  const base: EditorialArticle = {
+  return finalizeGuide({
     slug: input.slug,
     title: input.title,
     ...(input.seoTitle ? { seoTitle: input.seoTitle } : {}),
@@ -122,45 +156,15 @@ export function buildSeoGuide(input: {
     relatedArticleSlugs: input.relatedArticleSlugs,
     keywords: input.keywords,
     publishedAt: PUBLISHED,
-    updatedAt: PUBLISHED,
+    updatedAt: input.updatedAt ?? PUBLISHED,
     readMinutes: input.readMinutes ?? 7,
-    heroImageAlt:
-      input.heroImageAlt ??
-      `${input.title} — ${pk} tips for fire station kitchens and crew-sized meals`,
-  };
-  return enrichGuideArticle(base);
+    ...(input.heroImage ? { heroImage: input.heroImage } : {}),
+    ...(input.heroImageAlt ? { heroImageAlt: input.heroImageAlt } : {}),
+    ...(input.sources?.length ? { sources: input.sources } : {}),
+  });
 }
 
 /** Ensure SEO + metadata defaults on any guide before publish. */
 export function withGuidePublishingDefaults(article: EditorialArticle): EditorialArticle {
-  const pk = article.keywords[0] ?? article.slug.replace(/-/g, " ");
-  const faqs =
-    article.topic === "nutrition_performance" &&
-    !article.faqs.some((f) => /medical/i.test(f.question))
-      ? [...article.faqs, STANDARD_FAQS.nutrition]
-      : article.faqs;
-  assertGuideSpecificFaqs(article.slug, faqs);
-
-  return enrichGuideArticle({
-    ...article,
-    faqs,
-    heroImageAlt:
-      article.heroImageAlt?.trim() ||
-      `${article.title} — ${pk} tips for fire station kitchens and crew-sized meals`,
-  });
+  return finalizeGuide({ ...article, faqs: article.faqs ?? [] });
 }
-
-/**
- * Standard FAQ fragments that are genuinely reusable — not guide-specific
- * boilerplate. `nutrition` is a real disclaimer (this is not medical
- * advice), appropriate to repeat verbatim across nutrition_performance
- * guides. Do not add generic "how does this product work" entries here;
- * every other FAQ must be written specifically for its guide.
- */
-export const STANDARD_FAQS = {
-  nutrition: {
-    question: "Is this medical advice?",
-    answer:
-      "No. This is practical shift nutrition for station kitchens. Follow your department's health guidance and consult professionals for personal medical questions.",
-  },
-} as const;

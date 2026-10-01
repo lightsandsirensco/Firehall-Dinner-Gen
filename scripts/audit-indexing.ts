@@ -29,6 +29,7 @@ import type { GoldenCatalogIndexEntry, GoldenRecipePage } from "../shared/golden
 import type { EditorialArticle } from "../shared/editorial/content-schema.js";
 import type { BreakfastRecipePage } from "../shared/breakfast-schema.js";
 import type { FuelRecipePage } from "../shared/fuel-catalog/schema.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -438,7 +439,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(MD_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
 
   const md = `# SEO Indexing Audit
 
@@ -560,12 +561,12 @@ Recipes excluded from Explore (duplicate hero imagery) are linked from hall guid
 | \`spaghetti-aglio-e-olio-for-the-hall\` | \`/guides/easy-firehall-pasta-recipes\` |
 | \`crispy-chicken-cutlets\` | \`/guides/firehouse-comfort-meals\` |
 | \`four-step-chicken-piccata\` | \`/guides/rookie-firefighter-meal-guide\` |
-| \`french-onion-soup-for-the-hall\` | \`/guides/comfort-food-after-a-long-shift\` |
-| \`tomato-soup-grilled-cheese-croutons\` | \`/guides/comfort-food-after-a-long-shift\` |
+| \`french-onion-soup-for-the-hall\` | \`/guides/firehouse-comfort-meals\` |
+| \`tomato-soup-grilled-cheese-croutons\` | \`/guides/firehouse-comfort-meals\` |
 | \`sheet-pan-parmesan-dijon-chicken-thigh-dinner\` | \`/guides/fast-firehall-meals-under-30-minutes\` |
-| \`turkey-burgers\` | \`/guides/healthy-firefighter-meals-fill-you-up\` |
+| \`turkey-burgers\` | \`/guides/healthy-meals-that-still-taste-good\` |
 | \`classic-patty-melt-for-the-crew\` | \`/guides/10-classic-firehall-meals\` |
-| \`hall-blt-sandwich-feed\` | \`/guides/quick-meals-between-calls\` |
+| \`hall-blt-sandwich-feed\` | \`/guides/fast-firehall-meals-under-30-minutes\` |
 
 ## Validation commands
 
@@ -576,7 +577,7 @@ npm run seo:audit-sitemap
 \`\`\`
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
 
   console.log("[audit:indexing] report →", MD_OUT);
   console.log(

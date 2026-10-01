@@ -21,6 +21,7 @@ import type { GoldenRecipePageIngredient } from "../shared/golden-100/recipe-pag
 import { CREW_SIZE_OPTIONS, getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
 import { CURATED_HALL_PACKAGES, buildCuratedClientRecipe } from "../shared/curated-hall-packages.js";
 import { MEAL_IDENTITY_SIDE_BUNDLES } from "../shared/meal-archetype-sides.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const JSON_OUT = path.join(ROOT, "review", "nutrition-ingredient-integrity-audit.json");
@@ -327,7 +328,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, `${JSON.stringify(summary, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(JSON_OUT, `${JSON.stringify(summary, null, 2)}\n`, "utf8");
 
   const md: string[] = [
     "# Nutrition & Ingredient Integrity Audit",
@@ -399,7 +400,7 @@ async function main(): Promise<void> {
     "",
   );
 
-  fs.writeFileSync(MD_OUT, md.join("\n"), "utf8");
+  writeFileAtomicSync(MD_OUT, md.join("\n"), "utf8");
 
   console.log(
     `[audit:nutrition-integrity] scanned=${summary.totals.recipes_scanned} nutrition_issues=${summary.totals.nutrition_issues} title_as_ingredient=${summary.totals.title_as_ingredient}`,

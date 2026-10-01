@@ -8,6 +8,12 @@ import {
   VISION_QA_RUBRIC,
 } from "../../shared/food-imagery/quality-score.js";
 import { readPngDimensions } from "./png-dimensions.js";
+import {
+  checkRecipeDishFormat,
+  DISH_FORMATS,
+  dishFormatRubricLines,
+  expectedDishFormat,
+} from "../../shared/food-imagery/dish-format.js";
 import { parseSizeDimensions, FOOD_IMAGERY_HERO_SIZE } from "../../shared/food-imagery/aspect-ratio.js";
 
 export interface OutputValidationResult {
@@ -100,11 +106,62 @@ export async function validateImageWithVision(
   }
 }
 
+const FORMAT_GATE_PROMPT = `You classify the serving format of a food photo. Ignore ingredients, quality and style.
+${dishFormatRubricLines().join("\n")}
+Return JSON only: {"depicted_format": ${DISH_FORMATS.map((f) => `"${f}"`).join("|")}, "format_confidence": integer 0-100, "description": string}`;
+
+/**
+ * Dish-format gate — runs whenever an OpenAI key is present, independent of FOOD_IMAGERY_VISION_VALIDATE,
+ * so a bowl rendered as a sandwich is rejected (and retried) before it is ever stored.
+ * Opt out with FOOD_IMAGERY_FORMAT_GATE=false.
+ */
+export async function validateDishFormat(buf: Buffer, ctx: FoodImageryContext): Promise<OutputValidationResult> {
+  if (process.env.FOOD_IMAGERY_FORMAT_GATE === "false" || !hasOpenAIKey()) {
+    return { ok: true, reason: "format_gate_skipped" };
+  }
+  const expected = expectedDishFormat(ctx.title, ctx.mealFormat);
+  if (!expected) return { ok: true, reason: "format_not_applicable" };
+
+  try {
+    const client = createOpenAIClient();
+    const mime = buf[0] === 0xff ? "image/jpeg" : "image/png";
+    const res = await client.chat.completions.create({
+      model: process.env.FOOD_IMAGERY_VISION_MODEL?.trim() || "gpt-4o-mini",
+      temperature: 0,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: FORMAT_GATE_PROMPT },
+        {
+          role: "user",
+          content: [
+            { type: "text", text: "Classify the serving format of this photo." },
+            { type: "image_url", image_url: { url: `data:${mime};base64,${buf.toString("base64")}`, detail: "low" } },
+          ],
+        },
+      ],
+    });
+    const parsed = JSON.parse(res.choices[0]?.message?.content || "{}") as Record<string, unknown>;
+    const check = checkRecipeDishFormat(ctx.title, ctx.mealFormat, parsed.depicted_format, Number(parsed.format_confidence) || 0);
+    const notes = `format expected=${check.expected} depicted=${check.depicted} (${String(parsed.description ?? "")})`;
+    if (check.verdict === "mismatch") {
+      log(`[food-imagery] format gate rejected ${ctx.recipeKey}: ${check.reason}`, "catalog");
+      return { ok: false, reason: "wrong_dish_format", notes };
+    }
+    return { ok: true, reason: check.verdict === "inconclusive" ? "format_inconclusive" : undefined, notes };
+  } catch (err: unknown) {
+    const msg = err instanceof Error ? err.message : String(err);
+    log(`[food-imagery] format gate skipped: ${msg}`, "catalog");
+    return { ok: true, reason: "format_gate_error" };
+  }
+}
+
 export async function validateGeneratedFoodImage(
   buf: Buffer,
   ctx: FoodImageryContext,
 ): Promise<OutputValidationResult> {
   const heuristic = validateImageBufferHeuristic(buf);
   if (!heuristic.ok) return heuristic;
+  const format = await validateDishFormat(buf, ctx);
+  if (!format.ok) return format;
   return validateImageWithVision(buf, ctx);
 }

@@ -1,19 +1,6 @@
 {
-  "generatedAt": "2026-06-04T20:37:00.424Z",
+  "generatedAt": "2026-10-01T14:51:38.123Z",
   "rows": [
-    {
-      "slug": "chicken-caesar-wraps",
-      "imageTrust": "PASS",
-      "duplicateHero": "PASS",
-      "donorReuse": "PASS",
-      "placeholder": "PASS",
-      "exploreCard": "PASS",
-      "mobileCard": "PASS",
-      "homepageRail": "PASS",
-      "recentlyAdded": "PASS",
-      "overall": "PASS",
-      "notes": []
-    },
     {
       "slug": "buffalo-chicken-wraps",
       "imageTrust": "PASS",
@@ -94,7 +81,7 @@
     }
   ],
   "summary": {
-    "pass": 7,
+    "pass": 6,
     "fix": 0,
     "blocker": 0
   }

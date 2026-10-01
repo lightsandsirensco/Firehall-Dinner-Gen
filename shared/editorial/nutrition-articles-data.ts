@@ -1,768 +1,402 @@
 /**
- * Nutrition & performance guides — shift-work fuel, recovery, hydration.
+ * Food-choice guides with a cooking focus: lighter dinners that still taste
+ * good, protein-forward crew meals, and station snacks.
  */
 
-import { buildSeoGuide, meal, STANDARD_FAQS } from "./seo-article-build.js";
+import { SRC } from "./guide-sources.js";
+import { buildSeoGuide, meal } from "./seo-article-build.js";
+
+const UPDATED = "2026-09-30T18:00:00.000Z";
 
 export const NUTRITION_PERFORMANCE_ARTICLES = [
   buildSeoGuide({
     slug: "healthy-meals-that-still-taste-good",
-    title: "Healthy Meals That Still Taste Good",
-    subtitle: "Protein-forward hall dinners that feel like dinner — not a lecture",
+    title: "Healthy Meals That Still Taste Good: Cooking Lighter for a Crew",
+    seoTitle: "Healthy Meals That Taste Good: Lighter Cooking for a Crowd",
+    subtitle:
+      "Keeping lean chicken, pork and fish juicy, roasting vegetables people actually eat, sauces with big flavor, and a bowl line for 10.",
     description:
-      "Healthy firefighter meals do not have to be sad salads. Practical station-friendly ways to keep meals lighter without losing flavor, plus recipe picks crews actually finish.",
-    keywords: ["healthy firefighter meals", "healthy firehall meals", "high protein dinners", "station cooking"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    readMinutes: 7,
-    intro:
-      "Most crews are not asking for diet food. They are asking for dinner that tastes good and does not leave everyone wrecked at 21:00. The best “healthy” hall meals are balanced and operational: enough protein to satisfy, smart carbs you can scale, and sauces that carry flavor without turning everything into a sugar bomb.",
-    practicalAdvice: [
-      "Do not announce “healthy night.” Just cook a meal that tastes good and moves well.",
-      "Make sauce a real component: yogurt, citrus, garlic, herbs — not a vague drizzle.",
-      "If you need speed, go grill or sheet-pan. Hands-off beats heroic stovetop work on busy tours.",
-      "If you want seconds, make the vegetable side bigger — not the rice pot.",
+      "Healthy meals that still taste good for a crew: keeping lean chicken and fish juicy, roasting vegetables properly, bold sauces, and bowl lines.",
+    keywords: [
+      "healthy meals that taste good",
+      "healthy firehall meals",
+      "healthy meals for a crowd",
+      "how to keep chicken breast juicy",
+      "roasted vegetable times",
     ],
-    sections: [
-      {
-        id: "what-healthy-means",
-        heading: 'What "healthy" looks like at the station',
-        paragraphs: [
-          "Healthy does not mean low-calorie. For most crews it means protein-forward, vegetables that are actually cooked well, and portions that do not knock you out for the rest of the tour.",
-          "The station constraint is real: you need food that holds for late eaters, survives interruptions, and does not require perfect prep to taste good.",
-        ],
-        tips: [
-          "Keep the base simple: rice, potatoes, or tortillas — then win with protein + sauce.",
-          "Use sheet pans and grills when the board is loud. Hands-off cooking beats stress eating.",
-        ],
-      },
-      {
-        id: "flavor-without-bloat",
-        heading: 'Flavor without the "food coma"',
-        paragraphs: [
-          "Most post-dinner crashes come from heavy fat + heavy starch + heavy portions, not one ingredient. Shift the ratio: more lean protein, a normal carb portion, and sauce that tastes intentional.",
-          "Use acid and spice the right way: citrus, vinegar, yogurt, herbs, and chiles. That is how you get big flavor without drowning everything in sugar or cheese.",
-        ],
-      },
-      {
-        id: "formats",
-        heading: "Formats that work when you are short on time",
-        paragraphs: [
-          "Bowls, trays, and grills win because they scale. They also let each person self-serve, which fixes portions without a lecture.",
-          "If the crew is split between comfort and performance, keep the main plate balanced and make indulgent extras optional at the end of the line.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Balanced bowls with real flavor — easy to portion."),
-      meal("ginger-salmon-bowls", "Ginger Salmon Rice Bowls", "Lighter-feeling dinner that still eats like a real plate."),
-      meal("sheet-pan-fajitas", "Sheet Pan Fajitas", "Hands-off and fast; build-your-own keeps everyone happy."),
-      meal("lemon-herb-salmon", "Lemon Herb Grilled Salmon", "Premium-feeling hall meal that stays clean and bright."),
-      meal("turkey-chili", "High-Protein Turkey Chili", "Chili still counts — leaner batch that holds all shift."),
-      meal("mediterranean-chickpea", "Mediterranean Chickpea Bowl Night", "Plant-forward option that still feels like dinner."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What makes a firefighter meal healthy without turning it into diet food?",
-        answer:
-          "Protein-forward plates with real sauce — yogurt, citrus, garlic — instead of dry, under-seasoned chicken. Greek chicken bowls and ginger salmon rice bowls hit that mark: a full plate with real flavor, not a diet-plate stand-in.",
-      },
-      {
-        question: "How do you keep dinner lighter without leaving the crew hungry?",
-        answer:
-          "Make the vegetable side bigger instead of shrinking the rice or protein. Bowls work well because everyone builds their own ratio — protein, grain, veg, sauce — so nobody ends up with a sad, small plate.",
-      },
-    ],
-    relatedArticleSlugs: ["healthy-meals-for-active-crews", "high-protein-firehall-meals", "meals-wont-wreck-energy-levels"],
-  }),
-
-  buildSeoGuide({
-    slug: "eating-well-on-24-hour-shifts",
-    title: "Eating Well on 24-Hour Shifts",
-    subtitle: "Three meals in one tour — without living on gas-station food",
-    description:
-      "How firefighters can eat well across a full tour: dinner that holds, overnight snacks that help, and breakfast that does not wreck the kitchen for the next crew.",
-    keywords: ["24 hour shift nutrition", "firefighter shift meals", "fire station eating"],
     topic: "nutrition_performance",
     pillar: "nutrition_performance",
     readMinutes: 8,
+    updatedAt: UPDATED,
     intro:
-      "A full tour is not one dinner. It is an evening meal for the arriving crew, optional fuel overnight if the board stays loud, and breakfast before handoff. Eating well on a 24-hour shift means planning hold-friendly food and stopping the slow drift toward vending machines — not eating perfectly every hour.",
-    practicalAdvice: [
-      "Cook dinner so it still eats well at 22:00 — chili, pulled pork, and baked pasta beat crispy food that dies on hold.",
-      "Keep overnight options simple: fruit, yogurt, sandwich fixings — not a second full cook at 02:00.",
-      "Breakfast should be a line or a bake, not twelve individual omelets.",
-      "Drink water before coffee number three — dehydration feels like hunger.",
-    ],
+      "Lighter cooking has a reputation for tasting like a compromise, and usually that is a cooking problem rather than an ingredient problem. Lean meat dries out because it has little fat to protect it, vegetables taste flat when they are steamed or crowded onto a pan, and lower-fat dishes lose flavor when nothing replaces the richness. Each of those has a fix: salt lean protein ahead and pull it at the right temperature, roast vegetables hot and spread out, and let bold sauces carry the flavor. Serving it as a bowl line lets everyone choose their own portions of each part. This is cooking guidance for a crew, not medical or dietary advice.",
     sections: [
       {
-        id: "dinner",
-        heading: "Dinner that survives the first half",
+        id: "lean-protein",
+        heading: "Keep lean protein juicy",
         paragraphs: [
-          "Anchor the tour with protein and starch you can reheat. Bowls, batches, and lines let late eaters build a plate without reheating the whole kitchen.",
-          "Skip meals that only taste right in a two-minute window after plating. After a long call, nobody is eating on your schedule.",
+          "Chicken breast, pork loin and white fish have very little fat or connective tissue, so there is no margin once they pass their target temperature. Three habits keep them moist. Salt them ahead: about 3/4 tsp of kosher salt per pound (450 g), at least an hour or up to a day ahead in the fridge, which helps the meat hold onto its juices as it cooks. Even out the thickness, pounding breasts to about 3/4 in (2 cm) so the thin end doesn't overcook while the thick end finishes. And use a thermometer, pulling the meat as soon as it reaches temperature.",
+          "The temperatures below are USDA minimums, with Health Canada's figure where it differs. Pork loin at 145°F (63°C) with a 3-minute rest is slightly pink and much juicier than pork cooked to the old 160°F standard.",
+        ],
+        table: {
+          caption: "Cooking lean proteins without drying them out",
+          columns: ["Protein", "Best method", "Done at", "What helps"],
+          rows: [
+            ["Chicken breast, pounded to 3/4 in", "Roast at 425°F (220°C) 15 to 18 min, or grill over medium", "165°F (74°C)", "Salt ahead; slice across the grain after 5 minutes' rest"],
+            ["Pork tenderloin or loin", "Sear, then roast at 400°F (200°C)", "145°F (63°C) plus 3 min rest; Health Canada 160°F (71°C)", "A mustard or spice rub adds flavor without fat"],
+            ["Salmon fillets", "Roast at 425°F (220°C) 10 to 12 min", "145°F (63°C); Health Canada 158°F (70°C)", "Skin side down on the pan protects the flesh"],
+            ["Cod, haddock, other white fish", "Roast at 425°F (220°C) 8 to 12 min", "145°F (63°C); Health Canada 158°F (70°C)", "Flakes easily when done; top with a crumb or herb crust"],
+            ["93% lean ground turkey", "Brown in batches", "165°F (74°C)", "Add tomato paste and a splash of stock; it is drier than beef"],
+          ],
+        },
+      },
+      {
+        id: "vegetables",
+        heading: "Roast vegetables so people eat them",
+        paragraphs: [
+          "Vegetables get eaten when they are browned and seasoned, not when they are soft and grey. Roast them at 425 to 450°F (220 to 230°C), cut to an even size, patted dry, and tossed with about 1 tbsp oil and 1/2 tsp salt per pound. Spread them in a single layer with space between pieces: crowded vegetables release water and steam instead of browning, which is the same problem as crowding meat. For 10 people, plan on 4 to 5 lb (1.8 to 2.3 kg) of vegetables across two half sheet pans.",
+          "Finish them after they come out of the oven. A squeeze of lemon, a splash of vinegar, grated Parmesan or chopped herbs make a plain tray taste considered.",
+        ],
+        table: {
+          caption: "Roasting times at 425°F (220°C) in a single layer",
+          columns: ["Vegetable", "Cut", "Time"],
+          rows: [
+            ["Broccoli or cauliflower", "1 1/2 in (4 cm) florets", "18 to 25 min"],
+            ["Carrots", "1/2 in (1 cm) coins or sticks", "25 to 30 min"],
+            ["Potatoes or sweet potatoes", "3/4 in (2 cm) cubes", "30 to 40 min, turning once"],
+            ["Brussels sprouts", "Halved, cut side down", "20 to 25 min"],
+            ["Bell peppers and onions", "1/2 in (1 cm) strips", "20 to 25 min"],
+            ["Zucchini", "3/4 in (2 cm) half moons", "15 to 20 min"],
+            ["Green beans", "Trimmed, whole", "12 to 15 min"],
+          ],
+        },
+      },
+      {
+        id: "sauces",
+        heading: "Sauces that carry the flavor",
+        paragraphs: [
+          "A strong sauce is what makes a simple grilled chicken or roasted salmon taste like a finished dish. Herb, yogurt and citrus sauces add a lot of flavor for little fat, and they are all made ahead in a few minutes. Serve them on the side so people use as much as they like, and make more than you think you need; on a bowl line, the sauce runs out before anything else.",
+        ],
+        table: {
+          caption: "Make-ahead sauces for 10",
+          columns: ["Sauce", "Quantities for 10", "Goes with", "Keeps in the fridge"],
+          rows: [
+            ["Tzatziki", "2 cups Greek yogurt, 1 grated cucumber squeezed dry, 2 garlic cloves, 2 tbsp lemon juice, dill, salt", "Chicken, lamb, souvlaki, grain bowls", "3 to 4 days"],
+            ["Chimichurri", "2 cups parsley, 4 garlic cloves, 1/2 cup olive oil, 1/4 cup red wine vinegar, chili flakes, salt", "Steak, chicken, roasted potatoes", "3 days"],
+            ["Ginger-scallion", "1 cup sliced scallions, 1/4 cup grated ginger, 1/3 cup neutral oil, 1 tsp salt", "Rice bowls, salmon, chicken", "4 days"],
+            ["Peanut-lime", "1/2 cup peanut butter, 1/4 cup soy sauce, 1/4 cup lime juice, 2 tbsp honey, warm water to thin", "Noodle and rice bowls, grilled chicken", "5 days"],
+            ["Salsa verde (tomatillo)", "2 lb tomatillos broiled, 1 onion, 2 jalapeños, cilantro, lime, salt, blended", "Tacos, chicken, eggs", "5 days"],
+          ],
+        },
+      },
+      {
+        id: "bowl-line",
+        heading: "Build a bowl line for 10",
+        paragraphs: [
+          "A bowl line is the easiest way to serve a lighter dinner to a crew with different appetites. Everyone takes the same components but builds their own ratio, so nobody gets a fixed small plate. Set it up in this order: grain, protein, a cooked vegetable, a raw or crunchy vegetable, sauce, then toppings. Most of it can be made ahead, and leftovers become lunch the next day.",
+        ],
+        steps: [
+          "Grain: 5 cups raw rice, farro or quinoa, cooked ahead and kept covered and warm.",
+          "Protein: 4 to 5 lb (1.8 to 2.3 kg) raw boneless chicken, salmon or pork, roasted or grilled and sliced.",
+          "Cooked vegetable: 4 lb of vegetables roasted on two half sheet pans.",
+          "Crunchy vegetable: shredded cabbage, sliced cucumber or quick-pickled onions (1 sliced red onion in 1/2 cup vinegar, 1 tbsp sugar and 1 tsp salt for 20 minutes).",
+          "Sauce: two from the table above, one creamy and one sharp.",
+          "Toppings: lime wedges, herbs, toasted seeds, crumbled feta, hot sauce.",
         ],
       },
       {
-        id: "overnight",
-        heading: "Overnight without a second production",
+        id: "swaps",
+        heading: "Lighter swaps that don't cost flavor",
         paragraphs: [
-          "If the hall stocks the fridge, keep credible snacks visible — not buried behind condiments. Crews grab what they see.",
-          "A pot of chili on low is not glamorous. It is effective when four people eat between 23:00 and 03:00.",
-        ],
-      },
-      {
-        id: "morning",
-        heading: "Breakfast and handoff",
-        paragraphs: [
-          "Egg bakes and burrito bars tolerate a ninety-minute eating window. Pancakes hold in a warm oven between waves.",
-          "Clean as you go. The crew on next owes you the same courtesy.",
+          "Some swaps work well and some don't. Greek yogurt can replace half the sour cream in a dip or topping without anyone noticing. Breaded cutlets baked on a wire rack at 425°F (220°C) stay crisp on both sides, which frying doesn't manage without a lot of oil. Chili and pasta sauce can take an extra pound of vegetables or a can of beans. Ground turkey can stand in for beef if it is browned well and seasoned more boldly, since it has less fat carrying the flavor.",
+          "Swaps that usually disappoint include fat-free cheese, which doesn't melt, and replacing all the pasta or rice with vegetable noodles for a hungry crew. It is better to keep the starch at a normal portion and make the vegetable side larger.",
         ],
       },
     ],
-    mealRecommendations: [
-      meal("big-chili", "Hall-Sized Beef and Bean Chili", "Reheats across the tour."),
-      meal("breakfast-burrito-bar", "Breakfast Burrito Bar", "Morning line for staggered eaters."),
-      meal("pulled-pork", "Pulled Pork Sandwiches", "Late-night sandwiches still work."),
-      meal("sausage-egg-bake", "Sausage Egg Bake", "Hands-off morning bake."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What should dinner look like on a 24-hour shift?",
-        answer:
-          "One anchor meal that holds — chili, pulled pork, or baked pasta — cooked early enough that it still tastes good at 22:00 for late eaters. Bowls and lines beat a single dish that has to be eaten hot out of the oven, since staggered eating is normal on a full tour.",
-      },
-      {
-        question: "What's a good overnight snack if the board stays busy?",
-        answer:
-          "Fruit, yogurt, sandwich fixings, or a pot of chili on low — nothing that needs a second full cook at 2 a.m. Keep it visible in the fridge; crews eat what they can see without digging behind condiments.",
-      },
-      {
-        question: "What's an easy breakfast to close out a 24-hour tour?",
-        answer:
-          "A sausage egg bake or breakfast burrito bar. Both tolerate a staggered eating window, so people coming off apparatus checks at 9:30 still get a hot plate instead of cold eggs from 7 a.m.",
-      },
-    ],
-    relatedArticleSlugs: ["best-meals-24-hour-shift", "hydration-for-firefighters"],
-  }),
-
-  buildSeoGuide({
-    slug: "best-foods-for-long-shifts",
-    title: "Best Foods for Long Shifts",
-    subtitle: "What keeps you steady — not what spikes and crashes",
-    description:
-      "Best foods for long firefighter shifts: protein-forward plates, smart carbs, hydration, and hall meals that do not leave the crew crashing at hour ten.",
-    keywords: ["long shift meals", "firefighter energy food", "shift work nutrition"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "Long shifts punish empty calories and reward steady fuel. The best foods for a long tour combine protein, usable carbs, and salt you actually lose — without turning every meal into a grease bomb. You are not optimizing for a photoshoot. You are staying functional until relief.",
     practicalAdvice: [
-      "Pair protein with starch every time you sit down — not carbs alone.",
-      "Eat before you are furiously hungry; judgment gets worse when blood sugar drops.",
-      "Keep electrolytes in rotation on hot days — water alone is not always enough.",
-      "Heavy grease at 18:00 can feel fine at 19:00 and awful at 02:00.",
-    ],
-    sections: [
-      {
-        id: "steady",
-        heading: "Steady beats flashy",
-        paragraphs: [
-          "Rice bowls, chili, roasted chicken, and bean-heavy batches release energy slower than a tray of fries alone.",
-          "Fat is not the enemy — unbalanced fat with no protein is. A burger with a side beats a burger with nothing.",
-        ],
-      },
-      {
-        id: "avoid",
-        heading: "What to dial back on long tours",
-        paragraphs: [
-          "Massive sugar hits without protein — donuts for dinner, then wondering why focus tanks.",
-          "Relying on energy drinks instead of food. Caffeine masks hunger; it does not replace it.",
-        ],
-      },
+      "Salt lean meat at least an hour ahead and pull it as soon as it reaches temperature.",
+      "Roast vegetables at 425 to 450°F (220 to 230°C) in a single layer with space between pieces.",
+      "Serve at least one strong sauce on the side; make more than seems necessary.",
+      "Serve lighter dinners as a bowl line so people build their own portions.",
+      "Make the vegetable side bigger rather than shrinking the starch.",
     ],
     mealRecommendations: [
-      meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Protein, grain, veg — steady line."),
-      meal("turkey-chili", "High-Protein Turkey Chili", "Lean batch that still fills."),
-      meal("teriyaki-donburi", "Teriyaki Donburi", "Balanced bowl — predictable portions."),
-      meal("beef-barley-soup", "Beef Barley Soup", "Slow-burn bowl food."),
+      meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "The bowl line above with tzatziki and a crunchy salad."),
+      meal("ginger-salmon-bowls", "Ginger Salmon Rice Bowls", "Salmon roasted skin side down, with a ginger sauce."),
+      meal("chicken-souvlaki", "Grilled Chicken Souvlaki", "Marinated skewers that stay juicy over medium heat."),
+      meal("lemon-herb-salmon", "Lemon Herb Grilled Salmon", "A simple fish dinner finished with lemon and herbs."),
+      meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "Chicken and peppers roasted hot on two pans."),
+      meal("mediterranean-chickpea", "Mediterranean Chickpea Bowls", "A meatless bowl that still fills a plate."),
+      meal("turkey-burgers", "Black Bean Turkey Burgers", "Beans keep lean turkey patties moist."),
+      meal("teriyaki-donburi", "Teriyaki Donburi", "A rice bowl with a glaze that carries the flavor."),
     ],
     faqs: [
-      STANDARD_FAQS.nutrition,
       {
-        question: "What foods keep energy steady during a long shift?",
+        question: "How do I keep chicken breast from drying out when cooking for a crowd?",
         answer:
-          "Rice bowls, chili, and roasted chicken paired with a real starch — food that releases energy slower than sugar alone. Pair protein with a starch every time you sit down instead of eating carbs by themselves.",
-      },
-      {
-        question: "What should you avoid eating on a long tour?",
-        answer:
-          "Sugar without protein next to it — a donut or a pastry might work as a quick bite, but it won't hold you the way a plate with real protein does. The same goes for energy drinks on their own; caffeine can mask hunger instead of actually feeding you.",
+          "Pound the breasts to an even 3/4 in (2 cm), salt them at least an hour ahead, and roast them at 425°F (220°C) on sheet pans with space between them. Start checking at 15 minutes and pull them at 165°F (74°C). Let them rest 5 minutes before slicing across the grain.",
       },
     ],
-    relatedArticleSlugs: ["meals-wont-wreck-energy-levels", "healthy-meals-for-active-crews"],
-  }),
-
-  buildSeoGuide({
-    slug: "firefighter-recovery-nutrition",
-    title: "Firefighter Recovery Nutrition",
-    subtitle: "After the hard job — food that helps you come down",
-    description:
-      "Recovery nutrition for firefighters after tough calls: protein, fluids, and familiar meals that support sleep and next-day function — not guilt-driven diet talk.",
-    keywords: ["firefighter recovery nutrition", "post call meals", "recovery food shift work"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "Recovery nutrition is not a powder tub in the gear room. After a hard job, your crew needs fluids, protein, and food that feels normal — hot, salty, familiar. The body recovers better when you eat real food and hydrate than when you skip dinner because the shift 'was not a workout.'",
-    practicalAdvice: [
-      "Drink water before alcohol — always.",
-      "Include protein within a few hours of a demanding job when you can — chili, chicken, eggs, yogurt.",
-      "Do not punish the crew with 'light' food after a bad call — comfort and recovery can coexist.",
-      "Magnesium-rich foods (beans, greens, nuts) help some people sleep — not magic, just useful.",
+    relatedArticleSlugs: [
+      "high-protein-firehall-meals",
+      "healthy-station-snacks",
+      "healthy-smoothies-at-the-hall",
+      "bbq-night-at-the-station",
     ],
-    sections: [
-      {
-        id: "fluids",
-        heading: "Fluids first",
-        paragraphs: [
-          "Heat, gear, and adrenaline pull fluid. Rehydrate with water and electrolytes before you treat beer as recovery.",
-        ],
-      },
-      {
-        id: "food",
-        heading: "Food that matches the night",
-        paragraphs: [
-          "Post-call meals should be easy to eat, plentiful, and warm. Mac and cheese is not a failure — it is a signal that the room can breathe again.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("big-chili", "Firehall Chili", "Protein-rich batch — communal bowls."),
-      meal("chicken-pot-pie", "Chicken Pot Pie", "Warm, familiar, filling."),
-      meal("ginger-salmon-bowls", "Ginger Salmon Rice Bowls", "Lighter recovery night option."),
-      meal("beef-barley-soup", "Beef Barley Soup", "Hydrating broth base."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What should firefighters eat after a hard call?",
-        answer:
-          "Something hot, salty, and familiar — chili, chicken pot pie, or mac and cheese — plus water before anything else. The goal is food that feels normal, not a health lecture right after a rough job.",
-      },
-      {
-        question: "Does recovery food need to be different from a normal dinner?",
-        answer:
-          "Not really — protein and fluids matter more than novelty. A bowl of firehall chili or ginger salmon rice bowls covers both without turning recovery into a production.",
-      },
-    ],
-    relatedArticleSlugs: ["recovery-meals-after-hard-calls", "comfort-food-after-a-long-shift"],
-  }),
-
-  buildSeoGuide({
-    slug: "hydration-for-firefighters",
-    title: "Hydration for Firefighters",
-    subtitle: "Water, electrolytes, and the habits that actually stick",
-    description:
-      "Hydration guide for firefighters: how much to drink on shift, when electrolytes matter, and how hall meals support fluid balance without gimmicks.",
-    keywords: ["firefighter hydration", "shift hydration", "electrolytes firefighters"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "Hydration on shift is boring until it is not. Headaches, cramps, and bad decisions show up when water intake drifts. Firefighters lose fluid in heat, gear, and dry station air — coffee does not count as a hydration strategy.",
-    practicalAdvice: [
-      "Start the shift with a full bottle — not an empty one you 'will fill later.'",
-      "Add electrolytes on hot days or after heavy work — especially if you sweat through gear.",
-      "Soup, fruit, and chili count toward fluid — not only plain water.",
-      "Alcohol after the job dehydrates — pair it with water if you drink.",
-    ],
-    sections: [
-      {
-        id: "when",
-        heading: "When electrolytes matter",
-        paragraphs: [
-          "Long hot jobs, back-to-back calls, and tours where you sweat more than you notice. Lightheadedness with clear urine can still mean sodium need on heavy days.",
-        ],
-      },
-      {
-        id: "hall",
-        heading: "Hall habits that help",
-        paragraphs: [
-          "Keep a water cooler visible in the kitchen. Out of sight is out of mind.",
-          "Broth-based soups at dinner add sodium and fluid — useful when appetites are low.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("beef-barley-soup", "Beef Barley Soup", "Broth-forward bowl — fluids and protein."),
-      meal("chicken-dumpling-soup", "Chicken and Dumplings", "Hydrating comfort pot."),
-      meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Cucumber and tzatziki add fluid."),
-      meal("big-chili", "Hall-Sized Beef and Bean Chili", "Salty batch — sip water with it."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "How much water should firefighters drink on shift?",
-        answer:
-          "Start the tour with a full bottle instead of planning to fill it later, then keep refilling through the day — heat, gear, and dry station air pull fluid fast. There is no single magic number; steady sipping beats chugging once you're already thirsty.",
-      },
-      {
-        question: "Do firefighters need electrolytes, or is water enough?",
-        answer:
-          "Water covers most shifts, but electrolytes help on long hot jobs or back-to-back calls where you're sweating through gear. Broth-based soups like beef barley add sodium and fluid at dinner without a separate packet.",
-      },
-    ],
-    relatedArticleSlugs: ["eating-well-on-24-hour-shifts", "best-foods-for-long-shifts"],
-  }),
-
-  buildSeoGuide({
-    slug: "nutrition-after-overnight-calls",
-    title: "Nutrition After Overnight Calls",
-    subtitle: "When the board never really went quiet",
-    description:
-      "What to eat after overnight firefighter activity: light morning options, rehydration, and meals that do not compound exhaustion with a sugar crash.",
-    keywords: ["overnight shift nutrition", "firefighter overnight meals", "post night call food"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "Overnight calls fragment sleep and appetite. Nutrition after a busy night is about rehydration, gentle protein, and breakfast formats that do not require a short-order cook. The crew is tired — food should be easy, not ambitious.",
-    practicalAdvice: [
-      "Rehydrate before heavy coffee.",
-      "Breakfast: eggs, yogurt, fruit, toast — not only sugar pastries.",
-      "If dinner was skipped, eat something real in the morning — not just caffeine.",
-    ],
-    sections: [
-      {
-        id: "morning",
-        heading: "Morning after a loud board",
-        paragraphs: [
-          "Burrito bars and egg bakes let people eat when they surface. Avoid relying on doughnuts as the only option.",
-        ],
-      },
-      {
-        id: "fluids",
-        heading: "Rehydrate before you caffeinate",
-        paragraphs: [
-          "Overnight tours dehydrate quietly. Water and electrolytes before the second pot of coffee prevents the shaky, hollow feeling crews mistake for exhaustion.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("breakfast-burrito-bar", "Breakfast Burrito Bar", "Staggered morning eating — line format."),
-      meal("hall-sausage-biscuits-gravy", "Biscuits and Gravy", "Hearty when the night was thin on food."),
-      meal("chorizo-breakfast-tacos", "Chorizo Breakfast Tacos", "Fast protein line for morning after calls."),
-      meal("pancake-short-stack", "Pancake Short Stack", "Pair with eggs or sausage for balance."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What's the best breakfast after an overnight call?",
-        answer:
-          "Eggs, yogurt, fruit, or toast — something with real protein, not just a sugar pastry. Burrito bars and egg bakes let a tired crew eat when they surface instead of everyone needing a hot plate at the same minute.",
-      },
-      {
-        question: "Should you drink coffee first thing after a rough night?",
-        answer:
-          "Have water alongside it rather than skipping straight to a second pot. Overnight tours dehydrate quietly, and some of what feels like exhaustion the next morning is just needing fluids before more caffeine.",
-      },
-    ],
-    relatedArticleSlugs: ["firefighter-breakfast-ideas", "eating-well-on-24-hour-shifts"],
+    sources: [SRC.usdaTemps, SRC.hcTemps],
   }),
 
   buildSeoGuide({
     slug: "high-protein-firehall-meals",
-    title: "High-Protein Firehall Meals",
-    subtitle: "Crew portions that actually deliver protein — not powder hype",
+    title: "High-Protein Firehall Meals: Protein-Forward Dinners for a Crew",
+    seoTitle: "High-Protein Meals for a Crowd: Portions, Sources, Recipes",
+    subtitle:
+      "How much protein common foods contain, how much raw meat to buy per person, cheaper protein sources, and breakfasts and sides that add more.",
     description:
-      "High-protein firehall meals for active crews: chili, bowls, grilled chicken, turkey batches, and hall recipes with realistic protein per plate.",
-    keywords: ["high protein firefighter meals", "protein crew dinners", "firehall protein"],
+      "High-protein meals for a crowd: protein in common foods, raw amounts to buy per person, cheaper sources, and dinners that deliver 35 to 40 g each.",
+    keywords: [
+      "high protein meals for a crowd",
+      "high protein firehall meals",
+      "protein per serving chicken",
+      "cheap high protein meals",
+      "high protein breakfast casserole",
+    ],
     topic: "nutrition_performance",
     pillar: "nutrition_performance",
+    readMinutes: 8,
+    updatedAt: UPDATED,
     intro:
-      "High-protein hall food means a full plate of real food — not six ounces of dry chicken breast while everyone else eats pasta. Crews need volume and protein together. Turkey chili, Greek chicken bowls, big chili with bread, and a sausage egg bake on morning shift hit both without feeling like a gym meal.",
-    practicalAdvice: [
-      "Shoot for visible protein on every plate — not protein hidden in a shake.",
-      "Turkey chili and Greek bowls scale well for mixed appetites.",
-      "Sauce on the side keeps bowls flexible.",
-      "Second helpings: extra starch before you run out of chicken.",
-    ],
+      "A protein-forward crew dinner is mostly a shopping and portioning question: how much raw meat, fish, eggs or beans to buy so each plate carries a real serving, and how to add protein through sides and sauces without doubling the grocery bill. A good target for a hearty main is about 35 to 40 g of protein per plate, which is roughly 6 to 7 oz (170 to 200 g) of raw boneless meat or fish per person. This guide gives protein figures for common foods from USDA's FoodData Central, raw amounts to buy for 10, cheaper ways to add protein, and breakfasts and sides that contribute. Individual needs depend on body size and activity; this is cooking and shopping guidance, not medical advice.",
     sections: [
       {
-        id: "sources",
-        heading: "Protein sources that scale",
+        id: "protein-content",
+        heading: "How much protein is in common foods",
         paragraphs: [
-          "Ground meats, chicken thighs, beans plus meat, eggs, and dairy in bakes. Thighs beat breast for flavor per dollar on crew night — nobody wants eight portions of chalky breast because someone bought the wrong case.",
-          "Training days are when halls run turkey chili or a big batch and let people stack bowls. Powder shakes in the bay are fine for individuals; dinner still needs to look like dinner.",
+          "The figures below are rounded from USDA FoodData Central and are for typical cooked servings. Meat, poultry and fish lose water as they cook but keep almost all their protein, so a cooked portion has more protein per ounce than the same weight raw. That is why raw quantities in the next section look larger than the cooked servings here.",
         ],
-        tips: [
-          "Beans plus meat in chili stretch cost without looking cheap.",
-          "Skewers and bowl lines portion protein without one person hoarding the tray.",
+        table: {
+          caption: "Approximate protein in common foods (USDA FoodData Central, rounded)",
+          columns: ["Food", "Serving", "Protein"],
+          rows: [
+            ["Chicken breast, cooked", "5 oz (140 g)", "About 44 g"],
+            ["Chicken thigh, skinless, cooked", "5 oz (140 g)", "About 36 g"],
+            ["90% lean ground beef, cooked", "4 oz (115 g)", "About 30 g"],
+            ["Pork loin, cooked", "5 oz (140 g)", "About 39 g"],
+            ["Salmon, cooked", "5 oz (140 g)", "About 31 to 35 g"],
+            ["Shrimp, cooked", "5 oz (140 g)", "About 34 g"],
+            ["Eggs", "3 large", "About 19 g"],
+            ["Plain Greek yogurt", "3/4 cup (170 g)", "About 17 g"],
+            ["Cottage cheese", "1 cup (225 g)", "About 25 g"],
+            ["Firm tofu", "5 oz (140 g)", "About 24 g"],
+            ["Lentils, cooked", "1 cup (200 g)", "About 18 g"],
+            ["Black beans, cooked", "1 cup (170 g)", "About 15 g"],
+            ["Quinoa, cooked", "1 cup (185 g)", "About 8 g"],
+          ],
+        },
+      },
+      {
+        id: "buying",
+        heading: "How much to buy for a protein-forward dinner",
+        paragraphs: [
+          "To put about 35 to 40 g of protein on each plate from the main alone, buy more than the standard 1/2 lb (225 g) of raw boneless meat per person. The amounts below are raw weights. Bone-in cuts need about half as much again, because bone and skin can be a third or more of the weight. Round up to the package and keep leftovers for lunches.",
+          "Fish and shrimp cook in minutes, so a protein-forward seafood dinner for 10 is a sheet-pan job. Tofu needs pressing for 15 to 20 minutes under a weighted pan before cooking so it browns rather than steams.",
+        ],
+        table: {
+          caption: "Raw amounts for about 35 to 40 g of protein per person",
+          columns: ["Protein", "Raw per person", "For 10 people"],
+          rows: [
+            ["Boneless chicken breast", "6 oz (170 g)", "3 3/4 lb (1.7 kg)"],
+            ["Boneless chicken thighs", "7 oz (200 g)", "4 1/2 lb (2 kg)"],
+            ["90% lean ground beef or 93% ground turkey", "7 oz (200 g)", "4 1/2 lb (2 kg)"],
+            ["Pork loin or tenderloin", "6 1/2 oz (185 g)", "4 lb (1.8 kg)"],
+            ["Salmon fillets", "7 oz (200 g)", "4 1/2 lb (2 kg)"],
+            ["Peeled raw shrimp", "7 oz (200 g)", "4 1/2 lb (2 kg)"],
+            ["Firm tofu", "9 oz (250 g)", "5 1/2 lb (2.5 kg)"],
+          ],
+        },
+      },
+      {
+        id: "cheaper-protein",
+        heading: "Cheaper ways to add protein",
+        paragraphs: [
+          "Meat is the most expensive part of a high-protein dinner, so the cheaper approach is to let several foods contribute. Three 15 oz (425 g) cans of beans add about as much protein to a pot of chili as another 3/4 lb (340 g) of ground beef, at a fraction of the cost. Brown and green lentils blend into ground-meat sauces. Chicken thighs cost less than breasts and hold up better on a line. Eggs are one of the cheapest sources per gram, which makes frittatas, egg fried rice and breakfast bakes good value.",
+          "Dairy helps too. A yogurt sauce, a cheese topping or cottage cheese mixed into a baked pasta each add protein without another pan. Bean sides, edamame and grain salads made with quinoa or farro add a few more grams per plate than plain rice.",
         ],
       },
       {
-        id: "portions",
-        heading: "Portions crews will actually eat",
+        id: "sides-sauces",
+        heading: "Sides and sauces that add protein",
         paragraphs: [
-          "Protein on the plate should be obvious, not hidden in sauce alone. Mixed plates — chili with bread, bowls with yogurt — beat dry chicken with no sides.",
-          "You will always have one eater who wants double starch and half protein. Build the line so the default plate is balanced and seconds are extra rice or buns, not scraping the protein pan dry before the late crew gets off the rig.",
+          "Once the main is set, sides are the easiest place to add protein without changing the dinner. The swaps here cost little and take no more work than the usual side, and most can be made ahead.",
         ],
+        table: {
+          caption: "Protein-adding sides and sauces for 10",
+          columns: ["Instead of", "Try", "Quantities for 10"],
+          rows: [
+            ["Plain rice", "Rice and black beans, or quinoa", "4 cups raw rice plus 3 cans beans, or 5 cups raw quinoa"],
+            ["Sour cream", "Greek yogurt with lime and salt", "3 cups yogurt"],
+            ["Green salad alone", "Salad with chickpeas and feta", "2 cans chickpeas, 8 oz (225 g) feta"],
+            ["Garlic bread", "Edamame with sea salt", "2 lb (900 g) frozen shelled edamame, boiled 4 to 5 min"],
+            ["Creamy dressing", "Yogurt-tahini sauce", "2 cups yogurt, 1/2 cup tahini, lemon, garlic"],
+          ],
+        },
       },
       {
-        id: "not-a-lecture",
-        heading: "Keep it food, not a wellness slide deck",
+        id: "breakfast",
+        heading: "Protein at breakfast and overnight",
         paragraphs: [
-          "Crews tune out fast when dinner sounds like a supplement plan. Serve normal hall food that happens to carry protein — chili, souvlaki, bowls — and let people eat like adults.",
-          "This is practical kitchen guidance, not medical advice. Department health programs and your own provider handle individual plans.",
+          "Breakfast is where most crew meals fall short on protein, because pancakes and pastries carry very little. An egg bake fixes that and is made the night before. For 8: whisk 18 eggs with 2 cups of cottage cheese, 1 cup of milk and 1 tsp salt, add 1 lb (450 g) of cooked sausage or ham and 2 cups of cheese, pour into a 9 x 13 in (23 x 33 cm) dish, and bake at 350°F (175°C) for 45 to 55 minutes until the center reaches 160°F (71°C). Each portion has around 30 g of protein.",
+          "For overnight or early-morning eating without a cook, keep hard-cooked eggs (a week in the fridge in their shells), Greek yogurt with granola stored separately so it stays crisp, and cottage cheese with fruit.",
         ],
       },
     ],
+    practicalAdvice: [
+      "Buy about 6 to 7 oz (170 to 200 g) of raw boneless meat or fish per person for a protein-forward main.",
+      "Add beans or lentils to ground-meat dishes to raise protein at lower cost.",
+      "Use Greek yogurt, cottage cheese and cheese to add protein through sauces and bakes.",
+      "Swap plain rice or bread for bean, quinoa or edamame sides.",
+      "Make breakfast an egg bake with cottage cheese rather than a pancake-only morning.",
+    ],
     mealRecommendations: [
-      meal("turkey-chili", "High-Protein Turkey Chili", "Lean batch — still hearty."),
-      meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Chicken, tzatziki, feta."),
-      meal("big-chili", "Hall-Sized Beef and Bean Chili", "Beef and beans — hall classic."),
-      meal("chicken-souvlaki", "Grilled Chicken Souvlaki", "Marinated skewers — pita ready."),
-      meal("sausage-egg-bake", "Sausage Egg Bake", "Morning protein hit for the line."),
+      meal("turkey-chili", "High-Protein Turkey Chili", "Ground turkey and beans together in one pot."),
+      meal("big-chili", "Hall-Sized Beef and Bean Chili", "The beef-and-bean approach to cheaper protein."),
+      meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Chicken, chickpeas and tzatziki on one bowl line."),
+      meal("chicken-souvlaki", "Grilled Chicken Souvlaki", "Skewers make even protein portions easy."),
+      meal("sausage-egg-bake", "Sausage Egg Bake", "A protein-forward breakfast assembled the night before."),
+      meal("ginger-salmon-bowls", "Ginger Salmon Rice Bowls", "Salmon roasted on sheet pans for a crew."),
     ],
     faqs: [
       {
-        question: "Is this medical advice?",
+        question: "How much chicken should I buy per person for a high-protein dinner?",
         answer:
-          "No. This is how halls cook for hungry crews on shift. Follow your department and your own provider for personal health questions.",
-      },
-      {
-        question: "What are some high-protein dinners that work for a firehall crew?",
-        answer:
-          "Turkey chili, Greek chicken bowls, and a sausage egg bake all put protein front and center instead of hiding it in a sauce. Building the plate around a protein-forward main — rather than treating meat as a side to rice or pasta — is the easiest way to get there without a special shopping list.",
-      },
-      {
-        question: "What are cheap ways to add protein without raising the grocery bill much?",
-        answer:
-          "Beans can stretch a pot of chili while keeping it filling, and chicken thighs cost less than breasts for a similar amount of protein. Eggs and dairy worked into a bake — cheese, a yogurt-based sauce — add protein too, usually for less than buying more meat.",
+          "About 6 oz (170 g) of raw boneless chicken breast or 7 oz (200 g) of boneless thighs per person, which cooks down to a portion with roughly 35 to 40 g of protein. For bone-in pieces, buy about 10 oz (280 g) per person.",
       },
     ],
-    relatedArticleSlugs: ["healthy-firefighter-meals-fill-you-up", "performance-nutrition-firefighters"],
-  }),
-
-  buildSeoGuide({
-    slug: "avoid-living-on-takeout",
-    title: "How Firefighters Can Avoid Living on Takeout",
-    subtitle: "Station cooking beats delivery — when the system supports it",
-    description:
-      "Practical ways firefighter crews cut takeout dependence: batch cooking, grocery splits, fast hall formats, and meals cheaper than delivery for eight.",
-    keywords: ["firefighter meal planning", "station cooking vs takeout", "firehall groceries"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "Takeout is easy when the board is loud and nobody planned dinner. The fix is not willpower — it is a hall system: a default fast meal, a shared grocery run, and cooks who know three reliable formats. When station food is credible, delivery stops being the nightly fallback.",
-    practicalAdvice: [
-      "Keep one 'always possible' dinner: taco bar, chili, sheet pan — under 45 minutes.",
-      "Split grocery costs weekly — takeout is expensive at crew scale.",
-      "Assign a cook before 17:00 — ambiguity becomes pizza.",
+    relatedArticleSlugs: [
+      "healthy-meals-that-still-taste-good",
+      "cheap-firehall-meals",
+      "firehall-meal-prep-ideas",
+      "healthy-smoothies-at-the-hall",
     ],
-    sections: [
-      {
-        id: "system",
-        heading: "Systems beat motivation",
-        paragraphs: [
-          "A whiteboard dinner plan and a stocked pantry matter more than recipe ambition. Crews that cook twice a week break the takeout habit.",
-        ],
-      },
-      {
-        id: "fallback",
-        heading: "The fallback meal list",
-        paragraphs: [
-          "Post three dinners the hall can cook in under forty-five minutes. When the board goes loud, you pick from the list — not from a delivery app.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("hall-taco-bar", "Hall Taco Bar Night", "Cheaper than eight delivered burritos."),
-      meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "One pan — minimal cleanup."),
-      meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Pantry-friendly crew dinner."),
-      meal("big-chili", "Firehall Chili", "Batch beats delivery buckets."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What's a fast meal that beats ordering delivery for the whole crew?",
-        answer:
-          "A taco bar or sheet-pan chicken fajitas — both come together in under 45 minutes and cost less than delivery for eight people. Keep one of these as the default 'board's loud' meal so nobody defaults to an app.",
-      },
-      {
-        question: "How do you stop a hall from ordering takeout every busy night?",
-        answer:
-          "Assign a cook before the shift gets busy and keep a stocked pantry so dinner is a decision, not a shopping trip. It's easier to stick with cooking most nights than to enforce a no-takeout rule after the fact.",
-      },
-    ],
-    relatedArticleSlugs: ["planning-tonights-station-dinner", "firehall-grocery-planning"],
-  }),
-
-  buildSeoGuide({
-    slug: "performance-nutrition-firefighters",
-    title: "Performance Nutrition for Firefighters",
-    subtitle: "Fuel for work that is not predictable",
-    description:
-      "Performance nutrition for firefighters: balanced plates on shift, timing around calls, and hall meals that support strength and endurance without fad diets.",
-    keywords: ["performance nutrition firefighters", "firefighter athlete meals", "shift athlete food"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "Performance nutrition on the job is not bodybuilding meal prep in Tupperware. It is eating enough protein, enough carbs for the work, and enough fluid to think clearly at hour fourteen. The hall wins when meals taste like food and still support the job.",
-    practicalAdvice: [
-      "Carbs fuel calls — do not fear rice, potatoes, or pasta on active days.",
-      "Protein repairs — distribute it across the tour, not only post-gym.",
-      "Sleep and food interact — heavy grease at midnight affects both.",
-    ],
-    sections: [
-      {
-        id: "plate",
-        heading: "A performance plate at the hall",
-        paragraphs: [
-          "Half the plate protein and veg, starch for the shift length, sauce for flavor. Bowls make this automatic.",
-        ],
-      },
-      {
-        id: "timing",
-        heading: "Timing around the job",
-        paragraphs: [
-          "Eat before long jobs when you can. After, prioritize fluids and a real meal — not only supplements. Performance nutrition is tour-long, not one heroic plate.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("performance-burrito-bowls", "Performance Chicken Burrito Bowls", "Macros-friendly bowl line."),
-      meal("bulgogi-bowls", "Korean Bulgogi Rice Bowls", "Protein and rice — steady fuel."),
-      meal("herb-roasted-thighs", "Herb Roasted Chicken Thighs", "Protein-forward oven night."),
-      meal("ginger-salmon-bowls", "Ginger Salmon Rice Bowls", "Omega-3s plus carbs."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What does a balanced plate look like for a working shift?",
-        answer:
-          "A visible protein, a vegetable, a real starch, and sauce for flavor — not a plate that's mostly one thing. Bowls make this easy since everyone builds their own: bulgogi rice bowls or herb roasted chicken thighs with rice cover all four without anyone measuring anything.",
-      },
-      {
-        question: "Should firefighters eat before or after a long call?",
-        answer:
-          "Eat before when you can — it's easier to fuel ahead than to catch up. After a long job, prioritize fluids and a real meal over a shake; performance nutrition is about the whole tour, not one heroic plate.",
-      },
-    ],
-    relatedArticleSlugs: ["healthy-meals-for-active-crews", "high-protein-firehall-meals"],
+    sources: [SRC.usdaFoodData, SRC.usdaTemps, SRC.hcTemps, SRC.usdaEggs],
   }),
 
   buildSeoGuide({
     slug: "healthy-station-snacks",
-    title: "Healthy Station Snacks",
-    subtitle: "Fridge and shelf ideas that crews actually eat",
+    title: "Healthy Station Snacks: What to Stock and What to Make Ahead",
+    seoTitle: "Healthy Snacks for a Crowd: What to Stock and Make Ahead",
+    subtitle:
+      "What to keep on the shelf and in the fridge, six snacks to make in batches, how long each keeps, and how to run a shared snack shelf.",
     description:
-      "Healthy snacks for fire stations: fruit, yogurt, nuts, hummus, and protein options that beat vending machines between meals.",
-    keywords: ["fire station snacks", "healthy firefighter snacks", "hall fridge snacks"],
+      "Healthy station snacks for a shared kitchen: what to stock, six make-ahead snacks with batch quantities, and how long each keeps in the fridge.",
+    keywords: [
+      "healthy station snacks",
+      "healthy snacks for a crowd",
+      "make ahead snacks",
+      "how long do hard boiled eggs last",
+      "homemade hummus",
+    ],
     topic: "nutrition_performance",
     pillar: "nutrition_performance",
+    readMinutes: 7,
+    updatedAt: UPDATED,
     intro:
-      "Station snacks fail when they are 'healthy' but invisible. A fruit bowl on the counter beats asparagus wilting in the crisper. The goal is credible options between meals — not a lecture while someone eats chips because nothing else is ready.",
-    practicalAdvice: [
-      "Stock snacks at eye level — yogurt, fruit, string cheese, hummus.",
-      "Keep nuts and trail mix in labeled bins — portion beats mindless bag eating.",
-      "Rotate weekly — old fruit erodes trust in the whole program.",
-    ],
+      "Snacks in a shared kitchen get eaten when they are visible, ready to eat and clearly fresh. Healthy station snacks that sit unprepared in the back of the crisper get thrown out, while a labelled container of cut vegetables and hummus at eye level is gone by the end of the shift. The work is mostly an hour of batch prep once or twice a week: boil a couple of dozen eggs, make a batch of hummus, cut vegetables and portion nuts. This guide covers what to stock, six make-ahead snacks with quantities and fridge life, how to run a shared snack shelf, and safety for perishable snacks. It is about food and storage, not medical or dietary advice.",
     sections: [
       {
-        id: "fridge",
-        heading: "Fridge that works",
+        id: "stock",
+        heading: "What to keep stocked",
         paragraphs: [
-          "Designate a snack shelf. Date labels. One person owns rotation. Chaos fridges become takeout fridges.",
+          "Aim for a mix of ready-to-eat items that need no preparation and a few things made in batches. Fresh fruit that keeps well on the counter (apples, oranges, bananas) covers the no-effort end. Dairy and eggs give more staying power. Shelf-stable items such as nuts, whole-grain crackers and popcorn kernels fill the gaps between shopping trips.",
+        ],
+        table: {
+          caption: "Snacks to stock and how to store them",
+          columns: ["Category", "Examples", "Where to store"],
+          rows: [
+            ["Whole fruit", "Apples, oranges, bananas, pears", "Counter bowl; apples and pears last longer in the fridge"],
+            ["Berries and grapes", "Blueberries, grapes, strawberries", "Fridge, unwashed until eaten"],
+            ["Dairy", "Greek yogurt cups, string cheese, cottage cheese", "Fridge, eye-level shelf"],
+            ["Eggs", "Hard-cooked eggs in the shell", "Fridge, in a labelled container"],
+            ["Nuts and seeds", "Almonds, peanuts, pumpkin seeds", "Sealed bins in the pantry, or the fridge for longer storage"],
+            ["Grains", "Whole-grain crackers, rice cakes, popcorn kernels, oats", "Pantry"],
+            ["Dips", "Hummus, bean dip, tzatziki", "Fridge, dated"],
+          ],
+        },
+      },
+      {
+        id: "make-ahead",
+        heading: "Six snacks to make in batches",
+        paragraphs: [
+          "Each of these takes 10 to 30 minutes of active work and makes enough for a crew for several days. Label every container with the date it was made. Fridge life assumes the fridge is at 40°F (4°C) or below and that the food goes in within two hours of being made.",
+        ],
+        table: {
+          caption: "Make-ahead snacks: quantities and fridge life",
+          columns: ["Snack", "Batch", "Makes", "Keeps in the fridge"],
+          rows: [
+            ["Hard-cooked eggs", "24 eggs: cover by 1 in of water, bring to a boil, cover off the heat for 12 min, then ice water", "24 eggs", "1 week in the shell"],
+            ["Hummus", "Two 15 oz cans chickpeas, 1/3 cup tahini, 1/4 cup lemon juice, 1 garlic clove, 1 tsp salt, ice water to blend", "About 4 cups", "4 days"],
+            ["Cut vegetables", "3 lb of carrots, celery, peppers and snap peas, cut into sticks", "About 10 cups", "4 to 5 days, in a sealed container lined with paper towel"],
+            ["Oat and peanut butter bites", "2 cups oats, 1 cup peanut butter, 1/2 cup honey, 1/2 cup chocolate chips, 2 tbsp ground flax", "About 30 bites", "1 week"],
+            ["Yogurt parfait jars", "Greek yogurt and fruit in jars, granola in a separate container", "As many jars as needed", "3 days; add granola just before eating"],
+            ["Stovetop popcorn", "1/2 cup kernels and 3 tbsp oil in a covered 6 qt pot, shaken over medium-high heat", "About 14 to 16 cups", "1 week in an airtight container at room temperature"],
+          ],
+        },
+      },
+      {
+        id: "eggs",
+        heading: "Hard-cooked eggs that peel easily",
+        paragraphs: [
+          "Hard-cooked eggs are the most useful make-ahead snack, and they only cause problems when they are hard to peel or overcooked, with a green ring around the yolk. The green ring is a harmless reaction between the yolk and white that comes from cooking too long or cooling too slowly. Eggs a week or more old peel more easily than very fresh ones.",
+        ],
+        steps: [
+          "Put eggs in a single layer in a pot and cover with cold water by 1 in (2.5 cm).",
+          "Bring to a full boil over high heat, then turn off the heat, cover, and leave for 12 minutes for large eggs.",
+          "Move the eggs straight into a bowl of ice water for at least 5 minutes to stop the cooking.",
+          "Refrigerate in their shells, dated, and use within a week. Peeled eggs are best eaten the same day.",
         ],
       },
       {
-        id: "counter",
-        heading: "Counter snacks that disappear",
+        id: "shelf",
+        heading: "Running a shared snack shelf",
         paragraphs: [
-          "Bananas, oranges, and a nut bin on the counter beat hidden 'healthy' food in the back of the fridge. Visibility drives use on busy tours.",
+          "Put one shelf of the fridge at eye level aside for crew snacks and keep everything on it in clear, labelled containers. One person on the rotation restocks it on a set day each week and throws out anything past its date, which keeps people trusting what they find there. Portion nuts and trail mix into small containers or bags, since a big open bag goes stale and gets picked through.",
+          "Pay for snacks from the same grocery fund as meals so the shelf doesn't depend on one person buying for everyone. Keep a fruit bowl on the counter where people pass, because food that is visible gets eaten first.",
+        ],
+      },
+      {
+        id: "safety",
+        heading: "Keeping perishable snacks safe",
+        paragraphs: [
+          "Yogurt, cheese, eggs, hummus, cut fruit and cut vegetables are perishable and shouldn't be out of the fridge for more than two hours in total. That includes time sitting on the counter during a long afternoon. Cut melon and other cut fruit must go back in the fridge. Put out small amounts and refill them, rather than leaving a large bowl out all day.",
+          "Nuts and peanut butter are common allergens. If anyone on the crew has a nut allergy, keep nut snacks in their own sealed, labelled bin away from other food, and use a separate scoop for each container.",
         ],
       },
     ],
-    mealRecommendations: [
-      meal("mediterranean-chickpea", "Mediterranean Chickpea Bowls", "Plant protein tray for lunch bowls."),
-      meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Prep components for quick plates."),
-      meal("turkey-chili", "High-Protein Turkey Chili", "Reheat cup between meals."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What snacks should a fire station keep stocked?",
-        answer:
-          "Fruit, yogurt, string cheese, and hummus at eye level in the fridge — visible options get eaten, buried ones do not. A labeled bin of nuts or trail mix works too, as long as someone owns rotating it weekly.",
-      },
-      {
-        question: "Why do healthy snacks in the fridge go untouched?",
-        answer:
-          "Usually because they're invisible. A banana on the counter gets eaten; the same banana in the back of the crisper does not. Put the good options where the chips already are.",
-      },
-    ],
-    relatedArticleSlugs: ["avoid-living-on-takeout", "best-foods-for-long-shifts"],
-  }),
-
-  buildSeoGuide({
-    slug: "meals-wont-wreck-energy-levels",
-    title: "Meals That Won't Wreck Energy Levels",
-    subtitle: "Avoid the 21:00 food coma",
-    description:
-      "Firefighter meals that keep energy steady: balanced bowls, reasonable portions of fat, and hall dinners that do not leave the crew useless on the couch.",
-    keywords: ["firefighter energy meals", "meals steady energy shift", "avoid food coma"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "Some hall dinners taste great at 18:00 and end the shift at 20:30. Meals that wreck energy are usually heavy fat with no balance, or sugar without protein. Steady energy comes from familiar food in reasonable portions — not from eating like it is a holiday every night.",
     practicalAdvice: [
-      "Balance starch with protein — pasta with meat, rice with chicken.",
-      "Serve veg or salad when you can — fiber slows the crash.",
-      "Save the heaviest grease for slow nights.",
-    ],
-    sections: [
-      {
-        id: "picks",
-        heading: "Hall picks that stay steady",
-        paragraphs: [
-          "Bowls, chili, grilled proteins with rice, and soups beat deep-fried-only spreads for a long tour.",
-        ],
-      },
-      {
-        id: "timing",
-        heading: "When you eat matters",
-        paragraphs: [
-          "A huge greasy plate at 22:00 after skipping lunch hits harder than the same meal at 18:00. Spread fuel across the tour when the board allows.",
-        ],
-      },
+      "Batch-prep eggs, hummus and cut vegetables once or twice a week and date every container.",
+      "Keep snacks at eye level in clear containers; visible food gets eaten.",
+      "Assign weekly restocking to the rotation and clear out anything past its date.",
+      "Keep perishable snacks out of the fridge for no more than two hours in total.",
+      "Store nut snacks in their own labelled bin if anyone has a nut allergy.",
     ],
     mealRecommendations: [
-      meal("teriyaki-donburi", "Teriyaki Donburi", "Balanced bowl — steady energy."),
-      meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "Veg and protein — one pan."),
-      meal("turkey-chili", "High-Protein Turkey Chili", "Bean and turkey — steady."),
-      meal("lemon-herb-salmon", "Lemon Herb Grilled Salmon", "Lighter grill night."),
+      meal("mediterranean-chickpea", "Mediterranean Chickpea Bowls", "Make extra chickpeas for snack boxes with hummus and vegetables."),
+      meal("greek-chicken-bowls", "Greek Chicken Power Bowls", "Leftover chicken and tzatziki make a quick snack plate."),
+      meal("turkey-chili", "High-Protein Turkey Chili", "Portion into cups for a small, filling snack between meals."),
     ],
     faqs: [
-      STANDARD_FAQS.nutrition,
       {
-        question: "What causes the post-dinner crash at the station?",
+        question: "How long do hard-boiled eggs last in the fridge?",
         answer:
-          "Usually heavy fat and heavy starch together in one big portion, not a single ingredient. A plate that's mostly fried food with nothing balancing it tends to leave a crew sluggish for the rest of the evening.",
-      },
-      {
-        question: "What dinners keep the crew alert instead of sluggish?",
-        answer:
-          "Bowls and grilled proteins with rice — teriyaki donburi, sheet-pan chicken fajitas — because they balance starch and protein instead of stacking grease on grease. Save the heaviest, richest meals for slow nights when nobody needs to stay sharp after.",
+          "About a week in their shells, according to USDA, as long as they were refrigerated within two hours of cooking. Peeled eggs are best eaten the same day. Date the container so the next shift knows when they were made.",
       },
     ],
-    relatedArticleSlugs: ["best-foods-for-long-shifts", "healthy-meals-for-active-crews"],
-  }),
-
-  buildSeoGuide({
-    slug: "eating-during-high-stress-shifts",
-    title: "Eating During High-Stress Shifts",
-    subtitle: "When appetite disappears — and still need fuel",
-    description:
-      "How to eat during high-stress firefighter shifts when crews skip meals, and which hall foods are easy to eat when adrenaline is high.",
-    keywords: ["stress shift eating", "firefighter stress nutrition", "eat during busy shift"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "High-stress shifts kill appetite. Crews still need fuel — especially before a long job and after. Small, familiar foods win: broth, sandwiches, banana with peanut butter, chili in a cup. Forcing a huge plate mid-crisis rarely works.",
-    practicalAdvice: [
-      "Keep grab-and-go options visible before tones stack.",
-      "After the job, warm simple food — do not skip because 'nobody is hungry.'",
-      "Broth and soup are underrated — easy to sip.",
+    relatedArticleSlugs: [
+      "healthy-smoothies-at-the-hall",
+      "firehall-meal-prep-ideas",
+      "best-meals-24-hour-shift",
+      "firehall-kitchen-culture",
     ],
-    sections: [
-      {
-        id: "before",
-        heading: "Before the board stacks",
-        paragraphs: [
-          "If dinner is early, eat while you can. A bowl now beats nothing later.",
-        ],
-      },
-      {
-        id: "after",
-        heading: "After intensity",
-        paragraphs: [
-          "Salt, protein, and warmth signal safety. That is when chili and sandwiches land.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("beef-barley-soup", "Beef Barley Soup", "Sippable bowl food when appetite is low."),
-      meal("big-chili", "Firehall Chili", "Cup portions — easy between calls."),
-      meal("pulled-pork", "Pulled Pork Sandwiches", "Handheld — low ceremony."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What should you eat when you're too stressed to feel hungry?",
-        answer:
-          "Small, familiar food — broth, a sandwich, banana with peanut butter, chili in a cup. Forcing a full plate mid-crisis rarely works; something easy to eat in a few bites keeps fuel going without the pressure of a sit-down meal.",
-      },
-      {
-        question: "Is it bad to skip a meal during a rough shift?",
-        answer:
-          "One skipped meal is not a disaster, but don't skip the next one too. Warm, simple food after things settle down — a bowl of beef barley soup or a sandwich — is an easy way to get something in without needing a full sit-down dinner.",
-      },
-    ],
-    relatedArticleSlugs: ["best-meals-after-busy-shift", "firefighter-recovery-nutrition"],
-  }),
-
-  buildSeoGuide({
-    slug: "recovery-meals-after-hard-calls",
-    title: "Recovery Meals After Hard Calls",
-    subtitle: "Hot food when the room needs to exhale",
-    description:
-      "Recovery meals for firefighters after difficult calls: comfort, protein, hydration, and hall food that supports the crew without performative 'wellness.'",
-    keywords: ["recovery meals firefighters", "post incident meals", "hard call food"],
-    topic: "nutrition_performance",
-    pillar: "nutrition_performance",
-    intro:
-      "After a hard call, food is emotional infrastructure. Recovery meals should be hot, plentiful, and familiar — not a surprise health experiment. The kitchen can be where the crew lands without forcing conversation.",
-    practicalAdvice: [
-      "Start water and simple food — not alcohol first.",
-      "Let people eat in silence if they want.",
-      "Comfort food is appropriate — pair with protein when you can.",
-    ],
-    sections: [
-      {
-        id: "kitchen",
-        heading: "Let the kitchen do quiet work",
-        paragraphs: [
-          "Mac and cheese, chili, pot pie — foods people eat without thinking. Hold seconds on a warm tray.",
-        ],
-      },
-      {
-        id: "room",
-        heading: "Read the room",
-        paragraphs: [
-          "Some nights need quiet and food, not a speech. Let the kitchen stay open late without forcing a group moment — presence matters more than menu creativity.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("mac-and-cheese-bake", "Baked Mac and Cheese", "Warm tray — low friction."),
-      meal("chicken-pot-pie", "Chicken Pot Pie", "Familiar bowl — warm and filling."),
-      meal("big-chili", "Firehall Chili", "Communal pot — protein rich."),
-      meal("loaded-baked-potato-bar", "Loaded Baked Potato Bar", "Self-serve — no pressure."),
-    ],
-    faqs: [
-      STANDARD_FAQS.nutrition,
-      {
-        question: "What food actually helps after a difficult call?",
-        answer:
-          "Hot, plentiful, familiar food — mac and cheese, chili, chicken pot pie — not a wellness experiment sprung on a tired crew. Comfort and recovery are not opposites; pair the comfort food with protein when you can and let people eat in whatever mood they're in.",
-      },
-      {
-        question: "Should the crew talk through a hard call over dinner?",
-        answer:
-          "Only if they want to. The kitchen can just be a place to land — quiet food without forcing conversation works fine. Keep a tray warm for people who need a minute before they sit down.",
-      },
-    ],
-    relatedArticleSlugs: ["comfort-food-after-a-long-shift", "firefighter-recovery-nutrition"],
+    sources: [SRC.usdaEggs, SRC.usdaDangerZone, SRC.fdaAllergies, SRC.usdaKeepFoodSafe],
   }),
 ];

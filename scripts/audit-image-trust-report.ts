@@ -21,6 +21,7 @@ import { HALL_EXPANSION_IMAGE_DONOR_OVERRIDES } from "../shared/hall-expansion/i
 import { CATALOG_IMAGE_DONOR_OVERRIDES } from "../shared/catalog-image-donor-overrides.js";
 import { auditTitlePathKeywords } from "../shared/curated-image-governance/image-accuracy-rules.js";
 import { auditBreakfastFormatRules } from "../shared/curated-image-governance/breakfast-image-rules.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type Category =
   | "golden_100"
@@ -434,7 +435,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(payload, null, 2));
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(payload, null, 2));
 
   const md: string[] = [
     "# Image Trust Report",
@@ -511,7 +512,7 @@ async function main(): Promise<void> {
   md.push("3. **P2 accurate** — leave until AI regen; cross-listing the same correct dish is acceptable.");
   md.push("4. **Do not** regen accurate images merely to reduce duplicate counts.");
 
-  fs.writeFileSync(MD_OUT, md.join("\n"));
+  writeFileAtomicSync(MD_OUT, md.join("\n"));
 
   console.log(`[audit:image-trust] wrote ${JSON_OUT}`);
   console.log(`[audit:image-trust] wrote ${MD_OUT}`);

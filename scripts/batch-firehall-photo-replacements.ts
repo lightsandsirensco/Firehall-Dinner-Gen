@@ -13,6 +13,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { loadProjectEnv } from "../server/lib/load-project-env.js";
 import { hasOpenAIKey } from "../server/openai-client.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 loadProjectEnv();
 
@@ -65,7 +66,7 @@ function loadProgress(): ProgressFile {
 function saveProgress(progress: ProgressFile): void {
   progress.updatedAt = new Date().toISOString();
   fs.mkdirSync(REVIEW, { recursive: true });
-  fs.writeFileSync(PROGRESS_PATH, JSON.stringify(progress, null, 2));
+  writeFileAtomicSync(PROGRESS_PATH, JSON.stringify(progress, null, 2));
 }
 
 function loadQueue(): QueueItem[] {

@@ -33,6 +33,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const BASE = (process.env.TARGET_BASE_URL || "http://localhost:5051").replace(/\/+$/, "");
 const CONCURRENCY = Number(process.env.CRAWL_CONCURRENCY || 10);
@@ -324,7 +325,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(report, null, 2), "utf8");
 
   const catalogRows = [...byCatalog.entries()]
     .map(([name, b]) => `| ${name} | ${b.total} | ${b.withAnyLink} | ${b.withRelatedLink} | ${b.orphans} |`)
@@ -354,7 +355,7 @@ ${catalogRows}
 ${orphans.length ? `## Orphaned recipes\n\n${orphans.map((o) => `- [${o.catalog}] \`${o.slug}\` (${o.path})`).join("\n")}\n` : ""}
 ${brokenLinks.length ? `## Broken links\n\n${brokenLinks.map((b) => `- \`${b.target}\` linked from ${b.linkedFrom.map((s) => `\`${s}\``).join(", ")}`).join("\n")}\n` : ""}
 `;
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
   console.log(`\nReport written to ${path.relative(ROOT, JSON_OUT)} and ${path.relative(ROOT, MD_OUT)}`);
 
   // Fail only on unambiguous regressions — never a brittle exact-N rule.

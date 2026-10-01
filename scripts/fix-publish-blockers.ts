@@ -21,6 +21,7 @@ import { findNearDuplicatePairs } from "../shared/curated-recipe/families/simila
 import { listCuratedRecipesForEditorialQa } from "../server/curated-recipe-qa.js";
 import { summarizeEditorialQaReports } from "../shared/curated-recipe/qa-engine/summarize.js";
 import type { CuratedRecipe } from "../shared/curated-recipe/types.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC_IMAGES = path.join(process.cwd(), "client", "public", "images");
 const REVIEW_ASSETS = path.join(process.cwd(), "review", "assets");
@@ -268,7 +269,7 @@ function writeDuplicateReviewReport(recipes: CuratedRecipe[]): void {
 
   const outDir = path.join(process.cwd(), "review");
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     path.join(outDir, "variant-duplicate-review.json"),
     JSON.stringify({ generatedAt: new Date().toISOString(), pairCount: pairs.length, families: [...byFamily.entries()].map(([family, familyPairs]) => ({ family, pairs: familyPairs })), recommendations }, null, 2),
   );
@@ -289,7 +290,7 @@ function writeDuplicateReviewReport(recipes: CuratedRecipe[]): void {
     }
     mdLines.push("");
   }
-  fs.writeFileSync(path.join(outDir, "variant-duplicate-review.md"), mdLines.join("\n"));
+  writeFileAtomicSync(path.join(outDir, "variant-duplicate-review.md"), mdLines.join("\n"));
   console.log(`[fix-blockers] wrote variant duplicate review (${pairs.length} pairs)`);
 }
 
@@ -352,7 +353,7 @@ async function main(): Promise<void> {
   flushSqliteToDisk();
 
   const reportPath = path.join(process.cwd(), "review", "fix-publish-blockers-report.json");
-  fs.writeFileSync(
+  writeFileAtomicSync(
     reportPath,
     JSON.stringify(
       {

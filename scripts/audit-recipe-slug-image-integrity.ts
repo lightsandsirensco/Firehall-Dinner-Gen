@@ -13,6 +13,7 @@
  */
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const CATALOG_DIR = path.join(ROOT, "client", "public", "catalog");
@@ -103,7 +104,7 @@ function main() {
 
   const reviewDir = path.join(ROOT, "review");
   fs.mkdirSync(reviewDir, { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     path.join(reviewDir, "recipe-slug-image-integrity-audit.json"),
     JSON.stringify({ generatedAt: new Date().toISOString(), totalRecipes, issueCount: issues.length, issues }, null, 2) + "\n",
     "utf8",

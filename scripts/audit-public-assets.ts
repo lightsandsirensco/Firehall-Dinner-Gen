@@ -12,6 +12,7 @@ import { spawnSync } from "node:child_process";
 import { buildApprovedCatalog } from "../server/approved-catalog.js";
 import { resolveExistingSlugImage } from "../shared/explore-image-paths.js";
 import { publicImageAbsolute } from "../shared/explore-image-paths.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC_ROOT = path.join(ROOT, "client", "public");
@@ -192,7 +193,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(reportPath), { recursive: true });
-  fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(reportPath, JSON.stringify(report, null, 2));
 
   console.log("[audit:public-assets] Public asset audit\n");
   for (const req of report.requiredAssets) {

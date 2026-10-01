@@ -1116,5 +1116,890 @@
       "everything bagel seasoning"
     ],
     "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:18:53.303Z",
+    "collection": "breakfast",
+    "slug": "high-protein-breakfast-burrito-bowls",
+    "hero": "/images/breakfast/high-protein-breakfast-burrito-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "brown rice",
+      "ground turkey",
+      "scrambled eggs",
+      "black beans",
+      "pico de gallo",
+      "shredded cheese",
+      "avocado",
+      "greek yogurt"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:23:38.599Z",
+    "collection": "breakfast",
+    "slug": "berry-vanilla-protein-overnight-oats",
+    "hero": "/images/breakfast/berry-vanilla-protein-overnight-oats.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "served in a bowl instead of a jar"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "rolled oats",
+      "greek yogurt",
+      "mixed berries",
+      "chia seeds"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:24:23.799Z",
+    "collection": "breakfast",
+    "slug": "black-bean-egg-white-breakfast-burritos",
+    "hero": "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "egg whites",
+      "black beans",
+      "bell pepper",
+      "yellow onion",
+      "pepper jack cheese",
+      "flour tortilla",
+      "salsa"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:25:06.593Z",
+    "collection": "breakfast",
+    "slug": "cottage-cheese-veggie-egg-bake",
+    "hero": "/images/breakfast/cottage-cheese-veggie-egg-bake.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "eggs",
+      "cottage cheese",
+      "yellow onion",
+      "bell pepper",
+      "baby spinach",
+      "shredded cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:25:52.185Z",
+    "collection": "breakfast",
+    "slug": "egg-white-black-bean-breakfast-quesadillas",
+    "hero": "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "egg whites",
+      "black beans",
+      "pepper jack cheese",
+      "salsa",
+      "flour tortilla"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:26:36.598Z",
+    "collection": "breakfast",
+    "slug": "firehouse-breakfast-protein-bowls",
+    "hero": "/images/breakfast/firehouse-breakfast-protein-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "sweet potato",
+      "chicken sausage",
+      "scrambled eggs",
+      "cottage cheese",
+      "salsa",
+      "green onions",
+      "avocado"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:27:59.402Z",
+    "collection": "breakfast",
+    "slug": "peanut-butter-protein-overnight-oats",
+    "hero": "/images/breakfast/peanut-butter-protein-overnight-oats.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "served in a bowl instead of a jar"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "rolled oats",
+      "peanut butter",
+      "banana"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:28:44.239Z",
+    "collection": "breakfast",
+    "slug": "savory-cottage-cheese-breakfast-bowls",
+    "hero": "/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "cottage cheese",
+      "cucumber",
+      "cherry tomatoes",
+      "avocado",
+      "everything bagel seasoning",
+      "hot sauce"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:29:27.727Z",
+    "collection": "breakfast",
+    "slug": "turkey-bacon-white-bean-breakfast-hash",
+    "hero": "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "russet potato",
+      "turkey bacon",
+      "white beans",
+      "large eggs",
+      "yellow onion",
+      "bell pepper"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:30:09.407Z",
+    "collection": "breakfast",
+    "slug": "turkey-sausage-egg-white-sandwiches",
+    "hero": "/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "turkey sausage",
+      "egg whites",
+      "english muffin",
+      "cheddar cheese",
+      "hot sauce"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:30:50.670Z",
+    "collection": "breakfast",
+    "slug": "turkey-sausage-spinach-feta-egg-white-scramble",
+    "hero": "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "turkey sausage",
+      "egg whites",
+      "baby spinach",
+      "feta cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:31:32.657Z",
+    "collection": "breakfast",
+    "slug": "turkey-sausage-sweet-potato-skillet",
+    "hero": "/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "sweet potato",
+      "turkey sausage",
+      "eggs",
+      "shredded cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:32:16.117Z",
+    "collection": "hall-expansion",
+    "slug": "blackened-salmon-sweet-potato-bowls",
+    "hero": "/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "sweet potato",
+      "salmon fillet",
+      "baby spinach",
+      "plain greek yogurt"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:32:58.803Z",
+    "collection": "hall-expansion",
+    "slug": "cajun-lime-shrimp-black-bean-bowls",
+    "hero": "/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "shrimp",
+      "black beans",
+      "corn",
+      "jasmine rice",
+      "bell pepper",
+      "lime wedge",
+      "fresh cilantro"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:33:44.459Z",
+    "collection": "hall-expansion",
+    "slug": "firehouse-chicken-black-bean-bowls",
+    "hero": "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chicken breast",
+      "brown rice",
+      "black beans",
+      "corn",
+      "avocado",
+      "plain greek yogurt",
+      "lime"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:34:23.741Z",
+    "collection": "hall-expansion",
+    "slug": "garlic-steak-broccoli-cottage-cheese-bowls",
+    "hero": "/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "sirloin steak",
+      "jasmine rice",
+      "broccoli florets",
+      "cottage cheese",
+      "fresh chives"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:35:45.962Z",
+    "collection": "hall-expansion",
+    "slug": "high-protein-chicken-quinoa-meal-prep-bowls",
+    "hero": "/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "bowl format instead of individual meal-prep containers"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chicken thighs",
+      "quinoa",
+      "broccoli florets",
+      "bell pepper"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:36:24.638Z",
+    "collection": "hall-expansion",
+    "slug": "honey-mustard-turkey-meatball-bowls",
+    "hero": "/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "turkey meatballs",
+      "jasmine rice",
+      "green beans",
+      "honey mustard sauce"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:37:07.895Z",
+    "collection": "hall-expansion",
+    "slug": "lemon-herb-cod-roasted-vegetables",
+    "hero": "/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "cod fillet",
+      "baby potatoes",
+      "zucchini",
+      "cherry tomatoes",
+      "lemon slices",
+      "parsley"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-09-30T19:37:51.823Z",
+    "collection": "hall-expansion",
+    "slug": "sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+    "hero": "/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chicken breast",
+      "sweet potato",
+      "broccoli florets",
+      "lemon"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:38:48.606Z",
+    "collection": "hall-expansion",
+    "slug": "firehouse-sweet-potato-beef-protein-bowls",
+    "hero": "/images/hall-expansion/firehouse-sweet-potato-beef-protein-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "sweet potato",
+      "ground beef",
+      "cottage cheese",
+      "avocado",
+      "cherry tomatoes",
+      "green onions"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:38:49.404Z",
+    "collection": "hall-expansion",
+    "slug": "loaded-firehouse-sweet-potatoes",
+    "hero": "/images/hall-expansion/loaded-firehouse-sweet-potatoes.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "sweet potato",
+      "ground beef",
+      "black beans",
+      "plain greek yogurt",
+      "cheddar cheese",
+      "green onions",
+      "salsa"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:38:49.510Z",
+    "collection": "hall-expansion",
+    "slug": "firehouse-dense-bean-salad",
+    "hero": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chickpeas",
+      "black beans",
+      "kidney beans",
+      "cucumber",
+      "bell pepper",
+      "feta cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:39:29.725Z",
+    "collection": "hall-expansion",
+    "slug": "firehouse-diner-burger-bowls",
+    "hero": "/images/hall-expansion/firehouse-diner-burger-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "ground beef",
+      "romaine lettuce",
+      "cheddar cheese",
+      "tomatoes",
+      "dill pickles",
+      "red onion",
+      "mayonnaise",
+      "ketchup"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:39:32.106Z",
+    "collection": "hall-expansion",
+    "slug": "sesame-ginger-tofu-bowls",
+    "hero": "/images/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "firm tofu",
+      "jasmine rice",
+      "edamame",
+      "shredded carrots",
+      "cucumber",
+      "sesame seeds"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:39:33.517Z",
+    "collection": "hall-expansion",
+    "slug": "firehouse-lentil-chili",
+    "hero": "/images/hall-expansion/firehouse-lentil-chili.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "lentils",
+      "kidney beans",
+      "crushed tomato",
+      "shredded cheddar",
+      "green onions"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:40:17.594Z",
+    "collection": "hall-expansion",
+    "slug": "southwest-black-bean-corn-bowls",
+    "hero": "/images/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "quinoa",
+      "black beans",
+      "corn",
+      "bell pepper",
+      "avocado",
+      "fresh cilantro",
+      "lime wedge"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:40:18.989Z",
+    "collection": "hall-expansion",
+    "slug": "chickpea-pasta-primavera-white-beans",
+    "hero": "/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chickpea pasta",
+      "zucchini",
+      "bell pepper",
+      "cherry tomatoes",
+      "cannellini beans",
+      "parmesan cheese",
+      "fresh basil"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:40:20.348Z",
+    "collection": "hall-expansion",
+    "slug": "firehouse-turkey-white-bean-soup",
+    "hero": "/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "ground turkey",
+      "yellow onion",
+      "carrots",
+      "celery",
+      "cannellini beans",
+      "kale",
+      "parmesan cheese"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:41:03.209Z",
+    "collection": "hall-expansion",
+    "slug": "tempeh-peanut-buddha-bowls",
+    "hero": "/images/hall-expansion/tempeh-peanut-buddha-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "tempeh",
+      "brown rice",
+      "edamame",
+      "carrots",
+      "red cabbage",
+      "green onions",
+      "sesame seeds"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:41:06.424Z",
+    "collection": "hall-expansion",
+    "slug": "black-bean-cottage-cheese-enchilada-bake",
+    "hero": "/images/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "black beans",
+      "corn kernels",
+      "corn tortilla",
+      "tomato sauce",
+      "shredded cheese",
+      "green onions"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:41:42.483Z",
+    "collection": "hall-expansion",
+    "slug": "red-lentil-paneer-dal",
+    "hero": "/images/hall-expansion/red-lentil-paneer-dal.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "red lentils",
+      "paneer",
+      "basmati rice",
+      "greek yogurt",
+      "fresh cilantro"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:41:44.453Z",
+    "collection": "hall-expansion",
+    "slug": "paneer-tikka-masala-bowls",
+    "hero": "/images/hall-expansion/paneer-tikka-masala-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "peas in rice not listed in recipe"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "paneer",
+      "basmati rice",
+      "tomato sauce",
+      "fresh cilantro"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:42:24.423Z",
+    "collection": "hall-expansion",
+    "slug": "greek-yogurt-white-bean-power-bowls",
+    "hero": "/images/hall-expansion/greek-yogurt-white-bean-power-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": false,
+        "reasons": [
+          "missing cherry tomatoes",
+          "missing red onion"
+        ]
+      },
+      {
+        "attempt": 2,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "white beans",
+      "quinoa",
+      "greek yogurt",
+      "feta cheese",
+      "cucumber",
+      "cherry tomatoes",
+      "red onion"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:42:24.442Z",
+    "collection": "hall-expansion",
+    "slug": "cottage-cheese-spinach-stuffed-shells",
+    "hero": "/images/hall-expansion/cottage-cheese-spinach-stuffed-shells.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "jumbo pasta shells",
+      "cottage cheese",
+      "shredded mozzarella",
+      "frozen spinach",
+      "marinara sauce"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:44:47.640Z",
+    "collection": "hall-expansion",
+    "slug": "firehouse-dense-bean-salad",
+    "hero": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "chickpeas",
+      "black beans",
+      "kidney beans",
+      "cucumber",
+      "bell pepper",
+      "red onion",
+      "cherry tomatoes",
+      "feta cheese",
+      "fresh parsley"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:45:28.428Z",
+    "collection": "hall-expansion",
+    "slug": "tempeh-peanut-buddha-bowls",
+    "hero": "/images/hall-expansion/tempeh-peanut-buddha-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "tempeh",
+      "brown rice",
+      "edamame",
+      "carrots",
+      "red cabbage",
+      "green onions",
+      "sesame seeds"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:46:07.967Z",
+    "collection": "hall-expansion",
+    "slug": "paneer-tikka-masala-bowls",
+    "hero": "/images/hall-expansion/paneer-tikka-masala-bowls.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "paneer",
+      "basmati rice",
+      "tomato sauce",
+      "cilantro"
+    ],
+    "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-01T01:46:48.501Z",
+    "collection": "hall-expansion",
+    "slug": "black-bean-cottage-cheese-enchilada-bake",
+    "hero": "/images/hall-expansion/black-bean-cottage-cheese-enchilada-bake.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "black beans",
+      "corn kernels",
+      "corn tortilla",
+      "tomato sauce",
+      "shredded cheese",
+      "green onions"
+    ],
+    "camera_angle": "45_degree"
   }
 ]

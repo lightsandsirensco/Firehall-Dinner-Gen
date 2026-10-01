@@ -61,12 +61,20 @@ function main(): void {
   const titles = new Set<string>();
   const descriptions = new Set<string>();
 
-  if (pages.length !== 100) {
-    issues.push({
-      slug: "__catalog__",
-      code: "count",
-      message: `Expected 100 pages, found ${pages.length}`,
-    });
+  const index = JSON.parse(fs.readFileSync(path.join(pagesDir, "..", "index.json"), "utf8")) as {
+    recipes: { slug: string }[];
+  };
+  const indexSlugs = new Set(index.recipes.map((r) => r.slug));
+  const pageSlugs = new Set(pages.map((p) => p.slug));
+  for (const slug of indexSlugs) {
+    if (!pageSlugs.has(slug)) {
+      issues.push({ slug, code: "missing_page", message: "Listed in golden-100/index.json but has no page JSON" });
+    }
+  }
+  for (const slug of pageSlugs) {
+    if (!indexSlugs.has(slug)) {
+      issues.push({ slug, code: "unlisted_page", message: "Page JSON not listed in golden-100/index.json" });
+    }
   }
 
   for (const page of pages) {

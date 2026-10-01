@@ -491,11 +491,26 @@ Wide firehall platter of johnnycakes on prep table.
 Visible:
 - stack of golden cornmeal johnnycakes/pancakes
 - butter pats and maple syrup in a pitcher or ramekin beside the stack
-- optional bacon at edge in separate zone
 
 NO single cake macro. NO waffles when titled johnnycakes.
+NO bacon, sausage, eggs, potatoes or other breakfast sides — the recipe is only johnnycakes, butter and maple syrup.
 
 Family-style breakfast.`;
+
+export const BEEF_BIRRIA_CONSOMME_IMAGE_PROMPT = `Beef Birria with Consommé for Dipping
+
+Firehall-sized birria spread on a stainless prep table.
+
+Visible:
+- shredded braised beef coated in deep red guajillo-ancho chile birria sauce
+- small cup or bowl of red consommé for dipping
+- stack of warm corn tortillas
+- chopped white onion, fresh cilantro and lime wedges in small piles or ramekins
+
+NO cheese. NO rice. NO beans. NO broccoli, carrots or other vegetables.
+NO side dishes beyond tortillas, onion, cilantro, lime and consommé.
+
+Family-style crew meal.`;
 
 export const LUMBERJACK_BREAKFAST_PLATTER_IMAGE_PROMPT = `Lumberjack Breakfast Platter
 
@@ -571,6 +586,7 @@ export const TITLE_LOCKED_IMAGE_PROMPTS: Record<string, string> = {
   "baked-oatmeal-mixed-berries": BAKED_OATMEAL_BERRIES_IMAGE_PROMPT,
   "country-fried-steak-eggs": COUNTRY_FRIED_STEAK_EGGS_IMAGE_PROMPT,
   "johnnycakes-with-syrup": JOHNNYCAKES_SYRUP_IMAGE_PROMPT,
+  "beef-birria-with-consomme": BEEF_BIRRIA_CONSOMME_IMAGE_PROMPT,
   "lumberjack-breakfast-platter": LUMBERJACK_BREAKFAST_PLATTER_IMAGE_PROMPT,
   "scrapple-and-eggs-skillet": SCRAPPLE_EGGS_SKILLET_IMAGE_PROMPT,
   "shrimp-and-grits-breakfast": SHRIMP_GRITS_BREAKFAST_IMAGE_PROMPT,

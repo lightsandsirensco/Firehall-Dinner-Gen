@@ -93,7 +93,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
       { heading: "FAQ", bullets: ["Macro-friendly hall food", "Crew buy-in", "Budget"] },
     ],
     internalLinks: ["/healthy-firefighter-meals", firehallCategoryExplorePath("healthy_options"), BROWSE_CANONICAL_PATH],
-    curatedRecipeSlugs: ["ginger-salmon-bowls", "lean-turkey-bean-chili", "sheet-pan-chicken-fajitas-lite"],
+    curatedRecipeSlugs: ["ginger-salmon-bowls", "turkey-sweet-potato-chili", "sheet-pan-fajitas"],
   },
   {
     slug: "firehouse-cooking-tips",
@@ -127,7 +127,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
       { heading: "FAQ", bullets: ["Budget proteins", "Interrupted smokes", "Feeding visitors"] },
     ],
     internalLinks: ["/firefighter-bbq-recipes", firehallCategoryExplorePath("bbq_smoker"), BROWSE_CANONICAL_PATH],
-    curatedRecipeSlugs: ["smoked-brisket", "pulled-pork", "memphis-dry-rub-ribs"],
+    curatedRecipeSlugs: ["texas-central-brisket-crew", "pulled-pork", "memphis-dry-rub-ribs"],
   },
   {
     slug: "fire-station-meal-planning",
@@ -161,7 +161,7 @@ export const BLOG_OUTLINES: BlogOutline[] = [
       { heading: "FAQ", bullets: ["Easiest classics", "Budget classics", "Healthy alternates"] },
     ],
     internalLinks: ["/wheel", "/firefighter-recipes", BROWSE_CANONICAL_PATH],
-    curatedRecipeSlugs: ["chicken-parm", "smash-burgers", "beef-dip", "steak-tacos", "chili-garlic-bread"],
+    curatedRecipeSlugs: ["chicken-parm", "smash-burgers", "beef-dip", "steak-tacos", "big-chili"],
   },
   {
     slug: "rookie-firefighter-meals",

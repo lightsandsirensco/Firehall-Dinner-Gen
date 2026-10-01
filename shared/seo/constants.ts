@@ -1,11 +1,8 @@
 /** Core brand + target keyword phrases for metadata and copy. */
 
-import {
-  APPROVED_CATALOG_TOTAL,
-  formatMarketingRecipeCount,
-} from "../meal-catalog/curated-count.js";
-
+/** Public brand name: schema `name`, og:site_name, titles, visible labels. */
 export const SEO_SITE_NAME = "Firehall Meals";
+/** Domain-style spelling; only ever an `alternateName`, never the public name. */
 export const SEO_BRAND = "FirehallMeals";
 export const SEO_TAGLINE = "Built by Firefighters. Tested in the Firehall.";
 export const SEO_MISSION =
@@ -36,21 +33,42 @@ export const SEO_TARGET_KEYWORDS = [
  * pre-JS / post-hydration title drift for crawlers.
  */
 export const SEO_DEFAULT_TITLE =
-  "Firefighter Meals & Firehall Recipes | Firehall Meals";
+  "Firehall Meals | Firefighter Recipes & Crew Meal Ideas";
 
-/** Homepage meta description — keep in sync with `client/index.html`. */
+/**
+ * Homepage meta description. Also used for og/twitter description, the
+ * Organization/WebSite schema, and the PWA manifest — keep in sync with
+ * `client/index.html` and `vite.config.ts` (enforced by test-home-brand-seo).
+ */
 export const SEO_DEFAULT_DESCRIPTION =
-  "Crew-sized firefighter meals for the fire hall and fire station. Browse hundreds of shift-tested recipes, meal ideas, and tools built by firefighters.";
+  "Firefighter-tested recipes, easy crew meals, shift-friendly dinners and grocery planning built for the firehouse. Find meals your whole crew will eat.";
 
-/** Marketing count still used in body copy / landings — not the homepage meta. */
-export const SEO_DEFAULT_DESCRIPTION_WITH_COUNT =
-  `Pick shift dinners in seconds, save meals you love, and cook with crew-sized recipes from ${formatMarketingRecipeCount(APPROVED_CATALOG_TOTAL)} firefighter-tested meals. Free for firefighters — connect your hall for shared planning when your crew is ready. Built by firefighters.`;
+/** Homepage H1 — the hero renders HOME.heroHeadline, which must match this. */
+export const SEO_HOME_H1 = "What’s for dinner at the firehall?";
 
-/** Visible homepage H1 (legacy; hero uses HOME.heroHeadline). */
-export const SEO_HOME_H1 = "Pick dinner for your shift";
+/** Supporting copy directly under the homepage H1 (hero and server snapshot). */
+export const SEO_HOME_H1_SUPPORT =
+  "Easy firefighter recipes and crew meal ideas built for busy shifts, big appetites and unpredictable calls.";
 
 export const SEO_HOME_HERO_EYEBROW = "For firefighters · Your shift · Your meals";
 
+/** Recipe photo that stands in as the share image until the brand image ships. */
 export const SEO_DEFAULT_OG_IMAGE_PATH = "/images/golden-100/chicken-parm.jpg";
+
+/**
+ * Dedicated brand social-share image: 1200×630, Firehall Meals branding.
+ * Supply the file at `client/public${SEO_BRAND_SHARE_IMAGE_PATH}`, then set
+ * SEO_BRAND_SHARE_IMAGE_READY to true and update og:image/twitter:image in
+ * `client/index.html` (test-home-brand-seo checks both).
+ */
+export const SEO_BRAND_SHARE_IMAGE_PATH = "/images/brand/firehall-meals-share.png";
+export const SEO_BRAND_SHARE_IMAGE_READY = true;
+export const SEO_BRAND_SHARE_IMAGE_WIDTH = 1200;
+export const SEO_BRAND_SHARE_IMAGE_HEIGHT = 630;
+
+/** Share image for the homepage and any page without its own image. */
+export const SEO_SITE_SHARE_IMAGE_PATH = SEO_BRAND_SHARE_IMAGE_READY
+  ? SEO_BRAND_SHARE_IMAGE_PATH
+  : SEO_DEFAULT_OG_IMAGE_PATH;
 
 export const SEO_TWITTER_HANDLE = "@firehallmeals";

@@ -10,6 +10,7 @@
 import { execSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const BASE = (process.env.BASE_URL || "http://127.0.0.1:5000").replace(/\/+$/, "");
 const outDir = path.join(process.cwd(), "review", "lighthouse-seo");
@@ -90,7 +91,7 @@ function main(): void {
   }
 
   const summaryPath = path.join(outDir, "summary.json");
-  fs.writeFileSync(summaryPath, JSON.stringify({ base: BASE, rows, at: new Date().toISOString() }, null, 2));
+  writeFileAtomicSync(summaryPath, JSON.stringify({ base: BASE, rows, at: new Date().toISOString() }, null, 2));
   console.log(`\n[lighthouse-seo] wrote ${summaryPath}`);
   console.log(fail === 0 ? "[lighthouse-seo] PASS (SEO ≥ 90 on all pages)" : `[lighthouse-seo] ${fail} page(s) below SEO 90`);
   process.exit(fail > 0 ? 1 : 0);

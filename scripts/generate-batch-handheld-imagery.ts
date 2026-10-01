@@ -4,7 +4,7 @@
  *
  *   npx tsx scripts/generate-batch-handheld-imagery.ts --dry-run
  *   npx tsx scripts/generate-batch-handheld-imagery.ts --force
- *   npx tsx scripts/generate-batch-handheld-imagery.ts --only=chicken-caesar-wraps
+ *   npx tsx scripts/generate-batch-handheld-imagery.ts --only=buffalo-chicken-wraps
  */
 import { loadProjectEnv, logOpenAIKeyDiagnostics } from "../server/lib/load-project-env.js";
 import { applyDevOpenAiTlsIfAllowed } from "./dev-tls.js";
@@ -27,7 +27,6 @@ import { getFirehallKitchenNegativePromptLines } from "../shared/food-imagery/fi
 import { buildRecipeHeroAlt } from "../shared/seo/recipe-image-seo.js";
 
 const HANDHELD_SLUGS = [
-  "chicken-caesar-wraps",
   "buffalo-chicken-wraps",
   "greek-chicken-pitas",
   "beef-gyros-for-the-hall",

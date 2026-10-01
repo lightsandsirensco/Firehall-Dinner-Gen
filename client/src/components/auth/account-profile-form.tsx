@@ -156,11 +156,21 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
           <Label htmlFor="department">Department (optional)</Label>
-          <Input id="department" value={department} onChange={(e) => setDepartment(e.target.value)} />
+          <Input
+            id="department"
+            placeholder="Add your department"
+            value={department}
+            onChange={(e) => setDepartment(e.target.value)}
+          />
         </div>
         <div className="space-y-2">
           <Label htmlFor="hall-name">Hall name (optional)</Label>
-          <Input id="hall-name" value={hallName} onChange={(e) => setHallName(e.target.value)} />
+          <Input
+            id="hall-name"
+            placeholder="Add your hall or station"
+            value={hallName}
+            onChange={(e) => setHallName(e.target.value)}
+          />
         </div>
       </div>
 
@@ -169,7 +179,7 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
           <Label htmlFor="shift">Shift (optional)</Label>
           <Input
             id="shift"
-            placeholder="A Shift"
+            placeholder="Add your shift or crew"
             value={shiftLabel}
             onChange={(e) => setShiftLabel(e.target.value)}
           />

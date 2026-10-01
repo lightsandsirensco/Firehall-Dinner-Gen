@@ -40,7 +40,7 @@ export default function FamiliesIndexPage() {
             Explore recipes
           </Link>
           <Link href="/about" className="px-4 py-2 rounded-lg bg-muted text-foreground text-sm font-semibold">
-            About FirehallMeals
+            About Firehall Meals
           </Link>
         </div>
       </main>

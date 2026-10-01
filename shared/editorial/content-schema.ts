@@ -21,11 +21,31 @@ export const editorialTopicSchema = z.enum([
   "station_lifestyle",
 ]);
 
+export const editorialTableSchema = z
+  .object({
+    caption: z.string().trim().min(10).max(200),
+    columns: z.array(z.string().trim().min(1).max(60)).min(2).max(7),
+    rows: z.array(z.array(z.string().trim().min(1).max(160)).min(2).max(7)).min(2).max(16),
+  })
+  .refine((t) => t.rows.every((r) => r.length === t.columns.length), {
+    message: "every table row must have one cell per column",
+  });
+
 export const editorialSectionSchema = z.object({
   id: z.string().trim().min(1).max(40),
   heading: z.string().trim().min(3).max(120),
   paragraphs: z.array(z.string().trim().min(20).max(1200)).min(1).max(8),
+  /** Ordered method steps, rendered as a numbered list after the paragraphs. */
+  steps: z.array(z.string().trim().min(15).max(500)).min(2).max(12).optional(),
+  table: editorialTableSchema.optional(),
   tips: z.array(z.string().trim().min(12).max(400)).max(8).optional(),
+});
+
+/** A published reference that backs a factual claim in the guide (temperatures, storage times). */
+export const editorialSourceSchema = z.object({
+  label: z.string().trim().min(5).max(160),
+  publisher: z.string().trim().min(2).max(80),
+  url: z.string().trim().url().startsWith("https://"),
 });
 
 export const editorialMealPickSchema = z.object({
@@ -74,7 +94,11 @@ export const editorialArticleSchema = z.object({
   sections: z.array(editorialSectionSchema).min(1).max(12),
   practicalAdvice: z.array(z.string().trim().min(20).max(500)).min(3).max(10),
   mealRecommendations: z.array(editorialMealPickSchema).min(3).max(30),
-  faqs: z.array(editorialFaqSchema).min(2).max(10),
+  /**
+   * Only questions a reader would genuinely ask; empty means no FAQ section. FAQPage schema
+   * is emitted only when there are at least `MIN_GUIDE_FAQS_FOR_SCHEMA` questions.
+   */
+  faqs: z.array(editorialFaqSchema).max(10),
   relatedArticleSlugs: z.array(slugSchema).max(6).optional(),
   keywords: z.array(z.string().trim().min(2).max(48)).max(16),
   publishedAt: z.string().trim().max(40),
@@ -85,6 +109,7 @@ export const editorialArticleSchema = z.object({
   heroImage: z.string().trim().max(200).optional(),
   heroImageAlt: z.string().trim().max(160).optional(),
   embeddedRecipes: z.array(editorialEmbeddedRecipeSchema).min(1).max(20).optional(),
+  sources: z.array(editorialSourceSchema).min(1).max(12).optional(),
 });
 
 export const editorialIndexEntrySchema = z.object({
@@ -107,6 +132,8 @@ export const editorialCatalogIndexSchema = z.object({
 
 export type EditorialTopic = z.infer<typeof editorialTopicSchema>;
 export type EditorialSection = z.infer<typeof editorialSectionSchema>;
+export type EditorialTable = z.infer<typeof editorialTableSchema>;
+export type EditorialSource = z.infer<typeof editorialSourceSchema>;
 export type EditorialMealPick = z.infer<typeof editorialMealPickSchema>;
 export type EditorialFaq = z.infer<typeof editorialFaqSchema>;
 export type EditorialEmbeddedIngredient = z.infer<typeof editorialEmbeddedIngredientSchema>;
@@ -116,6 +143,13 @@ export type EditorialIndexEntry = z.infer<typeof editorialIndexEntrySchema>;
 export type EditorialCatalogIndex = z.infer<typeof editorialCatalogIndexSchema>;
 
 export const EDITORIAL_CONTENT_VERSION = 3 as const;
+
+export const MIN_GUIDE_FAQS_FOR_SCHEMA = 2;
+
+/** FAQ items to publish as FAQPage JSON-LD; a lone question stays visible prose only. */
+export function guideFaqSchemaItems(article: Pick<EditorialArticle, "faqs">): EditorialArticle["faqs"] {
+  return (article.faqs?.length ?? 0) >= MIN_GUIDE_FAQS_FOR_SCHEMA ? article.faqs : [];
+}
 
 export function guidePath(slug: string): string {
   return `/guides/${slug}`;

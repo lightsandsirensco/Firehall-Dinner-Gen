@@ -17,6 +17,7 @@ import {
   buildCuratedMealImageProfile,
   validateCuratedImageGovernance,
 } from "../shared/curated-image-governance/index.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type AuditRow = {
   slug: string;
@@ -81,7 +82,7 @@ function writeReport(rows: AuditRow[]): void {
   const mdPath = path.join("review", "performance-meals-visual-title-audit.md");
 
   fs.mkdirSync(path.dirname(jsonPath), { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     jsonPath,
     JSON.stringify(
       {
@@ -123,7 +124,7 @@ function writeReport(rows: AuditRow[]): void {
     }
   }
 
-  fs.writeFileSync(mdPath, mdLines.join("\n"));
+  writeFileAtomicSync(mdPath, mdLines.join("\n"));
   console.log(`[audit:performance-meals-visual-title] wrote ${jsonPath}`);
   console.log(`[audit:performance-meals-visual-title] wrote ${mdPath}`);
   console.log(

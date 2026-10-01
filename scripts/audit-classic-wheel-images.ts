@@ -17,6 +17,7 @@ import {
 } from "../shared/classic-wheel-imagery.js";
 import { extractSlugFromImagePath } from "../shared/explore-image-mapping.js";
 import crypto from "node:crypto";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -166,7 +167,7 @@ function main(): void {
   };
 
   const jsonPath = path.join(reviewDir, "classic-wheel-imagery-audit.json");
-  fs.writeFileSync(jsonPath, JSON.stringify(report, null, 2) + "\n", "utf8");
+  writeFileAtomicSync(jsonPath, JSON.stringify(report, null, 2) + "\n", "utf8");
 
   const md = [
     "# Classics Wheel imagery audit",
@@ -191,7 +192,7 @@ function main(): void {
   ].join("\n");
 
   const mdPath = path.join(reviewDir, "classic-wheel-imagery-audit.md");
-  fs.writeFileSync(mdPath, md + "\n", "utf8");
+  writeFileAtomicSync(mdPath, md + "\n", "utf8");
 
   console.log(`\nReport → ${path.relative(ROOT, mdPath)}`);
 

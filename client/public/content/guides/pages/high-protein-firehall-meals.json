@@ -1,99 +1,288 @@
 {
   "slug": "high-protein-firehall-meals",
-  "title": "High-Protein Firehall Meals",
-  "subtitle": "Crew portions that actually deliver protein — not powder hype",
-  "description": "High-protein firehall meals for active crews: chili, bowls, grilled chicken, turkey batches, and hall recipes with realistic protein per plate.",
+  "title": "High-Protein Firehall Meals: Protein-Forward Dinners for a Crew",
+  "subtitle": "How much protein common foods contain, how much raw meat to buy per person, cheaper protein sources, and breakfasts and sides that add more.",
+  "description": "High-protein meals for a crowd: protein in common foods, raw amounts to buy per person, cheaper sources, and dinners that deliver 35 to 40 g each.",
   "topic": "nutrition_performance",
   "pillar": "nutrition_performance",
-  "intro": "High-protein hall food means a full plate of real food — not six ounces of dry chicken breast while everyone else eats pasta. Crews need volume and protein together. Turkey chili, Greek chicken bowls, big chili with bread, and a sausage egg bake on morning shift hit both without feeling like a gym meal. Below: what halls actually cook for high protein firefighter meals — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "A protein-forward crew dinner is mostly a shopping and portioning question: how much raw meat, fish, eggs or beans to buy so each plate carries a real serving, and how to add protein through sides and sauces without doubling the grocery bill. A good target for a hearty main is about 35 to 40 g of protein per plate, which is roughly 6 to 7 oz (170 to 200 g) of raw boneless meat or fish per person. This guide gives protein figures for common foods from USDA's FoodData Central, raw amounts to buy for 10, cheaper ways to add protein, and breakfasts and sides that contribute. Individual needs depend on body size and activity; this is cooking and shopping guidance, not medical advice.",
   "sections": [
     {
-      "id": "sources",
-      "heading": "Protein sources that scale",
+      "id": "protein-content",
+      "heading": "How much protein is in common foods",
       "paragraphs": [
-        "Ground meats, chicken thighs, beans plus meat, eggs, and dairy in bakes. Thighs beat breast for flavor per dollar on crew night — nobody wants eight portions of chalky breast because someone bought the wrong case.",
-        "Training days are when halls run turkey chili or a big batch and let people stack bowls. Powder shakes in the bay are fine for individuals; dinner still needs to look like dinner."
+        "The figures below are rounded from USDA FoodData Central and are for typical cooked servings. Meat, poultry and fish lose water as they cook but keep almost all their protein, so a cooked portion has more protein per ounce than the same weight raw. That is why raw quantities in the next section look larger than the cooked servings here."
       ],
-      "tips": [
-        "Beans plus meat in chili stretch cost without looking cheap.",
-        "Skewers and bowl lines portion protein without one person hoarding the tray."
+      "table": {
+        "caption": "Approximate protein in common foods (USDA FoodData Central, rounded)",
+        "columns": [
+          "Food",
+          "Serving",
+          "Protein"
+        ],
+        "rows": [
+          [
+            "Chicken breast, cooked",
+            "5 oz (140 g)",
+            "About 44 g"
+          ],
+          [
+            "Chicken thigh, skinless, cooked",
+            "5 oz (140 g)",
+            "About 36 g"
+          ],
+          [
+            "90% lean ground beef, cooked",
+            "4 oz (115 g)",
+            "About 30 g"
+          ],
+          [
+            "Pork loin, cooked",
+            "5 oz (140 g)",
+            "About 39 g"
+          ],
+          [
+            "Salmon, cooked",
+            "5 oz (140 g)",
+            "About 31 to 35 g"
+          ],
+          [
+            "Shrimp, cooked",
+            "5 oz (140 g)",
+            "About 34 g"
+          ],
+          [
+            "Eggs",
+            "3 large",
+            "About 19 g"
+          ],
+          [
+            "Plain Greek yogurt",
+            "3/4 cup (170 g)",
+            "About 17 g"
+          ],
+          [
+            "Cottage cheese",
+            "1 cup (225 g)",
+            "About 25 g"
+          ],
+          [
+            "Firm tofu",
+            "5 oz (140 g)",
+            "About 24 g"
+          ],
+          [
+            "Lentils, cooked",
+            "1 cup (200 g)",
+            "About 18 g"
+          ],
+          [
+            "Black beans, cooked",
+            "1 cup (170 g)",
+            "About 15 g"
+          ],
+          [
+            "Quinoa, cooked",
+            "1 cup (185 g)",
+            "About 8 g"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "buying",
+      "heading": "How much to buy for a protein-forward dinner",
+      "paragraphs": [
+        "To put about 35 to 40 g of protein on each plate from the main alone, buy more than the standard 1/2 lb (225 g) of raw boneless meat per person. The amounts below are raw weights. Bone-in cuts need about half as much again, because bone and skin can be a third or more of the weight. Round up to the package and keep leftovers for lunches.",
+        "Fish and shrimp cook in minutes, so a protein-forward seafood dinner for 10 is a sheet-pan job. Tofu needs pressing for 15 to 20 minutes under a weighted pan before cooking so it browns rather than steams."
+      ],
+      "table": {
+        "caption": "Raw amounts for about 35 to 40 g of protein per person",
+        "columns": [
+          "Protein",
+          "Raw per person",
+          "For 10 people"
+        ],
+        "rows": [
+          [
+            "Boneless chicken breast",
+            "6 oz (170 g)",
+            "3 3/4 lb (1.7 kg)"
+          ],
+          [
+            "Boneless chicken thighs",
+            "7 oz (200 g)",
+            "4 1/2 lb (2 kg)"
+          ],
+          [
+            "90% lean ground beef or 93% ground turkey",
+            "7 oz (200 g)",
+            "4 1/2 lb (2 kg)"
+          ],
+          [
+            "Pork loin or tenderloin",
+            "6 1/2 oz (185 g)",
+            "4 lb (1.8 kg)"
+          ],
+          [
+            "Salmon fillets",
+            "7 oz (200 g)",
+            "4 1/2 lb (2 kg)"
+          ],
+          [
+            "Peeled raw shrimp",
+            "7 oz (200 g)",
+            "4 1/2 lb (2 kg)"
+          ],
+          [
+            "Firm tofu",
+            "9 oz (250 g)",
+            "5 1/2 lb (2.5 kg)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cheaper-protein",
+      "heading": "Cheaper ways to add protein",
+      "paragraphs": [
+        "Meat is the most expensive part of a high-protein dinner, so the cheaper approach is to let several foods contribute. Three 15 oz (425 g) cans of beans add about as much protein to a pot of chili as another 3/4 lb (340 g) of ground beef, at a fraction of the cost. Brown and green lentils blend into ground-meat sauces. Chicken thighs cost less than breasts and hold up better on a line. Eggs are one of the cheapest sources per gram, which makes frittatas, egg fried rice and breakfast bakes good value.",
+        "Dairy helps too. A yogurt sauce, a cheese topping or cottage cheese mixed into a baked pasta each add protein without another pan. Bean sides, edamame and grain salads made with quinoa or farro add a few more grams per plate than plain rice."
       ]
     },
     {
-      "id": "portions",
-      "heading": "Portions crews will actually eat",
+      "id": "sides-sauces",
+      "heading": "Sides and sauces that add protein",
       "paragraphs": [
-        "Protein on the plate should be obvious, not hidden in sauce alone. Mixed plates — chili with bread, bowls with yogurt — beat dry chicken with no sides.",
-        "You will always have one eater who wants double starch and half protein. Build the line so the default plate is balanced and seconds are extra rice or buns, not scraping the protein pan dry before the late crew gets off the rig."
-      ]
+        "Once the main is set, sides are the easiest place to add protein without changing the dinner. The swaps here cost little and take no more work than the usual side, and most can be made ahead."
+      ],
+      "table": {
+        "caption": "Protein-adding sides and sauces for 10",
+        "columns": [
+          "Instead of",
+          "Try",
+          "Quantities for 10"
+        ],
+        "rows": [
+          [
+            "Plain rice",
+            "Rice and black beans, or quinoa",
+            "4 cups raw rice plus 3 cans beans, or 5 cups raw quinoa"
+          ],
+          [
+            "Sour cream",
+            "Greek yogurt with lime and salt",
+            "3 cups yogurt"
+          ],
+          [
+            "Green salad alone",
+            "Salad with chickpeas and feta",
+            "2 cans chickpeas, 8 oz (225 g) feta"
+          ],
+          [
+            "Garlic bread",
+            "Edamame with sea salt",
+            "2 lb (900 g) frozen shelled edamame, boiled 4 to 5 min"
+          ],
+          [
+            "Creamy dressing",
+            "Yogurt-tahini sauce",
+            "2 cups yogurt, 1/2 cup tahini, lemon, garlic"
+          ]
+        ]
+      }
     },
     {
-      "id": "not-a-lecture",
-      "heading": "Keep it food, not a wellness slide deck",
+      "id": "breakfast",
+      "heading": "Protein at breakfast and overnight",
       "paragraphs": [
-        "Crews tune out fast when dinner sounds like a supplement plan. Serve normal hall food that happens to carry protein — chili, souvlaki, bowls — and let people eat like adults.",
-        "This is practical kitchen guidance, not medical advice. Department health programs and your own provider handle individual plans."
+        "Breakfast is where most crew meals fall short on protein, because pancakes and pastries carry very little. An egg bake fixes that and is made the night before. For 8: whisk 18 eggs with 2 cups of cottage cheese, 1 cup of milk and 1 tsp salt, add 1 lb (450 g) of cooked sausage or ham and 2 cups of cheese, pour into a 9 x 13 in (23 x 33 cm) dish, and bake at 350°F (175°C) for 45 to 55 minutes until the center reaches 160°F (71°C). Each portion has around 30 g of protein.",
+        "For overnight or early-morning eating without a cook, keep hard-cooked eggs (a week in the fridge in their shells), Greek yogurt with granola stored separately so it stays crisp, and cottage cheese with fruit."
       ]
     }
   ],
   "practicalAdvice": [
-    "Shoot for visible protein on every plate — not protein hidden in a shake.",
-    "Turkey chili and Greek bowls scale well for mixed appetites.",
-    "Sauce on the side keeps bowls flexible.",
-    "Second helpings: extra starch before you run out of chicken."
+    "Buy about 6 to 7 oz (170 to 200 g) of raw boneless meat or fish per person for a protein-forward main.",
+    "Add beans or lentils to ground-meat dishes to raise protein at lower cost.",
+    "Use Greek yogurt, cottage cheese and cheese to add protein through sauces and bakes.",
+    "Swap plain rice or bread for bean, quinoa or edamame sides.",
+    "Make breakfast an egg bake with cottage cheese rather than a pancake-only morning."
   ],
   "mealRecommendations": [
     {
       "slug": "turkey-chili",
       "title": "Turkey Chili",
-      "blurb": "Lean batch — still hearty."
-    },
-    {
-      "slug": "greek-chicken-bowls",
-      "title": "Greek Chicken Power Bowls",
-      "blurb": "Chicken, tzatziki, feta."
+      "blurb": "Ground turkey and beans together in one pot."
     },
     {
       "slug": "big-chili",
       "title": "Beef and Bean Chili",
-      "blurb": "Beef and beans — hall classic."
+      "blurb": "The beef-and-bean approach to cheaper protein."
+    },
+    {
+      "slug": "greek-chicken-bowls",
+      "title": "Greek Chicken Power Bowls",
+      "blurb": "Chicken, chickpeas and tzatziki on one bowl line."
     },
     {
       "slug": "chicken-souvlaki",
       "title": "Chicken Souvlaki",
-      "blurb": "Marinated skewers — pita ready."
+      "blurb": "Skewers make even protein portions easy."
     },
     {
       "slug": "sausage-egg-bake",
       "title": "Sausage Egg Bake",
-      "blurb": "Morning protein hit for the line."
+      "blurb": "A protein-forward breakfast assembled the night before."
+    },
+    {
+      "slug": "ginger-salmon-bowls",
+      "title": "Ginger Salmon Rice Bowls",
+      "blurb": "Salmon roasted on sheet pans for a crew."
     }
   ],
   "faqs": [
     {
-      "question": "Is this medical advice?",
-      "answer": "No. This is how halls cook for hungry crews on shift. Follow your department and your own provider for personal health questions."
-    },
-    {
-      "question": "What are some high-protein dinners that work for a firehall crew?",
-      "answer": "Turkey chili, Greek chicken bowls, and a sausage egg bake all put protein front and center instead of hiding it in a sauce. Building the plate around a protein-forward main — rather than treating meat as a side to rice or pasta — is the easiest way to get there without a special shopping list."
-    },
-    {
-      "question": "What are cheap ways to add protein without raising the grocery bill much?",
-      "answer": "Beans can stretch a pot of chili while keeping it filling, and chicken thighs cost less than breasts for a similar amount of protein. Eggs and dairy worked into a bake — cheese, a yogurt-based sauce — add protein too, usually for less than buying more meat."
+      "question": "How much chicken should I buy per person for a high-protein dinner?",
+      "answer": "About 6 oz (170 g) of raw boneless chicken breast or 7 oz (200 g) of boneless thighs per person, which cooks down to a portion with roughly 35 to 40 g of protein. For bone-in pieces, buy about 10 oz (280 g) per person."
     }
   ],
   "relatedArticleSlugs": [
-    "healthy-firefighter-meals-fill-you-up",
-    "performance-nutrition-firefighters"
+    "healthy-meals-that-still-taste-good",
+    "cheap-firehall-meals",
+    "firehall-meal-prep-ideas",
+    "healthy-smoothies-at-the-hall"
   ],
   "keywords": [
-    "high protein firefighter meals",
-    "protein crew dinners",
-    "firehall protein"
+    "high protein meals for a crowd",
+    "high protein firehall meals",
+    "protein per serving chicken",
+    "cheap high protein meals",
+    "high protein breakfast casserole"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "High-Protein Firehall Meals — high protein firefighter meals tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "High-Protein Meals for a Crowd: Portions, Sources, Recipes",
+  "sources": [
+    {
+      "label": "FoodData Central",
+      "publisher": "U.S. Department of Agriculture, Agricultural Research Service",
+      "url": "https://fdc.nal.usda.gov/"
+    },
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    },
+    {
+      "label": "Shell Eggs from Farm to Table",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/eggs/shell-eggs-farm-table"
+    }
+  ]
 }

@@ -17,7 +17,8 @@ export function smoothieCatalogToEmbedded(item: SmoothieCatalogItem): EditorialE
     nutritionHighlights: item.nutritionHighlights,
     substitutions: item.substitutions,
     shiftNote: item.shiftNote,
-    imagePath: item.heroImage,
+    // Guide cards render small; every smoothie hero ships a ~100 KB .webp beside the ~1.6 MB .jpg.
+    imagePath: item.heroImage.replace(/^(\/images\/smoothies\/.+)\.jpg$/, "$1.webp"),
     imageAlt: item.imageAlt,
   };
 }

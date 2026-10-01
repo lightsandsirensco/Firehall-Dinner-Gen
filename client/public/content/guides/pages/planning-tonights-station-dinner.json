@@ -1,94 +1,246 @@
 {
   "slug": "planning-tonights-station-dinner",
-  "title": "Planning Tonight's Station Dinner (Without the 6 PM Panic)",
-  "subtitle": "A simple decision tree for firehall dinner ideas",
-  "description": "Firehall dinner ideas for tonight: pick by time, crew size, and appliances — with hall-tested recipes crews actually cook on shift.",
+  "title": "Planning Tonight's Station Dinner: How to Choose, Time and Organize It",
+  "subtitle": "Choose by time and crew size, check what needs thawing, work backward from serving time, split the jobs, and keep five pantry dinners in reserve.",
+  "description": "How to plan tonight's station dinner: choose by time and crew size, work out when to thaw and start, split the jobs, and keep five pantry dinners ready.",
   "topic": "meal_planning",
   "pillar": "operations_how_to",
-  "intro": "Firehall dinner ideas should be decided before 17:00 — not argued about at 18:45 while someone stares into the walk-in. The hardest part of dinner is not cooking; it is picking a format that matches time, crew size, and how loud the board feels. Use a simple filter: minutes available, mouths to feed, which appliance is free, then choose tacos, a batch, or a bake — not a Pinterest fantasy.",
+  "intro": "Most station dinners get decided too late. By 17:00, the choice has already been made for you by what is thawed, which appliance is free and how much time is left. Planning tonight's dinner comes down to three questions asked by mid-afternoon: how long before people want to eat, how many are eating, and what equipment is available. The answers narrow the options to a few formats. After that, work backward from serving time to find when meat must be thawed, when to shop and when cooking has to start. This guide gives a decision table, a thawing chart, a sample timeline with jobs split between people, and five pantry dinners for nights when nothing was planned.",
   "sections": [
     {
-      "id": "decision-tree",
-      "heading": "A hall-tested decision tree",
+      "id": "choose",
+      "heading": "Choose by time, crew size and equipment",
       "paragraphs": [
-        "Start with time. Under 35 minutes? Handhelds, stir-fry, quesadillas. 35–60? Sheet pan, pasta, rice bowls. Over 60? Bakes, BBQ, big batches.",
-        "Next, crew size. Above ten? Think lines and batches, not individual plating.",
-        "Last, appliance: if the oven is occupied with gear drying (it happens), pivot to flat-top or slow cooker."
-      ]
-    },
-    {
-      "id": "when-stuck",
-      "heading": "When nobody will pick",
-      "paragraphs": [
-        "Put two options on the whiteboard, not ten. Run a quick vote, then commit. Indecision burns more time than cooking the wrong pasta.",
-        "If the board is still loud, default to a line meal. Tacos and bowls end debates because people customize."
-      ]
-    },
-    {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
-      "paragraphs": [
-        "For firehall dinner ideas, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+        "Start with time, because it rules out the most. Then check crew size: above 8 people, choose a line or a tray bake rather than anything plated or cooked in single portions. Finally, check the equipment. If the oven is already in use, pick something from the stovetop or slow cooker column; if you only have a stovetop, a Dutch oven covers braises and one-pot rice dishes."
       ],
-      "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
+      "table": {
+        "caption": "Dinner formats by the time available",
+        "columns": [
+          "Time before eating",
+          "Formats that fit",
+          "Examples"
+        ],
+        "rows": [
+          [
+            "Under 30 minutes",
+            "Skillet, stir-fry, quesadillas, quick pasta, shrimp",
+            "Philly cheesesteak skillet, garlic butter shrimp, quesadillas"
+          ],
+          [
+            "30 to 60 minutes",
+            "Sheet-pan dinners, rice bowls, tacos, burgers",
+            "Sheet-pan fajitas, teriyaki bowls, smash burgers"
+          ],
+          [
+            "60 to 90 minutes",
+            "Baked pasta, roast chicken pieces, chili, one-pot rice",
+            "Baked ziti, enchilada casserole, jambalaya"
+          ],
+          [
+            "2 hours or more",
+            "Braises, pot roast, pulled pork, lasagna from scratch",
+            "Beef stew, pulled pork, batch lasagna"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "thawing",
+      "heading": "Check the freezer first: thawing decides the menu",
+      "paragraphs": [
+        "Frozen meat is the most common reason a planned dinner becomes a takeout order. The fridge is the safest way to thaw but the slowest: even 1 lb (450 g) of ground meat or boneless chicken needs about a full day, and larger packages need about 24 hours for every 4 to 5 lb. If dinner is tonight and the meat is still frozen at noon, use cold water or the microwave, or change the menu.",
+        "Cold-water thawing takes about 30 minutes per pound. Keep the meat in a sealed bag, submerge it, and change the water every 30 minutes so it stays cold. Food thawed in cold water or the microwave has to be cooked straight away. Thin, separated pieces can also be cooked from frozen, which takes about 50 percent longer."
+      ],
+      "table": {
+        "caption": "Safe thawing methods and times",
+        "columns": [
+          "Method",
+          "1 lb (450 g)",
+          "3 to 4 lb (1.4 to 1.8 kg)",
+          "After thawing"
+        ],
+        "rows": [
+          [
+            "Refrigerator",
+            "About 24 hours",
+            "About 24 hours",
+            "Keeps 1 to 2 days (ground meat, poultry) or 3 to 5 days (roasts, chops)"
+          ],
+          [
+            "Cold water, changed every 30 min",
+            "About 30 minutes to 1 hour",
+            "2 to 3 hours",
+            "Cook immediately"
+          ],
+          [
+            "Microwave defrost",
+            "Minutes",
+            "Minutes, turning often",
+            "Cook immediately; edges may start to cook"
+          ],
+          [
+            "Cook from frozen",
+            "No thawing",
+            "No thawing",
+            "Allow about 50 percent more cooking time; never in a slow cooker"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "timeline",
+      "heading": "Work backward from serving time",
+      "paragraphs": [
+        "Once the dish is chosen, write the serving time down and count back. This example is baked ziti, salad and garlic bread for 8, served at 18:00. The tray bake is forgiving once assembled, so most of the risk is in starting late. Putting the cook's name, the dish and the serving time on the board also means that if the cook is called away partway through, whoever takes over knows exactly what stage it is at.",
+        "Split the jobs before cooking starts. The cook owns the menu and timing, one helper does prep and sets the table, and someone other than the cook leads cleanup. Ask about allergies once when the menu is posted, write them down, and keep an allergen-free portion separate before anything is mixed in."
+      ],
+      "steps": [
+        "14:00: decide the dish, check the fridge, pantry and freezer, and write the shopping list.",
+        "14:30: shop. Buy 2 lb (900 g) of ziti, 1 1/2 lb (680 g) sausage, two 24 oz jars of marinara, 2 lb ricotta, 1 1/2 lb mozzarella, salad greens and two loaves of bread.",
+        "16:00: brown the sausage, simmer it with the sauce, and boil the pasta 2 minutes short of the package time.",
+        "16:45: assemble two 9 x 13 in (23 x 33 cm) dishes. Cover them and refrigerate if dinner might slip.",
+        "17:10: bake covered at 375°F (190°C) for 30 minutes, then uncovered for 10 to 15 minutes until the center reaches 165°F (74°C).",
+        "17:45: toast the garlic bread, dress the salad, and set out plates. Serve at 18:00 and put leftovers away within two hours."
+      ]
+    },
+    {
+      "id": "pantry-dinners",
+      "heading": "Five dinners from the pantry when nothing was planned",
+      "paragraphs": [
+        "A short list of shelf-stable and freezer staples makes it possible to cook a real dinner for a crew without shopping. Keep dry pasta, long-grain rice, canned tomatoes, canned beans, tortillas, eggs, cheese, frozen vegetables, a couple of pounds of frozen ground meat, garlic, onions and a basic spice shelf. With those, all five dinners below are possible in under 45 minutes for 8 people."
+      ],
+      "table": {
+        "caption": "Pantry dinners for 8",
+        "columns": [
+          "Dinner",
+          "What it uses",
+          "Time"
+        ],
+        "rows": [
+          [
+            "Bean and cheese quesadillas with salsa",
+            "16 tortillas, 3 cans beans, 1 1/2 lb cheese, jarred salsa",
+            "25 minutes"
+          ],
+          [
+            "Pasta with quick tomato sauce",
+            "2 lb pasta, two 28 oz cans crushed tomatoes, garlic, chili flakes, Parmesan",
+            "25 minutes"
+          ],
+          [
+            "Egg fried rice",
+            "8 cups cold cooked rice, 12 eggs, 2 lb frozen mixed vegetables, soy sauce",
+            "20 minutes, with rice cooked earlier"
+          ],
+          [
+            "Quick beef and bean chili",
+            "2 1/2 lb ground beef cooked from frozen, 3 cans beans, 2 cans tomatoes, chili powder",
+            "45 minutes"
+          ],
+          [
+            "Potato and cheese frittata",
+            "18 eggs, 2 lb frozen diced potatoes, 2 cups cheese, onion",
+            "35 minutes; eggs to 160°F (71°C)"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "plan-changes",
+      "heading": "When the plan changes",
+      "paragraphs": [
+        "If more people turn up than you planned for, add starch and sides rather than a second protein: another pound of pasta, a pot of rice, or more bread stretches a meal quickly and cheaply. If fewer eat, stop assembling the second tray and refrigerate it for the next shift rather than baking everything.",
+        "If a call interrupts cooking, turn off the heat and cover everything, and don't leave meat partly cooked to finish later. Food that won't be eaten within two hours goes in the fridge. The interruption guide covers dinners built to handle that kind of night."
       ]
     }
   ],
   "practicalAdvice": [
-    "Quiet board + 60 minutes → bake, braise, or BBQ.",
-    "Busy board + 40 minutes → skillet, sheet pan, tacos, pasta.",
-    "Unknown board → chili, taco bar, or bowls — hold and serve.",
-    "Ask about allergies once, write it on a sticky, stop re-asking mid-cook.",
-    "When stuck, use Find a Meal on the home page — it matches crew size and time to curated hall recipes."
+    "Decide dinner by mid-afternoon: time available first, then crew size, then equipment.",
+    "Check the freezer early; fridge thawing takes about a day even for small packages.",
+    "Write the serving time down and count back to when cooking must start.",
+    "Split the jobs before cooking: cook, prep helper, and a separate cleanup lead.",
+    "Keep enough pantry staples for five no-shop dinners."
   ],
   "mealRecommendations": [
     {
-      "slug": "smash-burgers",
-      "title": "Double Smash Burgers",
-      "blurb": "Fast crowd-pleaser when time is medium."
+      "slug": "baked-ziti",
+      "title": "Baked Ziti",
+      "blurb": "The worked timeline above; assemble early and bake when the crew is close."
+    },
+    {
+      "slug": "fast-philly-skillet",
+      "title": "Quick Philly Skillet",
+      "blurb": "An under-30-minute skillet when the afternoon got away."
+    },
+    {
+      "slug": "sheet-pan-fajitas",
+      "title": "Chicken Fajitas",
+      "blurb": "A 30 to 60 minute option that uses only the oven."
     },
     {
       "slug": "enchilada-casserole",
       "title": "Enchilada Casserole",
-      "blurb": "Oven bake — hands-off middle."
+      "blurb": "A 60 to 90 minute bake that can be assembled ahead."
     },
     {
-      "slug": "teriyaki-donburi",
-      "title": "Teriyaki Donburi",
-      "blurb": "Bowl line — balanced and quick."
+      "slug": "chicken-quesadillas",
+      "title": "Chicken Quesadillas",
+      "blurb": "Close to a pantry dinner when there's cooked chicken in the fridge."
     },
     {
-      "slug": "stuffed-peppers",
-      "title": "Stuffed Peppers",
-      "blurb": "Make-ahead friendly bake."
+      "slug": "jambalaya",
+      "title": "Jambalaya",
+      "blurb": "A one-pot dinner for when the oven is busy."
+    },
+    {
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "blurb": "Fast on a griddle once the patties are portioned."
     }
   ],
   "faqs": [
     {
-      "question": "What if nobody agrees on dinner?",
-      "answer": "Default to a line format (tacos, bowls, baked potato bar). Agreement is easier when people assemble their own plate. If two factions remain, make one base protein and two sauces."
-    },
-    {
-      "question": "What's the fastest way to decide dinner when time is short?",
-      "answer": "Run the three-question filter: how many minutes, how many people, which appliance is free. That alone eliminates most options and leaves you choosing between two or three formats — tacos, a skillet, or a bake — instead of scrolling endlessly."
+      "question": "What can I cook if the meat is still frozen at 4 p.m.?",
+      "answer": "Thaw it in a sealed bag in cold water, changing the water every 30 minutes; a 1 lb package takes about an hour. Thin or separated pieces can also be cooked from frozen with about 50 percent more time. Otherwise, switch to a pantry dinner such as quesadillas, pasta with tomato sauce or a frittata."
     }
   ],
   "relatedArticleSlugs": [
-    "quick-meals-between-calls",
-    "feeding-a-firehall-crew"
+    "feeding-a-firehall-crew",
+    "fast-firehall-meals-under-30-minutes",
+    "firehall-grocery-planning",
+    "firehall-kitchen-culture"
   ],
   "keywords": [
-    "firehall dinner ideas",
-    "firefighter dinner ideas",
-    "tonight's dinner",
-    "station meal planning"
+    "plan tonight's station dinner",
+    "what to cook for dinner tonight for a group",
+    "plan a dinner for a crew",
+    "dinner timeline",
+    "pantry dinners"
   ],
-  "publishedAt": "2026-05-27T12:00:00.000Z",
-  "updatedAt": "2026-05-27T12:00:00.000Z",
-  "readMinutes": 7,
-  "seoTitle": "Firehall Dinner Ideas: Plan Tonight's Station Meal",
-  "heroImageAlt": "Planning Tonight's Station Dinner (Without the 6 PM Panic) — firehall dinner ideas tips for fire station kitchens and crew-sized meals"
+  "publishedAt": "2026-05-27T18:00:00.000Z",
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "How to Plan Tonight's Station Dinner: Timing and Thawing",
+  "sources": [
+    {
+      "label": "The Big Thaw: Safe Defrosting Methods",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/big-thaw-safe-defrosting-methods"
+    },
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    },
+    {
+      "label": "Food Allergies: What You Need to Know",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/food/buy-store-serve-safe-food/food-allergies-what-you-need-know"
+    }
+  ]
 }

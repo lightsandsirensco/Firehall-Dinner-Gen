@@ -4,7 +4,11 @@
 
 import { z } from "zod";
 
-/** Target mix: ~40% recipes, ~30% nutrition, ~20% lifestyle, ~10% operations */
+/**
+ * Target mix for new guides. The Guides section is a cooking resource: recipes and
+ * cooking how-to (quantities, technique, holding, storage) make up most of it, and
+ * nutrition stays a small supporting pillar.
+ */
 export const editorialPillarSchema = z.enum([
   "recipes_meals",
   "nutrition_performance",
@@ -23,7 +27,7 @@ export const PILLAR_LABELS: Record<EditorialPillar, string> = {
 
 export const CONTENT_STRATEGY_TARGETS: Record<EditorialPillar, number> = {
   recipes_meals: 40,
-  nutrition_performance: 30,
-  station_lifestyle: 20,
-  operations_how_to: 10,
+  operations_how_to: 40,
+  station_lifestyle: 10,
+  nutrition_performance: 10,
 };

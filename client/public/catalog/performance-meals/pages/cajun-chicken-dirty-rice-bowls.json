@@ -171,17 +171,17 @@
     },
     {
       "stepNumber": 2,
-      "title": "Season and sear the chicken",
-      "instruction": "Combine paprika, garlic powder, onion powder, thyme, cayenne, and salt; coat chicken breasts evenly. Sear in oil in a hot cast iron skillet 4–5 minutes per side until deeply charred and 165°F at the center. Rest 5 minutes, then slice.",
-      "minutes": 15,
-      "heatLevel": "high"
-    },
-    {
-      "stepNumber": 3,
       "title": "Build the dirty rice",
       "instruction": "Cook onion, bell pepper, and celery in oil over medium 5–6 minutes until softened. Add garlic and Cajun seasoning, cook 1 minute. Add rice, broth, and black-eyed peas; bring to a boil, cover, and simmer 18–20 minutes until rice is tender and liquid is absorbed.",
       "minutes": 22,
       "heatLevel": "medium-low"
+    },
+    {
+      "stepNumber": 3,
+      "title": "Season and sear the chicken",
+      "instruction": "While the rice simmers, combine paprika, garlic powder, onion powder, thyme, cayenne, and salt; coat chicken breasts evenly. Sear in oil in a hot cast iron skillet 4–5 minutes per side until deeply charred and 165°F at the center. Rest 5 minutes, then slice.",
+      "minutes": 15,
+      "heatLevel": "high"
     },
     {
       "stepNumber": 4,
@@ -231,7 +231,7 @@
     }
   },
   "heroImage": "/images/golden-100/cajun-chicken-dirty-rice-bowls.jpg",
-  "heroImageAlt": "Cajun Chicken & Dirty Rice Bowls with Remoulade — cajun bowl plated for a firehall crew",
+  "heroImageAlt": "Cajun Chicken & Dirty Rice Bowls with Remoulade — chicken breast and green bell pepper",
   "mobileImage": "/images/mobile/cajun-chicken-dirty-rice-bowls.jpg",
   "thumbImage": "/images/thumbs/cajun-chicken-dirty-rice-bowls.jpg",
   "railImage": "/images/rails/cajun-chicken-dirty-rice-bowls.jpg",
@@ -249,7 +249,7 @@
   ],
   "relatedSlugs": [
     "lemon-garlic-chicken-tray",
-    "sheet-pan-chicken-fajitas-lite",
+    "sheet-pan-fajitas",
     "honey-garlic-chicken-rice-bowls",
     "white-bean-chicken-chili",
     "korean-beef-rice-bowls",

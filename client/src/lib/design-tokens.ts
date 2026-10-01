@@ -6,7 +6,8 @@ export const app = {
   page: "page-shell min-h-screen min-h-[100dvh] bg-background overflow-x-hidden",
   main: "max-w-[1400px] mx-auto px-page",
   mainFeed: "max-w-[1320px] mx-auto px-page",
-  mainDetail: "max-w-[720px] mx-auto px-page",
+  /** w-full + min-w-0: auto margins in the flex-column page shell would otherwise size main to its content. */
+  mainDetail: "w-full min-w-0 max-w-[720px] mx-auto px-page",
 
   sectionY: "py-10 sm:py-14",
   sectionGap: "space-y-8 sm:space-y-12",

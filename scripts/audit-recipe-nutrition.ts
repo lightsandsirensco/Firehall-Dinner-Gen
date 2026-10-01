@@ -22,6 +22,7 @@ import {
   type MealRole,
 } from "../shared/nutrition/index.js";
 import { getRecipeBaseServings } from "../shared/recipe/crew-scaling-config.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 /** Strips the role-specific "full meal" calorie-floor messages for sides/condiments/appetizers,
  *  which are legitimately allowed to be under 250 calories per serving. */
@@ -319,7 +320,7 @@ async function main(): Promise<void> {
   }
 
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
-  fs.writeFileSync(REPORT_PATH, lines.join("\n"), "utf8");
+  writeFileAtomicSync(REPORT_PATH, lines.join("\n"), "utf8");
 
   console.log(`[audit-recipe-nutrition] scanned=${total} corrected=${corrected} suspicious=${suspicious}`);
   console.log(`[audit-recipe-nutrition] report → ${REPORT_PATH}`);

@@ -36,6 +36,7 @@ import { auditGoldenRecipeContent } from "../shared/golden-100/recipe-quality/au
 import type { GoldenRecipePage } from "../shared/golden-100/recipe-page-schema.js";
 import { normalizeCatalogSlug } from "../shared/hall-catalog/gate.js";
 import { isBannedStepTitle, isGenericStep } from "../shared/golden-100/recipe-quality/placeholders.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -71,12 +72,12 @@ function md5File(publicPath: string): string | null {
 
 function writeJson(name: string, data: unknown): void {
   fs.mkdirSync(REVIEW, { recursive: true });
-  fs.writeFileSync(path.join(REVIEW, name), `${JSON.stringify(data, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(path.join(REVIEW, name), `${JSON.stringify(data, null, 2)}\n`, "utf8");
 }
 
 function writeMd(name: string, lines: string[]): void {
   fs.mkdirSync(REVIEW, { recursive: true });
-  fs.writeFileSync(path.join(REVIEW, name), `${lines.join("\n")}\n`, "utf8");
+  writeFileAtomicSync(path.join(REVIEW, name), `${lines.join("\n")}\n`, "utf8");
 }
 
 function runSubAudit(script: string): { ok: boolean; error?: string } {

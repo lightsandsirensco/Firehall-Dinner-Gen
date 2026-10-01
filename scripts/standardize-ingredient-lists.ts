@@ -11,6 +11,7 @@ import {
   standardizeIngredientName,
   standardizeIngredientUnit,
 } from "../shared/measurements/ingredient-list-standard.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const APPLY = process.argv.includes("--apply");
@@ -123,7 +124,7 @@ const report = {
   recipeChanges,
 };
 
-writeFileSync(REPORT_PATH, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+writeFileAtomicSync(REPORT_PATH, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
 console.log("[ingredient-list-standardization]");
 console.log(`  Mode: ${APPLY ? "APPLY" : "AUDIT (dry run)"}`);

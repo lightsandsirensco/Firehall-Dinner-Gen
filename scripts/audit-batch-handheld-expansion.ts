@@ -12,9 +12,9 @@ import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
 import { calculateNutritionFromIngredients } from "../shared/nutrition/calculate.js";
 import { titleMatchesDishIdentity } from "../shared/meal-format-contract.js";
 import { FIREHALL_CREW_SCALE_SIZES } from "../shared/recipe-sourcing-policy.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const BATCH = [
-  { slug: "chicken-caesar-wraps", collection: "hall-expansion" as const, title: "Chicken Caesar Wraps" },
   { slug: "buffalo-chicken-wraps", collection: "hall-expansion" as const, title: "Buffalo Chicken Wraps" },
   { slug: "greek-chicken-pitas", collection: "hall-expansion" as const, title: "Greek Chicken Pitas" },
   { slug: "beef-gyros-for-the-hall", collection: "hall-expansion" as const, title: "Beef Gyros" },
@@ -24,7 +24,6 @@ const BATCH = [
 ] as const;
 
 const NEAR_DUPES: Record<string, string[]> = {
-  "chicken-caesar-wraps": ["chicken-caesar", "chicken-quesadillas"],
   "buffalo-chicken-wraps": ["buffalo-chicken-dip", "game-day-nachos"],
   "greek-chicken-pitas": ["greek-chicken-bowls", "chicken-souvlaki", "mediterranean-chickpea"],
   "beef-gyros-for-the-hall": ["philly-cheesesteak-skillet", "hall-taco-bar"],
@@ -34,7 +33,6 @@ const NEAR_DUPES: Record<string, string[]> = {
 };
 
 const HANDHELD_RULES: Record<string, RegExp[]> = {
-  "chicken-caesar-wraps": [/\bwrap\b|\btortilla\b/i, /\bromaine\b|\bCaesar\b/i, /\bgrill\b/i, /\bhold\b/i],
   "buffalo-chicken-wraps": [/\bbuffalo\b/i, /\bwrap\b|\btortilla\b/i, /\branch\b|\bblue cheese\b/i, /\bhold\b/i],
   "greek-chicken-pitas": [/\bpita\b/i, /\btzatziki\b/i, /\bcucumber\b|\btomato\b/i, /\blemon\b|\boregano\b/i],
   "beef-gyros-for-the-hall": [/\bgyro\b|\bbeef\b/i, /\bpita\b/i, /\btzatziki\b/i, /\bonion\b/i],
@@ -328,9 +326,9 @@ const duplicateReport = {
 
 const reviewDir = path.join(process.cwd(), "review");
 fs.mkdirSync(reviewDir, { recursive: true });
-fs.writeFileSync(path.join(reviewDir, "batch-handheld-recipe-audit.json"), JSON.stringify(recipeAudit, null, 2));
-fs.writeFileSync(path.join(reviewDir, "batch-handheld-image-audit.json"), JSON.stringify(imageAudit, null, 2));
-fs.writeFileSync(path.join(reviewDir, "batch-handheld-duplicate-report.json"), JSON.stringify(duplicateReport, null, 2));
+writeFileAtomicSync(path.join(reviewDir, "batch-handheld-recipe-audit.json"), JSON.stringify(recipeAudit, null, 2));
+writeFileAtomicSync(path.join(reviewDir, "batch-handheld-image-audit.json"), JSON.stringify(imageAudit, null, 2));
+writeFileAtomicSync(path.join(reviewDir, "batch-handheld-duplicate-report.json"), JSON.stringify(duplicateReport, null, 2));
 
 console.log(JSON.stringify(recipeAudit, null, 2));
 process.exit(rows.some((r) => r.overall !== "PASS") ? 1 : 0);

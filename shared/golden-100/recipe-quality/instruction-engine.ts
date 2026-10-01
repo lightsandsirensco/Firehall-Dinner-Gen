@@ -1073,7 +1073,16 @@ function buildBurger(scale: number): { ingredients: Ing[]; steps: Step[] } {
 function buildTacos(def: GoldenRecipeDefinition, scale: number): { ingredients: Ing[]; steps: Step[] } {
   return {
     ingredients: [
-      m(def.protein === "beef" ? "Flank or skirt steak" : "Boneless chicken thighs", mult(3, scale), "lb", "Main"),
+      m(
+        def.protein === "beef"
+          ? "Flank or skirt steak"
+          : def.protein === "pork"
+            ? "Boneless pork shoulder, cut into 1/2-inch pieces"
+            : "Boneless chicken thighs",
+        mult(3, scale),
+        "lb",
+        "Main",
+      ),
       m("Flour or corn tortillas", mult(24, scale), "count", "Serve"),
       m("White onion", mult(2, scale), "large", "Toppings"),
       m("Fresh cilantro", mult(1, scale), "bunch", "Toppings"),
@@ -1092,7 +1101,10 @@ function buildTacos(def: GoldenRecipeDefinition, scale: number): { ingredients: 
       {
         stepNumber: 2,
         title: "Cook the filling",
-        instruction: `Season protein with salt and cumin. Sear over medium-high until cooked through (chicken 165°F, steak 130°F then rest). Rest steak 8 minutes; slice thin against the grain.`,
+        instruction:
+          def.protein === "pork"
+            ? `Season pork with salt and cumin. Sear in batches over medium-high, without crowding, until edges are browned and crisp and pork reaches at least 145°F. Hold on the warm sheet tray.`
+            : `Season protein with salt and cumin. Sear over medium-high until cooked through (chicken 165°F, steak 130°F then rest). Rest steak 8 minutes; slice thin against the grain.`,
         minutes: 18,
         heatLevel: "medium-high",
       },

@@ -30,6 +30,7 @@ import {
 } from "../shared/breakfast-catalog/image-donor-plan.js";
 import { imageFileExists } from "../shared/explore-image-paths.js";
 import { breakfastCatalogHeroPath, breakfastCatalogThumbPath } from "../shared/breakfast-catalog/slug-registry.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type BreakfastAuditRow = BreakfastImageSurface & {
   route: string;
@@ -283,7 +284,7 @@ function writeReports(rows: BreakfastAuditRow[]): void {
   };
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, JSON.stringify(payload, null, 2), "utf8");
+  writeFileAtomicSync(JSON_OUT, JSON.stringify(payload, null, 2), "utf8");
 
   const md: string[] = [
     "# Breakfast Image Audit",
@@ -334,7 +335,7 @@ function writeReports(rows: BreakfastAuditRow[]): void {
     md.push("");
   }
 
-  fs.writeFileSync(MD_OUT, md.join("\n"), "utf8");
+  writeFileAtomicSync(MD_OUT, md.join("\n"), "utf8");
   console.log(`[audit:breakfast-images] wrote ${JSON_OUT}`);
   console.log(`[audit:breakfast-images] wrote ${MD_OUT}`);
   console.log(

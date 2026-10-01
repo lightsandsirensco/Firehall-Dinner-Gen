@@ -23,6 +23,7 @@ import { hallExpansionPageImageSet } from "../shared/hall-expansion/recipe-page-
 import { PIZZA_NIGHT_RECIPES } from "../shared/pizza-night/manifest.js";
 import { pizzaNightPageImageSet } from "../shared/pizza-night/recipe-page-paths.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../shared/fuel-catalog/smoothies/catalog-data.js";
+import { smoothieRecipePath } from "../shared/fuel-catalog/paths.js";
 import { PERFORMANCE_MEAL_IMAGE_DONOR_OVERRIDES } from "../shared/performance-meals/image-donor-overrides.js";
 import {
   auditFirehallPhotoStandardMetadata,
@@ -32,6 +33,7 @@ import {
 } from "../shared/food-imagery/firehall-kitchen-photo-standard.js";
 import { resolveActiveImageDonorSlug } from "../shared/image-donor-resolver.js";
 import { imageFileExists } from "../shared/explore-image-paths.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type CollectionId =
   | "golden_100"
@@ -347,7 +349,7 @@ function main(): void {
         collection: "smoothies",
         slug: item.slug,
         title: item.title,
-        route: `/recipes/${item.slug}`,
+        route: smoothieRecipePath(item.slug),
         protein: "vegetarian",
         mealFormat: "smoothie",
         category: "smoothies",
@@ -433,8 +435,8 @@ function main(): void {
   };
 
   fs.mkdirSync(path.dirname(JSON_PATH), { recursive: true });
-  fs.writeFileSync(JSON_PATH, JSON.stringify(report, null, 2));
-  fs.writeFileSync(
+  writeFileAtomicSync(JSON_PATH, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(
     QUEUE_PATH,
     JSON.stringify(
       {
@@ -494,7 +496,7 @@ function main(): void {
     if (p0.length > 60) md.push(`_…and ${p0.length - 60} more P0 items (see JSON)._`);
   }
 
-  fs.writeFileSync(MD_PATH, md.join("\n"));
+  writeFileAtomicSync(MD_PATH, md.join("\n"));
 
   console.log(`[audit:firehall-photo-standard] wrote ${JSON_PATH}`);
   console.log(`[audit:firehall-photo-standard] wrote ${QUEUE_PATH}`);

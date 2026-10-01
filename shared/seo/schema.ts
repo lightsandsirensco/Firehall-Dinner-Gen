@@ -135,8 +135,8 @@ export function buildOrganizationSchema(origin: string) {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: SEO_BRAND,
-    alternateName: SEO_SITE_NAME,
+    name: SEO_SITE_NAME,
+    alternateName: SEO_BRAND,
     url: absoluteUrl(origin, "/"),
     description: SEO_DEFAULT_DESCRIPTION,
     knowsAbout: [...SEO_TARGET_KEYWORDS],
@@ -173,7 +173,7 @@ export function buildHomeRecipeCollectionSchema(
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": `${absoluteUrl(origin, "/")}#recipe-collection`,
-    name: "Firefighter Meals & Firehall Recipes",
+    name: "Firefighter Recipes & Crew Meal Ideas",
     description: SEO_DEFAULT_DESCRIPTION,
     url: absoluteUrl(origin, "/"),
     isPartOf: {
@@ -261,12 +261,12 @@ export function buildRecipeSchemaAtPath(
     inLanguage: "en-US",
     author: {
       "@type": "Organization",
-      name: SEO_BRAND,
+      name: SEO_SITE_NAME,
       url: absoluteUrl(origin, "/"),
     },
     publisher: {
       "@type": "Organization",
-      name: SEO_BRAND,
+      name: SEO_SITE_NAME,
       url: absoluteUrl(origin, "/"),
     },
     datePublished: page.generatedAt,
@@ -372,12 +372,12 @@ export function buildStandaloneRecipeSchema(origin: string, recipe: StandaloneRe
     inLanguage: "en-US",
     author: {
       "@type": "Organization",
-      name: SEO_BRAND,
+      name: SEO_SITE_NAME,
       url: absoluteUrl(origin, "/"),
     },
     publisher: {
       "@type": "Organization",
-      name: SEO_BRAND,
+      name: SEO_SITE_NAME,
       url: absoluteUrl(origin, "/"),
     },
     datePublished: recipe.generatedAt,
@@ -419,18 +419,28 @@ export function buildArticleSchema(origin: string, article: EditorialArticle) {
     dateModified: article.updatedAt,
     author: {
       "@type": "Organization",
-      name: SEO_BRAND,
+      name: SEO_SITE_NAME,
       url: absoluteUrl(origin, "/"),
     },
     publisher: {
       "@type": "Organization",
-      name: SEO_BRAND,
+      name: SEO_SITE_NAME,
       url: absoluteUrl(origin, "/"),
     },
-    keywords: [...SEO_TARGET_KEYWORDS, ...article.keywords].join(", "),
+    keywords: article.keywords.join(", "),
     timeRequired: isoDurationMinutes(article.readMinutes),
     articleSection: article.topic.replace(/_/g, " "),
     mainEntityOfPage: url,
+    ...(article.sources?.length
+      ? {
+          citation: article.sources.map((s) => ({
+            "@type": "CreativeWork",
+            name: s.label,
+            url: s.url,
+            publisher: { "@type": "Organization", name: s.publisher },
+          })),
+        }
+      : {}),
   };
 }
 
@@ -471,7 +481,7 @@ export function buildSoftwareApplicationSchema(
     },
     provider: {
       "@type": "Organization",
-      name: SEO_BRAND,
+      name: SEO_SITE_NAME,
       url: absoluteUrl(origin, "/"),
     },
     isPartOf: {

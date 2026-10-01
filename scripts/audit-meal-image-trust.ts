@@ -32,6 +32,7 @@ import {
 } from "../shared/curated-image-governance/trust-audit-targets.js";
 import { auditMealImageWithVision } from "../server/imagery/audit-meal-image-vision.js";
 import { imageFileExists } from "../shared/explore-image-paths.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const JSON_PATH = path.join("review", "meal-image-trust-audit.json");
 const MD_PATH = path.join("review", "meal-image-trust-audit.md");
@@ -221,7 +222,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(JSON_PATH), { recursive: true });
-  fs.writeFileSync(JSON_PATH, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(JSON_PATH, JSON.stringify(report, null, 2));
 
   const md: string[] = [
     "# Meal Image Trust Audit",
@@ -250,7 +251,7 @@ async function main(): Promise<void> {
     }
   }
 
-  fs.writeFileSync(MD_PATH, md.join("\n"));
+  writeFileAtomicSync(MD_PATH, md.join("\n"));
   console.log(`[audit:meal-image-trust] wrote ${JSON_PATH}`);
   console.log(
     `[audit:meal-image-trust] pass=${report.totals.passed} fail=${report.totals.failed} proteinOnly=${report.totals.proteinOnlyHeroes}`,

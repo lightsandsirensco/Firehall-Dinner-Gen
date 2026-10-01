@@ -1,429 +1,142 @@
 /**
- * Firehall lifestyle & culture guides — how crews actually eat together.
+ * Shared-kitchen guide: rotations, cleanup, fridge rules, allergies and
+ * keeping the crew's recipes.
  */
 
+import { SRC } from "./guide-sources.js";
 import { buildSeoGuide, meal } from "./seo-article-build.js";
+
+const UPDATED = "2026-09-30T18:00:00.000Z";
 
 export const STATION_LIFESTYLE_ARTICLES = [
   buildSeoGuide({
     slug: "firehall-kitchen-culture",
-    title: "Firehall Kitchen Culture",
-    subtitle: "How meals build (or break) a crew",
+    title: "Firehall Kitchen Culture: Running a Shared Station Kitchen That Works",
+    seoTitle: "Firehall Kitchen Culture: Cooking, Cleanup and Fridge Rules",
+    subtitle:
+      "A fair cook rotation, cleanup in the right order, shared-fridge rules, handling allergies, and writing the crew's recipes down so they outlast transfers.",
     description:
-      "Firehall kitchen culture: who cooks, who cleans, how dinner decisions get made, and why food matters beyond calories on shift.",
-    keywords: ["firehall kitchen culture", "fire station cooking culture", "crew meals"],
+      "Firehall kitchen culture that works: a fair cook rotation, cleanup order, shared-fridge labelling, handling allergies, and writing recipes down.",
+    keywords: [
+      "firehall kitchen culture",
+      "fire station kitchen rules",
+      "shared kitchen cleaning schedule",
+      "shared fridge labeling",
+      "cook rotation",
+    ],
     topic: "station_lifestyle",
     pillar: "station_lifestyle",
+    readMinutes: 8,
+    updatedAt: UPDATED,
     intro:
-      "Every hall has a kitchen culture whether anyone writes it down or not. Some stations rotate cooks; others have one person who always ends up at the stove. The culture shows up in who cleans, who shops, and whether rookies learn or get hazed. Good kitchen culture is fair, predictable, and good-natured — not competitive suffering.",
-    practicalAdvice: [
-      "Write unwritten rules on a whiteboard: cook rotation, cleanup owner, grocery day.",
-      "Praise the cook publicly — criticism belongs one-on-one.",
-      "Rookies cook with a partner, not alone on their first big meal.",
-    ],
+      "A shared station kitchen works when a few things are settled and written down: who cooks and when, who cleans, how the fridge is labelled, and how allergies are handled. Most of the friction in a firehall kitchen comes from the same places: dishes left for the next shift, unlabelled containers nobody will admit to, and the same two people always cooking. Each of those has a simple system that fixes it, and several of them are also food-safety rules. This guide covers a fair rotation, the order to clean in, shared-fridge rules, allergies, keeping a crew recipe file, and bringing new cooks along.",
     sections: [
       {
-        id: "roles",
-        heading: "Roles that prevent resentment",
+        id: "rotation",
+        heading: "A cook rotation that stays fair",
         paragraphs: [
-          "Cook, cleanup lead, grocery shopper — three jobs, can be three people. When everyone 'helps' with no owner, dishes sit until morning.",
+          "Fix cleanup before anything else. When the person who cooked also ends up washing every pot, cooking starts to feel like a penalty and volunteers disappear. The simplest rule that works is that the cook never does the dishes. Split the kitchen into a few named jobs, rotate them on a posted schedule by shift, and allow swaps as long as the board is updated.",
+          "New cooks should do their first two turns paired with someone experienced, on a forgiving dish such as chili, a taco bar or a sheet-pan dinner. A stocked pantry makes the rotation fairer too: when rice, pasta, canned tomatoes, beans, oil and spices are always there, whoever is cooking isn't starting from nothing.",
+        ],
+        table: {
+          caption: "Kitchen jobs to rotate",
+          columns: ["Job", "What it covers"],
+          rows: [
+            ["Cook", "Menu, shopping list, timing, checking allergies, food temperatures"],
+            ["Prep helper", "Chopping, setting the table or line, keeping the counters clear while cooking"],
+            ["Cleanup lead (never the cook)", "Dishes, pots, stovetop, counters, trash and recycling"],
+            ["Shopper", "Buying the list, keeping receipts for the grocery split"],
+            ["Weekly fridge check", "Clearing out expired leftovers and wiping shelves on a fixed day"],
+          ],
+        },
+      },
+      {
+        id: "cleanup",
+        heading: "Cleanup in the right order",
+        paragraphs: [
+          "Cleaning in a set order is faster and keeps raw-meat contamination away from things people eat from. Soak pots and sheet pans in hot water as soon as they are empty, while people are eating, so nothing dries on. Wash the cleanest things first, when the water is hottest and cleanest, and finish with anything that touched raw meat.",
+          "Washing removes dirt and grease; sanitizing kills what is left. USDA's solution for boards and counters is 1 tablespoon of unscented liquid chlorine bleach per gallon (4 L) of water: flood the surface, leave it for several minutes, rinse, then air-dry. Use separate cutting boards for raw meat and for bread, fruit and vegetables, and replace boards once they have deep grooves that are hard to clean.",
+        ],
+        steps: [
+          "Scrape plates into the trash or compost and stack them by type.",
+          "Wash glasses and mugs, then cutlery, then plates and bowls, then serving dishes.",
+          "Wash pots and pans, starting with the ones that soaked longest.",
+          "Wash raw-meat boards, knives and tongs last, then sanitize them.",
+          "Wipe the stovetop and griddle while still warm, then sanitize counters and the sink.",
+          "Put dishcloths in the laundry and hang out fresh ones for the next shift.",
         ],
       },
       {
-        id: "tone",
-        heading: "Tone at the table",
+        id: "fridge",
+        heading: "Shared fridge rules",
         paragraphs: [
-          "Meals are where crews decompress. Complaining about the food while someone cooked is a fast way to end volunteer cooks.",
+          "A shared fridge needs three rules: everything is labelled, raw meat goes on the bottom, and there is a fixed clear-out day. Labels should show what the food is, the date it was cooked, and whose it is or which shift made it. Store raw meat and poultry on the lowest shelf in a pan or tray, so it can't drip onto food that won't be cooked again, and keep ready-to-eat food and leftovers above it.",
+          "Keep a thermometer inside and check it stays at 40°F (4°C) or below; a crowded door that is opened constantly on a busy shift can drift warmer. USDA gives 3 to 4 days for cooked leftovers and Health Canada 2 to 3 days. In a station where several crews share one fridge, the shorter window is easier to apply, and the weekly check clears anything older. Personal food goes in one labelled bin per person so it doesn't get mixed up with crew food.",
+        ],
+      },
+      {
+        id: "allergies",
+        heading: "Allergies and dietary needs",
+        paragraphs: [
+          "Ask about allergies once, write them on a list the cook can see, and update it when the crew changes. Asking every shift gets tiresome, but relying on memory is how mistakes happen. The FDA lists nine major allergens in the US (milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, soybeans and sesame), and Health Canada's priority list also includes mustard and sulphites.",
+          "Cooking for someone with an allergy mostly comes down to separation. Set aside their portion before an allergen is stirred in, use a clean board, pan and utensils, and give every dish on a line its own serving spoon so ingredients don't travel between them. Put allergens such as cheese, sour cream and nuts at the end of the line or on the side instead of mixing them in, and label anything that contains a hidden one.",
+        ],
+      },
+      {
+        id: "recipe-file",
+        heading: "Write the crew's recipes down",
+        paragraphs: [
+          "Every crew has a few dishes people ask for again, and they often exist only in one person's head. When that person transfers or retires, the recipe goes with them. Writing it down with the details that matter at crew scale (pan sizes, weights, times and how it holds) means anyone on the rotation can cook it. Keep the file in a binder in the kitchen or a shared document, and add notes each time someone makes it.",
+        ],
+        table: {
+          caption: "What to include in a crew recipe card",
+          columns: ["Field", "Why it matters"],
+          rows: [
+            ["Yield and crew size", "Tells the next cook whether to scale it"],
+            ["Ingredients by weight", "\"3 lb chuck\" repeats; \"a big pack\" doesn't"],
+            ["Pot, pan and dish sizes", "Cooking time depends on depth, so the pan is part of the recipe"],
+            ["Oven temperature and time", "With a note if the station oven runs hot or cold"],
+            ["Doneness temperature", "The reliable check, whoever is cooking"],
+            ["Holding and reheating notes", "How long it keeps on low, and how to reheat leftovers"],
+            ["Allergens", "Listed once so the cook doesn't have to work it out"],
+          ],
+        },
+      },
+      {
+        id: "teaching",
+        heading: "Bringing new cooks along",
+        paragraphs: [
+          "Most people who say they can't cook for a crew have never been shown the few things that change at scale: browning in batches, using two pans instead of one crowded one, seasoning in stages, and checking temperatures instead of guessing. Teach one of those per turn, on a dish that forgives mistakes, and let the new cook run the next one with help nearby rather than taking over.",
+          "Keep feedback on the food specific and private, and save public comments for what went well. A crew that complains at the table about a dinner someone else cooked soon finds that nobody wants to cook.",
         ],
       },
     ],
+    practicalAdvice: [
+      "Rotate named kitchen jobs on a posted schedule, and never make the cook do the dishes.",
+      "Wash in order from cleanest to dirtiest, and sanitize raw-meat boards last.",
+      "Label every container with contents, date and owner; raw meat goes on the bottom shelf.",
+      "Keep a written allergy list and separate allergen-free portions before mixing.",
+      "Write down the dishes the crew likes, with pan sizes, weights and holding notes.",
+    ],
     mealRecommendations: [
-      meal("hall-taco-bar", "Hall Taco Bar Night", "Line meals teach rookies assembly, not plating."),
-      meal("big-chili", "Sunday Batch Chili", "Batch cooking teaches timing and cleanup."),
-      meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Forgiving format for new cooks."),
+      meal("big-chili", "Hall-Sized Beef and Bean Chili", "A forgiving first dish for a new cook on the rotation."),
+      meal("hall-taco-bar", "Hall Taco Bar Night", "A line meal that keeps allergens easy to separate."),
+      meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "Two pans in the oven and little to wash afterward."),
+      meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "One pot to clean, and simple to write up as a crew recipe."),
     ],
     faqs: [
       {
-        question: "Who should be in charge of cooking at a fire station?",
+        question: "How long can leftovers stay in a shared station fridge?",
         answer:
-          "Rotate it — one person on cook, one on cleanup, one on groceries, and switch weekly. When everyone 'helps' with no single owner, dishes sit until morning and resentment builds fast.",
-      },
-      {
-        question: "How do you teach a rookie to cook for the crew without embarrassing them?",
-        answer:
-          "Pair them with a senior firefighter for their first few meals and pick a forgiving format like one-pot chicken and rice or a taco bar. Praise what goes well in front of the crew; save corrections for a one-on-one afterward.",
+          "USDA gives 3 to 4 days for cooked leftovers kept at 40°F (4°C) or below, and Health Canada 2 to 3 days. In a fridge shared by several crews, label everything with the date it was cooked, follow the shorter window, and clear out anything older on a fixed day each week.",
       },
     ],
-    relatedArticleSlugs: ["better-station-food-culture", "how-crews-split-groceries"],
-  }),
-
-  buildSeoGuide({
-    slug: "how-crews-split-groceries",
-    title: "How Crews Split Groceries",
-    subtitle: "Fair splits without spreadsheet wars",
-    description:
-      "How firefighter crews split grocery costs for station dinners: apps, receipts, rotation, and simple rules that keep dinner from becoming politics.",
-    keywords: ["fire station groceries", "crew grocery split", "firehall food budget"],
-    topic: "station_lifestyle",
-    pillar: "station_lifestyle",
-    intro:
-      "Someone always pays first. The question is whether they get paid back before payday. Crews that split groceries cleanly cook more often; crews that 'figure it out later' order pizza. A simple system beats a perfect one.",
-    practicalAdvice: [
-      "One receipt per shop — photo it to the group chat immediately.",
-      "Split by eaters on duty, not by seniority.",
-      "Rotate who shops — spreads labor and catches price drift.",
-      "Keep a hall card or Venmo dedicated to food — not mixed with personal tabs.",
+    relatedArticleSlugs: [
+      "planning-tonights-station-dinner",
+      "firehall-grocery-planning",
+      "rookie-cooking-mistakes",
+      "firehall-meal-prep-ideas",
     ],
-    sections: [
-      {
-        id: "math",
-        heading: "Simple math",
-        paragraphs: [
-          "Total ÷ eaters = share. Round up a dollar for staples (oil, salt, foil) that stay at the hall.",
-        ],
-      },
-      {
-        id: "tools",
-        heading: "Tools that prevent drama",
-        paragraphs: [
-          "A shared payment app, one hall card, or a weekly cash float — pick one and stick with it. Mixed personal tabs are where grocery splits die.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("turkey-chili", "High-Protein Turkey Chili", "Budget-friendly batch."),
-      meal("hall-taco-bar", "Hall Taco Bar Night", "Predictable cost per person."),
-      meal("big-chili", "Hall-Sized Beef and Bean Chili", "Stretches ground beef with beans."),
-    ],
-    faqs: [
-      {
-        question: "What's the fairest way to split grocery costs at a fire station?",
-        answer:
-          "Divide the total by the number of eaters on duty that shift, not by seniority, and photo the receipt to the group chat right away. A dedicated hall card or shared payment app beats chasing people down after the fact.",
-      },
-      {
-        question: "Who should do the grocery shopping for the hall?",
-        answer:
-          "Rotate it. One person shopping every week burns out and starts cutting corners; spreading the job also catches price drift that one person might stop noticing.",
-      },
-    ],
-    relatedArticleSlugs: ["firehall-grocery-planning", "avoid-living-on-takeout"],
-  }),
-
-  buildSeoGuide({
-    slug: "legendary-firehall-meals",
-    title: "Legendary Firehall Meals",
-    subtitle: "The dishes halls still talk about",
-    description:
-      "Legendary firehall meals crews remember: chili, BBQ pulls, parm nights, and the recipes that become tradition — not one-off experiments.",
-    keywords: ["legendary firehall meals", "fire station famous meals", "hall traditions"],
-    topic: "station_lifestyle",
-    pillar: "station_lifestyle",
-    intro:
-      "Every hall has a short list of meals that became lore — the chili after the big job, the rookie's first burnt burgers, the BBQ that fed two companies. Legendary firehall meals are rarely complicated. They are reliable, generous, and tied to a story.",
-    practicalAdvice: [
-      "Repeat winners beat novelty — tradition is comfort.",
-      "Document the recipe when a meal hits — 'Dave's chili' should be cookable after Dave transfers.",
-      "Feed enough for seconds — legendary nights rarely end with empty pans.",
-    ],
-    sections: [
-      {
-        id: "patterns",
-        heading: "What legends have in common",
-        paragraphs: [
-          "Big batches, strong flavor, enough for seconds, and someone who owned the cook without drama.",
-        ],
-      },
-      {
-        id: "stories",
-        heading: "Why stories stick",
-        paragraphs: [
-          "Legendary meals are tied to nights — the storm, the transfer, the rookie who nailed it. Write the recipe down so the food survives the story.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("big-chili", "Firehall Chili", "The universal candidate."),
-      meal("pulled-pork", "Pulled Pork Sandwiches", "BBQ lore starter at many halls."),
-      meal("chicken-parm", "Chicken Parm", "Italian night legend."),
-      meal("texas-central-brisket-crew", "Kansas City Smoked Brisket", "When the hall has time and a pit."),
-    ],
-    faqs: [
-      {
-        question: "What makes a firehall meal become a hall legend?",
-        answer:
-          "A big batch, strong flavor, enough for seconds, and a story attached — the chili after the big job, the rookie's first burnt burgers. It's rarely the fanciest dish; it's the one tied to a memorable night.",
-      },
-      {
-        question: "How do you keep a legendary recipe from disappearing when the cook transfers?",
-        answer:
-          "Write it down. 'Dave's chili' should still be cookable after Dave leaves — get the actual recipe on paper instead of relying on one person's memory.",
-      },
-    ],
-    relatedArticleSlugs: ["meals-every-firefighter-knows", "bbq-night-at-the-station"],
-  }),
-
-  buildSeoGuide({
-    slug: "meals-every-firefighter-knows",
-    title: "Meals Every Firefighter Knows",
-    subtitle: "The short list — chili, burgers, tacos, pasta",
-    description:
-      "Meals every firefighter knows from station kitchens: chili, burgers, tacos, pasta bakes, and BBQ — the shared vocabulary of hall food.",
-    keywords: ["meals firefighters know", "classic fire station food", "firehall classics"],
-    topic: "station_lifestyle",
-    pillar: "station_lifestyle",
-    intro:
-      "You can walk into most halls and predict three dinners from the freezer and whiteboard. Chili, burgers, tacos, pasta bake, BBQ chicken — these are not clichés. They are the shared language of crews who cook under interruption.",
-    practicalAdvice: [
-      "Master one meal in each category — your hall will thank you.",
-      "Teach rookies one batch meal and one line meal.",
-      "Keep the shopping list for your hall canon posted — repetition builds speed.",
-    ],
-    sections: [
-      {
-        id: "list",
-        heading: "The hall canon",
-        paragraphs: [
-          "Chili, smash burgers, taco bar, chicken parm, pulled pork, mac and cheese, sheet-pan fajitas. If you can cook these, you can feed most crews.",
-        ],
-      },
-      {
-        id: "why",
-        heading: "Why the canon works",
-        paragraphs: [
-          "These meals scale, survive holds, and need no fine dining timing. They are what crews suggest when someone asks 'what should we make?'",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("big-chili", "Firehall Chili", "The baseline hall chili — batch friendly."),
-      meal("smash-burgers", "Double Smash Burgers", "Handheld standard on flat-top night."),
-      meal("hall-taco-bar", "Hall Taco Bar Night", "Line classic — self-serve tacos."),
-      meal("chicken-parm", "Chicken Parm", "Table spread classic."),
-    ],
-    faqs: [
-      {
-        question: "What meals does almost every fire station cook?",
-        answer:
-          "Chili, smash burgers, taco bar, chicken parm, pulled pork, and mac and cheese. If you can cook these six, you can feed most crews without relearning a new recipe every week.",
-      },
-      {
-        question: "Why do the same meals show up at almost every hall?",
-        answer:
-          "They scale, survive being held on the stove, and don't need fine-dining timing. They're also what someone suggests by default when the board asks 'what should we make?' and nobody wants to debate it.",
-      },
-    ],
-    relatedArticleSlugs: ["meals-firefighters-actually-cook", "legendary-firehall-meals"],
-  }),
-
-  buildSeoGuide({
-    slug: "rookie-cooking-mistakes",
-    title: "Rookie Cooking Mistakes at the Hall",
-    subtitle: "What to skip your first year on the stove",
-    description:
-      "Common rookie cooking mistakes in fire station kitchens: oversalting, crowding pans, ambitious menus, and cleanup failures that hurt trust.",
-    keywords: ["rookie firefighter cooking", "station kitchen mistakes", "first hall meal"],
-    topic: "station_lifestyle",
-    pillar: "station_lifestyle",
-    intro:
-      "Rookies want to impress. The hall wants dinner on time and the kitchen usable after. Rookie cooking mistakes usually come from trying too hard — twelve-ingredient fusion on a busy night — or from basics: crowded pans, raw centers, and dishes left for 'later.'",
-    practicalAdvice: [
-      "Cook with a senior on your first three hall meals.",
-      "Pick one-pot or line formats — not a timing puzzle.",
-      "Taste before you serve — salt is fixable before the line opens.",
-      "Cleanup starts while food cooks — not after everyone leaves.",
-    ],
-    sections: [
-      {
-        id: "mistakes",
-        heading: "Mistakes halls remember",
-        paragraphs: [
-          "Undercooked chicken, oversalted pasta water, smoke from oil past smoke point, and 'I'll do dishes tomorrow.'",
-        ],
-      },
-      {
-        id: "recovery",
-        heading: "Recovering trust",
-        paragraphs: [
-          "A bad meal is fixable with honesty and cleanup. Own the miss, feed the crew something simple next time, and cook with a partner until basics are solid.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "Forgiving first cook."),
-      meal("hall-taco-bar", "Hall Taco Bar Night", "Hard to ruin the whole meal."),
-      meal("big-chili", "Sunday Batch Chili", "Teaches batch timing."),
-    ],
-    faqs: [
-      {
-        question: "What's the most common mistake a rookie makes cooking their first hall meal?",
-        answer:
-          "Trying too hard — a twelve-ingredient fusion dish on a busy night instead of something forgiving. Basics like crowded pans, undercooked chicken, and oversalted pasta water trip up rookies more than an ambitious menu does.",
-      },
-      {
-        question: "How do you recover from a bad meal in front of the whole crew?",
-        answer:
-          "Own it, clean up without complaint, and cook something simple and reliable next time — a one-pot chicken and rice or a taco bar. Cooking with a partner for the next few meals rebuilds trust faster than over-explaining what went wrong.",
-      },
-    ],
-    relatedArticleSlugs: ["feeding-a-firehall-crew", "firehall-kitchen-culture"],
-  }),
-
-  buildSeoGuide({
-    slug: "feeding-ten-firefighters",
-    title: "Feeding Ten Firefighters",
-    subtitle: "Portion math and formats that scale",
-    description:
-      "How to feed ten firefighters: grocery quantities, line vs plated service, and recipes that scale without doubling cook stress.",
-    keywords: ["feed 10 firefighters", "large crew dinner", "fire station portions"],
-    topic: "station_lifestyle",
-    pillar: "operations_how_to",
-    intro:
-      "Ten eaters is the point where home-recipe math breaks. Feeding ten firefighters means rounding up protein, using lines and batches, and accepting that two sheet pans beat one crowded pan. The goal is full plates, not perfect presentation.",
-    practicalAdvice: [
-      "Plan one pound raw protein per three to four eaters for mixed plates.",
-      "Use two half-sheet pans or two pots — even heat matters.",
-      "Taco bars and potato bars scale cleaner than ten plated entrees.",
-    ],
-    sections: [
-      {
-        id: "formats",
-        heading: "Formats for ten",
-        paragraphs: [
-          "Chili, lasagna, taco bar, pulled pork, jambalaya — all proven at ten plus.",
-        ],
-      },
-      {
-        id: "quantities",
-        heading: "Quantity shortcuts",
-        paragraphs: [
-          "Double sheet pans, two pots of chili, or two pork shoulders beat one crowded vessel. Uneven heat at ten portions is how dinner fails quietly.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("batch-lasagna", "Giant Batch Lasagna", "Built for big tables."),
-      meal("hall-taco-bar", "Hall Taco Bar Night", "Self-serve at scale."),
-      meal("jambalaya", "Cajun Jambalaya for the Hall", "One pot — loud flavor."),
-      meal("loaded-potato-feed", "Loaded Potato Feed", "Ten-plus friendly self-serve line."),
-    ],
-    faqs: [
-      {
-        question: "How do you avoid running short on protein when cooking for ten?",
-        answer:
-          "Round up rather than portioning exactly — it's cheaper to have a little extra chicken left over than to come up short with three people still in line. Use two half-sheet pans or two pots instead of one crowded pan, since crowding the pan is what usually causes uneven cooking, not the total amount of meat.",
-      },
-      {
-        question: "What's the easiest format for serving ten people at once?",
-        answer:
-          "A taco bar or potato bar — self-serve lines scale cleaner than ten plated entrées and let people build to their own appetite. Chili, lasagna, and jambalaya are close seconds since they hold well and self-portion from one pot or tray.",
-      },
-    ],
-    relatedArticleSlugs: ["best-firehouse-meals-large-crews", "feeding-a-firehall-crew"],
-  }),
-
-  buildSeoGuide({
-    slug: "busy-shift-dinner-strategies",
-    title: "Busy Shift Dinner Strategies",
-    subtitle: "Dinner when the board will not cooperate",
-    description:
-      "Busy shift dinner strategies for fire stations: default meals, hold plans, and communication so food still happens when calls stack.",
-    keywords: ["busy shift dinner", "fire station dinner strategy", "dinner between calls"],
-    topic: "station_lifestyle",
-    pillar: "station_lifestyle",
-    intro:
-      "Busy shift dinner is a strategy problem. You need a default meal everyone knows, a cook assigned early, and formats that survive pause. Waiting until 18:30 to 'see how the board looks' is how halls end up with nothing.",
-    practicalAdvice: [
-      "Pick dinner by 16:00 — adjust format, not whether you eat.",
-      "Keep a 30-minute fallback in the freezer.",
-      "Communicate on the whiteboard: 'Chili 18:30 — line.'",
-    ],
-    sections: [
-      {
-        id: "defaults",
-        heading: "Default meals",
-        paragraphs: [
-          "Chili, quesadillas, sheet pan, pasta — rotate defaults monthly so shopping stays automatic.",
-        ],
-      },
-      {
-        id: "hold",
-        heading: "Hold and communicate",
-        paragraphs: [
-          "Tell the crew when food is ready and what format — line at 18:30, not 'food sometime.' Holds on low beat reheating twelve individual plates after a call.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("chili-mac", "Chili Mac Skillet", "One pan — fast when the board stays loud."),
-      meal("chicken-quesadillas", "Chicken Quesadillas", "Handheld — staggered eating."),
-      meal("garlic-butter-shrimp", "Garlic Butter Shrimp", "Minutes on heat — high flavor."),
-      meal("fast-philly-skillet", "Fast Philly Cheesesteak Skillet", "Flat-top speed for busy nights."),
-    ],
-    faqs: [
-      {
-        question: "What's a good default dinner when you don't know how busy the shift will get?",
-        answer:
-          "Chili, quesadillas, or a sheet-pan meal — anything that holds on low if calls stack up. Pick dinner by 16:00 and keep a 30-minute fallback in the freezer so a bad-looking board never means no food.",
-      },
-      {
-        question: "How do you communicate dinner plans when the shift is unpredictable?",
-        answer:
-          "Post it on the whiteboard with a specific format and rough time — 'Chili, 18:30, line' — instead of 'food sometime.' Holding food on low beats reheating twelve individual plates after everyone gets back from a call.",
-      },
-    ],
-    relatedArticleSlugs: ["quick-meals-between-calls", "best-firehall-meals-busy-nights"],
-  }),
-
-  buildSeoGuide({
-    slug: "better-station-food-culture",
-    title: "Building a Better Station Food Culture",
-    subtitle: "Small changes that stick",
-    description:
-      "How to build better fire station food culture: fair rotations, better groceries, rookie support, and meals that make cooking worth the effort.",
-    keywords: ["station food culture", "improve firehall meals", "crew food culture"],
-    topic: "station_lifestyle",
-    pillar: "station_lifestyle",
-    intro:
-      "Better station food culture is not a wellness poster — it is fair labor, decent groceries, and meals people want to eat. Crews cook when cooking feels worth it: clear roles, reimbursement that works, and less public griping about the result.",
-    practicalAdvice: [
-      "Rotate cooks weekly — visibility prevents burnout.",
-      "Stock the pantry with basics so dinner is not 'shop from zero.'",
-      "Celebrate good meals — photos on the board, not only complaints.",
-    ],
-    sections: [
-      {
-        id: "start",
-        heading: "Where to start",
-        paragraphs: [
-          "Fix cleanup fairness first. Then grocery splits. Then one recurring cook night with a reliable recipe.",
-        ],
-      },
-      {
-        id: "habits",
-        heading: "Habits that compound",
-        paragraphs: [
-          "Stock basics, rotate cooks, and celebrate wins on the whiteboard. Culture shifts when cooking feels fair — not when someone gives a speech about wellness.",
-        ],
-      },
-    ],
-    mealRecommendations: [
-      meal("hall-taco-bar", "Hall Taco Bar Night", "Low-risk culture win."),
-      meal("big-chili", "Hall-Sized Beef and Bean Chili", "Teaches batch cooperation."),
-      meal("sheet-pan-fajitas", "Sheet Pan Chicken Fajitas", "Shared cook night — low drama."),
-    ],
-    faqs: [
-      {
-        question: "What's the first thing to fix to improve a station's food culture?",
-        answer:
-          "Cleanup fairness. If the same one or two people are stuck doing dishes every time, cooking starts to feel like a punishment and people stop volunteering. Fix that before touching the grocery budget or the menu.",
-      },
-      {
-        question: "Does rotating cooks actually help, or does it just create inconsistent meals?",
-        answer:
-          "It helps more than it hurts. Weekly rotation prevents burnout and spreads the job fairly; stock a few pantry basics so whoever's cooking isn't starting from zero, and the inconsistency mostly disappears.",
-      },
-    ],
-    relatedArticleSlugs: ["firehall-kitchen-culture", "how-crews-split-groceries"],
+    sources: [SRC.usdaCuttingBoards, SRC.usdaLeftovers, SRC.hcLeftovers, SRC.fdaAllergies, SRC.hcAllergies],
   }),
 ];

@@ -9,6 +9,7 @@ import path from "node:path";
 import { CLASSIC_HALL_MEALS } from "../shared/classic-hall-meals.js";
 import { resolveClassicWheelImagery } from "../shared/classic-wheel-imagery.js";
 import { CLASSICS_WHEEL_HERO_REGEN_SLUGS } from "../shared/golden-100/recipe-quality/classics-wheel-fixes.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -201,7 +202,7 @@ function main(): void {
     rows,
   };
 
-  fs.writeFileSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
   const md = `# Classics Wheel Quality Upgrade
 
@@ -263,7 +264,7 @@ npm run audit:classics-wheel
 Every Classics Wheel segment should read as shift-dinner food firefighters would be proud to cook: realistic portions, warm firehall kitchen light, visible texture, and title-accurate composition (buns for sandwiches, rice and peas for jerk chicken, fries and jus for beef dip, shredded BBQ chicken in mac and cheese).
 `;
 
-  fs.writeFileSync(MD_OUT, md, "utf8");
+  writeFileAtomicSync(MD_OUT, md, "utf8");
   console.log(`[classics-wheel-quality] wrote ${MD_OUT}`);
   console.log(`[classics-wheel-quality] wrote ${JSON_OUT}`);
 }

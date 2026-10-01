@@ -30,6 +30,7 @@ import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
 import { createOpenAIClient, hasOpenAIKey } from "../server/openai-client.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const REPORT_JSON = path.join(process.cwd(), "review", "image-extra-ingredient-audit.json");
@@ -290,7 +291,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(REPORT_JSON), { recursive: true });
-  fs.writeFileSync(REPORT_JSON, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(REPORT_JSON, `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
   const md = [
     "# Image extra-ingredient accuracy audit",
@@ -314,7 +315,7 @@ async function main(): Promise<void> {
     ),
     "",
   ].join("\n");
-  fs.writeFileSync(REPORT_MD, md, "utf8");
+  writeFileAtomicSync(REPORT_MD, md, "utf8");
 
   console.log(`[audit:image-extra-ingredient] done. flagged=${report.flaggedCount} dietaryConflicts=${report.dietaryConflictCount} skipped=${report.skipped}`);
   console.log(`[audit:image-extra-ingredient] wrote ${REPORT_JSON}`);

@@ -1,0 +1,216 @@
+{
+  "description": "Recipe-fidelity verdicts with dish format as a first-class requirement. `vision` is the raw JSON the semantic checker's model returns; `expected` is the required fidelity verdict.",
+  "cases": [
+    {
+      "id": "regression-italian-garlic-beef-bowls-shown-as-meatball-subs",
+      "note": "Production failure: generated bowl recipe rendered as meatball subs. Beef, garlic, parmesan and red sauce all overlap, so the model graded content MINOR.",
+      "recipe": {
+        "slug": "italian-garlic-beef-bowls-with-spaghetti-coleslaw-mix",
+        "title": "Italian Garlic Beef Bowls with Spaghetti & Coleslaw Mix",
+        "mealFormat": "bowl",
+        "cuisine": "Italian",
+        "ingredients": [
+          { "name": "ground beef" },
+          { "name": "spaghetti" },
+          { "name": "coleslaw mix" },
+          { "name": "garlic" },
+          { "name": "olive oil" },
+          { "name": "Italian seasoning" },
+          { "name": "parmesan" },
+          { "name": "crushed red pepper" }
+        ]
+      },
+      "vision": {
+        "visible_foods": ["beef meatballs", "marinara", "parmesan", "garlic", "basil", "sub rolls"],
+        "dish_format": "meatball subs on a tray",
+        "depicted_format": "sandwich",
+        "format_confidence": 96,
+        "accuracy": "MINOR",
+        "accuracy_issues": ["basil garnish not listed"],
+        "confidence": 88
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "regression-legacy-response-free-text-format-only",
+      "note": "Same failure, older model response with only free-text dish_format and a MAJOR (non-critical) grade — previously came out inconclusive.",
+      "recipe": {
+        "slug": "italian-garlic-beef-bowls-with-spaghetti-coleslaw-mix",
+        "title": "Italian Garlic Beef Bowls with Spaghetti & Coleslaw Mix",
+        "mealFormat": "bowl",
+        "ingredients": [{ "name": "ground beef" }, { "name": "spaghetti" }, { "name": "coleslaw mix" }, { "name": "garlic" }]
+      },
+      "vision": {
+        "visible_foods": ["meatballs", "tomato sauce", "melted cheese", "hoagie rolls"],
+        "dish_format": "meatball subs on a tray",
+        "accuracy": "MAJOR",
+        "accuracy_issues": ["no spaghetti or coleslaw visible"],
+        "confidence": 80
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "control-bowl-recipe-with-sandwich-image",
+      "recipe": { "slug": "teriyaki-chicken-rice-bowls", "title": "Teriyaki Chicken Rice Bowls", "ingredients": [{ "name": "chicken thighs" }, { "name": "rice" }, { "name": "teriyaki sauce" }, { "name": "broccoli" }] },
+      "vision": { "visible_foods": ["teriyaki chicken", "brioche bun"], "depicted_format": "sandwich", "format_confidence": 92, "accuracy": "PASS", "accuracy_issues": [], "confidence": 85 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "control-sandwich-recipe-with-bowl-image",
+      "recipe": { "slug": "turkey-club-sandwiches", "title": "Turkey Club Sandwiches", "ingredients": [{ "name": "turkey" }, { "name": "bacon" }, { "name": "bread" }, { "name": "lettuce" }, { "name": "tomato" }] },
+      "vision": { "visible_foods": ["turkey", "bacon", "lettuce", "tomato"], "depicted_format": "bowl", "format_confidence": 90, "accuracy": "MINOR", "accuracy_issues": [], "confidence": 85 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-burrito-bowl-as-wrapped-burrito",
+      "recipe": { "slug": "chicken-burrito-bowls", "title": "Chicken Burrito Bowls", "ingredients": [{ "name": "chicken" }, { "name": "rice" }, { "name": "black beans" }] },
+      "vision": { "dish_format": "wrapped burrito cut in half", "depicted_format": "wrap", "format_confidence": 94, "accuracy": "PASS", "accuracy_issues": [], "confidence": 90 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-burger-bowl-as-burger-on-bun",
+      "recipe": { "slug": "cheeseburger-bowls", "title": "Cheeseburger Bowls", "ingredients": [{ "name": "ground beef" }, { "name": "cheddar" }, { "name": "pickles" }] },
+      "vision": { "depicted_format": "burger", "format_confidence": 95, "accuracy": "MINOR", "accuracy_issues": [], "confidence": 90 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-casserole-as-plated-rolls",
+      "recipe": { "slug": "chicken-enchilada-casserole", "title": "Chicken Enchilada Casserole", "ingredients": [{ "name": "chicken" }, { "name": "tortillas" }, { "name": "enchilada sauce" }] },
+      "vision": { "dish_format": "individually rolled enchiladas on a plate", "depicted_format": "rolled", "format_confidence": 85, "accuracy": "MINOR", "accuracy_issues": [], "confidence": 85 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-salad-as-hot-plated-entree",
+      "recipe": { "slug": "grilled-chicken-cobb-salad", "title": "Grilled Chicken Cobb Salad", "ingredients": [{ "name": "chicken" }, { "name": "romaine" }, { "name": "egg" }, { "name": "bacon" }] },
+      "vision": { "depicted_format": "plated", "format_confidence": 88, "accuracy": "MINOR", "accuracy_issues": [], "confidence": 85 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-soup-as-dry-plate",
+      "recipe": { "slug": "chicken-tortilla-soup", "title": "Chicken Tortilla Soup", "ingredients": [{ "name": "chicken" }, { "name": "broth" }, { "name": "tortilla strips" }] },
+      "vision": { "depicted_format": "plated", "format_confidence": 90, "accuracy": "MAJOR", "accuracy_issues": ["no broth visible"], "confidence": 80 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-meal-prep-bowl-as-restaurant-plate",
+      "recipe": { "slug": "meal-prep-chicken-burrito-bowls", "title": "Meal Prep Chicken Burrito Bowls", "ingredients": [{ "name": "chicken" }, { "name": "rice" }, { "name": "corn" }] },
+      "vision": { "depicted_format": "plated", "format_confidence": 87, "accuracy": "PASS", "accuracy_issues": [], "confidence": 90 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-sandwich-as-bowl",
+      "recipe": { "slug": "italian-beef-sandwiches", "title": "Italian Beef Sandwiches", "ingredients": [{ "name": "beef" }, { "name": "giardiniera" }, { "name": "rolls" }] },
+      "vision": { "depicted_format": "bowl", "format_confidence": 90, "accuracy": "MINOR", "accuracy_issues": [], "confidence": 85 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-tacos-as-burrito",
+      "recipe": { "slug": "carne-asada-tacos", "title": "Carne Asada Tacos", "ingredients": [{ "name": "flank steak" }, { "name": "corn tortillas" }, { "name": "onion" }] },
+      "vision": { "dish_format": "large wrapped burrito", "depicted_format": "wrap", "format_confidence": 91, "accuracy": "PASS", "accuracy_issues": [], "confidence": 90 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-pasta-bake-as-soup",
+      "recipe": { "slug": "sausage-pasta-bake", "title": "Sausage Pasta Bake", "ingredients": [{ "name": "italian sausage" }, { "name": "penne" }, { "name": "mozzarella" }] },
+      "vision": { "dish_format": "brothy stew in a bowl", "depicted_format": "soup", "format_confidence": 86, "accuracy": "MINOR", "accuracy_issues": [], "confidence": 85 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "pass-bowl-with-minor-garnish-variation",
+      "recipe": { "slug": "italian-garlic-beef-bowls-with-spaghetti-coleslaw-mix", "title": "Italian Garlic Beef Bowls with Spaghetti & Coleslaw Mix", "mealFormat": "bowl", "ingredients": [{ "name": "ground beef" }, { "name": "spaghetti" }, { "name": "coleslaw mix" }, { "name": "garlic" }] },
+      "vision": { "visible_foods": ["ground beef", "spaghetti", "coleslaw", "parmesan", "parsley"], "depicted_format": "bowl", "format_confidence": 95, "accuracy": "MINOR", "accuracy_issues": ["parsley garnish not listed"], "confidence": 90 },
+      "expected": "PASS"
+    },
+    {
+      "id": "pass-sandwich-on-sandwich-recipe",
+      "recipe": { "slug": "turkey-club-sandwiches", "title": "Turkey Club Sandwiches", "ingredients": [{ "name": "turkey" }, { "name": "bread" }] },
+      "vision": { "dish_format": "triple-decker club sandwich", "accuracy": "PASS", "accuracy_issues": [], "confidence": 92 },
+      "expected": "PASS"
+    },
+    {
+      "id": "fail-right-format-wrong-dish",
+      "note": "Format matching never rescues a critical content miss.",
+      "recipe": { "slug": "teriyaki-chicken-rice-bowls", "title": "Teriyaki Chicken Rice Bowls", "ingredients": [{ "name": "chicken" }, { "name": "rice" }] },
+      "vision": { "depicted_format": "bowl", "format_confidence": 95, "accuracy": "CRITICAL", "accuracy_issues": ["shows a shrimp poke bowl — wrong main protein"], "confidence": 92 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "inconclusive-format-unclear",
+      "recipe": { "slug": "chicken-burrito-bowls", "title": "Chicken Burrito Bowls", "ingredients": [{ "name": "chicken" }, { "name": "rice" }] },
+      "vision": { "dish_format": "tight crop of shredded chicken", "depicted_format": "unclear", "format_confidence": 30, "accuracy": "PASS", "accuracy_issues": [], "confidence": 70 },
+      "expected": "INCONCLUSIVE"
+    },
+    {
+      "id": "inconclusive-bowl-that-looks-like-a-salad",
+      "recipe": { "slug": "greek-chicken-bowls", "title": "Greek Chicken Bowls", "ingredients": [{ "name": "chicken" }, { "name": "cucumber" }, { "name": "tomato" }, { "name": "rice" }] },
+      "vision": { "depicted_format": "salad", "format_confidence": 80, "accuracy": "MINOR", "accuracy_issues": [], "confidence": 85 },
+      "expected": "INCONCLUSIVE"
+    },
+    {
+      "id": "inconclusive-low-confidence-format-call",
+      "recipe": { "slug": "teriyaki-chicken-rice-bowls", "title": "Teriyaki Chicken Rice Bowls", "ingredients": [{ "name": "chicken" }, { "name": "rice" }] },
+      "vision": { "depicted_format": "sandwich", "format_confidence": 40, "accuracy": "PASS", "accuracy_issues": [], "confidence": 60 },
+      "expected": "INCONCLUSIVE"
+    },
+    {
+      "id": "inconclusive-format-only-from-meal-tag",
+      "note": "Nachos tagged mealFormat=bowl but the title promises no bowl — a sheet-pan photo is a review, not a hard fail.",
+      "recipe": { "slug": "game-day-nachos", "title": "Game Day Nachos", "mealFormat": "bowl", "ingredients": [{ "name": "tortilla chips" }, { "name": "cheddar" }, { "name": "ground beef" }] },
+      "vision": { "depicted_format": "sheet_pan", "format_confidence": 95, "accuracy": "PASS", "accuracy_issues": [], "confidence": 90 },
+      "expected": "INCONCLUSIVE"
+    },
+    {
+      "id": "inconclusive-bake-served-in-a-bowl",
+      "recipe": { "slug": "baked-ziti", "title": "Baked Ziti", "ingredients": [{ "name": "ziti" }, { "name": "marinara" }, { "name": "ricotta" }, { "name": "mozzarella" }] },
+      "vision": { "depicted_format": "bowl", "format_confidence": 90, "accuracy": "MINOR", "accuracy_issues": [], "confidence": 88 },
+      "expected": "INCONCLUSIVE"
+    },
+    {
+      "id": "inconclusive-model-graded-vessel-quibble-critical",
+      "note": "Full-catalog run: model graded a skillet dish on a plate CRITICAL purely on vessel. The format check owns that call (skillet vs plated is ambiguous).",
+      "recipe": { "slug": "enchilada-beef-skillet", "title": "Beef Enchilada Skillet", "ingredients": [{ "name": "ground beef" }, { "name": "tortillas" }, { "name": "enchilada sauce" }] },
+      "vision": { "depicted_format": "plated", "format_confidence": 85, "accuracy": "CRITICAL", "accuracy_issues": ["served on a plate instead of in a skillet"], "confidence": 90 },
+      "expected": "INCONCLUSIVE"
+    },
+    {
+      "id": "pass-model-format-complaint-but-format-matches",
+      "note": "Model complains about shape (round vs sheet-pan pizza) but both are pizza — format check passes it.",
+      "recipe": { "slug": "firehall-breakfast-pizza", "title": "Firehall Breakfast Pizza", "ingredients": [{ "name": "pizza dough" }, { "name": "eggs" }, { "name": "sausage" }] },
+      "vision": { "depicted_format": "pizza", "format_confidence": 95, "accuracy": "CRITICAL", "accuracy_issues": ["Round pizza instead of sheet-pan pizza"], "confidence": 90 },
+      "expected": "PASS"
+    },
+    {
+      "id": "fail-food-issue-survives-format-filtering",
+      "recipe": { "slug": "smoked-turkey-breast", "title": "Smoked Turkey Breast for the Crew", "ingredients": [{ "name": "turkey breast" }, { "name": "cranberry" }, { "name": "mustard" }] },
+      "vision": { "depicted_format": "plated", "format_confidence": 90, "accuracy": "CRITICAL", "accuracy_issues": ["chicken wings instead of turkey breast", "served on a plate instead of a carving board"], "confidence": 92 },
+      "expected": "FAIL"
+    },
+    {
+      "id": "not-applicable-plated-main-content-decides",
+      "recipe": { "slug": "herb-roasted-thighs", "title": "Herb Roasted Thighs", "ingredients": [{ "name": "chicken thighs" }, { "name": "herbs" }] },
+      "vision": { "depicted_format": "plated", "format_confidence": 90, "accuracy": "PASS", "accuracy_issues": [], "confidence": 90 },
+      "expected": "PASS"
+    }
+  ],
+  "expectedFormats": [
+    ["Italian Garlic Beef Bowls with Spaghetti & Coleslaw Mix", "bowl"],
+    ["Cheeseburger Bowls", "bowl"],
+    ["Chicken Burrito Bowls", "bowl"],
+    ["Meal Prep Chicken Burrito Bowls", "meal_prep"],
+    ["Taco Soup", "soup"],
+    ["Big Chili", "soup"],
+    ["Chili Lime Grilled Tilapia", null],
+    ["Mac and Cheese Bake", "casserole"],
+    ["Sausage Pasta Bake", "casserole"],
+    ["Chicken Enchilada Casserole", "casserole"],
+    ["Cheesesteak Egg Rolls", "rolled"],
+    ["Philly Cheesesteak Skillet", "skillet"],
+    ["Steak Sandwiches on Ciabatta", "sandwich"],
+    ["Meatball Hoagies", "sandwich"],
+    ["Carne Asada Tacos", "taco"],
+    ["Spaghetti and Meatballs", "pasta"],
+    ["Grilled Chicken Cobb Salad", "salad"],
+    ["Super Bowl Wings", null],
+    ["Herb Roasted Thighs", null]
+  ]
+}

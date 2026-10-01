@@ -15,6 +15,7 @@ import {
   auditCuratedRecipeQuality,
   buildCuratedQualityReport,
 } from "../shared/recipe-quality/curated-recipe-quality-audit.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -113,7 +114,7 @@ function main(): void {
   const report = buildCuratedQualityReport(rows);
 
   fs.mkdirSync(REVIEW, { recursive: true });
-  fs.writeFileSync(path.join(REVIEW, "recipe-quality-audit.json"), `${JSON.stringify(report, null, 2)}\n`);
+  writeFileAtomicSync(path.join(REVIEW, "recipe-quality-audit.json"), `${JSON.stringify(report, null, 2)}\n`);
 
   const md = [
     "# Firehall Meals Recipe Quality Audit",
@@ -145,7 +146,7 @@ function main(): void {
       .map((r) => `- **${r.slug}** — ${r.issues.slice(0, 3).map((i) => i.message).join("; ")}`),
   ];
 
-  fs.writeFileSync(path.join(REVIEW, "recipe-quality-audit.md"), `${md.join("\n")}\n`);
+  writeFileAtomicSync(path.join(REVIEW, "recipe-quality-audit.md"), `${md.join("\n")}\n`);
 
   console.log(
     `[audit:recipe-quality] scope=${scope} recipes=${report.totals.recipes} pass=${report.totals.pass} fail=${report.totals.fail}`,

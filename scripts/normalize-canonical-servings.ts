@@ -11,6 +11,7 @@ import path from "node:path";
 import { CANONICAL_BASE_SERVINGS } from "../shared/recipe/crew-scaling-config.js";
 import { scaleGoldenIngredients } from "../shared/golden-100/recipe-quality/crew-scale.js";
 import type { GoldenRecipePageIngredient } from "../shared/golden-100/recipe-page-schema.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const DRY_RUN = process.argv.includes("--dry-run");
 
@@ -110,7 +111,7 @@ function main(): void {
   };
 
   fs.mkdirSync("review", { recursive: true });
-  fs.writeFileSync("review/canonical-servings-normalize.json", `${JSON.stringify(report, null, 2)}\n`);
+  writeFileAtomicSync("review/canonical-servings-normalize.json", `${JSON.stringify(report, null, 2)}\n`);
 
   const md = [
     "# Canonical servings normalization",
@@ -133,7 +134,7 @@ function main(): void {
       (r) => `| ${r.slug} | ${r.oldBase} | ${r.oldCrew} | ${r.ingredientCount} |`,
     ),
   ];
-  fs.writeFileSync("review/canonical-servings-normalize.md", `${md.join("\n")}\n`);
+  writeFileAtomicSync("review/canonical-servings-normalize.md", `${md.join("\n")}\n`);
 
   console.log(
     `[normalize:canonical-servings] scanned=${scanned} normalized=${normalized.length} mode=${report.mode}`,

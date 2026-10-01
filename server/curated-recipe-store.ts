@@ -45,8 +45,16 @@ import {
   firehallCategoryTagKey,
   type FirehallCategoryId,
 } from "../shared/firehall-categories.js";
+import { RETIRED_CATALOG_SLUGS } from "../shared/catalog-slug-redirects.js";
 
 const GOLDEN_100_SLUGS = new Set(GOLDEN_100_RECIPES.map((r) => r.slug));
+
+/** Discovery listings never return retired slugs, whatever their DB status (rows stay for redirects/history). */
+function excludeRetiredSlugs(column: string, conditions: string[], params: (string | number)[]): void {
+  if (!RETIRED_CATALOG_SLUGS.length) return;
+  conditions.push(`${column} NOT IN (${RETIRED_CATALOG_SLUGS.map(() => "?").join(",")})`);
+  params.push(...RETIRED_CATALOG_SLUGS);
+}
 import type { IngestRecipeDraft } from "../shared/ingestion/recipe-ingest-schema.js";
 
 let db: SqliteDatabase | null = null;
@@ -623,6 +631,7 @@ export function listCuratedRecipeSummaries(query: CuratedRecipeListQuery = {}): 
   }
 
   appendMetadataFilterSql(query.metadata, conditions, params);
+  excludeRetiredSlugs("curated_recipes.slug", conditions, params);
 
   let join = "";
   if (query.explorePool) {
@@ -704,6 +713,7 @@ export function listCuratedRecipeSummariesForFirehallCategory(
   }
 
   appendMetadataFilterSql(query.metadata, conditions, params);
+  excludeRetiredSlugs("curated_recipes.slug", conditions, params);
 
   const placeholders = keys.map(() => "?").join(", ");
   const where = conditions.length ? `AND ${conditions.join(" AND ")}` : "";

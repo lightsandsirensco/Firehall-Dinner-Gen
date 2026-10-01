@@ -10,6 +10,7 @@ import { fileURLToPath } from "node:url";
 import { EDITORIAL_ARTICLES } from "../shared/editorial/articles-data.js";
 import { auditHallGuidesCatalog } from "../shared/editorial/hall-guides-audit.js";
 import { withGuidePublishingDefaults } from "../shared/editorial/seo-article-build.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const INVENTORY_MD = join(root, "review", "hall-guides-inventory.md");
@@ -117,9 +118,9 @@ function main(): void {
   ].join("\n");
 
   mkdirSync(dirname(INVENTORY_MD), { recursive: true });
-  writeFileSync(INVENTORY_MD, inventoryMd, "utf8");
-  writeFileSync(PRODUCTION_MD, productionMd, "utf8");
-  writeFileSync(
+  writeFileAtomicSync(INVENTORY_MD, inventoryMd, "utf8");
+  writeFileAtomicSync(PRODUCTION_MD, productionMd, "utf8");
+  writeFileAtomicSync(
     PRODUCTION_JSON,
     `${JSON.stringify({ generatedAt: new Date().toISOString(), summary, inventory, audits }, null, 2)}\n`,
     "utf8",

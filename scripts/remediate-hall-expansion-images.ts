@@ -24,7 +24,8 @@ import {
   hallExpansionThumbPath,
 } from "../shared/hall-expansion/recipe-page-paths.js";
 import { getMobileCropRule } from "../shared/mobile-crop-rules.js";
-import { loadSharp } from "../server/imagery/sharp-utils.js";
+import { encodeJpeg, JPEG_OUTPUT, requireSharp } from "../server/imagery/sharp-utils.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client/public");
@@ -291,16 +292,8 @@ async function resizeVariant(
   height: number,
   position: string,
 ): Promise<Buffer> {
-  const sharp = await loadSharp();
-  if (!sharp) return buffer;
-  try {
-    return await sharp(buffer)
-      .resize(width, height, { fit: "cover", position })
-      .jpeg({ quality: 88, mozjpeg: true })
-      .toBuffer();
-  } catch {
-    return buffer;
-  }
+  const sharp = await requireSharp();
+  return sharp(buffer).resize(width, height, { fit: "cover", position }).jpeg(JPEG_OUTPUT).toBuffer();
 }
 
 async function writeHallExpansionVariants(slug: string, heroBuffer: Buffer): Promise<void> {
@@ -330,7 +323,7 @@ async function writeHallExpansionVariants(slug: string, heroBuffer: Buffer): Pro
     absPublic(hallExpansionMobilePath(slug)),
     absPublic(hallExpansionRailPath(slug)),
   ];
-  const buffers = [heroBuffer, thumbBuf, mobileBuf, railBuf];
+  const buffers = [await encodeJpeg(heroBuffer), thumbBuf, mobileBuf, railBuf];
   for (let i = 0; i < targets.length; i += 1) {
     fs.mkdirSync(path.dirname(targets[i]!), { recursive: true });
     fs.writeFileSync(targets[i]!, buffers[i]!);
@@ -410,7 +403,7 @@ async function main(): Promise<void> {
   }
 
   fs.mkdirSync(path.dirname(REPORT_PATH), { recursive: true });
-  fs.writeFileSync(REPORT_PATH, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(REPORT_PATH, JSON.stringify(report, null, 2));
 
   console.log(
     `[hall-expansion-images] audited ${report.totalRecipes} recipes — ${report.issueCount} issue(s), ${report.uniqueHeroHashes} unique hero hash(es)`,

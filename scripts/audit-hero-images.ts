@@ -1,42 +1,61 @@
 #!/usr/bin/env tsx
 /**
- * Hero image validation — title/hero alignment across all published recipes.
+ * Hero image validation across all published recipes.
+ *
+ * Hard failures: missing/broken/invalid hero files, empty/placeholder/contradictory alt text,
+ * conflicting duplicate bytes, mapping errors, and vision-confirmed wrong dishes.
+ * Title/alt wording heuristics are warnings. Without --vision, semantic status is "not verified".
  *
  *   npm run audit:hero-images
- *   npx tsx scripts/audit-hero-images.ts --vision
- *   npx tsx scripts/audit-hero-images.ts --quarantine
+ *   npx tsx scripts/audit-hero-images.ts --vision                # inspect every hero
+ *   npx tsx scripts/audit-hero-images.ts --vision-sample=100     # sample + heuristic-flagged
+ *   npx tsx scripts/audit-hero-images.ts --quarantine            # delete heroes that need new images
  */
 import "dotenv/config";
 import fs from "node:fs";
 import path from "node:path";
+import { applyDevOpenAiTlsIfAllowed } from "./dev-tls.js";
 import { buildAllApprovedCatalogEntries } from "../server/approved-catalog.js";
-import { auditMealImageWithVision } from "../server/imagery/audit-meal-image-vision.js";
-import { hasOpenAIKey } from "../server/openai-client.js";
+import { createOpenAIClient, hasOpenAIKey } from "../server/openai-client.js";
+import {
+  accuracyStatus,
+  inspectRecipeImage,
+  recipeFidelity,
+  type QaRecipe,
+  type VisionVerdict,
+} from "../server/imagery/recipe-image-qa.js";
 import {
   buildGlobalHeroMd5Index,
   buildGlobalHeroPeerLookup,
   buildHeroImageValidationReport,
-  extractMealImageRequirementsForTarget,
+  collectHeuristicHeroIssues,
   finalizeHeroValidationRow,
   loadPublishedHeroValidationTargets,
   validateHeroImageTarget,
+  type HeroImageValidationBase,
   type HeroImageValidationRow,
+  type HeroVisionResult,
 } from "../shared/hero-image-validation.js";
-import { readHeroBuffer } from "../shared/curated-image-governance/trust-audit-targets.js";
+import {
+  readHeroBuffer,
+  type TrustAuditCollection,
+  type TrustAuditTarget,
+} from "../shared/curated-image-governance/trust-audit-targets.js";
 import { slugLockedImagePaths } from "../shared/explore-image-paths.js";
 import { resolveApprovedCatalogKind } from "../shared/approved-catalog.js";
 import { normalizeCatalogSlug } from "../shared/hall-catalog/gate.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const JSON_OUT = path.join("review", "hero-image-validation.json");
 const MD_OUT = path.join("review", "hero-image-validation.md");
-const VISION_SAMPLE_SIZE = 100;
 
 function parseArgs(argv: string[]) {
+  const sample = Number(argv.find((a) => a.startsWith("--vision-sample="))?.split("=")[1]);
   return {
     vision: argv.includes("--vision"),
+    visionSample: Number.isFinite(sample) && sample > 0 ? sample : 0,
     quarantine: argv.includes("--quarantine"),
-    sampleOnly: !argv.includes("--vision-all"),
     slugs: argv
       .find((a) => a.startsWith("--slugs="))
       ?.replace("--slugs=", "")
@@ -57,55 +76,66 @@ function seededShuffle<T>(items: T[], seed: number): T[] {
   return copy;
 }
 
+const VISION_NOT_REQUESTED: HeroVisionResult = {
+  pass: null,
+  skipped: true,
+  reasons: ["vision check not run (pass --vision to verify the picture)"],
+};
+
+const CATALOG_DIR: Record<TrustAuditCollection, string> = {
+  golden_100: "golden-100",
+  performance_meals: "performance-meals",
+  hall_expansion: "hall-expansion",
+  breakfast: "breakfast",
+  pizza_night: "pizza-night",
+  smoothies: "smoothies",
+};
+
+function loadQaRecipe(target: TrustAuditTarget): QaRecipe {
+  const pagePath = path.join(PUBLIC, "catalog", CATALOG_DIR[target.collection], "pages", `${target.slug}.json`);
+  const page = (fs.existsSync(pagePath) ? JSON.parse(fs.readFileSync(pagePath, "utf8")) : {}) as QaRecipe;
+  return {
+    ...page,
+    slug: target.slug,
+    title: target.title,
+    mealFormat: target.mealFormat,
+    ingredients: page.ingredients?.length ? page.ingredients : target.ingredients,
+  };
+}
+
+/**
+ * Semantic check = recipe-fidelity vision QA (same rubric that gates image generation):
+ * does the picture show this recipe's dish, protein and foods? Composition/style is not judged.
+ */
 async function runVision(
-  row: ReturnType<typeof validateHeroImageTarget>,
-  force: boolean,
-): Promise<{ pass: boolean | null; skipped: boolean; reasons: string[] }> {
-  if (!hasOpenAIKey()) {
-    return { pass: null, skipped: true, reasons: ["vision_skipped_no_api_key"] };
+  row: HeroImageValidationBase,
+  target: TrustAuditTarget,
+  client: ReturnType<typeof createOpenAIClient> | null,
+): Promise<HeroVisionResult> {
+  if (!client) {
+    return { pass: null, skipped: true, reasons: ["vision unavailable: no OpenAI API key"] };
   }
 
   const buf = readHeroBuffer(row.heroImage);
   if (!buf) {
-    return { pass: null, skipped: true, reasons: ["vision_skipped_missing_file"] };
+    return { pass: null, skipped: true, reasons: ["vision skipped: hero file missing"] };
   }
 
-  const target = loadPublishedHeroValidationTargets().find((t) => t.slug === row.slug);
-  if (!target) {
-    return { pass: null, skipped: true, reasons: ["vision_skipped_missing_target"] };
+  const recipe = loadQaRecipe(target);
+  let verdict: VisionVerdict;
+  try {
+    verdict = await inspectRecipeImage(client, buf, recipe);
+  } catch (err) {
+    return { pass: null, skipped: true, reasons: [`vision unavailable: ${(err as Error).message}`] };
   }
 
-  const vision = await auditMealImageWithVision({
-    imageBuffer: buf,
-    title: target.title,
-    requirements: extractMealImageRequirementsForTarget(target),
-    ingredients: target.ingredients,
-    mealFormat: target.mealFormat,
-    cuisine: target.cuisine,
-    force,
-  });
-
-  if (vision.skipped) {
-    return { pass: null, skipped: true, reasons: vision.reasons };
-  }
-
-  if (vision.pass) {
-    return { pass: true, skipped: false, reasons: [] };
-  }
-
-  const reasons =
-    vision.reasons.filter((r) => r && r !== "vision_skipped").length > 0
-      ? vision.reasons.filter((r) => r && r !== "vision_skipped")
-      : [
-          vision.couldBelongToAnotherRecipe ? "image could belong to another recipe" : null,
-          vision.proteinOnly ? "protein-only hero" : null,
-          !vision.completeMeal ? "incomplete meal in hero" : null,
-        ].filter(Boolean) as string[];
-
+  const fidelity = recipeFidelity(verdict, recipe);
+  if (fidelity.status === "PASS") return { pass: true, skipped: false, reasons: [] };
+  if (fidelity.status === "FAIL") return { pass: false, skipped: false, reasons: fidelity.reasons };
   return {
-    pass: false,
+    pass: null,
     skipped: false,
-    reasons: reasons.length > 0 ? reasons : ["vision QA failed — image does not match title"],
+    reasons: [`vision inconclusive (${accuracyStatus(verdict)}) — needs human review: ${fidelity.reasons.join("; ")}`],
   };
 }
 
@@ -124,114 +154,103 @@ function quarantineHero(slug: string): string[] {
   return removed;
 }
 
+const cell = (text: string) => text.replace(/\|/g, "\\|");
+
+function table(rows: HeroImageValidationRow[], reasons: (row: HeroImageValidationRow) => string[], limit = 80): string {
+  if (rows.length === 0) return "_None._";
+  return [
+    "| Slug | Title | Hero | Reasons |",
+    "| --- | --- | --- | --- |",
+    ...rows.slice(0, limit).map(
+      (row) =>
+        `| \`${row.slug}\` | ${cell(row.title)} | \`${row.heroImage}\` | ${cell(reasons(row).slice(0, 3).join("; "))} |`,
+    ),
+  ].join("\n");
+}
+
 function renderMarkdown(
   report: ReturnType<typeof buildHeroImageValidationReport>,
   options: {
-    rootCause: string;
     visionMode: string;
     recipesFixed: string[];
     approvedTotals: { recipes: number; exploreEligible: number };
   },
 ): string {
+  const t = report.totals;
   const failed = report.rows.filter((row) => !row.pass);
-  const excludedDuplicates = report.rows.filter(
-    (row) =>
-      !row.exploreMapping.exploreEligible &&
-      row.criticalReasons.some((reason) => /reused across recipes|hero bytes match/i.test(reason)),
-  );
-  const warnings = report.rows.flatMap((row) =>
-    row.metadataIssues
-      .filter((issue) => issue.severity === "warning")
-      .map((issue) => ({ slug: row.slug, message: issue.message })),
-  );
+  const needsNewImage = report.rows.filter((row) => row.needsNewImage);
+  const semanticWarned = report.rows.filter((row) => row.semanticWarnings.length > 0);
+  const metadataWarned = report.rows.filter((row) => row.metadataWarnings.length > 0);
+  const notVerifiedReasons = new Map<string, number>();
+  for (const row of report.rows.filter((r) => r.semanticStatus === "not_verified")) {
+    for (const reason of row.semanticReasons) notVerifiedReasons.set(reason, (notVerifiedReasons.get(reason) ?? 0) + 1);
+  }
 
   const lines = [
     "# Hero image validation",
     "",
     `Generated: ${report.generatedAt}`,
     "",
-    "## Root cause",
-    "",
-    options.rootCause,
-    "",
     "## Summary",
     "",
-    `- Published recipes audited: **${report.totals.recipes}**`,
-    `- Approved catalog recipes: **${options.approvedTotals.recipes}** (explore-eligible after mapping: **${options.approvedTotals.exploreEligible}**)`,
-    `- Pass: **${report.totals.pass}**`,
-    `- Fail: **${report.totals.fail}**`,
-    `- Missing hero file: **${report.totals.missingHero}**`,
-    `- Metadata / duplicate conflicts: **${report.totals.metadataFail}**`,
-    `- Cross-recipe duplicate conflicts: **${report.totals.duplicateConflict}**`,
+    `- Published recipes audited: **${t.recipes}** (approved catalog: ${options.approvedTotals.recipes}, explore-eligible: ${options.approvedTotals.exploreEligible})`,
+    `- Pass: **${t.pass}** · Hard failures: **${t.fail}**`,
+    `  - File failures (missing, empty, malformed path, not an image): ${t.fileFailures} (missing: ${t.missingHero})`,
+    `  - Metadata failures (empty/placeholder alt, alt contradicts title): ${t.metadataFailures}`,
+    `  - Conflicting duplicate hero bytes: ${t.duplicateConflict}`,
+    `  - Vision-confirmed wrong dish: ${t.semanticFail}`,
+    `- Metadata warnings: **${t.metadataWarnings}** recipes`,
+    `- Semantic warnings (title/alt wording heuristics, not failures): **${t.semanticWarnings}** recipes`,
+    `- Semantic status — verified pass: **${t.semanticPass}**, verified fail: **${t.semanticFail}**, not verified: **${t.semanticNotVerified}**`,
+    `- Recipes requiring new images: **${t.needsNewImage}**`,
     `- Vision mode: **${options.visionMode}**`,
-    `- Vision failures: **${report.totals.visionFail}** (skipped: ${report.totals.visionSkipped})`,
     "",
   ];
 
   if (options.recipesFixed.length > 0) {
-    lines.push("## Recipes fixed", "", ...options.recipesFixed.map((s) => `- ${s}`), "");
-  } else {
-    lines.push(
-      "## Recipes fixed",
-      "",
-      "- `best-tuna-melt-for-the-hall` — quarantined wrong bootstrap donor hero (pasta bytes on melt title)",
-      "- `classic-patty-melt-for-the-crew` — quarantined duplicate of `smash-burgers`",
-      "- `hall-blt-sandwich-feed` — quarantined duplicate of `turkey-burgers`",
-      "- `30-minute-pasta-e-fagioli-for-the-hall` — quarantined duplicate of `chili-mac`",
-      "- `french-onion-soup-for-the-hall` — quarantined duplicate bootstrap copy",
-      "- `spaghetti-aglio-e-olio-for-the-hall` — quarantined duplicate of `five-ingredient-pasta`",
-      "",
-    );
-  }
-
-  if (excludedDuplicates.length > 0) {
-    lines.push(
-      "## Excluded from surfaces (duplicate heroes pending regen)",
-      "",
-      `_These ${excludedDuplicates.length} recipes are blocked from Explore/detail heroes until unique imagery is generated._`,
-      "",
-      ...excludedDuplicates.slice(0, 30).map((row) => `- \`${row.slug}\``),
-      "",
-    );
+    lines.push("## Quarantined this run", "", ...options.recipesFixed.map((s) => `- ${s}`), "");
   }
 
   lines.push(
-    "## Critical failures",
+    "## Hard failures",
     "",
-    failed.length === 0
-      ? "_None — all audited heroes pass._"
-      : [
-          "| Slug | Title | Hero | Reasons |",
-          "| --- | --- | --- | --- |",
-          ...failed.slice(0, 80).map((row) => {
-            const reasons = row.criticalReasons.slice(0, 3).join("; ").replace(/\|/g, "\\|");
-            return `| \`${row.slug}\` | ${row.title.replace(/\|/g, "\\|")} | \`${row.heroImage}\` | ${reasons} |`;
-          }),
-        ].join("\n"),
+    table(failed, (row) => row.hardFailures),
     "",
-    "## Remaining warnings",
+    "## Recipes requiring new images",
     "",
-    warnings.length === 0
+    "_Missing or invalid hero file, bytes that conflict with another recipe, or a vision-confirmed wrong dish._",
+    "",
+    table(needsNewImage, (row) =>
+      row.hardFailures.length ? row.hardFailures : ["hero bytes conflict with another recipe (excluded from Explore)"],
+    ),
+    "",
+    "## Semantic status not verified",
+    "",
+    t.semanticNotVerified === 0
+      ? "_Every hero was inspected by vision._"
+      : [...notVerifiedReasons].map(([reason, n]) => `- ${n} recipe(s): ${reason}`).join("\n"),
+    "",
+    "## Semantic warnings (wording heuristics)",
+    "",
+    "_Title/alt/path wording suggests a possible mismatch. These never fail the audit; confirm visually or run `--vision`._",
+    "",
+    table(semanticWarned, (row) => row.semanticWarnings),
+    "",
+    "## Metadata warnings",
+    "",
+    metadataWarned.length === 0
       ? "_None._"
-      : warnings
-          .slice(0, 40)
-          .map((w) => `- \`${w.slug}\`: ${w.message}`)
+      : metadataWarned
+          .slice(0, 60)
+          .map((row) => `- \`${row.slug}\`: ${row.metadataWarnings.join("; ")}`)
           .join("\n"),
-    "",
-    "## Manual QA checklist",
-    "",
-    "- [x] Automated audit across Explore surfaces (approved catalog + cross-collection MD5 index)",
-    "- [x] Homepage rails / category rails use slug-locked approved catalog entries",
-    "- [x] Explore grid thumb paths are collection-aware (`hall-expansion`, `breakfast`, `bbq` subfolders)",
-    `- [x] Random vision sample (${VISION_SAMPLE_SIZE} recipes when API key present)`,
-    "- [ ] Spot-check failed slugs in browser after quarantine/regen",
     "",
     "## Validation commands",
     "",
     "```bash",
-    "npm run check",
-    "npm run build",
+    "npm run test:hero-image-validation",
     "npm run audit:hero-images",
+    "npx tsx scripts/audit-hero-images.ts --vision",
     "```",
     "",
   );
@@ -241,6 +260,10 @@ function renderMarkdown(
 
 async function main(): Promise<void> {
   const args = parseArgs(process.argv.slice(2));
+  const visionRequested = args.vision || args.visionSample > 0;
+  if (visionRequested) applyDevOpenAiTlsIfAllowed();
+  const client = visionRequested && hasOpenAIKey() ? createOpenAIClient() : null;
+
   let targets = loadPublishedHeroValidationTargets();
   if (args.slugs?.length) {
     const wanted = new Set(args.slugs);
@@ -250,15 +273,16 @@ async function main(): Promise<void> {
   const context = buildGlobalHeroMd5Index(targets, PUBLIC);
   const peerLookup = buildGlobalHeroPeerLookup(targets);
 
-  const visionCandidates = new Set<string>();
-  if (args.vision || hasOpenAIKey()) {
-    const shuffled = seededShuffle(targets, 20260622);
-    const sample = args.vision ? shuffled : shuffled.slice(0, VISION_SAMPLE_SIZE);
-    for (const target of sample) visionCandidates.add(target.slug);
-  }
+  const sampled = new Set<string>(
+    args.vision
+      ? targets.map((t) => t.slug)
+      : seededShuffle(targets, 20260622)
+          .slice(0, args.visionSample)
+          .map((t) => t.slug),
+  );
 
   console.log(
-    `[audit:hero-images] targets=${targets.length} visionSample=${visionCandidates.size} quarantine=${args.quarantine}`,
+    `[audit:hero-images] targets=${targets.length} vision=${args.vision ? "all" : args.visionSample > 0 ? `sample ${args.visionSample} + flagged` : "off"} quarantine=${args.quarantine}`,
   );
 
   const rows: HeroImageValidationRow[] = [];
@@ -269,12 +293,14 @@ async function main(): Promise<void> {
     if (i % 50 === 0) console.log(`  validating ${i + 1}/${targets.length}…`);
 
     const base = validateHeroImageTarget(target, context, peerLookup, PUBLIC);
-    const shouldVision = args.vision ? visionCandidates.has(target.slug) : visionCandidates.has(target.slug);
-    const vision = shouldVision ? await runVision(base, args.vision) : { pass: null, skipped: true, reasons: [] };
+    const shouldVision =
+      visionRequested &&
+      (sampled.has(target.slug) || collectHeuristicHeroIssues(base.metadataIssues).length > 0);
+    const vision = shouldVision ? await runVision(base, target, client) : VISION_NOT_REQUESTED;
     const row = finalizeHeroValidationRow(base, vision);
     rows.push(row);
 
-    if (args.quarantine && !row.pass && row.heroOnDisk) {
+    if (args.quarantine && row.needsNewImage && row.heroOnDisk) {
       const removed = quarantineHero(row.slug);
       if (removed.length > 0) {
         recipesFixed.push(`\`${row.slug}\` — quarantined ${removed.length} asset(s): ${removed.join(", ")}`);
@@ -289,24 +315,17 @@ async function main(): Promise<void> {
     return row?.exploreMapping.exploreEligible ?? false;
   }).length;
 
-  const rootCause = [
-    "Hero files were saved at **correct slug-locked paths** but with **wrong image bytes** copied from bootstrap donors (`scripts/bootstrap-batch-b-images.ts`, `scripts/bootstrap-catalog-250-images.ts`).",
-    "Path-only audits passed because filenames matched slugs; cross-collection MD5 duplicate detection was missing from the approved-catalog explore index.",
-    "Explore grid thumbs also used a flat `/images/thumbs/{slug}.jpg` fallback that breaks `hall-expansion`, `breakfast`, and `bbq` collections.",
-  ].join(" ");
-
   const visionMode = args.vision
-    ? `full vision (${visionCandidates.size} recipes)`
-    : hasOpenAIKey()
-      ? `random sample (${visionCandidates.size}/${targets.length})`
-      : "metadata only (no OPENAI_API_KEY)";
+    ? `full vision (${targets.length} recipes)`
+    : args.visionSample > 0
+      ? `sample of ${args.visionSample} + heuristic-flagged recipes`
+      : "off — semantic correctness not verified";
 
   fs.mkdirSync(path.dirname(JSON_OUT), { recursive: true });
-  fs.writeFileSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
-  fs.writeFileSync(
+  writeFileAtomicSync(JSON_OUT, `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(
     MD_OUT,
     renderMarkdown(report, {
-      rootCause,
       visionMode,
       recipesFixed,
       approvedTotals: { recipes: approved.length, exploreEligible: approvedEligible },
@@ -314,11 +333,15 @@ async function main(): Promise<void> {
     "utf8",
   );
 
-  console.log(`[audit:hero-images] pass=${report.totals.pass} fail=${report.totals.fail}`);
+  const t = report.totals;
+  console.log(
+    `[audit:hero-images] pass=${t.pass} hardFail=${t.fail} metadataWarnings=${t.metadataWarnings} semanticWarnings=${t.semanticWarnings} ` +
+      `semantic(pass/fail/notVerified)=${t.semanticPass}/${t.semanticFail}/${t.semanticNotVerified} needsNewImage=${t.needsNewImage}`,
+  );
   console.log(`[audit:hero-images] wrote ${MD_OUT}`);
 
-  if (report.totals.fail > 0) {
-    console.error(`[audit:hero-images] FAILED — ${report.totals.fail} recipe(s) with hero/title mismatches`);
+  if (t.fail > 0) {
+    console.error(`[audit:hero-images] FAILED — ${t.fail} recipe(s) with hard hero-image failures`);
     process.exit(1);
   }
 }
@@ -327,3 +350,4 @@ main().catch((err) => {
   console.error(err);
   process.exit(1);
 });
+

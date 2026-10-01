@@ -27,6 +27,7 @@ import { RouteLoadingFallback } from "@/components/route-loading-fallback";
 import { PageTransition } from "@/components/page-transition";
 import { SkipToContent } from "@/components/skip-to-content";
 import Home from "@/pages/home";
+import { getRetiredGuide } from "@shared/editorial/retired-guides";
 const Generator = lazy(() => import("@/pages/generator"));
 const ShiftPlannerPage = lazy(() => import("@/pages/shift-planner"));
 const AdminGolden100Page = lazy(() => import("@/pages/admin-golden-100"));
@@ -92,6 +93,13 @@ const MeSettingsPage = lazy(() => import("@/pages/me-settings-page"));
 const MeShoppingListPage = lazy(() => import("@/pages/me-shopping-list-page"));
 const MePantryPage = lazy(() => import("@/pages/me-pantry-page"));
 const NotFound = lazy(() => import("@/pages/not-found"));
+
+/** Mirrors the server's retired-guide 301/410 for in-app navigation. */
+function RetiredGuideRedirectOr({ slug }: { slug: string }) {
+  const retired = getRetiredGuide(slug.trim().toLowerCase());
+  if (!retired) return <GuideArticlePage />;
+  return retired.target ? <Redirect to={`/guides/${retired.target}`} /> : <NotFound />;
+}
 
 function AppRoutes() {
   const [location] = useLocation();
@@ -183,8 +191,8 @@ function AppRoutes() {
       <Route path="/guides/firefighter-bbq-recipes">
         {() => <Redirect to="/firefighter-bbq-recipes" />}
       </Route>
-      <Route path="/guides/:slug" component={GuideArticlePage} />
-      <Route path="/blog/:slug" component={GuideArticlePage} />
+      <Route path="/guides/:slug">{(params) => <RetiredGuideRedirectOr slug={params.slug} />}</Route>
+      <Route path="/blog/:slug">{(params) => <RetiredGuideRedirectOr slug={params.slug} />}</Route>
       <Route path="/families" component={FamiliesIndexPage} />
       {/* Firehall Meals Shop — literal routes before the /:slug catch-all */}
       <Route path="/shop/order-success" component={ShopOrderSuccessPage} />

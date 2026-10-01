@@ -24,6 +24,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import crypto from "node:crypto";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const asJson = process.argv.includes("--json");
@@ -224,7 +225,7 @@ function main(): void {
   };
 
   fs.mkdirSync(path.join(process.cwd(), "review"), { recursive: true });
-  fs.writeFileSync(
+  writeFileAtomicSync(
     path.join(process.cwd(), "review", "full-catalog-image-integrity-audit.json"),
     `${JSON.stringify(report, null, 2)}\n`,
     "utf8",

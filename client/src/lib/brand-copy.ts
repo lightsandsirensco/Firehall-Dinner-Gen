@@ -3,6 +3,8 @@
  * Firefighter-built, kitchen-table practical. No catalog/startup speak.
  */
 
+import { SEO_HOME_H1, SEO_HOME_H1_SUPPORT } from "@shared/seo/constants";
+
 export const BRAND_NAME = "Firehall Meals";
 
 export const BRAND_TAGLINE = "Built by Firefighters. Tested in the Firehall.";
@@ -154,8 +156,8 @@ export const GENERATOR = {
 export const HOME = {
   /** Visible hero — kitchen-table voice; one problem, one fix. */
   heroEyebrow: "Built by firefighters • For every shift",
-  heroHeadline: 'End the "What\'s for Dinner?" Debate.',
-  heroLead: "Great meals for home, the hall, and every shift in between.",
+  heroHeadline: SEO_HOME_H1,
+  heroLead: SEO_HOME_H1_SUPPORT,
   heroPunchlines: ["No recipe blogs.", "No group chat.", "No arguing."] as const,
   heroPrimaryCta: "Pick Tonight's Meal",
   heroSecondaryCta: "Can't Decide? Spin the Wheel",
@@ -163,8 +165,6 @@ export const HOME = {
   /** @deprecated Use heroLead + heroPunchlines */
   heroSubheadline:
     "Pick a meal, let the crew vote, and get cooking.",
-  /** @deprecated Use heroHeadline */
-  h1: "Firefighter Meals & Firehall Recipes",
   eyebrow: "Your shift kitchen",
   subline:
     "The meal app for firefighters — pick tonight's dinner, save what you love, and optionally link your hall for crew planning.",

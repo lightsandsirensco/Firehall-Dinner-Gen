@@ -48,6 +48,10 @@ const COLLECTION_CATEGORY: Record<string, string> = {
 const HIDDEN_GROUP = /batter|marinade|brine|custard|dredge|egg wash|^cook(ing)?$|for (the )?(pan|griddle)|frying/i;
 const PANTRY =
   /^((kosher|sea|table|fine) )?salt\b|black pepper|cooking spray|(vegetable|canola|neutral|olive|avocado) oil|^water$|^ice$|baking (soda|powder)|^(all-purpose )?flour$|^(granulated )?sugar$|vanilla extract/i;
+// Dry spices, seasoning blends and cooking liquids dissolve into the dish; listing
+// them crowds real toppings out of the prompt's capped ingredient line.
+const SEASONING =
+  /^(ground )?(cumin|turmeric|garam masala|chili powder|(smoked )?paprika|cayenne|coriander|cinnamon|nutmeg)$|(garlic|onion) powder|seasoning$|^dried (thyme|oregano|basil|rosemary)|^bay leaf|red pepper flakes|\b(broth|stock)$|vinegar$|^cornstarch$|pickle juice/i;
 
 const PLATED_EGG_TITLE = /\begg|omelet|frittata|benedict|scramble|shakshuka|huevos|quiche|strata/i;
 const WHOLE_EGG =
@@ -77,12 +81,13 @@ const PROTEIN_WORDS = [
   "black bean",
 ];
 
+// "Burrito Bowls" / "Burger Bowls" are served in a bowl, so bowl wins over handheld words.
 const FORMAT_WORDS: Array<[RegExp, string]> = [
+  [/bowl/i, "bowl"],
   [/sandwich|monte cristo|sub\b|hoagie|panini|po.?boy|melt\b|club\b/i, "sandwich"],
   [/burger|slider/i, "burger"],
   [/taco/i, "tacos"],
   [/burrito|wrap/i, "wrap"],
-  [/bowl/i, "bowl"],
   [/pizza|flatbread/i, "pizza"],
   [/soup|chowder|bisque/i, "soup"],
   [/chili|stew|curry/i, "stew"],
@@ -158,6 +163,7 @@ function isHiddenIngredient(ing: RecipeIngredientLike, platesEgg: boolean): bool
   if (!name) return true;
   if (HIDDEN_GROUP.test(ing.group ?? "")) return true;
   if (PANTRY.test(name)) return true;
+  if (SEASONING.test(name)) return true;
   if (/\begg/i.test(name) && !platesEgg) return true;
   return false;
 }
@@ -179,7 +185,7 @@ export function inferMealFormat(title: string): string | undefined {
 }
 
 export function inferProteinLabel(page: RecipePageLike): string {
-  const blob = blobOf(page);
+  const blob = blobOf(page).replace(/\b(chicken|beef|turkey|pork|fish|seafood)\s+(broth|stock|bouillon|base)\b/g, "");
   const found = PROTEIN_WORDS.filter((w) => new RegExp(`\\b${w}`, "i").test(blob));
   if (found.length) return found.slice(0, 3).join(" and ");
   return page.dietary?.flags?.vegetarian ? "vegetarian (no meat)" : "none";
@@ -218,8 +224,14 @@ export function deriveAvoidItems(page: RecipePageLike, extra: string[] = []): st
   return [...new Set([...extra.map((e) => e.trim()).filter(Boolean), ...avoid, "side dishes not in the recipe"])];
 }
 
+// Holding, leftover and food-safety steps describe storage containers, not the plate.
+const NON_SERVING_STEP =
+  /hold for|call interruption|tones drop|leftovers?|pack down|within two hours|refrigerat|reheat|\bstore\b|delayed (line|service)|if service is delayed|room temperature/i;
+
 function servingLine(page: RecipePageLike): string {
-  const last = page.steps?.[page.steps.length - 1]?.instruction ?? "";
+  const steps = page.steps ?? [];
+  const serving = [...steps].reverse().find((s) => !NON_SERVING_STEP.test(`${s.title ?? ""} ${s.instruction ?? ""}`));
+  const last = (serving ?? steps[steps.length - 1])?.instruction ?? "";
   return last.length > 220 ? `${last.slice(0, 217)}…` : last;
 }
 
@@ -244,12 +256,40 @@ export function buildRecipeImagePromptInput(
   };
 }
 
-/** Alt text derived from the recipe, not from the image filename. */
-export function buildRecipeImageAlt(page: RecipePageLike): string {
+const ALT_MAX = 160;
+const SERVING_TAIL =
+  /\s*(?:—\s*)?(?:(?:sheet-pan )?batch )?(?:for (?:a |the )?(?:hungry )?(?:crew|hall|ten|eight|twelve|twenty|\d+)|in a make-ahead \w+)$/i;
+
+function joinFoods(items: string[]): string {
+  if (items.length <= 2) return items.join(" and ");
+  return `${items.slice(0, -1).join(", ")}, and ${items[items.length - 1]}`;
+}
+
+/**
+ * Alt text derived from the recipe, not from the image filename. When vision QA has listed
+ * the foods in this exact photo, the alt names them instead of the recipe's marketing subtitle.
+ */
+export function buildRecipeImageAlt(page: RecipePageLike, visibleFoods?: string[]): string {
   const title = (page.title ?? page.slug).trim();
-  const summary = (page.subtitle || page.description || "").split(/(?<=\.)\s/)[0]?.trim().replace(/\.$/, "") ?? "";
+  if (visibleFoods?.length) {
+    const stem = (w: string) => w.replace(/s$/, "");
+    const titleWords = new Set((title.toLowerCase().match(/[a-z]+/g) ?? []).map(stem));
+    const extra = visibleFoods
+      .map((f) => f.trim())
+      .filter((f) => f && !(f.toLowerCase().match(/[a-z]{3,}/g) ?? []).every((w) => titleWords.has(stem(w))));
+    for (let n = extra.length; n > 0; n--) {
+      const alt = `${title} — ${joinFoods(extra.slice(0, n))}`;
+      if (alt.length <= ALT_MAX) return alt;
+    }
+    return title;
+  }
+  const summary = ((page.subtitle || page.description || "").split(/(?<=\.)\s/)[0] ?? "")
+    .trim()
+    .replace(/\.$/, "")
+    .replace(SERVING_TAIL, "")
+    .trim();
   if (!summary) return title;
   const lead = summary.charAt(0).toLowerCase() + summary.slice(1);
   const alt = `${title} — ${lead}`;
-  return alt.length > 160 ? `${alt.slice(0, 157)}…` : alt;
+  return alt.length > ALT_MAX ? `${alt.slice(0, ALT_MAX - 3)}…` : alt;
 }

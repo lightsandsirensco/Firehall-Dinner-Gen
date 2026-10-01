@@ -24,6 +24,7 @@ import {
 } from "../server/curated-recipe-store.js";
 import { runLocalFirstGeneratePipeline } from "../server/generation/local-first-pipeline.js";
 import { flushSqliteToDisk, releaseSqliteTimersForTests } from "../server/sqlite.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const RUNS_PER_CATEGORY = 25;
 const OUT_JSON = path.join(process.cwd(), "review", "generator-category-audit.json");
@@ -136,7 +137,7 @@ async function main(): Promise<void> {
   };
 
   fs.mkdirSync(path.dirname(OUT_JSON), { recursive: true });
-  fs.writeFileSync(OUT_JSON, JSON.stringify(report, null, 2));
+  writeFileAtomicSync(OUT_JSON, JSON.stringify(report, null, 2));
 
   const md = [
     "# Generator category audit",
@@ -152,7 +153,7 @@ async function main(): Promise<void> {
     "",
     totalFailures === 0 ? "**PASS** — 0 out-of-category results." : `**FAIL** — ${totalFailures} mismatches.`,
   ].join("\n");
-  fs.writeFileSync(OUT_MD, md);
+  writeFileAtomicSync(OUT_MD, md);
 
   await flushSqliteToDisk();
   releaseSqliteTimersForTests();

@@ -4,8 +4,7 @@
  */
 
 export function buildRecipeHeroAlt(title: string): string {
-  const t = title.trim();
-  return `${t} — firefighter meal served for a firehall crew dinner`;
+  return title.trim();
 }
 
 export function buildRecipeCardAlt(title: string): string {

@@ -1,117 +1,190 @@
 {
   "slug": "easy-firehall-pasta-recipes",
-  "title": "Easy Firehall Pasta Recipes",
-  "subtitle": "Feeds a crew without a culinary degree",
-  "description": "Easy firehall pasta recipes: baked ziti, garlic butter pasta, stroganoff, chicken parm, and one-skillet alfredo for station dinners.",
+  "title": "Pasta for a Crowd: How Much to Cook and How to Keep It From Going Soft",
+  "subtitle": "Quantities and sauce for 4 to 12, how to cook several pounds at once, and how to handle pasta when dinner might have to wait.",
+  "description": "How much dry pasta and sauce to cook for 4 to 12 people, how to boil several pounds at once, and how to hold pasta for a crew so it doesn't go mushy.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Pasta is hall currency — cheap, familiar, and scalable. Easy firehall pasta recipes focus on one pot or one tray, sauce that can be held hot, and protein mixed in so plates feel complete. Nuance is optional; volume is not. Below: what halls actually cook for firehall pasta recipes — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "Plan on 4 oz (115 g) of dry pasta per hungry adult when pasta is the main dish: 2 lb for 8 people, 2 1/2 lb for 10 and 3 lb for 12. The 2 oz serving on the box is a side portion. For sauce, one 24 oz (680 ml) jar, or about 3 cups of homemade sauce, per pound of pasta is a good starting point. What goes wrong at a station is usually timing rather than quantity: pasta keeps absorbing liquid after it is drained, so a pot that is perfect at 6:00 is soft by 6:45.",
   "sections": [
     {
-      "id": "bake-vs-skillet",
-      "heading": "Bake vs skillet — pick one",
+      "id": "quantities",
+      "heading": "How much pasta and sauce for 4 to 12 people",
       "paragraphs": [
-        "Bakes (ziti, lasagna) feed the most people with the least active time. Skillet pastas (alfredo, garlic butter) finish faster when the board is loud.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "Use the main-dish column when pasta is the meal and the side column when it sits next to a protein. Thick sauces with meat, such as Bolognese, stretch a little further than thin tomato sauces; creamy sauces go further still because they are richer."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      "table": {
+        "caption": "Dry pasta, sauce and pot size by crew size",
+        "columns": [
+          "Crew",
+          "Pasta as main",
+          "Pasta as side",
+          "Sauce",
+          "Pot"
+        ],
+        "rows": [
+          [
+            "4",
+            "1 lb (450 g)",
+            "1/2 lb (225 g)",
+            "3 cups (1 jar)",
+            "6 qt, about 4 qt of water"
+          ],
+          [
+            "6",
+            "1 1/2 lb (680 g)",
+            "3/4 lb (340 g)",
+            "4 1/2 cups",
+            "8 qt"
+          ],
+          [
+            "8",
+            "2 lb (900 g)",
+            "1 lb (450 g)",
+            "6 cups",
+            "12 qt, or two pots"
+          ],
+          [
+            "10",
+            "2 1/2 lb (1.1 kg)",
+            "1 1/4 lb (570 g)",
+            "7 1/2 cups",
+            "16 qt, or two pots"
+          ],
+          [
+            "12",
+            "3 lb (1.4 kg)",
+            "1 1/2 lb (680 g)",
+            "9 cups",
+            "16 to 20 qt, or two pots"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "big-batch",
+      "heading": "Cooking several pounds at once",
+      "paragraphs": [
+        "The traditional ratio is about 4 quarts of water per pound of pasta, which gets unwieldy past 2 lb. You can use less water as long as you stir often during the first two minutes, when the surface starch is sticky and the pieces are most likely to clump. Two pots on two burners is often faster than one giant pot, because a very large volume of water takes a long time to boil on a home-style range."
+      ],
+      "steps": [
+        "Start the water first, covered, because it takes longer to boil than anything else in the meal.",
+        "Salt the water once it boils so it tastes noticeably seasoned; this is the only chance to season the pasta itself.",
+        "Add the pasta gradually and stir well for the first two minutes to stop it sticking.",
+        "Start timing when the water returns to a boil, and taste a piece a minute or two before the package time.",
+        "Scoop out 2 cups of cooking water before draining; its starch helps the sauce cling and loosens pasta that has tightened up.",
+        "Skip the oil in the cooking water. It doesn't stop sticking, and it coats the pasta so the sauce slides off."
       ]
     },
     {
-      "id": "sauce",
-      "heading": "Sauce that survives the line",
+      "id": "holding",
+      "heading": "Holding pasta when dinner might be delayed",
       "paragraphs": [
-        "Hold sauce slightly loose — pasta keeps absorbing. Refresh with pasta water or butter at service instead of cooking dry in the tray.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "If a pasta dinner might be interrupted, cook the pasta slightly short of al dente and keep it separate from the sauce until the crew is ready to eat. Fully dressed pasta continues absorbing liquid while it sits and can become soft before everyone gets back to the station.",
+        "Drain the pasta about two minutes early, toss it with a spoonful of oil so it doesn't stick together, and spread it on a sheet pan so it stops cooking. Keep the sauce hot in its own pot. To serve, drop the pasta into boiling water for 30 to 60 seconds, or toss it in the simmering sauce for a minute or two with a splash of the reserved cooking water. Cooked pasta follows the same rule as other cooked food: refrigerate it if it will sit at room temperature for more than two hours."
       ]
     },
     {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
+      "id": "baked-pasta",
+      "heading": "Baked pasta is the interruption-proof version",
       "paragraphs": [
-        "For firehall pasta recipes, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
-      ],
-      "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
+        "Baked ziti, lasagna and pasta bakes can be assembled hours ahead, refrigerated, and baked when the crew is close to eating. Undercook the pasta by 2 to 3 minutes before it goes in the dish, because it keeps absorbing sauce in the oven, and use a little more sauce than seems necessary for the same reason. A dish going straight from the fridge into the oven often needs an hour or more; bake it covered and check that the centre reaches 165°F (74°C) before serving.",
+        "Short, sturdy shapes with ridges or tubes, such as rigatoni, penne and ziti, hold sauce and survive holding and baking. Thin long pasta like angel hair goes soft fastest and is the worst choice when dinner might wait."
       ]
     }
   ],
   "practicalAdvice": [
-    "Salt the pasta water hard — it carries the dish.",
-    "Finish with butter or good olive oil if sauce is thin.",
-    "Hold pasta slightly underdone if it will sit — it finishes in the tray.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "Plan 4 oz (115 g) of dry pasta per person as a main and about 3 cups of sauce per pound.",
+    "Use two pots for more than 2 lb, and stir hard in the first two minutes.",
+    "If dinner might be delayed, drain the pasta two minutes early and keep it separate from the sauce.",
+    "Choose baked pasta on busy nights; undercook the pasta by 2 to 3 minutes before baking."
   ],
   "mealRecommendations": [
     {
       "slug": "baked-ziti",
       "title": "Baked Ziti",
-      "blurb": "Tray bake — crew classic."
-    },
-    {
-      "slug": "five-ingredient-pasta",
-      "title": "Garlic Butter Pasta",
-      "blurb": "Fastest pantry save."
-    },
-    {
-      "slug": "beef-stroganoff",
-      "title": "Beef Stroganoff",
-      "blurb": "Hearty noodle night."
-    },
-    {
-      "slug": "chicken-parm",
-      "title": "Chicken Parmesan",
-      "blurb": "Over pasta — hall tradition."
-    },
-    {
-      "slug": "skillet-chicken-alfredo",
-      "title": "Chicken Alfredo",
-      "blurb": "Creamy skillet finish."
+      "blurb": "The standard crew pasta: assemble early, bake late, and it holds covered if the crew gets called."
     },
     {
       "slug": "batch-lasagna",
       "title": "Batch Lasagna",
-      "blurb": "Maximum pasta for big tables."
+      "blurb": "Built ahead and baked on schedule; slices cleanly once it rests."
+    },
+    {
+      "slug": "five-ingredient-pasta",
+      "title": "Five-Ingredient Pasta",
+      "blurb": "A fast weeknight pasta for the nights when the crew is actually sitting down on time."
+    },
+    {
+      "slug": "skillet-chicken-alfredo",
+      "title": "Chicken Alfredo",
+      "blurb": "Keep the sauce and pasta separate until serving so the cream sauce doesn't tighten."
+    },
+    {
+      "slug": "chicken-parm",
+      "title": "Chicken Parmesan",
+      "blurb": "Serve the chicken over pasta cooked at the last minute for the best texture."
     },
     {
       "slug": "30-minute-pasta-e-fagioli-for-the-hall",
-      "title": "30-Minute Pasta e Fagioli for the Hall",
-      "blurb": "Bean-and-pasta soup that lands in half an hour."
+      "title": "Pasta e Fagioli",
+      "blurb": "A pasta soup that holds; cook the pasta separately if the pot will sit."
     },
     {
       "slug": "spaghetti-aglio-e-olio-for-the-hall",
-      "title": "Spaghetti Aglio e Olio for the Hall",
-      "blurb": "Garlic, oil, and pasta — emulsified the right way."
+      "title": "Spaghetti Aglio e Olio",
+      "blurb": "Pantry pasta for a quiet night; it doesn't hold, so cook it to order."
+    },
+    {
+      "slug": "beef-stroganoff",
+      "title": "Beef Stroganoff",
+      "blurb": "Egg noodles cooked separately and sauced at the table stay intact."
     }
   ],
   "faqs": [
     {
-      "question": "What's the easiest pasta dish for a big crew?",
-      "answer": "A baked ziti or lasagna — assemble it in a tray, put it in the oven, and it feeds the whole hall with almost no active time once it's in. Skillet pastas like garlic butter or alfredo are faster if the board is loud and dinner needs to happen in under 30 minutes."
+      "question": "How much pasta do I need for 10 adults?",
+      "answer": "2 1/2 lb (1.1 kg) of dry pasta if it is the main dish, or about 1 1/4 lb (570 g) as a side. Budget about 7 1/2 cups of sauce for the main-dish amount."
     },
     {
-      "question": "How do you keep pasta from drying out if it sits before people eat?",
-      "answer": "Hold the sauce slightly loose since the pasta keeps absorbing liquid, and refresh it with a splash of pasta water or butter at service instead of cooking it dry in the tray."
+      "question": "How much sauce do I need for 3 lb of pasta?",
+      "answer": "About 9 cups (2.1 L), or three 24 oz (680 ml) jars. Add a little more if the pasta is going to be baked or held, since it keeps absorbing sauce."
+    },
+    {
+      "question": "Should I rinse pasta after cooking?",
+      "answer": "Not for hot dishes. Rinsing washes off the surface starch that helps sauce cling. The exception is cold pasta salad, where rinsing stops the cooking and keeps the pasta from clumping as it cools."
+    },
+    {
+      "question": "Can I cook pasta ahead of time for a crowd?",
+      "answer": "Yes. Cook it about two minutes short, drain it, toss it with a little oil and spread it out to cool, then refrigerate it if it won't be used within two hours. Reheat it in boiling water for 30 to 60 seconds or in hot sauce."
     }
   ],
   "relatedArticleSlugs": [
+    "cooking-for-10-firefighters",
+    "feeding-a-firehall-crew",
     "one-pot-firehall-meals"
   ],
   "keywords": [
-    "firehall pasta recipes",
-    "easy pasta crew dinner",
-    "fire station pasta"
+    "how much pasta for 8 people",
+    "how much pasta for 10 people",
+    "pasta for a crowd",
+    "firehouse pasta recipes",
+    "keeping pasta warm"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Easy Firehall Pasta Recipes — firehall pasta recipes tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 8,
+  "seoTitle": "How Much Pasta for 8 or 10 People (and How to Hold It)",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    }
+  ]
 }

@@ -13,6 +13,7 @@ import { isHallClassicSlug } from "../shared/hall-catalog/gate.js";
 import type { GoldenRecipePage } from "../shared/golden-100/recipe-page-schema.js";
 import { auditRecipeDetailBatch } from "../shared/golden-100/recipe-quality/recipe-detail-audit.js";
 import { breakfastPageToGolden, smoothiePageToGolden } from "../shared/golden-100/recipe-quality/detail-rewrite-engine.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const PUBLIC = path.join(ROOT, "client", "public");
@@ -92,7 +93,7 @@ function main(): void {
   );
 
   fs.mkdirSync(REVIEW, { recursive: true });
-  fs.writeFileSync(path.join(REVIEW, "recipe-detail-audit.json"), `${JSON.stringify(report, null, 2)}\n`);
+  writeFileAtomicSync(path.join(REVIEW, "recipe-detail-audit.json"), `${JSON.stringify(report, null, 2)}\n`);
   const md = [
     "# Recipe Detail Audit",
     "",
@@ -107,7 +108,7 @@ function main(): void {
       .slice(0, 40)
       .map((r) => `- \`${r.slug}\` — ${r.issues.slice(0, 3).join("; ")}`),
   ];
-  fs.writeFileSync(path.join(REVIEW, "recipe-detail-audit.md"), `${md.join("\n")}\n`);
+  writeFileAtomicSync(path.join(REVIEW, "recipe-detail-audit.md"), `${md.join("\n")}\n`);
 
   console.log(`[audit:recipe-detail] batch=${batch} pass=${report.totals.pass}/${report.totals.recipes}`);
   if (report.totals.fail > 0) {

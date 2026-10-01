@@ -2497,10 +2497,10 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 897,
-        "protein": 65,
+        "calories": 752,
+        "protein": 74,
         "carbs": 42,
-        "fat": 54,
+        "fat": 31,
         "numericFilterEligible": true
       },
       "avoidTags": [
@@ -5345,7 +5345,7 @@
           "soyFree": true,
           "shellfishFree": true,
           "fishFree": true,
-          "porkFree": true,
+          "porkFree": false,
           "vegetarian": false,
           "vegan": false
         },
@@ -5360,12 +5360,12 @@
       "nutritionSummary": {
         "highProtein": true,
         "lowCarb": false,
-        "healthy": true,
+        "healthy": false,
         "estimateAvailable": true,
-        "calories": 529,
-        "protein": 39,
+        "calories": 639,
+        "protein": 51,
         "carbs": 49,
-        "fat": 20,
+        "fat": 27,
         "numericFilterEligible": true
       },
       "avoidTags": [

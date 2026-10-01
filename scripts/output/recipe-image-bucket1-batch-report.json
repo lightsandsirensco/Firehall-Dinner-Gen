@@ -1,0 +1,300 @@
+{
+    "bucket":  "BUCKET 1 — missing images + unquestionably misleading food images",
+    "run":  "2026-09-28",
+    "resumedRun":  "2026-09-30",
+    "status":  "COMPLETE — 20/20 generated, passed vision QA + manual inspection, written",
+    "selectionBasis":  "Order 1 (completely missing hero). 35 live, indexed recipes have no hero file on disk; all 35 pass the title/ingredient conflict check. Batch capped at 20, so no P1 accuracy items were reached.",
+    "rerun":  "npm run images:regen -- --only=\u003ccomma-separated keys below\u003e",
+    "previousRun":  {
+                        "status":  "BLOCKED — OpenAI Images API 429: no credits remaining",
+                        "failed":  [
+                                       {
+                                           "key":  "breakfast/high-protein-breakfast-burrito-bowls",
+                                           "reason":  "3/3 attempts: OpenAI Images API 429 \u0027You have no credits remaining\u0027. No image written; logged to recipe-image-regen-failures.json."
+                                       }
+                                   ]
+                    },
+    "attempted":  [
+                      "breakfast/high-protein-breakfast-burrito-bowls",
+                      "breakfast/berry-vanilla-protein-overnight-oats",
+                      "breakfast/black-bean-egg-white-breakfast-burritos",
+                      "breakfast/cottage-cheese-veggie-egg-bake",
+                      "breakfast/egg-white-black-bean-breakfast-quesadillas",
+                      "breakfast/firehouse-breakfast-protein-bowls",
+                      "breakfast/peanut-butter-protein-overnight-oats",
+                      "breakfast/savory-cottage-cheese-breakfast-bowls",
+                      "breakfast/turkey-bacon-white-bean-breakfast-hash",
+                      "breakfast/turkey-sausage-egg-white-sandwiches",
+                      "breakfast/turkey-sausage-spinach-feta-egg-white-scramble",
+                      "breakfast/turkey-sausage-sweet-potato-skillet",
+                      "hall-expansion/blackened-salmon-sweet-potato-bowls",
+                      "hall-expansion/cajun-lime-shrimp-black-bean-bowls",
+                      "hall-expansion/firehouse-chicken-black-bean-bowls",
+                      "hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls",
+                      "hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls",
+                      "hall-expansion/honey-mustard-turkey-meatball-bowls",
+                      "hall-expansion/lemon-herb-cod-roasted-vegetables",
+                      "hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes"
+                  ],
+    "replaced":  [
+                     {
+                         "key":  "breakfast/high-protein-breakfast-burrito-bowls",
+                         "hero":  "/images/breakfast/high-protein-breakfast-burrito-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/berry-vanilla-protein-overnight-oats",
+                         "hero":  "/images/breakfast/berry-vanilla-protein-overnight-oats.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  2,
+                         "retryNote":  "attempt 1 rejected: served in a bowl instead of a jar",
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/black-bean-egg-white-breakfast-burritos",
+                         "hero":  "/images/breakfast/black-bean-egg-white-breakfast-burritos.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "P3",
+                         "postAuditNotes":  [
+                                                "accuracy: yellow onion not visible",
+                                                "accuracy: pepper jack cheese not visible"
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/cottage-cheese-veggie-egg-bake",
+                         "hero":  "/images/breakfast/cottage-cheese-veggie-egg-bake.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/egg-white-black-bean-breakfast-quesadillas",
+                         "hero":  "/images/breakfast/egg-white-black-bean-breakfast-quesadillas.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/firehouse-breakfast-protein-bowls",
+                         "hero":  "/images/breakfast/firehouse-breakfast-protein-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/peanut-butter-protein-overnight-oats",
+                         "hero":  "/images/breakfast/peanut-butter-protein-overnight-oats.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  2,
+                         "retryNote":  "attempt 1 rejected: served in a bowl instead of a jar",
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/savory-cottage-cheese-breakfast-bowls",
+                         "hero":  "/images/breakfast/savory-cottage-cheese-breakfast-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/turkey-bacon-white-bean-breakfast-hash",
+                         "hero":  "/images/breakfast/turkey-bacon-white-bean-breakfast-hash.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/turkey-sausage-egg-white-sandwiches",
+                         "hero":  "/images/breakfast/turkey-sausage-egg-white-sandwiches.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/turkey-sausage-spinach-feta-egg-white-scramble",
+                         "hero":  "/images/breakfast/turkey-sausage-spinach-feta-egg-white-scramble.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "breakfast/turkey-sausage-sweet-potato-skillet",
+                         "hero":  "/images/breakfast/turkey-sausage-sweet-potato-skillet.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "hall-expansion/blackened-salmon-sweet-potato-bowls",
+                         "hero":  "/images/hall-expansion/blackened-salmon-sweet-potato-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "hall-expansion/cajun-lime-shrimp-black-bean-bowls",
+                         "hero":  "/images/hall-expansion/cajun-lime-shrimp-black-bean-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "P3",
+                         "postAuditNotes":  [
+                                                "accuracy: lime wedge instead of lime juice"
+                                            ]
+                     },
+                     {
+                         "key":  "hall-expansion/firehouse-chicken-black-bean-bowls",
+                         "hero":  "/images/hall-expansion/firehouse-chicken-black-bean-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls",
+                         "hero":  "/images/hall-expansion/garlic-steak-broccoli-cottage-cheese-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls",
+                         "hero":  "/images/hall-expansion/high-protein-chicken-quinoa-meal-prep-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  2,
+                         "retryNote":  "attempt 1 rejected: bowl instead of meal-prep containers",
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "hall-expansion/honey-mustard-turkey-meatball-bowls",
+                         "hero":  "/images/hall-expansion/honey-mustard-turkey-meatball-bowls.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     },
+                     {
+                         "key":  "hall-expansion/lemon-herb-cod-roasted-vegetables",
+                         "hero":  "/images/hall-expansion/lemon-herb-cod-roasted-vegetables.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "P3",
+                         "postAuditNotes":  [
+                                                "accuracy: lemon slices visible â€” recipe uses lemon juice"
+                                            ]
+                     },
+                     {
+                         "key":  "hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+                         "hero":  "/images/hall-expansion/sheet-pan-lemon-chicken-broccoli-sweet-potatoes.jpg",
+                         "previous":  "missing (no hero file on disk)",
+                         "attempts":  1,
+                         "retryNote":  null,
+                         "postAuditPriority":  "PASS",
+                         "postAuditNotes":  [
+
+                                            ]
+                     }
+                 ],
+    "failed":  [
+
+               ],
+    "skipped":  [
+
+                ],
+    "imageGenerationCalls":  23,
+    "postBatchAudit":  {
+                           "reviewQueueBefore":  337,
+                           "reviewQueueAfter":  315,
+                           "batchPass":  17,
+                           "batchP3Minor":  3
+                       },
+    "stillMissingOutsideBatch":  [
+                                     "hall-expansion/black-bean-cottage-cheese-enchilada-bake",
+                                     "hall-expansion/chickpea-pasta-primavera-white-beans",
+                                     "hall-expansion/cottage-cheese-spinach-stuffed-shells",
+                                     "hall-expansion/firehouse-dense-bean-salad",
+                                     "hall-expansion/firehouse-diner-burger-bowls",
+                                     "hall-expansion/firehouse-lentil-chili",
+                                     "hall-expansion/firehouse-sweet-potato-beef-protein-bowls",
+                                     "hall-expansion/firehouse-turkey-white-bean-soup",
+                                     "hall-expansion/greek-yogurt-white-bean-power-bowls",
+                                     "hall-expansion/loaded-firehouse-sweet-potatoes",
+                                     "hall-expansion/paneer-tikka-masala-bowls",
+                                     "hall-expansion/red-lentil-paneer-dal",
+                                     "hall-expansion/sesame-ginger-tofu-bowls",
+                                     "hall-expansion/southwest-black-bean-corn-bowls",
+                                     "hall-expansion/tempeh-peanut-buddha-bowls"
+                                 ],
+    "pipelineFixesMadeBeforeGeneration":  [
+                                              "recipe-image-prompt.ts: \u0027bowl\u0027 now wins format inference (\u0027Burrito Bowls\u0027 / \u0027Burger Bowls\u0027 were being prompted as wraps / burgers)",
+                                              "recipe-image-prompt.ts: broth/stock/bouillon no longer counted as a visible protein (turkey soup was prompted as \u0027chicken and turkey\u0027)",
+                                              "plating-type.ts: bowl template no longer injects \u0027glazed protein, green onion and sesame garnish\u0027",
+                                              "plating-type.ts: wrap template no longer forces lettuce cups/leaves onto tortilla burritos",
+                                              "plating-type.ts: salad template no longer forces greens; casserole template no longer forces a melted (cheese) top",
+                                              "regen-recipe-images.ts: stops the whole run on systemic API failures (no credits, quota/billing, 401/403, unknown model) instead of retrying every target"
+                                          ]
+}

@@ -77,33 +77,16 @@ const LANDING_COPY: Record<string, LandingCopy> = {
  * unassigned guides").
  */
 const GUIDE_LANDING_MAP: Record<string, string> = {
-  // Breakfast guides -> /firefighter-breakfast-recipes
-  "firefighter-breakfast-ideas": "/firefighter-breakfast-recipes",
+  // Breakfast guide -> /firefighter-breakfast-recipes
   "firefighter-breakfast-guide": "/firefighter-breakfast-recipes",
-  "firehall-breakfast-and-brunch": "/firefighter-breakfast-recipes",
 
   // BBQ guide -> /firefighter-bbq-recipes
   "bbq-night-at-the-station": "/firefighter-bbq-recipes",
 
-  // Healthy / nutrition guides (all of `nutrition_performance`, minus the
-  // smoothies guide, which links its own more precise hub instead — see
-  // below) -> /healthy-firefighter-meals
-  "avoid-living-on-takeout": "/healthy-firefighter-meals",
-  "best-foods-for-long-shifts": "/healthy-firefighter-meals",
-  "eating-during-high-stress-shifts": "/healthy-firefighter-meals",
-  "eating-well-on-24-hour-shifts": "/healthy-firefighter-meals",
-  "firefighter-recovery-nutrition": "/healthy-firefighter-meals",
-  "healthy-meals-for-active-crews": "/healthy-firefighter-meals",
+  // Healthy-cooking guides -> /healthy-firefighter-meals
   "healthy-meals-that-still-taste-good": "/healthy-firefighter-meals",
   "healthy-station-snacks": "/healthy-firefighter-meals",
   "high-protein-firehall-meals": "/healthy-firefighter-meals",
-  "hydration-for-firefighters": "/healthy-firefighter-meals",
-  "meals-wont-wreck-energy-levels": "/healthy-firefighter-meals",
-  "nutrition-after-overnight-calls": "/healthy-firefighter-meals",
-  "performance-nutrition-firefighters": "/healthy-firefighter-meals",
-  "recovery-meals-after-hard-calls": "/healthy-firefighter-meals",
-  // meal_planning guide that's explicitly healthy-themed by keyword too
-  "healthy-firefighter-meals-fill-you-up": "/healthy-firefighter-meals",
   // The smoothies guide's most precise, primary hub is the smoothies
   // catalog itself (already reverse-linked from smoothies-index.tsx) —
   // a stronger, more specific match than the general nutrition hub.
@@ -111,37 +94,24 @@ const GUIDE_LANDING_MAP: Record<string, string> = {
 
   // Large-crew guides -> /crew-meals
   "best-firehouse-meals-large-crews": "/crew-meals",
-  "meals-feeding-10-firefighters": "/crew-meals",
   "cooking-for-10-firefighters": "/crew-meals",
   "feeding-a-firehall-crew": "/crew-meals",
-  "feeding-ten-firefighters": "/crew-meals",
 
-  // Dinner-decision guides -> /firefighter-dinner-ideas
-  "25-firefighter-dinner-ideas": "/firefighter-dinner-ideas",
+  // Dinner-decision guide -> /firefighter-dinner-ideas
   "planning-tonights-station-dinner": "/firefighter-dinner-ideas",
-  "organize-firehall-dinners": "/firefighter-dinner-ideas",
-  "busy-shift-dinner-strategies": "/firefighter-dinner-ideas",
 
   // Station-meal / shift-logistics guides -> /fire-station-meals
   "best-firefighter-crockpot-meals": "/fire-station-meals",
-  "best-firehall-meals-busy-nights": "/fire-station-meals",
   "best-meals-24-hour-shift": "/fire-station-meals",
-  "dutch-oven-meals-firefighters": "/fire-station-meals",
   "fast-firehall-meals-under-30-minutes": "/fire-station-meals",
   "firehall-grocery-planning": "/fire-station-meals",
   "firehall-meal-prep-ideas": "/fire-station-meals",
-  "meal-prep-for-shift-workers": "/fire-station-meals",
   "one-pot-firehall-meals": "/fire-station-meals",
   "station-kitchen-essentials": "/fire-station-meals",
   "rookie-firefighter-meal-guide": "/fire-station-meals",
-  "quick-meals-between-calls": "/fire-station-meals",
-  "how-crews-split-groceries": "/fire-station-meals",
 
   // General "what the hall actually eats" guides -> /firefighter-meals
   "most-popular-firefighter-meals": "/firefighter-meals",
-  "meals-firefighters-actually-cook": "/firefighter-meals",
-  "legendary-firehall-meals": "/firefighter-meals",
-  "meals-every-firefighter-knows": "/firefighter-meals",
   "10-classic-firehall-meals": "/firefighter-meals",
 };
 
@@ -152,16 +122,13 @@ const GUIDE_LANDING_MAP: Record<string, string> = {
  * by any code path.
  */
 export const GUIDES_WITHOUT_LANDING_LINK: readonly string[] = [
-  "best-meals-after-busy-shift",
   "best-station-chili-recipes",
   "cheap-firehall-meals",
   "easy-firehall-pasta-recipes",
   "firehall-taco-night-ideas",
   "firehouse-comfort-meals",
-  "comfort-food-after-a-long-shift",
   "firehall-kitchen-culture",
   "rookie-cooking-mistakes",
-  "better-station-food-culture",
 ];
 
 export function getGuideLandingLink(slug: string): GuideAuthorityLink | null {

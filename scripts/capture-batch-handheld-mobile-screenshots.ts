@@ -8,7 +8,6 @@ const BASE = process.env.SCREENSHOT_BASE_URL ?? "http://127.0.0.1:5000";
 const OUT = path.join(process.cwd(), "review/batch-handheld-mobile-screenshots");
 
 const RECIPES = [
-  { slug: "chicken-caesar-wraps", cardPath: "/explore", pagePath: "/recipes/chicken-caesar-wraps" },
   { slug: "buffalo-chicken-wraps", cardPath: "/explore", pagePath: "/recipes/buffalo-chicken-wraps" },
   { slug: "greek-chicken-pitas", cardPath: "/explore", pagePath: "/recipes/greek-chicken-pitas" },
   { slug: "beef-gyros-for-the-hall", cardPath: "/explore", pagePath: "/recipes/beef-gyros-for-the-hall" },

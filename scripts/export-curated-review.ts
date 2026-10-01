@@ -33,6 +33,7 @@ import { normalizeRecipeSpacing } from "../shared/recipe/spacing.js";
 import { checkImageAvailability } from "../shared/curated-recipe/qa-engine/assets.js";
 import { summarizeEditorialQaReports } from "../shared/curated-recipe/qa-engine/summarize.js";
 import { parseQaOverridesJson } from "../server/curated-recipe-qa.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 type CuratedStatus = "draft" | "review" | "approved" | "published" | "rejected" | "archived";
 
@@ -221,7 +222,7 @@ async function cacheExternalImage(
   if (fs.existsSync(abs)) return { path: rel, saved: false };
   const { buf, error } = await fetchWithRetry(url, 3, 15000);
   if (!buf) return { path: url, saved: false, error }; // keep original if download fails (still works online)
-  fs.writeFileSync(abs, buf);
+  writeFileAtomicSync(abs, buf);
   return { path: rel, saved: true };
 }
 
@@ -1003,7 +1004,7 @@ async function main(): Promise<void> {
   }, qaSummary);
   const md = buildGoldenMd(recipes, qaById, generatedAt);
   const qaJsonPath = path.join(OUT_DIR, "editorial-qa-report.json");
-  fs.writeFileSync(
+  writeFileAtomicSync(
     qaJsonPath,
     JSON.stringify(
       {
@@ -1019,8 +1020,8 @@ async function main(): Promise<void> {
     "utf8",
   );
 
-  fs.writeFileSync(OUT_HTML, html, "utf8");
-  fs.writeFileSync(OUT_MD, md, "utf8");
+  writeFileAtomicSync(OUT_HTML, html, "utf8");
+  writeFileAtomicSync(OUT_MD, md, "utf8");
 
   flushSqliteToDisk();
   releaseSqliteTimersForTests();

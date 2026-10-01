@@ -60,7 +60,12 @@ export function DeleteAccountSection() {
 
   return (
     <section className="space-y-2" data-testid="delete-account-section">
-      <h2 className="text-sm font-medium text-destructive">Danger zone</h2>
+      <div className="space-y-1">
+        <h2 className="text-sm font-medium text-foreground">Delete account</h2>
+        <p className="text-sm text-muted-foreground">
+          Permanently delete your Firehall Meals account and associated data.
+        </p>
+      </div>
       <AlertDialog open={open} onOpenChange={(next) => !deleting && setOpen(next)}>
         <AlertDialogTrigger asChild>
           <Button

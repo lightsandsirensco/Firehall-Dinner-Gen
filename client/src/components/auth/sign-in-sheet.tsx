@@ -1,4 +1,4 @@
-import { Flame } from "lucide-react";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import {
   Sheet,
   SheetContent,
@@ -23,7 +23,7 @@ export function SignInSheet() {
       <SheetContent side="bottom" className="rounded-t-2xl pb-safe max-h-[90vh] overflow-y-auto">
         <SheetHeader className="text-left space-y-3">
           <div className="flex items-center gap-2 text-muted-foreground">
-            <Flame className="w-4 h-4 text-primary" aria-hidden />
+            <BrandLogo className="h-5 w-5" />
             <span className="text-xs font-semibold uppercase tracking-[0.18em]">{BRAND_NAME}</span>
           </div>
           <SheetTitle className="font-heading tracking-wide text-2xl">Welcome back</SheetTitle>

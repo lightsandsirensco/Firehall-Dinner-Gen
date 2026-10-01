@@ -2,6 +2,7 @@
 /** Writes human-readable transparency report from catalog-250-full-transparency.json */
 import fs from "node:fs";
 import path from "node:path";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const json = JSON.parse(
@@ -82,5 +83,5 @@ lines.push(
   "",
 );
 
-fs.writeFileSync(path.join(ROOT, "review/catalog-250-transparency-report.md"), lines.join("\n"), "utf8");
+writeFileAtomicSync(path.join(ROOT, "review/catalog-250-transparency-report.md"), lines.join("\n"), "utf8");
 console.log("[report] wrote review/catalog-250-transparency-report.md");

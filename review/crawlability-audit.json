@@ -1,22 +1,22 @@
 {
-  "generatedAt": "2026-09-25T22:32:26.238Z",
+  "generatedAt": "2026-09-30T23:57:06.230Z",
   "target": "http://localhost:5051",
-  "elapsedMs": 2704,
+  "elapsedMs": 1952,
   "totals": {
-    "sitemapUrls": 516,
-    "crawledUnique": 517,
-    "internallyDiscoverable": 512,
-    "sitemapOnly": 3,
-    "orphans": 3,
-    "notInSitemapButCrawled": 4,
-    "brokenInternalLinks": 0,
+    "sitemapUrls": 518,
+    "crawledUnique": 512,
+    "internallyDiscoverable": 503,
+    "sitemapOnly": 14,
+    "orphans": 14,
+    "notInSitemapButCrawled": 8,
+    "brokenInternalLinks": 4,
     "unreachableInternalLinks": 0
   },
   "depthDistribution": {
     "0": 1,
     "1": 42,
-    "2": 465,
-    "3": 5,
+    "2": 451,
+    "3": 10,
     "4+": 0
   },
   "collections": {
@@ -35,9 +35,9 @@
       "maxDepth": 1
     },
     "static-other": {
-      "total": 29,
+      "total": 30,
       "crawlable": 27,
-      "sitemapOnly": 2,
+      "sitemapOnly": 3,
       "avgDepth": 1,
       "maxDepth": 1
     },
@@ -84,10 +84,10 @@
       "maxDepth": 2
     },
     "recipe-dinner": {
-      "total": 285,
-      "crawlable": 284,
-      "sitemapOnly": 1,
-      "avgDepth": 1.98,
+      "total": 308,
+      "crawlable": 297,
+      "sitemapOnly": 11,
+      "avgDepth": 2,
       "maxDepth": 3
     },
     "recipe-pizza": {
@@ -105,8 +105,8 @@
       "maxDepth": 2
     },
     "breakfast-recipe": {
-      "total": 62,
-      "crawlable": 62,
+      "total": 70,
+      "crawlable": 70,
       "sitemapOnly": 0,
       "avgDepth": 2,
       "maxDepth": 2
@@ -126,14 +126,18 @@
       "maxDepth": 2
     },
     "guide": {
-      "total": 57,
-      "crawlable": 57,
+      "total": 27,
+      "crawlable": 27,
       "sitemapOnly": 0,
       "avgDepth": 2,
       "maxDepth": 2
     }
   },
   "sitemapOnlyUrls": [
+    {
+      "path": "/families",
+      "collection": "static-other"
+    },
     {
       "path": "/privacy",
       "collection": "static-other"
@@ -145,10 +149,84 @@
     {
       "path": "/recipes/veggie-egg-casserole-tray",
       "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/firehouse-sweet-potato-beef-protein-bowls",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/firehouse-diner-burger-bowls",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/sesame-ginger-tofu-bowls",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/firehouse-lentil-chili",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/firehouse-turkey-white-bean-soup",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/tempeh-peanut-buddha-bowls",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/paneer-tikka-masala-bowls",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/red-lentil-paneer-dal",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/greek-yogurt-white-bean-power-bowls",
+      "collection": "recipe-dinner"
+    },
+    {
+      "path": "/recipes/cottage-cheese-spinach-stuffed-shells",
+      "collection": "recipe-dinner"
     }
   ],
-  "brokenInternalLinks": [],
+  "brokenInternalLinks": [
+    {
+      "path": "/recipes/sheet-pan-chicken-fajitas-lite",
+      "status": 301,
+      "linkedFrom": [
+        "/recipes/mediterranean-baked-fish-tray"
+      ]
+    },
+    {
+      "path": "/recipes/lean-turkey-bean-chili",
+      "status": 301,
+      "linkedFrom": [
+        "/recipes/baked-turkey-meatball-marinara",
+        "/recipes/turkey-sausage-egg-muffins"
+      ]
+    },
+    {
+      "path": "/recipes/lean-beef-broccoli-rice",
+      "status": 301,
+      "linkedFrom": [
+        "/recipes/beef-birria-with-consomme"
+      ]
+    },
+    {
+      "path": "/recipes/turkey-quinoa-stuffed-peppers",
+      "status": 301,
+      "linkedFrom": [
+        "/recipes/greek-beef-keftedes-lemon-orzo-tzatziki"
+      ]
+    }
+  ],
   "notInSitemapButCrawled": [
+    "/breakfast/cowboy-breakfast-skillet",
+    "/breakfast/german-potato-breakfast-skillet",
+    "/breakfast/green-chile-breakfast-burritos",
+    "/breakfast/red-lead-skillet",
     "/recipes/sheet-pan-chicken-fajitas-lite",
     "/recipes/lean-turkey-bean-chili",
     "/recipes/lean-beef-broccoli-rice",
@@ -164,7 +242,7 @@
       "depth": 0,
       "inboundLinks": 0,
       "hasContent": true,
-      "h1": "Firehall Meals",
+      "h1": "What’s for dinner at the firehall?",
       "canonicalOk": true,
       "lastmod": "2026-07-29"
     },
@@ -175,7 +253,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 517,
+      "inboundLinks": 508,
       "hasContent": true,
       "h1": "Browse Firefighter Meals &amp; Recipes",
       "canonicalOk": true,
@@ -214,7 +292,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 6,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Find a Firefighter Meal for Tonight",
       "canonicalOk": true,
@@ -240,9 +318,9 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 513,
+      "inboundLinks": 504,
       "hasContent": true,
-      "h1": "Firefighter Meal &amp; Nutrition Guides",
+      "h1": "Firefighter Meal &amp; Firehouse Cooking Guides",
       "canonicalOk": true,
       "lastmod": "2026-07-29"
     },
@@ -305,7 +383,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 516,
+      "inboundLinks": 505,
       "hasContent": true,
       "h1": "Pizza Night",
       "canonicalOk": true,
@@ -318,7 +396,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 481,
+      "inboundLinks": 474,
       "hasContent": true,
       "h1": "Classics Wheel",
       "canonicalOk": true,
@@ -331,7 +409,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 515,
+      "inboundLinks": 506,
       "hasContent": true,
       "h1": "Healthy Smoothies for Firefighters",
       "canonicalOk": true,
@@ -344,7 +422,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 514,
+      "inboundLinks": 507,
       "hasContent": true,
       "h1": "Firefighter Breakfast &amp; Shift Fuel",
       "canonicalOk": true,
@@ -372,7 +450,7 @@
       "depth": 1,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Firefighter Red Lead Recipe — Firehall Tomato Sauce",
+      "h1": "Firefighter Red Lead Recipe",
       "canonicalOk": true,
       "lastmod": "2026-07-29"
     },
@@ -403,6 +481,15 @@
       "lastmod": "2026-07-29"
     },
     {
+      "path": "/families",
+      "collection": "static-other",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-07-29"
+    },
+    {
       "path": "/privacy",
       "collection": "static-other",
       "sitemapStatus": "in_sitemap",
@@ -427,7 +514,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 9,
+      "inboundLinks": 11,
       "hasContent": true,
       "h1": "Firefighter Meals: Easy Firehouse Meals for the Whole Crew",
       "canonicalOk": true,
@@ -466,7 +553,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 4,
+      "inboundLinks": 12,
       "hasContent": true,
       "h1": "Fire Station Meals",
       "canonicalOk": true,
@@ -479,7 +566,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 1,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Healthy Firefighter Meals",
       "canonicalOk": true,
@@ -492,7 +579,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 2,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Firefighter Breakfast Recipes",
       "canonicalOk": true,
@@ -505,7 +592,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 1,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "BBQ Firefighter Recipes",
       "canonicalOk": true,
@@ -531,7 +618,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 2,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Firefighter Dinner Ideas",
       "canonicalOk": true,
@@ -544,7 +631,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 1,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Crew Meals",
       "canonicalOk": true,
@@ -674,7 +761,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 6,
       "hasContent": true,
       "h1": "30-Minute Pasta e Fagioli for the Hall",
       "canonicalOk": true,
@@ -687,7 +774,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 9,
+      "inboundLinks": 16,
       "hasContent": true,
       "h1": "Baked Ziti",
       "canonicalOk": true,
@@ -700,7 +787,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 16,
+      "inboundLinks": 12,
       "hasContent": true,
       "h1": "Batch Lasagna",
       "canonicalOk": true,
@@ -726,7 +813,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 20,
+      "inboundLinks": 18,
       "hasContent": true,
       "h1": "BBQ Chicken Bowls",
       "canonicalOk": true,
@@ -778,7 +865,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 21,
+      "inboundLinks": 19,
       "hasContent": true,
       "h1": "Beef Barley Soup",
       "canonicalOk": true,
@@ -804,7 +891,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 12,
+      "inboundLinks": 14,
       "hasContent": true,
       "h1": "Beef Dip Sandwiches",
       "canonicalOk": true,
@@ -817,7 +904,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 8,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Beef Stroganoff",
       "canonicalOk": true,
@@ -830,7 +917,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 16,
+      "inboundLinks": 15,
       "hasContent": true,
       "h1": "Beer Can Chicken",
       "canonicalOk": true,
@@ -843,7 +930,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 22,
+      "inboundLinks": 20,
       "hasContent": true,
       "h1": "Firehall Chili",
       "canonicalOk": true,
@@ -869,7 +956,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 15,
+      "inboundLinks": 16,
       "hasContent": true,
       "h1": "Breakfast Sausage Gravy Pizza",
       "canonicalOk": true,
@@ -882,7 +969,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 7,
       "hasContent": true,
       "h1": "Buffalo Chicken Dip",
       "canonicalOk": true,
@@ -895,7 +982,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Bulgogi Bowls",
       "canonicalOk": true,
@@ -947,7 +1034,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 7,
+      "inboundLinks": 14,
       "hasContent": true,
       "h1": "Chicken Caesar Salad",
       "canonicalOk": true,
@@ -960,7 +1047,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 8,
+      "inboundLinks": 7,
       "hasContent": true,
       "h1": "Chicken and Dumplings",
       "canonicalOk": true,
@@ -973,7 +1060,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 35,
+      "inboundLinks": 31,
       "hasContent": true,
       "h1": "Chicken Parmesan",
       "canonicalOk": true,
@@ -986,7 +1073,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 13,
+      "inboundLinks": 9,
       "hasContent": true,
       "h1": "Chicken Pot Pie",
       "canonicalOk": true,
@@ -999,7 +1086,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 11,
+      "inboundLinks": 9,
       "hasContent": true,
       "h1": "Chicken Quesadillas",
       "canonicalOk": true,
@@ -1012,7 +1099,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 8,
       "hasContent": true,
       "h1": "Chicken Souvlaki",
       "canonicalOk": true,
@@ -1025,7 +1112,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Chicken Tikka Masala",
       "canonicalOk": true,
@@ -1090,7 +1177,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 7,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Crispy Chicken Cutlets Marinara",
       "canonicalOk": true,
@@ -1103,7 +1190,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 14,
+      "inboundLinks": 13,
       "hasContent": true,
       "h1": "Detroit-Style Pepperoni Pizza",
       "canonicalOk": true,
@@ -1116,7 +1203,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 7,
       "hasContent": true,
       "h1": "Chicken Enchilada Casserole",
       "canonicalOk": true,
@@ -1129,7 +1216,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Quick Philly Skillet",
       "canonicalOk": true,
@@ -1142,7 +1229,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Garlic Butter Pasta",
       "canonicalOk": true,
@@ -1168,7 +1255,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 6,
       "hasContent": true,
       "h1": "Four-Step Chicken Piccata",
       "canonicalOk": true,
@@ -1194,7 +1281,7 @@
       "crawled": true,
       "status": 200,
       "depth": 3,
-      "inboundLinks": 1,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "French Toast Casserole",
       "canonicalOk": true,
@@ -1207,7 +1294,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 8,
       "hasContent": true,
       "h1": "Game Day Nachos",
       "canonicalOk": true,
@@ -1220,7 +1307,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Garlic Butter Shrimp",
       "canonicalOk": true,
@@ -1233,7 +1320,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 8,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Ginger Salmon Rice Bowls",
       "canonicalOk": true,
@@ -1246,7 +1333,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 14,
+      "inboundLinks": 8,
       "hasContent": true,
       "h1": "Greek Chicken Bowls",
       "canonicalOk": true,
@@ -1272,7 +1359,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 11,
+      "inboundLinks": 10,
       "hasContent": true,
       "h1": "Grilled Pork Chops",
       "canonicalOk": true,
@@ -1285,7 +1372,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 23,
+      "inboundLinks": 14,
       "hasContent": true,
       "h1": "Taco Bar",
       "canonicalOk": true,
@@ -1298,7 +1385,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Herb Roasted Chicken Thighs",
       "canonicalOk": true,
@@ -1337,7 +1424,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Jambalaya",
       "canonicalOk": true,
@@ -1363,7 +1450,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Lemon Herb Salmon",
       "canonicalOk": true,
@@ -1376,7 +1463,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 14,
+      "inboundLinks": 16,
       "hasContent": true,
       "h1": "Baked Potato Bar",
       "canonicalOk": true,
@@ -1402,7 +1489,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Potato Bar Feed",
       "canonicalOk": true,
@@ -1415,7 +1502,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 12,
+      "inboundLinks": 8,
       "hasContent": true,
       "h1": "Baked Mac and Cheese",
       "canonicalOk": true,
@@ -1454,7 +1541,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Meatball Hoagies",
       "canonicalOk": true,
@@ -1480,7 +1567,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Mediterranean Chickpea Bowls",
       "canonicalOk": true,
@@ -1532,7 +1619,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 12,
+      "inboundLinks": 10,
       "hasContent": true,
       "h1": "Chicken and Rice",
       "canonicalOk": true,
@@ -1545,7 +1632,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Pad Thai",
       "canonicalOk": true,
@@ -1558,7 +1645,7 @@
       "crawled": true,
       "status": 200,
       "depth": 3,
-      "inboundLinks": 2,
+      "inboundLinks": 1,
       "hasContent": true,
       "h1": "Pancake Short Stack",
       "canonicalOk": true,
@@ -1610,7 +1697,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 9,
+      "inboundLinks": 8,
       "hasContent": true,
       "h1": "Chicken Burrito Bowls",
       "canonicalOk": true,
@@ -1623,7 +1710,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Philly Cheesesteak Skillet",
       "canonicalOk": true,
@@ -1636,7 +1723,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Philly Cheesesteak Egg Rolls",
       "canonicalOk": true,
@@ -1662,7 +1749,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 30,
+      "inboundLinks": 28,
       "hasContent": true,
       "h1": "Carolina-Style Pulled Pork",
       "canonicalOk": true,
@@ -1688,7 +1775,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 11,
+      "inboundLinks": 7,
       "hasContent": true,
       "h1": "Sausage Egg Bake",
       "canonicalOk": true,
@@ -1714,7 +1801,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 14,
+      "inboundLinks": 12,
       "hasContent": true,
       "h1": "Chicken Fajitas",
       "canonicalOk": true,
@@ -1727,7 +1814,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Chicken Meal Prep Trays",
       "canonicalOk": true,
@@ -1753,7 +1840,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 1,
       "hasContent": true,
       "h1": "Sausage and Peppers",
       "canonicalOk": true,
@@ -1766,7 +1853,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Shepherd's Pie",
       "canonicalOk": true,
@@ -1779,7 +1866,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 10,
+      "inboundLinks": 9,
       "hasContent": true,
       "h1": "Chicken Alfredo",
       "canonicalOk": true,
@@ -1805,7 +1892,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 26,
+      "inboundLinks": 23,
       "hasContent": true,
       "h1": "Double Smash Burgers",
       "canonicalOk": true,
@@ -1844,7 +1931,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Spicy Tomato Bisque with Grilled Brie Toast",
       "canonicalOk": true,
@@ -1870,7 +1957,7 @@
       "crawled": true,
       "status": 200,
       "depth": 1,
-      "inboundLinks": 21,
+      "inboundLinks": 20,
       "hasContent": true,
       "h1": "Chimichurri Steak Tacos",
       "canonicalOk": true,
@@ -1896,7 +1983,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Quinoa Stuffed Peppers",
       "canonicalOk": true,
@@ -1909,7 +1996,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Teriyaki Chicken Donburi",
       "canonicalOk": true,
@@ -1948,7 +2035,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Thai Basil Chicken",
       "canonicalOk": true,
@@ -1961,7 +2048,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Tomato Soup with Grilled Cheese Croutons",
       "canonicalOk": true,
@@ -1987,7 +2074,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 12,
+      "inboundLinks": 9,
       "hasContent": true,
       "h1": "Turkey Chili",
       "canonicalOk": true,
@@ -2000,7 +2087,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 1,
       "hasContent": true,
       "h1": "Turkey Meatballs with Zucchini Noodles",
       "canonicalOk": true,
@@ -2052,7 +2139,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 11,
+      "inboundLinks": 9,
       "hasContent": true,
       "h1": "Baked Turkey Meatball Marinara",
       "canonicalOk": true,
@@ -2065,7 +2152,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Beef Birria with Consommé for Dipping",
       "canonicalOk": true,
@@ -2208,7 +2295,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 36,
+      "inboundLinks": 34,
       "hasContent": true,
       "h1": "Barbacoa Chicken",
       "canonicalOk": true,
@@ -2260,7 +2347,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 1,
       "hasContent": true,
       "h1": "Greek Beef Meatballs (Keftedes) with Lemon Orzo &amp; Tzatziki",
       "canonicalOk": true,
@@ -2312,7 +2399,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 12,
+      "inboundLinks": 11,
       "hasContent": true,
       "h1": "Baked Salmon Tray",
       "canonicalOk": true,
@@ -2351,7 +2438,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 24,
+      "inboundLinks": 22,
       "hasContent": true,
       "h1": "Honey Garlic Chicken Bowls",
       "canonicalOk": true,
@@ -2390,7 +2477,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 19,
+      "inboundLinks": 18,
       "hasContent": true,
       "h1": "Beef Rice Bowls",
       "canonicalOk": true,
@@ -2429,7 +2516,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 16,
+      "inboundLinks": 15,
       "hasContent": true,
       "h1": "Lemon Garlic Chicken Tray",
       "canonicalOk": true,
@@ -2455,7 +2542,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Lemon Salmon Orzo",
       "canonicalOk": true,
@@ -2468,7 +2555,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Lentil Bolognese",
       "canonicalOk": true,
@@ -2520,7 +2607,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 1,
       "hasContent": true,
       "h1": "Mediterranean Beef Kofta Bowls",
       "canonicalOk": true,
@@ -2611,7 +2698,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 6,
       "hasContent": true,
       "h1": "Shawarma Chicken Bowls",
       "canonicalOk": true,
@@ -2637,7 +2724,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Lentil and Kale Soup",
       "canonicalOk": true,
@@ -2650,7 +2737,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Southwest Beef &amp; Sweet Potato Skillet",
       "canonicalOk": true,
@@ -2689,7 +2776,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Thai Basil Ground Beef Skillet",
       "canonicalOk": true,
@@ -2715,7 +2802,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Turkey Lettuce Wraps",
       "canonicalOk": true,
@@ -2728,7 +2815,7 @@
       "crawled": true,
       "status": 200,
       "depth": 3,
-      "inboundLinks": 2,
+      "inboundLinks": 1,
       "hasContent": true,
       "h1": "Turkey Sausage Egg Muffins",
       "canonicalOk": true,
@@ -2754,7 +2841,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Turkey Sweet Potato Chili",
       "canonicalOk": true,
@@ -2767,7 +2854,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Turkey Taco Skillet",
       "canonicalOk": true,
@@ -2880,11 +2967,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Smoked Turkey Breast for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/smoked-meatloaf",
@@ -2893,11 +2980,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 8,
+      "inboundLinks": 7,
       "hasContent": true,
       "h1": "Smoked Meatloaf with Glaze",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/pork-belly-burnt-ends",
@@ -2910,7 +2997,7 @@
       "hasContent": true,
       "h1": "Pork Belly Burnt Ends",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/smoked-sausage-platter",
@@ -2919,11 +3006,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Smoked Sausage Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/smoked-queso-fundido",
@@ -2936,7 +3023,7 @@
       "hasContent": true,
       "h1": "Smoked Queso Fundido",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/hickory-turkey-legs",
@@ -2949,7 +3036,7 @@
       "hasContent": true,
       "h1": "Hickory Smoked Turkey Legs",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/smoked-tri-tip",
@@ -2962,7 +3049,7 @@
       "hasContent": true,
       "h1": "Smoked Tri-Tip Roast",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/smoked-corned-beef",
@@ -2975,7 +3062,7 @@
       "hasContent": true,
       "h1": "Smoked Corned Beef Brisket",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/pellet-smoked-chicken-quarters",
@@ -2988,7 +3075,7 @@
       "hasContent": true,
       "h1": "Pellet Smoked Chicken Quarters",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/loaded-potato-skins",
@@ -2997,11 +3084,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 6,
       "hasContent": true,
       "h1": "Loaded Potato Skins",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/game-day-pizza-sliders",
@@ -3010,11 +3097,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Game Day Pizza Sliders",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/pretzel-bite-platter",
@@ -3023,11 +3110,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Pretzel Bite Platter with Beer Cheese",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/jalapeno-popper-dip",
@@ -3040,7 +3127,7 @@
       "hasContent": true,
       "h1": "Jalapeño Popper Dip",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/philly-cheesesteak-sliders",
@@ -3049,11 +3136,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Philly Cheesesteak Sliders",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/chicken-wing-bar-night",
@@ -3066,7 +3153,7 @@
       "hasContent": true,
       "h1": "Chicken Wing Bar Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/bbq-meatball-skewers",
@@ -3079,7 +3166,7 @@
       "hasContent": true,
       "h1": "BBQ Meatball Skewers",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/soft-pretzel-dogs",
@@ -3092,7 +3179,7 @@
       "hasContent": true,
       "h1": "Soft Pretzel Hot Dogs",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/firehall-charcuterie-board",
@@ -3105,7 +3192,7 @@
       "hasContent": true,
       "h1": "Firehall Charcuterie Board",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/cheesy-beef-nacho-bake",
@@ -3114,11 +3201,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 7,
       "hasContent": true,
       "h1": "Cheesy Beef Nacho Bake",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/shawarma-bar-night",
@@ -3127,11 +3214,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Shawarma Bar Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/fajita-bar-night",
@@ -3140,11 +3227,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 14,
+      "inboundLinks": 13,
       "hasContent": true,
       "h1": "Fajita Bar Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/hall-burger-bar",
@@ -3153,11 +3240,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Hall Burger Bar",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/pasta-bar-night",
@@ -3170,7 +3257,7 @@
       "hasContent": true,
       "h1": "Pasta Bar Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/rice-bowl-bar-night",
@@ -3183,7 +3270,7 @@
       "hasContent": true,
       "h1": "Rice Bowl Bar Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/sandwich-board-night",
@@ -3196,7 +3283,7 @@
       "hasContent": true,
       "h1": "Sandwich Board Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/mediterranean-feast-night",
@@ -3209,7 +3296,7 @@
       "hasContent": true,
       "h1": "Mediterranean Feast Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/burrito-bowl-bar-night",
@@ -3222,7 +3309,7 @@
       "hasContent": true,
       "h1": "Burrito Bowl Bar Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/loaded-nacho-bar-night",
@@ -3235,7 +3322,7 @@
       "hasContent": true,
       "h1": "Loaded Nacho Bar Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/build-your-own-pho-bar",
@@ -3248,7 +3335,7 @@
       "hasContent": true,
       "h1": "Build-Your-Own Pho Bar",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/mesquite-chuck-roast",
@@ -3261,7 +3348,7 @@
       "hasContent": true,
       "h1": "Mesquite Smoked Chuck Roast",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/molasses-bourbon-pork-ribs",
@@ -3274,7 +3361,7 @@
       "hasContent": true,
       "h1": "Molasses Bourbon Pork Ribs",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/applewood-pork-shoulder-steaks",
@@ -3287,7 +3374,7 @@
       "hasContent": true,
       "h1": "Applewood Grilled Pork Shoulder Steaks",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/honey-mustard-oven-chicken-thighs",
@@ -3300,7 +3387,7 @@
       "hasContent": true,
       "h1": "Honey Mustard Baked Chicken Thighs",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/spatchcock-lemon-roast-chicken",
@@ -3313,7 +3400,7 @@
       "hasContent": true,
       "h1": "Spatchcock Lemon Roast Chicken",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/cajun-chicken-rice-skillet",
@@ -3326,7 +3413,7 @@
       "hasContent": true,
       "h1": "Cajun Chicken and Rice Skillet",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/paprika-roasted-chicken-quarters",
@@ -3339,7 +3426,7 @@
       "hasContent": true,
       "h1": "Paprika Roasted Chicken Quarters",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/cast-iron-chicken-fajitas",
@@ -3352,7 +3439,7 @@
       "hasContent": true,
       "h1": "Cast Iron Chicken Fajitas",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/mushroom-swiss-steak-pan",
@@ -3361,11 +3448,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Mushroom Swiss Steak Pan",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/pepper-steak-onions",
@@ -3378,7 +3465,7 @@
       "hasContent": true,
       "h1": "Pepper Steak with Onions",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/dutch-oven-pot-roast",
@@ -3391,7 +3478,7 @@
       "hasContent": true,
       "h1": "Dutch Oven Pot Roast",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/enchilada-beef-skillet",
@@ -3404,7 +3491,7 @@
       "hasContent": true,
       "h1": "Beef Enchilada Skillet",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/mostaccioli-sausage-bake",
@@ -3413,11 +3500,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Baked Mostaccioli with Sausage",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/creamy-chicken-penne-alfredo",
@@ -3426,11 +3513,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Creamy Chicken Penne Alfredo",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/rigatoni-meat-sauce-batch",
@@ -3439,11 +3526,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Rigatoni with Meat Sauce",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/station-cobb-salad",
@@ -3452,11 +3539,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Station Cobb Salad",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/warm-spinach-chicken-salad",
@@ -3465,11 +3552,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Warm Spinach Chicken Salad",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/hall-chicken-noodle-soup",
@@ -3482,7 +3569,7 @@
       "hasContent": true,
       "h1": "Hall Chicken Noodle Soup",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/green-chile-chicken-stew",
@@ -3495,7 +3582,7 @@
       "hasContent": true,
       "h1": "Green Chile Chicken Stew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/ginger-soy-chicken-rice-bowls",
@@ -3504,11 +3591,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 11,
+      "inboundLinks": 13,
       "hasContent": true,
       "h1": "Ginger Soy Chicken Rice Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/mediterranean-chicken-farro-bowls",
@@ -3521,7 +3608,7 @@
       "hasContent": true,
       "h1": "Mediterranean Chicken Farro Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/kielbasa-cabbage-potato-skillet",
@@ -3534,7 +3621,7 @@
       "hasContent": true,
       "h1": "Kielbasa Cabbage Potato Skillet",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/cheesy-chicken-broccoli-rice",
@@ -3547,7 +3634,7 @@
       "hasContent": true,
       "h1": "Cheesy Chicken Broccoli Rice",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/sheet-pan-meatball-marinara",
@@ -3560,7 +3647,7 @@
       "hasContent": true,
       "h1": "Sheet Pan Meatball Marinara Feed",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/hall-sloppy-joe-feed",
@@ -3573,7 +3660,7 @@
       "hasContent": true,
       "h1": "Hall Sloppy Joe Feed",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/montreal-smoked-meat-platter",
@@ -3586,7 +3673,7 @@
       "hasContent": true,
       "h1": "Montreal Smoked Meat Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/tourtiere-for-the-crew",
@@ -3595,11 +3682,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Tourtière for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/firehall-donair-platter",
@@ -3612,7 +3699,7 @@
       "hasContent": true,
       "h1": "Firehall Donair Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/maple-cured-salmon-plank",
@@ -3625,7 +3712,7 @@
       "hasContent": true,
       "h1": "Maple-Cured Salmon Plank",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/classic-poutine-feed-crew",
@@ -3638,7 +3725,7 @@
       "hasContent": true,
       "h1": "Classic Poutine Feed for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/cottage-pie-for-the-crew",
@@ -3647,11 +3734,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Cottage Pie for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/chicken-paprikash-hall",
@@ -3664,7 +3751,7 @@
       "hasContent": true,
       "h1": "Chicken Paprikash for the Hall",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/chicken-cacciatore-crew",
@@ -3677,7 +3764,7 @@
       "hasContent": true,
       "h1": "Chicken Cacciatore for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/coq-au-vin-batch",
@@ -3690,7 +3777,7 @@
       "hasContent": true,
       "h1": "Coq au Vin Batch",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/hungarian-goulash-crew",
@@ -3703,7 +3790,7 @@
       "hasContent": true,
       "h1": "Hungarian Goulash for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/tonkotsu-ramen-crew",
@@ -3716,7 +3803,7 @@
       "hasContent": true,
       "h1": "Tonkotsu Ramen for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/miso-ramen-bar",
@@ -3729,7 +3816,7 @@
       "hasContent": true,
       "h1": "Miso Ramen Bar",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/malaysian-laksa-soup",
@@ -3742,7 +3829,7 @@
       "hasContent": true,
       "h1": "Malaysian Laksa Soup",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/bun-bo-hue-noodle-soup",
@@ -3755,7 +3842,7 @@
       "hasContent": true,
       "h1": "Bun Bo Hue Noodle Soup",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/wonton-noodle-soup-crew",
@@ -3768,7 +3855,7 @@
       "hasContent": true,
       "h1": "Wonton Noodle Soup for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/peri-peri-chicken-platter",
@@ -3781,7 +3868,7 @@
       "hasContent": true,
       "h1": "Peri Peri Chicken Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/korean-bulgogi-grill-night",
@@ -3794,7 +3881,7 @@
       "hasContent": true,
       "h1": "Korean Bulgogi Grill Night",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/lamb-kofta-skewer-platter",
@@ -3803,11 +3890,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Lamb Kofta Skewer Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/moroccan-chicken-kebab-platter",
@@ -3820,7 +3907,7 @@
       "hasContent": true,
       "h1": "Moroccan Chicken Kebab Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/lebanese-chicken-shish-platter",
@@ -3829,11 +3916,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Lebanese Chicken Shish Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/classic-patty-melt-for-the-crew",
@@ -3846,7 +3933,7 @@
       "hasContent": true,
       "h1": "Classic Patty Melt for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/best-tuna-melt-for-the-hall",
@@ -3859,7 +3946,7 @@
       "hasContent": true,
       "h1": "Best Tuna Melt for the Hall (Diner Style)",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/hall-blt-sandwich-feed",
@@ -3872,7 +3959,7 @@
       "hasContent": true,
       "h1": "Hall BLT Sandwich Feed",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/buffalo-chicken-wraps",
@@ -3885,7 +3972,7 @@
       "hasContent": true,
       "h1": "Buffalo Chicken Wraps",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/greek-chicken-pitas",
@@ -3898,7 +3985,7 @@
       "hasContent": true,
       "h1": "Greek Chicken Pitas",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/beef-gyros-for-the-hall",
@@ -3911,7 +3998,7 @@
       "hasContent": true,
       "h1": "Beef Gyros",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/chicken-shawarma-pitas",
@@ -3924,7 +4011,7 @@
       "hasContent": true,
       "h1": "Chicken Shawarma Pitas",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/sausage-peppers-on-buns",
@@ -3937,7 +4024,7 @@
       "hasContent": true,
       "h1": "Sausage &amp; Peppers on Buns",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/firehall-taco-bowls",
@@ -3950,7 +4037,7 @@
       "hasContent": true,
       "h1": "Firehall Taco Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/buffalo-chicken-sweet-potato-bowls",
@@ -3963,7 +4050,7 @@
       "hasContent": true,
       "h1": "Buffalo Chicken Sweet Potato Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/firehall-greek-chicken-bowls",
@@ -3974,9 +4061,9 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Greek Chicken Bowls for the Hall",
+      "h1": "Greek Chicken Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/teriyaki-chicken-rice-bowls",
@@ -3989,7 +4076,7 @@
       "hasContent": true,
       "h1": "Teriyaki Chicken Rice Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/firehall-korean-beef-bowls",
@@ -4002,7 +4089,7 @@
       "hasContent": true,
       "h1": "Korean Beef Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/cajun-shrimp-rice-bowls",
@@ -4015,7 +4102,7 @@
       "hasContent": true,
       "h1": "Cajun Shrimp Rice Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/southwest-steak-bowls",
@@ -4028,7 +4115,7 @@
       "hasContent": true,
       "h1": "Southwest Steak Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/bbq-pulled-pork-bowls",
@@ -4041,7 +4128,7 @@
       "hasContent": true,
       "h1": "BBQ Pulled Pork Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/mediterranean-beef-bowls",
@@ -4054,7 +4141,7 @@
       "hasContent": true,
       "h1": "Mediterranean Beef Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/chipotle-chicken-burrito-bowls",
@@ -4067,7 +4154,7 @@
       "hasContent": true,
       "h1": "Chipotle Chicken Burrito Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/turkey-taco-bowls",
@@ -4080,7 +4167,7 @@
       "hasContent": true,
       "h1": "Turkey Taco Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/peanut-chicken-rice-bowls",
@@ -4093,7 +4180,7 @@
       "hasContent": true,
       "h1": "Peanut Chicken Rice Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/firehall-gyro-bowls",
@@ -4106,7 +4193,7 @@
       "hasContent": true,
       "h1": "Firehall Gyro Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/egg-roll-in-a-bowl-crew",
@@ -4119,7 +4206,7 @@
       "hasContent": true,
       "h1": "Egg Roll in a Bowl for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/salmon-rice-bowls-crew",
@@ -4132,7 +4219,7 @@
       "hasContent": true,
       "h1": "Salmon Rice Bowls for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/korean-turkey-rice-bowls",
@@ -4145,7 +4232,7 @@
       "hasContent": true,
       "h1": "Korean Turkey Rice Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/leftover-roast-beef-bowls",
@@ -4158,7 +4245,7 @@
       "hasContent": true,
       "h1": "Leftover Roast Beef Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/mississippi-pot-roast-crew",
@@ -4171,7 +4258,7 @@
       "hasContent": true,
       "h1": "Mississippi Pot Roast for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/white-chicken-chili-crock",
@@ -4184,7 +4271,7 @@
       "hasContent": true,
       "h1": "White Chicken Chili Crock",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/italian-beef-slow-cooker",
@@ -4197,7 +4284,7 @@
       "hasContent": true,
       "h1": "Italian Beef Slow Cooker Sandwiches",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/salsa-verde-chicken-crock",
@@ -4210,7 +4297,7 @@
       "hasContent": true,
       "h1": "Salsa Verde Chicken Crock",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/loaded-baked-potato-soup-crock",
@@ -4223,7 +4310,7 @@
       "hasContent": true,
       "h1": "Loaded Baked Potato Soup Crock",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/thai-peanut-chicken-crock",
@@ -4236,7 +4323,7 @@
       "hasContent": true,
       "h1": "Thai Peanut Chicken Crock",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/burnt-ends-chili-crew",
@@ -4249,7 +4336,7 @@
       "hasContent": true,
       "h1": "Burnt Ends Chili for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/smoker-nachos-crew",
@@ -4262,7 +4349,7 @@
       "hasContent": true,
       "h1": "Smoker Nachos for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/weeknight-bbq-ribs-crew",
@@ -4275,7 +4362,7 @@
       "hasContent": true,
       "h1": "Weeknight BBQ Ribs for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/grilled-flank-fajita-bar",
@@ -4288,7 +4375,7 @@
       "hasContent": true,
       "h1": "Grilled Flank Fajita Bar",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/costco-rotisserie-remix",
@@ -4301,7 +4388,7 @@
       "hasContent": true,
       "h1": "Costco Rotisserie Chicken Remix",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/chicken-thigh-stretch-dinner",
@@ -4314,7 +4401,7 @@
       "hasContent": true,
       "h1": "Chicken Thigh Stretch Dinner",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/pasta-e-fagioli-hall",
@@ -4327,7 +4414,7 @@
       "hasContent": true,
       "h1": "Pasta e Fagioli for the Hall",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/dirty-rice-crew-skillet",
@@ -4340,7 +4427,7 @@
       "hasContent": true,
       "h1": "Dirty Rice Crew Skillet",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/sausage-gnocchi-skillet",
@@ -4353,7 +4440,7 @@
       "hasContent": true,
       "h1": "Sausage Gnocchi Skillet",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/spanish-rice-chicken-one-pot",
@@ -4366,7 +4453,266 @@
       "hasContent": true,
       "h1": "Spanish Rice Chicken One Pot",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/firehouse-sweet-potato-beef-protein-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/firehouse-dense-bean-salad",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 3,
+      "inboundLinks": 2,
+      "hasContent": true,
+      "h1": "Firehouse Dense Bean Salad",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/loaded-firehouse-sweet-potatoes",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 3,
+      "inboundLinks": 2,
+      "hasContent": true,
+      "h1": "Loaded Firehouse Sweet Potatoes",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/firehouse-diner-burger-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/blackened-salmon-sweet-potato-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Blackened Salmon Sweet Potato Bowls",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/firehouse-chicken-black-bean-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Firehouse Chicken &amp; Black Bean Bowls",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/sesame-ginger-tofu-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/firehouse-lentil-chili",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/chickpea-pasta-primavera-white-beans",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 3,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Chickpea Pasta Primavera with White Beans",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/southwest-black-bean-corn-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 3,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Southwest Black Bean &amp; Corn Bowls",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/firehouse-turkey-white-bean-soup",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/sheet-pan-lemon-chicken-broccoli-sweet-potatoes",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Sheet-Pan Lemon Chicken with Broccoli &amp; Sweet Potatoes",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/high-protein-chicken-quinoa-meal-prep-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "High-Protein Chicken &amp; Quinoa Meal-Prep Bowls",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/lemon-herb-cod-roasted-vegetables",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 4,
+      "hasContent": true,
+      "h1": "Lemon-Herb Cod with Roasted Vegetables",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/garlic-steak-broccoli-cottage-cheese-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Garlic Steak &amp; Broccoli Bowls with Herbed Cottage Cheese",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/honey-mustard-turkey-meatball-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Honey Mustard Turkey Meatball Bowls",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/cajun-lime-shrimp-black-bean-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Cajun Lime Shrimp &amp; Black Bean Bowls",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/tempeh-peanut-buddha-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/paneer-tikka-masala-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/black-bean-cottage-cheese-enchilada-bake",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 3,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Black Bean &amp; Cottage Cheese Enchilada Bake",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/red-lentil-paneer-dal",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/greek-yogurt-white-bean-power-bowls",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/recipes/cottage-cheese-spinach-stuffed-shells",
+      "collection": "recipe-dinner",
+      "sitemapStatus": "in_sitemap",
+      "crawled": false,
+      "depth": null,
+      "inboundLinks": 0,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/buffalo-chicken-pizza",
@@ -4388,7 +4734,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Firehall Supreme Pizza",
       "canonicalOk": true,
@@ -4414,7 +4760,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Hawaiian Pizza",
       "canonicalOk": true,
@@ -4427,7 +4773,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Jalapeño Popper Pizza",
       "canonicalOk": true,
@@ -4492,7 +4838,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Smoked Brisket BBQ Pizza",
       "canonicalOk": true,
@@ -4505,7 +4851,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 1,
       "hasContent": true,
       "h1": "Taco Pizza",
       "canonicalOk": true,
@@ -4665,7 +5011,7 @@
       "hasContent": true,
       "h1": "Bagel and Lox Breakfast Board",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/bagel-sandwich-line",
@@ -4678,7 +5024,7 @@
       "hasContent": true,
       "h1": "Bagel Sandwich Line",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/baked-oatmeal-mixed-berries",
@@ -4687,11 +5033,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 18,
+      "inboundLinks": 26,
       "hasContent": true,
       "h1": "Baked Oatmeal with Mixed Berries",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/bbq-breakfast-hash",
@@ -4704,7 +5050,7 @@
       "hasContent": true,
       "h1": "BBQ Breakfast Hash",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/belgian-waffle-platter",
@@ -4717,7 +5063,20 @@
       "hasContent": true,
       "h1": "Belgian Waffle Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/berry-vanilla-protein-overnight-oats",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 9,
+      "hasContent": true,
+      "h1": "Berry Vanilla Protein Overnight Oats",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/biscuit-french-toast-sliders",
@@ -4730,7 +5089,20 @@
       "hasContent": true,
       "h1": "Biscuit French Toast Sliders",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/black-bean-egg-white-breakfast-burritos",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 7,
+      "hasContent": true,
+      "h1": "Black Bean &amp; Egg White Breakfast Burritos",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-crunchwraps",
@@ -4743,7 +5115,7 @@
       "hasContent": true,
       "h1": "Breakfast Crunchwraps",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-enchiladas",
@@ -4752,11 +5124,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 8,
+      "inboundLinks": 6,
       "hasContent": true,
       "h1": "Breakfast Enchiladas for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-fried-rice-crew",
@@ -4765,11 +5137,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 19,
+      "inboundLinks": 16,
       "hasContent": true,
       "h1": "Breakfast Fried Rice for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-nachos-supreme",
@@ -4782,7 +5154,7 @@
       "hasContent": true,
       "h1": "Breakfast Nachos Supreme",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-poutine",
@@ -4791,11 +5163,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 21,
+      "inboundLinks": 22,
       "hasContent": true,
       "h1": "Breakfast Poutine",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-quesadillas",
@@ -4804,11 +5176,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Breakfast Quesadillas",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-sandwich-trays",
@@ -4821,7 +5193,7 @@
       "hasContent": true,
       "h1": "Breakfast Sandwich Trays",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-sliders",
@@ -4834,7 +5206,7 @@
       "hasContent": true,
       "h1": "Breakfast Sliders",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/breakfast-stromboli-roll",
@@ -4843,11 +5215,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 12,
+      "inboundLinks": 13,
       "hasContent": true,
       "h1": "Breakfast Stromboli Roll",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/buttermilk-pancakes",
@@ -4856,11 +5228,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Buttermilk Pancakes for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/cast-iron-breakfast-skillet",
@@ -4869,11 +5241,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Cast Iron Breakfast Skillet",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/chicken-and-waffles-crew",
@@ -4886,7 +5258,7 @@
       "hasContent": true,
       "h1": "Chicken and Waffles for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/chilaquiles-verde-bake",
@@ -4895,11 +5267,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 13,
+      "inboundLinks": 15,
       "hasContent": true,
       "h1": "Chilaquiles Verde Bake",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/chorizo-breakfast-hash",
@@ -4908,11 +5280,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Chorizo Breakfast Hash",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/club-sandwich-breakfast-bake",
@@ -4921,11 +5293,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 6,
+      "inboundLinks": 7,
       "hasContent": true,
       "h1": "Club Sandwich Breakfast Bake",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/corned-beef-hash-breakfast",
@@ -4934,11 +5306,24 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 11,
+      "inboundLinks": 13,
       "hasContent": true,
       "h1": "Corned Beef Hash Breakfast",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/cottage-cheese-veggie-egg-bake",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 5,
+      "hasContent": true,
+      "h1": "Cottage Cheese Veggie Egg Bake",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/country-fried-steak-eggs",
@@ -4951,20 +5336,7 @@
       "hasContent": true,
       "h1": "Country Fried Steak and Eggs Breakfast",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
-    },
-    {
-      "path": "/breakfast/cowboy-breakfast-skillet",
-      "collection": "breakfast-recipe",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Cowboy Breakfast Skillet",
-      "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/crew-french-toast-bake",
@@ -4977,7 +5349,7 @@
       "hasContent": true,
       "h1": "Crew French Toast Bake",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/denver-breakfast-casserole",
@@ -4990,7 +5362,20 @@
       "hasContent": true,
       "h1": "Denver Breakfast Casserole",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/egg-white-black-bean-breakfast-quesadillas",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 3,
+      "hasContent": true,
+      "h1": "Egg White &amp; Black Bean Breakfast Quesadillas",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/eggs-benedict-hall-style",
@@ -4999,11 +5384,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 5,
+      "inboundLinks": 6,
       "hasContent": true,
       "h1": "Eggs Benedict Hall Style",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/farmers-breakfast-casserole",
@@ -5012,11 +5397,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 9,
+      "inboundLinks": 10,
       "hasContent": true,
       "h1": "Farmer's Breakfast Casserole",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/fire-captain-omelette-bar",
@@ -5029,7 +5414,7 @@
       "hasContent": true,
       "h1": "Fire Captain Omelette Bar",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/firehall-breakfast-pizza",
@@ -5038,37 +5423,24 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Firehall Breakfast Pizza",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
-      "path": "/breakfast/german-potato-breakfast-skillet",
+      "path": "/breakfast/firehouse-breakfast-protein-bowls",
       "collection": "breakfast-recipe",
       "sitemapStatus": "in_sitemap",
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 10,
       "hasContent": true,
-      "h1": "German Potato Breakfast Skillet",
+      "h1": "Firehouse Breakfast Protein Bowls",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
-    },
-    {
-      "path": "/breakfast/green-chile-breakfast-burritos",
-      "collection": "breakfast-recipe",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Green Chile Breakfast Burritos",
-      "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/hall-breakfast-burritos",
@@ -5077,11 +5449,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 5,
       "hasContent": true,
       "h1": "Hall Breakfast Burritos",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/hall-breakfast-wraps",
@@ -5090,11 +5462,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 6,
       "hasContent": true,
       "h1": "Hall Breakfast Wraps",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/hall-sausage-biscuits-gravy",
@@ -5103,11 +5475,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 4,
       "hasContent": true,
       "h1": "Hall Sausage Biscuits &amp; Gravy",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/hash-brown-breakfast-casserole",
@@ -5116,11 +5488,24 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 7,
+      "inboundLinks": 8,
       "hasContent": true,
       "h1": "Hash Brown Breakfast Casserole",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/high-protein-breakfast-burrito-bowls",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 4,
+      "hasContent": true,
+      "h1": "High-Protein Breakfast Burrito Bowls",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/huevos-rancheros-crew",
@@ -5133,7 +5518,7 @@
       "hasContent": true,
       "h1": "Huevos Rancheros for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/irish-breakfast-fry-up",
@@ -5146,7 +5531,7 @@
       "hasContent": true,
       "h1": "Irish Breakfast Fry-Up",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/johnnycakes-with-syrup",
@@ -5159,7 +5544,7 @@
       "hasContent": true,
       "h1": "Johnnycakes with Maple Syrup",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/lumberjack-breakfast-platter",
@@ -5172,7 +5557,7 @@
       "hasContent": true,
       "h1": "Lumberjack Breakfast Platter",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/maple-sausage-pinwheels",
@@ -5185,7 +5570,7 @@
       "hasContent": true,
       "h1": "Maple Sausage Pinwheels",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/menemen-for-the-crew",
@@ -5198,7 +5583,7 @@
       "hasContent": true,
       "h1": "Menemen for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/migas-for-the-crew",
@@ -5211,7 +5596,7 @@
       "hasContent": true,
       "h1": "Migas for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/monte-cristo-sandwiches",
@@ -5224,7 +5609,7 @@
       "hasContent": true,
       "h1": "Monte Cristo Sandwiches",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/overnight-french-toast-bake",
@@ -5233,11 +5618,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Overnight French Toast Bake",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/overnight-oat-bar-crew",
@@ -5246,11 +5631,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 4,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Overnight Oat Bar for the Crew",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/overnight-sausage-strata",
@@ -5263,7 +5648,20 @@
       "hasContent": true,
       "h1": "Overnight Sausage Strata",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/peanut-butter-protein-overnight-oats",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Peanut Butter Protein Overnight Oats",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/quick-egg-tacos",
@@ -5276,20 +5674,7 @@
       "hasContent": true,
       "h1": "Quick Egg Tacos",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
-    },
-    {
-      "path": "/breakfast/red-lead-skillet",
-      "collection": "breakfast-recipe",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Red Lead Skillet",
-      "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/sausage-egg-cheese-sandwiches",
@@ -5302,7 +5687,20 @@
       "hasContent": true,
       "h1": "Sausage Egg &amp; Cheese Sandwiches",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/savory-cottage-cheese-breakfast-bowls",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Savory Cottage Cheese Breakfast Bowls",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/scrapple-and-eggs-skillet",
@@ -5315,7 +5713,7 @@
       "hasContent": true,
       "h1": "Scrapple and Eggs Skillet",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/shakshuka-for-the-hall",
@@ -5328,7 +5726,7 @@
       "hasContent": true,
       "h1": "Shakshuka for the Hall",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/sheet-pan-breakfast-hash",
@@ -5341,7 +5739,7 @@
       "hasContent": true,
       "h1": "Sheet Pan Breakfast Hash",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/sheet-pan-breakfast-sandwiches",
@@ -5354,7 +5752,7 @@
       "hasContent": true,
       "h1": "Sheet Pan Breakfast Sandwiches",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/sheet-pan-full-english",
@@ -5363,11 +5761,11 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Sheet Pan Full English",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/sheet-pan-eggs-sausage-crew",
@@ -5380,7 +5778,7 @@
       "hasContent": true,
       "h1": "Sheet-Pan Eggs &amp; Sausage",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/shrimp-and-grits-breakfast",
@@ -5393,7 +5791,7 @@
       "hasContent": true,
       "h1": "Shrimp and Grits Breakfast",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/smoked-salmon-benedit",
@@ -5406,7 +5804,7 @@
       "hasContent": true,
       "h1": "Smoked Salmon Benedict",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/southwest-egg-bake",
@@ -5419,7 +5817,7 @@
       "hasContent": true,
       "h1": "Southwest Egg Bake",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/tater-tot-breakfast-casserole",
@@ -5432,7 +5830,33 @@
       "hasContent": true,
       "h1": "Tater Tot Breakfast Casserole",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/turkey-bacon-white-bean-breakfast-hash",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Turkey Bacon &amp; White Bean Breakfast Hash",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/turkey-sausage-sweet-potato-skillet",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Turkey Sausage &amp; Sweet Potato Breakfast Skillet",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/turkey-sausage-burritos",
@@ -5445,7 +5869,33 @@
       "hasContent": true,
       "h1": "Turkey Sausage Breakfast Burritos",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/turkey-sausage-egg-white-sandwiches",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Turkey Sausage Egg White Breakfast Sandwiches",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
+    },
+    {
+      "path": "/breakfast/turkey-sausage-spinach-feta-egg-white-scramble",
+      "collection": "breakfast-recipe",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Turkey Sausage, Spinach &amp; Feta Egg White Scramble",
+      "canonicalOk": true,
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/veggie-egg-burritos",
@@ -5458,7 +5908,7 @@
       "hasContent": true,
       "h1": "Veggie Egg Burritos",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/performance/apple-cinnamon-baked-oatmeal",
@@ -5471,7 +5921,7 @@
       "hasContent": true,
       "h1": "Apple Cinnamon Baked Oatmeal",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/performance/big-pot-savory-oats",
@@ -5484,7 +5934,7 @@
       "hasContent": true,
       "h1": "Big-Pot Savory Oats",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/performance/high-protein-parfaits",
@@ -5497,7 +5947,7 @@
       "hasContent": true,
       "h1": "High-Protein Yogurt Parfaits",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/performance/protein-french-toast",
@@ -5510,7 +5960,7 @@
       "hasContent": true,
       "h1": "Protein French Toast",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/breakfast/performance/protein-pancake-tray",
@@ -5523,7 +5973,7 @@
       "hasContent": true,
       "h1": "Protein Pancake Tray",
       "canonicalOk": true,
-      "lastmod": "2026-07-17"
+      "lastmod": "2026-09-26"
     },
     {
       "path": "/recipes/honey-chipotle-chicken-thighs",
@@ -5532,7 +5982,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 20,
+      "inboundLinks": 21,
       "hasContent": true,
       "h1": "Honey Chipotle Grilled Chicken Thighs",
       "canonicalOk": true,
@@ -5545,7 +5995,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 8,
+      "inboundLinks": 7,
       "hasContent": true,
       "h1": "Smoked Chicken Quarters with White Sauce",
       "canonicalOk": true,
@@ -5558,7 +6008,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 30,
+      "inboundLinks": 28,
       "hasContent": true,
       "h1": "Brisket-Style Beef Sandwiches",
       "canonicalOk": true,
@@ -5584,7 +6034,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 1,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Texas Central Brisket for the Crew",
       "canonicalOk": true,
@@ -5649,7 +6099,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 3,
+      "inboundLinks": 2,
       "hasContent": true,
       "h1": "Santa Maria Tri-Tip Roast",
       "canonicalOk": true,
@@ -5662,7 +6112,7 @@
       "crawled": true,
       "status": 200,
       "depth": 2,
-      "inboundLinks": 2,
+      "inboundLinks": 3,
       "hasContent": true,
       "h1": "Reverse-Seared Ribeye for the Crew",
       "canonicalOk": true,
@@ -6111,6 +6561,19 @@
       "lastmod": "2026-06-04"
     },
     {
+      "path": "/guides/cooking-for-10-firefighters",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Cooking for 10 Firefighters: How Much Food, Which Pans, and How to Time It",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
       "path": "/guides/feeding-a-firehall-crew",
       "collection": "guide",
       "sitemapStatus": "in_sitemap",
@@ -6119,12 +6582,12 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "How to Feed a Firehall Crew Without Losing the Shift",
+      "h1": "How to Cook a Crew Dinner That Survives Interruptions",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
     {
-      "path": "/guides/quick-meals-between-calls",
+      "path": "/guides/firehall-grocery-planning",
       "collection": "guide",
       "sitemapStatus": "in_sitemap",
       "crawled": true,
@@ -6132,12 +6595,12 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Quick Firefighter Meals Between Calls",
+      "h1": "Grocery Planning for a Firehouse Crew: How Much to Buy and How to Shop",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
     {
-      "path": "/guides/bbq-night-at-the-station",
+      "path": "/guides/rookie-cooking-mistakes",
       "collection": "guide",
       "sitemapStatus": "in_sitemap",
       "crawled": true,
@@ -6145,189 +6608,7 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "BBQ Night at the Fire Station",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/comfort-food-after-a-long-shift",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Comfort Food After a Long Call",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/firehall-breakfast-and-brunch",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Firehall Breakfast and Brunch That Actually Get Eaten",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/meal-prep-for-shift-workers",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Meal Prep for Firefighters and Shift Workers",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/planning-tonights-station-dinner",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Planning Tonight's Station Dinner (Without the 6 PM Panic)",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/healthy-meals-for-active-crews",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Healthy Meals for Active Crews (Without the Lecture)",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/best-firehall-meals-busy-nights",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Best Firehall Meals for Busy Nights",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/25-firefighter-dinner-ideas",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "25 Firefighter Dinner Ideas",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/best-firehouse-meals-large-crews",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Best Firehouse Meals for Large Crews",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/meals-firefighters-actually-cook",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Meals Firefighters Actually Cook",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/best-meals-24-hour-shift",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Best Meals for a 24 Hour Shift",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/healthy-firefighter-meals-fill-you-up",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Healthy Firefighter Meals That Fill You Up",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/fast-firehall-meals-under-30-minutes",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Fast Firehall Meals Under 30 Minutes",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/best-firefighter-crockpot-meals",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Best Firefighter Crockpot Meals",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/firehouse-comfort-meals",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Firehouse Comfort Meals",
+      "h1": "Rookie Cooking Mistakes at the Firehall, and How to Fix Them",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
@@ -6340,12 +6621,12 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Easy Firehall Pasta Recipes",
+      "h1": "Pasta for a Crowd: How Much to Cook and How to Keep It From Going Soft",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
     {
-      "path": "/guides/meals-feeding-10-firefighters",
+      "path": "/guides/best-firefighter-crockpot-meals",
       "collection": "guide",
       "sitemapStatus": "in_sitemap",
       "crawled": true,
@@ -6353,7 +6634,137 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Meals for Feeding 10 Firefighters",
+      "h1": "Slow Cooker Meals for a Firehouse Crew: What Works and How to Do It Safely",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/firehall-meal-prep-ideas",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Firehouse Meal Prep: Cook Ahead, Store Safely, Reheat Without Ruining It",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/firefighter-breakfast-guide",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Firehouse Breakfast for a Crowd: Eggs, Bacon, and Pancakes for 8 to 12",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/best-station-chili-recipes",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Chili for a Crowd: How to Make, Hold, and Cool a Big Batch",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/station-kitchen-essentials",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Station Kitchen Equipment: What You Need to Cook for 8 to 12",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/bbq-night-at-the-station",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "BBQ Night at the Fire Station: How to Grill for a Crowd",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/planning-tonights-station-dinner",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Planning Tonight's Station Dinner: How to Choose, Time and Organize It",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/best-firehouse-meals-large-crews",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Best Firehouse Meals for Large Crews: Cooking for 15 to 30",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/best-meals-24-hour-shift",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Best Meals for a 24-Hour Shift: Planning Dinner, Overnight Food and Breakfast",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/fast-firehall-meals-under-30-minutes",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Fast Firehall Meals Under 30 Minutes: Quick Dinners for a Crew",
+      "canonicalOk": true,
+      "lastmod": "2026-05-27"
+    },
+    {
+      "path": "/guides/firehouse-comfort-meals",
+      "collection": "guide",
+      "sitemapStatus": "in_sitemap",
+      "crawled": true,
+      "status": 200,
+      "depth": 2,
+      "inboundLinks": 1,
+      "hasContent": true,
+      "h1": "Firehouse Comfort Meals: Make-Ahead Classics That Feed a Crew",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
@@ -6371,19 +6782,6 @@
       "lastmod": "2026-05-27"
     },
     {
-      "path": "/guides/best-station-chili-recipes",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Best Station Chili Recipes",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
       "path": "/guides/firehall-taco-night-ideas",
       "collection": "guide",
       "sitemapStatus": "in_sitemap",
@@ -6392,59 +6790,7 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Firehall Taco Night Ideas",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/best-meals-after-busy-shift",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Best Meals After a Busy Shift",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/firefighter-breakfast-ideas",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Firefighter Breakfast Ideas",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/firehall-meal-prep-ideas",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Firehall Meal Prep Ideas",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/dutch-oven-meals-firefighters",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Best Dutch Oven Meals for Firefighters",
+      "h1": "Firehall Taco Night Ideas: How to Run a Taco Bar for a Crew",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
@@ -6457,7 +6803,7 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "One-Pot Firehall Meals",
+      "h1": "One-Pot Firehall Meals: Rice, Pasta and Stews for a Crew in a Single Pot",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
@@ -6470,72 +6816,7 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Healthy Meals That Still Taste Good",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/eating-well-on-24-hour-shifts",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Eating Well on 24-Hour Shifts",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/best-foods-for-long-shifts",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Best Foods for Long Shifts",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/firefighter-recovery-nutrition",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Firefighter Recovery Nutrition",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/hydration-for-firefighters",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Hydration for Firefighters",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/nutrition-after-overnight-calls",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Nutrition After Overnight Calls",
+      "h1": "Healthy Meals That Still Taste Good: Cooking Lighter for a Crew",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
@@ -6548,33 +6829,7 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "High-Protein Firehall Meals",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/avoid-living-on-takeout",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "How Firefighters Can Avoid Living on Takeout",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/performance-nutrition-firefighters",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Performance Nutrition for Firefighters",
+      "h1": "High-Protein Firehall Meals: Protein-Forward Dinners for a Crew",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
@@ -6587,46 +6842,7 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Healthy Station Snacks",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/meals-wont-wreck-energy-levels",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Meals That Won't Wreck Energy Levels",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/eating-during-high-stress-shifts",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Eating During High-Stress Shifts",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/recovery-meals-after-hard-calls",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Recovery Meals After Hard Calls",
+      "h1": "Healthy Station Snacks: What to Stock and What to Make Ahead",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
@@ -6639,150 +6855,7 @@
       "depth": 2,
       "inboundLinks": 1,
       "hasContent": true,
-      "h1": "Firehall Kitchen Culture",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/how-crews-split-groceries",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "How Crews Split Groceries",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/legendary-firehall-meals",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Legendary Firehall Meals",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/meals-every-firefighter-knows",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Meals Every Firefighter Knows",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/rookie-cooking-mistakes",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Rookie Cooking Mistakes at the Hall",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/feeding-ten-firefighters",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Feeding Ten Firefighters",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/busy-shift-dinner-strategies",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Busy Shift Dinner Strategies",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/better-station-food-culture",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Building a Better Station Food Culture",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/cooking-for-10-firefighters",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Cooking for 10 Firefighters",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/firehall-grocery-planning",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Firehall Grocery Planning",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/station-kitchen-essentials",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "Station Kitchen Essentials",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/organize-firehall-dinners",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "How to Organize Firehall Dinners",
+      "h1": "Firehall Kitchen Culture: Running a Shared Station Kitchen That Works",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },
@@ -6809,19 +6882,6 @@
       "inboundLinks": 1,
       "hasContent": true,
       "h1": "20 Most Popular Firefighter Meals",
-      "canonicalOk": true,
-      "lastmod": "2026-05-27"
-    },
-    {
-      "path": "/guides/firefighter-breakfast-guide",
-      "collection": "guide",
-      "sitemapStatus": "in_sitemap",
-      "crawled": true,
-      "status": 200,
-      "depth": 2,
-      "inboundLinks": 1,
-      "hasContent": true,
-      "h1": "The Firefighter Breakfast Guide",
       "canonicalOk": true,
       "lastmod": "2026-05-27"
     },

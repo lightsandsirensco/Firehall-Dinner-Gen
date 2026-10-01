@@ -11,6 +11,7 @@ import { normalizeTitleKey } from "../shared/ingestion/dedupe.js";
 import { resolveExistingSlugImage } from "../shared/explore-image-paths.js";
 import { hasCompleteNutrition, validateNutritionPerServing } from "../shared/nutrition/index.js";
 import { BATCH_250_RECIPES } from "../shared/hall-expansion/adapted/batch-250.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const ROOT = process.cwd();
 const REPORT = path.join(ROOT, "review", "catalog-250-production-report.md");
@@ -184,7 +185,7 @@ function main(): void {
   else for (const i of warns.slice(0, 40)) lines.push(`- **${i.slug}** (${i.code}): ${i.message}`);
 
   fs.mkdirSync(path.dirname(REPORT), { recursive: true });
-  fs.writeFileSync(REPORT, lines.join("\n"), "utf8");
+  writeFileAtomicSync(REPORT, lines.join("\n"), "utf8");
 
   console.log(`[audit:catalog-250] recipes=${catalog.recipeCount} critical=${critical.length} warn=${warns.length} score=${score}`);
   console.log(`[audit:catalog-250] report → ${REPORT}`);

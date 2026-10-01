@@ -1,113 +1,213 @@
 {
   "slug": "firehouse-comfort-meals",
-  "title": "Firehouse Comfort Meals",
-  "subtitle": "Post-call food that hits — mac, parm, chili, and bakes",
-  "description": "Firehouse comfort meals crews ask for again: cheesy bakes, chili, parm, mashed plates, and loaded bowls after long jobs.",
-  "topic": "meal_planning",
+  "title": "Firehouse Comfort Meals: Make-Ahead Classics That Feed a Crew",
+  "subtitle": "Mac and cheese, meatloaf, pot pie, stew and mashed potatoes for 10: quantities, oven times, and the fixes for grainy sauce, gluey potatoes and tough stew.",
+  "description": "Firehouse comfort meals for 10: mac and cheese, meatloaf, pot pie, stew and mashed potatoes, with quantities, oven times and make-ahead steps.",
+  "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "Comfort food at the station is half the reset after a tough job. Crews want salt, starch, and enough volume that nobody hits the vending machine later. These meals are not gourmet — they are familiar, hot, and big. Below: what halls actually cook for firehouse comfort meals — formats, timing, and recipe picks that survive a busy board.",
+  "intro": "Comfort food suits a station kitchen because most of it improves with time. Stews and braises taste deeper the next day, mac and cheese and pot pie can be assembled hours ahead, and meatloaf slices cleanly after it rests. The problems at crew scale are predictable: cheese sauce that turns grainy, mashed potatoes that go gluey, stew meat that stays tough because it boiled, and a bake that is cold in the middle because it went into the oven straight from the fridge. Each has a specific cause and a specific fix. This guide gives quantities and oven times for 10, the technique behind each fix, and how to assemble ahead and reheat.",
   "sections": [
     {
-      "id": "hits",
-      "heading": "Hall hits that never get voted off",
+      "id": "quantities",
+      "heading": "Comfort classics for 10: quantities and oven times",
       "paragraphs": [
-        "Mac and cheese, chicken parm, chili, meatloaf, pot pie, and loaded potatoes. These are not creative — they are effective.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
+        "These amounts feed 10 hungry adults with a side or two. Temperatures are for a conventional oven; with convection, drop 25°F (15°C). For any dish containing meat or poultry, check the center with a thermometer rather than trusting the time, especially when two dishes share the oven."
       ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+      "table": {
+        "caption": "Quantities, pans and cooking times for 10 people",
+        "columns": [
+          "Dish",
+          "Main quantities",
+          "Pan",
+          "Oven and time",
+          "Done when"
+        ],
+        "rows": [
+          [
+            "Baked mac and cheese",
+            "2 lb dry pasta, 8 cups milk, 1/2 cup each butter and flour, 2 lb cheese",
+            "Two 9 x 13 in",
+            "350°F (175°C), 25 to 30 min",
+            "Bubbling at the edges, browned on top"
+          ],
+          [
+            "Meatloaf",
+            "4 lb ground beef or beef and pork, 2 cups fresh breadcrumbs, 4 eggs",
+            "Two free-form loaves on a sheet pan",
+            "350°F (175°C), 60 to 75 min",
+            "160°F (71°C) in the center; rest 10 min"
+          ],
+          [
+            "Chicken pot pie",
+            "4 lb boneless chicken, 6 cups vegetables, 6 cups sauce, pastry for the top",
+            "Two 9 x 13 in",
+            "400°F (200°C), 25 to 35 min",
+            "Crust deep golden, filling 165°F (74°C)"
+          ],
+          [
+            "Beef stew",
+            "5 lb chuck in 1 1/2 in cubes, 3 lb potatoes, 2 lb carrots",
+            "7 to 8 qt Dutch oven",
+            "325°F (165°C), covered, 2 1/2 to 3 hours",
+            "Beef falls apart when pressed with a fork"
+          ],
+          [
+            "Shepherd's pie",
+            "3 1/2 lb ground lamb or beef, 4 lb potatoes",
+            "Two 9 x 13 in",
+            "400°F (200°C), 25 to 30 min",
+            "Filling bubbling, potato peaks browned"
+          ],
+          [
+            "Mashed potatoes",
+            "5 lb Yukon Gold or russet, 1/2 cup butter, 1 1/2 cups milk",
+            "8 qt pot",
+            "Stovetop simmer 15 to 20 min",
+            "A knife slides through without resistance"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "cheese-sauce",
+      "heading": "Cheese sauce that stays smooth",
+      "paragraphs": [
+        "Cheese sauce goes grainy for two reasons: it gets too hot after the cheese goes in, which makes the proteins tighten and squeeze out fat, or the cheese is pre-shredded and coated with starch that keeps it from melting smoothly. Grate the cheese from a block, and take the sauce off the heat before adding it. Very aged cheddar is the most likely to split; mixing it half and half with a good melting cheese such as Monterey Jack, young cheddar or American cheese gives both flavor and smoothness.",
+        "For a crew, undercook the pasta by 2 minutes, because it keeps absorbing sauce in the oven. Make the sauce looser than you want the finished dish, since it thickens as it bakes and again as it sits on the line."
+      ],
+      "steps": [
+        "Melt 1/2 cup (115 g) butter over medium heat, whisk in 1/2 cup (65 g) flour, and cook for 2 minutes without browning.",
+        "Whisk in 8 cups (2 L) of warm milk a cup at a time, then simmer 5 minutes until it coats a spoon.",
+        "Take the pot off the heat and stir in 2 lb (900 g) grated cheese a handful at a time. Season with 2 tsp salt, 1 tsp dry mustard and a pinch of cayenne.",
+        "Fold in 2 lb of pasta cooked 2 minutes short of the package time, divide between two 9 x 13 in dishes, and bake."
       ]
     },
     {
-      "id": "serve",
-      "heading": "How to serve comfort without a mess",
+      "id": "stews",
+      "heading": "Stews and braises: why low heat matters",
       "paragraphs": [
-        "Tray format, one ladle per pot, and buns or garlic bread on the side. Comfort food fails when the line backs up — keep movement simple.",
-        "On shift, write the hold plan on the whiteboard — covered on low, finish sear when you're back — so the next cook is not guessing at your flat-top settings."
-      ],
-      "tips": [
-        "Assign one cook and one runner; keep everyone else out of the kitchen until called.",
-        "Label allergens on the line once — it stops the mid-meal Q&A loop."
+        "Chuck, shoulder and short ribs are full of collagen, which slowly turns into gelatin when the meat is held well below boiling for a long time. That is what makes stew meat tender and the sauce silky. At a hard boil, the muscle fibers tighten and squeeze out their moisture faster than the collagen can soften, so boiled stew meat ends up dry and stringy even though it is surrounded by liquid. An oven at 300 to 325°F (150 to 165°C) with the lid on keeps the pot at a steady, gentle simmer without scorching the bottom.",
+        "Brown the beef in batches with space between the pieces; crowded meat steams and never develops the browned crust that flavors the whole pot. Stew is better on the second day, and chilling it overnight makes the fat set on the surface so you can lift it off. Reheat to a simmer, stirring, until it reaches 165°F (74°C)."
       ]
     },
     {
-      "id": "shift-pick",
-      "heading": "Pick the format before the recipe",
+      "id": "mashed",
+      "heading": "Mashed potatoes for a crowd",
       "paragraphs": [
-        "For firehouse comfort meals, decide line vs. plated vs. batch before you open a recipe tab. Lines win when eaters show up between 17:00 and 20:00; batches win when you know the whole crew lands at once.",
-        "Post protein, starch, and hold plan on the whiteboard. When tones drop, the next cook should read \"covered on low\" instead of guessing what you meant on the flat-top."
+        "Potatoes go gluey when their swollen starch cells are ruptured, which is what happens in a food processor or blender, or when they are mashed for too long. Use a masher or ricer and stop once they are smooth. Start them in cold, well-salted water so the outside does not overcook before the center is done, then drain and let them steam dry in the pot for 2 minutes. Add melted butter first, which coats the starch, and then warm milk.",
+        "To make them ahead, mash, spread in a buttered baking dish, cover, and refrigerate for up to 2 days. Reheat covered at 350°F (175°C) for 30 to 40 minutes, stirring once, to 165°F (74°C). For holding during service, a slow cooker on Warm with a thin layer of milk on top keeps them soft for about 2 hours."
+      ]
+    },
+    {
+      "id": "make-ahead",
+      "heading": "Assemble ahead, bake later",
+      "paragraphs": [
+        "Most of these dishes can be assembled up to a day in advance, which moves the work to a quiet part of the shift. The catch is that a dish going into the oven cold takes much longer to heat through, and the center is the last part to get there."
+      ],
+      "steps": [
+        "Cool any cooked filling (pot pie sauce, stew, meat for shepherd's pie) before assembling, so it does not hold the dish at a warm temperature in the fridge.",
+        "Assemble, cover tightly, and refrigerate for up to 24 hours. Add pastry or biscuit tops just before baking so they do not go soggy.",
+        "Bake from cold with foil on for the first half, and add 15 to 20 minutes to the normal time.",
+        "Check the center reaches 165°F (74°C) before serving; the edges will be bubbling well before that."
       ],
       "tips": [
-        "Assign one cook and one runner — everyone else stays out until called.",
-        "Sauces on the side keep reheat from turning gluey for post-call eaters."
+        "Reheat leftover mac and cheese with 1/4 cup milk per 4 cups, covered, at 350°F (175°C) for 20 to 25 minutes, stirring halfway.",
+        "Soft comfort food benefits from something crisp alongside: toasted bread, a sharp slaw or pickles."
       ]
     }
   ],
   "practicalAdvice": [
-    "Serve something crunchy or toasted if the main is soft.",
-    "Keep hot sauce on the table — instant customization.",
-    "Do not apologize for comfort night — balance the week instead.",
-    "Post who's cooking and what's holding warm on the whiteboard — post-call eaters should not hunt for answers."
+    "Grate cheese from a block and add it off the heat to keep cheese sauce smooth.",
+    "Braise stew meat covered at 300 to 325°F (150 to 165°C); boiling makes it tough.",
+    "Mash potatoes by hand or with a ricer; a food processor makes them gluey.",
+    "When baking a dish straight from the fridge, add 15 to 20 minutes and check the center reaches 165°F (74°C).",
+    "Undercook pasta for baked dishes by 2 minutes."
   ],
   "mealRecommendations": [
     {
       "slug": "mac-and-cheese-bake",
       "title": "Baked Mac and Cheese",
-      "blurb": "Cheesy tray — universal."
-    },
-    {
-      "slug": "chicken-parm",
-      "title": "Chicken Parmesan",
-      "blurb": "Italian comfort king."
-    },
-    {
-      "slug": "big-chili",
-      "title": "Beef and Bean Chili",
-      "blurb": "Bowl food after hard weather."
+      "blurb": "Uses the cheese sauce method above; assemble ahead and bake when needed."
     },
     {
       "slug": "meatloaf-mashed",
       "title": "Meatloaf and Mashed Potatoes",
-      "blurb": "Sunday-dinner energy on a weeknight."
+      "blurb": "Free-form loaves on a sheet pan brown better than loaf pans."
     },
     {
       "slug": "chicken-pot-pie",
       "title": "Chicken Pot Pie",
-      "blurb": "All-in-one bowl meal."
+      "blurb": "The filling can be made a day ahead; top it just before baking."
+    },
+    {
+      "slug": "shepherds-pie",
+      "title": "Shepherd's Pie",
+      "blurb": "Two 9 x 13 pans feed 10 to 12 and reheat well."
     },
     {
       "slug": "beef-stroganoff",
       "title": "Beef Stroganoff",
-      "blurb": "Rich, savory noodles."
+      "blurb": "A quicker braise; stir in the sour cream off the heat so it doesn't split."
     },
     {
-      "slug": "crispy-chicken-cutlets",
-      "title": "Crispy Chicken Cutlets Marinara",
-      "blurb": "Golden cutlets with bubbling sauce — Italian night energy."
+      "slug": "chicken-parm",
+      "title": "Chicken Parmesan",
+      "blurb": "Bake the breaded cutlets on racks so the bottoms stay crisp under the sauce."
+    },
+    {
+      "slug": "beef-barley-soup",
+      "title": "Beef Barley Soup",
+      "blurb": "Barley thickens it as it sits; add stock when reheating."
+    },
+    {
+      "slug": "french-onion-soup-for-the-hall",
+      "title": "French Onion Soup",
+      "blurb": "The onions take an hour to brown; make the soup base the day before."
+    },
+    {
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "blurb": "A fast comfort dinner when there is no time for a braise."
     }
   ],
   "faqs": [
     {
-      "question": "What comfort meals do firehouse crews ask for again and again?",
-      "answer": "Mac and cheese, chicken parm, chili, meatloaf, and loaded potatoes. None of it is creative — it's effective, and it reheats well for people eating in shifts."
-    },
-    {
-      "question": "How do you serve comfort food without backing up the line?",
-      "answer": "Use a tray format with one ladle per pot and buns or garlic bread on the side. Comfort food fails fast when the line backs up, so keep the setup simple even if the menu is rich."
+      "question": "How far ahead can I make mac and cheese for a crowd?",
+      "answer": "Assemble it up to 24 hours ahead with the pasta slightly undercooked and the sauce a little loose, then cover and refrigerate. Bake from cold at 350°F (175°C), covered for the first 20 minutes, for 40 to 50 minutes total, until it bubbles and the center is hot."
     }
   ],
   "relatedArticleSlugs": [
-    "comfort-food-after-a-long-shift",
-    "firehouse-comfort-meals"
+    "best-station-chili-recipes",
+    "one-pot-firehall-meals",
+    "firehall-meal-prep-ideas",
+    "cooking-for-10-firefighters"
   ],
   "keywords": [
     "firehouse comfort meals",
-    "firefighter comfort food",
-    "post call meal"
+    "comfort food for a crowd",
+    "make ahead comfort food",
+    "mac and cheese for a crowd",
+    "beef stew for a crowd"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-05-27T18:00:00.000Z",
-  "readMinutes": 7,
-  "heroImageAlt": "Firehouse Comfort Meals — firehouse comfort meals tips for fire station kitchens and crew-sized meals"
+  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "readMinutes": 9,
+  "seoTitle": "Comfort Food for a Crowd: Make-Ahead Classics That Reheat",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    },
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
+    }
+  ]
 }

@@ -19,6 +19,7 @@ import {
   scaleGoldenIngredients,
 } from "../shared/golden-100/recipe-quality/crew-scale.js";
 import type { GoldenRecipePageIngredient } from "../shared/golden-100/recipe-page-schema.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const CATALOG_ROOTS = [
   "client/public/catalog/golden-100/pages",
@@ -211,7 +212,7 @@ function main(): void {
   };
 
   fs.mkdirSync("review", { recursive: true });
-  fs.writeFileSync("review/crew-scaling-audit.json", `${JSON.stringify(report, null, 2)}\n`);
+  writeFileAtomicSync("review/crew-scaling-audit.json", `${JSON.stringify(report, null, 2)}\n`);
 
   const md = [
     "# Crew scaling audit",
@@ -257,7 +258,7 @@ function main(): void {
       : ["_None_"]),
   ];
 
-  fs.writeFileSync("review/crew-scaling-audit.md", `${md.join("\n")}\n`);
+  writeFileAtomicSync("review/crew-scaling-audit.md", `${md.join("\n")}\n`);
 
   console.log(
     `[audit:crew-scaling] recipes=${report.recipesAudited} ok=${report.successfullyScaled} fail=${report.failures} edge=${report.edgeCaseRecipes}`,

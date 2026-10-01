@@ -1,4 +1,4 @@
-import type { Express, Request, Response } from "express";
+import type { Express, NextFunction, Request, Response } from "express";
 import fs from "node:fs";
 import path from "node:path";
 import { toApprovedCatalogGridResponse } from "../../shared/approved-catalog.js";
@@ -34,8 +34,19 @@ import {
 import { buildSmoothieRecipePage } from "../fuel-catalog/page-builder.js";
 import { getSmoothieCatalogItem } from "../../shared/fuel-catalog/smoothies/catalog-data.js";
 import { routeParam } from "./param.js";
+import { getCatalogSlugRedirect } from "../../shared/catalog-slug-redirects.js";
+import { isBreakfastCatalogSlug } from "../../shared/hall-catalog/gate.js";
 
 export function registerCatalogRoutes(app: Express): void {
+  // Retired slugs never build a page of their own; like `/recipes/:slug`, they
+  // 301 to the replacement's detail endpoint (golden-100 resolves every hall collection).
+  app.get("/api/catalog/:collection/:slug", (req: Request, res: Response, next: NextFunction) => {
+    const target = getCatalogSlugRedirect(decodeURIComponent(routeParam(req.params.slug)));
+    if (!target) return next();
+    const endpoint = isBreakfastCatalogSlug(target) ? "breakfast" : "golden-100";
+    return res.redirect(301, `/api/catalog/${endpoint}/${encodeURIComponent(target)}`);
+  });
+
   app.get("/api/catalog/golden-100", async (_req: Request, res: Response) => {
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     const merged = loadMergedHallCatalogIndex();

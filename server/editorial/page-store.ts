@@ -12,6 +12,7 @@ import {
   type EditorialCatalogIndex,
   type EditorialIndexEntry,
 } from "../../shared/editorial/content-schema.js";
+import { writeFileAtomicSync } from "../lib/write-file-atomic.js";
 
 export const EDITORIAL_PUBLIC_DIR = path.join(process.cwd(), "client", "public", "content", "guides");
 export const EDITORIAL_PAGES_DIR = path.join(EDITORIAL_PUBLIC_DIR, "pages");
@@ -20,7 +21,7 @@ export function writeEditorialArticle(article: EditorialArticle): string {
   const parsed = editorialArticleSchema.parse(article);
   fs.mkdirSync(EDITORIAL_PAGES_DIR, { recursive: true });
   const file = path.join(EDITORIAL_PAGES_DIR, `${parsed.slug}.json`);
-  fs.writeFileSync(file, JSON.stringify(parsed, null, 2), "utf8");
+  writeFileAtomicSync(file, JSON.stringify(parsed, null, 2), "utf8");
   return file;
 }
 
@@ -49,7 +50,7 @@ export function writeEditorialIndex(entries: EditorialIndexEntry[]): string {
   editorialCatalogIndexSchema.parse(index);
   fs.mkdirSync(EDITORIAL_PUBLIC_DIR, { recursive: true });
   const file = path.join(EDITORIAL_PUBLIC_DIR, "index.json");
-  fs.writeFileSync(file, JSON.stringify(index, null, 2), "utf8");
+  writeFileAtomicSync(file, JSON.stringify(index, null, 2), "utf8");
   return file;
 }
 

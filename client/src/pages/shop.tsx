@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Flame } from "lucide-react";
+import { BrandLogo } from "@/components/brand/brand-logo";
 import { SiteHeader } from "@/components/site-header";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -17,7 +17,7 @@ export default function ShopPage() {
 
       <main className="max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
         <div className="flex items-center gap-2 mb-2">
-          <Flame className="w-5 h-5 text-primary" />
+          <BrandLogo className="h-6 w-6" />
           <span className="text-xs font-medium uppercase tracking-widest text-muted-foreground">
             Firehall Meals
           </span>

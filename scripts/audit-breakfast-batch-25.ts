@@ -13,6 +13,7 @@ import { imageFileExists } from "../shared/explore-image-paths.js";
 import { breakfastCatalogHeroPath, breakfastCatalogThumbPath } from "../shared/breakfast-catalog/slug-registry.js";
 import { validateExploreImageMapping, buildExploreImageMappingContext } from "../shared/explore-image-mapping.js";
 import { resolveApprovedCatalogKind } from "../shared/approved-catalog.js";
+import { writeFileAtomicSync } from "../server/lib/write-file-atomic.js";
 
 const PUBLIC = path.join(process.cwd(), "client", "public");
 const PAGES_DIR = path.join(PUBLIC, "catalog", "breakfast", "pages");
@@ -106,7 +107,7 @@ function main(): void {
 
   const outDir = path.join("review");
   fs.mkdirSync(outDir, { recursive: true });
-  fs.writeFileSync(path.join(outDir, "breakfast-batch-25-audit.json"), `${JSON.stringify(report, null, 2)}\n`, "utf8");
+  writeFileAtomicSync(path.join(outDir, "breakfast-batch-25-audit.json"), `${JSON.stringify(report, null, 2)}\n`, "utf8");
 
   console.log("[audit:breakfast-batch-25] Summary");
   console.log(`  Recipes in batch: ${slugs.length}`);
