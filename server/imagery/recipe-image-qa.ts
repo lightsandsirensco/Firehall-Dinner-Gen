@@ -15,11 +15,13 @@ import {
 } from "../../shared/food-imagery/recipe-image-standard.js";
 import {
   checkRecipeDishFormat,
+  checkStructuralCues,
   combineFidelity,
   DISH_FORMATS,
   dishFormatRubricLines,
   expectedDishFormatBrief,
   isFormatIssue,
+  mergeStructuralCues,
   normalizeDepictedFormat,
   type DishFormat,
   type DishFormatCheck,
@@ -32,7 +34,7 @@ import {
   type RecipePageLike,
 } from "./recipe-image-prompt.js";
 
-export const RECIPE_IMAGE_QA_VERSION = `qa4+std${RECIPE_IMAGE_STANDARD_VERSION}`;
+export const RECIPE_IMAGE_QA_VERSION = `qa5+std${RECIPE_IMAGE_STANDARD_VERSION}`;
 
 const EGG_BRIEF: Record<string, string> = {
   whole: "This recipe DOES serve visible whole eggs (fried, cracked on top, poached, or boiled) — do not flag them.",
@@ -204,7 +206,10 @@ export function parseVisionVerdict(raw: string | Record<string, unknown>): Visio
 }
 
 export function dishFormatCheck(v: VisionVerdict, recipe: QaRecipe): DishFormatCheck {
-  return checkRecipeDishFormat(recipe.title ?? "", recipe.mealFormat, v.depicted_format, v.format_confidence);
+  const title = recipe.title ?? "";
+  const format = checkRecipeDishFormat(title, recipe.mealFormat, v.depicted_format, v.format_confidence);
+  const recipeText = (recipe.ingredients ?? []).map((i) => `${i.name ?? ""} ${i.notes ?? ""}`).join(" ");
+  return mergeStructuralCues(format, checkStructuralCues(title, recipeText, v.visible_foods, recipe.mealFormat));
 }
 
 /**

@@ -10,9 +10,11 @@ import {
 import { readPngDimensions } from "./png-dimensions.js";
 import {
   checkRecipeDishFormat,
+  checkStructuralCues,
   DISH_FORMATS,
   dishFormatRubricLines,
   expectedDishFormat,
+  mergeStructuralCues,
 } from "../../shared/food-imagery/dish-format.js";
 import { parseSizeDimensions, FOOD_IMAGERY_HERO_SIZE } from "../../shared/food-imagery/aspect-ratio.js";
 
@@ -106,9 +108,10 @@ export async function validateImageWithVision(
   }
 }
 
-const FORMAT_GATE_PROMPT = `You classify the serving format of a food photo. Ignore ingredients, quality and style.
+const FORMAT_GATE_PROMPT = `You classify the serving format of a food photo. Ignore quality and style.
 ${dishFormatRubricLines().join("\n")}
-Return JSON only: {"depicted_format": ${DISH_FORMATS.map((f) => `"${f}"`).join("|")}, "format_confidence": integer 0-100, "description": string}`;
+Also list every distinct food you can see (e.g. "white rice", "ground beef", "tortilla chips", "sub roll").
+Return JSON only: {"depicted_format": ${DISH_FORMATS.map((f) => `"${f}"`).join("|")}, "format_confidence": integer 0-100, "visible_foods": string[], "description": string}`;
 
 /**
  * Dish-format gate — runs whenever an OpenAI key is present, independent of FOOD_IMAGERY_VISION_VALIDATE,
@@ -141,7 +144,12 @@ export async function validateDishFormat(buf: Buffer, ctx: FoodImageryContext): 
       ],
     });
     const parsed = JSON.parse(res.choices[0]?.message?.content || "{}") as Record<string, unknown>;
-    const check = checkRecipeDishFormat(ctx.title, ctx.mealFormat, parsed.depicted_format, Number(parsed.format_confidence) || 0);
+    const visibleFoods = Array.isArray(parsed.visible_foods) ? parsed.visible_foods.map(String) : [];
+    const recipeText = (ctx.ingredients ?? []).map((i) => i.name).join(" ");
+    const check = mergeStructuralCues(
+      checkRecipeDishFormat(ctx.title, ctx.mealFormat, parsed.depicted_format, Number(parsed.format_confidence) || 0),
+      checkStructuralCues(ctx.title, recipeText, visibleFoods, ctx.mealFormat),
+    );
     const notes = `format expected=${check.expected} depicted=${check.depicted} (${String(parsed.description ?? "")})`;
     if (check.verdict === "mismatch") {
       log(`[food-imagery] format gate rejected ${ctx.recipeKey}: ${check.reason}`, "catalog");

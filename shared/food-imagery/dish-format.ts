@@ -12,6 +12,7 @@ export const DISH_FORMATS = [
   "burger",
   "wrap",
   "taco",
+  "nachos",
   "pasta",
   "casserole",
   "rolled",
@@ -34,6 +35,7 @@ export const DISH_FORMAT_DEFINITIONS: Record<DishFormat, string> = {
   burger: "patty on a bun, including sliders",
   wrap: "filling rolled inside a tortilla or flatbread — burrito, wrap, rolled lavash",
   taco: "folded taco shells or tortillas, open-topped",
+  nachos: "tortilla chips loaded with toppings — nachos, even when piled in a bowl or skillet",
   pasta: "pasta or noodles plated or in a pasta bowl (not baked in a dish)",
   casserole: "baked in a baking dish or hotel pan — casserole, pasta bake, lasagna, gratin, hot dish",
   rolled: "individually rolled items plated separately — enchiladas, cannelloni, cabbage rolls, egg rolls",
@@ -58,6 +60,7 @@ const FORMAT_KEYWORDS: Array<{ format: DishFormat; re: RegExp }> = [
     re: /\b(sandwich(?:es)?|subs?|hoagies?|heroes|hero subs?|paninis?|melts?(?!-in)|po'?.?boys?|grilled cheese|french dips?|beef dips?|cheesesteaks?)\b/gi,
   },
   { format: "taco", re: /\btacos?\b/gi },
+  { format: "nachos", re: /\bnachos?\b/gi },
   { format: "wrap", re: /\b(burritos?|wraps?|chimichangas?)\b/gi },
   { format: "rolled", re: /\b(enchiladas?|cannelloni|cabbage rolls?|egg rolls?)\b/gi },
   { format: "pizza", re: /\bpizzas?\b/gi },
@@ -145,6 +148,7 @@ const DEPICTED_SYNONYMS: Array<{ format: DishFormat; re: RegExp }> = [
   { format: "wrap", re: /\b(burrito(?! bowl)|wrap|chimichanga)/i },
   { format: "rolled", re: /\b(rolled|enchilada|cannelloni|cabbage roll|egg roll)/i },
   { format: "sandwich", re: /\b(sandwich|sub\b|subs\b|hoagie|hero\b|panini|melt\b|po'?.?boy|roll(?!ed)|bread|toast|baguette|ciabatta)/i },
+  { format: "nachos", re: /\b(nachos?|tortilla chips)\b/i },
   { format: "taco", re: /\btaco/i },
   { format: "pizza", re: /\b(pizza|flatbread)/i },
   { format: "casserole", re: /\b(casserole|bake|baking dish|lasagna|gratin|hotel pan)/i },
@@ -177,6 +181,7 @@ const FORMAT_COMPATIBILITY: Record<Exclude<DishFormat, "unclear" | "plated">, { 
   burger: { ok: ["burger"], ambiguous: ["sandwich"] },
   wrap: { ok: ["wrap"], ambiguous: ["taco", "rolled"] },
   taco: { ok: ["taco"], ambiguous: [] },
+  nachos: { ok: ["nachos"], ambiguous: ["sheet_pan", "casserole", "skillet"] },
   pasta: { ok: ["pasta", "bowl"], ambiguous: ["casserole", "skillet", "soup", "plated"] },
   casserole: { ok: ["casserole", "sheet_pan"], ambiguous: ["skillet", "pasta", "plated", "bowl"] },
   rolled: { ok: ["rolled", "casserole"], ambiguous: ["wrap", "plated"] },
@@ -199,7 +204,7 @@ export interface DishFormatCheck {
   reason?: string;
 }
 
-const LABEL: Partial<Record<DishFormat, string>> = { meal_prep: "meal-prep containers", sheet_pan: "sheet pan", rolled: "individually rolled items", wrap: "wrapped burrito/wrap", plated: "hot plated entrée" };
+const LABEL: Partial<Record<DishFormat, string>> = { meal_prep: "meal-prep containers", sheet_pan: "sheet pan", rolled: "individually rolled items", wrap: "wrapped burrito/wrap", plated: "hot plated entrée", nachos: "nachos (loaded tortilla chips)" };
 const label = (f: DishFormat) => LABEL[f] ?? f;
 
 export function compareDishFormat(
@@ -244,12 +249,98 @@ export function combineFidelity(
   return content;
 }
 
+const PASTA_WORDS =
+  /\b(pasta|spaghetti|penne|rigatoni|fettuccine|linguine|ziti|macaroni|mac (?:and|&|n) cheese|noodles?|lo mein|orzo|tortellini|ravioli|gnocchi|lasagna)\b/i;
+
+/** Components a title names that must read clearly in the photo ("… Bowls with Rice" → rice). */
+const REQUIRED_COMPONENTS: Array<{ component: string; title: RegExp; visible: RegExp }> = [
+  { component: "rice", title: /\brice\b(?!\s*(?:paper|krispie|vinegar|wine|cakes?))/i, visible: /\b(rice|pilaf|risotto)\b/i },
+  { component: "pasta", title: PASTA_WORDS, visible: PASTA_WORDS },
+];
+
+/** Foods that turn a dish into a different format when the recipe does not use them. */
+const FORMAT_CARRIERS: Array<{ carrier: string; format: DishFormat; visible: RegExp; inRecipe: RegExp }> = [
+  { carrier: "tortilla chips", format: "nachos", visible: /\b(tortilla chips|corn chips|nachos?)\b/i, inRecipe: /\b(chips|nachos?|tostadas?)\b/i },
+  { carrier: "taco shells", format: "taco", visible: /\b(taco shells?|hard[- ]shells?)\b/i, inRecipe: /\b(taco shells?|tacos?)\b/i },
+  { carrier: "a wrapped tortilla", format: "wrap", visible: /\b(burritos?(?! bowl)|wrapped tortillas?|tortilla wraps?)\b/i, inRecipe: /\b(burritos?|wraps?|tortillas?)\b/i },
+  {
+    carrier: "sandwich bread",
+    format: "sandwich",
+    visible: /\b(buns?|sub rolls?|hoagie(?: rolls?)?|hero rolls?|subs?|sandwich(?:es)?|baguettes?|ciabatta|sliced bread)\b/i,
+    inRecipe: /\b(buns?|rolls?|bread|baguettes?|ciabatta|hoagies?|subs?|sandwich(?:es)?)\b/i,
+  },
+];
+
+/** Formats whose identity rests on the cues above — a missing base or a foreign carrier is a format failure. */
+const CUE_STRICT_FORMATS: readonly DishFormat[] = ["bowl", "meal_prep", "pasta", "salad"];
+/** Below this many listed foods, an absent component may just be an omission in the model's list. */
+const MIN_FOODS_FOR_ABSENCE = 3;
+
+export interface StructuralCueCheck {
+  verdict: DishFormatVerdict;
+  reasons: string[];
+}
+
+/**
+ * Required structural cues from the title, checked against the foods the vision model saw:
+ * a rice bowl must show rice, a pasta bowl pasta, and a bowl must not arrive on chips, shells or bread.
+ */
+export function checkStructuralCues(
+  title: string,
+  recipeText: string,
+  visibleFoods: string[],
+  mealFormat?: string,
+): StructuralCueCheck {
+  const { format, source } = resolveExpectedDishFormat(title, mealFormat);
+  if (!format || source !== "title" || !visibleFoods.length) return { verdict: "not_applicable", reasons: [] };
+  const strict = CUE_STRICT_FORMATS.includes(format);
+  const seen = visibleFoods.join(" | ");
+  const reasons: string[] = [];
+  let verdict: StructuralCueCheck["verdict"] = "match";
+
+  for (const { component, title: inTitle, visible } of REQUIRED_COMPONENTS) {
+    if (!inTitle.test(title) || visible.test(seen)) continue;
+    reasons.push(`required ${component} not visible — the title promises ${component}`);
+    if (strict && visibleFoods.length >= MIN_FOODS_FOR_ABSENCE) verdict = "mismatch";
+    else if (verdict !== "mismatch") verdict = "inconclusive";
+  }
+
+  if (strict) {
+    const rules = FORMAT_COMPATIBILITY[format as Exclude<DishFormat, "unclear" | "plated">];
+    const promised = `${title} ${recipeText}`;
+    for (const { carrier, format: carrierFormat, visible, inRecipe } of FORMAT_CARRIERS) {
+      if (rules.ok.includes(carrierFormat) || rules.ambiguous.includes(carrierFormat)) continue;
+      if (!visible.test(seen) || inRecipe.test(promised)) continue;
+      reasons.unshift(`wrong dish format — recipe is ${label(format)} but image shows ${carrier} (${label(carrierFormat)} presentation, not in recipe)`);
+      verdict = "mismatch";
+    }
+  }
+  return { verdict, reasons };
+}
+
+/** Fold the structural-cue result into the format check: either can fail the format on its own. */
+export function mergeStructuralCues(format: DishFormatCheck, cues: StructuralCueCheck): DishFormatCheck {
+  if (format.verdict === "mismatch" || cues.verdict === "match" || cues.verdict === "not_applicable") return format;
+  if (cues.verdict === "mismatch") return { ...format, verdict: "mismatch", reason: cues.reasons.join("; ") };
+  if (format.verdict === "inconclusive") return { ...format, reason: [format.reason, ...cues.reasons].join("; ") };
+  return { ...format, verdict: "inconclusive", reason: cues.reasons.join("; ") };
+}
+
+/** Positive prompt cues: components the title promises must read clearly. */
+export function structuralCuePromptLine(title: string, mealFormat?: string): string {
+  const { format, source } = resolveExpectedDishFormat(title, mealFormat);
+  if (!format || source !== "title") return "";
+  const parts = REQUIRED_COMPONENTS.filter(({ title: re }) => re.test(title)).map(({ component }) => component);
+  if (!parts.length) return "";
+  return `${parts.join(" and ")} must be clearly visible as a major component of the dish`;
+}
+
 /** Rubric block asking the vision model for a format label from the fixed list. */
 export function dishFormatRubricLines(): string[] {
   return [
     "DISH FORMAT — classify the physical form of the food, independent of ingredients. Use the food's form, not the tray or board it sits on (subs on a sheet pan are still \"sandwich\").",
     ...DISH_FORMATS.map((f) => `  - ${f}: ${DISH_FORMAT_DEFINITIONS[f]}`),
-    "Report depicted_format honestly even when every ingredient matches — a bowl recipe shown as subs is depicted_format \"sandwich\".",
+    "Report depicted_format honestly even when every ingredient matches — a bowl recipe shown as subs is depicted_format \"sandwich\"; loaded tortilla chips are \"nachos\" even when piled in a bowl.",
     "Format and vessel (bowl vs plate vs skillet vs baking dish) are judged separately from depicted_format: grade ACCURACY on the foods only and do not list format or vessel differences in accuracy_issues.",
   ];
 }
@@ -292,6 +383,7 @@ export function dishFormatNegativeHints(expected: DishFormat | null): string[] {
     burger: ["burger bun"],
     wrap: ["wrapped burrito", "tortilla wrap"],
     taco: ["taco shells"],
+    nachos: ["nachos", "tortilla chips"],
     rolled: ["rolled enchiladas"],
     soup: ["soup broth"],
     pizza: ["pizza crust"],

@@ -50,6 +50,72 @@
       "expected": "FAIL"
     },
     {
+      "id": "regression-mexican-american-garlic-beef-bowls-shown-as-nachos",
+      "note": "Production failure: generated rice-bowl recipe rendered as loaded nachos. Beef, cheese, tomato and cilantro all overlap; there is no rice.",
+      "recipe": {
+        "slug": "mexican-american-garlic-beef-bowls-with-rice",
+        "title": "Mexican-American Garlic Beef Bowls with Rice",
+        "mealFormat": "bowl",
+        "cuisine": "Mexican-American",
+        "ingredients": [
+          { "name": "ground beef" },
+          { "name": "long-grain white rice" },
+          { "name": "garlic" },
+          { "name": "onion" },
+          { "name": "bell pepper" },
+          { "name": "chili powder" },
+          { "name": "cumin" },
+          { "name": "diced tomatoes" },
+          { "name": "shredded cheddar" },
+          { "name": "cilantro" },
+          { "name": "lime" }
+        ]
+      },
+      "vision": {
+        "visible_foods": ["tortilla chips", "seasoned ground beef", "melted cheese", "pico de gallo", "jalapeños"],
+        "dish_format": "loaded nachos on a platter",
+        "depicted_format": "nachos",
+        "format_confidence": 95,
+        "accuracy": "MAJOR",
+        "accuracy_issues": ["tortilla chips not in recipe", "missing rice"],
+        "confidence": 88
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "regression-mexican-american-nachos-labelled-as-bowl",
+      "note": "Same image when the model calls the vessel a bowl (nachos piled in a bowl): the structural cues — chips present, rice absent — must still fail it.",
+      "recipe": {
+        "slug": "mexican-american-garlic-beef-bowls-with-rice",
+        "title": "Mexican-American Garlic Beef Bowls with Rice",
+        "mealFormat": "bowl",
+        "cuisine": "Mexican-American",
+        "ingredients": [
+          { "name": "ground beef" },
+          { "name": "long-grain white rice" },
+          { "name": "garlic" },
+          { "name": "onion" },
+          { "name": "bell pepper" },
+          { "name": "chili powder" },
+          { "name": "cumin" },
+          { "name": "diced tomatoes" },
+          { "name": "shredded cheddar" },
+          { "name": "cilantro" },
+          { "name": "lime" }
+        ]
+      },
+      "vision": {
+        "visible_foods": ["tortilla chips", "seasoned ground beef", "melted cheese", "pico de gallo", "jalapeños"],
+        "dish_format": "nachos piled in a serving bowl",
+        "depicted_format": "bowl",
+        "format_confidence": 80,
+        "accuracy": "MINOR",
+        "accuracy_issues": ["jalapeños not listed"],
+        "confidence": 85
+      },
+      "expected": "FAIL"
+    },
+    {
       "id": "control-bowl-recipe-with-sandwich-image",
       "recipe": { "slug": "teriyaki-chicken-rice-bowls", "title": "Teriyaki Chicken Rice Bowls", "ingredients": [{ "name": "chicken thighs" }, { "name": "rice" }, { "name": "teriyaki sauce" }, { "name": "broccoli" }] },
       "vision": { "visible_foods": ["teriyaki chicken", "brioche bun"], "depicted_format": "sandwich", "format_confidence": 92, "accuracy": "PASS", "accuracy_issues": [], "confidence": 85 },
@@ -190,10 +256,158 @@
       "recipe": { "slug": "herb-roasted-thighs", "title": "Herb Roasted Thighs", "ingredients": [{ "name": "chicken thighs" }, { "name": "herbs" }] },
       "vision": { "depicted_format": "plated", "format_confidence": 90, "accuracy": "PASS", "accuracy_issues": [], "confidence": 90 },
       "expected": "PASS"
+    },
+    {
+      "id": "mismatch-rice-bowl-without-rice",
+      "recipe": {
+        "slug": "mexican-american-garlic-beef-bowls-with-rice",
+        "title": "Mexican-American Garlic Beef Bowls with Rice",
+        "mealFormat": "bowl",
+        "cuisine": "Mexican-American",
+        "ingredients": [
+          { "name": "ground beef" },
+          { "name": "long-grain white rice" },
+          { "name": "garlic" },
+          { "name": "onion" },
+          { "name": "bell pepper" },
+          { "name": "chili powder" },
+          { "name": "cumin" },
+          { "name": "diced tomatoes" },
+          { "name": "shredded cheddar" },
+          { "name": "cilantro" },
+          { "name": "lime" }
+        ]
+      },
+      "vision": {
+        "visible_foods": ["ground beef", "black beans", "corn", "cheddar", "salsa"],
+        "depicted_format": "bowl",
+        "format_confidence": 92,
+        "accuracy": "MINOR",
+        "accuracy_issues": [],
+        "confidence": 85
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-pasta-bowl-without-pasta",
+      "recipe": {
+        "slug": "italian-garlic-beef-bowls-with-spaghetti-coleslaw-mix",
+        "title": "Italian Garlic Beef Bowls with Spaghetti & Coleslaw Mix",
+        "mealFormat": "bowl",
+        "ingredients": [
+          { "name": "ground beef" },
+          { "name": "spaghetti" },
+          { "name": "coleslaw mix" },
+          { "name": "garlic" }
+        ]
+      },
+      "vision": {
+        "visible_foods": ["ground beef", "coleslaw", "parmesan", "parsley"],
+        "depicted_format": "bowl",
+        "format_confidence": 93,
+        "accuracy": "MINOR",
+        "accuracy_issues": [],
+        "confidence": 85
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "mismatch-bowl-label-but-served-on-sub-roll",
+      "recipe": {
+        "slug": "italian-garlic-beef-bowls-with-spaghetti-coleslaw-mix",
+        "title": "Italian Garlic Beef Bowls with Spaghetti & Coleslaw Mix",
+        "mealFormat": "bowl",
+        "ingredients": [
+          { "name": "ground beef" },
+          { "name": "spaghetti" },
+          { "name": "coleslaw mix" },
+          { "name": "garlic" }
+        ]
+      },
+      "vision": {
+        "visible_foods": ["ground beef", "spaghetti", "coleslaw", "sub roll"],
+        "depicted_format": "bowl",
+        "format_confidence": 70,
+        "accuracy": "MINOR",
+        "accuracy_issues": [],
+        "confidence": 80
+      },
+      "expected": "FAIL"
+    },
+    {
+      "id": "pass-rice-bowl-with-rice-and-minor-garnish",
+      "recipe": {
+        "slug": "mexican-american-garlic-beef-bowls-with-rice",
+        "title": "Mexican-American Garlic Beef Bowls with Rice",
+        "mealFormat": "bowl",
+        "cuisine": "Mexican-American",
+        "ingredients": [
+          { "name": "ground beef" },
+          { "name": "long-grain white rice" },
+          { "name": "garlic" },
+          { "name": "onion" },
+          { "name": "bell pepper" },
+          { "name": "chili powder" },
+          { "name": "cumin" },
+          { "name": "diced tomatoes" },
+          { "name": "shredded cheddar" },
+          { "name": "cilantro" },
+          { "name": "lime" }
+        ]
+      },
+      "vision": {
+        "visible_foods": [
+          "cilantro-lime rice",
+          "garlic ground beef",
+          "peppers and onions",
+          "cheddar",
+          "lime wedge",
+          "sour cream"
+        ],
+        "depicted_format": "bowl",
+        "format_confidence": 96,
+        "accuracy": "MINOR",
+        "accuracy_issues": ["sour cream dollop not listed"],
+        "confidence": 90
+      },
+      "expected": "PASS"
+    },
+    {
+      "id": "inconclusive-rice-absent-from-short-food-list",
+      "recipe": {
+        "slug": "mexican-american-garlic-beef-bowls-with-rice",
+        "title": "Mexican-American Garlic Beef Bowls with Rice",
+        "mealFormat": "bowl",
+        "cuisine": "Mexican-American",
+        "ingredients": [
+          { "name": "ground beef" },
+          { "name": "long-grain white rice" },
+          { "name": "garlic" },
+          { "name": "onion" },
+          { "name": "bell pepper" },
+          { "name": "chili powder" },
+          { "name": "cumin" },
+          { "name": "diced tomatoes" },
+          { "name": "shredded cheddar" },
+          { "name": "cilantro" },
+          { "name": "lime" }
+        ]
+      },
+      "vision": {
+        "visible_foods": ["ground beef", "cheddar"],
+        "depicted_format": "bowl",
+        "format_confidence": 85,
+        "accuracy": "PASS",
+        "accuracy_issues": [],
+        "confidence": 70
+      },
+      "expected": "INCONCLUSIVE"
     }
   ],
   "expectedFormats": [
     ["Italian Garlic Beef Bowls with Spaghetti & Coleslaw Mix", "bowl"],
+    ["Mexican-American Garlic Beef Bowls with Rice", "bowl"],
+    ["Loaded Beef Nachos", "nachos"],
     ["Cheeseburger Bowls", "bowl"],
     ["Chicken Burrito Bowls", "bowl"],
     ["Meal Prep Chicken Burrito Bowls", "meal_prep"],

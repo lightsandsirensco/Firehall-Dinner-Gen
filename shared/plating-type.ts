@@ -3,7 +3,7 @@
  */
 
 import { normalizeFormatKey } from "./meal-format-contract.js";
-import { dishFormatNegativeHints, expectedDishFormat } from "./food-imagery/dish-format.js";
+import { dishFormatNegativeHints, expectedDishFormat, structuralCuePromptLine } from "./food-imagery/dish-format.js";
 import {
   buildPlatingAccuracyNegativeHints,
   buildPlatingAccuracyPromptLines,
@@ -124,7 +124,7 @@ export function buildPlatingPromptLine(
   const dish = title.trim();
   switch (platingType) {
     case "bowl":
-      return `${dish} served in a deep matte bowl — the recipe's base layer visible with its listed toppings arranged in distinct zones on top — eaten with a fork from the bowl, NOT a sandwich, sub or roll, NOT lettuce wraps, NOT tacos, NOT handheld, no bread unless the recipe lists it`;
+      return `${dish} served in a deep matte bowl — the recipe's base layer visible with its listed toppings arranged in distinct zones on top — eaten with a fork from the bowl, NOT a sandwich, sub or roll, NOT lettuce wraps, NOT tacos, NOT nachos or tortilla chips, NOT a wrapped burrito, NOT handheld, no bread unless the recipe lists it`;
     case "wrap":
       return `${dish} as rolled or folded wraps on a dark plate, one cut in half to show the listed filling — lettuce only if the recipe lists it — NOT a rice bowl, NOT deep bowl service`;
     case "taco":
@@ -206,5 +206,6 @@ export function buildFullPlatingPromptLine(
   const platingType = inferPlatingType(title, mealFormat);
   const vessel = buildPlatingPromptLine(platingType, title, cuisine);
   const accuracy = buildPlatingAccuracyPromptLines(title, mealFormat, platingType).join(" ");
-  return `${vessel}. ${accuracy}`;
+  const cues = structuralCuePromptLine(title, mealFormat);
+  return cues ? `${vessel}. ${cues}. ${accuracy}` : `${vessel}. ${accuracy}`;
 }
