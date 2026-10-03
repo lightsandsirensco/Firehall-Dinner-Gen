@@ -80,36 +80,6 @@ function loadScript(src: string, id: string): Promise<void> {
   return promise;
 }
 
-function parseOAuthError(err: unknown): { title: string; description: string } {
-  const fallback = { title: "Google sign-in failed", description: "Try email instead." };
-  if (!(err instanceof Error)) return fallback;
-  const match = err.message.match(/^(\d{3}):\s*(.+)$/s);
-  if (!match) return fallback;
-
-  const status = match[1];
-  const body = match[2]?.trim() ?? "";
-  let message = "";
-  let code = "";
-  try {
-    const json = JSON.parse(body) as { message?: string; code?: string };
-    if (json.message) message = json.message;
-    if (json.code) code = json.code;
-  } catch {
-    /* plain text body */
-  }
-
-  if (status === "409" && code === "email_collision") {
-    return {
-      title: "You already have an account",
-      description:
-        message ||
-        "You already have a Firehall Meals account with this email. Sign in with your email link first, then connect Google from your Account page.",
-    };
-  }
-
-  return { title: fallback.title, description: message || fallback.description };
-}
-
 function parseMagicLinkError(err: unknown): { message: string; retryAfter?: number } {
   if (!(err instanceof Error)) return { message: "We could not send the sign-in link. Try again." };
   const match = err.message.match(/^(\d{3}):\s*(.+)$/s);
@@ -234,28 +204,16 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
           return;
         }
 
+        // Redirect mode: Google form-POSTs the credential to login_uri, which
+        // signs in server-side and 303s back to /?signed_in=1 (finished by
+        // AuthCompleteHandler, return path kept in sessionStorage). Popup
+        // mode cannot complete on iOS browsers (ITP); login_uri must be
+        // absolute and listed under the OAuth client's Authorized redirect
+        // URIs for every origin (www.firehallmeals.com, localhost).
         window.google.accounts.id.initialize({
           client_id: googleClientId,
-          callback: async (response: { credential?: string }) => {
-            if (!response.credential) return;
-            setOauthBusy(true);
-            try {
-              const res = await apiRequest("POST", "/api/auth/google", {
-                id_token: response.credential,
-              });
-              const body = await res.json();
-              await afterSignIn(body.is_new, "google");
-            } catch (err) {
-              const parsed = parseOAuthError(err);
-              toast({
-                title: parsed.title,
-                description: parsed.description,
-                variant: "destructive",
-              });
-            } finally {
-              setOauthBusy(false);
-            }
-          },
+          ux_mode: "redirect",
+          login_uri: `${window.location.origin}/api/auth/google/callback`,
         });
 
         googleButtonRef.current.innerHTML = "";
@@ -273,7 +231,7 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
     return () => {
       cancelled = true;
     };
-  }, [active, showGoogle, googleClientId, googleWidth, afterSignIn, toast]);
+  }, [active, showGoogle, googleClientId, googleWidth]);
 
   const resetSentState = () => {
     setSent(false);

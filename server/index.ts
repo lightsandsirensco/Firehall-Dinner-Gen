@@ -75,6 +75,11 @@ app.use(
         }
       : false,
     crossOriginEmbedderPolicy: false,
+    // Helmet's default `same-origin` severs window.opener for the Google
+    // Identity Services popup (account linking), stranding it on a blank
+    // accounts.google.com page after account selection. Google documents
+    // `same-origin-allow-popups` as the required value for popup mode.
+    crossOriginOpenerPolicy: { policy: "same-origin-allow-popups" },
     crossOriginResourcePolicy: { policy: "cross-origin" },
   }),
 );

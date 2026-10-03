@@ -28,9 +28,15 @@ const ERROR_COPY: Record<string, { title: string; description: string; reopen?: 
     description: "Something went wrong completing sign-in. Try again.",
     reopen: true,
   },
+  google_email_collision: {
+    title: "You already have an account",
+    description:
+      "You already have a Firehall Meals account with this email. Sign in with your email link first, then connect Google from your Account page.",
+    reopen: true,
+  },
 };
 
-/** Handles magic-link redirects (?signed_in=1) and auth error query params. */
+/** Handles magic-link and Google redirect sign-ins (?signed_in=1) and auth error query params. */
 export function AuthCompleteHandler() {
   const { refresh, openSignIn } = useAuth();
   const { toast } = useToast();

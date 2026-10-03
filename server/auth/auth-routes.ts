@@ -251,6 +251,41 @@ export function registerAuthRoutes(app: Express): void {
     }
   });
 
+  async function signInWithGoogleCredential(
+    req: Request,
+    res: Response,
+    idToken: string,
+  ): Promise<{ kind: "signed_in"; isNew: boolean; userId: string } | { kind: "email_collision" }> {
+    const identity = await verifyGoogleIdToken(idToken);
+    const result = await resolveOAuthSignIn({
+      provider: "google",
+      subject: identity.subject,
+      email: identity.email,
+      firstName: identity.firstName,
+      lastName: identity.lastName,
+    });
+
+    if (result.kind === "email_collision") {
+      // Deliberate conflict — never silently merge/duplicate/move data.
+      // See GOOGLE SIGN-IN SAFETY section 7. Does not reveal whether an
+      // arbitrary email has an account: only reachable after a
+      // server-verified Google identity has already proven the requester
+      // controls that Google account/email.
+      trackAuthEvent(req, "google_email_collision");
+      return { kind: "email_collision" };
+    }
+
+    const session = await createAuthSession(result.user.user_id, result.isNew);
+    setAuthCookie(res, session.token);
+
+    // Sign-in itself is never marketing consent — only links a pre-existing
+    // opted-in lead's consent row to this account, never sets it true.
+    if (result.user.email) void linkExistingConsentToUser(result.user.email, result.user.user_id);
+
+    trackAuthEvent(req, result.isNew ? "account_created" : "login", { provider: "google" });
+    return { kind: "signed_in", isNew: result.isNew, userId: result.user.user_id };
+  }
+
   app.post("/api/auth/google", requireCsrf, async (req: Request, res: Response) => {
     try {
       await ensureStore();
@@ -263,22 +298,8 @@ export function registerAuthRoutes(app: Express): void {
         return res.status(400).json({ message: "Invalid Google credential" });
       }
 
-      const identity = await verifyGoogleIdToken(parsed.data.id_token);
-      const result = await resolveOAuthSignIn({
-        provider: "google",
-        subject: identity.subject,
-        email: identity.email,
-        firstName: identity.firstName,
-        lastName: identity.lastName,
-      });
-
+      const result = await signInWithGoogleCredential(req, res, parsed.data.id_token);
       if (result.kind === "email_collision") {
-        // Deliberate conflict — never silently merge/duplicate/move data.
-        // See GOOGLE SIGN-IN SAFETY section 7. Does not reveal whether an
-        // arbitrary email has an account: only reachable after a
-        // server-verified Google identity has already proven the requester
-        // controls that Google account/email.
-        trackAuthEvent(req, "google_email_collision");
         return res.status(409).json({
           code: "email_collision",
           message:
@@ -286,19 +307,54 @@ export function registerAuthRoutes(app: Express): void {
         });
       }
 
-      const session = await createAuthSession(result.user.user_id, result.isNew);
-      setAuthCookie(res, session.token);
-
-      // Sign-in itself is never marketing consent — only links a pre-existing
-      // opted-in lead's consent row to this account, never sets it true.
-      if (result.user.email) void linkExistingConsentToUser(result.user.email, result.user.user_id);
-
-      trackAuthEvent(req, result.isNew ? "account_created" : "login", { provider: "google" });
-
-      return res.json({ ok: true, is_new: result.isNew, user: await getAuthMe(result.user.user_id) });
+      return res.json({ ok: true, is_new: result.isNew, user: await getAuthMe(result.userId) });
     } catch (err) {
       logError("auth", "google sign-in failed", err);
       return res.status(401).json({ message: "Google sign-in failed" });
+    }
+  });
+
+  // Google Identity Services redirect mode (ux_mode "redirect", required on
+  // iOS browsers): after account selection Google top-level form-POSTs
+  // `credential` + `g_csrf_token` here, cross-site from accounts.google.com,
+  // so the app's own X-CSRF-Token header check cannot apply. Google's
+  // double-submit token replaces it: GIS sets a `g_csrf_token` cookie
+  // (SameSite=None; Secure) on our origin before redirecting, and the posted
+  // value must match it. Always answers with a 303 back into the app so the
+  // browser never stalls on this endpoint.
+  app.post("/api/auth/google/callback", async (req: Request, res: Response) => {
+    const fail = (error: string) => res.redirect(303, `/?error=${error}`);
+    try {
+      await ensureStore();
+      if (!process.env.GOOGLE_CLIENT_ID?.trim()) {
+        return fail("sign_in_failed");
+      }
+
+      const body = (req.body ?? {}) as Record<string, unknown>;
+      const credential = typeof body.credential === "string" ? body.credential : "";
+      const bodyCsrf = typeof body.g_csrf_token === "string" ? body.g_csrf_token : "";
+      const cookieCsrf = typeof req.cookies?.g_csrf_token === "string" ? req.cookies.g_csrf_token : "";
+
+      if (!bodyCsrf || !cookieCsrf || bodyCsrf !== cookieCsrf) {
+        logError(
+          "auth",
+          "google redirect callback rejected: g_csrf_token mismatch",
+          `body_token=${bodyCsrf ? "present" : "missing"} cookie_token=${cookieCsrf ? "present" : "missing"}`,
+        );
+        return fail("sign_in_failed");
+      }
+      if (!credential) {
+        return fail("sign_in_failed");
+      }
+
+      const result = await signInWithGoogleCredential(req, res, credential);
+      if (result.kind === "email_collision") {
+        return fail("google_email_collision");
+      }
+      return res.redirect(303, appendSignedInQuery("/"));
+    } catch (err) {
+      logError("auth", "google redirect sign-in failed", err);
+      return fail("sign_in_failed");
     }
   });
 
