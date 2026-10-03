@@ -11,16 +11,7 @@ import {
   getMostCookedMeals,
 } from "@/lib/hall-history-store";
 import { buildHallStreaksSnapshot } from "@shared/hall-streak/compute";
-import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { resolveCanteenManagerDisplayName } from "@shared/hall-identity/display";
-import type { HallHistoryEntry } from "@shared/hall-profile/types";
-
-function entryRecipeHref(entry?: HallHistoryEntry): string | undefined {
-  if (!entry) return undefined;
-  if (entry.recipePath) return entry.recipePath;
-  if (entry.recipeSlug) return approvedCatalogRecipePath(entry.recipeSlug);
-  return undefined;
-}
 
 export function useHallDashboard() {
   const { authenticated, user } = useAuth();
@@ -33,9 +24,6 @@ export function useHallDashboard() {
   return useMemo(() => {
     const mostCooked = getMostCookedMeals(1)[0];
     const lastVote = history.hallVotes[0];
-    const lastWheel = history.wheelResults[0];
-    const lastGenerated = history.entries.find((entry) => entry.type === "meal_generated");
-    const tonightPick = history.lastMealCooked ?? lastWheel ?? lastGenerated;
     const mealsThisMonth = countMealsCookedThisMonth();
 
     const hall = detail?.hall;
@@ -107,9 +95,6 @@ export function useHallDashboard() {
         mostCooked,
       },
       mealsThisMonth,
-      tonightPick,
-      tonightRecipeHref: entryRecipeHref(tonightPick),
-      cookHref: entryRecipeHref(history.lastMealCooked) ?? entryRecipeHref(tonightPick),
       lastMealCooked: history.lastMealCooked,
       lastVote,
       favorites,

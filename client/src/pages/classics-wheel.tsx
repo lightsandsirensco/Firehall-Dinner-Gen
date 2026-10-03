@@ -25,6 +25,7 @@ import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-cred
 import { SiteFooter } from "@/components/site-footer";
 import { trackWheelSpin, trackWheelRecipeOpen } from "@/lib/analytics";
 import { recordWheelResult } from "@/lib/hall-history-store";
+import { setTonightSelection } from "@/lib/tonight-selection-store";
 import { recordWheelStreakSpin } from "@/lib/wheel-streak-store";
 import { getProductSeoPage } from "@shared/seo/product-pages-data";
 
@@ -67,6 +68,14 @@ export default function ClassicsWheelPage() {
       recipeSlug: classic.slug,
       recipePath: buildRecipeUrl(classic),
       segmentIndex: idx >= 0 ? idx : undefined,
+    });
+    setTonightSelection({
+      source: "wheel",
+      title: classic.title,
+      recipeSlug: classic.slug,
+      recipePath: buildRecipeUrl(classic),
+      imageUrl: classic.imageApproved ? classic.heroImage : undefined,
+      description: classic.description,
     });
     recordWheelStreakSpin();
     setWinner(classic);

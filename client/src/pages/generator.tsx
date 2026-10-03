@@ -32,6 +32,9 @@ import {
 import { buildFilterKey, putCached, addRecentSignature, getRecentSignatures } from "@/lib/recipe-cache";
 import { getRecentMealSlugs, recordMealSlug } from "@/lib/meal-rotation-memory";
 import { recordMealGenerated } from "@/lib/hall-history-store";
+import { setTonightSelection } from "@/lib/tonight-selection-store";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
+import { isApprovedCatalogSlug } from "@shared/hall-catalog/gate";
 import { syncHallProfileCrewSizeFromFilters } from "@/lib/hall-profile-store";
 import { RepeatWarning } from "@/components/hall-history/repeat-warning";
 import { useHallHistory } from "@/hooks/use-hall-history";
@@ -526,6 +529,21 @@ export default function Generator() {
       recipeSlug: slug,
       crewSize: genFilters ? crewSizeFromFilters(genFilters) : undefined,
       source: "generator",
+    });
+    const catalogRecipePath =
+      slug && isApprovedCatalogSlug(slug) ? approvedCatalogRecipePath(slug) : undefined;
+    setTonightSelection({
+      source: "generator",
+      title: data.title,
+      recipeSlug: slug,
+      recipePath: catalogRecipePath,
+      imageUrl: data.hero_image,
+      description: data.why_it_fits_tonight,
+      crewSize: genFilters ? crewSizeFromFilters(genFilters) : data.servings,
+      prepMinutes: data.timing?.prep_min,
+      cookMinutes: data.timing?.cook_min,
+      // Only /recipes/ pages honor `?cook=1`; keep the result so Tonight can open Cook Mode itself.
+      generatedRecipe: catalogRecipePath?.startsWith("/recipes/") ? undefined : data,
     });
     hapticSuccess();
     const totalGens = recordSuccessfulGeneration();

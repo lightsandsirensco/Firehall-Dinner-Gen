@@ -21,8 +21,7 @@ export function HallTonightSection({ className }: { className?: string }) {
   const [voteOpen, setVoteOpen] = useState(false);
   const voteRecipes = useMemo(() => buildDefaultHallVoteRecipes(), []);
 
-  const dinnerLine =
-    hub.tonightPick?.title ?? hub.cookTitle ?? hub.lastGenerated?.title ?? null;
+  const dinnerLine = hub.tonightPick?.title ?? null;
 
   const primary: DinnerPrimary = useMemo(() => {
     if (hub.cookHref) {

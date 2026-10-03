@@ -1,27 +1,17 @@
 import { useEffect, useMemo, useState } from "react";
-import type { HallHistoryEntry } from "@shared/hall-profile/types";
 import type { HallCanteenItem } from "@shared/hall-canteen/types";
 import type { HallShoppingListPayload } from "@shared/hall-shopping-list/types";
 import type { HallVoteResponse } from "@shared/schema";
-import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { fetchHallCanteen, setCanteenItemStatus } from "@/lib/hall-canteen/api";
 import { fetchHallShoppingList } from "@/lib/hall-shopping-list/api";
 import { useHallDashboard } from "@/hooks/use-hall-dashboard";
-import { useHallHistory } from "@/hooks/use-hall-history";
+import { useTonightSelection } from "@/hooks/use-tonight-selection";
 import { useHallMembership } from "@/lib/hall-membership/context";
 import { useHallFeature } from "@/lib/billing/hooks";
 import { useToast } from "@/hooks/use-toast";
 
-function entryRecipeHref(entry?: HallHistoryEntry): string | undefined {
-  if (!entry) return undefined;
-  if (entry.recipePath) return entry.recipePath;
-  if (entry.recipeSlug) return approvedCatalogRecipePath(entry.recipeSlug);
-  return undefined;
-}
-
 export function useTonightHub() {
   const dashboard = useHallDashboard();
-  const history = useHallHistory();
   const { detail } = useHallMembership();
   const hallId = dashboard.activeHallId;
   const canManageCanteen = Boolean(hallId);
@@ -102,13 +92,8 @@ export function useTonightHub() {
     };
   }, [hallId]);
 
-  const lastGenerated = useMemo(
-    () => history.entries.find((entry) => entry.type === "meal_generated"),
-    [history.entries],
-  );
-  const lastWheel = history.wheelResults[0];
-  const lastMealCooked = history.lastMealCooked;
-  const tonightPick = lastMealCooked ?? lastWheel ?? lastGenerated;
+  const tonightPick = useTonightSelection();
+  const tonightRecipeHref = tonightPick?.recipePath;
 
   const shoppingHref = hallId
     ? `/halls/${hallId}#hall-shared-shopping-list`
@@ -151,12 +136,10 @@ export function useTonightHub() {
     hallId,
     hallName: dashboard.hallName,
     members: detail?.members ?? dashboard.members,
-    lastGenerated,
-    lastGeneratedHref: entryRecipeHref(lastGenerated),
     tonightPick,
-    tonightRecipeHref: entryRecipeHref(tonightPick),
-    cookHref: entryRecipeHref(lastMealCooked),
-    cookTitle: lastMealCooked?.title ?? tonightPick?.title,
+    tonightRecipeHref,
+    cookHref: tonightPick?.cookingStartedAt ? tonightRecipeHref : undefined,
+    cookTitle: tonightPick?.title,
     shoppingHref,
     runnerHref,
     shoppingLoading,

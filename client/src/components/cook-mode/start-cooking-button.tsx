@@ -33,6 +33,9 @@ interface StartCookingButtonProps {
   costSnapshot?: MealCostSnapshot;
   /** Renders a fast, no-Cook-Mode "Made This" quick-log button alongside Start Cooking. */
   showQuickLog?: boolean;
+  /** Fires each time the button opens Cook Mode. */
+  onStart?: () => void;
+  label?: string;
 }
 
 export function StartCookingButton({
@@ -50,6 +53,8 @@ export function StartCookingButton({
   hallId,
   costSnapshot,
   showQuickLog = true,
+  onStart,
+  label,
 }: StartCookingButtonProps) {
   const [open, setOpen] = useState(false);
   const hasMealMemory = useFeature("meal_memory");
@@ -157,11 +162,14 @@ export function StartCookingButton({
           variant={variant}
           size={size}
           className={cn("min-h-11 gap-2 touch-manipulation font-heading tracking-wide", className)}
-          onClick={() => setOpen(true)}
+          onClick={() => {
+            onStart?.();
+            setOpen(true);
+          }}
           data-testid="button-start-cooking"
         >
           <ChefHat className="w-4 h-4 shrink-0" />
-          {COOK_MODE.startCooking}
+          {label ?? COOK_MODE.startCooking}
         </Button>
         {showQuickLog && hasMealMemory && recipeSlug ? (
           <Button
