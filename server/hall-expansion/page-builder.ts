@@ -7,11 +7,8 @@ import { GOLDEN_RECIPE_PAGE_CONTENT_VERSION } from "../../shared/golden-100/reci
 import { PHASE5_REMOVED_SLUGS } from "../../shared/catalog-consolidation/phase5-redirects.js";
 import { HALL_EXPANSION_ADAPTED_RECIPES } from "../../shared/hall-expansion/adapted/index.js";
 import { hallExpansionPageImageSet } from "../../shared/hall-expansion/recipe-page-paths.js";
-import {
-  HALL_EXPANSION_PAGE_CATEGORY,
-  HALL_EXPANSION_SET_TAG,
-  type ExpansionRecipeDef,
-} from "../../shared/hall-expansion/types.js";
+import { hallExpansionDisplayCategory } from "../../shared/hall-expansion/display-categories.js";
+import { HALL_EXPANSION_SET_TAG, type ExpansionRecipeDef } from "../../shared/hall-expansion/types.js";
 import { CANONICAL_BASE_SERVINGS } from "../../shared/recipe/crew-scaling-config.js";
 import { scaleGoldenIngredients } from "../../shared/golden-100/recipe-quality/crew-scale.js";
 import { buildRecipeImageAlt } from "../imagery/recipe-image-prompt.js";
@@ -80,7 +77,7 @@ export function buildHallExpansionRecipePage(
     seoTitle: buildSeoTitle(recipe.title),
     shortDescription: recipe.subtitle,
     subtitle: recipe.subtitle,
-    category: HALL_EXPANSION_PAGE_CATEGORY,
+    category: hallExpansionDisplayCategory(recipe.slug),
     cuisine: recipe.cuisine,
     description: recipe.description,
     crewSize: CANONICAL_BASE_SERVINGS,

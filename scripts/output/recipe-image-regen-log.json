@@ -2101,5 +2101,26 @@
       "shredded mozzarella"
     ],
     "camera_angle": "45_degree"
+  },
+  {
+    "at": "2026-10-03T12:09:28.872Z",
+    "collection": "hall-expansion",
+    "slug": "beef-gyros-for-the-hall",
+    "hero": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+    "attempts": [
+      {
+        "attempt": 1,
+        "ok": true,
+        "reasons": []
+      }
+    ],
+    "visible_foods": [
+      "beef",
+      "pita breads",
+      "tzatziki",
+      "tomatoes",
+      "red onion"
+    ],
+    "camera_angle": "45_degree"
   }
 ]

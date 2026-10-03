@@ -9,11 +9,8 @@ import type { IngestRecipeDraft } from "../../shared/ingestion/recipe-ingest-sch
 import { assignExploreCategories } from "../../shared/ingestion/categorize.js";
 import { computeIngestQualityScores } from "../../shared/ingestion/scoring.js";
 import { recipeFingerprint } from "../../shared/ingestion/dedupe.js";
-import {
-  HALL_EXPANSION_PAGE_CATEGORY,
-  HALL_EXPANSION_SET_TAG,
-  type ExpansionRecipeDef,
-} from "../../shared/hall-expansion/types.js";
+import { hallExpansionDisplayCategory } from "../../shared/hall-expansion/display-categories.js";
+import { HALL_EXPANSION_SET_TAG, type ExpansionRecipeDef } from "../../shared/hall-expansion/types.js";
 import { hallExpansionPageImageSet } from "../../shared/hall-expansion/recipe-page-paths.js";
 import { getCuratedRecipeBySlug, upsertCuratedRecipe } from "../curated-recipe-store.js";
 import { curatedInsertFromIngestDraft } from "../curated-recipe-bridge.js";
@@ -32,7 +29,7 @@ function categoryExplorePools(category: ExpansionRecipeDef["category"]): string[
 function expansionTags(recipe: ExpansionRecipeDef): string[] {
   const tags = new Set<string>([
     HALL_EXPANSION_SET_TAG,
-    `master:${HALL_EXPANSION_PAGE_CATEGORY}`,
+    `master:${hallExpansionDisplayCategory(recipe.slug)}`,
     `category:${recipe.category}`,
     "hall_meal",
     "firefighter_meal",

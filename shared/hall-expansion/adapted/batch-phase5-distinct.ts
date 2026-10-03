@@ -1143,7 +1143,7 @@ export const PHASE5_DISTINCT_RECIPES: ExpansionRecipeDef[] = [
     subtitle: "Spiced lamb skewers with yogurt sauce and flatbread for ten",
     category: "crew_feeders",
     protein: "lamb",
-    cuisine: "middle_eastern",
+    cuisine: "Middle Eastern",
     mealFormat: "skewer",
     explorePools: ["hall_expansion", "crew_feeders", "middle_eastern", "lamb"],
     hookLine: "Middle Eastern kofta skewers—grill smoke, warm spices, zero platter boredom",

@@ -341,15 +341,19 @@ export const BEEF_GYROS_FOR_THE_HALL_IMAGE_PROMPT = `Beef Gyros
 Greek beef gyro pitas on a firehall serving line.
 
 Visible:
-- thin-sliced seasoned beef gyro meat (not ground beef patty)
-- warm pita bread
-- white tzatziki sauce
+- 1–2 assembled gyros rolled in soft, thick Greek pita with a foil or parchment collar
+- thinly shaved seasoned beef gyro meat with browned edges (not ground beef patty, not thick steak strips)
+- white tzatziki sauce visible inside the pita
 - thinly sliced red onion
-- diced tomato at edge
+- diced or sliced tomato inside the pita
+- optional chopped parsley
 
+NO taco shells, tortillas, or pita folded open like a taco.
+NO lettuce, cheese, fries, or extra sides.
 NO chicken shawarma.
 NO steak sandwich on kaiser bun without pita.
 NO lamb-only if beef is the protein focus — show sliced beef.
+NO people anywhere in frame.
 
 Professional firehall food photography. Warm lighting.`;
 
