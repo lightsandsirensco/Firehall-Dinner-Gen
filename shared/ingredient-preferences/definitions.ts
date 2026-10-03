@@ -117,7 +117,7 @@ export const FOOD_PREFERENCE_DEFINITIONS: FoodPreferenceDefinition[] = [
   },
   {
     key: "tomatoes",
-    label: "Tomatoes (fresh)",
+    label: "Tomatoes (Fresh)",
     matches: [
       "cherry tomatoes",
       "grape tomatoes",
@@ -150,13 +150,13 @@ export const FOOD_PREFERENCE_DEFINITIONS: FoodPreferenceDefinition[] = [
   },
   {
     key: "bell_peppers",
-    label: "Bell peppers",
+    label: "Bell Peppers",
     matches: ["bell peppers", "bell pepper", "poblano peppers", "roasted red peppers"],
     policyNote: "Distinct from black pepper (a spice) and from hot/jalapeño-type peppers, which are their own preference.",
   },
   {
     key: "jalapenos",
-    label: "Jalapeños & spicy peppers",
+    label: "Jalapeños & Spicy Peppers",
     matches: [
       "pickled jalapeños",
       "pickled jalapenos",
@@ -196,7 +196,7 @@ export const FOOD_PREFERENCE_DEFINITIONS: FoodPreferenceDefinition[] = [
   },
   {
     key: "blue_cheese",
-    label: "Blue cheese",
+    label: "Blue Cheese",
     matches: ["blue cheese", "gorgonzola"],
     policyNote: "Small but reliably distinct — never confused with any other cheese profile.",
   },

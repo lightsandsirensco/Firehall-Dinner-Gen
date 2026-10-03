@@ -6,6 +6,12 @@ import type {
 } from "@shared/approved-catalog";
 import type { DietaryFilterKey } from "@shared/dietary/schema";
 import { recipeHasAnyAvoidedTag } from "@shared/ingredient-preferences/match";
+import {
+  canonicalExploreCategoryLabel,
+  canonicalExploreProtein,
+  exploreCategoryFilterId,
+  exploreProteinFilterId,
+} from "@shared/explore-taxonomy";
 
 /** Entries usable in Explore filters (full catalog or grid payload without hero). */
 export type ApprovedCatalogFilterable = ApprovedCatalogEntry | ApprovedCatalogGridEntry;
@@ -86,8 +92,18 @@ export function filterApprovedCatalogEntries<T extends ApprovedCatalogFilterable
         break;
     }
 
-    if (state.category !== "all" && entry.category !== state.category) return false;
-    if (state.protein !== "all" && entry.protein !== state.protein) return false;
+    if (
+      state.category !== "all" &&
+      exploreCategoryFilterId(entry.category) !== exploreCategoryFilterId(state.category)
+    ) {
+      return false;
+    }
+    if (
+      state.protein !== "all" &&
+      exploreProteinFilterId(entry.protein) !== exploreProteinFilterId(state.protein)
+    ) {
+      return false;
+    }
     if (state.cookTime !== "all" && entry.cookTimeBucket !== state.cookTime) return false;
     if (state.highProtein && !entry.isHighProtein) return false;
     if (state.lowCarb && !entry.isLowCarb) return false;
@@ -124,29 +140,26 @@ export function buildApprovedCatalogFacetOptions(entries: ApprovedCatalogFiltera
   categories: Array<{ id: string; label: string }>;
   proteins: Array<{ id: string; label: string }>;
 } {
-  const categoryIds = new Set<string>();
-  const proteinIds = new Set<string>();
+  const categories = new Map<string, string>();
+  const proteins = new Map<string, string>();
 
   for (const entry of entries) {
-    categoryIds.add(entry.category);
-    proteinIds.add(entry.protein);
+    const categoryId = exploreCategoryFilterId(entry.category);
+    if (categoryId && !categories.has(categoryId)) {
+      categories.set(categoryId, canonicalExploreCategoryLabel(categoryId));
+    }
+    const proteinId = exploreProteinFilterId(entry.protein);
+    if (proteinId && !proteins.has(proteinId)) {
+      proteins.set(proteinId, canonicalExploreProtein(entry.protein));
+    }
   }
 
-  const categories = [...categoryIds]
-    .map((id) => ({
-      id,
-      label: entries.find((e) => e.category === id)?.categoryLabel ?? id.replace(/_/g, " "),
-    }))
-    .sort((a, b) => a.label.localeCompare(b.label));
+  const toSortedOptions = (options: Map<string, string>) =>
+    [...options]
+      .map(([id, label]) => ({ id, label }))
+      .sort((a, b) => a.label.localeCompare(b.label));
 
-  const proteins = [...proteinIds]
-    .map((id) => ({
-      id,
-      label: id.replace(/_/g, " "),
-    }))
-    .sort((a, b) => a.label.localeCompare(b.label));
-
-  return { categories, proteins };
+  return { categories: toSortedOptions(categories), proteins: toSortedOptions(proteins) };
 }
 
 export function hasActiveApprovedCatalogFilters(state: ApprovedCatalogFilterState): boolean {

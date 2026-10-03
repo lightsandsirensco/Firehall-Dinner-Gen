@@ -35,7 +35,7 @@ export function formatTestimonialAttribution(attr: SocialProofAttribution): stri
   if (attr.anonymous) return "Anonymous firefighter";
   const name = attr.name?.trim();
   const role = attr.role?.trim();
-  if (name && role) return `${name} · ${role}`;
+  if (name && role) return `${name}, ${role}`;
   if (name) return name;
   return role ?? "";
 }

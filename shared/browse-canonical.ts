@@ -9,6 +9,11 @@ import {
 } from "./firehall-categories.js";
 import { DIETARY_FILTER_KEYS, type DietaryFilterKey } from "./dietary/schema.js";
 import { isFoodPreferenceKey } from "./ingredient-preferences/definitions.js";
+import {
+  exploreCategoryFilterId,
+  exploreProteinFilterId,
+  normalizeTaxonomyKey,
+} from "./explore-taxonomy.js";
 
 export const BROWSE_CANONICAL_PATH = "/explore";
 
@@ -104,11 +109,13 @@ export function parseExploreBrowseSearch(search: string): ExploreBrowseFilterPat
     patch.primary = primary;
   }
 
-  const category = params.get("category");
-  if (category) patch.category = category;
+  const category = exploreCategoryFilterId(params.get("category"));
+  if (category && category !== "all") patch.category = category;
 
   const protein = params.get("protein");
-  if (protein) patch.protein = protein;
+  if (protein?.trim() && normalizeTaxonomyKey(protein) !== "all") {
+    patch.protein = exploreProteinFilterId(protein);
+  }
 
   const cookTime = params.get("cookTime");
   if (cookTime === "under_30" || cookTime === "30_to_60" || cookTime === "over_60") {
