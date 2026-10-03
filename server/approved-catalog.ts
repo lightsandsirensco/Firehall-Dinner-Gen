@@ -11,6 +11,11 @@ import {
   resolveApprovedCatalogKind,
 } from "../shared/approved-catalog.js";
 import { filterExploreEligibleCatalogEntries } from "../shared/explore-image-mapping.js";
+import {
+  canonicalExploreCategoryLabel,
+  canonicalExploreProtein,
+  exploreCategoryFilterId,
+} from "../shared/explore-taxonomy.js";
 import { buildCrossCatalogHeroAuditContext } from "./cross-catalog-hero-index.js";
 import { resolveExistingSlugImage } from "../shared/explore-image-paths.js";
 import { SMOOTHIE_CATALOG_ITEMS } from "../shared/fuel-catalog/smoothies/catalog-data.js";
@@ -382,7 +387,23 @@ export function buildAllApprovedCatalogEntries(): ApprovedCatalogEntry[] {
     smoothieEntryToApproved,
   );
 
-  return [...meals, ...breakfasts, ...bbqRecipes, ...smoothies].sort((a, b) => a.title.localeCompare(b.title));
+  return [...meals, ...breakfasts, ...bbqRecipes, ...smoothies]
+    .map(withCanonicalExploreTaxonomy)
+    .sort((a, b) => a.title.localeCompare(b.title));
+}
+
+function withCanonicalExploreTaxonomy(entry: ApprovedCatalogEntry): ApprovedCatalogEntry {
+  const category = exploreCategoryFilterId(entry.category);
+  const protein = canonicalExploreProtein(entry.protein, entry.slug);
+  return {
+    ...entry,
+    category,
+    categoryLabel: canonicalExploreCategoryLabel(category),
+    protein,
+    searchText: entry.searchText.includes(protein.toLowerCase())
+      ? entry.searchText
+      : `${entry.searchText} ${protein.toLowerCase()}`,
+  };
 }
 
 export function buildApprovedCatalog(): ApprovedCatalogResponse {

@@ -18,6 +18,7 @@ import {
   type ExploreCatalogImageKind,
 } from "./explore-image-paths.js";
 import { CATALOG_ASSET_REVISION } from "./meal-catalog/asset-revision.js";
+import { canonicalExploreCategoryLabel } from "./explore-taxonomy.js";
 import type { DietarySummary } from "./dietary/schema.js";
 
 export type ApprovedCatalogKind = ExploreCatalogImageKind;
@@ -131,7 +132,7 @@ export const APPROVED_CATALOG_PRIMARY_LABELS: Record<ApprovedCatalogPrimaryFilte
 };
 
 export function formatApprovedCatalogCategory(id: string): string {
-  return id.replace(/_/g, " ");
+  return canonicalExploreCategoryLabel(id);
 }
 
 export function approvedCatalogCookTimeBucket(minutes: number): ApprovedCatalogCookTimeBucket {

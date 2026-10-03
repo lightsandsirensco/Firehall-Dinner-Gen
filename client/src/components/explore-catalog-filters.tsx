@@ -248,7 +248,8 @@ export function ExploreCatalogFilters({
               if (category !== "all") {
                 trackExploreFilter({
                   filter_key: `category:${category}`,
-                  filter_label: category,
+                  filter_label:
+                    facets.categories.find((option) => option.id === category)?.label ?? category,
                   category,
                 });
               }
@@ -280,7 +281,8 @@ export function ExploreCatalogFilters({
               if (protein !== "all") {
                 trackExploreFilter({
                   filter_key: `protein:${protein}`,
-                  filter_label: protein,
+                  filter_label:
+                    facets.proteins.find((option) => option.id === protein)?.label ?? protein,
                 });
               }
             }}
@@ -356,7 +358,7 @@ export function ExploreCatalogFilters({
           }}
           testId="explore-catalog-trait-high-protein"
         >
-          High protein
+          High Protein
           {!hasProFilters ? proBadge : null}
         </FilterChip>
         <FilterChip
@@ -370,7 +372,7 @@ export function ExploreCatalogFilters({
           }}
           testId="explore-catalog-trait-low-carb"
         >
-          Low carb
+          Low Carb
         </FilterChip>
         <FilterChip
           active={filters.lowCleanup}
@@ -383,7 +385,7 @@ export function ExploreCatalogFilters({
           }}
           testId="explore-catalog-trait-low-cleanup"
         >
-          Low cleanup
+          Low Cleanup
         </FilterChip>
       </FilterChipScroller>
 

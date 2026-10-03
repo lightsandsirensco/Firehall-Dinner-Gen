@@ -21,7 +21,7 @@ export const SOCIAL_PROOF_TESTIMONIALS: SocialProofTestimonial[] = [
     id: "kyle-m-hall-sized",
     quote:
       "I didn't cook much before I got hired. The steps are straightforward and everything's already sized for a hall, so I'm not guessing how much chicken feeds nine guys.",
-    attribution: { name: "Kyle M.", role: "Firefighter — Ontario" },
+    attribution: { name: "Kyle M.", role: "Firefighter" },
   },
   {
     id: "matt-p-meal-wheel",
