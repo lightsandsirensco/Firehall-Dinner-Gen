@@ -5,7 +5,7 @@
   "description": "How much dry pasta and sauce to cook for 4 to 12 people, how to boil several pounds at once, and how to hold pasta for a crew so it doesn't go mushy.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Plan on 4 oz (115 g) of dry pasta per hungry adult when pasta is the main dish: 2 lb for 8 people, 2 1/2 lb for 10 and 3 lb for 12. The 2 oz serving on the box is a side portion. For sauce, one 24 oz (680 ml) jar, or about 3 cups of homemade sauce, per pound of pasta is a good starting point. What goes wrong at a station is usually timing rather than quantity: pasta keeps absorbing liquid after it is drained, so a pot that is perfect at 6:00 is soft by 6:45.",
+  "intro": "Plan on 4 oz (115 g) of dry pasta per hungry adult when pasta is the main dish: 2 lb for 8 people, 2 1/2 lb for 10 and 3 lb for 12. The 2 oz serving on the box is a side portion. For sauce, start with one 24 oz (680 ml) jar, or about 3 cups of homemade sauce, per pound of pasta. What goes wrong for a crowd is usually timing rather than quantity: pasta keeps absorbing liquid after it is drained, so a pot that is perfect when it comes off the stove is soft 45 minutes later.",
   "sections": [
     {
       "id": "quantities",
@@ -65,7 +65,7 @@
       "id": "big-batch",
       "heading": "Cooking several pounds at once",
       "paragraphs": [
-        "The traditional ratio is about 4 quarts of water per pound of pasta, which gets unwieldy past 2 lb. You can use less water as long as you stir often during the first two minutes, when the surface starch is sticky and the pieces are most likely to clump. Two pots on two burners is often faster than one giant pot, because a very large volume of water takes a long time to boil on a home-style range."
+        "The traditional ratio is about 4 quarts of water per pound of pasta, which gets unwieldy past 2 lb. You can use less water if you stir often in the first two minutes, when the surface starch is sticky and the pieces clump. Two pots on two burners are often faster than one giant pot, because a very large volume of water takes a long time to boil on a home-style range."
       ],
       "steps": [
         "Start the water first, covered, because it takes longer to boil than anything else in the meal.",
@@ -80,15 +80,15 @@
       "id": "holding",
       "heading": "Holding pasta when dinner might be delayed",
       "paragraphs": [
-        "If a pasta dinner might be interrupted, cook the pasta slightly short of al dente and keep it separate from the sauce until the crew is ready to eat. Fully dressed pasta continues absorbing liquid while it sits and can become soft before everyone gets back to the station.",
-        "Drain the pasta about two minutes early, toss it with a spoonful of oil so it doesn't stick together, and spread it on a sheet pan so it stops cooking. Keep the sauce hot in its own pot. To serve, drop the pasta into boiling water for 30 to 60 seconds, or toss it in the simmering sauce for a minute or two with a splash of the reserved cooking water. Cooked pasta follows the same rule as other cooked food: refrigerate it if it will sit at room temperature for more than two hours."
+        "Keep the pasta and sauce apart until the crew is ready to eat, because sauced pasta keeps soaking up liquid and goes soft. Drain the pasta about two minutes short of al dente, toss it with a spoonful of oil, and spread it on a sheet pan so it stops cooking. Keep the sauce hot in its own pot.",
+        "To serve, drop the pasta into boiling water for 30 to 60 seconds, or toss it in the simmering sauce with a splash of the reserved cooking water. If it won't be eaten within two hours, refrigerate it."
       ]
     },
     {
       "id": "baked-pasta",
       "heading": "Baked pasta is the interruption-proof version",
       "paragraphs": [
-        "Baked ziti, lasagna and pasta bakes can be assembled hours ahead, refrigerated, and baked when the crew is close to eating. Undercook the pasta by 2 to 3 minutes before it goes in the dish, because it keeps absorbing sauce in the oven, and use a little more sauce than seems necessary for the same reason. A dish going straight from the fridge into the oven often needs an hour or more; bake it covered and check that the centre reaches 165°F (74°C) before serving.",
+        "Baked ziti, lasagna and pasta bakes can be assembled hours ahead, refrigerated, and baked when the crew is close to eating. Undercook the pasta by 2 to 3 minutes before it goes in the dish, because it keeps absorbing sauce in the oven, and use a little more sauce than seems necessary for the same reason. A dish going straight from the fridge into the oven often needs an hour or more; bake it covered and check that the center reaches 165°F (74°C) before serving.",
         "Short, sturdy shapes with ridges or tubes, such as rigatoni, penne and ziti, hold sauce and survive holding and baking. Thin long pasta like angel hair goes soft fastest and is the worst choice when dinner might wait."
       ]
     }
@@ -172,7 +172,7 @@
     "keeping pasta warm"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "How Much Pasta for 8 or 10 People (and How to Hold It)",
   "sources": [

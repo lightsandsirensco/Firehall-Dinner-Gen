@@ -5,7 +5,7 @@
   "description": "30-minute meals for a crowd of 6 to 10: proteins that cook fast, pan space and high heat, a minute-by-minute plan, and shortcuts that work.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Dinner for 8 to 10 in 30 minutes is realistic only when three things line up: a protein that cooks in under 15 minutes, enough hot pan or oven space to cook it in one or two batches, and a starch that finishes on its own while you work. Thin or small proteins qualify: shrimp, ground meat, sliced chicken thighs, fish fillets and eggs. Bone-in chicken, roasts and anything braised do not, however good the recipe looks. Most 30-minute recipes are written for four people, and doubling them fails for a predictable reason: the food no longer fits in the pan. This guide covers fast proteins, pan space, a worked plan and shortcuts that save real time.",
+  "intro": "You can get dinner for 8 to 10 on the table in 30 minutes if the protein cooks in under 15 minutes and you have enough pan or oven space to cook it in one or two batches. Shrimp, ground meat, sliced chicken thighs, fish fillets and eggs qualify; bone-in chicken, roasts and braises do not. Most 30-minute recipes are written for 4, and doubling them fails because the food no longer fits in the pan and steams instead of browning. The other lost time is waiting: for the oven to preheat and for a big pot of water to boil.",
   "sections": [
     {
       "id": "fast-proteins",
@@ -93,12 +93,12 @@
         "This is the order of work that makes 30 minutes possible. The oven and the rice start first because they take the longest and need no attention. Chopping happens while they heat, and the line is set while the chicken roasts. The quantities are 3 lb (1.4 kg) boneless chicken thighs, 4 bell peppers, 2 onions, 4 cups of long-grain rice and 24 small tortillas."
       ],
       "steps": [
-        "Minute 0: heat the oven to 450°F (230°C) with racks in the upper and lower thirds. Bring 6 cups of salted water to a boil for the rice.",
-        "Minute 3: add 4 cups of rinsed long-grain rice, cover, and simmer on low for 18 minutes, then leave it covered off the heat.",
-        "Minutes 3 to 12: slice the chicken, peppers and onions 1/2 in thick. Toss with 3 tbsp oil, 2 tbsp fajita or chili seasoning and 1 1/2 tsp salt.",
-        "Minute 12: spread across two half sheet pans and roast 14 to 16 minutes, swapping the pans at the halfway point.",
-        "Minutes 14 to 24: wrap the tortillas in foil in stacks of 12 and put them in the oven for the last 10 minutes. Set out salsa, sour cream, cheese and lime wedges.",
-        "Minute 27: check the thickest chicken piece reads 165°F (74°C). Fluff the rice and serve."
+        "Minute 0: heat the oven to 450°F (230°C) with racks in the upper and lower thirds. Put 6 cups of salted water in a covered pot over high heat, or boil it in a kettle; either way it takes about 8 minutes.",
+        "Minutes 0 to 10: slice the chicken, peppers and onions 1/2 in thick. Toss with 3 tbsp oil, 2 tbsp fajita or chili seasoning and 1 1/2 tsp salt.",
+        "Minute 8: when the water boils, add 4 cups of rinsed long-grain rice, cover, and simmer on low for 18 minutes. Then take it off the heat and leave the lid on.",
+        "Minute 11: spread the chicken and vegetables across two half sheet pans and roast for 14 to 16 minutes, swapping the pans halfway through.",
+        "Minute 17: wrap the tortillas in foil in stacks of 12 and put them in the oven for the last 10 minutes. Set out salsa, sour cream, cheese and lime wedges.",
+        "Minute 27: check that the thickest piece of chicken reads 165°F (74°C). Fluff the rice and serve."
       ]
     },
     {
@@ -152,8 +152,8 @@
       "id": "leaving-mid-cook",
       "heading": "If you have to leave in the middle of cooking",
       "paragraphs": [
-        "Fast dinners are also the most likely to be interrupted halfway. Turn off the burners, pull skillets off the heat, and take sheet pans out of the oven, because residual heat keeps cooking thin food. Cover everything. Do not leave meat partly cooked to finish later: USDA advises against partial cooking unless you finish immediately, because the meat sits at temperatures where bacteria grow.",
-        "Cooked food that will not be eaten within two hours of coming off the heat goes into the fridge, and gets reheated to 165°F (74°C). The interruption-proof dinner guide covers how to plan a whole meal around the chance of being called away."
+        "Fast dinners are cooked hot and thin, so they overcook quickly if you walk away. Turn off the burners, pull skillets off the heat, and take sheet pans out of the oven, then cover everything. Fully cooked food can go into a low oven to hold.",
+        "Meat that isn't cooked through goes straight into the fridge. USDA advises against partially cooking meat to finish later, so finish it to a safe temperature as soon as you're back, and throw it out if it sat warm. Cooked food that won't be eaten within two hours goes into the fridge and gets reheated to 165°F (74°C)."
       ]
     }
   ],
@@ -208,6 +208,10 @@
   ],
   "faqs": [
     {
+      "question": "What can I cook for 10 people in 30 minutes?",
+      "answer": "Something built on a fast protein that fits in one oven or two skillets: sheet-pan chicken fajitas, garlic butter shrimp over pasta or rice, a Philly cheesesteak skillet, or quesadillas made with rotisserie chicken. Start the oven and the water before you chop anything, and spread the protein across two sheet pans so it browns instead of steaming."
+    },
+    {
       "question": "Can I cook frozen chicken for a quick dinner?",
       "answer": "Yes. USDA says meat and poultry can be cooked safely from frozen, but it takes about 50 percent longer, so thin boneless pieces are the only practical choice on a 30-minute schedule. Separate the pieces, roast them on a sheet pan rather than in a crowded skillet, and check that they reach 165°F (74°C). Frozen chicken should never go into a slow cooker."
     }
@@ -226,7 +230,7 @@
     "fast dinner for 10"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "30-Minute Meals for a Crowd: Fast Dinners for 6 to 10",
   "sources": [

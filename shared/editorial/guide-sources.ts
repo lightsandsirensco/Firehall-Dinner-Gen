@@ -77,6 +77,11 @@ export const SRC = {
     publisher: "USDA Food Safety and Inspection Service",
     url: "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/eggs/shell-eggs-farm-table",
   },
+  usdaWashing: {
+    label: "Washing Food: Does it Promote Food Safety?",
+    publisher: "USDA Food Safety and Inspection Service",
+    url: "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/washing-food-does-it-promote-food-safety",
+  },
   usdaCuttingBoards: {
     label: "Cutting Boards and Food Safety",
     publisher: "USDA Food Safety and Inspection Service",

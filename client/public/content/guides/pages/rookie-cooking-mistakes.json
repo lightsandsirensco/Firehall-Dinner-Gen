@@ -1,48 +1,55 @@
 {
   "slug": "rookie-cooking-mistakes",
   "title": "Rookie Cooking Mistakes at the Firehall, and How to Fix Them",
-  "subtitle": "Grey ground beef, bland chili, dry chicken: the handful of technique errors behind most bad crew dinners, and what is actually going wrong.",
-  "description": "The cooking mistakes behind most bad crew dinners, from crowded pans to guessing doneness, with the reason each one happens and a safe-temperature chart.",
+  "subtitle": "Grey ground beef, flat chili, dry chicken and a dinner that finishes in pieces: the mistakes behind most bad crew dinners, and what to do instead.",
+  "description": "Beginner cooking mistakes to avoid when cooking for a crowd: crowded pans, wet meat, salt in big batches, guessing doneness and leaving food out.",
   "topic": "station_cooking",
   "pillar": "operations_how_to",
-  "intro": "Most disappointing crew dinners come from the same few technique problems, and almost none of them have to do with the recipe. Crowded pans steam meat instead of browning it. A recipe scaled up for ten tastes flat because the salt and liquid didn't scale the way the cook expected. Chicken is dry because nobody used a thermometer and it was cooked \"to be safe\". Each of these has a simple fix once you know what is happening in the pan.",
+  "intro": "Most bad crew dinners have nothing to do with the recipe. They come from a few technique mistakes that get worse as the batch gets bigger: three pounds of ground beef piled into one skillet so it steams grey, a pot of chili scaled up for ten that tastes flat, chicken cooked until it's dry because nobody checked the temperature. None of the fixes takes special skill. Most of them take a second pan, an instant-read thermometer, or ten minutes of planning before the stove goes on.",
   "sections": [
     {
       "id": "crowding",
       "heading": "Crowding the pan",
       "paragraphs": [
-        "Meat and vegetables release water as they heat. In a pan with space between the pieces, that water evaporates almost instantly and the surface gets hot enough to brown. Pile 3 lb of ground beef into one skillet and the water comes out faster than it can evaporate: the pan temperature drops, the meat simmers in its own liquid, and it turns grey instead of brown. You lose the browned flavour that makes chili and taco meat taste savoury.",
-        "For a crew, brown in batches. In a 12 in (30 cm) skillet that means about 1 to 1 1/2 lb of ground meat at a time, or chicken pieces with an inch of space around each one. Move each browned batch to a sheet pan and keep going. It takes longer at the stove, but the result is noticeably better."
+        "Meat and vegetables give off water as they heat. With space around each piece, that water evaporates almost as fast as it appears and the surface browns. Pile too much into one pan and the water comes out faster than it can boil off. The pan cools, the food simmers in its own juices, and it turns grey and greasy instead of brown. You lose the browned flavor that makes taco meat and chili taste savory.",
+        "Brown in batches. A 12 in (30 cm) skillet handles about 1 to 1 1/2 lb (450 to 680 g) of ground meat at a time, or chicken pieces with roughly an inch of space around each one. Spread the meat out and leave it alone for the first few minutes so a crust can form before you start breaking it up.",
+        "For a crew, that means 3 1/2 lb of taco meat is three batches. Run two skillets side by side, or brown the meat in the wide pot you'll finish the dish in. The same rule applies in the oven: a half sheet pan holds about 3 lb of boneless chicken thighs in a single layer, so use two pans for 10 people and swap their rack positions halfway through."
       ]
     },
     {
       "id": "wet-surface",
-      "heading": "Putting wet meat in the pan",
+      "heading": "Putting meat in the pan wet",
       "paragraphs": [
-        "Browning can't start until the surface water has boiled off, because water can't get much hotter than 212°F (100°C) and browning happens at much higher temperatures. Patting meat dry with paper towels means the pan's heat goes into browning rather than evaporating water. It matters most for chicken thighs, pork chops and anything that came out of a marinade. There is no need to rinse raw chicken first; it adds water and splashes raw juices around the sink."
+        "A wet surface can't brown. The pan's heat goes into boiling off the water first, and water doesn't get much hotter than 212°F (100°C), well below the temperature where browning happens. Pat meat dry with paper towels before it goes in, especially chicken thighs, pork chops and anything that has been in a marinade. Scrape off excess marinade too; the sugar in it burns before the meat is done.",
+        "Don't rinse raw chicken. It doesn't make the chicken safer, because cooking to 165°F (74°C) is what kills bacteria, and USDA warns that rinsing splashes those bacteria onto the sink, counters and anything nearby. Pat it dry, then wash your hands and anything the raw chicken touched.",
+        "With a family pack, lay the pieces out on a sheet pan lined with paper towels and pat the tops dry in one pass. If you have time, salt the meat and leave it uncovered on a rack in the fridge for a few hours or overnight. The surface dries on its own and the meat is seasoned at the same time."
       ]
     },
     {
       "id": "pan-temperature",
-      "heading": "Starting in a cold pan and moving food too soon",
+      "heading": "Adding food before the pan is hot, then moving it too soon",
       "paragraphs": [
-        "Preheat the pan before the oil and the oil before the food. A properly hot pan sears the surface quickly; a lukewarm one lets proteins bond to the metal before a crust forms, which is why food sticks. Once the meat is in, leave it alone. It releases on its own when the crust has formed, usually after a few minutes. If it is still stuck, it isn't ready to turn."
+        "In a lukewarm pan, meat sticks and stews instead of searing. Moving it early makes things worse, because the crust tears off and stays on the pan.",
+        "Heat a stainless steel or cast-iron skillet over medium-high for 2 to 3 minutes, add the oil, and wait until it shimmers. Then add the food and leave it for 3 to 4 minutes. When the crust has formed, the meat releases from the pan with a gentle nudge. If it is still stuck, give it another minute. Nonstick pans are the exception: don't heat them empty on high, because it damages the coating. Add the oil first and use medium to medium-high heat.",
+        "When you brown several batches in a row, give the pan a minute to come back up to heat between them, and add a little fresh oil. If the bits on the bottom start to blacken rather than brown, wipe the pan out before the next batch, or the burnt taste ends up in the dish."
       ]
     },
     {
       "id": "seasoning",
-      "heading": "Seasoning only at the end, or all at once when scaling",
+      "heading": "Salting at the wrong time, and scaling salt by guesswork",
       "paragraphs": [
-        "Salt added at the end sits on the surface and tastes harsh; salt added during cooking seasons the food all the way through. Season meat well ahead when you can, an hour or even overnight in the fridge, so the salt has time to dissolve and move into the meat. Season each component as you go rather than trying to fix the whole plate at the table.",
-        "When you scale a recipe up for a crew, start with about three-quarters of the multiplied salt and strong spices. A big pot reduces more slowly than a small one, so seasoning concentrates less, and salt is easy to add but impossible to take out. If a big pot of chili or soup still tastes flat after the salt is right, it usually needs acid: a squeeze of lime or a splash of vinegar brightens it more than extra spice."
+        "Salt sprinkled on a finished plate only seasons the surface. Salt added earlier has time to get into the food. Salt meat ahead when you can: an hour before cooking, or up to a day ahead in the fridge. Then season each part of the meal as it cooks: the pasta water, the vegetables, the sauce. Trying to fix a whole dinner with the salt shaker at the table doesn't work.",
+        "Scaling needs more care. In principle, salt goes up with the amount of food. In practice, the salty ingredients in a big batch (stock, canned tomatoes, cheese, sausage, store-bought seasoning blends) vary by brand. A big pot also reduces differently from the small one the recipe was tested in, so it's hard to predict how strong it will taste. When you multiply a recipe, start with about three-quarters of the salt and strong spices like cayenne. Taste after 20 to 30 minutes of simmering, then adjust. You can always add salt. You can't take it out.",
+        "If a big pot of chili or soup still tastes flat once the salt is right, it usually needs acid rather than more spice: a squeeze of lime or a spoonful of vinegar. If it tastes thin as well as flat, simmer it uncovered for longer so it can reduce."
       ]
     },
     {
       "id": "doneness",
-      "heading": "Guessing doneness instead of measuring it",
+      "heading": "Guessing when meat is done",
       "paragraphs": [
-        "Colour and cutting-to-check are unreliable, and they tend to push cooks toward overcooking \"to be safe\". A digital instant-read thermometer takes the guesswork out: cook to the target, then stop. Insert it into the thickest part of the meat, away from bone, fat and gristle.",
-        "USDA and Health Canada agree on most targets but not all. They differ on whole pork cuts, whole poultry, fish and egg dishes, so the table shows both. Follow the guidance that applies where you cook."
+        "Color is not a reliable test. USDA notes that ground beef can turn brown before it reaches a safe temperature, and fully cooked chicken can still look pink near the bone. Cutting into meat to check lets juice run out, and cooks who guess usually make up for it by overcooking. That is where most dry chicken comes from.",
+        "Use a digital instant-read thermometer. Push it into the thickest part of the meat, away from bone, fat and gristle, and take the meat off the heat when it reaches the target. On a crowded tray, pieces vary in size and ovens have hot spots, so check the biggest piece and a couple from different parts of the pan. Test the thermometer now and then in a glass of ice water, where it should read 32°F (0°C).",
+        "USDA and Health Canada agree on most targets but not all. They differ on whole cuts of pork, whole poultry, fish and egg dishes, so the table shows both. Follow the guidance that applies where you cook."
       ],
       "table": {
         "caption": "Safe minimum internal temperatures, USDA and Health Canada",
@@ -97,24 +104,51 @@
     },
     {
       "id": "resting",
-      "heading": "Cutting into meat straight off the heat",
+      "heading": "Slicing meat the moment it comes off the heat",
       "paragraphs": [
-        "Meat keeps cooking after it comes off the heat, because the hot outside keeps pushing heat toward the cooler centre. For a thick roast, the internal temperature can climb several degrees while it rests. Resting also gives the juices a chance to thicken slightly, so less of them run out onto the board when you slice. Rest steaks and chops for about 5 minutes and roasts for 10 to 20, loosely covered with foil."
+        "Thick cuts keep cooking after they leave the heat, because the hot outside keeps pushing heat into the center. A roast can rise several degrees while it rests. Resting also lets the temperature even out, so less juice runs onto the board when you slice. USDA's 145°F (63°C) target for whole cuts of beef, pork and lamb includes a 3-minute rest.",
+        "Rest steaks and chops for about 5 minutes and roasts for 10 to 20, loosely covered with foil. Then slice across the grain. Ground meat, chicken pieces and anything in a sauce don't need a rest. If a roast has to wait longer before a line opens, keep it covered in a low oven so it stays at 140°F (60°C) or above."
       ]
     },
     {
-      "id": "other-mistakes",
-      "heading": "Three smaller mistakes worth fixing",
+      "id": "scaling-a-batch",
+      "heading": "Treating a big batch like a small one",
       "paragraphs": [
-        "Garlic added with the onions at high heat burns long before the onions soften, and burnt garlic makes the whole dish bitter; add it once the onions are soft and cook it for under a minute. A dull knife slips off onions and tomatoes instead of cutting them, which is slower and more dangerous than a sharp one. And starting every component at the same time guarantees that something waits too long: work backward from the serving time and start the most forgiving dish first."
+        "Cooking time depends on how thick the food is, not how much of it there is. Two pans of baked ziti at the original depth bake in about the original time. One pan twice as deep takes much longer, and the edges dry out before the center is hot. Split big batches across more pans rather than piling them higher.",
+        "A full oven also cooks more slowly than the recipe says, because there is more cold food in it and less room for air to move. Add 10 to 15 minutes, swap the pans between racks halfway through, and go by the thermometer rather than the timer. For soups and braises, start with about 90 percent of the multiplied liquid. A wide pot that is only a little bigger than the original reduces more slowly, and it's easier to add liquid than to cook it off."
+      ]
+    },
+    {
+      "id": "timing",
+      "heading": "Starting everything at the same time",
+      "paragraphs": [
+        "Start every part of the meal together and something will be done 30 minutes early and something else 10 minutes late. Write down the serving time, then work backward. Start the slowest, most forgiving dish first: chili, a braise or a tray bake that can sit covered once it's done. Rice and roasted potatoes come next, because they hold well. Leave the fast, fragile things for the last 15 minutes: green vegetables, anything seared, garlic bread, and dressing the salad.",
+        "Give yourself a margin the first few times you cook for the crew. Add 20 minutes to the plan, and do all the chopping, measuring and can-opening before the heat goes on."
+      ]
+    },
+    {
+      "id": "food-safety",
+      "heading": "Leaving food out after dinner or during a call",
+      "paragraphs": [
+        "Food left between 40 and 140°F (4 and 60°C) for more than two hours, or one hour above 90°F (32°C), should be thrown out. In a station kitchen that usually happens after dinner, when the pot sits on the stove while the crew cleans up or heads out on a call. Get leftovers into shallow containers and into the fridge within two hours. A full stockpot cools too slowly in the fridge, so divide it up first.",
+        "If a call comes in partway through the cook, turn off open burners and cover everything. Don't leave raw or partly cooked meat sitting warm to finish later. Get it into the fridge before you leave, and finish cooking it to a safe temperature as soon as you're back. Keep raw meat on its own cutting board, and keep it on the bottom shelf of the fridge so it can't drip onto anything else."
+      ]
+    },
+    {
+      "id": "garlic-and-knives",
+      "heading": "Burning the garlic, and cooking with a dull knife",
+      "paragraphs": [
+        "Garlic added with the onions over medium-high heat burns long before the onions soften, and burnt garlic makes the whole pot bitter. Cook the onions first, then add the garlic for the last minute before the liquid goes in.",
+        "A dull knife slips off onion skins and tomatoes instead of cutting them, which makes it slower and more dangerous than a sharp one. Prepping for 10 means a lot of chopping, so keep a sharpener in the kitchen and use it."
       ]
     }
   ],
   "practicalAdvice": [
-    "Brown meat in batches with space between the pieces; crowded meat steams and turns grey.",
-    "Pat meat dry before it goes in a hot pan.",
-    "Season during cooking, and start with three-quarters of the salt when you scale a recipe up.",
-    "Use a thermometer and pull meat when it hits the target instead of overcooking it to be safe."
+    "Brown about 1 to 1 1/2 lb of meat at a time in a 12 in skillet, or run two pans at once.",
+    "Pat meat dry before it goes in a hot pan, and never rinse raw chicken.",
+    "When you scale a recipe, start with three-quarters of the salt and strong spices, taste after it simmers, and finish with acid if it tastes flat.",
+    "Check doneness with an instant-read thermometer, testing several pieces on a crowded tray.",
+    "Get leftovers into shallow containers and into the fridge within two hours."
   ],
   "mealRecommendations": [
     {
@@ -135,18 +169,22 @@
     {
       "slug": "one-pot-chicken-rice",
       "title": "Chicken and Rice",
-      "blurb": "One pan, one timer, and a chance to practise searing before the rice goes in."
+      "blurb": "One pot, one timer, and a chance to practice searing before the rice goes in."
     },
     {
       "slug": "baked-ziti",
       "title": "Baked Ziti",
-      "blurb": "Hard to get wrong once you undercook the pasta slightly before baking."
+      "blurb": "Hard to get wrong if you undercook the pasta slightly before baking."
     }
   ],
   "faqs": [
     {
       "question": "Why does my ground beef turn grey instead of brown?",
-      "answer": "The pan is overcrowded. The meat releases water faster than it can evaporate, so it simmers instead of searing. Brown it in batches of about 1 to 1 1/2 lb in a 12 in skillet over medium-high heat, and don't stir it for the first few minutes."
+      "answer": "Too much meat in the pan. It gives off water faster than the water can evaporate, so it simmers instead of searing. Brown it in batches of about 1 to 1 1/2 lb in a 12 in skillet over medium-high heat, and leave it alone for the first few minutes before breaking it up."
+    },
+    {
+      "question": "Should you rinse raw chicken before cooking it?",
+      "answer": "No. USDA advises against it. Rinsing doesn't remove bacteria reliably, and the splashes spread them around the sink and counters. Cooking chicken to 165°F (74°C) is what makes it safe. Pat it dry with paper towels instead, then wash your hands and anything it touched."
     },
     {
       "question": "What temperature should chicken be cooked to?",
@@ -154,30 +192,33 @@
     },
     {
       "question": "Why does my chili taste bland even though I followed the recipe?",
-      "answer": "Scaled recipes often end up under-reduced and under-seasoned, because a big pot evaporates less than a small one. Simmer it longer uncovered to concentrate it, then adjust the salt at the end and add a splash of acid such as lime juice or vinegar."
+      "answer": "Usually it needs more salt, more reduction or some acid. Taste it after it has simmered for a while, add salt in small amounts, and simmer it uncovered if it's thin, because a big pot reduces slowly. If it still tastes flat, a squeeze of lime or a splash of vinegar usually fixes it."
     },
     {
       "question": "Do I really need to rest meat after cooking?",
-      "answer": "For steaks, chops and roasts, yes. The temperature keeps rising as the meat rests, and the juices thicken slightly so less runs out when you slice. About 5 minutes for steaks and chops and 10 to 20 minutes for roasts is enough."
+      "answer": "For steaks, chops and roasts, yes. The temperature evens out as the meat rests, and less juice runs out when you slice it. About 5 minutes for steaks and chops and 10 to 20 minutes for roasts is enough. Chicken pieces, ground meat and dishes in sauce don't need it."
     }
   ],
   "relatedArticleSlugs": [
+    "rookie-firefighter-meal-guide",
     "cooking-for-10-firefighters",
     "station-kitchen-essentials",
-    "rookie-firefighter-meal-guide",
-    "feeding-a-firehall-crew"
+    "feeding-a-firehall-crew",
+    "best-station-chili-recipes"
   ],
   "keywords": [
+    "beginner cooking mistakes",
+    "cooking mistakes to avoid",
     "common cooking mistakes",
-    "rookie firefighter cooking",
-    "why is my meat grey",
-    "safe cooking temperatures",
-    "cooking for a crew"
+    "cooking for a crowd",
+    "firehouse cooking",
+    "why is my ground beef grey",
+    "should you rinse raw chicken"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
-  "readMinutes": 9,
-  "seoTitle": "Common Cooking Mistakes and How to Fix Them",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
+  "readMinutes": 10,
+  "seoTitle": "Beginner Cooking Mistakes to Avoid When Cooking for a Crowd",
   "sources": [
     {
       "label": "Safe Minimum Internal Temperature Chart",
@@ -188,6 +229,16 @@
       "label": "Safe cooking temperatures",
       "publisher": "Health Canada",
       "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    },
+    {
+      "label": "Washing Food: Does it Promote Food Safety?",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/washing-food-does-it-promote-food-safety"
+    },
+    {
+      "label": "Leftovers and Food Safety",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/leftovers-and-food-safety"
     }
   ]
 }

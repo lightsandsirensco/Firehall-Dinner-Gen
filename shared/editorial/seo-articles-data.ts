@@ -7,7 +7,7 @@
 import { SRC } from "./guide-sources.js";
 import { buildSeoGuide, meal } from "./seo-article-build.js";
 
-const UPDATED = "2026-09-30T18:00:00.000Z";
+const UPDATED = "2026-10-03T18:00:00.000Z";
 
 export const SEO_TRAFFIC_ARTICLES = [
   buildSeoGuide({
@@ -30,7 +30,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     readMinutes: 9,
     updatedAt: UPDATED,
     intro:
-      "Past 15 people, the recipe stops being the hard part. The limits become equipment: a residential oven has two racks, a 12-inch skillet browns about a pound and a half of meat at a time, and an 8-quart pot is full long before it feeds 25. Large-crew cooking works when you pick dishes whose bottleneck you can manage, cook the slow parts a day ahead, and have a plan for keeping food at 140°F (60°C) while a long line moves through. This guide covers quantities for 15, 20 and 30, what each common pan and pot really holds, and a two-day schedule. For crews of 4 to 12, the 10-person guide has tighter numbers.",
+      "For a crew of 15 to 30, plan about 1/2 lb (225 g) of raw boneless meat and 1/2 cup of raw rice per person, and pick dishes your equipment can handle. Past 15 people the recipe stops being the hard part: a residential oven has two racks, a 12-inch skillet browns about a pound and a half of meat at a time, and a 12-quart stockpot of chili feeds about 24. What goes wrong is two dishes needing the oven at once, and food cooling below 140°F (60°C) while a long line moves through. Cook the slow parts the day before and plan how you will hold food hot before you shop.",
     sections: [
       {
         id: "quantities",
@@ -90,8 +90,8 @@ export const SEO_TRAFFIC_ARTICLES = [
           columns: ["Format", "Bottleneck", "How to manage it"],
           rows: [
             ["Chili, stew or soup", "Browning 10 lb of meat", "Brown in 2 1/2 lb batches in the stockpot itself, 8 to 10 minutes each, so nothing is washed in between"],
-            ["Pulled pork", "8 to 10 hours of cooking", "Cook the day before, chill in its juices, reheat covered to 165°F (74°C)"],
-            ["Baked pasta or lasagna", "Oven space", "Assemble the day before; bake in two waves 40 minutes apart and hold the first wave in an insulated carrier"],
+            ["Pulled pork", "Hours of cooking", "Cook the day before, chill in its juices, reheat covered on the stove to 165°F (74°C)"],
+            ["Baked pasta or lasagna", "Oven space", "Assemble the day before; four 9 x 13 in pans fill both racks, so bake them together and keep other reheating on the stove"],
             ["Taco or rice bowl line", "Serving speed", "Set up both sides of the table so two lines run at once, with a server on each protein"],
             ["Roast chicken pieces", "Three oven loads", "Roast in waves and hold hot, grill instead, or choose boneless thighs, which fit twice as many per pan"],
           ],
@@ -113,13 +113,14 @@ export const SEO_TRAFFIC_ARTICLES = [
         id: "cooling",
         heading: "Cooling large batches safely",
         paragraphs: [
-          "A 20-quart pot of chili left to cool on the stove stays warm in the middle for hours, which is exactly the range where bacteria grow fastest. The FDA Food Code standard is to cool cooked food from 135°F to 70°F (57°C to 21°C) within 2 hours and then to 41°F (5°C) or below within 4 more. A deep pot cannot do that in a refrigerator; shallow containers can.",
+          "A 20-quart pot of chili left to cool on the stove stays warm in the middle for hours, which is exactly the range where bacteria grow fastest. The FDA Food Code standard is to cool cooked food from 135°F to 70°F (57°C to 21°C) within 2 hours, then to 41°F (5°C) or below within a further 4 hours, 6 hours in total. A deep pot cannot do that even in a cold refrigerator; the center stays warm long after the edges are cold.",
+          "Shallow containers can, because heat only has to travel an inch or two to escape. Most of the work is getting the food out of the stockpot quickly, before the cleanup starts and the pot gets forgotten.",
         ],
         steps: [
           "Divide leftovers into shallow containers no more than 2 in (5 cm) deep as soon as service ends.",
           "For thick foods like chili or mashed potatoes, stir for a few minutes in a sink of ice water first to take off the worst of the heat.",
           "Refrigerate loosely covered, leaving space between containers so cold air can circulate, and seal them once cold.",
-          "Label with the dish and date. Eat within 3 to 4 days (USDA) or 2 to 3 days (Health Canada), and reheat to 165°F (74°C).",
+          "Label with the dish and date. USDA allows 3 to 4 days and Health Canada 2 to 3; in a shared station fridge, use the shorter window. Reheat to 165°F (74°C).",
         ],
       },
       {
@@ -127,28 +128,30 @@ export const SEO_TRAFFIC_ARTICLES = [
         heading: "A two-day plan for 30 people",
         paragraphs: [
           "Most of the work for a large feed can happen the day before, which leaves the day of service for baking, reheating and setting up. This example is pulled pork, baked ziti, coleslaw and rolls for 30, but the same split works for most menus: anything braised, simmered or assembled moves to day one, and anything crisp, dressed or toasted stays on day two.",
+          "On the day, give the oven one job at one temperature. The ziti takes both racks, so the pork reheats on the stove and holds in slow cookers, and the oven drops to a holding temperature once the pasta is done.",
         ],
         steps: [
           "Day before: cook 15 lb of pork shoulder in chunks, shred it, and chill it in its juices in shallow pans.",
           "Day before: make the sauce and assemble four 9 x 13 in pans of ziti, cover, and refrigerate for up to 24 hours.",
           "Day before: shred the cabbage and make the dressing, stored separately.",
-          "Two hours before: bake the first two pans of ziti, covered, at 375°F (190°C) for about 55 minutes from cold, then 10 minutes uncovered; they are done at 165°F (74°C) in the center.",
-          "90 minutes before: reheat the pork, covered, in a 325°F (165°C) oven to 165°F (74°C). Move the first ziti to the hot box and start the second wave.",
-          "Fifteen minutes before: dress the slaw, set up the line, and warm the rolls wrapped in foil.",
+          "Two hours before: bake all four pans of ziti, covered, at 375°F (190°C), swapping racks halfway. From cold in a full oven, allow 65 to 70 minutes covered, then 10 minutes uncovered; they are done at 165°F (74°C) in the center.",
+          "One hour before: reheat the pork in its juices in a covered pot over medium-low heat, stirring now and then, to 165°F (74°C), then move it to slow cookers on Warm.",
+          "When the ziti is done: turn the oven down to 200°F (95°C) and hold the pans there, covered, or move them to the hot box.",
+          "Fifteen minutes before: dress the slaw, set up the line, and warm the rolls wrapped in foil in the low oven.",
         ],
       },
     ],
     practicalAdvice: [
       "Plan 1/2 lb (225 g) of raw boneless meat and 1/2 cup of raw rice per person, and trim protein by 20 percent only when there are several sides.",
       "Fill stockpots no more than three-quarters full; a 12 qt pot feeds about 24 as the main dish.",
-      "Move braising, simmering and assembly to the day before, and keep day two for baking and reheating.",
+      "Move braising, simmering and assembly to the day before, and give the oven one job at one temperature on the day.",
       "Hold hot food at 140°F (60°C) or above and check it with a thermometer every hour of a long service.",
       "Cool leftovers in shallow containers no more than 2 in (5 cm) deep.",
     ],
     mealRecommendations: [
       meal("pulled-pork", "Pulled Pork Sandwiches", "The easiest main at 30: cook it the day before and reheat in its juices."),
       meal("big-chili", "Hall-Sized Beef and Bean Chili", "Scales to a 20-quart pot and holds on low through a long line."),
-      meal("baked-ziti", "Baked Ziti", "Assemble four pans the day before and bake in two waves."),
+      meal("baked-ziti", "Baked Ziti", "Assemble four pans the day before and bake them together on both racks."),
       meal("batch-lasagna", "Batch Lasagna", "Slices into even portions, so a tray feeds a known number of people."),
       meal("hall-taco-bar", "Taco Bar", "Runs as a double-sided line once the crowd passes 20."),
       meal("jambalaya", "Cajun Jambalaya", "Rice, sausage and chicken in one pot; use a wide rondeau for even cooking."),
@@ -165,6 +168,11 @@ export const SEO_TRAFFIC_ARTICLES = [
         question: "How do I keep food hot for a large group without chafing dishes?",
         answer:
           "Use a low oven set around 200°F (95°C), slow cookers on Warm, or a picnic cooler preheated with hot water and packed with foil-covered pans and towels. Whatever you use, check that the food stays at 140°F (60°C) or above, and reheat anything that falls below it.",
+      },
+      {
+        question: "How much chili do I need for 30 people?",
+        answer:
+          "Plan 1 1/2 cups per person as the main dish, about 11 1/4 quarts in total, made with roughly 10 lb (4.5 kg) of raw ground meat. That is more than a 12-quart stockpot can hold when filled three-quarters, so use a 16- to 20-quart pot or split it between two 12-quart pots on separate burners.",
       },
     ],
     relatedArticleSlugs: [
@@ -196,7 +204,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "A 24-hour shift has four eating windows: lunch, dinner, late night and breakfast before relief. It rarely has time for four separate cooks. The practical answer is to cook once for two meals. Make a dinner that holds and doubles as the overnight option, portion the extra into single servings before anyone goes to bed, and assemble breakfast the night before so the morning only needs an oven. This guide lays out each window, which dishes carry over well, a make-ahead breakfast for a crew, and the food-safety limits that matter when food is left out at 2 a.m.",
+      "The best meals for a 24-hour shift come from cooking once for two meals: a dinner that reheats well in single portions, and a breakfast bake assembled the night before. Make about one and a half times what dinner needs, portion the extra before anyone goes to bed, and the late-night and morning windows need only a microwave and an oven. What goes wrong is a pot left on the stove overnight for whoever is up, and a breakfast that depends on someone being free to cook before relief.",
     sections: [
       {
         id: "four-meals",
@@ -238,8 +246,8 @@ export const SEO_TRAFFIC_ARTICLES = [
         id: "overnight",
         heading: "Late-night food that doesn't need a cook",
         paragraphs: [
-          "Between midnight and 4 a.m., nobody should need to cook. Beyond the portioned dinner, keep a short list of things people can eat cold or heat in two minutes: bread and peanut butter, cheese, yogurt, fruit, instant oatmeal, and eggs. Hard-cooked eggs keep for a week in the fridge in their shells, so boil a dozen during the afternoon and they are ready whenever someone wants one.",
-          "Overnight oats are the other no-cook option. Stir equal volumes of rolled oats and milk with a pinch of salt, add fruit or peanut butter if you like, and refrigerate in jars; they are soft and ready after about 4 hours and keep for up to 3 days. Smaller portions are easier to eat at 3 a.m. than a full plate of dinner, and single-serve containers make that easy.",
+          "After midnight, nobody should need to cook. Beyond the portioned dinner, keep a short list of things people can eat cold or heat in two minutes: bread and peanut butter, cheese, yogurt, fruit, instant oatmeal, and eggs. Hard-cooked eggs keep for a week in the fridge in their shells, so boil a dozen during the afternoon and they are ready whenever someone wants one.",
+          "Overnight oats are the other no-cook option. Stir equal volumes of rolled oats and milk with a pinch of salt, add fruit or peanut butter if you like, and refrigerate in jars; they are soft after about 4 hours and keep for up to 3 days. Someone back from a call in the middle of the night usually wants a small bowl, not a full plate, which is another reason to portion dinner small.",
         ],
       },
       {
@@ -253,7 +261,7 @@ export const SEO_TRAFFIC_ARTICLES = [
           "Butter a 9 x 13 in dish and fill it with 8 cups of day-old bread in 1 in (2.5 cm) cubes, the sausage, and 2 cups of shredded cheddar.",
           "Whisk 12 eggs with 3 cups of milk, 1 tsp salt, 1/2 tsp pepper and 1 tsp dry mustard, and pour it evenly over the bread.",
           "Press the bread down so it is all wet, cover, and refrigerate for at least 8 hours and up to 24.",
-          "Bake uncovered straight from the fridge at 350°F (175°C) for 55 to 65 minutes, until the center reaches 160°F (71°C) and a knife comes out clean.",
+          "Bake uncovered straight from the fridge at 350°F (175°C) for 55 to 65 minutes, until the center reaches 160°F (71°C) (Health Canada: 165°F (74°C)) and a knife comes out clean.",
           "Rest 10 minutes before cutting so the slices hold together. Hold leftovers covered in a 200°F (95°C) oven for late arrivals.",
         ],
       },
@@ -266,8 +274,8 @@ export const SEO_TRAFFIC_ARTICLES = [
         steps: [
           "Shift start: check the fridge and freezer, move anything for dinner to thaw, and write the day's menu.",
           "Morning: shop once for lunch, dinner, overnight and breakfast. Boil a dozen eggs.",
-          "Afternoon: start dinner early enough that it is ready by 17:30 and can hold for two hours.",
-          "After dinner: portion the extra into labelled single servings and refrigerate within two hours.",
+          "Afternoon: start dinner early enough that it is ready by 17:30, and keep it hot on low for anyone delayed by a call.",
+          "After dinner: portion the extra into labeled single servings and refrigerate within two hours.",
           "Evening: assemble the breakfast bake, clean the kitchen, and leave the oven empty for the morning.",
           "Before relief: bake breakfast, clean up, and label or throw out anything older than your fridge rule.",
         ],
@@ -294,6 +302,16 @@ export const SEO_TRAFFIC_ARTICLES = [
         question: "Can I leave a pot of chili on the stove overnight for the crew?",
         answer:
           "Only if it stays at 140°F (60°C) or above the whole time, which a switched-off stove cannot do. Either keep it hot in a slow cooker on Warm and check it with a thermometer, or portion it into containers and refrigerate it within two hours of cooking. Food that has been between 40°F and 140°F for more than two hours should be thrown out.",
+      },
+      {
+        question: "What can I prep the night before for a crew breakfast?",
+        answer:
+          "A sausage and egg strata or an overnight French toast bake: both have to soak in the fridge for at least 8 hours, so assembling them after dinner suits a shift. Breakfast burrito fillings can be cooked, chilled and reheated in the morning, and overnight oats need no cooking at all. A 9 x 13 in egg bake serves about 8 and goes straight from the fridge into a 350°F (175°C) oven for 55 to 65 minutes.",
+      },
+      {
+        question: "How long do hard-boiled eggs last in the fridge?",
+        answer:
+          "Up to a week in the fridge, according to USDA, so a dozen boiled during the afternoon covers the whole shift and the next one. Cool them in cold water, refrigerate them within two hours of cooking, and keep peeled eggs in a covered container so they don't dry out or pick up fridge smells.",
       },
     ],
     relatedArticleSlugs: [
@@ -325,7 +343,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "Dinner for 8 to 10 in 30 minutes is realistic only when three things line up: a protein that cooks in under 15 minutes, enough hot pan or oven space to cook it in one or two batches, and a starch that finishes on its own while you work. Thin or small proteins qualify: shrimp, ground meat, sliced chicken thighs, fish fillets and eggs. Bone-in chicken, roasts and anything braised do not, however good the recipe looks. Most 30-minute recipes are written for four people, and doubling them fails for a predictable reason: the food no longer fits in the pan. This guide covers fast proteins, pan space, a worked plan and shortcuts that save real time.",
+      "You can get dinner for 8 to 10 on the table in 30 minutes if the protein cooks in under 15 minutes and you have enough pan or oven space to cook it in one or two batches. Shrimp, ground meat, sliced chicken thighs, fish fillets and eggs qualify; bone-in chicken, roasts and braises do not. Most 30-minute recipes are written for 4, and doubling them fails because the food no longer fits in the pan and steams instead of browning. The other lost time is waiting: for the oven to preheat and for a big pot of water to boil.",
     sections: [
       {
         id: "fast-proteins",
@@ -368,12 +386,12 @@ export const SEO_TRAFFIC_ARTICLES = [
           "This is the order of work that makes 30 minutes possible. The oven and the rice start first because they take the longest and need no attention. Chopping happens while they heat, and the line is set while the chicken roasts. The quantities are 3 lb (1.4 kg) boneless chicken thighs, 4 bell peppers, 2 onions, 4 cups of long-grain rice and 24 small tortillas.",
         ],
         steps: [
-          "Minute 0: heat the oven to 450°F (230°C) with racks in the upper and lower thirds. Bring 6 cups of salted water to a boil for the rice.",
-          "Minute 3: add 4 cups of rinsed long-grain rice, cover, and simmer on low for 18 minutes, then leave it covered off the heat.",
-          "Minutes 3 to 12: slice the chicken, peppers and onions 1/2 in thick. Toss with 3 tbsp oil, 2 tbsp fajita or chili seasoning and 1 1/2 tsp salt.",
-          "Minute 12: spread across two half sheet pans and roast 14 to 16 minutes, swapping the pans at the halfway point.",
-          "Minutes 14 to 24: wrap the tortillas in foil in stacks of 12 and put them in the oven for the last 10 minutes. Set out salsa, sour cream, cheese and lime wedges.",
-          "Minute 27: check the thickest chicken piece reads 165°F (74°C). Fluff the rice and serve.",
+          "Minute 0: heat the oven to 450°F (230°C) with racks in the upper and lower thirds. Put 6 cups of salted water in a covered pot over high heat, or boil it in a kettle; either way it takes about 8 minutes.",
+          "Minutes 0 to 10: slice the chicken, peppers and onions 1/2 in thick. Toss with 3 tbsp oil, 2 tbsp fajita or chili seasoning and 1 1/2 tsp salt.",
+          "Minute 8: when the water boils, add 4 cups of rinsed long-grain rice, cover, and simmer on low for 18 minutes. Then take it off the heat and leave the lid on.",
+          "Minute 11: spread the chicken and vegetables across two half sheet pans and roast for 14 to 16 minutes, swapping the pans halfway through.",
+          "Minute 17: wrap the tortillas in foil in stacks of 12 and put them in the oven for the last 10 minutes. Set out salsa, sour cream, cheese and lime wedges.",
+          "Minute 27: check that the thickest piece of chicken reads 165°F (74°C). Fluff the rice and serve.",
         ],
       },
       {
@@ -399,8 +417,8 @@ export const SEO_TRAFFIC_ARTICLES = [
         id: "leaving-mid-cook",
         heading: "If you have to leave in the middle of cooking",
         paragraphs: [
-          "Fast dinners are also the most likely to be interrupted halfway. Turn off the burners, pull skillets off the heat, and take sheet pans out of the oven, because residual heat keeps cooking thin food. Cover everything. Do not leave meat partly cooked to finish later: USDA advises against partial cooking unless you finish immediately, because the meat sits at temperatures where bacteria grow.",
-          "Cooked food that will not be eaten within two hours of coming off the heat goes into the fridge, and gets reheated to 165°F (74°C). The interruption-proof dinner guide covers how to plan a whole meal around the chance of being called away.",
+          "Fast dinners are cooked hot and thin, so they overcook quickly if you walk away. Turn off the burners, pull skillets off the heat, and take sheet pans out of the oven, then cover everything. Fully cooked food can go into a low oven to hold.",
+          "Meat that isn't cooked through goes straight into the fridge. USDA advises against partially cooking meat to finish later, so finish it to a safe temperature as soon as you're back, and throw it out if it sat warm. Cooked food that won't be eaten within two hours goes into the fridge and gets reheated to 165°F (74°C).",
         ],
       },
     ],
@@ -422,6 +440,11 @@ export const SEO_TRAFFIC_ARTICLES = [
       meal("hall-blt-sandwich-feed", "BLT Sandwich Feed", "Oven bacon on sheet pans while the bread toasts."),
     ],
     faqs: [
+      {
+        question: "What can I cook for 10 people in 30 minutes?",
+        answer:
+          "Something built on a fast protein that fits in one oven or two skillets: sheet-pan chicken fajitas, garlic butter shrimp over pasta or rice, a Philly cheesesteak skillet, or quesadillas made with rotisserie chicken. Start the oven and the water before you chop anything, and spread the protein across two sheet pans so it browns instead of steaming.",
+      },
       {
         question: "Can I cook frozen chicken for a quick dinner?",
         answer:
@@ -457,7 +480,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     readMinutes: 9,
     updatedAt: UPDATED,
     intro:
-      "Comfort food suits a station kitchen because most of it improves with time. Stews and braises taste deeper the next day, mac and cheese and pot pie can be assembled hours ahead, and meatloaf slices cleanly after it rests. The problems at crew scale are predictable: cheese sauce that turns grainy, mashed potatoes that go gluey, stew meat that stays tough because it boiled, and a bake that is cold in the middle because it went into the oven straight from the fridge. Each has a specific cause and a specific fix. This guide gives quantities and oven times for 10, the technique behind each fix, and how to assemble ahead and reheat.",
+      "The best comfort food for a crowd is the kind that can be made ahead: beef stew, mac and cheese, meatloaf, pot pie and shepherd's pie all hold, reheat and feed 10 from two pans or one Dutch oven. Stews taste deeper the next day, and the bakes can be assembled hours before they go in the oven. At crew scale the same four problems come up: cheese sauce that turns grainy, mashed potatoes that go gluey, stew meat that stays tough because it boiled, and a bake that is still cold in the middle because it went into the oven straight from the fridge.",
     sections: [
       {
         id: "quantities",
@@ -550,6 +573,11 @@ export const SEO_TRAFFIC_ARTICLES = [
         answer:
           "Assemble it up to 24 hours ahead with the pasta slightly undercooked and the sauce a little loose, then cover and refrigerate. Bake from cold at 350°F (175°C), covered for the first 20 minutes, for 40 to 50 minutes total, until it bubbles and the center is hot.",
       },
+      {
+        question: "Why does my beef stew meat stay tough?",
+        answer:
+          "Either it boiled or it hasn't cooked long enough. Chuck needs 2 1/2 to 3 hours at a bare simmer, or in a 325°F (165°C) oven, for its connective tissue to soften; a hard boil tightens the muscle fibers and squeezes out moisture. If the meat is tough but the stew hasn't boiled, it needs more time, not less.",
+      },
     ],
     relatedArticleSlugs: [
       "best-station-chili-recipes",
@@ -580,7 +608,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "Budget crew dinners get cheaper in two ways: choosing proteins that cost less per serving, and letting beans, grains and vegetables carry more of the plate. Bone-in chicken, pork shoulder, eggs, dried beans and ground meat stretched with lentils cover most tight weeks. None of them needs expensive ingredients to taste good; they need browning, enough salt, and something acidic at the end. Prices vary by region and week, so this guide compares proteins by cost per serving rather than listing prices, and the shelf tag's unit price (per pound or per kilogram) is the number to check. The guide also covers how to stretch meat without anyone noticing, dried beans done safely, and five budget dinners for 10.",
+      "Cheap meals for a crowd come from two moves: buying proteins that cost less per serving, and letting beans, grains and vegetables carry more of the plate. Bone-in chicken, pork shoulder, eggs, dried beans and ground meat stretched with lentils cover most tight weeks. None of them needs expensive ingredients to taste good. They need hard browning, enough salt, and something acidic at the end. Prices change by region and by week, so compare the unit price on the shelf tag (per pound or per kilogram) rather than the package price.",
     sections: [
       {
         id: "proteins",
@@ -628,7 +656,7 @@ export const SEO_TRAFFIC_ARTICLES = [
         heading: "Where the flavor comes from when the budget is tight",
         paragraphs: [
           "Cheap food tastes cheap when it is under-browned and under-seasoned. Brown meat hard, in batches; the browned crust and the brown film left in the pan are most of the flavor in a stew or sauce, so deglaze the pan with a splash of stock or water and scrape it up. Cook spices and tomato paste in the hot fat for a minute before adding liquid, which makes them taste fuller. Season with salt in stages, and finish with something acidic, such as a squeeze of lime, a spoon of vinegar or pickled onions, which makes a heavy dish taste brighter.",
-          "Some of the best flavor boosters cost almost nothing: a Parmesan rind simmered in soup, the chicken carcass from a roast turned into stock (simmer 3 to 4 hours with an onion and a carrot), and one bunch of fresh herbs used across two dinners.",
+          "Some of the most useful flavor comes from things you would otherwise throw away: a Parmesan rind simmered in soup, the chicken carcass from a roast turned into stock (simmer 3 to 4 hours with an onion and a carrot), and one bunch of fresh herbs used across two dinners.",
         ],
       },
       {
@@ -672,6 +700,11 @@ export const SEO_TRAFFIC_ARTICLES = [
         answer:
           "Dried beans and lentils are the cheapest per serving, followed in most stores by eggs, chicken leg quarters or thighs, whole chickens, and pork shoulder. Prices move with the season, so compare the unit price per pound or kilogram on the shelf tag rather than the price of the package.",
       },
+      {
+        question: "How do you stretch ground beef for a big crew?",
+        answer:
+          "Replace up to a third of the meat with cooked lentils, beans, finely chopped mushrooms or grated vegetables, which take on the seasoning and the browned flavor. In chili, tacos and pasta sauce most people won't notice. Brown the meat hard first, then add the filler, so the dish still tastes meaty.",
+      },
     ],
     relatedArticleSlugs: [
       "firehall-grocery-planning",
@@ -702,7 +735,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "A taco bar is one of the easiest ways to feed a crew because people build their own plates, which handles different appetites and dietary needs without extra cooking. It goes wrong in three places: running out of tortillas, meat that is greasy or bland, and tortillas that crack because they were not heated properly. Plan on 1/3 lb (150 g) of raw ground meat and three tortillas per person, keep to two proteins at most (one meat that holds well, plus beans), and put most of your effort into warm tortillas and cold, fresh toppings. This guide gives the amounts for 8 and 12, a seasoning ratio, proteins that hold on a line, and the setup.",
+      "For a taco bar for a crowd, plan on 1/3 lb (150 g) of raw ground meat and three tortillas per person: about 2 3/4 lb of meat and 24 tortillas for 8, or 4 lb and 36 for 12. Keep to two proteins at most, one meat that holds well plus a pot of beans, and put most of your effort into warm tortillas and cold, fresh toppings. People build their own plates, so different appetites and diets take care of themselves. Taco night goes wrong in three places: running out of tortillas, greasy or bland meat, and tortillas that crack because they weren't heated properly.",
     sections: [
       {
         id: "quantities",
@@ -779,7 +812,7 @@ export const SEO_TRAFFIC_ARTICLES = [
         heading: "Setting up the line",
         paragraphs: [
           "Order the line so people fill plates with the cheaper items first: plates, tortillas, beans and rice, meat, cheese, then cold toppings, salsas and limes. Keep hot items together on one end and cold on the other. Put cold toppings in small bowls set into larger bowls of ice, or bring out small refills from the fridge rather than one large bowl, because anything perishable left out more than two hours has to be thrown out.",
-          "Label mild and hot salsas, and put dairy (cheese and sour cream) at the end with its own spoons so anyone avoiding it can skip it easily. Make guacamole close to serving time and press plastic wrap directly onto the surface to slow browning. Leftover taco meat keeps 3 to 4 days in the fridge and becomes nachos, taco bowls or quesadillas the next day.",
+          "Label mild and hot salsas, and put dairy (cheese and sour cream) at the end with its own spoons so anyone avoiding it can skip it easily. Make guacamole close to serving time and press plastic wrap directly onto the surface to slow browning. Refrigerate leftover taco meat within two hours. USDA allows 3 to 4 days and Health Canada 2 to 3; in a shared fridge, use the shorter window. It makes good nachos, taco bowls or quesadillas the next day.",
         ],
       },
     ],
@@ -803,6 +836,11 @@ export const SEO_TRAFFIC_ARTICLES = [
         question: "How many tacos per person should I plan for a taco bar?",
         answer:
           "Three per adult is a safe average with beans and rice on the side, and four for a crew that has been working all day. That works out to about 1/3 lb (150 g) of raw ground meat per person. If you are serving two meats, make two-thirds of the amount of each.",
+      },
+      {
+        question: "How do you keep tortillas warm for a crowd?",
+        answer:
+          "Heat each tortilla first, then hold the stack warm. Char corn tortillas for a few seconds a side in a dry skillet or over a gas flame, or wrap stacks of 10 to 12 in foil and heat them in a 350°F (175°C) oven for about 15 minutes. Keep them wrapped in a towel inside a covered dish or an insulated tortilla warmer, and they stay soft for 30 to 45 minutes.",
       },
     ],
     relatedArticleSlugs: [
@@ -834,7 +872,7 @@ export const SEO_TRAFFIC_ARTICLES = [
     readMinutes: 9,
     updatedAt: UPDATED,
     intro:
-      "One-pot cooking works when three things are right: a pot big and wide enough for the crew, the correct amount of liquid when rice or pasta cooks in the sauce, and the order the ingredients go in, based on how long each one takes. Get those right and one-pot chicken and rice or jambalaya comes out evenly cooked, with the browned flavor of a dinner that used several pans and only one pot to wash. Get the liquid wrong and the rice is crunchy or mushy; get the pot wrong and the bottom scorches before the top cooks. This guide covers pot and Dutch oven sizes, liquid ratios by grain, a step order that works for most one-pot dishes, and how to prevent scorching.",
+      "One-pot meals for a crowd depend on three things: a pot wide enough to keep rice or pasta shallow, the right amount of liquid when the starch cooks in the sauce, and adding ingredients in order of how long they take. For 6 to 8 people that means a 7 to 8 qt Dutch oven at least 11 in (28 cm) across; for 10 to 12, two pots or a wide rondeau. Get the liquid wrong and the rice comes out crunchy or mushy. Get the pot wrong and the bottom scorches before the top is cooked.",
     sections: [
       {
         id: "pot-size",
@@ -903,7 +941,7 @@ export const SEO_TRAFFIC_ARTICLES = [
         heading: "Dutch oven braising: stews and pot roast in the oven",
         paragraphs: [
           "A Dutch oven with a heavy lid is designed for braising: brown the meat on the stove, add liquid to come about halfway up the meat, cover, and cook in a 300 to 325°F (150 to 165°C) oven. The steady, gentle heat softens chuck roast, short ribs and pork shoulder without the boiling that toughens them. A 3 to 4 lb (1.4 to 1.8 kg) chuck roast takes about 3 to 3 1/2 hours and feeds 6 to 8; for 10 to 12, use two roasts in a 7 to 8 qt pot, or two pots.",
-          "Outdoors, a cast-iron camp Dutch oven with legs and a flat, rimmed lid cooks over charcoal. A common starting point for baking at about 350°F (175°C) is to take the pot's diameter in inches, double it for the total number of briquettes, and place about two-thirds on the lid and one-third underneath. Wind and cold air change that a lot, so check the food and rotate the pot and lid a quarter turn in opposite directions every 15 minutes to avoid hot spots.",
+          "Braises hold better than almost anything else, which makes them a safe choice on a busy night. Once the meat is tender, the pot can sit covered in a 200°F (95°C) oven for an hour or more. Like stew, a braise is often better the next day: chill it, lift off the set fat, and reheat it covered until it simmers.",
         ],
       },
       {
@@ -936,6 +974,11 @@ export const SEO_TRAFFIC_ARTICLES = [
         question: "Can I make one-pot chicken and rice for 12 in a single pot?",
         answer:
           "Only in a wide pot, such as a 12 to 15 quart rondeau, where the rice stays about 2 in (5 cm) deep. In a tall stockpot the rice at the bottom scorches before the top cooks. Otherwise, use two 7 quart Dutch ovens, or bring the rice and liquid to a boil and bake it covered in hotel pans at 350°F (175°C).",
+      },
+      {
+        question: "Why is the rice still crunchy in my one-pot dish?",
+        answer:
+          "Usually because the liquid ran out before the rice cooked: the lid was lifted too often, the heat was too high, or the pot was so wide that it evaporated fast. Add 1/2 cup of hot stock, cover tightly, and cook on the lowest heat or in a 350°F (175°C) oven for another 10 minutes. If only the top layer is crunchy, the rice was piled too deep; next time use a wider pot or two pots.",
       },
     ],
     relatedArticleSlugs: [

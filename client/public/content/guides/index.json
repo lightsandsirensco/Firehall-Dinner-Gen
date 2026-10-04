@@ -1,6 +1,6 @@
 {
   "version": 3,
-  "generatedAt": "2026-10-03T12:01:10.462Z",
+  "generatedAt": "2026-10-04T00:04:09.476Z",
   "articleCount": 27,
   "articles": [
     {
@@ -16,8 +16,8 @@
     {
       "slug": "feeding-a-firehall-crew",
       "title": "How to Cook a Crew Dinner That Survives Interruptions",
-      "subtitle": "Which dishes can wait and which can't, how to build stopping points into the cook, and what to do with the food when the crew has to leave mid-meal.",
-      "description": "Firehouse meals that can be paused: which dishes hold, where to build stopping points, and when food left during a call is still safe to eat.",
+      "subtitle": "Which dishes can wait and which can't, where to pause the cook, and what to do with the food when the crew has to leave mid-meal.",
+      "description": "Meals that hold well for a crew dinner that gets interrupted: which dishes wait, where to pause the cook, and when food left during a call is safe.",
       "topic": "shift_operations",
       "pillar": "operations_how_to",
       "readMinutes": 8,
@@ -36,11 +36,11 @@
     {
       "slug": "rookie-cooking-mistakes",
       "title": "Rookie Cooking Mistakes at the Firehall, and How to Fix Them",
-      "subtitle": "Grey ground beef, bland chili, dry chicken: the handful of technique errors behind most bad crew dinners, and what is actually going wrong.",
-      "description": "The cooking mistakes behind most bad crew dinners, from crowded pans to guessing doneness, with the reason each one happens and a safe-temperature chart.",
+      "subtitle": "Grey ground beef, flat chili, dry chicken and a dinner that finishes in pieces: the mistakes behind most bad crew dinners, and what to do instead.",
+      "description": "Beginner cooking mistakes to avoid when cooking for a crowd: crowded pans, wet meat, salt in big batches, guessing doneness and leaving food out.",
       "topic": "station_cooking",
       "pillar": "operations_how_to",
-      "readMinutes": 9,
+      "readMinutes": 10,
       "publishedAt": "2026-05-27T18:00:00.000Z"
     },
     {
@@ -197,7 +197,7 @@
       "slug": "healthy-meals-that-still-taste-good",
       "title": "Healthy Meals That Still Taste Good: Cooking Lighter for a Crew",
       "subtitle": "Keeping lean chicken, pork and fish juicy, roasting vegetables people actually eat, sauces with big flavor, and a bowl line for 10.",
-      "description": "Healthy meals that still taste good for a crew: keeping lean chicken and fish juicy, roasting vegetables properly, bold sauces, and bowl lines.",
+      "description": "Healthy meals that taste good for a crew: keep lean chicken and fish juicy, roast vegetables hot, and let bold make-ahead sauces carry the flavor.",
       "topic": "nutrition_performance",
       "pillar": "nutrition_performance",
       "readMinutes": 8,
@@ -207,7 +207,7 @@
       "slug": "high-protein-firehall-meals",
       "title": "High-Protein Firehall Meals: Protein-Forward Dinners for a Crew",
       "subtitle": "How much protein common foods contain, how much raw meat to buy per person, cheaper protein sources, and breakfasts and sides that add more.",
-      "description": "High-protein meals for a crowd: protein in common foods, raw amounts to buy per person, cheaper sources, and dinners that deliver 35 to 40 g each.",
+      "description": "High protein meals for a crowd: protein in common foods, raw amounts to buy per person, cheaper sources, and dinners with 35 to 40 g a plate.",
       "topic": "nutrition_performance",
       "pillar": "nutrition_performance",
       "readMinutes": 8,
@@ -227,7 +227,7 @@
       "slug": "firehall-kitchen-culture",
       "title": "Firehall Kitchen Culture: Running a Shared Station Kitchen That Works",
       "subtitle": "A fair cook rotation, cleanup in the right order, shared-fridge rules, handling allergies, and writing the crew's recipes down so they outlast transfers.",
-      "description": "Firehall kitchen culture that works: a fair cook rotation, cleanup order, shared-fridge labelling, handling allergies, and writing recipes down.",
+      "description": "Firehall kitchen culture that works: a fair cook rotation, cleanup order, shared-fridge labeling, handling allergies, and writing recipes down.",
       "topic": "station_lifestyle",
       "pillar": "station_lifestyle",
       "readMinutes": 8,

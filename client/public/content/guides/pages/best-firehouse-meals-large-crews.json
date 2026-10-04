@@ -5,7 +5,7 @@
   "description": "Firehouse meals for large crews of 15 to 30: per-person quantities, hotel pan and stockpot capacity, oven timing and safe hot holding.",
   "topic": "station_cooking",
   "pillar": "operations_how_to",
-  "intro": "Past 15 people, the recipe stops being the hard part. The limits become equipment: a residential oven has two racks, a 12-inch skillet browns about a pound and a half of meat at a time, and an 8-quart pot is full long before it feeds 25. Large-crew cooking works when you pick dishes whose bottleneck you can manage, cook the slow parts a day ahead, and have a plan for keeping food at 140°F (60°C) while a long line moves through. This guide covers quantities for 15, 20 and 30, what each common pan and pot really holds, and a two-day schedule. For crews of 4 to 12, the 10-person guide has tighter numbers.",
+  "intro": "For a crew of 15 to 30, plan about 1/2 lb (225 g) of raw boneless meat and 1/2 cup of raw rice per person, and pick dishes your equipment can handle. Past 15 people the recipe stops being the hard part: a residential oven has two racks, a 12-inch skillet browns about a pound and a half of meat at a time, and a 12-quart stockpot of chili feeds about 24. What goes wrong is two dishes needing the oven at once, and food cooling below 140°F (60°C) while a long line moves through. Cook the slow parts the day before and plan how you will hold food hot before you shop.",
   "sections": [
     {
       "id": "quantities",
@@ -177,13 +177,13 @@
           ],
           [
             "Pulled pork",
-            "8 to 10 hours of cooking",
-            "Cook the day before, chill in its juices, reheat covered to 165°F (74°C)"
+            "Hours of cooking",
+            "Cook the day before, chill in its juices, reheat covered on the stove to 165°F (74°C)"
           ],
           [
             "Baked pasta or lasagna",
             "Oven space",
-            "Assemble the day before; bake in two waves 40 minutes apart and hold the first wave in an insulated carrier"
+            "Assemble the day before; four 9 x 13 in pans fill both racks, so bake them together and keep other reheating on the stove"
           ],
           [
             "Taco or rice bowl line",
@@ -214,35 +214,38 @@
       "id": "cooling",
       "heading": "Cooling large batches safely",
       "paragraphs": [
-        "A 20-quart pot of chili left to cool on the stove stays warm in the middle for hours, which is exactly the range where bacteria grow fastest. The FDA Food Code standard is to cool cooked food from 135°F to 70°F (57°C to 21°C) within 2 hours and then to 41°F (5°C) or below within 4 more. A deep pot cannot do that in a refrigerator; shallow containers can."
+        "A 20-quart pot of chili left to cool on the stove stays warm in the middle for hours, which is exactly the range where bacteria grow fastest. The FDA Food Code standard is to cool cooked food from 135°F to 70°F (57°C to 21°C) within 2 hours, then to 41°F (5°C) or below within a further 4 hours, 6 hours in total. A deep pot cannot do that even in a cold refrigerator; the center stays warm long after the edges are cold.",
+        "Shallow containers can, because heat only has to travel an inch or two to escape. Most of the work is getting the food out of the stockpot quickly, before the cleanup starts and the pot gets forgotten."
       ],
       "steps": [
         "Divide leftovers into shallow containers no more than 2 in (5 cm) deep as soon as service ends.",
         "For thick foods like chili or mashed potatoes, stir for a few minutes in a sink of ice water first to take off the worst of the heat.",
         "Refrigerate loosely covered, leaving space between containers so cold air can circulate, and seal them once cold.",
-        "Label with the dish and date. Eat within 3 to 4 days (USDA) or 2 to 3 days (Health Canada), and reheat to 165°F (74°C)."
+        "Label with the dish and date. USDA allows 3 to 4 days and Health Canada 2 to 3; in a shared station fridge, use the shorter window. Reheat to 165°F (74°C)."
       ]
     },
     {
       "id": "schedule",
       "heading": "A two-day plan for 30 people",
       "paragraphs": [
-        "Most of the work for a large feed can happen the day before, which leaves the day of service for baking, reheating and setting up. This example is pulled pork, baked ziti, coleslaw and rolls for 30, but the same split works for most menus: anything braised, simmered or assembled moves to day one, and anything crisp, dressed or toasted stays on day two."
+        "Most of the work for a large feed can happen the day before, which leaves the day of service for baking, reheating and setting up. This example is pulled pork, baked ziti, coleslaw and rolls for 30, but the same split works for most menus: anything braised, simmered or assembled moves to day one, and anything crisp, dressed or toasted stays on day two.",
+        "On the day, give the oven one job at one temperature. The ziti takes both racks, so the pork reheats on the stove and holds in slow cookers, and the oven drops to a holding temperature once the pasta is done."
       ],
       "steps": [
         "Day before: cook 15 lb of pork shoulder in chunks, shred it, and chill it in its juices in shallow pans.",
         "Day before: make the sauce and assemble four 9 x 13 in pans of ziti, cover, and refrigerate for up to 24 hours.",
         "Day before: shred the cabbage and make the dressing, stored separately.",
-        "Two hours before: bake the first two pans of ziti, covered, at 375°F (190°C) for about 55 minutes from cold, then 10 minutes uncovered; they are done at 165°F (74°C) in the center.",
-        "90 minutes before: reheat the pork, covered, in a 325°F (165°C) oven to 165°F (74°C). Move the first ziti to the hot box and start the second wave.",
-        "Fifteen minutes before: dress the slaw, set up the line, and warm the rolls wrapped in foil."
+        "Two hours before: bake all four pans of ziti, covered, at 375°F (190°C), swapping racks halfway. From cold in a full oven, allow 65 to 70 minutes covered, then 10 minutes uncovered; they are done at 165°F (74°C) in the center.",
+        "One hour before: reheat the pork in its juices in a covered pot over medium-low heat, stirring now and then, to 165°F (74°C), then move it to slow cookers on Warm.",
+        "When the ziti is done: turn the oven down to 200°F (95°C) and hold the pans there, covered, or move them to the hot box.",
+        "Fifteen minutes before: dress the slaw, set up the line, and warm the rolls wrapped in foil in the low oven."
       ]
     }
   ],
   "practicalAdvice": [
     "Plan 1/2 lb (225 g) of raw boneless meat and 1/2 cup of raw rice per person, and trim protein by 20 percent only when there are several sides.",
     "Fill stockpots no more than three-quarters full; a 12 qt pot feeds about 24 as the main dish.",
-    "Move braising, simmering and assembly to the day before, and keep day two for baking and reheating.",
+    "Move braising, simmering and assembly to the day before, and give the oven one job at one temperature on the day.",
     "Hold hot food at 140°F (60°C) or above and check it with a thermometer every hour of a long service.",
     "Cool leftovers in shallow containers no more than 2 in (5 cm) deep."
   ],
@@ -260,7 +263,7 @@
     {
       "slug": "baked-ziti",
       "title": "Baked Ziti",
-      "blurb": "Assemble four pans the day before and bake in two waves."
+      "blurb": "Assemble four pans the day before and bake them together on both racks."
     },
     {
       "slug": "batch-lasagna",
@@ -296,6 +299,10 @@
     {
       "question": "How do I keep food hot for a large group without chafing dishes?",
       "answer": "Use a low oven set around 200°F (95°C), slow cookers on Warm, or a picnic cooler preheated with hot water and packed with foil-covered pans and towels. Whatever you use, check that the food stays at 140°F (60°C) or above, and reheat anything that falls below it."
+    },
+    {
+      "question": "How much chili do I need for 30 people?",
+      "answer": "Plan 1 1/2 cups per person as the main dish, about 11 1/4 quarts in total, made with roughly 10 lb (4.5 kg) of raw ground meat. That is more than a 12-quart stockpot can hold when filled three-quarters, so use a 16- to 20-quart pot or split it between two 12-quart pots on separate burners."
     }
   ],
   "relatedArticleSlugs": [
@@ -312,7 +319,7 @@
     "hotel pan capacity"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 9,
   "seoTitle": "Firehouse Meals for Large Crews: Feeding 15 to 30",
   "sources": [

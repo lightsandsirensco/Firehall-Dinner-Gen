@@ -5,7 +5,7 @@
   "description": "One-pot meals for a crowd: pot and Dutch oven sizes for 4 to 12, liquid ratios for rice and pasta cooked in the pot, ingredient order, and scorching fixes.",
   "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "One-pot cooking works when three things are right: a pot big and wide enough for the crew, the correct amount of liquid when rice or pasta cooks in the sauce, and the order the ingredients go in, based on how long each one takes. Get those right and one-pot chicken and rice or jambalaya comes out evenly cooked, with the browned flavor of a dinner that used several pans and only one pot to wash. Get the liquid wrong and the rice is crunchy or mushy; get the pot wrong and the bottom scorches before the top cooks. This guide covers pot and Dutch oven sizes, liquid ratios by grain, a step order that works for most one-pot dishes, and how to prevent scorching.",
+  "intro": "One-pot meals for a crowd depend on three things: a pot wide enough to keep rice or pasta shallow, the right amount of liquid when the starch cooks in the sauce, and adding ingredients in order of how long they take. For 6 to 8 people that means a 7 to 8 qt Dutch oven at least 11 in (28 cm) across; for 10 to 12, two pots or a wide rondeau. Get the liquid wrong and the rice comes out crunchy or mushy. Get the pot wrong and the bottom scorches before the top is cooked.",
   "sections": [
     {
       "id": "pot-size",
@@ -130,7 +130,7 @@
       "heading": "Dutch oven braising: stews and pot roast in the oven",
       "paragraphs": [
         "A Dutch oven with a heavy lid is designed for braising: brown the meat on the stove, add liquid to come about halfway up the meat, cover, and cook in a 300 to 325°F (150 to 165°C) oven. The steady, gentle heat softens chuck roast, short ribs and pork shoulder without the boiling that toughens them. A 3 to 4 lb (1.4 to 1.8 kg) chuck roast takes about 3 to 3 1/2 hours and feeds 6 to 8; for 10 to 12, use two roasts in a 7 to 8 qt pot, or two pots.",
-        "Outdoors, a cast-iron camp Dutch oven with legs and a flat, rimmed lid cooks over charcoal. A common starting point for baking at about 350°F (175°C) is to take the pot's diameter in inches, double it for the total number of briquettes, and place about two-thirds on the lid and one-third underneath. Wind and cold air change that a lot, so check the food and rotate the pot and lid a quarter turn in opposite directions every 15 minutes to avoid hot spots."
+        "Braises hold better than almost anything else, which makes them a safe choice on a busy night. Once the meat is tender, the pot can sit covered in a 200°F (95°C) oven for an hour or more. Like stew, a braise is often better the next day: chill it, lift off the set fat, and reheat it covered until it simmers."
       ]
     },
     {
@@ -190,6 +190,10 @@
     {
       "question": "Can I make one-pot chicken and rice for 12 in a single pot?",
       "answer": "Only in a wide pot, such as a 12 to 15 quart rondeau, where the rice stays about 2 in (5 cm) deep. In a tall stockpot the rice at the bottom scorches before the top cooks. Otherwise, use two 7 quart Dutch ovens, or bring the rice and liquid to a boil and bake it covered in hotel pans at 350°F (175°C)."
+    },
+    {
+      "question": "Why is the rice still crunchy in my one-pot dish?",
+      "answer": "Usually because the liquid ran out before the rice cooked: the lid was lifted too often, the heat was too high, or the pot was so wide that it evaporated fast. Add 1/2 cup of hot stock, cover tightly, and cook on the lowest heat or in a 350°F (175°C) oven for another 10 minutes. If only the top layer is crunchy, the rice was piled too deep; next time use a wider pot or two pots."
     }
   ],
   "relatedArticleSlugs": [
@@ -206,7 +210,7 @@
     "one pot rice ratio"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 9,
   "seoTitle": "One-Pot Meals for a Crowd: Pot Sizes, Ratios and Timing",
   "sources": [

@@ -5,7 +5,7 @@
   "description": "Build a firehouse grocery list from the menu: per-person quantities, buying and thawing bulk meat safely, and pantry staples for bad nights.",
   "topic": "meal_planning",
   "pillar": "operations_how_to",
-  "intro": "Good crew grocery planning starts with a menu and a head count, not a trip down the aisles. Decide what you are cooking, multiply by the number of people eating, and buy protein by weight first because it is the most expensive item and the one you can't improvise. Then make sure frozen meat has time to thaw, which is the step crews most often forget: even a 1 lb package needs about a full day in the fridge.",
+  "intro": "Plan crew groceries from the menu and the head count: decide the meals, multiply per-person amounts by the number eating, and buy protein by weight first, at about 1/2 lb (225 g) of raw boneless meat per person. Protein is the most expensive item and the one you can't improvise. The step crews most often miss is the thaw: even a 1 lb package of frozen meat needs about a full day in the fridge.",
   "sections": [
     {
       "id": "menu-to-list",
@@ -40,7 +40,7 @@
         "Dry goods: rice, dry pasta, flour, oats, tortillas (they freeze well).",
         "Cans and jars: crushed tomatoes, beans, broth, salsa, peanut butter.",
         "Keepers: onions, garlic, potatoes, eggs, a block of cheese, frozen vegetables.",
-        "Flavour: salt, pepper, cumin, chili powder, smoked paprika, oregano, soy sauce, hot sauce, vinegar, oil."
+        "Flavor: salt, pepper, cumin, chili powder, smoked paprika, oregano, soy sauce, hot sauce, vinegar, oil."
       ]
     },
     {
@@ -54,8 +54,8 @@
       "id": "splitting-the-cost",
       "heading": "Splitting the cost fairly",
       "paragraphs": [
-        "Most crews that cook together split the bill for each meal among the people who ate it. It is simple, and it avoids charging someone who was off sick or detailed elsewhere. The part that goes wrong is the staples: oil, salt, spices, foil and coffee get used by everyone but bought by whoever happened to shop. A small fixed amount added to each person's share, kept in a separate staples fund, pays for them without anyone keeping a ledger of who used how much cumin.",
-        "As a worked example: a dinner for 8 costs 96 in groceries, which is 12 per person. Add 1 each for the staples fund and everyone pays 13. When the fund runs low, whoever shops next restocks the staples from it."
+        "Most crews split the bill for each meal among the people who ate it, which avoids charging someone who was off sick or detailed elsewhere. The part that goes wrong is the staples: oil, salt, spices, foil and coffee get used by everyone but bought by whoever happened to shop. A small fixed amount added to each person's share, kept in a separate staples fund, pays for them without anyone tracking who used how much cumin.",
+        "For example, a dinner for 8 costs $96 in groceries, or $12 a person. Add $1 each for the staples fund and everyone pays $13. When the fund runs low, whoever shops next restocks the staples from it."
       ],
       "steps": [
         "Photograph the receipt and post it for the crew before you put the groceries away.",
@@ -106,7 +106,11 @@
     },
     {
       "question": "How long does frozen ground beef take to thaw?",
-      "answer": "About a full day per pound in the fridge, according to USDA. In cold water, in a leak-proof bag with the water changed every 30 minutes, a 1 lb package can thaw in an hour or less. Cook meat thawed in cold water right away."
+      "answer": "In the fridge, USDA says to allow a full day for a 1 lb package, and about 24 hours per 5 lb for larger amounts; flat bags thaw faster than a block. In cold water, in a leak-proof bag with the water changed every 30 minutes, a 1 lb package can thaw in an hour or less. Cook meat thawed in cold water right away."
+    },
+    {
+      "question": "How do you split grocery costs at a fire station?",
+      "answer": "Divide each meal's receipt by the number of people who ate it, not the number on shift. Add a small fixed amount per person, such as $1, to a staples fund that covers oil, spices, foil and coffee. Post a photo of the receipt and settle up the same shift through one shared payment app."
     },
     {
       "question": "Can we cook meat straight from frozen?",
@@ -128,7 +132,7 @@
     "thawing meat safely"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "Grocery Planning for a Crew: How Much Food to Buy",
   "sources": [

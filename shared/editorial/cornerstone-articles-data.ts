@@ -6,7 +6,7 @@
 import { SRC } from "./guide-sources.js";
 import { buildSeoGuide, meal } from "./seo-article-build.js";
 
-const UPDATED = "2026-09-30T18:00:00.000Z";
+const UPDATED = "2026-10-03T18:00:00.000Z";
 
 export const CORNERSTONE_BLOG_ARTICLES = [
   buildSeoGuide({
@@ -28,7 +28,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "These ten classic firehall meals are the same ten on the Classics Wheel: jerk chicken with rice and peas, BBQ chicken mac and cheese, steak sandwiches, smash burgers, chicken parm, pulled pork, chili with garlic bread, chicken Caesar, beef dip and steak tacos. They are here as a list for when you want to choose rather than spin. What they share is that each one feeds a crew from one or two pans without a fussy finish. They differ in how well they hold, and that matters most when choosing on a given night. This guide gives quantities for 8, the step that makes each dish work, and which ones can wait if people are late.",
+      "The ten classic firehall meals on the Classics Wheel are jerk chicken with rice and peas, BBQ chicken mac and cheese, steak sandwiches, smash burgers, chicken parm, pulled pork, chili with garlic bread, chicken Caesar, beef dip and steak tacos. Each one feeds a crew of 8 from one or two pans without a fussy finish. Where they differ is how well they wait: chili and pulled pork hold for hours, while smash burgers and steak tacos need to be cooked when people sit down. On a night when calls are likely, that difference matters more than which dish you'd prefer.",
     sections: [
       {
         id: "at-a-glance",
@@ -46,7 +46,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
             ["Smash burgers", "4 lb 80/20 ground beef as 16 balls, 8 buns", "25 min", "No; cook to order"],
             ["Chicken parm", "3 lb chicken breast as 8 cutlets, 2 lb pasta, 1 jar marinara, 1 lb mozzarella", "50 min", "About 20 min, uncovered"],
             ["Pulled pork", "5 lb bone-in pork shoulder, 12 buns, 1 cabbage for slaw", "30 min, plus 8 hours cooking", "Hours, in its juices"],
-            ["Chili with garlic bread", "2 3/4 lb ground beef, 2 cans beans, 2 cans tomatoes, 2 loaves", "40 min, plus simmering", "Hours, on low"],
+            ["Chili with garlic bread", "2 3/4 lb ground beef, 3 cans beans, 2 large cans crushed tomatoes, 2 loaves", "40 min, plus simmering", "Hours, on low"],
             ["Chicken Caesar", "3 lb chicken breast, 3 heads romaine, 1 cup Parmesan", "35 min", "Chicken holds; dress the salad at serving"],
             ["Beef dip", "4 lb sirloin tip or inside round roast, 8 rolls, 4 cups beef stock", "30 min, plus roasting", "Jus holds; slice the beef to order"],
             ["Steak tacos", "3 lb flank or skirt steak, 24 small tortillas", "30 min", "No; cook and slice last"],
@@ -65,7 +65,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         id: "technique",
         heading: "The step that makes each one work",
         paragraphs: [
-          "Each of these has one step that decides whether it comes out right. Get that step right and the rest of the recipe is forgiving. Beef temperatures below are USDA's minimum of 145°F (63°C) with a 3-minute rest for whole cuts, and 160°F (71°C) for ground beef; chicken is 165°F (74°C).",
+          "Each of these has one step that decides whether it comes out right. Get that step right and the rest of the recipe is forgiving. For safety, whole cuts of beef need 145°F (63°C) with a 3-minute rest under USDA guidance (Health Canada gives 145°F for medium-rare), ground beef 160°F (71°C), and chicken 165°F (74°C).",
         ],
         table: {
           caption: "The key step for each classic",
@@ -76,7 +76,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
             ["Steak sandwiches", "Rest the steak 5 to 10 minutes, then slice thin across the grain", "Short fibers make even a firmer cut tender to bite"],
             ["Smash burgers", "Smash hard within the first 30 seconds on a very hot griddle, then leave them alone", "Wide contact while the fat is cold builds the crust"],
             ["Chicken parm", "Bake breaded cutlets on a wire rack and put sauce under the cheese", "Air under the cutlet and cheese over the sauce keep the crust crisp"],
-            ["Pulled pork", "Cook to about 200°F (93°C), well past the 145°F safety point", "Connective tissue needs the extra heat before the meat will pull"],
+            ["Pulled pork", "Cook to about 200°F (93°C), well past any safe minimum", "Connective tissue needs the extra heat before the meat will pull"],
             ["Chili", "Brown the meat in batches and toast the spices in the fat", "Browning and toasted spices give it depth"],
             ["Chicken Caesar", "Dress the lettuce just before serving and keep croutons separate", "Dressing wilts romaine within about 20 minutes"],
             ["Beef dip", "Slice the roast paper-thin and build the jus from the pan drippings", "Thin slices soak up jus; drippings give it body"],
@@ -118,6 +118,11 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         answer:
           "Yes. The first ten recipes here are the ten on the wheel. Use the wheel when you want a random pick and this list when you want to choose by time, crew size or how well a dish holds.",
       },
+      {
+        question: "Which classic firehall meals hold best if dinner runs late?",
+        answer:
+          "Chili, pulled pork and BBQ chicken mac and cheese hold for an hour or more, covered, on low heat or in a 200°F (95°C) oven. The jus for beef dip holds too, but slice the beef to order. Smash burgers, steak sandwiches, steak tacos and a dressed Caesar should be cooked or dressed when the crew sits down.",
+      },
     ],
     relatedArticleSlugs: [
       "most-popular-firefighter-meals",
@@ -145,7 +150,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
     readMinutes: 9,
     updatedAt: UPDATED,
     intro:
-      "The most popular firefighter meals are not a secret list. Chili, tacos, burgers, pulled pork, lasagna and a few others come up again and again because they share practical traits: they scale in one pot or pan, their parts can be held separately, their doneness is forgiving, and cheap starches fill out the plate. This guide groups the 20 most common crew dinners by format, since the format decides how a meal behaves on a busy night more than the recipe does. It gives quantities for 10 for the five most common, explains why each format works for a crew, and suggests how to choose among them.",
+      "The meals firefighters cook most are chili, tacos, burgers, pulled pork and baked pasta, followed by a familiar group of bakes, bowl lines and sheet-pan dinners. They keep coming back for practical reasons: they scale in one pot or pan, their parts can be held separately, a few extra minutes won't ruin them, and cheap starches fill out the plate. Group them by format (pot meal, bake, line, handheld or sheet pan) and you know most of what matters on a busy night, because the format decides how a dinner holds and how much last-minute cooking it needs.",
     sections: [
       {
         id: "by-format",
@@ -184,7 +189,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
           columns: ["Dinner", "Protein", "Starch", "Also buy"],
           rows: [
             ["Taco bar", "3 1/2 lb (1.6 kg) ground beef", "30 small tortillas, 3 cups raw rice", "1 1/4 lb cheese, 3 cans beans, lettuce, tomatoes, salsa, sour cream"],
-            ["Beef and bean chili", "3 1/2 lb (1.6 kg) ground beef", "2 loaves bread or 5 cups raw rice", "3 cans beans, 3 cans tomatoes, 2 onions, chili powder, cumin"],
+            ["Beef and bean chili", "3 1/2 lb (1.6 kg) ground beef", "2 loaves bread or 5 cups raw rice", "4 cans beans, 2 large cans crushed tomatoes, 2 onions, chili powder, cumin"],
             ["Batch lasagna", "2 lb (900 g) Italian sausage or beef", "1 1/2 lb (680 g) lasagna noodles", "3 jars marinara, 2 lb ricotta, 2 lb mozzarella, Parmesan"],
             ["Pulled pork", "6 lb (2.7 kg) bone-in pork shoulder", "15 buns", "1 cabbage for slaw, barbecue sauce"],
             ["Smash burgers", "5 lb (2.3 kg) 80/20 ground beef", "20 buns", "Cheese slices, onions, pickles, lettuce"],
@@ -239,7 +244,12 @@ export const CORNERSTONE_BLOG_ARTICLES = [
       {
         question: "What is the most common dinner cooked at fire stations?",
         answer:
-          "Chili and taco nights are the most common, followed closely by burgers, pulled pork and baked pasta. They all scale easily, hold well or can be kept in separate parts, and rely on inexpensive starches.",
+          "There is no official count, but chili and taco nights come up in almost every station kitchen, with burgers, pulled pork and baked pasta close behind. They all scale easily, hold well or can be kept in separate parts, and rely on inexpensive starches.",
+      },
+      {
+        question: "What is a good dinner for a fire station on a busy night?",
+        answer:
+          "A pot meal or a line. Chili, one-pot chicken and rice, or a taco bar with the meat held on low all wait for an interrupted crew and let people eat when they get back. Avoid anything cooked to order, like smash burgers or steak, unless the crew is already at the table.",
       },
     ],
     relatedArticleSlugs: [
@@ -248,6 +258,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
       "cooking-for-10-firefighters",
       "feeding-a-firehall-crew",
     ],
+    sources: [SRC.usdaTemps, SRC.hcTemps],
   }),
 
   buildSeoGuide({
@@ -270,7 +281,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "Cooking for a crew for the first time is mostly a planning job. The ten rookie-proof meals here are hard to ruin for the same reasons: their doneness is forgiving, they cook in one pot, tray or line, and they still taste good if people come to the table late. Each one also teaches a skill that carries over to harder dishes, such as browning in batches, seasoning a big pot, or timing several components to finish together. This guide explains what makes a meal forgiving, gives a step-by-step plan for your first cook, lists what each of the ten teaches, and covers quick fixes for the most common problems.",
+      "For your first cook for the crew, pick chili, a taco bar or pulled pork. Like the other rookie-proof meals here, they are hard to ruin: a few extra minutes won't overcook them, they cook in one pot, tray or line, and they still taste good if people come to the table late. Each also teaches a skill you'll use on harder dishes, such as browning in batches, seasoning a big pot, or getting several components to finish together. Most first-time problems are planning problems: starting too late, missing an ingredient, or running out of pan space.",
     sections: [
       {
         id: "forgiving",
@@ -306,7 +317,7 @@ export const CORNERSTONE_BLOG_ARTICLES = [
           caption: "The skill each rookie-proof meal teaches",
           columns: ["Meal", "Skill it teaches", "The thing to watch"],
           rows: [
-            ["Beef and bean chili", "Browning in batches and seasoning a big pot", "Add salt late; the pot reduces and concentrates it"],
+            ["Beef and bean chili", "Browning in batches and seasoning a big pot", "Hold back some salt until the end; canned goods vary and the pot reduces"],
             ["Pulled pork", "Low-and-slow cooking to a target temperature", "Cook to about 200°F (93°C) so it pulls; rest before shredding"],
             ["Taco bar", "Setting up and running a line", "Put out cold toppings before the meat is done"],
             ["Batch lasagna", "Assembling ahead and baking a deep tray", "Rest 15 minutes before cutting or the slices slide"],
@@ -352,6 +363,11 @@ export const CORNERSTONE_BLOG_ARTICLES = [
         question: "What should I cook the first time I cook for the crew?",
         answer:
           "Chili or a taco bar. Both are forgiving, feed any crew size, and teach the basics of browning in batches and setting up a line. Read the recipe fully, prep everything before you start, and give yourself an extra 20 minutes.",
+      },
+      {
+        question: "How do you fix chili or soup that is too salty?",
+        answer:
+          "Add more of the unsalted base: another can of beans and tomatoes to chili, or more unsalted stock and vegetables to soup, then simmer to bring it back together. Water alone thins the flavor along with the salt. A squeeze of lime or a splash of vinegar won't remove salt, but it makes a salty dish taste more balanced.",
       },
     ],
     relatedArticleSlugs: [

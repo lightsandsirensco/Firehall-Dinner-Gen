@@ -12,7 +12,7 @@ import { CORNERSTONE_BLOG_ARTICLES } from "./cornerstone-articles-data.js";
 import { CREW_COOKING_GUIDES } from "./crew-cooking-guides-data.js";
 import { buildSeoGuide, meal } from "./seo-article-build.js";
 
-const UPDATED = "2026-09-30T18:00:00.000Z";
+const UPDATED = "2026-10-03T18:00:00.000Z";
 
 const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
   buildSeoGuide({
@@ -29,19 +29,20 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       "grilling for a large group",
       "two zone fire",
       "grilled chicken thigh temperature",
+      "keep burgers warm for a crowd",
     ],
     topic: "station_cooking",
     pillar: "recipes_meals",
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "Grilling for a crowd fails in two familiar ways: chicken that is charred outside and underdone at the bone, and a grill too small for the amount of food, so the first plates are cold before the last burgers are done. Both come down to setup rather than recipe. A two-zone fire lets you sear over high heat and then finish thicker pieces gently with the lid closed. Knowing how much your grill holds tells you how many rounds you need and what to start first. This guide covers the two-zone setup, grill capacity, times and temperatures for the usual cookout foods, sauce and flare-ups, food safety outdoors, and a schedule for 12.",
+      "To grill for a crowd, set up a two-zone fire and plan the cook around how much your grill holds. A kettle or 3-burner gas grill fits 12 to 18 burgers on the full grate, so cook the slow food (bone-in chicken, raw sausages) first on the cool side, hold it hot, and finish with burgers. Grill night usually goes wrong in two ways: chicken charred outside and underdone at the bone, and a grill too small for the menu, so the first plates are cold before the last burgers come off. Both are setup problems, not recipe problems.",
     sections: [
       {
         id: "two-zone",
-        heading: "Set up a two-zone fire",
+        heading: "How to set up a two-zone fire",
         paragraphs: [
-          "A two-zone fire has a hot side for searing and a cooler side for cooking through. On a charcoal grill, pile the lit coals on one half of the grate and leave the other half empty. On a gas grill, run the burners on one side at high and turn the others to low or off. Thin foods such as burgers, sausages that are already cooked, and boneless chicken cook entirely over direct heat. Thick or bone-in pieces start on the cool side with the lid closed, which works like an oven, then move to the hot side for a few minutes to crisp and char.",
+          "A two-zone fire has a hot side for searing and a cooler side for cooking through. On a charcoal grill, pile the lit coals on one half of the grate and leave the other half empty. On a gas grill, run the burners on one side at high and turn the others to low or off. Thin foods such as burgers, precooked hot dogs and boneless chicken cook entirely over direct heat. Thick or bone-in pieces start on the cool side with the lid closed, which works like an oven, then move to the hot side for a few minutes to crisp and char.",
           "Aim for about 450 to 550°F (230 to 290°C) over the direct side and 325 to 375°F (165 to 190°C) on the indirect side with the lid closed. A lid thermometer is close enough for the indirect side. The two zones also give you somewhere to move food during a flare-up and a place to hold cooked food hot while the next round cooks.",
         ],
       },
@@ -49,7 +50,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         id: "capacity",
         heading: "How much fits on the grill",
         paragraphs: [
-          "Count your grill's capacity before deciding the menu. A two-zone fire halves the direct cooking area, so a grill that holds 14 burgers over full heat holds about 7 at a time over the hot side. For 12 people eating two burgers each, that is several rounds. It is usually faster to cook the bone-in chicken or sausages first on the indirect side, hold them, and use the whole grate for burgers at the end.",
+          "Count your grill's capacity before deciding the menu. A two-zone fire halves the direct cooking area, so a grill that holds 14 burgers over full heat holds about 7 at a time over the hot side. For 12 people eating two burgers each, that is four rounds over the hot side or two over the full grate. It is faster to cook the bone-in chicken or sausages first on the indirect side, hold them, and then heat the whole grate for burgers at the end: turn every burner up on gas, or spread the coals across the bottom on charcoal.",
         ],
         table: {
           caption: "Approximate grill capacity with space between pieces",
@@ -64,7 +65,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       },
       {
         id: "times",
-        heading: "Quantities, times and temperatures",
+        heading: "Grilling times and temperatures for burgers, chicken and sausages",
         paragraphs: [
           "Cook times are a guide; the thermometer decides. Push it into the thickest part of the meat, away from bone. The temperatures are the USDA minimums, with Health Canada's figure where it differs. Bone-in chicken thighs and drumsticks are safe at 165°F (74°C), but they are juicier and more tender taken to 175 to 185°F (80 to 85°C), because their connective tissue needs the extra heat to soften.",
         ],
@@ -104,15 +105,16 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         id: "schedule",
         heading: "A grill night schedule for 12",
         paragraphs: [
-          "This menu is bone-in chicken thighs, sausages, burgers, corn and slaw for 12, cooked on a mid-size gas grill or a kettle. The rule is to cook the slowest, most forgiving food first and hold it, and finish with the quickest food on the full grate.",
+          "This menu is bone-in chicken thighs, sausages, burgers, corn and slaw for 12, cooked on a 3-burner gas grill or a 22 in kettle. With three meats on the menu, one thigh, one sausage and one burger each is enough, which keeps every round within the capacity table above. Cook the slowest, most forgiving food first and hold it, and finish with the quickest food on the full grate.",
         ],
         steps: [
-          "Earlier in the day: season the chicken, shape 12 to 18 patties and chill them, and make the slaw with the dressing kept separate.",
-          "75 minutes before: light a full chimney of charcoal (15 to 20 minutes until the coals are covered in gray ash) or preheat the gas grill for 10 to 15 minutes.",
-          "60 minutes before: put 9 lb (4 kg) of bone-in chicken on the indirect side, lid closed.",
-          "35 minutes before: add the raw sausages to the indirect side. Move the chicken to the hot side for 3 to 5 minutes to crisp, then into a covered pan in a low oven.",
-          "20 minutes before: brown the sausages over direct heat and move them to the oven. Grill the corn.",
-          "12 minutes before: cook the burgers over the whole grate, adding cheese in the last minute. Toast the buns for 30 to 60 seconds. Dress the slaw and serve.",
+          "Earlier in the day: season 12 bone-in chicken thighs (about 4 1/2 lb, 2 kg), shape 12 to 14 patties and chill them, and make the slaw with the dressing kept separate.",
+          "90 minutes before: light a full chimney of charcoal (15 to 20 minutes until the coals are covered in gray ash), or preheat the gas grill for 10 to 15 minutes starting 80 minutes before. Turn the oven on to 200°F (95°C) for holding.",
+          "75 minutes before: put the chicken on the indirect side, lid closed. While it cooks, grill the corn on the hot side, turning, in two rounds if it doesn't all fit. Wrap the corn in foil and move it to the oven.",
+          "40 minutes before: check the chicken. At 175°F (80°C) in the thickest part, move it to the hot side for 3 to 5 minutes to crisp, then into a covered pan in the oven.",
+          "38 minutes before: put 12 raw sausages on the indirect side, lid closed. On charcoal, add half a chimney of fresh coals to the pile now so there is heat left for the burgers.",
+          "20 minutes before: brown the sausages over direct heat for 3 to 4 minutes and move them to the oven.",
+          "12 minutes before: heat the whole grate and cook the burgers, adding cheese in the last minute. Toast the buns for 30 to 60 seconds. Dress the slaw and serve.",
         ],
       },
     ],
@@ -137,7 +139,17 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       {
         question: "How long before dinner should I light the grill?",
         answer:
-          "For charcoal, allow 15 to 20 minutes for a chimney of coals to ash over and another 5 to 10 minutes for the grate to heat. A gas grill needs 10 to 15 minutes with the lid closed. If bone-in chicken is on the menu, light it about 75 minutes before you want to eat.",
+          "For charcoal, allow 15 to 20 minutes for a chimney of coals to ash over and another 5 to 10 minutes for the grate to heat. A gas grill needs 10 to 15 minutes with the lid closed. If bone-in chicken is on the menu, light charcoal about 90 minutes before you want to eat, since the chicken alone needs 35 to 45 minutes.",
+      },
+      {
+        question: "What temperature should grilled chicken thighs reach?",
+        answer:
+          "Chicken thighs are safe at 165°F (74°C), measured in the thickest part away from the bone. They are juicier and more tender at 175 to 185°F (80 to 85°C), because the connective tissue needs the extra heat to soften. Unlike breast meat, thighs stay moist at those temperatures.",
+      },
+      {
+        question: "How do you keep burgers warm for a crowd?",
+        answer:
+          "Hold them in a covered pan in a 200°F (95°C) oven or on the indirect side of the grill, where they stay at 140°F (60°C) or above. Burgers dry out after about 30 minutes, so cook them last and in rounds timed to when people sit down. Keep the buns and toppings separate until serving so the buns don't go soggy.",
       },
     ],
     relatedArticleSlugs: [
@@ -163,19 +175,20 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
       "plan a dinner for a crew",
       "dinner timeline",
       "pantry dinners",
+      "how long to thaw meat in the fridge",
     ],
     topic: "meal_planning",
     pillar: "operations_how_to",
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "Most station dinners get decided too late. By 17:00, the choice has already been made for you by what is thawed, which appliance is free and how much time is left. Planning tonight's dinner comes down to three questions asked by mid-afternoon: how long before people want to eat, how many are eating, and what equipment is available. The answers narrow the options to a few formats. After that, work backward from serving time to find when meat must be thawed, when to shop and when cooking has to start. This guide gives a decision table, a thawing chart, a sample timeline with jobs split between people, and five pantry dinners for nights when nothing was planned.",
+      "To plan tonight's station dinner, answer three questions by mid-afternoon: how long until the crew eats, how many are eating, and which equipment is free. Those answers narrow dinner to a few formats, and checking the freezer narrows it further, because meat that is still frozen at midday needs cold water or a change of menu. Then work backward from serving time to find when to shop and when cooking has to start. Most station dinners go wrong by being decided too late, when what is thawed and which oven is free have already made the choice.",
     sections: [
       {
         id: "choose",
-        heading: "Choose by time, crew size and equipment",
+        heading: "Choose dinner by time, crew size and equipment",
         paragraphs: [
-          "Start with time, because it rules out the most. Then check crew size: above 8 people, choose a line or a tray bake rather than anything plated or cooked in single portions. Finally, check the equipment. If the oven is already in use, pick something from the stovetop or slow cooker column; if you only have a stovetop, a Dutch oven covers braises and one-pot rice dishes.",
+          "Start with time, because it rules out the most. Then check crew size: above 8 people, choose a line or a tray bake rather than anything plated or cooked in single portions. Finally, check the equipment. If the oven is already in use, pick a skillet, stir-fry or one-pot dish from the table; with only a stovetop and a couple of hours, a Dutch oven covers braises and one-pot rice dishes.",
         ],
         table: {
           caption: "Dinner formats by the time available",
@@ -192,15 +205,15 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         id: "thawing",
         heading: "Check the freezer first: thawing decides the menu",
         paragraphs: [
-          "Frozen meat is the most common reason a planned dinner becomes a takeout order. The fridge is the safest way to thaw but the slowest: even 1 lb (450 g) of ground meat or boneless chicken needs about a full day, and larger packages need about 24 hours for every 4 to 5 lb. If dinner is tonight and the meat is still frozen at noon, use cold water or the microwave, or change the menu.",
-          "Cold-water thawing takes about 30 minutes per pound. Keep the meat in a sealed bag, submerge it, and change the water every 30 minutes so it stays cold. Food thawed in cold water or the microwave has to be cooked straight away. Thin, separated pieces can also be cooked from frozen, which takes about 50 percent longer.",
+          "Frozen meat is the most common reason a planned dinner becomes a takeout order. The fridge is the safest way to thaw but the slowest: allow about 24 hours for any package up to 4 to 5 lb (1.8 to 2.3 kg), whether it is 1 lb of ground beef or a 4 lb pack of chicken thighs, and another day for every 4 to 5 lb beyond that. If dinner is tonight and the meat is still frozen at midday, use cold water or the microwave, or change the menu.",
+          "In cold water, a 1 lb (450 g) package thaws in an hour or less and a 3 to 4 lb package in 2 to 3 hours. Keep the meat in a sealed bag, submerge it, and change the water every 30 minutes so it stays cold. Food thawed in cold water or the microwave has to be cooked straight away. Thin, separated pieces can also be cooked from frozen, which takes about 50 percent longer.",
         ],
         table: {
           caption: "Safe thawing methods and times",
           columns: ["Method", "1 lb (450 g)", "3 to 4 lb (1.4 to 1.8 kg)", "After thawing"],
           rows: [
             ["Refrigerator", "About 24 hours", "About 24 hours", "Keeps 1 to 2 days (ground meat, poultry) or 3 to 5 days (roasts, chops)"],
-            ["Cold water, changed every 30 min", "About 30 minutes to 1 hour", "2 to 3 hours", "Cook immediately"],
+            ["Cold water, changed every 30 min", "1 hour or less", "2 to 3 hours", "Cook immediately"],
             ["Microwave defrost", "Minutes", "Minutes, turning often", "Cook immediately; edges may start to cook"],
             ["Cook from frozen", "No thawing", "No thawing", "Allow about 50 percent more cooking time; never in a slow cooker"],
           ],
@@ -219,14 +232,14 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
           "16:00: brown the sausage, simmer it with the sauce, and boil the pasta 2 minutes short of the package time.",
           "16:45: assemble two 9 x 13 in (23 x 33 cm) dishes. Cover them and refrigerate if dinner might slip.",
           "17:10: bake covered at 375°F (190°C) for 30 minutes, then uncovered for 10 to 15 minutes until the center reaches 165°F (74°C).",
-          "17:45: toast the garlic bread, dress the salad, and set out plates. Serve at 18:00 and put leftovers away within two hours.",
+          "17:45: toast the garlic bread, dress the salad, and set out plates. Serve at 18:00.",
         ],
       },
       {
         id: "pantry-dinners",
         heading: "Five dinners from the pantry when nothing was planned",
         paragraphs: [
-          "A short list of shelf-stable and freezer staples makes it possible to cook a real dinner for a crew without shopping. Keep dry pasta, long-grain rice, canned tomatoes, canned beans, tortillas, eggs, cheese, frozen vegetables, a couple of pounds of frozen ground meat, garlic, onions and a basic spice shelf. With those, all five dinners below are possible in under 45 minutes for 8 people.",
+          "A short list of shelf-stable and freezer staples makes it possible to cook a real dinner for a crew without shopping. Keep dry pasta, long-grain rice, canned tomatoes, canned beans, tortillas, eggs, cheese, frozen vegetables, garlic, onions and a basic spice shelf, plus 2 to 3 lb of ground beef frozen flat in 1 lb bags. Flat bags thaw in cold water in under an hour, where a solid 3 lb block takes hours and browns unevenly. With those staples, each of the five dinners below cooks in 45 minutes or less for 8 people.",
         ],
         table: {
           caption: "Pantry dinners for 8",
@@ -235,8 +248,8 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
             ["Bean and cheese quesadillas with salsa", "16 tortillas, 3 cans beans, 1 1/2 lb cheese, jarred salsa", "25 minutes"],
             ["Pasta with quick tomato sauce", "2 lb pasta, two 28 oz cans crushed tomatoes, garlic, chili flakes, Parmesan", "25 minutes"],
             ["Egg fried rice", "8 cups cold cooked rice, 12 eggs, 2 lb frozen mixed vegetables, soy sauce", "20 minutes, with rice cooked earlier"],
-            ["Quick beef and bean chili", "2 1/2 lb ground beef cooked from frozen, 3 cans beans, 2 cans tomatoes, chili powder", "45 minutes"],
-            ["Potato and cheese frittata", "18 eggs, 2 lb frozen diced potatoes, 2 cups cheese, onion", "35 minutes; eggs to 160°F (71°C)"],
+            ["Quick beef and bean chili", "2 1/2 lb ground beef (frozen flat in 1 lb bags, thawed in cold water), 3 cans beans, 2 cans tomatoes, chili powder", "45 minutes, plus up to 1 hour to thaw the beef"],
+            ["Potato and cheese frittata", "18 eggs, 2 lb frozen diced potatoes, 2 cups cheese, onion", "35 minutes; center to 160°F (71°C), Health Canada 165°F (74°C)"],
           ],
         },
       },
@@ -245,7 +258,7 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
         heading: "When the plan changes",
         paragraphs: [
           "If more people turn up than you planned for, add starch and sides rather than a second protein: another pound of pasta, a pot of rice, or more bread stretches a meal quickly and cheaply. If fewer eat, stop assembling the second tray and refrigerate it for the next shift rather than baking everything.",
-          "If a call interrupts cooking, turn off the heat and cover everything, and don't leave meat partly cooked to finish later. Food that won't be eaten within two hours goes in the fridge. The interruption guide covers dinners built to handle that kind of night.",
+          "If a call interrupts cooking, turn off the heat and cover everything. Partly cooked meat can't sit warm to be finished later: put it in the fridge before you leave if there is time, finish it to a safe temperature as soon as you are back, and throw it out if it sat warm. Cooked food that won't be eaten within two hours goes in the fridge.",
         ],
       },
     ],
@@ -267,9 +280,19 @@ const CORE_EDITORIAL_ARTICLES: EditorialArticle[] = [
     ],
     faqs: [
       {
-        question: "What can I cook if the meat is still frozen at 4 p.m.?",
+        question: "What can I cook if the meat is still frozen late in the afternoon?",
         answer:
-          "Thaw it in a sealed bag in cold water, changing the water every 30 minutes; a 1 lb package takes about an hour. Thin or separated pieces can also be cooked from frozen with about 50 percent more time. Otherwise, switch to a pantry dinner such as quesadillas, pasta with tomato sauce or a frittata.",
+          "Thaw it in a sealed bag in cold water, changing the water every 30 minutes; a 1 lb package takes an hour or less, and it has to be cooked as soon as it thaws. Thin or separated pieces can also be cooked from frozen with about 50 percent more time. Otherwise, switch to a pantry dinner such as quesadillas, pasta with tomato sauce or a frittata.",
+      },
+      {
+        question: "How long does it take to thaw meat in the fridge?",
+        answer:
+          "About 24 hours for a package up to 4 to 5 lb, including small 1 lb packs of ground beef, and roughly another day for every 4 to 5 lb beyond that. Once thawed, ground meat and poultry keep 1 to 2 days in the fridge, and roasts and chops 3 to 5 days. For dinner tomorrow, move the meat from the freezer today.",
+      },
+      {
+        question: "How do you plan dinner for a large group on short notice?",
+        answer:
+          "Pick from what is already thawed and what the pantry holds, and choose a format that scales without plating, such as pasta, a skillet, a taco line or a sheet-pan dinner. Under 30 minutes means a skillet, stir-fry or quick pasta; with an hour, a sheet-pan dinner or rice bowls. Stretch it with extra pasta, rice or bread rather than a second protein.",
       },
     ],
     relatedArticleSlugs: [

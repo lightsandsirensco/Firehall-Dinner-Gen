@@ -5,7 +5,7 @@
   "description": "The 20 most popular firefighter meals grouped by format, with quantities for 10, how well each holds, and why these dinners suit station crews.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "The most popular firefighter meals are not a secret list. Chili, tacos, burgers, pulled pork, lasagna and a few others come up again and again because they share practical traits: they scale in one pot or pan, their parts can be held separately, their doneness is forgiving, and cheap starches fill out the plate. This guide groups the 20 most common crew dinners by format, since the format decides how a meal behaves on a busy night more than the recipe does. It gives quantities for 10 for the five most common, explains why each format works for a crew, and suggests how to choose among them.",
+  "intro": "The meals firefighters cook most are chili, tacos, burgers, pulled pork and baked pasta, followed by a familiar group of bakes, bowl lines and sheet-pan dinners. They keep coming back for practical reasons: they scale in one pot or pan, their parts can be held separately, a few extra minutes won't ruin them, and cheap starches fill out the plate. Group them by format (pot meal, bake, line, handheld or sheet pan) and you know most of what matters on a busy night, because the format decides how a dinner holds and how much last-minute cooking it needs.",
   "sections": [
     {
       "id": "by-format",
@@ -88,7 +88,7 @@
             "Beef and bean chili",
             "3 1/2 lb (1.6 kg) ground beef",
             "2 loaves bread or 5 cups raw rice",
-            "3 cans beans, 3 cans tomatoes, 2 onions, chili powder, cumin"
+            "4 cans beans, 2 large cans crushed tomatoes, 2 onions, chili powder, cumin"
           ],
           [
             "Batch lasagna",
@@ -238,7 +238,11 @@
   "faqs": [
     {
       "question": "What is the most common dinner cooked at fire stations?",
-      "answer": "Chili and taco nights are the most common, followed closely by burgers, pulled pork and baked pasta. They all scale easily, hold well or can be kept in separate parts, and rely on inexpensive starches."
+      "answer": "There is no official count, but chili and taco nights come up in almost every station kitchen, with burgers, pulled pork and baked pasta close behind. They all scale easily, hold well or can be kept in separate parts, and rely on inexpensive starches."
+    },
+    {
+      "question": "What is a good dinner for a fire station on a busy night?",
+      "answer": "A pot meal or a line. Chili, one-pot chicken and rice, or a taco bar with the meat held on low all wait for an interrupted crew and let people eat when they get back. Avoid anything cooked to order, like smash burgers or steak, unless the crew is already at the table."
     }
   ],
   "relatedArticleSlugs": [
@@ -253,7 +257,19 @@
     "popular crew dinners"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 9,
-  "seoTitle": "20 Most Popular Firefighter Meals, Grouped by Format"
+  "seoTitle": "20 Most Popular Firefighter Meals, Grouped by Format",
+  "sources": [
+    {
+      "label": "Safe Minimum Internal Temperature Chart",
+      "publisher": "USDA Food Safety and Inspection Service",
+      "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/safe-temperature-chart"
+    },
+    {
+      "label": "Safe cooking temperatures",
+      "publisher": "Health Canada",
+      "url": "https://www.canada.ca/en/health-canada/services/general-food-safety-tips/safe-internal-cooking-temperatures.html"
+    }
+  ]
 }

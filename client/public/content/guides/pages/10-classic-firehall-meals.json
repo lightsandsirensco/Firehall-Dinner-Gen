@@ -5,7 +5,7 @@
   "description": "Ten classic firehall meals from the Classics Wheel, with quantities for 8, the technique that makes each work, and which hold if dinner runs late.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "These ten classic firehall meals are the same ten on the Classics Wheel: jerk chicken with rice and peas, BBQ chicken mac and cheese, steak sandwiches, smash burgers, chicken parm, pulled pork, chili with garlic bread, chicken Caesar, beef dip and steak tacos. They are here as a list for when you want to choose rather than spin. What they share is that each one feeds a crew from one or two pans without a fussy finish. They differ in how well they hold, and that matters most when choosing on a given night. This guide gives quantities for 8, the step that makes each dish work, and which ones can wait if people are late.",
+  "intro": "The ten classic firehall meals on the Classics Wheel are jerk chicken with rice and peas, BBQ chicken mac and cheese, steak sandwiches, smash burgers, chicken parm, pulled pork, chili with garlic bread, chicken Caesar, beef dip and steak tacos. Each one feeds a crew of 8 from one or two pans without a fussy finish. Where they differ is how well they wait: chili and pulled pork hold for hours, while smash burgers and steak tacos need to be cooked when people sit down. On a night when calls are likely, that difference matters more than which dish you'd prefer.",
   "sections": [
     {
       "id": "at-a-glance",
@@ -60,7 +60,7 @@
           ],
           [
             "Chili with garlic bread",
-            "2 3/4 lb ground beef, 2 cans beans, 2 cans tomatoes, 2 loaves",
+            "2 3/4 lb ground beef, 3 cans beans, 2 large cans crushed tomatoes, 2 loaves",
             "40 min, plus simmering",
             "Hours, on low"
           ],
@@ -97,7 +97,7 @@
       "id": "technique",
       "heading": "The step that makes each one work",
       "paragraphs": [
-        "Each of these has one step that decides whether it comes out right. Get that step right and the rest of the recipe is forgiving. Beef temperatures below are USDA's minimum of 145°F (63°C) with a 3-minute rest for whole cuts, and 160°F (71°C) for ground beef; chicken is 165°F (74°C)."
+        "Each of these has one step that decides whether it comes out right. Get that step right and the rest of the recipe is forgiving. For safety, whole cuts of beef need 145°F (63°C) with a 3-minute rest under USDA guidance (Health Canada gives 145°F for medium-rare), ground beef 160°F (71°C), and chicken 165°F (74°C)."
       ],
       "table": {
         "caption": "The key step for each classic",
@@ -134,7 +134,7 @@
           ],
           [
             "Pulled pork",
-            "Cook to about 200°F (93°C), well past the 145°F safety point",
+            "Cook to about 200°F (93°C), well past any safe minimum",
             "Connective tissue needs the extra heat before the meat will pull"
           ],
           [
@@ -236,6 +236,10 @@
     {
       "question": "Are these the same meals as the Classics Wheel?",
       "answer": "Yes. The first ten recipes here are the ten on the wheel. Use the wheel when you want a random pick and this list when you want to choose by time, crew size or how well a dish holds."
+    },
+    {
+      "question": "Which classic firehall meals hold best if dinner runs late?",
+      "answer": "Chili, pulled pork and BBQ chicken mac and cheese hold for an hour or more, covered, on low heat or in a 200°F (95°C) oven. The jus for beef dip holds too, but slice the beef to order. Smash burgers, steak sandwiches, steak tacos and a dressed Caesar should be cooked or dressed when the crew sits down."
     }
   ],
   "relatedArticleSlugs": [
@@ -250,7 +254,7 @@
     "crew dinner recipes"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "10 Classic Firehall Meals: Quantities and How to Cook Them",
   "sources": [

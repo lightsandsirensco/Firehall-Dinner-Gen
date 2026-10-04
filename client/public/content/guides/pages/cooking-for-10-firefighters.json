@@ -5,7 +5,7 @@
   "description": "Cooking for 10 people: how much meat, pasta and rice to make for 4 to 12, what not to multiply when scaling a recipe, and how to time dinner.",
   "topic": "station_cooking",
   "pillar": "operations_how_to",
-  "intro": "For 10 hungry adults, plan on about 5 lb (2.3 kg) of boneless meat for a meat-forward main, or 3 1/2 lb (1.6 kg) of ground meat in chili, tacos or a meat sauce. For starch, that is 2 1/2 lb (1.1 kg) of dry pasta as the main, or 5 cups of raw rice as a side. Those numbers are deliberately higher than package serving sizes: a crew that has been working all day eats more than a nutrition label assumes, and running out halfway down the line is a worse outcome than leftovers. The quantities are the easy part. The harder problems at 10 are pan space, seasoning that does not scale in a straight line, and getting three components hot at the same moment.",
+  "intro": "For 10 hungry adults, plan on about 5 lb (2.3 kg) of boneless meat for a meat-forward main, or 3 1/2 lb (1.6 kg) of ground meat in chili, tacos or a meat sauce. For starch, that is 2 1/2 lb (1.1 kg) of dry pasta as the main, or 5 cups of raw rice as a side. Those amounts run higher than package serving sizes because a working crew eats more than a nutrition label assumes, and running out is worse than leftovers. What usually goes wrong at 10 is not the shopping but the cooking: too little pan space, a multiplied recipe that comes out thin or over-salted, and three components that are never hot at the same time.",
   "sections": [
     {
       "id": "how-much-per-person",
@@ -97,7 +97,8 @@
       "heading": "What not to multiply when you scale a recipe",
       "paragraphs": [
         "Multiplying the main ingredients of a recipe for 4 by 2.5 works. Multiplying everything does not, because several things in a recipe depend on the pot and the pan rather than on the amount of food.",
-        "The biggest one is evaporation. Liquid evaporates from the surface, so when you make two and a half times the chili in a pot that is only a little wider, you have far more liquid but not much more surface. The pot reduces more slowly, the sauce ends up thinner, and the flavour is less concentrated than the small recipe you are copying. That is why a scaled recipe often tastes flat even though every spice was multiplied correctly, and why it can also taste too salty if the recipe relied on the salt concentrating as it reduced."
+        "The biggest one is evaporation. Liquid evaporates from the surface, so two and a half times the chili in a pot that is only a little wider has far more liquid but not much more surface. It reduces proportionally less in the same time, which is why a scaled pot often comes out thin and tastes flat even though every spice was multiplied. Give it a longer uncovered simmer before you reach for more seasoning.",
+        "Salt does scale with the amount of food, but hold back about a quarter of it, along with strong spices like cayenne, when you multiply a recipe. Stock, canned tomatoes, cheese, sausage and seasoning blends all vary in salt by brand, and multiplying the recipe multiplies that variation. Taste once the pot has simmered and adjust at the end. You can add salt; you can't take it out."
       ],
       "table": {
         "caption": "How common ingredients and steps behave when you scale up",
@@ -109,8 +110,8 @@
         "rows": [
           [
             "Salt, dried chiles, strong spices",
-            "Less than linear in a big pot",
-            "Add about three-quarters of the scaled amount, taste near the end, then adjust"
+            "Linear, with the amount of food",
+            "Add about three-quarters at first, because salty ingredients vary; taste at the end and add the rest as needed"
           ],
           [
             "Oil for searing",
@@ -119,8 +120,8 @@
           ],
           [
             "Liquid in soups, braises, sauces",
-            "Reduces more slowly in a deep pot",
-            "Start with about 90 percent of the scaled liquid and add more if it thickens too fast"
+            "Reduces proportionally less in a big pot",
+            "Start with about 90 percent of the scaled liquid; simmer uncovered longer if it is still thin"
           ],
           [
             "Flour or cornstarch thickener",
@@ -164,14 +165,14 @@
         "Start the long, forgiving item first: a braise, chili, or baked pasta that can sit covered once it is done.",
         "Start starches that hold next. Rice keeps well in a covered pot off the heat for 20 to 30 minutes; roasted potatoes hold in a low oven.",
         "Leave the fast, fragile items for the last 15 minutes: green vegetables, anything seared, garlic bread, and dressing the salad.",
-        "Hold finished food covered in a low oven or on low heat. Hot food should stay at 140°F (60°C) or above until it is served."
+        "Hold finished food covered in a low oven or on the lowest heat until it is served."
       ]
     },
     {
       "id": "worked-examples",
       "heading": "Two complete shopping lists for 10",
       "paragraphs": [
-        "Per-person numbers are easier to trust once you see them turned into a full list. These two dinners are the formats crews cook most for a table of 10, with enough margin for second helpings and one or two extra people who turn up at the table. If your crew regularly has visitors from another company or the day shift stays late, shop for 12 rather than 10.",
+        "These are the two dinners crews cook most for 10, turned into full lists with enough margin for seconds and one or two extra people at the table. If visitors from another company or the day shift regularly stay to eat, shop for 12.",
         "Baked ziti needs less dry pasta than a plain pasta dinner, because the pasta shares the pan with meat, ricotta and mozzarella. Two 9 x 13 in (23 x 33 cm) dishes hold it comfortably, with room for leftovers."
       ],
       "table": {
@@ -234,13 +235,13 @@
       "paragraphs": [
         "At 10, run a line instead of plating. Put the plates first, then starches and sides, then the protein, then sauces and toppings, so plates fill with the cheaper food before they reach the part most likely to run short. One person serving the protein keeps portions even and keeps everyone else away from the stove, which matters in a small station kitchen.",
         "When protein is tight, portion it before service starts: count the chicken thighs, slice the roast, or put a card at the pan that says two tacos' worth or one ladle. Set a covered plate aside in a low oven for anyone who is out on a call.",
-        "Anything that will not be eaten within two hours of coming off the heat or out of the warm oven needs to go into the fridge. Put leftovers into shallow containers so they cool quickly, and reheat them to 165°F (74°C)."
+        "Hot food is safe while it stays at 140°F (60°C) or above. Anything that has sat between 40 and 140°F (4 and 60°C) for two hours, or one hour above 90°F (32°C), should be thrown out, so get leftovers into shallow containers and into the fridge well before then. Reheat them to 165°F (74°C)."
       ]
     }
   ],
   "practicalAdvice": [
     "Plan 1/2 lb (225 g) of raw boneless meat per person for a meat-forward main and 1/3 lb (150 g) of ground meat for chili, tacos or sauces.",
-    "When you scale a recipe, scale the main ingredients fully but start with about three-quarters of the salt and strong spices.",
+    "When you scale a recipe, scale the main ingredients fully, add about three-quarters of the salt and strong spices at first, and adjust at the end.",
     "Brown meat in batches and use two sheet pans instead of one crowded pan.",
     "Start the most forgiving dish first and finish with anything seared, dressed or fried."
   ],
@@ -292,11 +293,11 @@
     },
     {
       "question": "Can I just multiply a recipe for 4 by 2.5?",
-      "answer": "Multiply the main ingredients, but not everything. Start with about three-quarters of the salt and strong spices and adjust at the end, use pan-sized amounts of oil for searing rather than a multiplied amount, and reduce the liquid slightly because a big pot evaporates less. Split the food across more pans instead of making one deeper pan, or the cooking time and texture will change."
+      "answer": "Multiply the main ingredients, but not everything. Salt and strong spices scale with the food, but add about three-quarters at first because stock, canned tomatoes and cheese vary in salt, then taste and adjust at the end. Use pan-sized amounts of oil for searing, start with about 90 percent of the liquid because a big pot reduces proportionally less, and split the food across more pans rather than one deeper pan."
     },
     {
       "question": "How do I keep dinner hot for people who eat at different times?",
-      "answer": "Keep finished food covered at 140°F (60°C) or above: on the stove on low, in a slow cooker on warm, or in a low oven. Covering stops it drying out. Anything that has sat at room temperature for more than two hours should go in the fridge, and leftovers should be reheated to 165°F (74°C)."
+      "answer": "Keep finished food covered at 140°F (60°C) or above: on the stove on low, in a slow cooker on warm, or in a low oven. Covering stops it drying out. Anything that won't be eaten within two hours goes in the fridge instead, and gets reheated to 165°F (74°C) later."
     }
   ],
   "relatedArticleSlugs": [
@@ -315,7 +316,7 @@
     "scaling recipes for a crowd"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 9,
   "seoTitle": "Cooking for 10 People: Quantities, Pans and Timing",
   "sources": [

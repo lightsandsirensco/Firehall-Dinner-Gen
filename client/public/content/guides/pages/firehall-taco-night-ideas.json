@@ -5,7 +5,7 @@
   "description": "Taco bar for a crowd: how much meat, tortillas and toppings for 8 to 12, taco seasoning ratios, keeping tortillas warm, and holding the line safely.",
   "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "A taco bar is one of the easiest ways to feed a crew because people build their own plates, which handles different appetites and dietary needs without extra cooking. It goes wrong in three places: running out of tortillas, meat that is greasy or bland, and tortillas that crack because they were not heated properly. Plan on 1/3 lb (150 g) of raw ground meat and three tortillas per person, keep to two proteins at most (one meat that holds well, plus beans), and put most of your effort into warm tortillas and cold, fresh toppings. This guide gives the amounts for 8 and 12, a seasoning ratio, proteins that hold on a line, and the setup.",
+  "intro": "For a taco bar for a crowd, plan on 1/3 lb (150 g) of raw ground meat and three tortillas per person: about 2 3/4 lb of meat and 24 tortillas for 8, or 4 lb and 36 for 12. Keep to two proteins at most, one meat that holds well plus a pot of beans, and put most of your effort into warm tortillas and cold, fresh toppings. People build their own plates, so different appetites and diets take care of themselves. Taco night goes wrong in three places: running out of tortillas, greasy or bland meat, and tortillas that crack because they weren't heated properly.",
   "sections": [
     {
       "id": "quantities",
@@ -200,7 +200,7 @@
       "heading": "Setting up the line",
       "paragraphs": [
         "Order the line so people fill plates with the cheaper items first: plates, tortillas, beans and rice, meat, cheese, then cold toppings, salsas and limes. Keep hot items together on one end and cold on the other. Put cold toppings in small bowls set into larger bowls of ice, or bring out small refills from the fridge rather than one large bowl, because anything perishable left out more than two hours has to be thrown out.",
-        "Label mild and hot salsas, and put dairy (cheese and sour cream) at the end with its own spoons so anyone avoiding it can skip it easily. Make guacamole close to serving time and press plastic wrap directly onto the surface to slow browning. Leftover taco meat keeps 3 to 4 days in the fridge and becomes nachos, taco bowls or quesadillas the next day."
+        "Label mild and hot salsas, and put dairy (cheese and sour cream) at the end with its own spoons so anyone avoiding it can skip it easily. Make guacamole close to serving time and press plastic wrap directly onto the surface to slow browning. Refrigerate leftover taco meat within two hours. USDA allows 3 to 4 days and Health Canada 2 to 3; in a shared fridge, use the shorter window. It makes good nachos, taco bowls or quesadillas the next day."
       ]
     }
   ],
@@ -247,6 +247,10 @@
     {
       "question": "How many tacos per person should I plan for a taco bar?",
       "answer": "Three per adult is a safe average with beans and rice on the side, and four for a crew that has been working all day. That works out to about 1/3 lb (150 g) of raw ground meat per person. If you are serving two meats, make two-thirds of the amount of each."
+    },
+    {
+      "question": "How do you keep tortillas warm for a crowd?",
+      "answer": "Heat each tortilla first, then hold the stack warm. Char corn tortillas for a few seconds a side in a dry skillet or over a gas flame, or wrap stacks of 10 to 12 in foil and heat them in a 350°F (175°C) oven for about 15 minutes. Keep them wrapped in a towel inside a covered dish or an insulated tortilla warmer, and they stay soft for 30 to 45 minutes."
     }
   ],
   "relatedArticleSlugs": [
@@ -263,7 +267,7 @@
     "taco bar quantities"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "Taco Bar for a Crowd: How Much to Make and How to Serve It",
   "sources": [

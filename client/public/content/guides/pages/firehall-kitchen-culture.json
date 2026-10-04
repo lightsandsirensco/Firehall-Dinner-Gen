@@ -2,16 +2,16 @@
   "slug": "firehall-kitchen-culture",
   "title": "Firehall Kitchen Culture: Running a Shared Station Kitchen That Works",
   "subtitle": "A fair cook rotation, cleanup in the right order, shared-fridge rules, handling allergies, and writing the crew's recipes down so they outlast transfers.",
-  "description": "Firehall kitchen culture that works: a fair cook rotation, cleanup order, shared-fridge labelling, handling allergies, and writing recipes down.",
+  "description": "Firehall kitchen culture that works: a fair cook rotation, cleanup order, shared-fridge labeling, handling allergies, and writing recipes down.",
   "topic": "station_lifestyle",
   "pillar": "station_lifestyle",
-  "intro": "A shared station kitchen works when a few things are settled and written down: who cooks and when, who cleans, how the fridge is labelled, and how allergies are handled. Most of the friction in a firehall kitchen comes from the same places: dishes left for the next shift, unlabelled containers nobody will admit to, and the same two people always cooking. Each of those has a simple system that fixes it, and several of them are also food-safety rules. This guide covers a fair rotation, the order to clean in, shared-fridge rules, allergies, keeping a crew recipe file, and bringing new cooks along.",
+  "intro": "A shared station kitchen works when four things are settled and written down: who cooks, who cleans, how the fridge is labeled, and how allergies are handled. The rule that fixes the most is simple: the cook never does the dishes. Most of the friction in a firehall kitchen comes from dishes left for the next shift, unlabeled containers nobody will admit to, and the same two people always cooking. Each has a simple fix, and several of them double as food-safety rules.",
   "sections": [
     {
       "id": "rotation",
       "heading": "A cook rotation that stays fair",
       "paragraphs": [
-        "Fix cleanup before anything else. When the person who cooked also ends up washing every pot, cooking starts to feel like a penalty and volunteers disappear. The simplest rule that works is that the cook never does the dishes. Split the kitchen into a few named jobs, rotate them on a posted schedule by shift, and allow swaps as long as the board is updated.",
+        "Fix cleanup before anything else. When the person who cooked also ends up washing every pot, cooking starts to feel like a penalty and volunteers disappear, which is why the cook should never be on dishes. Split the kitchen into a few named jobs, rotate them on a posted schedule by shift, and allow swaps as long as the board is updated.",
         "New cooks should do their first two turns paired with someone experienced, on a forgiving dish such as chili, a taco bar or a sheet-pan dinner. A stocked pantry makes the rotation fairer too: when rice, pasta, canned tomatoes, beans, oil and spices are always there, whoever is cooking isn't starting from nothing."
       ],
       "table": {
@@ -46,7 +46,7 @@
     },
     {
       "id": "cleanup",
-      "heading": "Cleanup in the right order",
+      "heading": "Clean up in the right order",
       "paragraphs": [
         "Cleaning in a set order is faster and keeps raw-meat contamination away from things people eat from. Soak pots and sheet pans in hot water as soon as they are empty, while people are eating, so nothing dries on. Wash the cleanest things first, when the water is hottest and cleanest, and finish with anything that touched raw meat.",
         "Washing removes dirt and grease; sanitizing kills what is left. USDA's solution for boards and counters is 1 tablespoon of unscented liquid chlorine bleach per gallon (4 L) of water: flood the surface, leave it for several minutes, rinse, then air-dry. Use separate cutting boards for raw meat and for bread, fruit and vegetables, and replace boards once they have deep grooves that are hard to clean."
@@ -64,15 +64,15 @@
       "id": "fridge",
       "heading": "Shared fridge rules",
       "paragraphs": [
-        "A shared fridge needs three rules: everything is labelled, raw meat goes on the bottom, and there is a fixed clear-out day. Labels should show what the food is, the date it was cooked, and whose it is or which shift made it. Store raw meat and poultry on the lowest shelf in a pan or tray, so it can't drip onto food that won't be cooked again, and keep ready-to-eat food and leftovers above it.",
-        "Keep a thermometer inside and check it stays at 40°F (4°C) or below; a crowded door that is opened constantly on a busy shift can drift warmer. USDA gives 3 to 4 days for cooked leftovers and Health Canada 2 to 3 days. In a station where several crews share one fridge, the shorter window is easier to apply, and the weekly check clears anything older. Personal food goes in one labelled bin per person so it doesn't get mixed up with crew food."
+        "A shared fridge needs three rules: everything is labeled, raw meat goes on the bottom, and there is a fixed clear-out day. Labels should show what the food is, the date it was cooked, and whose it is or which shift made it. Store raw meat and poultry on the lowest shelf in a pan or tray, so it can't drip onto food that won't be cooked again, and keep ready-to-eat food and leftovers above it.",
+        "Keep a thermometer inside and check it stays at 40°F (4°C) or below; a crowded door that is opened constantly on a busy shift can drift warmer. USDA gives 3 to 4 days for cooked leftovers and Health Canada 2 to 3 days. In a station where several crews share one fridge, the shorter window is easier to apply, and the weekly check clears anything older. Personal food goes in one labeled bin per person so it doesn't get mixed up with crew food."
       ]
     },
     {
       "id": "allergies",
-      "heading": "Allergies and dietary needs",
+      "heading": "Handling allergies and dietary needs",
       "paragraphs": [
-        "Ask about allergies once, write them on a list the cook can see, and update it when the crew changes. Asking every shift gets tiresome, but relying on memory is how mistakes happen. The FDA lists nine major allergens in the US (milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, soybeans and sesame), and Health Canada's priority list also includes mustard and sulphites.",
+        "Ask about allergies once, write them on a list the cook can see, and update it when the crew changes. Asking every shift gets tiresome, but relying on memory is how mistakes happen. The FDA lists nine major allergens in the US (milk, eggs, fish, shellfish, tree nuts, peanuts, wheat, soybeans and sesame), and Health Canada's priority list also includes mustard and sulfites.",
         "Cooking for someone with an allergy mostly comes down to separation. Set aside their portion before an allergen is stirred in, use a clean board, pan and utensils, and give every dish on a line its own serving spoon so ingredients don't travel between them. Put allergens such as cheese, sour cream and nuts at the end of the line or on the side instead of mixing them in, and label anything that contains a hidden one."
       ]
     },
@@ -162,6 +162,14 @@
     {
       "question": "How long can leftovers stay in a shared station fridge?",
       "answer": "USDA gives 3 to 4 days for cooked leftovers kept at 40°F (4°C) or below, and Health Canada 2 to 3 days. In a fridge shared by several crews, label everything with the date it was cooked, follow the shorter window, and clear out anything older on a fixed day each week."
+    },
+    {
+      "question": "How should a fire station split cooking and cleanup?",
+      "answer": "Keep them separate: whoever cooks does not wash up. Rotate a few named jobs (cook, prep helper, cleanup lead and shopper) on a posted schedule by shift, and allow swaps as long as the board is updated. The cleanup lead owns dishes, pots, counters and trash, so nothing is left for the next shift."
+    },
+    {
+      "question": "How do you sanitize a cutting board?",
+      "answer": "Wash it in hot, soapy water first, then flood it with a solution of 1 tablespoon of unscented liquid chlorine bleach per gallon (4 L) of water. Leave it for several minutes, rinse, and let it air-dry. Replace plastic or wooden boards once they have deep grooves that are hard to clean."
     }
   ],
   "relatedArticleSlugs": [
@@ -175,10 +183,11 @@
     "fire station kitchen rules",
     "shared kitchen cleaning schedule",
     "shared fridge labeling",
-    "cook rotation"
+    "cook rotation",
+    "how to sanitize a cutting board"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "Firehall Kitchen Culture: Cooking, Cleanup and Fridge Rules",
   "sources": [

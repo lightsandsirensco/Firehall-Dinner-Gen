@@ -5,13 +5,13 @@
   "description": "Slow cooker meals for a crowd: the best cuts, cooker sizes for 6 to 12, cooking times, and the safety rules for thawing, beans and leftovers.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "A slow cooker suits an unpredictable shift better than almost any other appliance: USDA notes that food stays safe as long as the cooker is operating, and a covered pot of pulled pork or chili is just as good at 8:30 as at 6:00. It works best with tough, collagen-rich cuts like pork shoulder, beef chuck and chicken thighs, and with chili, soups and stews. It does a poor job with lean chicken breast on a long cook, pasta, and anything meant to be crisp.",
+  "intro": "The best slow cooker meals for a crowd use tough, collagen-rich cuts (pork shoulder, beef chuck, chicken thighs) or chili, soup and stew, cooked in a 7 to 8 qt (6.6 to 7.6 L) cooker for 10 to 12 people. USDA notes that food stays safe as long as the cooker is running, so a covered pot rides out a call better than almost anything else. The usual failures are lean chicken breast drying out on a long cook and frozen meat going in without being thawed.",
   "sections": [
     {
       "id": "size",
       "heading": "Size the cooker to the crew",
       "paragraphs": [
-        "A 6 qt (5.7 L) cooker handles about six to eight servings of stew, chili or pulled meat; a 7 to 8 qt (6.6 to 7.6 L) cooker handles ten to twelve. For more than that, run two cookers rather than overfilling one. Check the manual for the minimum and maximum fill: too little food cooks fast and can scorch, and an overfilled cooker takes longer to come up to a safe temperature."
+        "A 6 qt (5.7 L) cooker handles about 6 to 8 servings of stew, chili or pulled meat; a 7 to 8 qt (6.6 to 7.6 L) cooker handles 10 to 12. For more than that, run two cookers rather than overfilling one. Check the manual for the minimum and maximum fill: too little food cooks fast and can scorch, and an overfilled cooker takes longer to come up to a safe temperature."
       ]
     },
     {
@@ -57,7 +57,7 @@
             "Chili with browned ground beef",
             "6 to 8 hours",
             "3 to 4 hours",
-            "Brown the meat first for better flavour"
+            "Brown the meat first for better flavor"
           ]
         ]
       }
@@ -82,15 +82,15 @@
       "id": "beans",
       "heading": "A warning about dried red kidney beans",
       "paragraphs": [
-        "Dried red kidney beans contain a natural toxin, phytohaemagglutinin, that is destroyed by boiling but not by the lower temperatures a slow cooker reaches. FDA guidance, summarized by Kansas State University extension, is to soak dried kidney beans for at least five hours, drain them, and boil them in fresh water before they go into a slow cooker. The toxin is destroyed after 10 minutes at a full boil, and 30 minutes is recommended to be sure. Canned kidney beans are already fully cooked and are safe to add straight to the pot."
+        "Dried red kidney beans contain a natural toxin, phytohemagglutinin, that boiling destroys but the lower temperatures in a slow cooker do not. FDA guidance, summarized by Kansas State University extension, is to soak dried kidney beans for at least five hours, drain them, and boil them hard in fresh water for at least 10 minutes (30 minutes to be sure) before they go into a slow cooker. Canned kidney beans are already cooked and can go straight into the pot."
       ]
     },
     {
-      "id": "better-flavour",
-      "heading": "Getting better flavour out of a slow cooker",
+      "id": "better-flavor",
+      "heading": "Getting better flavor out of a slow cooker",
       "paragraphs": [
-        "Brown the meat in a skillet before it goes in when you have ten minutes; the browned surface adds a depth of flavour that slow, moist cooking can't create on its own. Use less liquid than a stovetop recipe calls for, because the lid traps moisture and very little evaporates. Too much liquid gives you a watery sauce.",
-        "Add dairy, fresh herbs and delicate vegetables like peas or spinach in the last 30 minutes; dairy can curdle and greens turn drab over a long cook. If the sauce is thin at the end, stir in a cornstarch slurry and cook on high with the lid off for 15 to 30 minutes, or reduce the liquid in a pan on the stove. A splash of vinegar or citrus just before serving sharpens flavours that have gone soft over hours of cooking."
+        "Brown the meat in a skillet before it goes in when you have ten minutes; the browned surface adds a depth of flavor that slow, moist cooking can't create on its own. Use less liquid than a stovetop recipe calls for, because the lid traps moisture and very little evaporates. Too much liquid gives you a watery sauce.",
+        "Add dairy, fresh herbs and delicate vegetables like peas or spinach in the last 30 minutes; dairy can curdle and greens turn drab over a long cook. If the sauce is thin at the end, stir in a cornstarch slurry and cook on high with the lid off for 15 to 30 minutes, or reduce the liquid in a pan on the stove. A splash of vinegar or citrus just before serving sharpens flavors that have gone soft over hours of cooking."
       ]
     }
   ],
@@ -147,7 +147,7 @@
     },
     {
       "question": "Do I have to brown meat before slow cooking?",
-      "answer": "No, it is safe either way. Browning adds flavour, because the browned surface develops savoury compounds that moist heat can't produce, so do it when you have ten minutes. Brown in batches so the meat sears instead of steaming."
+      "answer": "No, it is safe either way. Browning adds flavor, because the browned surface develops savory compounds that moist heat can't produce, so do it when you have ten minutes. Brown in batches so the meat sears instead of steaming."
     }
   ],
   "relatedArticleSlugs": [
@@ -164,7 +164,7 @@
     "slow cooker pulled pork"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "Slow Cooker Meals for a Crowd: Sizes, Timing and Safety",
   "sources": [

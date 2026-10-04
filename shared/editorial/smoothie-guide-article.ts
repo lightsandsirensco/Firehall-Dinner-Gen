@@ -9,7 +9,7 @@ import { smoothieCatalogToEmbedded } from "../fuel-catalog/smoothies/to-editoria
 import { SRC } from "./guide-sources.js";
 
 const PUBLISHED = "2026-05-28T12:00:00.000Z";
-const UPDATED = "2026-09-30T12:00:00.000Z";
+const UPDATED = "2026-10-03T12:00:00.000Z";
 
 const EMBEDDED_SMOOTHIES = SMOOTHIE_CATALOG_ITEMS.map(smoothieCatalogToEmbedded);
 
@@ -36,7 +36,7 @@ export const HEALTHY_HALL_SMOOTHIES_ARTICLE: EditorialArticle = {
   heroImage: "/images/smoothies/mixed-berry-protein.webp",
   heroImageAlt: "Glass of mixed berry smoothie with fresh raspberries and blueberries on a dark plate",
   intro:
-    "At a station, a smoothie does three jobs well: breakfast when there is no time to cook, something after training, and a stopgap when a call pushes dinner back. It does not replace a cooked crew dinner. The ten recipes below are written as batches of roughly four 12 oz (350 ml) glasses and use what most station kitchens already keep: frozen fruit, plain Greek yogurt, milk, bananas and oats. Only the mocha calls for protein powder. The blends built on Greek yogurt and milk carry the most protein and keep people full longest. The fruit-only blends, like citrus ginger and green pineapple, are snacks.",
+    "Healthy smoothies that keep a crew full are built on plain Greek yogurt and milk for protein, with frozen fruit and oats for fiber. A blend of juice, fruit and ice is a snack, not breakfast. Each of the ten recipes below makes about four 12 oz (350 ml) glasses from what most station kitchens already stock, and none needs protein powder (the mocha lists it as optional). At the hall, a smoothie covers breakfast when there is no time to cook, a drink after training, or a stopgap when a call pushes dinner back. It does not replace a cooked crew dinner.",
   practicalAdvice: [
     "Load the jar in this order: liquid, yogurt, greens, then frozen fruit and ice on top. The blade catches the liquid first and pulls the frozen fruit down.",
     "If the blender stalls, add liquid 1/4 cup (60 ml) at a time. More ice makes a stall worse.",
@@ -136,7 +136,7 @@ export const HEALTHY_HALL_SMOOTHIES_ARTICLE: EditorialArticle = {
   ],
   faqs: [
     {
-      question: "Do we need an expensive blender?",
+      question: "Do you need an expensive blender for smoothies?",
       answer:
         "No. A mid-range blender with a 64 oz (1.9 L) jar handles these recipes if you add the liquid first and don't overload it with ice. If smoothies stay chunky even with enough liquid, the blade assembly is usually worn and is cheaper to replace than the blender.",
     },
@@ -146,12 +146,12 @@ export const HEALTHY_HALL_SMOOTHIES_ARTICLE: EditorialArticle = {
         "Occasionally, if it is built like one: Greek yogurt or milk for protein, whole fruit, and oats or nut butter. That covers breakfast or a delayed lunch. It is not a substitute for a cooked crew dinner.",
     },
     {
-      question: "How do we keep the sugar down?",
+      question: "How do you make a smoothie with less sugar?",
       answer:
         "Use plain yogurt instead of flavored, use water or milk instead of juice where the recipe allows, and taste before adding honey. Ripe or frozen bananas add enough sweetness for most blends.",
     },
     {
-      question: "How long can a smoothie sit out if we get a call?",
+      question: "How long can a smoothie sit out?",
       answer:
         "Up to 2 hours at room temperature, or 1 hour above 90°F (32°C), which is USDA's limit for perishable food. After that, throw it out. Kept covered in the fridge, drink it within about a day.",
     },

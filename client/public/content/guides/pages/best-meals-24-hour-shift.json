@@ -5,7 +5,7 @@
   "description": "24-hour shift meals planned as one day: a dinner that holds for late eaters, safe overnight food, a make-ahead breakfast and one prep timeline.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "A 24-hour shift has four eating windows: lunch, dinner, late night and breakfast before relief. It rarely has time for four separate cooks. The practical answer is to cook once for two meals. Make a dinner that holds and doubles as the overnight option, portion the extra into single servings before anyone goes to bed, and assemble breakfast the night before so the morning only needs an oven. This guide lays out each window, which dishes carry over well, a make-ahead breakfast for a crew, and the food-safety limits that matter when food is left out at 2 a.m.",
+  "intro": "The best meals for a 24-hour shift come from cooking once for two meals: a dinner that reheats well in single portions, and a breakfast bake assembled the night before. Make about one and a half times what dinner needs, portion the extra before anyone goes to bed, and the late-night and morning windows need only a microwave and an oven. What goes wrong is a pot left on the stove overnight for whoever is up, and a breakfast that depends on someone being free to cook before relief.",
   "sections": [
     {
       "id": "four-meals",
@@ -92,8 +92,8 @@
       "id": "overnight",
       "heading": "Late-night food that doesn't need a cook",
       "paragraphs": [
-        "Between midnight and 4 a.m., nobody should need to cook. Beyond the portioned dinner, keep a short list of things people can eat cold or heat in two minutes: bread and peanut butter, cheese, yogurt, fruit, instant oatmeal, and eggs. Hard-cooked eggs keep for a week in the fridge in their shells, so boil a dozen during the afternoon and they are ready whenever someone wants one.",
-        "Overnight oats are the other no-cook option. Stir equal volumes of rolled oats and milk with a pinch of salt, add fruit or peanut butter if you like, and refrigerate in jars; they are soft and ready after about 4 hours and keep for up to 3 days. Smaller portions are easier to eat at 3 a.m. than a full plate of dinner, and single-serve containers make that easy."
+        "After midnight, nobody should need to cook. Beyond the portioned dinner, keep a short list of things people can eat cold or heat in two minutes: bread and peanut butter, cheese, yogurt, fruit, instant oatmeal, and eggs. Hard-cooked eggs keep for a week in the fridge in their shells, so boil a dozen during the afternoon and they are ready whenever someone wants one.",
+        "Overnight oats are the other no-cook option. Stir equal volumes of rolled oats and milk with a pinch of salt, add fruit or peanut butter if you like, and refrigerate in jars; they are soft after about 4 hours and keep for up to 3 days. Someone back from a call in the middle of the night usually wants a small bowl, not a full plate, which is another reason to portion dinner small."
       ]
     },
     {
@@ -107,7 +107,7 @@
         "Butter a 9 x 13 in dish and fill it with 8 cups of day-old bread in 1 in (2.5 cm) cubes, the sausage, and 2 cups of shredded cheddar.",
         "Whisk 12 eggs with 3 cups of milk, 1 tsp salt, 1/2 tsp pepper and 1 tsp dry mustard, and pour it evenly over the bread.",
         "Press the bread down so it is all wet, cover, and refrigerate for at least 8 hours and up to 24.",
-        "Bake uncovered straight from the fridge at 350°F (175°C) for 55 to 65 minutes, until the center reaches 160°F (71°C) and a knife comes out clean.",
+        "Bake uncovered straight from the fridge at 350°F (175°C) for 55 to 65 minutes, until the center reaches 160°F (71°C) (Health Canada: 165°F (74°C)) and a knife comes out clean.",
         "Rest 10 minutes before cutting so the slices hold together. Hold leftovers covered in a 200°F (95°C) oven for late arrivals."
       ]
     },
@@ -120,8 +120,8 @@
       "steps": [
         "Shift start: check the fridge and freezer, move anything for dinner to thaw, and write the day's menu.",
         "Morning: shop once for lunch, dinner, overnight and breakfast. Boil a dozen eggs.",
-        "Afternoon: start dinner early enough that it is ready by 17:30 and can hold for two hours.",
-        "After dinner: portion the extra into labelled single servings and refrigerate within two hours.",
+        "Afternoon: start dinner early enough that it is ready by 17:30, and keep it hot on low for anyone delayed by a call.",
+        "After dinner: portion the extra into labeled single servings and refrigerate within two hours.",
         "Evening: assemble the breakfast bake, clean the kitchen, and leave the oven empty for the morning.",
         "Before relief: bake breakfast, clean up, and label or throw out anything older than your fridge rule."
       ]
@@ -177,6 +177,14 @@
     {
       "question": "Can I leave a pot of chili on the stove overnight for the crew?",
       "answer": "Only if it stays at 140°F (60°C) or above the whole time, which a switched-off stove cannot do. Either keep it hot in a slow cooker on Warm and check it with a thermometer, or portion it into containers and refrigerate it within two hours of cooking. Food that has been between 40°F and 140°F for more than two hours should be thrown out."
+    },
+    {
+      "question": "What can I prep the night before for a crew breakfast?",
+      "answer": "A sausage and egg strata or an overnight French toast bake: both have to soak in the fridge for at least 8 hours, so assembling them after dinner suits a shift. Breakfast burrito fillings can be cooked, chilled and reheated in the morning, and overnight oats need no cooking at all. A 9 x 13 in egg bake serves about 8 and goes straight from the fridge into a 350°F (175°C) oven for 55 to 65 minutes."
+    },
+    {
+      "question": "How long do hard-boiled eggs last in the fridge?",
+      "answer": "Up to a week in the fridge, according to USDA, so a dozen boiled during the afternoon covers the whole shift and the next one. Cool them in cold water, refrigerate them within two hours of cooking, and keep peeled eggs in a covered container so they don't dry out or pick up fridge smells."
     }
   ],
   "relatedArticleSlugs": [
@@ -193,7 +201,7 @@
     "make ahead breakfast casserole"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "Best Meals for a 24-Hour Shift: A Full Day of Crew Food",
   "sources": [

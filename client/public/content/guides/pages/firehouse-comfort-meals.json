@@ -5,7 +5,7 @@
   "description": "Firehouse comfort meals for 10: mac and cheese, meatloaf, pot pie, stew and mashed potatoes, with quantities, oven times and make-ahead steps.",
   "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "Comfort food suits a station kitchen because most of it improves with time. Stews and braises taste deeper the next day, mac and cheese and pot pie can be assembled hours ahead, and meatloaf slices cleanly after it rests. The problems at crew scale are predictable: cheese sauce that turns grainy, mashed potatoes that go gluey, stew meat that stays tough because it boiled, and a bake that is cold in the middle because it went into the oven straight from the fridge. Each has a specific cause and a specific fix. This guide gives quantities and oven times for 10, the technique behind each fix, and how to assemble ahead and reheat.",
+  "intro": "The best comfort food for a crowd is the kind that can be made ahead: beef stew, mac and cheese, meatloaf, pot pie and shepherd's pie all hold, reheat and feed 10 from two pans or one Dutch oven. Stews taste deeper the next day, and the bakes can be assembled hours before they go in the oven. At crew scale the same four problems come up: cheese sauce that turns grainy, mashed potatoes that go gluey, stew meat that stays tough because it boiled, and a bake that is still cold in the middle because it went into the oven straight from the fridge.",
   "sections": [
     {
       "id": "quantities",
@@ -174,6 +174,10 @@
     {
       "question": "How far ahead can I make mac and cheese for a crowd?",
       "answer": "Assemble it up to 24 hours ahead with the pasta slightly undercooked and the sauce a little loose, then cover and refrigerate. Bake from cold at 350°F (175°C), covered for the first 20 minutes, for 40 to 50 minutes total, until it bubbles and the center is hot."
+    },
+    {
+      "question": "Why does my beef stew meat stay tough?",
+      "answer": "Either it boiled or it hasn't cooked long enough. Chuck needs 2 1/2 to 3 hours at a bare simmer, or in a 325°F (165°C) oven, for its connective tissue to soften; a hard boil tightens the muscle fibers and squeezes out moisture. If the meat is tough but the stew hasn't boiled, it needs more time, not less."
     }
   ],
   "relatedArticleSlugs": [
@@ -190,7 +194,7 @@
     "beef stew for a crowd"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 9,
   "seoTitle": "Comfort Food for a Crowd: Make-Ahead Classics That Reheat",
   "sources": [

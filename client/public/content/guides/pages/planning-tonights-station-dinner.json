@@ -5,13 +5,13 @@
   "description": "How to plan tonight's station dinner: choose by time and crew size, work out when to thaw and start, split the jobs, and keep five pantry dinners ready.",
   "topic": "meal_planning",
   "pillar": "operations_how_to",
-  "intro": "Most station dinners get decided too late. By 17:00, the choice has already been made for you by what is thawed, which appliance is free and how much time is left. Planning tonight's dinner comes down to three questions asked by mid-afternoon: how long before people want to eat, how many are eating, and what equipment is available. The answers narrow the options to a few formats. After that, work backward from serving time to find when meat must be thawed, when to shop and when cooking has to start. This guide gives a decision table, a thawing chart, a sample timeline with jobs split between people, and five pantry dinners for nights when nothing was planned.",
+  "intro": "To plan tonight's station dinner, answer three questions by mid-afternoon: how long until the crew eats, how many are eating, and which equipment is free. Those answers narrow dinner to a few formats, and checking the freezer narrows it further, because meat that is still frozen at midday needs cold water or a change of menu. Then work backward from serving time to find when to shop and when cooking has to start. Most station dinners go wrong by being decided too late, when what is thawed and which oven is free have already made the choice.",
   "sections": [
     {
       "id": "choose",
-      "heading": "Choose by time, crew size and equipment",
+      "heading": "Choose dinner by time, crew size and equipment",
       "paragraphs": [
-        "Start with time, because it rules out the most. Then check crew size: above 8 people, choose a line or a tray bake rather than anything plated or cooked in single portions. Finally, check the equipment. If the oven is already in use, pick something from the stovetop or slow cooker column; if you only have a stovetop, a Dutch oven covers braises and one-pot rice dishes."
+        "Start with time, because it rules out the most. Then check crew size: above 8 people, choose a line or a tray bake rather than anything plated or cooked in single portions. Finally, check the equipment. If the oven is already in use, pick a skillet, stir-fry or one-pot dish from the table; with only a stovetop and a couple of hours, a Dutch oven covers braises and one-pot rice dishes."
       ],
       "table": {
         "caption": "Dinner formats by the time available",
@@ -48,8 +48,8 @@
       "id": "thawing",
       "heading": "Check the freezer first: thawing decides the menu",
       "paragraphs": [
-        "Frozen meat is the most common reason a planned dinner becomes a takeout order. The fridge is the safest way to thaw but the slowest: even 1 lb (450 g) of ground meat or boneless chicken needs about a full day, and larger packages need about 24 hours for every 4 to 5 lb. If dinner is tonight and the meat is still frozen at noon, use cold water or the microwave, or change the menu.",
-        "Cold-water thawing takes about 30 minutes per pound. Keep the meat in a sealed bag, submerge it, and change the water every 30 minutes so it stays cold. Food thawed in cold water or the microwave has to be cooked straight away. Thin, separated pieces can also be cooked from frozen, which takes about 50 percent longer."
+        "Frozen meat is the most common reason a planned dinner becomes a takeout order. The fridge is the safest way to thaw but the slowest: allow about 24 hours for any package up to 4 to 5 lb (1.8 to 2.3 kg), whether it is 1 lb of ground beef or a 4 lb pack of chicken thighs, and another day for every 4 to 5 lb beyond that. If dinner is tonight and the meat is still frozen at midday, use cold water or the microwave, or change the menu.",
+        "In cold water, a 1 lb (450 g) package thaws in an hour or less and a 3 to 4 lb package in 2 to 3 hours. Keep the meat in a sealed bag, submerge it, and change the water every 30 minutes so it stays cold. Food thawed in cold water or the microwave has to be cooked straight away. Thin, separated pieces can also be cooked from frozen, which takes about 50 percent longer."
       ],
       "table": {
         "caption": "Safe thawing methods and times",
@@ -68,7 +68,7 @@
           ],
           [
             "Cold water, changed every 30 min",
-            "About 30 minutes to 1 hour",
+            "1 hour or less",
             "2 to 3 hours",
             "Cook immediately"
           ],
@@ -100,14 +100,14 @@
         "16:00: brown the sausage, simmer it with the sauce, and boil the pasta 2 minutes short of the package time.",
         "16:45: assemble two 9 x 13 in (23 x 33 cm) dishes. Cover them and refrigerate if dinner might slip.",
         "17:10: bake covered at 375°F (190°C) for 30 minutes, then uncovered for 10 to 15 minutes until the center reaches 165°F (74°C).",
-        "17:45: toast the garlic bread, dress the salad, and set out plates. Serve at 18:00 and put leftovers away within two hours."
+        "17:45: toast the garlic bread, dress the salad, and set out plates. Serve at 18:00."
       ]
     },
     {
       "id": "pantry-dinners",
       "heading": "Five dinners from the pantry when nothing was planned",
       "paragraphs": [
-        "A short list of shelf-stable and freezer staples makes it possible to cook a real dinner for a crew without shopping. Keep dry pasta, long-grain rice, canned tomatoes, canned beans, tortillas, eggs, cheese, frozen vegetables, a couple of pounds of frozen ground meat, garlic, onions and a basic spice shelf. With those, all five dinners below are possible in under 45 minutes for 8 people."
+        "A short list of shelf-stable and freezer staples makes it possible to cook a real dinner for a crew without shopping. Keep dry pasta, long-grain rice, canned tomatoes, canned beans, tortillas, eggs, cheese, frozen vegetables, garlic, onions and a basic spice shelf, plus 2 to 3 lb of ground beef frozen flat in 1 lb bags. Flat bags thaw in cold water in under an hour, where a solid 3 lb block takes hours and browns unevenly. With those staples, each of the five dinners below cooks in 45 minutes or less for 8 people."
       ],
       "table": {
         "caption": "Pantry dinners for 8",
@@ -134,13 +134,13 @@
           ],
           [
             "Quick beef and bean chili",
-            "2 1/2 lb ground beef cooked from frozen, 3 cans beans, 2 cans tomatoes, chili powder",
-            "45 minutes"
+            "2 1/2 lb ground beef (frozen flat in 1 lb bags, thawed in cold water), 3 cans beans, 2 cans tomatoes, chili powder",
+            "45 minutes, plus up to 1 hour to thaw the beef"
           ],
           [
             "Potato and cheese frittata",
             "18 eggs, 2 lb frozen diced potatoes, 2 cups cheese, onion",
-            "35 minutes; eggs to 160°F (71°C)"
+            "35 minutes; center to 160°F (71°C), Health Canada 165°F (74°C)"
           ]
         ]
       }
@@ -150,7 +150,7 @@
       "heading": "When the plan changes",
       "paragraphs": [
         "If more people turn up than you planned for, add starch and sides rather than a second protein: another pound of pasta, a pot of rice, or more bread stretches a meal quickly and cheaply. If fewer eat, stop assembling the second tray and refrigerate it for the next shift rather than baking everything.",
-        "If a call interrupts cooking, turn off the heat and cover everything, and don't leave meat partly cooked to finish later. Food that won't be eaten within two hours goes in the fridge. The interruption guide covers dinners built to handle that kind of night."
+        "If a call interrupts cooking, turn off the heat and cover everything. Partly cooked meat can't sit warm to be finished later: put it in the fridge before you leave if there is time, finish it to a safe temperature as soon as you are back, and throw it out if it sat warm. Cooked food that won't be eaten within two hours goes in the fridge."
       ]
     }
   ],
@@ -200,8 +200,16 @@
   ],
   "faqs": [
     {
-      "question": "What can I cook if the meat is still frozen at 4 p.m.?",
-      "answer": "Thaw it in a sealed bag in cold water, changing the water every 30 minutes; a 1 lb package takes about an hour. Thin or separated pieces can also be cooked from frozen with about 50 percent more time. Otherwise, switch to a pantry dinner such as quesadillas, pasta with tomato sauce or a frittata."
+      "question": "What can I cook if the meat is still frozen late in the afternoon?",
+      "answer": "Thaw it in a sealed bag in cold water, changing the water every 30 minutes; a 1 lb package takes an hour or less, and it has to be cooked as soon as it thaws. Thin or separated pieces can also be cooked from frozen with about 50 percent more time. Otherwise, switch to a pantry dinner such as quesadillas, pasta with tomato sauce or a frittata."
+    },
+    {
+      "question": "How long does it take to thaw meat in the fridge?",
+      "answer": "About 24 hours for a package up to 4 to 5 lb, including small 1 lb packs of ground beef, and roughly another day for every 4 to 5 lb beyond that. Once thawed, ground meat and poultry keep 1 to 2 days in the fridge, and roasts and chops 3 to 5 days. For dinner tomorrow, move the meat from the freezer today."
+    },
+    {
+      "question": "How do you plan dinner for a large group on short notice?",
+      "answer": "Pick from what is already thawed and what the pantry holds, and choose a format that scales without plating, such as pasta, a skillet, a taco line or a sheet-pan dinner. Under 30 minutes means a skillet, stir-fry or quick pasta; with an hour, a sheet-pan dinner or rice bowls. Stretch it with extra pasta, rice or bread rather than a second protein."
     }
   ],
   "relatedArticleSlugs": [
@@ -215,10 +223,11 @@
     "what to cook for dinner tonight for a group",
     "plan a dinner for a crew",
     "dinner timeline",
-    "pantry dinners"
+    "pantry dinners",
+    "how long to thaw meat in the fridge"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "How to Plan Tonight's Station Dinner: Timing and Thawing",
   "sources": [

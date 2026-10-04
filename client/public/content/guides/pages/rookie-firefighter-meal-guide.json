@@ -5,7 +5,7 @@
   "description": "Ten rookie-proof firehall meals for a first-time crew cook: forgiving dishes, a step-by-step plan for your first dinner, and the skill each one teaches.",
   "topic": "station_cooking",
   "pillar": "recipes_meals",
-  "intro": "Cooking for a crew for the first time is mostly a planning job. The ten rookie-proof meals here are hard to ruin for the same reasons: their doneness is forgiving, they cook in one pot, tray or line, and they still taste good if people come to the table late. Each one also teaches a skill that carries over to harder dishes, such as browning in batches, seasoning a big pot, or timing several components to finish together. This guide explains what makes a meal forgiving, gives a step-by-step plan for your first cook, lists what each of the ten teaches, and covers quick fixes for the most common problems.",
+  "intro": "For your first cook for the crew, pick chili, a taco bar or pulled pork. Like the other rookie-proof meals here, they are hard to ruin: a few extra minutes won't overcook them, they cook in one pot, tray or line, and they still taste good if people come to the table late. Each also teaches a skill you'll use on harder dishes, such as browning in batches, seasoning a big pot, or getting several components to finish together. Most first-time problems are planning problems: starting too late, missing an ingredient, or running out of pan space.",
   "sections": [
     {
       "id": "forgiving",
@@ -48,7 +48,7 @@
           [
             "Beef and bean chili",
             "Browning in batches and seasoning a big pot",
-            "Add salt late; the pot reduces and concentrates it"
+            "Hold back some salt until the end; canned goods vary and the pot reduces"
           ],
           [
             "Pulled pork",
@@ -171,6 +171,10 @@
     {
       "question": "What should I cook the first time I cook for the crew?",
       "answer": "Chili or a taco bar. Both are forgiving, feed any crew size, and teach the basics of browning in batches and setting up a line. Read the recipe fully, prep everything before you start, and give yourself an extra 20 minutes."
+    },
+    {
+      "question": "How do you fix chili or soup that is too salty?",
+      "answer": "Add more of the unsalted base: another can of beans and tomatoes to chili, or more unsalted stock and vegetables to soup, then simmer to bring it back together. Water alone thins the flavor along with the salt. A squeeze of lime or a splash of vinegar won't remove salt, but it makes a salty dish taste more balanced."
     }
   ],
   "relatedArticleSlugs": [
@@ -187,7 +191,7 @@
     "beginner crowd recipes"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "10 Rookie-Proof Firehall Meals for a First-Time Crew Cook",
   "sources": [

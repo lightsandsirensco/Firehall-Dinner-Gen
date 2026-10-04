@@ -8,7 +8,7 @@ import type { EditorialArticle } from "./content-schema.js";
 import { SRC } from "./guide-sources.js";
 import { buildSeoGuide, meal } from "./seo-article-build.js";
 
-const UPDATED = "2026-09-30T18:00:00.000Z";
+const UPDATED = "2026-10-03T18:00:00.000Z";
 
 const cookingForTen = buildSeoGuide({
   slug: "cooking-for-10-firefighters",
@@ -31,7 +31,7 @@ const cookingForTen = buildSeoGuide({
     "scaling recipes for a crowd",
   ],
   intro:
-    "For 10 hungry adults, plan on about 5 lb (2.3 kg) of boneless meat for a meat-forward main, or 3 1/2 lb (1.6 kg) of ground meat in chili, tacos or a meat sauce. For starch, that is 2 1/2 lb (1.1 kg) of dry pasta as the main, or 5 cups of raw rice as a side. Those numbers are deliberately higher than package serving sizes: a crew that has been working all day eats more than a nutrition label assumes, and running out halfway down the line is a worse outcome than leftovers. The quantities are the easy part. The harder problems at 10 are pan space, seasoning that does not scale in a straight line, and getting three components hot at the same moment.",
+    "For 10 hungry adults, plan on about 5 lb (2.3 kg) of boneless meat for a meat-forward main, or 3 1/2 lb (1.6 kg) of ground meat in chili, tacos or a meat sauce. For starch, that is 2 1/2 lb (1.1 kg) of dry pasta as the main, or 5 cups of raw rice as a side. Those amounts run higher than package serving sizes because a working crew eats more than a nutrition label assumes, and running out is worse than leftovers. What usually goes wrong at 10 is not the shopping but the cooking: too little pan space, a multiplied recipe that comes out thin or over-salted, and three components that are never hot at the same time.",
   sections: [
     {
       id: "how-much-per-person",
@@ -59,15 +59,16 @@ const cookingForTen = buildSeoGuide({
       heading: "What not to multiply when you scale a recipe",
       paragraphs: [
         "Multiplying the main ingredients of a recipe for 4 by 2.5 works. Multiplying everything does not, because several things in a recipe depend on the pot and the pan rather than on the amount of food.",
-        "The biggest one is evaporation. Liquid evaporates from the surface, so when you make two and a half times the chili in a pot that is only a little wider, you have far more liquid but not much more surface. The pot reduces more slowly, the sauce ends up thinner, and the flavour is less concentrated than the small recipe you are copying. That is why a scaled recipe often tastes flat even though every spice was multiplied correctly, and why it can also taste too salty if the recipe relied on the salt concentrating as it reduced.",
+        "The biggest one is evaporation. Liquid evaporates from the surface, so two and a half times the chili in a pot that is only a little wider has far more liquid but not much more surface. It reduces proportionally less in the same time, which is why a scaled pot often comes out thin and tastes flat even though every spice was multiplied. Give it a longer uncovered simmer before you reach for more seasoning.",
+        "Salt does scale with the amount of food, but hold back about a quarter of it, along with strong spices like cayenne, when you multiply a recipe. Stock, canned tomatoes, cheese, sausage and seasoning blends all vary in salt by brand, and multiplying the recipe multiplies that variation. Taste once the pot has simmered and adjust at the end. You can add salt; you can't take it out.",
       ],
       table: {
         caption: "How common ingredients and steps behave when you scale up",
         columns: ["Ingredient or step", "How it scales", "What to do"],
         rows: [
-          ["Salt, dried chiles, strong spices", "Less than linear in a big pot", "Add about three-quarters of the scaled amount, taste near the end, then adjust"],
+          ["Salt, dried chiles, strong spices", "Linear, with the amount of food", "Add about three-quarters at first, because salty ingredients vary; taste at the end and add the rest as needed"],
           ["Oil for searing", "Depends on pan surface, not food weight", "Use enough to film the pan for each batch instead of multiplying the recipe amount"],
-          ["Liquid in soups, braises, sauces", "Reduces more slowly in a deep pot", "Start with about 90 percent of the scaled liquid and add more if it thickens too fast"],
+          ["Liquid in soups, braises, sauces", "Reduces proportionally less in a big pot", "Start with about 90 percent of the scaled liquid; simmer uncovered longer if it is still thin"],
           ["Flour or cornstarch thickener", "Roughly linear", "Scale it fully; if the sauce is still thin, add a slurry at the end"],
           ["Baking powder, baking soda, yeast", "Linear by weight, but pan depth changes baking", "Scale by weight, and bake in several pans of the original depth rather than one deep pan"],
           ["Cooking time", "Depends on thickness, not total quantity", "Two pans at the original depth take about the original time; one pan twice as deep takes much longer and cooks unevenly"],
@@ -94,14 +95,14 @@ const cookingForTen = buildSeoGuide({
         "Start the long, forgiving item first: a braise, chili, or baked pasta that can sit covered once it is done.",
         "Start starches that hold next. Rice keeps well in a covered pot off the heat for 20 to 30 minutes; roasted potatoes hold in a low oven.",
         "Leave the fast, fragile items for the last 15 minutes: green vegetables, anything seared, garlic bread, and dressing the salad.",
-        "Hold finished food covered in a low oven or on low heat. Hot food should stay at 140°F (60°C) or above until it is served.",
+        "Hold finished food covered in a low oven or on the lowest heat until it is served.",
       ],
     },
     {
       id: "worked-examples",
       heading: "Two complete shopping lists for 10",
       paragraphs: [
-        "Per-person numbers are easier to trust once you see them turned into a full list. These two dinners are the formats crews cook most for a table of 10, with enough margin for second helpings and one or two extra people who turn up at the table. If your crew regularly has visitors from another company or the day shift stays late, shop for 12 rather than 10.",
+        "These are the two dinners crews cook most for 10, turned into full lists with enough margin for seconds and one or two extra people at the table. If visitors from another company or the day shift regularly stay to eat, shop for 12.",
         "Baked ziti needs less dry pasta than a plain pasta dinner, because the pasta shares the pan with meat, ricotta and mozzarella. Two 9 x 13 in (23 x 33 cm) dishes hold it comfortably, with room for leftovers.",
       ],
       table: {
@@ -124,13 +125,13 @@ const cookingForTen = buildSeoGuide({
       paragraphs: [
         "At 10, run a line instead of plating. Put the plates first, then starches and sides, then the protein, then sauces and toppings, so plates fill with the cheaper food before they reach the part most likely to run short. One person serving the protein keeps portions even and keeps everyone else away from the stove, which matters in a small station kitchen.",
         "When protein is tight, portion it before service starts: count the chicken thighs, slice the roast, or put a card at the pan that says two tacos' worth or one ladle. Set a covered plate aside in a low oven for anyone who is out on a call.",
-        "Anything that will not be eaten within two hours of coming off the heat or out of the warm oven needs to go into the fridge. Put leftovers into shallow containers so they cool quickly, and reheat them to 165°F (74°C).",
+        "Hot food is safe while it stays at 140°F (60°C) or above. Anything that has sat between 40 and 140°F (4 and 60°C) for two hours, or one hour above 90°F (32°C), should be thrown out, so get leftovers into shallow containers and into the fridge well before then. Reheat them to 165°F (74°C).",
       ],
     },
   ],
   practicalAdvice: [
     "Plan 1/2 lb (225 g) of raw boneless meat per person for a meat-forward main and 1/3 lb (150 g) of ground meat for chili, tacos or sauces.",
-    "When you scale a recipe, scale the main ingredients fully but start with about three-quarters of the salt and strong spices.",
+    "When you scale a recipe, scale the main ingredients fully, add about three-quarters of the salt and strong spices at first, and adjust at the end.",
     "Brown meat in batches and use two sheet pans instead of one crowded pan.",
     "Start the most forgiving dish first and finish with anything seared, dressed or fried.",
   ],
@@ -157,12 +158,12 @@ const cookingForTen = buildSeoGuide({
     {
       question: "Can I just multiply a recipe for 4 by 2.5?",
       answer:
-        "Multiply the main ingredients, but not everything. Start with about three-quarters of the salt and strong spices and adjust at the end, use pan-sized amounts of oil for searing rather than a multiplied amount, and reduce the liquid slightly because a big pot evaporates less. Split the food across more pans instead of making one deeper pan, or the cooking time and texture will change.",
+        "Multiply the main ingredients, but not everything. Salt and strong spices scale with the food, but add about three-quarters at first because stock, canned tomatoes and cheese vary in salt, then taste and adjust at the end. Use pan-sized amounts of oil for searing, start with about 90 percent of the liquid because a big pot reduces proportionally less, and split the food across more pans rather than one deeper pan.",
     },
     {
       question: "How do I keep dinner hot for people who eat at different times?",
       answer:
-        "Keep finished food covered at 140°F (60°C) or above: on the stove on low, in a slow cooker on warm, or in a low oven. Covering stops it drying out. Anything that has sat at room temperature for more than two hours should go in the fridge, and leftovers should be reheated to 165°F (74°C).",
+        "Keep finished food covered at 140°F (60°C) or above: on the stove on low, in a slow cooker on warm, or in a low oven. Covering stops it drying out. Anything that won't be eaten within two hours goes in the fridge instead, and gets reheated to 165°F (74°C) later.",
     },
   ],
   relatedArticleSlugs: [
@@ -178,23 +179,25 @@ const cookingForTen = buildSeoGuide({
 const interruptionProofDinner = buildSeoGuide({
   slug: "feeding-a-firehall-crew",
   title: "How to Cook a Crew Dinner That Survives Interruptions",
-  seoTitle: "How to Cook a Crew Dinner That Survives Interruptions",
+  seoTitle: "Meals That Hold Well: Crew Dinners That Survive a Call",
   subtitle:
-    "Which dishes can wait and which can't, how to build stopping points into the cook, and what to do with the food when the crew has to leave mid-meal.",
+    "Which dishes can wait and which can't, where to pause the cook, and what to do with the food when the crew has to leave mid-meal.",
   description:
-    "Firehouse meals that can be paused: which dishes hold, where to build stopping points, and when food left during a call is still safe to eat.",
+    "Meals that hold well for a crew dinner that gets interrupted: which dishes wait, where to pause the cook, and when food left during a call is safe.",
   topic: "shift_operations",
   pillar: "operations_how_to",
   readMinutes: 8,
   updatedAt: UPDATED,
   keywords: [
-    "crew dinner interruptions",
+    "meals that hold well",
+    "keeping food warm for a crowd",
     "meals that can be interrupted",
     "keeping dinner warm",
+    "is food left out safe to eat",
     "cooking for a crew on shift",
   ],
   intro:
-    "The dinners that work best at a station have a safe place to stop at every stage. A braise, chili or baked pasta can sit covered on low heat or in a warm oven for an hour and come back just as good. Seared steak, fried food and dressed pasta cannot. Planning an interruptible dinner comes down to three decisions: choose dishes that hold, cook the components separately so nothing overcooks while it waits, and know what to do with the food if the crew is gone longer than expected.",
+    "Meals that hold well have a safe place to stop at every stage: chili, a braise or a baked pasta can sit covered in a 200°F (95°C) oven or a slow cooker on warm for an hour and come back just as good. Seared steak, fried food and dressed pasta cannot. Interrupted crew dinners usually go wrong in two places: components that keep cooking while they wait, and food left on a cold stove for longer than anyone noticed.",
   sections: [
     {
       id: "what-holds",
@@ -221,31 +224,32 @@ const interruptionProofDinner = buildSeoGuide({
       id: "stopping-points",
       heading: "Build stopping points into the cook",
       paragraphs: [
-        "Most interrupted dinners are ruined by components that keep cooking while they wait. Pasta is the clearest example. If a pasta dinner might be interrupted, cook the pasta a couple of minutes short of al dente and keep it separate from the sauce until the crew is ready to eat. Fully dressed pasta keeps absorbing liquid as it sits and goes soft before everyone gets back. Drained pasta tossed with a little oil and spread on a sheet pan stops cooking almost immediately and comes back in 30 to 60 seconds in boiling water or simmering sauce.",
+        "Most interrupted dinners are ruined by components that keep cooking while they wait. Pasta is the clearest example: dressed pasta keeps absorbing sauce and goes soft before everyone gets back. If a pasta dinner might be interrupted, drain the pasta a couple of minutes short of al dente, toss it with a little oil and spread it on a sheet pan. It stops cooking almost immediately and comes back in 30 to 60 seconds in boiling water or simmering sauce.",
         "The same logic applies elsewhere. Keep gravies and sauces in their own pot. Roast vegetables until just tender rather than fully browned, then finish them in a hot oven when you're back. Cook starches and proteins separately so a delay only affects the one component that is actually sensitive to it.",
-        "One stopping point to avoid is partly cooked meat. If you have browned chicken but it isn't cooked through, it shouldn't sit warm while you're away: that is the temperature range where bacteria grow fastest, and the partial cooking hasn't destroyed them. Get it into the fridge before you leave if you possibly can, and cook it all the way through as soon as you return.",
+        "Partly cooked meat is never a planned stopping point. USDA advises against partially cooking meat or poultry to finish later, because partial cooking warms any bacteria without killing them. Don't brown chicken ahead with the idea of finishing it after dinner is called; start the meat only when you can take it all the way to a safe temperature.",
       ],
     },
     {
       id: "when-the-call-comes",
       heading: "What to do when a call comes in mid-cook",
       paragraphs: [
-        "You usually have less than a minute, so these steps are in order of importance. Covered, fully cooked food in a low oven or a running slow cooker is the safest way to leave dinner; an open pot on a burner is not.",
+        "You usually have less than a minute, so these steps are in order of importance. Fully cooked food, covered, in a low oven or a running slow cooker is the safest way to leave dinner.",
       ],
       steps: [
-        "Turn off open burners. If the main dish is fully cooked, move it into a low oven or leave it in the slow cooker instead.",
+        "Turn off open burners. If the main dish is fully cooked, move it into a low oven or leave it in the slow cooker.",
         "Cover everything. A lid or foil slows cooling and stops the surface drying out.",
         "Drain pasta or vegetables sitting in hot water; they keep cooking as long as they are in it.",
-        "Take seared meat out of the hot pan and onto a plate so carryover heat doesn't overcook it.",
-        "Put cold ingredients and anything raw or half-cooked back in the fridge.",
+        "If seared meat is fully cooked, move it from the hot pan to a plate so carryover heat doesn't overcook it, cover it, and hold it in the low oven.",
+        "If the meat isn't cooked through, put it straight into the fridge, along with anything raw and any cold ingredients that are out.",
       ],
     },
     {
       id: "is-it-safe",
       heading: "When you get back: is the food still safe?",
       paragraphs: [
-        "Food that was held hot the whole time, in a slow cooker or an oven keeping it at 140°F (60°C) or above, is fine. Food that sat on the stove with the heat off has been cooling through the danger zone, 40 to 140°F (4 to 60°C), where bacteria multiply quickly. USDA and Health Canada both say cooked food left in that range for more than two hours should be thrown out, and USDA shortens that to one hour when the room is above 90°F (32°C).",
-        "If it has been less than two hours, reheat the food to 165°F (74°C) and serve it. Bring soups, sauces and gravies back to a rolling boil. If nobody knows how long it has been sitting, throw it out. Smell and appearance won't tell you whether it is safe.",
+        "Food that stayed at 140°F (60°C) or above the whole time, in a slow cooker or a low oven, is fine. Food left on the stove with the heat off has been cooling through the danger zone, 40 to 140°F (4 to 60°C), where bacteria multiply quickly. USDA and Health Canada both say cooked food left in that range for more than two hours should be thrown out, and USDA shortens that to one hour when the room is above 90°F (32°C).",
+        "Under two hours, reheat the food to 165°F (74°C) and serve it; bring soups, sauces and gravies back to a rolling boil. If nobody knows how long it has been sitting, throw it out. Smell and appearance won't tell you whether it is safe.",
+        "Partly cooked meat that went into the fridge before you left should be cooked all the way to a safe temperature as soon as you're back. Treat that as the fallback for a call you couldn't avoid, not as a way to plan dinner. If the meat sat in a warm pan or on the counter instead, throw it out.",
       ],
     },
     {
@@ -253,14 +257,14 @@ const interruptionProofDinner = buildSeoGuide({
       heading: "Plan the menu around how busy the day is",
       paragraphs: [
         "On a day that has already been busy, cook something that is done an hour early and holds: chili, a braise in the oven, pulled pork in the slow cooker, or a baked pasta that only needs reheating. Save steaks, stir-fries and fried food for quiet evenings, or cook them in stages so the fragile part happens only when everyone is actually sitting down.",
-        "Decide the meal by mid-afternoon, even if the day is unpredictable. The decision that can change later is the format, not whether dinner happens: a planned taco night can become a pot of seasoned meat held on low with tortillas warmed to order, and a planned sheet-pan dinner can go into the oven the moment the crew is back. Write the dish and the rough serving time where everyone can see it, so whoever picks up the cook after a call knows what state it is in.",
+        "Decide the meal by mid-afternoon, even if the day is unpredictable. What can change later is the format, not whether dinner happens: a planned taco night can become a pot of seasoned meat held on low with tortillas warmed to order, and a planned sheet-pan dinner can go into the oven the moment the crew is back. Write the dish and the rough serving time where everyone can see it, so whoever picks up the cook after a call knows what state it is in.",
       ],
     },
     {
       id: "fallback",
       heading: "Keep a 30-minute fallback in the freezer",
       paragraphs: [
-        "When the planned dinner can't happen, the usual alternative is ordering in. A few freezer and pantry items that go from frozen to the table in about 30 minutes remove that choice. All of these can be cooked from frozen or thawed quickly under cold water, and none needs more than one pan and a pot of water.",
+        "When the planned dinner falls through, the usual answer is ordering in. A few freezer and pantry items that go from frozen to the table in about 30 minutes give the crew a better option. Each one cooks from frozen or thaws quickly in cold water, and none needs more than one pan and a pot of water.",
       ],
       table: {
         caption: "Freezer fallbacks and how long they take from frozen",
@@ -268,7 +272,7 @@ const interruptionProofDinner = buildSeoGuide({
         rows: [
           ["Raw shrimp, peeled", "About 15 minutes", "Thaw in a colander under cold running water for 5 to 10 minutes, then sauté with garlic and butter over pasta or rice"],
           ["Ground beef frozen flat in 1 lb bags", "About 40 minutes", "Thaw in its bag in cold water (under an hour for a flat bag), then brown for tacos or a quick meat sauce"],
-          ["Cooked meatballs", "About 25 minutes", "Simmer straight from frozen in jarred marinara until 165°F (74°C) in the centre; serve on rolls or pasta"],
+          ["Cooked meatballs", "About 25 minutes", "Simmer straight from frozen in jarred marinara until 165°F (74°C) in the center; serve on rolls or pasta"],
           ["Filled pasta (tortellini, ravioli)", "About 10 minutes", "Boil straight from frozen and toss with butter, parmesan and a vegetable"],
           ["Frozen dumplings or potstickers", "About 15 minutes", "Pan-fry and steam in a covered skillet, with rice and a frozen stir-fry vegetable blend"],
           ["Tortillas, cheese, canned beans", "About 20 minutes", "Bean and cheese quesadillas in batches on a griddle, held on a rack in a low oven"],
@@ -279,12 +283,12 @@ const interruptionProofDinner = buildSeoGuide({
   practicalAdvice: [
     "Pick a main that holds: braises, chili, soups, baked pasta and shredded meats are the safest choices on a busy day.",
     "Keep pasta, sauces and dressings separate until serving so nothing goes soft while it waits.",
-    "Before you leave, turn off open burners, cover everything, and move fully cooked food to a low oven or slow cooker.",
-    "Cooked food that has cooled for more than two hours goes in the bin; anything under that gets reheated to 165°F (74°C).",
+    "Before you leave, turn off open burners, cover everything, move fully cooked food to a low oven or slow cooker, and put meat that isn't cooked through in the fridge.",
+    "Never stop partway through cooking meat as a plan; only start it when you can finish it to a safe temperature.",
     "Decide dinner by mid-afternoon and keep a few 30-minute freezer fallbacks for the nights the plan falls through.",
   ],
   mealRecommendations: [
-    meal("big-chili", "Beef and Bean Chili", "Holds for hours on low and tastes as good at 8:30 as at 6:00."),
+    meal("big-chili", "Beef and Bean Chili", "Holds for hours on low and tastes as good two hours later as when it was ready."),
     meal("pulled-pork", "Pulled Pork", "Slow cooker or low oven; it stays moist in its juices while the crew is out."),
     meal("baked-ziti", "Baked Ziti", "Assemble early, bake when the crew is close, hold covered if they get called."),
     meal("pork-carnitas-tacos", "Pork Carnitas Tacos", "Braised pork shoulder holds in its juices; crisp it in a hot pan when the crew is back."),
@@ -295,12 +299,17 @@ const interruptionProofDinner = buildSeoGuide({
     {
       question: "What meals can be left on warm if we get called out?",
       answer:
-        "Dishes with plenty of liquid or that are already cooked past tender: chili, stews, soups, braises, pulled pork, shredded chicken and baked pastas. Keep them covered in a slow cooker on warm or in a low oven so they stay at 140°F (60°C) or above.",
+        "Dishes with plenty of liquid or that are already cooked past tender: chili, stews, soups, braises, pulled pork, shredded chicken and baked pastas. Keep them covered in a slow cooker on warm or in a low oven, where they stay hot enough to be safe.",
+    },
+    {
+      question: "How do you keep food warm for a crowd without drying it out?",
+      answer:
+        "Hold it covered at 140°F (60°C) or above: in a slow cooker on warm, on the lowest burner, or in a 200°F (95°C) oven. Saucy dishes hold best; stir from the bottom and add a splash of water or stock if they thicken. Crisp food is the exception: hold it uncovered on a rack and serve it within about 20 minutes.",
     },
     {
       question: "Is food still safe if it sat on the stove during a call?",
       answer:
-        "If the heat was off, the food started cooling into the 40 to 140°F (4 to 60°C) danger zone. Under two hours, reheat it to 165°F (74°C) and serve it. Over two hours, or if nobody knows how long it sat, throw it out. That is the guidance from both USDA and Health Canada.",
+        "If the heat was off, it has been cooling since you left. Under two hours, reheat it to 165°F (74°C) and serve it. Over two hours, or if nobody knows how long it sat, throw it out. USDA and Health Canada give the same rule.",
     },
     {
       question: "How do I keep pasta from going mushy if dinner is delayed?",
@@ -308,9 +317,9 @@ const interruptionProofDinner = buildSeoGuide({
         "Cook it a couple of minutes short of al dente, drain it, toss it with a little oil and spread it out to stop the cooking. Keep the sauce hot separately. When the crew is back, dunk the pasta in boiling water for 30 to 60 seconds or finish it in the simmering sauce with a splash of pasta water.",
     },
     {
-      question: "Should I finish cooking chicken that was half-cooked when we left?",
+      question: "Can I finish cooking chicken that was half-cooked when we got a call?",
       answer:
-        "Only if it went into the fridge promptly. Partly cooked meat left sitting warm is a food-safety problem because partial cooking doesn't destroy bacteria and the meat has been sitting at the temperatures where they grow. If it sat out, throw it out. If it was refrigerated, cook it all the way through as soon as you return.",
+        "Only if it went into the fridge before you left, and then cook it to 165°F (74°C) as soon as you're back. USDA advises never partially cooking meat or poultry to finish later, so treat this as a fallback, not a plan. If the chicken sat in a warm pan or on the counter, throw it out.",
     },
   ],
   relatedArticleSlugs: [
@@ -344,7 +353,7 @@ const groceryPlanning = buildSeoGuide({
     "thawing meat safely",
   ],
   intro:
-    "Good crew grocery planning starts with a menu and a head count, not a trip down the aisles. Decide what you are cooking, multiply by the number of people eating, and buy protein by weight first because it is the most expensive item and the one you can't improvise. Then make sure frozen meat has time to thaw, which is the step crews most often forget: even a 1 lb package needs about a full day in the fridge.",
+    "Plan crew groceries from the menu and the head count: decide the meals, multiply per-person amounts by the number eating, and buy protein by weight first, at about 1/2 lb (225 g) of raw boneless meat per person. Protein is the most expensive item and the one you can't improvise. The step crews most often miss is the thaw: even a 1 lb package of frozen meat needs about a full day in the fridge.",
   sections: [
     {
       id: "menu-to-list",
@@ -379,7 +388,7 @@ const groceryPlanning = buildSeoGuide({
         "Dry goods: rice, dry pasta, flour, oats, tortillas (they freeze well).",
         "Cans and jars: crushed tomatoes, beans, broth, salsa, peanut butter.",
         "Keepers: onions, garlic, potatoes, eggs, a block of cheese, frozen vegetables.",
-        "Flavour: salt, pepper, cumin, chili powder, smoked paprika, oregano, soy sauce, hot sauce, vinegar, oil.",
+        "Flavor: salt, pepper, cumin, chili powder, smoked paprika, oregano, soy sauce, hot sauce, vinegar, oil.",
       ],
     },
     {
@@ -393,8 +402,8 @@ const groceryPlanning = buildSeoGuide({
       id: "splitting-the-cost",
       heading: "Splitting the cost fairly",
       paragraphs: [
-        "Most crews that cook together split the bill for each meal among the people who ate it. It is simple, and it avoids charging someone who was off sick or detailed elsewhere. The part that goes wrong is the staples: oil, salt, spices, foil and coffee get used by everyone but bought by whoever happened to shop. A small fixed amount added to each person's share, kept in a separate staples fund, pays for them without anyone keeping a ledger of who used how much cumin.",
-        "As a worked example: a dinner for 8 costs 96 in groceries, which is 12 per person. Add 1 each for the staples fund and everyone pays 13. When the fund runs low, whoever shops next restocks the staples from it.",
+        "Most crews split the bill for each meal among the people who ate it, which avoids charging someone who was off sick or detailed elsewhere. The part that goes wrong is the staples: oil, salt, spices, foil and coffee get used by everyone but bought by whoever happened to shop. A small fixed amount added to each person's share, kept in a separate staples fund, pays for them without anyone tracking who used how much cumin.",
+        "For example, a dinner for 8 costs $96 in groceries, or $12 a person. Add $1 each for the staples fund and everyone pays $13. When the fund runs low, whoever shops next restocks the staples from it.",
       ],
       steps: [
         "Photograph the receipt and post it for the crew before you put the groceries away.",
@@ -427,7 +436,12 @@ const groceryPlanning = buildSeoGuide({
     {
       question: "How long does frozen ground beef take to thaw?",
       answer:
-        "About a full day per pound in the fridge, according to USDA. In cold water, in a leak-proof bag with the water changed every 30 minutes, a 1 lb package can thaw in an hour or less. Cook meat thawed in cold water right away.",
+        "In the fridge, USDA says to allow a full day for a 1 lb package, and about 24 hours per 5 lb for larger amounts; flat bags thaw faster than a block. In cold water, in a leak-proof bag with the water changed every 30 minutes, a 1 lb package can thaw in an hour or less. Cook meat thawed in cold water right away.",
+    },
+    {
+      question: "How do you split grocery costs at a fire station?",
+      answer:
+        "Divide each meal's receipt by the number of people who ate it, not the number on shift. Add a small fixed amount per person, such as $1, to a staples fund that covers oil, spices, foil and coffee. Post a photo of the receipt and settle up the same shift through one shared payment app.",
     },
     {
       question: "Can we cook meat straight from frozen?",
@@ -447,61 +461,70 @@ const groceryPlanning = buildSeoGuide({
 const rookieMistakes = buildSeoGuide({
   slug: "rookie-cooking-mistakes",
   title: "Rookie Cooking Mistakes at the Firehall, and How to Fix Them",
-  seoTitle: "Common Cooking Mistakes and How to Fix Them",
+  seoTitle: "Beginner Cooking Mistakes to Avoid When Cooking for a Crowd",
   subtitle:
-    "Grey ground beef, bland chili, dry chicken: the handful of technique errors behind most bad crew dinners, and what is actually going wrong.",
+    "Grey ground beef, flat chili, dry chicken and a dinner that finishes in pieces: the mistakes behind most bad crew dinners, and what to do instead.",
   description:
-    "The cooking mistakes behind most bad crew dinners, from crowded pans to guessing doneness, with the reason each one happens and a safe-temperature chart.",
+    "Beginner cooking mistakes to avoid when cooking for a crowd: crowded pans, wet meat, salt in big batches, guessing doneness and leaving food out.",
   topic: "station_cooking",
   pillar: "operations_how_to",
-  readMinutes: 9,
+  readMinutes: 10,
   updatedAt: UPDATED,
   keywords: [
+    "beginner cooking mistakes",
+    "cooking mistakes to avoid",
     "common cooking mistakes",
-    "rookie firefighter cooking",
-    "why is my meat grey",
-    "safe cooking temperatures",
-    "cooking for a crew",
+    "cooking for a crowd",
+    "firehouse cooking",
+    "why is my ground beef grey",
+    "should you rinse raw chicken",
   ],
   intro:
-    "Most disappointing crew dinners come from the same few technique problems, and almost none of them have to do with the recipe. Crowded pans steam meat instead of browning it. A recipe scaled up for ten tastes flat because the salt and liquid didn't scale the way the cook expected. Chicken is dry because nobody used a thermometer and it was cooked \"to be safe\". Each of these has a simple fix once you know what is happening in the pan.",
+    "Most bad crew dinners have nothing to do with the recipe. They come from a few technique mistakes that get worse as the batch gets bigger: three pounds of ground beef piled into one skillet so it steams grey, a pot of chili scaled up for ten that tastes flat, chicken cooked until it's dry because nobody checked the temperature. None of the fixes takes special skill. Most of them take a second pan, an instant-read thermometer, or ten minutes of planning before the stove goes on.",
   sections: [
     {
       id: "crowding",
       heading: "Crowding the pan",
       paragraphs: [
-        "Meat and vegetables release water as they heat. In a pan with space between the pieces, that water evaporates almost instantly and the surface gets hot enough to brown. Pile 3 lb of ground beef into one skillet and the water comes out faster than it can evaporate: the pan temperature drops, the meat simmers in its own liquid, and it turns grey instead of brown. You lose the browned flavour that makes chili and taco meat taste savoury.",
-        "For a crew, brown in batches. In a 12 in (30 cm) skillet that means about 1 to 1 1/2 lb of ground meat at a time, or chicken pieces with an inch of space around each one. Move each browned batch to a sheet pan and keep going. It takes longer at the stove, but the result is noticeably better.",
+        "Meat and vegetables give off water as they heat. With space around each piece, that water evaporates almost as fast as it appears and the surface browns. Pile too much into one pan and the water comes out faster than it can boil off. The pan cools, the food simmers in its own juices, and it turns grey and greasy instead of brown. You lose the browned flavor that makes taco meat and chili taste savory.",
+        "Brown in batches. A 12 in (30 cm) skillet handles about 1 to 1 1/2 lb (450 to 680 g) of ground meat at a time, or chicken pieces with roughly an inch of space around each one. Spread the meat out and leave it alone for the first few minutes so a crust can form before you start breaking it up.",
+        "For a crew, that means 3 1/2 lb of taco meat is three batches. Run two skillets side by side, or brown the meat in the wide pot you'll finish the dish in. The same rule applies in the oven: a half sheet pan holds about 3 lb of boneless chicken thighs in a single layer, so use two pans for 10 people and swap their rack positions halfway through.",
       ],
     },
     {
       id: "wet-surface",
-      heading: "Putting wet meat in the pan",
+      heading: "Putting meat in the pan wet",
       paragraphs: [
-        "Browning can't start until the surface water has boiled off, because water can't get much hotter than 212°F (100°C) and browning happens at much higher temperatures. Patting meat dry with paper towels means the pan's heat goes into browning rather than evaporating water. It matters most for chicken thighs, pork chops and anything that came out of a marinade. There is no need to rinse raw chicken first; it adds water and splashes raw juices around the sink.",
+        "A wet surface can't brown. The pan's heat goes into boiling off the water first, and water doesn't get much hotter than 212°F (100°C), well below the temperature where browning happens. Pat meat dry with paper towels before it goes in, especially chicken thighs, pork chops and anything that has been in a marinade. Scrape off excess marinade too; the sugar in it burns before the meat is done.",
+        "Don't rinse raw chicken. It doesn't make the chicken safer, because cooking to 165°F (74°C) is what kills bacteria, and USDA warns that rinsing splashes those bacteria onto the sink, counters and anything nearby. Pat it dry, then wash your hands and anything the raw chicken touched.",
+        "With a family pack, lay the pieces out on a sheet pan lined with paper towels and pat the tops dry in one pass. If you have time, salt the meat and leave it uncovered on a rack in the fridge for a few hours or overnight. The surface dries on its own and the meat is seasoned at the same time.",
       ],
     },
     {
       id: "pan-temperature",
-      heading: "Starting in a cold pan and moving food too soon",
+      heading: "Adding food before the pan is hot, then moving it too soon",
       paragraphs: [
-        "Preheat the pan before the oil and the oil before the food. A properly hot pan sears the surface quickly; a lukewarm one lets proteins bond to the metal before a crust forms, which is why food sticks. Once the meat is in, leave it alone. It releases on its own when the crust has formed, usually after a few minutes. If it is still stuck, it isn't ready to turn.",
+        "In a lukewarm pan, meat sticks and stews instead of searing. Moving it early makes things worse, because the crust tears off and stays on the pan.",
+        "Heat a stainless steel or cast-iron skillet over medium-high for 2 to 3 minutes, add the oil, and wait until it shimmers. Then add the food and leave it for 3 to 4 minutes. When the crust has formed, the meat releases from the pan with a gentle nudge. If it is still stuck, give it another minute. Nonstick pans are the exception: don't heat them empty on high, because it damages the coating. Add the oil first and use medium to medium-high heat.",
+        "When you brown several batches in a row, give the pan a minute to come back up to heat between them, and add a little fresh oil. If the bits on the bottom start to blacken rather than brown, wipe the pan out before the next batch, or the burnt taste ends up in the dish.",
       ],
     },
     {
       id: "seasoning",
-      heading: "Seasoning only at the end, or all at once when scaling",
+      heading: "Salting at the wrong time, and scaling salt by guesswork",
       paragraphs: [
-        "Salt added at the end sits on the surface and tastes harsh; salt added during cooking seasons the food all the way through. Season meat well ahead when you can, an hour or even overnight in the fridge, so the salt has time to dissolve and move into the meat. Season each component as you go rather than trying to fix the whole plate at the table.",
-        "When you scale a recipe up for a crew, start with about three-quarters of the multiplied salt and strong spices. A big pot reduces more slowly than a small one, so seasoning concentrates less, and salt is easy to add but impossible to take out. If a big pot of chili or soup still tastes flat after the salt is right, it usually needs acid: a squeeze of lime or a splash of vinegar brightens it more than extra spice.",
+        "Salt sprinkled on a finished plate only seasons the surface. Salt added earlier has time to get into the food. Salt meat ahead when you can: an hour before cooking, or up to a day ahead in the fridge. Then season each part of the meal as it cooks: the pasta water, the vegetables, the sauce. Trying to fix a whole dinner with the salt shaker at the table doesn't work.",
+        "Scaling needs more care. In principle, salt goes up with the amount of food. In practice, the salty ingredients in a big batch (stock, canned tomatoes, cheese, sausage, store-bought seasoning blends) vary by brand. A big pot also reduces differently from the small one the recipe was tested in, so it's hard to predict how strong it will taste. When you multiply a recipe, start with about three-quarters of the salt and strong spices like cayenne. Taste after 20 to 30 minutes of simmering, then adjust. You can always add salt. You can't take it out.",
+        "If a big pot of chili or soup still tastes flat once the salt is right, it usually needs acid rather than more spice: a squeeze of lime or a spoonful of vinegar. If it tastes thin as well as flat, simmer it uncovered for longer so it can reduce.",
       ],
     },
     {
       id: "doneness",
-      heading: "Guessing doneness instead of measuring it",
+      heading: "Guessing when meat is done",
       paragraphs: [
-        "Colour and cutting-to-check are unreliable, and they tend to push cooks toward overcooking \"to be safe\". A digital instant-read thermometer takes the guesswork out: cook to the target, then stop. Insert it into the thickest part of the meat, away from bone, fat and gristle.",
-        "USDA and Health Canada agree on most targets but not all. They differ on whole pork cuts, whole poultry, fish and egg dishes, so the table shows both. Follow the guidance that applies where you cook.",
+        "Color is not a reliable test. USDA notes that ground beef can turn brown before it reaches a safe temperature, and fully cooked chicken can still look pink near the bone. Cutting into meat to check lets juice run out, and cooks who guess usually make up for it by overcooking. That is where most dry chicken comes from.",
+        "Use a digital instant-read thermometer. Push it into the thickest part of the meat, away from bone, fat and gristle, and take the meat off the heat when it reaches the target. On a crowded tray, pieces vary in size and ovens have hot spots, so check the biggest piece and a couple from different parts of the pan. Test the thermometer now and then in a glass of ice water, where it should read 32°F (0°C).",
+        "USDA and Health Canada agree on most targets but not all. They differ on whole cuts of pork, whole poultry, fish and egg dishes, so the table shows both. Follow the guidance that applies where you cook.",
       ],
       table: {
         caption: "Safe minimum internal temperatures, USDA and Health Canada",
@@ -520,37 +543,69 @@ const rookieMistakes = buildSeoGuide({
     },
     {
       id: "resting",
-      heading: "Cutting into meat straight off the heat",
+      heading: "Slicing meat the moment it comes off the heat",
       paragraphs: [
-        "Meat keeps cooking after it comes off the heat, because the hot outside keeps pushing heat toward the cooler centre. For a thick roast, the internal temperature can climb several degrees while it rests. Resting also gives the juices a chance to thicken slightly, so less of them run out onto the board when you slice. Rest steaks and chops for about 5 minutes and roasts for 10 to 20, loosely covered with foil.",
+        "Thick cuts keep cooking after they leave the heat, because the hot outside keeps pushing heat into the center. A roast can rise several degrees while it rests. Resting also lets the temperature even out, so less juice runs onto the board when you slice. USDA's 145°F (63°C) target for whole cuts of beef, pork and lamb includes a 3-minute rest.",
+        "Rest steaks and chops for about 5 minutes and roasts for 10 to 20, loosely covered with foil. Then slice across the grain. Ground meat, chicken pieces and anything in a sauce don't need a rest. If a roast has to wait longer before a line opens, keep it covered in a low oven so it stays at 140°F (60°C) or above.",
       ],
     },
     {
-      id: "other-mistakes",
-      heading: "Three smaller mistakes worth fixing",
+      id: "scaling-a-batch",
+      heading: "Treating a big batch like a small one",
       paragraphs: [
-        "Garlic added with the onions at high heat burns long before the onions soften, and burnt garlic makes the whole dish bitter; add it once the onions are soft and cook it for under a minute. A dull knife slips off onions and tomatoes instead of cutting them, which is slower and more dangerous than a sharp one. And starting every component at the same time guarantees that something waits too long: work backward from the serving time and start the most forgiving dish first.",
+        "Cooking time depends on how thick the food is, not how much of it there is. Two pans of baked ziti at the original depth bake in about the original time. One pan twice as deep takes much longer, and the edges dry out before the center is hot. Split big batches across more pans rather than piling them higher.",
+        "A full oven also cooks more slowly than the recipe says, because there is more cold food in it and less room for air to move. Add 10 to 15 minutes, swap the pans between racks halfway through, and go by the thermometer rather than the timer. For soups and braises, start with about 90 percent of the multiplied liquid. A wide pot that is only a little bigger than the original reduces more slowly, and it's easier to add liquid than to cook it off.",
+      ],
+    },
+    {
+      id: "timing",
+      heading: "Starting everything at the same time",
+      paragraphs: [
+        "Start every part of the meal together and something will be done 30 minutes early and something else 10 minutes late. Write down the serving time, then work backward. Start the slowest, most forgiving dish first: chili, a braise or a tray bake that can sit covered once it's done. Rice and roasted potatoes come next, because they hold well. Leave the fast, fragile things for the last 15 minutes: green vegetables, anything seared, garlic bread, and dressing the salad.",
+        "Give yourself a margin the first few times you cook for the crew. Add 20 minutes to the plan, and do all the chopping, measuring and can-opening before the heat goes on.",
+      ],
+    },
+    {
+      id: "food-safety",
+      heading: "Leaving food out after dinner or during a call",
+      paragraphs: [
+        "Food left between 40 and 140°F (4 and 60°C) for more than two hours, or one hour above 90°F (32°C), should be thrown out. In a station kitchen that usually happens after dinner, when the pot sits on the stove while the crew cleans up or heads out on a call. Get leftovers into shallow containers and into the fridge within two hours. A full stockpot cools too slowly in the fridge, so divide it up first.",
+        "If a call comes in partway through the cook, turn off open burners and cover everything. Don't leave raw or partly cooked meat sitting warm to finish later. Get it into the fridge before you leave, and finish cooking it to a safe temperature as soon as you're back. Keep raw meat on its own cutting board, and keep it on the bottom shelf of the fridge so it can't drip onto anything else.",
+      ],
+    },
+    {
+      id: "garlic-and-knives",
+      heading: "Burning the garlic, and cooking with a dull knife",
+      paragraphs: [
+        "Garlic added with the onions over medium-high heat burns long before the onions soften, and burnt garlic makes the whole pot bitter. Cook the onions first, then add the garlic for the last minute before the liquid goes in.",
+        "A dull knife slips off onion skins and tomatoes instead of cutting them, which makes it slower and more dangerous than a sharp one. Prepping for 10 means a lot of chopping, so keep a sharpener in the kitchen and use it.",
       ],
     },
   ],
   practicalAdvice: [
-    "Brown meat in batches with space between the pieces; crowded meat steams and turns grey.",
-    "Pat meat dry before it goes in a hot pan.",
-    "Season during cooking, and start with three-quarters of the salt when you scale a recipe up.",
-    "Use a thermometer and pull meat when it hits the target instead of overcooking it to be safe.",
+    "Brown about 1 to 1 1/2 lb of meat at a time in a 12 in skillet, or run two pans at once.",
+    "Pat meat dry before it goes in a hot pan, and never rinse raw chicken.",
+    "When you scale a recipe, start with three-quarters of the salt and strong spices, taste after it simmers, and finish with acid if it tastes flat.",
+    "Check doneness with an instant-read thermometer, testing several pieces on a crowded tray.",
+    "Get leftovers into shallow containers and into the fridge within two hours.",
   ],
   mealRecommendations: [
     meal("sheet-pan-parmesan-dijon-chicken-thigh-dinner", "Sheet-Pan Parmesan Dijon Chicken Thighs", "A forgiving first crew dinner: dry the thighs well, space them out, and check with a thermometer."),
     meal("big-chili", "Beef and Bean Chili", "Good practice for browning in batches and seasoning a big pot."),
     meal("hall-taco-bar", "Taco Bar", "Brown the meat properly and the rest is assembly."),
-    meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "One pan, one timer, and a chance to practise searing before the rice goes in."),
-    meal("baked-ziti", "Baked Ziti", "Hard to get wrong once you undercook the pasta slightly before baking."),
+    meal("one-pot-chicken-rice", "One-Pot Chicken and Rice", "One pot, one timer, and a chance to practice searing before the rice goes in."),
+    meal("baked-ziti", "Baked Ziti", "Hard to get wrong if you undercook the pasta slightly before baking."),
   ],
   faqs: [
     {
       question: "Why does my ground beef turn grey instead of brown?",
       answer:
-        "The pan is overcrowded. The meat releases water faster than it can evaporate, so it simmers instead of searing. Brown it in batches of about 1 to 1 1/2 lb in a 12 in skillet over medium-high heat, and don't stir it for the first few minutes.",
+        "Too much meat in the pan. It gives off water faster than the water can evaporate, so it simmers instead of searing. Brown it in batches of about 1 to 1 1/2 lb in a 12 in skillet over medium-high heat, and leave it alone for the first few minutes before breaking it up.",
+    },
+    {
+      question: "Should you rinse raw chicken before cooking it?",
+      answer:
+        "No. USDA advises against it. Rinsing doesn't remove bacteria reliably, and the splashes spread them around the sink and counters. Cooking chicken to 165°F (74°C) is what makes it safe. Pat it dry with paper towels instead, then wash your hands and anything it touched.",
     },
     {
       question: "What temperature should chicken be cooked to?",
@@ -560,21 +615,22 @@ const rookieMistakes = buildSeoGuide({
     {
       question: "Why does my chili taste bland even though I followed the recipe?",
       answer:
-        "Scaled recipes often end up under-reduced and under-seasoned, because a big pot evaporates less than a small one. Simmer it longer uncovered to concentrate it, then adjust the salt at the end and add a splash of acid such as lime juice or vinegar.",
+        "Usually it needs more salt, more reduction or some acid. Taste it after it has simmered for a while, add salt in small amounts, and simmer it uncovered if it's thin, because a big pot reduces slowly. If it still tastes flat, a squeeze of lime or a splash of vinegar usually fixes it.",
     },
     {
       question: "Do I really need to rest meat after cooking?",
       answer:
-        "For steaks, chops and roasts, yes. The temperature keeps rising as the meat rests, and the juices thicken slightly so less runs out when you slice. About 5 minutes for steaks and chops and 10 to 20 minutes for roasts is enough.",
+        "For steaks, chops and roasts, yes. The temperature evens out as the meat rests, and less juice runs out when you slice it. About 5 minutes for steaks and chops and 10 to 20 minutes for roasts is enough. Chicken pieces, ground meat and dishes in sauce don't need it.",
     },
   ],
   relatedArticleSlugs: [
+    "rookie-firefighter-meal-guide",
     "cooking-for-10-firefighters",
     "station-kitchen-essentials",
-    "rookie-firefighter-meal-guide",
     "feeding-a-firehall-crew",
+    "best-station-chili-recipes",
   ],
-  sources: [SRC.usdaTemps, SRC.hcTemps],
+  sources: [SRC.usdaTemps, SRC.hcTemps, SRC.usdaWashing, SRC.usdaLeftovers],
 });
 
 const pastaForACrowd = buildSeoGuide({
@@ -597,7 +653,7 @@ const pastaForACrowd = buildSeoGuide({
     "keeping pasta warm",
   ],
   intro:
-    "Plan on 4 oz (115 g) of dry pasta per hungry adult when pasta is the main dish: 2 lb for 8 people, 2 1/2 lb for 10 and 3 lb for 12. The 2 oz serving on the box is a side portion. For sauce, one 24 oz (680 ml) jar, or about 3 cups of homemade sauce, per pound of pasta is a good starting point. What goes wrong at a station is usually timing rather than quantity: pasta keeps absorbing liquid after it is drained, so a pot that is perfect at 6:00 is soft by 6:45.",
+    "Plan on 4 oz (115 g) of dry pasta per hungry adult when pasta is the main dish: 2 lb for 8 people, 2 1/2 lb for 10 and 3 lb for 12. The 2 oz serving on the box is a side portion. For sauce, start with one 24 oz (680 ml) jar, or about 3 cups of homemade sauce, per pound of pasta. What goes wrong for a crowd is usually timing rather than quantity: pasta keeps absorbing liquid after it is drained, so a pot that is perfect when it comes off the stove is soft 45 minutes later.",
   sections: [
     {
       id: "quantities",
@@ -621,7 +677,7 @@ const pastaForACrowd = buildSeoGuide({
       id: "big-batch",
       heading: "Cooking several pounds at once",
       paragraphs: [
-        "The traditional ratio is about 4 quarts of water per pound of pasta, which gets unwieldy past 2 lb. You can use less water as long as you stir often during the first two minutes, when the surface starch is sticky and the pieces are most likely to clump. Two pots on two burners is often faster than one giant pot, because a very large volume of water takes a long time to boil on a home-style range.",
+        "The traditional ratio is about 4 quarts of water per pound of pasta, which gets unwieldy past 2 lb. You can use less water if you stir often in the first two minutes, when the surface starch is sticky and the pieces clump. Two pots on two burners are often faster than one giant pot, because a very large volume of water takes a long time to boil on a home-style range.",
       ],
       steps: [
         "Start the water first, covered, because it takes longer to boil than anything else in the meal.",
@@ -636,15 +692,15 @@ const pastaForACrowd = buildSeoGuide({
       id: "holding",
       heading: "Holding pasta when dinner might be delayed",
       paragraphs: [
-        "If a pasta dinner might be interrupted, cook the pasta slightly short of al dente and keep it separate from the sauce until the crew is ready to eat. Fully dressed pasta continues absorbing liquid while it sits and can become soft before everyone gets back to the station.",
-        "Drain the pasta about two minutes early, toss it with a spoonful of oil so it doesn't stick together, and spread it on a sheet pan so it stops cooking. Keep the sauce hot in its own pot. To serve, drop the pasta into boiling water for 30 to 60 seconds, or toss it in the simmering sauce for a minute or two with a splash of the reserved cooking water. Cooked pasta follows the same rule as other cooked food: refrigerate it if it will sit at room temperature for more than two hours.",
+        "Keep the pasta and sauce apart until the crew is ready to eat, because sauced pasta keeps soaking up liquid and goes soft. Drain the pasta about two minutes short of al dente, toss it with a spoonful of oil, and spread it on a sheet pan so it stops cooking. Keep the sauce hot in its own pot.",
+        "To serve, drop the pasta into boiling water for 30 to 60 seconds, or toss it in the simmering sauce with a splash of the reserved cooking water. If it won't be eaten within two hours, refrigerate it.",
       ],
     },
     {
       id: "baked-pasta",
       heading: "Baked pasta is the interruption-proof version",
       paragraphs: [
-        "Baked ziti, lasagna and pasta bakes can be assembled hours ahead, refrigerated, and baked when the crew is close to eating. Undercook the pasta by 2 to 3 minutes before it goes in the dish, because it keeps absorbing sauce in the oven, and use a little more sauce than seems necessary for the same reason. A dish going straight from the fridge into the oven often needs an hour or more; bake it covered and check that the centre reaches 165°F (74°C) before serving.",
+        "Baked ziti, lasagna and pasta bakes can be assembled hours ahead, refrigerated, and baked when the crew is close to eating. Undercook the pasta by 2 to 3 minutes before it goes in the dish, because it keeps absorbing sauce in the oven, and use a little more sauce than seems necessary for the same reason. A dish going straight from the fridge into the oven often needs an hour or more; bake it covered and check that the center reaches 165°F (74°C) before serving.",
         "Short, sturdy shapes with ridges or tubes, such as rigatoni, penne and ziti, hold sauce and survive holding and baking. Thin long pasta like angel hair goes soft fastest and is the worst choice when dinner might wait.",
       ],
     },
@@ -711,13 +767,13 @@ const slowCooker = buildSeoGuide({
     "slow cooker pulled pork",
   ],
   intro:
-    "A slow cooker suits an unpredictable shift better than almost any other appliance: USDA notes that food stays safe as long as the cooker is operating, and a covered pot of pulled pork or chili is just as good at 8:30 as at 6:00. It works best with tough, collagen-rich cuts like pork shoulder, beef chuck and chicken thighs, and with chili, soups and stews. It does a poor job with lean chicken breast on a long cook, pasta, and anything meant to be crisp.",
+    "The best slow cooker meals for a crowd use tough, collagen-rich cuts (pork shoulder, beef chuck, chicken thighs) or chili, soup and stew, cooked in a 7 to 8 qt (6.6 to 7.6 L) cooker for 10 to 12 people. USDA notes that food stays safe as long as the cooker is running, so a covered pot rides out a call better than almost anything else. The usual failures are lean chicken breast drying out on a long cook and frozen meat going in without being thawed.",
   sections: [
     {
       id: "size",
       heading: "Size the cooker to the crew",
       paragraphs: [
-        "A 6 qt (5.7 L) cooker handles about six to eight servings of stew, chili or pulled meat; a 7 to 8 qt (6.6 to 7.6 L) cooker handles ten to twelve. For more than that, run two cookers rather than overfilling one. Check the manual for the minimum and maximum fill: too little food cooks fast and can scorch, and an overfilled cooker takes longer to come up to a safe temperature.",
+        "A 6 qt (5.7 L) cooker handles about 6 to 8 servings of stew, chili or pulled meat; a 7 to 8 qt (6.6 to 7.6 L) cooker handles 10 to 12. For more than that, run two cookers rather than overfilling one. Check the manual for the minimum and maximum fill: too little food cooks fast and can scorch, and an overfilled cooker takes longer to come up to a safe temperature.",
       ],
     },
     {
@@ -734,7 +790,7 @@ const slowCooker = buildSeoGuide({
           ["Beef chuck roast, 3 to 4 lb", "8 to 9 hours", "5 to 6 hours", "Pot roast or shredded beef"],
           ["Chicken thighs", "4 to 6 hours", "2 1/2 to 3 hours", "Stay moist; shred for tacos or bowls"],
           ["Chicken breasts", "3 to 4 hours", "About 2 hours", "Dry out if left longer; thighs are more forgiving"],
-          ["Chili with browned ground beef", "6 to 8 hours", "3 to 4 hours", "Brown the meat first for better flavour"],
+          ["Chili with browned ground beef", "6 to 8 hours", "3 to 4 hours", "Brown the meat first for better flavor"],
         ],
       },
     },
@@ -758,15 +814,15 @@ const slowCooker = buildSeoGuide({
       id: "beans",
       heading: "A warning about dried red kidney beans",
       paragraphs: [
-        "Dried red kidney beans contain a natural toxin, phytohaemagglutinin, that is destroyed by boiling but not by the lower temperatures a slow cooker reaches. FDA guidance, summarized by Kansas State University extension, is to soak dried kidney beans for at least five hours, drain them, and boil them in fresh water before they go into a slow cooker. The toxin is destroyed after 10 minutes at a full boil, and 30 minutes is recommended to be sure. Canned kidney beans are already fully cooked and are safe to add straight to the pot.",
+        "Dried red kidney beans contain a natural toxin, phytohemagglutinin, that boiling destroys but the lower temperatures in a slow cooker do not. FDA guidance, summarized by Kansas State University extension, is to soak dried kidney beans for at least five hours, drain them, and boil them hard in fresh water for at least 10 minutes (30 minutes to be sure) before they go into a slow cooker. Canned kidney beans are already cooked and can go straight into the pot.",
       ],
     },
     {
-      id: "better-flavour",
-      heading: "Getting better flavour out of a slow cooker",
+      id: "better-flavor",
+      heading: "Getting better flavor out of a slow cooker",
       paragraphs: [
-        "Brown the meat in a skillet before it goes in when you have ten minutes; the browned surface adds a depth of flavour that slow, moist cooking can't create on its own. Use less liquid than a stovetop recipe calls for, because the lid traps moisture and very little evaporates. Too much liquid gives you a watery sauce.",
-        "Add dairy, fresh herbs and delicate vegetables like peas or spinach in the last 30 minutes; dairy can curdle and greens turn drab over a long cook. If the sauce is thin at the end, stir in a cornstarch slurry and cook on high with the lid off for 15 to 30 minutes, or reduce the liquid in a pan on the stove. A splash of vinegar or citrus just before serving sharpens flavours that have gone soft over hours of cooking.",
+        "Brown the meat in a skillet before it goes in when you have ten minutes; the browned surface adds a depth of flavor that slow, moist cooking can't create on its own. Use less liquid than a stovetop recipe calls for, because the lid traps moisture and very little evaporates. Too much liquid gives you a watery sauce.",
+        "Add dairy, fresh herbs and delicate vegetables like peas or spinach in the last 30 minutes; dairy can curdle and greens turn drab over a long cook. If the sauce is thin at the end, stir in a cornstarch slurry and cook on high with the lid off for 15 to 30 minutes, or reduce the liquid in a pan on the stove. A splash of vinegar or citrus just before serving sharpens flavors that have gone soft over hours of cooking.",
       ],
     },
   ],
@@ -803,7 +859,7 @@ const slowCooker = buildSeoGuide({
     {
       question: "Do I have to brown meat before slow cooking?",
       answer:
-        "No, it is safe either way. Browning adds flavour, because the browned surface develops savoury compounds that moist heat can't produce, so do it when you have ten minutes. Brown in batches so the meat sears instead of steaming.",
+        "No, it is safe either way. Browning adds flavor, because the browned surface develops savory compounds that moist heat can't produce, so do it when you have ten minutes. Brown in batches so the meat sears instead of steaming.",
     },
   ],
   relatedArticleSlugs: [
@@ -835,7 +891,7 @@ const mealPrepStorage = buildSeoGuide({
     "cooling food quickly",
   ],
   intro:
-    "Meal prep at a station is less about lining up identical containers and more about three habits: prepping the components that save time later, cooling big batches fast enough to be safe, and reheating each food in a way that doesn't ruin it. Because different shifts share the same fridge, labelling matters as much as cooking. Nobody on the next shift knows when your chili was made unless the container says so.",
+    "Firehouse meal prep works best when you cook components ahead (chili, sauces, grains, an assembled baked pasta), get them into shallow containers in the fridge within two hours, and reheat each one in the way that suits it. The two things that go wrong are a full stockpot cooling too slowly and leftovers nobody can date. In a fridge shared by rotating shifts, the label matters as much as the cooking.",
   sections: [
     {
       id: "what-to-prep",
@@ -849,7 +905,7 @@ const mealPrepStorage = buildSeoGuide({
       id: "cooling",
       heading: "Cooling a big batch quickly",
       paragraphs: [
-        "A full stockpot of chili cools very slowly because the centre is insulated by everything around it, and that slow cooling keeps food in the temperature range where bacteria grow. Commercial kitchens follow the FDA Food Code's two-stage rule: from 135°F to 70°F (57 to 21°C) within 2 hours, and down to 41°F (5°C) within 6 hours in total. At a station, the practical guidance from USDA and Health Canada is to get cooked food into the fridge within two hours, in shallow containers.",
+        "A full stockpot of chili cools very slowly because the center is insulated by everything around it, and that slow cooling keeps food in the temperature range where bacteria grow. Commercial kitchens follow the FDA Food Code's two-stage rule: from 135°F to 70°F (57 to 21°C) within 2 hours, and down to 41°F (5°C) within 6 hours in total. At a station, the practical guidance from USDA and Health Canada is to get cooked food into the fridge within two hours, in shallow containers.",
       ],
       steps: [
         "Divide the batch into shallow containers, ideally no more than 2 in (5 cm) deep. Metal pans cool faster than plastic.",
@@ -919,7 +975,7 @@ const mealPrepStorage = buildSeoGuide({
     {
       question: "How long do leftovers last in the station fridge?",
       answer:
-        "Health Canada recommends eating refrigerated leftovers within 2 to 3 days (2 to 4 for poultry); USDA says 3 to 4 days. With shifts rotating through the same fridge, labelling everything with the date and using the shorter window is the simplest rule.",
+        "Health Canada recommends eating refrigerated leftovers within 2 to 3 days (2 to 4 for poultry); USDA says 3 to 4 days. With shifts rotating through the same fridge, labeling everything with the date and using the shorter window is the simplest rule.",
     },
     {
       question: "Can I put hot food straight into the fridge?",
@@ -967,7 +1023,7 @@ const breakfastForACrowd = buildSeoGuide({
     "bacon in the oven for a crowd",
   ],
   intro:
-    "Cooking breakfast for a crew is mostly about moving work off the stovetop. Bacon goes on sheet pans in the oven, eggs are either baked in a pan or scrambled at the last minute, and anything assembled the night before, like an egg bake or French toast casserole, only needs oven time in the morning. For 12 people, plan on roughly 2 to 3 dozen eggs, 36 slices of bacon or sausage links, and potatoes or bread on the side.",
+    "Breakfast for a crowd of 12 takes 2 to 3 dozen eggs, about 36 slices of bacon (2 1/2 to 3 lb) or sausage links, and potatoes or bread on the side. Getting it all hot at once means moving work off the stovetop: bacon on sheet pans in the oven, eggs baked in a pan or scrambled at the last minute, and an egg bake or French toast casserole assembled the night before. What goes wrong is scrambled eggs held too long and pancakes stacked until they go soggy.",
   sections: [
     {
       id: "quantities",
@@ -992,7 +1048,8 @@ const breakfastForACrowd = buildSeoGuide({
       id: "oven-bacon",
       heading: "Cook bacon in the oven, not in a skillet",
       paragraphs: [
-        "Pan-frying 36 slices means six or seven batches and a stovetop covered in grease. In the oven, four sheet pans cook the whole lot at once and the bacon cooks more evenly because it lies flat. Line the pans with foil for easy cleanup, lay the slices close together without overlapping, and cook at 400°F (200°C) for about 15 to 20 minutes for regular bacon, longer for thick-cut. There's no need to flip it. Swap the pans between racks halfway, because most ovens run hotter in some spots. For crisper bacon, cook it on a wire rack set in the pan.",
+        "Pan-frying 36 slices means six or seven batches and a stovetop covered in grease. In the oven, four sheet pans cook the whole lot at once, and the bacon cooks more evenly because it lies flat. Line the pans with foil, lay the slices close together without overlapping, and cook at 400°F (200°C) for 15 to 20 minutes for regular bacon, longer for thick-cut. There's no need to flip it.",
+        "Swap the pans between racks halfway, because most ovens run hotter in some spots. For crisper bacon, set a wire rack in each pan. Pour the cooled fat into a can for the trash rather than down the sink.",
       ],
     },
     {
@@ -1000,14 +1057,14 @@ const breakfastForACrowd = buildSeoGuide({
       heading: "Eggs that hold, and eggs that don't",
       paragraphs: [
         "Scrambled eggs are best in the first few minutes. As they sit, the proteins keep tightening and squeeze out water, which is why a hotel pan of scrambled eggs turns rubbery with a puddle underneath. If the crew eats together, scramble in batches over medium-low heat and pull them while they still look slightly wet, since they finish cooking on the way to the table.",
-        "If people will be eating over an hour, bake the eggs instead. Whisk 18 to 24 eggs with a splash of milk and seasoning, pour them into a greased half sheet pan, and bake at 350°F (175°C) until the centre is just set. Cut them into squares for breakfast sandwiches or burritos. They hold and reheat far better than scrambled eggs. For egg bakes and casseroles, USDA's safe temperature is 160°F (71°C) and Health Canada's is 74°C (165°F).",
+        "If people will be eating over an hour, bake the eggs instead. Whisk 18 to 24 eggs with a splash of milk and seasoning, pour them into a greased half sheet pan, and bake at 350°F (175°C) until the center is just set. Cut them into squares for breakfast sandwiches or burritos. They hold and reheat far better than scrambled eggs. For egg bakes and casseroles, USDA's safe temperature is 160°F (71°C) and Health Canada's is 74°C (165°F).",
       ],
     },
     {
       id: "make-ahead",
       heading: "Make-ahead bakes for shift change",
       paragraphs: [
-        "An egg bake or French toast casserole assembled the evening before is the easiest way to serve a hot breakfast at shift change. The bread soaks up the custard overnight, which is what gives French toast casserole its texture. In the morning, put the dish in the oven straight from the fridge. A cold dish takes longer than the recipe's time, so bake it covered for most of the time, uncover it to brown, and check that the centre has reached a safe temperature rather than relying on the clock.",
+        "An egg bake or French toast casserole assembled the evening before is the easiest way to serve a hot breakfast at shift change. The bread soaks up the custard overnight, which is what gives French toast casserole its texture. In the morning, put the dish in the oven straight from the fridge. A cold dish takes longer than the recipe's time, so bake it covered for most of the time, uncover it to brown, and check that the center has reached a safe temperature rather than relying on the clock.",
       ],
     },
     {
@@ -1030,7 +1087,7 @@ const breakfastForACrowd = buildSeoGuide({
       paragraphs: [
         "When the crew will drift in over an hour or more, a burrito line beats any plated breakfast. Every filling can be cooked in the oven and held: baked eggs cut into strips, sausage or bacon from the sheet pans, and roasted potatoes. Put them out in shallow pans with cheese, salsa and hot sauce, and warm large 10 to 12 in (25 to 30 cm) flour tortillas just before the line opens. Wrapped in a clean towel inside a covered dish or a small cooler, warm tortillas stay soft for about an hour; cold ones crack when they are folded.",
         "Burritos can also be rolled ahead. Wrap each one tightly in foil and hold them in a 200°F (95°C) oven for up to about an hour, or chill them and reheat to 165°F (74°C) for the next morning. Leave salsa and sour cream out of any burrito you plan to hold, because they make the tortilla soggy.",
-        "Breakfast usually overlaps with the shift change, so clear up before the next crew needs the kitchen. Soak sheet pans as soon as they are empty, scrape the griddle while it is still warm, and put leftover fillings in shallow, labelled containers in the fridge within two hours.",
+        "Breakfast usually overlaps with the shift change, so clear up before the next crew needs the kitchen. Soak sheet pans as soon as they are empty, scrape the griddle while it is still warm, and put leftover fillings in shallow, labeled containers in the fridge within two hours.",
       ],
     },
     {
@@ -1077,7 +1134,7 @@ const breakfastForACrowd = buildSeoGuide({
     {
       question: "Can I make a breakfast casserole the night before?",
       answer:
-        "Yes, and it is usually better for it, because the bread has time to soak up the eggs. Refrigerate it covered, then bake it straight from the fridge, allowing extra time. Check the centre with a thermometer: 160°F (71°C) by USDA guidance, or 74°C (165°F) by Health Canada's.",
+        "Yes, and it is usually better for it, because the bread has time to soak up the eggs. Refrigerate it covered, then bake it straight from the fridge, allowing extra time. Check the center with a thermometer: 160°F (71°C) by USDA guidance, or 74°C (165°F) by Health Canada's.",
     },
     {
       question: "What's the best way to cook bacon for a crowd?",
@@ -1109,22 +1166,22 @@ const chiliForACrowd = buildSeoGuide({
     "big batch chili",
   ],
   intro:
-    "For 10 people, a big pot of chili starts with about 3 1/2 lb (1.6 kg) of ground beef, three cans of beans and two large cans of crushed tomatoes, which makes around 5 quarts (4.7 L), enough for a generous bowl each with seconds. Chili is a natural station meal because it holds for hours on low heat and reheats well, but big batches have their own problems: meat that steams instead of browning, seasoning that doesn't scale evenly, a scorched bottom, and a pot that takes too long to cool.",
+    "Chili for a crowd of 10 takes about 3 1/2 lb (1.6 kg) of ground beef, four cans of beans and two large cans of crushed tomatoes. That makes about 5 quarts (4.7 L), a generous bowl each with room for seconds. Chili holds for hours on low heat and reheats well, which is why it suits a station. Big batches go wrong in four places: meat that steams grey instead of browning, seasoning that's hard to judge, a scorched bottom, and a full pot that takes too long to cool.",
   sections: [
     {
       id: "quantities",
       heading: "How much chili for 6 to 12 people",
       paragraphs: [
-        "Plan about 1 1/2 cups (350 ml) of chili per serving, plus extra if the crew goes back for seconds. Use a pot that holds at least half as much again as the finished chili so you can stir without slopping it over: an 8 qt Dutch oven or stockpot for 10 people.",
+        "Plan about 1 1/2 cups (350 ml) of chili per serving, plus extra if the crew goes back for seconds. Use a pot that holds at least half as much again as the finished chili so you can stir without slopping it over: an 8 qt Dutch oven or stockpot for 10 people, and a 10 to 12 qt pot for 12.",
       ],
       table: {
-        caption: "Chili quantities by crew size (can sizes: beans 15 oz / 540 ml, tomatoes 28 oz / 796 ml)",
+        caption: "Chili quantities by crew size (beans in 15 to 19 oz / 425 to 540 ml cans, tomatoes in 28 oz / 796 ml cans)",
         columns: ["Crew", "Ground beef", "Cans of beans", "Cans of crushed tomatoes", "Onions", "Finished yield"],
         rows: [
           ["6", "2 lb (900 g)", "2", "1", "1 large", "About 3 qt"],
-          ["8", "2 3/4 lb (1.2 kg)", "3", "2", "2", "About 4 qt"],
-          ["10", "3 1/2 lb (1.6 kg)", "3", "2", "2", "About 5 qt"],
-          ["12", "4 lb (1.8 kg)", "4", "3", "3", "About 6 qt"],
+          ["8", "2 3/4 lb (1.2 kg)", "3", "2", "2", "About 4 1/2 qt"],
+          ["10", "3 1/2 lb (1.6 kg)", "4", "2", "2", "About 5 qt"],
+          ["12", "4 lb (1.8 kg)", "4", "3", "3", "About 6 1/2 qt"],
         ],
       },
     },
@@ -1132,8 +1189,8 @@ const chiliForACrowd = buildSeoGuide({
       id: "method",
       heading: "Browning, blooming, and simmering a big pot",
       paragraphs: [
-        "Brown the meat in batches of about 1 to 1 1/2 lb. Put all 3 1/2 lb in the pot at once and it releases more water than the pan can evaporate, so it turns grey and simmers instead of browning, and you lose the savoury depth that makes chili taste like chili. Move each batch out as it browns, pour off most of the fat, and soften the onions in what is left.",
-        "Add the chili powder, cumin and other dried spices to the hot fat for 30 to 60 seconds before the liquid goes in. Many of the flavour compounds in dried spices dissolve in fat, and a short time in hot oil makes them noticeably stronger and less dusty. Keep it moving so the spices don't scorch.",
+        "Brown the meat in batches of about 1 to 1 1/2 lb. Put all 3 1/2 lb in the pot at once and it releases more water than the pan can evaporate, so it turns grey and simmers instead of browning, and you lose the savory depth that makes chili taste like chili. Move each batch out as it browns, pour off most of the fat, and soften the onions in what is left.",
+        "Add the chili powder, cumin and other dried spices to the hot fat for 30 to 60 seconds before the liquid goes in. Many of the flavor compounds in dried spices dissolve in fat, and a short time in hot oil makes them noticeably stronger and less dusty. Keep it moving so the spices don't scorch.",
         "Then add the meat back with the tomatoes and beans, and simmer uncovered for at least 45 minutes to an hour for ground beef, or 2 1/2 to 3 hours if you are using cubed chuck. A big pot needs longer than a small one to reduce and concentrate. Stir from the bottom every 10 to 15 minutes; thick chili scorches easily where it touches the base of the pot.",
       ],
     },
@@ -1141,8 +1198,8 @@ const chiliForACrowd = buildSeoGuide({
       id: "seasoning",
       heading: "Seasoning a scaled-up pot",
       paragraphs: [
-        "If you are multiplying a smaller recipe, start with about three-quarters of the scaled chili powder, cayenne and salt. A large pot evaporates less liquid for its volume than a small one, so the flavour concentrates less, and heat and salt are easy to add but impossible to remove. Taste after 30 minutes of simmering and adjust.",
-        "To thicken, stir in a slurry of masa harina and water for the last 10 minutes; it thickens and adds a light corn flavour. Finish with salt and a squeeze of lime or a splash of vinegar. A little acid at the end is often what a chili that tastes flat is missing.",
+        "Salt and spice scale with the amount of food, but when you multiply a smaller recipe, start with about three-quarters of the chili powder, cayenne and salt. Canned tomatoes, beans, stock and chili powder blends all vary in salt and heat by brand, and both are easy to add but impossible to take out. Taste after 30 minutes of simmering and adjust.",
+        "A big pot also reduces proportionally less than a small one, so a scaled chili can taste thin and flat even when the seasoning is right. Simmer it uncovered for longer before adding more spice. To thicken it faster, stir in a slurry of masa harina and water for the last 10 minutes, which also adds a light corn flavor. Finish with a squeeze of lime or a splash of vinegar; a little acid is often what a flat chili is missing.",
       ],
     },
     {
@@ -1163,7 +1220,7 @@ const chiliForACrowd = buildSeoGuide({
       id: "cooling",
       heading: "Cooling and storing the leftovers",
       paragraphs: [
-        "A full pot of chili is one of the slowest things in a kitchen to cool, because the centre is insulated by everything around it. Don't put the pot in the fridge. Commercial kitchens follow the FDA Food Code, which requires cooked food to get from 135°F to 70°F (57 to 21°C) within 2 hours and to 41°F (5°C) within 6 hours in total; the home guidance from USDA and Health Canada is to refrigerate within two hours.",
+        "A full pot of chili is one of the slowest things in a kitchen to cool, because the center is insulated by everything around it. Don't put the pot in the fridge. Commercial kitchens follow the FDA Food Code, which requires cooked food to get from 135°F to 70°F (57 to 21°C) within 2 hours and to 41°F (5°C) within 6 hours in total; the home guidance from USDA and Health Canada is to refrigerate within two hours.",
       ],
       steps: [
         "Stir the pot in a sink of ice water for a few minutes to take the heat off.",
@@ -1192,7 +1249,7 @@ const chiliForACrowd = buildSeoGuide({
     {
       question: "How much chili do I need for 10 people?",
       answer:
-        "About 5 quarts (4.7 L), which allows roughly 1 1/2 cups per person with some seconds. That takes around 3 1/2 lb (1.6 kg) of ground beef, three 15 oz (540 ml) cans of beans and two 28 oz (796 ml) cans of crushed tomatoes.",
+        "About 5 quarts (4.7 L), which allows roughly 1 1/2 cups per person with room for seconds. That takes around 3 1/2 lb (1.6 kg) of ground beef, four 15 to 19 oz (425 to 540 ml) cans of beans, two 28 oz (796 ml) cans of crushed tomatoes and two onions.",
     },
     {
       question: "How do I thicken chili?",
@@ -1284,7 +1341,7 @@ const kitchenEquipment = buildSeoGuide({
       id: "shared-kitchen",
       heading: "Keeping a shared kitchen usable",
       paragraphs: [
-        "Equipment in a shared kitchen wears out faster when nobody owns it. Give knives a dedicated block or magnetic strip so they don't dull in a drawer, dry cast iron on a warm burner and wipe it with a little oil after washing, and keep a roll of tape and a marker with the storage containers so every leftover gets a date. A labelled shelf in the fridge for each shift stops food being thrown out by mistake, or eaten past its time.",
+        "Equipment in a shared kitchen wears out faster when nobody owns it. Give knives a dedicated block or magnetic strip so they don't dull in a drawer, dry cast iron on a warm burner and wipe it with a little oil after washing, and keep a roll of tape and a marker with the storage containers so every leftover gets a date. A labeled shelf in the fridge for each shift stops food being thrown out by mistake, or eaten past its time.",
       ],
     },
   ],

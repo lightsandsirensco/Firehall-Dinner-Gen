@@ -5,7 +5,7 @@
   "description": "Cheap meals for a crowd that still taste good: low-cost proteins, stretching meat with beans and lentils, cooking dried beans safely, and budget menus.",
   "topic": "meal_planning",
   "pillar": "recipes_meals",
-  "intro": "Budget crew dinners get cheaper in two ways: choosing proteins that cost less per serving, and letting beans, grains and vegetables carry more of the plate. Bone-in chicken, pork shoulder, eggs, dried beans and ground meat stretched with lentils cover most tight weeks. None of them needs expensive ingredients to taste good; they need browning, enough salt, and something acidic at the end. Prices vary by region and week, so this guide compares proteins by cost per serving rather than listing prices, and the shelf tag's unit price (per pound or per kilogram) is the number to check. The guide also covers how to stretch meat without anyone noticing, dried beans done safely, and five budget dinners for 10.",
+  "intro": "Cheap meals for a crowd come from two moves: buying proteins that cost less per serving, and letting beans, grains and vegetables carry more of the plate. Bone-in chicken, pork shoulder, eggs, dried beans and ground meat stretched with lentils cover most tight weeks. None of them needs expensive ingredients to taste good. They need hard browning, enough salt, and something acidic at the end. Prices change by region and by week, so compare the unit price on the shelf tag (per pound or per kilogram) rather than the package price.",
   "sections": [
     {
       "id": "proteins",
@@ -88,7 +88,7 @@
       "heading": "Where the flavor comes from when the budget is tight",
       "paragraphs": [
         "Cheap food tastes cheap when it is under-browned and under-seasoned. Brown meat hard, in batches; the browned crust and the brown film left in the pan are most of the flavor in a stew or sauce, so deglaze the pan with a splash of stock or water and scrape it up. Cook spices and tomato paste in the hot fat for a minute before adding liquid, which makes them taste fuller. Season with salt in stages, and finish with something acidic, such as a squeeze of lime, a spoon of vinegar or pickled onions, which makes a heavy dish taste brighter.",
-        "Some of the best flavor boosters cost almost nothing: a Parmesan rind simmered in soup, the chicken carcass from a roast turned into stock (simmer 3 to 4 hours with an onion and a carrot), and one bunch of fresh herbs used across two dinners."
+        "Some of the most useful flavor comes from things you would otherwise throw away: a Parmesan rind simmered in soup, the chicken carcass from a roast turned into stock (simmer 3 to 4 hours with an onion and a carrot), and one bunch of fresh herbs used across two dinners."
       ]
     },
     {
@@ -182,6 +182,10 @@
     {
       "question": "What is the cheapest protein for feeding a crowd?",
       "answer": "Dried beans and lentils are the cheapest per serving, followed in most stores by eggs, chicken leg quarters or thighs, whole chickens, and pork shoulder. Prices move with the season, so compare the unit price per pound or kilogram on the shelf tag rather than the price of the package."
+    },
+    {
+      "question": "How do you stretch ground beef for a big crew?",
+      "answer": "Replace up to a third of the meat with cooked lentils, beans, finely chopped mushrooms or grated vegetables, which take on the seasoning and the browned flavor. In chili, tacos and pasta sauce most people won't notice. Brown the meat hard first, then add the filler, so the dish still tastes meaty."
     }
   ],
   "relatedArticleSlugs": [
@@ -198,7 +202,7 @@
     "cooking dried beans"
   ],
   "publishedAt": "2026-05-27T18:00:00.000Z",
-  "updatedAt": "2026-09-30T18:00:00.000Z",
+  "updatedAt": "2026-10-03T18:00:00.000Z",
   "readMinutes": 8,
   "seoTitle": "Cheap Meals for a Crowd That Still Taste Good",
   "sources": [
