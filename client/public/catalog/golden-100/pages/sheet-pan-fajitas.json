@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 424,
-  "protein": 35,
-  "carbs": 11,
-  "fats": 26,
+  "calories": 845,
+  "protein": 46,
+  "carbs": 82,
+  "fats": 36,
   "tags": [
     "protein:chicken",
     "format:sheet_pan",
@@ -68,6 +68,12 @@
       "quantity": "4",
       "unit": "count",
       "group": "Finish"
+    },
+    {
+      "name": "Flour Tortillas (8-Inch)",
+      "quantity": "24",
+      "unit": "count",
+      "group": "Serve"
     }
   ],
   "steps": [
@@ -88,7 +94,7 @@
     {
       "stepNumber": 3,
       "title": "Serve family-style",
-      "instruction": "Pile Chicken Fajitas onto trays. Hold backup pan foil-covered at 200°F. Squeeze lime at the line if using.",
+      "instruction": "Warm tortillas wrapped in foil in the oven for the last 10 minutes. Pile Chicken Fajitas onto trays next to the tortillas and lime wedges. Hold backup pan foil-covered at 200°F.",
       "minutes": 5,
       "heatLevel": "low"
     },
@@ -123,25 +129,26 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 424,
-    "protein": 35,
-    "carbs": 11,
-    "fats": 26,
+    "calories": 845,
+    "protein": 46,
+    "carbs": 82,
+    "fats": 36,
     "label": "per serving (hall portion)",
     "source": "calculated",
     "filterFlags": {
       "highProtein": true,
-      "under700Calories": true,
-      "under30gFat": true,
-      "highCarb": false,
-      "lowCarb": true,
+      "under700Calories": false,
+      "under30gFat": false,
+      "highCarb": true,
+      "lowCarb": false,
       "mealPrepFriendly": false
     },
     "badgeCandidates": {
       "highProtein": true,
       "lighterOption": false,
       "performanceMeal": false
-    }
+    },
+    "estimateAvailable": true
   },
   "heroImage": "/images/golden-100/sheet-pan-fajitas.jpg",
   "heroImageAlt": "Chicken Fajitas — chicken strips, bell peppers, and red onion",
@@ -176,12 +183,18 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 7,
+    "totalCount": 7,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
         "name": "Fajita Seasoning",
+        "allergens": [
+          "gluten"
+        ]
+      },
+      {
+        "name": "Flour Tortillas (8-Inch)",
         "allergens": [
           "gluten"
         ]
@@ -204,10 +217,10 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+        "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use certified gluten-free tortillas or corn tortillas."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-10-03T22:41:15.935Z"
   },
   "avoidTags": [
     "onions",

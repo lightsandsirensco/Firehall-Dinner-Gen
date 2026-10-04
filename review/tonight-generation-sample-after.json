@@ -1,0 +1,2449 @@
+{
+  "base": "http://localhost:5057",
+  "total": 72,
+  "ok": 72,
+  "errors": 0,
+  "issueCounts": {},
+  "results": [
+    {
+      "i": 0,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "any",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067540805-0",
+        "generation_intent": "user"
+      },
+      "slug": "crispy-fish-taco-night",
+      "title": "Fish Tacos",
+      "displayed_title": "Fish Tacos",
+      "hero_image": "/images/golden-100/crispy-fish-taco-night.jpg",
+      "hero_status": "ready",
+      "protein_label": "Fish",
+      "page_title": "Fish Tacos",
+      "page_hero": "/images/golden-100/crispy-fish-taco-night.jpg",
+      "chips": [
+        "Tacos",
+        "Fish"
+      ],
+      "issues": []
+    },
+    {
+      "i": 1,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "chicken",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067540967-1",
+        "generation_intent": "user"
+      },
+      "slug": "greek-chicken-pitas",
+      "title": "Greek Chicken Pitas",
+      "displayed_title": "Greek Chicken Pitas",
+      "hero_image": "/images/hall-expansion/greek-chicken-pitas.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Greek Chicken Pitas",
+      "page_hero": "/images/hall-expansion/greek-chicken-pitas.jpg",
+      "chips": [
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 2,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "beef",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541054-2",
+        "generation_intent": "user"
+      },
+      "slug": "bbq-meatball-skewers",
+      "title": "BBQ Meatball Skewers",
+      "displayed_title": "BBQ Meatball Skewers",
+      "hero_image": "/images/hall-expansion/bbq-meatball-skewers.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "BBQ Meatball Skewers",
+      "page_hero": "/images/hall-expansion/bbq-meatball-skewers.jpg",
+      "chips": [
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 3,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "pork",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541119-3",
+        "generation_intent": "user"
+      },
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "displayed_title": "Hall BLT Sandwich Feed",
+      "hero_image": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "hero_status": "ready",
+      "protein_label": "Bacon",
+      "page_title": "Hall BLT Sandwich Feed",
+      "page_hero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "chips": [
+        "Sandwiches",
+        "Bacon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 4,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "turkey",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541173-4",
+        "generation_intent": "user"
+      },
+      "slug": "firehouse-turkey-white-bean-soup",
+      "title": "Firehouse Turkey & White Bean Soup",
+      "displayed_title": "Firehouse Turkey & White Bean Soup",
+      "hero_image": "/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Firehouse Turkey & White Bean Soup",
+      "page_hero": "/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+      "chips": [
+        "Soup & Chili",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 5,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "seafood",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541212-5",
+        "generation_intent": "user"
+      },
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo",
+      "displayed_title": "Lemon Salmon Orzo",
+      "hero_image": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Salmon",
+      "page_title": "Lemon Salmon Orzo",
+      "page_hero": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
+      "chips": [
+        "Pasta",
+        "Salmon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 6,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "vegetarian",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541258-6",
+        "generation_intent": "user"
+      },
+      "slug": "baked-falafel-hall-bowls",
+      "title": "Falafel Bowls",
+      "displayed_title": "Falafel Bowls",
+      "hero_image": "/images/golden-100/baked-falafel-hall-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Falafel Bowls",
+      "page_hero": "/images/golden-100/baked-falafel-hall-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 7,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "any",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541295-7",
+        "generation_intent": "user"
+      },
+      "slug": "honey-chipotle-chicken-thighs",
+      "title": "Honey Chipotle Grilled Chicken Thighs",
+      "displayed_title": "Honey Chipotle Grilled Chicken Thighs",
+      "hero_image": "/images/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Honey Chipotle Grilled Chicken Thighs",
+      "page_hero": "/images/smoker-catalog/honey-chipotle-chicken-thighs.jpg",
+      "chips": [
+        "Grill",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 8,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "chicken",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541454-8",
+        "generation_intent": "user"
+      },
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Chicken Lettuce Cups",
+      "displayed_title": "Chicken Lettuce Cups",
+      "hero_image": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Chicken Lettuce Cups",
+      "page_hero": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "chips": [
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 9,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "beef",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541529-9",
+        "generation_intent": "user"
+      },
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "displayed_title": "Firehall Taco Bowls",
+      "hero_image": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Firehall Taco Bowls",
+      "page_hero": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 10,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "pork",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541594-10",
+        "generation_intent": "user"
+      },
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "displayed_title": "Game Day Pizza Sliders",
+      "hero_image": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "hero_status": "ready",
+      "protein_label": "Pork",
+      "page_title": "Game Day Pizza Sliders",
+      "page_hero": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Pork"
+      ],
+      "issues": []
+    },
+    {
+      "i": 11,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "turkey",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541648-11",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "displayed_title": "Turkey Taco Bowls",
+      "hero_image": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Bowls",
+      "page_hero": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 12,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "seafood",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541688-12",
+        "generation_intent": "user"
+      },
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Baked Cod Tray",
+      "displayed_title": "Baked Cod Tray",
+      "hero_image": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "hero_status": "ready",
+      "protein_label": "Fish",
+      "page_title": "Baked Cod Tray",
+      "page_hero": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Fish"
+      ],
+      "issues": []
+    },
+    {
+      "i": 13,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "vegetarian",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541729-13",
+        "generation_intent": "user"
+      },
+      "slug": "firehouse-dense-bean-salad",
+      "title": "Firehouse Dense Bean Salad",
+      "displayed_title": "Firehouse Dense Bean Salad",
+      "hero_image": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Firehouse Dense Bean Salad",
+      "page_hero": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "chips": [
+        "Salad",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 14,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "any",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541777-14",
+        "generation_intent": "user"
+      },
+      "slug": "shawarma-chicken-rice-bowls",
+      "title": "Shawarma Chicken Bowls",
+      "displayed_title": "Shawarma Chicken Bowls",
+      "hero_image": "/images/golden-100/shawarma-chicken-rice-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Shawarma Chicken Bowls",
+      "page_hero": "/images/golden-100/shawarma-chicken-rice-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 15,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "chicken",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541921-15",
+        "generation_intent": "user"
+      },
+      "slug": "yogurt-marinated-grill-chicken",
+      "title": "Yogurt Marinated Chicken",
+      "displayed_title": "Yogurt Marinated Chicken",
+      "hero_image": "/images/golden-100/yogurt-marinated-grill-chicken.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Yogurt Marinated Chicken",
+      "page_hero": "/images/golden-100/yogurt-marinated-grill-chicken.jpg",
+      "chips": [
+        "Grill",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 16,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "beef",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067541998-16",
+        "generation_intent": "user"
+      },
+      "slug": "loaded-nacho-skillet",
+      "title": "Nacho Skillet",
+      "displayed_title": "Nacho Skillet",
+      "hero_image": "/images/golden-100/loaded-nacho-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Nacho Skillet",
+      "page_hero": "/images/golden-100/loaded-nacho-skillet.jpg",
+      "chips": [
+        "Bowls",
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 17,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "pork",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067542065-17",
+        "generation_intent": "user"
+      },
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "displayed_title": "Hall BLT Sandwich Feed",
+      "hero_image": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "hero_status": "ready",
+      "protein_label": "Bacon",
+      "page_title": "Hall BLT Sandwich Feed",
+      "page_hero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "chips": [
+        "Sandwiches",
+        "Bacon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 18,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "turkey",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067542117-18",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "displayed_title": "Turkey Taco Bowls",
+      "hero_image": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Bowls",
+      "page_hero": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 19,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "seafood",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067542157-19",
+        "generation_intent": "user"
+      },
+      "slug": "lemon-salmon-orzo-skillet",
+      "title": "Lemon Salmon Orzo",
+      "displayed_title": "Lemon Salmon Orzo",
+      "hero_image": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Salmon",
+      "page_title": "Lemon Salmon Orzo",
+      "page_hero": "/images/golden-100/lemon-salmon-orzo-skillet.jpg",
+      "chips": [
+        "Pasta",
+        "Salmon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 20,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "vegetarian",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067542198-20",
+        "generation_intent": "user"
+      },
+      "slug": "firehouse-dense-bean-salad",
+      "title": "Firehouse Dense Bean Salad",
+      "displayed_title": "Firehouse Dense Bean Salad",
+      "hero_image": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Firehouse Dense Bean Salad",
+      "page_hero": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "chips": [
+        "Salad",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 21,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "any",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592260-21",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "displayed_title": "Turkey Taco Skillet",
+      "hero_image": "/images/golden-100/turkey-taco-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Skillet",
+      "page_hero": "/images/golden-100/turkey-taco-skillet.jpg",
+      "chips": [
+        "Skillet",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 22,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "chicken",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592411-22",
+        "generation_intent": "user"
+      },
+      "slug": "ginger-soy-chicken-rice-bowls",
+      "title": "Ginger Soy Chicken Rice Bowls",
+      "displayed_title": "Ginger Soy Chicken Rice Bowls",
+      "hero_image": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Ginger Soy Chicken Rice Bowls",
+      "page_hero": "/images/hall-expansion/ginger-soy-chicken-rice-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 23,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "beef",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592500-23",
+        "generation_intent": "user"
+      },
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "displayed_title": "Firehall Taco Bowls",
+      "hero_image": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Firehall Taco Bowls",
+      "page_hero": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 24,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "pork",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592571-24",
+        "generation_intent": "user"
+      },
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "displayed_title": "Kielbasa Cabbage Potato Skillet",
+      "hero_image": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Sausage",
+      "page_title": "Kielbasa Cabbage Potato Skillet",
+      "page_hero": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "chips": [
+        "Skillet",
+        "Sausage"
+      ],
+      "issues": []
+    },
+    {
+      "i": 25,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "turkey",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592616-25",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "displayed_title": "Turkey Taco Skillet",
+      "hero_image": "/images/golden-100/turkey-taco-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Skillet",
+      "page_hero": "/images/golden-100/turkey-taco-skillet.jpg",
+      "chips": [
+        "Skillet",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 26,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "seafood",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592658-26",
+        "generation_intent": "user"
+      },
+      "slug": "salmon-rice-bowls-crew",
+      "title": "Salmon Rice Bowls for the Crew",
+      "displayed_title": "Salmon Rice Bowls for the Crew",
+      "hero_image": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "hero_status": "ready",
+      "protein_label": "Salmon",
+      "page_title": "Salmon Rice Bowls for the Crew",
+      "page_hero": "/images/hall-expansion/salmon-rice-bowls-crew.jpg",
+      "chips": [
+        "Salmon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 27,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "vegetarian",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592700-27",
+        "generation_intent": "user"
+      },
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "displayed_title": "Tomato Soup with Grilled Cheese Croutons",
+      "hero_image": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Tomato Soup with Grilled Cheese Croutons",
+      "page_hero": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "chips": [
+        "Soup & Chili",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 28,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "any",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592736-28",
+        "generation_intent": "user"
+      },
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "title": "Hot Honey Grilled Sausage & Peppers",
+      "displayed_title": "Hot Honey Grilled Sausage & Peppers",
+      "hero_image": "/images/smoker-catalog/hot-honey-grilled-sausage-peppers.jpg",
+      "hero_status": "ready",
+      "protein_label": "Sausage",
+      "page_title": "Hot Honey Grilled Sausage & Peppers",
+      "page_hero": "/images/smoker-catalog/hot-honey-grilled-sausage-peppers.jpg",
+      "chips": [
+        "Sandwiches",
+        "Sausage"
+      ],
+      "issues": []
+    },
+    {
+      "i": 29,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "chicken",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592869-29",
+        "generation_intent": "user"
+      },
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Bowls",
+      "displayed_title": "Honey Garlic Chicken Bowls",
+      "hero_image": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Honey Garlic Chicken Bowls",
+      "page_hero": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 30,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "beef",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067592944-30",
+        "generation_intent": "user"
+      },
+      "slug": "beef-gyros-for-the-hall",
+      "title": "Beef Gyros",
+      "displayed_title": "Beef Gyros",
+      "hero_image": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Beef Gyros",
+      "page_hero": "/images/hall-expansion/beef-gyros-for-the-hall.jpg",
+      "chips": [
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 31,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "pork",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593008-31",
+        "generation_intent": "user"
+      },
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "displayed_title": "Hall BLT Sandwich Feed",
+      "hero_image": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "hero_status": "ready",
+      "protein_label": "Bacon",
+      "page_title": "Hall BLT Sandwich Feed",
+      "page_hero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "chips": [
+        "Sandwiches",
+        "Bacon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 32,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "turkey",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593051-32",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "displayed_title": "Turkey Taco Bowls",
+      "hero_image": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Bowls",
+      "page_hero": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 33,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "seafood",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593093-33",
+        "generation_intent": "user"
+      },
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "displayed_title": "Baked Salmon Tray",
+      "hero_image": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "hero_status": "ready",
+      "protein_label": "Salmon",
+      "page_title": "Baked Salmon Tray",
+      "page_hero": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Salmon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 34,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "vegetarian",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593138-34",
+        "generation_intent": "user"
+      },
+      "slug": "firehouse-lentil-chili",
+      "title": "Firehouse Lentil Chili",
+      "displayed_title": "Firehouse Lentil Chili",
+      "hero_image": "/images/hall-expansion/firehouse-lentil-chili.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Firehouse Lentil Chili",
+      "page_hero": "/images/hall-expansion/firehouse-lentil-chili.jpg",
+      "chips": [
+        "Soup & Chili",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 35,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "any",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593175-35",
+        "generation_intent": "user"
+      },
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Bowls",
+      "displayed_title": "Honey Garlic Chicken Bowls",
+      "hero_image": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Honey Garlic Chicken Bowls",
+      "page_hero": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 36,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "chicken",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593299-36",
+        "generation_intent": "user"
+      },
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken and Chickpeas",
+      "displayed_title": "Moroccan Chicken and Chickpeas",
+      "hero_image": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Moroccan Chicken and Chickpeas",
+      "page_hero": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 37,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "beef",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593354-37",
+        "generation_intent": "user"
+      },
+      "slug": "korean-bulgogi-grill-night",
+      "title": "Korean Bulgogi Grill Night",
+      "displayed_title": "Korean Bulgogi Grill Night",
+      "hero_image": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Korean Bulgogi Grill Night",
+      "page_hero": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
+      "chips": [
+        "Grill",
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 38,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "pork",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593421-38",
+        "generation_intent": "user"
+      },
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "displayed_title": "Game Day Pizza Sliders",
+      "hero_image": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "hero_status": "ready",
+      "protein_label": "Pork",
+      "page_title": "Game Day Pizza Sliders",
+      "page_hero": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Pork"
+      ],
+      "issues": []
+    },
+    {
+      "i": 39,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "turkey",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067593475-39",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "displayed_title": "Turkey Taco Bowls",
+      "hero_image": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Bowls",
+      "page_hero": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 40,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "seafood",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601530-40",
+        "generation_intent": "user"
+      },
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "displayed_title": "Best Tuna Melt for the Hall (Diner Style)",
+      "hero_image": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "hero_status": "ready",
+      "protein_label": "Fish",
+      "page_title": "Best Tuna Melt for the Hall (Diner Style)",
+      "page_hero": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "chips": [
+        "Sandwiches",
+        "Fish"
+      ],
+      "issues": []
+    },
+    {
+      "i": 41,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "vegetarian",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601572-41",
+        "generation_intent": "user"
+      },
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "displayed_title": "Tomato Soup with Grilled Cheese Croutons",
+      "hero_image": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Tomato Soup with Grilled Cheese Croutons",
+      "page_hero": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "chips": [
+        "Soup & Chili",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 42,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "any",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601605-42",
+        "generation_intent": "user"
+      },
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Bowls",
+      "displayed_title": "Honey Garlic Chicken Bowls",
+      "hero_image": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Honey Garlic Chicken Bowls",
+      "page_hero": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 43,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "chicken",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601712-43",
+        "generation_intent": "user"
+      },
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "displayed_title": "Buffalo Chicken Sweet Potato Bowls",
+      "hero_image": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Buffalo Chicken Sweet Potato Bowls",
+      "page_hero": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 44,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "beef",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601799-44",
+        "generation_intent": "user"
+      },
+      "slug": "thai-basil-ground-beef-skillet",
+      "title": "Thai Basil Ground Beef Skillet",
+      "displayed_title": "Thai Basil Ground Beef Skillet",
+      "hero_image": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Thai Basil Ground Beef Skillet",
+      "page_hero": "/images/golden-100/thai-basil-ground-beef-skillet.jpg",
+      "chips": [
+        "Skillet",
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 45,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "pork",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601856-45",
+        "generation_intent": "user"
+      },
+      "slug": "sheet-pan-sausage-peppers",
+      "title": "Sausage and Peppers",
+      "displayed_title": "Sausage and Peppers",
+      "hero_image": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+      "hero_status": "ready",
+      "protein_label": "Sausage",
+      "page_title": "Sausage and Peppers",
+      "page_hero": "/images/golden-100/sheet-pan-sausage-peppers.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Sausage"
+      ],
+      "issues": []
+    },
+    {
+      "i": 46,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "turkey",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601906-46",
+        "generation_intent": "user"
+      },
+      "slug": "baked-turkey-meatball-marinara",
+      "title": "Baked Turkey Meatball Marinara",
+      "displayed_title": "Baked Turkey Meatball Marinara",
+      "hero_image": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Baked Turkey Meatball Marinara",
+      "page_hero": "/images/golden-100/baked-turkey-meatball-marinara.jpg",
+      "chips": [
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 47,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "seafood",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601944-47",
+        "generation_intent": "user"
+      },
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "displayed_title": "Baked Salmon Tray",
+      "hero_image": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "hero_status": "ready",
+      "protein_label": "Salmon",
+      "page_title": "Baked Salmon Tray",
+      "page_hero": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Salmon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 48,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "vegetarian",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067601980-48",
+        "generation_intent": "user"
+      },
+      "slug": "firehouse-dense-bean-salad",
+      "title": "Firehouse Dense Bean Salad",
+      "displayed_title": "Firehouse Dense Bean Salad",
+      "hero_image": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Firehouse Dense Bean Salad",
+      "page_hero": "/images/hall-expansion/firehouse-dense-bean-salad.jpg",
+      "chips": [
+        "Salad",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 49,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "any",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602018-49",
+        "generation_intent": "user"
+      },
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "displayed_title": "Game Day Pizza Sliders",
+      "hero_image": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "hero_status": "ready",
+      "protein_label": "Pork",
+      "page_title": "Game Day Pizza Sliders",
+      "page_hero": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Pork"
+      ],
+      "issues": []
+    },
+    {
+      "i": 50,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "chicken",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602160-50",
+        "generation_intent": "user"
+      },
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Chicken Lettuce Cups",
+      "displayed_title": "Chicken Lettuce Cups",
+      "hero_image": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Chicken Lettuce Cups",
+      "page_hero": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "chips": [
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 51,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "beef",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602245-51",
+        "generation_intent": "user"
+      },
+      "slug": "cheesy-beef-nacho-bake",
+      "title": "Cheesy Beef Nacho Bake",
+      "displayed_title": "Cheesy Beef Nacho Bake",
+      "hero_image": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Cheesy Beef Nacho Bake",
+      "page_hero": "/images/hall-expansion/cheesy-beef-nacho-bake.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 52,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "pork",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602314-52",
+        "generation_intent": "user"
+      },
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "displayed_title": "Kielbasa Cabbage Potato Skillet",
+      "hero_image": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Sausage",
+      "page_title": "Kielbasa Cabbage Potato Skillet",
+      "page_hero": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "chips": [
+        "Skillet",
+        "Sausage"
+      ],
+      "issues": []
+    },
+    {
+      "i": 53,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "turkey",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602367-53",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "displayed_title": "Turkey Taco Skillet",
+      "hero_image": "/images/golden-100/turkey-taco-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Skillet",
+      "page_hero": "/images/golden-100/turkey-taco-skillet.jpg",
+      "chips": [
+        "Skillet",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 54,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "seafood",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602398-54",
+        "generation_intent": "user"
+      },
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls",
+      "displayed_title": "Maple Soy Salmon Bowls",
+      "hero_image": "/images/golden-100/maple-soy-salmon-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Salmon",
+      "page_title": "Maple Soy Salmon Bowls",
+      "page_hero": "/images/golden-100/maple-soy-salmon-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Salmon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 55,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "vegetarian",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602434-55",
+        "generation_intent": "user"
+      },
+      "slug": "sesame-ginger-tofu-bowls",
+      "title": "Sesame Ginger Tofu Bowls",
+      "displayed_title": "Sesame Ginger Tofu Bowls",
+      "hero_image": "/images/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Sesame Ginger Tofu Bowls",
+      "page_hero": "/images/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 56,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "any",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602464-56",
+        "generation_intent": "user"
+      },
+      "slug": "honey-garlic-chicken-rice-bowls",
+      "title": "Honey Garlic Chicken Bowls",
+      "displayed_title": "Honey Garlic Chicken Bowls",
+      "hero_image": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Honey Garlic Chicken Bowls",
+      "page_hero": "/images/golden-100/honey-garlic-chicken-rice-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 57,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "chicken",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602604-57",
+        "generation_intent": "user"
+      },
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "displayed_title": "Honey Lime Chicken Tray",
+      "hero_image": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Honey Lime Chicken Tray",
+      "page_hero": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 58,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "beef",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602666-58",
+        "generation_intent": "user"
+      },
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "displayed_title": "Firehall Taco Bowls",
+      "hero_image": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Firehall Taco Bowls",
+      "page_hero": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 59,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "pork",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602740-59",
+        "generation_intent": "user"
+      },
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "displayed_title": "Kielbasa Cabbage Potato Skillet",
+      "hero_image": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Sausage",
+      "page_title": "Kielbasa Cabbage Potato Skillet",
+      "page_hero": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "chips": [
+        "Skillet",
+        "Sausage"
+      ],
+      "issues": []
+    },
+    {
+      "i": 60,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "turkey",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067602795-60",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-bowls",
+      "title": "Turkey Taco Bowls",
+      "displayed_title": "Turkey Taco Bowls",
+      "hero_image": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Bowls",
+      "page_hero": "/images/hall-expansion/turkey-taco-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 61,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "seafood",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067652850-61",
+        "generation_intent": "user"
+      },
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray",
+      "displayed_title": "Maple Mustard Salmon Tray",
+      "hero_image": "/images/golden-100/maple-mustard-salmon-tray.jpg",
+      "hero_status": "ready",
+      "protein_label": "Salmon",
+      "page_title": "Maple Mustard Salmon Tray",
+      "page_hero": "/images/golden-100/maple-mustard-salmon-tray.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Salmon"
+      ],
+      "issues": []
+    },
+    {
+      "i": 62,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "vegetarian",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067652888-62",
+        "generation_intent": "user"
+      },
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "displayed_title": "Tomato Soup with Grilled Cheese Croutons",
+      "hero_image": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Tomato Soup with Grilled Cheese Croutons",
+      "page_hero": "/images/golden-100/tomato-soup-grilled-cheese-croutons.jpg",
+      "chips": [
+        "Soup & Chili",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 63,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "any",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067652922-63",
+        "generation_intent": "user"
+      },
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "displayed_title": "Game Day Pizza Sliders",
+      "hero_image": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "hero_status": "ready",
+      "protein_label": "Pork",
+      "page_title": "Game Day Pizza Sliders",
+      "page_hero": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Pork"
+      ],
+      "issues": []
+    },
+    {
+      "i": 64,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "chicken",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067653060-64",
+        "generation_intent": "user"
+      },
+      "slug": "creamy-chicken-penne-alfredo",
+      "title": "Creamy Chicken Penne Alfredo",
+      "displayed_title": "Creamy Chicken Penne Alfredo",
+      "hero_image": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Creamy Chicken Penne Alfredo",
+      "page_hero": "/images/hall-expansion/creamy-chicken-penne-alfredo.jpg",
+      "chips": [
+        "Pasta",
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 65,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "beef",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067653152-65",
+        "generation_intent": "user"
+      },
+      "slug": "cuban-beef-picadillo-bowls",
+      "title": "Cuban-Style Beef Picadillo Bowls",
+      "displayed_title": "Cuban-Style Beef Picadillo Bowls",
+      "hero_image": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+      "hero_status": "ready",
+      "protein_label": "Beef",
+      "page_title": "Cuban-Style Beef Picadillo Bowls",
+      "page_hero": "/images/golden-100/cuban-beef-picadillo-bowls.jpg",
+      "chips": [
+        "Bowls",
+        "Beef"
+      ],
+      "issues": []
+    },
+    {
+      "i": 66,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "pork",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067653220-66",
+        "generation_intent": "user"
+      },
+      "slug": "sausage-peppers-onions",
+      "title": "Sausage Peppers and Onions",
+      "displayed_title": "Sausage Peppers and Onions",
+      "hero_image": "/images/golden-100/sausage-peppers-onions.jpg",
+      "hero_status": "ready",
+      "protein_label": "Sausage",
+      "page_title": "Sausage Peppers and Onions",
+      "page_hero": "/images/golden-100/sausage-peppers-onions.jpg",
+      "chips": [
+        "Skillet",
+        "Sausage"
+      ],
+      "issues": []
+    },
+    {
+      "i": 67,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "turkey",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067653269-67",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "displayed_title": "Turkey Taco Skillet",
+      "hero_image": "/images/golden-100/turkey-taco-skillet.jpg",
+      "hero_status": "ready",
+      "protein_label": "Turkey",
+      "page_title": "Turkey Taco Skillet",
+      "page_hero": "/images/golden-100/turkey-taco-skillet.jpg",
+      "chips": [
+        "Skillet",
+        "Turkey"
+      ],
+      "issues": []
+    },
+    {
+      "i": 68,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "seafood",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067653305-68",
+        "generation_intent": "user"
+      },
+      "slug": "best-tuna-melt-for-the-hall",
+      "title": "Best Tuna Melt for the Hall (Diner Style)",
+      "displayed_title": "Best Tuna Melt for the Hall (Diner Style)",
+      "hero_image": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "hero_status": "ready",
+      "protein_label": "Fish",
+      "page_title": "Best Tuna Melt for the Hall (Diner Style)",
+      "page_hero": "/images/hall-expansion/best-tuna-melt-for-the-hall.jpg",
+      "chips": [
+        "Sandwiches",
+        "Fish"
+      ],
+      "issues": []
+    },
+    {
+      "i": 69,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "vegetarian",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067653350-69",
+        "generation_intent": "user"
+      },
+      "slug": "chickpea-pasta-primavera-white-beans",
+      "title": "Chickpea Pasta Primavera with White Beans",
+      "displayed_title": "Chickpea Pasta Primavera with White Beans",
+      "hero_image": "/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+      "hero_status": "ready",
+      "protein_label": "Vegetarian",
+      "page_title": "Chickpea Pasta Primavera with White Beans",
+      "page_hero": "/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+      "chips": [
+        "Pasta",
+        "Vegetarian"
+      ],
+      "issues": []
+    },
+    {
+      "i": 70,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "any",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067653388-70",
+        "generation_intent": "user"
+      },
+      "slug": "lebanese-chicken-shish-platter",
+      "title": "Lebanese Chicken Shish Platter",
+      "displayed_title": "Lebanese Chicken Shish Platter",
+      "hero_image": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Lebanese Chicken Shish Platter",
+      "page_hero": "/images/hall-expansion/lebanese-chicken-shish-platter.jpg",
+      "chips": [
+        "Chicken"
+      ],
+      "issues": []
+    },
+    {
+      "i": 71,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "chicken",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791067653529-71",
+        "generation_intent": "user"
+      },
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Chicken Tray",
+      "displayed_title": "Pesto Chicken Tray",
+      "hero_image": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "hero_status": "ready",
+      "protein_label": "Chicken",
+      "page_title": "Pesto Chicken Tray",
+      "page_hero": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "chips": [
+        "Sheet Pan",
+        "Chicken"
+      ],
+      "issues": []
+    }
+  ]
+}

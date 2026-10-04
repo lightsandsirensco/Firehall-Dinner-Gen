@@ -45,6 +45,59 @@ export function customerHallPickLine(recipe: Pick<ClientRecipeResponse, "title" 
   return HALL_PICK_LINES[stableIndex(key, HALL_PICK_LINES.length)];
 }
 
+const MEAL_FORMAT_LABELS: Record<string, string> = {
+  burger: "Burgers",
+  tacos: "Tacos",
+  taco: "Tacos",
+  wrap: "Wraps",
+  bowl: "Bowls",
+  pasta: "Pasta",
+  salad: "Salad",
+  sheet_pan: "Sheet Pan",
+  skillet: "Skillet",
+  stir_fry: "Stir-Fry",
+  soup_chili: "Soup & Chili",
+  soup: "Soup & Chili",
+  stew: "Stew",
+  grill: "Grill",
+  one_pot: "One-Pot",
+  breakfast: "Breakfast for Dinner",
+  breakfast_for_dinner: "Breakfast for Dinner",
+  loaded_fries: "Loaded Fries",
+  sandwich: "Sandwiches",
+  casserole: "Casserole",
+  noodle_toss: "Noodles",
+};
+
+function formatKey(raw?: string | null): string {
+  return (raw || "").toLowerCase().trim().replace(/\s*\/.*$/, "").replace(/[\s-]+/g, "_");
+}
+
+/**
+ * Chip label for the dish format. Prefers the built dish's meal_style over the
+ * requested meal_format; "random", "plated main" and unknown values return null.
+ */
+export function customerMealFormatLabel(
+  recipe: Pick<ClientRecipeResponse, "meal_format" | "meal_style">,
+): string | null {
+  return MEAL_FORMAT_LABELS[formatKey(recipe.meal_style)] || MEAL_FORMAT_LABELS[formatKey(recipe.meal_format)] || null;
+}
+
+const NON_LABEL_VALUES = new Set(["", "any", "random", "mixed", "hall", "none"]);
+
+export function customerProteinLabel(protein?: string | null): string | null {
+  const p = (protein || "").trim();
+  if (NON_LABEL_VALUES.has(p.toLowerCase())) return null;
+  return p.replace(/\b\w/g, (c) => c.toUpperCase());
+}
+
+/** Cuisine caption; placeholder values ("Hall", "any") are internal, not a cuisine. */
+export function customerCuisineLabel(cuisine?: string | null): string | null {
+  const c = (cuisine || "").trim();
+  if (NON_LABEL_VALUES.has(c.toLowerCase())) return null;
+  return c;
+}
+
 /** Strip internal fields from API payloads (keep server-side in debug only). */
 export function stripInternalClientFields<T extends Record<string, unknown>>(
   client: T,

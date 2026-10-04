@@ -22,6 +22,7 @@ import {
   type CatalogCollectionId,
 } from "../../shared/hall-catalog/gate.js";
 import { hydrateCatalogGenerateResponse } from "../meal-catalog/hydrate-golden-generate.js";
+import { tonightFilterProtein, tonightIneligibleReason } from "./tonight-eligibility.js";
 import { loadMergedHallCatalogIndex } from "../meal-catalog/load-index.js";
 import { readBbqCatalogIndexFromDisk } from "../bbq-catalog/catalog.js";
 import { applyCrewPortionFloors, hallProTips } from "../firehall-voice.js";
@@ -76,6 +77,8 @@ import {
 export interface LocalRecipePick {
   recipe: GenerateResponse;
   protein: string;
+  /** Customer-facing protein label — identical to Explore's. */
+  proteinLabel: string;
   originalTitle: string;
   catalogId: string;
   recipeSource?: RecipeSourceAttribution;
@@ -160,6 +163,11 @@ function hydratePick(
     log(`[generate:local] reject non-catalog slug=${slug}`, "generate");
     return null;
   }
+  const ineligible = tonightIneligibleReason(slug);
+  if (ineligible) {
+    log(`[generate:local] reject slug=${slug} reason=${ineligible}`, "generate");
+    return null;
+  }
 
   const full = getCuratedRecipeBySlug(slug);
   const wantsBreakfast = request.meal_format === "breakfast";
@@ -197,7 +205,7 @@ function hydratePick(
     return null;
   }
 
-  const protein = hydrated.protein || defProtein(full, hydrated.recipe);
+  const protein = hydrated.protein;
   const scaled: GenerateResponse = {
     ...hydrated.recipe,
     title: hydrated.title,
@@ -276,15 +284,12 @@ function hydratePick(
   return {
     recipe: scaled,
     protein,
+    proteinLabel: hydrated.proteinLabel,
     originalTitle: hydrated.title,
     catalogId: hydrated.catalogId,
     recipeSource: (full?.source ?? hydrated.recipe._recipe_source) as RecipeSourceAttribution,
     slug,
   };
-}
-
-function defProtein(full: ReturnType<typeof getCuratedRecipeBySlug>, gr: GenerateResponse): string {
-  return full?.protein || gr.chosen_protein || "chicken";
 }
 
 function pickFromSummaries(
@@ -310,6 +315,7 @@ function pickFromSummaries(
   // own explanation — never recomputed against a different candidate.
   const historyBySlug = new Map<string, { delta: number; appliedSignals: HistorySignalType[] }>();
   const ranked = summaries
+    .map((r) => ({ ...r, protein: tonightFilterProtein(r.protein, r.slug) }))
     .filter((r) => !isExcludedFromDinnerFeeds(r))
     .filter((r) => !options.excludeSlugs?.has(r.slug))
     // If the user explicitly picked a protein, don't serve mismatched curated meals.

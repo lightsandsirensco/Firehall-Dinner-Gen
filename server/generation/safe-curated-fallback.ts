@@ -15,6 +15,7 @@ import { pickGolden100ForGenerate } from "./pick-local-recipes.js";
 import { GAME_DAY_SAFE_FALLBACK_CATEGORIES } from "./firehall-category-pools.js";
 import { proteinMatchesFilter } from "../spoonacular-converter.js";
 import { hydrateCatalogGenerateResponse } from "../meal-catalog/hydrate-golden-generate.js";
+import { tonightFilterProtein, tonightIneligibleReason } from "./tonight-eligibility.js";
 
 export interface SafeCuratedFallbackResult {
   recipe: GenerateResponse;
@@ -69,10 +70,12 @@ function pickDeterministicCatalogSlug(
 ): string {
   const selected = protein && protein !== "any" ? protein : null;
   const goldenPool = selected
-    ? GOLDEN_100_RECIPES.filter((r) => proteinMatchesFilter(r.protein, selected))
+    ? GOLDEN_100_RECIPES.filter((r) => proteinMatchesFilter(tonightFilterProtein(r.protein, r.slug), selected))
     : GOLDEN_100_RECIPES;
   const performancePool = selected
-    ? PERFORMANCE_ADAPTED_RECIPES.filter((r) => proteinMatchesFilter(r.manifest.protein, selected))
+    ? PERFORMANCE_ADAPTED_RECIPES.filter((r) =>
+        proteinMatchesFilter(tonightFilterProtein(r.manifest.protein, r.manifest.slug), selected),
+      )
     : PERFORMANCE_ADAPTED_RECIPES;
 
   const pool: Array<{ slug: string; collection: CatalogCollectionId }> = [];
@@ -91,6 +94,10 @@ function pickDeterministicCatalogSlug(
     slug: r.slug,
     collection: "golden_100" as const,
   }));
+  for (let i = 0; i < list.length; i++) {
+    const slug = list[(seed + i) % list.length]!.slug;
+    if (!tonightIneligibleReason(slug)) return slug;
+  }
   return list[seed % list.length]!.slug;
 }
 

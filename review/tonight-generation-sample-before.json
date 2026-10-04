@@ -1,0 +1,2241 @@
+{
+  "base": "http://localhost:5057",
+  "total": 60,
+  "ok": 0,
+  "errors": 2,
+  "issueCounts": {
+    "displayed_title_differs": 54,
+    "ingredients_added": 41,
+    "internal_chip_values": 58,
+    "step_count": 26,
+    "ingredients_missing": 9,
+    "total_minutes": 7
+  },
+  "results": [
+    {
+      "i": 0,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "any",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065949726-0",
+        "generation_intent": "user"
+      },
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "displayed_title": "Honey Lime Chicken Tray with Rice",
+      "hero_image": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "page_title": "Honey Lime Chicken Tray",
+      "page_hero": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Honey Lime Chicken Tray with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 1,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "chicken",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065949980-1",
+        "generation_intent": "user"
+      },
+      "slug": "moroccan-chicken-chickpea-tray",
+      "title": "Moroccan Chicken and Chickpeas",
+      "displayed_title": "Moroccan Chicken Chickpea Tray with Rice",
+      "hero_image": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
+      "page_title": "Moroccan Chicken and Chickpeas",
+      "page_hero": "/images/golden-100/moroccan-chicken-chickpea-tray.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Moroccan Chicken Chickpea Tray with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 2,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "beef",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950086-2",
+        "generation_intent": "user"
+      },
+      "slug": "korean-bulgogi-grill-night",
+      "title": "Korean Bulgogi Grill Night",
+      "displayed_title": "Korean Garlic Steak Bowls with Rice & Butter Lettuce",
+      "hero_image": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
+      "page_title": "Korean Bulgogi Grill Night",
+      "page_hero": "/images/hall-expansion/korean-bulgogi-grill-night.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Korean Garlic Steak Bowls with Rice & Butter Lettuce",
+        "ingredients_added:rice",
+        "step_count:6 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 3,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "pork",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950173-3",
+        "generation_intent": "user"
+      },
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "displayed_title": "Game Day Pizza Sliders with Garden Salad",
+      "hero_image": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "page_title": "Game Day Pizza Sliders",
+      "page_hero": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Game Day Pizza Sliders with Garden Salad",
+        "ingredients_added:rice|garden salad|burger buns",
+        "step_count:7 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 4,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "turkey",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950238-4",
+        "generation_intent": "user"
+      },
+      "slug": "firehouse-turkey-white-bean-soup",
+      "title": "Firehouse Turkey & White Bean Soup",
+      "displayed_title": "Firehouse Turkey & White Bean Soup with Cornbread Mix & Kale",
+      "hero_image": "/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+      "page_title": "Firehouse Turkey & White Bean Soup",
+      "page_hero": "/images/hall-expansion/firehouse-turkey-white-bean-soup.jpg",
+      "chips": [
+        "random",
+        "turkey",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Firehouse Turkey & White Bean Soup with Cornbread Mix & Kale",
+        "ingredients_added:cornbread mix",
+        "step_count:9 != 8",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 5,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "seafood",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950300-5",
+        "generation_intent": "user"
+      },
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta",
+      "displayed_title": "Lemon Garlic Shrimp Pasta",
+      "hero_image": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
+      "page_title": "Lemon Garlic Shrimp Pasta",
+      "page_hero": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
+      "chips": [
+        "random",
+        "seafood",
+        "Hall"
+      ],
+      "issues": [
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 6,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "vegetarian",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950341-6",
+        "generation_intent": "user"
+      },
+      "slug": "pasta-bar-night",
+      "title": "Pasta Bar Night",
+      "displayed_title": "Pasta Bar Night",
+      "hero_image": "/images/hall-expansion/pasta-bar-night.jpg",
+      "page_title": "Pasta Bar Night",
+      "page_hero": "/images/hall-expansion/pasta-bar-night.jpg",
+      "chips": [
+        "random",
+        "vegetarian",
+        "Hall"
+      ],
+      "issues": [
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 7,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "any",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950386-7",
+        "generation_intent": "user"
+      },
+      "slug": "soft-pretzel-dogs",
+      "title": "Soft Pretzel Hot Dogs",
+      "displayed_title": "Beef Hot Dogs with Yukon Gold Potatoes & Green Beans With Butter",
+      "hero_image": "/images/hall-expansion/soft-pretzel-dogs.jpg",
+      "page_title": "Soft Pretzel Hot Dogs",
+      "page_hero": "/images/hall-expansion/soft-pretzel-dogs.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Beef Hot Dogs with Yukon Gold Potatoes & Green Beans With Butter",
+        "ingredients_added:yukon gold potatoes|green beans with butter",
+        "step_count:8 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 8,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "chicken",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950570-8",
+        "generation_intent": "user"
+      },
+      "slug": "asian-chicken-lettuce-cups",
+      "title": "Chicken Lettuce Cups",
+      "displayed_title": "Asian Garlic Chicken Bowls with Rice Vinegar & Butter Lettuce",
+      "hero_image": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "page_title": "Chicken Lettuce Cups",
+      "page_hero": "/images/golden-100/asian-chicken-lettuce-cups.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Asian Garlic Chicken Bowls with Rice Vinegar & Butter Lettuce",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 9,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "beef",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950670-9",
+        "generation_intent": "user"
+      },
+      "slug": "pepper-steak-onions",
+      "title": "Pepper Steak with Onions",
+      "displayed_title": "Pepper Steak with Long-grain White Rice",
+      "hero_image": "/images/hall-expansion/pepper-steak-onions.jpg",
+      "page_title": "Pepper Steak with Onions",
+      "page_hero": "/images/hall-expansion/pepper-steak-onions.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Pepper Steak with Long-grain White Rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 10,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "pork",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950739-10",
+        "generation_intent": "user"
+      },
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "displayed_title": "Hall Blt Sandwich Feed with Romaine Or Iceberg Lettuce",
+      "hero_image": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "page_title": "Hall BLT Sandwich Feed",
+      "page_hero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Hall Blt Sandwich Feed with Romaine Or Iceberg Lettuce",
+        "ingredients_added:rice|garlic powder|smoked paprika|olive oil",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 11,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "turkey",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950793-11",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-shepherds-sweet-potato",
+      "title": "Turkey Shepherd's Pie",
+      "displayed_title": "Turkey Shepherd'S with Sweet Potatoes & Tomato Paste",
+      "hero_image": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
+      "page_title": "Turkey Shepherd's Pie",
+      "page_hero": "/images/golden-100/turkey-shepherds-sweet-potato.jpg",
+      "chips": [
+        "random",
+        "turkey",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Turkey Shepherd'S with Sweet Potatoes & Tomato Paste",
+        "step_count:6 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 12,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "seafood",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950848-12",
+        "generation_intent": "user"
+      },
+      "slug": "maple-mustard-salmon-tray",
+      "title": "Maple Mustard Salmon Tray",
+      "displayed_title": "Sheet-Pan Maple Salmon Sheet-Pan Dinner with Potato Wedges & Brussels Sprouts",
+      "hero_image": "/images/golden-100/maple-mustard-salmon-tray.jpg",
+      "page_title": "Maple Mustard Salmon Tray",
+      "page_hero": "/images/golden-100/maple-mustard-salmon-tray.jpg",
+      "chips": [
+        "random",
+        "seafood",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Sheet-Pan Maple Salmon Sheet-Pan Dinner with Potato Wedges & Brussels Sprouts",
+        "ingredients_added:potato wedges",
+        "step_count:6 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 13,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "vegetarian",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950896-13",
+        "generation_intent": "user"
+      },
+      "slug": "five-ingredient-pasta",
+      "title": "Garlic Butter Pasta",
+      "displayed_title": "Garlic Butter Pasta",
+      "hero_image": "/images/golden-100/five-ingredient-pasta.jpg",
+      "page_title": "Garlic Butter Pasta",
+      "page_hero": "/images/golden-100/five-ingredient-pasta.jpg",
+      "chips": [
+        "random",
+        "vegetarian",
+        "Hall"
+      ],
+      "issues": [
+        "ingredients_added:vegetarian main|black pepper|cooking oil|onion|garlic|penne pasta",
+        "ingredients_missing:dried spaghetti|unsalted butter|garlic cloves minced|parmesan cheese finely grated|black pepper freshly cracked|fresh parsley chopped",
+        "total_minutes:30 != 50",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 14,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "any",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065950930-14",
+        "generation_intent": "user"
+      },
+      "slug": "white-bean-chicken-chili",
+      "title": "White Bean Chicken Chili",
+      "displayed_title": "White Bean Chicken Chili with Rice",
+      "hero_image": "/images/golden-100/white-bean-chicken-chili.jpg",
+      "page_title": "White Bean Chicken Chili",
+      "page_hero": "/images/golden-100/white-bean-chicken-chili.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:White Bean Chicken Chili with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 15,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "chicken",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951090-15",
+        "generation_intent": "user"
+      },
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "displayed_title": "Honey Lime Chicken Tray with Rice",
+      "hero_image": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "page_title": "Honey Lime Chicken Tray",
+      "page_hero": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Honey Lime Chicken Tray with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 16,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "beef",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951178-16",
+        "generation_intent": "user"
+      },
+      "slug": "philly-cheesesteak-skillet",
+      "title": "Philly Cheesesteak Skillet",
+      "displayed_title": "Garlic Beef Skillet with Jasmine Rice",
+      "hero_image": "/images/golden-100/philly-cheesesteak-skillet.jpg",
+      "page_title": "Philly Cheesesteak Skillet",
+      "page_hero": "/images/golden-100/philly-cheesesteak-skillet.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Garlic Beef Skillet with Jasmine Rice",
+        "ingredients_added:beef main|kosher salt|black pepper|cooking oil|onion|garlic|jasmine rice uncooked",
+        "ingredients_missing:ribeye or sirloin sliced thin|hoagie rolls|provolone slices|bell peppers sliced|yellow onion sliced",
+        "step_count:3 != 4",
+        "total_minutes:55 != 75",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 17,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "pork",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951241-17",
+        "generation_intent": "user"
+      },
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "displayed_title": "Polish-American Garlic Pork Bowls with Yukon Gold Potatoes",
+      "hero_image": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "page_title": "Kielbasa Cabbage Potato Skillet",
+      "page_hero": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Polish-American Garlic Pork Bowls with Yukon Gold Potatoes",
+        "step_count:4 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 18,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "turkey",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951315-18",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "displayed_title": "Mexican Garlic Turkey Bowls with Rice",
+      "hero_image": "/images/golden-100/turkey-taco-skillet.jpg",
+      "page_title": "Turkey Taco Skillet",
+      "page_hero": "/images/golden-100/turkey-taco-skillet.jpg",
+      "chips": [
+        "random",
+        "turkey",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Mexican Garlic Turkey Bowls with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 19,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "seafood",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951363-19",
+        "generation_intent": "user"
+      },
+      "slug": "maple-cured-salmon-plank",
+      "title": "Maple-Cured Salmon Plank",
+      "displayed_title": "Maple-Cured Salmon Plank with Rice & Asparagus",
+      "hero_image": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
+      "page_title": "Maple-Cured Salmon Plank",
+      "page_hero": "/images/hall-expansion/maple-cured-salmon-plank.jpg",
+      "chips": [
+        "random",
+        "seafood",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Maple-Cured Salmon Plank with Rice & Asparagus",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 20,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "vegetarian",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951414-20",
+        "generation_intent": "user"
+      },
+      "slug": "spaghetti-aglio-e-olio-for-the-hall",
+      "title": "Spaghetti Aglio e Olio for the Hall",
+      "displayed_title": "Spaghetti Aglio E Olio For the Hall with Garden Salad",
+      "hero_image": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
+      "page_title": "Spaghetti Aglio e Olio for the Hall",
+      "page_hero": "/images/golden-100/spaghetti-aglio-e-olio-for-the-hall.jpg",
+      "chips": [
+        "random",
+        "vegetarian",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Spaghetti Aglio E Olio For the Hall with Garden Salad",
+        "ingredients_added:penne pasta|garlic powder|smoked paprika|olive oil|garden salad",
+        "ingredients_missing:dried spaghetti|extra virgin olive oil|garlic cloves|red pepper flakes|fresh parsley|grated parmesan|kosher salt",
+        "step_count:5 != 4",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 21,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "any",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951455-21",
+        "generation_intent": "user"
+      },
+      "slug": "maple-soy-salmon-bowls",
+      "title": "Maple Soy Salmon Bowls",
+      "displayed_title": "Maple Soy Salmon Bowls with Brown Rice & Shelled Edamame",
+      "hero_image": "/images/golden-100/maple-soy-salmon-bowls.jpg",
+      "page_title": "Maple Soy Salmon Bowls",
+      "page_hero": "/images/golden-100/maple-soy-salmon-bowls.jpg",
+      "chips": [
+        "random",
+        "seafood",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Maple Soy Salmon Bowls with Brown Rice & Shelled Edamame",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 22,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "chicken",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951625-22",
+        "generation_intent": "user"
+      },
+      "slug": "cast-iron-chicken-fajitas",
+      "title": "Cast Iron Chicken Fajitas",
+      "displayed_title": "Cast Iron Chicken Fajitas with Rice",
+      "hero_image": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
+      "page_title": "Cast Iron Chicken Fajitas",
+      "page_hero": "/images/hall-expansion/cast-iron-chicken-fajitas.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Cast Iron Chicken Fajitas with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 23,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "beef",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951700-23",
+        "generation_intent": "user"
+      },
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "displayed_title": "Firehall Taco Bowls with Long-grain Rice & Shredded Lettuce",
+      "hero_image": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "page_title": "Firehall Taco Bowls",
+      "page_hero": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Firehall Taco Bowls with Long-grain Rice & Shredded Lettuce",
+        "step_count:6 != 12",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 24,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "pork",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951788-24",
+        "generation_intent": "user"
+      },
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "displayed_title": "Egg Roll In a Bowl For the Crew with Rice & Coleslaw Mix",
+      "hero_image": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "page_title": "Egg Roll in a Bowl for the Crew",
+      "page_hero": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Egg Roll In a Bowl For the Crew with Rice & Coleslaw Mix",
+        "step_count:6 != 12",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 25,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "turkey",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951841-25",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "displayed_title": "Mexican Garlic Turkey Bowls with Rice",
+      "hero_image": "/images/golden-100/turkey-taco-skillet.jpg",
+      "page_title": "Turkey Taco Skillet",
+      "page_hero": "/images/golden-100/turkey-taco-skillet.jpg",
+      "chips": [
+        "random",
+        "turkey",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Mexican Garlic Turkey Bowls with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 26,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "seafood",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951877-26",
+        "generation_intent": "user"
+      },
+      "slug": "malaysian-laksa-soup",
+      "title": "Malaysian Laksa Soup",
+      "displayed_title": "Malaysian Laksa Soup with Rice Noodles & Vegetable Oil",
+      "hero_image": "/images/hall-expansion/malaysian-laksa-soup.jpg",
+      "page_title": "Malaysian Laksa Soup",
+      "page_hero": "/images/hall-expansion/malaysian-laksa-soup.jpg",
+      "chips": [
+        "random",
+        "seafood",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Malaysian Laksa Soup with Rice Noodles & Vegetable Oil",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 27,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "vegetarian",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951926-27",
+        "generation_intent": "user"
+      },
+      "slug": "mediterranean-chickpea",
+      "title": "Mediterranean Chickpea Bowls",
+      "displayed_title": "American Garlic Chickpea Bowls with Rice",
+      "hero_image": "/images/golden-100/mediterranean-chickpea.jpg",
+      "page_title": "Mediterranean Chickpea Bowls",
+      "page_hero": "/images/golden-100/mediterranean-chickpea.jpg",
+      "chips": [
+        "random",
+        "vegetarian",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:American Garlic Chickpea Bowls with Rice",
+        "ingredients_added:vegetarian main|kosher salt|black pepper|cooking oil|onion|garlic|rice",
+        "ingredients_missing:quinoa uncooked|chickpeas drained and rinsed|cherry tomatoes halved|cucumber diced|red onion thinly sliced|feta cheese crumbled|lemon tahini dressing",
+        "step_count:3 != 4",
+        "total_minutes:55 != 75",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 28,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "any",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065951972-28",
+        "generation_intent": "user"
+      },
+      "slug": "hot-honey-grilled-sausage-peppers",
+      "title": "Hot Honey Grilled Sausage & Peppers",
+      "displayed_title": "Hot Honey Grilled Sausage & Peppers with Rice & Frozen Edamame",
+      "hero_image": "/images/smoker-catalog/hot-honey-grilled-sausage-peppers.jpg",
+      "page_title": "Hot Honey Grilled Sausage & Peppers",
+      "page_hero": "/images/smoker-catalog/hot-honey-grilled-sausage-peppers.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Hot Honey Grilled Sausage & Peppers with Rice & Frozen Edamame",
+        "ingredients_added:rice|frozen edamame",
+        "step_count:7 != 6",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 29,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "chicken",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952158-29",
+        "generation_intent": "user"
+      },
+      "slug": "yogurt-marinated-grill-chicken",
+      "title": "Yogurt Marinated Chicken",
+      "displayed_title": "Yogurt Marinated Grill Chicken with Rice",
+      "hero_image": "/images/golden-100/yogurt-marinated-grill-chicken.jpg",
+      "page_title": "Yogurt Marinated Chicken",
+      "page_hero": "/images/golden-100/yogurt-marinated-grill-chicken.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Yogurt Marinated Grill Chicken with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 30,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "beef",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952241-30",
+        "generation_intent": "user"
+      },
+      "slug": "philly-cheesesteak-sliders",
+      "title": "Philly Cheesesteak Sliders",
+      "displayed_title": "Philly Cheesesteak Sliders with Rice & Side Salad With Ranch",
+      "hero_image": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
+      "page_title": "Philly Cheesesteak Sliders",
+      "page_hero": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Philly Cheesesteak Sliders with Rice & Side Salad With Ranch",
+        "ingredients_added:rice|side salad with ranch",
+        "step_count:6 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 31,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "pork",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952316-31",
+        "generation_intent": "user"
+      },
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "displayed_title": "Polish-American Garlic Pork Bowls with Yukon Gold Potatoes",
+      "hero_image": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "page_title": "Kielbasa Cabbage Potato Skillet",
+      "page_hero": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Polish-American Garlic Pork Bowls with Yukon Gold Potatoes",
+        "step_count:4 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 32,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "turkey",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952382-32",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-chili",
+      "title": "Turkey Chili",
+      "displayed_title": "High-Protein Turkey Chili with Crusty Bread & Vegetable Broth",
+      "hero_image": "/images/golden-100/turkey-chili.jpg",
+      "page_title": "Turkey Chili",
+      "page_hero": "/images/golden-100/turkey-chili.jpg",
+      "chips": [
+        "random",
+        "turkey",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:High-Protein Turkey Chili with Crusty Bread & Vegetable Broth",
+        "ingredients_added:turkey main|black pepper|cooking oil|onion|garlic|vegetable broth|crusty bread",
+        "ingredients_missing:ground turkey|yellow onion|bell peppers diced|garlic cloves minced|kidney beans drained|crushed tomatoes|diced tomatoes|tomato paste|beef or chicken broth|chili powder|smoked paprika|ground cumin|brown sugar|worcestershire sauce",
+        "total_minutes:55 != 75",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 33,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "seafood",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952424-33",
+        "generation_intent": "user"
+      },
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "displayed_title": "Herb-Crusted Baked Salmon Tray with Rice & Asparagus Spears",
+      "hero_image": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "page_title": "Baked Salmon Tray",
+      "page_hero": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "chips": [
+        "random",
+        "seafood",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Herb-Crusted Baked Salmon Tray with Rice & Asparagus Spears",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 34,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "vegetarian",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952478-34",
+        "generation_intent": "user"
+      },
+      "slug": "chickpea-pasta-primavera-white-beans",
+      "title": "Chickpea Pasta Primavera with White Beans",
+      "displayed_title": "Chickpea Pasta Primavera with Zucchini",
+      "hero_image": "/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+      "page_title": "Chickpea Pasta Primavera with White Beans",
+      "page_hero": "/images/hall-expansion/chickpea-pasta-primavera-white-beans.jpg",
+      "chips": [
+        "random",
+        "vegetarian",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Chickpea Pasta Primavera with Zucchini",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 35,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "any",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952519-35",
+        "generation_intent": "user"
+      },
+      "slug": "herb-baked-salmon-tray",
+      "title": "Baked Salmon Tray",
+      "displayed_title": "Herb-Crusted Baked Salmon Tray with Rice & Asparagus Spears",
+      "hero_image": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "page_title": "Baked Salmon Tray",
+      "page_hero": "/images/golden-100/herb-baked-salmon-tray.jpg",
+      "chips": [
+        "random",
+        "seafood",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Herb-Crusted Baked Salmon Tray with Rice & Asparagus Spears",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 36,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "chicken",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952691-36",
+        "generation_intent": "user"
+      },
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Chicken Tray",
+      "displayed_title": "Pesto Tomato Chicken Tray with Rice & Zucchini",
+      "hero_image": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "page_title": "Pesto Chicken Tray",
+      "page_hero": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Pesto Tomato Chicken Tray with Rice & Zucchini",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 37,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "beef",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952776-37",
+        "generation_intent": "user"
+      },
+      "slug": "smash-burgers",
+      "title": "Double Smash Burgers",
+      "displayed_title": "Double Smash Burgers with Potato Slider/burger Buns & Iceberg Lettuce",
+      "hero_image": "/images/golden-100/smash-burgers.jpg",
+      "page_title": "Double Smash Burgers",
+      "page_hero": "/images/golden-100/smash-burgers.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Double Smash Burgers with Potato Slider/burger Buns & Iceberg Lettuce",
+        "ingredients_added:potato slider burger buns|bacon optional",
+        "ingredients_missing:potato burger buns|bacon",
+        "step_count:9 != 12",
+        "total_minutes:50 != 75",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 38,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "pork",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952861-38",
+        "generation_intent": "user"
+      },
+      "slug": "game-day-pizza-sliders",
+      "title": "Game Day Pizza Sliders",
+      "displayed_title": "Game Day Pizza Sliders with Garden Salad",
+      "hero_image": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "page_title": "Game Day Pizza Sliders",
+      "page_hero": "/images/hall-expansion/game-day-pizza-sliders.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Game Day Pizza Sliders with Garden Salad",
+        "ingredients_added:rice|garden salad|burger buns",
+        "step_count:7 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 39,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "turkey",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952933-39",
+        "generation_intent": "user"
+      },
+      "slug": "korean-turkey-rice-bowls",
+      "title": "Korean Turkey Rice Bowls",
+      "displayed_title": "Smoky Turkey Bowls with Rice & Greek Salad",
+      "hero_image": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "page_title": "Korean Turkey Rice Bowls",
+      "page_hero": "/images/hall-expansion/korean-turkey-rice-bowls.jpg",
+      "chips": [
+        "random",
+        "turkey",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Smoky Turkey Bowls with Rice & Greek Salad",
+        "ingredients_added:greek salad",
+        "step_count:5 != 12",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 40,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "seafood",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791065952971-40",
+        "generation_intent": "user"
+      },
+      "status": 429,
+      "error": "rate_limited",
+      "detail": {
+        "code": "rate_limited",
+        "message": "Slow down — you can generate about 40 meals per minute. Try again in 57s.",
+        "retry_after_seconds": 57,
+        "request_id": "sample-1791065952971-40"
+      }
+    },
+    {
+      "i": 41,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "vegetarian",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066010011-41",
+        "generation_intent": "user"
+      },
+      "slug": "grilled-corn-cotija",
+      "title": "Street Corn with Cotija",
+      "displayed_title": "Grilled Street Corn with Jasmine Rice",
+      "hero_image": "/images/golden-100/grilled-corn-cotija.jpg",
+      "page_title": "Street Corn with Cotija",
+      "page_hero": "/images/golden-100/grilled-corn-cotija.jpg",
+      "chips": [
+        "random",
+        "vegetarian",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Grilled Street Corn with Jasmine Rice",
+        "ingredients_added:vegetarian main|kosher salt|black pepper|cooking oil|onion|garlic|jasmine rice uncooked",
+        "ingredients_missing:corn on the cob husks peeled|mayonnaise|cotija cheese crumbled|chili powder|fresh lime",
+        "step_count:2 != 4",
+        "total_minutes:55 != 120",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 42,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "any",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066010061-42",
+        "generation_intent": "user"
+      },
+      "status": 429,
+      "error": "rate_limited",
+      "detail": {
+        "code": "rate_limited",
+        "message": "Slow down — you can generate about 40 meals per minute. Try again in 5s.",
+        "retry_after_seconds": 5,
+        "request_id": "sample-1791066010061-42"
+      }
+    },
+    {
+      "i": 43,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "chicken",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015072-43",
+        "generation_intent": "user"
+      },
+      "slug": "buffalo-chicken-sweet-potato-bowls",
+      "title": "Buffalo Chicken Sweet Potato Bowls",
+      "displayed_title": "Buffalo Chicken Sweet Potato Bowls with Sweet Potatoes & Broccoli Florets",
+      "hero_image": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "page_title": "Buffalo Chicken Sweet Potato Bowls",
+      "page_hero": "/images/hall-expansion/buffalo-chicken-sweet-potato-bowls.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Buffalo Chicken Sweet Potato Bowls with Sweet Potatoes & Broccoli Florets",
+        "step_count:6 != 12",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 44,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "beef",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015174-44",
+        "generation_intent": "user"
+      },
+      "slug": "korean-beef-rice-bowls",
+      "title": "Beef Rice Bowls",
+      "displayed_title": "Korean Garlic Beef Bowls with Jasmine Rice & English Cucumber",
+      "hero_image": "/images/golden-100/korean-beef-rice-bowls.jpg",
+      "page_title": "Beef Rice Bowls",
+      "page_hero": "/images/golden-100/korean-beef-rice-bowls.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Korean Garlic Beef Bowls with Jasmine Rice & English Cucumber",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 45,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "pork",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015246-45",
+        "generation_intent": "user"
+      },
+      "slug": "egg-roll-in-a-bowl-crew",
+      "title": "Egg Roll in a Bowl for the Crew",
+      "displayed_title": "Egg Roll In a Bowl For the Crew with Rice & Coleslaw Mix",
+      "hero_image": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "page_title": "Egg Roll in a Bowl for the Crew",
+      "page_hero": "/images/hall-expansion/egg-roll-in-a-bowl-crew.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Egg Roll In a Bowl For the Crew with Rice & Coleslaw Mix",
+        "step_count:6 != 12",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 46,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "turkey",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015322-46",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-chili",
+      "title": "Turkey Chili",
+      "displayed_title": "High-Protein Turkey Chili with Crusty Bread & Vegetable Broth",
+      "hero_image": "/images/golden-100/turkey-chili.jpg",
+      "page_title": "Turkey Chili",
+      "page_hero": "/images/golden-100/turkey-chili.jpg",
+      "chips": [
+        "random",
+        "turkey",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:High-Protein Turkey Chili with Crusty Bread & Vegetable Broth",
+        "ingredients_added:turkey main|black pepper|cooking oil|onion|garlic|vegetable broth|crusty bread",
+        "ingredients_missing:ground turkey|yellow onion|bell peppers diced|garlic cloves minced|kidney beans drained|crushed tomatoes|diced tomatoes|tomato paste|beef or chicken broth|chili powder|smoked paprika|ground cumin|brown sugar|worcestershire sauce",
+        "total_minutes:55 != 75",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 47,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "seafood",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015375-47",
+        "generation_intent": "user"
+      },
+      "slug": "lemon-garlic-shrimp-pasta",
+      "title": "Lemon Garlic Shrimp Pasta",
+      "displayed_title": "Lemon Garlic Shrimp Pasta",
+      "hero_image": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
+      "page_title": "Lemon Garlic Shrimp Pasta",
+      "page_hero": "/images/golden-100/lemon-garlic-shrimp-pasta.jpg",
+      "chips": [
+        "random",
+        "seafood",
+        "Hall"
+      ],
+      "issues": [
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 48,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "vegetarian",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015419-48",
+        "generation_intent": "user"
+      },
+      "slug": "sesame-ginger-tofu-bowls",
+      "title": "Sesame Ginger Tofu Bowls",
+      "displayed_title": "Sesame Ginger Tofu Bowls with Jasmine Rice & Vegetable Oil",
+      "hero_image": "/images/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+      "page_title": "Sesame Ginger Tofu Bowls",
+      "page_hero": "/images/hall-expansion/sesame-ginger-tofu-bowls.jpg",
+      "chips": [
+        "random",
+        "vegetarian",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Sesame Ginger Tofu Bowls with Jasmine Rice & Vegetable Oil",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 49,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "any",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015470-49",
+        "generation_intent": "user"
+      },
+      "slug": "bbq-meatball-skewers",
+      "title": "BBQ Meatball Skewers",
+      "displayed_title": "Bbq Meatball Skewers with Rice & Caesar Salad",
+      "hero_image": "/images/hall-expansion/bbq-meatball-skewers.jpg",
+      "page_title": "BBQ Meatball Skewers",
+      "page_hero": "/images/hall-expansion/bbq-meatball-skewers.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Bbq Meatball Skewers with Rice & Caesar Salad",
+        "ingredients_added:rice|caesar salad",
+        "step_count:6 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 50,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "chicken",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015645-50",
+        "generation_intent": "user"
+      },
+      "slug": "honey-lime-chicken-tray",
+      "title": "Honey Lime Chicken Tray",
+      "displayed_title": "Honey Lime Chicken Tray with Rice",
+      "hero_image": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "page_title": "Honey Lime Chicken Tray",
+      "page_hero": "/images/golden-100/honey-lime-chicken-tray.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Honey Lime Chicken Tray with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 51,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "beef",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015734-51",
+        "generation_intent": "user"
+      },
+      "slug": "philly-cheesesteak-sliders",
+      "title": "Philly Cheesesteak Sliders",
+      "displayed_title": "Philly Cheesesteak Sliders with Rice & Coleslaw Mix",
+      "hero_image": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
+      "page_title": "Philly Cheesesteak Sliders",
+      "page_hero": "/images/hall-expansion/philly-cheesesteak-sliders.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Philly Cheesesteak Sliders with Rice & Coleslaw Mix",
+        "ingredients_added:rice|coleslaw mix",
+        "step_count:6 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 52,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "pork",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015812-52",
+        "generation_intent": "user"
+      },
+      "slug": "hall-blt-sandwich-feed",
+      "title": "Hall BLT Sandwich Feed",
+      "displayed_title": "Hall Blt Sandwich Feed with Romaine Or Iceberg Lettuce",
+      "hero_image": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "page_title": "Hall BLT Sandwich Feed",
+      "page_hero": "/images/hall-expansion/hall-blt-sandwich-feed.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Hall Blt Sandwich Feed with Romaine Or Iceberg Lettuce",
+        "ingredients_added:rice|garlic powder|smoked paprika|olive oil",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 53,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "turkey",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015873-53",
+        "generation_intent": "user"
+      },
+      "slug": "turkey-taco-skillet",
+      "title": "Turkey Taco Skillet",
+      "displayed_title": "Mexican Garlic Turkey Bowls with Rice",
+      "hero_image": "/images/golden-100/turkey-taco-skillet.jpg",
+      "page_title": "Turkey Taco Skillet",
+      "page_hero": "/images/golden-100/turkey-taco-skillet.jpg",
+      "chips": [
+        "random",
+        "turkey",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Mexican Garlic Turkey Bowls with Rice",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 54,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "seafood",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015914-54",
+        "generation_intent": "user"
+      },
+      "slug": "mediterranean-baked-fish-tray",
+      "title": "Baked Cod Tray",
+      "displayed_title": "Mediterranean Garlic Fish Bowls with Rice",
+      "hero_image": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "page_title": "Baked Cod Tray",
+      "page_hero": "/images/golden-100/mediterranean-baked-fish-tray.jpg",
+      "chips": [
+        "random",
+        "fish",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Mediterranean Garlic Fish Bowls with Rice",
+        "ingredients_added:cod or halibut fillets|rice",
+        "ingredients_missing:cod fillets",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 55,
+      "request": {
+        "crew_size": 4,
+        "busy_level": "average",
+        "time_available": "25-40",
+        "protein": "vegetarian",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066015957-55",
+        "generation_intent": "user"
+      },
+      "slug": "southwest-black-bean-corn-bowls",
+      "title": "Southwest Black Bean & Corn Bowls",
+      "displayed_title": "Southwest Black Bean & Corn Bowls with Quinoa",
+      "hero_image": "/images/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+      "page_title": "Southwest Black Bean & Corn Bowls",
+      "page_hero": "/images/hall-expansion/southwest-black-bean-corn-bowls.jpg",
+      "chips": [
+        "random",
+        "vegetarian",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Southwest Black Bean & Corn Bowls with Quinoa",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 56,
+      "request": {
+        "crew_size": 6,
+        "busy_level": "average",
+        "time_available": "60-90",
+        "protein": "any",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "no_preference",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066016003-56",
+        "generation_intent": "user"
+      },
+      "slug": "greek-lemon-chicken-potatoes",
+      "title": "Lemon Chicken and Potatoes",
+      "displayed_title": "Greek Lemon Chicken and Potatoes with Yukon Gold Potatoes & Side Salad With Ranch",
+      "hero_image": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+      "page_title": "Lemon Chicken and Potatoes",
+      "page_hero": "/images/golden-100/greek-lemon-chicken-potatoes.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Greek Lemon Chicken and Potatoes with Yukon Gold Potatoes & Side Salad With Ranch",
+        "ingredients_added:side salad with ranch",
+        "step_count:6 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 57,
+      "request": {
+        "crew_size": 8,
+        "busy_level": "average",
+        "time_available": "30-45",
+        "protein": "chicken",
+        "healthiness_preference": "balanced",
+        "nutrition_goal": "balanced",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066016165-57",
+        "generation_intent": "user"
+      },
+      "slug": "pesto-tomato-chicken-tray",
+      "title": "Pesto Chicken Tray",
+      "displayed_title": "Pesto Tomato Chicken Tray with Rice & Zucchini",
+      "hero_image": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "page_title": "Pesto Chicken Tray",
+      "page_hero": "/images/golden-100/pesto-tomato-chicken-tray.jpg",
+      "chips": [
+        "random",
+        "chicken",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Pesto Tomato Chicken Tray with Rice & Zucchini",
+        "ingredients_added:rice",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 58,
+      "request": {
+        "crew_size": 12,
+        "busy_level": "average",
+        "time_available": "20-30",
+        "protein": "beef",
+        "healthiness_preference": "comfort",
+        "nutrition_goal": "lighter",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066016247-58",
+        "generation_intent": "user"
+      },
+      "slug": "firehall-taco-bowls",
+      "title": "Firehall Taco Bowls",
+      "displayed_title": "Firehall Taco Bowls with Long-grain Rice & Shredded Lettuce",
+      "hero_image": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "page_title": "Firehall Taco Bowls",
+      "page_hero": "/images/hall-expansion/firehall-taco-bowls.jpg",
+      "chips": [
+        "random",
+        "beef",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Firehall Taco Bowls with Long-grain Rice & Shredded Lettuce",
+        "step_count:6 != 12",
+        "internal_chip_values:random|Hall"
+      ]
+    },
+    {
+      "i": 59,
+      "request": {
+        "crew_size": 16,
+        "busy_level": "average",
+        "time_available": "45-60",
+        "protein": "pork",
+        "healthiness_preference": "lean",
+        "nutrition_goal": "high_protein",
+        "appliances": [
+          "stove",
+          "oven"
+        ],
+        "budget_level": "standard",
+        "cuisine_style": "any",
+        "meal_format": "random",
+        "allergens_to_avoid": [],
+        "request_id": "sample-1791066016329-59",
+        "generation_intent": "user"
+      },
+      "slug": "kielbasa-cabbage-potato-skillet",
+      "title": "Kielbasa Cabbage Potato Skillet",
+      "displayed_title": "Polish-American Garlic Pork Stew with Yukon Gold Potatoes",
+      "hero_image": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "page_title": "Kielbasa Cabbage Potato Skillet",
+      "page_hero": "/images/hall-expansion/kielbasa-cabbage-potato-skillet.jpg",
+      "chips": [
+        "random",
+        "pork",
+        "Hall"
+      ],
+      "issues": [
+        "displayed_title_differs:Polish-American Garlic Pork Stew with Yukon Gold Potatoes",
+        "step_count:4 != 5",
+        "internal_chip_values:random|Hall"
+      ]
+    }
+  ]
+}

@@ -249,7 +249,7 @@ export function buildMealPlate(
 
   const cuisine_label =
     CUISINE_ADJ[ctx.cuisine.toLowerCase()] ||
-    (ctx.cuisine && ctx.cuisine !== "any" ? toTitleCase(ctx.cuisine) : "Hall");
+    (ctx.cuisine && ctx.cuisine !== "any" ? toTitleCase(ctx.cuisine) : "");
 
   return {
     display_title,
@@ -287,7 +287,7 @@ export function finalizeMealPlate(
       mealFormat: ctx.mealFormat,
       fallbackTitle: title,
       ingredients: recipe.ingredients,
-      cuisine: plate.cuisine_label || ctx.cuisine,
+      cuisine: plate.cuisine_label || undefined,
     });
   }
 

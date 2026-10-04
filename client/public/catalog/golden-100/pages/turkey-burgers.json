@@ -13,10 +13,10 @@
   "cookTime": 55,
   "prepTime": 20,
   "difficulty": "medium",
-  "calories": 772,
-  "protein": 54,
-  "carbs": 32,
-  "fats": 49,
+  "calories": 730,
+  "protein": 57,
+  "carbs": 48,
+  "fats": 33,
   "tags": [
     "protein:turkey",
     "format:burger",
@@ -27,75 +27,87 @@
   ],
   "equipment": [
     "Flat griddle or cast iron",
-    "Burger press or heavy spatula",
+    "Large mixing bowl",
     "Large sheet trays",
     "Instant-read thermometer",
     "Aluminum foil"
   ],
   "ingredients": [
     {
-      "name": "Ground Beef (80/20)",
+      "name": "Ground Turkey (93/7)",
       "quantity": "3",
       "unit": "Lb",
       "group": "Main"
     },
     {
-      "name": "Potato Buns",
+      "name": "Black Beans, Rinsed",
+      "quantity": "2",
+      "unit": "Cups",
+      "group": "Main"
+    },
+    {
+      "name": "Panko Breadcrumbs",
+      "quantity": "0.75",
+      "unit": "Cup",
+      "group": "Binder"
+    },
+    {
+      "name": "Large Eggs",
+      "quantity": "2",
+      "unit": "count",
+      "group": "Binder"
+    },
+    {
+      "name": "Whole Wheat Buns",
       "quantity": "8",
       "unit": "count",
       "group": "Buns"
     },
     {
-      "name": "American Cheese",
-      "quantity": "12",
+      "name": "Pepper Jack Cheese",
+      "quantity": "8",
       "unit": "slices",
       "group": "Cheese"
     },
     {
-      "name": "Mayonnaise",
-      "quantity": "0.5",
-      "unit": "Cup",
-      "group": "Sauce"
-    },
-    {
-      "name": "Yellow Mustard",
-      "quantity": "3",
-      "unit": "Tbsp",
-      "group": "Sauce"
-    },
-    {
-      "name": "Dill Pickles",
+      "name": "Avocado",
       "quantity": "2",
-      "unit": "Cups",
+      "unit": "count",
+      "group": "Toppings"
+    },
+    {
+      "name": "Green Leaf Lettuce",
+      "quantity": "1",
+      "unit": "head",
       "group": "Toppings"
     }
   ],
   "steps": [
     {
       "stepNumber": 1,
-      "title": "Form loose balls",
-      "instruction": "Mix sauce. Split buns. Form beef into loose 3 oz balls — tight patties steam instead of crisp.",
+      "title": "Mix and form patties",
+      "instruction": "Mash black beans with a fork, leaving some texture. Mix with ground turkey, panko, eggs and 2 tsp salt just until combined. Form 8 patties 3/4 inch thick with a thumbprint in the center.",
       "minutes": 12,
       "heatLevel": ""
     },
     {
       "stepNumber": 2,
-      "title": "Smash for crust",
-      "instruction": "Heat griddle until smoking. Smash balls immediately; season with salt. Cook 2 minutes until edges lace brown. Flip, add cheese, melt 1 minute.",
-      "minutes": 8,
-      "heatLevel": "high"
+      "title": "Sear to 165°F",
+      "instruction": "Heat an oiled griddle or cast iron to medium-high. Cook patties 5–6 minutes per side until they read 165°F — lean turkey dries out fast past that. Add pepper jack the last minute.",
+      "minutes": 14,
+      "heatLevel": "medium-high"
     },
     {
       "stepNumber": 3,
       "title": "Build and run",
-      "instruction": "Toast buns in fat. Stack and serve within 2 minutes — smash burgers go soft fast. Run a sheet-tray line, not plated dinners.",
+      "instruction": "Toast buns on the griddle. Slice avocado and separate lettuce leaves. Run a topping line so the crew builds their own.",
       "minutes": 5,
       "heatLevel": ""
     },
     {
       "stepNumber": 4,
       "title": "Batch the next round",
-      "instruction": "Wipe griddle between batches. Keep cooked burgers on a rack in a 200°F oven — max 10 minutes or edges soften.",
+      "instruction": "Hold cooked patties on a rack in a 200°F oven up to 15 minutes — the beans keep them moist longer than all-turkey patties.",
       "minutes": 5,
       "heatLevel": "low"
     }
@@ -122,10 +134,10 @@
   "spiceLevel": "mild",
   "cleanupDifficulty": "medium",
   "nutrition": {
-    "calories": 772,
-    "protein": 54,
-    "carbs": 32,
-    "fats": 49,
+    "calories": 730,
+    "protein": 57,
+    "carbs": 48,
+    "fats": 33,
     "label": "Estimated per serving",
     "source": "calculated",
     "estimateAvailable": true,
@@ -176,26 +188,32 @@
   "contentVersion": 2,
   "dietary": {
     "confidence": "high",
-    "matchedCount": 6,
-    "totalCount": 6,
+    "matchedCount": 8,
+    "totalCount": 8,
     "uncertainIngredients": [],
     "flaggedIngredients": [
       {
-        "name": "Potato Buns",
+        "name": "Panko Breadcrumbs",
         "allergens": [
           "gluten"
         ]
       },
       {
-        "name": "American Cheese",
+        "name": "Large Eggs",
         "allergens": [
-          "dairy"
+          "egg"
         ]
       },
       {
-        "name": "Mayonnaise",
+        "name": "Whole Wheat Buns",
         "allergens": [
-          "egg"
+          "gluten"
+        ]
+      },
+      {
+        "name": "Pepper Jack Cheese",
+        "allergens": [
+          "dairy"
         ]
       }
     ],
@@ -216,24 +234,18 @@
       {
         "flag": "gluten",
         "label": "Gluten-Free Adaptable",
-        "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+        "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
       },
       {
         "flag": "dairy",
         "label": "Dairy-Free Adaptable",
         "note": "Use a dairy-free cheese shred/block alternative."
-      },
-      {
-        "flag": "egg",
-        "label": "Egg-Free Adaptable",
-        "note": "Use an egg-free/vegan mayonnaise."
       }
     ],
-    "classifiedAt": "2026-09-26T19:31:02.326Z"
+    "classifiedAt": "2026-10-03T22:41:15.912Z"
   },
   "avoidTags": [
-    "mayonnaise",
-    "pickles",
-    "mustard"
+    "avocado",
+    "beans"
   ]
 }

@@ -597,7 +597,7 @@ function buildForClass(
     case "pasta":
       return buildPasta(def, scale);
     case "burger":
-      return buildBurger(scale);
+      return def.protein === "turkey" ? buildTurkeyBurger(scale) : buildBurger(scale);
     case "tacos":
       return buildTacos(def, scale);
     case "breakfast":
@@ -1070,6 +1070,55 @@ function buildBurger(scale: number): { ingredients: Ing[]; steps: Step[] } {
   };
 }
 
+function buildTurkeyBurger(scale: number): { ingredients: Ing[]; steps: Step[] } {
+  return {
+    ingredients: [
+      m("Ground turkey (93/7)", mult(3, scale), "lb", "Main"),
+      m("Black beans, rinsed", mult(2, scale), "cups", "Main"),
+      m("Panko breadcrumbs", mult(0.75, scale), "cup", "Binder"),
+      m("Large eggs", mult(2, scale), "count", "Binder"),
+      m("Whole wheat buns", mult(8, scale), "count", "Buns"),
+      m("Pepper jack cheese", mult(8, scale), "slices", "Cheese"),
+      m("Avocado", mult(2, scale), "count", "Toppings"),
+      m("Green leaf lettuce", mult(1, scale), "head", "Toppings"),
+    ],
+    steps: [
+      {
+        stepNumber: 1,
+        title: "Mix and form patties",
+        instruction:
+          "Mash black beans with a fork, leaving some texture. Mix with ground turkey, panko, eggs and 2 tsp salt just until combined. Form 8 patties 3/4 inch thick with a thumbprint in the center.",
+        minutes: 12,
+        heatLevel: "",
+      },
+      {
+        stepNumber: 2,
+        title: "Sear to 165°F",
+        instruction:
+          "Heat an oiled griddle or cast iron to medium-high. Cook patties 5–6 minutes per side until they read 165°F — lean turkey dries out fast past that. Add pepper jack the last minute.",
+        minutes: 14,
+        heatLevel: "medium-high",
+      },
+      {
+        stepNumber: 3,
+        title: "Build and run",
+        instruction:
+          "Toast buns on the griddle. Slice avocado and separate lettuce leaves. Run a topping line so the crew builds their own.",
+        minutes: 5,
+        heatLevel: "",
+      },
+      {
+        stepNumber: 4,
+        title: "Batch the next round",
+        instruction:
+          "Hold cooked patties on a rack in a 200°F oven up to 15 minutes — the beans keep them moist longer than all-turkey patties.",
+        minutes: 5,
+        heatLevel: "low",
+      },
+    ],
+  };
+}
+
 function buildTacos(def: GoldenRecipeDefinition, scale: number): { ingredients: Ing[]; steps: Step[] } {
   return {
     ingredients: [
@@ -1173,6 +1222,7 @@ function buildBreakfast(def: GoldenRecipeDefinition, scale: number): { ingredien
 }
 
 function buildSheetPan(def: GoldenRecipeDefinition, scale: number): { ingredients: Ing[]; steps: Step[] } {
+  const fajitas = /\bfajitas?\b/i.test(def.title);
   return {
     ingredients: [
       m("Boneless chicken thighs", mult(3, scale), "lb", "Main"),
@@ -1181,6 +1231,7 @@ function buildSheetPan(def: GoldenRecipeDefinition, scale: number): { ingredient
       m("Olive oil", mult(0.33, scale), "cup", "Aromatics"),
       m("Fajita seasoning", mult(3, scale), "tbsp", "Seasoning"),
       m("Lime", mult(4, scale), "count", "Finish"),
+      ...(fajitas ? [m("Flour tortillas (8-inch)", mult(24, scale), "count", "Serve")] : []),
     ],
     steps: [
       {
@@ -1202,7 +1253,9 @@ function buildSheetPan(def: GoldenRecipeDefinition, scale: number): { ingredient
       {
         stepNumber: 3,
         title: "Serve family-style",
-        instruction: `Pile ${def.title} onto trays. Hold backup pan foil-covered at 200°F. Squeeze lime at the line if using.`,
+        instruction: fajitas
+          ? `Warm tortillas wrapped in foil in the oven for the last 10 minutes. Pile ${def.title} onto trays next to the tortillas and lime wedges. Hold backup pan foil-covered at 200°F.`
+          : `Pile ${def.title} onto trays. Hold backup pan foil-covered at 200°F. Squeeze lime at the line if using.`,
         minutes: 5,
         heatLevel: "low",
       },

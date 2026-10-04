@@ -253,6 +253,7 @@ export function inferActualProtein(
  */
 const PROTEIN_FILTER_SYNONYMS: Record<string, readonly string[]> = {
   seafood: ["seafood", "fish", "salmon", "shrimp", "tuna", "cod", "shellfish", "crab", "lobster"],
+  fish: ["seafood", "fish", "salmon", "shrimp", "tuna", "cod", "shellfish", "crab", "lobster"],
   pork: ["pork", "bacon", "sausage", "ham"],
   vegetarian: ["vegetarian", "plant", "vegan"],
   beef: ["beef"],

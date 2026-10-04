@@ -50,7 +50,10 @@ assert.ok(visibleIngredientHints(bagel).some((h) => /egg/.test(h)));
 assert.ok(deriveAvoidItems(bagel).includes("fried egg"));
 
 // Title/ingredient conflicts block regeneration.
-assert.ok(titleIngredientConflicts(load("golden-100/pages/turkey-burgers.json")).length > 0);
+assert.ok(
+  titleIngredientConflicts({ title: "Black Bean Turkey Burgers", ingredients: [{ name: "Ground beef (80/20)" }] }).length > 0,
+);
+assert.deepEqual(titleIngredientConflicts(load("golden-100/pages/turkey-burgers.json")), []);
 assert.deepEqual(titleIngredientConflicts(monte), []);
 assert.deepEqual(titleIngredientConflicts(load("golden-100/pages/pork-carnitas-tacos.json")), []);
 

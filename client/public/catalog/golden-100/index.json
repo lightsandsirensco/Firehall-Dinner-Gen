@@ -5731,15 +5731,15 @@
           {
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
-            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet."
+            "note": "Make your own blend from individually confirmed gluten-free spices, or use a certified gluten-free seasoning packet. Use certified gluten-free tortillas or corn tortillas."
           }
         ]
       },
       "nutritionSummary": {
-        "highProtein": false,
+        "highProtein": true,
         "lowCarb": false,
         "healthy": false,
-        "estimateAvailable": false,
+        "estimateAvailable": true,
         "numericFilterEligible": false
       },
       "avoidTags": [
@@ -7172,17 +7172,12 @@
           {
             "flag": "gluten",
             "label": "Gluten-Free Adaptable",
-            "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
+            "note": "Use certified gluten-free panko/breadcrumbs, or crushed gluten-free crackers. Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           },
           {
             "flag": "dairy",
             "label": "Dairy-Free Adaptable",
             "note": "Use a dairy-free cheese shred/block alternative."
-          },
-          {
-            "flag": "egg",
-            "label": "Egg-Free Adaptable",
-            "note": "Use an egg-free/vegan mayonnaise."
           }
         ]
       },
@@ -7191,16 +7186,15 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "calories": 772,
-        "protein": 54,
-        "carbs": 32,
-        "fat": 49,
+        "calories": 730,
+        "protein": 57,
+        "carbs": 48,
+        "fat": 33,
         "numericFilterEligible": true
       },
       "avoidTags": [
-        "mayonnaise",
-        "pickles",
-        "mustard"
+        "avocado",
+        "beans"
       ]
     },
     {

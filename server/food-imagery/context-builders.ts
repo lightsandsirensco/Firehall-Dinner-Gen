@@ -2,9 +2,16 @@ import type { GenerateResponse, PizzaResponse } from "../../shared/schema.js";
 import type { FoodImageryContext } from "../../shared/food-imagery/types.js";
 import { getPizzaConceptMeta } from "../../shared/pizza-concepts.js";
 import { buildPizzaImageryContext } from "../../shared/food-imagery/pizza-prompt-builder.js";
+import { createHash } from "node:crypto";
+import { normalizeRecipeSignature } from "../../shared/recipe-signature.js";
 
+/**
+ * Hash the whole signature: its plain-text prefix (style|protein|cuisine|carb|method)
+ * is shared by many different dishes, so truncating it aliased one meal's image to others.
+ */
 export function mealImageryKeyFromSignature(signature: string): string {
-  return `meal:sig:${signature.slice(0, 48)}`;
+  const digest = createHash("sha256").update(normalizeRecipeSignature(signature)).digest("hex");
+  return `meal:sig:${digest.slice(0, 32)}`;
 }
 
 export function mealImageryKeyFromId(recipeId: string): string {

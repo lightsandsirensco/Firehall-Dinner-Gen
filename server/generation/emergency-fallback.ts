@@ -88,6 +88,8 @@ export function buildEmergencyFallbackRecipe(
 
   let recipe: GenerateResponse;
   try {
+    // Keep the builder's title/style: seed titles name dishes ("Firehall Beef Tacos")
+    // that the protein's fixed fallback ingredient set does not contain.
     recipe = buildFallbackRecipe(
       STUB_TEMPLATE,
       request,
@@ -95,9 +97,6 @@ export function buildEmergencyFallbackRecipe(
       structure,
       [],
     );
-    recipe.title = seed.title;
-    recipe.why_it_fits_tonight = seed.whyItFits;
-    recipe.meal_style = structureDisplay;
   } catch {
     recipe = buildSafeFallbackRecipe(seed.mealFormat, request.crew_size ?? 4);
     recipe.title = seed.title;

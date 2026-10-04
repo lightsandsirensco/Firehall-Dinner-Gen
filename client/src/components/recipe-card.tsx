@@ -3,7 +3,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import type { ClientRecipeResponse, MealPlateLine } from "@shared/schema";
-import { customerSourceAttribution } from "@shared/customer-facing";
+import {
+  customerCuisineLabel,
+  customerMealFormatLabel,
+  customerProteinLabel,
+  customerSourceAttribution,
+} from "@shared/customer-facing";
 import type { RecipeSourceAttribution } from "@shared/canonical-recipe";
 import { resolveMealPlate } from "@/lib/meal-plate-ui";
 import { MealHeroImage } from "@/components/meal-hero-image";
@@ -400,6 +405,11 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
     mealFormat: recipe.meal_style,
     protein: recipe.chosen_protein,
   });
+  const cuisineLabel = customerCuisineLabel(mealPlate?.cuisine_label);
+  const proteinLabel = customerProteinLabel(
+    (recipe as { protein_label?: string }).protein_label || recipe.chosen_protein,
+  );
+  const mealFormatLabel = customerMealFormatLabel(recipe);
 
   return (
     <div className={cn(app.sectionGap, "meal-reveal motion-reduce:animate-none")}>
@@ -478,9 +488,9 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             )}
           </p>
         )}
-        {mealPlate?.cuisine_label && (
+        {cuisineLabel && (
           <p className={app.caption} data-testid="text-cuisine-label">
-            {mealPlate.cuisine_label}
+            {cuisineLabel}
           </p>
         )}
 
@@ -501,14 +511,14 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
               {recipe.timing.total_min} min
             </span>
           )}
-          {recipe.chosen_protein && (
+          {proteinLabel && (
             <span className={app.pill} data-testid="text-chosen-protein">
-              {recipe.chosen_protein}
+              {proteinLabel}
             </span>
           )}
-          {recipe.meal_format && (
+          {mealFormatLabel && (
             <span className={app.pill} data-testid="badge-meal-format">
-              {recipe.meal_format}
+              {mealFormatLabel}
             </span>
           )}
           {recipe.budget_level === "low" && (

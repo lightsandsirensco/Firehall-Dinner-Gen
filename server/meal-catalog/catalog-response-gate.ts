@@ -10,6 +10,7 @@ import {
   type CatalogGateResult,
 } from "../../shared/hall-catalog/gate.js";
 import { log } from "../logger.js";
+import { loadCanonicalCatalogPageForDisplay } from "./canonical-page.js";
 
 export interface CatalogResponseContext {
   slug?: string | null;
@@ -41,6 +42,13 @@ export function evaluateOutboundCatalogRecipe(ctx: CatalogResponseContext): Cata
     },
     { score: ctx.score ?? null },
   );
+  if (result.slug && result.reasons.includes("title_mismatch")) {
+    const pageTitle = loadCanonicalCatalogPageForDisplay(result.slug)?.title?.trim();
+    if (pageTitle && pageTitle === (ctx.title || "").trim()) {
+      result.reasons = result.reasons.filter((r) => r !== "title_mismatch");
+      result.approved = result.reasons.length === 0;
+    }
+  }
   logCatalogSourceTelemetry(result, ctx);
   return result;
 }
@@ -58,9 +66,26 @@ export function applyCatalogGateToClientPayload<T extends Record<string, unknown
     catalog_badge: string;
     _slug: string;
     hero_image: string;
+    hero_image_alt?: string;
+    hero_image_status?: string;
     title: string;
     hall_curated?: boolean;
   };
+  const page = loadCanonicalCatalogPageForDisplay(slug);
+  if (page) {
+    if (page.title?.trim()) gated.title = page.title.trim();
+    if (page.heroVerified && page.heroImage) {
+      gated.hero_image = page.heroImage;
+      gated.hero_image_alt = page.heroImageAlt || gated.title;
+    } else {
+      gated.hero_image = "";
+      gated.hero_image_status = "unavailable";
+    }
+  }
+  const plate = (gated as Record<string, unknown>).meal_plate as { display_title?: string } | undefined;
+  if (plate && typeof plate === "object") {
+    (gated as Record<string, unknown>).meal_plate = { ...plate, display_title: gated.title };
+  }
   gated.hall_curated = true;
   delete (gated as Record<string, unknown>)._source;
   delete (gated as Record<string, unknown>)._fallback;

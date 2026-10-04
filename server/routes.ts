@@ -169,7 +169,7 @@ import {
   pickCatalogRecipeForGenerate,
   pickCuratedExploreSearchCard,
 } from "./recipe-ranker.js";
-import { fetchBestSpoonacularRecipe } from "./spoonacular-converter";
+import { fetchBestSpoonacularRecipe, proteinMatchesFilter } from "./spoonacular-converter";
 import { runV2Generate } from "./recipe-engine-v2";
 import { runV2Fallback } from "./v2-fallback";
 import { isTemplateFallbackAllowed } from "./recipe-fallback-policy";
@@ -230,7 +230,8 @@ import { normalizeGenerateFirehallCategory } from "../shared/firehall-categories
 import { getClientIp } from "./client-ip.js";
 import { enforceExploreRateLimit } from "./explore-rate-limit.js";
 import { enforceEmailRateLimit } from "./email-rate-limit.js";
-import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, isBlockedByRecentVariety, type RecipeValidationContext } from "./validateRecipe";
+import { validateAndFixRecipe, validateRecipe, computeSignature, recordSignature, isBlockedByRecentVariety, type RecipeValidationContext, type ValidationResult } from "./validateRecipe";
+import { catalogProteinLabel } from "./meal-catalog/hydrate-golden-generate.js";
 import {
   initCacheStore,
   buildCacheKey,
@@ -280,6 +281,21 @@ function coerceGenerateRequestBody(body: unknown): unknown {
     next.appliances = ["stove", "oven"];
   }
   return next;
+}
+
+/**
+ * Catalog meals are delivered exactly as their canonical record — the AI-meal repair passes
+ * (structure fixes, flavor injection, title rebuilds) must never touch them.
+ */
+function validateForDelivery(
+  recipe: GenerateResponse,
+  ctx: RecipeValidationContext,
+  slug: unknown,
+): ValidationResult {
+  if (typeof slug === "string" && isApprovedCatalogSlug(slug)) {
+    return { recipe, ok: true, issues: [], actionTaken: "catalog_locked", signature: computeSignature(recipe) };
+  }
+  return validateAndFixRecipe(prepareRecipePreValidation(recipe), ctx);
 }
 
 export async function registerRoutes(
@@ -617,7 +633,9 @@ export async function registerRoutes(
   }
 
   function buildResponse(validation: import("./validateRecipe").ValidationResult, extras: Record<string, any>, debug: boolean, crewSize: number = 0, mealFormat: string = "", allergens: string[] = [], auditCtx?: LabelAuditContext, sessionKey?: string): Record<string, any> {
-    let recipe = prepareRecipePreValidation(validation.recipe);
+    const catalogSlug =
+      typeof extras._slug === "string" && isApprovedCatalogSlug(extras._slug) ? extras._slug : null;
+    let recipe = catalogSlug ? validation.recipe : prepareRecipePreValidation(validation.recipe);
     if (extras._recipe_source) {
       recipe = { ...recipe, _recipe_source: extras._recipe_source };
     }
@@ -627,6 +645,10 @@ export async function registerRoutes(
 
     if (allergens.length > 0) {
       const scan = scanRecipeForAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
+      if (scan.found && catalogSlug) {
+        log(`[allergen-postcheck] Catalog recipe ${catalogSlug} conflicts with allergens: ${scan.violations.join("; ")} — re-picking`, "allergen");
+        throw new RecipeNotSendableError(["allergen_catalog_conflict"]);
+      }
       if (scan.found) {
         log(`[allergen-postcheck] Found ${scan.violations.length} allergen violations â€” auto-substituting: ${scan.violations.join("; ")}`, "allergen");
         const fixed = autoSubstituteAllergens(recipe.ingredients, recipe.steps, recipe.title, allergens);
@@ -689,76 +711,78 @@ export async function registerRoutes(
     };
 
     const audit = labelAudit(recipe, ctx);
-    recipe = audit.recipe;
-
-    if (audit.fixesApplied.length > 0) {
-      log(`[label-audit] Applied ${audit.fixesApplied.length} fixes: ${audit.fixesApplied.join("; ")}`, "audit");
-    }
-
-    const healthiness = ctx.selectedHealthiness || "balanced";
-    const { recipe: carbFixed, fixes: carbFixes } = enforceCarbs(recipe, mealFormat, healthiness, allergens);
-    recipe = carbFixed;
-    if (carbFixes.length > 0) {
-      log(`[carb-rules] Applied ${carbFixes.length} fixes: ${carbFixes.join("; ")}`, "carb");
-    }
-
     const effectiveCrewSize = ctx.crewSize || crewSize || 6;
-    const { recipe: riceFixed, fixes: riceFixes } = ensureRiceForRiceDishes(recipe, mealFormat, effectiveCrewSize, allergens);
-    recipe = riceFixed;
-    if (riceFixes.length > 0) {
-      log(`[rice-inject] Applied ${riceFixes.length} fixes: ${riceFixes.join("; ")}`, "carb");
-    }
 
-    const { recipe: composed, fixes: composeFixes } = completeFirehallPlate(recipe, {
-      mealFormat,
-      cuisine: ctx.selectedCuisine || recipe.tags?.cuisine || "any",
-      healthiness,
-      crewSize: effectiveCrewSize,
-      allergens,
-      protein: ctx.chosenProtein || recipe.chosen_protein || "any",
-      sessionKey,
-    });
-    const recipeSource = composed._recipe_source || extras._recipe_source;
-    recipe = {
-      ...composed,
-      steps: resolveMealBuildSteps(composed, mealFormat, effectiveCrewSize, recipeSource),
-    };
-    if (composeFixes.length > 0) {
-      log(`[compose] Applied ${composeFixes.length} plate fixes: ${composeFixes.join("; ")}`, "compose");
-    }
-
-    recipe = assertMealSemanticsOrLog(recipe, {
-      mealFormat,
-      cuisine: ctx.selectedCuisine || recipe.tags?.cuisine || "any",
-      crewSize: effectiveCrewSize,
-      allergens,
-      protein: ctx.chosenProtein || recipe.chosen_protein || "any",
-    }, composeFixes.filter((f) => f.startsWith("unrepaired:") || f.startsWith("repair:")));
-
-    if (composeFixes.length > 0) {
-      recipe = adjustMacrosAfterCompose(recipe, composeFixes.length);
-    }
-
-    const trustScore = scorePlateTrust(recipe);
-    if (trustScore < 5) {
-      log(`[meal-sanity] Low plate trust (${trustScore}/10) for "${recipe.title}"`, "validate");
-    }
-
-    recipe = {
-      ...recipe,
-      steps: polishFirehallSteps(recipe.steps || []),
-      ingredients: applyCrewPortionFloors(recipe.ingredients || [], effectiveCrewSize),
-      cleanup_tip: recipe.cleanup_tip || hallCleanupTip(),
-      pro_tips: recipe.pro_tips?.length ? recipe.pro_tips : hallProTips(effectiveCrewSize, 4),
-    };
-
-    const catalogSlug =
-      typeof extras._slug === "string" && isApprovedCatalogSlug(extras._slug) ? extras._slug : null;
     if (catalogSlug) {
-      const catalogTitle = getCatalogTitle(catalogSlug);
-      if (catalogTitle) {
-        recipe = { ...recipe, title: catalogTitle };
+      recipe = {
+        ...recipe,
+        ingredients: applyCrewPortionFloors(recipe.ingredients || [], effectiveCrewSize),
+        cleanup_tip: recipe.cleanup_tip || hallCleanupTip(),
+        pro_tips: recipe.pro_tips?.length ? recipe.pro_tips : hallProTips(effectiveCrewSize, 4),
+        title: getCatalogTitle(catalogSlug) || recipe.title,
+      };
+    } else {
+      recipe = audit.recipe;
+
+      if (audit.fixesApplied.length > 0) {
+        log(`[label-audit] Applied ${audit.fixesApplied.length} fixes: ${audit.fixesApplied.join("; ")}`, "audit");
       }
+
+      const healthiness = ctx.selectedHealthiness || "balanced";
+      const { recipe: carbFixed, fixes: carbFixes } = enforceCarbs(recipe, mealFormat, healthiness, allergens);
+      recipe = carbFixed;
+      if (carbFixes.length > 0) {
+        log(`[carb-rules] Applied ${carbFixes.length} fixes: ${carbFixes.join("; ")}`, "carb");
+      }
+
+      const { recipe: riceFixed, fixes: riceFixes } = ensureRiceForRiceDishes(recipe, mealFormat, effectiveCrewSize, allergens);
+      recipe = riceFixed;
+      if (riceFixes.length > 0) {
+        log(`[rice-inject] Applied ${riceFixes.length} fixes: ${riceFixes.join("; ")}`, "carb");
+      }
+
+      const { recipe: composed, fixes: composeFixes } = completeFirehallPlate(recipe, {
+        mealFormat,
+        cuisine: ctx.selectedCuisine || recipe.tags?.cuisine || "any",
+        healthiness,
+        crewSize: effectiveCrewSize,
+        allergens,
+        protein: ctx.chosenProtein || recipe.chosen_protein || "any",
+        sessionKey,
+      });
+      const recipeSource = composed._recipe_source || extras._recipe_source;
+      recipe = {
+        ...composed,
+        steps: resolveMealBuildSteps(composed, mealFormat, effectiveCrewSize, recipeSource),
+      };
+      if (composeFixes.length > 0) {
+        log(`[compose] Applied ${composeFixes.length} plate fixes: ${composeFixes.join("; ")}`, "compose");
+      }
+
+      recipe = assertMealSemanticsOrLog(recipe, {
+        mealFormat,
+        cuisine: ctx.selectedCuisine || recipe.tags?.cuisine || "any",
+        crewSize: effectiveCrewSize,
+        allergens,
+        protein: ctx.chosenProtein || recipe.chosen_protein || "any",
+      }, composeFixes.filter((f) => f.startsWith("unrepaired:") || f.startsWith("repair:")));
+
+      if (composeFixes.length > 0) {
+        recipe = adjustMacrosAfterCompose(recipe, composeFixes.length);
+      }
+
+      const trustScore = scorePlateTrust(recipe);
+      if (trustScore < 5) {
+        log(`[meal-sanity] Low plate trust (${trustScore}/10) for "${recipe.title}"`, "validate");
+      }
+
+      recipe = {
+        ...recipe,
+        steps: polishFirehallSteps(recipe.steps || []),
+        ingredients: applyCrewPortionFloors(recipe.ingredients || [], effectiveCrewSize),
+        cleanup_tip: recipe.cleanup_tip || hallCleanupTip(),
+        pro_tips: recipe.pro_tips?.length ? recipe.pro_tips : hallProTips(effectiveCrewSize, 4),
+      };
     }
 
     const importedSource =
@@ -799,12 +823,20 @@ export async function registerRoutes(
 
     const recipeId = crypto.randomUUID();
     const merged = { ...recipe, ...extras, _signature: validation.signature, _id: recipeId };
-    const client = normalizeToClientFormat(merged, crewSize, mealFormat);
+    const client = normalizeToClientFormat(
+      merged,
+      crewSize,
+      catalogSlug ? recipe.meal_style || mealFormat : mealFormat,
+    );
     const base: Record<string, any> = stripInternalClientFields(
       { ...client },
       debug,
     );
     base._id = recipeId;
+    if (catalogSlug) {
+      const proteinLabel = catalogProteinLabel(catalogSlug);
+      if (proteinLabel) base.protein_label = proteinLabel;
+    }
     if (extras._fallback === true) {
       if (debug) base._fallback = true;
       else base.hall_curated = true;
@@ -972,10 +1004,7 @@ export async function registerRoutes(
       if (request?.protein && request.protein !== "any") {
         const want = request.protein;
         const got = String((result as any).chosen_protein || "").toLowerCase();
-        const ok =
-          want === "seafood"
-            ? got === "seafood" || got === "fish"
-            : got === String(want).toLowerCase();
+        const ok = proteinMatchesFilter(got, want);
         if (!ok) {
           recordReliabilityEvent("blocked_client_send", `protein_mismatch:${want}->${got || "unknown"}`);
           throw new RecipeNotSendableError([`protein_mismatch:${want}`]);
@@ -1030,7 +1059,7 @@ export async function registerRoutes(
       // Meals must ship with curated hero assets (or client-side editorial fallbacks).
       let payload = result as any;
       try {
-        if ((!payload.hero_image || payload.hero_image_status === "unavailable") && extras?._catalog_id) {
+        if ((!payload.hero_image || payload.hero_image_status === "unavailable") && extras?._catalog_id && !payload._slug) {
           const { getCuratedRecipeById } = await import("./curated-recipe-store.js");
           const curated = getCuratedRecipeById(String(extras._catalog_id));
           if (curated?.heroImage) {
@@ -1068,10 +1097,7 @@ export async function registerRoutes(
           allergens,
           recentSignatures: clientRecentSigs,
         };
-        const fbVal = validateAndFixRecipe(
-          prepareRecipePreValidation(safe.recipe),
-          fbValCtx,
-        );
+        const fbVal = validateForDelivery(safe.recipe, fbValCtx, safe.slug);
         return sendRecipeResponse(
           res,
           fbVal,
@@ -1118,7 +1144,7 @@ export async function registerRoutes(
             allergens,
             recentSignatures: clientRecentSigs,
           };
-          const emVal = validateAndFixRecipe(prepareRecipePreValidation(safe.recipe), emValCtx);
+          const emVal = validateForDelivery(safe.recipe, emValCtx, safe.slug);
           return sendRecipeResponse(
             res,
             emVal,
@@ -1448,10 +1474,7 @@ export async function registerRoutes(
         currentRecipeSignature: clientCurrentSig || undefined,
       };
 
-      let validated = validateAndFixRecipe(
-        prepareRecipePreValidation(pipelineHit.recipe),
-        valCtx,
-      );
+      let validated = validateForDelivery(pipelineHit.recipe, valCtx, pipelineHit.extras._slug);
 
       const preserveTitle = pipelineHit.originalTitle;
       if (preserveTitle && validated.recipe.title !== preserveTitle) {
@@ -1621,10 +1644,7 @@ export async function registerRoutes(
           appliances: emergencyRequest.appliances,
           allergens,
         };
-        let validated = validateAndFixRecipe(
-          prepareRecipePreValidation(pipelineHit.recipe),
-          valCtx,
-        );
+        let validated = validateForDelivery(pipelineHit.recipe, valCtx, pipelineHit.extras._slug);
         if (pipelineHit.originalTitle && validated.recipe.title !== pipelineHit.originalTitle) {
           validated = { ...validated, recipe: { ...validated.recipe, title: pipelineHit.originalTitle } };
         }
@@ -1698,7 +1718,7 @@ export async function registerRoutes(
             appliances: salvage.appliances,
             allergens,
           };
-          const validated = validateAndFixRecipe(prepareRecipePreValidation(safe.recipe), valCtx);
+          const validated = validateForDelivery(safe.recipe, valCtx, safe.slug);
           return sendRecipeResponse(
             res,
             validated,

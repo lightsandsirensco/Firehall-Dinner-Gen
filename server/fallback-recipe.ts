@@ -1,5 +1,5 @@
 import type { TemplateRow, GenerateRequest, GenerateResponse } from "@shared/schema";
-import { log } from "./index";
+import { log } from "./logger";
 import type { StructureType } from "./structure-variety";
 import { STRUCTURE_DISPLAY } from "./structure-variety";
 import { getRecentVegBases, commitVegBase } from "./protein-validator";
@@ -105,6 +105,8 @@ const PROTEIN_INGREDIENTS: Record<string, RawIngredient[]> = {
 
 interface VegFallbackSet {
   base: string;
+  title: string;
+  structure: StructureType;
   ingredients: RawIngredient[];
   steps: { heading: string; body: string }[];
   proTips: string[];
@@ -114,6 +116,8 @@ interface VegFallbackSet {
 const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   {
     base: "chickpeas",
+    title: "Smoky Chickpea & Vegetable Skillet",
+    structure: "skillet",
     ingredients: [
       { item: "Chickpeas, drained and rinsed", amount: "4 cans (15 oz)", baseQty: 4, unit: "cans (15 oz)" },
       { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
@@ -136,6 +140,8 @@ const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   },
   {
     base: "lentils",
+    title: "Lemony Lentil & Spinach Stew",
+    structure: "soup-stew",
     ingredients: [
       { item: "Green or brown lentils, rinsed", amount: "2 cups dry", baseQty: 2, unit: "cups" },
       { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
@@ -160,6 +166,8 @@ const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   },
   {
     base: "black beans",
+    title: "Black Bean & Pepper Bowls",
+    structure: "bowl",
     ingredients: [
       { item: "Black beans, drained and rinsed", amount: "4 cans (15 oz)", baseQty: 4, unit: "cans (15 oz)" },
       { item: "Olive oil", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
@@ -182,6 +190,8 @@ const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   },
   {
     base: "kidney beans",
+    title: "Smoky Kidney Bean & Tomato Stew",
+    structure: "soup-stew",
     ingredients: [
       { item: "Kidney beans, drained and rinsed", amount: "4 cans (15 oz)", baseQty: 4, unit: "cans (15 oz)" },
       { item: "Olive oil", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
@@ -203,6 +213,8 @@ const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   },
   {
     base: "quinoa",
+    title: "Roasted Vegetable Quinoa Bowls",
+    structure: "bowl",
     ingredients: [
       { item: "Quinoa, rinsed", amount: "2 cups dry", baseQty: 2, unit: "cups" },
       { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
@@ -225,6 +237,8 @@ const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   },
   {
     base: "eggs",
+    title: "Veggie Egg Scramble",
+    structure: "breakfast-for-dinner",
     ingredients: [
       { item: "Large eggs", amount: "18", baseQty: 18, unit: "", allergens: ["eggs"] },
       { item: "Olive oil", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
@@ -248,6 +262,8 @@ const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   },
   {
     base: "tempeh",
+    title: "Glazed Tempeh with Broccoli",
+    structure: "stir-fry",
     ingredients: [
       { item: "Tempeh, cubed", amount: "2 lbs", baseQty: 2, unit: "lbs", allergens: ["soy"] },
       { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
@@ -270,6 +286,8 @@ const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   },
   {
     base: "white beans",
+    title: "Garlicky White Beans with Tomatoes & Spinach",
+    structure: "skillet",
     ingredients: [
       { item: "Cannellini beans, drained and rinsed", amount: "4 cans (15 oz)", baseQty: 4, unit: "cans (15 oz)" },
       { item: "Olive oil", amount: "3 tbsp", baseQty: 3, unit: "tbsp" },
@@ -293,6 +311,8 @@ const VEG_FALLBACK_SETS: VegFallbackSet[] = [
   },
   {
     base: "edamame",
+    title: "Sesame Edamame Rice Noodle Toss",
+    structure: "noodle-toss",
     ingredients: [
       { item: "Shelled edamame", amount: "2 lbs frozen", baseQty: 2, unit: "lbs", allergens: ["soy"] },
       { item: "Sesame oil", amount: "2 tbsp", baseQty: 2, unit: "tbsp" },
@@ -437,138 +457,38 @@ interface FallbackArchetype {
   cookingMethod: string;
 }
 
+// Every protein has ONE fixed ingredient list + step set (PROTEIN_INGREDIENTS /
+// STOVETOP_STEPS / OVEN_STEPS), so titles may only name what those contain and
+// structures the steps actually produce. Avoid naming ingredients that allergen
+// swaps replace (soy sauce, butter, cheese).
 const FALLBACK_ARCHETYPES: Record<string, FallbackArchetype[]> = {
   chicken: [
-    { structure: "bowl", title: "Chipotle Chicken Power Bowls", baseCarb: "greens", cookingMethod: "stovetop" },
-    { structure: "wrap", title: "Buffalo Chicken Wraps", baseCarb: "tortilla", cookingMethod: "stovetop" },
-    { structure: "taco", title: "Chicken Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
-    { structure: "sandwich", title: "Grilled Chicken Subs with Peppers", baseCarb: "sub roll", cookingMethod: "grill" },
-    { structure: "sheet-pan", title: "Greek Sheet Pan Chicken & Vegetables", baseCarb: "pita", cookingMethod: "oven" },
-    { structure: "skillet", title: "Creamy Garlic Chicken Skillet", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "stir-fry", title: "Teriyaki Chicken Stir-Fry", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "flatbread", title: "BBQ Chicken Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
-    { structure: "stuffed", title: "Chicken & Quinoa Stuffed Peppers", baseCarb: "quinoa", cookingMethod: "oven" },
-    { structure: "pasta", title: "Lemon Garlic Chicken Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
-    { structure: "bake", title: "Chicken Taco Bake", baseCarb: "tortilla", cookingMethod: "oven" },
-    { structure: "one-pot", title: "One-Pot Chicken & Veggie Dinner", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "noodle-toss", title: "Sesame Chicken Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "soup-stew", title: "Hearty Chicken & Vegetable Stew", baseCarb: "crusty bread", cookingMethod: "stovetop" },
-    { structure: "loaded-fries", title: "Loaded Chicken Nacho Fries", baseCarb: "fries", cookingMethod: "oven" },
-    { structure: "casserole", title: "Chicken Enchilada Casserole", baseCarb: "tortilla", cookingMethod: "oven" },
-    { structure: "burger", title: "Smash Chicken Burgers", baseCarb: "bun", cookingMethod: "skillet" },
-    { structure: "breakfast-for-dinner", title: "Chicken & Veggie Breakfast Hash", baseCarb: "potato", cookingMethod: "skillet" },
-    { structure: "grill", title: "Herb-Marinated Grilled Chicken Plates", baseCarb: "couscous", cookingMethod: "grill" },
-    { structure: "rice-bake", title: "Cheesy Chicken & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "skillet", title: "Garlic Paprika Chicken & Vegetable Skillet", baseCarb: "none", cookingMethod: "stovetop" },
+    { structure: "stir-fry", title: "Garlic Chicken & Vegetable Stir-Fry", baseCarb: "none", cookingMethod: "stovetop" },
+    { structure: "bowl", title: "Garlic Paprika Chicken & Veggie Bowls", baseCarb: "none", cookingMethod: "stovetop" },
+    { structure: "one-pot", title: "One-Pan Garlic Chicken & Vegetables", baseCarb: "none", cookingMethod: "stovetop" },
   ],
   beef: [
-    { structure: "bowl", title: "Korean Beef Power Bowls", baseCarb: "greens", cookingMethod: "stovetop" },
-    { structure: "wrap", title: "Philly Cheesesteak Wraps", baseCarb: "tortilla", cookingMethod: "skillet" },
-    { structure: "taco", title: "Seasoned Beef Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
-    { structure: "sandwich", title: "French Dip Beef Sandwiches", baseCarb: "hoagie roll", cookingMethod: "stovetop" },
-    { structure: "burger", title: "Smash Burgers with All the Fixings", baseCarb: "bun", cookingMethod: "skillet" },
-    { structure: "sheet-pan", title: "Sheet Pan Beef & Veggie Fajitas", baseCarb: "tortilla", cookingMethod: "oven" },
-    { structure: "skillet", title: "Firehouse Beef & Pepper Skillet", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "stir-fry", title: "Beef & Broccoli Stir-Fry", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "stuffed", title: "Beef & Cheese Stuffed Peppers", baseCarb: "quinoa", cookingMethod: "oven" },
-    { structure: "casserole", title: "Beef & Potato Casserole", baseCarb: "potato", cookingMethod: "oven" },
-    { structure: "pasta", title: "Beefy Marinara Pasta Bake", baseCarb: "pasta", cookingMethod: "oven" },
-    { structure: "soup-stew", title: "Hearty Beef & Vegetable Stew", baseCarb: "crusty bread", cookingMethod: "stovetop" },
-    { structure: "one-pot", title: "One-Pot Beef Chili Mac", baseCarb: "pasta", cookingMethod: "stovetop" },
-    { structure: "noodle-toss", title: "Mongolian Beef Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "loaded-fries", title: "Loaded Beef Nacho Fries", baseCarb: "fries", cookingMethod: "oven" },
-    { structure: "flatbread", title: "Beef & Onion Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
-    { structure: "bake", title: "Beef Enchilada Bake", baseCarb: "tortilla", cookingMethod: "oven" },
-    { structure: "stuffed-bread", title: "Beef & Cheese Stuffed Bread", baseCarb: "bread dough", cookingMethod: "oven" },
-    { structure: "breakfast-for-dinner", title: "Beef & Egg Breakfast Skillet", baseCarb: "potato", cookingMethod: "skillet" },
-    { structure: "rice-bake", title: "Cheesy Beef & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "skillet", title: "Chili Beef & Tomato Skillet", baseCarb: "none", cookingMethod: "stovetop" },
+    { structure: "bowl", title: "Chili Beef & Tomato Bowls", baseCarb: "none", cookingMethod: "stovetop" },
+    { structure: "one-pot", title: "One-Pot Chili Beef & Tomatoes", baseCarb: "none", cookingMethod: "stovetop" },
   ],
   pork: [
-    { structure: "bowl", title: "Hawaiian Pork Power Bowls", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "wrap", title: "Pulled Pork Wraps with Slaw", baseCarb: "tortilla", cookingMethod: "stovetop" },
-    { structure: "taco", title: "Carnitas Street Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
-    { structure: "sandwich", title: "BBQ Pulled Pork Sandwiches", baseCarb: "bun", cookingMethod: "slow cooker" },
-    { structure: "sheet-pan", title: "Sheet Pan Pork Chops & Roasted Veggies", baseCarb: "sweet potato", cookingMethod: "oven" },
-    { structure: "skillet", title: "Honey Mustard Pork Skillet", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "stir-fry", title: "Ginger Pork Stir-Fry", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "flatbread", title: "Pork & Caramelized Onion Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
-    { structure: "stuffed", title: "Pork & Apple Stuffed Sweet Potatoes", baseCarb: "sweet potato", cookingMethod: "oven" },
-    { structure: "pasta", title: "Pork Ragu Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
-    { structure: "one-pot", title: "One-Pot Pork & Veggie Dinner", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "noodle-toss", title: "Szechuan Pork Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "soup-stew", title: "Pork & White Bean Stew", baseCarb: "crusty bread", cookingMethod: "stovetop" },
-    { structure: "bake", title: "Pork Tenderloin & Potato Bake", baseCarb: "potato", cookingMethod: "oven" },
-    { structure: "loaded-fries", title: "Loaded Pulled Pork Fries", baseCarb: "fries", cookingMethod: "oven" },
-    { structure: "casserole", title: "Pork & Veggie Casserole", baseCarb: "potatoes", cookingMethod: "oven" },
-    { structure: "burger", title: "Pork Smash Burgers", baseCarb: "bun", cookingMethod: "skillet" },
-    { structure: "breakfast-for-dinner", title: "Pork & Hash Brown Breakfast Skillet", baseCarb: "potato", cookingMethod: "skillet" },
-    { structure: "grill", title: "Grilled Pork Chops with Corn Salad", baseCarb: "corn", cookingMethod: "grill" },
-    { structure: "rice-bake", title: "Cheesy Pork & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "sheet-pan", title: "Sheet Pan Brown Sugar Dijon Pork with Potatoes & Green Beans", baseCarb: "potatoes", cookingMethod: "oven" },
+    { structure: "plated-main", title: "Brown Sugar Dijon Pork Tenderloin with Potatoes & Green Beans", baseCarb: "potatoes", cookingMethod: "stovetop" },
   ],
   turkey: [
     { structure: "bowl", title: "Turkey Taco Bowls with Black Beans", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "wrap", title: "Turkey Lettuce Wraps", baseCarb: "lettuce", cookingMethod: "stovetop" },
-    { structure: "taco", title: "Spiced Turkey Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
-    { structure: "sandwich", title: "Turkey Meatball Subs", baseCarb: "sub roll", cookingMethod: "oven" },
-    { structure: "burger", title: "Turkey Smash Burgers", baseCarb: "bun", cookingMethod: "skillet" },
-    { structure: "sheet-pan", title: "Sheet Pan Turkey & Sweet Potato", baseCarb: "sweet potato", cookingMethod: "oven" },
-    { structure: "skillet", title: "Turkey Sausage & Pepper Skillet", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "stir-fry", title: "Turkey & Veggie Stir-Fry", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "stuffed", title: "Turkey & Quinoa Stuffed Peppers", baseCarb: "quinoa", cookingMethod: "oven" },
-    { structure: "casserole", title: "Turkey Enchilada Casserole", baseCarb: "tortilla", cookingMethod: "oven" },
-    { structure: "pasta", title: "Turkey Bolognese Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
-    { structure: "soup-stew", title: "Turkey & White Bean Chili", baseCarb: "cornbread", cookingMethod: "stovetop" },
-    { structure: "one-pot", title: "One-Pot Turkey & Veggie Dinner", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "noodle-toss", title: "Asian Turkey Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "loaded-fries", title: "Loaded Turkey Taco Fries", baseCarb: "fries", cookingMethod: "oven" },
-    { structure: "flatbread", title: "Turkey & Pesto Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
-    { structure: "bake", title: "Turkey & Veggie Potato Bake", baseCarb: "potatoes", cookingMethod: "oven" },
-    { structure: "breakfast-for-dinner", title: "Turkey Sausage Breakfast Hash", baseCarb: "potato", cookingMethod: "skillet" },
-    { structure: "grill", title: "Grilled Turkey Burgers with Fixings", baseCarb: "bun", cookingMethod: "grill" },
-    { structure: "rice-bake", title: "Turkey & Black Bean Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "skillet", title: "Taco-Spiced Turkey & Black Bean Skillet", baseCarb: "none", cookingMethod: "stovetop" },
   ],
   fish: [
-    { structure: "bowl", title: "Teriyaki Salmon Quinoa Bowls", baseCarb: "quinoa", cookingMethod: "stovetop" },
-    { structure: "wrap", title: "Fish & Slaw Wraps", baseCarb: "tortilla", cookingMethod: "stovetop" },
-    { structure: "taco", title: "Crispy Fish Tacos with Lime Crema", baseCarb: "tortilla", cookingMethod: "skillet" },
-    { structure: "sandwich", title: "Crispy Fish Sandwiches", baseCarb: "bun", cookingMethod: "skillet" },
-    { structure: "sheet-pan", title: "Sheet Pan Salmon & Asparagus", baseCarb: "potatoes", cookingMethod: "oven" },
-    { structure: "skillet", title: "Lemon Butter Fish Skillet", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "stir-fry", title: "Ginger Fish & Veggie Stir-Fry", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "flatbread", title: "Smoked Salmon Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
-    { structure: "pasta", title: "Garlic Shrimp & Lemon Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
-    { structure: "one-pot", title: "One-Pot Fish & Veggie Dinner", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "noodle-toss", title: "Thai Fish Noodle Toss", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "soup-stew", title: "Hearty Fish & Potato Chowder", baseCarb: "crusty bread", cookingMethod: "stovetop" },
-    { structure: "bake", title: "Herb-Crusted Fish Bake", baseCarb: "potato", cookingMethod: "oven" },
-    { structure: "loaded-fries", title: "Loaded Fish & Chips Fries", baseCarb: "fries", cookingMethod: "oven" },
-    { structure: "casserole", title: "Fish & Veggie Potato Casserole", baseCarb: "potatoes", cookingMethod: "oven" },
-    { structure: "burger", title: "Salmon Burgers with Dill Sauce", baseCarb: "bun", cookingMethod: "skillet" },
-    { structure: "breakfast-for-dinner", title: "Smoked Salmon Breakfast Plates", baseCarb: "toast", cookingMethod: "stovetop" },
-    { structure: "grill", title: "Grilled Fish with Citrus & Vegetables", baseCarb: "none", cookingMethod: "grill" },
-    { structure: "rice-bake", title: "Cheesy Fish & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
-    { structure: "stuffed", title: "Fish-Stuffed Bell Peppers", baseCarb: "quinoa", cookingMethod: "oven" },
+    { structure: "plated-main", title: "Lemon Dill Salmon with Asparagus", baseCarb: "none", cookingMethod: "stovetop" },
+    { structure: "skillet", title: "Pan-Seared Lemon Dill Salmon & Asparagus", baseCarb: "none", cookingMethod: "stovetop" },
   ],
+  // Used only when no VEG_FALLBACK_SETS entry fits (STOVETOP_STEPS.vegetarian: tofu + chickpeas).
   vegetarian: [
-    { structure: "bowl", title: "Chickpea & Roasted Veggie Bowls", baseCarb: "greens", cookingMethod: "stovetop" },
-    { structure: "wrap", title: "Spiced Chickpea & Hummus Wraps", baseCarb: "tortilla", cookingMethod: "stovetop" },
-    { structure: "taco", title: "Black Bean & Sweet Potato Tacos", baseCarb: "tortilla", cookingMethod: "skillet" },
-    { structure: "sandwich", title: "Crispy Tofu Bánh Mì Sandwiches", baseCarb: "baguette", cookingMethod: "stovetop" },
-    { structure: "burger", title: "Smoky Black Bean Burgers", baseCarb: "bun", cookingMethod: "skillet" },
-    { structure: "sheet-pan", title: "Sheet Pan Tofu & Veggie Dinner", baseCarb: "none", cookingMethod: "oven" },
-    { structure: "skillet", title: "Lentil & Vegetable Skillet", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "stir-fry", title: "Tofu & Veggie Stir-Fry", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "flatbread", title: "Roasted Veggie & Hummus Flatbreads", baseCarb: "flatbread", cookingMethod: "oven" },
-    { structure: "stuffed", title: "Quinoa-Stuffed Bell Peppers", baseCarb: "quinoa", cookingMethod: "oven" },
-    { structure: "pasta", title: "Creamy Roasted Red Pepper Pasta", baseCarb: "pasta", cookingMethod: "stovetop" },
-    { structure: "one-pot", title: "One-Pot Chickpea Coconut Curry", baseCarb: "none", cookingMethod: "stovetop" },
-    { structure: "noodle-toss", title: "Peanut Noodle Toss with Edamame", baseCarb: "noodles", cookingMethod: "stovetop" },
-    { structure: "soup-stew", title: "Hearty Lentil & Vegetable Stew", baseCarb: "crusty bread", cookingMethod: "stovetop" },
-    { structure: "bake", title: "Mediterranean Veggie & Feta Bake", baseCarb: "orzo", cookingMethod: "oven" },
-    { structure: "loaded-fries", title: "Loaded Black Bean Nacho Fries", baseCarb: "fries", cookingMethod: "oven" },
-    { structure: "casserole", title: "Three-Bean Enchilada Casserole", baseCarb: "tortilla", cookingMethod: "oven" },
-    { structure: "breakfast-for-dinner", title: "Veggie & Egg Breakfast Hash", baseCarb: "potato", cookingMethod: "skillet" },
-    { structure: "grill", title: "Grilled Halloumi & Veggie Plates", baseCarb: "couscous", cookingMethod: "grill" },
-    { structure: "rice-bake", title: "Cheesy Black Bean & Rice Bake", baseCarb: "rice", cookingMethod: "oven" },
+    { structure: "skillet", title: "Crispy Tofu & Chickpea Vegetable Skillet", baseCarb: "none", cookingMethod: "stovetop" },
+    { structure: "bowl", title: "Crispy Tofu & Chickpea Bowls", baseCarb: "none", cookingMethod: "stovetop" },
   ],
 };
 
@@ -906,32 +826,6 @@ function getBudgetTips(budgetLevel: string, proteinName: string): string[] {
   return [];
 }
 
-const VEG_TITLE_DISPLAY: Record<string, string> = {
-  chickpeas: "Chickpea",
-  lentils: "Lentil",
-  "black beans": "Black Bean",
-  "kidney beans": "Kidney Bean",
-  "white beans": "White Bean",
-  quinoa: "Quinoa",
-  tempeh: "Tempeh",
-  eggs: "Egg",
-  edamame: "Edamame",
-  seitan: "Seitan",
-  "greek yogurt": "Greek Yogurt",
-  tofu: "Tofu",
-};
-
-const VEG_PROTEIN_PATTERN = /\b(Chickpea|Lentil|Black Bean|Kidney Bean|White Bean|Quinoa|Tempeh|Egg|Edamame|Seitan|Tofu|Three-Bean)\b/i;
-
-function adaptVegTitle(archetypeTitle: string, vegBase: string): string {
-  const display = VEG_TITLE_DISPLAY[vegBase];
-  if (!display) return archetypeTitle;
-  if (archetypeTitle.toLowerCase().includes(display.toLowerCase())) return archetypeTitle;
-  const replaced = archetypeTitle.replace(VEG_PROTEIN_PATTERN, display);
-  if (replaced !== archetypeTitle) return replaced;
-  return archetypeTitle;
-}
-
 const NO_BASE_CARB_STRUCTURES = new Set(["soup-stew", "burger", "sandwich", "skillet", "sheet-pan", "breakfast-for-dinner", "stir-fry"]);
 const STRUCTURE_DEFAULT_CARB: Record<string, string> = {
   "sheet-pan": "potatoes",
@@ -1017,12 +911,10 @@ export function buildFallbackRecipe(
       };
   const macros = adjustMacrosForHealthiness(baseMacros, healthiness);
 
-  const archetype = structureType
-    ? pickFallbackArchetype(finalProtein, structureType, appliances, recentSignatures)
-    : pickFallbackArchetype(finalProtein, "skillet", appliances, recentSignatures);
-  const baseTitle = isVegetarian && vegSet
-    ? adaptVegTitle(archetype.title, vegSet.base)
-    : archetype.title;
+  const archetype: FallbackArchetype = isVegetarian && vegSet
+    ? { structure: vegSet.structure, title: vegSet.title, baseCarb: "none", cookingMethod: "stovetop" }
+    : pickFallbackArchetype(finalProtein, structureType || "skillet", appliances, recentSignatures);
+  const baseTitle = archetype.title;
   const title = cuisineData
     ? `${cuisineData.titlePrefix} ${baseTitle}`
     : baseTitle;
@@ -1100,7 +992,7 @@ export function buildFallbackRecipe(
   ];
   log(`Built fallback recipe: "${title}" (${logParts.join(" | ")})`, "fallback");
 
-  const mealStyleLabel = structureType ? (STRUCTURE_DISPLAY[structureType] || structureType) : "Skillet";
+  const mealStyleLabel = STRUCTURE_DISPLAY[archetype.structure] || archetype.structure;
 
   const primarySource = isVegetarian && vegSet
     ? vegSet.base
@@ -1130,8 +1022,8 @@ export function buildFallbackRecipe(
     tags: {
       cuisine: cuisineData ? cuisineStyle.replace("_", " ") : "American",
       cooking_method: archetype.cookingMethod || cookingMethod,
-      base_carb: resolveBaseCarb(archetype, structureType),
-      key_ingredients: [proteinDisplay, resolveBaseCarb(archetype, structureType) === "none" ? "vegetables" : (resolveBaseCarb(archetype, structureType) || "vegetables"), "vegetables"],
+      base_carb: resolveBaseCarb(archetype),
+      key_ingredients: [proteinDisplay, resolveBaseCarb(archetype) === "none" ? "vegetables" : (resolveBaseCarb(archetype) || "vegetables"), "vegetables"],
       high_protein: true,
       high_fiber: healthiness === "lean",
       quick_cleanup: archetype.structure === "one-pot" || archetype.structure === "sheet-pan",

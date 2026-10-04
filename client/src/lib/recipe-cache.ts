@@ -1,7 +1,8 @@
 import type { ClientRecipeResponse } from "@shared/schema";
 import { normalizeRecipeSignature, sanitizeRecipeSignatureList } from "@shared/recipe-signature";
 
-const STORAGE_KEY = "firehall_recipe_cache";
+const STORAGE_KEY = "firehall_recipe_cache_v2";
+const LEGACY_STORAGE_KEYS = ["firehall_recipe_cache"];
 const SIGNATURES_KEY = "firehall_recent_signatures";
 const MAX_ENTRIES = 50;
 const MAX_SIGNATURES = 15;
@@ -46,6 +47,7 @@ export function buildFilterKey(filters: Record<string, unknown>): string {
 
 function loadDisk(): CacheMap {
   try {
+    for (const key of LEGACY_STORAGE_KEYS) localStorage.removeItem(key);
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return {};
     const parsed: CacheMap = JSON.parse(raw);
