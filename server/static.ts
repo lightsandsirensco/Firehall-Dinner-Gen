@@ -5,6 +5,7 @@ import { matchRecipeSlug, injectRecipeSeoIntoHtml } from "./seo/recipe-html-inje
 import { injectGenericPageSeoIntoHtml } from "./seo/generic-page-injection.js";
 import { matchPackageSlug, injectPackageSeoIntoHtml } from "./seo/package-html-injection.js";
 import { resolvePublicSiteOrigin } from "./seo/sitemap.js";
+import { stripShellCanonical } from "./seo/apply-seo-tags.js";
 
 /** Vite emits hashed filenames — safe for long-term CDN/browser cache */
 function isImmutableBuildAsset(filePath: string): boolean {
@@ -91,6 +92,10 @@ export function serveStatic(app: Express) {
       // Fall through to the plain static shell if injection fails for any reason.
     }
 
-    res.sendFile(indexHtmlPath);
+    try {
+      return res.type("text/html").send(stripShellCanonical(fs.readFileSync(indexHtmlPath, "utf-8")));
+    } catch {
+      res.sendFile(indexHtmlPath);
+    }
   });
 }

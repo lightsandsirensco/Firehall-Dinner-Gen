@@ -23,7 +23,6 @@ import {
 } from "@shared/seo/product-pages-data";
 import { recipePath } from "@shared/seo/urls";
 import { guidePath } from "@shared/editorial/content-schema";
-import { buildRecipeCardAlt } from "@shared/seo/recipe-image-seo";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { BRAND_TAGLINE } from "@/lib/brand-copy";
@@ -239,9 +238,7 @@ export default function SeoProductPage({ slug }: SeoProductPageProps) {
                           <span className="block text-xs text-muted-foreground mt-1">
                             ~{r.cookTime} min · crew-sized
                           </span>
-                        )}
-                        <span className="sr-only">{buildRecipeCardAlt(r.title)}</span>
-                      </Link>
+                        )}                      </Link>
                     </li>
                   ))}
                 </ul>

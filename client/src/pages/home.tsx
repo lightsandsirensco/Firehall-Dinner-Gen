@@ -1,4 +1,4 @@
-import { lazy, Suspense, useMemo } from "react";
+import { Suspense, useMemo, type ReactNode } from "react";
 
 import { useQuery } from "@tanstack/react-query";
 
@@ -12,43 +12,47 @@ import { HomeHero } from "@/components/home/home-hero";
 
 import { HomeHowItWorks } from "@/components/home/home-how-it-works";
 
+import { SectionErrorBoundary } from "@/components/section-error-boundary";
+
+import { lazyWithRetry } from "@/lib/lazy-with-retry";
+
 // Below-the-fold homepage sections are not needed for first paint or LCP
 // (the hero image is the LCP element — see client/index.html preload).
 // Lazy-loading them keeps the eager "/" bundle lean for first-time visitors
 // on station Wi-Fi, without changing what renders once the page settles.
-const HomeWhyCrews = lazy(() =>
+const HomeWhyCrews = lazyWithRetry(() =>
   import("@/components/home/home-why-crews").then((m) => ({ default: m.HomeWhyCrews })),
 );
-const HomeSocialProof = lazy(() =>
+const HomeSocialProof = lazyWithRetry(() =>
   import("@/components/home/home-social-proof").then((m) => ({ default: m.HomeSocialProof })),
 );
-const HomeFeaturedMeals = lazy(() =>
+const HomeFeaturedMeals = lazyWithRetry(() =>
   import("@/components/home/home-featured-meals").then((m) => ({ default: m.HomeFeaturedMeals })),
 );
-const HomeCtaBand = lazy(() =>
+const HomeCtaBand = lazyWithRetry(() =>
   import("@/components/home/home-cta-band").then((m) => ({ default: m.HomeCtaBand })),
 );
-const HomeProCallout = lazy(() =>
+const HomeProCallout = lazyWithRetry(() =>
   import("@/components/home/home-pro-callout").then((m) => ({ default: m.HomeProCallout })),
 );
-const HomeSeoIntro = lazy(() =>
+const HomeSeoIntro = lazyWithRetry(() =>
   import("@/components/home/home-seo-intro").then((m) => ({ default: m.HomeSeoIntro })),
 );
-const HomeLightsAuthenticity = lazy(() =>
+const HomeLightsAuthenticity = lazyWithRetry(() =>
   import("@/components/brand/home-lights-authenticity").then((m) => ({
     default: m.HomeLightsAuthenticity,
   })),
 );
-const HomeSeoEditorial = lazy(() =>
+const HomeSeoEditorial = lazyWithRetry(() =>
   import("@/components/home/home-seo-editorial").then((m) => ({ default: m.HomeSeoEditorial })),
 );
-const HomeEmailCapture = lazy(() =>
+const HomeEmailCapture = lazyWithRetry(() =>
   import("@/components/home/home-email-capture").then((m) => ({ default: m.HomeEmailCapture })),
 );
-const HomeFaqSection = lazy(() =>
+const HomeFaqSection = lazyWithRetry(() =>
   import("@/components/home/home-faq-section").then((m) => ({ default: m.HomeFaqSection })),
 );
-const HomeFooter = lazy(() =>
+const HomeFooter = lazyWithRetry(() =>
   import("@/components/home/home-footer").then((m) => ({ default: m.HomeFooter })),
 );
 
@@ -61,6 +65,23 @@ function SectionFallback({ minHeight = 192 }: { minHeight?: number }) {
     >
       <div className="rounded-2xl skeleton-shimmer" style={{ height: minHeight }} />
     </div>
+  );
+}
+
+/** A lazy section that drops out on its own if its chunk fails, instead of taking the whole homepage down. */
+function LazySection({
+  name,
+  fallback,
+  children,
+}: {
+  name: string;
+  fallback: ReactNode;
+  children: ReactNode;
+}) {
+  return (
+    <SectionErrorBoundary name={name}>
+      <Suspense fallback={fallback}>{children}</Suspense>
+    </SectionErrorBoundary>
   );
 }
 
@@ -101,50 +122,54 @@ export default function Home() {
       <main id="main-content">
 
         <HomeHowItWorks />
-        <Suspense fallback={<SectionFallback minHeight={480} />}>
+        <LazySection name="home-why-crews" fallback={<SectionFallback minHeight={480} />}>
           <HomeWhyCrews />
-        </Suspense>
-        <Suspense fallback={<SectionFallback minHeight={320} />}>
+        </LazySection>
+        <LazySection name="home-social-proof" fallback={<SectionFallback minHeight={320} />}>
           <HomeSocialProof />
-        </Suspense>
-        <Suspense fallback={<SectionFallback minHeight={360} />}>
+        </LazySection>
+        <LazySection name="home-featured-meals" fallback={<SectionFallback minHeight={360} />}>
           <HomeFeaturedMeals meals={catalogMeals} loading={catalogLoading} />
-        </Suspense>
-        <Suspense fallback={<SectionFallback minHeight={220} />}>
+        </LazySection>
+        <LazySection name="home-cta-band" fallback={<SectionFallback minHeight={220} />}>
           <HomeCtaBand />
-        </Suspense>
-        <Suspense fallback={<SectionFallback minHeight={220} />}>
+        </LazySection>
+        <LazySection name="home-pro-callout" fallback={<SectionFallback minHeight={220} />}>
           <HomeProCallout />
-        </Suspense>
+        </LazySection>
 
 
 
         <div className="border-t border-border/20">
 
-          <Suspense fallback={null}>
+          <LazySection name="home-seo-intro" fallback={null}>
             <HomeSeoIntro />
+          </LazySection>
+          <LazySection name="home-lights-authenticity" fallback={null}>
             <HomeLightsAuthenticity />
+          </LazySection>
+          <LazySection name="home-seo-editorial" fallback={null}>
             <HomeSeoEditorial />
-          </Suspense>
+          </LazySection>
 
         </div>
 
 
 
-        <Suspense fallback={<SectionFallback minHeight={340} />}>
+        <LazySection name="home-email-capture" fallback={<SectionFallback minHeight={340} />}>
           <HomeEmailCapture />
-        </Suspense>
-        <Suspense fallback={<SectionFallback minHeight={420} />}>
+        </LazySection>
+        <LazySection name="home-faq-section" fallback={<SectionFallback minHeight={420} />}>
           <HomeFaqSection />
-        </Suspense>
+        </LazySection>
 
       </main>
 
 
 
-      <Suspense fallback={null}>
+      <LazySection name="home-footer" fallback={null}>
         <HomeFooter />
-      </Suspense>
+      </LazySection>
 
     </div>
 

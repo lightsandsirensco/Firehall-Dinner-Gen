@@ -434,7 +434,7 @@ export default function BreakfastRecipePage() {
                           <div className="relative aspect-[4/5]">
                             <FoodImage
                               src={r.thumbImage || r.heroImage}
-                              alt={r.title}
+                              alt=""
                               layout="card-fill"
                               fit="cover"
                               focal="food-plate"

@@ -167,7 +167,7 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
         {showImage ? (
           <img
             src={imageSrc}
-            alt={entry.title}
+            alt=""
             width={EXPLORE_CARD_IMG_WIDTH}
             height={EXPLORE_CARD_IMG_HEIGHT}
             loading="lazy"

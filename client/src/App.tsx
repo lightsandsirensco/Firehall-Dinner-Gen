@@ -1,6 +1,5 @@
-import { lazy, Suspense, useEffect } from "react";
-import { PostHogProvider } from "@posthog/react";
-import { posthog } from "@/lib/posthog-client";
+import { Suspense, useEffect, useRef } from "react";
+import { lazyWithRetry } from "@/lib/lazy-with-retry";
 import { Switch, Route, useLocation, Redirect } from "wouter";
 import { prefetchLikelyRoutes } from "@/lib/route-prefetch";
 import { trackAnalyticsPageView } from "@/lib/analytics-deferred";
@@ -28,71 +27,71 @@ import { PageTransition } from "@/components/page-transition";
 import { SkipToContent } from "@/components/skip-to-content";
 import Home from "@/pages/home";
 import { getRetiredGuide } from "@shared/editorial/retired-guides";
-const Generator = lazy(() => import("@/pages/generator"));
-const ShiftPlannerPage = lazy(() => import("@/pages/shift-planner"));
-const AdminGolden100Page = lazy(() => import("@/pages/admin-golden-100"));
-const AdminCatalogPage = lazy(() => import("@/pages/admin-catalog"));
+const Generator = lazyWithRetry(() => import("@/pages/generator"));
+const ShiftPlannerPage = lazyWithRetry(() => import("@/pages/shift-planner"));
+const AdminGolden100Page = lazyWithRetry(() => import("@/pages/admin-golden-100"));
+const AdminCatalogPage = lazyWithRetry(() => import("@/pages/admin-catalog"));
 
-const PizzaNight = lazy(() => import("@/pages/pizza-night"));
-const ExplorePage = lazy(() => import("@/pages/explore"));
-const AdminPage = lazy(() => import("@/pages/admin"));
-const AdminIngestionPage = lazy(() => import("@/pages/admin-ingestion"));
-const AdminRecipeRatingsPage = lazy(() => import("@/pages/admin-recipe-ratings"));
-const AdminAnalyticsPage = lazy(() => import("@/pages/admin-analytics"));
-const AdminErrorsPage = lazy(() => import("@/pages/admin-errors"));
-const AdminGrowthDashboardPage = lazy(() => import("@/pages/admin-growth-dashboard"));
-const VotePage = lazy(() => import("@/pages/vote"));
-const FavoritesPage = lazy(() => import("@/pages/favorites"));
-const ClassicsWheelPage = lazy(() => import("@/pages/classics-wheel"));
-const CuratedPackagePage = lazy(() => import("@/pages/curated-package"));
-const CatalogRecipePage = lazy(() => import("@/pages/catalog-recipe-page"));
-const AboutPage = lazy(() => import("@/pages/about"));
-const PrivacyPage = lazy(() => import("@/pages/privacy-page"));
-const TermsPage = lazy(() => import("@/pages/terms-page"));
-const HowWeTestRecipesPage = lazy(() => import("@/pages/how-we-test-recipes"));
-const FaqPage = lazy(() => import("@/pages/faq"));
-const RecipesIndexPage = lazy(() => import("@/pages/explore-browse-redirect"));
-const GuidesIndexPage = lazy(() => import("@/pages/guides-index"));
-const GuidesClusterPage = lazy(() => import("@/pages/guides-cluster"));
-const GuideArticlePage = lazy(() => import("@/pages/guide-article-page"));
-const FirehallCategoryRedirect = lazy(() => import("@/pages/firehall-category-redirect"));
-const FamiliesIndexPage = lazy(() => import("@/pages/families-index"));
-const SmoothiesIndexPage = lazy(() => import("@/pages/smoothies-index"));
-const SmoothieRecipePage = lazy(() => import("@/pages/smoothie-recipe-page"));
-const BreakfastIndexPage = lazy(() => import("@/pages/breakfast-index"));
-const BreakfastPerformanceIndexPage = lazy(() => import("@/pages/breakfast-performance-index"));
-const BreakfastRecipePage = lazy(() => import("@/pages/breakfast-recipe-page"));
-const PerformanceFuelRedirect = lazy(() => import("@/pages/performance-fuel-redirect"));
-const SeoLandingPage = lazy(() => import("@/pages/seo-landing-page"));
-const SeoProductPage = lazy(() => import("@/pages/seo-product-page"));
-const FirefighterRedLeadRecipePage = lazy(() => import("@/pages/firefighter-red-lead-recipe-page"));
-const TopRatedRecipesPage = lazy(() => import("@/pages/top-rated-recipes-page"));
-const HallOfFamePage = lazy(() => import("@/pages/hall-of-fame-page"));
-const HallPrivateBetaPage = lazy(() => import("@/pages/hall-private-beta-page"));
-const OnboardingHallPage = lazy(() => import("@/pages/onboarding-hall-page"));
-const AccountPage = lazy(() => import("@/pages/account-page"));
-const PlansPage = lazy(() => import("@/pages/plans-page"));
-const AdminBillingPage = lazy(() => import("@/pages/admin-billing"));
-const AdminUsersPage = lazy(() => import("@/pages/admin-users"));
-const AdminSignupsPage = lazy(() => import("@/pages/admin-signups-page"));
-const AdminUserDetailPage = lazy(() => import("@/pages/admin-user-detail"));
-const AdminLeadsPage = lazy(() => import("@/pages/admin-leads"));
-const AdminDealsPage = lazy(() => import("@/pages/admin-deals"));
-const ShopPage = lazy(() => import("@/pages/shop"));
-const ShopProductPage = lazy(() => import("@/pages/shop-product"));
-const ShopOrderSuccessPage = lazy(() => import("@/pages/shop-order-success"));
-const AdminShopPage = lazy(() => import("@/pages/admin-shop"));
-const AdminShopProductEditorPage = lazy(() => import("@/pages/admin-shop-product-editor"));
-const AdminShopOrdersPage = lazy(() => import("@/pages/admin-shop-orders"));
-const TonightDashboardPage = lazy(() => import("@/pages/app-home-page"));
-const MePage = lazy(() => import("@/pages/me-page"));
-const MeHistoryPage = lazy(() => import("@/pages/me-history-page"));
-const MeProgressPage = lazy(() => import("@/pages/me-progress-page"));
-const MeInsightsPage = lazy(() => import("@/pages/me-insights-page"));
-const MeSettingsPage = lazy(() => import("@/pages/me-settings-page"));
-const MeShoppingListPage = lazy(() => import("@/pages/me-shopping-list-page"));
-const MePantryPage = lazy(() => import("@/pages/me-pantry-page"));
-const NotFound = lazy(() => import("@/pages/not-found"));
+const PizzaNight = lazyWithRetry(() => import("@/pages/pizza-night"));
+const ExplorePage = lazyWithRetry(() => import("@/pages/explore"));
+const AdminPage = lazyWithRetry(() => import("@/pages/admin"));
+const AdminIngestionPage = lazyWithRetry(() => import("@/pages/admin-ingestion"));
+const AdminRecipeRatingsPage = lazyWithRetry(() => import("@/pages/admin-recipe-ratings"));
+const AdminAnalyticsPage = lazyWithRetry(() => import("@/pages/admin-analytics"));
+const AdminErrorsPage = lazyWithRetry(() => import("@/pages/admin-errors"));
+const AdminGrowthDashboardPage = lazyWithRetry(() => import("@/pages/admin-growth-dashboard"));
+const VotePage = lazyWithRetry(() => import("@/pages/vote"));
+const FavoritesPage = lazyWithRetry(() => import("@/pages/favorites"));
+const ClassicsWheelPage = lazyWithRetry(() => import("@/pages/classics-wheel"));
+const CuratedPackagePage = lazyWithRetry(() => import("@/pages/curated-package"));
+const CatalogRecipePage = lazyWithRetry(() => import("@/pages/catalog-recipe-page"));
+const AboutPage = lazyWithRetry(() => import("@/pages/about"));
+const PrivacyPage = lazyWithRetry(() => import("@/pages/privacy-page"));
+const TermsPage = lazyWithRetry(() => import("@/pages/terms-page"));
+const HowWeTestRecipesPage = lazyWithRetry(() => import("@/pages/how-we-test-recipes"));
+const FaqPage = lazyWithRetry(() => import("@/pages/faq"));
+const RecipesIndexPage = lazyWithRetry(() => import("@/pages/explore-browse-redirect"));
+const GuidesIndexPage = lazyWithRetry(() => import("@/pages/guides-index"));
+const GuidesClusterPage = lazyWithRetry(() => import("@/pages/guides-cluster"));
+const GuideArticlePage = lazyWithRetry(() => import("@/pages/guide-article-page"));
+const FirehallCategoryRedirect = lazyWithRetry(() => import("@/pages/firehall-category-redirect"));
+const FamiliesIndexPage = lazyWithRetry(() => import("@/pages/families-index"));
+const SmoothiesIndexPage = lazyWithRetry(() => import("@/pages/smoothies-index"));
+const SmoothieRecipePage = lazyWithRetry(() => import("@/pages/smoothie-recipe-page"));
+const BreakfastIndexPage = lazyWithRetry(() => import("@/pages/breakfast-index"));
+const BreakfastPerformanceIndexPage = lazyWithRetry(() => import("@/pages/breakfast-performance-index"));
+const BreakfastRecipePage = lazyWithRetry(() => import("@/pages/breakfast-recipe-page"));
+const PerformanceFuelRedirect = lazyWithRetry(() => import("@/pages/performance-fuel-redirect"));
+const SeoLandingPage = lazyWithRetry(() => import("@/pages/seo-landing-page"));
+const SeoProductPage = lazyWithRetry(() => import("@/pages/seo-product-page"));
+const FirefighterRedLeadRecipePage = lazyWithRetry(() => import("@/pages/firefighter-red-lead-recipe-page"));
+const TopRatedRecipesPage = lazyWithRetry(() => import("@/pages/top-rated-recipes-page"));
+const HallOfFamePage = lazyWithRetry(() => import("@/pages/hall-of-fame-page"));
+const HallPrivateBetaPage = lazyWithRetry(() => import("@/pages/hall-private-beta-page"));
+const OnboardingHallPage = lazyWithRetry(() => import("@/pages/onboarding-hall-page"));
+const AccountPage = lazyWithRetry(() => import("@/pages/account-page"));
+const PlansPage = lazyWithRetry(() => import("@/pages/plans-page"));
+const AdminBillingPage = lazyWithRetry(() => import("@/pages/admin-billing"));
+const AdminUsersPage = lazyWithRetry(() => import("@/pages/admin-users"));
+const AdminSignupsPage = lazyWithRetry(() => import("@/pages/admin-signups-page"));
+const AdminUserDetailPage = lazyWithRetry(() => import("@/pages/admin-user-detail"));
+const AdminLeadsPage = lazyWithRetry(() => import("@/pages/admin-leads"));
+const AdminDealsPage = lazyWithRetry(() => import("@/pages/admin-deals"));
+const ShopPage = lazyWithRetry(() => import("@/pages/shop"));
+const ShopProductPage = lazyWithRetry(() => import("@/pages/shop-product"));
+const ShopOrderSuccessPage = lazyWithRetry(() => import("@/pages/shop-order-success"));
+const AdminShopPage = lazyWithRetry(() => import("@/pages/admin-shop"));
+const AdminShopProductEditorPage = lazyWithRetry(() => import("@/pages/admin-shop-product-editor"));
+const AdminShopOrdersPage = lazyWithRetry(() => import("@/pages/admin-shop-orders"));
+const TonightDashboardPage = lazyWithRetry(() => import("@/pages/app-home-page"));
+const MePage = lazyWithRetry(() => import("@/pages/me-page"));
+const MeHistoryPage = lazyWithRetry(() => import("@/pages/me-history-page"));
+const MeProgressPage = lazyWithRetry(() => import("@/pages/me-progress-page"));
+const MeInsightsPage = lazyWithRetry(() => import("@/pages/me-insights-page"));
+const MeSettingsPage = lazyWithRetry(() => import("@/pages/me-settings-page"));
+const MeShoppingListPage = lazyWithRetry(() => import("@/pages/me-shopping-list-page"));
+const MePantryPage = lazyWithRetry(() => import("@/pages/me-pantry-page"));
+const NotFound = lazyWithRetry(() => import("@/pages/not-found"));
 
 /** Mirrors the server's retired-guide 301/410 for in-app navigation. */
 function RetiredGuideRedirectOr({ slug }: { slug: string }) {
@@ -248,7 +247,11 @@ function Router() {
   const [location] = useLocation();
   useShiftReminderAttribution();
 
+  const initialLocation = useRef(location);
   useEffect(() => {
+    // The landing route is warmed by initRoutePrefetch after first interaction.
+    if (location === initialLocation.current) return;
+    initialLocation.current = "";
     prefetchLikelyRoutes(location);
   }, [location]);
 
@@ -271,7 +274,6 @@ function Router() {
 function App() {
   return (
     <ErrorBoundary>
-      <PostHogProvider client={posthog}>
       <QueryClientProvider client={queryClient}>
         <MeasurementSystemProvider>
           <AuthProvider>
@@ -295,7 +297,6 @@ function App() {
           </AuthProvider>
         </MeasurementSystemProvider>
       </QueryClientProvider>
-      </PostHogProvider>
     </ErrorBoundary>
   );
 }

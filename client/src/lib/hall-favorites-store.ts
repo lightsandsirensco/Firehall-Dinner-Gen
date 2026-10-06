@@ -7,8 +7,6 @@ import {
 } from "@shared/hall-favorites/types";
 import { getHallProfile } from "@/lib/hall-profile-store";
 import { getSavedMeals } from "@/lib/saved-meals";
-import { approvedCatalogRecipePath } from "@shared/approved-catalog";
-
 const STORAGE_KEY = "firehall_hall_favorites_v1";
 const MIGRATION_FLAG = "firehall_hall_favorites_migrated_v1";
 
@@ -107,7 +105,7 @@ export function addHallFavorite(
   const favorite: HallFavorite = {
     slug,
     title: input.title.trim(),
-    recipePath: input.recipePath ?? approvedCatalogRecipePath(slug),
+    recipePath: input.recipePath,
     addedAt: input.addedAt ?? new Date().toISOString(),
     source: input.source,
   };
@@ -136,8 +134,14 @@ export function removeHallFavorite(slug: string): boolean {
   return true;
 }
 
-/** One-time import of legacy catalog bookmarks into Hall Classics. */
-export function migrateCatalogSavedMealsToHallFavorites(): void {
+/**
+ * One-time import of legacy catalog bookmarks into Hall Classics.
+ * The path resolver is injected so this module (eagerly loaded via cloud sync)
+ * never statically imports the full approved catalog.
+ */
+export function migrateCatalogSavedMealsToHallFavorites(
+  resolveRecipePath: (slug: string) => string,
+): void {
   try {
     if (localStorage.getItem(MIGRATION_FLAG)) return;
     const saved = getSavedMeals().filter((m) => m.id.startsWith("catalog:"));
@@ -147,6 +151,7 @@ export function migrateCatalogSavedMealsToHallFavorites(): void {
       addHallFavorite({
         slug,
         title: meal.recipe.title,
+        recipePath: resolveRecipePath(slug),
         source: "migrated_saved_meal",
       });
     }

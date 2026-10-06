@@ -161,7 +161,10 @@ export default defineConfig({
           if (id.includes("@radix-ui")) return "vendor-radix";
           if (id.includes("@tanstack/react-query")) return "vendor-query";
           if (id.includes("lucide-react")) return "vendor-icons";
-          return "vendor";
+          if (/node_modules[\\/](react|react-dom|scheduler|clsx)[\\/]/.test(id)) return "vendor";
+          // Everything else is placed by Rollup so lazy-only deps (posthog,
+          // recharts' d3/lodash, qrcode, embla) stay out of the entry graph.
+          return undefined;
         },
       },
     },

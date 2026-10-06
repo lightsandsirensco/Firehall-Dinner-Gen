@@ -8,7 +8,7 @@ import {
   type ReactNode,
 } from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { posthog } from "@/lib/posthog-client";
+import { posthogIdentify, posthogReset } from "@/lib/posthog-client";
 import { toast } from "@/hooks/use-toast";
 import { useLocation } from "wouter";
 import { apiRequest } from "@/lib/queryClient";
@@ -82,7 +82,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   // call repeatedly with the same id.
   useEffect(() => {
     if (authenticated && userId) {
-      posthog.identify(userId);
+      posthogIdentify(userId);
     }
   }, [authenticated, userId]);
 
@@ -134,7 +134,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = useCallback(async () => {
     await apiRequest("POST", "/api/auth/logout");
-    posthog.reset();
+    posthogReset();
     clearAuthReturnTo();
     setAuthReturnTo(null);
     await queryClient.invalidateQueries({ queryKey: ["/api/auth/me"] });

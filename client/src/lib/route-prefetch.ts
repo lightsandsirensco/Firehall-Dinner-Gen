@@ -62,7 +62,6 @@ export function initRoutePrefetch(): void {
   if (typeof window === "undefined") return;
 
   const path = window.location.pathname;
-  prefetchLikelyRoutes(path);
 
   const onHover = (e: MouseEvent) => {
     const anchor = (e.target as Element)?.closest?.("a[href]") as HTMLAnchorElement | null;
@@ -79,11 +78,23 @@ export function initRoutePrefetch(): void {
 
   document.addEventListener("mouseover", onHover, { passive: true, capture: true });
 
-  const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
-  if (conn?.saveData) return;
+  // Likely-route chunks pull in the full recipe catalog (~1.2 MB), so warming
+  // them on initial idle competes with first paint on mobile. Wait for the
+  // first user interaction instead.
+  const events = ["pointerdown", "touchstart", "keydown", "scroll"] as const;
+  const onFirstInteraction = () => {
+    for (const ev of events) window.removeEventListener(ev, onFirstInteraction);
+    prefetchLikelyRoutes(path);
 
-  globalThis.setTimeout(() => {
-    prefetchRoute("/tonight");
-    prefetchRoute("/generator");
-  }, 2500);
+    const conn = (navigator as Navigator & { connection?: { saveData?: boolean } }).connection;
+    if (conn?.saveData) return;
+
+    globalThis.setTimeout(() => {
+      prefetchRoute("/tonight");
+      prefetchRoute("/generator");
+    }, 2500);
+  };
+  for (const ev of events) {
+    window.addEventListener(ev, onFirstInteraction, { passive: true, once: true });
+  }
 }

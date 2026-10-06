@@ -110,7 +110,7 @@ function RelatedCard({ slug, title, thumb }: { slug: string; title: string; thum
 
               src={thumb}
 
-              alt={buildRecipeHeroAlt(title)}
+              alt=""
 
               layout="card-fill"
 

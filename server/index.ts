@@ -1,6 +1,7 @@
 import "./env-bootstrap.js";
 import express, { type Request, Response, NextFunction } from "express";
 import helmet from "helmet";
+import compression from "compression";
 import { registerRoutes } from "./routes";
 import { serveStatic } from "./static";
 import { createServer } from "http";
@@ -83,6 +84,10 @@ app.use(
     crossOriginResourcePolicy: { policy: "cross-origin" },
   }),
 );
+
+// The production host does not compress responses, so without this the
+// multi-hundred-KB JS/CSS bundles and SEO HTML ship uncompressed.
+app.use(compression());
 
 const jsonBodyLimit = process.env.JSON_BODY_LIMIT || "256kb";
 

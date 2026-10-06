@@ -98,7 +98,7 @@ export function HomeFeaturedMeals({ meals, loading }: HomeFeaturedMealsProps) {
               >
                 <HeroImage
                   src={meal.heroImage}
-                  alt={meal.title}
+                  alt=""
                   layout="card-fill"
                   focal="food"
                   overlay="none"

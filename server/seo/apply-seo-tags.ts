@@ -218,6 +218,17 @@ export function injectBodyContentIntoHtml(html: string, contentHtml: string): st
 }
 
 /**
+ * Remove the `index.html` shell's homepage canonical and `og:url`. Any HTML
+ * not rewritten by a page-specific injector must not claim the homepage as
+ * its canonical.
+ */
+export function stripShellCanonical(html: string): string {
+  return html
+    .replace(/\s*<link\s+rel="canonical"\s+href="[^"]*"\s*\/>\n?/, "\n")
+    .replace(/\s*<meta\s+property="og:url"\s+content="[^"]*"\s*\/>\n?/, "\n");
+}
+
+/**
  * Rewrite `html` for a genuine 404 (dead/removed recipe, guide, smoothie,
  * breakfast, package, or guide-topic link, or any other unrecognized public
  * URL). Every injector previously paired `status: 404` with the completely
@@ -246,8 +257,7 @@ export function applyNotFoundSeoToHtml(html: string): string {
     `<meta name="robots" content="noindex, nofollow" />`,
   );
   // No canonical/og:url on a 404 — there's no real page to point crawlers at.
-  out = out.replace(/\s*<link\s+rel="canonical"\s+href="[^"]*"\s*\/>\n?/, "\n");
-  out = out.replace(/\s*<meta\s+property="og:url"\s+content="[^"]*"\s*\/>\n?/, "\n");
+  out = stripShellCanonical(out);
   out = replaceTag(
     out,
     /<meta\s+property="og:title"\s+content="[^"]*"\s*\/>/,

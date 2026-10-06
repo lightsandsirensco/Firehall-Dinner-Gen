@@ -86,7 +86,7 @@ import { guideFaqSchemaItems, guidePath } from "../../shared/editorial/content-s
 import { guidesInCluster } from "../../shared/editorial/topic-clusters.js";
 import { getApprovedCatalog } from "../approved-catalog-cache.js";
 import { approvedCatalogRecipePath } from "../../shared/approved-catalog.js";
-import { applySeoTagsToHtml, applyNotFoundSeoToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml } from "./apply-seo-tags.js";
+import { applySeoTagsToHtml, applyNotFoundSeoToHtml, injectJsonLdIntoHtml, injectBodyContentIntoHtml, stripShellCanonical } from "./apply-seo-tags.js";
 import {
   breakfastRecipeSnapshot,
   editorialArticleSnapshot,
@@ -262,6 +262,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         h1: SEO_HOME_H1,
         intro: SEO_HOME_H1_SUPPORT,
         sections: [categoryLinkSection(), popularRecipeLinks(10), ...moreResourcesLinkSections()],
+        faqs: { heading: "Questions from the crew", items: HOME_FAQ_ITEMS },
       }),
     };
   }
@@ -373,6 +374,12 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
     return {
       seo: buildFaqSeo(),
       jsonLd: [buildOrganizationSchema(origin), buildFaqPageSchema(HOME_FAQ_ITEMS)],
+      bodyHtml: renderIndexSnapshotHtml({
+        h1: "Firefighter & Firehall Meal FAQ",
+        intro: "Straight answers about firefighter meals, station cooking, and crew dinners on Firehall Meals.",
+        sections: [],
+        faqs: { heading: "FAQ", items: HOME_FAQ_ITEMS },
+      }),
     };
   }
 
@@ -903,7 +910,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
 export function injectGenericPageSeoIntoHtml(html: string, origin: string, pathname: string): InjectionResult {
   const resolved = resolvePageSeo(origin, pathname);
   if (resolved === "not_found") return { html: applyNotFoundSeoToHtml(html), status: 404 };
-  if (!resolved) return { html, status: 200 };
+  if (!resolved) return { html: stripShellCanonical(html), status: 200 };
 
   const canonicalUrl = absoluteUrl(origin, resolved.seo.canonicalPath);
   const ogImage = resolved.seo.ogImage

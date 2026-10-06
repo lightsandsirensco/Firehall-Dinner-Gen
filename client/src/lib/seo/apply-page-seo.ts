@@ -41,7 +41,36 @@ function clearManagedSeo(): void {
   document.querySelectorAll(`script[${SEO_JSON_LD_ATTR}]`).forEach((el) => el.remove());
 }
 
+/**
+ * Client twin of the server's `dedupeDefaultJsonLd`: drop any entity from
+ * index.html's static `#fh-default-jsonld` @graph whose @type this route
+ * supplies itself, so there's never a second Organization/WebSite. The static
+ * block survives whenever the shell came from the service worker precache or
+ * the server left it in place for a route.
+ */
+function dedupeShellDefaultJsonLd(blocks: unknown[]): void {
+  const el = document.getElementById("fh-default-jsonld");
+  if (!el) return;
+  const supplied = new Set<string>();
+  for (const block of blocks) {
+    const type = (block as { "@type"?: unknown } | null)?.["@type"];
+    if (typeof type === "string") supplied.add(type);
+  }
+  if (!supplied.size) return;
+  try {
+    const parsed = JSON.parse(el.textContent ?? "") as { "@graph"?: Array<{ "@type"?: unknown }> };
+    const graph = parsed["@graph"] ?? [];
+    const remaining = graph.filter((n) => !(typeof n["@type"] === "string" && supplied.has(n["@type"])));
+    if (remaining.length === graph.length) return;
+    if (!remaining.length) el.remove();
+    else el.textContent = JSON.stringify({ ...parsed, "@graph": remaining });
+  } catch {
+    /* leave a malformed static block alone */
+  }
+}
+
 function injectJsonLd(blocks: unknown[]): void {
+  dedupeShellDefaultJsonLd(blocks);
   for (const data of blocks) {
     const script = document.createElement("script");
     script.type = "application/ld+json";

@@ -55,6 +55,15 @@ export function ExploreRecipeImage({
 
   const overlay = cinematic ? "card-cinematic" : variant === "detail" ? "minimal" : "card";
 
+  // Cards sit inside a link that already shows the title; an alt that only repeats it is noise.
+  const imageAlt = recipe.imageAlt?.trim();
+  const alt =
+    variant === "detail"
+      ? imageAlt || recipe.title
+      : imageAlt && imageAlt.toLowerCase() !== recipe.title.trim().toLowerCase()
+        ? imageAlt
+        : "";
+
   if (held) {
     return (
       <ExploreHeldImageryPlaceholder
@@ -89,7 +98,7 @@ export function ExploreRecipeImage({
     <FoodImage
       key={`explore-hero-${recipe.id}-${src}`}
       src={src}
-      alt={recipe.imageAlt || recipe.title}
+      alt={alt}
       layout={variant === "detail" ? "detail" : "card-fill"}
       focal="food"
       fit="cover"

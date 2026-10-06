@@ -35,7 +35,7 @@ export default function FavoritesPage() {
   }, []);
 
   useEffect(() => {
-    migrateCatalogSavedMealsToHallFavorites();
+    migrateCatalogSavedMealsToHallFavorites(approvedCatalogRecipePath);
     loadMeals();
     trackHallFavoritesViewed({ favorite_count: getHallFavoritesCount() });
     const handler = () => loadMeals();

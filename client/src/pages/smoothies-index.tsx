@@ -132,7 +132,7 @@ export default function SmoothiesIndexPage() {
                           {r.thumbImage ? (
                             <img
                               src={r.thumbImage}
-                              alt={r.title}
+                              alt=""
                               className="w-full h-full object-cover"
                               loading="lazy"
                             />

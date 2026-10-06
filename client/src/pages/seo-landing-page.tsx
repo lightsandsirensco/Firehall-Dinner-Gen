@@ -16,7 +16,6 @@ import {
 import { buildSeoLandingPageSeo } from "@shared/seo/metadata";
 import { getSeoLandingPage, seoLandingPagePath, type SeoLandingPageSlug } from "@shared/seo/landing-pages-data";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
-import { buildRecipeCardAlt } from "@shared/seo/recipe-image-seo";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { BRAND_TAGLINE, CTA } from "@/lib/brand-copy";
@@ -152,9 +151,7 @@ export default function SeoLandingPage({ slug }: SeoLandingPageProps) {
                               <span className="block text-xs text-muted-foreground mt-1">
                                 ~{r.cookTime} min · crew-sized
                               </span>
-                            )}
-                            <span className="sr-only">{buildRecipeCardAlt(r.title)}</span>
-                          </Link>
+                            )}                          </Link>
                         </li>
                       ))}
                     </ul>
@@ -213,9 +210,7 @@ export default function SeoLandingPage({ slug }: SeoLandingPageProps) {
                               <span className="block text-xs text-muted-foreground mt-1">
                                 ~{r.cookTime} min · crew-sized
                               </span>
-                            )}
-                            <span className="sr-only">{buildRecipeCardAlt(r.title)}</span>
-                          </Link>
+                            )}                          </Link>
                         </li>
                       ))}
                     </ul>

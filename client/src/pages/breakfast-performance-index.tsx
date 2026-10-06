@@ -98,7 +98,7 @@ export default function BreakfastPerformanceIndexPage() {
                 <div className="relative aspect-[16/11]">
                   <FoodImage
                     src={r.thumbImage || r.heroImage}
-                    alt={r.title}
+                    alt=""
                     layout="card-fill"
                     fit="cover"
                     focal="food-plate"

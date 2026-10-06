@@ -632,6 +632,8 @@ export interface IndexSnapshotData {
   h1: string;
   intro: string;
   sections: IndexSnapshotSection[];
+  /** Must be the same items as the page's FAQPage JSON-LD and its visible FAQ. */
+  faqs?: { heading: string; items: ReadonlyArray<{ question: string; answer: string }> };
 }
 
 /**
@@ -648,6 +650,11 @@ export function renderIndexSnapshotHtml(data: IndexSnapshotData): string {
     styleTag(),
     `<h1>${escapeHtml(data.h1)}</h1>`,
     `<p class="fh-desc">${escapeHtml(data.intro)}</p>`,
+    data.faqs?.items.length
+      ? `<h2>${escapeHtml(data.faqs.heading)}</h2>${data.faqs.items
+          .map((f) => `<p><strong>${escapeHtml(f.question)}</strong></p><p>${escapeHtml(f.answer)}</p>`)
+          .join("")}`
+      : "",
     renderLinkSections([...data.sections, siteHubSection()]),
     `</div>`,
   ]

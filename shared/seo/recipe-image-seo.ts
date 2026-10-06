@@ -7,16 +7,6 @@ export function buildRecipeHeroAlt(title: string): string {
   return title.trim();
 }
 
-export function buildRecipeCardAlt(title: string): string {
-  const t = title.trim();
-  return `${t} recipe for firefighters cooking at the station`;
-}
-
-export function buildRecipeThumbnailAlt(title: string): string {
-  const t = title.trim();
-  return `Firehall ${t.toLowerCase()} — station meal photo`;
-}
-
 /** Suggested SEO filename for future asset migrations (does not rename on disk). */
 export function suggestRecipeImageFilename(slug: string, suffix = "jpg"): string {
   const base = slug

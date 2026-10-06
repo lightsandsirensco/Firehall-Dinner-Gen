@@ -78,8 +78,7 @@ export function HeroImage({
           HERO_LAYOUT_FRAME[layout],
           className,
         )}
-        role="img"
-        aria-label={alt}
+        {...(alt ? { role: "img", "aria-label": alt } : { "aria-hidden": true })}
       />
     );
   }

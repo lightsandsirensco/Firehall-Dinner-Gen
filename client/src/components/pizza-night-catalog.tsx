@@ -43,7 +43,7 @@ function PizzaCatalogCard({
         {showImage ? (
           <FoodImage
             src={imageSrc}
-            alt={entry.title}
+            alt=""
             layout="card-fill"
             fit="cover"
             focal="center"
