@@ -30,6 +30,14 @@ import {
   PROFILE_NUTRITION_GOAL_LABELS,
 } from "@shared/auth/constants";
 import { FOOD_PREFERENCE_DEFINITIONS } from "@shared/ingredient-preferences/definitions";
+import {
+  PROFILE_NUTRITION_GOALS,
+  PROFILE_NUTRITION_GOAL_KEY_LABELS,
+  PROFILE_NUTRITION_GOALS_DESCRIPTION,
+  sanitizeProfileNutritionGoals,
+  toggleProfileNutritionGoal,
+  type ProfileNutritionGoalKey,
+} from "@shared/nutrition/profile-goals";
 
 type SpiceLevel = (typeof PROFILE_SPICE_OPTIONS)[number];
 type Difficulty = (typeof PROFILE_DIFFICULTY_OPTIONS)[number];
@@ -46,6 +54,7 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
   const { toast } = useToast();
   const [, setLocation] = useLocation();
   const hasFoodPreferences = useFeature("ingredient_preferences");
+  const hasNutritionGoals = useFeature("nutrition_goals");
   const recordPaywall = useRecordPaywallView();
   const [saving, setSaving] = useState(false);
 
@@ -58,6 +67,7 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
   const [difficulty, setDifficulty] = useState<Difficulty | null>(null);
   const [cookTime, setCookTime] = useState<CookTime | null>(null);
   const [nutritionGoal, setNutritionGoal] = useState<NutritionGoal | null>(null);
+  const [nutritionGoals, setNutritionGoals] = useState<ProfileNutritionGoalKey[]>([]);
 
   useEffect(() => {
     if (!open) return;
@@ -70,6 +80,7 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
     setDifficulty((preferences?.meal_difficulty as Difficulty | null) ?? null);
     setCookTime((preferences?.cook_time_preference as CookTime | null) ?? null);
     setNutritionGoal((preferences?.nutrition_goal as NutritionGoal | null) ?? null);
+    setNutritionGoals(sanitizeProfileNutritionGoals(preferences?.nutrition_goals ?? []));
   }, [open, preferences]);
 
   const toggleItem = (list: string[], value: string, setter: (v: string[]) => void) => {
@@ -92,6 +103,8 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
         meal_difficulty: difficulty,
         cook_time_preference: cookTime,
         nutrition_goal: nutritionGoal,
+        // Entitlement re-checked server-side, same as excluded_ingredients.
+        ...(hasNutritionGoals ? { nutrition_goals: nutritionGoals } : {}),
       });
       await refresh();
       trackProfileUpdated();
@@ -216,6 +229,45 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
               onChange={setNutritionGoal}
               labels={PROFILE_NUTRITION_GOAL_LABELS}
             />
+          </div>
+
+          <div className="space-y-2">
+            <div className="flex items-center gap-1.5">
+              <Label>Nutrition Goals</Label>
+              {!hasNutritionGoals && (
+                <span className="inline-flex items-center gap-0.5 text-[9px] font-bold uppercase tracking-wide text-primary">
+                  <Lock className="h-2.5 w-2.5" aria-hidden />
+                  Pro
+                </span>
+              )}
+            </div>
+            <p className="text-xs text-muted-foreground">{PROFILE_NUTRITION_GOALS_DESCRIPTION}</p>
+            {hasNutritionGoals ? (
+              <div className="flex flex-wrap gap-2">
+                {PROFILE_NUTRITION_GOALS.map((goal) => (
+                  <ChipToggle
+                    key={goal}
+                    label={PROFILE_NUTRITION_GOAL_KEY_LABELS[goal]}
+                    selected={nutritionGoals.includes(goal)}
+                    onToggle={() => setNutritionGoals((prev) => toggleProfileNutritionGoal(prev, goal))}
+                  />
+                ))}
+              </div>
+            ) : (
+              <button
+                type="button"
+                onClick={() => {
+                  trackProFeatureClicked({ feature: "nutrition_goals", page: "/account", logged_in: authenticated });
+                  void recordPaywall("nutrition_goals", "account_preferences");
+                  onOpenChange(false);
+                  setLocation("/me/subscription?feature=nutrition_goals");
+                }}
+                className="w-full rounded-md border border-border/40 bg-muted/20 px-3 py-2 text-left text-xs text-muted-foreground"
+                data-testid="account-nutrition-goals-locked"
+              >
+                Upgrade to Firehall Meals Pro to shape recommendations around your nutrition goals.
+              </button>
+            )}
           </div>
 
           <div className="space-y-2 border-t border-border/30 pt-4">

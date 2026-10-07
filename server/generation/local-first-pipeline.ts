@@ -20,6 +20,7 @@ import {
 } from "./tonight-selection.js";
 import { TONIGHT_MEAL_STYLE_LABELS, TONIGHT_TIME_WINDOW_LABELS } from "../../shared/tonight-filters.js";
 import { sampleSizeBucket, type HistorySignals } from "./history-personalization.js";
+import type { ProfileNutritionGoalKey } from "../../shared/nutrition/profile-goals.js";
 import { log } from "../logger.js";
 import {
   sourceKindForLayer,
@@ -41,6 +42,8 @@ export interface LocalFirstPipelineContext {
   startTime: number;
   /** Insight-Driven Personalization — deterministic history-learned soft signals (see history-personalization.ts). Absent/null = scoring unchanged from before this feature existed. */
   historySignals?: HistorySignals | null;
+  /** Firehall Meals Pro saved Nutrition Goals — already entitlement-gated in routes.ts. */
+  nutritionGoals?: readonly ProfileNutritionGoalKey[] | null;
 }
 
 export interface LocalFirstPipelineHit {
@@ -195,6 +198,7 @@ export async function runLocalFirstGeneratePipeline(
       currentRecipeSignature: ctx.currentRecipeSignature,
       varietySeed: `curated150:${ctx.varietySeed}:${i}`,
       historySignals: ctx.historySignals,
+      nutritionGoals: ctx.nutritionGoals,
     });
 
     const healthinessRelaxed = (req.healthiness_preference || "balanced") !== requestedHealthiness;

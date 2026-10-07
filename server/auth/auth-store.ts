@@ -22,6 +22,7 @@ import { listUserHallSummaries } from "../hall-membership/store.js";
 import { resolveUserBilling } from "../billing/store.js";
 import { hasFeature, type UserBillingState } from "../../shared/billing/types.js";
 import { sanitizeFoodPreferenceKeys } from "../../shared/ingredient-preferences/definitions.js";
+import { sanitizeProfileNutritionGoals } from "../../shared/nutrition/profile-goals.js";
 
 const AUTH_COOKIE_NAME = "fh_auth";
 const SESSION_DAYS = 30;
@@ -131,6 +132,7 @@ function rowToPreferences(row: Record<string, unknown> | undefined): UserPrefere
     meal_difficulty: row.meal_difficulty ? String(row.meal_difficulty) : null,
     cook_time_preference: row.cook_time_preference ? String(row.cook_time_preference) : null,
     nutrition_goal: row.nutrition_goal ? String(row.nutrition_goal) : null,
+    nutrition_goals: sanitizeProfileNutritionGoals(parseJsonArray(row.nutrition_goals_json as string)),
     shift_reminders_enabled: Number(row.shift_reminders_enabled) === 1,
     shift_days: normalizeShiftDays(
       (() => {
@@ -564,6 +566,7 @@ export async function updateUserProfile(
     meal_difficulty?: string | null;
     cook_time_preference?: string | null;
     nutrition_goal?: string | null;
+    nutrition_goals?: string[];
     shift_reminders_enabled?: boolean;
     shift_days?: number[];
     shift_reminder_time?: string;
@@ -645,6 +648,18 @@ export async function updateUserProfile(
   }
   if ("nutrition_goal" in patch) {
     prefFields.push(["nutrition_goal", patch.nutrition_goal ?? null]);
+  }
+  if (patch.nutrition_goals) {
+    // Same rule as Foods to Avoid: only a currently-entitled Pro account can
+    // persist a non-empty list; clearing is always allowed.
+    const sanitized = sanitizeProfileNutritionGoals(patch.nutrition_goals);
+    let allowed = sanitized.length === 0;
+    if (!allowed) {
+      const userRow = await pgOne(`SELECT * FROM users WHERE user_id = $1`, [userId]);
+      const billing = await attachBilling(userId, userRow ? rowToUser(userRow) : null);
+      allowed = hasFeature(billing.features, "nutrition_goals");
+    }
+    prefFields.push(["nutrition_goals_json", JSON.stringify(allowed ? sanitized : [])]);
   }
   if (typeof patch.shift_reminders_enabled === "boolean") {
     prefFields.push(["shift_reminders_enabled", patch.shift_reminders_enabled ? 1 : 0]);

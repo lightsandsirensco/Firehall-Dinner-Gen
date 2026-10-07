@@ -45,6 +45,8 @@ export interface UserPreferences {
   meal_difficulty: string | null;
   cook_time_preference: string | null;
   nutrition_goal: string | null;
+  /** Firehall Meals Pro — saved multi-select Nutrition Goals (canonical keys; see shared/nutrition/profile-goals.ts). */
+  nutrition_goals: string[];
   shift_reminders_enabled: boolean;
   shift_days: number[];
   shift_reminder_time: string;

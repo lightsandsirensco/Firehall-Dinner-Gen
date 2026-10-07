@@ -161,6 +161,10 @@ export const PLAN_PRESENTATIONS: Record<Exclude<PlanId, "hall_pro">, PlanPresent
         description: "Tell Firehall Meals what your crew doesn't want to eat.",
       },
       {
+        label: "Nutrition Goals",
+        description: "Shape meal recommendations around how you want to eat.",
+      },
+      {
         label: "Meal Memory",
         description: "Remembers what you've cooked and helps keep the Generator varied.",
       },

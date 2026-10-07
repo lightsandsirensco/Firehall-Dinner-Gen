@@ -52,6 +52,7 @@
     "test:generator-personalization": "tsx scripts/test-generator-personalization.ts",
     "test:fallback-title-consistency": "tsx scripts/test-fallback-title-consistency.ts",
     "test:nutrition-goal-scoring": "tsx scripts/test-nutrition-goal-scoring.ts",
+    "test:nutrition-goals-premium": "tsx scripts/test-nutrition-goals-premium.ts",
     "test:stripe-billing": "tsx scripts/test-stripe-billing.ts",
     "verify:stripe-live": "tsx scripts/verify-stripe-live-readiness.ts",
     "audit:editorial-150": "tsx scripts/audit-editorial-150.ts",

@@ -83,6 +83,10 @@ import {
   type HistorySignals,
   type HistorySignalType,
 } from "./history-personalization.js";
+import {
+  scoreProfileNutritionGoals,
+  type ProfileNutritionGoalKey,
+} from "../../shared/nutrition/profile-goals.js";
 
 export interface LocalRecipePick {
   recipe: GenerateResponse;
@@ -109,6 +113,8 @@ export interface PickOptions {
   varietySeed: string;
   /** Insight-Driven Personalization — deterministic history-learned soft signals (see history-personalization.ts). Null/absent = scoring unchanged from before this feature existed. */
   historySignals?: HistorySignals | null;
+  /** Firehall Meals Pro saved Nutrition Goals — weighted ranking only, applied after eligibility. */
+  nutritionGoals?: readonly ProfileNutritionGoalKey[] | null;
 }
 
 function signatureBlocked(
@@ -372,6 +378,17 @@ function pickFromSummaries(
       // small, heavily-suppressed pool (e.g. a narrow firehall-category stage).
       const eligibilityScore = score;
       score += feedbackDelta;
+      if (full && options.nutritionGoals?.length) {
+        const macros = full.generateResponse?.macros_per_serving;
+        score += scoreProfileNutritionGoals(options.nutritionGoals, {
+          calories: macros?.calories,
+          protein_g: macros?.protein_g,
+          carbs_g: macros?.carbs_g,
+          fat_g: macros?.fat_g,
+          highFiberTag: full.generateResponse?.tags?.high_fiber,
+          nutritionCategory: full.metadata?.nutritionCategory ?? null,
+        });
+      }
       score -= recentSlugPenalty(row.slug, options.recentSlugs);
       if (options.historySignals) {
         const history = scoreHistorySignal({ slug: row.slug, protein: row.protein }, options.historySignals);

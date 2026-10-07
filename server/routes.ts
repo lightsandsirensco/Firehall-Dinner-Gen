@@ -195,6 +195,8 @@ import { registerAuthRoutes } from "./auth/auth-routes.js";
 import { initAuthStore } from "./auth/auth-store.js";
 import type { AuthedRequest } from "./auth/auth-middleware.js";
 import { gateFoodsToAvoidByEntitlement } from "./generation/foods-to-avoid-gate.js";
+import { loadEntitledNutritionGoals } from "./generation/nutrition-goals-gate.js";
+import type { ProfileNutritionGoalKey } from "../shared/nutrition/profile-goals.js";
 import { registerUserSyncRoutes } from "./sync/routes.js";
 import { registerHallMembershipRoutes } from "./hall-membership/routes.js";
 import { registerHallShoppingListRoutes } from "./hall-shopping-list/routes.js";
@@ -1414,6 +1416,19 @@ export async function registerRoutes(
         }
       }
 
+      // Firehall Meals Pro "Nutrition Goals" — saved profile goals applied as
+      // weighted ranking preferences only (never hard filters), after allergies /
+      // dietary / Foods to Avoid have already decided eligibility.
+      let nutritionGoals: ProfileNutritionGoalKey[] = [];
+      if (authUserId && requestUserBilling) {
+        try {
+          nutritionGoals = await loadEntitledNutritionGoals(authUserId, requestUserBilling);
+        } catch (err) {
+          log(`[generate] nutrition goals load failed: ${(err as Error)?.message}`, "generate");
+          nutritionGoals = [];
+        }
+      }
+
       if (clientCurrentSig) {
         addSessionSignature(`${ipHash}:${sessionId}`, clientCurrentSig);
       }
@@ -1463,6 +1478,7 @@ export async function registerRoutes(
         preferDifferentStyle: Boolean(request.prefer_different_style),
         startTime,
         historySignals,
+        nutritionGoals,
       });
 
       auditCtx.chosenProtein = pipelineHit.protein;

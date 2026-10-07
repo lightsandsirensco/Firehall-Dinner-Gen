@@ -8,6 +8,10 @@ import {
   PROFILE_COOK_TIME_LABELS,
   PROFILE_NUTRITION_GOAL_LABELS,
 } from "@shared/auth/constants";
+import {
+  PROFILE_NUTRITION_GOAL_KEY_LABELS,
+  sanitizeProfileNutritionGoals,
+} from "@shared/nutrition/profile-goals";
 
 function SummaryChip({ label }: { label: string }) {
   return (
@@ -30,6 +34,9 @@ export function CrewFoodProfileCard() {
   const difficulty = preferences?.meal_difficulty;
   const cookTime = preferences?.cook_time_preference;
   const nutritionGoal = preferences?.nutrition_goal;
+  const nutritionGoals = sanitizeProfileNutritionGoals(preferences?.nutrition_goals ?? []).map(
+    (g) => PROFILE_NUTRITION_GOAL_KEY_LABELS[g],
+  );
 
   const singleSelects = [
     spice && `${spice} spice`,
@@ -38,7 +45,7 @@ export function CrewFoodProfileCard() {
     nutritionGoal && (PROFILE_NUTRITION_GOAL_LABELS as Record<string, string>)[nutritionGoal],
   ].filter(Boolean) as string[];
 
-  const chipGroups = [dietary, allergies, avoid, cuisines, appliances];
+  const chipGroups = [dietary, allergies, avoid, cuisines, appliances, nutritionGoals];
   const hasAnyData = chipGroups.some((g) => g.length > 0) || singleSelects.length > 0;
 
   return (
@@ -61,6 +68,9 @@ export function CrewFoodProfileCard() {
           <div className="flex flex-wrap gap-1.5">
             {singleSelects.map((s) => (
               <SummaryChip key={s} label={s} />
+            ))}
+            {nutritionGoals.map((g) => (
+              <SummaryChip key={`n-${g}`} label={g} />
             ))}
             {dietary.map((d) => (
               <SummaryChip key={`d-${d}`} label={d} />

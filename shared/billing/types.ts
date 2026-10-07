@@ -53,6 +53,8 @@ export const BILLING_FEATURES = [
   "offline_recipes",
   /** Firefighter Plus — persistent "Foods to Avoid" ingredient preferences (Explore + Generator). */
   "ingredient_preferences",
+  /** Firefighter Plus — saved multi-select Nutrition Goals that softly re-rank Generator picks. */
+  "nutrition_goals",
   /**
    * Firefighter Plus V1 Feature 3 — "Meal Memory": durable, cross-device
    * account-level cooked-meal history + Generator variety personalization
@@ -97,6 +99,7 @@ export const PLUS_FEATURES = [
   "ai_substitutions",
   "offline_recipes",
   "ingredient_preferences",
+  "nutrition_goals",
   "meal_memory",
 ] as const satisfies readonly BillingFeature[];
 
