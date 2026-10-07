@@ -104,6 +104,7 @@ export default function CuratedPackagePage() {
                 heldLabel="Hall Classic"
                 title={data.title}
                 variant="cinematic"
+                bleed={false}
                 className="w-full"
               />
               <div className="relative p-5 sm:p-8 -mt-8 sm:-mt-16 bg-gradient-to-t from-card via-card/95 to-transparent">

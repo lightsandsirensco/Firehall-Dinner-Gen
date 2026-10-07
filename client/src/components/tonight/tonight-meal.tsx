@@ -18,6 +18,7 @@ import {
   type TonightSelection,
 } from "@/lib/tonight-selection-store";
 import { app } from "@/lib/design-tokens";
+import { resolveImageObjectPosition } from "@shared/image-focal";
 import { cn } from "@/lib/utils";
 import { approvedCatalogHeroPath, resolveApprovedCatalogKind } from "@shared/approved-catalog";
 import type { GoldenRecipePage } from "@shared/golden-100/recipe-page-schema";
@@ -118,6 +119,7 @@ function MealImage({ src, alt, className }: { src?: string; alt: string; classNa
       src={src}
       alt={alt}
       className={cn("object-cover bg-zinc-900", className)}
+      style={{ objectPosition: resolveImageObjectPosition(src) }}
       onError={() => setFailed(true)}
       decoding="async"
     />
@@ -222,7 +224,7 @@ export function TonightMeal({ selection }: { selection: TonightSelection }) {
 
       {selected ? (
         <article className="overflow-hidden rounded-3xl border border-border/40 bg-card/40 shadow-xl shadow-black/30">
-          <MealImage src={details.imageSrc} alt={details.imageAlt} className="aspect-[4/3] w-full sm:aspect-[16/9]" />
+          <MealImage src={details.imageSrc} alt={details.imageAlt} className="aspect-[4/3] w-full sm:aspect-[3/2]" />
           <div className="space-y-4 p-5">
             <div className="space-y-2">
               <h1 className="font-heading text-[2rem] uppercase leading-[0.95] tracking-tight text-foreground sm:text-4xl">

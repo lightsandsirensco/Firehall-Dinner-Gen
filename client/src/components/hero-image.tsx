@@ -11,12 +11,15 @@ import {
   heroOverlayClasses,
 } from "@/lib/hero-image";
 import { normalizeMediaUrl } from "@/lib/media-url";
+import { resolveImageObjectPosition, type ImageFocalPosition } from "@shared/image-focal";
 
 export interface HeroImageProps {
   src: string;
   alt: string;
   layout?: HeroImageLayout;
   focal?: HeroFocalPoint;
+  /** Optional per-image override; otherwise the food default / file-stem override applies. */
+  imagePosition?: ImageFocalPosition;
   /** How to fit the image into the frame */
   fit?: "cover" | "contain" | "contain-blur";
   overlay?: HeroOverlayPreset;
@@ -44,6 +47,7 @@ export function HeroImage({
   alt,
   layout = "detail",
   focal = "food",
+  imagePosition,
   fit = "cover",
   overlay = "detail",
   cinematicGrade = false,
@@ -140,7 +144,13 @@ export function HeroImage({
           loaded ? "opacity-100 scale-100" : "opacity-40 scale-[1.01]",
           imgClassName,
         )}
-        style={fit === "contain-blur" ? { zIndex: 1 } : undefined}
+        style={
+          fit === "contain-blur"
+            ? { zIndex: 1 }
+            : fit === "cover" && (focal === "food" || focal === "food-plate" || imagePosition != null)
+              ? { objectPosition: resolveImageObjectPosition(resolvedSrc, imagePosition) }
+              : undefined
+        }
         onLoad={() => setLoaded(true)}
         onError={() => {
           const handled = onError?.();

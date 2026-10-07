@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import { HERO_LAYOUT_FRAME } from "@/lib/hero-image";
 import { FoodImage } from "@/components/mobile/food-image";
 import { ExploreHeldImageryPlaceholder } from "@/components/explore-held-imagery-placeholder";
 
@@ -13,6 +14,8 @@ interface MealHeroImageProps {
   /** Cinematic full-bleed vs contained card header */
   variant?: "cinematic" | "card";
   priority?: boolean;
+  /** Edge-to-edge on mobile (cinematic default). Turn off when the hero sits inside a bordered card. */
+  bleed?: boolean;
 }
 
 /**
@@ -27,11 +30,9 @@ export function MealHeroImage({
   imgClassName,
   variant = "cinematic",
   priority = true,
+  bleed = variant === "cinematic",
 }: MealHeroImageProps) {
-  const frameClass =
-    variant === "cinematic"
-      ? "w-full aspect-[3/2] max-h-[min(50vh,440px)] sm:aspect-video sm:max-h-[min(420px,48vh)]"
-      : "w-full aspect-[16/10]";
+  const frameClass = variant === "cinematic" ? HERO_LAYOUT_FRAME.cinematic : "w-full aspect-[16/10]";
 
   const brandedFallback = (
     <ExploreHeldImageryPlaceholder
@@ -54,7 +55,7 @@ export function MealHeroImage({
       focal="food-plate"
       overlay={variant === "cinematic" ? "minimal" : "minimal"}
       priority={priority}
-      bleed={variant === "cinematic"}
+      bleed={bleed}
       rounded={variant === "cinematic" ? "none" : "lg"}
       className={cn(
         variant === "cinematic" && "sm:rounded-2xl sm:ring-1 sm:ring-border/40 sm:shadow-xl sm:shadow-black/25",

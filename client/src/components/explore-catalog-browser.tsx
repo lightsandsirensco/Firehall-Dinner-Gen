@@ -6,6 +6,7 @@ import {
   approvedCatalogRecipePath,
   type ApprovedCatalogGridEntry,
 } from "@shared/approved-catalog";
+import { resolveImageObjectPosition } from "@shared/image-focal";
 import { MissingRecipeImagePlaceholder } from "@/components/missing-recipe-image-placeholder";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
@@ -161,7 +162,7 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
       data-recipe-route={approvedCatalogRecipePath(entry.slug)}
     >
       <div
-        className="relative aspect-square overflow-hidden bg-zinc-950 md:aspect-[4/5]"
+        className="relative aspect-square overflow-hidden bg-zinc-950"
         style={{ contain: "layout paint" }}
       >
         {showImage ? (
@@ -174,7 +175,8 @@ const ApprovedCatalogCard = memo(function ApprovedCatalogCard({
             decoding="async"
             fetchPriority="low"
             sizes="(max-width: 768px) 44vw, 240px"
-            className="absolute inset-0 h-full w-full object-cover object-center [transform:translateZ(0)]"
+            className="absolute inset-0 h-full w-full object-cover [transform:translateZ(0)]"
+            style={{ objectPosition: resolveImageObjectPosition(imageSrc) }}
             onError={() => {
               setCandidateIndex((prev) => {
                 if (prev + 1 < candidates.length) return prev + 1;

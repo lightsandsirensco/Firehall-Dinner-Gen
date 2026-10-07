@@ -22,25 +22,27 @@ export type HeroOverlayPreset =
   | "banner-compact"
   | "banner-utility";
 
-/** Recipe detail pages — consistent 3:2 mobile, 16:9 desktop, capped height */
+/**
+ * Recipe/meal heroes — 4:3 mobile, 3:2 desktop, capped height. Source photos are 1:1, so
+ * anything wider than ~3:2 (or a low height cap on a wide column) crops away the dish.
+ */
 export const RECIPE_PAGE_HERO_FRAME =
-  "w-full aspect-[3/2] max-h-[min(50vh,440px)] sm:aspect-video sm:max-h-[min(420px,48vh)]";
+  "w-full aspect-[4/3] max-h-[min(62vh,520px)] sm:aspect-[3/2] sm:max-h-[min(540px,62vh)]";
 
 /** Outer frame: aspect ratio + max height caps (prevents giant mobile blobs) */
 export const HERO_LAYOUT_FRAME: Record<HeroImageLayout, string> = {
   detail: RECIPE_PAGE_HERO_FRAME,
-  cinematic:
-    "w-full aspect-[3/2] max-h-[min(50vh,440px)] sm:aspect-video sm:max-h-[min(420px,48vh)]",
+  cinematic: RECIPE_PAGE_HERO_FRAME,
   "card-fill": "w-full h-full min-h-0",
   "banner-full": "w-full h-[min(42vh,300px)] sm:h-[260px] md:h-[340px]",
   "banner-compact": "w-full h-[100px] sm:h-[152px]",
   "banner-utility": "w-full h-[52px] sm:h-[60px]",
 };
 
-/** Intentional crop — keep plated food in frame; avoid aggressive vertical shifts */
+/** Food focal points get their position inline from `resolveImageObjectPosition` (per-image overrides). */
 export const HERO_FOCAL_CLASS: Record<HeroFocalPoint, string> = {
-  food: "object-cover object-[center_45%]",
-  "food-plate": "object-cover object-[center_45%]",
+  food: "object-cover",
+  "food-plate": "object-cover",
   banner: "object-cover object-[center_45%] sm:object-[center_40%]",
   center: "object-cover object-center",
 };

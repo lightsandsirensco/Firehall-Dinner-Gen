@@ -31,6 +31,7 @@ export function DinnerWheelReveal({
             heldLabel="Hall Pick"
             title={recipe.title}
             variant="cinematic"
+            bleed={false}
             className="w-full"
           />
           <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-transparent pointer-events-none" />

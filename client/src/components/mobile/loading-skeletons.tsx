@@ -41,7 +41,7 @@ export function RecipeGridSkeleton({ count = 8 }: { count?: number }) {
     <ul className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4 lg:gap-4" aria-hidden>
       {Array.from({ length: count }).map((_, i) => (
         <li key={i} className="overflow-hidden rounded-xl bg-card/40 ring-1 ring-border/20 md:rounded-2xl">
-          <div className="aspect-square skeleton-shimmer md:aspect-[4/5]" />
+          <div className="aspect-square skeleton-shimmer" />
           <div className="space-y-1.5 p-2 md:p-3">
             <div className="h-3 w-full rounded skeleton-shimmer md:h-4" />
             <div className="h-2.5 w-2/3 rounded skeleton-shimmer md:h-3" />
