@@ -69,6 +69,8 @@ interface RecipeCardProps {
   mealOccasion?: string;
   /** Real linked hall id, if this surface has hall context. */
   hallId?: string;
+  /** Skip hero, title, pills, Start Cooking and why-line when a decision header renders them (Pick Tonight). */
+  hideIntro?: boolean;
 }
 
 function MealSection({
@@ -286,7 +288,7 @@ export function buildPrintHtml(
 </html>`;
 }
 
-export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, onHallVoteClick, hideSave, nutritionGoal, mealOccasion, hallId }: RecipeCardProps) {
+export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick, onHallVoteClick, hideSave, nutritionGoal, mealOccasion, hallId, hideIntro = false }: RecipeCardProps) {
   const auth = useOptionalAuth();
   const [, navigate] = useLocation();
   const hasTiming = recipe.timing && (recipe.timing.prep_min || recipe.timing.cook_min || recipe.timing.total_min);
@@ -413,7 +415,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
 
   return (
     <div className={cn(app.sectionGap, "meal-reveal motion-reduce:animate-none")}>
-      {recipe.hero_image && recipe.hero_image_status === "ready" ? (
+      {hideIntro ? null : recipe.hero_image && recipe.hero_image_status === "ready" ? (
         <MealHeroImage
           src={recipe.hero_image}
           alt={recipe.hero_image_alt || displayTitle}
@@ -460,6 +462,8 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         </div>
       )}
       <div className="space-y-3">
+        {!hideIntro && (
+        <>
         <h2 className={cn(app.titlePage, "max-w-2xl")} data-testid="text-recipe-title">
           {displayTitle}
         </h2>
@@ -527,8 +531,10 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             </span>
           )}
         </div>
+        </>
+        )}
 
-        <div className="my-4">
+        <div className={hideIntro ? "mb-4" : "my-4"}>
           <RecipeMeasurementBar>
             <p className="text-sm text-muted-foreground">
               Crew size:{" "}
@@ -544,7 +550,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         </div>
 
         <div className="space-y-2">
-          {cookModeRecipe.steps.length > 0 ? (
+          {!hideIntro && cookModeRecipe.steps.length > 0 ? (
             <StartCookingButton
               recipe={cookModeRecipe}
               recipeSlug={recipeSlug}
@@ -618,12 +624,16 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
             Saved to Saved Meals.
           </div>
         )}
-        <p className={cn(app.lead, "max-w-2xl")} data-testid="text-recipe-why">
-          {recipe.why_it_fits_tonight}
-        </p>
-        <p className="text-xs text-muted-foreground" data-testid="text-recipe-commit">
-          {CTA.cookThis} — or try another if this isn&apos;t it.
-        </p>
+        {!hideIntro && (
+          <>
+            <p className={cn(app.lead, "max-w-2xl")} data-testid="text-recipe-why">
+              {recipe.why_it_fits_tonight}
+            </p>
+            <p className="text-xs text-muted-foreground" data-testid="text-recipe-commit">
+              {CTA.cookThis} — or try another if this isn&apos;t it.
+            </p>
+          </>
+        )}
       </div>
 
       {mealPlate && (mealPlate.main.length > 0 || mealPlate.sides.length > 0) && (

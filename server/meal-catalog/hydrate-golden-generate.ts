@@ -122,6 +122,19 @@ export function catalogProteinLabel(slug: string): string | null {
   return meta ? canonicalTonightProtein(meta.protein, normalized).label : null;
 }
 
+/**
+ * Coarse "same kind of meal" key (protein family + meal format), e.g. `chicken|sheet pan`.
+ * Used to avoid serving two near-identical meals back to back.
+ */
+export function catalogSimilarityKey(slug: string): string | null {
+  const normalized = normalizeCatalogSlug(slug);
+  const meta = manifestMeta(normalized);
+  if (!meta) return null;
+  const { family } = canonicalTonightProtein(meta.protein, normalized);
+  const format = (meta.mealFormat || "").trim().toLowerCase();
+  return `${family ?? meta.protein.toLowerCase()}|${format}`;
+}
+
 /** Resolve generate payload for an approved catalog slug. */
 export function hydrateCatalogGenerateResponse(
   slug: string,

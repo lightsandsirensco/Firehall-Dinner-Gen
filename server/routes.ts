@@ -873,6 +873,8 @@ export async function registerRoutes(
     if (extras._relaxation_note) {
       base._relaxation_note = extras._relaxation_note;
     }
+    if (extras._tonight_badge) base._tonight_badge = extras._tonight_badge;
+    if (extras._tonight_why) base._tonight_why = extras._tonight_why;
     if (extras._healthiness_relaxed) {
       base._healthiness_relaxed = extras._healthiness_relaxed;
     }

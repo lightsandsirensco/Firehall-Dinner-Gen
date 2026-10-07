@@ -17,10 +17,23 @@ function assert(cond: boolean, msg: string) {
   if (!cond) throw new Error(msg);
 }
 
-assert(crewSizeToBucket(4) === "2-4", "crew 4 → 2-4");
-assert(crewSizeToBucket(6) === "5-8", "crew 6 → 5-8");
-assert(crewSizeToBucket(10) === "9-12", "crew 10 → 9-12");
+assert(crewSizeToBucket(4) === "4", "crew 4 → 4");
+assert(crewSizeToBucket(5) === "6", "crew 5 → 6");
+assert(crewSizeToBucket(6) === "6", "crew 6 → 6");
+assert(crewSizeToBucket(10) === "10", "crew 10 → 10");
 assert(crewSizeToBucket(14) === "12+", "crew 14 → 12+");
+
+// Legacy range buckets from saved state still resolve.
+const legacySession = resolveGeneratorFilters({
+  personal: null,
+  session: { ...createDefaultSimplifiedFilters(), crew_bucket: "5-8" as never, protein: "turkey" as never },
+  preferences: null,
+  hall: null,
+  hallLinked: false,
+});
+assert(legacySession.crew_bucket === "8", "legacy 5-8 → 8");
+assert(legacySession.protein === "surprise", "legacy turkey → surprise");
+assert(legacySession.time_window === "any" && legacySession.meal_style === "any", "new filters default to any");
 
 assert(
   mapProfileAppliancesToSimplified(["stove", "grill", "flat_top"]).join(",") ===
@@ -56,7 +69,7 @@ const hallLinked = resolveGeneratorFilters({
   hallLinked: true,
   localCrewSize: 6,
 });
-assert(hallLinked.crew_bucket === "5-8", "hall crew 8");
+assert(hallLinked.crew_bucket === "8", "hall crew 8");
 assert(hallLinked.appliances.includes("bbq"), "hall grill → bbq");
 assert(hallLinked.appliances.includes("oven"), "hall oven");
 
@@ -94,7 +107,7 @@ const accountOnly = resolveGeneratorFilters({
   hall: null,
   hallLinked: false,
 });
-assert(accountOnly.protein === "turkey", "account protein default");
+assert(accountOnly.protein === "surprise", "account turkey preference → surprise");
 assert(accountOnly.allergens.includes("shellfish"), "account allergens");
 assert(accountOnly.appliances.includes("air_fryer"), "account appliances");
 
@@ -220,13 +233,13 @@ const accountCrewSize = resolveGeneratorFilters({
   localCrewSize: 6,
   accountCrewSize: 12,
 });
-assert(accountCrewSize.crew_bucket === "9-12", "account crew_size 12 → 9-12 bucket default");
+assert(accountCrewSize.crew_bucket === "12+", "account crew_size 12 → 12+ bucket default");
 
 // A session crew_bucket already picked by the user this session must win over the
 // account default — defaults never overwrite an explicit in-session choice.
 const sessionOverridesAccountCrewSize = resolveGeneratorFilters({
   personal: null,
-  session: { ...createDefaultSimplifiedFilters(), crew_bucket: "2-4" },
+  session: { ...createDefaultSimplifiedFilters(), crew_bucket: "4" },
   preferences: null,
   hall: null,
   hallLinked: false,
@@ -234,7 +247,7 @@ const sessionOverridesAccountCrewSize = resolveGeneratorFilters({
   accountCrewSize: 12,
 });
 assert(
-  sessionOverridesAccountCrewSize.crew_bucket === "2-4",
+  sessionOverridesAccountCrewSize.crew_bucket === "4",
   "session crew_bucket wins over account crew_size default",
 );
 
@@ -248,7 +261,7 @@ const hallOverridesAccountCrewSize = resolveGeneratorFilters({
   localCrewSize: 6,
   accountCrewSize: 20,
 });
-assert(hallOverridesAccountCrewSize.crew_bucket === "5-8", "hall crew_size wins over account crew_size default");
+assert(hallOverridesAccountCrewSize.crew_bucket === "8", "hall crew_size wins over account crew_size default");
 
 console.log("[test-generator-personalization] OK");
 process.exit(0);

@@ -3,7 +3,7 @@
  */
 
 const STORAGE_KEY = "firehall_recent_meal_slugs_v1";
-const MAX_SLUGS = 24;
+const MAX_SLUGS = 32;
 
 export function getRecentMealSlugs(): string[] {
   try {

@@ -8,12 +8,15 @@ export function hashSeed(s: string): number {
   return Math.abs(h);
 }
 
-/** Penalize recently served slugs — more recent = larger penalty. */
+/**
+ * Penalize recently served slugs — more recent = larger penalty.
+ * `recentSlugs` is oldest-first (most recent last), matching recordMealSlug.
+ */
 export function recentSlugPenalty(slug: string, recentSlugs?: string[]): number {
   if (!recentSlugs?.length) return 0;
   const idx = recentSlugs.lastIndexOf(slug);
   if (idx === -1) return 0;
-  const recency = recentSlugs.length - idx;
+  const recency = idx + 1;
   return recency * 28;
 }
 
@@ -51,7 +54,13 @@ export function mergeRecentSlugSources(
 export function weightedPickIndex(weights: number[], seed: string): number {
   const total = weights.reduce((a, b) => a + b, 0);
   if (total <= 0) return 0;
-  let r = hashSeed(seed) % total;
+  // Avalanche the hash (murmur3 fmix32): near-identical seeds ("…:1", "…:2") otherwise
+  // land on near-identical values and the draw clusters on a few candidates.
+  let h = hashSeed(seed);
+  h = Math.imul(h ^ (h >>> 16), 0x85ebca6b);
+  h = Math.imul(h ^ (h >>> 13), 0xc2b2ae35);
+  h ^= h >>> 16;
+  let r = ((h >>> 0) / 0x100000000) * total;
   for (let i = 0; i < weights.length; i++) {
     r -= weights[i]!;
     if (r < 0) return i;

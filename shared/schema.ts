@@ -10,6 +10,7 @@ import {
 import { FIREHALL_CATEGORY_IDS } from "./firehall-categories.js";
 import { DIETARY_FILTER_KEYS } from "./dietary/schema.js";
 import { PROFILE_NUTRITION_GOAL_OPTIONS } from "./auth/constants.js";
+import { TONIGHT_MEAL_STYLES, TONIGHT_TIME_WINDOWS } from "./tonight-filters.js";
 
 const safeLabel = z.string().trim().min(1).max(80);
 const safeAllergen = z.string().trim().min(1).max(40);
@@ -33,6 +34,26 @@ export const generateRequestSchema = z.object({
   crew_size: z.number().min(2).max(20),
   busy_level: z.enum(["quiet", "average", "busy", "slammed"]),
   time_available: z.enum(["15-25", "20-30", "25-40", "30-45", "45-60", "60-90"]),
+  /**
+   * `false` when the surface has no time picker, so `time_available` is only a ranking hint
+   * and never hard-excludes longer dinners. Omitted = enforced (user chose a time).
+   */
+  enforce_time_bucket: z.boolean().optional(),
+  /** Pick Tonight — preferred time window (ranking tier; upper bound enforced via `time_available`). */
+  time_window: z.enum(TONIGHT_TIME_WINDOWS).optional(),
+  /** Pick Tonight — preferred meal style (ranking tier, falls back when nothing matches). */
+  meal_style: z.enum(TONIGHT_MEAL_STYLES).optional(),
+  /** Pick Tonight "Not feeling it" — session-only nudges, never persisted server-side. */
+  session_feedback: z
+    .object({
+      avoid_slugs: z.array(z.string().trim().max(120)).max(40).optional(),
+      avoid_protein_of: z.array(z.string().trim().max(120)).max(6).optional(),
+      avoid_protein_labels: z.array(z.string().trim().max(40)).max(6).optional(),
+      prefer_quick: z.boolean().optional(),
+      prefer_light: z.boolean().optional(),
+      prefer_budget: z.boolean().optional(),
+    })
+    .optional(),
   appliances: z.array(z.string().trim().min(1).max(40)).min(0).max(8),
   protein: z.enum(["chicken", "beef", "pork", "turkey", "fish", "seafood", "vegetarian", "any"]),
   healthiness_preference: z.enum(["lean", "balanced", "comfort"]),
@@ -417,6 +438,10 @@ export interface ClientRecipeResponse {
   /** When healthiness preference was relaxed to find a match */
   _relaxation_note?: string;
   _healthiness_relaxed?: boolean;
+  /** Pick Tonight result card — one catalog-derived badge (Hall Favourite, Under 45 Min, …). */
+  _tonight_badge?: string;
+  /** Pick Tonight result card — short "why this works tonight" line. */
+  _tonight_why?: string;
   /**
    * Insight-Driven Personalization (deterministic, history-learned soft
    * signals — NOT AI). `_personalization_used` is true whenever the server

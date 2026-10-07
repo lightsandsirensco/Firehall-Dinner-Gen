@@ -2,7 +2,15 @@ import { createDefaultGenerateRequest } from "@shared/generate-request-defaults"
 import type { ClientRecipeResponse, GenerateRequest } from "@shared/schema";
 import { GENERATION_INTENT_PREFETCH } from "@shared/generation-intent";
 import { apiRequest } from "@/lib/queryClient";
-import { buildFilterKey, putCached, getAllCached, removeCached, buildSignature, getRecentSignatures } from "@/lib/recipe-cache";
+import {
+  buildFilterKey,
+  putCached,
+  getAllCached,
+  removeCachedRecipe,
+  buildSignature,
+  getRecentSignatures,
+} from "@/lib/recipe-cache";
+import { getRecentMealSlugs } from "@/lib/meal-rotation-memory";
 
 /** Max background prefetches in flight — keeps burst budget for real clicks */
 const POOL_SIZE = 1;
@@ -93,7 +101,13 @@ function prefetchMeals(filters: Partial<GenerateRequest>, epoch: number): void {
   const rid = body.request_id;
   if (import.meta.env.DEV) console.log(`[Prefetch] Start rid=${rid}`);
 
-  apiRequest("POST", "/api/generate", body)
+  const recentSignatures = getRecentSignatures();
+  apiRequest("POST", "/api/generate", {
+    ...body,
+    recentSlugs: getRecentMealSlugs(),
+    recentSignatures,
+    exclude_signatures: recentSignatures,
+  })
     .then((res) => res.json())
     .then((data: ClientRecipeResponse) => {
       if (epoch !== prefetchEpoch) {
@@ -119,29 +133,21 @@ export function consumePrefetched(
 ): ClientRecipeResponse | null {
   const filterKey = buildFilterKey(filters);
   const cached = getAllCached(filterKey);
-  const recentSigs = getRecentSignatures();
-  const sigSet = new Set(recentSigs);
+  const sigSet = new Set(getRecentSignatures());
+  const slugSet = new Set(getRecentMealSlugs());
+  const alreadySeen = (r: ClientRecipeResponse) =>
+    sigSet.has(buildSignature(r)) ||
+    slugSet.has(String((r as { _slug?: string })._slug || "").toLowerCase());
+
+  for (const r of cached) {
+    if (alreadySeen(r)) removeCachedRecipe(filterKey, r);
+  }
 
   const match = cached.find(
     (r) =>
-      (excludeTemplateId == null || r.template_id !== excludeTemplateId) &&
-      !sigSet.has(buildSignature(r)),
+      !alreadySeen(r) &&
+      (excludeTemplateId == null || r.template_id !== excludeTemplateId),
   );
-
-  if (!match) {
-    const fallback = cached.find(
-      (r) =>
-        (excludeTemplateId == null || r.template_id !== excludeTemplateId) &&
-        !sigSet.has(buildSignature(r)),
-    );
-    if (fallback && fallback.template_id != null) {
-      removeCached(filterKey, fallback.template_id);
-    }
-    return fallback || null;
-  }
-
-  if (match.template_id != null) {
-    removeCached(filterKey, match.template_id);
-  }
-  return match;
+  if (match) removeCachedRecipe(filterKey, match);
+  return match ?? null;
 }

@@ -12,6 +12,13 @@ import { buildCacheKey, setCachedRecipe } from "../cache-store.js";
 import { pickGolden100ForGenerate, type LocalRecipePick } from "./pick-local-recipes.js";
 import { getCuratedRecipeBySlug } from "../curated-recipe-store.js";
 import { buildRelaxationNote } from "./generator-match.js";
+import {
+  buildTonightHighlights,
+  loadTonightRecipeMeta,
+  matchesMealStyle,
+  matchesTimeWindow,
+} from "./tonight-selection.js";
+import { TONIGHT_MEAL_STYLE_LABELS, TONIGHT_TIME_WINDOW_LABELS } from "../../shared/tonight-filters.js";
 import { sampleSizeBucket, type HistorySignals } from "./history-personalization.js";
 import { log } from "../logger.js";
 import {
@@ -86,6 +93,12 @@ function hitFromCurated(
   setCachedRecipe(cacheKey, 0, pick.recipe);
 
   const layer: GenerateFallbackLayer = "golden_100";
+  const highlights = buildTonightHighlights(
+    pick.slug,
+    pick.recipe.timing,
+    ctx.request,
+    pick.recipeSource?.kind,
+  );
   return {
     layer,
     recipe: pick.recipe,
@@ -101,6 +114,8 @@ function hitFromCurated(
       _healthiness_relaxed: healthinessRelaxed,
       _relaxation_note: relaxationNote ?? undefined,
       _requested_healthiness: ctx.request.healthiness_preference,
+      _tonight_badge: highlights.badge,
+      _tonight_why: highlights.why,
       _personalization_used: Boolean(ctx.historySignals),
       _personalization_note: pick.personalization?.note ?? undefined,
       _personalization_signal_types: pick.personalization?.signalTypes?.length
@@ -126,6 +141,35 @@ function hitFromCurated(
   };
 }
 
+/** Explains a pick that falls outside the visible Pick Tonight style / time filters. */
+function tonightFilterMissNote(
+  pick: LocalRecipePick,
+  request: GenerateRequest,
+  timeRelaxed: boolean,
+): string | null {
+  const style = request.meal_style ?? "any";
+  const window = request.time_window ?? "any";
+  const styleMiss = style !== "any" && !matchesMealStyle(loadTonightRecipeMeta().get(pick.slug), style);
+  const windowMiss =
+    timeRelaxed || !matchesTimeWindow(pick.recipe.timing?.total_minutes ?? 0, window);
+  if (!styleMiss && !windowMiss) return null;
+
+  const styleLabel =
+    style === "bbq"
+      ? "BBQ"
+      : style === "different"
+        ? `"${TONIGHT_MEAL_STYLE_LABELS[style]}"`
+        : TONIGHT_MEAL_STYLE_LABELS[style].toLowerCase();
+  const windowLabel = window === "any" ? "your time window" : `the ${TONIGHT_TIME_WINDOW_LABELS[window].replace(/ min$/, "").toLowerCase()} min window`;
+  if (styleMiss && windowMiss) {
+    return `No more ${styleLabel} meals fit ${windowLabel} with these filters, so here's the closest match.`;
+  }
+  if (styleMiss) {
+    return `No more ${styleLabel} meals fit these filters, so here's the closest match.`;
+  }
+  return `Nothing else fits ${windowLabel} with these filters, so here's the closest match.`;
+}
+
 /**
  * Resolve a meal through the curated-only chain.
  * Never relaxes protein, allergies, or appliances.
@@ -134,6 +178,8 @@ export async function runLocalFirstGeneratePipeline(
   ctx: LocalFirstPipelineContext,
 ): Promise<LocalFirstPipelineHit> {
   const attempts = healthinessRelaxAttempts(ctx.request).slice(0, MAX_BROADEN_ATTEMPTS);
+  const timeEnforced = ctx.request.enforce_time_bucket !== false;
+  if (timeEnforced) attempts.push({ ...ctx.request, enforce_time_bucket: false });
   const requestedHealthiness = ctx.request.healthiness_preference || "balanced";
 
   log(
@@ -160,9 +206,11 @@ export async function runLocalFirstGeneratePipeline(
 
     if (!pick) continue;
 
+    const timeRelaxed = timeEnforced && req.enforce_time_bucket === false;
     const full = getCuratedRecipeBySlug(pick.slug);
     const relaxationNote =
-      healthinessRelaxed && full ? buildRelaxationNote(ctx.request, full) : null;
+      tonightFilterMissNote(pick, ctx.request, timeRelaxed) ??
+      (healthinessRelaxed && full ? buildRelaxationNote(ctx.request, full) : null);
 
     return hitFromCurated(pick, { ...ctx, request: req }, i, healthinessRelaxed, relaxationNote);
   }

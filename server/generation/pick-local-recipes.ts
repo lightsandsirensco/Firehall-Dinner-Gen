@@ -21,7 +21,10 @@ import {
   resolveCatalogRankBias,
   type CatalogCollectionId,
 } from "../../shared/hall-catalog/gate.js";
-import { hydrateCatalogGenerateResponse } from "../meal-catalog/hydrate-golden-generate.js";
+import {
+  catalogSimilarityKey,
+  hydrateCatalogGenerateResponse,
+} from "../meal-catalog/hydrate-golden-generate.js";
 import { tonightFilterProtein, tonightIneligibleReason } from "./tonight-eligibility.js";
 import { loadMergedHallCatalogIndex } from "../meal-catalog/load-index.js";
 import { readBbqCatalogIndexFromDisk } from "../bbq-catalog/catalog.js";
@@ -67,6 +70,13 @@ import {
   TIME_BUCKET_MAX_MINUTES as TIME_MAX_MINUTES,
   recipeFitsTimeBucket,
 } from "../../shared/generation/time-buckets.js";
+import {
+  loadTonightRecipeMeta,
+  matchesMealStyle,
+  matchesTimeWindow,
+  scoreFirehallPractical,
+  scoreSessionFeedback,
+} from "./tonight-selection.js";
 import {
   explainPersonalization,
   scoreHistorySignal,
@@ -197,7 +207,7 @@ function hydratePick(
   // asked for "15-25 min." Time is now enforced the same way allergens and
   // dietary restrictions are: reject before ever reaching the client.
   const totalMinutes = hydrated.recipe.timing?.total_minutes;
-  if (!recipeFitsTimeBucket(totalMinutes, request.time_available)) {
+  if (request.enforce_time_bucket !== false && !recipeFitsTimeBucket(totalMinutes, request.time_available)) {
     log(
       `[generate:local] reject time slug=${slug} total_minutes=${totalMinutes} bucket=${request.time_available}`,
       "generate",
@@ -314,10 +324,24 @@ function pickFromSummaries(
   // existing weighted-band selection below ultimately picks can carry its
   // own explanation — never recomputed against a different candidate.
   const historyBySlug = new Map<string, { delta: number; appliedSignals: HistorySignalType[] }>();
+  const tonightMeta = loadTonightRecipeMeta();
+  const feedback = request.session_feedback;
+  const avoidSlugs = new Set(feedback?.avoid_slugs ?? []);
+  const avoidProteinOf = new Set(feedback?.avoid_protein_of ?? []);
+  // Never exclude the protein the crew explicitly asked for — that would empty the pool.
+  const avoidProteins = new Set(
+    summaries
+      .filter((r) => avoidProteinOf.has(r.slug))
+      .map((r) => tonightFilterProtein(r.protein, r.slug))
+      .filter((p) => p !== selectedProtein),
+  );
   const ranked = summaries
     .map((r) => ({ ...r, protein: tonightFilterProtein(r.protein, r.slug) }))
     .filter((r) => !isExcludedFromDinnerFeeds(r))
     .filter((r) => !options.excludeSlugs?.has(r.slug))
+    .filter((r) => !avoidSlugs.has(r.slug) && !avoidProteins.has(r.protein))
+    // Image holds / non-Explore slugs can never be served — keep them out of the weighted draw.
+    .filter((r) => !tonightIneligibleReason(r.slug))
     // If the user explicitly picked a protein, don't serve mismatched curated meals.
     .filter((r) => !strictProtein || proteinMatchesFilter(r.protein, selectedProtein))
     .filter((r) => !request.vegetarian_swap_needed || r.protein === "vegetarian")
@@ -331,15 +355,24 @@ function pickFromSummaries(
         score += scoreNutritionGoal(request.nutrition_goal, full, row.totalMinutes);
         score += scoreCrewFit(full, request.crew_size);
       }
-      score -= recentSlugPenalty(row.slug, options.recentSlugs);
+      score += scoreFirehallPractical(tonightMeta.get(row.slug), request);
+      // Session nudges reorder candidates but don't decide pool membership.
+      const feedbackDelta = scoreSessionFeedback(
+        tonightMeta.get(row.slug),
+        row.totalMinutes,
+        request,
+        full?.metadata,
+      );
       if (typeof row.catalogBoost === "number") score += row.catalogBoost;
       // Candidate pool membership (the minScore floor below) is decided BEFORE
-      // history signals are applied — a learned suppression/penalty must only
+      // recency and history signals are applied — a recency/learned penalty must only
       // ever push a candidate to the bottom of the ranking, never make an
       // otherwise-eligible candidate vanish from the pool entirely. This keeps
       // "history signals never override hard constraints" true even in a
       // small, heavily-suppressed pool (e.g. a narrow firehall-category stage).
       const eligibilityScore = score;
+      score += feedbackDelta;
+      score -= recentSlugPenalty(row.slug, options.recentSlugs);
       if (options.historySignals) {
         const history = scoreHistorySignal({ slug: row.slug, protein: row.protein }, options.historySignals);
         historyBySlug.set(row.slug, history);
@@ -352,9 +385,23 @@ function pickFromSummaries(
 
   if (ranked.length === 0) return null;
 
-  const band = ranked.slice(0, 16);
-  const weights = band.map((x) => Math.max(1, x.score));
-  const startIdx = weightedPickIndex(weights, options.varietySeed);
+  // Every eligible candidate stays in the weighted draw; a fixed top-N band made most of the
+  // catalog unreachable. Weights are relative to the top score so a better match is
+  // meaningfully more likely (top ≈ WEIGHT_SPREAD, WEIGHT_SPREAD points lower ≈ 1).
+  const WEIGHT_SPREAD = 80;
+  const weightedRotation = <T extends { score: number }>(list: T[]): T[] => {
+    if (list.length === 0) return list;
+    const floor = list[0]!.score - WEIGHT_SPREAD;
+    const startIdx = weightedPickIndex(
+      list.map((x) => Math.max(1, x.score - floor)),
+      options.varietySeed,
+    );
+    return [...list.slice(startIdx), ...list.slice(0, startIdx)];
+  };
+
+  const styled = ranked.filter((x) => matchesMealStyle(tonightMeta.get(x.row.slug), request.meal_style));
+  const inWindow = (pick: LocalRecipePick) =>
+    matchesTimeWindow(pick.recipe.timing?.total_minutes ?? 0, request.time_window);
 
   const withPersonalization = (pick: LocalRecipePick): LocalRecipePick => {
     if (!options.historySignals) return pick;
@@ -368,21 +415,59 @@ function pickFromSummaries(
     return { ...pick, personalization: { note, signalTypes: history.appliedSignals } };
   };
 
-  // Try to hydrate + pass variety constraints across the band.
+  // Try to hydrate + pass variety constraints, strictest pass first.
   // Some curated rows may not have a generateResponse yet — skip those gracefully.
-  const ordered = [...band.slice(startIdx), ...band.slice(0, startIdx)];
-  for (const candidate of ordered) {
-    const pick = hydratePick(candidate.row.slug, request);
-    if (!pick) continue;
-    const sig = computeSignature(pick.recipe);
-    if (signatureBlocked(sig, options.recentSignatures, options.currentRecipeSignature)) continue;
-    return withPersonalization(pick);
-  }
+  const recentSlugSet = new Set(options.recentSlugs ?? []);
+  const lastSlug = options.recentSlugs?.[options.recentSlugs.length - 1];
+  const lastKey = lastSlug ? catalogSimilarityKey(lastSlug) : null;
+  const hydratedBySlug = new Map<string, LocalRecipePick | null>();
+  const hydrate = (slug: string) => {
+    if (!hydratedBySlug.has(slug)) hydratedBySlug.set(slug, hydratePick(slug, request));
+    return hydratedBySlug.get(slug)!;
+  };
 
-  // As a last resort, return any hydrated pick (even if it repeats) to avoid a blank state.
-  for (const candidate of ordered) {
-    const pick = hydratePick(candidate.row.slug, request);
-    if (pick) return withPersonalization(pick);
+  const passes: Array<(slug: string, pick: LocalRecipePick) => boolean> = [
+    // 1. Not shown recently, not a recent signature, not the same kind of meal as last time.
+    (slug, pick) =>
+      !recentSlugSet.has(slug) &&
+      !signatureBlocked(computeSignature(pick.recipe), options.recentSignatures, options.currentRecipeSignature) &&
+      (!lastKey || catalogSimilarityKey(slug) !== lastKey),
+    // 2. Not shown recently, not a recent signature.
+    (slug, pick) =>
+      !recentSlugSet.has(slug) &&
+      !signatureBlocked(computeSignature(pick.recipe), options.recentSignatures, options.currentRecipeSignature),
+    // 3. Small pools: allow older repeats, never the meal that was just shown.
+    (slug) => slug !== lastSlug,
+    // 4. Last resort (single-recipe pool): anything, to avoid a blank state.
+    () => true,
+  ];
+  // Preference order: matching the visible filters beats freshness — an older in-style,
+  // in-window meal (never the one just shown) is served before an off-style or off-window one.
+  // The time window's upper bound is already a hard filter in hydratePick; here it only steers
+  // toward the selected range.
+  const styledOrder = weightedRotation(styled);
+  const allOrder = weightedRotation(ranked);
+  const fresh = passes.slice(0, 2);
+  const notLast = passes.slice(2, 3);
+  const repeats = passes.slice(2);
+  const tiers: Array<{ ordered: typeof ranked; passes: typeof passes; window: boolean }> = [
+    { ordered: styledOrder, passes: fresh, window: true },
+    { ordered: styledOrder, passes: notLast, window: true },
+    { ordered: styledOrder, passes: fresh, window: false },
+    { ordered: styledOrder, passes: notLast, window: false },
+    { ordered: allOrder, passes: fresh, window: true },
+    { ordered: allOrder, passes: fresh, window: false },
+    { ordered: allOrder, passes: repeats, window: false },
+  ];
+  for (const tier of tiers) {
+    for (const accept of tier.passes) {
+      for (const candidate of tier.ordered) {
+        const pick = hydrate(candidate.row.slug);
+        if (pick && (!tier.window || inWindow(pick)) && accept(candidate.row.slug, pick)) {
+          return withPersonalization(pick);
+        }
+      }
+    }
   }
 
   return null;

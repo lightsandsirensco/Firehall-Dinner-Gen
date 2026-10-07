@@ -5,8 +5,11 @@
 import type { UserPreferences } from "./auth/types.js";
 import type { HallRecord } from "./hall-membership/types.js";
 import {
-  CREW_SIZE_BUCKETS,
   SIMPLIFIED_ALLERGENS,
+  crewSizeToBucket,
+  normalizeCrewBucket,
+  normalizeMealStyle,
+  normalizeTimeWindow,
   SIMPLIFIED_APPLIANCE_IDS,
   SIMPLIFIED_DIETS,
   SIMPLIFIED_PROTEINS,
@@ -59,12 +62,7 @@ const PROFILE_APPLIANCE_MAP: Record<string, SimplifiedApplianceId> = {
   blackstone: "flat_top",
 };
 
-export function crewSizeToBucket(size: number): CrewSizeBucketUi {
-  if (size <= 4) return "2-4";
-  if (size <= 8) return "5-8";
-  if (size <= 12) return "9-12";
-  return "12+";
-}
+export { crewSizeToBucket };
 
 export function mapProfileAppliancesToSimplified(raw: string[]): SimplifiedApplianceId[] {
   const out = new Set<SimplifiedApplianceId>();
@@ -119,7 +117,8 @@ export function mapProfileNutritionGoal(raw: string | null | undefined): Nutriti
 export function mapPreferredProtein(raw: string | undefined): SimplifiedProtein | null {
   if (!raw?.trim()) return null;
   const key = raw.toLowerCase().trim();
-  if (key === "any" || key === "fish") return key === "fish" ? "seafood" : "surprise";
+  if (key === "fish") return "seafood";
+  if (key === "any" || key === "turkey") return "surprise";
   return SIMPLIFIED_PROTEINS.includes(key as SimplifiedProtein)
     ? (key as SimplifiedProtein)
     : null;
@@ -148,8 +147,7 @@ export function parsePersonalPrefs(raw: unknown): GeneratorPersonalPrefs | null 
   const foodsToAvoid = sanitizeFoodPreferenceKeys(
     Array.isArray(p.foodsToAvoid) ? p.foodsToAvoid.map(String) : [],
   );
-  const crew_bucket =
-    p.crew_bucket && CREW_SIZE_BUCKETS.includes(p.crew_bucket) ? p.crew_bucket : undefined;
+  const crew_bucket = normalizeCrewBucket(p.crew_bucket);
   const nutrition_goal = mapProfileNutritionGoal(p.nutrition_goal) ?? undefined;
   return {
     schemaVersion: GENERATOR_PERSONAL_PREFS_SCHEMA,
@@ -204,14 +202,18 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
   let filters: SimplifiedGeneratorFilters = {
     crew_bucket:
       personal?.crew_bucket ??
-      (session?.crew_bucket && CREW_SIZE_BUCKETS.includes(session.crew_bucket)
-        ? session.crew_bucket
-        : input.accountCrewSize != null && input.accountCrewSize >= 2
-          ? crewSizeToBucket(input.accountCrewSize)
-          : input.localCrewSize
-            ? crewSizeToBucket(input.localCrewSize)
-            : base.crew_bucket),
-    protein: personal?.protein ?? session?.protein ?? base.protein,
+      normalizeCrewBucket(session?.crew_bucket) ??
+      (input.accountCrewSize != null && input.accountCrewSize >= 2
+        ? crewSizeToBucket(input.accountCrewSize)
+        : input.localCrewSize
+          ? crewSizeToBucket(input.localCrewSize)
+          : base.crew_bucket),
+    time_window: normalizeTimeWindow(session?.time_window),
+    meal_style: normalizeMealStyle(session?.meal_style),
+    protein:
+      personal?.protein ??
+      (session?.protein === "surprise" ? "surprise" : mapPreferredProtein(session?.protein)) ??
+      base.protein,
     appliances: session?.appliances?.length ? [...session.appliances] : base.appliances,
     // Precedence: this-device "remember my last pick" > current session > signed-in
     // saved profile default > generator default ("no preference"). Never mutates the

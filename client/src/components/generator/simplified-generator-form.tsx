@@ -20,6 +20,10 @@ import {
   SIMPLIFIED_DIETS,
   SIMPLIFIED_PROTEIN_LABELS,
   SIMPLIFIED_PROTEINS,
+  TONIGHT_MEAL_STYLES,
+  TONIGHT_MEAL_STYLE_LABELS,
+  TONIGHT_TIME_WINDOWS,
+  TONIGHT_TIME_WINDOW_LABELS,
   formatGeneratorSummary,
   formatApplianceSummary,
   nutritionGoalToHealthiness,
@@ -242,7 +246,7 @@ export function SimplifiedGeneratorForm({
             onClick={onToggleFiltersExpanded}
             data-testid="generator-expand-filters"
           >
-            Adjust crew, appliances &amp; more
+            Adjust crew, time, style &amp; more
           </button>
         )}
       </div>
@@ -260,7 +264,7 @@ export function SimplifiedGeneratorForm({
       <div className="grid grid-cols-2 gap-2">
         <div className="col-span-2 space-y-1">
           <Label className="text-xs text-muted-foreground">Crew size</Label>
-          <div className="grid grid-cols-4 gap-1.5">
+          <div className="grid grid-cols-5 gap-1.5">
             {CREW_SIZE_BUCKETS.map((bucket) => (
               <Chip
                 key={bucket}
@@ -270,6 +274,22 @@ export function SimplifiedGeneratorForm({
                 className="w-full justify-center"
               >
                 {CREW_BUCKET_LABELS[bucket]}
+              </Chip>
+            ))}
+          </div>
+        </div>
+
+        <div className="col-span-2 space-y-1">
+          <Label className="text-xs text-muted-foreground">Time</Label>
+          <div className="flex flex-wrap gap-1.5">
+            {TONIGHT_TIME_WINDOWS.map((t) => (
+              <Chip
+                key={t}
+                active={filters.time_window === t}
+                onClick={() => patch({ time_window: t })}
+                testId={`time-${t}`}
+              >
+                {TONIGHT_TIME_WINDOW_LABELS[t]}
               </Chip>
             ))}
           </div>
@@ -286,6 +306,22 @@ export function SimplifiedGeneratorForm({
                 testId={`protein-${p}`}
               >
                 {SIMPLIFIED_PROTEIN_LABELS[p]}
+              </Chip>
+            ))}
+          </div>
+        </div>
+
+        <div className="col-span-2 space-y-1">
+          <Label className="text-xs text-muted-foreground">Style</Label>
+          <div className="flex flex-wrap gap-1.5">
+            {TONIGHT_MEAL_STYLES.map((s) => (
+              <Chip
+                key={s}
+                active={filters.meal_style === s}
+                onClick={() => patch({ meal_style: s })}
+                testId={`style-${s}`}
+              >
+                {TONIGHT_MEAL_STYLE_LABELS[s]}
               </Chip>
             ))}
           </div>

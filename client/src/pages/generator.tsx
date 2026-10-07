@@ -10,6 +10,14 @@ import { ONE_TAP_MEAL_LABEL } from "@/lib/meal-outcome-copy";
 import { buildGenerateRequestInput } from "@shared/generate-request-defaults";
 import { getWheelClassicBySlug, buildPackageUrl } from "@/lib/firehall-classics-wheel";
 import { RecipeCard } from "@/components/recipe-card";
+import { TonightPickCard } from "@/components/generator/tonight-pick-card";
+import { clearSessionFeedback, loadSessionFeedback, saveSessionFeedback } from "@/lib/tonight-session-feedback";
+import {
+  applyNotFeelingIt,
+  describeSessionFeedback,
+  hasSessionFeedback,
+  type NotFeelingItReason,
+} from "@shared/tonight-filters";
 import { EmptyState } from "@/components/empty-state";
 import { LoadingState } from "@/components/loading-state";
 import { ErrorState } from "@/components/error-state";
@@ -115,11 +123,13 @@ function buildRequestPayload(
   templateId?: number,
   preferDifferentStyle = false,
 ) {
+  const feedback = loadSessionFeedback();
   return buildGenerateRequestInput(
     simplifiedFiltersToGenerateRequest(filters, {
       last_template_id: templateId,
       prefer_different_style: preferDifferentStyle,
       recent_meal_styles: getRecentMealStyles(),
+      ...(hasSessionFeedback(feedback) ? { session_feedback: feedback } : {}),
     }),
   );
 }
@@ -155,11 +165,16 @@ const ResultsPanel = memo(function ResultsPanel({
   onHallVoteClick,
   historyNav,
   onGenerate,
+  onPickAgain,
+  onNotFeelingIt,
+  adjustingSummary,
+  onResetAdjustments,
   generateDisabled,
   showHallVotePrompt = false,
   hallVoteBannerRef,
   voteOptionCount = 0,
   hideInitialEmpty = false,
+  relaxationNoteInHeader = false,
 }: {
   loading: boolean;
   error: string | null;
@@ -174,12 +189,18 @@ const ResultsPanel = memo(function ResultsPanel({
   onHallVoteClick: () => void;
   historyNav: { index: number; total: number };
   onGenerate: () => void;
+  onPickAgain: () => void;
+  onNotFeelingIt: (reason: NotFeelingItReason, proteinLabel: string | null) => void;
+  adjustingSummary?: string;
+  onResetAdjustments: () => void;
   generateDisabled: boolean;
   /** True after first successful generation this session. */
   showHallVotePrompt?: boolean;
   hallVoteBannerRef?: React.RefObject<HTMLDivElement | null>;
   voteOptionCount?: number;
   hideInitialEmpty?: boolean;
+  /** The page header already shows the fallback note in place of its subline. */
+  relaxationNoteInHeader?: boolean;
 }) {
   const recipeWithHero = useMealHeroPoll(recipe);
   const showRecipe = !error && recipeWithHero;
@@ -194,10 +215,7 @@ const ResultsPanel = memo(function ResultsPanel({
             <LoadingState variant="compact" mode="alternate" />
           </div>
           <div className="opacity-35 pointer-events-none select-none transition-opacity duration-300 blur-[0.5px]">
-            <RecipeCard
-              recipe={recipeWithHero}
-              crewSize={crewSizeFromFilters(filters)}
-            />
+            <TonightPickCard recipe={recipeWithHero} crewSize={crewSizeFromFilters(filters)} />
           </div>
         </div>
       )}
@@ -218,7 +236,15 @@ const ResultsPanel = memo(function ResultsPanel({
       )}
       {!loading && showRecipe && recipeWithHero && (
         <div className="meal-reveal motion-reduce:animate-none" key={stableRecipeKey(recipeWithHero)}>
-          {(recipeWithHero as ClientRecipeResponse & { _relaxation_note?: string })._relaxation_note && (
+          {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
+            <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
+              <span className="text-xs text-muted-foreground/60 font-mono tracking-widest uppercase">
+                Earlier pick · {historyNav.index + 1} of {historyNav.total}
+              </span>
+            </div>
+          )}
+          {!relaxationNoteInHeader &&
+            (recipeWithHero as ClientRecipeResponse & { _relaxation_note?: string })._relaxation_note && (
             <p
               className="mb-3 text-sm text-muted-foreground rounded-lg border border-border/40 bg-muted/30 px-3 py-2"
               data-testid="relaxation-note"
@@ -226,6 +252,18 @@ const ResultsPanel = memo(function ResultsPanel({
               {(recipeWithHero as ClientRecipeResponse & { _relaxation_note?: string })._relaxation_note}
             </p>
           )}
+          <div className="mb-6">
+            <TonightPickCard
+              recipe={recipeWithHero}
+              crewSize={crewSizeFromFilters(filters)}
+              onPickAgain={onPickAgain}
+              pickAgainDisabled={generateDisabled}
+              nutritionGoal={filters.nutrition_goal}
+              onNotFeelingIt={onNotFeelingIt}
+              adjustingSummary={adjustingSummary}
+              onResetAdjustments={onResetAdjustments}
+            />
+          </div>
           {(recipeWithHero as ClientRecipeResponse & { _personalization_note?: string })._personalization_note && (
             <p
               className="mb-3 text-xs text-muted-foreground rounded-lg border border-primary/20 bg-primary/5 px-3 py-2"
@@ -235,13 +273,6 @@ const ResultsPanel = memo(function ResultsPanel({
             </p>
           )}
           <GeneratorMealRepeatWarning recipe={recipeWithHero} />
-          {historyNav.total > 1 && historyNav.index < historyNav.total - 1 && (
-            <div className="flex items-center justify-center mb-3" data-testid="history-position-indicator">
-              <span className="text-xs text-muted-foreground/60 font-mono tracking-widest uppercase">
-                Earlier pick · {historyNav.index + 1} of {historyNav.total}
-              </span>
-            </div>
-          )}
           <RecipeCard
             key={stableRecipeKey(recipeWithHero)}
             recipe={recipeWithHero}
@@ -250,6 +281,7 @@ const ResultsPanel = memo(function ResultsPanel({
             onShoppingListClick={onShoppingListClick}
             onHallVoteClick={onHallVoteClick}
             nutritionGoal={filters.nutrition_goal}
+            hideIntro
           />
           {showHallVotePrompt && (
             <HallVotePromoBanner
@@ -362,6 +394,10 @@ export default function Generator() {
 
   /** Meal-first layout: recipe above filters on mobile after first successful gen. */
   const mealFocusMode = !!recipe && userGenCount >= 1;
+  const relaxationNote =
+    !loading && !error
+      ? (recipe as (ClientRecipeResponse & { _relaxation_note?: string }) | null)?._relaxation_note
+      : undefined;
 
   useEffect(() => {
     persistGeneratorSession(filters);
@@ -741,6 +777,31 @@ export default function Generator() {
     handleGenerate(filters, lastTemplateId, true);
   }, [filters, lastTemplateId, handleGenerate]);
 
+  const [adjustingSummary, setAdjustingSummary] = useState(() => describeSessionFeedback(loadSessionFeedback()));
+
+  const handleNotFeelingIt = useCallback(
+    (reason: NotFeelingItReason, proteinLabel: string | null) => {
+      const slug = (recipe as (ClientRecipeResponse & { _slug?: string }) | null)?._slug;
+      const next = applyNotFeelingIt(loadSessionFeedback(), reason, { slug, proteinLabel });
+      saveSessionFeedback(next);
+      setAdjustingSummary(describeSessionFeedback(next));
+      trackEvent("tonight_not_feeling_it", { reason });
+      // Rejecting the protein the crew explicitly chose means "anything else" — open the filter up.
+      let nextFilters = filters;
+      if (reason === "protein" && filters.protein !== "surprise") {
+        nextFilters = { ...filters, protein: "surprise" };
+        setFilters(nextFilters);
+      }
+      handleGenerate(nextFilters, lastTemplateId, true);
+    },
+    [recipe, filters, lastTemplateId, handleGenerate],
+  );
+
+  const handleResetAdjustments = useCallback(() => {
+    clearSessionFeedback();
+    setAdjustingSummary("");
+  }, []);
+
   // ── History navigation — NO API calls, instant ────────────────────────────
   const handleBack = useCallback(() => {
     const newIdx = historyIndexRef.current - 1;
@@ -865,7 +926,13 @@ export default function Generator() {
         {mealFocusMode && (
           <header className="mb-4 lg:mb-6">
             <h1 className="font-heading text-2xl sm:text-3xl tracking-tight">{GENERATOR.headlineWithMeal}</h1>
-            <p className="mt-1 text-sm text-muted-foreground">{GENERATOR.sublineFocus}</p>
+            {relaxationNote ? (
+              <p className="mt-1 text-sm text-foreground/85" data-testid="relaxation-note">
+                {relaxationNote}
+              </p>
+            ) : (
+              <p className="mt-1 text-sm text-muted-foreground">{GENERATOR.sublineFocus}</p>
+            )}
           </header>
         )}
 
@@ -917,11 +984,16 @@ export default function Generator() {
               onHallVoteClick={onHallVoteClick}
               historyNav={historyNav}
               onGenerate={handleGenerateClick}
+              onPickAgain={handleGenerateAnother}
+              onNotFeelingIt={handleNotFeelingIt}
+              adjustingSummary={adjustingSummary || undefined}
+              onResetAdjustments={handleResetAdjustments}
               generateDisabled={generateDisabled}
               showHallVotePrompt={showHallVotePrompt}
               hallVoteBannerRef={hallVoteBannerRef}
               voteOptionCount={voteRecipes.length}
               hideInitialEmpty={false}
+              relaxationNoteInHeader={mealFocusMode}
             />
           </div>
         </div>

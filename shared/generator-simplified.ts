@@ -5,6 +5,14 @@
 
 import type { GenerateRequest } from "./schema.js";
 import { inferBusyLevelFromTime } from "./busy-level.js";
+import {
+  TONIGHT_MEAL_STYLES,
+  TONIGHT_MEAL_STYLE_LABELS,
+  TONIGHT_TIME_WINDOWS,
+  TONIGHT_TIME_WINDOW_LABELS,
+  type TonightMealStyle,
+  type TonightTimeWindow,
+} from "./tonight-filters.js";
 import type { DietaryFilterKey } from "./dietary/schema.js";
 import { getFoodPreferenceDefinition } from "./ingredient-preferences/definitions.js";
 import {
@@ -24,34 +32,50 @@ export {
 } from "./nutrition/goal-scoring.js";
 
 /** Crew buckets shown in the generator UI */
-export const CREW_SIZE_BUCKETS = ["2-4", "5-8", "9-12", "12+"] as const;
+export const CREW_SIZE_BUCKETS = ["4", "6", "8", "10", "12+"] as const;
 export type CrewSizeBucketUi = (typeof CREW_SIZE_BUCKETS)[number];
 
-/**
- * Representative crew_size sent to the API for scaling.
- * Always the top of the selected range — under-scaling leaves part of a real
- * crew short on food, which is worse than a few extra portions.
- */
+/** crew_size sent to the API for scaling ("12+" rounds up so a big crew isn't short). */
 export const CREW_BUCKET_TO_SIZE: Record<CrewSizeBucketUi, number> = {
-  "2-4": 4,
-  "5-8": 8,
-  "9-12": 12,
+  "4": 4,
+  "6": 6,
+  "8": 8,
+  "10": 10,
   "12+": 14,
 };
 
 export const CREW_BUCKET_LABELS: Record<CrewSizeBucketUi, string> = {
-  "2-4": "2–4",
-  "5-8": "5–8",
-  "9-12": "9–12",
+  "4": "4",
+  "6": "6",
+  "8": "8",
+  "10": "10",
   "12+": "12+",
 };
 
+/** Accepts current buckets and the legacy range buckets ("2-4", "5-8", "9-12") from saved state. */
+export function normalizeCrewBucket(raw: unknown): CrewSizeBucketUi | undefined {
+  if (typeof raw !== "string") return undefined;
+  if ((CREW_SIZE_BUCKETS as readonly string[]).includes(raw)) return raw as CrewSizeBucketUi;
+  if (raw === "2-4") return "4";
+  if (raw === "5-8") return "8";
+  if (raw === "9-12") return "12+";
+  return undefined;
+}
+
+/** Smallest bucket that feeds the whole crew. */
+export function crewSizeToBucket(size: number): CrewSizeBucketUi {
+  if (size <= 4) return "4";
+  if (size <= 6) return "6";
+  if (size <= 8) return "8";
+  if (size <= 10) return "10";
+  return "12+";
+}
+
 /** Protein choices — "surprise" maps to API "any" */
 export const SIMPLIFIED_PROTEINS = [
-  "chicken",
   "beef",
+  "chicken",
   "pork",
-  "turkey",
   "seafood",
   "vegetarian",
   "surprise",
@@ -59,13 +83,41 @@ export const SIMPLIFIED_PROTEINS = [
 export type SimplifiedProtein = (typeof SIMPLIFIED_PROTEINS)[number];
 
 export const SIMPLIFIED_PROTEIN_LABELS: Record<SimplifiedProtein, string> = {
-  chicken: "Chicken",
   beef: "Beef",
+  chicken: "Chicken",
   pork: "Pork",
-  turkey: "Turkey",
   seafood: "Seafood",
   vegetarian: "Vegetarian",
   surprise: "Surprise Me",
+};
+
+export {
+  TONIGHT_TIME_WINDOWS,
+  TONIGHT_TIME_WINDOW_LABELS,
+  TONIGHT_MEAL_STYLES,
+  TONIGHT_MEAL_STYLE_LABELS,
+  type TonightTimeWindow,
+  type TonightMealStyle,
+};
+
+export function normalizeTimeWindow(raw: unknown): TonightTimeWindow {
+  return (TONIGHT_TIME_WINDOWS as readonly unknown[]).includes(raw) ? (raw as TonightTimeWindow) : "any";
+}
+
+export function normalizeMealStyle(raw: unknown): TonightMealStyle {
+  return (TONIGHT_MEAL_STYLES as readonly unknown[]).includes(raw) ? (raw as TonightMealStyle) : "any";
+}
+
+/** `time_available` + hard-enforcement flag sent for each time window. */
+const TIME_WINDOW_REQUEST: Record<
+  TonightTimeWindow,
+  { time_available: GenerateRequest["time_available"]; enforce_time_bucket: boolean }
+> = {
+  any: { time_available: "45-60", enforce_time_bucket: false },
+  under_30: { time_available: "20-30", enforce_time_bucket: true },
+  "30_60": { time_available: "45-60", enforce_time_bucket: true },
+  "60_90": { time_available: "60-90", enforce_time_bucket: true },
+  "90_plus": { time_available: "60-90", enforce_time_bucket: false },
 };
 
 /** Appliance multi-select — empty means all common appliances available */
@@ -138,6 +190,8 @@ export const HEALTHINESS_OPTIONS: {
 
 export interface SimplifiedGeneratorFilters {
   crew_bucket: CrewSizeBucketUi;
+  time_window: TonightTimeWindow;
+  meal_style: TonightMealStyle;
   protein: SimplifiedProtein;
   appliances: SimplifiedApplianceId[];
   healthiness: HealthinessPreference;
@@ -173,7 +227,9 @@ export interface SimplifiedGeneratorFilters {
 
 export function createDefaultSimplifiedFilters(): SimplifiedGeneratorFilters {
   return {
-    crew_bucket: "5-8",
+    crew_bucket: "8",
+    time_window: "any",
+    meal_style: "any",
     protein: "chicken",
     appliances: [],
     healthiness: "balanced",
@@ -243,10 +299,15 @@ export function simplifiedFiltersToGenerateRequest(
   for (const diet of filters.diets) dietary_restrictions.push(diet);
   for (const allergen of filters.allergens) dietary_restrictions.push(ALLERGEN_TO_DIETARY_FLAG[allergen]);
 
+  const time = TIME_WINDOW_REQUEST[filters.time_window] ?? TIME_WINDOW_REQUEST.any;
+
   return {
     crew_size,
-    busy_level: inferBusyLevelFromTime("45-60"),
-    time_available: "45-60",
+    busy_level: inferBusyLevelFromTime(time.time_available),
+    time_available: time.time_available,
+    enforce_time_bucket: time.enforce_time_bucket,
+    time_window: filters.time_window,
+    meal_style: filters.meal_style,
     appliances: simplifiedAppliancesToRequest(filters.appliances),
     protein: simplifiedProteinToApi(filters.protein),
     healthiness_preference: filters.healthiness,
@@ -296,7 +357,9 @@ export function formatGeneratorSummary(filters: SimplifiedGeneratorFilters): str
       : SIMPLIFIED_PROTEIN_LABELS[filters.protein];
   const lines = [
     `Crew: ${CREW_BUCKET_LABELS[filters.crew_bucket]}`,
+    `Time: ${TONIGHT_TIME_WINDOW_LABELS[normalizeTimeWindow(filters.time_window)]}`,
     `Protein: ${protein}`,
+    `Style: ${TONIGHT_MEAL_STYLE_LABELS[normalizeMealStyle(filters.meal_style)]}`,
     `Appliances: ${formatApplianceSummary(filters.appliances)}`,
     `Healthy: ${health}`,
     `Avoid: ${formatAllergenSummary(filters.allergens)}`,
@@ -328,11 +391,7 @@ export function healthinessRelaxationMessage(
 export function migrateLegacyFilterState(legacy: Record<string, unknown>): SimplifiedGeneratorFilters {
   const defaults = createDefaultSimplifiedFilters();
   const crew = typeof legacy.crew_size === "number" ? legacy.crew_size : 6;
-  let crew_bucket: CrewSizeBucketUi = "5-8";
-  if (crew <= 4) crew_bucket = "2-4";
-  else if (crew <= 8) crew_bucket = "5-8";
-  else if (crew <= 12) crew_bucket = "9-12";
-  else crew_bucket = "12+";
+  const crew_bucket = crewSizeToBucket(crew);
 
   const rawProtein = String(legacy.protein || "chicken");
   const protein: SimplifiedProtein =
@@ -375,6 +434,8 @@ export function migrateLegacyFilterState(legacy: Record<string, unknown>): Simpl
 
   return {
     crew_bucket,
+    time_window: defaults.time_window,
+    meal_style: defaults.meal_style,
     protein,
     appliances: [...new Set(appliances)],
     healthiness,

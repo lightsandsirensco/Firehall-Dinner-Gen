@@ -144,11 +144,22 @@ export function getAllCached(filterKey: string): ClientRecipeResponse[] {
   return entries.filter((e) => now - e.ts < TTL_MS).map((e) => e.recipe);
 }
 
-export function removeCached(filterKey: string, templateId: number) {
+function cachedSlug(recipe: ClientRecipeResponse): string {
+  return String((recipe as { _slug?: string })._slug || "").toLowerCase();
+}
+
+/** Catalog meals all share template_id 0, so identity is slug/signature, not template. */
+function sameCachedRecipe(a: ClientRecipeResponse, b: ClientRecipeResponse): boolean {
+  const slug = cachedSlug(a);
+  if (slug && slug === cachedSlug(b)) return true;
+  return buildSignature(a) === buildSignature(b);
+}
+
+export function removeCachedRecipe(filterKey: string, recipe: ClientRecipeResponse) {
   ensureMemory();
   const entries = memoryCache[filterKey];
   if (!entries) return;
-  memoryCache[filterKey] = entries.filter((e) => e.recipe.template_id !== templateId);
+  memoryCache[filterKey] = entries.filter((e) => !sameCachedRecipe(e.recipe, recipe));
   if (memoryCache[filterKey].length === 0) delete memoryCache[filterKey];
   saveDisk(memoryCache);
 }
@@ -156,10 +167,7 @@ export function removeCached(filterKey: string, templateId: number) {
 export function putCached(filterKey: string, recipe: ClientRecipeResponse) {
   ensureMemory();
   if (!memoryCache[filterKey]) memoryCache[filterKey] = [];
-  const sig = buildSignature(recipe);
-  const exists = memoryCache[filterKey].some(
-    (e) => e.recipe.template_id === recipe.template_id || buildSignature(e.recipe) === sig
-  );
+  const exists = memoryCache[filterKey].some((e) => sameCachedRecipe(e.recipe, recipe));
   if (exists) return;
   memoryCache[filterKey].push({ recipe, ts: Date.now() });
   saveDisk(memoryCache);
