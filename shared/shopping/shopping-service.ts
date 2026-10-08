@@ -14,16 +14,23 @@ import { classifyDepartment, DEPARTMENT_ORDER } from "./departments";
 import { generateId } from "./id";
 import {
   canonicalizeIngredientName,
-  mergeContributions,
+  formatShoppingQuantities,
+  isOptionalIngredient,
+  mergeContributionQuantities,
   normalizeIngredient,
 } from "./ingredient-normalizer";
 import { getStockLevel } from "./pantry-profile";
+import { canonicalizeQuantityForScaling } from "./quantity-parser";
+import { pantryLookupKeys, splitCompoundKey } from "./staple-aliases";
 import {
   SHOPPING_SCHEMA_VERSION,
   stockLevelHidesItem,
   type Department,
+  type ExcludedOptionalIngredient,
   type GroupedShoppingList,
   type PantryContext,
+  type PantryProfile,
+  type RawRecipeIngredient,
   type ShoppingHistory,
   type ShoppingHistoryEntry,
   type ShoppingList,
@@ -35,6 +42,7 @@ import {
   type ShoppingItemContribution,
   type StockLevel,
 } from "./types";
+import type { ShoppingUnitSystem } from "./units";
 
 const MAX_UNDO_DEPTH = 20;
 const MAX_HISTORY_ENTRIES = 25;
@@ -68,41 +76,87 @@ interface AggregatedIngredient {
   contributions: ShoppingItemContribution[];
 }
 
+type PantryStatus = { level: StockLevel; source?: "personal" | "hall" };
+
+function explicitLevel(profile: PantryProfile | undefined, keys: string[]): StockLevel | undefined {
+  if (!profile) return undefined;
+  for (const key of keys) {
+    if (key in profile.items) return getStockLevel(profile, key);
+  }
+  return undefined;
+}
+
+function resolveSingleKey(pantry: PantryContext | undefined, canonicalKey: string): PantryStatus | null {
+  const keys = pantryLookupKeys(canonicalKey);
+  const personal = explicitLevel(pantry?.personal, keys);
+  if (personal !== undefined) return { level: personal, source: "personal" };
+  const hall = explicitLevel(pantry?.hall, keys);
+  if (hall !== undefined) return { level: hall, source: "hall" };
+  return null;
+}
+
 /**
  * Personal Pantry wins when the firefighter has an explicit opinion; otherwise
  * fall back to the Hall Pantry (the hall already stocks it, so no one needs
  * to buy it); untracked in both means "never seen it, must buy."
+ *
+ * Lookups try the exact key first, then its staple alias ("kosher salt" ->
+ * "salt"). A compound line ("kosher salt and black pepper") is covered only
+ * when every part is covered.
  */
 export function resolvePantryStatus(
   pantry: PantryContext | undefined,
   canonicalKey: string,
-): { level: StockLevel; source?: "personal" | "hall" } {
-  const personalLevel = pantry?.personal ? getStockLevel(pantry.personal, canonicalKey) : undefined;
-  if (personalLevel !== undefined && canonicalKey in (pantry?.personal?.items ?? {})) {
-    return { level: personalLevel, source: "personal" };
-  }
-  const hallLevel = pantry?.hall ? getStockLevel(pantry.hall, canonicalKey) : undefined;
-  if (hallLevel !== undefined && canonicalKey in (pantry?.hall?.items ?? {})) {
-    return { level: hallLevel, source: "hall" };
+): PantryStatus {
+  const direct = resolveSingleKey(pantry, canonicalKey);
+  if (direct) return direct;
+
+  const parts = splitCompoundKey(canonicalKey);
+  if (parts) {
+    const statuses = parts.map((p) => resolveSingleKey(pantry, p));
+    if (statuses.every((s) => s && stockLevelHidesItem(s.level))) {
+      const weakest = statuses.find((s) => s!.level === "usually") ?? statuses[0]!;
+      return { level: weakest.level, source: weakest.source };
+    }
   }
   return { level: "never" };
 }
 
-/** Recompute the derived (non-manual) part of the list from current recipes + crew sizes. */
-function rebuildList(
-  recipes: ShoppingSessionRecipe[],
-  previousItems: ShoppingListItem[],
-  pantry?: PantryContext,
-): ShoppingList {
-  const manualItems = previousItems.filter((i) => i.isManual).map((item) => applyPantryToItem(item, pantry));
-  const previousDerivedByKey = new Map(
-    previousItems.filter((i) => !i.isManual).map((i) => [i.canonicalKey, i] as const),
-  );
+interface AggregationResult {
+  aggregate: Map<string, AggregatedIngredient>;
+  excludedOptional: ExcludedOptionalIngredient[];
+}
 
+/** Put range/fraction/split-unit quantities into the form the crew scaler parses reliably. */
+function prepareForScaling(ing: RawRecipeIngredient): RawRecipeIngredient {
+  const { quantity, unit } = canonicalizeQuantityForScaling(ing.quantity, ing.unit);
+  if (quantity === ing.quantity && unit === ing.unit) return ing;
+  const next: RawRecipeIngredient = { ...ing, quantity };
+  if (unit) next.unit = unit;
+  else delete next.unit;
+  return next;
+}
+
+/** Scale every recipe to its crew size and merge contributions by canonical key. */
+function aggregateRecipes(recipes: ShoppingSessionRecipe[]): AggregationResult {
   const aggregate = new Map<string, AggregatedIngredient>();
+  const excludedOptional: ExcludedOptionalIngredient[] = [];
 
   for (const recipe of recipes) {
-    const eligible = recipe.ingredients.filter((ing) => !ing.optional);
+    const eligible: RawRecipeIngredient[] = [];
+    for (const ing of recipe.ingredients) {
+      if (isOptionalIngredient(ing)) {
+        excludedOptional.push({
+          recipeSlug: recipe.slug,
+          recipeTitle: recipe.title,
+          name: ing.name.trim(),
+          canonicalKey: canonicalizeIngredientName(ing.name),
+        });
+      } else {
+        eligible.push(prepareForScaling(ing));
+      }
+    }
+
     const scaled = scaleGoldenIngredients(
       eligible as GoldenRecipePageIngredient[],
       recipe.baseServings,
@@ -121,6 +175,7 @@ function rebuildList(
         unit: normalized.parsed?.unit ?? "",
         rawQuantity: normalized.rawQuantity,
       };
+      if (normalized.parsed?.min !== undefined) contribution.min = normalized.parsed.min;
 
       const existing = aggregate.get(key);
       if (existing) {
@@ -136,6 +191,31 @@ function rebuildList(
     }
   }
 
+  return { aggregate, excludedOptional };
+}
+
+/** quantityLabel + structured quantities, always in the units the recipes used. */
+function deriveQuantityFields(contributions: ShoppingItemContribution[]): {
+  quantityLabel: string;
+  quantities: ShoppingListItem["quantities"];
+} {
+  const { quantities, textOnly } = mergeContributionQuantities(contributions);
+  return { quantityLabel: formatShoppingQuantities(quantities, textOnly), quantities };
+}
+
+/** Recompute the derived (non-manual) part of the list from current recipes + crew sizes. */
+function rebuildList(
+  recipes: ShoppingSessionRecipe[],
+  previousItems: ShoppingListItem[],
+  pantry?: PantryContext,
+): ShoppingList {
+  const manualItems = previousItems.filter((i) => i.isManual).map((item) => applyPantryToItem(item, pantry));
+  const previousDerivedByKey = new Map(
+    previousItems.filter((i) => !i.isManual).map((i) => [i.canonicalKey, i] as const),
+  );
+
+  const { aggregate, excludedOptional } = aggregateRecipes(recipes);
+
   const derivedItems: ShoppingListItem[] = [...aggregate.entries()].map(([key, agg]) => {
     const prior = previousDerivedByKey.get(key);
     const { level, source } = resolvePantryStatus(pantry, key);
@@ -144,7 +224,7 @@ function rebuildList(
       canonicalKey: key,
       displayName: agg.displayName,
       department: agg.department,
-      quantityLabel: mergeContributions(agg.contributions),
+      ...deriveQuantityFields(agg.contributions),
       contributions: agg.contributions,
       notes: agg.notes,
       isManual: false,
@@ -156,7 +236,44 @@ function rebuildList(
     };
   });
 
-  return { items: sortItems([...derivedItems, ...manualItems]), generatedAt: new Date().toISOString() };
+  const list: ShoppingList = {
+    items: sortItems([...derivedItems, ...manualItems]),
+    generatedAt: new Date().toISOString(),
+  };
+  if (excludedOptional.length > 0) list.excludedOptional = excludedOptional;
+  return list;
+}
+
+/**
+ * Recompute quantities for the recipe-derived items already on the list,
+ * using the current parser/merger — without re-adding items the user cleared
+ * and without touching checked/pantry state or manual items. Used when
+ * restoring a persisted session written by an older engine.
+ */
+export function refreshDerivedQuantities(session: ShoppingSession): ShoppingSession {
+  const { aggregate, excludedOptional } = aggregateRecipes(session.recipes);
+  const items = session.list.items.map((item) => {
+    if (item.isManual) return item;
+    const agg = aggregate.get(item.canonicalKey);
+    if (!agg) return item;
+    return { ...item, ...deriveQuantityFields(agg.contributions), contributions: agg.contributions };
+  });
+  const list: ShoppingList = { ...session.list, items };
+  if (excludedOptional.length > 0) list.excludedOptional = excludedOptional;
+  else delete list.excludedOptional;
+  return { ...session, list };
+}
+
+/**
+ * Display a list item's quantity in a measurement system. Recipe-derived
+ * items are re-merged from their contributions (same-family conversion
+ * only); manual items keep exactly what the user typed. With no system the
+ * stored, recipe-unit label is returned.
+ */
+export function formatShoppingItemQuantity(item: ShoppingListItem, system?: ShoppingUnitSystem): string {
+  if (item.isManual || !system || item.contributions.length === 0) return item.quantityLabel;
+  const { quantities, textOnly } = mergeContributionQuantities(item.contributions, system);
+  return formatShoppingQuantities(quantities, textOnly);
 }
 
 function applyPantryToItem(item: ShoppingListItem, pantry?: PantryContext): ShoppingListItem {
@@ -268,6 +385,7 @@ export function addManualItem(
   return {
     ...session,
     list: {
+      ...session.list,
       items: sortItems([...session.list.items, item]),
       generatedAt: new Date().toISOString(),
     },
@@ -311,9 +429,16 @@ export function setSessionMode(session: ShoppingSession, mode: ShoppingMode): Sh
   };
 }
 
-/** Re-run pantry matching (e.g. after the user edits Personal or Hall Pantry). */
+/**
+ * Re-run pantry matching (e.g. after the user edits Personal or Hall Pantry).
+ * Only pantry flags change — items the user cleared or removed stay gone.
+ */
 export function applyPantryContext(session: ShoppingSession, pantry: PantryContext): ShoppingSession {
-  return finalize(session, session.recipes, session.list.items, pantry);
+  return {
+    ...session,
+    list: { ...session.list, items: session.list.items.map((item) => applyPantryToItem(item, pantry)) },
+    updatedAt: new Date().toISOString(),
+  };
 }
 
 export function groupByDepartment(items: ShoppingListItem[]): GroupedShoppingList {
@@ -379,7 +504,11 @@ export function addHistoryEntry(
  * layer decoupled from any specific data-fetching mechanism.
  */
 export function startNewSessionFromHistory(entry: ShoppingHistoryEntry): ShoppingSession {
+  const carriedManual = entry.session.list.items
+    .filter((i) => i.isManual)
+    .map((i) => ({ ...i, id: generateId("item"), checked: false }));
   const fresh = createShoppingSession();
+  fresh.list = { ...fresh.list, items: carriedManual };
   return entry.session.recipes.reduce(
     (session, recipe) =>
       addRecipeToSession(

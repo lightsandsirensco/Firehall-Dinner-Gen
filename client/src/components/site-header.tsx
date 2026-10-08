@@ -18,10 +18,7 @@ import { BRAND_NAME, CTA, NAV } from "@/lib/brand-copy";
 import { LightsAndSirensMobilePanel } from "@/components/brand/lights-and-sirens-mobile-panel";
 import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
 import { BrandLogo } from "@/components/brand/brand-logo";
-import {
-  getHallFavoritesCount,
-  HALL_FAVORITES_CHANGED_EVENT,
-} from "@/lib/hall-favorites-store";
+import { getSavedCount, SAVED_MEALS_CHANGED_EVENT } from "@/lib/saved-meals";
 import { useAuth } from "@/lib/auth/context";
 import { HOME, TONIGHT, shouldShowAppShell } from "@/lib/app-nav";
 
@@ -88,16 +85,16 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
   const { authenticated, loading: authLoading, profile, openSignIn } = useAuth();
   const accountLabel = authenticated ? profile?.display_name || profile?.first_name || "Profile" : "Sign in";
   const accountInitial = accountLabel.trim().charAt(0).toUpperCase() || "F";
-  const [badgeCount, setBadgeCount] = useState(() => favCount ?? getHallFavoritesCount());
+  const [badgeCount, setBadgeCount] = useState(() => favCount ?? getSavedCount());
   const inAppShell = shouldShowAppShell(location);
   // The logo and "Home" nav item always go to the one true Home — the landing page.
   const homeHref = HOME;
 
   useEffect(() => {
-    const sync = () => setBadgeCount(getHallFavoritesCount());
+    const sync = () => setBadgeCount(getSavedCount());
     sync();
-    window.addEventListener(HALL_FAVORITES_CHANGED_EVENT, sync);
-    return () => window.removeEventListener(HALL_FAVORITES_CHANGED_EVENT, sync);
+    window.addEventListener(SAVED_MEALS_CHANGED_EVENT, sync);
+    return () => window.removeEventListener(SAVED_MEALS_CHANGED_EVENT, sync);
   }, []);
 
   useEffect(() => {

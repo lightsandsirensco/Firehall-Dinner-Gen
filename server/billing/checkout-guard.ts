@@ -15,11 +15,14 @@
  * either way, creating a brand-new paid Stripe subscription on top of
  * existing access would be an unwanted duplicate charge.
  */
-import { subscriptionGrantsAccess, type UserSubscription } from "../../shared/billing/types.js";
+import { subscriptionIsEntitled, type UserSubscription } from "../../shared/billing/types.js";
 
 export function userAlreadyHasProAccess(
-  subscription: Pick<UserSubscription, "plan_id" | "status"> | null | undefined,
+  subscription:
+    | (Pick<UserSubscription, "plan_id" | "status"> & Partial<Pick<UserSubscription, "source" | "expires_at">>)
+    | null
+    | undefined,
 ): boolean {
   if (!subscription) return false;
-  return subscription.plan_id === "firefighter_plus" && subscriptionGrantsAccess(subscription.status);
+  return subscription.plan_id === "firefighter_plus" && subscriptionIsEntitled(subscription);
 }

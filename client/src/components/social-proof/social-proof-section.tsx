@@ -3,11 +3,7 @@ import { SocialProofStatsRow } from "@/components/social-proof/social-proof-stat
 import { Testimonials } from "@/components/social-proof/testimonials";
 import { fetchSocialProof, socialProofQueryKey } from "@/lib/social-proof-api";
 import { hasCredibleSocialProofStats } from "@shared/social-proof/format";
-import {
-  SOCIAL_PROOF_HEADLINE,
-  SOCIAL_PROOF_SUBHEADLINE,
-  SOCIAL_PROOF_TESTIMONIALS,
-} from "@shared/social-proof/testimonials-data";
+import { SOCIAL_PROOF_HEADLINE, SOCIAL_PROOF_SUBHEADLINE } from "@shared/social-proof/testimonials-data";
 import { cn } from "@/lib/utils";
 import { app } from "@/lib/design-tokens";
 
@@ -23,9 +19,13 @@ export function SocialProofSection({ className }: SocialProofSectionProps) {
   });
 
   const stats = data?.stats;
-  const testimonials = data?.testimonials ?? SOCIAL_PROOF_TESTIMONIALS;
+  const testimonials = data?.testimonials ?? [];
   const headline = data?.headline ?? SOCIAL_PROOF_HEADLINE;
   const subheadline = data?.subheadline ?? SOCIAL_PROOF_SUBHEADLINE;
+  const hasTestimonials = testimonials.length > 0;
+  const hasStats = hasCredibleSocialProofStats(stats);
+
+  if (!hasTestimonials && !hasStats) return null;
 
   return (
     <section
@@ -38,14 +38,16 @@ export function SocialProofSection({ className }: SocialProofSectionProps) {
           <h2 id="social-proof-heading" className={cn(app.titleSection, "text-balance")}>
             {headline}
           </h2>
-          <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
-            {subheadline}
-          </p>
+          {hasTestimonials ? (
+            <p className="mt-3 text-sm sm:text-base text-muted-foreground leading-relaxed">
+              {subheadline}
+            </p>
+          ) : null}
         </div>
 
-        {hasCredibleSocialProofStats(stats) ? <SocialProofStatsRow stats={stats!} /> : null}
+        {hasStats ? <SocialProofStatsRow stats={stats!} /> : null}
 
-        <Testimonials testimonials={testimonials} />
+        {hasTestimonials ? <Testimonials testimonials={testimonials} /> : null}
       </div>
     </section>
   );

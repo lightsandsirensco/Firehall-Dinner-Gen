@@ -1,14 +1,18 @@
 import { useMemo } from "react";
 import { Link } from "wouter";
 import { ChevronRight, Heart } from "lucide-react";
-import { getHallFavorites } from "@/lib/hall-favorites-store";
+import { getSavedMeals } from "@/lib/saved-meals";
+import { importLegacyHallFavorites } from "@/lib/hall-favorites-store";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 
 export function YourFoodCard() {
-  const favorites = useMemo(() => getHallFavorites(), []);
+  const favorites = useMemo(() => {
+    importLegacyHallFavorites();
+    return getSavedMeals();
+  }, []);
   const recent = useMemo(
-    () => [...favorites].sort((a, b) => (a.addedAt < b.addedAt ? 1 : -1)).slice(0, 3),
+    () => [...favorites].sort((a, b) => (a.savedAt < b.savedAt ? 1 : -1)).slice(0, 3),
     [favorites],
   );
 
@@ -30,9 +34,9 @@ export function YourFoodCard() {
           </p>
           <ul className="space-y-1.5">
             {recent.map((r) => (
-              <li key={r.slug} className="flex items-center gap-2 text-sm text-foreground/90 truncate">
+              <li key={r.id} className="flex items-center gap-2 text-sm text-foreground/90 truncate">
                 <Heart className="h-3.5 w-3.5 shrink-0 text-primary/80" aria-hidden />
-                <span className="truncate">{r.title}</span>
+                <span className="truncate">{r.recipe.title}</span>
               </li>
             ))}
           </ul>

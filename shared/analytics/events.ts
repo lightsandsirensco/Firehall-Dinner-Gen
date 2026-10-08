@@ -148,6 +148,21 @@ export const ANALYTICS_EVENT_TYPES = [
   "history_personalization_used",
   "history_personalization_disabled",
   "personalized_recipe_selected",
+  "schedule_setup_started",
+  "schedule_created",
+  "schedule_updated",
+  "extra_shift_added",
+  "shift_override_created",
+  "shift_viewed",
+  "shift_plan_started",
+  "shift_plan_autofilled",
+  "shift_meal_swapped",
+  "shift_meal_skipped",
+  "shift_plan_completed",
+  "shift_list_generated",
+  "shift_list_opened",
+  "shift_list_item_checked",
+  "shift_list_manual_item_added",
 ] as const;
 
 export type AnalyticsEventType = (typeof ANALYTICS_EVENT_TYPES)[number];

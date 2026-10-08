@@ -1,23 +1,39 @@
+/**
+ * Hall Classics — read projection over the canonical saved-meals store.
+ *
+ * Personal favourites are owned by lib/saved-meals (→ user_saved_recipes).
+ * "Hall Classics" is the catalog subset of those saves, so pinning on a
+ * recipe page, the wheel, or a dashboard is the same Save the generator and
+ * Explore use.
+ *
+ * Legacy: `firehall_hall_favorites_v1` was a separate 10-item device store.
+ * It is never deleted or rewritten here; it stays readable for cloud sync
+ * (`personal_favorites` snapshot) and is imported into saved meals once per
+ * slug (tracked in IMPORTED_KEY, so a later un-save is not undone by a
+ * re-import).
+ */
 import {
   HALL_FAVORITES_SCHEMA_VERSION,
-  MAX_HALL_CLASSICS,
   type HallFavorite,
   type HallFavoritesSnapshot,
-  type HallFavoritesStore,
 } from "@shared/hall-favorites/types";
 import { getHallProfile } from "@/lib/hall-profile-store";
-import { getSavedMeals } from "@/lib/saved-meals";
-const STORAGE_KEY = "firehall_hall_favorites_v1";
-const MIGRATION_FLAG = "firehall_hall_favorites_migrated_v1";
+import {
+  getSavedMeals,
+  isCatalogMealSaved,
+  notifySavedMealsChanged,
+  removeCatalogMeal,
+  saveCatalogMeal,
+  HALL_FAVORITES_CHANGED_EVENT,
+} from "@/lib/saved-meals";
 
-export const HALL_FAVORITES_CHANGED_EVENT = "hall-favorites-changed";
+const LEGACY_STORAGE_KEY = "firehall_hall_favorites_v1";
+const IMPORTED_KEY = "firehall_hall_favorites_imported_v1";
+
+export { HALL_FAVORITES_CHANGED_EVENT };
 
 function slugKey(slug: string): string {
   return slug.trim().toLowerCase();
-}
-
-function dispatchChanged(): void {
-  window.dispatchEvent(new Event(HALL_FAVORITES_CHANGED_EVENT));
 }
 
 function emptySnapshot(hallId: string): HallFavoritesSnapshot {
@@ -35,31 +51,21 @@ function parseSnapshot(raw: string, hallId: string): HallFavoritesSnapshot {
     if (parsed?.schemaVersion !== HALL_FAVORITES_SCHEMA_VERSION) return emptySnapshot(hallId);
     if (parsed.hallId !== hallId) return emptySnapshot(hallId);
     if (!Array.isArray(parsed.favorites)) return emptySnapshot(hallId);
-    const favorites = parsed.favorites
-      .filter(
-        (f): f is HallFavorite =>
-          !!f && typeof f.slug === "string" && typeof f.title === "string" && typeof f.addedAt === "string",
-      )
-      .slice(0, MAX_HALL_CLASSICS);
+    const favorites = parsed.favorites.filter(
+      (f): f is HallFavorite =>
+        !!f && typeof f.slug === "string" && typeof f.title === "string" && typeof f.addedAt === "string",
+    );
     return { ...parsed, favorites };
   } catch {
     return emptySnapshot(hallId);
   }
 }
 
-function writeSnapshot(snapshot: HallFavoritesSnapshot): void {
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot));
-    dispatchChanged();
-  } catch {
-    /* quota / private mode */
-  }
-}
-
+/** Legacy device snapshot, read-only. Used by cloud sync and the import below. */
 export function getHallFavoritesSnapshot(): HallFavoritesSnapshot {
   const hallId = getHallProfile().hallId;
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
+    const raw = localStorage.getItem(LEGACY_STORAGE_KEY);
     if (!raw) return emptySnapshot(hallId);
     return parseSnapshot(raw, hallId);
   } catch {
@@ -67,8 +73,69 @@ export function getHallFavoritesSnapshot(): HallFavoritesSnapshot {
   }
 }
 
+function getImportedSlugs(): Set<string> {
+  try {
+    const raw = localStorage.getItem(IMPORTED_KEY);
+    const parsed = raw ? JSON.parse(raw) : [];
+    return new Set(Array.isArray(parsed) ? parsed.filter((s): s is string => typeof s === "string") : []);
+  } catch {
+    return new Set();
+  }
+}
+
+let importedThisSession = false;
+
+/**
+ * Copies legacy Hall Favorites into saved meals. Idempotent: each legacy slug
+ * is imported at most once per device, and existing saves are never
+ * overwritten. Call again after a sync pull may have brought new legacy rows.
+ */
+export function importLegacyHallFavorites(): number {
+  importedThisSession = true;
+  try {
+    const legacy = getHallFavoritesSnapshot().favorites;
+    if (legacy.length === 0) return 0;
+    const imported = getImportedSlugs();
+    let added = 0;
+    for (const fav of legacy) {
+      const slug = slugKey(fav.slug);
+      if (!slug || imported.has(slug)) continue;
+      const result = saveCatalogMeal(
+        {
+          slug,
+          title: fav.title,
+          recipePath: fav.recipePath,
+          savedAt: fav.addedAt,
+          source: fav.source ?? "legacy_hall_favorite",
+        },
+        { notify: false },
+      );
+      if (result.saved) added += 1;
+      imported.add(slug);
+    }
+    localStorage.setItem(IMPORTED_KEY, JSON.stringify([...imported]));
+    if (added > 0) notifySavedMealsChanged();
+    return added;
+  } catch {
+    return 0;
+  }
+}
+
+function ensureImported(): void {
+  if (!importedThisSession && typeof window !== "undefined") importLegacyHallFavorites();
+}
+
 export function getHallFavorites(): HallFavorite[] {
-  return getHallFavoritesSnapshot().favorites;
+  ensureImported();
+  return getSavedMeals()
+    .filter((m) => m.id.startsWith("catalog:"))
+    .map((m) => ({
+      slug: m.id.slice("catalog:".length),
+      title: m.recipe.title,
+      recipePath: m.recipePath,
+      addedAt: m.savedAt,
+      source: m.source,
+    }));
 }
 
 export function getHallFavoritesCount(): number {
@@ -76,98 +143,35 @@ export function getHallFavoritesCount(): number {
 }
 
 export function isHallFavorite(slug: string): boolean {
-  const key = slugKey(slug);
-  return getHallFavorites().some((f) => slugKey(f.slug) === key);
-}
-
-export function canAddHallFavorite(): boolean {
-  return getHallFavorites().length < MAX_HALL_CLASSICS;
+  ensureImported();
+  return isCatalogMealSaved(slug);
 }
 
 export type AddHallFavoriteResult =
   | { ok: true; favorite: HallFavorite }
-  | { ok: false; reason: "duplicate" | "full" };
+  | { ok: false; reason: "duplicate" | "invalid" };
 
 export function addHallFavorite(
   input: Omit<HallFavorite, "addedAt"> & { addedAt?: string },
 ): AddHallFavoriteResult {
   const slug = slugKey(input.slug);
-  if (!slug) return { ok: false, reason: "duplicate" };
-
-  const snapshot = getHallFavoritesSnapshot();
-  if (snapshot.favorites.some((f) => slugKey(f.slug) === slug)) {
-    return { ok: false, reason: "duplicate" };
-  }
-  if (snapshot.favorites.length >= MAX_HALL_CLASSICS) {
-    return { ok: false, reason: "full" };
-  }
-
-  const favorite: HallFavorite = {
+  if (!slug) return { ok: false, reason: "invalid" };
+  const addedAt = input.addedAt ?? new Date().toISOString();
+  const result = saveCatalogMeal({
     slug,
-    title: input.title.trim(),
+    title: input.title,
     recipePath: input.recipePath,
-    addedAt: input.addedAt ?? new Date().toISOString(),
     source: input.source,
-  };
-
-  writeSnapshot({
-    ...snapshot,
-    hallId: getHallProfile().hallId,
-    favorites: [favorite, ...snapshot.favorites].slice(0, MAX_HALL_CLASSICS),
-    updatedAt: new Date().toISOString(),
+    savedAt: addedAt,
   });
-
-  return { ok: true, favorite };
+  if (result.duplicate) return { ok: false, reason: "duplicate" };
+  if (!result.saved) return { ok: false, reason: "invalid" };
+  return {
+    ok: true,
+    favorite: { slug, title: input.title.trim(), recipePath: input.recipePath, addedAt, source: input.source },
+  };
 }
 
 export function removeHallFavorite(slug: string): boolean {
-  const key = slugKey(slug);
-  const snapshot = getHallFavoritesSnapshot();
-  const next = snapshot.favorites.filter((f) => slugKey(f.slug) !== key);
-  if (next.length === snapshot.favorites.length) return false;
-
-  writeSnapshot({
-    ...snapshot,
-    favorites: next,
-    updatedAt: new Date().toISOString(),
-  });
-  return true;
+  return removeCatalogMeal(slug);
 }
-
-/**
- * One-time import of legacy catalog bookmarks into Hall Classics.
- * The path resolver is injected so this module (eagerly loaded via cloud sync)
- * never statically imports the full approved catalog.
- */
-export function migrateCatalogSavedMealsToHallFavorites(
-  resolveRecipePath: (slug: string) => string,
-): void {
-  try {
-    if (localStorage.getItem(MIGRATION_FLAG)) return;
-    const saved = getSavedMeals().filter((m) => m.id.startsWith("catalog:"));
-    for (const meal of saved) {
-      if (!canAddHallFavorite()) break;
-      const slug = meal.id.replace(/^catalog:/, "");
-      addHallFavorite({
-        slug,
-        title: meal.recipe.title,
-        recipePath: resolveRecipePath(slug),
-        source: "migrated_saved_meal",
-      });
-    }
-    localStorage.setItem(MIGRATION_FLAG, "1");
-  } catch {
-    /* ignore */
-  }
-}
-
-export const localHallFavoritesStore: HallFavoritesStore = {
-  getSnapshot: getHallFavoritesSnapshot,
-  getFavorites: getHallFavorites,
-  addFavorite: (input) => {
-    const result = addHallFavorite(input);
-    return result.ok ? result.favorite : null;
-  },
-  removeFavorite: removeHallFavorite,
-  isFavorite: isHallFavorite,
-};

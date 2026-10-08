@@ -9,6 +9,7 @@ import {
 } from "./store.js";
 import { processDueShiftReminders, startShiftReminderScheduler } from "./scheduler.js";
 import { redirectPathForAction } from "./mail.js";
+import { createShiftReminderRunHandler } from "./run-endpoint.js";
 import { SHIFT_REMINDER_ACTIONS, type ShiftReminderAction } from "../../shared/shift-reminder/types.js";
 
 let storeReady = false;
@@ -96,17 +97,13 @@ export function registerShiftReminderRoutes(app: Express): void {
     }
   });
 
-  app.post("/api/shift-reminder/run", async (_req, res: Response) => {
-    try {
-      if (process.env.NODE_ENV === "production" && process.env.SHIFT_REMINDER_RUN_KEY) {
-        return res.status(403).json({ message: "Forbidden" });
-      }
-      await ensureStore();
-      const sent = await processDueShiftReminders();
-      return res.json({ ok: true, sent });
-    } catch (err) {
-      logError("shift-reminder", "manual run failed", err);
-      return res.status(500).json({ message: "Failed to run shift reminders" });
-    }
-  });
+  app.post(
+    "/api/shift-reminder/run",
+    createShiftReminderRunHandler({
+      runDue: async () => {
+        await ensureStore();
+        return processDueShiftReminders();
+      },
+    }),
+  );
 }

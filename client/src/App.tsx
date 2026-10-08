@@ -29,6 +29,7 @@ import Home from "@/pages/home";
 import { getRetiredGuide } from "@shared/editorial/retired-guides";
 const Generator = lazyWithRetry(() => import("@/pages/generator"));
 const ShiftPlannerPage = lazyWithRetry(() => import("@/pages/shift-planner"));
+const ShiftListPage = lazyWithRetry(() => import("@/pages/shift-list-page"));
 const AdminGolden100Page = lazyWithRetry(() => import("@/pages/admin-golden-100"));
 const AdminCatalogPage = lazyWithRetry(() => import("@/pages/admin-catalog"));
 
@@ -91,6 +92,7 @@ const MeInsightsPage = lazyWithRetry(() => import("@/pages/me-insights-page"));
 const MeSettingsPage = lazyWithRetry(() => import("@/pages/me-settings-page"));
 const MeShoppingListPage = lazyWithRetry(() => import("@/pages/me-shopping-list-page"));
 const MePantryPage = lazyWithRetry(() => import("@/pages/me-pantry-page"));
+const MeSchedulePage = lazyWithRetry(() => import("@/pages/me-schedule-page"));
 const NotFound = lazyWithRetry(() => import("@/pages/not-found"));
 
 /** Mirrors the server's retired-guide 301/410 for in-app navigation. */
@@ -122,12 +124,14 @@ function AppRoutes() {
       <Route path="/me/saved" component={FavoritesPage} />
       <Route path="/me/shopping-list" component={MeShoppingListPage} />
       <Route path="/me/pantry" component={MePantryPage} />
+      <Route path="/me/schedule" component={MeSchedulePage} />
       <Route path="/me/subscription" component={PlansPage} />
       <Route path="/hall/settings">{() => <Redirect to="/hall" />}</Route>
       <Route path="/hall/history">{() => <Redirect to="/hall" />}</Route>
       <Route path="/onboarding/hall" component={OnboardingHallPage} />
       <Route path="/generator" component={Generator} />
       <Route path="/shift-planner" component={ShiftPlannerPage} />
+      <Route path="/shift-planner/shop" component={ShiftListPage} />
       <Route path="/faq" component={FaqPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/privacy" component={PrivacyPage} />

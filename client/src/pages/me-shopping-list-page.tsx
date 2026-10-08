@@ -18,9 +18,12 @@ import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
+import { useMeasurementSystem } from "@/lib/measurement-preference";
 import { useShoppingSession } from "@/hooks/use-shopping-session";
+import { formatShoppingItemQuantity } from "@shared/shopping";
 
 export default function MeShoppingListPage() {
+  const [measurementSystem] = useMeasurementSystem();
   const {
     session,
     activeItems,
@@ -192,7 +195,9 @@ export default function MeShoppingListPage() {
                       <p className={cn("text-sm font-medium text-foreground transition-all duration-200", item.checked && "line-through")}>
                         {item.displayName}
                         {item.quantityLabel && (
-                          <span className="ml-1.5 font-normal text-muted-foreground">— {item.quantityLabel}</span>
+                          <span className="ml-1.5 font-normal text-muted-foreground">
+                            — {formatShoppingItemQuantity(item, measurementSystem)}
+                          </span>
                         )}
                       </p>
                       {!item.isManual && item.contributions.length > 1 && (
@@ -287,7 +292,9 @@ export default function MeShoppingListPage() {
                   <div className="min-w-0 flex-1">
                     <p className="text-sm text-muted-foreground">
                       {item.displayName}
-                      {item.quantityLabel && <span className="ml-1.5">— {item.quantityLabel}</span>}
+                      {item.quantityLabel && (
+                        <span className="ml-1.5">— {formatShoppingItemQuantity(item, measurementSystem)}</span>
+                      )}
                     </p>
                     <p className="text-[11px] text-muted-foreground/70">
                       {item.pantryStockLevel === "usually" ? "Usually stocked" : "Always stocked"}

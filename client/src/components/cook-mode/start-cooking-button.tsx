@@ -85,18 +85,22 @@ export function StartCookingButton({
   // Feedback). Best-effort: a network failure here must never block/undo
   // the Free local record or interrupt whichever flow called it. On
   // success, opens the fast post-meal feedback sheet.
-  const logDurableMeal = async () => {
+  const logDurableMeal = async (localEntryId: string) => {
     if (!hasMealMemory || !recipeSlug) return;
     try {
-      const result = await postMealCooked(recipeSlug, {
-        is_high_protein: recipeTags?.high_protein,
-        is_high_fiber: recipeTags?.high_fiber,
-        meal_occasion: mealOccasion,
-        crew_size: recipe.crewSize,
-        nutrition_goal: nutritionGoal,
-        hall_id: hallId,
-        cost: costSnapshot,
-      });
+      const result = await postMealCooked(
+        recipeSlug,
+        {
+          is_high_protein: recipeTags?.high_protein,
+          is_high_fiber: recipeTags?.high_fiber,
+          meal_occasion: mealOccasion,
+          crew_size: recipe.crewSize,
+          nutrition_goal: nutritionGoal,
+          hall_id: hallId,
+          cost: costSnapshot,
+        },
+        localEntryId,
+      );
       trackMealLogged({
         recipe_slug: recipeSlug,
         meal_occasion: mealOccasion,
@@ -115,7 +119,7 @@ export function StartCookingButton({
     // Existing Free/local behavior — always preserved unchanged, for every
     // user regardless of Pro entitlement (this is the one real "Mark as
     // Cooked" action; we reuse it rather than adding a second button).
-    recordMealCooked({
+    const localEntry = recordMealCooked({
       title: recipe.title,
       recipeSlug,
       recipePath,
@@ -126,7 +130,7 @@ export function StartCookingButton({
 
     if (!submittedRef.current) {
       submittedRef.current = true;
-      void logDurableMeal();
+      void logDurableMeal(localEntry.id);
     }
   };
 
@@ -137,7 +141,7 @@ export function StartCookingButton({
     // Same Free local record Cook Mode completion writes — a firefighter who
     // already knows the recipe shouldn't have to step through Cook Mode just
     // to log that they made it.
-    recordMealCooked({
+    const localEntry = recordMealCooked({
       title: recipe.title,
       recipeSlug,
       recipePath,
@@ -150,7 +154,7 @@ export function StartCookingButton({
       source: "made_this",
       crew_size: recipe.crewSize,
     });
-    await logDurableMeal();
+    await logDurableMeal(localEntry.id);
     setQuickLogging(false);
   };
 

@@ -1,3 +1,11 @@
+/**
+ * LEGACY single-recipe shopping list (copy/print/email dialog only).
+ *
+ * The canonical shopping engine is `shared/shopping/*` (ShoppingService,
+ * quantity-parser, units, pantry). Shift Planner, /me/shopping-list, and any
+ * new planner or Premium work must build on that engine — do not add new
+ * callers here. Kept until the per-recipe modal is migrated.
+ */
 import type { GenerateResponse, PizzaResponse, IngredientItem, ClientRecipeResponse, ClientIngredient } from "@shared/schema";
 import type { GoldenRecipePageIngredient } from "@shared/golden-100/recipe-page-schema";
 import {

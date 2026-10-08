@@ -7,8 +7,8 @@
  */
 
 import {
-  PANTRY_SCHEMA_VERSION,
   createPantryProfile,
+  restorePantryProfile,
   type PantryProfile,
 } from "@shared/shopping";
 import { getHallProfile } from "@/lib/hall-profile-store";
@@ -36,10 +36,9 @@ function defaultSnapshot(hallId: string): StoredHallPantry {
 function parseSnapshot(raw: string, hallId: string): StoredHallPantry {
   try {
     const parsed = JSON.parse(raw) as StoredHallPantry;
-    if (parsed?.schemaVersion !== PANTRY_SCHEMA_VERSION) return defaultSnapshot(hallId);
-    if (parsed.hallId !== hallId) return defaultSnapshot(hallId);
-    if (!parsed.items || typeof parsed.items !== "object") return defaultSnapshot(hallId);
-    return parsed;
+    if (parsed?.hallId !== hallId) return defaultSnapshot(hallId);
+    const profile = restorePantryProfile(parsed);
+    return profile ? { ...profile, hallId } : defaultSnapshot(hallId);
   } catch {
     return defaultSnapshot(hallId);
   }

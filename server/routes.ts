@@ -55,7 +55,6 @@ import { registerVoteRoutes } from "./routes/vote-routes.js";
 import { registerCatalogRoutes } from "./routes/catalog-routes.js";
 import { registerRecipeRatingsRoutes } from "./routes/recipe-ratings-routes.js";
 import { routeParam } from "./routes/param.js";
-import { getAllFavouriteIds } from "./favourites";
 import { getTopCachedRecipes, getVotedRecipeNames } from "./cache-store";
 import { buildFallbackRecipe } from "./fallback-recipe";
 import { searchRecipes, getRecipeById, getRandomRecipes, type SearchOptions } from "./spoonacular";
@@ -215,6 +214,8 @@ import { registerShopRoutes } from "./shop/routes.js";
 import { registerMarketingConsentWebhookRoutes } from "./marketing-consent/webhook-routes.js";
 import { initBillingStore, resolveUserBilling } from "./billing/store.js";
 import { registerMealHistoryRoutes } from "./meal-history/routes.js";
+import { registerScheduleRoutes } from "./schedule/routes.js";
+import { registerShiftPlanRoutes } from "./shift-plan/routes.js";
 import { registerGoalsRoutes } from "./goals/routes.js";
 import { registerInsightsRoutes } from "./insights/routes.js";
 import { listRecentCookedSlugsOldestFirst } from "./meal-history/store.js";
@@ -224,11 +225,11 @@ import { captureEmailLead, registerAdminUsersRoutes } from "./admin-users/routes
 import { registerGroceryDealsRoutes } from "./grocery-deals/routes.js";
 import { registerMonitoringRoutes } from "./monitoring/error-monitor.js";
 import {
+  coerceGenerateRequestBody,
   sanitizeClientGenerationMeta,
   sanitizeGenerateRequest,
   sanitizePizzaRequest,
 } from "./sanitize-request.js";
-import { normalizeGenerateFirehallCategory } from "../shared/firehall-categories.js";
 import { getClientIp } from "./client-ip.js";
 import { enforceExploreRateLimit } from "./explore-rate-limit.js";
 import { enforceEmailRateLimit } from "./email-rate-limit.js";
@@ -271,18 +272,6 @@ const BOT_UA_PATTERNS = [
 
 function isBot(ua: string): boolean {
   return BOT_UA_PATTERNS.some((p) => p.test(ua));
-}
-
-function coerceGenerateRequestBody(body: unknown): unknown {
-  if (!body || typeof body !== "object") return body;
-  const next = { ...(body as Record<string, unknown>) };
-  const fc = normalizeGenerateFirehallCategory(next.firehall_category);
-  if (fc) next.firehall_category = fc;
-  else delete next.firehall_category;
-  if (Array.isArray(next.appliances) && next.appliances.length === 0) {
-    next.appliances = ["stove", "oven"];
-  }
-  return next;
 }
 
 /**
@@ -391,6 +380,8 @@ export async function registerRoutes(
   registerShopRoutes(app);
   registerMarketingConsentWebhookRoutes(app);
   registerMealHistoryRoutes(app);
+  registerScheduleRoutes(app);
+  registerShiftPlanRoutes(app);
   registerGoalsRoutes(app);
   registerInsightsRoutes(app);
   registerAdminUsersRoutes(app);
@@ -2934,7 +2925,6 @@ export async function registerRoutes(
     try {
       const cachedRecipes = getTopCachedRecipes(30);
       const votedNames = getVotedRecipeNames();
-      const favCounts = getAllFavouriteIds();
 
       interface TrendingItem {
         title: string;
@@ -2976,23 +2966,6 @@ export async function registerRoutes(
             source: "voted",
             hit_count: 0,
           });
-        }
-      }
-
-      for (const [recipeId, count] of Array.from(favCounts.entries())) {
-        for (const cr of cachedRecipes) {
-          try {
-            const parsed = JSON.parse(cr.recipe_json);
-            if (parsed._id === recipeId) {
-              const key = cr.title.toLowerCase().replace(/[^a-z]/g, "").substring(0, 40);
-              const existing = titleMap.get(key);
-              if (existing) {
-                existing.score += count * 5;
-                existing.source = "favorited";
-              }
-              break;
-            }
-          } catch {}
         }
       }
 

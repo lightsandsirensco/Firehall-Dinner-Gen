@@ -1,5 +1,6 @@
 import { apiRequest } from "@/lib/queryClient";
 import { trackSyncCompleted, trackSyncFailed } from "@/lib/analytics";
+import { getSavedMealTombstones } from "@/lib/saved-meals";
 import {
   mergeHallFavorites,
   mergeHallHistory,
@@ -192,7 +193,7 @@ async function syncSavedRecipes(): Promise<void> {
     };
     remote = fromSavedMealRows(data.recipes ?? []);
   }
-  const merged = mergeSavedMeals(local, remote);
+  const merged = mergeSavedMeals(local, remote, getSavedMealTombstones());
   applySavedMeals(merged as ReturnType<typeof getLocalSavedMeals>);
   await apiRequest("PUT", "/api/auth/saves", {
     recipes: toSavedMealRows(merged as ReturnType<typeof getLocalSavedMeals>),

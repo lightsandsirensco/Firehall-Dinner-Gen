@@ -3,11 +3,8 @@
  */
 
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
-import {
-  SOCIAL_PROOF_HEADLINE,
-  SOCIAL_PROOF_SUBHEADLINE,
-  SOCIAL_PROOF_TESTIMONIALS,
-} from "../../shared/social-proof/testimonials-data.js";
+import { SOCIAL_PROOF_HEADLINE, SOCIAL_PROOF_SUBHEADLINE } from "../../shared/social-proof/testimonials-data.js";
+import { getPublishedTestimonials } from "./testimonial-records.js";
 import type { SocialProofPayload, SocialProofStats } from "../../shared/social-proof/types.js";
 
 let db: SqliteDatabase;
@@ -58,7 +55,7 @@ export function getSocialProofStats(): SocialProofStats {
 export function getSocialProofPayload(): SocialProofPayload {
   return {
     stats: getSocialProofStats(),
-    testimonials: SOCIAL_PROOF_TESTIMONIALS,
+    testimonials: getPublishedTestimonials(),
     headline: SOCIAL_PROOF_HEADLINE,
     subheadline: SOCIAL_PROOF_SUBHEADLINE,
   };

@@ -112,7 +112,8 @@ export const FEATURE_OWNERSHIP: FeatureOwnership[] = [
     signed_in_individual: "full",
     hall_member: "full",
     hall_admin: "full",
-    notes: "user_saved_recipes + firehall_saved_meals localStorage.",
+    notes:
+      "CANONICAL personal favourites: user_saved_recipes (server) + firehall_saved_meals (device cache). Every Save writes here.",
   },
   {
     domain: "meal_history",
@@ -123,7 +124,8 @@ export const FEATURE_OWNERSHIP: FeatureOwnership[] = [
     signed_in_individual: "full",
     hall_member: "full",
     hall_admin: "full",
-    notes: "Personal activity log; sync key personal_meal_history (legacy hall_history).",
+    notes:
+      "CANONICAL durable cooked log: Postgres user_meal_history (meal_memory). Device log firehall_hall_history_v1 (sync key personal_meal_history) is the offline/Free cache, imported idempotently via /api/meal-history/import.",
   },
   {
     domain: "favorites",
@@ -134,7 +136,8 @@ export const FEATURE_OWNERSHIP: FeatureOwnership[] = [
     signed_in_individual: "full",
     hall_member: "full",
     hall_admin: "full",
-    notes: "Pinned classics; sync key personal_favorites (legacy hall_favorites).",
+    notes:
+      "Hall Classics = catalog subset of saved_meals (read projection). Legacy firehall_hall_favorites_v1 / sync key personal_favorites is preserved and imported once per slug.",
   },
   {
     domain: "shopping_personal",
@@ -145,7 +148,8 @@ export const FEATURE_OWNERSHIP: FeatureOwnership[] = [
     signed_in_individual: "full",
     hall_member: "full",
     hall_admin: "full",
-    notes: "Per-recipe modal export; no server list required.",
+    notes:
+      "CANONICAL engine: shared/shopping (Shift Planner, /me/shopping-list). client/src/lib/shopping-list.ts is the legacy per-recipe modal.",
   },
   {
     domain: "shopping_shared",

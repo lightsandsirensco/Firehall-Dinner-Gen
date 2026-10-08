@@ -8,6 +8,7 @@ import type {
   MealFeedbackInput,
   MealHistoryCreateResponse,
   MealHistoryFeedbackResponse,
+  MealHistoryImportResponse,
   MealHistoryListResponse,
   MealLogContext,
 } from "@shared/meal-history/types";
@@ -17,16 +18,35 @@ export async function fetchMealHistory(): Promise<MealHistoryListResponse> {
   return res.json();
 }
 
-/** Records a "Made This" / Cook Mode completion event with whatever real context is on hand. */
+/**
+ * Records a "Made This" / Cook Mode completion event with whatever real context is on hand.
+ * `clientEntryId` is the matching local history entry id, so a later import never duplicates it.
+ */
 export async function postMealCooked(
   recipeSlug: string,
   context?: MealLogContext,
+  clientEntryId?: string,
 ): Promise<MealHistoryCreateResponse> {
   const res = await apiRequest("POST", "/api/meal-history", {
     recipe_slug: recipeSlug,
+    ...(clientEntryId ? { client_entry_id: clientEntryId } : {}),
     ...context,
   });
   return res.json();
+}
+
+export async function postMealHistoryImport(
+  entries: MealHistoryImportRequestEntry[],
+): Promise<MealHistoryImportResponse> {
+  const res = await apiRequest("POST", "/api/meal-history/import", { entries });
+  return res.json();
+}
+
+export interface MealHistoryImportRequestEntry {
+  client_entry_id: string;
+  recipe_slug: string;
+  cooked_at: string;
+  crew_size?: number;
 }
 
 /** Submits (or edits) post-meal crew feedback on an existing history row. Every field optional. */

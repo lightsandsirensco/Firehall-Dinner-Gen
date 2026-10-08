@@ -1,11 +1,17 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useAuth } from "@/lib/auth/context";
 import { runCloudSync, scheduleCloudSync } from "@/lib/sync/coordinator";
 import { SYNC_CHANGE_EVENTS } from "@/lib/sync/local-snapshots";
+import { importLocalMealHistory } from "@/lib/meal-history-import";
+import { importLegacyHallFavorites } from "@/lib/hall-favorites-store";
 
 export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
-  const { authenticated, loading } = useAuth();
+  const { authenticated, loading, user } = useAuth();
+  const userId = user?.user_id ?? null;
   const initialSyncDone = useRef(false);
+
+  // Before children render so first-paint saved counts already include legacy Hall Favorites. Idempotent.
+  useState(() => importLegacyHallFavorites());
 
   useEffect(() => {
     if (loading || !authenticated) {
@@ -15,9 +21,12 @@ export function CloudSyncProvider({ children }: { children: React.ReactNode }) {
 
     if (!initialSyncDone.current) {
       initialSyncDone.current = true;
-      void runCloudSync("sign_in");
+      // Snapshot sync first so local history includes entries pulled from other devices.
+      void runCloudSync("sign_in").finally(() => {
+        if (userId) void importLocalMealHistory(userId);
+      });
     }
-  }, [authenticated, loading]);
+  }, [authenticated, loading, userId]);
 
   useEffect(() => {
     if (!authenticated) return;

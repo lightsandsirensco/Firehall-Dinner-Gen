@@ -14,10 +14,21 @@ export interface SocialProofAttribution {
   anonymous?: boolean;
 }
 
+/** Public shape — the only testimonial fields ever sent to a client. */
 export interface SocialProofTestimonial {
   id: string;
   quote: string;
   attribution: SocialProofAttribution;
+}
+
+/** Server-only record. Internal fields must never reach a public payload. */
+export interface TestimonialRecord extends SocialProofTestimonial {
+  /** Publishes only when exactly `true` — set solely on the owner's explicit confirmation. */
+  approved: boolean;
+  /** "YYYY-MM-DD" the owner approved public use. */
+  approvedAt?: string;
+  /** Internal provenance / consent note. */
+  consentNote?: string;
 }
 
 export interface SocialProofPayload {

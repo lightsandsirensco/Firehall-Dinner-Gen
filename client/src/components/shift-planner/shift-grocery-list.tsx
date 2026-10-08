@@ -17,11 +17,12 @@ import { ShoppingCart } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   addRecipeToSession,
+  clientRecipeToShoppingInput,
   createShoppingSession,
+  formatShoppingItemQuantity,
   groupByDepartment,
   removeRecipeFromSession,
   toggleItemChecked,
-  type ShoppingRecipeInput,
   type ShoppingSession,
 } from "@shared/shopping";
 import {
@@ -34,6 +35,7 @@ import {
 import type { ClientRecipeResponse } from "@shared/schema";
 import type { MealOccasion } from "@shared/shift-planner/occasions";
 import { app } from "@/lib/design-tokens";
+import { useMeasurementSystem } from "@/lib/measurement-preference";
 import { cn } from "@/lib/utils";
 
 interface ShiftGroceryListProps {
@@ -43,24 +45,8 @@ interface ShiftGroceryListProps {
   location: LocationQuery;
 }
 
-function toShoppingRecipeInput(
-  occasion: MealOccasion,
-  recipe: ClientRecipeResponse,
-  crewSize: number,
-): ShoppingRecipeInput {
-  return {
-    slug: `shift-${occasion}`,
-    title: recipe.title,
-    baseServings: recipe.servings || crewSize,
-    ingredients: recipe.ingredients.map((ing) => ({
-      name: ing.name,
-      quantity: String(ing.qty),
-      unit: ing.unit,
-    })),
-  };
-}
-
 export function ShiftGroceryList({ recipes, crewSize, location }: ShiftGroceryListProps) {
+  const [measurementSystem] = useMeasurementSystem();
   const [session, setSession] = useState<ShoppingSession>(() => createShoppingSession());
   const presentSlugs = useRef<Set<string>>(new Set());
 
@@ -76,7 +62,11 @@ export function ShiftGroceryList({ recipes, crewSize, location }: ShiftGroceryLi
         if (!nextSlugs.has(slug)) next = removeRecipeFromSession(next, slug);
       }
       for (const { occasion, recipe } of recipes) {
-        next = addRecipeToSession(next, toShoppingRecipeInput(occasion, recipe, crewSize), recipe.servings || crewSize);
+        next = addRecipeToSession(
+          next,
+          clientRecipeToShoppingInput(`shift-${occasion}`, recipe, crewSize),
+          recipe.servings || crewSize,
+        );
       }
       presentSlugs.current = nextSlugs;
       return next;
@@ -158,28 +148,29 @@ export function ShiftGroceryList({ recipes, crewSize, location }: ShiftGroceryLi
                   {department}
                 </h3>
                 <ul className="space-y-1">
-                  {items.map((item) => (
-                    <li key={item.id} className="flex items-start gap-2.5 py-1">
-                      <Checkbox
-                        checked={item.checked}
-                        onCheckedChange={() => setSession((prev) => toggleItemChecked(prev, item.id))}
-                        className="mt-0.5 min-h-5 min-w-5 touch-manipulation"
-                        data-testid={`shift-grocery-item-${item.id}`}
-                        aria-label={`${item.displayName}, ${item.quantityLabel}`}
-                      />
-                      <span
-                        className={cn(
-                          "text-sm leading-snug",
-                          item.checked && "line-through text-muted-foreground/70",
-                        )}
-                      >
-                        {item.displayName}
-                        {item.quantityLabel ? (
-                          <span className="text-muted-foreground"> — {item.quantityLabel}</span>
-                        ) : null}
-                      </span>
-                    </li>
-                  ))}
+                  {items.map((item) => {
+                    const quantity = formatShoppingItemQuantity(item, measurementSystem);
+                    return (
+                      <li key={item.id} className="flex items-start gap-2.5 py-1">
+                        <Checkbox
+                          checked={item.checked}
+                          onCheckedChange={() => setSession((prev) => toggleItemChecked(prev, item.id))}
+                          className="mt-0.5 min-h-5 min-w-5 touch-manipulation"
+                          data-testid={`shift-grocery-item-${item.id}`}
+                          aria-label={`${item.displayName}, ${quantity}`}
+                        />
+                        <span
+                          className={cn(
+                            "text-sm leading-snug",
+                            item.checked && "line-through text-muted-foreground/70",
+                          )}
+                        >
+                          {item.displayName}
+                          {quantity ? <span className="text-muted-foreground"> — {quantity}</span> : null}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
               </div>
             ))}

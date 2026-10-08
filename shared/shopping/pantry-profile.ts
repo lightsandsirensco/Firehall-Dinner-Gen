@@ -9,7 +9,45 @@
  */
 
 import { COMMON_STAPLES } from "./common-staples";
+import { IRREGULAR_PLURALS } from "./ingredient-normalizer";
 import { PANTRY_SCHEMA_VERSION, stockLevelHidesItem, type PantryProfile, type StockLevel } from "./types";
+
+/** Word forms older canonicalization rules stored ("tomatoes" -> "tomatoe", "eggs" kept as-is). */
+const LEGACY_WORD_RENAMES: Record<string, string> = {
+  ...IRREGULAR_PLURALS,
+  tomatoe: "tomato",
+  potatoe: "potato",
+  mangoe: "mango",
+};
+
+function migrateKey(key: string): string {
+  return key.replace(/\b[a-z]+\b/g, (w) => LEGACY_WORD_RENAMES[w] ?? w);
+}
+
+/**
+ * Re-key a stored pantry under the current canonicalization rules so entries
+ * saved before a normalizer change ("eggs") still match today's keys ("egg").
+ * An entry already stored under the current key wins over a legacy duplicate.
+ */
+export function migratePantryProfileKeys(profile: PantryProfile): PantryProfile {
+  let changed = false;
+  const items: Record<string, StockLevel> = {};
+  const legacy: [string, StockLevel][] = [];
+  for (const [key, level] of Object.entries(profile.items)) {
+    const next = migrateKey(key);
+    if (next !== key) {
+      legacy.push([next, level]);
+      changed = true;
+    } else {
+      items[key] = level;
+    }
+  }
+  if (!changed) return profile;
+  for (const [key, level] of legacy) {
+    if (!(key in items)) items[key] = level;
+  }
+  return { ...profile, items };
+}
 
 /** New pantries start pre-seeded with common staples marked "always" — invisible by default. */
 export function createPantryProfile(): PantryProfile {

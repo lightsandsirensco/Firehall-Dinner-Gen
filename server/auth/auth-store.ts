@@ -796,6 +796,9 @@ const HALL_NULLABLE_USER_REFERENCE_COLUMNS: Array<{ table: string; column: strin
  * DELETED from Postgres: auth_sessions, auth_identities, auth_magic_links
  * (by email), user_profiles, user_preferences, user_saved_recipes,
  * user_subscriptions, user_data_snapshots, user_meal_history, users.
+ * user_schedules / user_schedule_overrides / user_meal_slot_preferences /
+ * user_shift_plans / user_shift_plan_slots / user_shift_shopping_lists go via
+ * ON DELETE CASCADE from users.
  *
  * DELETED/NULLED from SQLite (unchanged from pre-migration behavior):
  * shift_reminder_sends, hall_memberships, hall_canteen_dues_members,

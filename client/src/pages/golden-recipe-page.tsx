@@ -12,10 +12,7 @@ import { SiteFooter } from "@/components/site-footer";
 
 import { Button } from "@/components/ui/button";
 
-import {
-  getHallFavoritesCount,
-  HALL_FAVORITES_CHANGED_EVENT,
-} from "@/lib/hall-favorites-store";
+import { getSavedCount, SAVED_MEALS_CHANGED_EVENT } from "@/lib/saved-meals";
 import { HallFavoriteButton } from "@/components/hall-favorites/hall-favorite-button";
 import { catalogVoteOptions } from "@/lib/hall-vote-recipes";
 import { HallVoteFlow } from "@/components/hall-vote-flow";
@@ -394,7 +391,7 @@ export default function GoldenRecipePageView() {
 
   const slug = params?.slug ?? "";
 
-  const [favCount, setFavCount] = useState(() => getHallFavoritesCount());
+  const [favCount, setFavCount] = useState(() => getSavedCount());
   const [shoppingOpen, setShoppingOpen] = useState(false);
   const [addedToMyList, setAddedToMyList] = useState(false);
   const { addRecipe: addRecipeToMyShoppingList } = useShoppingSession();
@@ -417,10 +414,10 @@ export default function GoldenRecipePageView() {
   });
 
   useEffect(() => {
-    const sync = () => setFavCount(getHallFavoritesCount());
+    const sync = () => setFavCount(getSavedCount());
     sync();
-    window.addEventListener(HALL_FAVORITES_CHANGED_EVENT, sync);
-    return () => window.removeEventListener(HALL_FAVORITES_CHANGED_EVENT, sync);
+    window.addEventListener(SAVED_MEALS_CHANGED_EVENT, sync);
+    return () => window.removeEventListener(SAVED_MEALS_CHANGED_EVENT, sync);
   }, []);
 
 

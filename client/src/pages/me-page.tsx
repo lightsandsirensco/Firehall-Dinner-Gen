@@ -1,4 +1,4 @@
-import { CreditCard, Heart, History, Package, Settings, ShoppingCart, User } from "lucide-react";
+import { CalendarDays, CreditCard, Heart, History, Package, Settings, ShoppingCart, User } from "lucide-react";
 import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { HubTile } from "@/components/app-shell/hub-tile";
 import { WorkflowExit } from "@/components/app-shell/workflow-exit";
@@ -50,6 +50,19 @@ export default function MePage() {
             </span>
           </button>
         ) : null}
+
+        <section className="space-y-2" aria-labelledby="me-shifts">
+          <h2 id="me-shifts" className={cn(app.eyebrowMuted, "px-0.5")}>
+            Shifts
+          </h2>
+          <HubTile
+            href="/me/schedule"
+            icon={CalendarDays}
+            title="My Schedule"
+            description="Your rotation and upcoming shifts"
+            testId="me-schedule"
+          />
+        </section>
 
         <section className="space-y-2" aria-labelledby="me-cook">
           <h2 id="me-cook" className={cn(app.eyebrowMuted, "px-0.5")}>

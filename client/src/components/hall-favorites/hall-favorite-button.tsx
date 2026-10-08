@@ -6,15 +6,13 @@ import {
   addHallFavorite,
   removeHallFavorite,
   isHallFavorite,
-  canAddHallFavorite,
+  getHallFavoritesCount,
   HALL_FAVORITES_CHANGED_EVENT,
 } from "@/lib/hall-favorites-store";
 import { approvedCatalogRecipePath } from "@shared/approved-catalog";
 import { trackHallFavoriteAdded, trackHallFavoriteRemoved } from "@/lib/analytics";
 import { hapticLight, hapticSuccess } from "@/lib/haptics";
 import { cn } from "@/lib/utils";
-import { useToast } from "@/hooks/use-toast";
-import { getHallFavoritesCount } from "@/lib/hall-favorites-store";
 
 interface HallFavoriteButtonProps {
   slug: string;
@@ -36,7 +34,6 @@ export function HallFavoriteButton({
   size = "default",
 }: HallFavoriteButtonProps) {
   const [pinned, setPinned] = useState(() => isHallFavorite(slug));
-  const { toast } = useToast();
 
   useEffect(() => {
     const sync = () => setPinned(isHallFavorite(slug));
@@ -61,14 +58,6 @@ export function HallFavoriteButton({
       return;
     }
 
-    if (!canAddHallFavorite()) {
-      toast({
-        title: HALL_FAVORITES.classicsFull,
-        variant: "destructive",
-      });
-      return;
-    }
-
     const result = addHallFavorite({
       slug,
       title,
@@ -87,11 +76,6 @@ export function HallFavoriteButton({
       });
     } else if (result.reason === "duplicate") {
       setPinned(true);
-    } else if (result.reason === "full") {
-      toast({
-        title: HALL_FAVORITES.classicsFull,
-        variant: "destructive",
-      });
     }
   };
 

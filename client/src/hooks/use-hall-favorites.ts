@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import {
   getHallFavorites,
-  getHallFavoritesCount,
   isHallFavorite,
-  canAddHallFavorite,
   HALL_FAVORITES_CHANGED_EVENT,
 } from "@/lib/hall-favorites-store";
 import { getMostCookedMeals } from "@/lib/hall-history-store";
@@ -22,14 +20,13 @@ export function useHallFavorites() {
     };
   }, []);
 
-  return useMemo(
-    () => ({
-      favorites: getHallFavorites(),
-      count: getHallFavoritesCount(),
+  return useMemo(() => {
+    const favorites = getHallFavorites();
+    return {
+      favorites,
+      count: favorites.length,
       isFavorite: isHallFavorite,
-      canAdd: canAddHallFavorite(),
       mostCooked: getMostCookedMeals(),
-    }),
-    [version],
-  );
+    };
+  }, [version]);
 }

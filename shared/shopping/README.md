@@ -57,7 +57,17 @@ Everything in `shared/shopping/` is pure TypeScript with no DOM or Node APIs, so
 
 ### Combining duplicate ingredients across units
 
-When two recipes contribute the same canonical ingredient in the *same* unit, `IngredientNormalizer.mergeContributions` sums the values ("2 lb" + "1 lb" → "3 lb"). When units differ, it shows both instead of guessing a conversion ("2 lb + 3 cans") — this keeps the list honest rather than silently wrong.
+Quantities are parsed by `quantity-parser.ts` (units in the `unit` field *or* embedded in `quantity` like `"3.5 lb"`; ranges `1-2` / `1–2` / `1 to 2`; fractions) and units are canonicalized by `units.ts`. Contributions are then merged per unit family:
+
+- **Same unit** → exact sum ("2 lb" + "1 lb" → "3 lb").
+- **Same family, different units** → exact conversion, rounded *up* for purchase: volume (tsp, tbsp, cup, fl oz, ml, L) and mass (oz, lb, g, kg). "1 tsp" + "1 tbsp" → "1.5 tbsp".
+- **Different families or other units** → shown side by side, never coerced ("2 cups + 8 oz", "2 cans (15 oz) + 1 can (28 oz)"). There is no density (mass ↔ volume) conversion.
+- **Ranges** keep both bounds (`contribution.min` / `value`); the label shows the range ("2–3 cups") and `value` (the upper bound) is the purchase amount.
+- **Count**: `count`, bare numbers, `egg(s)`, and size words (`large`) merge as one count.
+
+Stored `quantityLabel` / `quantities` use the units the recipes were written in. `formatShoppingItemQuantity(item, "us" | "metric")` renders the same contributions in a measurement system for display; manual items always show exactly what was typed.
+
+Optional ingredients (`optional: true`, `"(optional)"` in the name, or notes starting with "optional") are excluded by `isOptionalIngredient` for every entry point and recorded in `list.excludedOptional`. Pantry lookups also consult `staple-aliases.ts` ("Kosher Salt" is covered by a "Salt" pantry entry) and require every part of a compound line ("Kosher Salt & Black Pepper") to be covered. `persistence.ts` validates and restores sessions, history, undo stacks, and pantries from storage.
 
 ## Pantry Intelligence (Sprint 2.2)
 
@@ -98,12 +108,16 @@ This is a **personal, device-local** feature — it works for any visitor buildi
 
 **Undo** is a bounded (20-deep) stack of full prior `ShoppingSession` snapshots kept alongside the session in storage. The hook pushes a snapshot before every mutating call and pops it on `undo()` — simple, always correct, and easy to reason about compared to per-field undo logic.
 
+### Shift shopping list (account-synced)
+
+"Shop for this shift" (`/shift-planner/shop`) builds one list from every planned meal of the user's current/next shift — each slot's recipe at that slot's crew size; skipped and BYO meals excluded. It is this engine, not a copy: `shared/shift-plan/shopping.ts` only picks the recipes and applies list actions with these service functions. The session is stored server-side in `user_shift_shopping_lists` (one row per user, keyed to the source plan's `shift_key`) with a bounded undo stack and the device pantry it was last matched with, so it syncs across devices for every signed-in user (no Premium gate). Tests: `npm run test:shift-shopping` (real catalog recipes).
+
 ## Relationship to other shopping features (do not confuse these)
 
 | Feature | Scope | Status |
 |---|---|---|
-| `client/src/lib/shopping-list.ts` + `shopping-list-modal.tsx` | Ephemeral, single-recipe list shown in a dialog (copy/print/email). | Existing — untouched by this sprint. |
-| **This engine** (`shared/shopping/*`, `/me/shopping-list`) | Persistent, multi-recipe, normalized list for any user, on this device. | New — Sprint 2.1. |
+| `client/src/lib/shopping-list.ts` + `shopping-list-modal.tsx` | Ephemeral, single-recipe list shown in a dialog (copy/print/email). | **Legacy** — no new callers; migrate the modal later. |
+| **This engine** (`shared/shopping/*`, `/me/shopping-list`, Shift Planner grocery list) | Persistent, multi-recipe, normalized list for any user, on this device. | **Canonical** — all planner / Premium shopping work targets this. |
 | `server/hall-shopping-list/*` ("The Run") | Hall-Pro, multi-member, server-persisted shared list for a fire hall. | Existing, separate feature. |
 | `review/smart-shopping-engine.md` (design only) | Hall Ops purchasing *intelligence* (inventory pars, recurring rules, retailers, approval workflow) — a much larger, not-yet-approved system that would eventually feed "The Run". | Design doc, not implemented. |
 

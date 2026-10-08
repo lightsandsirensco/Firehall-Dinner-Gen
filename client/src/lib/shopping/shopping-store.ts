@@ -8,11 +8,14 @@
  */
 
 import {
-  SHOPPING_SCHEMA_VERSION,
-  PANTRY_SCHEMA_VERSION,
   createShoppingSession,
   createEmptyHistory,
   createPantryProfile,
+  restorePantryProfile,
+  restoreShoppingHistory,
+  restoreShoppingSession,
+  restoreUndoStack,
+  serializeShoppingSession,
   type ShoppingSession,
   type ShoppingHistory,
   type PantryProfile,
@@ -52,15 +55,15 @@ function writeJson(key: string, value: unknown): void {
 }
 
 export function getShoppingSession(): ShoppingSession {
-  const stored = readJson<ShoppingSession>(SESSION_KEY);
-  if (stored?.schemaVersion === SHOPPING_SCHEMA_VERSION && Array.isArray(stored.recipes)) {
-    return stored;
-  }
-  return createShoppingSession();
+  return restoreShoppingSession(readJson<unknown>(SESSION_KEY)) ?? createShoppingSession();
 }
 
 export function saveShoppingSession(session: ShoppingSession): void {
-  writeJson(SESSION_KEY, session);
+  try {
+    localStorage.setItem(SESSION_KEY, serializeShoppingSession(session));
+  } catch {
+    /* quota / private mode — fail silently, in-memory state still works this tab */
+  }
   dispatchChanged();
 }
 
@@ -72,11 +75,7 @@ export function startNewShoppingSession(): ShoppingSession {
 }
 
 export function getShoppingHistory(): ShoppingHistory {
-  const stored = readJson<ShoppingHistory>(HISTORY_KEY);
-  if (stored?.schemaVersion === SHOPPING_SCHEMA_VERSION && Array.isArray(stored.entries)) {
-    return stored;
-  }
-  return createEmptyHistory();
+  return restoreShoppingHistory(readJson<unknown>(HISTORY_KEY)) ?? createEmptyHistory();
 }
 
 export function saveShoppingHistory(history: ShoppingHistory): void {
@@ -85,11 +84,7 @@ export function saveShoppingHistory(history: ShoppingHistory): void {
 }
 
 export function getPantryProfile(): PantryProfile {
-  const stored = readJson<PantryProfile>(PANTRY_KEY);
-  if (stored?.schemaVersion === PANTRY_SCHEMA_VERSION && stored.items && typeof stored.items === "object") {
-    return stored;
-  }
-  return createPantryProfile();
+  return restorePantryProfile(readJson<unknown>(PANTRY_KEY)) ?? createPantryProfile();
 }
 
 export function savePantryProfile(profile: PantryProfile): void {
@@ -104,8 +99,7 @@ export function resetPantryProfile(): PantryProfile {
 }
 
 export function getUndoStack(): ShoppingSession[] {
-  const stored = readJson<ShoppingSession[]>(UNDO_KEY);
-  return Array.isArray(stored) ? stored : [];
+  return restoreUndoStack(readJson<unknown>(UNDO_KEY));
 }
 
 export function saveUndoStack(stack: ShoppingSession[]): void {

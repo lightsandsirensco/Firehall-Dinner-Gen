@@ -14,10 +14,15 @@ import { requireAuth, type AuthedRequest } from "../auth/auth-middleware.js";
 import { logError } from "../logger.js";
 import { hasFeature } from "../../shared/billing/types.js";
 import { resolveUserBilling } from "../billing/store.js";
-import { mealHistoryCreateSchema, mealHistoryFeedbackSchema } from "../../shared/meal-history/schema.js";
-import type { MealHistoryListResponse } from "../../shared/meal-history/types.js";
+import {
+  mealHistoryCreateSchema,
+  mealHistoryFeedbackSchema,
+  mealHistoryImportSchema,
+} from "../../shared/meal-history/schema.js";
+import type { MealHistoryImportResponse, MealHistoryListResponse } from "../../shared/meal-history/types.js";
 import {
   deleteMealHistoryEntryForUser,
+  importMealHistoryForUser,
   initMealHistoryStore,
   listMealHistoryForUser,
   recordMealCookedForUser,
@@ -74,8 +79,8 @@ export function registerMealHistoryRoutes(app: Express): void {
         return res.status(400).json({ message: "Invalid recipe" });
       }
 
-      const { recipe_slug, ...context } = parsed.data;
-      const result = await recordMealCookedForUser(userId, recipe_slug, context);
+      const { recipe_slug, client_entry_id, ...context } = parsed.data;
+      const result = await recordMealCookedForUser(userId, recipe_slug, context, client_entry_id);
       if (!result.ok) {
         return res.status(400).json({ message: "Recipe not found" });
       }
@@ -90,6 +95,47 @@ export function registerMealHistoryRoutes(app: Express): void {
       return res.status(500).json({ message: "Failed to record cooked meal" });
     }
   });
+
+  // Backfill device-local cooked entries into the canonical table. Idempotent
+  // (keyed by client_entry_id), insert-only, same `meal_memory` gate as a
+  // live write. Non-entitled users get `entitled: false` and nothing is
+  // written, so the client keeps its local copy and retries after upgrade.
+  app.post(
+    "/api/meal-history/import",
+    requireCsrf,
+    requireAuth,
+    async (req: AuthedRequest, res: Response) => {
+      try {
+        await ensureStore();
+        const userId = req._authUserId!;
+        const billing = await resolveUserBilling(userId);
+        if (!hasFeature(billing.features, "meal_memory")) {
+          const response: MealHistoryImportResponse = { entitled: false, imported: 0, duplicates: 0, skipped: 0 };
+          return res.json(response);
+        }
+
+        const parsed = mealHistoryImportSchema.safeParse(req.body);
+        if (!parsed.success) {
+          return res.status(400).json({ message: "Invalid history import" });
+        }
+
+        const result = await importMealHistoryForUser(userId, parsed.data.entries);
+        if (!result.ok) {
+          return res.status(503).json({ message: "History import is not available yet" });
+        }
+        const response: MealHistoryImportResponse = {
+          entitled: true,
+          imported: result.imported,
+          duplicates: result.duplicates,
+          skipped: result.skipped,
+        };
+        return res.json(response);
+      } catch (err) {
+        logError("meal-history", "import failed", err);
+        return res.status(500).json({ message: "Failed to import meal history" });
+      }
+    },
+  );
 
   // Post-meal crew feedback — a partial update onto a history row the user
   // already owns. Every field optional; safe to call multiple times to edit

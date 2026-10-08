@@ -94,9 +94,20 @@ export interface SavedMealLike {
   recipe: unknown;
 }
 
-export function mergeSavedMeals(local: SavedMealLike[], remote: SavedMealLike[]): SavedMealLike[] {
+/**
+ * Union by id, newest savedAt wins. `removedAt` (id → ISO) drops any copy
+ * saved at or before the user removed it, so an un-save on this device is
+ * not resurrected by the server copy; a later re-save still wins.
+ */
+export function mergeSavedMeals(
+  local: SavedMealLike[],
+  remote: SavedMealLike[],
+  removedAt: Record<string, string> = {},
+): SavedMealLike[] {
   const byId = new Map<string, SavedMealLike>();
   for (const meal of [...remote, ...local]) {
+    const removed = removedAt[meal.id];
+    if (removed && new Date(meal.savedAt).getTime() <= new Date(removed).getTime()) continue;
     const existing = byId.get(meal.id);
     if (!existing || new Date(meal.savedAt).getTime() >= new Date(existing.savedAt).getTime()) {
       byId.set(meal.id, meal);

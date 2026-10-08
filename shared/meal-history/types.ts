@@ -122,6 +122,14 @@ export interface MealHistoryCreateResponse {
   entry: MealHistoryEntry;
 }
 
+/** POST /api/meal-history/import — `entitled: false` means nothing was written (retry after upgrade). */
+export interface MealHistoryImportResponse {
+  entitled: boolean;
+  imported: number;
+  duplicates: number;
+  skipped: number;
+}
+
 export interface MealHistoryFeedbackResponse {
   ok: true;
   entry: MealHistoryEntry;

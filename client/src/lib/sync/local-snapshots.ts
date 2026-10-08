@@ -3,8 +3,12 @@ import type { HallFavoritesSnapshot } from "@shared/hall-favorites/types";
 import type { HallHistorySnapshot, HallProfile } from "@shared/hall-profile/types";
 import type { WheelStreakSnapshot } from "@shared/wheel-streak/types";
 import type { SyncSnapshotKey, SyncSnapshotRow } from "@shared/sync/types";
-import { getSavedMeals, type SavedMeal } from "@/lib/saved-meals";
-import { getHallFavoritesSnapshot, HALL_FAVORITES_CHANGED_EVENT } from "@/lib/hall-favorites-store";
+import { getSavedMeals, writeSavedMeals, SAVED_MEALS_CHANGED_EVENT, type SavedMeal } from "@/lib/saved-meals";
+import {
+  getHallFavoritesSnapshot,
+  importLegacyHallFavorites,
+  HALL_FAVORITES_CHANGED_EVENT,
+} from "@/lib/hall-favorites-store";
 import {
   getHallHistorySnapshot,
   HALL_HISTORY_CHANGED_EVENT,
@@ -15,10 +19,8 @@ import { getWheelStreakSnapshot, WHEEL_STREAK_CHANGED_EVENT } from "@/lib/wheel-
 const FAVORITES_KEY = "firehall_hall_favorites_v1";
 const HISTORY_KEY = "firehall_hall_history_v1";
 const WHEEL_KEY = "firehall_wheel_streak_v1";
-const SAVED_KEY = "firehall_saved_meals";
-
 export const SYNC_CHANGE_EVENTS = [
-  "favorites-changed",
+  SAVED_MEALS_CHANGED_EVENT,
   HALL_FAVORITES_CHANGED_EVENT,
   HALL_HISTORY_CHANGED_EVENT,
   WHEEL_STREAK_CHANGED_EVENT,
@@ -55,12 +57,7 @@ export function getLocalSavedMeals(): SavedMeal[] {
 }
 
 export function applySavedMeals(meals: SavedMeal[]): void {
-  try {
-    localStorage.setItem(SAVED_KEY, JSON.stringify(meals));
-    window.dispatchEvent(new Event("favorites-changed"));
-  } catch {
-    /* quota */
-  }
+  writeSavedMeals(meals);
 }
 
 function writeJson(key: string, value: unknown, eventName?: string): void {
@@ -72,8 +69,10 @@ function writeJson(key: string, value: unknown, eventName?: string): void {
   }
 }
 
+/** Legacy snapshot is kept verbatim; any newly-synced slugs are imported into saved meals. */
 export function applyHallFavoritesSnapshot(snapshot: HallFavoritesSnapshot): void {
   writeJson(FAVORITES_KEY, snapshot, HALL_FAVORITES_CHANGED_EVENT);
+  importLegacyHallFavorites();
 }
 
 export function applyHallHistorySnapshot(snapshot: HallHistorySnapshot): void {

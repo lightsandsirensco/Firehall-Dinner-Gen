@@ -26,6 +26,25 @@ import {
   type MealLogContext,
 } from "../../shared/meal-history/types.js";
 
+let clientEntryColumnReady: boolean | null = null;
+
+/**
+ * Whether 0011_meal_history_client_entry_id has been applied. Postgres
+ * migrations run out-of-band (`npm run db:pg:migrate`), so live writes must
+ * keep working on a database that has not been migrated yet.
+ */
+export async function hasClientEntryIdColumn(): Promise<boolean> {
+  if (clientEntryColumnReady === true) return true;
+  const row = await pgOne<{ present: boolean }>(
+    `SELECT EXISTS (
+       SELECT 1 FROM information_schema.columns
+       WHERE table_name = 'user_meal_history' AND column_name = 'client_entry_id'
+     ) AS present`,
+  );
+  clientEntryColumnReady = row?.present === true;
+  return clientEntryColumnReady;
+}
+
 export async function initMealHistoryStore(): Promise<void> {
   await verifyPgConnection();
 }
@@ -141,6 +160,7 @@ export async function recordMealCookedForUser(
   userId: string,
   recipeSlugRaw: string,
   context: MealLogContext = {},
+  clientEntryId?: string,
 ): Promise<RecordMealCookedResult> {
   const recipeSlug = recipeSlugRaw.trim().toLowerCase();
   if (!isApprovedCatalogSlug(recipeSlug)) {
@@ -149,6 +169,15 @@ export async function recordMealCookedForUser(
   const isHighProtein = context.is_high_protein === undefined ? null : context.is_high_protein ? 1 : 0;
   const isHighFiber = context.is_high_fiber === undefined ? null : context.is_high_fiber ? 1 : 0;
   const costTrustworthy = context.cost === undefined ? null : context.cost.trustworthy ? 1 : 0;
+  const storeClientId = !!clientEntryId && (await hasClientEntryIdColumn());
+
+  if (storeClientId) {
+    const sameEvent = await pgOne<MealHistoryRow>(
+      `SELECT * FROM user_meal_history WHERE user_id = $1 AND client_entry_id = $2`,
+      [userId, clientEntryId],
+    );
+    if (sameEvent) return { ok: true, entry: toEntry(sameEvent), deduped: true };
+  }
 
   // Idempotent double-click guard: if the exact same user+recipe was just
   // recorded a few seconds ago, return that same row instead of inserting
@@ -166,32 +195,123 @@ export async function recordMealCookedForUser(
     }
   }
 
-  const row = await pgOne<MealHistoryRow>(
-    `INSERT INTO user_meal_history (
-       user_id, recipe_slug, is_high_protein, is_high_fiber,
-       hall_id, meal_occasion, crew_size, nutrition_goal,
-       cost_total_min, cost_total_max, cost_per_person_min, cost_per_person_max, cost_trustworthy
-     )
-     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING *`,
-    [
-      userId,
-      recipeSlug,
-      isHighProtein,
-      isHighFiber,
-      context.hall_id ?? null,
-      context.meal_occasion ?? null,
-      context.crew_size ?? null,
-      context.nutrition_goal ?? null,
-      context.cost?.totalMin ?? null,
-      context.cost?.totalMax ?? null,
-      context.cost?.perPersonMin ?? null,
-      context.cost?.perPersonMax ?? null,
-      costTrustworthy,
-    ],
-  );
+  const values = [
+    userId,
+    recipeSlug,
+    isHighProtein,
+    isHighFiber,
+    context.hall_id ?? null,
+    context.meal_occasion ?? null,
+    context.crew_size ?? null,
+    context.nutrition_goal ?? null,
+    context.cost?.totalMin ?? null,
+    context.cost?.totalMax ?? null,
+    context.cost?.perPersonMin ?? null,
+    context.cost?.perPersonMax ?? null,
+    costTrustworthy,
+  ];
+  const row = storeClientId
+    ? await pgOne<MealHistoryRow>(
+        `INSERT INTO user_meal_history (
+           user_id, recipe_slug, is_high_protein, is_high_fiber,
+           hall_id, meal_occasion, crew_size, nutrition_goal,
+           cost_total_min, cost_total_max, cost_per_person_min, cost_per_person_max, cost_trustworthy,
+           client_entry_id, source
+         )
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, 'live') RETURNING *`,
+        [...values, clientEntryId],
+      )
+    : await pgOne<MealHistoryRow>(
+        `INSERT INTO user_meal_history (
+           user_id, recipe_slug, is_high_protein, is_high_fiber,
+           hall_id, meal_occasion, crew_size, nutrition_goal,
+           cost_total_min, cost_total_max, cost_per_person_min, cost_per_person_max, cost_trustworthy
+         )
+         VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13) RETURNING *`,
+        values,
+      );
 
   invalidateHistorySignalsCache(userId);
   return { ok: true, entry: toEntry(row!), deduped: false };
+}
+
+/**
+ * Rows recorded live before client_entry_id existed have no key, so an
+ * imported local entry matching the same recipe within this window of a
+ * keyless row is treated as that same cooked event.
+ */
+export const IMPORT_MATCH_WINDOW_MS = 15 * 60_000;
+const IMPORT_EARLIEST_MS = Date.UTC(2020, 0, 1);
+const IMPORT_FUTURE_SKEW_MS = 24 * 60 * 60_000;
+
+export interface MealHistoryImportEntry {
+  client_entry_id: string;
+  recipe_slug: string;
+  cooked_at: string;
+  crew_size?: number;
+}
+
+export type ImportMealHistoryResult =
+  | { ok: true; imported: number; duplicates: number; skipped: number }
+  | { ok: false; reason: "not_migrated" };
+
+/**
+ * Idempotent import of device-local cooked events into the canonical table.
+ * Never updates or deletes existing rows. Each entry is inserted at most once
+ * per (user_id, client_entry_id); legacy keyless rows are matched by recipe +
+ * time window. Unknown slugs and implausible timestamps are skipped.
+ */
+export async function importMealHistoryForUser(
+  userId: string,
+  entries: MealHistoryImportEntry[],
+): Promise<ImportMealHistoryResult> {
+  if (!(await hasClientEntryIdColumn())) return { ok: false, reason: "not_migrated" };
+
+  let imported = 0;
+  let duplicates = 0;
+  let skipped = 0;
+  const now = Date.now();
+
+  for (const entry of entries) {
+    const slug = entry.recipe_slug.trim().toLowerCase();
+    const cookedMs = new Date(entry.cooked_at).getTime();
+    if (
+      !isApprovedCatalogSlug(slug) ||
+      !Number.isFinite(cookedMs) ||
+      cookedMs < IMPORT_EARLIEST_MS ||
+      cookedMs > now + IMPORT_FUTURE_SKEW_MS
+    ) {
+      skipped += 1;
+      continue;
+    }
+    const cookedAt = new Date(cookedMs).toISOString();
+
+    const legacyMatch = await pgOne<{ id: number }>(
+      `SELECT id FROM user_meal_history
+       WHERE user_id = $1 AND recipe_slug = $2 AND client_entry_id IS NULL
+         AND cooked_at BETWEEN $3::timestamptz - make_interval(secs => $4)
+                           AND $3::timestamptz + make_interval(secs => $4)
+       LIMIT 1`,
+      [userId, slug, cookedAt, IMPORT_MATCH_WINDOW_MS / 1000],
+    );
+    if (legacyMatch) {
+      duplicates += 1;
+      continue;
+    }
+
+    const inserted = await pgOne<{ id: number }>(
+      `INSERT INTO user_meal_history (user_id, recipe_slug, cooked_at, crew_size, client_entry_id, source)
+       VALUES ($1, $2, $3, $4, $5, 'local_import')
+       ON CONFLICT (user_id, client_entry_id) WHERE client_entry_id IS NOT NULL DO NOTHING
+       RETURNING id`,
+      [userId, slug, cookedAt, entry.crew_size ?? null, entry.client_entry_id],
+    );
+    if (inserted) imported += 1;
+    else duplicates += 1;
+  }
+
+  if (imported > 0) invalidateHistorySignalsCache(userId);
+  return { ok: true, imported, duplicates, skipped };
 }
 
 /** Most recent cooked events for a user, newest first — for account UI. */

@@ -13,7 +13,7 @@ import {
   hallHasProStatus,
   isHallProFeature,
   resolveBillingFeature,
-  subscriptionGrantsAccess,
+  subscriptionIsEntitled,
   type BillingFeature,
   type HallSubscription,
   type PlanCatalogEntry,
@@ -409,7 +409,8 @@ export async function resolveUserBilling(
   const sub = await getUserSubscription(userId);
   // A Stripe subscription in its `past_due` dunning grace period still grants
   // access — only a fully lapsed/cancelled subscription falls back to free.
-  const subscribedPlan = sub && subscriptionGrantsAccess(sub.status) ? sub.plan_id : ("personal" as PlanId);
+  // Non-Stripe grants additionally end at `expires_at`.
+  const subscribedPlan = sub && subscriptionIsEntitled(sub) ? sub.plan_id : ("personal" as PlanId);
 
   const effective = await resolvePersonalPlanId(subscribedPlan, false);
   const hallSubscriptions = listUserHallSubscriptions(userId);
@@ -611,6 +612,7 @@ export async function adminSetUserPlan(
        plan_id = excluded.plan_id,
        status = excluded.status,
        source = 'admin_grant',
+       expires_at = NULL,
        updated_at = now()`,
     [userId, planId, status],
   );

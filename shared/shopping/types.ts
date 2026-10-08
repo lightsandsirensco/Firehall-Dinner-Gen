@@ -60,9 +60,36 @@ export interface ShoppingRecipeInput {
 export interface ShoppingItemContribution {
   recipeSlug: string;
   recipeTitle: string;
+  /** Purchase quantity in `unit` — the upper bound when the recipe gave a range. */
   value: number;
+  /** Range lower bound ("1–2 tbsp" -> 1); absent for single quantities. */
+  min?: number;
+  /** Canonical unit ("tbsp", "lb", "count", "can (15 oz)"); "" for bare numbers. */
   unit: string;
+  /** The quantity exactly as the (scaled) recipe wrote it, e.g. "1–2 Tbsp" or "to taste". */
   rawQuantity: string;
+}
+
+/**
+ * A merged, purchase-ready amount for one compatible unit family. Volume and
+ * mass totals are converted within their own family only; count and other
+ * units (cans, cloves, bunches…) sum only with an identical unit.
+ */
+export interface ShoppingQuantity {
+  family: "volume" | "mass" | "count" | "other";
+  unit: string;
+  /** Purchase amount (upper bound of any ranges). */
+  value: number;
+  /** Lower bound when any contribution was a range. */
+  min?: number;
+}
+
+/** An optional recipe ingredient deliberately left off the list (shown nowhere as "must buy"). */
+export interface ExcludedOptionalIngredient {
+  recipeSlug: string;
+  recipeTitle: string;
+  name: string;
+  canonicalKey: string;
 }
 
 /** A recipe currently feeding this shopping session. */
@@ -88,6 +115,8 @@ export interface ShoppingListItem {
   quantityLabel: string;
   /** Per-recipe breakdown that produced quantityLabel — empty for manual items. */
   contributions: ShoppingItemContribution[];
+  /** Structured purchase amounts behind quantityLabel (recipe-written units) — absent for manual items. */
+  quantities?: ShoppingQuantity[];
   notes?: string;
   isManual: boolean;
   checked: boolean;
@@ -102,6 +131,8 @@ export interface ShoppingListItem {
 export interface ShoppingList {
   items: ShoppingListItem[];
   generatedAt: string;
+  /** Optional ingredients skipped while building the list, so a UI can mention them. */
+  excludedOptional?: ExcludedOptionalIngredient[];
 }
 
 export interface ShoppingSession {

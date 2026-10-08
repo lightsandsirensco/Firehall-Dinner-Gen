@@ -404,7 +404,7 @@ export function WheelReveal({
                   className="text-xs font-semibold text-muted-foreground hover:text-foreground hover:underline min-h-8"
                   data-testid="button-wheel-pin"
                 >
-                  {pinned ? "Pinned" : "Pin classic"}
+                  {pinned ? "Saved" : "Save"}
                 </button>
               </div>
             </div>

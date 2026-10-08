@@ -5,10 +5,7 @@ import { RecipeCard } from "@/components/recipe-card";
 import { FavoriteMealCard } from "@/components/mobile/favorite-meal-card";
 import { OurHallClassicsSection } from "@/components/hall-favorites/our-hall-classics-section";
 import { getSavedMeals, removeMeal, type SavedMeal } from "@/lib/saved-meals";
-import {
-  getHallFavoritesCount,
-  migrateCatalogSavedMealsToHallFavorites,
-} from "@/lib/hall-favorites-store";
+import { getHallFavoritesCount } from "@/lib/hall-favorites-store";
 import { useHallFavorites } from "@/hooks/use-hall-favorites";
 import { Heart } from "lucide-react";
 import { Link } from "wouter";
@@ -35,7 +32,6 @@ export default function FavoritesPage() {
   }, []);
 
   useEffect(() => {
-    migrateCatalogSavedMealsToHallFavorites(approvedCatalogRecipePath);
     loadMeals();
     trackHallFavoritesViewed({ favorite_count: getHallFavoritesCount() });
     const handler = () => loadMeals();

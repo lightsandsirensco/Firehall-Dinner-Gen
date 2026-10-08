@@ -155,7 +155,7 @@ export const SIMPLIFIED_ALLERGEN_LABELS: Record<SimplifiedAllergen, string> = {
 };
 
 /** Maps each hard allergen exclusion to the matching canonical DietaryFilterKey. */
-const ALLERGEN_TO_DIETARY_FLAG: Record<SimplifiedAllergen, DietaryFilterKey> = {
+export const ALLERGEN_TO_DIETARY_FLAG: Record<SimplifiedAllergen, DietaryFilterKey> = {
   dairy: "dairyFree",
   gluten: "glutenFree",
   nuts: "nutFree",

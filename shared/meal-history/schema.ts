@@ -17,14 +17,20 @@ const costSnapshotSchema = z.object({
  * goal, the recipe's own RecipeTags booleans, an already-computed cost
  * estimate). Never required, never fabricated when absent.
  */
+const recipeSlugSchema = z
+  .string()
+  .trim()
+  .toLowerCase()
+  .min(1)
+  .max(140)
+  .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Invalid recipe identifier");
+
+/** Stable id of the device-local history entry for the same cooked event (idempotency key). */
+const clientEntryIdSchema = z.string().trim().min(1).max(80).regex(/^[A-Za-z0-9_-]+$/);
+
 export const mealHistoryCreateSchema = z.object({
-  recipe_slug: z
-    .string()
-    .trim()
-    .toLowerCase()
-    .min(1)
-    .max(140)
-    .regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "Invalid recipe identifier"),
+  recipe_slug: recipeSlugSchema,
+  client_entry_id: clientEntryIdSchema.optional(),
   is_high_protein: z.boolean().optional(),
   is_high_fiber: z.boolean().optional(),
   hall_id: z.string().trim().min(1).max(64).optional(),
@@ -32,6 +38,22 @@ export const mealHistoryCreateSchema = z.object({
   crew_size: z.number().int().min(1).max(200).optional(),
   nutrition_goal: z.string().trim().min(1).max(32).optional(),
   cost: costSnapshotSchema.optional(),
+});
+
+export const MEAL_HISTORY_IMPORT_MAX = 200;
+
+/** POST /api/meal-history/import body — device-local cooked entries to backfill. */
+export const mealHistoryImportSchema = z.object({
+  entries: z
+    .array(
+      z.object({
+        client_entry_id: clientEntryIdSchema,
+        recipe_slug: recipeSlugSchema,
+        cooked_at: z.string().min(1).max(40),
+        crew_size: z.number().int().min(1).max(200).optional(),
+      }),
+    )
+    .max(MEAL_HISTORY_IMPORT_MAX),
 });
 
 /** PATCH /api/meal-history/:id/feedback body — every field optional, partial updates allowed (skip everything but a star tap). */

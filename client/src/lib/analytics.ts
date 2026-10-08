@@ -319,6 +319,53 @@ export function trackProgressPageViewed(input?: { active_goal_count?: number }):
   trackProductEvent("progress_page_viewed", params);
 }
 
+export function trackScheduleSetupStarted(input: { mode: "create" | "edit" }): void {
+  trackEvent("schedule_setup_started", input);
+  trackProductEvent("schedule_setup_started", input);
+}
+
+export function trackScheduleSaved(input: {
+  created: boolean;
+  preset_id: string;
+  cycle_hours: number;
+  timezone: string;
+}): void {
+  const { created, ...params } = input;
+  const name = created ? "schedule_created" : "schedule_updated";
+  trackEvent(name, params);
+  trackProductEvent(name, params);
+}
+
+export function trackExtraShiftAdded(input: { hours: number }): void {
+  trackEvent("extra_shift_added", input);
+  trackProductEvent("extra_shift_added", input);
+}
+
+export function trackShiftOverrideCreated(input: { kind: "cancel" | "modify" }): void {
+  trackEvent("shift_override_created", input);
+  trackProductEvent("shift_override_created", input);
+}
+
+/** Shift Planner v2 — personal plan for the user's next scheduled shift. */
+type ShiftPlanEvent =
+  | "shift_viewed"
+  | "shift_plan_started"
+  | "shift_plan_autofilled"
+  | "shift_meal_selected"
+  | "shift_meal_swapped"
+  | "shift_meal_skipped"
+  | "shift_plan_completed"
+  | "shift_list_generated"
+  | "shift_list_opened"
+  | "shift_list_item_checked"
+  | "shift_list_manual_item_added";
+
+export function trackShiftPlanEvent(name: ShiftPlanEvent, params: Record<string, string | number>): void {
+  const withSurface = { surface: "shift_planner", ...params };
+  trackEvent(name, withSurface);
+  trackProductEvent(name, withSurface);
+}
+
 export function trackGoalCreated(input: { goal_type: string; target: number; period?: string }): void {
   const params = { goal_type: input.goal_type, target: input.target, ...(input.period ? { period: input.period } : {}) };
   trackEvent("goal_created", params);

@@ -6,6 +6,20 @@ import {
 } from "../shared/recipe-signature.js";
 import { sanitizeFoodLabelText, sanitizePromptStringList, sanitizeUserPromptText } from "./prompt-sanitize.js";
 import { sanitizeFoodPreferenceKeys } from "../shared/ingredient-preferences/definitions.js";
+import { normalizeGenerateFirehallCategory } from "../shared/firehall-categories.js";
+
+/** Pre-Zod coercion for generate bodies (legacy category ids, empty appliance list). */
+export function coerceGenerateRequestBody(body: unknown): unknown {
+  if (!body || typeof body !== "object") return body;
+  const next = { ...(body as Record<string, unknown>) };
+  const fc = normalizeGenerateFirehallCategory(next.firehall_category);
+  if (fc) next.firehall_category = fc;
+  else delete next.firehall_category;
+  if (Array.isArray(next.appliances) && next.appliances.length === 0) {
+    next.appliances = ["stove", "oven"];
+  }
+  return next;
+}
 
 /** Normalize generate body after Zod — strips injection patterns from prompt-bound fields. */
 export function sanitizeGenerateRequest(request: GenerateRequest): GenerateRequest {

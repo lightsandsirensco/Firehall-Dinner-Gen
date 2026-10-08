@@ -17,6 +17,30 @@ export function subscriptionGrantsAccess(status: SubscriptionStatus): boolean {
   return status === "active" || status === "trialing" || status === "past_due";
 }
 
+/**
+ * Whether a stored personal subscription row entitles the user right now.
+ *
+ * Stripe-sourced rows are governed by their webhook-driven `status` alone:
+ * Stripe advances `current_period_end` on renewal and moves a lapsed
+ * subscription to cancelled, while `expires_at` is never written for them
+ * (a stale value can survive from an earlier admin grant on the same row).
+ *
+ * Every other source (admin grants, self-select) has no webhook to revoke it,
+ * so a past `expires_at` ends access. A null `expires_at` means no end date;
+ * an unparseable one fails closed.
+ */
+export function subscriptionIsEntitled(
+  subscription: Pick<UserSubscription, "status"> & Partial<Pick<UserSubscription, "source" | "expires_at">>,
+  now: Date = new Date(),
+): boolean {
+  if (!subscriptionGrantsAccess(subscription.status)) return false;
+  if (subscription.source === "stripe") return true;
+  if (!subscription.expires_at) return true;
+  const expiresAtMs = Date.parse(subscription.expires_at);
+  if (Number.isNaN(expiresAtMs)) return false;
+  return expiresAtMs > now.getTime();
+}
+
 export const BILLING_FEATURES = [
   "generator",
   "wheel",

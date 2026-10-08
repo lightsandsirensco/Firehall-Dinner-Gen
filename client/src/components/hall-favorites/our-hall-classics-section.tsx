@@ -1,5 +1,4 @@
 import { HALL_FAVORITES } from "@/lib/brand-copy";
-import { MAX_HALL_CLASSICS } from "@shared/hall-favorites/types";
 import { HallClassicCard } from "@/components/hall-favorites/hall-classic-card";
 import { useHallFavorites } from "@/hooks/use-hall-favorites";
 import {
@@ -45,7 +44,7 @@ export function OurHallClassicsSection({
             {HALL_FAVORITES.ourClassics}
           </h2>
         </div>
-        <span className="text-sm text-muted-foreground tabular-nums">{count}/{MAX_HALL_CLASSICS}</span>
+        <span className="text-sm text-muted-foreground tabular-nums">{count}</span>
       </div>
       <p className="text-sm text-muted-foreground mb-4 max-w-prose">{HALL_FAVORITES.classicsHint}</p>
 
