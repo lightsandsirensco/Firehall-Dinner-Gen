@@ -8,15 +8,16 @@
  * computed client-side, and free users never reach the data-fetching path.
  */
 import { useEffect } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { useQuery } from "@tanstack/react-query";
 import { Lock, Sparkles } from "lucide-react";
 import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
 import { Button } from "@/components/ui/button";
 import { useAuth } from "@/lib/auth/context";
-import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
+import { useFeature } from "@/lib/billing/hooks";
 import { fetchInsights } from "@/lib/insights-api";
-import { trackInsightViewed, trackInsightsPageViewed, trackProFeatureClicked } from "@/lib/analytics";
+import { trackInsightViewed, trackInsightsPageViewed } from "@/lib/analytics";
+import { useProPaywall } from "@/components/billing/pro-paywall";
 import { ME_INSIGHTS } from "@/lib/brand-copy";
 import {
   INSIGHT_CATEGORIES,
@@ -40,8 +41,7 @@ function InsightRow({ insight }: { insight: Insight }) {
 export default function MeInsightsPage() {
   const { authenticated } = useAuth();
   const hasMealMemory = useFeature("meal_memory");
-  const [, setLocation] = useLocation();
-  const recordPaywall = useRecordPaywallView();
+  const { openProPaywall } = useProPaywall();
 
   const insightsQuery = useQuery({
     queryKey: ["/api/insights"],
@@ -99,11 +99,7 @@ export default function MeInsightsPage() {
             </p>
             <button
               type="button"
-              onClick={() => {
-                trackProFeatureClicked({ feature: "meal_memory", page: "/me/insights", logged_in: authenticated });
-                void recordPaywall("meal_memory", "me_insights");
-                setLocation("/me/subscription?feature=meal_memory");
-              }}
+              onClick={() => openProPaywall("meal_memory", "me_insights")}
               className="w-full rounded-md border border-border/40 bg-muted/20 px-3 py-2 text-left text-xs text-muted-foreground"
               data-testid="insights-locked"
             >

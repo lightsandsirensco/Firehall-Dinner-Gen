@@ -2,17 +2,26 @@
  * Firehall Meals — one true Home.
  *
  * Home is the marketing landing page at "/". The brand logo always returns
- * there, from every page. The in-app dashboard is "Tonight" (/tonight):
- * the shift's meal-planning command center — not a second Home.
+ * there, from every page.
  *
- * One product. Four in-app destinations:
- *   Tonight · Explore · Hall · Me
+ * Signed out:  Tonight · Explore · Me — the public Pick Tonight experience.
+ * Signed in:   Shift · Explore · List · Me — Shift (/shift) is the in-app home.
+ *
+ * /tonight stays as the "tonight's meal" detail (the pick + Cook Mode). For a
+ * signed-in user with nothing picked it hands off to Shift.
  */
 
 /** The one true Home — the landing page. Every logo links here. */
 export const HOME = "/" as const;
 
-export type AppTab = "tonight" | "explore" | "hall" | "me";
+export type AppTab = "tonight" | "shift" | "explore" | "list" | "hall" | "me";
+
+/** Signed-in home — the next/current shift. */
+export const SHIFT = "/shift" as const;
+/** Signed-in shopping — the current/next shift's list. */
+export const LIST = "/list" as const;
+/** Pick Tonight — the generator. */
+export const PICK_TONIGHT = "/generator" as const;
 
 /** @deprecated Dual workspaces removed — kept for soft compat */
 export type AppWorkspace = "meals" | "hall";
@@ -28,21 +37,43 @@ export type PublicTab = MealsTab;
 /** The in-app dashboard — Tonight's meal planning. Not Home. */
 export const TONIGHT = "/tonight" as const;
 
-/**
- * Hall/canteen is paused (private beta / coming soon) — deliberately left out
- * of the primary tab bar. `/hall` still exists and still renders its
- * smallest "coming soon" treatment; it's just not a promoted destination.
- */
-export const PRIMARY_TABS: Array<{
+export type PrimaryTab = {
   id: AppTab;
   label: string;
   href: string;
   testId: string;
-}> = [
+};
+
+/**
+ * Signed-out tabs. Hall/canteen is paused (private beta / coming soon) —
+ * deliberately left out of the primary tab bar. `/hall` still exists and
+ * still renders its smallest "coming soon" treatment.
+ */
+export const PRIMARY_TABS: PrimaryTab[] = [
   { id: "tonight", label: "Tonight", href: "/tonight", testId: "tab-tonight" },
   { id: "explore", label: "Explore", href: "/explore", testId: "tab-explore" },
   { id: "me", label: "Me", href: "/me", testId: "tab-me" },
 ];
+
+export const SIGNED_IN_TABS: PrimaryTab[] = [
+  { id: "shift", label: "Shift", href: SHIFT, testId: "tab-shift" },
+  { id: "explore", label: "Explore", href: "/explore", testId: "tab-explore" },
+  { id: "list", label: "List", href: LIST, testId: "tab-list" },
+  { id: "me", label: "Me", href: "/me", testId: "tab-me" },
+];
+
+export function primaryTabsFor(signedIn: boolean): PrimaryTab[] {
+  return signedIn ? SIGNED_IN_TABS : PRIMARY_TABS;
+}
+
+/** Where "back to the app" goes — Shift when signed in, Tonight otherwise. */
+export function appHomeFor(signedIn: boolean): string {
+  return signedIn ? SHIFT : TONIGHT;
+}
+
+export function appHomeLabelFor(signedIn: boolean): string {
+  return signedIn ? "Shift" : "Tonight";
+}
 
 /** @deprecated Use PRIMARY_TABS — Pick/Saved are actions, not peer tabs */
 export const MEALS_TABS = PRIMARY_TABS;
@@ -107,8 +138,13 @@ const SHELL_EXCLUDED_PREFIXES = [
   "/blog/",
 ];
 
+const SHIFT_PREFIXES = [SHIFT, "/shift-planner"];
+const LIST_PREFIXES = [LIST];
+
 const APP_SHELL_PREFIXES = [
   "/tonight",
+  ...SHIFT_PREFIXES,
+  ...LIST_PREFIXES,
   "/home", // legacy — redirects to /tonight
   "/onboarding",
   ...EXPLORE_PREFIXES,
@@ -137,8 +173,24 @@ export function resolveWorkspace(pathname: string): AppWorkspace | null {
 /** @deprecated Use resolveWorkspace */
 export const resolveExperience = resolveWorkspace;
 
-export function resolveAppTab(pathname: string): AppTab | null {
+const matchesPrefix = (pathname: string, prefixes: readonly string[]) =>
+  prefixes.some((p) => pathname === p || pathname.startsWith(`${p}/`) || pathname.startsWith(`${p}?`));
+
+export function resolveAppTab(pathname: string, signedIn = false): AppTab | null {
   if (!shouldShowAppShell(pathname)) return null;
+
+  if (signedIn) {
+    if (matchesPrefix(pathname, LIST_PREFIXES) || matchesPrefix(pathname, ["/shift-planner/shop"])) {
+      return "list";
+    }
+    // Tonight's meal and Pick Tonight are moments inside the shift, not peers of it.
+    if (
+      matchesPrefix(pathname, SHIFT_PREFIXES) ||
+      matchesPrefix(pathname, [TONIGHT, "/home", "/onboarding", PICK_TONIGHT])
+    ) {
+      return "shift";
+    }
+  }
 
   if (
     pathname === "/me" ||
@@ -163,19 +215,11 @@ export function resolveAppTab(pathname: string): AppTab | null {
     return "explore";
   }
 
-  if (
-    pathname.startsWith("/tonight") ||
-    pathname.startsWith("/home") ||
-    pathname.startsWith("/onboarding")
-  ) {
-    return "tonight";
-  }
-
-  return "tonight";
+  return signedIn ? "shift" : "tonight";
 }
 
-export function isTabActive(tabId: string, pathname: string): boolean {
-  return resolveAppTab(pathname) === tabId;
+export function isTabActive(tabId: string, pathname: string, signedIn = false): boolean {
+  return resolveAppTab(pathname, signedIn) === tabId;
 }
 
 /** In-app dashboard entry — Tonight. (The brand logo goes to HOME, not here.) */

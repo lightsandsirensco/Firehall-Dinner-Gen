@@ -11,10 +11,21 @@
  */
 import Stripe from "stripe";
 import type { SubscriptionStatus } from "../../shared/billing/types.js";
+import {
+  FOUNDING_ANNUAL_DISCOUNT_CENTS,
+  PRO_ANNUAL_PRICE_CENTS,
+  PRO_MONTHLY_PRICE_CENTS,
+  PRO_PRICE_CURRENCY,
+} from "../../shared/billing/pricing.js";
 
 export type BillingPeriod = "monthly" | "annual";
 
 let cachedClient: Stripe | null = null;
+
+/** Test-only: swap in a stand-in client (scripts/test-billing-e2e.ts). Pass null to restore the real one. */
+export function setStripeClientForTests(client: Stripe | null): void {
+  cachedClient = client;
+}
 
 /**
  * Boolean-only Stripe configuration status for the admin billing console —
@@ -26,6 +37,7 @@ export interface StripeConfigStatus {
   webhook_secret_configured: boolean;
   price_monthly_configured: boolean;
   price_annual_configured: boolean;
+  founding_coupon_configured: boolean;
   public_site_url_configured: boolean;
 }
 
@@ -35,6 +47,7 @@ export function getStripeConfigStatus(): StripeConfigStatus {
     webhook_secret_configured: Boolean(process.env.STRIPE_WEBHOOK_SECRET?.trim()),
     price_monthly_configured: Boolean(process.env.STRIPE_PRICE_ID_MONTHLY?.trim()),
     price_annual_configured: Boolean(process.env.STRIPE_PRICE_ID_ANNUAL?.trim()),
+    founding_coupon_configured: Boolean(process.env.STRIPE_COUPON_ID_FOUNDING?.trim()),
     // Same fallback chain resolvePublicSiteOrigin() uses (server/seo/sitemap.ts) —
     // "configured" means checkout/portal redirect URLs won't fall back to the
     // hardcoded canonical origin.
@@ -96,8 +109,8 @@ export interface ExpectedPriceSpec {
 }
 
 export const EXPECTED_PRICE_SPECS: Record<BillingPeriod, ExpectedPriceSpec> = {
-  monthly: { unitAmountCents: 499, currency: "usd", interval: "month", intervalCount: 1 },
-  annual: { unitAmountCents: 3999, currency: "usd", interval: "year", intervalCount: 1 },
+  monthly: { unitAmountCents: PRO_MONTHLY_PRICE_CENTS, currency: PRO_PRICE_CURRENCY, interval: "month", intervalCount: 1 },
+  annual: { unitAmountCents: PRO_ANNUAL_PRICE_CENTS, currency: PRO_PRICE_CURRENCY, interval: "year", intervalCount: 1 },
 };
 
 /**
@@ -169,6 +182,98 @@ export async function getVerifiedPriceIdForPeriod(period: BillingPeriod): Promis
 }
 
 /**
+ * Founding offer contract: a fixed $10.00 USD discount on exactly one
+ * invoice. Applied only to the annual price, that first invoice is $29.99
+ * and every renewal is the standard $39.99 — Stripe enforces "first year
+ * only" itself, with no schedule or webhook repricing on our side.
+ */
+export const FOUNDING_COUPON_SPEC = {
+  amountOffCents: FOUNDING_ANNUAL_DISCOUNT_CENTS,
+  currency: PRO_PRICE_CURRENCY,
+  duration: "once",
+} as const;
+
+export function couponMatchesFoundingSpec(coupon: {
+  amount_off?: number | null;
+  percent_off?: number | null;
+  currency?: string | null;
+  duration?: string | null;
+  valid?: boolean | null;
+}): { ok: boolean; reason?: string } {
+  if (coupon.percent_off != null) {
+    return { ok: false, reason: `expected a fixed amount_off coupon, got percent_off=${coupon.percent_off}` };
+  }
+  if (coupon.amount_off !== FOUNDING_COUPON_SPEC.amountOffCents) {
+    return { ok: false, reason: `expected amount_off=${FOUNDING_COUPON_SPEC.amountOffCents}, got ${coupon.amount_off}` };
+  }
+  if ((coupon.currency ?? "").toLowerCase() !== FOUNDING_COUPON_SPEC.currency) {
+    return { ok: false, reason: `expected currency=${FOUNDING_COUPON_SPEC.currency}, got ${coupon.currency}` };
+  }
+  if (coupon.duration !== FOUNDING_COUPON_SPEC.duration) {
+    return { ok: false, reason: `expected duration=once (first invoice only), got ${coupon.duration}` };
+  }
+  if (coupon.valid === false) {
+    return { ok: false, reason: "coupon is no longer valid (expired or fully redeemed)" };
+  }
+  return { ok: true };
+}
+
+/**
+ * STRIPE_COUPON_ID_FOUNDING, checked against the live coupon on every
+ * founding checkout (validity can change when it expires or hits
+ * max_redemptions). Fails closed so nobody shown $29.99 is charged $39.99.
+ */
+export async function getVerifiedFoundingCouponId(): Promise<string> {
+  const couponId = process.env.STRIPE_COUPON_ID_FOUNDING?.trim();
+  if (!couponId) {
+    throw new Error("STRIPE_COUPON_ID_FOUNDING is not set — cannot apply the founding offer.");
+  }
+  const coupon = await getStripeClient().coupons.retrieve(couponId);
+  const result = couponMatchesFoundingSpec(coupon);
+  if (!result.ok) {
+    throw new Error(`STRIPE_COUPON_ID_FOUNDING (${couponId}) does not match the founding offer contract: ${result.reason}`);
+  }
+  return couponId;
+}
+
+/**
+ * The one Checkout Session shape for Firehall Meals Pro. Deliberately has no
+ * subscription_data.trial_period_days: the only trial is the no-card
+ * personal reverse trial (server/billing/pro-trial.ts), and paid Pro bills
+ * immediately. Stripe rejects `discounts` together with
+ * `allow_promotion_codes`, so a founding checkout omits the promo field.
+ */
+export function buildProCheckoutSessionParams(params: {
+  customerId: string;
+  userId: string;
+  priceId: string;
+  billingPeriod: BillingPeriod;
+  origin: string;
+  foundingCouponId: string | null;
+  feature?: string;
+}): Stripe.Checkout.SessionCreateParams {
+  const founding = Boolean(params.foundingCouponId);
+  return {
+    mode: "subscription",
+    customer: params.customerId,
+    client_reference_id: params.userId,
+    line_items: [{ price: params.priceId, quantity: 1 }],
+    subscription_data: {
+      metadata: { user_id: params.userId, ...(founding ? { founding_offer: "true" } : {}) },
+    },
+    metadata: {
+      user_id: params.userId,
+      billing_period: params.billingPeriod,
+      ...(founding ? { founding_offer: "true" } : {}),
+      ...(params.feature ? { feature: params.feature } : {}),
+    },
+    success_url: `${params.origin}/plans?checkout=success`,
+    cancel_url: `${params.origin}/plans?checkout=cancelled`,
+    ...(founding ? { discounts: [{ coupon: params.foundingCouponId! }] } : { allow_promotion_codes: true }),
+  };
+}
+
+/**
  * Maps a Stripe Subscription status onto our internal SubscriptionStatus enum.
  * Kept narrow on purpose — Stripe has more granular pre-payment states
  * ("incomplete", "incomplete_expired", "unpaid", "paused") that only matter
@@ -205,4 +310,30 @@ export function mapStripeStatus(stripeStatus: Stripe.Subscription.Status): Subsc
     default:
       return "cancelled";
   }
+}
+
+/**
+ * The fields we persist from a Stripe Subscription. A scheduled cancellation
+ * can arrive as `cancel_at_period_end` or as a `cancel_at` timestamp
+ * (depending on how it was cancelled in the Portal/Dashboard) — both mean
+ * "access continues until then, no renewal".
+ */
+export function stripeSubscriptionToRecord(subscription: {
+  status: Stripe.Subscription.Status;
+  cancel_at_period_end: boolean;
+  cancel_at?: number | null;
+  items: { data: Array<{ price?: { id: string } | null; current_period_end?: number | null }> };
+}): {
+  stripePriceId: string | null;
+  status: SubscriptionStatus;
+  cancelAtPeriodEnd: boolean;
+  currentPeriodEnd: string | null;
+} {
+  const item = subscription.items.data[0];
+  return {
+    stripePriceId: item?.price?.id ?? null,
+    status: mapStripeStatus(subscription.status),
+    cancelAtPeriodEnd: subscription.cancel_at_period_end || subscription.cancel_at != null,
+    currentPeriodEnd: item?.current_period_end ? new Date(item.current_period_end * 1000).toISOString() : null,
+  };
 }

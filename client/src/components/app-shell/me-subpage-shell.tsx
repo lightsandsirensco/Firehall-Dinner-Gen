@@ -5,6 +5,8 @@ import { SiteFooter } from "@/components/site-footer";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { useNoIndex } from "@/lib/seo/use-noindex";
+import { useSignedInNav } from "@/hooks/use-signed-in-nav";
+import { appHomeFor, appHomeLabelFor } from "@/lib/app-nav";
 
 interface MeSubpageShellProps {
   title: string;
@@ -22,7 +24,7 @@ interface MeSubpageShellProps {
   wide?: boolean;
 }
 
-/** Profile sub-pages — Me parent + always escape to Tonight. */
+/** Profile sub-pages — Me parent + always escape to the app home (Shift / Tonight). */
 export function MeSubpageShell({
   title,
   subtitle,
@@ -33,6 +35,7 @@ export function MeSubpageShell({
   wide,
 }: MeSubpageShellProps) {
   useNoIndex();
+  const signedInNav = useSignedInNav();
 
   return (
     <div className={cn(app.page, "bg-background")} data-testid={testId}>
@@ -53,8 +56,8 @@ export function MeSubpageShell({
         {children}
         {!hideWorkflowExit && (
           <WorkflowExit
-            href="/tonight"
-            label="← Back to Tonight"
+            href={appHomeFor(signedInNav)}
+            label={`← Back to ${appHomeLabelFor(signedInNav)}`}
             hint="Done here?"
             testId="me-subpage-exit"
           />

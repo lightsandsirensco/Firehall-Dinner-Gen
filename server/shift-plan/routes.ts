@@ -2,9 +2,14 @@
  * Shift Planner v2 API — authenticated, own-data only. Plans the shift under
  * way, otherwise the user's next scheduled shift (available to Free users).
  *
- *   GET   /api/shift-plan        → ShiftPlanView
+ *   GET   /api/shift-plan[?shiftKey=] → ShiftPlanView (default: current/next shift)
+ *   GET   /api/shift-plan/upcoming    → UpcomingShiftsView (next 30 days, with plan status)
  *   PATCH /api/shift-plan/slot   → set/clear recipe, skip, BYO, lock, crew size for one meal
  *   POST  /api/shift-plan/fill   → auto-fill the shift, or pick/swap specific meals
+ *   POST  /api/shift-plan/run-it-back → (Pro) copy the previous comparable plan, optionally refreshing meals
+ *
+ * Plan Ahead: any shift other than the current/next one needs the Pro
+ * `plan_ahead` feature and must start within 30 days (403 plan_ahead_required).
  *
  *   GET   /api/shift-plan/shopping-list     → the shift's consolidated list (null until built)
  *   POST  /api/shift-plan/shopping-list     → build / bring up to date (with device pantry)
@@ -24,9 +29,12 @@ import { log, logError } from "../logger.js";
 import { generateRequestSchema, type GenerateRequest } from "../../shared/schema.js";
 import { coerceGenerateRequestBody, sanitizeGenerateRequest } from "../sanitize-request.js";
 import { resolveUserBilling } from "../billing/store.js";
+import { startProTrial } from "../billing/pro-trial.js";
+import { proTrialDeps } from "../billing/pro-trial-deps.js";
 import { hasFeature } from "../../shared/billing/types.js";
+import { resolveMealHistoryAccess, visibleSince } from "../../shared/meal-history/access.js";
 import { gateFoodsToAvoidByEntitlement } from "../generation/foods-to-avoid-gate.js";
-import { loadEntitledNutritionGoals } from "../generation/nutrition-goals-gate.js";
+import { loadEntitledNutritionGoal } from "../generation/nutrition-goals-gate.js";
 import { computeHistorySignals } from "../generation/history-personalization.js";
 import { listRecentCookedSlugsOldestFirst } from "../meal-history/store.js";
 import { mergeRecentSlugSources } from "../../shared/meal-rotation/weighted-pick.js";
@@ -48,9 +56,13 @@ import {
 import {
   shiftListOpSchema,
   shiftListOpenSchema,
+  runItBackSchema,
   shiftPlanFillSchema,
+  shiftPlanQuerySchema,
   shiftPlanSlotPatchSchema,
 } from "../../shared/shift-plan/schema.js";
+import { resolvePlanAheadAccess } from "../../shared/shift-plan/plan-ahead.js";
+import { makeRecipeCheck } from "../../shared/shift-plan/run-it-back.js";
 import { GENERATOR_MAX_CREW, GENERATOR_MIN_CREW } from "../../shared/shift-plan/plan.js";
 import type { PlannedRecipe } from "../../shared/shift-plan/types.js";
 import type { ShoppingRecipeInput } from "../../shared/shopping/index.js";
@@ -65,7 +77,9 @@ import {
   ShiftPlanError,
   fillShiftPlan,
   getShiftPlan,
+  listUpcomingShifts,
   patchShiftPlanSlot,
+  runItBack,
   type ShiftPlanDeps,
   type SlotPicker,
 } from "./service.js";
@@ -126,6 +140,15 @@ const deps: ShiftPlanDeps = {
   },
   resolveRecipe: resolvePlannedRecipe,
   isSelectableSlug: (slug) => Boolean(catalogEntry(slug)),
+  async canPlanAhead(userId) {
+    return resolvePlanAheadAccess((await resolveUserBilling(userId)).features).canPlanAhead;
+  },
+  async canRunItBack(userId) {
+    return hasFeature((await resolveUserBilling(userId)).features, "run_it_back");
+  },
+  async onPlanComplete(userId) {
+    return (await startProTrial(proTrialDeps(), userId, "first_shift_plan")).started;
+  },
   now: () => new Date(),
 };
 
@@ -155,7 +178,7 @@ async function buildSlotPicker(
   userId: string,
   rawBase: Record<string, unknown>,
   clientRecentSlugs: string[],
-): Promise<SlotPicker | null> {
+): Promise<{ base: GenerateRequest; picker: SlotPicker } | null> {
   const crew = Number(rawBase.crew_size);
   const parsed = generateRequestSchema.safeParse(
     coerceGenerateRequestBody({
@@ -171,29 +194,35 @@ async function buildSlotPicker(
 
   let recentSlugs = clientRecentSlugs;
   let historySignals: Awaited<ReturnType<typeof computeHistorySignals>> | null = null;
-  if (hasFeature(billing.features, "meal_memory")) {
-    const durable = await listRecentCookedSlugsOldestFirst(userId, 10);
+  const historyAccess = resolveMealHistoryAccess(billing.features);
+  if (historyAccess.canLog) {
+    const durable = await listRecentCookedSlugsOldestFirst(userId, 10, visibleSince(historyAccess));
     if (durable.length > 0) recentSlugs = mergeRecentSlugSources(durable, clientRecentSlugs);
-    if (base.personalize_with_history !== false) {
-      try {
-        historySignals = await computeHistorySignals(userId, recentSlugs);
-      } catch (err) {
-        log(`[shift-plan] history signals failed: ${(err as Error)?.message}`, "shift-plan");
-      }
+  }
+  if (historyAccess.fullHistory && base.personalize_with_history !== false) {
+    try {
+      historySignals = await computeHistorySignals(userId, recentSlugs);
+    } catch (err) {
+      log(`[shift-plan] history signals failed: ${(err as Error)?.message}`, "shift-plan");
     }
   }
-  let nutritionGoals: Awaited<ReturnType<typeof loadEntitledNutritionGoals>> = [];
+  let nutritionGoal: Awaited<ReturnType<typeof loadEntitledNutritionGoal>> = null;
   try {
-    nutritionGoals = await loadEntitledNutritionGoals(userId, billing);
+    nutritionGoal = await loadEntitledNutritionGoal(userId, billing);
   } catch (err) {
-    log(`[shift-plan] nutrition goals failed: ${(err as Error)?.message}`, "shift-plan");
+    log(`[shift-plan] nutrition goal failed: ${(err as Error)?.message}`, "shift-plan");
   }
 
-  return createSlotPicker({ base, recentSlugs, historySignals, nutritionGoals, sessionKey: `shift-plan:${userId}` });
+  return {
+    base,
+    picker: createSlotPicker({ base, recentSlugs, historySignals, nutritionGoal, sessionKey: `shift-plan:${userId}` }),
+  };
 }
 
 function sendError(res: Response, err: unknown, what: string) {
-  if (err instanceof ShiftPlanError) return res.status(err.status).json({ message: err.message });
+  if (err instanceof ShiftPlanError) {
+    return res.status(err.status).json({ message: err.message, ...(err.code ? { code: err.code } : {}) });
+  }
   logError("shift-plan", `${what} failed`, err);
   return res.status(500).json({ message: `Failed to ${what}` });
 }
@@ -202,9 +231,22 @@ export function registerShiftPlanRoutes(app: Express): void {
   app.get("/api/shift-plan", requireAuth, async (req: AuthedRequest, res: Response) => {
     try {
       await ensureStore();
-      return res.json(await getShiftPlan(deps, req._authUserId!));
+      const parsed = shiftPlanQuerySchema.safeParse(req.query);
+      if (!parsed.success) return res.status(400).json({ message: "Invalid shift" });
+      res.setHeader("Cache-Control", "no-store");
+      return res.json(await getShiftPlan(deps, req._authUserId!, parsed.data.shiftKey));
     } catch (err) {
       return sendError(res, err, "load shift plan");
+    }
+  });
+
+  app.get("/api/shift-plan/upcoming", requireAuth, async (req: AuthedRequest, res: Response) => {
+    try {
+      await ensureStore();
+      res.setHeader("Cache-Control", "no-store");
+      return res.json(await listUpcomingShifts(deps, req._authUserId!));
+    } catch (err) {
+      return sendError(res, err, "load upcoming shifts");
     }
   });
 
@@ -238,12 +280,43 @@ export function registerShiftPlanRoutes(app: Express): void {
       }
       recordRateLimit(rateKey);
 
-      const picker = await buildSlotPicker(userId, parsed.data.base, parsed.data.recentSlugs ?? []);
-      if (!picker) return res.status(400).json({ message: "Invalid meal preferences" });
+      const built = await buildSlotPicker(userId, parsed.data.base, parsed.data.recentSlugs ?? []);
+      if (!built) return res.status(400).json({ message: "Invalid meal preferences" });
 
-      return res.json(await fillShiftPlan(deps, userId, parsed.data, picker));
+      return res.json(await fillShiftPlan(deps, userId, parsed.data, built.picker));
     } catch (err) {
       return sendError(res, err, "fill shift plan");
+    }
+  });
+
+  app.post("/api/shift-plan/run-it-back", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
+    try {
+      await ensureStore();
+      const userId = req._authUserId!;
+      const parsed = runItBackSchema.safeParse(req.body);
+      if (!parsed.success) {
+        return res.status(400).json({ message: "Invalid request", issues: parsed.error.issues.map((i) => i.message) });
+      }
+
+      const rateKey = `shift-plan:fill:${userId}`;
+      const limit = peekRateLimit(rateKey, FILL_WINDOW_MS, FILL_MAX_PER_WINDOW);
+      if (!limit.allowed) {
+        const retry = Math.max(5, Math.ceil(limit.resetMs / 1000));
+        return res.status(429).json({ message: `Slow down — try again in ${retry}s.`, retry_after_seconds: retry });
+      }
+      recordRateLimit(rateKey);
+
+      const built = await buildSlotPicker(userId, parsed.data.base, parsed.data.recentSlugs ?? []);
+      if (!built) return res.status(400).json({ message: "Invalid meal preferences" });
+
+      return res.json(
+        await runItBack(deps, userId, parsed.data, {
+          checkRecipe: makeRecipeCheck(catalogEntry, built.base),
+          pick: built.picker,
+        }),
+      );
+    } catch (err) {
+      return sendError(res, err, "run it back");
     }
   });
 

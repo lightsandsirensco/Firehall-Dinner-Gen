@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-10-11T14:09:26.627Z",
+  "input": "data/recipe-discovery/samples/sample-candidates.csv",
+  "inventory": "data/recipe-discovery/existing-recipes.json",
+  "results": [
+    {
+      "dish_name": "BBQ Chicken Pizza",
+      "cuisine": "American",
+      "source_url": "https://example.com/placeholder-1",
+      "duplicate_status": "DUPLICATE",
+      "matched_recipe": "golden-100/bbq-chicken-pizza",
+      "match_reason": "exact name match (existing)",
+      "ingredient_overlap": "golden-100/bbq-chicken-mac-and-cheese (3/5 main ingredients)",
+      "review_status": "REJECTED",
+      "reviewer_notes": ""
+    },
+    {
+      "dish_name": "Barbecue Chicken Pizzas",
+      "cuisine": "American",
+      "source_url": "https://example.com/placeholder-2",
+      "duplicate_status": "POSSIBLE DUPLICATE",
+      "matched_recipe": "golden-100/bbq-chicken-pizza",
+      "match_reason": "same normalized name / spelling variant (existing)",
+      "ingredient_overlap": "",
+      "review_status": "PENDING REVIEW",
+      "reviewer_notes": ""
+    },
+    {
+      "dish_name": "Greek Chicken Bowl",
+      "cuisine": "Greek",
+      "source_url": "https://example.com/placeholder-3",
+      "duplicate_status": "POSSIBLE DUPLICATE",
+      "matched_recipe": "golden-100/greek-chicken-bowls",
+      "match_reason": "same normalized name / spelling variant (existing)",
+      "ingredient_overlap": "golden-100/greek-chicken-bowls (6/6 main ingredients)",
+      "review_status": "PENDING REVIEW",
+      "reviewer_notes": ""
+    },
+    {
+      "dish_name": "Doro Wat",
+      "cuisine": "Ethiopian",
+      "source_url": "https://example.com/placeholder-4",
+      "duplicate_status": "NEW",
+      "matched_recipe": "",
+      "match_reason": "",
+      "ingredient_overlap": "",
+      "review_status": "PENDING REVIEW",
+      "reviewer_notes": ""
+    },
+    {
+      "dish_name": "Lemon Herb Sheet Pan Chicken",
+      "cuisine": "American",
+      "source_url": "https://example.com/placeholder-5",
+      "duplicate_status": "POSSIBLE DUPLICATE",
+      "matched_recipe": "performance-meals/greek-lemon-chicken-potatoes",
+      "match_reason": "ingredient overlap 5/5 + shared name words (existing)",
+      "ingredient_overlap": "performance-meals/boneless-chicken-thighs-sweet-potato-spinach (5/5 main ingredients)",
+      "review_status": "PENDING REVIEW",
+      "reviewer_notes": ""
+    }
+  ]
+}

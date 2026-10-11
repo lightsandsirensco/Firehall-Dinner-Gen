@@ -8,6 +8,7 @@ import {
   formatTemperaturesInText,
 } from "@shared/measurements";
 import type { ExploreRecipeDetail } from "@/lib/explore-api";
+import { resolveEditorialFallbackHero } from "@shared/meal-hero-fallback";
 import { buildHoldingPanelNotes } from "./holding-notes";
 import type { CookModeRecipe } from "./types";
 
@@ -29,9 +30,19 @@ export function clientRecipeToCookMode(
     formatTemperaturesInText(t, measurementSystem),
   );
 
+  const imageUrl =
+    recipe.hero_image && recipe.hero_image_status === "ready"
+      ? recipe.hero_image
+      : resolveEditorialFallbackHero(recipe.title, {
+          mealFormat: recipe.meal_style,
+          protein: recipe.chosen_protein,
+        }) ?? undefined;
+
   return {
     title: recipe.title,
     crewSize,
+    imageUrl,
+    imageAlt: recipe.hero_image_alt || recipe.title,
     ingredients: (recipe.ingredients ?? []).map((ing) => ({
       name: formatRecipeIngredientName(ing.name),
       amount: formatClientIngredientQty(ing.qty, ing.unit, measurementSystem) || undefined,
@@ -70,6 +81,8 @@ export function goldenPageToCookMode(
   return {
     title: page.title,
     crewSize,
+    imageUrl: page.heroImage || undefined,
+    imageAlt: page.heroImageAlt || page.title,
     ingredients: scaledIngredients.map((ing) => ({
       name: formatRecipeIngredientName(ing.name),
       amount: formatIngredientAmount(ing.quantity, ing.unit, measurementSystem) || undefined,
@@ -141,9 +154,13 @@ export function exploreDetailToCookMode(
     amount: `${ing.amount} ${ing.unit}`.trim() || undefined,
   }));
 
+  const showImage = detail.image && (detail.imageryStatus ?? "approved") === "approved";
+
   return {
     title: detail.title,
     crewSize,
+    imageUrl: showImage ? detail.image : undefined,
+    imageAlt: detail.imageAlt || detail.title,
     ingredients,
     steps,
     holdingGuidance: buildHoldingPanelNotes(steps),

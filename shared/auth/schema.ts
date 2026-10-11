@@ -77,7 +77,7 @@ export const profileUpdateSchema = z.object({
     .enum(PROFILE_NUTRITION_GOAL_OPTIONS as unknown as [string, ...string[]])
     .optional()
     .nullable(),
-  /** "Nutrition Goals" (Firehall Meals Pro) — canonical keys, sanitized/entitlement-checked server-side. */
+  /** "Nutrition Goal" (Firehall Meals Pro) — single select; reduced to one launch goal + entitlement-checked server-side. */
   nutrition_goals: z.array(z.string().max(32)).max(10).optional(),
   shift_reminders_enabled: z.boolean().optional(),
   shift_days: z.array(z.coerce.number().int().min(0).max(6)).max(7).optional(),

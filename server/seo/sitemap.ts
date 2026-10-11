@@ -425,6 +425,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites`;
 
@@ -453,6 +456,9 @@ export const NOINDEX_PATH_PREFIXES = [
   "/settings",
   "/profile",
   "/tonight",
+  "/shift",
+  "/shift-planner",
+  "/list",
   "/onboarding",
   "/account",
   "/plans",

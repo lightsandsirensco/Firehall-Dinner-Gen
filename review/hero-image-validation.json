@@ -1,19 +1,19 @@
 {
-  "generatedAt": "2026-10-01T18:19:48.803Z",
+  "generatedAt": "2026-10-09T20:20:56.824Z",
   "totals": {
     "recipes": 408,
-    "pass": 369,
-    "fail": 39,
+    "pass": 408,
+    "fail": 0,
     "fileFailures": 0,
     "metadataFailures": 0,
     "missingHero": 0,
     "duplicateConflict": 0,
     "metadataWarnings": 1,
-    "semanticWarnings": 0,
-    "semanticPass": 268,
-    "semanticFail": 39,
-    "semanticNotVerified": 101,
-    "needsNewImage": 39
+    "semanticWarnings": 5,
+    "semanticPass": 0,
+    "semanticFail": 0,
+    "semanticNotVerified": 408,
+    "needsNewImage": 0
   },
   "rows": [
     {
@@ -42,8 +42,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -74,8 +76,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -106,8 +110,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -138,8 +144,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -170,8 +178,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -202,8 +212,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -236,7 +248,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing corn kernels; missing coleslaw mix; extra green onions; extra sesame seeds"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -268,15 +280,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "brioche buns used instead of hoagie rolls"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: brioche buns used instead of hoagie rolls"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "chicken-caesar",
@@ -310,9 +320,13 @@
       "fileFailures": [],
       "metadataFailures": [],
       "metadataWarnings": [],
-      "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticWarnings": [
+        "Chicken Caesar Salad — hero must show cut-up grilled chicken pieces mixed through the salad, not a whole breast on top"
+      ],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -343,8 +357,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -377,7 +393,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: format may not match — recipe is skillet, image looks like nachos (loaded tortilla chips); diced tomatoes present — not in recipe; missing black beans — listed in recipe; missing pickled jalapeños — listed in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -409,8 +425,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -441,8 +459,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -473,15 +493,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "cheese present — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: cheese present — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "memphis-dry-rub-ribs",
@@ -509,8 +527,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -543,7 +563,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: beer can missing"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -575,17 +595,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "baby potatoes not in recipe",
-        "broccoli not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: baby potatoes not in recipe",
-        "vision: broccoli not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "bbq-chicken-sliders",
@@ -613,15 +629,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "cheese on sliders — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: cheese on sliders — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "grilled-pork-chops",
@@ -649,8 +663,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -681,8 +697,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -713,8 +731,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -745,8 +765,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -777,8 +799,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -809,17 +833,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "roasted potatoes not in recipe",
-        "greens not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: roasted potatoes not in recipe",
-        "vision: greens not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "grilled-corn-cotija",
@@ -847,8 +867,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -881,7 +903,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli and rice not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -913,8 +935,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -945,15 +969,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "garlic bread side — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: garlic bread side — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "shepherds-pie",
@@ -983,7 +1005,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: Greek salad on the side — not in the recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1017,7 +1039,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: gravy not in recipe; parsley not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1049,8 +1071,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1081,8 +1105,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1115,7 +1141,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is bowl, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1147,8 +1173,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1181,7 +1209,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: hoagie rolls missing"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1213,8 +1241,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1245,8 +1275,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1279,7 +1311,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is casserole, image looks like bowl"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1311,8 +1343,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1345,7 +1379,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is pasta, image looks like casserole"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1379,7 +1413,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1411,8 +1445,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1445,7 +1481,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: sour cream and chives on top — not in recipe; bread does not appear to have brie cheese"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1477,8 +1513,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1509,8 +1547,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1543,7 +1583,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli not in recipe; carrots not in recipe; zucchini not in recipe; rice not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1577,7 +1617,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: tzatziki sauce missing"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1609,19 +1649,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "shredded cheese on top — recipe does not include cheese as a main ingredient",
-        "sour cream on top — recipe does not include sour cream as a main ingredient",
-        "cilantro on top — recipe does not include cilantro as a main ingredient"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: shredded cheese on top — recipe does not include cheese as a main ingredient",
-        "vision: sour cream on top — recipe does not include sour cream as a main ingredient",
-        "vision: cilantro on top — recipe does not include cilantro as a main ingredient"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "sheet-pan-fajitas",
@@ -1651,7 +1685,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1683,8 +1717,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1715,8 +1751,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1749,7 +1787,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: lettuce and tomato not in recipe; missing mayonnaise and mustard"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1783,7 +1821,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: cucumber not in recipe; carrot not in recipe; missing sesame seeds"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1815,8 +1853,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1849,7 +1889,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is pasta, image looks like casserole"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1881,8 +1921,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -1913,17 +1955,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "shredded cheese present — not in recipe",
-        "tomatoes instead of pico de gallo"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: shredded cheese present — not in recipe",
-        "vision: tomatoes instead of pico de gallo"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "herb-roasted-thighs",
@@ -1953,7 +1991,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli not in recipe; carrots not in recipe; rice not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -1987,7 +2025,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is skillet, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2019,15 +2057,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "melted cheese not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: melted cheese not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "skillet-chicken-alfredo",
@@ -2055,8 +2091,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2089,7 +2127,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing steamed rice"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2121,8 +2159,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2155,7 +2195,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: format may not match — recipe is skillet, image looks like hot plated entrée; missing hoagie rolls"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2187,17 +2227,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "cheese not in recipe",
-        "sauce not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: cheese not in recipe",
-        "vision: sauce not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "chicken-quesadillas",
@@ -2225,8 +2261,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2259,7 +2297,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is skillet, image looks like bowl"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2293,7 +2331,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is skillet, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2327,7 +2365,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée; broccoli and carrots not in recipe; missing green beans"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2361,7 +2399,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is pasta, image looks like soup"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2393,8 +2431,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2425,8 +2465,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2457,8 +2499,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2489,8 +2533,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2521,8 +2567,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2553,8 +2601,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2585,8 +2635,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2619,7 +2671,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: Missing shredded cheddar-mozzarella blend"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2653,7 +2705,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is casserole, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2687,7 +2739,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is casserole, image looks like pasta"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -2719,8 +2771,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2751,8 +2805,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2783,8 +2839,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2815,8 +2873,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2847,8 +2907,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2879,8 +2941,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2911,8 +2975,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2949,9 +3015,13 @@
       "fileFailures": [],
       "metadataFailures": [],
       "metadataWarnings": [],
-      "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticWarnings": [
+        "plating accuracy: breakfast_fail: eggs on pancakes"
+      ],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -2982,8 +3052,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3014,8 +3086,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3048,7 +3122,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is skillet, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -3080,8 +3154,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3112,8 +3188,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3146,7 +3224,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: Missing cotija cheese; Missing lime wedges; Presence of green garnish not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -3178,8 +3256,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3210,8 +3290,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3242,8 +3324,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3274,8 +3358,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3306,8 +3392,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3338,23 +3426,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "missing hoagie rolls",
-        "missing marinara sauce",
-        "missing yellow onion",
-        "missing garlic cloves",
-        "missing visible eggs"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: missing hoagie rolls",
-        "vision: missing marinara sauce",
-        "vision: missing yellow onion",
-        "vision: missing garlic cloves",
-        "vision: missing visible eggs"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "sheet-pan-meal-prep",
@@ -3382,27 +3460,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "wrong dish format — recipe is meal-prep containers but image shows sheet pan",
-        "missing sweet potatoes",
-        "missing broccoli",
-        "missing long-grain rice",
-        "extra bell peppers",
-        "extra onions",
-        "extra lime"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: wrong dish format — recipe is meal-prep containers but image shows sheet pan",
-        "vision: missing sweet potatoes",
-        "vision: missing broccoli",
-        "vision: missing long-grain rice",
-        "vision: extra bell peppers",
-        "vision: extra onions",
-        "vision: extra lime"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "one-pot-chicken-rice",
@@ -3430,8 +3494,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3462,8 +3528,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3494,8 +3562,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3526,15 +3596,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "chicken drumsticks instead of bone-in chicken thighs"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: chicken drumsticks instead of bone-in chicken thighs"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "herb-baked-salmon-tray",
@@ -3562,8 +3630,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3594,8 +3664,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3626,8 +3698,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3660,7 +3734,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: spaghetti not in recipe; green beans not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -3692,17 +3766,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "broccoli side — not in recipe",
-        "not baked in a casserole dish"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: broccoli side — not in recipe",
-        "vision: not baked in a casserole dish"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "honey-garlic-chicken-rice-bowls",
@@ -3732,7 +3802,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing broccoli"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -3764,8 +3834,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3796,8 +3868,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3828,8 +3902,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3860,8 +3936,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3892,8 +3970,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3926,7 +4006,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing cherry tomatoes; missing red onion"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -3958,8 +4038,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -3990,8 +4072,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4022,8 +4106,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4054,8 +4140,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4086,8 +4174,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4118,8 +4208,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4152,7 +4244,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: side salad visible — not in recipe; pita bread visible — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4186,7 +4278,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4220,7 +4312,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: rice present — not in recipe; pita missing — recipe includes pita"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4252,8 +4344,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4286,7 +4380,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: rice not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4318,8 +4412,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4350,8 +4446,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4382,8 +4480,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4414,8 +4514,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4448,7 +4550,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: format may not match — recipe is casserole, image looks like hot plated entrée; rice not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4480,8 +4582,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4514,7 +4618,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: zucchini missing; bone-in chicken thighs expected but not visible"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4546,8 +4650,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4580,7 +4686,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: side salad present — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4612,8 +4718,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4644,8 +4752,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4676,8 +4786,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4708,8 +4820,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4740,8 +4854,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4774,7 +4890,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: rice not in recipe; tomatoes not in recipe; missing slaw; missing lime crema"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4808,7 +4924,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: flatbread present — not in recipe; missing feta cheese; missing fresh parsley"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4842,7 +4958,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli not in recipe; mushrooms not in recipe; missing spinach; missing feta cheese"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4876,7 +4992,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4910,7 +5026,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: rice not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -4942,8 +5058,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -4974,8 +5092,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5006,8 +5126,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5038,17 +5160,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "cheese on top — not in recipe",
-        "parsley garnish — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: cheese on top — not in recipe",
-        "vision: parsley garnish — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "beef-birria-with-consomme",
@@ -5088,9 +5206,14 @@
       "fileFailures": [],
       "metadataFailures": [],
       "metadataWarnings": [],
-      "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticWarnings": [
+        "Title component not represented in hero path/slug: \"consomm for dipping\"",
+        "Complete meal required — hero metadata shows too few title components (1/3)"
+      ],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5121,8 +5244,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5155,7 +5280,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing tomato-cucumber salad"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5187,15 +5312,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "melted cheese not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: melted cheese not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "cuban-beef-picadillo-bowls",
@@ -5225,7 +5348,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing black beans"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5259,7 +5382,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: green onions not in recipe; sesame seeds not in recipe; missing cherry tomatoes; missing extra crumbled feta"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5291,8 +5414,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5325,7 +5450,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is skillet, image looks like bowl"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5359,7 +5484,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5393,7 +5518,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: broccoli not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5425,8 +5550,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5459,7 +5586,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing pickled vegetables; missing fresh cilantro and mint; missing Thai or serrano chili; sesame seeds not in recipe; green onions not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5491,8 +5618,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5525,7 +5654,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is skillet, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5559,7 +5688,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing black-eyed peas; missing shredded lettuce; missing diced tomato"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5593,7 +5722,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing red onion; missing rice"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5627,7 +5756,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing visible scrambled egg"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5661,7 +5790,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5695,7 +5824,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing baby spinach; missing kalamata olives; missing feta cheese"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5727,15 +5856,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "chicken wings instead of turkey breast"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: chicken wings instead of turkey breast"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "smoked-meatloaf",
@@ -5763,8 +5890,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5795,8 +5924,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5827,8 +5958,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5859,8 +5992,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -5893,7 +6028,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing corn on the cob"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5927,7 +6062,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing grilled crusty bread; missing chimichurri"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5961,7 +6096,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing cabbage; missing potatoes; missing rye bread; missing swiss cheese"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -5995,7 +6130,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing baked beans; missing cornbread"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6029,7 +6164,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6061,8 +6196,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6093,8 +6230,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6127,7 +6266,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing tortilla chips; missing baguette"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6159,8 +6298,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6191,8 +6332,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6223,19 +6366,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "missing pickled red onions",
-        "missing shredded cabbage mix",
-        "cheese not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: missing pickled red onions",
-        "vision: missing shredded cabbage mix",
-        "vision: cheese not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "soft-pretzel-dogs",
@@ -6265,7 +6402,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing spicy brown mustard; missing sauerkraut; missing cheddar cheese sauce"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6299,7 +6436,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing gouda cheese; missing cornichons; missing fig jam"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6333,7 +6470,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is casserole, image looks like nachos (loaded tortilla chips)"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6365,8 +6502,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6397,8 +6536,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6429,8 +6570,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6461,19 +6604,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "spaghetti instead of penne pasta",
-        "missing visible sauces",
-        "missing garlic bread"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: spaghetti instead of penne pasta",
-        "vision: missing visible sauces",
-        "vision: missing garlic bread"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "rice-bowl-bar-night",
@@ -6503,7 +6640,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing broccoli florets; missing carrots; missing edamame; missing pickled ginger; missing sesame seeds; missing sriracha mayo; missing soy sauce"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6537,7 +6674,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing provolone cheese; missing swiss cheese; missing mayonnaise; missing mustard assortment; missing lettuce and tomato"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6569,27 +6706,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "missing hummus",
-        "missing tzatziki",
-        "missing pita bread",
-        "missing feta cheese",
-        "extra cauliflower",
-        "extra rice",
-        "sauce not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: missing hummus",
-        "vision: missing tzatziki",
-        "vision: missing pita bread",
-        "vision: missing feta cheese",
-        "vision: extra cauliflower",
-        "vision: extra rice",
-        "vision: sauce not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "burrito-bowl-bar-night",
@@ -6619,7 +6742,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: green onions not in recipe; missing black beans; missing corn salsa; missing shredded lettuce"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6651,8 +6774,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6683,8 +6808,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6717,7 +6844,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: soft potato rolls missing"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6749,8 +6876,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6783,7 +6912,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: steaks not sliced or fanned as per serving step"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6815,8 +6944,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6849,7 +6980,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing yellow onion; missing carrots"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -6881,8 +7012,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6913,8 +7046,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -6945,15 +7080,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "melted cheese not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: melted cheese not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "mushroom-swiss-steak-pan",
@@ -6981,8 +7114,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7015,7 +7150,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: format may not match — recipe is skillet, image looks like hot plated entrée; broccoli not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7047,15 +7182,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "melted cheese on top — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: melted cheese on top — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "enchilada-beef-skillet",
@@ -7085,7 +7218,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is skillet, image looks like hot plated entrée"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7117,8 +7250,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7149,8 +7284,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7181,8 +7318,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7213,8 +7352,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7247,7 +7388,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing bacon; missing mushrooms; missing hard-boiled eggs; presence of red peppers not in recipe; presence of onions not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7279,8 +7420,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7311,17 +7454,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "cheese not in recipe",
-        "tomatoes not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: cheese not in recipe",
-        "vision: tomatoes not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "ginger-soy-chicken-rice-bowls",
@@ -7351,7 +7490,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing broccoli florets; green onions not listed in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7385,7 +7524,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: Missing cucumber; Missing cherry tomatoes; Missing kalamata olives; Missing hummus; Missing feta cheese"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7417,8 +7556,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7449,8 +7590,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7473,7 +7616,7 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "6642a344d8f5b07dc5e298c9f1ae2726",
+        "heroMd5": "c0460ee50b73ccf0ef04732c141a55c6",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -7481,15 +7624,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "wrong dish format — recipe is sheet pan but image shows sandwich"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: wrong dish format — recipe is sheet pan but image shows sandwich"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "hall-sloppy-joe-feed",
@@ -7517,8 +7658,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7549,8 +7692,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7581,8 +7726,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7615,7 +7762,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: lettuce garnish not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7649,7 +7796,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing asparagus; missing yogurt sauce"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7681,8 +7828,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7715,7 +7864,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: side of peas not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7749,7 +7898,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: wrong dish format — recipe is soup but image shows hot plated entrée (format from meal tag, not title — review); missing red bell pepper; missing yellow onion; missing fresh parsley"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7783,7 +7932,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: black olives not in recipe; missing polenta"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7817,7 +7966,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: potatoes missing — recipe serves over potatoes"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7849,19 +7998,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "pasta instead of potatoes",
-        "missing sour cream",
-        "missing rye bread"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: pasta instead of potatoes",
-        "vision: missing sour cream",
-        "vision: missing rye bread"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "tonkotsu-ramen-crew",
@@ -7889,8 +8032,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -7923,7 +8068,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: nori present — not in recipe; missing chicken thighs; missing soft-boiled eggs; missing bean sprouts"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7957,7 +8102,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: tofu puffs not in recipe; lime wedge instead of lime juice"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -7989,8 +8134,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8021,8 +8168,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8053,21 +8202,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "french fries present — not in recipe",
-        "missing grilled red bell peppers",
-        "missing grilled yellow onion",
-        "missing fresh cilantro"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: french fries present — not in recipe",
-        "vision: missing grilled red bell peppers",
-        "vision: missing grilled yellow onion",
-        "vision: missing fresh cilantro"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "korean-bulgogi-grill-night",
@@ -8095,8 +8236,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8127,8 +8270,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8159,8 +8304,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8193,7 +8340,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: salad present — recipe specifies tabbouleh"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -8225,15 +8372,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "French fries present — not in the recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: French fries present — not in the recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "best-tuna-melt-for-the-hall",
@@ -8267,9 +8412,13 @@
       "fileFailures": [],
       "metadataFailures": [],
       "metadataWarnings": [],
-      "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticWarnings": [
+        "Complete meal required — hero metadata shows too few title components (1/2)"
+      ],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8300,8 +8449,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8332,8 +8483,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8364,17 +8517,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "potato wedges not in recipe",
-        "broccoli not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: potato wedges not in recipe",
-        "vision: broccoli not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "beef-gyros-for-the-hall",
@@ -8394,7 +8543,7 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "b63334395f73d6566123edec01377688",
+        "heroMd5": "034280a5cdaf41ed08bda63a0aee5d88",
         "exploreEligible": true
       },
       "metadataIssues": [],
@@ -8402,8 +8551,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8436,7 +8587,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: side dish of rice and salad not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -8468,8 +8619,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8500,8 +8653,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8534,7 +8689,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: rice present — not in recipe; missing avocados; missing blue cheese; missing ranch dressing"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -8568,7 +8723,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing romaine; missing feta; missing tzatziki"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -8600,8 +8755,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8634,7 +8791,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing kimchi; missing eggs; missing sesame seeds"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -8666,8 +8823,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8698,8 +8857,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8730,8 +8891,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8764,7 +8927,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing hummus; missing feta; missing tzatziki"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -8796,8 +8959,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8828,8 +8993,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8860,8 +9027,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8892,8 +9061,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8924,8 +9095,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8956,8 +9129,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -8988,8 +9163,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9022,7 +9199,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: rice present — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -9054,15 +9231,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "cheese on top — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: cheese on top — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "white-chicken-chili-crock",
@@ -9090,8 +9265,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9122,15 +9299,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "broccoli and mashed potatoes are not in the recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: broccoli and mashed potatoes are not in the recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "salsa-verde-chicken-crock",
@@ -9158,8 +9333,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9190,8 +9367,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9222,15 +9401,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "cheese on top — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: cheese on top — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "burnt-ends-chili-crew",
@@ -9258,17 +9435,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "cheese not in recipe",
-        "green onions not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: cheese not in recipe",
-        "vision: green onions not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "smoker-nachos-crew",
@@ -9296,8 +9469,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9328,8 +9503,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9360,8 +9537,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9392,8 +9571,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9424,8 +9605,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9456,8 +9639,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9488,15 +9673,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "melted cheese on top — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: melted cheese on top — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "sausage-gnocchi-skillet",
@@ -9524,8 +9707,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9556,8 +9741,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9588,8 +9775,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9620,8 +9809,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9652,8 +9843,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9684,8 +9877,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9716,8 +9911,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9748,8 +9945,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9780,8 +9979,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9812,8 +10013,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9844,8 +10047,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9876,8 +10081,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9908,8 +10115,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9940,8 +10149,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -9972,8 +10183,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10004,8 +10217,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10036,8 +10251,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10068,8 +10285,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10100,8 +10319,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10132,8 +10353,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10164,8 +10387,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10196,8 +10421,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10230,7 +10457,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (PASS) — needs human review: wrong dish format — recipe is soup but image shows hot plated entrée (format from meal tag, not title — review)"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -10262,8 +10489,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10294,8 +10523,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10326,8 +10557,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10360,7 +10593,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing visible egg squares"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -10392,8 +10625,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10424,8 +10659,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10456,8 +10693,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10488,8 +10727,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10520,8 +10761,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10552,8 +10795,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10584,8 +10829,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10616,8 +10863,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10648,8 +10897,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10680,8 +10931,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10712,15 +10965,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "bacon present — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: bacon present — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "breakfast-quesadillas",
@@ -10748,8 +10999,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10780,8 +11033,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10814,7 +11069,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: Missing visible eggs"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -10846,8 +11101,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10878,8 +11135,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10910,8 +11169,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10942,8 +11203,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -10974,8 +11237,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11006,8 +11271,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11038,8 +11305,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11070,8 +11339,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11102,8 +11373,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11134,8 +11407,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11166,8 +11441,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11198,8 +11475,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11230,8 +11509,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11262,8 +11543,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11294,8 +11577,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11326,8 +11611,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11358,8 +11645,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11390,8 +11679,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11422,8 +11713,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11454,8 +11747,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11486,8 +11781,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11518,8 +11815,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11550,8 +11849,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11582,8 +11883,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11614,15 +11917,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "baked beans present — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: baked beans present — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "johnnycakes-with-syrup",
@@ -11650,8 +11951,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11688,9 +11991,13 @@
       "fileFailures": [],
       "metadataFailures": [],
       "metadataWarnings": [],
-      "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticWarnings": [
+        "plating accuracy: breakfast_fail: eggs on pancakes"
+      ],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11721,17 +12028,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "fried eggs on top — recipe does not include visible eggs",
-        "bacon present — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: fried eggs on top — recipe does not include visible eggs",
-        "vision: bacon present — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "menemen-for-the-crew",
@@ -11759,8 +12062,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11791,15 +12096,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "fries on the side — not in the recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: fries on the side — not in the recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "monte-cristo-sandwiches",
@@ -11827,8 +12130,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11859,8 +12164,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11891,8 +12198,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11923,8 +12232,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11955,8 +12266,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -11987,8 +12300,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12019,15 +12334,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "bacon strips present — not in recipe"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: bacon strips present — not in recipe"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "savory-cottage-cheese-breakfast-bowls",
@@ -12055,8 +12368,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12087,8 +12402,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12119,8 +12436,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12153,7 +12472,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (CRITICAL) — needs human review: format may not match — recipe is sheet pan, image looks like hot plated entrée; Missing yellow onion; Missing shredded cheddar"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -12185,8 +12504,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12219,7 +12540,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing white bread"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -12251,15 +12572,13 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "fail",
+      "semanticStatus": "not_verified",
       "semanticReasons": [
-        "whole sausages instead of bulk or casings removed"
+        "vision check not run (pass --vision to verify the picture)"
       ],
-      "hardFailures": [
-        "vision: whole sausages instead of bulk or casings removed"
-      ],
-      "needsNewImage": true,
-      "pass": false
+      "hardFailures": [],
+      "needsNewImage": false,
+      "pass": true
     },
     {
       "slug": "shrimp-and-grits-breakfast",
@@ -12287,8 +12606,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12319,8 +12640,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12351,8 +12674,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12383,8 +12708,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12415,8 +12742,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12447,8 +12776,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12479,8 +12810,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12511,8 +12844,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12543,8 +12878,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12575,8 +12912,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12607,8 +12946,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12639,8 +12980,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12671,8 +13014,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12703,8 +13048,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12735,8 +13082,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12767,8 +13116,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12799,8 +13150,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12831,8 +13184,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12863,8 +13218,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12895,8 +13252,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12927,8 +13286,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -12961,7 +13322,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing italian sausage; missing bacon; missing grated parmesan"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -12993,8 +13354,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13025,8 +13388,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13057,8 +13422,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13089,8 +13456,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13123,7 +13492,7 @@
       "semanticWarnings": [],
       "semanticStatus": "not_verified",
       "semanticReasons": [
-        "vision inconclusive (MAJOR) — needs human review: missing coleslaw"
+        "vision check not run (pass --vision to verify the picture)"
       ],
       "hardFailures": [],
       "needsNewImage": false,
@@ -13155,8 +13524,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13187,8 +13558,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13219,8 +13592,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13253,8 +13628,10 @@
         "no heroImageAlt configured — alt falls back to the recipe title"
       ],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13285,8 +13662,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13317,8 +13696,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13349,8 +13730,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13381,8 +13764,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13413,8 +13798,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13445,8 +13832,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13477,8 +13866,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13509,8 +13900,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true
@@ -13541,8 +13934,10 @@
       "metadataFailures": [],
       "metadataWarnings": [],
       "semanticWarnings": [],
-      "semanticStatus": "pass",
-      "semanticReasons": [],
+      "semanticStatus": "not_verified",
+      "semanticReasons": [
+        "vision check not run (pass --vision to verify the picture)"
+      ],
       "hardFailures": [],
       "needsNewImage": false,
       "pass": true

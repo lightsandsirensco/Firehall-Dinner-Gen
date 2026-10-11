@@ -52,6 +52,12 @@ export function getPgPool(): Pool {
   return pool;
 }
 
+/** Test-only: route every store through a stand-in pool (scripts/test-billing-e2e.ts uses in-process PGlite). */
+export function setPgPoolForTests(testPool: Pool): void {
+  pool = testPool;
+  db = null;
+}
+
 /** Lazily-created singleton Drizzle instance over the shared pg Pool. */
 export function getPgDb(): NodePgDatabase {
   if (db) return db;

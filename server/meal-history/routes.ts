@@ -1,33 +1,32 @@
 /**
- * Firehall Meals Pro V1 Feature 3 — Meal Memory API.
+ * Meal History API — Free/Premium.
  *
  * Authenticated-only. A user may only ever read/write/delete their OWN
  * history — user id always comes from the server-verified session
- * (`req._authUserId`), never from the request body. The durable
- * cross-device read/write paths are gated behind the `meal_memory`
- * entitlement; deleting your own existing row is always allowed (privacy/
- * control action, not a paid-feature consumption).
+ * (`req._authUserId`), never from the request body. Every signed-in user
+ * (`meal_history`) accumulates durable history; the tier only limits what is
+ * visible/editable (shared/meal-history/access.ts). Nothing here ever deletes
+ * rows because of a plan change. Deleting your own row is always allowed.
  */
 import type { Express, Response } from "express";
 import { requireCsrf } from "../csrf.js";
 import { requireAuth, type AuthedRequest } from "../auth/auth-middleware.js";
 import { logError } from "../logger.js";
-import { hasFeature } from "../../shared/billing/types.js";
 import { resolveUserBilling } from "../billing/store.js";
+import { resolveMealHistoryAccess } from "../../shared/meal-history/access.js";
 import {
   mealHistoryCreateSchema,
   mealHistoryFeedbackSchema,
   mealHistoryImportSchema,
 } from "../../shared/meal-history/schema.js";
-import type { MealHistoryImportResponse, MealHistoryListResponse } from "../../shared/meal-history/types.js";
+import type { MealHistoryImportResponse } from "../../shared/meal-history/types.js";
 import {
   deleteMealHistoryEntryForUser,
   importMealHistoryForUser,
   initMealHistoryStore,
-  listMealHistoryForUser,
   recordMealCookedForUser,
-  submitMealFeedbackForUser,
 } from "./store.js";
+import { buildMealHistoryList, storeMealHistoryDeps, submitFeedbackWithAccess } from "./service.js";
 
 let storeReady = false;
 
@@ -38,21 +37,28 @@ async function ensureStore(): Promise<void> {
   }
 }
 
+async function accessFor(userId: string) {
+  const billing = await resolveUserBilling(userId);
+  return resolveMealHistoryAccess(billing.features);
+}
+
+function intQuery(value: unknown): number | undefined {
+  if (typeof value !== "string" || !/^\d{1,6}$/.test(value)) return undefined;
+  return Number(value);
+}
+
+const SIGN_IN_MESSAGE = "Sign in to keep your meal history.";
+
 export function registerMealHistoryRoutes(app: Express): void {
-  // Retrieve the signed-in user's own recent cooked-meal history.
-  // Non-entitled users get `entitled: false` + an empty list (not an error) —
-  // keeps the client's empty/upsell state simple and consistent with GET
-  // never leaking whether history rows exist for a downgraded former-Pro user.
+  // Visible history for the current tier (Free: last 30 days + locked count; Premium: everything + favorites).
   app.get("/api/meal-history", requireAuth, async (req: AuthedRequest, res: Response) => {
     try {
       await ensureStore();
       const userId = req._authUserId!;
-      const billing = await resolveUserBilling(userId);
-      const entitled = hasFeature(billing.features, "meal_memory");
-      const response: MealHistoryListResponse = {
-        entitled,
-        entries: entitled ? await listMealHistoryForUser(userId, 20) : [],
-      };
+      const response = await buildMealHistoryList(storeMealHistoryDeps, userId, await accessFor(userId), {
+        offset: intQuery(req.query.offset),
+        limit: intQuery(req.query.limit),
+      });
       return res.json(response);
     } catch (err) {
       logError("meal-history", "list failed", err);
@@ -60,18 +66,13 @@ export function registerMealHistoryRoutes(app: Express): void {
     }
   });
 
-  // Record an explicit "Mark as Cooked" event. Pro-only — the client only
-  // calls this when entitled, but the entitlement check here is the real
-  // gate (defense against a hand-crafted request from a non-Pro session).
+  // Record an explicit "Made This" / Cook Mode completion — every signed-in user.
   app.post("/api/meal-history", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
     try {
       await ensureStore();
       const userId = req._authUserId!;
-      const billing = await resolveUserBilling(userId);
-      if (!hasFeature(billing.features, "meal_memory")) {
-        return res.status(403).json({
-          message: "Firehall Meals Pro remembers your cooked meals across devices.",
-        });
+      if (!(await accessFor(userId)).canLog) {
+        return res.status(403).json({ message: SIGN_IN_MESSAGE });
       }
 
       const parsed = mealHistoryCreateSchema.safeParse(req.body);
@@ -85,10 +86,7 @@ export function registerMealHistoryRoutes(app: Express): void {
         return res.status(400).json({ message: "Recipe not found" });
       }
 
-      // No separate server-side analytics event here — the existing
-      // `meal_cooked`/`meal_logged` client events fire from the same
-      // logging call site (start-cooking-button.tsx) — a second,
-      // server-side event for the identical moment would double-count.
+      // `meal_logged` fires client-side from the same call site; no server event to avoid double counting.
       return res.status(201).json({ ok: true, entry: result.entry });
     } catch (err) {
       logError("meal-history", "create failed", err);
@@ -96,10 +94,8 @@ export function registerMealHistoryRoutes(app: Express): void {
     }
   });
 
-  // Backfill device-local cooked entries into the canonical table. Idempotent
-  // (keyed by client_entry_id), insert-only, same `meal_memory` gate as a
-  // live write. Non-entitled users get `entitled: false` and nothing is
-  // written, so the client keeps its local copy and retries after upgrade.
+  // Backfill device-local cooked entries. Idempotent and insert-only; older
+  // entries are stored for Free users too (hidden until upgrade, never dropped).
   app.post(
     "/api/meal-history/import",
     requireCsrf,
@@ -108,8 +104,7 @@ export function registerMealHistoryRoutes(app: Express): void {
       try {
         await ensureStore();
         const userId = req._authUserId!;
-        const billing = await resolveUserBilling(userId);
-        if (!hasFeature(billing.features, "meal_memory")) {
+        if (!(await accessFor(userId)).canLog) {
           const response: MealHistoryImportResponse = { entitled: false, imported: 0, duplicates: 0, skipped: 0 };
           return res.json(response);
         }
@@ -137,9 +132,7 @@ export function registerMealHistoryRoutes(app: Express): void {
     },
   );
 
-  // Post-meal crew feedback — a partial update onto a history row the user
-  // already owns. Every field optional; safe to call multiple times to edit
-  // rating/note later. Same `meal_memory` gate as creating the row itself.
+  // Rating / make-again / tags / note. Free: meals inside the visible window; Premium: any meal.
   app.patch(
     "/api/meal-history/:id/feedback",
     requireCsrf,
@@ -148,12 +141,6 @@ export function registerMealHistoryRoutes(app: Express): void {
       try {
         await ensureStore();
         const userId = req._authUserId!;
-        const billing = await resolveUserBilling(userId);
-        if (!hasFeature(billing.features, "meal_memory")) {
-          return res.status(403).json({
-            message: "Firehall Meals Pro remembers your cooked meals across devices.",
-          });
-        }
 
         const id = Number(req.params.id);
         if (!Number.isInteger(id) || id <= 0) {
@@ -165,12 +152,17 @@ export function registerMealHistoryRoutes(app: Express): void {
           return res.status(400).json({ message: "Invalid feedback" });
         }
 
-        const result = await submitMealFeedbackForUser(userId, id, parsed.data);
-        if (!result.ok) {
-          return res.status(404).json({ message: "History entry not found" });
+        const outcome = await submitFeedbackWithAccess(
+          storeMealHistoryDeps,
+          userId,
+          await accessFor(userId),
+          id,
+          parsed.data,
+        );
+        if (!outcome.ok) {
+          return res.status(outcome.status).json({ message: outcome.message });
         }
-
-        return res.json({ ok: true, entry: result.entry });
+        return res.json({ ok: true, entry: outcome.entry });
       } catch (err) {
         logError("meal-history", "feedback failed", err);
         return res.status(500).json({ message: "Failed to save feedback" });
@@ -178,9 +170,7 @@ export function registerMealHistoryRoutes(app: Express): void {
     },
   );
 
-  // Remove one of the signed-in user's own history entries — always
-  // allowed regardless of current entitlement (removing your own data is a
-  // privacy/control action, not a paid-feature consumption).
+  // Remove one of the signed-in user's own history entries — always allowed.
   app.delete(
     "/api/meal-history/:id",
     requireCsrf,

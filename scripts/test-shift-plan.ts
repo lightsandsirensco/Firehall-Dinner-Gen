@@ -19,6 +19,7 @@ import {
 } from "../shared/shift-plan/plan.ts";
 import { shiftPlanFillSchema, shiftPlanSlotPatchSchema } from "../shared/shift-plan/schema.ts";
 import { pickBreakfast, type BreakfastCandidate } from "../shared/shift-plan/breakfast.ts";
+import { classifyMealOccasions } from "../shared/catalog/meal-occasions.ts";
 import type { PlannedMealSlot, PlannedRecipe, ShiftPlanView } from "../shared/shift-plan/types.ts";
 import { createMemoryShiftPlanRepo, type ShiftPlanRepo } from "../server/shift-plan/store.ts";
 import {
@@ -67,6 +68,8 @@ function makeDeps(s: PersonalSchedule | null, repo: ShiftPlanRepo, now = NOW): S
     loadSchedule: async () => (s ? { schedule: s, overrides: [], mealPreferences: {} } : null),
     resolveRecipe: (slug) => RECIPES[slug] ?? null,
     isSelectableSlug: (slug) => slug in RECIPES,
+    canPlanAhead: async () => false,
+    canRunItBack: async () => false,
     now: () => now,
   };
 }
@@ -277,7 +280,9 @@ await test("guards: stale shift → 409, unknown slot → 404, non-catalog recip
       return err.status;
     }
   };
-  assert.equal(await status(fillShiftPlan(deps, USER, { shiftKey: "2026-10-11T07:00", mode: "fill" }, fakePicker())), 409);
+  assert.equal(await status(fillShiftPlan(deps, USER, { shiftKey: "2026-10-09T07:00", mode: "fill" }, fakePicker())), 409);
+  // A real later shift is Plan Ahead (Pro) — see test-plan-ahead.ts.
+  assert.equal(await status(fillShiftPlan(deps, USER, { shiftKey: "2026-10-11T07:00", mode: "fill" }, fakePicker())), 403);
   assert.equal(await status(patchShiftPlanSlot(deps, USER, { shiftKey, slotKey: "nope", skipped: true })), 404);
   assert.equal(
     await status(patchShiftPlanSlot(deps, USER, { shiftKey, slotKey: `${shiftKey}|lunch|2026-10-08`, recipeSlug: "not-real" })),
@@ -343,9 +348,36 @@ await test("slot request keeps hard restrictions, resets session choices, clamps
   const veg = buildSlotGenerateRequest(buildGenerateRequestInput({ protein: "vegetarian" }), slot);
   assert.deepEqual([veg.protein, veg.vegetarian_swap_needed], ["vegetarian", true]);
   const dinner = buildSlotGenerateRequest(base, { type: "dinner", plannedLocal: "2026-10-08T18:00", adjusted: false, crewSize: 6 });
-  assert.deepEqual([dinner.firehall_category, dinner.time_available], ["crew_favorites", "45-60"]);
+  assert.deepEqual([dinner.firehall_category, dinner.time_available], [undefined, "45-60"]);
+  const fromCategory = buildSlotGenerateRequest(buildGenerateRequestInput({ firehall_category: "bbq_smoker" }), {
+    type: "lunch",
+    plannedLocal: "2026-10-08T12:00",
+    adjusted: false,
+    crewSize: 6,
+  });
+  assert.equal(fromCategory.firehall_category, undefined, "a Pick Tonight category never narrows a planner slot");
   const custom = slotSelectionProfile({ type: "custom", plannedLocal: "2026-10-09T02:00", adjusted: false });
   assert.equal(custom.mealType, "late_night");
+});
+
+await test("meal occasions follow dish style, not 'could be eaten then'", () => {
+  const occ = (title: string, mealFormat: string, cookTime: number, slug = "x") =>
+    classifyMealOccasions({ slug, title, mealFormat, cookTime }).occasions;
+  assert.deepEqual(occ("Dutch Oven Pot Roast", "braise", 210), ["dinner"]);
+  assert.deepEqual(occ("Lemon Chicken Orzo Soup", "soup", 35), ["lunch"]);
+  assert.deepEqual(occ("Turkey Chili", "soup_chili", 55), ["lunch", "dinner"]);
+  assert.deepEqual(occ("Chicken Quesadillas", "handheld", 30), ["lunch", "dinner", "late_night"]);
+  assert.deepEqual(occ("Station Cobb Salad", "salad", 25), ["lunch"]);
+  assert.deepEqual(occ("Beef and Broccoli", "skillet", 35), ["dinner"]);
+  assert.deepEqual(occ("Seoul Chili Pear Beef Cubes", "grill", 14), ["dinner"], "chili as an ingredient isn't a chili");
+  assert.deepEqual(occ("Hall Breakfast Burritos", "breakfast", 35), ["breakfast"]);
+  assert.deepEqual(occ("Loaded Baked Potato Soup Crock", "slow_cooker", 420), ["dinner"], "too slow for lunch is still a meal");
+  const side = classifyMealOccasions({ slug: "grilled-corn-cotija", title: "Street Corn with Cotija", mealFormat: "grill", cookTime: 90 });
+  assert.deepEqual([side.role, side.occasions, side.primary], ["side", [], "not_a_meal"]);
+  const pizza = classifyMealOccasions({ slug: "breakfast-sausage-pizza", title: "Breakfast Sausage Gravy Pizza", mealFormat: "pizza", cookTime: 55 });
+  assert.deepEqual(pizza.occasions, ["breakfast"]);
+  const smoothie = classifyMealOccasions({ slug: "s", title: "Mocha Protein Smoothie", mealFormat: "smoothie", cookTime: 5, isSmoothie: true });
+  assert.equal(smoothie.role, "drink");
 });
 
 await test("API schemas", () => {
@@ -396,6 +428,22 @@ await test("48h shift auto-fills all 8 meals from the catalog with no repeats", 
   for (const slug of slugs) assert.ok(catalog.has(slug!), `${slug} is a browsable catalog recipe`);
   const breakfasts = res.plan.slots.filter((s) => s.type === "breakfast").map((s) => catalog.get(s.recipe!.slug)!);
   assert.ok(breakfasts.every((b) => b.mealFormat === "breakfast"), "breakfast slots get breakfasts");
+});
+
+await test("72h auto-fill: every lunch / dinner / late-night pick fits its meal occasion", async () => {
+  const res = await fillWithRealPipeline(schedule(72, 96));
+  const lateNight = schedule(12, 36, "19:00");
+  const night = await fillWithRealPipeline(lateNight);
+  for (const slot of [...res.plan.slots, ...night.plan.slots]) {
+    const meal = slotSelectionProfile(slot).mealType;
+    if (meal === "breakfast" || !slot.recipe) continue;
+    const entry = catalog.get(slot.recipe.slug)!;
+    assert.ok(
+      classifyMealOccasions(entry).occasions.includes(meal),
+      `${slot.recipe.slug} (${entry.title}) is a realistic ${meal}`,
+    );
+  }
+  assert.ok(res.plan.slots.filter((s) => s.recipe).length >= 10, "72h shift fills its meals");
 });
 
 await test("dietary restriction is respected on every auto-filled meal (vegetarian)", async () => {

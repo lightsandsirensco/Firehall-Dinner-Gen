@@ -10,6 +10,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -25,6 +28,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -40,6 +46,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -55,6 +64,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -70,6 +82,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -85,6 +100,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -100,6 +118,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -115,6 +136,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -130,6 +154,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -145,6 +172,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -160,6 +190,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -175,6 +208,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 
@@ -190,6 +226,9 @@ Disallow: /halls/
 Disallow: /settings
 Disallow: /profile
 Disallow: /tonight
+Disallow: /shift$
+Disallow: /shift-planner
+Disallow: /list$
 Disallow: /onboarding/
 Disallow: /favorites
 

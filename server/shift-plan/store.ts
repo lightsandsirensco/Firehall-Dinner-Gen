@@ -13,6 +13,8 @@ export interface ShiftPlanRecord {
 /** Storage seam — Postgres in production, in-memory in tests. */
 export interface ShiftPlanRepo {
   getPlan(userId: string, shiftKey: string): Promise<ShiftPlanRecord>;
+  /** Saved slot states for several shifts at once (upcoming-shifts status). Shifts with no plan are absent. */
+  listSlotStates(userId: string, shiftKeys: readonly string[]): Promise<Map<string, ShiftPlanSlotState[]>>;
   /** Writes slot states (creating the plan if needed). Returns true when the plan was created. */
   saveSlots(userId: string, shiftKey: string, slots: readonly ShiftPlanSlotState[]): Promise<boolean>;
 }
@@ -52,6 +54,22 @@ export const pgShiftPlanRepo: ShiftPlanRepo = {
       [userId, shiftKey],
     );
     return { exists: true, slots: rows.map(toState) };
+  },
+
+  async listSlotStates(userId, shiftKeys) {
+    const out = new Map<string, ShiftPlanSlotState[]>();
+    if (shiftKeys.length === 0) return out;
+    const rows = await pgAll<SlotRow & { shift_key: string }>(
+      `SELECT shift_key, slot_key, recipe_slug, selection_source, locked, skipped, byo, crew_size_override
+       FROM user_shift_plan_slots WHERE user_id = $1 AND shift_key = ANY($2::text[])`,
+      [userId, [...shiftKeys]],
+    );
+    for (const row of rows) {
+      const list = out.get(row.shift_key) ?? [];
+      list.push(toState(row));
+      out.set(row.shift_key, list);
+    }
+    return out;
   },
 
   async saveSlots(userId, shiftKey, slots) {
@@ -102,6 +120,14 @@ export function createMemoryShiftPlanRepo(): ShiftPlanRepo & { snapshot(): Map<s
     async getPlan(userId, shiftKey) {
       const plan = plans.get(key(userId, shiftKey));
       return plan ? { exists: true, slots: [...plan.values()].map((s) => ({ ...s })) } : { exists: false, slots: [] };
+    },
+    async listSlotStates(userId, shiftKeys) {
+      const out = new Map<string, ShiftPlanSlotState[]>();
+      for (const shiftKey of shiftKeys) {
+        const plan = plans.get(key(userId, shiftKey));
+        if (plan) out.set(shiftKey, [...plan.values()].map((s) => ({ ...s })));
+      }
+      return out;
     },
     async saveSlots(userId, shiftKey, slots) {
       const k = key(userId, shiftKey);

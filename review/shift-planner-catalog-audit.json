@@ -1,0 +1,705 @@
+{
+  "generatedAt": "2026-10-11T13:57:52.777Z",
+  "totals": {
+    "approved": 427,
+    "meals": 400,
+    "roles": {
+      "meal": 400,
+      "appetizer": 8,
+      "side": 9,
+      "drink": 10
+    },
+    "heldFromTonight": 5
+  },
+  "occasions": {
+    "primary": {
+      "multi_purpose": 132,
+      "dinner": 182,
+      "breakfast": 72,
+      "not_a_meal": 27,
+      "lunch": 14
+    },
+    "eligible": {
+      "breakfast": 72,
+      "lunch": 116,
+      "dinner": 307,
+      "late_night": 91
+    },
+    "multiPurposeCombos": {
+      "lunch+dinner": 41,
+      "lunch+dinner+late_night": 54,
+      "dinner+late_night": 30,
+      "lunch+late_night": 7
+    }
+  },
+  "time": {
+    "under_30": 115,
+    "30_59": 183,
+    "60_89": 37,
+    "90_plus": 65
+  },
+  "protein": {
+    "Vegetarian": 29,
+    "Seafood": 30,
+    "Pork": 70,
+    "Eggs": 32,
+    "Beef": 95,
+    "Turkey": 15,
+    "Chicken": 120,
+    "Mixed": 4,
+    "Lamb": 5
+  },
+  "batchFriendly": {
+    "explicit": 29,
+    "format": 78
+  },
+  "byOccasion": {
+    "breakfast": {
+      "total": 72,
+      "time": {
+        "under_30": 8,
+        "30_59": 52,
+        "60_89": 11,
+        "90_plus": 1
+      },
+      "protein": {
+        "Seafood": 3,
+        "Eggs": 32,
+        "Vegetarian": 3,
+        "Pork": 31,
+        "Chicken": 1,
+        "Beef": 2
+      },
+      "batchFriendly": 10
+    },
+    "lunch": {
+      "total": 116,
+      "time": {
+        "under_30": 58,
+        "30_59": 53,
+        "60_89": 4,
+        "90_plus": 1
+      },
+      "protein": {
+        "Vegetarian": 15,
+        "Pork": 11,
+        "Chicken": 40,
+        "Beef": 30,
+        "Seafood": 11,
+        "Turkey": 8,
+        "Mixed": 1
+      },
+      "batchFriendly": 27
+    },
+    "dinner": {
+      "total": 307,
+      "time": {
+        "under_30": 97,
+        "30_59": 122,
+        "60_89": 24,
+        "90_plus": 64
+      },
+      "protein": {
+        "Vegetarian": 20,
+        "Seafood": 26,
+        "Pork": 37,
+        "Beef": 91,
+        "Turkey": 13,
+        "Chicken": 112,
+        "Mixed": 3,
+        "Lamb": 5
+      },
+      "batchFriendly": 87
+    },
+    "late_night": {
+      "total": 91,
+      "time": {
+        "under_30": 73,
+        "30_59": 18,
+        "60_89": 0,
+        "90_plus": 0
+      },
+      "protein": {
+        "Pork": 9,
+        "Seafood": 14,
+        "Turkey": 7,
+        "Beef": 25,
+        "Chicken": 31,
+        "Vegetarian": 5
+      },
+      "batchFriendly": 15
+    }
+  },
+  "slotPools": [
+    {
+      "slot": "breakfast",
+      "adjusted": false,
+      "budget": "20-30",
+      "occasionPool": 72,
+      "inTime": 34,
+      "perRestriction": {
+        "none": 34,
+        "vegetarian": 11,
+        "porkFree": 18,
+        "noSeafood": 33,
+        "glutenFree": 10,
+        "dairyFree": 2
+      },
+      "perProtein": {
+        "Seafood": 1,
+        "Vegetarian": 3,
+        "Eggs": 14,
+        "Pork": 16
+      }
+    },
+    {
+      "slot": "breakfast",
+      "adjusted": true,
+      "budget": "15-25",
+      "occasionPool": 72,
+      "inTime": 24,
+      "perRestriction": {
+        "none": 24,
+        "vegetarian": 10,
+        "porkFree": 14,
+        "noSeafood": 23,
+        "glutenFree": 4,
+        "dairyFree": 1
+      },
+      "perProtein": {
+        "Seafood": 1,
+        "Vegetarian": 3,
+        "Eggs": 11,
+        "Pork": 9
+      }
+    },
+    {
+      "slot": "lunch",
+      "adjusted": false,
+      "budget": "30-45",
+      "occasionPool": 115,
+      "inTime": 111,
+      "perRestriction": {
+        "none": 111,
+        "vegetarian": 12,
+        "porkFree": 95,
+        "noSeafood": 93,
+        "glutenFree": 32,
+        "dairyFree": 44
+      },
+      "perProtein": {
+        "Vegetarian": 15,
+        "Pork": 11,
+        "Chicken": 35,
+        "Beef": 30,
+        "Seafood": 11,
+        "Turkey": 8,
+        "Mixed": 1
+      }
+    },
+    {
+      "slot": "lunch",
+      "adjusted": true,
+      "budget": "25-40",
+      "occasionPool": 115,
+      "inTime": 96,
+      "perRestriction": {
+        "none": 96,
+        "vegetarian": 11,
+        "porkFree": 81,
+        "noSeafood": 80,
+        "glutenFree": 28,
+        "dairyFree": 37
+      },
+      "perProtein": {
+        "Vegetarian": 14,
+        "Pork": 11,
+        "Chicken": 31,
+        "Beef": 23,
+        "Seafood": 10,
+        "Turkey": 6,
+        "Mixed": 1
+      }
+    },
+    {
+      "slot": "dinner",
+      "adjusted": false,
+      "budget": "45-60",
+      "occasionPool": 302,
+      "inTime": 231,
+      "perRestriction": {
+        "none": 231,
+        "vegetarian": 17,
+        "porkFree": 203,
+        "noSeafood": 188,
+        "glutenFree": 69,
+        "dairyFree": 99
+      },
+      "perProtein": {
+        "Vegetarian": 19,
+        "Seafood": 25,
+        "Pork": 21,
+        "Turkey": 10,
+        "Chicken": 90,
+        "Beef": 59,
+        "Mixed": 2,
+        "Lamb": 5
+      }
+    },
+    {
+      "slot": "dinner",
+      "adjusted": true,
+      "budget": "30-45",
+      "occasionPool": 302,
+      "inTime": 217,
+      "perRestriction": {
+        "none": 217,
+        "vegetarian": 16,
+        "porkFree": 192,
+        "noSeafood": 177,
+        "glutenFree": 65,
+        "dairyFree": 97
+      },
+      "perProtein": {
+        "Vegetarian": 18,
+        "Seafood": 25,
+        "Pork": 20,
+        "Turkey": 10,
+        "Chicken": 82,
+        "Beef": 55,
+        "Mixed": 2,
+        "Lamb": 5
+      }
+    },
+    {
+      "slot": "late_night",
+      "adjusted": false,
+      "budget": "20-30",
+      "occasionPool": 91,
+      "inTime": 91,
+      "perRestriction": {
+        "none": 91,
+        "vegetarian": 5,
+        "porkFree": 83,
+        "noSeafood": 74,
+        "glutenFree": 33,
+        "dairyFree": 39
+      },
+      "perProtein": {
+        "Pork": 9,
+        "Seafood": 14,
+        "Turkey": 7,
+        "Beef": 25,
+        "Chicken": 31,
+        "Vegetarian": 5
+      }
+    },
+    {
+      "slot": "late_night",
+      "adjusted": true,
+      "budget": "15-25",
+      "occasionPool": 91,
+      "inTime": 91,
+      "perRestriction": {
+        "none": 91,
+        "vegetarian": 5,
+        "porkFree": 83,
+        "noSeafood": 74,
+        "glutenFree": 33,
+        "dairyFree": 39
+      },
+      "perProtein": {
+        "Pork": 9,
+        "Seafood": 14,
+        "Turkey": 7,
+        "Beef": 25,
+        "Chicken": 31,
+        "Vegetarian": 5
+      }
+    }
+  ],
+  "dinnerNeverFitsSlotBudget": 74,
+  "nutrition": {
+    "breakfast": {
+      "total": 72,
+      "withMacros": 0,
+      "flagOnly": 52,
+      "noNutrition": 20,
+      "strongFitWithMacros": {
+        "high_protein": 0,
+        "lower_calorie": 0,
+        "lower_carb": 0,
+        "balanced": 0
+      }
+    },
+    "lunch": {
+      "total": 116,
+      "withMacros": 48,
+      "flagOnly": 29,
+      "noNutrition": 39,
+      "strongFitWithMacros": {
+        "high_protein": 41,
+        "lower_calorie": 8,
+        "lower_carb": 8,
+        "balanced": 23
+      }
+    },
+    "dinner": {
+      "total": 307,
+      "withMacros": 139,
+      "flagOnly": 48,
+      "noNutrition": 120,
+      "strongFitWithMacros": {
+        "high_protein": 132,
+        "lower_calorie": 20,
+        "lower_carb": 44,
+        "balanced": 43
+      }
+    },
+    "late_night": {
+      "total": 91,
+      "withMacros": 46,
+      "flagOnly": 18,
+      "noNutrition": 27,
+      "strongFitWithMacros": {
+        "high_protein": 44,
+        "lower_calorie": 8,
+        "lower_carb": 17,
+        "balanced": 18
+      }
+    }
+  },
+  "issues": [
+    {
+      "slug": "30-minute-pasta-e-fagioli-for-the-hall",
+      "title": "30-Minute Pasta e Fagioli for the Hall",
+      "kind": "firehall_catalog",
+      "issue": "protein label 'Vegetarian' but dietary analysis says not vegetarian"
+    },
+    {
+      "slug": "bbq-meatball-skewers",
+      "title": "BBQ Meatball Skewers",
+      "kind": "hall_expansion",
+      "issue": "appetizer, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "loaded-ranch-potato-salad-crew",
+      "title": "Blue Cheese Fingerling Ranch Tray",
+      "kind": "bbq_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "breakfast-sausage-pizza",
+      "title": "Breakfast Sausage Gravy Pizza",
+      "kind": "firehall_catalog",
+      "issue": "breakfast dish filed outside the breakfast catalog (meal format pizza)"
+    },
+    {
+      "slug": "buffalo-chicken-dip",
+      "title": "Buffalo Chicken Dip",
+      "kind": "firehall_catalog",
+      "issue": "appetizer, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "firehall-street-elote-cups",
+      "title": "Epazote Esquites Street Cups",
+      "kind": "bbq_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "firehall-charcuterie-board",
+      "title": "Firehall Charcuterie Board",
+      "kind": "hall_expansion",
+      "issue": "appetizer, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "jalapeno-popper-dip",
+      "title": "Jalapeño Popper Dip",
+      "kind": "hall_expansion",
+      "issue": "appetizer, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "loaded-potato-skins",
+      "title": "Loaded Potato Skins",
+      "kind": "hall_expansion",
+      "issue": "appetizer, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "firehall-antipasto-pasta-salad",
+      "title": "Mortadella Farfalle Antipasto Tray",
+      "kind": "bbq_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "pasta-e-ceci-for-the-hall",
+      "title": "Pasta e Ceci (Pasta with Chickpeas)",
+      "kind": "firehall_catalog",
+      "issue": "protein label 'Vegetarian' but dietary analysis says not vegetarian"
+    },
+    {
+      "slug": "philly-egg-rolls",
+      "title": "Philly Cheesesteak Egg Rolls",
+      "kind": "firehall_catalog",
+      "issue": "appetizer, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "grilled-peach-burrata-salad",
+      "title": "Pistachio Peach and Burrata Salad",
+      "kind": "bbq_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "pretzel-bite-platter",
+      "title": "Pretzel Bite Platter with Beer Cheese",
+      "kind": "hall_expansion",
+      "issue": "protein label 'Vegetarian' but dietary analysis says not vegetarian"
+    },
+    {
+      "slug": "pretzel-bite-platter",
+      "title": "Pretzel Bite Platter with Beer Cheese",
+      "kind": "hall_expansion",
+      "issue": "appetizer, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "sausage-egg-bake",
+      "title": "Sausage Egg Bake",
+      "kind": "firehall_catalog",
+      "issue": "breakfast dish filed outside the breakfast catalog (meal format bake)"
+    },
+    {
+      "slug": "charred-broccolini-lemon-tray",
+      "title": "Sicilian Anchovy Broccolini Tray",
+      "kind": "bbq_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "smoked-baked-beans-crew",
+      "title": "Smoked Baked Beans for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "smoked-mac-and-cheese-crew",
+      "title": "Smoked Mac and Cheese for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "smoked-potato-salad-tray",
+      "title": "Smoked Potato Salad Tray",
+      "kind": "bbq_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "smoked-queso-fundido",
+      "title": "Smoked Queso Fundido",
+      "kind": "hall_expansion",
+      "issue": "appetizer, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "spicy-tomato-bisque-grilled-brie-toast",
+      "title": "Spicy Tomato Bisque with Grilled Brie Toast",
+      "kind": "firehall_catalog",
+      "issue": "protein label 'Vegetarian' but dietary analysis says not vegetarian"
+    },
+    {
+      "slug": "grilled-corn-cotija",
+      "title": "Street Corn with Cotija",
+      "kind": "firehall_catalog",
+      "issue": "side, not a meal — previously eligible for meal slots"
+    },
+    {
+      "slug": "tomato-soup-grilled-cheese-croutons",
+      "title": "Tomato Soup with Grilled Cheese Croutons",
+      "kind": "firehall_catalog",
+      "issue": "protein label 'Vegetarian' but dietary analysis says not vegetarian"
+    },
+    {
+      "slug": "chili-lime-grilled-tilapia",
+      "title": "Ancho-Tilapia with Charred Corn Salsa",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'crew_kebab' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "andouille-po-boy-rolls-crew",
+      "title": "Andouille Po Boy Rolls for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'smokehouse_board' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "spiedie-chicken-platter-crew",
+      "title": "Binghamton White-Wine Spiedie Tray",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'side' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "cajun-grilled-cod-crew",
+      "title": "Black Iron Remoulade Cod Plates",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'crew_kebab' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "loaded-ranch-potato-salad-crew",
+      "title": "Blue Cheese Fingerling Ranch Tray",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'hoagie_press' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "grilled-cod-lemon-packets",
+      "title": "Caper-Butter Cod Foil Packets",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'crew_kebab' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "cast-iron-steak-fajita-sizzlers",
+      "title": "Cast Iron Skirt Steak Sizzlers",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'smokehouse_board' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "flat-top-philly-cheesesteaks-crew",
+      "title": "Cooper Sharp Chopped Ribeye Hoagies",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'river_fish' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "firehall-street-elote-cups",
+      "title": "Epazote Esquites Street Cups",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'tropical_fillet' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "firehall-burnt-ends-platter",
+      "title": "Firehall Burnt Ends Platter",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'burger' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "griddle-smash-sausage-peppers",
+      "title": "Giardiniera Smash Sausage Hoagies",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'bayou_fillet' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "grilled-reuben-sandwiches-crew",
+      "title": "Grilled Reuben Sandwiches for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'smokehouse_board' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "tandoori-lamb-chop-platter",
+      "title": "Kashmiri Mustard-Oil Lamb Chop Feast",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'side' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "portuguese-linguica-grill-platter",
+      "title": "Lisbon Piri-Piri Linguica Spread",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'side' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "firehall-antipasto-pasta-salad",
+      "title": "Mortadella Farfalle Antipasto Tray",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'hoagie_press' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "honey-sriracha-shrimp-skewers",
+      "title": "Palm Sugar Lime Shrimp Skewers",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'burger' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "maple-bourbon-grilled-trout",
+      "title": "Pecan Bourbon Whole Trout Board",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'crew_kebab' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "grilled-peach-burrata-salad",
+      "title": "Pistachio Peach and Burrata Salad",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'hoagie_press' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "pressed-cuban-sandwiches-crew",
+      "title": "Pressed Cuban Sandwiches for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'smokehouse_board' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "reverse-seared-ribeye-crew",
+      "title": "Reverse-Seared Ribeye for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'sandwich' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "mongolian-beef-flat-top-crew",
+      "title": "Scallion Crisp Mongolian Flank Tray",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'foil_fish' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "charred-broccolini-lemon-tray",
+      "title": "Sicilian Anchovy Broccolini Tray",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'hoagie_press' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "smoked-baked-beans-crew",
+      "title": "Smoked Baked Beans for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'grill' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "smoked-mac-and-cheese-crew",
+      "title": "Smoked Mac and Cheese for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'sandwich' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "smoked-picanha-steak-platter",
+      "title": "Smoked Picanha Steak Platter",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'sandwich' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "smoked-potato-salad-tray",
+      "title": "Smoked Potato Salad Tray",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'grill' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "grilled-chicken-pesto-panini-crew",
+      "title": "Sun-Dried Tomato Pesto Panini Press",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'smokehouse_board' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "firehall-hibachi-mixed-grill-crew",
+      "title": "Teppan Shrimp and Pork Belly Mixed Grill",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'smokehouse_board' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "texas-central-brisket-crew",
+      "title": "Texas Central Brisket for the Crew",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'sandwich' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "pollo-asado-citrus-platter",
+      "title": "Yucatán Achiote Pollo Asado Spread",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'crew_kebab' is a BBQ authoring template, not the dish"
+    },
+    {
+      "slug": "mixed-lamb-chop-grill-board",
+      "title": "Za'atar Loin and Shoulder Lamb Board",
+      "kind": "bbq_catalog",
+      "issue": "meal format 'crew_kebab' is a BBQ authoring template, not the dish"
+    }
+  ],
+  "thinPoolThreshold": 15
+}

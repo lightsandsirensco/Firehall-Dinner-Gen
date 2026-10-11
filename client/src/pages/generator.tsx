@@ -96,6 +96,33 @@ import { trackPersonalOnboardingStepCompleted } from "@/lib/analytics";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 
+const TONIGHT_RECIPE_ANCHOR_ID = "tonight-recipe";
+/** Current pick for this tab, so Back from the recipe page returns to the same meal. */
+const CURRENT_PICK_SESSION_KEY = "firehall:pick-tonight:current";
+
+function readSessionPick(): ClientRecipeResponse | null {
+  try {
+    const raw = sessionStorage.getItem(CURRENT_PICK_SESSION_KEY);
+    const parsed = raw ? (JSON.parse(raw) as ClientRecipeResponse) : null;
+    return parsed && typeof parsed.title === "string" ? parsed : null;
+  } catch {
+    return null;
+  }
+}
+
+function writeSessionPick(recipe: ClientRecipeResponse | null): void {
+  try {
+    if (recipe) sessionStorage.setItem(CURRENT_PICK_SESSION_KEY, JSON.stringify(recipe));
+    else sessionStorage.removeItem(CURRENT_PICK_SESSION_KEY);
+  } catch {
+    /* storage full or disabled — Back just shows the empty state */
+  }
+}
+
+function signatureOf(recipe: ClientRecipeResponse | null): string {
+  return (recipe as (ClientRecipeResponse & { _signature?: string }) | null)?._signature || "";
+}
+
 function GeneratorMealRepeatWarning({ recipe }: { recipe: ClientRecipeResponse }) {
   const { shouldAvoidRepeat } = useHallHistory();
   const slug = (recipe as ClientRecipeResponse & { _slug?: string })._slug;
@@ -258,7 +285,7 @@ const ResultsPanel = memo(function ResultsPanel({
               crewSize={crewSizeFromFilters(filters)}
               onPickAgain={onPickAgain}
               pickAgainDisabled={generateDisabled}
-              nutritionGoal={filters.nutrition_goal}
+              recipeAnchorId={TONIGHT_RECIPE_ANCHOR_ID}
               onNotFeelingIt={onNotFeelingIt}
               adjustingSummary={adjustingSummary}
               onResetAdjustments={onResetAdjustments}
@@ -273,16 +300,18 @@ const ResultsPanel = memo(function ResultsPanel({
             </p>
           )}
           <GeneratorMealRepeatWarning recipe={recipeWithHero} />
-          <RecipeCard
-            key={stableRecipeKey(recipeWithHero)}
-            recipe={recipeWithHero}
-            crewSize={crewSizeFromFilters(filters)}
-            onEmailClick={onEmailClick}
-            onShoppingListClick={onShoppingListClick}
-            onHallVoteClick={onHallVoteClick}
-            nutritionGoal={filters.nutrition_goal}
-            hideIntro
-          />
+          <div id={TONIGHT_RECIPE_ANCHOR_ID} className="scroll-mt-20">
+            <RecipeCard
+              key={stableRecipeKey(recipeWithHero)}
+              recipe={recipeWithHero}
+              crewSize={crewSizeFromFilters(filters)}
+              onEmailClick={onEmailClick}
+              onShoppingListClick={onShoppingListClick}
+              onHallVoteClick={onHallVoteClick}
+              nutritionGoal={filters.nutrition_goal}
+              hideIntro
+            />
+          </div>
           {showHallVotePrompt && (
             <HallVotePromoBanner
               onStartVote={onHallVoteClick}
@@ -315,7 +344,8 @@ export default function Generator() {
   // ── Core recipe state ─────────────────────────────────────────────────────
   // recipe is ALWAYS replaced atomically — never partially updated.
   // Title, ingredients, steps, timing, tags, macros all come from the same object.
-  const [recipe, setRecipe] = useState<ClientRecipeResponse | null>(null);
+  const [restoredPick] = useState(readSessionPick);
+  const [recipe, setRecipe] = useState<ClientRecipeResponse | null>(restoredPick);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [errorSmoked, setErrorSmoked] = useState(false);
@@ -327,9 +357,9 @@ export default function Generator() {
   // which one is currently displayed. Both are refs so they can be read inside
   // callbacks without stale-closure issues. historyNav is the React state that
   // drives button enabled/disabled state and the "Meal X of Y" indicator.
-  const mealHistoryRef = useRef<ClientRecipeResponse[]>([]);
-  const historyIndexRef = useRef<number>(-1);
-  const [historyNav, setHistoryNav] = useState({ index: -1, total: 0 });
+  const mealHistoryRef = useRef<ClientRecipeResponse[]>(restoredPick ? [restoredPick] : []);
+  const historyIndexRef = useRef<number>(restoredPick ? 0 : -1);
+  const [historyNav, setHistoryNav] = useState(restoredPick ? { index: 0, total: 1 } : { index: -1, total: 0 });
 
   // ── Supporting state ──────────────────────────────────────────────────────
   const [lastTemplateId, setLastTemplateId] = useState<number | undefined>();
@@ -363,7 +393,7 @@ export default function Generator() {
 
   // currentSignature: the last served recipe's signature, sent to the server
   // to avoid returning the same recipe twice in a row.
-  const currentSignatureRef = useRef("");
+  const currentSignatureRef = useRef(signatureOf(restoredPick));
 
   const generationFiltersRef = useRef<SimplifiedGeneratorFilters | null>(null);
   const generationCacheHitRef = useRef(false);
@@ -373,7 +403,11 @@ export default function Generator() {
   const hallVoteBannerRef = useRef<HTMLDivElement>(null);
 
   // Generation counter — only incremented by successful, non-duplicate recipe delivery.
-  const lastAppliedSignatureRef = useRef<string | null>(null);
+  const lastAppliedSignatureRef = useRef<string | null>(signatureOf(restoredPick) || null);
+
+  useEffect(() => {
+    writeSessionPick(recipe);
+  }, [recipe]);
   const [userGenCount, setUserGenCount] = useState(() => getPersistedGenerationCount());
   const [mealHistoryVersion, setMealHistoryVersion] = useState(0);
 
@@ -914,11 +948,11 @@ export default function Generator() {
               {GENERATOR.subline}
             </p>
             <a
-              href="/shift-planner"
+              href="/shift"
               className="mt-2 inline-block text-sm text-primary hover:underline"
               data-testid="link-shift-planner"
             >
-              Planning more than one meal? Try the Shift Planner →
+              Planning more than one meal? Plan your whole shift →
             </a>
           </header>
         )}

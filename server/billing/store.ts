@@ -4,6 +4,15 @@ import { pgAll, pgOne, pgRun } from "../db/pg-sql.js";
 
 import { getStripeConfigStatus } from "./stripe-client.js";
 import { syncKlaviyoProfileForUser } from "../marketing-consent/klaviyo-sync.js";
+import { insertAnalyticsEvents } from "../analytics/analytics-store.js";
+import { pgProTrialRepo } from "./pro-trial-store.js";
+import {
+  isProTrialActive,
+  personalPlanFromSources,
+  proTrialEligibility,
+  proTrialState,
+  type ProTrialRecord,
+} from "../../shared/billing/pro-trial.js";
 
 import {
   BILLING_FEATURES,
@@ -198,6 +207,19 @@ export async function userHasStripeCustomer(userId: string): Promise<boolean> {
     [userId],
   );
   return Boolean(row?.stripe_customer_id);
+}
+
+/**
+ * Whether this account has ever had a Stripe subscription (any status) —
+ * the founding first-year price is for a first paid subscription only.
+ * Cancelled rows keep their stripe_subscription_id, so this survives lapses.
+ */
+export async function userHasHadPaidSubscription(userId: string): Promise<boolean> {
+  const row = await pgOne<{ stripe_subscription_id: string | null }>(
+    `SELECT stripe_subscription_id FROM user_subscriptions WHERE user_id = $1`,
+    [userId],
+  );
+  return Boolean(row?.stripe_subscription_id);
 }
 
 export async function getStripeCustomerIdForUser(userId: string): Promise<string | null> {
@@ -403,14 +425,28 @@ export async function resolveUserBilling(
       hall_subscriptions: [],
       catalog,
       manage_billing_available: false,
+      pro_trial: null,
+      pro_trial_eligible: false,
+      founding_offer_eligible: await getGlobalFlag("founding_offer_enabled", false),
     };
   }
 
-  const sub = await getUserSubscription(userId);
+  const now = new Date();
+  const [sub, trial, foundingEnabled, hadPaid] = await Promise.all([
+    getUserSubscription(userId),
+    pgProTrialRepo.get(userId),
+    getGlobalFlag("founding_offer_enabled", false),
+    userHasHadPaidSubscription(userId),
+  ]);
   // A Stripe subscription in its `past_due` dunning grace period still grants
   // access — only a fully lapsed/cancelled subscription falls back to free.
-  // Non-Stripe grants additionally end at `expires_at`.
-  const subscribedPlan = sub && subscriptionIsEntitled(sub) ? sub.plan_id : ("personal" as PlanId);
+  // Non-Stripe grants additionally end at `expires_at`. An active reverse
+  // trial grants Pro until trial_expires_at; afterwards the user is simply
+  // Free again (no data is touched).
+  const subscribedPlan = personalPlanFromSources({ subscription: sub, trial, now });
+  if (trial && !trial.expired_recorded_at && !isProTrialActive(trial, now)) {
+    void recordTrialExpired(trial, now);
+  }
 
   const effective = await resolvePersonalPlanId(subscribedPlan, false);
   const hallSubscriptions = listUserHallSubscriptions(userId);
@@ -425,7 +461,26 @@ export async function resolveUserBilling(
     hall_subscriptions: hallSubscriptions,
     catalog,
     manage_billing_available: sub?.source === "stripe" && (await userHasStripeCustomer(userId)),
+    pro_trial: proTrialState(trial, now),
+    pro_trial_eligible: proTrialEligibility({ record: trial, subscription: sub, now }).eligible,
+    founding_offer_eligible: foundingEnabled && !hadPaid,
   };
+}
+
+/** premium_trial_expired — recorded once, the first time expiry is observed. */
+async function recordTrialExpired(trial: ProTrialRecord, now: Date): Promise<void> {
+  try {
+    if (!(await pgProTrialRepo.claimExpiredRecording(trial.user_id, now))) return;
+    insertAnalyticsEvents([
+      {
+        event_type: "premium_trial_expired",
+        route: "/api/billing",
+        metadata: { start_source: trial.start_source, expired_at: trial.trial_expires_at },
+      },
+    ]);
+  } catch {
+    /* analytics is best-effort; entitlement already ended by time alone */
+  }
 }
 
 export async function userHasFeature(
@@ -735,10 +790,12 @@ export async function getAdminBillingDashboard(): Promise<{
 export async function getBillingPublicConfig(): Promise<{
   monetization_enabled: boolean;
   payments_enabled: boolean;
+  founding_offer_enabled: boolean;
 }> {
   return {
     monetization_enabled: await getGlobalFlag("monetization_enabled", true),
     payments_enabled: await getGlobalFlag("payments_enabled", false),
+    founding_offer_enabled: await getGlobalFlag("founding_offer_enabled", false),
   };
 }
 

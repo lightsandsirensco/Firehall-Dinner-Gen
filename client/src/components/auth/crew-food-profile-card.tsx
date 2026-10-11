@@ -1,16 +1,15 @@
 import { useState } from "react";
 import { Pencil } from "lucide-react";
+import { useSearch } from "wouter";
 import { EditCrewFoodProfileSheet } from "@/components/auth/edit-crew-food-profile-sheet";
 import { useAuth } from "@/lib/auth/context";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
-import {
-  PROFILE_COOK_TIME_LABELS,
-  PROFILE_NUTRITION_GOAL_LABELS,
-} from "@shared/auth/constants";
+import { useFeature } from "@/lib/billing/hooks";
+import { PROFILE_COOK_TIME_LABELS } from "@shared/auth/constants";
 import {
   PROFILE_NUTRITION_GOAL_KEY_LABELS,
-  sanitizeProfileNutritionGoals,
+  sanitizeProfileNutritionGoal,
 } from "@shared/nutrition/profile-goals";
 
 function SummaryChip({ label }: { label: string }) {
@@ -23,7 +22,9 @@ function SummaryChip({ label }: { label: string }) {
 
 export function CrewFoodProfileCard() {
   const { preferences } = useAuth();
-  const [editing, setEditing] = useState(false);
+  const hasNutritionGoals = useFeature("nutrition_goals");
+  const search = useSearch();
+  const [editing, setEditing] = useState(() => new URLSearchParams(search).get("edit") === "food");
 
   const dietary = preferences?.dietary_restrictions ?? [];
   const allergies = preferences?.allergies ?? [];
@@ -33,19 +34,16 @@ export function CrewFoodProfileCard() {
   const spice = preferences?.spice_level;
   const difficulty = preferences?.meal_difficulty;
   const cookTime = preferences?.cook_time_preference;
-  const nutritionGoal = preferences?.nutrition_goal;
-  const nutritionGoals = sanitizeProfileNutritionGoals(preferences?.nutrition_goals ?? []).map(
-    (g) => PROFILE_NUTRITION_GOAL_KEY_LABELS[g],
-  );
+  const nutritionGoal = hasNutritionGoals ? sanitizeProfileNutritionGoal(preferences?.nutrition_goals ?? []) : null;
 
   const singleSelects = [
+    nutritionGoal && PROFILE_NUTRITION_GOAL_KEY_LABELS[nutritionGoal],
     spice && `${spice} spice`,
     difficulty && `${difficulty} difficulty`,
     cookTime && (PROFILE_COOK_TIME_LABELS as Record<string, string>)[cookTime],
-    nutritionGoal && (PROFILE_NUTRITION_GOAL_LABELS as Record<string, string>)[nutritionGoal],
   ].filter(Boolean) as string[];
 
-  const chipGroups = [dietary, allergies, avoid, cuisines, appliances, nutritionGoals];
+  const chipGroups = [dietary, allergies, avoid, cuisines, appliances];
   const hasAnyData = chipGroups.some((g) => g.length > 0) || singleSelects.length > 0;
 
   return (
@@ -68,9 +66,6 @@ export function CrewFoodProfileCard() {
           <div className="flex flex-wrap gap-1.5">
             {singleSelects.map((s) => (
               <SummaryChip key={s} label={s} />
-            ))}
-            {nutritionGoals.map((g) => (
-              <SummaryChip key={`n-${g}`} label={g} />
             ))}
             {dietary.map((d) => (
               <SummaryChip key={`d-${d}`} label={d} />

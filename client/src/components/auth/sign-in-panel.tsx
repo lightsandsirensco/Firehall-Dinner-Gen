@@ -361,6 +361,10 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
   const cooldownProgress =
     resendSeconds > 0 ? Math.round(((RESEND_COOLDOWN_SEC - resendSeconds) / RESEND_COOLDOWN_SEC) * 100) : 100;
   const showDevNotice = import.meta.env.DEV && config?.email_configured === false;
+  const missingGoogleEnv =
+    import.meta.env.DEV && config && !showGoogle
+      ? [!config.google && "GOOGLE_CLIENT_ID", !googleClientId && "VITE_GOOGLE_CLIENT_ID"].filter(Boolean)
+      : [];
 
   return (
     <div className={cn("space-y-3", className)}>
@@ -381,6 +385,13 @@ export function SignInPanel({ active = true, dismissLabel, onDismiss, className 
               </div>
               <div className="absolute inset-0 overflow-hidden rounded-md opacity-0" ref={googleButtonRef} />
             </div>
+          )}
+
+          {import.meta.env.DEV && missingGoogleEnv.length > 0 && (
+            <p className="text-xs text-muted-foreground/70 text-center" role="status">
+              Dev only: Continue with Google is hidden — set {missingGoogleEnv.join(" and ")} (the same Google
+              OAuth Web client ID) and restart the server.
+            </p>
           )}
 
           {showGoogle && googleUnavailable && (

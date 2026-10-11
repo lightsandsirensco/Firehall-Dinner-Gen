@@ -121,6 +121,8 @@ const HTTP_CHECKS: HttpCheck[] = [
   { label: "private /me shell", path: "/me", expectStatus: 200 },
   { label: "private /hall shell", path: "/hall", expectStatus: 200 },
   { label: "private /tonight shell", path: "/tonight", expectStatus: 200 },
+  { label: "private /shift shell", path: "/shift", expectStatus: 200 },
+  { label: "private /list shell", path: "/list", expectStatus: 200 },
   { label: "private /admin shell", path: "/admin", expectStatus: 200 },
   { label: "private /vote/:id shell", path: "/vote/some-vote-id", expectStatus: 200 },
   // Requirement 3 — /privacy and /terms get real server-rendered metadata.
@@ -132,6 +134,9 @@ const HTTP_CHECKS: HttpCheck[] = [
   // Client-only legacy redirects promoted to real server 301s.
   { label: "/home -> /tonight", path: "/home", expectStatus: 301, expectRedirectTo: "/tonight" },
   { label: "/discover -> /tonight", path: "/discover", expectStatus: 301, expectRedirectTo: "/tonight" },
+  { label: "/shift-planner -> /shift", path: "/shift-planner", expectStatus: 301, expectRedirectTo: "/shift" },
+  { label: "/shift-planner?shift= keeps the deep link", path: "/shift-planner?shift=extra%3A42", expectStatus: 301, expectRedirectTo: "/shift?shift=extra%3A42" },
+  { label: "/shift-planner/shop -> /list", path: "/shift-planner/shop", expectStatus: 301, expectRedirectTo: "/list" },
   { label: "/hall-history -> /hall", path: "/hall-history", expectStatus: 301, expectRedirectTo: "/hall" },
   { label: "/hall-program -> /hall", path: "/hall-program", expectStatus: 301, expectRedirectTo: "/hall" },
 ];

@@ -47,8 +47,6 @@ export function buildHallExpansionRecipePage(
   const images = hallExpansionPageImageSet(recipe.slug);
   const scores = computeScores(recipe);
   const n = recipe.nutrition;
-  const fiber = n.fiber ?? 0;
-
   const tags = [
     `protein:${recipe.protein}`,
     `format:${recipe.mealFormat}`,
@@ -106,7 +104,7 @@ export function buildHallExpansionRecipePage(
       protein: n.protein,
       carbs: n.carbs,
       fats: n.fats,
-      label: `~${n.calories} cal/serving · ${n.protein}g protein · ${fiber}g fiber (est.)`,
+      label: `~${n.calories} cal/serving · ${n.protein}g protein (est.)`,
       source: "estimated" as const,
       estimateAvailable: true,
       filterFlags: {

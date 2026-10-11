@@ -28,7 +28,9 @@ const DEFAULT_QUALITY = 80;
 /** Same spread the generator uses: the best match is ~WEIGHT_SPREAD× likelier than one this many points lower. */
 const WEIGHT_SPREAD = 80;
 
-function requiredDietaryFlags(request: GenerateRequest): DietaryFilterKey[] {
+export function requiredDietaryFlags(
+  request: Pick<GenerateRequest, "dietary_restrictions" | "allergens_to_avoid" | "protein">,
+): DietaryFilterKey[] {
   const flags = new Set<DietaryFilterKey>(request.dietary_restrictions ?? []);
   for (const allergen of request.allergens_to_avoid ?? []) {
     const flag = ALLERGEN_TO_DIETARY_FLAG[allergen as SimplifiedAllergen];
@@ -50,7 +52,13 @@ export function breakfastPassesHardFilters(c: BreakfastCandidate, request: Gener
 export function pickBreakfast(
   candidates: readonly BreakfastCandidate[],
   request: GenerateRequest,
-  options: { avoid: { hard: readonly string[]; soft: readonly string[] }; recentSlugs?: string[]; seed: string },
+  options: {
+    avoid: { hard: readonly string[]; soft: readonly string[] };
+    recentSlugs?: string[];
+    seed: string;
+    /** Soft ranking nudge (e.g. Pro Nutrition Goal) — applied to the already-eligible pool only. */
+    preferenceScore?: (slug: string) => number;
+  },
 ): string | null {
   const hard = new Set(options.avoid.hard);
   const soft = new Set(options.avoid.soft);
@@ -68,7 +76,13 @@ export function pickBreakfast(
   const pool = tiers.find((t) => t.length > 0)!;
 
   const ranked = pool
-    .map((c) => ({ slug: c.slug, score: (c.quality ?? DEFAULT_QUALITY) - recentSlugPenalty(c.slug, options.recentSlugs) }))
+    .map((c) => ({
+      slug: c.slug,
+      score:
+        (c.quality ?? DEFAULT_QUALITY) -
+        recentSlugPenalty(c.slug, options.recentSlugs) +
+        (options.preferenceScore?.(c.slug) ?? 0),
+    }))
     .sort((a, b) => b.score - a.score || a.slug.localeCompare(b.slug));
   const floor = ranked[0]!.score - WEIGHT_SPREAD;
   const idx = weightedPickIndex(

@@ -249,16 +249,18 @@ export function trackMealCooked(input: {
   trackProductEvent("meal_cooked", params);
 }
 
-/** "Made This" / Cook Mode completion recorded to durable meal history (Meal Memory Pro). */
+/** "Made This" / Cook Mode completion recorded to durable meal history (every signed-in user). */
 export function trackMealLogged(input: {
   recipe_slug?: string;
   meal_occasion?: string;
   crew_size?: number;
   nutrition_goal?: string;
   source: string;
+  tier?: string;
 }): void {
   const params = {
     source: input.source.slice(0, 64),
+    ...(input.tier ? { tier: input.tier } : {}),
     ...(input.recipe_slug ? { recipe_slug: input.recipe_slug } : {}),
     ...(input.meal_occasion ? { meal_occasion: input.meal_occasion } : {}),
     ...(input.crew_size != null ? { crew_size: input.crew_size } : {}),
@@ -311,6 +313,27 @@ export function trackMealFeedbackTagSelected(input: {
   trackProductEvent("meal_feedback_tag_selected", params);
 }
 
+/** A non-empty note saved on a meal history entry. Note text itself is never sent. */
+export function trackMealNoteAdded(input: { recipe_slug?: string; note_length: number; meal_occasion?: string }): void {
+  const params = {
+    note_length: input.note_length,
+    ...(input.recipe_slug ? { recipe_slug: input.recipe_slug } : {}),
+    ...(input.meal_occasion ? { meal_occasion: input.meal_occasion } : {}),
+  };
+  trackEvent("meal_note_added", params);
+  trackProductEvent("meal_note_added", params);
+}
+
+/** Free user saw the locked older-history prompt (or tapped a Premium-only history action). */
+export function trackHistoryPaywallViewed(input: { surface: string; locked_count?: number }): void {
+  const params = {
+    surface: input.surface.slice(0, 64),
+    ...(input.locked_count != null ? { locked_count: input.locked_count } : {}),
+  };
+  trackEvent("history_paywall_viewed", params);
+  trackProductEvent("history_paywall_viewed", params);
+}
+
 /** Goals + Progress page (or Profile "Your Progress" section) viewed. */
 export function trackProgressPageViewed(input?: { active_goal_count?: number }): void {
   const params: Record<string, number> = {};
@@ -322,6 +345,34 @@ export function trackProgressPageViewed(input?: { active_goal_count?: number }):
 export function trackScheduleSetupStarted(input: { mode: "create" | "edit" }): void {
   trackEvent("schedule_setup_started", input);
   trackProductEvent("schedule_setup_started", input);
+}
+
+export type ScheduleOnboardingEntry = "shift_home" | "deep_link";
+export type ScheduleOnboardingAbandonReason = "cancelled" | "navigated_away" | "page_hidden";
+
+export function trackScheduleOnboardingStarted(input: { entry: ScheduleOnboardingEntry }): void {
+  trackEvent("schedule_onboarding_started", input);
+  trackProductEvent("schedule_onboarding_started", input);
+}
+
+export function trackScheduleOnboardingCompleted(input: {
+  entry: ScheduleOnboardingEntry;
+  preset_id: string;
+  crew_size: number;
+  duration_sec: number;
+}): void {
+  trackEvent("schedule_onboarding_completed", input);
+  trackProductEvent("schedule_onboarding_completed", input);
+}
+
+export function trackScheduleOnboardingAbandoned(input: {
+  entry: ScheduleOnboardingEntry;
+  reason: ScheduleOnboardingAbandonReason;
+  last_step: number;
+  duration_sec: number;
+}): void {
+  trackEvent("schedule_onboarding_abandoned", input);
+  trackProductEvent("schedule_onboarding_abandoned", input);
 }
 
 export function trackScheduleSaved(input: {
@@ -358,7 +409,14 @@ type ShiftPlanEvent =
   | "shift_list_generated"
   | "shift_list_opened"
   | "shift_list_item_checked"
-  | "shift_list_manual_item_added";
+  | "shift_list_manual_item_added"
+  /** Plan Ahead — a shift beyond the free current/next shift. */
+  | "future_shift_viewed"
+  | "plan_ahead_paywall_viewed"
+  | "future_shift_plan_created"
+  | "run_it_back_clicked"
+  | "run_it_back_completed"
+  | "run_it_back_paywall_viewed";
 
 export function trackShiftPlanEvent(name: ShiftPlanEvent, params: Record<string, string | number>): void {
   const withSurface = { surface: "shift_planner", ...params };
@@ -784,11 +842,6 @@ export function trackPersonalOnboardingCompleted(mode: "personal" | "hall"): voi
   trackProductEvent("personal_onboarding_completed", { mode });
 }
 
-export function trackPersonalOnboardingHallChoice(worksAtFirehall: boolean): void {
-  trackEvent("personal_onboarding_hall_choice", { works_at_firehall: worksAtFirehall ? 1 : 0 });
-  trackProductEvent("personal_onboarding_hall_choice", { works_at_firehall: worksAtFirehall ? 1 : 0 });
-}
-
 export function trackHallActivationCompleted(hallId: string): void {
   trackEvent("hall_activation_completed", { hall_id: hallId });
   trackProductEvent("hall_activation_completed", { hall_id: hallId });
@@ -996,6 +1049,57 @@ export function trackProPlanSelected(input: {
   const params = proEventParams(input);
   trackEvent("pro_plan_selected", params);
   trackProductEvent("pro_plan_selected", params);
+}
+
+interface PremiumPaywallParams {
+  /** Billing feature behind the trigger. */
+  feature: string;
+  /** Paywall copy variant (plan_ahead, run_it_back, nutrition_goals, meal_memory, …). */
+  trigger: string;
+  /** Where in the app the user hit the lock, e.g. "shift_planner_upcoming_list". */
+  paywall_source: string;
+  logged_in: boolean;
+}
+
+function premiumParams(input: PremiumPaywallParams) {
+  return {
+    feature: input.feature,
+    trigger: input.trigger,
+    paywall_source: input.paywall_source.slice(0, 64),
+    logged_in: String(input.logged_in),
+  };
+}
+
+/** User tapped a locked personal Premium feature. */
+export function trackPremiumFeatureClicked(input: PremiumPaywallParams): void {
+  const params = premiumParams(input);
+  trackEvent("premium_feature_clicked", params);
+  trackProductEvent("premium_feature_clicked", params);
+}
+
+/** The personal Pro paywall was shown. */
+export function trackPremiumPaywallViewed(input: PremiumPaywallParams): void {
+  const params = premiumParams(input);
+  trackEvent("premium_paywall_viewed", params);
+  trackProductEvent("premium_paywall_viewed", params);
+}
+
+/** Active Pro trial seen — callers dedupe to once per remaining-days value. */
+export function trackPremiumTrialDayViewed(input: { days_left: number; start_source: string }): void {
+  const params = { days_left: input.days_left, start_source: input.start_source };
+  trackEvent("premium_trial_day_viewed", params);
+  trackProductEvent("premium_trial_day_viewed", params);
+}
+
+/** "Keep Pro" / subscribe tapped from a trial surface. */
+export function trackPremiumTrialUpgradeClicked(input: {
+  surface: "status" | "ending_notice" | "expired_notice" | "paywall" | "plans_page";
+  trial_status: "active" | "expired";
+  days_left: number;
+}): void {
+  const params = { surface: input.surface, trial_status: input.trial_status, days_left: input.days_left };
+  trackEvent("premium_trial_upgrade_clicked", params);
+  trackProductEvent("premium_trial_upgrade_clicked", params);
 }
 
 export function trackProUpgradeInterest(input: {

@@ -43,6 +43,7 @@ import { isBreakfastMeal } from "../../shared/hall-catalog/isolation.js";
 import {
   recentSlugPenalty,
   weightedPickIndex,
+  weightedShuffle,
 } from "../../shared/meal-rotation/weighted-pick.js";
 import {
   buildFirehallPoolStages,
@@ -57,7 +58,6 @@ import {
   recipePassesHardFilters,
   scoreCrewFit,
   scoreHealthinessPreference,
-  scoreNutritionGoal,
 } from "./generator-match.js";
 import { scanRecipeForAllergens } from "../allergens.js";
 import { classifyRecipeDietary } from "../../shared/dietary/classify-recipe.js";
@@ -84,9 +84,10 @@ import {
   type HistorySignalType,
 } from "./history-personalization.js";
 import {
-  scoreProfileNutritionGoals,
+  scoreProfileNutritionGoal,
   type ProfileNutritionGoalKey,
 } from "../../shared/nutrition/profile-goals.js";
+import { nutritionGoalFactsForSlug } from "./nutrition-goals-gate.js";
 
 export interface LocalRecipePick {
   recipe: GenerateResponse;
@@ -113,8 +114,10 @@ export interface PickOptions {
   varietySeed: string;
   /** Insight-Driven Personalization — deterministic history-learned soft signals (see history-personalization.ts). Null/absent = scoring unchanged from before this feature existed. */
   historySignals?: HistorySignals | null;
-  /** Firehall Meals Pro saved Nutrition Goals — weighted ranking only, applied after eligibility. */
-  nutritionGoals?: readonly ProfileNutritionGoalKey[] | null;
+  /** Firehall Meals Pro saved Nutrition Goal — weighted ranking only, applied after eligibility. */
+  nutritionGoal?: ProfileNutritionGoalKey | null;
+  /** Server-side pool narrowing (Shift Planner meal occasion). Default pool only; never set from a client request. */
+  restrictToSlugs?: ReadonlySet<string> | null;
 }
 
 function signatureBlocked(
@@ -358,7 +361,6 @@ function pickFromSummaries(
         const hard = recipePassesHardFilters(full, request);
         if (!hard.ok) return { row, score: -9999, eligibilityScore: -9999 };
         score += scoreHealthinessPreference(request.healthiness_preference || "balanced", full);
-        score += scoreNutritionGoal(request.nutrition_goal, full, row.totalMinutes);
         score += scoreCrewFit(full, request.crew_size);
       }
       score += scoreFirehallPractical(tonightMeta.get(row.slug), request);
@@ -378,16 +380,8 @@ function pickFromSummaries(
       // small, heavily-suppressed pool (e.g. a narrow firehall-category stage).
       const eligibilityScore = score;
       score += feedbackDelta;
-      if (full && options.nutritionGoals?.length) {
-        const macros = full.generateResponse?.macros_per_serving;
-        score += scoreProfileNutritionGoals(options.nutritionGoals, {
-          calories: macros?.calories,
-          protein_g: macros?.protein_g,
-          carbs_g: macros?.carbs_g,
-          fat_g: macros?.fat_g,
-          highFiberTag: full.generateResponse?.tags?.high_fiber,
-          nutritionCategory: full.metadata?.nutritionCategory ?? null,
-        });
+      if (full && options.nutritionGoal) {
+        score += scoreProfileNutritionGoal(options.nutritionGoal, nutritionGoalFactsForSlug(row.slug));
       }
       score -= recentSlugPenalty(row.slug, options.recentSlugs);
       if (options.historySignals) {
@@ -414,6 +408,15 @@ function pickFromSummaries(
       options.varietySeed,
     );
     return [...list.slice(startIdx), ...list.slice(0, startIdx)];
+  };
+  const weightedOrder = <T extends { score: number; row: { slug: string } }>(list: T[]): T[] => {
+    if (list.length === 0) return list;
+    const floor = list[0]!.score - WEIGHT_SPREAD;
+    return weightedShuffle(
+      list,
+      (x) => Math.max(1, x.score - floor),
+      (x) => `${options.varietySeed}:${x.row.slug}`,
+    );
   };
 
   const styled = ranked.filter((x) => matchesMealStyle(tonightMeta.get(x.row.slug), request.meal_style));
@@ -462,8 +465,13 @@ function pickFromSummaries(
   // in-window meal (never the one just shown) is served before an off-style or off-window one.
   // The time window's upper bound is already a hard filter in hydratePick; here it only steers
   // toward the selected range.
-  const styledOrder = weightedRotation(styled);
-  const allOrder = weightedRotation(ranked);
+  // A goal lifts whole clusters of similar meals (e.g. long-cook high-protein dishes) that
+  // can then fail the lazy time/allergen checks in hydratePick together; rotation would hand
+  // that cluster's whole weight to the next meal below it, so goal ranking draws without
+  // replacement instead.
+  const order = options.nutritionGoal ? weightedOrder : weightedRotation;
+  const styledOrder = order(styled);
+  const allOrder = order(ranked);
   const fresh = passes.slice(0, 2);
   const notLast = passes.slice(2, 3);
   const repeats = passes.slice(2);
@@ -734,12 +742,13 @@ export function pickGolden100ForGenerate(
     catalogBoost: catalogCollectionScoreBoost(collection, rankBias),
   });
 
+  const restrict = options.restrictToSlugs;
   const combined = [
     ...goldenRows.map((r) => toSummary(r, "golden_100")),
     ...performanceRows.map((r) => toSummary(r, "performance_50")),
     ...hallExpansionRows.map((r) => toSummary(r, "hall_expansion_74")),
     ...bbqRows.map((r) => toSummary(r, "bbq_catalog")),
-  ];
+  ].filter((r) => !restrict || restrict.has(r.slug));
 
   if (combined.length === 0) return null;
 

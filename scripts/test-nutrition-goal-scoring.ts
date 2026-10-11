@@ -91,7 +91,8 @@ check("no_preference maps to balanced", nutritionGoalToHealthiness("no_preferenc
   check("signed-out default nutrition_goal is no_preference", filters.nutrition_goal === "no_preference");
 }
 
-// ── 9. Signed-in user — saved profile nutrition_goal becomes the default ───
+// ── 9. Legacy free profile nutrition_goal no longer seeds the Generator ────
+// (Nutrition Goals are Pro-only and applied server-side from the profile.)
 {
   const filters = resolveGeneratorFilters({
     personal: null,
@@ -100,21 +101,21 @@ check("no_preference maps to balanced", nutritionGoalToHealthiness("no_preferenc
     hall: null,
     hallLinked: false,
   });
-  check("signed-in saved default applied", filters.nutrition_goal === "high_protein");
-  check("healthiness derived in sync with saved default", filters.healthiness === "balanced");
+  check("legacy saved default ignored", filters.nutrition_goal === "no_preference");
+  check("healthiness stays at default", filters.healthiness === "balanced");
 }
 
-// ── 10. Session override wins over saved profile default, profile untouched ─
+// ── 10. Remembered session goal no longer carries into the Generator ───────
 {
   const filters = resolveGeneratorFilters({
     personal: null,
-    session: { ...createDefaultSimplifiedFilters(), nutrition_goal: "lighter" },
+    session: { ...createDefaultSimplifiedFilters(), nutrition_goal: "lighter", healthiness: "lean" },
     preferences: { nutrition_goal: "high_protein" } as any,
     hall: null,
     hallLinked: false,
   });
-  check("session override wins for this generation", filters.nutrition_goal === "lighter");
-  // The "preferences" input object itself is never mutated by resolveGeneratorFilters.
+  check("remembered session goal ignored", filters.nutrition_goal === "no_preference");
+  check("remembered session healthiness ignored", filters.healthiness === "balanced");
 }
 
 // ── 11. Recipe result UI — missing nutrition data is hidden, not fabricated ─

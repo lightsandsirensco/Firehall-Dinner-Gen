@@ -10,6 +10,9 @@ const recipeSlug = z
   .regex(/^[a-z0-9][a-z0-9-]{0,119}$/, "Invalid recipe");
 const slugList = (max: number) => z.array(z.string().trim().toLowerCase().max(120)).max(max);
 
+/** GET /api/shift-plan?shiftKey= — omitted = the current/next shift. */
+export const shiftPlanQuerySchema = z.object({ shiftKey: shiftKey.optional() });
+
 /** PATCH /api/shift-plan/slot — one slot's decision. Omitted fields are unchanged. */
 export const shiftPlanSlotPatchSchema = z
   .object({
@@ -47,6 +50,23 @@ export const shiftPlanFillSchema = z.object({
   excludeSlugs: slugList(40).optional(),
 });
 export type ShiftPlanFillInput = z.infer<typeof shiftPlanFillSchema>;
+
+/**
+ * POST /api/shift-plan/run-it-back — copy the previous comparable plan into
+ * `shiftKey`. `sourceShiftKey` is the source the user saw (409 if it changed).
+ * `base` re-checks copied meals against current hard restrictions and drives
+ * refresh picks.
+ */
+export const runItBackSchema = z
+  .object({
+    shiftKey,
+    sourceShiftKey: shiftKey.optional(),
+    mode: z.enum(["copy", "refresh"]),
+    base: z.record(z.unknown()),
+    recentSlugs: slugList(30).optional(),
+  })
+  .strict();
+export type RunItBackInput = z.infer<typeof runItBackSchema>;
 
 /** Device pantry (Personal + Hall) — validated again by restorePantryProfile server-side. */
 const pantryProfile = z.object({ schemaVersion: z.number(), items: z.record(z.string()), updatedAt: z.string() }).passthrough();

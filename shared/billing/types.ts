@@ -1,3 +1,6 @@
+import type { ProTrialState } from "./pro-trial.js";
+import { PRO_PRICE_LABEL } from "./pricing.js";
+
 export const PLAN_IDS = ["guest", "personal", "firefighter_plus", "hall_pro"] as const;
 
 export type PlanId = (typeof PLAN_IDS)[number];
@@ -77,14 +80,25 @@ export const BILLING_FEATURES = [
   "offline_recipes",
   /** Firefighter Plus — persistent "Foods to Avoid" ingredient preferences (Explore + Generator). */
   "ingredient_preferences",
-  /** Firefighter Plus — saved multi-select Nutrition Goals that softly re-rank Generator picks. */
+  /** Firefighter Plus — one saved Nutrition Goal that softly re-ranks Pick Tonight and Shift Planner auto-fill. */
   "nutrition_goals",
+  /** Firehall Meals Pro — plan any scheduled shift up to 30 days ahead (Free plans the current/next shift). */
+  "plan_ahead",
+  /** Firehall Meals Pro — copy the previous comparable shift plan into a shift ("Run It Back"). */
+  "run_it_back",
   /**
-   * Firefighter Plus V1 Feature 3 — "Meal Memory": durable, cross-device
-   * account-level cooked-meal history + Generator variety personalization
-   * built from it. Distinct from the free `personal_meal_history` sync key
-   * (device-local Hall History timeline — generated/cooked/wheel/vote
-   * activity, still free — see shared/sync/types.ts).
+   * Durable account-level cooked-meal history for EVERY signed-in user:
+   * logging, ratings/notes/make-again, and recent-repeat avoidance — all
+   * limited to the last FREE_HISTORY_WINDOW_DAYS (shared/meal-history/access.ts).
+   * Older rows are always kept; they are only hidden until `meal_memory`.
+   */
+  "meal_history",
+  /**
+   * Firehall Meals Pro "Meal Memory" depth on top of `meal_history`: full
+   * history visibility, long-term ratings/notes, full-history Generator
+   * personalization, insights/goals, and crew-favorite recall. Distinct from
+   * the free `personal_meal_history` sync key (device-local Hall History
+   * timeline — see shared/sync/types.ts).
    */
   "meal_memory",
   /** @deprecated */
@@ -97,6 +111,9 @@ export const BILLING_FEATURES = [
 ] as const;
 
 export type BillingFeature = (typeof BILLING_FEATURES)[number];
+
+/** Length of the once-per-account, no-card personal Pro trial (see shared/billing/pro-trial.ts). */
+export const PRO_TRIAL_DAYS = 14;
 
 /** Crew collaboration unlocked per hall with Hall Pro — staples are free with hall link. */
 export const HALL_PRO_FEATURES = [
@@ -124,6 +141,8 @@ export const PLUS_FEATURES = [
   "offline_recipes",
   "ingredient_preferences",
   "nutrition_goals",
+  "plan_ahead",
+  "run_it_back",
   "meal_memory",
 ] as const satisfies readonly BillingFeature[];
 
@@ -191,6 +210,12 @@ export interface UserBillingState {
   catalog: PlanCatalogEntry[];
   /** True when this user has a live Stripe customer — i.e. the "Manage billing" portal link should show. */
   manage_billing_available: boolean;
+  /** The account's one personal Pro reverse trial (active or expired), or null if never started. */
+  pro_trial: ProTrialState | null;
+  /** True when this account can still start its one trial (signed in, never trialed, not already Pro). */
+  pro_trial_eligible: boolean;
+  /** True when an annual checkout would get the founding first-year price (offer on, no prior paid subscription). */
+  founding_offer_eligible: boolean;
 }
 
 export interface PlanFeatureFlagRow {
@@ -227,7 +252,7 @@ export const PLAN_DISPLAY: Record<
   firefighter_plus: {
     display_name: "Firehall Meals Pro",
     tagline: "Find the right meal faster.",
-    price_label: "$4.99/mo · $39.99/yr",
+    price_label: PRO_PRICE_LABEL,
     sort_order: 2,
   },
   hall_pro: {
@@ -246,6 +271,7 @@ const PERSONAL_FEATURES = [
   "browse",
   "cross_device_saves",
   "personal_meal_history",
+  "meal_history",
   "grocery_exports",
   "shift_reminders",
   "hall_dashboard",

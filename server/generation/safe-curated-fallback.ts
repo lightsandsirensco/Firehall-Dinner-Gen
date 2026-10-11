@@ -15,7 +15,11 @@ import { pickGolden100ForGenerate } from "./pick-local-recipes.js";
 import { GAME_DAY_SAFE_FALLBACK_CATEGORIES } from "./firehall-category-pools.js";
 import { proteinMatchesFilter } from "../spoonacular-converter.js";
 import { hydrateCatalogGenerateResponse } from "../meal-catalog/hydrate-golden-generate.js";
-import { tonightFilterProtein, tonightIneligibleReason } from "./tonight-eligibility.js";
+import {
+  tonightFilterProtein,
+  tonightIneligibleReason,
+  tonightStandaloneMealSlugs,
+} from "./tonight-eligibility.js";
 
 export interface SafeCuratedFallbackResult {
   recipe: GenerateResponse;
@@ -94,9 +98,10 @@ function pickDeterministicCatalogSlug(
     slug: r.slug,
     collection: "golden_100" as const,
   }));
+  const standalone = tonightStandaloneMealSlugs();
   for (let i = 0; i < list.length; i++) {
     const slug = list[(seed + i) % list.length]!.slug;
-    if (!tonightIneligibleReason(slug)) return slug;
+    if (!tonightIneligibleReason(slug) && standalone.has(slug)) return slug;
   }
   return list[seed % list.length]!.slug;
 }
@@ -115,6 +120,7 @@ export async function resolveSafeCuratedFallback(
     const pick = pickGolden100ForGenerate(req, {
       recentSignatures,
       varietySeed: String(seed + i),
+      restrictToSlugs: tonightStandaloneMealSlugs(),
     });
     if (pick) {
       log(

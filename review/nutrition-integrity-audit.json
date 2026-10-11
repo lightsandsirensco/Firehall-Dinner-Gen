@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-09-26T19:27:10.205Z",
+  "generatedAt": "2026-10-11T14:16:14.080Z",
   "mode": "audit",
   "summary": {
-    "total": 467,
-    "pass": 299,
+    "total": 462,
+    "pass": 294,
     "fail": 155,
     "withheld": 13,
-    "accuracyPct": 65.9,
+    "accuracyPct": 65.5,
     "suspiciousCalories": [
       "baked-ziti",
       "batch-lasagna",
@@ -126,6 +126,12 @@
       "spicy-tomato-bisque-grilled-brie-toast",
       "steak-sandwiches",
       "texas-beef-ribs",
+      "classic-poutine-feed-crew",
+      "firehouse-dense-bean-salad",
+      "firehouse-lentil-chili",
+      "pork-belly-burnt-ends",
+      "smoked-sausage-platter",
+      "southwest-black-bean-corn-bowls",
       "baked-falafel-hall-bowls",
       "caprese-chicken-bake",
       "hummus-chicken-platter",
@@ -1169,8 +1175,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "897 cal · 65g P · 42g C · 54g F",
-      "recommended": "897 cal · 65g P · 42g C · 54g F",
+      "stored": "752 cal · 74g P · 42g C · 31g F",
+      "recommended": "752 cal · 74g P · 42g C · 31g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2103,8 +2109,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "529 cal · 39g P · 49g C · 20g F",
-      "recommended": "529 cal · 39g P · 49g C · 20g F",
+      "stored": "639 cal · 51g P · 49g C · 27g F",
+      "recommended": "639 cal · 51g P · 49g C · 27g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2213,8 +2219,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "424 cal · 35g P · 11g C · 26g F",
-      "recommended": "424 cal · 35g P · 11g C · 26g F",
+      "stored": "845 cal · 46g P · 82g C · 36g F",
+      "recommended": "845 cal · 46g P · 82g C · 36g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2541,7 +2547,7 @@
       "status": "pass",
       "servings": 8,
       "stored": "752 cal · 59g P · 33g C · 44g F",
-      "recommended": "752 cal · 59g P · 33g C · 44g F",
+      "recommended": "901 cal · 66g P · 56g C · 47g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2658,8 +2664,8 @@
       "catalog": "golden_100",
       "status": "pass",
       "servings": 8,
-      "stored": "772 cal · 54g P · 32g C · 49g F",
-      "recommended": "772 cal · 54g P · 32g C · 49g F",
+      "stored": "730 cal · 57g P · 48g C · 33g F",
+      "recommended": "730 cal · 57g P · 48g C · 33g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -2668,7 +2674,7 @@
       "showsZeroUi": false,
       "crewSizeCoupled": false,
       "needsRecalculation": false,
-      "ingredientMatchPct": 83
+      "ingredientMatchPct": 100
     },
     {
       "slug": "turkey-chili",
@@ -3306,9 +3312,14 @@
       "servings": 8,
       "stored": "680 cal · 18g P · 72g C · 36g F",
       "recommended": "810 cal · 32g P · 68g C · 46g F",
-      "findings": [],
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 18g outside Comfort Food target (25–45g)"
+        }
+      ],
       "suspiciousCalories": false,
-      "suspiciousProtein": false,
+      "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -3641,7 +3652,12 @@
       "servings": 8,
       "stored": "714 cal · 68g P · 78g C · 15g F",
       "recommended": "714 cal · 68g P · 78g C · 15g F",
-      "findings": [],
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 68g outside Performance Meals target (35–60g)"
+        }
+      ],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
@@ -3659,9 +3675,14 @@
       "servings": 8,
       "stored": "390 cal · 19g P · 46g C · 16g F",
       "recommended": "390 cal · 19g P · 46g C · 16g F",
-      "findings": [],
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 19g outside Performance Meals target (35–60g)"
+        }
+      ],
       "suspiciousCalories": false,
-      "suspiciousProtein": false,
+      "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -3695,9 +3716,14 @@
       "servings": 8,
       "stored": "272 cal · 14g P · 40g C · 7g F",
       "recommended": "272 cal · 14g P · 40g C · 7g F",
-      "findings": [],
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 14g outside Performance Meals target (35–60g)"
+        }
+      ],
       "suspiciousCalories": false,
-      "suspiciousProtein": false,
+      "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -4145,6 +4171,10 @@
         {
           "code": "crew_size_coupled",
           "message": "Stored macros match batch÷10 crew better than batch÷8 base servings"
+        },
+        {
+          "code": "protein_target_range",
+          "message": "Protein 22g outside Comfort Food target (25–45g)"
         }
       ],
       "suspiciousCalories": false,
@@ -4540,6 +4570,10 @@
           "message": "Stored protein 48g vs ingredient estimate 133g"
         },
         {
+          "code": "protein_target_range",
+          "message": "Protein 48g outside Comfort Food target (25–45g)"
+        },
+        {
           "code": "needs_recalculation",
           "message": "Recommended: 1400 cal · 117g P · 85g C · 70g F"
         }
@@ -4664,7 +4698,12 @@
       "servings": 8,
       "stored": "714 cal · 32g P · 65g C · 37g F",
       "recommended": "714 cal · 32g P · 65g C · 37g F",
-      "findings": [],
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 32g outside Performance Meals target (35–60g)"
+        }
+      ],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
@@ -4864,12 +4903,16 @@
           "message": "Stored 580 cal vs ingredient estimate 1566 cal"
         },
         {
+          "code": "protein_target_range",
+          "message": "Protein 18g outside BBQ & Grill target (30–55g)"
+        },
+        {
           "code": "needs_recalculation",
           "message": "Recommended: 946 cal · 16g P · 17g C · 90g F"
         }
       ],
       "suspiciousCalories": false,
-      "suspiciousProtein": false,
+      "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -5264,12 +5307,16 @@
           "message": "Stored 480 cal vs ingredient estimate 1229 cal"
         },
         {
+          "code": "protein_target_range",
+          "message": "Protein 22g outside BBQ & Grill target (30–55g)"
+        },
+        {
           "code": "needs_recalculation",
           "message": "Recommended: 1229 cal · 57g P · 81g C · 74g F"
         }
       ],
       "suspiciousCalories": false,
-      "suspiciousProtein": false,
+      "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -5379,9 +5426,14 @@
       "servings": 8,
       "stored": "458 cal · 15g P · 63g C · 19g F",
       "recommended": "458 cal · 15g P · 63g C · 19g F",
-      "findings": [],
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 15g outside Performance Meals target (35–60g)"
+        }
+      ],
       "suspiciousCalories": false,
-      "suspiciousProtein": false,
+      "suspiciousProtein": true,
       "suspiciousCarbs": false,
       "suspiciousFat": false,
       "showsZeroUi": false,
@@ -5497,7 +5549,12 @@
       "servings": 8,
       "stored": "622 cal · 33g P · 71g C · 27g F",
       "recommended": "622 cal · 33g P · 71g C · 27g F",
-      "findings": [],
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 33g outside Performance Meals target (35–60g)"
+        }
+      ],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
@@ -5619,7 +5676,12 @@
       "servings": 8,
       "stored": "380 cal · 34g P · 8g C · 24g F",
       "recommended": "511 cal · 48g P · 7g C · 32g F",
-      "findings": [],
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 34g outside Performance Meals target (35–60g)"
+        }
+      ],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,
@@ -6266,29 +6328,6 @@
       "ingredientMatchPct": 92
     },
     {
-      "slug": "italian-sausage-veg-sheet-pan",
-      "title": "Sausage, Peppers & Zucchini Sheet Pan",
-      "catalog": "performance_meals",
-      "status": "pass",
-      "servings": 8,
-      "stored": "675 cal · 33g P · 16g C · 53g F",
-      "recommended": "675 cal · 33g P · 16g C · 53g F",
-      "findings": [
-        {
-          "code": "protein_target_range",
-          "message": "Protein 33g outside Performance Meals target (35–60g)"
-        }
-      ],
-      "suspiciousCalories": false,
-      "suspiciousProtein": false,
-      "suspiciousCarbs": false,
-      "suspiciousFat": false,
-      "showsZeroUi": false,
-      "crewSizeCoupled": false,
-      "needsRecalculation": false,
-      "ingredientMatchPct": 100
-    },
-    {
       "slug": "korean-beef-rice-bowls",
       "title": "Beef Rice Bowls",
       "catalog": "performance_meals",
@@ -6323,42 +6362,6 @@
       "crewSizeCoupled": false,
       "needsRecalculation": false,
       "ingredientMatchPct": 86
-    },
-    {
-      "slug": "lean-beef-broccoli-rice",
-      "title": "Beef and Broccoli Rice",
-      "catalog": "performance_meals",
-      "status": "pass",
-      "servings": 8,
-      "stored": "875 cal · 55g P · 69g C · 42g F",
-      "recommended": "875 cal · 55g P · 69g C · 42g F",
-      "findings": [],
-      "suspiciousCalories": false,
-      "suspiciousProtein": false,
-      "suspiciousCarbs": false,
-      "suspiciousFat": false,
-      "showsZeroUi": false,
-      "crewSizeCoupled": false,
-      "needsRecalculation": false,
-      "ingredientMatchPct": 100
-    },
-    {
-      "slug": "lean-turkey-bean-chili",
-      "title": "Lean Turkey and Bean Chili",
-      "catalog": "performance_meals",
-      "status": "pass",
-      "servings": 8,
-      "stored": "587 cal · 56g P · 54g C · 16g F",
-      "recommended": "587 cal · 56g P · 54g C · 16g F",
-      "findings": [],
-      "suspiciousCalories": false,
-      "suspiciousProtein": false,
-      "suspiciousCarbs": false,
-      "suspiciousFat": false,
-      "showsZeroUi": false,
-      "crewSizeCoupled": false,
-      "needsRecalculation": false,
-      "ingredientMatchPct": 100
     },
     {
       "slug": "lemon-chicken-orzo-soup",
@@ -6688,29 +6691,6 @@
       "ingredientMatchPct": 92
     },
     {
-      "slug": "sheet-pan-chicken-fajitas-lite",
-      "title": "Chicken Fajitas (Lightened)",
-      "catalog": "performance_meals",
-      "status": "pass",
-      "servings": 8,
-      "stored": "485 cal · 72g P · 13g C · 14g F",
-      "recommended": "485 cal · 72g P · 13g C · 14g F",
-      "findings": [
-        {
-          "code": "protein_target_range",
-          "message": "Protein 72g outside Performance Meals target (35–60g)"
-        }
-      ],
-      "suspiciousCalories": false,
-      "suspiciousProtein": false,
-      "suspiciousCarbs": false,
-      "suspiciousFat": false,
-      "showsZeroUi": false,
-      "crewSizeCoupled": false,
-      "needsRecalculation": false,
-      "ingredientMatchPct": 100
-    },
-    {
       "slug": "sheet-pan-chimichurri-chicken-charred-vegetables",
       "title": "Sheet-Pan Chimichurri Chicken with Charred Vegetables",
       "catalog": "performance_meals",
@@ -6869,24 +6849,6 @@
       "servings": 8,
       "stored": "407 cal · 42g P · 9g C · 22g F",
       "recommended": "407 cal · 42g P · 9g C · 22g F",
-      "findings": [],
-      "suspiciousCalories": false,
-      "suspiciousProtein": false,
-      "suspiciousCarbs": false,
-      "suspiciousFat": false,
-      "showsZeroUi": false,
-      "crewSizeCoupled": false,
-      "needsRecalculation": false,
-      "ingredientMatchPct": 100
-    },
-    {
-      "slug": "turkey-quinoa-stuffed-peppers",
-      "title": "Turkey Stuffed Peppers",
-      "catalog": "performance_meals",
-      "status": "pass",
-      "servings": 8,
-      "stored": "535 cal · 39g P · 41g C · 23g F",
-      "recommended": "535 cal · 39g P · 41g C · 23g F",
       "findings": [],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
@@ -8646,9 +8608,14 @@
       "catalog": "breakfast",
       "status": "pass",
       "servings": 8,
-      "stored": "874 cal · 42g P · 76g C · 44g F",
-      "recommended": "874 cal · 42g P · 76g C · 44g F",
-      "findings": [],
+      "stored": "742 cal · 46g P · 74g C · 28g F",
+      "recommended": "742 cal · 46g P · 74g C · 28g F",
+      "findings": [
+        {
+          "code": "protein_target_range",
+          "message": "Protein 46g outside Breakfast target (20–45g)"
+        }
+      ],
       "suspiciousCalories": false,
       "suspiciousProtein": false,
       "suspiciousCarbs": false,

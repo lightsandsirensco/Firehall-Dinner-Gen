@@ -144,7 +144,7 @@ export const GENERATOR = {
   headline: "What's for dinner tonight?",
   headlineWithMeal: "Tonight's pick",
   subline: "Crew size and protein — tap once. Under a minute to a hall-tested recipe.",
-  sublineFocus: "Cook this one, or shuffle for another match.",
+  sublineFocus: "Open the recipe, or pick again for another match.",
   loading: "Finding a match…",
   loadingAlt: "Trying another match…",
   emptyTitle: "Ready when you are",

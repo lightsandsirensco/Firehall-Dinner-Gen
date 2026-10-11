@@ -10,7 +10,7 @@
  * since there is no cooked-meal history to show progress against without it.
  */
 import { useEffect, useMemo, useState } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import { CheckCircle2, Lock, Plus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -24,9 +24,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { useAuth } from "@/lib/auth/context";
-import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
+import { useFeature } from "@/lib/billing/hooks";
 import { fetchGoals, removeGoal, setGoal } from "@/lib/goals-api";
-import { trackGoalCompleted, trackGoalCreated, trackGoalRemoved, trackProFeatureClicked, trackProgressPageViewed } from "@/lib/analytics";
+import { trackGoalCompleted, trackGoalCreated, trackGoalRemoved, trackProgressPageViewed } from "@/lib/analytics";
+import { useProPaywall } from "@/components/billing/pro-paywall";
 import { GOAL_DEFINITIONS, type GoalProgress, type GoalType } from "@shared/goals/types";
 import { NUTRITION_GOAL_LABELS, type NutritionGoal } from "@shared/nutrition/goal-scoring";
 
@@ -100,8 +101,7 @@ function GoalCard({ progress, onRemove, removing }: { progress: GoalProgress; on
 export function GoalsProgressSection() {
   const { authenticated } = useAuth();
   const hasMealMemory = useFeature("meal_memory");
-  const [, setLocation] = useLocation();
-  const recordPaywall = useRecordPaywallView();
+  const { openProPaywall } = useProPaywall();
   const queryClient = useQueryClient();
   const [removingType, setRemovingType] = useState<GoalType | null>(null);
   const [addingType, setAddingType] = useState<GoalType | "">("");
@@ -153,11 +153,7 @@ export function GoalsProgressSection() {
         </p>
         <button
           type="button"
-          onClick={() => {
-            trackProFeatureClicked({ feature: "meal_memory", page: "/me/progress", logged_in: authenticated });
-            void recordPaywall("meal_memory", "me_progress");
-            setLocation("/me/subscription?feature=meal_memory");
-          }}
+          onClick={() => openProPaywall("meal_memory", "me_progress")}
           className="w-full rounded-md border border-border/40 bg-muted/20 px-3 py-2 text-left text-xs text-muted-foreground"
           data-testid="goals-locked"
         >

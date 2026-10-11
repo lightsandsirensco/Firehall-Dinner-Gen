@@ -1,33 +1,39 @@
-import { Building2, Compass, User, UtensilsCrossed } from "lucide-react";
+import { Building2, CalendarClock, Compass, ShoppingCart, User, UtensilsCrossed } from "lucide-react";
 import { Link, useLocation } from "wouter";
-import { PRIMARY_TABS, isTabActive, type AppTab } from "@/lib/app-nav";
+import { isTabActive, primaryTabsFor, type AppTab } from "@/lib/app-nav";
+import { useSignedInNav } from "@/hooks/use-signed-in-nav";
 import { cn } from "@/lib/utils";
 import { hapticLight } from "@/lib/haptics";
 
 const TAB_ICONS: Record<AppTab, typeof UtensilsCrossed> = {
   tonight: UtensilsCrossed,
+  shift: CalendarClock,
   explore: Compass,
+  list: ShoppingCart,
   hall: Building2,
   me: User,
 };
 
 /**
- * Four in-app destinations — same shift, same product.
- * Tonight is the command center; Home (the logo) is the landing page.
+ * Primary in-app destinations. Signed in: Shift · Explore · List · Me.
+ * Signed out: Tonight · Explore · Me. Home (the logo) is the landing page.
  */
 export function BottomTabBar() {
   const [location] = useLocation();
+  const signedIn = useSignedInNav();
+  const tabs = primaryTabsFor(signedIn);
 
   return (
     <nav
       className="fixed bottom-0 left-0 right-0 z-50 border-t border-border/40 bg-background/92 backdrop-blur-xl pb-safe"
       aria-label="Main navigation"
       data-testid="bottom-tab-bar"
+      data-nav={signedIn ? "signed-in" : "signed-out"}
     >
       <div className="mx-auto flex max-w-lg items-stretch justify-around px-0.5 pt-1">
-        {PRIMARY_TABS.map((tab) => {
+        {tabs.map((tab) => {
           const Icon = TAB_ICONS[tab.id];
-          const active = isTabActive(tab.id, location);
+          const active = isTabActive(tab.id, location, signedIn);
           return (
             <Link
               key={tab.testId}

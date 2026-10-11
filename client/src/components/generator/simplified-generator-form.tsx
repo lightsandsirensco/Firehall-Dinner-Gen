@@ -9,9 +9,6 @@ import { cn } from "@/lib/utils";
 import {
   CREW_BUCKET_LABELS,
   CREW_SIZE_BUCKETS,
-  NUTRITION_GOAL_LABELS,
-  NUTRITION_GOAL_MICROCOPY,
-  NUTRITION_GOAL_QUICK_PICKS,
   SIMPLIFIED_ALLERGEN_LABELS,
   SIMPLIFIED_ALLERGENS,
   SIMPLIFIED_APPLIANCE_IDS,
@@ -26,9 +23,7 @@ import {
   TONIGHT_TIME_WINDOW_LABELS,
   formatGeneratorSummary,
   formatApplianceSummary,
-  nutritionGoalToHealthiness,
   type CrewSizeBucketUi,
-  type NutritionGoal,
   type SimplifiedAllergen,
   type SimplifiedApplianceId,
   type SimplifiedDiet,
@@ -36,13 +31,13 @@ import {
   type SimplifiedProtein,
 } from "@shared/generator-simplified";
 import { FOOD_PREFERENCE_DEFINITIONS } from "@shared/ingredient-preferences/definitions";
-import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
 import {
-  trackProFeatureClicked,
-  trackNutritionGoalSelected,
-  trackNutritionGoalOverride,
-  trackHistoryPersonalizationDisabled,
-} from "@/lib/analytics";
+  PROFILE_NUTRITION_GOAL_KEY_LABELS,
+  sanitizeProfileNutritionGoal,
+} from "@shared/nutrition/profile-goals";
+import { useFeature } from "@/lib/billing/hooks";
+import { trackHistoryPersonalizationDisabled } from "@/lib/analytics";
+import { useProPaywall } from "@/components/billing/pro-paywall";
 import { useAuth } from "@/lib/auth/context";
 import {
   ChevronLeft,
@@ -152,18 +147,11 @@ export function SimplifiedGeneratorForm({
   const hasFoodPreferences = useFeature("ingredient_preferences");
   const hasMealMemory = useFeature("meal_memory");
   const { authenticated, preferences } = useAuth();
-  const recordPaywall = useRecordPaywallView();
   const [, setLocation] = useLocation();
+  const { openProPaywall } = useProPaywall();
 
-  const savedNutritionGoal = (preferences?.nutrition_goal as NutritionGoal | null) ?? null;
-
-  const onNutritionGoalChange = (goal: NutritionGoal) => {
-    patch({ nutrition_goal: goal, healthiness: nutritionGoalToHealthiness(goal) });
-    trackNutritionGoalSelected({ goal, source: "generator" });
-    if (authenticated && savedNutritionGoal && goal !== savedNutritionGoal) {
-      trackNutritionGoalOverride({ goal, saved_default: savedNutritionGoal });
-    }
-  };
+  const hasNutritionGoals = useFeature("nutrition_goals");
+  const savedNutritionGoal = hasNutritionGoals ? sanitizeProfileNutritionGoal(preferences?.nutrition_goals ?? []) : null;
 
   const togglePersonalizeWithHistory = () => {
     const next = !filters.personalizeWithHistory;
@@ -180,11 +168,7 @@ export function SimplifiedGeneratorForm({
     patch({ foodsToAvoid: next });
   };
 
-  const requestFoodPreferences = () => {
-    trackProFeatureClicked({ feature: "foods_to_avoid", page: "/generator", logged_in: authenticated });
-    void recordPaywall("ingredient_preferences", "generator_filter");
-    setLocation(`/me/subscription?feature=foods_to_avoid`);
-  };
+  const requestFoodPreferences = () => openProPaywall("foods_to_avoid", "generator_filter");
 
   const summaryLines = formatGeneratorSummary(filters).split("\n");
   const showCompactReturning =
@@ -352,34 +336,22 @@ export function SimplifiedGeneratorForm({
           )}
         </div>
 
-        <div className="col-span-2 space-y-1">
-          <Label className="text-xs text-muted-foreground">Nutrition goal</Label>
-          <div className="flex flex-wrap gap-1.5" data-testid="nutrition-goal-selector">
-            <Chip
-              active={filters.nutrition_goal === "no_preference"}
-              onClick={() => onNutritionGoalChange("no_preference")}
-              testId="nutrition-goal-no_preference"
-            >
-              {NUTRITION_GOAL_LABELS.no_preference}
-            </Chip>
-            {NUTRITION_GOAL_QUICK_PICKS.map((goal) => (
-              <Chip
-                key={goal}
-                active={filters.nutrition_goal === goal}
-                onClick={() => onNutritionGoalChange(goal)}
-                testId={`nutrition-goal-${goal}`}
-              >
-                {NUTRITION_GOAL_LABELS[goal]}
-              </Chip>
-            ))}
-          </div>
+        {savedNutritionGoal && (
           <p
-            className="text-[11px] leading-snug text-muted-foreground/80 px-0.5 pt-0.5"
-            data-testid="text-nutrition-goal-microcopy"
+            className="col-span-2 text-[11px] leading-snug text-muted-foreground px-0.5"
+            data-testid="generator-nutrition-goal-applied"
           >
-            {NUTRITION_GOAL_MICROCOPY[filters.nutrition_goal]}
+            Nutrition goal: <span className="font-medium text-foreground/90">{PROFILE_NUTRITION_GOAL_KEY_LABELS[savedNutritionGoal]}</span>
+            {" · "}
+            <button
+              type="button"
+              className="underline-offset-2 hover:underline"
+              onClick={() => setLocation("/me/profile")}
+            >
+              change in profile
+            </button>
           </p>
-        </div>
+        )}
 
         <div className="col-span-2 space-y-1">
           <Label className="text-xs text-muted-foreground">Avoid allergies</Label>

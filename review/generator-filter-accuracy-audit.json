@@ -1,18 +1,10 @@
 {
-  "generatedAt": "2026-09-30T23:40:49.494Z",
-  "totalRuns": 126,
-  "totalMatches": 126,
+  "generatedAt": "2026-10-09T20:21:32.745Z",
+  "totalRuns": 120,
+  "totalMatches": 120,
   "totalFalsePositives": 0,
   "totalEmpty": 0,
   "results": [
-    {
-      "label": "protein=chicken",
-      "protein": "chicken",
-      "runs": 6,
-      "matches": 6,
-      "emptyPoolCount": 0,
-      "falsePositives": []
-    },
     {
       "label": "protein=beef",
       "protein": "beef",
@@ -22,16 +14,16 @@
       "falsePositives": []
     },
     {
-      "label": "protein=pork",
-      "protein": "pork",
+      "label": "protein=chicken",
+      "protein": "chicken",
       "runs": 6,
       "matches": 6,
       "emptyPoolCount": 0,
       "falsePositives": []
     },
     {
-      "label": "protein=turkey",
-      "protein": "turkey",
+      "label": "protein=pork",
+      "protein": "pork",
       "runs": 6,
       "matches": 6,
       "emptyPoolCount": 0,

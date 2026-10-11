@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "wouter";
 import { Loader2, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,9 +9,10 @@ import {
 } from "@/components/auth/shift-reminder-settings-fields";
 import { apiRequest } from "@/lib/queryClient";
 import { useAuth } from "@/lib/auth/context";
-import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
+import { useFeature } from "@/lib/billing/hooks";
 import { useToast } from "@/hooks/use-toast";
-import { trackProfileUpdated, trackPersonalOnboardingStepCompleted, trackProFeatureClicked } from "@/lib/analytics";
+import { trackProfileUpdated, trackPersonalOnboardingStepCompleted } from "@/lib/analytics";
+import { useProPaywall } from "@/components/billing/pro-paywall";
 import {
   markProfileBuilt,
   onboardingSignalsFromAuth,
@@ -28,9 +28,8 @@ import { ChipToggle } from "@/components/auth/profile-chips";
 export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { onboarding?: boolean; onOnboardingSaved?: () => void }) {
   const { profile, preferences, refresh, user, halls, authenticated } = useAuth();
   const { toast } = useToast();
-  const [, setLocation] = useLocation();
+  const { openProPaywall } = useProPaywall();
   const hasFoodPreferences = useFeature("ingredient_preferences");
-  const recordPaywall = useRecordPaywallView();
   const [saving, setSaving] = useState(false);
 
   const [firstName, setFirstName] = useState("");
@@ -85,7 +84,7 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
         // Server re-checks Pro entitlement independently and forces this back to
         // [] for a non-Pro account regardless of what's sent — see
         // server/auth/auth-store.ts.
-        excluded_ingredients: foodsToAvoid,
+        ...(hasFoodPreferences ? { excluded_ingredients: foodsToAvoid } : {}),
         shift_reminders_enabled: shiftSettings.shift_reminders_enabled,
         shift_days: shiftSettings.shift_days,
         shift_reminder_time: shiftSettings.shift_reminder_time,
@@ -268,11 +267,7 @@ export function AccountProfileForm({ onboarding = false, onOnboardingSaved }: { 
         ) : (
           <button
             type="button"
-            onClick={() => {
-              trackProFeatureClicked({ feature: "foods_to_avoid", page: "/account", logged_in: authenticated });
-              void recordPaywall("ingredient_preferences", "account_preferences");
-              setLocation("/me/subscription?feature=foods_to_avoid");
-            }}
+            onClick={() => openProPaywall("foods_to_avoid", "account_preferences")}
             className="w-full rounded-md border border-border/40 bg-muted/20 px-3 py-2 text-left text-xs text-muted-foreground"
             data-testid="account-foods-to-avoid-locked"
           >

@@ -145,13 +145,22 @@ export default function TermsPage() {
           <Section id="pro-subscription" title="5. Firehall Meals Pro subscriptions">
             <p>Firehall Meals Pro is a paid, recurring subscription with two billing options:</p>
             <ul className="list-disc pl-5 space-y-1">
-              <li>$4.99 USD per month, billed monthly.</li>
+              <li>$5.99 USD per month, billed monthly.</li>
               <li>$39.99 USD per year, billed annually.</li>
             </ul>
             <p>
-              Subscriptions bill immediately upon successful checkout — there is no free trial
-              period. Payment is processed by Stripe; by subscribing you also agree to Stripe's
-              terms governing the payment method you provide.
+              Founding offer: while offered, an account's first annual subscription is $29.99 USD
+              for the first year only. It then renews at the standard $39.99 USD per year unless
+              cancelled. The founding offer is not available on monthly billing or to accounts
+              that have already had a paid subscription.
+            </p>
+            <p>
+              Each account may use one 14-day free trial of Firehall Meals Pro. No payment card is
+              required, and the trial never turns into a paid subscription: when it ends, your
+              account returns to the free plan automatically, nothing is charged, and none of your
+              data is deleted. A paid subscription bills immediately upon successful checkout.
+              Payment is processed by Stripe; by subscribing you also agree to Stripe's terms
+              governing the payment method you provide.
             </p>
             <p>
               Subscriptions automatically renew at the end of each billing period until
@@ -171,7 +180,8 @@ export default function TermsPage() {
             <p>
               Cancelling Firehall Meals Pro does not delete your Firehall Meals account or your
               saved account data (recipes, preferences, meal history). Your account simply
-              returns to the free plan.
+              returns to the free plan; meal history older than 30 days stays saved and becomes
+              visible again if you resubscribe.
             </p>
           </Section>
 
@@ -200,11 +210,13 @@ export default function TermsPage() {
           <Section id="free-vs-paid" title="8. Free vs. paid functionality">
             <p>
               Core features — the meal generator, the Classics Wheel, browsing the recipe catalog,
-              saving meals, and Hall crew collaboration — are free. Firehall Meals Pro adds:
-              advanced meal matching (nutrition-target search), the "Foods to Avoid" ingredient
-              exclusion tool, and durable cross-device meal memory that helps the generator avoid
-              recently repeated meals. We only describe features here that are actually shipped in
-              the product today.
+              saving meals, Hall crew collaboration, and a meal history covering the last 30 days
+              (with ratings, notes, and recent-repeat avoidance) — are free for signed-in users.
+              Firehall Meals Pro adds: advanced meal matching (nutrition-target search), the "Foods
+              to Avoid" ingredient exclusion tool, and full meal memory — your complete meal
+              history, long-term ratings and notes, crew favorites, and recommendations
+              personalized from everything you've cooked. We only describe features here that are
+              actually shipped in the product today.
             </p>
           </Section>
 

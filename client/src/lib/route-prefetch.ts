@@ -2,12 +2,14 @@
  * Prefetch lazy route chunks + warm likely navigations (aligned to 4-tab IA).
  */
 
-const PREFETCH_ROUTES = ["/tonight", "/generator", "/explore", "/pizza", "/hall", "/wheel"] as const;
+const PREFETCH_ROUTES = ["/tonight", "/shift", "/list", "/generator", "/explore", "/pizza", "/hall", "/wheel"] as const;
 
 type Prefetchable = (typeof PREFETCH_ROUTES)[number];
 
 const loaders: Record<Prefetchable, () => Promise<unknown>> = {
   "/tonight": () => import("@/pages/app-home-page"),
+  "/shift": () => import("@/pages/shift-planner"),
+  "/list": () => import("@/pages/shift-list-page"),
   "/generator": () => import("@/pages/generator"),
   "/explore": () => import("@/pages/explore"),
   "/pizza": () => import("@/pages/pizza-night"),

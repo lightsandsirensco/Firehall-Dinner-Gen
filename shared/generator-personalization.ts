@@ -15,7 +15,6 @@ import {
   SIMPLIFIED_PROTEINS,
   NUTRITION_GOAL_OPTIONS,
   createDefaultSimplifiedFilters,
-  nutritionGoalToHealthiness,
   type CrewSizeBucketUi,
   type HealthinessPreference,
   type NutritionGoal,
@@ -215,22 +214,11 @@ export function resolveGeneratorFilters(input: ResolveGeneratorFiltersInput): Si
       (session?.protein === "surprise" ? "surprise" : mapPreferredProtein(session?.protein)) ??
       base.protein,
     appliances: session?.appliances?.length ? [...session.appliances] : base.appliances,
-    // Precedence: this-device "remember my last pick" > current session > signed-in
-    // saved profile default > generator default ("no preference"). Never mutates the
-    // saved profile value itself — see PROFILE_NUTRITION_GOAL_OPTIONS. `healthiness`
-    // mirrors whichever tier resolved `nutrition_goal` so the legacy 3-way scoring/
-    // relaxation-message machinery (see generator-match.ts) always stays in sync with it.
-    healthiness:
-      personal?.healthiness ??
-      session?.healthiness ??
-      (mapProfileNutritionGoal(input.preferences?.nutrition_goal)
-        ? nutritionGoalToHealthiness(mapProfileNutritionGoal(input.preferences?.nutrition_goal)!)
-        : base.healthiness),
-    nutrition_goal:
-      personal?.nutrition_goal ??
-      session?.nutrition_goal ??
-      mapProfileNutritionGoal(input.preferences?.nutrition_goal) ??
-      base.nutrition_goal,
+    // Nutrition goals are the Pro profile goal only, applied server-side. Remembered
+    // session goals (and the healthiness they used to drive) no longer have a control,
+    // so they always resolve to defaults.
+    healthiness: base.healthiness,
+    nutrition_goal: base.nutrition_goal,
     allergens:
       personal?.allergens?.length
         ? [...personal.allergens]

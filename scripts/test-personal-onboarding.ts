@@ -8,10 +8,12 @@
  * / HALL SIGNUP SURFACES cleanup.
  */
 import assert from "node:assert/strict";
+import { existsSync, readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
 import {
   defaultPersonalOnboardingProgress,
   isPersonalOnboardingComplete,
-  onboardingPathForStep,
   personalOnboardingStep,
   type PersonalOnboardingProgress,
 } from "../client/src/lib/onboarding/state.ts";
@@ -92,11 +94,29 @@ function main(): void {
   assert.equal(isPersonalOnboardingComplete(personalComplete, false), true);
   assert.equal(isPersonalOnboardingComplete(defaultPersonalOnboardingProgress(), false), false);
 
-  assert.equal(onboardingPathForStep("generate_meal"), "/tonight");
-  assert.equal(onboardingPathForStep("profile"), "/tonight");
-  assert.equal(onboardingPathForStep("hall_question"), "/tonight");
-  assert.equal(onboardingPathForStep("connect_hall"), "/tonight");
-  assert.equal(onboardingPathForStep("completed"), "/tonight");
+  // Phase 16 — the funnel is progress-only: no gate redirects on it and the hall branch is gone.
+  const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+  const read = (rel: string) => readFileSync(path.join(root, rel), "utf8");
+  const app = read("client/src/App.tsx");
+  assert.ok(!app.includes("OnboardingGate"), "no forced onboarding gate is mounted");
+  assert.ok(!existsSync(path.join(root, "client/src/components/onboarding/onboarding-gate.tsx")));
+  assert.ok(!existsSync(path.join(root, "client/src/pages/onboarding-hall-page.tsx")), "hall question page removed");
+  assert.match(app, /path="\/onboarding\/hall">\{\(\) => <Redirect to="\/shift"/, "/onboarding/hall → /shift");
+  assert.match(
+    read("server/routes.ts"),
+    /app\.get\("\/onboarding\/hall"[\s\S]{0,80}redirect\(301, "\/shift"\)/,
+    "server 301 for /onboarding/hall",
+  );
+  for (const rel of [
+    "client/src/pages/account-page.tsx",
+    "client/src/components/recipe-card.tsx",
+    "client/src/pages/shift-planner.tsx",
+    "client/src/pages/shift-list-page.tsx",
+  ]) {
+    const src = read(rel);
+    assert.ok(!src.includes("/onboarding/hall"), `${rel} never links to the hall question`);
+    assert.ok(!src.includes("onboarding=1"), `${rel} never pushes into forced profile onboarding`);
+  }
 
   console.log("[test-personal-onboarding] OK");
 }

@@ -120,6 +120,11 @@ export const EXPLORE_PROTEIN_SLUG_OVERRIDES: Record<string, string> = {
   "shrimp-and-grits-breakfast": "Shrimp",
   "smoked-salmon-benedit": "Salmon",
   "turkey-sausage-burritos": "Sausage",
+  "berry-vanilla-protein-overnight-oats": "Vegetarian",
+  "overnight-oat-bar-crew": "Vegetarian",
+  "peanut-butter-protein-overnight-oats": "Vegetarian",
+  // Performance meals
+  "cottage-cheese-protein-pasta": "Vegetarian",
   // Hall / Firehall catalogs
   "best-tuna-melt-for-the-hall": "Fish",
   "breakfast-sausage-pizza": "Sausage",

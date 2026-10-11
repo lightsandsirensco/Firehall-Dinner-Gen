@@ -1,0 +1,3111 @@
+{
+  "generatedAt": "2026-10-11T13:57:29.010Z",
+  "days": 60,
+  "historyWindow": 10,
+  "results": [
+    {
+      "shift": "12h-day",
+      "variant": "default",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 68,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×3",
+            "cast-iron-breakfast-skillet×3",
+            "bagel-lox-breakfast-board×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 23,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "ginger-soy-chicken-rice-bowls×2",
+            "turkey-taco-skillet×2",
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 28,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "garlic-butter-shrimp×2",
+            "lemon-herb-salmon×2",
+            "turkey-shepherds-sweet-potato×1"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 28,
+        "Chicken": 12,
+        "Seafood": 12,
+        "Beef": 21,
+        "Turkey": 4,
+        "Eggs": 10,
+        "Vegetarian": 3
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "default",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 42,
+      "maxSameRecipe": 5,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "thai-basil-ground-beef-skillet×4",
+            "southwest-beef-sweet-potato-skillet×3",
+            "pasta-bar-night×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 21,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "maple-mustard-salmon-tray×3",
+            "buffalo-chicken-sweet-potato-bowls×3",
+            "high-protein-chicken-fried-rice×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Beef": 20,
+        "Vegetarian": 5,
+        "Seafood": 11,
+        "Chicken": 16,
+        "Pork": 5,
+        "Turkey": 2,
+        "Lamb": 1
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "default",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 62,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×2",
+            "sausage-egg-cheese-sandwiches×2",
+            "hall-sausage-biscuits-gravy×1"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "cuban-beef-picadillo-bowls×2",
+            "kung-pao-chicken-rice-bowls×2",
+            "ginger-soy-chicken-rice-bowls×1"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "garlic-butter-shrimp×2",
+            "lemon-herb-salmon×2",
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 14,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "maple-soy-salmon-bowls×3",
+            "high-protein-chicken-fried-rice×2",
+            "game-day-pizza-sliders×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 16,
+        "Chicken": 14,
+        "Seafood": 14,
+        "Beef": 18,
+        "Vegetarian": 7,
+        "Eggs": 7,
+        "Turkey": 4
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "default",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 58,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×2",
+            "cast-iron-breakfast-skillet×2",
+            "hall-breakfast-wraps×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×2",
+            "hall-sloppy-joe-feed×2",
+            "cuban-beef-picadillo-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peri-peri-chicken-platter×2",
+            "garlic-butter-shrimp×1",
+            "fajita-bar-night×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 13,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "maple-soy-salmon-bowls×3",
+            "thai-basil-ground-beef-skillet×2",
+            "blackened-cod-taco-night×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 19,
+        "Chicken": 9,
+        "Seafood": 12,
+        "Beef": 20,
+        "Vegetarian": 4,
+        "Eggs": 10,
+        "Turkey": 5,
+        "Lamb": 1
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "default",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 73,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 21,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "biscuit-french-toast-sliders×2",
+            "johnnycakes-with-syrup×2",
+            "chorizo-breakfast-hash×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 20,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×3",
+            "cuban-beef-picadillo-bowls×3",
+            "greek-chicken-pitas×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 21,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peri-peri-chicken-platter×3",
+            "boneless-chicken-thighs-sweet-potato-spinach×2",
+            "thai-basil-ground-beef-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×3",
+            "thai-basil-ground-beef-skillet×2",
+            "chickpea-pasta-primavera-white-beans×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 19,
+        "Chicken": 25,
+        "Seafood": 14,
+        "Beef": 25,
+        "Vegetarian": 5,
+        "Eggs": 13,
+        "Turkey": 7
+      }
+    },
+    {
+      "shift": "12h-day",
+      "variant": "no-history",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 55,
+      "maxSameRecipe": 7,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 18,
+          "repeatWithin7Days": 3,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-sausage-sweet-potato-skillet×4",
+            "veggie-egg-burritos×3",
+            "cast-iron-breakfast-skillet×3"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 20,
+          "repeatWithin7Days": 5,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "game-day-pizza-sliders×4",
+            "cuban-beef-picadillo-bowls×4",
+            "hall-sloppy-joe-feed×3"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 25,
+          "repeatWithin7Days": 4,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "game-day-pizza-sliders×3",
+            "lemon-herb-salmon×2",
+            "thai-basil-ground-beef-skillet×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 27,
+        "Chicken": 13,
+        "Seafood": 11,
+        "Turkey": 4,
+        "Beef": 20,
+        "Lamb": 2,
+        "Eggs": 11,
+        "Vegetarian": 2
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "no-history",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 33,
+      "maxSameRecipe": 13,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 19,
+          "repeatWithin7Days": 7,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "thai-basil-ground-beef-skillet×8",
+            "pasta-bar-night×2",
+            "white-bean-chicken-chili×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 17,
+          "repeatWithin7Days": 10,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "thai-basil-ground-beef-skillet×5",
+            "maple-mustard-salmon-tray×3",
+            "firehall-taco-bowls×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Beef": 22,
+        "Vegetarian": 3,
+        "Seafood": 15,
+        "Chicken": 14,
+        "Pork": 4,
+        "Turkey": 2
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "no-history",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 54,
+      "maxSameRecipe": 5,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "hall-sausage-biscuits-gravy×2",
+            "turkey-sausage-burritos×2",
+            "berry-vanilla-protein-overnight-oats×1"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 5,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "cuban-beef-picadillo-bowls×4",
+            "turkey-taco-skillet×2",
+            "blackened-salmon-sweet-potato-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chipotle-chicken-burrito-bowls×2",
+            "garlic-butter-shrimp×1",
+            "thai-basil-ground-beef-skillet×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 13,
+          "repeatWithin7Days": 3,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "korean-beef-rice-bowls×4",
+            "game-day-pizza-sliders×3",
+            "thai-basil-ground-beef-skillet×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 17,
+        "Chicken": 8,
+        "Seafood": 18,
+        "Beef": 21,
+        "Vegetarian": 6,
+        "Mixed Protein": 1,
+        "Turkey": 3,
+        "Lamb": 1,
+        "Eggs": 5
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "no-history",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 56,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "cast-iron-breakfast-skillet×2",
+            "hall-breakfast-wraps×2",
+            "hall-sausage-biscuits-gravy×1"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 16,
+          "repeatWithin7Days": 3,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "cuban-beef-picadillo-bowls×3",
+            "turkey-taco-skillet×2",
+            "game-day-pizza-sliders×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 2,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "thai-basil-ground-beef-skillet×2",
+            "peri-peri-chicken-platter×2",
+            "garlic-butter-shrimp×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 3,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "korean-beef-rice-bowls×3",
+            "thai-basil-ground-beef-skillet×2",
+            "blackened-cod-taco-night×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 20,
+        "Chicken": 11,
+        "Seafood": 14,
+        "Beef": 18,
+        "Vegetarian": 2,
+        "Turkey": 6,
+        "Eggs": 8,
+        "Lamb": 1
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "no-history",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 66,
+      "maxSameRecipe": 5,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 19,
+          "repeatWithin7Days": 4,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "hall-sausage-biscuits-gravy×3",
+            "breakfast-fried-rice-crew×3",
+            "menemen-for-the-crew×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 20,
+          "repeatWithin7Days": 4,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "cuban-beef-picadillo-bowls×5",
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×2",
+            "game-day-pizza-sliders×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 20,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "lemon-herb-salmon×3",
+            "boneless-chicken-thighs-sweet-potato-spinach×2",
+            "thai-basil-ground-beef-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 16,
+          "repeatWithin7Days": 4,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×4",
+            "firehall-taco-bowls×3",
+            "korean-beef-rice-bowls×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 26,
+        "Chicken": 22,
+        "Seafood": 15,
+        "Beef": 28,
+        "Vegetarian": 3,
+        "Eggs": 7,
+        "Turkey": 7
+      }
+    },
+    {
+      "shift": "12h-day",
+      "variant": "vegetarian",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 26,
+      "maxSameRecipe": 8,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 11,
+          "repeatWithin7Days": 4,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "savory-cottage-cheese-breakfast-bowls×5",
+            "menemen-for-the-crew×3",
+            "quick-egg-tacos×3"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 6,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "firehouse-dense-bean-salad×8",
+            "southwest-black-bean-corn-bowls×7",
+            "tempeh-peanut-buddha-bowls×6"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 9,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "pasta-bar-night×6",
+            "baked-falafel-hall-bowls×6",
+            "firehouse-lentil-chili×5"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 22,
+        "Vegetarian": 68
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "vegetarian",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 10,
+      "maxSameRecipe": 10,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 7,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "spaghetti-aglio-e-olio-for-the-hall×5",
+            "pasta-bar-night×5",
+            "red-lentil-paneer-dal×5"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 3,
+          "repeatWithin7Days": 27,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chickpea-pasta-primavera-white-beans×10",
+            "greek-yogurt-white-bean-power-bowls×10",
+            "sesame-ginger-tofu-bowls×10"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Vegetarian": 60
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "vegetarian",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 24,
+      "maxSameRecipe": 7,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 10,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "menemen-for-the-crew×3",
+            "biscuit-french-toast-sliders×3",
+            "berry-vanilla-protein-overnight-oats×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 4,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "firehouse-dense-bean-salad×6",
+            "southwest-black-bean-corn-bowls×6",
+            "red-lentil-paneer-dal×6"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 7,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "pasta-bar-night×4",
+            "firehouse-lentil-chili×4",
+            "five-ingredient-pasta×3"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 3,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chickpea-pasta-primavera-white-beans×7",
+            "greek-yogurt-white-bean-power-bowls×7",
+            "sesame-ginger-tofu-bowls×6"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 16,
+        "Vegetarian": 64
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "vegetarian",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 26,
+      "maxSameRecipe": 7,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 10,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buttermilk-pancakes×4",
+            "menemen-for-the-crew×3",
+            "savory-cottage-cheese-breakfast-bowls×3"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 5,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "firehouse-dense-bean-salad×5",
+            "southwest-black-bean-corn-bowls×5",
+            "red-lentil-paneer-dal×5"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 9,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "pasta-bar-night×4",
+            "five-ingredient-pasta×3",
+            "spaghetti-aglio-e-olio-for-the-hall×3"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 3,
+          "repeatWithin7Days": 9,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chickpea-pasta-primavera-white-beans×7",
+            "greek-yogurt-white-bean-power-bowls×7",
+            "sesame-ginger-tofu-bowls×6"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 17,
+        "Vegetarian": 63
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "vegetarian",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 26,
+      "maxSameRecipe": 9,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 9,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "savory-cottage-cheese-breakfast-bowls×6",
+            "menemen-for-the-crew×3",
+            "migas-for-the-crew×3"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 6,
+          "repeatWithin7Days": 8,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "firehouse-dense-bean-salad×9",
+            "southwest-black-bean-corn-bowls×5",
+            "red-lentil-paneer-dal×4"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 9,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "pasta-bar-night×5",
+            "five-ingredient-pasta×4",
+            "spaghetti-aglio-e-olio-for-the-hall×4"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 4,
+          "repeatWithin7Days": 24,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chickpea-pasta-primavera-white-beans×9",
+            "greek-yogurt-white-bean-power-bowls×9",
+            "sesame-ginger-tofu-bowls×8"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 20,
+        "Vegetarian": 88
+      }
+    },
+    {
+      "shift": "12h-day",
+      "variant": "pork-free",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 60,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 16,
+          "repeatWithin7Days": 3,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "biscuit-french-toast-sliders×3",
+            "turkey-sausage-burritos×3",
+            "peanut-butter-protein-overnight-oats×3"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 20,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "ginger-soy-chicken-rice-bowls×4",
+            "hall-sloppy-joe-feed×3",
+            "turkey-taco-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 28,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "lemon-herb-salmon×2",
+            "lemon-garlic-shrimp-pasta×2",
+            "garlic-butter-shrimp×1"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 12,
+        "Chicken": 22,
+        "Seafood": 13,
+        "Pork": 9,
+        "Beef": 20,
+        "Turkey": 6,
+        "Vegetarian": 8
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "pork-free",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 38,
+      "maxSameRecipe": 5,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "thai-basil-ground-beef-skillet×4",
+            "southwest-beef-sweet-potato-skillet×3",
+            "pasta-bar-night×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "maple-mustard-salmon-tray×3",
+            "buffalo-chicken-sweet-potato-bowls×3",
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Beef": 21,
+        "Vegetarian": 5,
+        "Seafood": 14,
+        "Chicken": 16,
+        "Turkey": 4
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "pork-free",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 55,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 12,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "biscuit-french-toast-sliders×3",
+            "berry-vanilla-protein-overnight-oats×2",
+            "quick-egg-tacos×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "cuban-beef-picadillo-bowls×3",
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×2",
+            "ginger-soy-chicken-rice-bowls×1"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "garlic-butter-shrimp×2",
+            "lemon-herb-salmon×2",
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 14,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "korean-beef-rice-bowls×3",
+            "high-protein-chicken-fried-rice×2",
+            "firehall-taco-bowls×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 10,
+        "Chicken": 15,
+        "Seafood": 17,
+        "Beef": 20,
+        "Vegetarian": 10,
+        "Turkey": 4,
+        "Pork": 4
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "pork-free",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 57,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 14,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "biscuit-french-toast-sliders×4",
+            "turkey-sausage-egg-white-sandwiches×3",
+            "turkey-sausage-sweet-potato-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "ginger-soy-chicken-rice-bowls×2",
+            "greek-chicken-pitas×2",
+            "cuban-beef-picadillo-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peri-peri-chicken-platter×2",
+            "garlic-butter-shrimp×1",
+            "fajita-bar-night×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 14,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "thai-basil-ground-beef-skillet×2",
+            "blackened-cod-taco-night×2",
+            "turkey-taco-bowls×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 10,
+        "Chicken": 20,
+        "Seafood": 12,
+        "Beef": 18,
+        "Pork": 7,
+        "Vegetarian": 6,
+        "Turkey": 6,
+        "Lamb": 1
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "pork-free",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 66,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 16,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "savory-cottage-cheese-breakfast-bowls×3",
+            "buttermilk-pancakes×3",
+            "turkey-sausage-egg-white-sandwiches×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 18,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "ginger-soy-chicken-rice-bowls×3",
+            "greek-spiced-beef-burger-bowls-tzatziki-slaw×3",
+            "cuban-beef-picadillo-bowls×3"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 21,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peri-peri-chicken-platter×3",
+            "boneless-chicken-thighs-sweet-potato-spinach×2",
+            "thai-basil-ground-beef-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×3",
+            "thai-basil-ground-beef-skillet×2",
+            "chickpea-pasta-primavera-white-beans×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 16,
+        "Chicken": 32,
+        "Seafood": 16,
+        "Beef": 24,
+        "Pork": 7,
+        "Vegetarian": 6,
+        "Turkey": 7
+      }
+    },
+    {
+      "shift": "12h-day",
+      "variant": "no-seafood",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 66,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×3",
+            "hall-sausage-biscuits-gravy×2",
+            "biscuit-french-toast-sliders×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 21,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "hall-blt-sandwich-feed×3",
+            "cuban-beef-picadillo-bowls×3",
+            "firehall-taco-bowls×3"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 28,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "sheet-pan-sausage-peppers×2",
+            "pasta-bar-night×2",
+            "lebanese-chicken-shish-platter×1"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 32,
+        "Chicken": 16,
+        "Beef": 20,
+        "Eggs": 12,
+        "Vegetarian": 6,
+        "Turkey": 4
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "no-seafood",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 38,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 21,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "southwest-beef-sweet-potato-skillet×4",
+            "pasta-bar-night×3",
+            "cuban-beef-picadillo-bowls×3"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×3",
+            "high-protein-chicken-fried-rice×3",
+            "firehall-korean-beef-bowls×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Beef": 22,
+        "Vegetarian": 7,
+        "Pork": 7,
+        "Chicken": 19,
+        "Turkey": 4,
+        "Lamb": 1
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "no-seafood",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 57,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "hall-sausage-biscuits-gravy×2",
+            "veggie-egg-burritos×2",
+            "sausage-egg-cheese-sandwiches×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "kung-pao-chicken-rice-bowls×2",
+            "asian-chicken-lettuce-cups×2",
+            "cuban-beef-picadillo-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "sheet-pan-sausage-peppers×2",
+            "pasta-bar-night×2",
+            "southwest-beef-sweet-potato-skillet×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 12,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×3",
+            "game-day-pizza-sliders×3",
+            "korean-beef-rice-bowls×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 23,
+        "Chicken": 18,
+        "Beef": 16,
+        "Vegetarian": 11,
+        "Turkey": 6,
+        "Eggs": 6
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "no-seafood",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 57,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "breakfast-sandwich-trays×2",
+            "veggie-egg-burritos×2",
+            "hall-breakfast-wraps×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "kung-pao-chicken-rice-bowls×2",
+            "game-day-pizza-sliders×2",
+            "ginger-soy-chicken-rice-bowls×1"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "pasta-bar-night×2",
+            "peri-peri-chicken-platter×2",
+            "sheet-pan-sausage-peppers×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 14,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "korean-beef-rice-bowls×3",
+            "turkey-taco-bowls×2",
+            "high-protein-chicken-fried-rice×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 21,
+        "Chicken": 19,
+        "Beef": 16,
+        "Eggs": 11,
+        "Vegetarian": 6,
+        "Turkey": 6,
+        "Lamb": 1
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "no-seafood",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 70,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "hall-sausage-biscuits-gravy×2",
+            "firehouse-breakfast-protein-bowls×2",
+            "turkey-sausage-spinach-feta-egg-white-scramble×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 21,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "kung-pao-chicken-rice-bowls×4",
+            "cuban-beef-picadillo-bowls×3",
+            "greek-chicken-pitas×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 20,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peri-peri-chicken-platter×3",
+            "boneless-chicken-thighs-sweet-potato-spinach×2",
+            "southwest-beef-sweet-potato-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 14,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chickpea-pasta-primavera-white-beans×4",
+            "turkey-taco-skillet×4",
+            "firehall-taco-bowls×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 23,
+        "Chicken": 35,
+        "Beef": 18,
+        "Eggs": 11,
+        "Vegetarian": 11,
+        "Turkey": 10
+      }
+    },
+    {
+      "shift": "12h-day",
+      "variant": "goal-high-protein",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 72,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×3",
+            "hall-breakfast-burritos×2",
+            "high-protein-breakfast-burrito-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 24,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×3",
+            "firehall-gyro-bowls×2",
+            "turkey-taco-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 30,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "creamy-chicken-penne-alfredo×1",
+            "blackened-cod-taco-night×1",
+            "maple-soy-salmon-bowls×1"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 12,
+        "Chicken": 19,
+        "Pork": 17,
+        "Seafood": 9,
+        "Beef": 18,
+        "Turkey": 7,
+        "Vegetarian": 8
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "goal-high-protein",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 40,
+      "maxSameRecipe": 5,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 27,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×2",
+            "chicken-quesadillas×2",
+            "greek-chicken-pitas×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×5",
+            "maple-soy-salmon-bowls×3",
+            "herb-baked-salmon-tray×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Beef": 10,
+        "Turkey": 11,
+        "Seafood": 13,
+        "Chicken": 23,
+        "Pork": 3
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "goal-high-protein",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 65,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×2",
+            "breakfast-sandwich-trays×1",
+            "firehouse-breakfast-protein-bowls×1"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×3",
+            "white-bean-kale-soup×2",
+            "grilled-shrimp-quinoa-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chicken-enchilada-skillet-light×2",
+            "creamy-chicken-penne-alfredo×1",
+            "philly-cheesesteak-sliders×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×3",
+            "cajun-shrimp-rice-bowls×3",
+            "mediterranean-baked-fish-tray×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 8,
+        "Chicken": 20,
+        "Pork": 15,
+        "Beef": 9,
+        "Turkey": 4,
+        "Seafood": 18,
+        "Vegetarian": 6
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "goal-high-protein",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 59,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 16,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-sausage-burritos×2",
+            "veggie-egg-burritos×2",
+            "peanut-butter-protein-overnight-oats×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×3",
+            "honey-garlic-chicken-rice-bowls×2",
+            "turkey-taco-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "creamy-chicken-penne-alfredo×2",
+            "zaatar-roasted-chicken-thighs×2",
+            "caprese-chicken-bake×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "mediterranean-baked-fish-tray×2",
+            "cajun-shrimp-rice-bowls×2",
+            "herb-baked-salmon-tray×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 8,
+        "Chicken": 25,
+        "Pork": 11,
+        "Seafood": 15,
+        "Turkey": 5,
+        "Beef": 9,
+        "Vegetarian": 6,
+        "Mixed Protein": 1
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "goal-high-protein",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 74,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "hall-breakfast-wraps×2",
+            "breakfast-sliders×2",
+            "chorizo-breakfast-hash×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 21,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "pork-carnitas-tacos×3",
+            "blackened-cod-taco-night×2",
+            "crispy-fish-taco-night×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 26,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "lemon-garlic-chicken-tray×2",
+            "creamy-chicken-penne-alfredo×1",
+            "caprese-chicken-bake×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×3",
+            "asian-chicken-lettuce-cups×3",
+            "buffalo-chicken-sweet-potato-bowls×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 12,
+        "Chicken": 28,
+        "Pork": 25,
+        "Seafood": 18,
+        "Turkey": 8,
+        "Beef": 16,
+        "Vegetarian": 1
+      }
+    },
+    {
+      "shift": "12h-day",
+      "variant": "goal-lower-calorie",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 73,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "breakfast-quesadillas×3",
+            "turkey-sausage-sweet-potato-skillet×2",
+            "scrapple-and-eggs-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 24,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×2",
+            "firehall-gyro-bowls×2",
+            "philly-cheesesteak-sliders×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 29,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "creamy-chicken-penne-alfredo×2",
+            "blackened-cod-taco-night×1",
+            "maple-soy-salmon-bowls×1"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 10,
+        "Chicken": 19,
+        "Pork": 25,
+        "Seafood": 7,
+        "Beef": 16,
+        "Turkey": 6,
+        "Vegetarian": 7
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "goal-lower-calorie",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 43,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 27,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×2",
+            "mediterranean-beef-bowls×2",
+            "kielbasa-cabbage-potato-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×4",
+            "egg-roll-in-a-bowl-crew×2",
+            "firehall-taco-bowls×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Beef": 13,
+        "Seafood": 10,
+        "Pork": 7,
+        "Chicken": 19,
+        "Turkey": 11
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "goal-lower-calorie",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 61,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "breakfast-quesadillas×2",
+            "scrapple-and-eggs-skillet×2",
+            "hall-breakfast-burritos×1"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 16,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×2",
+            "white-bean-kale-soup×2",
+            "grilled-shrimp-quinoa-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chicken-enchilada-skillet-light×2",
+            "creamy-chicken-penne-alfredo×1",
+            "philly-cheesesteak-sliders×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 13,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×3",
+            "cajun-shrimp-rice-bowls×3",
+            "mediterranean-baked-fish-tray×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 5,
+        "Chicken": 17,
+        "Vegetarian": 9,
+        "Beef": 8,
+        "Turkey": 6,
+        "Pork": 20,
+        "Seafood": 15
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "goal-lower-calorie",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 58,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×2",
+            "breakfast-quesadillas×2",
+            "breakfast-sliders×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×2",
+            "honey-garlic-chicken-rice-bowls×2",
+            "egg-roll-in-a-bowl-crew×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "creamy-chicken-penne-alfredo×2",
+            "buffalo-chicken-wraps×1",
+            "skillet-chicken-alfredo×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×2",
+            "lemon-garlic-shrimp-pasta×2",
+            "cajun-shrimp-rice-bowls×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 6,
+        "Chicken": 20,
+        "Turkey": 6,
+        "Pork": 18,
+        "Beef": 9,
+        "Seafood": 13,
+        "Vegetarian": 7,
+        "Lamb": 1
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "goal-lower-calorie",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 78,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "johnnycakes-with-syrup×2",
+            "hall-breakfast-wraps×2",
+            "hall-sausage-biscuits-gravy×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 24,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "mediterranean-beef-bowls×2",
+            "egg-roll-in-a-bowl-crew×2",
+            "lemon-chicken-orzo-soup×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 25,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "creamy-chicken-penne-alfredo×2",
+            "buffalo-chicken-wraps×2",
+            "firehall-gyro-bowls×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "cajun-shrimp-rice-bowls×4",
+            "best-tuna-melt-for-the-hall×3",
+            "asian-chicken-lettuce-cups×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 12,
+        "Chicken": 28,
+        "Turkey": 9,
+        "Seafood": 18,
+        "Beef": 14,
+        "Pork": 24,
+        "Vegetarian": 2,
+        "Mixed Protein": 1
+      }
+    },
+    {
+      "shift": "12h-day",
+      "variant": "goal-lower-carb",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 73,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 22,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×3",
+            "cast-iron-breakfast-skillet×3",
+            "bagel-lox-breakfast-board×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 25,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "firehall-gyro-bowls×2",
+            "philly-cheesesteak-sliders×2",
+            "turkey-taco-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 29,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-zoodle-bolognese×2",
+            "paprika-roasted-chicken-quarters×1",
+            "blackened-cod-taco-night×1"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 25,
+        "Seafood": 11,
+        "Chicken": 15,
+        "Beef": 18,
+        "Eggs": 10,
+        "Turkey": 6,
+        "Vegetarian": 5
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "goal-lower-carb",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 41,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 26,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "pesto-tomato-chicken-tray×2",
+            "buffalo-chicken-sweet-potato-bowls×2",
+            "turkey-zoodle-bolognese×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×4",
+            "best-tuna-melt-for-the-hall×2",
+            "egg-roll-in-a-bowl-crew×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Beef": 8,
+        "Seafood": 16,
+        "Pork": 5,
+        "Chicken": 20,
+        "Turkey": 11
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "goal-lower-carb",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 64,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×2",
+            "sausage-egg-cheese-sandwiches×2",
+            "hall-sausage-biscuits-gravy×1"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 16,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "grilled-shrimp-quinoa-bowls×3",
+            "white-bean-kale-soup×2",
+            "egg-roll-in-a-bowl-crew×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chicken-enchilada-skillet-light×2",
+            "paprika-roasted-chicken-quarters×1",
+            "philly-cheesesteak-sliders×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 13,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×3",
+            "best-tuna-melt-for-the-hall×3",
+            "mediterranean-baked-fish-tray×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 18,
+        "Seafood": 18,
+        "Chicken": 19,
+        "Vegetarian": 7,
+        "Beef": 7,
+        "Eggs": 7,
+        "Turkey": 4
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "goal-lower-carb",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 60,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "veggie-egg-burritos×2",
+            "cast-iron-breakfast-skillet×2",
+            "hall-breakfast-wraps×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 16,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "honey-garlic-chicken-rice-bowls×2",
+            "egg-roll-in-a-bowl-crew×2",
+            "korean-beef-rice-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 20,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "paprika-roasted-chicken-quarters×1",
+            "caprese-chicken-bake×1",
+            "yogurt-marinated-grill-chicken×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 14,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×2",
+            "turkey-taco-skillet×2",
+            "asian-chicken-lettuce-cups×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 17,
+        "Seafood": 14,
+        "Chicken": 22,
+        "Turkey": 5,
+        "Eggs": 10,
+        "Beef": 7,
+        "Vegetarian": 4,
+        "Lamb": 1
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "goal-lower-carb",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 75,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 21,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "biscuit-french-toast-sliders×2",
+            "johnnycakes-with-syrup×2",
+            "chorizo-breakfast-hash×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 21,
+          "repeatWithin7Days": 1,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "grilled-shrimp-quinoa-bowls×3",
+            "buffalo-chicken-wraps×2",
+            "turkey-lettuce-wrap-night×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 27,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "paprika-roasted-chicken-quarters×1",
+            "caprese-chicken-bake×1",
+            "firehall-gyro-bowls×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "caprese-chicken-bake×3",
+            "asian-chicken-lettuce-cups×3",
+            "lemon-garlic-shrimp-pasta×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Pork": 23,
+        "Seafood": 20,
+        "Chicken": 33,
+        "Turkey": 8,
+        "Eggs": 13,
+        "Beef": 10,
+        "Mixed Protein": 1
+      }
+    },
+    {
+      "shift": "12h-day",
+      "variant": "goal-balanced",
+      "shifts": 30,
+      "slots": 90,
+      "filled": 90,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 68,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "breakfast-quesadillas×3",
+            "hall-sausage-biscuits-gravy×3",
+            "sheet-pan-breakfast-sandwiches×3"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 23,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×4",
+            "firehall-gyro-bowls×2",
+            "philly-cheesesteak-sliders×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 29,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "creamy-chicken-penne-alfredo×2",
+            "blackened-cod-taco-night×1",
+            "maple-soy-salmon-bowls×1"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 12,
+        "Chicken": 22,
+        "Pork": 24,
+        "Seafood": 4,
+        "Beef": 17,
+        "Turkey": 6,
+        "Vegetarian": 5
+      }
+    },
+    {
+      "shift": "12h-night",
+      "variant": "goal-balanced",
+      "shifts": 30,
+      "slots": 60,
+      "filled": 60,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 41,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "dinner": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 25,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×2",
+            "cajun-chicken-rice-bowl×2",
+            "dirty-rice-crew-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 30,
+          "filled": 30,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "turkey-taco-skillet×4",
+            "egg-roll-in-a-bowl-crew×3",
+            "maple-soy-salmon-bowls×3"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Beef": 12,
+        "Seafood": 10,
+        "Pork": 7,
+        "Chicken": 19,
+        "Turkey": 9,
+        "Mixed Protein": 2,
+        "Vegetarian": 1
+      }
+    },
+    {
+      "shift": "24h",
+      "variant": "goal-balanced",
+      "shifts": 20,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 60,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 17,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "egg-white-black-bean-breakfast-quesadillas×2",
+            "breakfast-quesadillas×2",
+            "hall-breakfast-wraps×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 14,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×3",
+            "white-bean-kale-soup×2",
+            "chipotle-chicken-burrito-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "chicken-enchilada-skillet-light×2",
+            "cajun-chicken-rice-bowl×2",
+            "creamy-chicken-penne-alfredo×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 14,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "buffalo-chicken-sweet-potato-bowls×3",
+            "cajun-shrimp-rice-bowls×3",
+            "hot-honey-grilled-sausage-peppers×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 10,
+        "Chicken": 20,
+        "Seafood": 15,
+        "Beef": 9,
+        "Turkey": 3,
+        "Pork": 14,
+        "Vegetarian": 9
+      }
+    },
+    {
+      "shift": "48h",
+      "variant": "goal-balanced",
+      "shifts": 10,
+      "slots": 80,
+      "filled": 80,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 58,
+      "maxSameRecipe": 4,
+      "bySlot": {
+        "breakfast": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "quick-egg-tacos×2",
+            "breakfast-quesadillas×2",
+            "sheet-pan-breakfast-sandwiches×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "peanut-chicken-rice-bowls×3",
+            "honey-garlic-chicken-rice-bowls×2",
+            "turkey-taco-skillet×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 19,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "creamy-chicken-penne-alfredo×2",
+            "buffalo-chicken-wraps×1",
+            "skillet-chicken-alfredo×1"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 20,
+          "filled": 20,
+          "distinct": 15,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "firehall-taco-bowls×3",
+            "hot-honey-grilled-sausage-peppers×2",
+            "cajun-shrimp-rice-bowls×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 12,
+        "Chicken": 21,
+        "Seafood": 10,
+        "Turkey": 4,
+        "Pork": 13,
+        "Beef": 12,
+        "Vegetarian": 8
+      }
+    },
+    {
+      "shift": "72h",
+      "variant": "goal-balanced",
+      "shifts": 9,
+      "slots": 108,
+      "filled": 108,
+      "empty": 0,
+      "withinShiftRepeats": 0,
+      "distinct": 75,
+      "maxSameRecipe": 3,
+      "bySlot": {
+        "breakfast": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 20,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "egg-white-black-bean-breakfast-quesadillas×2",
+            "breakfast-sliders×2",
+            "hall-sausage-biscuits-gravy×2"
+          ],
+          "wrongExamples": []
+        },
+        "lunch": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 23,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "crispy-fish-taco-night×2",
+            "mediterranean-beef-bowls×2",
+            "firehall-korean-beef-bowls×2"
+          ],
+          "wrongExamples": []
+        },
+        "dinner": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 24,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "creamy-chicken-penne-alfredo×2",
+            "buffalo-chicken-wraps×2",
+            "lemon-garlic-chicken-tray×2"
+          ],
+          "wrongExamples": []
+        },
+        "late_night": {
+          "slots": 27,
+          "filled": 27,
+          "distinct": 18,
+          "repeatWithin7Days": 0,
+          "wrongOccasion": 0,
+          "overTimeBudget": 0,
+          "top": [
+            "firehall-taco-bowls×3",
+            "buffalo-chicken-sweet-potato-bowls×2",
+            "turkey-taco-bowls×2"
+          ],
+          "wrongExamples": []
+        }
+      },
+      "proteinMix": {
+        "Eggs": 14,
+        "Chicken": 26,
+        "Seafood": 18,
+        "Turkey": 8,
+        "Vegetarian": 1,
+        "Beef": 18,
+        "Pork": 22,
+        "Mixed Protein": 1
+      }
+    }
+  ]
+}

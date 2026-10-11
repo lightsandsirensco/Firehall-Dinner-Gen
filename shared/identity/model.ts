@@ -125,7 +125,7 @@ export const FEATURE_OWNERSHIP: FeatureOwnership[] = [
     hall_member: "full",
     hall_admin: "full",
     notes:
-      "CANONICAL durable cooked log: Postgres user_meal_history (meal_memory). Device log firehall_hall_history_v1 (sync key personal_meal_history) is the offline/Free cache, imported idempotently via /api/meal-history/import.",
+      "CANONICAL durable cooked log: Postgres user_meal_history — written for every signed-in user (meal_history; Free sees 30 days, meal_memory sees all). Device log firehall_hall_history_v1 (sync key personal_meal_history) is the offline cache, imported idempotently via /api/meal-history/import.",
   },
   {
     domain: "favorites",

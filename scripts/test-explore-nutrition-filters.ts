@@ -117,19 +117,13 @@ function main() {
     /hasProFilters \? \(\s*<Collapsible/.test(filtersSource),
   );
   check(
-    "Free-user paywall interaction fires the existing pro_feature_clicked analytics (trackProFeatureClicked)",
-    /trackProFeatureClicked/.test(filtersSource),
+    "Free-user paywall interaction opens the shared Pro paywall (premium_feature_clicked + premium_paywall_viewed)",
+    /openProPaywall\(/.test(filtersSource),
   );
   check(
-    "Free-user paywall interaction records the existing pro_paywall_viewed analytics (recordPaywall/advanced_search)",
-    // requestProFilter() now takes a billingFeature param (defaulting to
-    // "advanced_search") so the same helper can also attribute the Foods to
-    // Avoid paywall to "ingredient_preferences" — see Pro V1 Feature 2. The
-    // nutrition-targets/high-protein call sites still call it with NO second
-    // arg, so they still resolve to "advanced_search" via that default.
-    /recordPaywall\(\s*"advanced_search"/.test(filtersSource) ||
-      (/recordPaywall\(\s*billingFeature/.test(filtersSource) &&
-        /billingFeature[^,)]*=\s*"advanced_search"/.test(filtersSource)),
+    "Pro filter paywall resolves to the advanced_search copy by default and Foods to Avoid for ingredient_preferences",
+    /billingFeature[^,)]*=\s*"advanced_search"/.test(filtersSource) &&
+      /billingFeature === "ingredient_preferences" \? "foods_to_avoid" : "pro_filters"/.test(filtersSource),
   );
 
   // =====================================================================

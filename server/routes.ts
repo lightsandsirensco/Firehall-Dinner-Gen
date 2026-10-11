@@ -119,6 +119,7 @@ import {
 import { computeHistorySignals } from "./generation/history-personalization.js";
 import { logGenerateTelemetry } from "./generation/generation-telemetry.js";
 import { resolveSafeCuratedFallback } from "./generation/safe-curated-fallback.js";
+import { tonightStandaloneMealSlugs } from "./generation/tonight-eligibility.js";
 import { runRealismFirewall } from "./generation/realism-firewall.js";
 import {
   prepareRecipePreValidation,
@@ -194,7 +195,7 @@ import { registerAuthRoutes } from "./auth/auth-routes.js";
 import { initAuthStore } from "./auth/auth-store.js";
 import type { AuthedRequest } from "./auth/auth-middleware.js";
 import { gateFoodsToAvoidByEntitlement } from "./generation/foods-to-avoid-gate.js";
-import { loadEntitledNutritionGoals } from "./generation/nutrition-goals-gate.js";
+import { loadEntitledNutritionGoal } from "./generation/nutrition-goals-gate.js";
 import type { ProfileNutritionGoalKey } from "../shared/nutrition/profile-goals.js";
 import { registerUserSyncRoutes } from "./sync/routes.js";
 import { registerHallMembershipRoutes } from "./hall-membership/routes.js";
@@ -219,6 +220,7 @@ import { registerShiftPlanRoutes } from "./shift-plan/routes.js";
 import { registerGoalsRoutes } from "./goals/routes.js";
 import { registerInsightsRoutes } from "./insights/routes.js";
 import { listRecentCookedSlugsOldestFirst } from "./meal-history/store.js";
+import { resolveMealHistoryAccess, visibleSince } from "../shared/meal-history/access.js";
 import { mergeRecentSlugSources } from "../shared/meal-rotation/weighted-pick.js";
 import { hasFeature } from "../shared/billing/types.js";
 import { captureEmailLead, registerAdminUsersRoutes } from "./admin-users/routes.js";
@@ -1361,21 +1363,22 @@ export async function registerRoutes(
       const clientCurrentSig = clientMeta.currentRecipeSignature;
       const clientRecentSigs = clientMeta.recentSignatures;
 
-      // Firehall Meals Pro V1 Feature 3 — "Meal Memory": for a signed-in,
-      // entitled user, load their durable server-side cooked-meal history
-      // (never client-submitted — a Free/guest session cannot spoof this by
-      // sending fake account history) and merge it with this session's
-      // device-local recent slugs. Reuses the EXISTING recentSlugPenalty /
-      // pickFromSummaries variety mechanics untouched — see
-      // shared/meal-rotation/weighted-pick.ts mergeRecentSlugSources for the
-      // exact recency policy (last 10 cooked events, oldest-first, soft
-      // penalty only — never a hard block, so a small candidate pool can
-      // still relax repetition preference exactly as it already does).
-      // Dietary restrictions / Foods to Avoid are computed independently
-      // above/below and are never touched by this merge.
+      // Meal History recent-repeat avoidance: for any signed-in user, load
+      // their durable server-side cooked-meal history (never client-submitted
+      // — a session cannot spoof this by sending fake account history) and
+      // merge it with this session's device-local recent slugs. Free users
+      // only draw from their visible 30-day window; Premium from all history.
+      // Reuses the EXISTING recentSlugPenalty / pickFromSummaries variety
+      // mechanics untouched — see shared/meal-rotation/weighted-pick.ts
+      // mergeRecentSlugSources for the exact recency policy (last 10 cooked
+      // events, oldest-first, soft penalty only — never a hard block, so a
+      // small candidate pool can still relax repetition preference exactly
+      // as it already does). Dietary restrictions / Foods to Avoid are
+      // computed independently above/below and are never touched by this merge.
       let clientRecentSlugs = clientMeta.recentSlugs;
-      if (authUserId && requestUserBilling && hasFeature(requestUserBilling.features, "meal_memory")) {
-        const durableHistory = await listRecentCookedSlugsOldestFirst(authUserId, 10);
+      const historyAccess = requestUserBilling ? resolveMealHistoryAccess(requestUserBilling.features) : null;
+      if (authUserId && historyAccess?.canLog) {
+        const durableHistory = await listRecentCookedSlugsOldestFirst(authUserId, 10, visibleSince(historyAccess));
         if (durableHistory.length > 0) {
           clientRecentSlugs = mergeRecentSlugSources(durableHistory, clientRecentSlugs);
         }
@@ -1407,16 +1410,16 @@ export async function registerRoutes(
         }
       }
 
-      // Firehall Meals Pro "Nutrition Goals" — saved profile goals applied as
-      // weighted ranking preferences only (never hard filters), after allergies /
+      // Firehall Meals Pro "Nutrition Goal" — the saved profile goal applied as a
+      // weighted ranking preference only (never a hard filter), after allergies /
       // dietary / Foods to Avoid have already decided eligibility.
-      let nutritionGoals: ProfileNutritionGoalKey[] = [];
+      let nutritionGoal: ProfileNutritionGoalKey | null = null;
       if (authUserId && requestUserBilling) {
         try {
-          nutritionGoals = await loadEntitledNutritionGoals(authUserId, requestUserBilling);
+          nutritionGoal = await loadEntitledNutritionGoal(authUserId, requestUserBilling);
         } catch (err) {
-          log(`[generate] nutrition goals load failed: ${(err as Error)?.message}`, "generate");
-          nutritionGoals = [];
+          log(`[generate] nutrition goal load failed: ${(err as Error)?.message}`, "generate");
+          nutritionGoal = null;
         }
       }
 
@@ -1469,7 +1472,8 @@ export async function registerRoutes(
         preferDifferentStyle: Boolean(request.prefer_different_style),
         startTime,
         historySignals,
-        nutritionGoals,
+        nutritionGoal,
+        restrictToSlugs: tonightStandaloneMealSlugs(),
       });
 
       auditCtx.chosenProtein = pipelineHit.protein;
@@ -1642,6 +1646,7 @@ export async function registerRoutes(
           currentRecipeSignature: undefined,
           preferDifferentStyle: false,
           startTime: emergencyStart,
+          restrictToSlugs: tonightStandaloneMealSlugs(),
         });
         logGenerateTelemetry(pipelineHit.telemetry);
 
@@ -2556,6 +2561,19 @@ export async function registerRoutes(
   // Their destination is unambiguous, so make both real 301s.
   app.get(["/home", "/discover"], (_req: Request, res: Response) => {
     return res.redirect(301, "/tonight");
+  });
+
+  // The Shift Planner moved to the signed-in primary nav: /shift and /list.
+  app.get("/shift-planner", (req: Request, res: Response) => {
+    const qs = req.originalUrl.indexOf("?");
+    return res.redirect(301, qs === -1 ? "/shift" : `/shift${req.originalUrl.slice(qs)}`);
+  });
+  app.get("/shift-planner/shop", (_req: Request, res: Response) => {
+    return res.redirect(301, "/list");
+  });
+  // Retired hall onboarding question (it led to the private-beta /hall).
+  app.get("/onboarding/hall", (_req: Request, res: Response) => {
+    return res.redirect(301, "/shift");
   });
 
   // "/hall-history" and "/hall-program" are likewise client-side-only

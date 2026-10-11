@@ -192,7 +192,7 @@ export async function openSqliteDatabase(filePath: string): Promise<SqliteDataba
 }
 
 /** Shared local DB used by cache + hall vote stores */
-const DEFAULT_DB = path.join(process.cwd(), "data", "cache.db");
+const DEFAULT_DB = process.env.LOCAL_SQLITE_DB_PATH?.trim() || path.join(process.cwd(), "data", "cache.db");
 
 let sharedDb: SqliteDatabase | null = null;
 

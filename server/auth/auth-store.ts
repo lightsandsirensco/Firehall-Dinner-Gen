@@ -22,7 +22,10 @@ import { listUserHallSummaries } from "../hall-membership/store.js";
 import { resolveUserBilling } from "../billing/store.js";
 import { hasFeature, type UserBillingState } from "../../shared/billing/types.js";
 import { sanitizeFoodPreferenceKeys } from "../../shared/ingredient-preferences/definitions.js";
-import { sanitizeProfileNutritionGoals } from "../../shared/nutrition/profile-goals.js";
+import {
+  profileNutritionGoalToList,
+  sanitizeProfileNutritionGoal,
+} from "../../shared/nutrition/profile-goals.js";
 
 const AUTH_COOKIE_NAME = "fh_auth";
 const SESSION_DAYS = 30;
@@ -132,7 +135,9 @@ function rowToPreferences(row: Record<string, unknown> | undefined): UserPrefere
     meal_difficulty: row.meal_difficulty ? String(row.meal_difficulty) : null,
     cook_time_preference: row.cook_time_preference ? String(row.cook_time_preference) : null,
     nutrition_goal: row.nutrition_goal ? String(row.nutrition_goal) : null,
-    nutrition_goals: sanitizeProfileNutritionGoals(parseJsonArray(row.nutrition_goals_json as string)),
+    nutrition_goals: profileNutritionGoalToList(
+      sanitizeProfileNutritionGoal(parseJsonArray(row.nutrition_goals_json as string)),
+    ),
     shift_reminders_enabled: Number(row.shift_reminders_enabled) === 1,
     shift_days: normalizeShiftDays(
       (() => {
@@ -619,9 +624,10 @@ export async function updateUserProfile(
   }
   if (patch.excluded_ingredients) {
     // "Foods to Avoid" is a Firehall Meals Pro capability — a non-Pro user
-    // (including a downgraded former-Pro user) can never persist a non-empty
-    // list here, even via a direct API call. Clearing to an empty list is
-    // always allowed regardless of plan.
+    // (including a downgraded former-Pro or expired-trial user) can never
+    // write a non-empty list here, even via a direct API call. Their stored
+    // list is left untouched (kept, inactive) so subscribing restores it.
+    // Clearing to an empty list is always allowed regardless of plan.
     const sanitized = sanitizeFoodPreferenceKeys(patch.excluded_ingredients);
     let allowed = sanitized.length === 0;
     if (!allowed) {
@@ -629,7 +635,7 @@ export async function updateUserProfile(
       const billing = await attachBilling(userId, userRow ? rowToUser(userRow) : null);
       allowed = hasFeature(billing.features, "ingredient_preferences");
     }
-    prefFields.push(["excluded_ingredients_json", JSON.stringify(allowed ? sanitized : [])]);
+    if (allowed) prefFields.push(["excluded_ingredients_json", JSON.stringify(sanitized)]);
   }
   if (patch.allergies) {
     prefFields.push(["allergies_json", JSON.stringify(patch.allergies)]);
@@ -651,15 +657,16 @@ export async function updateUserProfile(
   }
   if (patch.nutrition_goals) {
     // Same rule as Foods to Avoid: only a currently-entitled Pro account can
-    // persist a non-empty list; clearing is always allowed.
-    const sanitized = sanitizeProfileNutritionGoals(patch.nutrition_goals);
+    // write a non-empty goal; a lapsed account's stored goal stays (inactive);
+    // clearing is always allowed.
+    const sanitized = profileNutritionGoalToList(sanitizeProfileNutritionGoal(patch.nutrition_goals));
     let allowed = sanitized.length === 0;
     if (!allowed) {
       const userRow = await pgOne(`SELECT * FROM users WHERE user_id = $1`, [userId]);
       const billing = await attachBilling(userId, userRow ? rowToUser(userRow) : null);
       allowed = hasFeature(billing.features, "nutrition_goals");
     }
-    prefFields.push(["nutrition_goals_json", JSON.stringify(allowed ? sanitized : [])]);
+    if (allowed) prefFields.push(["nutrition_goals_json", JSON.stringify(sanitized)]);
   }
   if (typeof patch.shift_reminders_enabled === "boolean") {
     prefFields.push(["shift_reminders_enabled", patch.shift_reminders_enabled ? 1 : 0]);
@@ -797,8 +804,8 @@ const HALL_NULLABLE_USER_REFERENCE_COLUMNS: Array<{ table: string; column: strin
  * (by email), user_profiles, user_preferences, user_saved_recipes,
  * user_subscriptions, user_data_snapshots, user_meal_history, users.
  * user_schedules / user_schedule_overrides / user_meal_slot_preferences /
- * user_shift_plans / user_shift_plan_slots / user_shift_shopping_lists go via
- * ON DELETE CASCADE from users.
+ * user_shift_plans / user_shift_plan_slots / user_shift_shopping_lists /
+ * personal_pro_trials go via ON DELETE CASCADE from users.
  *
  * DELETED/NULLED from SQLite (unchanged from pre-migration behavior):
  * shift_reminder_sends, hall_memberships, hall_canteen_dues_members,

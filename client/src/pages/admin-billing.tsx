@@ -15,6 +15,7 @@ interface StripeConfigStatus {
   webhook_secret_configured: boolean;
   price_monthly_configured: boolean;
   price_annual_configured: boolean;
+  founding_coupon_configured: boolean;
   public_site_url_configured: boolean;
 }
 
@@ -56,8 +57,16 @@ const STRIPE_CONFIG_LABELS: Array<{ key: keyof StripeConfigStatus; label: string
   { key: "webhook_secret_configured", label: "STRIPE_WEBHOOK_SECRET" },
   { key: "price_monthly_configured", label: "STRIPE_PRICE_ID_MONTHLY" },
   { key: "price_annual_configured", label: "STRIPE_PRICE_ID_ANNUAL" },
+  { key: "founding_coupon_configured", label: "STRIPE_COUPON_ID_FOUNDING" },
   { key: "public_site_url_configured", label: "PUBLIC_SITE_URL" },
 ];
+
+/** The founding coupon is only required while the founding offer is switched on. */
+function requiredStripeConfigKeys(foundingOfferEnabled: boolean): Array<keyof StripeConfigStatus> {
+  return STRIPE_CONFIG_LABELS.map(({ key }) => key).filter(
+    (key) => foundingOfferEnabled || key !== "founding_coupon_configured",
+  );
+}
 
 function ConfigRow({ ok, label }: { ok: boolean; label: string }) {
   return (
@@ -132,7 +141,8 @@ export default function AdminBillingPage() {
     // it on if Stripe isn't fully configured yet (it will simply fail closed
     // at checkout time either way, but the operator should know up front).
     if (flagKey === "payments_enabled" && enabled && data) {
-      const allConfigured = STRIPE_CONFIG_LABELS.every(({ key }) => data.stripe_config[key]);
+      const foundingOn = Boolean(data.global_flags.find((f) => f.flag_key === "founding_offer_enabled")?.enabled);
+      const allConfigured = requiredStripeConfigKeys(foundingOn).every((key) => data.stripe_config[key]);
       if (!allConfigured) {
         const proceed = window.confirm(
           "Stripe configuration is INCOMPLETE (see Stripe configuration below). " +
@@ -217,7 +227,10 @@ export default function AdminBillingPage() {
 
   const monetizationFlag = data?.global_flags.find((f) => f.flag_key === "monetization_enabled");
   const paymentsFlag = data?.global_flags.find((f) => f.flag_key === "payments_enabled");
-  const stripeFullyConfigured = data ? STRIPE_CONFIG_LABELS.every(({ key }) => data.stripe_config[key]) : false;
+  const foundingFlag = data?.global_flags.find((f) => f.flag_key === "founding_offer_enabled");
+  const stripeFullyConfigured = data
+    ? requiredStripeConfigKeys(Boolean(foundingFlag?.enabled)).every((key) => data.stripe_config[key])
+    : false;
 
   return (
     <div className="min-h-screen bg-background p-6">
@@ -297,6 +310,26 @@ export default function AdminBillingPage() {
                     checked={Boolean(paymentsFlag?.enabled)}
                     disabled={busy || !paymentsFlag}
                     onCheckedChange={(v) => void toggleGlobalFlag("payments_enabled", v)}
+                  />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between gap-4 py-2 border-b border-border/20">
+                <div>
+                  <p className="font-medium text-sm">Founding offer (founding_offer_enabled)</p>
+                  <p className="text-xs text-muted-foreground">
+                    New annual subscribers pay $29.99 for the first year, then $39.99/year (once-only Stripe coupon).
+                    Turning it off stops new founding checkouts; existing founding subscribers are unaffected.
+                  </p>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Badge variant={foundingFlag?.enabled ? "default" : "secondary"}>
+                    {foundingFlag?.enabled ? "Enabled" : "Disabled"}
+                  </Badge>
+                  <Switch
+                    checked={Boolean(foundingFlag?.enabled)}
+                    disabled={busy || !foundingFlag}
+                    onCheckedChange={(v) => void toggleGlobalFlag("founding_offer_enabled", v)}
                   />
                 </div>
               </div>

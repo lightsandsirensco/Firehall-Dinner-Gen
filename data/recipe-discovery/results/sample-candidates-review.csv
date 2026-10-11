@@ -1,0 +1,6 @@
+dish_name,cuisine,source_url,duplicate_status,matched_recipe,match_reason,ingredient_overlap,review_status,reviewer_notes
+BBQ Chicken Pizza,American,https://example.com/placeholder-1,DUPLICATE,golden-100/bbq-chicken-pizza,exact name match (existing),golden-100/bbq-chicken-mac-and-cheese (3/5 main ingredients),REJECTED,
+Barbecue Chicken Pizzas,American,https://example.com/placeholder-2,POSSIBLE DUPLICATE,golden-100/bbq-chicken-pizza,same normalized name / spelling variant (existing),,PENDING REVIEW,
+Greek Chicken Bowl,Greek,https://example.com/placeholder-3,POSSIBLE DUPLICATE,golden-100/greek-chicken-bowls,same normalized name / spelling variant (existing),golden-100/greek-chicken-bowls (6/6 main ingredients),PENDING REVIEW,
+Doro Wat,Ethiopian,https://example.com/placeholder-4,NEW,,,,PENDING REVIEW,
+Lemon Herb Sheet Pan Chicken,American,https://example.com/placeholder-5,POSSIBLE DUPLICATE,performance-meals/greek-lemon-chicken-potatoes,ingredient overlap 5/5 + shared name words (existing),performance-meals/boneless-chicken-thighs-sweet-potato-spinach (5/5 main ingredients),PENDING REVIEW,

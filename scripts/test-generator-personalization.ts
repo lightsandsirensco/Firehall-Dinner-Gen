@@ -88,7 +88,7 @@ const returning = resolveGeneratorFilters({
   localCrewSize: 6,
 });
 assert(returning.protein === "beef", "personal protein wins");
-assert(returning.healthiness === "comfort", "personal healthiness wins");
+assert(returning.healthiness === "balanced", "remembered healthiness no longer applies (no control for it)");
 assert(returning.allergens.includes("dairy"), "personal allergens win");
 
 const accountOnly = resolveGeneratorFilters({

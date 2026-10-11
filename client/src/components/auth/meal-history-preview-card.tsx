@@ -1,8 +1,8 @@
 /**
  * Meal History preview for the Profile / "Your Food" area — reuses the
  * exact card treatment as YourFoodCard right above it. Shows nothing when
- * there's no useful content yet (not entitled, or entitled but empty) —
- * the full upsell/empty-state copy already lives on /me/history.
+ * there's no useful content yet (signed out, or no visible meals) — the
+ * full empty-state and older-history copy lives on /me/history.
  */
 import { useMemo } from "react";
 import { useQuery } from "@tanstack/react-query";
@@ -29,19 +29,19 @@ function StarRow({ rating }: { rating: number }) {
 
 export function MealHistoryPreviewCard() {
   const { authenticated } = useAuth();
-  const hasMealMemory = useFeature("meal_memory");
+  const canLogHistory = useFeature("meal_history");
 
   const historyQuery = useQuery({
     queryKey: ["/api/meal-history"],
-    queryFn: fetchMealHistory,
-    enabled: authenticated && hasMealMemory,
+    queryFn: () => fetchMealHistory(),
+    enabled: authenticated && canLogHistory,
     staleTime: 30_000,
   });
 
   const entries = historyQuery.data?.entries ?? [];
   const recent = useMemo(() => entries.slice(0, 2), [entries]);
 
-  if (!hasMealMemory || entries.length === 0) return null;
+  if (!canLogHistory || entries.length === 0) return null;
 
   return (
     <Link
@@ -54,7 +54,9 @@ export function MealHistoryPreviewCard() {
         <ChevronRight className="h-4 w-4 text-muted-foreground shrink-0" aria-hidden />
       </div>
       <p className="text-sm text-muted-foreground mb-3">
-        {entries.length} meal{entries.length === 1 ? "" : "s"} logged
+        {entries.length}
+        {historyQuery.data?.has_more ? "+" : ""} meal{entries.length === 1 ? "" : "s"} logged
+        {historyQuery.data?.window_days ? ` in the last ${historyQuery.data.window_days} days` : ""}
       </p>
       <ul className="space-y-1.5">
         {recent.map((entry) => (

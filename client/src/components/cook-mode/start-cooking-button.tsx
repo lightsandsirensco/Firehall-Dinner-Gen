@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useQueryClient } from "@tanstack/react-query";
 import { ChefHat, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CookMode } from "@/components/cook-mode/cook-mode";
@@ -57,10 +58,12 @@ export function StartCookingButton({
   label,
 }: StartCookingButtonProps) {
   const [open, setOpen] = useState(false);
+  const canLogHistory = useFeature("meal_history");
   const hasMealMemory = useFeature("meal_memory");
-  // Firehall Meals Pro V1 Feature 3 — one server write per Cook Mode
-  // completion, even if "Finish" is double-clicked. Reset whenever Cook
-  // Mode reopens so a genuine later re-cook still records a new event.
+  const queryClient = useQueryClient();
+  // One server write per Cook Mode completion, even if "Finish" is
+  // double-clicked. Reset whenever Cook Mode reopens so a genuine later
+  // re-cook still records a new event.
   const submittedRef = useRef(false);
   const quickLogSubmittedRef = useRef(false);
 
@@ -80,13 +83,13 @@ export function StartCookingButton({
 
   if (!recipe || recipe.steps.length === 0) return null;
 
-  // Firehall Meals Pro — write the canonical event to durable, cross-device
-  // account history (Generator personalization + Meal History + Crew
-  // Feedback). Best-effort: a network failure here must never block/undo
-  // the Free local record or interrupt whichever flow called it. On
-  // success, opens the fast post-meal feedback sheet.
+  // Every signed-in user — write the canonical event to durable, cross-device
+  // account history (Meal History + Crew Feedback + recent-repeat avoidance).
+  // Best-effort: a network failure here must never block/undo the local
+  // record or interrupt whichever flow called it. On success, opens the fast
+  // post-meal feedback sheet.
   const logDurableMeal = async (localEntryId: string) => {
-    if (!hasMealMemory || !recipeSlug) return;
+    if (!canLogHistory || !recipeSlug) return;
     try {
       const result = await postMealCooked(
         recipeSlug,
@@ -107,7 +110,9 @@ export function StartCookingButton({
         crew_size: recipe.crewSize,
         nutrition_goal: nutritionGoal,
         source,
+        tier: hasMealMemory ? "premium" : "free",
       });
+      void queryClient.invalidateQueries({ queryKey: ["/api/meal-history"] });
       setFeedbackEntryId(result.entry.id);
       setFeedbackOpen(true);
     } catch {
@@ -116,9 +121,9 @@ export function StartCookingButton({
   };
 
   const handleComplete = () => {
-    // Existing Free/local behavior — always preserved unchanged, for every
-    // user regardless of Pro entitlement (this is the one real "Mark as
-    // Cooked" action; we reuse it rather than adding a second button).
+    // Device-local record — always written, signed in or not (this is the
+    // one real "Mark as Cooked" action; we reuse it rather than adding a
+    // second button).
     const localEntry = recordMealCooked({
       title: recipe.title,
       recipeSlug,
@@ -175,7 +180,7 @@ export function StartCookingButton({
           <ChefHat className="w-4 h-4 shrink-0" />
           {label ?? COOK_MODE.startCooking}
         </Button>
-        {showQuickLog && hasMealMemory && recipeSlug ? (
+        {showQuickLog && canLogHistory && recipeSlug ? (
           <Button
             type="button"
             variant="outline"
@@ -198,6 +203,7 @@ export function StartCookingButton({
         recipeTitle={recipe.title}
         recipeSlug={recipeSlug}
         mealOccasion={mealOccasion}
+        onSaved={() => void queryClient.invalidateQueries({ queryKey: ["/api/meal-history"] })}
       />
     </>
   );

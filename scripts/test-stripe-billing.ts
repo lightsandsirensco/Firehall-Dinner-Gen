@@ -136,6 +136,7 @@ import {
   userHasStripeCustomer,
 } from "../server/billing/store.js";
 import {
+  buildProCheckoutSessionParams,
   getVerifiedPriceIdForPeriod,
   mapStripeStatus,
   priceMatchesExpectedSpec,
@@ -193,7 +194,7 @@ function runPureLogicTests(): void {
 
   assert.equal(
     priceMatchesExpectedSpec(
-      { unit_amount: 499, currency: "usd", recurring: { interval: "month", interval_count: 1 } },
+      { unit_amount: 599, currency: "usd", recurring: { interval: "month", interval_count: 1 } },
       "monthly",
     ).ok,
     true,
@@ -215,14 +216,14 @@ function runPureLogicTests(): void {
   );
   assert.equal(
     priceMatchesExpectedSpec(
-      { unit_amount: 599, currency: "usd", recurring: { interval: "month", interval_count: 1 } },
+      { unit_amount: 499, currency: "usd", recurring: { interval: "month", interval_count: 1 } },
       "monthly",
     ).ok,
     false,
-    "wrong dollar amount must fail",
+    "the old $4.99 monthly price must fail",
   );
   assert.equal(
-    priceMatchesExpectedSpec({ unit_amount: 499, currency: "usd", recurring: null }, "monthly").ok,
+    priceMatchesExpectedSpec({ unit_amount: 599, currency: "usd", recurring: null }, "monthly").ok,
     false,
     "a one-time (non-recurring) price must fail — Pro is subscription-only",
   );
@@ -599,19 +600,18 @@ async function runLiveStripeTests(): Promise<void> {
     // --- [A] Free user starts Pro checkout — valid hosted Checkout URL ---
     const verifiedPriceId = await getVerifiedPriceIdForPeriod("monthly");
     assert.equal(verifiedPriceId, monthlyPriceId, "verified price id must match the configured monthly price");
-    ok("[A] STRIPE_PRICE_ID_MONTHLY matches the expected $4.99/mo product contract (live Stripe cross-check)");
+    ok("[A] STRIPE_PRICE_ID_MONTHLY matches the expected $5.99/mo product contract (live Stripe cross-check)");
 
-    const session = await stripe.checkout.sessions.create({
-      mode: "subscription",
-      customer: customerId,
-      client_reference_id: `test-${RUN_ID}`,
-      line_items: [{ price: verifiedPriceId, quantity: 1 }],
-      subscription_data: { metadata: { user_id: `test-${RUN_ID}` } },
-      metadata: { user_id: `test-${RUN_ID}`, billing_period: "monthly", test_run: RUN_ID },
-      success_url: "https://example.invalid/plans?checkout=success",
-      cancel_url: "https://example.invalid/plans?checkout=cancelled",
-      allow_promotion_codes: true,
-    });
+    const session = await stripe.checkout.sessions.create(
+      buildProCheckoutSessionParams({
+        customerId,
+        userId: `test-${RUN_ID}`,
+        priceId: verifiedPriceId,
+        billingPeriod: "monthly",
+        origin: "https://example.invalid",
+        foundingCouponId: null,
+      }),
+    );
     checkoutSessionId = session.id;
     assert.ok(session.url?.startsWith("https://checkout.stripe.com/"), "Checkout session must return a hosted checkout.stripe.com URL");
     ok("[A] valid hosted Checkout URL returned from Stripe Test Mode — " + session.url!.slice(0, 40) + "…");

@@ -48,6 +48,9 @@ interface ScheduleSetupFlowProps {
   hasShiftChanges?: boolean;
   onSave: (schedule: PersonalSchedule) => void;
   onCancel?: () => void;
+  /** First-run onboarding: start time and crew size get their own steps (4 total) and the copy is shorter. */
+  quick?: boolean;
+  onStepChange?: (step: number) => void;
 }
 
 function choiceIdForPreset(presetId: string | null): string {
@@ -112,14 +115,20 @@ export function ScheduleSetupFlow({
   hasShiftChanges,
   onSave,
   onCancel,
+  quick = false,
+  onStepChange,
 }: ScheduleSetupFlowProps) {
   const initialForm = useMemo(() => (initial ? formFromSchedule(initial) : null), [initial]);
   const isEdit = initial != null;
 
-  const [step, setStep] = useState<1 | 2 | 3>(1);
+  const totalSteps = quick ? 4 : 3;
+  const [step, setStep] = useState(1);
   const sectionRef = useRef<HTMLElement>(null);
   const firstRender = useRef(true);
+  const stepChangeRef = useRef(onStepChange);
+  stepChangeRef.current = onStepChange;
   useEffect(() => {
+    stepChangeRef.current?.(step);
     if (firstRender.current) {
       firstRender.current = false;
       return;
@@ -221,6 +230,46 @@ export function ScheduleSetupFlow({
   const today = localDateInZone(timezone, 0);
   const tomorrow = localDateInZone(timezone, 1);
 
+  const startTimeFields = (
+    <>
+      <div className="space-y-2">
+        <Label htmlFor="schedule-start-time">Shift start time</Label>
+        <Input
+          id="schedule-start-time"
+          type="time"
+          value={startTime}
+          onChange={(e) => {
+            setStartTime(e.target.value);
+            setStartTimeTouched(true);
+          }}
+          className="min-h-11"
+          required
+          data-testid="schedule-start-time"
+        />
+        {!startTimeTouched ? (
+          <p className={app.caption}>{startTime} is just a suggestion — change it if your shift starts at a different time.</p>
+        ) : null}
+      </div>
+
+      <div className="space-y-2">
+        <Label htmlFor="schedule-timezone">Time zone</Label>
+        <select
+          id="schedule-timezone"
+          value={timezone}
+          onChange={(e) => setTimezone(e.target.value)}
+          className="flex min-h-11 w-full rounded-md border border-input bg-background px-3 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+          data-testid="schedule-timezone"
+        >
+          {zones.map((z) => (
+            <option key={z} value={z}>
+              {timeZoneLabel(z)}
+            </option>
+          ))}
+        </select>
+      </div>
+    </>
+  );
+
   return (
     <section
       ref={sectionRef}
@@ -228,7 +277,9 @@ export function ScheduleSetupFlow({
       data-testid="schedule-setup-flow"
     >
       <div className="flex items-center justify-between gap-3">
-        <p className={app.eyebrowMuted}>Step {step} of 3</p>
+        <p className={app.eyebrowMuted}>
+          Step {step} of {totalSteps}
+        </p>
         {onCancel ? (
           <Button type="button" variant="ghost" size="sm" onClick={onCancel} className="min-h-11 -mr-2">
             Cancel
@@ -399,7 +450,31 @@ export function ScheduleSetupFlow({
         </div>
       ) : null}
 
-      {step === 3 ? (
+      {quick && step === 3 ? (
+        <div className="space-y-4">
+          <div className="space-y-1">
+            <h2 className={app.titleCard}>When does your shift start?</h2>
+            <p className={app.subtitle}>We plan breakfast, lunch, dinner and late night around it.</p>
+          </div>
+          {startTimeFields}
+          <div className="flex gap-2">
+            <Button type="button" variant="outline" className="min-h-11" onClick={() => setStep(2)}>
+              Back
+            </Button>
+            <Button
+              type="button"
+              className="flex-1 min-h-11"
+              disabled={!/^\d{2}:\d{2}$/.test(startTime)}
+              onClick={() => setStep(4)}
+              data-testid="schedule-step3-next"
+            >
+              Continue
+            </Button>
+          </div>
+        </div>
+      ) : null}
+
+      {step === totalSteps ? (
         <form
           className="space-y-4"
           onSubmit={(e) => {
@@ -408,45 +483,13 @@ export function ScheduleSetupFlow({
           }}
         >
           <div className="space-y-1">
-            <h2 className={app.titleCard}>Shift details</h2>
-            <p className={app.subtitle}>Check these match your hall.</p>
+            <h2 className={app.titleCard}>{quick ? "How many are you feeding?" : "Shift details"}</h2>
+            <p className={app.subtitle}>
+              {quick ? "Your usual crew on shift. You can change it for any shift later." : "Check these match your hall."}
+            </p>
           </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="schedule-start-time">Shift start time</Label>
-            <Input
-              id="schedule-start-time"
-              type="time"
-              value={startTime}
-              onChange={(e) => {
-                setStartTime(e.target.value);
-                setStartTimeTouched(true);
-              }}
-              className="min-h-11"
-              required
-              data-testid="schedule-start-time"
-            />
-            {!startTimeTouched ? (
-              <p className={app.caption}>{startTime} is just a suggestion — change it if your shift starts at a different time.</p>
-            ) : null}
-          </div>
-
-          <div className="space-y-2">
-            <Label htmlFor="schedule-timezone">Time zone</Label>
-            <select
-              id="schedule-timezone"
-              value={timezone}
-              onChange={(e) => setTimezone(e.target.value)}
-              className="flex min-h-11 w-full rounded-md border border-input bg-background px-3 text-sm text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
-              data-testid="schedule-timezone"
-            >
-              {zones.map((z) => (
-                <option key={z} value={z}>
-                  {timeZoneLabel(z)}
-                </option>
-              ))}
-            </select>
-          </div>
+          {!quick ? startTimeFields : null}
 
           <div className="space-y-2">
             <Label htmlFor="schedule-crew-size">Usual crew size</Label>
@@ -514,7 +557,7 @@ export function ScheduleSetupFlow({
           ) : null}
 
           <div className="flex gap-2">
-            <Button type="button" variant="outline" className="min-h-11" onClick={() => setStep(2)}>
+            <Button type="button" variant="outline" className="min-h-11" onClick={() => setStep(totalSteps - 1)}>
               Back
             </Button>
             <Button
@@ -524,7 +567,7 @@ export function ScheduleSetupFlow({
               data-testid="schedule-save"
             >
               {saving ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-              {isEdit ? "Save changes" : "Save schedule"}
+              {isEdit ? "Save changes" : quick ? "Plan my shift" : "Save schedule"}
             </Button>
           </div>
         </form>

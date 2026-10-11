@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-01T14:52:25.829Z",
+  "generated_at": "2026-10-09T20:52:04.375Z",
   "runs_per_category": 25,
-  "total_failures": 0,
+  "total_failures": 25,
   "results": [
     {
       "category": "crew_favorites",
@@ -71,8 +71,134 @@
       "category": "game_day",
       "label": "Game Day",
       "runs": 25,
-      "successes": 25,
-      "failures": [],
+      "successes": 0,
+      "failures": [
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "bbq-chicken-bowls",
+          "reason": "slug bbq-chicken-bowls not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "bbq-chicken-bowls",
+          "reason": "slug bbq-chicken-bowls not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "bbq-chicken-bowls",
+          "reason": "slug bbq-chicken-bowls not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "bbq-chicken-bowls",
+          "reason": "slug bbq-chicken-bowls not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "bbq-chicken-bowls",
+          "reason": "slug bbq-chicken-bowls not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        },
+        {
+          "slug": "white-bean-chicken-chili",
+          "reason": "slug white-bean-chicken-chili not tagged fh:game_day",
+          "broadened": false
+        }
+      ],
       "broadenedCount": 0
     }
   ]

@@ -1,10 +1,11 @@
-import { UtensilsCrossed } from "lucide-react";
+import { CalendarClock, UtensilsCrossed } from "lucide-react";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { Link, useLocation } from "wouter";
 import { BRAND_NAME } from "@/lib/brand-copy";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
-import { HOME, TONIGHT, resolveAppTab } from "@/lib/app-nav";
+import { HOME, SHIFT, TONIGHT, resolveAppTab } from "@/lib/app-nav";
+import { useSignedInNav } from "@/hooks/use-signed-in-nav";
 
 interface AppTopBarProps {
   title?: string;
@@ -19,7 +20,8 @@ interface AppTopBarProps {
 
 /**
  * One product chrome. The brand logo always returns to the one true Home
- * (the landing page at "/"); the Tonight chip returns to the dashboard.
+ * (the landing page at "/"); the trailing chip returns to the in-app home —
+ * Shift when signed in, Tonight when signed out.
  */
 export function AppTopBar({
   title,
@@ -28,19 +30,23 @@ export function AppTopBar({
   className,
 }: AppTopBarProps) {
   const [location] = useLocation();
-  const tab = resolveAppTab(location);
-  const onTonight =
-    location === TONIGHT || location.startsWith(`${TONIGHT}?`);
+  const signedIn = useSignedInNav();
+  const tab = resolveAppTab(location, signedIn);
+  const home = signedIn ? SHIFT : TONIGHT;
+  const onAppHome = location === home || location.startsWith(`${home}?`);
 
   const sectionTitle =
     title ??
     (tab === "explore"
       ? "Explore"
-      : tab === "hall"
-        ? "Hall"
-        : tab === "me"
-          ? "Me"
-          : null);
+      : tab === "list"
+        ? "List"
+        : tab === "hall"
+          ? "Hall"
+          : tab === "me"
+            ? "Me"
+            : null);
+  const HomeIcon = signedIn ? CalendarClock : UtensilsCrossed;
 
   return (
     <header
@@ -77,7 +83,7 @@ export function AppTopBar({
             </>
           ) : null}
 
-          {sectionTitle && !onTonight ? (
+          {sectionTitle && !onAppHome ? (
             <>
               <span className="text-muted-foreground/50 select-none" aria-hidden>
                 /
@@ -92,15 +98,15 @@ export function AppTopBar({
           ) : null}
         </div>
 
-        {!onTonight ? (
+        {!onAppHome ? (
           <Link
-            href={TONIGHT}
+            href={home}
             className="inline-flex min-h-11 shrink-0 items-center gap-1 rounded-xl border border-primary/35 bg-primary/10 px-3 text-xs font-semibold text-foreground touch-manipulation hover-elevate active-elevate-2"
-            data-testid="app-top-tonight"
-            aria-label="Go to Tonight — your shift's meal planning"
+            data-testid={signedIn ? "app-top-shift" : "app-top-tonight"}
+            aria-label={signedIn ? "Go to Shift — your next shift's meals" : "Go to Tonight — your shift's meal planning"}
           >
-            <UtensilsCrossed className="h-3.5 w-3.5" aria-hidden />
-            <span>Tonight</span>
+            <HomeIcon className="h-3.5 w-3.5" aria-hidden />
+            <span>{signedIn ? "Shift" : "Tonight"}</span>
           </Link>
         ) : null}
       </div>

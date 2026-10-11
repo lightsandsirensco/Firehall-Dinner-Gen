@@ -1,16 +1,29 @@
-import { useCallback, useMemo, useRef, useState } from "react";
-import { useQueryClient } from "@tanstack/react-query";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useQueryClient, type QueryKey } from "@tanstack/react-query";
 import { Link } from "wouter";
-import { CheckCircle2, ShoppingCart, Sparkles, Users } from "lucide-react";
+import { ArrowLeft, CheckCircle2, ShoppingCart, Sparkles, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { trackShiftPlanEvent } from "@/lib/analytics";
+import { useFeature } from "@/lib/billing/hooks";
+import { useProPaywall } from "@/components/billing/pro-paywall";
+import { ProTrialStatusPill } from "@/components/billing/pro-trial-status";
+import { useAuth } from "@/lib/auth/context";
+import { LIST, SHIFT } from "@/lib/app-nav";
 import { hapticLight, hapticSuccess } from "@/lib/haptics";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { formatLocalDay, formatShiftTimes } from "@/lib/schedule-format";
 import { scheduleErrorMessage } from "@/lib/schedule-api";
-import { fillShiftPlan, patchShiftPlanSlot, shiftPlanQueryKey } from "@/lib/shift-plan-api";
+import {
+  fillShiftPlan,
+  isRunItBackRequired,
+  patchShiftPlanSlot,
+  runItBackShiftPlan,
+  shiftPlanQueryKey,
+  upcomingShiftPlansQueryKey,
+} from "@/lib/shift-plan-api";
+import { RunItBackCard, RunItBackNotice, type RunItBackMode } from "@/components/shift-planner/run-it-back-card";
 import { ShiftMealCard, type ShiftMealCardActions } from "@/components/shift-planner/shift-meal-card";
 import { MealCrewSheet } from "@/components/shift-planner/meal-crew-sheet";
 import { RecipeBrowseSheet } from "@/components/shift-planner/recipe-browse-sheet";
@@ -21,25 +34,43 @@ import {
   simplifiedFiltersToGenerateRequest,
   type SimplifiedGeneratorFilters,
 } from "@shared/generator-simplified";
-import type { PlannedMealSlot, ShiftPlanView } from "@shared/shift-plan/types";
+import type { PlannedMealSlot, RunItBackSummary, ShiftPlanView } from "@shared/shift-plan/types";
 import type { ShiftInstance } from "@shared/schedule/types";
 
 function ShiftHeader({
   shift,
   inProgress,
+  planAhead,
   planned,
   total,
   complete,
 }: {
   shift: ShiftInstance;
   inProgress: boolean;
+  planAhead: boolean;
   planned: number;
   total: number;
   complete: boolean;
 }) {
   return (
     <header className="space-y-1" data-testid="shift-plan-header">
-      <p className={app.eyebrowAccent}>{inProgress ? "On shift now" : "Next shift"}</p>
+      {planAhead ? (
+        <Link
+          href={SHIFT}
+          className="inline-flex items-center gap-1 pb-1 text-xs text-muted-foreground hover:text-foreground"
+          data-testid="link-back-to-next-shift"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
+          Back to next shift
+        </Link>
+      ) : null}
+      <div className="flex flex-wrap items-center justify-between gap-2">
+        <p className={app.eyebrowAccent}>
+          {planAhead ? "Upcoming shift" : inProgress ? "On shift now" : "Next shift"}
+          {shift.source === "extra" ? " · Extra" : ""}
+        </p>
+        <ProTrialStatusPill />
+      </div>
       <h1 className="font-heading text-2xl tracking-tight sm:text-3xl" data-testid="text-shift-date">
         {formatLocalDay(shift.startLocal)}
       </h1>
@@ -66,20 +97,36 @@ function ShiftHeader({
   );
 }
 
-/** Shift Planner v2 — plan every meal of the user's next scheduled shift. */
+export function daysAhead(shift: Pick<ShiftInstance, "start">, now = Date.now()): number {
+  return Math.max(0, Math.round((Date.parse(shift.start) - now) / 86_400_000));
+}
+
+/** Shift Planner v2 — plan every meal of the next shift, or (Plan Ahead) of a later one. */
 export function NextShiftPlanner({
   plan,
   filters,
+  queryKey = shiftPlanQueryKey,
+  autoFill = false,
 }: {
   plan: ShiftPlanView & { shift: ShiftInstance };
   filters: SimplifiedGeneratorFilters;
+  /** The query this plan was loaded under — saved responses are written back to it. */
+  queryKey?: QueryKey;
+  /** Fill every open meal once on mount when nothing is planned yet (right after schedule onboarding). */
+  autoFill?: boolean;
 }) {
   const queryClient = useQueryClient();
   const { toast } = useToast();
   const shift = plan.shift;
+  const planAhead = plan.planAhead;
   const [busyKeys, setBusyKeys] = useState<Set<string>>(new Set());
   const [crewSlot, setCrewSlot] = useState<PlannedMealSlot | null>(null);
   const [browseSlot, setBrowseSlot] = useState<PlannedMealSlot | null>(null);
+  const [runningBack, setRunningBack] = useState(false);
+  const [runSummary, setRunSummary] = useState<RunItBackSummary | null>(null);
+  const canRunItBack = useFeature("run_it_back");
+  const { openProPaywall } = useProPaywall();
+  const { refresh: refreshAuth } = useAuth();
   /** Slugs already shown per slot this session — Swap never brings them back. */
   const seen = useRef(new Map<string, Set<string>>());
   const wasComplete = useRef(plan.complete);
@@ -88,6 +135,8 @@ export function NextShiftPlanner({
   const showDay = new Set(plan.slots.map((s) => s.mealDate)).size > 1;
   const resolvedCount = plan.slots.filter(isSlotResolved).length;
   const anyBusy = busyKeys.size > 0;
+  /** With Pro and nothing planned yet, reusing last shift is the fastest path. */
+  const runItBackLeads = Boolean(plan.runItBack) && canRunItBack && resolvedCount === 0;
   const dietary = useMemo(() => simplifiedFiltersToGenerateRequest(filters).dietary_restrictions ?? [], [filters]);
 
   const remember = (slotKey: string, ...slugs: Array<string | null | undefined>) => {
@@ -97,17 +146,32 @@ export function NextShiftPlanner({
   };
 
   const accept = useCallback(
-    (next: ShiftPlanView, created: boolean) => {
-      queryClient.setQueryData(shiftPlanQueryKey, next);
+    (next: ShiftPlanView, created: boolean, proTrialStarted?: boolean) => {
+      if (proTrialStarted) {
+        void refreshAuth();
+        toast({
+          title: "First shift planned — Pro is on for 14 days",
+          description: "Plan Ahead, Run It Back, Nutrition Goals and your full meal history are unlocked. No card needed.",
+        });
+      }
+      queryClient.setQueryData(queryKey, next);
+      void queryClient.invalidateQueries({ queryKey: upcomingShiftPlansQueryKey });
       const params = { shift_key: shift.key, shift_hours: Math.round(shift.scheduledMinutes / 60) };
       if (created) trackShiftPlanEvent("shift_plan_started", params);
+      if (created && planAhead) {
+        trackShiftPlanEvent("future_shift_plan_created", {
+          ...params,
+          days_ahead: daysAhead(shift),
+          shift_source: shift.source,
+        });
+      }
       if (next.complete && !wasComplete.current) {
         trackShiftPlanEvent("shift_plan_completed", { ...params, meal_count: next.slots.length });
         hapticSuccess();
       }
       wasComplete.current = next.complete;
     },
-    [queryClient, shift.key, shift.scheduledMinutes],
+    [queryClient, queryKey, shift, planAhead, refreshAuth, toast],
   );
 
   const fail = useCallback(
@@ -128,6 +192,67 @@ export function NextShiftPlanner({
     } finally {
       setBusyKeys(new Set());
     }
+  };
+
+  const runItBackParams = (mode: RunItBackMode) => ({
+    shift_key: shift.key,
+    mode,
+    match: plan.runItBack?.match ?? "none",
+    plan_ahead: planAhead ? 1 : 0,
+  });
+
+  const openRunItBackPaywall = (mode: RunItBackMode) => {
+    trackShiftPlanEvent("run_it_back_paywall_viewed", runItBackParams(mode));
+    openProPaywall("run_it_back", `shift_planner_run_it_back_${mode}`);
+  };
+
+  const runBack = (mode: RunItBackMode) => {
+    const source = plan.runItBack;
+    if (!source) return;
+    trackShiftPlanEvent("run_it_back_clicked", { ...runItBackParams(mode), locked: canRunItBack ? 0 : 1 });
+    if (!canRunItBack) return openRunItBackPaywall(mode);
+    hapticLight();
+    setRunningBack(true);
+    void withBusy(
+      plan.slots.map((s) => s.key),
+      async () => {
+        try {
+          const res = await runItBackShiftPlan({
+            shiftKey: shift.key,
+            sourceShiftKey: source.sourceShiftKey,
+            mode,
+            filters,
+          });
+          const s = res.summary;
+          for (const slot of res.plan.slots) remember(slot.key, slot.recipe?.slug);
+          trackShiftPlanEvent("run_it_back_completed", {
+            ...runItBackParams(mode),
+            match: s.match,
+            copied_meals: s.copiedMeals,
+            copied_skipped: s.copiedSkipped,
+            copied_byo: s.copiedByo,
+            flagged_count: s.flagged.length,
+            new_slots: s.newSlotKeys.length,
+            dropped_meals: s.droppedMeals,
+            refreshed: s.refreshed,
+          });
+          accept(res.plan, res.created, res.proTrialStarted);
+          setRunSummary(s);
+          toast({
+            title: `Ran it back from ${formatLocalDay(s.sourceStartLocal)}`,
+            description:
+              mode === "refresh"
+                ? `Kept your locked, skipped and BYO meals · refreshed ${s.refreshed}.`
+                : `${s.copiedMeals} meal${s.copiedMeals === 1 ? "" : "s"} copied.`,
+          });
+        } catch (err) {
+          if (isRunItBackRequired(err)) return openRunItBackPaywall(mode);
+          fail(err, "Couldn't run it back");
+        } finally {
+          setRunningBack(false);
+        }
+      },
+    );
   };
 
   const autofill = () => {
@@ -151,7 +276,7 @@ export function NextShiftPlanner({
             failed_count: res.results.length - filled,
             meal_count: res.plan.slots.length,
           });
-          accept(res.plan, res.created);
+          accept(res.plan, res.created, res.proTrialStarted);
           if (filled < res.results.length) {
             toast({ title: "Some meals couldn't be filled with your filters — try Browse." });
           }
@@ -161,6 +286,15 @@ export function NextShiftPlanner({
       },
     );
   };
+
+  const autoFilled = useRef(false);
+  const autofillRef = useRef(autofill);
+  autofillRef.current = autofill;
+  useEffect(() => {
+    if (!autoFill || autoFilled.current || resolvedCount > 0) return;
+    autoFilled.current = true;
+    autofillRef.current();
+  }, [autoFill, resolvedCount]);
 
   const actions: ShiftMealCardActions = {
     onPick: (slot) => {
@@ -180,7 +314,7 @@ export function NextShiftPlanner({
           } else {
             toast({ title: "No meal fits this slot with your filters — try Browse." });
           }
-          accept(res.plan, res.created);
+          accept(res.plan, res.created, res.proTrialStarted);
         } catch (err) {
           fail(err, "Couldn't pick a meal");
         }
@@ -210,7 +344,7 @@ export function NextShiftPlanner({
           } else {
             toast({ title: "No other meal fits this slot — try Browse." });
           }
-          accept(res.plan, res.created);
+          accept(res.plan, res.created, res.proTrialStarted);
         } catch (err) {
           fail(err, "Couldn't swap this meal");
         }
@@ -231,7 +365,7 @@ export function NextShiftPlanner({
         if (patch.skipped) {
           trackShiftPlanEvent("shift_meal_skipped", { shift_key: shift.key, meal_type: slot.type });
         }
-        accept(res.plan, res.created);
+        accept(res.plan, res.created, res.proTrialStarted);
         saved = true;
       } catch (err) {
         fail(err, "Couldn't save that change");
@@ -248,6 +382,7 @@ export function NextShiftPlanner({
       <ShiftHeader
         shift={shift}
         inProgress={inProgress}
+        planAhead={planAhead}
         planned={resolvedCount}
         total={plan.slots.length}
         complete={plan.complete}
@@ -259,16 +394,31 @@ export function NextShiftPlanner({
         </section>
       ) : (
         <>
+          {runSummary ? <RunItBackNotice summary={runSummary} onDismiss={() => setRunSummary(null)} /> : null}
+          {plan.runItBack ? (
+            <RunItBackCard
+              preview={plan.runItBack}
+              targetMinutes={shift.scheduledMinutes}
+              canUse={canRunItBack}
+              primary={runItBackLeads}
+              plannedCount={resolvedCount}
+              busy={runningBack}
+              disabled={anyBusy}
+              onRun={runBack}
+              onLocked={() => runBack("copy")}
+            />
+          ) : null}
           <div className="space-y-1.5">
             <Button
               size="lg"
+              variant={runItBackLeads ? "outline" : "default"}
               className="min-h-12 w-full touch-manipulation"
               onClick={autofill}
               disabled={anyBusy || !unresolvedOpen}
               data-testid="button-autofill-shift"
             >
               <Sparkles className={cn("mr-2 h-4 w-4", anyBusy && "animate-pulse")} aria-hidden />
-              {anyBusy && busyKeys.size > 1 ? "Planning your shift…" : "Auto-fill shift"}
+              {anyBusy && busyKeys.size > 1 && !runningBack ? "Planning your shift…" : "Auto-fill shift"}
             </Button>
             {plan.slots.some((s) => s.locked) ? (
               <p className="text-center text-xs text-muted-foreground">Locked meals stay put.</p>
@@ -288,7 +438,11 @@ export function NextShiftPlanner({
             ))}
           </div>
 
-          {shoppableMeals > 0 ? (
+          {planAhead ? (
+            <p className="text-center text-xs text-muted-foreground" data-testid="text-plan-ahead-shop-note">
+              Your shopping list for this shift opens once it's your next shift.
+            </p>
+          ) : shoppableMeals > 0 ? (
             <Button
               asChild
               size="lg"
@@ -296,7 +450,7 @@ export function NextShiftPlanner({
               className="min-h-12 w-full touch-manipulation"
               data-testid="button-shop-for-shift"
             >
-              <Link href="/shift-planner/shop">
+              <Link href={LIST}>
                 <ShoppingCart className="mr-2 h-4 w-4" aria-hidden />
                 Shop for this shift
                 <span className="ml-1.5 font-normal opacity-80">

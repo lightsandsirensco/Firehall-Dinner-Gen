@@ -7,18 +7,37 @@ import {
 } from "@shared/generator-simplified";
 import type { ShiftPlanSlotPatchInput } from "@shared/shift-plan/schema";
 import type {
+  RunItBackResponse,
   ShiftPlanFillMode,
   ShiftPlanFillResponse,
   ShiftPlanSlotResponse,
   ShiftPlanView,
+  UpcomingShiftsView,
 } from "@shared/shift-plan/types";
 
+/** The current/next shift's plan. Plan Ahead shifts use planQueryKeyFor(key) — invalidating this prefix covers both. */
 export const shiftPlanQueryKey = ["/api/shift-plan"] as const;
+export const upcomingShiftPlansQueryKey = ["/api/shift-plan/upcoming"] as const;
+
+export function planQueryKeyFor(shiftKey: string | null) {
+  return shiftKey ? ([...shiftPlanQueryKey, { shiftKey }] as const) : shiftPlanQueryKey;
+}
 
 const RECENT_SLUG_LIMIT = 30;
 
-export async function fetchShiftPlan(): Promise<ShiftPlanView> {
-  const res = await apiRequest("GET", "/api/shift-plan");
+export async function fetchShiftPlan(shiftKey?: string | null): Promise<ShiftPlanView> {
+  const query = shiftKey ? `?shiftKey=${encodeURIComponent(shiftKey)}` : "";
+  const res = await apiRequest("GET", `/api/shift-plan${query}`);
+  return res.json();
+}
+
+/** The server refused a shift beyond the free current/next shift (no Pro `plan_ahead`). */
+export function isPlanAheadRequired(err: unknown): boolean {
+  return err instanceof Error && err.message.startsWith("403") && err.message.includes("plan_ahead_required");
+}
+
+export async function fetchUpcomingShiftPlans(): Promise<UpcomingShiftsView> {
+  const res = await apiRequest("GET", "/api/shift-plan/upcoming");
   return res.json();
 }
 
@@ -34,6 +53,31 @@ export async function patchShiftPlanSlot(input: ShiftPlanSlotPatchInput): Promis
  */
 export function shiftPlanBaseRequest(filters: SimplifiedGeneratorFilters) {
   return buildGenerateRequestInput(simplifiedFiltersToGenerateRequest(filters));
+}
+
+export function isRunItBackRequired(err: unknown): boolean {
+  return err instanceof Error && err.message.startsWith("403") && err.message.includes("run_it_back_required");
+}
+
+export async function runItBackShiftPlan(input: {
+  shiftKey: string;
+  sourceShiftKey: string;
+  mode: "copy" | "refresh";
+  filters: SimplifiedGeneratorFilters;
+}): Promise<RunItBackResponse> {
+  const res = await apiRequest(
+    "POST",
+    "/api/shift-plan/run-it-back",
+    {
+      shiftKey: input.shiftKey,
+      sourceShiftKey: input.sourceShiftKey,
+      mode: input.mode,
+      base: shiftPlanBaseRequest(input.filters),
+      recentSlugs: getRecentMealSlugs().slice(-RECENT_SLUG_LIMIT),
+    },
+    60_000,
+  );
+  return res.json();
 }
 
 export async function fillShiftPlan(input: {

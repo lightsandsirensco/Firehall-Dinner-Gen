@@ -1,4 +1,5 @@
-import { Link } from "wouter";
+import { Link, Redirect } from "wouter";
+import { SHIFT } from "@/lib/app-nav";
 import { ChevronRight, ShoppingCart, Vote } from "lucide-react";
 import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { TonightEmptyState } from "@/components/tonight/tonight-empty-state";
@@ -10,14 +11,22 @@ import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 
 /**
- * Tonight (/tonight) — the in-app decision screen (Home is the landing page at "/").
+ * Tonight (/tonight) — tonight's meal (Home is the landing page at "/").
  * Three states: nothing chosen → tonight's meal → cooking. Only a meal the user
  * deliberately picked for this shift is ever shown.
+ *
+ * Signed out this is the public Pick Tonight dashboard. Signed in it is the
+ * current-meal detail; with nothing picked (and no hall loops to show) it hands
+ * off to Shift, which owns Pick Tonight for signed-in users.
  */
 export default function AppHomePage() {
-  const { authenticated, openSignIn } = useAuth();
+  const { authenticated, loading, halls, openSignIn } = useAuth();
   const hub = useTonightHub();
   const selection = hub.tonightPick;
+
+  if (!loading && authenticated && !selection && halls.length === 0) {
+    return <Redirect to={SHIFT} replace />;
+  }
 
   const hallLoops = [
     hub.hallId && hub.voteOpen && hub.voteHref

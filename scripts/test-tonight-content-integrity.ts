@@ -10,7 +10,15 @@ import {
   loadCanonicalCatalogPageForDisplay,
 } from "../server/meal-catalog/canonical-page.js";
 import { applyCatalogGateToClientPayload, mustApproveCatalogRecipe } from "../server/meal-catalog/catalog-response-gate.js";
-import { tonightFilterProtein, tonightIneligibleReason } from "../server/generation/tonight-eligibility.js";
+import {
+  tonightFilterProtein,
+  tonightIneligibleReason,
+  tonightStandaloneMealSlugs,
+} from "../server/generation/tonight-eligibility.js";
+import { pickGolden100ForGenerate } from "../server/generation/pick-local-recipes.js";
+import { getApprovedCatalog } from "../server/approved-catalog-cache.js";
+import { classifyMealOccasions } from "../shared/catalog/meal-occasions.js";
+import { generateRequestSchema } from "../shared/schema.js";
 import { TONIGHT_IMAGE_HOLDS } from "../shared/catalog-integrity/image-holds.js";
 import { canonicalExploreProtein } from "../shared/explore-taxonomy.js";
 import { GOLDEN_100_RECIPES } from "../shared/golden-100/manifest.js";
@@ -72,4 +80,47 @@ assert.ok(fajitas.ingredients.some((i) => /tortilla/i.test(i.name)), "fajitas ha
 const smash = buildEditorialInstructions(def("smash-burgers"), 8);
 assert.ok(smash.ingredients.some((i) => /beef/i.test(i.name)), "smash burgers stay beef");
 
-console.log("[test-tonight-content-integrity] OK");
+// Sides, appetizers, and smoothies are never tonight's whole dinner, but stay browsable.
+const approved = getApprovedCatalog().recipes;
+const standalone = tonightStandaloneMealSlugs();
+const nonMeals = approved.filter((r) => classifyMealOccasions(r).role !== "meal");
+assert.ok(nonMeals.some((r) => r.isSmoothie), "smoothies classified as non-meals");
+for (const slug of ["grilled-corn-cotija", "smoked-baked-beans-crew", "buffalo-chicken-dip", "pretzel-bite-platter"]) {
+  assert.ok(approved.some((r) => r.slug === slug), `${slug} still in approved catalog`);
+  assert.ok(!standalone.has(slug), `${slug} not a standalone Tonight dinner`);
+}
+for (const r of nonMeals) assert.ok(!standalone.has(r.slug), `${r.slug} excluded from Tonight`);
+for (const slug of ["chicken-parm", "big-chili", "texas-central-brisket-crew"]) {
+  assert.ok(standalone.has(slug), `${slug} stays Tonight-eligible`);
+}
+
+const baseRequest = generateRequestSchema.parse({
+  crew_size: 8,
+  busy_level: "average",
+  time_available: "60-90",
+  appliances: ["stove", "oven", "grill", "smoker"],
+  protein: "any",
+  healthiness_preference: "balanced",
+  allergens_to_avoid: [],
+});
+const nonMealSlugs = new Set(nonMeals.map((r) => r.slug));
+for (const protein of ["any", "chicken", "vegetarian", "beef", "pork"]) {
+  for (let seed = 0; seed < 15; seed++) {
+    const pick = pickGolden100ForGenerate(
+      { ...baseRequest, protein } as typeof baseRequest,
+      { varietySeed: `standalone:${protein}:${seed}`, restrictToSlugs: standalone },
+    );
+    if (pick) assert.ok(!nonMealSlugs.has(pick.slug), `Tonight served non-meal ${pick.slug} (${protein})`);
+  }
+}
+
+// Every approved recipe remains reachable in a browse kind + category.
+assert.equal(approved.length, 427, "approved catalog size");
+assert.equal(new Set(approved.map((r) => r.slug)).size, approved.length, "approved slugs unique");
+for (const r of approved) {
+  assert.ok(r.kind && r.category && r.categoryLabel, `${r.slug} has browse kind/category`);
+}
+
+console.log(
+  `[test-tonight-content-integrity] OK — standalone=${approved.filter((r) => standalone.has(r.slug)).length} nonMeal=${nonMeals.length} approved=${approved.length}`,
+);

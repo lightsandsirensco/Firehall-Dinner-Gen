@@ -62,19 +62,19 @@ import {
 
   upsertStripeSubscription,
 
+  userHasHadPaidSubscription,
+
 } from "./store.js";
 
 import {
-
+  buildProCheckoutSessionParams,
   getStripeClient,
-
+  getVerifiedFoundingCouponId,
   getVerifiedPriceIdForPeriod,
-
   getWebhookSecret,
-
-  mapStripeStatus,
-
+  stripeSubscriptionToRecord,
 } from "./stripe-client.js";
+import { foundingOfferApplies } from "../../shared/billing/pricing.js";
 
 import { userAlreadyHasProAccess } from "./checkout-guard.js";
 
@@ -100,11 +100,18 @@ import {
 
   selectPlanSchema,
 
+  proTrialNoticeSchema,
+
+  startProTrialSchema,
+
 } from "../../shared/billing/schema.js";
 
 import { resolvePublicSiteOrigin } from "../seo/sitemap.js";
 
 import type { PlanId } from "../../shared/billing/types.js";
+import { proTrialDeps } from "./pro-trial-deps.js";
+import { startProTrial } from "./pro-trial.js";
+import { pgProTrialRepo } from "./pro-trial-store.js";
 
 
 
@@ -500,6 +507,46 @@ export function registerBillingRoutes(app: Express): void {
 
 
 
+  // Personal Pro reverse trial — explicit start from a Premium paywall.
+  // No card, no checkout: works while payments are disabled.
+  app.post("/api/billing/trial/start", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
+    try {
+      await ensureStore();
+      const parsed = startProTrialSchema.safeParse(req.body ?? {});
+      if (!parsed.success) return res.status(400).json({ message: "Invalid request" });
+      const userId = req._authUserId!;
+      const result = await startProTrial(proTrialDeps(req._sessionId), userId, "paywall", parsed.data.paywall_source);
+      const billing = await resolveUserBilling(userId);
+      if (!result.started) {
+        return res.status(409).json({
+          code: result.reason,
+          message:
+            result.reason === "already_pro"
+              ? "You already have Firehall Meals Pro."
+              : "Your Pro trial has already been used on this account.",
+          billing,
+        });
+      }
+      return res.json({ ok: true, billing });
+    } catch (err) {
+      logError("billing", "start trial failed", err);
+      return res.status(500).json({ message: "Could not start your trial" });
+    }
+  });
+
+  app.post("/api/billing/trial/notice", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
+    try {
+      await ensureStore();
+      const parsed = proTrialNoticeSchema.safeParse(req.body ?? {});
+      if (!parsed.success) return res.status(400).json({ message: "Invalid request" });
+      await pgProTrialRepo.markNoticeSeen(req._authUserId!, parsed.data.notice, new Date());
+      return res.json({ ok: true });
+    } catch (err) {
+      logError("billing", "trial notice failed", err);
+      return res.status(500).json({ message: "Could not save" });
+    }
+  });
+
   app.post("/api/billing/checkout", requireCsrf, requireAuth, async (req: AuthedRequest, res: Response) => {
     try {
       await ensureStore();
@@ -561,31 +608,44 @@ export function registerBillingRoutes(app: Express): void {
       const priceId = await getVerifiedPriceIdForPeriod(parsed.data.billing_period);
       const origin = resolvePublicSiteOrigin(req.get("host"), req.protocol);
 
-      const session = await stripe.checkout.sessions.create({
-        mode: "subscription",
-        customer: customerId,
-        client_reference_id: userId,
-        line_items: [{ price: priceId, quantity: 1 }],
-        // No trial_period_days — Firehall Meals Pro bills immediately on
-        // successful checkout (see PAID LAUNCH LEGAL & COMMERCIAL SURFACES:
-        // the 7-day free trial was removed everywhere ahead of Stripe
-        // test-mode checkout testing).
-        subscription_data: {
-          metadata: { user_id: userId },
-        },
-        metadata: {
-          user_id: userId,
-          billing_period: parsed.data.billing_period,
-          ...(parsed.data.feature ? { feature: parsed.data.feature } : {}),
-        },
-        success_url: `${origin}/plans?checkout=success`,
-        cancel_url: `${origin}/plans?checkout=cancelled`,
-        allow_promotion_codes: true,
+      const founding = foundingOfferApplies({
+        billingPeriod: parsed.data.billing_period,
+        offerEnabled: config.founding_offer_enabled,
+        hadPaidSubscription: await userHasHadPaidSubscription(userId),
       });
+      let foundingCouponId: string | null = null;
+      if (founding) {
+        try {
+          foundingCouponId = await getVerifiedFoundingCouponId();
+        } catch (err) {
+          logError("billing", "founding coupon unavailable", err);
+          return res.status(503).json({ message: "Founding pricing is temporarily unavailable. Please try again shortly." });
+        }
+      }
+
+      // Only one open Checkout per customer: a second tab's session would
+      // otherwise let the same person complete two subscriptions.
+      const openSessions = await stripe.checkout.sessions.list({ customer: customerId, status: "open", limit: 10 });
+      for (const open of openSessions.data) {
+        await stripe.checkout.sessions.expire(open.id);
+      }
+
+      const session = await stripe.checkout.sessions.create(
+        buildProCheckoutSessionParams({
+          customerId,
+          userId,
+          priceId,
+          billingPeriod: parsed.data.billing_period,
+          origin,
+          foundingCouponId,
+          feature: parsed.data.feature,
+        }),
+      );
 
       trackBillingEvent(req, "stripe_checkout_started", {
         plan_id: "firefighter_plus",
         billing_period: parsed.data.billing_period,
+        founding_offer: Boolean(foundingCouponId),
         ...(parsed.data.feature ? { feature: parsed.data.feature } : {}),
       });
 
@@ -682,12 +742,7 @@ export function registerBillingRoutes(app: Express): void {
               userId,
               stripeCustomerId,
               stripeSubscriptionId,
-              stripePriceId: subscription.items.data[0]?.price?.id ?? null,
-              status: mapStripeStatus(subscription.status),
-              cancelAtPeriodEnd: subscription.cancel_at_period_end,
-              currentPeriodEnd: subscription.items.data[0]?.current_period_end
-                ? new Date(subscription.items.data[0].current_period_end * 1000).toISOString()
-                : null,
+              ...stripeSubscriptionToRecord(subscription),
             });
             trackBillingEvent(req, "stripe_checkout_completed", { plan_id: "firefighter_plus" });
           } else {
@@ -712,12 +767,7 @@ export function registerBillingRoutes(app: Express): void {
               userId,
               stripeCustomerId,
               stripeSubscriptionId: subscription.id,
-              stripePriceId: subscription.items.data[0]?.price?.id ?? null,
-              status: mapStripeStatus(subscription.status),
-              cancelAtPeriodEnd: subscription.cancel_at_period_end,
-              currentPeriodEnd: subscription.items.data[0]?.current_period_end
-                ? new Date(subscription.items.data[0].current_period_end * 1000).toISOString()
-                : null,
+              ...stripeSubscriptionToRecord(subscription),
             });
             trackBillingEvent(req, "stripe_subscription_updated", { status: subscription.status });
           }

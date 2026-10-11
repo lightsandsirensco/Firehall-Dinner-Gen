@@ -6,10 +6,9 @@
  * - Slot patch semantics (manual pick locks, skip/BYO are exclusive).
  * - Which slots auto-fill may touch.
  * - Mapping a meal slot onto the existing generator request (time window →
- *   time budget, crew size, meal format/category). No AI, no new ranking.
+ *   time budget, crew size, meal format). No AI, no new ranking.
  */
 import type { GenerateRequest } from "../schema.js";
-import type { FirehallCategoryId } from "../firehall-categories.js";
 import { inferBusyLevelFromTime } from "../busy-level.js";
 import { getNextShift } from "../schedule/engine.js";
 import type { MealSlot, StandardMealType } from "../schedule/meal-slots.js";
@@ -187,19 +186,20 @@ const TIME_BUDGETS_SHORTEST_FIRST: readonly TimeAvailable[] = [
 export interface SlotSelectionProfile {
   mealType: StandardMealType;
   meal_format: GenerateRequest["meal_format"];
-  firehall_category?: FirehallCategoryId;
   time_available: TimeAvailable;
 }
 
 /**
- * Same occasion → generator mapping the original Shift Planner uses
- * (shared/shift-planner/occasions.ts), with Late Night as a quick meal.
+ * Time budget per meal. Lunch / dinner / late night draw from the full
+ * generator pool narrowed to that meal's occasion pool
+ * (shared/catalog/meal-occasions.ts) by the slot picker — not a Pick Tonight
+ * category, which only covers part of the catalog.
  */
 const SLOT_PROFILES: Record<StandardMealType, Omit<SlotSelectionProfile, "mealType">> = {
   breakfast: { meal_format: "breakfast", time_available: "20-30" },
-  lunch: { meal_format: "random", firehall_category: "quick_meals", time_available: "30-45" },
-  dinner: { meal_format: "random", firehall_category: "crew_favorites", time_available: "45-60" },
-  late_night: { meal_format: "random", firehall_category: "quick_meals", time_available: "20-30" },
+  lunch: { meal_format: "random", time_available: "30-45" },
+  dinner: { meal_format: "random", time_available: "45-60" },
+  late_night: { meal_format: "random", time_available: "20-30" },
 };
 
 /** Custom meals borrow the profile of the standard meal nearest their local time. */
@@ -250,7 +250,7 @@ export function buildSlotGenerateRequest(
     ...base,
     crew_size: generatorCrewSize(slot.crewSize),
     meal_format: profile.meal_format,
-    firehall_category: profile.firehall_category,
+    firehall_category: undefined,
     time_available: profile.time_available,
     busy_level: inferBusyLevelFromTime(profile.time_available),
     enforce_time_bucket: true,

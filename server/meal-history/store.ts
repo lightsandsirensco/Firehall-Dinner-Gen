@@ -23,8 +23,10 @@ import {
   type FeedbackTag,
   type MealFeedbackInput,
   type MealHistoryEntry,
+  type MealHistoryFavorite,
   type MealLogContext,
 } from "../../shared/meal-history/types.js";
+import { planMealHistoryImport, type MealHistoryImportCandidate } from "../../shared/meal-history/access.js";
 
 let clientEntryColumnReady: boolean | null = null;
 
@@ -235,83 +237,52 @@ export async function recordMealCookedForUser(
   return { ok: true, entry: toEntry(row!), deduped: false };
 }
 
-/**
- * Rows recorded live before client_entry_id existed have no key, so an
- * imported local entry matching the same recipe within this window of a
- * keyless row is treated as that same cooked event.
- */
-export const IMPORT_MATCH_WINDOW_MS = 15 * 60_000;
-const IMPORT_EARLIEST_MS = Date.UTC(2020, 0, 1);
-const IMPORT_FUTURE_SKEW_MS = 24 * 60 * 60_000;
-
-export interface MealHistoryImportEntry {
-  client_entry_id: string;
-  recipe_slug: string;
-  cooked_at: string;
-  crew_size?: number;
-}
-
 export type ImportMealHistoryResult =
   | { ok: true; imported: number; duplicates: number; skipped: number }
   | { ok: false; reason: "not_migrated" };
 
 /**
  * Idempotent import of device-local cooked events into the canonical table.
- * Never updates or deletes existing rows. Each entry is inserted at most once
- * per (user_id, client_entry_id); legacy keyless rows are matched by recipe +
- * time window. Unknown slugs and implausible timestamps are skipped.
+ * Never updates or deletes existing rows — see planMealHistoryImport for the
+ * dedupe rules. The partial unique index on (user_id, client_entry_id) is the
+ * final guard when two devices import the same entries concurrently.
  */
 export async function importMealHistoryForUser(
   userId: string,
-  entries: MealHistoryImportEntry[],
+  entries: MealHistoryImportCandidate[],
 ): Promise<ImportMealHistoryResult> {
   if (!(await hasClientEntryIdColumn())) return { ok: false, reason: "not_migrated" };
 
+  const existingRows = await pgAll<{ client_entry_id: string | null; recipe_slug: string; cooked_at: Date }>(
+    `SELECT client_entry_id, recipe_slug, cooked_at FROM user_meal_history WHERE user_id = $1`,
+    [userId],
+  );
+  const plan = planMealHistoryImport(
+    entries,
+    existingRows.map((r) => ({
+      client_entry_id: r.client_entry_id,
+      recipe_slug: r.recipe_slug,
+      cooked_at_ms: new Date(r.cooked_at).getTime(),
+    })),
+    isApprovedCatalogSlug,
+  );
+
   let imported = 0;
-  let duplicates = 0;
-  let skipped = 0;
-  const now = Date.now();
-
-  for (const entry of entries) {
-    const slug = entry.recipe_slug.trim().toLowerCase();
-    const cookedMs = new Date(entry.cooked_at).getTime();
-    if (
-      !isApprovedCatalogSlug(slug) ||
-      !Number.isFinite(cookedMs) ||
-      cookedMs < IMPORT_EARLIEST_MS ||
-      cookedMs > now + IMPORT_FUTURE_SKEW_MS
-    ) {
-      skipped += 1;
-      continue;
-    }
-    const cookedAt = new Date(cookedMs).toISOString();
-
-    const legacyMatch = await pgOne<{ id: number }>(
-      `SELECT id FROM user_meal_history
-       WHERE user_id = $1 AND recipe_slug = $2 AND client_entry_id IS NULL
-         AND cooked_at BETWEEN $3::timestamptz - make_interval(secs => $4)
-                           AND $3::timestamptz + make_interval(secs => $4)
-       LIMIT 1`,
-      [userId, slug, cookedAt, IMPORT_MATCH_WINDOW_MS / 1000],
-    );
-    if (legacyMatch) {
-      duplicates += 1;
-      continue;
-    }
-
+  let duplicates = plan.duplicates;
+  for (const row of plan.toInsert) {
     const inserted = await pgOne<{ id: number }>(
       `INSERT INTO user_meal_history (user_id, recipe_slug, cooked_at, crew_size, client_entry_id, source)
        VALUES ($1, $2, $3, $4, $5, 'local_import')
        ON CONFLICT (user_id, client_entry_id) WHERE client_entry_id IS NOT NULL DO NOTHING
        RETURNING id`,
-      [userId, slug, cookedAt, entry.crew_size ?? null, entry.client_entry_id],
+      [userId, row.recipe_slug, row.cooked_at, row.crew_size, row.client_entry_id],
     );
     if (inserted) imported += 1;
     else duplicates += 1;
   }
 
   if (imported > 0) invalidateHistorySignalsCache(userId);
-  return { ok: true, imported, duplicates, skipped };
+  return { ok: true, imported, duplicates, skipped: plan.skipped };
 }
 
 /** Most recent cooked events for a user, newest first — for account UI. */
@@ -321,6 +292,82 @@ export async function listMealHistoryForUser(userId: string, limit = 20): Promis
     [userId, Math.max(1, Math.min(limit, 50))],
   );
   return rows.map(toEntry);
+}
+
+export const MEAL_HISTORY_PAGE_MAX = 100;
+
+/** One page of entries cooked at/after `since` (null = all), newest first. */
+export async function listMealHistoryPage(
+  userId: string,
+  opts: { since: Date | null; limit: number; offset: number },
+): Promise<MealHistoryEntry[]> {
+  const limit = Math.max(1, Math.min(opts.limit, MEAL_HISTORY_PAGE_MAX));
+  const offset = Math.max(0, opts.offset);
+  const rows = opts.since
+    ? await pgAll<MealHistoryRow>(
+        `SELECT * FROM user_meal_history WHERE user_id = $1 AND cooked_at >= $2
+         ORDER BY cooked_at DESC, id DESC LIMIT $3 OFFSET $4`,
+        [userId, opts.since.toISOString(), limit, offset],
+      )
+    : await pgAll<MealHistoryRow>(
+        `SELECT * FROM user_meal_history WHERE user_id = $1
+         ORDER BY cooked_at DESC, id DESC LIMIT $2 OFFSET $3`,
+        [userId, limit, offset],
+      );
+  return rows.map(toEntry);
+}
+
+/** Total stored rows and how many fall before `since` (hidden for Free, never deleted). */
+export async function countMealHistoryForUser(
+  userId: string,
+  since: Date | null,
+): Promise<{ total: number; older: number }> {
+  const row = await pgOne<{ total: string | number; older: string | number }>(
+    `SELECT COUNT(*) AS total,
+            COUNT(*) FILTER (WHERE $2::timestamptz IS NOT NULL AND cooked_at < $2::timestamptz) AS older
+     FROM user_meal_history WHERE user_id = $1`,
+    [userId, since ? since.toISOString() : null],
+  );
+  return { total: Number(row?.total ?? 0), older: Number(row?.older ?? 0) };
+}
+
+/** Single owned row, or null — used to check the visible window before feedback edits. */
+export async function getMealHistoryEntryForUser(userId: string, id: number): Promise<MealHistoryEntry | null> {
+  const row = await pgOne<MealHistoryRow>(`SELECT * FROM user_meal_history WHERE id = $1 AND user_id = $2`, [
+    id,
+    userId,
+  ]);
+  return row ? toEntry(row) : null;
+}
+
+/** Premium recall: recipes rated 4+ or marked make-again, across the user's full history. */
+export async function listFavoriteMealsForUser(userId: string, limit = 6): Promise<MealHistoryFavorite[]> {
+  const rows = await pgAll<{
+    recipe_slug: string;
+    times_cooked: string | number;
+    last_cooked_at: Date;
+    best_rating: number | null;
+  }>(
+    `SELECT recipe_slug, COUNT(*) AS times_cooked, MAX(cooked_at) AS last_cooked_at, MAX(rating) AS best_rating
+     FROM user_meal_history
+     WHERE user_id = $1
+     GROUP BY recipe_slug
+     HAVING BOOL_OR(make_again = 1) OR MAX(rating) >= 4
+     ORDER BY MAX(rating) DESC NULLS LAST, MAX(cooked_at) DESC
+     LIMIT $2`,
+    [userId, Math.max(1, Math.min(limit, 20))],
+  );
+  return rows
+    .filter((r) => isApprovedCatalogSlug(r.recipe_slug))
+    .map((r) => ({
+      recipe_slug: r.recipe_slug,
+      title: getCatalogTitle(r.recipe_slug),
+      recipe_path: approvedCatalogRecipePath(r.recipe_slug),
+      hero_image: resolveCatalogHeroPath(r.recipe_slug),
+      times_cooked: Number(r.times_cooked),
+      last_cooked_at: new Date(r.last_cooked_at).toISOString(),
+      best_rating: (r.best_rating as 1 | 2 | 3 | 4 | 5 | null) ?? null,
+    }));
 }
 
 /**
@@ -381,11 +428,22 @@ export async function deleteMealHistoryEntryForUser(userId: string, id: number):
  * existing recentSlugPenalty (shared/meal-rotation/weighted-pick.ts,
  * unmodified) exactly as the client's own device-local list already is.
  */
-export async function listRecentCookedSlugsOldestFirst(userId: string, limit = 10): Promise<string[]> {
-  const rows = await pgAll<{ recipe_slug: string }>(
-    `SELECT recipe_slug FROM user_meal_history WHERE user_id = $1 ORDER BY cooked_at DESC, id DESC LIMIT $2`,
-    [userId, Math.max(1, Math.min(limit, 32))],
-  );
+export async function listRecentCookedSlugsOldestFirst(
+  userId: string,
+  limit = 10,
+  since: Date | null = null,
+): Promise<string[]> {
+  const cap = Math.max(1, Math.min(limit, 32));
+  const rows = since
+    ? await pgAll<{ recipe_slug: string }>(
+        `SELECT recipe_slug FROM user_meal_history WHERE user_id = $1 AND cooked_at >= $2
+         ORDER BY cooked_at DESC, id DESC LIMIT $3`,
+        [userId, since.toISOString(), cap],
+      )
+    : await pgAll<{ recipe_slug: string }>(
+        `SELECT recipe_slug FROM user_meal_history WHERE user_id = $1 ORDER BY cooked_at DESC, id DESC LIMIT $2`,
+        [userId, cap],
+      );
   // rows come back newest-first; reverse for oldest-first.
   return rows.map((r) => r.recipe_slug).reverse();
 }

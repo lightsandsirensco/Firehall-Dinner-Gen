@@ -1,9 +1,7 @@
-import { useMemo, useState } from "react";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { LogOut } from "lucide-react";
 import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
 import { Button } from "@/components/ui/button";
-import { AccountProfileForm } from "@/components/auth/account-profile-form";
 import { DeleteAccountSection } from "@/components/auth/delete-account-section";
 import { SignInMethodsSection } from "@/components/auth/sign-in-methods-section";
 import { RequireAccountAuth } from "@/components/auth/require-account-auth";
@@ -15,8 +13,6 @@ import { MealHistoryPreviewCard } from "@/components/auth/meal-history-preview-c
 import { ProgressPreviewCard } from "@/components/auth/progress-preview-card";
 import { InsightsPreviewCard } from "@/components/auth/insights-preview-card";
 import { MembershipCard } from "@/components/auth/membership-card";
-import { OnboardingBanner } from "@/components/onboarding/onboarding-banner";
-import { isOnboardingMode } from "@/lib/onboarding/state";
 import { useAuth } from "@/lib/auth/context";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
@@ -37,22 +33,6 @@ export default function AccountPage() {
 
 function AccountPageContent() {
   const { logout } = useAuth();
-  const [, navigate] = useLocation();
-  const onboardingMode = useMemo(() => isOnboardingMode(), []);
-
-  if (onboardingMode) {
-    return (
-      <MeSubpageShell title="Your Profile" subtitle="Profile, preferences, and hall membership" testId="account-page">
-        <div className="space-y-6">
-          <OnboardingBanner />
-          <section className={cn(app.cardSurface, "p-5")}>
-            <h2 className={cn(app.titleCard, "mb-4")}>Profile &amp; preferences</h2>
-            <AccountProfileForm onboarding onOnboardingSaved={() => navigate("/onboarding/hall")} />
-          </section>
-        </div>
-      </MeSubpageShell>
-    );
-  }
 
   return (
     <MeSubpageShell title="Your Profile" subtitle="This is your Firehall Meals." testId="account-page">

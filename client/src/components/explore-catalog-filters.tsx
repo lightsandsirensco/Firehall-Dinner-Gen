@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useLocation } from "wouter";
 import { ChevronDown, Lock } from "lucide-react";
 import {
   APPROVED_CATALOG_COOK_TIME_LABELS,
@@ -30,8 +29,9 @@ import {
   buildApprovedCatalogFacetOptions,
   type ApprovedCatalogFilterState,
 } from "@/lib/approved-catalog-filters";
-import { trackExploreFilter, trackProFeatureClicked } from "@/lib/analytics";
-import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
+import { trackExploreFilter } from "@/lib/analytics";
+import { useFeature } from "@/lib/billing/hooks";
+import { useProPaywall } from "@/components/billing/pro-paywall";
 import { useAuth } from "@/lib/auth/context";
 
 /**
@@ -139,9 +139,7 @@ export function ExploreCatalogFilters({
   const stackClass = layout === "sheet" ? "space-y-5" : "space-y-4";
   const hasProFilters = useFeature("advanced_search");
   const hasFoodPreferences = useFeature("ingredient_preferences");
-  const { authenticated } = useAuth();
-  const recordPaywall = useRecordPaywallView();
-  const [, setLocation] = useLocation();
+  const { openProPaywall } = useProPaywall();
   const [nutritionOpen, setNutritionOpen] = useState(() => hasActiveNumericNutritionFilter(filters));
   const [avoidOpen, setAvoidOpen] = useState(() => filters.avoidIngredients.length > 0);
 
@@ -160,15 +158,10 @@ export function ExploreCatalogFilters({
   ).filter((key) => filters[key] != null).length;
 
   const requestProFilter = (filterKey: string, billingFeature: "advanced_search" | "ingredient_preferences" = "advanced_search") => {
-    trackProFeatureClicked({ feature: filterKey, page: "/explore", logged_in: authenticated });
-    void recordPaywall(billingFeature, "explore_filter");
-    // Carry the source feature through to the plans page via a plain query
-    // param — the simplest existing mechanism (no new attribution infra) — so
-    // the Pro offer and any resulting plan-selection/upgrade-interest events
-    // can attribute back to "High Protein" instead of losing that context.
-    // Navigates straight to /me/subscription (not /plans) because /plans is a
-    // <Redirect> shim that drops query strings on the hop.
-    setLocation(`/me/subscription?feature=${encodeURIComponent(filterKey)}`);
+    openProPaywall(
+      billingFeature === "ingredient_preferences" ? "foods_to_avoid" : "pro_filters",
+      `explore_filter_${filterKey}`,
+    );
   };
 
   const toggleAvoidIngredient = (key: string) => {

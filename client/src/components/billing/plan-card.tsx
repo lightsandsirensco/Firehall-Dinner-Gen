@@ -2,8 +2,14 @@ import { useState } from "react";
 import { Check, Loader2 } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
-import type { PlanCatalogEntry, PlanId } from "@shared/billing/types";
-import { PLAN_PRESENTATIONS, type PlanBillingPeriod } from "@/lib/plans-display";
+import { PRO_TRIAL_DAYS, type PlanCatalogEntry, type PlanId } from "@shared/billing/types";
+import {
+  FOUNDING_OFFER_DISPLAY,
+  PLAN_PRESENTATIONS,
+  resolveBillingOption,
+  type PlanBillingPeriod,
+} from "@/lib/plans-display";
+import { PRO_SUBSCRIBE_CTA, PRO_TRIAL_CTA } from "@/lib/pro-paywall-copy";
 import { cn } from "@/lib/utils";
 
 interface PlanCardProps {
@@ -27,6 +33,12 @@ interface PlanCardProps {
    * unaffected by this prop.
    */
   paymentsEnabled?: boolean;
+  /** Account can still start its one no-card Pro trial — the Pro CTA starts it (no checkout). */
+  proTrialEligible?: boolean;
+  /** Pro comes from an active trial — the Pro card stays purchasable instead of "Current plan". */
+  onProTrial?: boolean;
+  /** This account's annual checkout would get the founding first-year price. */
+  foundingOfferEligible?: boolean;
 }
 
 export function PlanCard({
@@ -37,6 +49,9 @@ export function PlanCard({
   selecting,
   disabled,
   paymentsEnabled,
+  proTrialEligible,
+  onProTrial,
+  foundingOfferEligible,
 }: PlanCardProps) {
   const presentation = PLAN_PRESENTATIONS[plan.plan_id as keyof typeof PLAN_PRESENTATIONS];
   // Visually recommend Annual (best value) without ever recording a
@@ -45,14 +60,16 @@ export function PlanCard({
   if (!presentation) return null;
 
   const isRecommended = Boolean(presentation.recommended);
-  const isCurrent = currentPlanId === plan.plan_id;
+  const isPro = plan.plan_id === "firefighter_plus";
+  const isCurrent = currentPlanId === plan.plan_id && !(isPro && onProTrial);
   const isBusy = selecting === plan.plan_id;
-  const billingOptions = presentation.billingOptions;
+  const founding = Boolean(foundingOfferEligible);
+  const billingOptions = presentation.billingOptions?.map((o) => resolveBillingOption(o, founding));
   const activeOption = billingOptions?.find((o) => o.id === billingPeriod) ?? billingOptions?.[0];
-  const isLive = plan.plan_id === "firefighter_plus" && Boolean(paymentsEnabled);
-  // No free trial — Firehall Meals Pro bills immediately on checkout (see
-  // PAID LAUNCH LEGAL & COMMERCIAL SURFACES).
-  const ctaLabel = isLive && !isCurrent ? "Subscribe now" : presentation.ctaLabel;
+  const showFounding = founding && activeOption?.id === "annual";
+  const isLive = isPro && Boolean(paymentsEnabled);
+  const offersTrial = isPro && Boolean(proTrialEligible);
+  const ctaLabel = offersTrial ? PRO_TRIAL_CTA : isLive && !isCurrent ? PRO_SUBSCRIBE_CTA : presentation.ctaLabel;
   // Once real checkout is live, every "not purchasable yet" signal (ribbon +
   // disclosure copy) must disappear from the Pro card — never show "Coming
   // Soon" next to a real, working Subscribe button.
@@ -83,6 +100,14 @@ export function PlanCard({
       {/* 2. Price + billing interval + optional savings/monthly-equivalent line */}
       {billingOptions && activeOption ? (
         <div className="mt-8">
+          {showFounding ? (
+            <span
+              className="mb-2 inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-primary"
+              data-testid="plan-founding-badge"
+            >
+              {FOUNDING_OFFER_DISPLAY.badge}
+            </span>
+          ) : null}
           <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
             <span className="font-heading text-5xl leading-none tracking-wide text-foreground">
               {activeOption.price}
@@ -90,7 +115,17 @@ export function PlanCard({
             <span className="text-base font-sans font-normal text-muted-foreground">
               {activeOption.period}
             </span>
+            {showFounding ? (
+              <span className="text-base text-muted-foreground/80 line-through" aria-label={`Standard price ${FOUNDING_OFFER_DISPLAY.standardPrice} per year`}>
+                {FOUNDING_OFFER_DISPLAY.standardPrice}
+              </span>
+            ) : null}
           </div>
+          {showFounding ? (
+            <p className="mt-1.5 text-sm text-foreground/90" data-testid="plan-founding-renewal">
+              {FOUNDING_OFFER_DISPLAY.renewalNote}
+            </p>
+          ) : null}
 
           {activeOption.equivalentLabel || activeOption.savingsLabel ? (
             <p className="mt-2 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
@@ -154,9 +189,15 @@ export function PlanCard({
             })}
           </div>
 
-          {isLive ? (
+          {offersTrial ? (
+            <p className="mt-4 text-xs text-muted-foreground/90" data-testid="plan-pro-trial-note">
+              Try Pro free for {PRO_TRIAL_DAYS} days — no card needed. You go back to Free automatically when it ends.
+            </p>
+          ) : isLive ? (
             <p className="mt-4 text-xs text-muted-foreground/90">
-              Billed immediately, renews automatically. Cancel anytime from Manage Billing.
+              {showFounding
+                ? `Billed today. Renews automatically at ${FOUNDING_OFFER_DISPLAY.standardPrice}/year after your first year. Cancel anytime from Manage Billing.`
+                : "Billed immediately, renews automatically. Cancel anytime from Manage Billing."}
             </p>
           ) : presentation.comingSoonNote ? (
             <p className="mt-4 text-xs text-muted-foreground/90">{presentation.comingSoonNote}</p>

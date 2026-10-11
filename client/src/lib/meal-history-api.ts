@@ -13,8 +13,12 @@ import type {
   MealLogContext,
 } from "@shared/meal-history/types";
 
-export async function fetchMealHistory(): Promise<MealHistoryListResponse> {
-  const res = await apiRequest("GET", "/api/meal-history");
+export async function fetchMealHistory(page: { offset?: number; limit?: number } = {}): Promise<MealHistoryListResponse> {
+  const params = new URLSearchParams();
+  if (page.offset) params.set("offset", String(page.offset));
+  if (page.limit) params.set("limit", String(page.limit));
+  const qs = params.toString();
+  const res = await apiRequest("GET", `/api/meal-history${qs ? `?${qs}` : ""}`);
   return res.json();
 }
 

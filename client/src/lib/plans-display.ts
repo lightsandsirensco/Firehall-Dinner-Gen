@@ -1,4 +1,11 @@
 import type { PlanId } from "@shared/billing/types";
+import {
+  FOUNDING_FIRST_YEAR_PRICE_CENTS,
+  PRO_ANNUAL_PRICE_CENTS,
+  PRO_MONTHLY_PRICE_CENTS,
+  formatUsdCents,
+  savingsVersusMonthlyPercent,
+} from "@shared/billing/pricing";
 
 export interface PlanFeatureItem {
   label: string;
@@ -17,7 +24,7 @@ export interface PlanBillingOption {
   period: string;
   /**
    * Small pill shown next to the price when this option is active, e.g.
-   * "Save 33%" — always rendered in normal document flow (never
+   * "Save 44%" — always rendered in normal document flow (never
    * `absolute`-positioned) so it can never overlap the price/period text at
    * any card width. Derived from real pricing math below — never a
    * hand-typed magic string.
@@ -58,24 +65,49 @@ export const PLANS_PAGE = {
   subtitle: "Simple pricing. No surprises.",
 } as const;
 
-// --- Pricing math — computed once and verified below, then threaded through
-// PLAN_PRESENTATIONS.firefighter_plus.billingOptions. Never hand-type a
-// savings percentage or monthly-equivalent price as a separate magic string
-// — derive it from these two real prices so it can never silently drift out
-// of sync with what Stripe actually charges (see server/billing/stripe-client.ts
-// EXPECTED_PRICE_SPECS, which is the source of truth for the real amounts).
-const MONTHLY_PRICE_USD = 4.99;
-const ANNUAL_PRICE_USD = 39.99;
-const ANNUAL_MONTHLY_EQUIVALENT_USD = ANNUAL_PRICE_USD / 12;
-// (4.99 * 12 - 39.99) / (4.99 * 12) = 19.89 / 59.88 = 0.3322... → 33%
-const ANNUAL_SAVINGS_PERCENT = Math.round(
-  ((MONTHLY_PRICE_USD * 12 - ANNUAL_PRICE_USD) / (MONTHLY_PRICE_USD * 12)) * 100,
-);
+// --- Pricing math — every label below is derived from the cents values in
+// shared/billing/pricing.ts (the same values Stripe prices/coupon are
+// verified against at checkout), never hand-typed, so the UI can't drift
+// from what Stripe actually charges.
+// $5.99 x 12 = $71.88; ($71.88 - $39.99) / $71.88 = 44%; founding $29.99 → 58%.
+const MONTHLY_PRICE_LABEL = formatUsdCents(PRO_MONTHLY_PRICE_CENTS);
+const ANNUAL_PRICE_LABEL = formatUsdCents(PRO_ANNUAL_PRICE_CENTS);
+const ANNUAL_EQUIVALENT_LABEL = `${formatUsdCents(Math.round(PRO_ANNUAL_PRICE_CENTS / 12))}/month billed annually`;
+const ANNUAL_SAVINGS_LABEL = `Save ${savingsVersusMonthlyPercent(PRO_ANNUAL_PRICE_CENTS)}%`;
+const FOUNDING_PRICE_LABEL = formatUsdCents(FOUNDING_FIRST_YEAR_PRICE_CENTS);
 
-const MONTHLY_PRICE_LABEL = `$${MONTHLY_PRICE_USD.toFixed(2)}`;
-const ANNUAL_PRICE_LABEL = `$${ANNUAL_PRICE_USD.toFixed(2)}`;
-const ANNUAL_EQUIVALENT_LABEL = `$${ANNUAL_MONTHLY_EQUIVALENT_USD.toFixed(2)}/month billed annually`;
-const ANNUAL_SAVINGS_LABEL = `Save ${ANNUAL_SAVINGS_PERCENT}%`;
+/**
+ * Founding offer presentation for the Annual option — shown only when the
+ * server says this account would actually get it (founding_offer_eligible).
+ */
+export const FOUNDING_OFFER_DISPLAY = {
+  badge: "Founding offer",
+  price: FOUNDING_PRICE_LABEL,
+  period: "/first year",
+  standardPrice: ANNUAL_PRICE_LABEL,
+  renewalNote: `${FOUNDING_PRICE_LABEL} for your first year, then ${ANNUAL_PRICE_LABEL}/year.`,
+  equivalentLabel: `${formatUsdCents(Math.round(FOUNDING_FIRST_YEAR_PRICE_CENTS / 12))}/month for the first year`,
+  savingsLabel: `Save ${savingsVersusMonthlyPercent(FOUNDING_FIRST_YEAR_PRICE_CENTS)}% first year`,
+} as const;
+
+/** One-line price summary for paywall/trial copy, e.g. "$5.99/month or $39.99/year". */
+export function proPriceSummary(foundingEligible: boolean): string {
+  return foundingEligible
+    ? `${MONTHLY_PRICE_LABEL}/month, or ${FOUNDING_PRICE_LABEL} for your first year (then ${ANNUAL_PRICE_LABEL}/year)`
+    : `${MONTHLY_PRICE_LABEL}/month or ${ANNUAL_PRICE_LABEL}/year`;
+}
+
+/** The option as it should render for this account (founding variant on Annual when eligible). */
+export function resolveBillingOption(option: PlanBillingOption, foundingEligible: boolean): PlanBillingOption {
+  if (option.id !== "annual" || !foundingEligible) return option;
+  return {
+    ...option,
+    price: FOUNDING_OFFER_DISPLAY.price,
+    period: FOUNDING_OFFER_DISPLAY.period,
+    savingsLabel: FOUNDING_OFFER_DISPLAY.savingsLabel,
+    equivalentLabel: FOUNDING_OFFER_DISPLAY.equivalentLabel,
+  };
+}
 
 /**
  * Every feature a user gets for $0 — shown as ONE "Free" card. "guest"
@@ -97,7 +129,7 @@ const FREE_FEATURES: PlanFeatureItem[] = [
   { label: "Crew-size scaling" },
   { label: "Save favorite meals" },
   { label: "Sync saved meals across devices" },
-  { label: "Personal meal history" },
+  { label: "Meal history for the last 30 days, with ratings and notes" },
 ];
 
 /**
@@ -162,11 +194,12 @@ export const PLAN_PRESENTATIONS: Record<Exclude<PlanId, "hall_pro">, PlanPresent
       },
       {
         label: "Nutrition Goals",
-        description: "Shape meal recommendations around how you want to eat.",
+        description: "Pick High Protein, Lower Calorie, Lower Carb, or Balanced to shape Pick Tonight and Shift Planner.",
       },
       {
         label: "Meal Memory",
-        description: "Remembers what you've cooked and helps keep the Generator varied.",
+        description:
+          "Your full meal history, long-term ratings and notes, crew favorites, and picks personalized from everything you've cooked.",
       },
     ],
     ctaLabel: "Join Pro Early Access",

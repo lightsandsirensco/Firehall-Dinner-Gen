@@ -1,0 +1,27 @@
+---
+description: Firehall Meals recipe development workflow, efficiency, and safety guardrails
+alwaysApply: true
+---
+
+# Firehall Meals Recipe Development Rules
+
+## Efficiency
+- Minimize token usage and tool calls.
+- Inspect only files relevant to the current task.
+- Never re-audit the whole application without a specific reason.
+- Use local scripts for repetitive processing, duplicate detection, and calculations.
+- Process recipes in batches of 10.
+- Prefer the simplest implementation that reuses existing code.
+
+## Data integrity
+- Keep temporary data and drafts separate from production recipes.
+- Use the existing canonical recipe schema and validation tools.
+- Do not fabricate source URLs, nutrition values, or recipe-testing results.
+- Do not copy copyrighted recipe descriptions, instructions, or photographs.
+
+## Approval required
+- Never modify production recipes without explicit approval.
+- Never commit, push, deploy, install dependencies, or modify the database without approval.
+
+## Reporting
+- Report only meaningful results, failures, and required decisions.

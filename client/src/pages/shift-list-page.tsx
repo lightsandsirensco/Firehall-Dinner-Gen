@@ -1,9 +1,11 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "wouter";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
-import { ArrowLeft, ChevronDown, ChevronUp, PackageCheck, Plus, ShoppingCart, Trash2, Undo2, X } from "lucide-react";
-import { SiteHeader } from "@/components/site-header";
+import { ChevronDown, ChevronUp, PackageCheck, Plus, ShoppingCart, Trash2, Undo2, X } from "lucide-react";
+import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { SiteFooter } from "@/components/site-footer";
+import { LIST, SHIFT } from "@/lib/app-nav";
+import { useNoIndex } from "@/lib/seo/use-noindex";
 import { LoadingState } from "@/components/loading-state";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -32,16 +34,14 @@ import type { ShiftShoppingListResponse, ShiftShoppingListView } from "@shared/s
 
 const REFRESH_MS = 20_000;
 
-function BackToPlanner() {
+function RecipeListLink() {
   return (
-    <Link
-      href="/shift-planner"
-      className="inline-flex min-h-11 items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground touch-manipulation"
-      data-testid="link-back-to-planner"
-    >
-      <ArrowLeft className="h-4 w-4" aria-hidden />
-      Shift plan
-    </Link>
+    <p className={cn(app.caption, "px-2 text-center")}>
+      Shopping for recipes outside a shift?{" "}
+      <Link href="/me/shopping-list" className="font-medium text-primary hover:underline" data-testid="link-recipe-shopping-list">
+        Open your recipe list
+      </Link>
+    </p>
   );
 }
 
@@ -157,7 +157,7 @@ function ShiftListBody({ shiftKey, shiftStartLocal }: { shiftKey: string; shiftS
       <section className={cn(app.cardSurface, "space-y-3 p-5 text-sm")} data-testid="shift-list-error">
         <p className="text-muted-foreground">{openError}</p>
         <Button asChild className="min-h-11 w-full">
-          <Link href="/shift-planner">Back to the shift plan</Link>
+          <Link href={SHIFT}>Back to the shift plan</Link>
         </Button>
       </section>
     );
@@ -369,27 +369,27 @@ function ShiftListBody({ shiftKey, shiftStartLocal }: { shiftKey: string; shiftS
   );
 }
 
-/** /shift-planner/shop — one shopping list for every planned meal of the current/next shift. */
+/** List (/list) — one shopping list for every planned meal of the current/next shift. */
 export default function ShiftListPage() {
+  useNoIndex();
   const { authenticated, openSignIn } = useAuth();
   const planQuery = useQuery({
     queryKey: shiftPlanQueryKey,
-    queryFn: fetchShiftPlan,
+    queryFn: () => fetchShiftPlan(),
     enabled: authenticated,
     staleTime: 30_000,
   });
   const shift = planQuery.data?.shift ?? null;
 
   return (
-    <div className="page-shell min-h-screen min-h-[100dvh] bg-background">
-      <SiteHeader activePage="generator" />
-      <main className={cn(app.main, "py-4 sm:py-8 pb-24")}>
+    <div className={cn(app.page, "bg-background")} data-testid="list-page">
+      <AppTopBar title="List" />
+      <main className={cn(app.main, "py-4 sm:py-8 pb-safe-tabs-cta")}>
         <div className="mx-auto max-w-xl space-y-3">
-          <BackToPlanner />
           {!authenticated ? (
             <section className={cn(app.cardSurface, "space-y-3 p-6 text-center")}>
               <p className="text-sm text-muted-foreground">Sign in to build one shopping list for your whole shift.</p>
-              <Button onClick={() => openSignIn("/shift-planner/shop")} data-testid="button-shift-list-sign-in">
+              <Button onClick={() => openSignIn(LIST)} data-testid="button-shift-list-sign-in">
                 Sign in
               </Button>
             </section>
@@ -398,15 +398,26 @@ export default function ShiftListPage() {
           ) : !shift ? (
             <section className={cn(app.cardSurface, "space-y-3 p-5 text-sm")} data-testid="shift-list-no-shift">
               <p className="text-muted-foreground">
-                {planQuery.isError ? "Couldn't load your shift plan." : "No upcoming shift to shop for."}
+                {planQuery.isError
+                  ? "Couldn't load your shift plan."
+                  : planQuery.data?.hasSchedule
+                    ? "No upcoming shift to shop for."
+                    : "Plan your next shift and its list builds itself from the meals you pick."}
               </p>
               <Button asChild className="min-h-11 w-full">
-                <Link href="/shift-planner">Open the Shift Planner</Link>
+                {planQuery.data?.hasSchedule || planQuery.isError ? (
+                  <Link href={SHIFT}>Open Shift</Link>
+                ) : (
+                  <Link href={`${SHIFT}?setup=1`} data-testid="link-list-plan-my-shift">
+                    Plan my shift
+                  </Link>
+                )}
               </Button>
             </section>
           ) : (
             <ShiftListBody key={shift.key} shiftKey={shift.key} shiftStartLocal={shift.startLocal} />
           )}
+          {authenticated ? <RecipeListLink /> : null}
         </div>
       </main>
       <SiteFooter variant="compact" className="mt-10" pbSafe />

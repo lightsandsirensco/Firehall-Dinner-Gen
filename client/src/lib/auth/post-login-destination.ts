@@ -1,6 +1,7 @@
 /**
- * Where to land after sign-in — the Tonight dashboard (/tonight).
- * (Home is the landing page at "/"; signed-in users start their shift on Tonight.)
+ * Where to land after sign-in — Shift (/shift), the signed-in home.
+ * (Home is the landing page at "/"; /tonight is tonight's meal and hands off
+ * to Shift when nothing is picked, so it isn't a meaningful return target.)
  */
 
 export function postLoginDestination(options: {
@@ -13,7 +14,7 @@ export function postLoginDestination(options: {
     return returnTo;
   }
   void options.hasHall;
-  return "/tonight";
+  return "/shift";
 }
 
 function isMeaningfulReturnTo(path: string): boolean {

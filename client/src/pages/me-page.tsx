@@ -1,17 +1,21 @@
-import { CalendarDays, CreditCard, Heart, History, Package, Settings, ShoppingCart, User } from "lucide-react";
+import { CalendarDays, CreditCard, Heart, History, Package, Salad, Settings, ShoppingCart, User, Users } from "lucide-react";
 import { AppTopBar } from "@/components/app-shell/app-top-bar";
 import { HubTile } from "@/components/app-shell/hub-tile";
 import { WorkflowExit } from "@/components/app-shell/workflow-exit";
 import { SiteFooter } from "@/components/site-footer";
 import { useAuth } from "@/lib/auth/context";
+import { useSignedInNav } from "@/hooks/use-signed-in-nav";
+import { appHomeFor, appHomeLabelFor } from "@/lib/app-nav";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 import { useNoIndex } from "@/lib/seo/use-noindex";
 
-/** Personal account — fourth destination, not a competing command center. */
+/** Personal account — saves, history, schedule, preferences, subscription. Not a competing command center. */
 export default function MePage() {
   useNoIndex();
   const { authenticated, loading, openSignIn } = useAuth();
+  const signedInNav = useSignedInNav();
+  const homeLabel = appHomeLabelFor(signedInNav);
 
   return (
     <div className={cn(app.page, "bg-background")} data-testid="me-page">
@@ -21,14 +25,14 @@ export default function MePage() {
         <header className="space-y-1.5 px-0.5">
           <h1 className={app.titlePage}>Me</h1>
           <p className={app.subtitle}>
-            Your profile, saves, and preferences — the shift still starts on Tonight.
+            Your saves, schedule, and preferences — the shift still starts on {homeLabel}.
           </p>
         </header>
 
         <WorkflowExit
-          href="/tonight"
-          label="← Back to Tonight"
-          hint="Ready for tonight?"
+          href={appHomeFor(signedInNav)}
+          label={`← Back to ${homeLabel}`}
+          hint={signedInNav ? "Ready for your shift?" : "Ready for tonight?"}
           testId="me-back-tonight"
         />
 
@@ -46,7 +50,7 @@ export default function MePage() {
             </span>
             <span className="min-w-0">
               <span className="block text-sm font-semibold text-foreground">Sign in to Firehall Meals</span>
-              <span className="block text-xs text-muted-foreground">Sync saves · join your hall</span>
+              <span className="block text-xs text-muted-foreground">Plan every shift · sync saves</span>
             </span>
           </button>
         ) : null}
@@ -64,9 +68,9 @@ export default function MePage() {
           />
         </section>
 
-        <section className="space-y-2" aria-labelledby="me-cook">
-          <h2 id="me-cook" className={cn(app.eyebrowMuted, "px-0.5")}>
-            Cooking
+        <section className="space-y-2" aria-labelledby="me-meals">
+          <h2 id="me-meals" className={cn(app.eyebrowMuted, "px-0.5")}>
+            Meals
           </h2>
           <div className={cn("space-y-2", app.stagger)}>
             <HubTile
@@ -84,12 +88,29 @@ export default function MePage() {
               secondary
               testId="me-history"
             />
+            {signedInNav ? null : (
+              <HubTile
+                href="/me/shopping-list"
+                icon={ShoppingCart}
+                title="Shopping List"
+                description="Every recipe you've added, combined by aisle"
+                testId="me-shopping-list"
+              />
+            )}
+          </div>
+        </section>
+
+        <section className="space-y-2" aria-labelledby="me-preferences">
+          <h2 id="me-preferences" className={cn(app.eyebrowMuted, "px-0.5")}>
+            Preferences
+          </h2>
+          <div className={cn("space-y-2", app.stagger)}>
             <HubTile
-              href="/me/shopping-list"
-              icon={ShoppingCart}
-              title="Shopping List"
-              description="Every recipe you've added, combined by aisle"
-              testId="me-shopping-list"
+              href="/me/profile?edit=food"
+              icon={Salad}
+              title="Food & Nutrition Goals"
+              description="Dietary needs, foods to avoid, and your nutrition goal"
+              testId="me-food-preferences"
             />
             <HubTile
               href="/me/pantry"
@@ -98,6 +119,14 @@ export default function MePage() {
               description="What you always have — skipped automatically"
               secondary
               testId="me-pantry"
+            />
+            <HubTile
+              href="/me/settings"
+              icon={Settings}
+              title="Settings"
+              description="Measurements and app preferences"
+              secondary
+              testId="me-settings"
             />
           </div>
         </section>
@@ -116,14 +145,6 @@ export default function MePage() {
               testId="me-profile"
             />
             <HubTile
-              href="/me/settings"
-              icon={Settings}
-              title="Settings"
-              description="Measurements and app preferences"
-              secondary
-              testId="me-settings"
-            />
-            <HubTile
               href="/me/subscription"
               icon={CreditCard}
               title="Subscription"
@@ -131,6 +152,25 @@ export default function MePage() {
               secondary
               testId="me-subscription"
             />
+          </div>
+        </section>
+
+        <section className="space-y-2" aria-labelledby="me-crew">
+          <h2 id="me-crew" className={cn(app.eyebrowMuted, "px-0.5")}>
+            Crew
+          </h2>
+          <div
+            className="flex min-h-[72px] items-center gap-3 rounded-2xl border border-dashed border-border/40 px-4 py-3.5"
+            aria-disabled="true"
+            data-testid="me-crew-later"
+          >
+            <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-muted/30 text-muted-foreground">
+              <Users className="h-5 w-5" aria-hidden />
+            </span>
+            <span className="min-w-0">
+              <span className="block text-sm font-semibold text-muted-foreground">Crew</span>
+              <span className="block text-xs text-muted-foreground/80">Plan and shop with your crew — coming later</span>
+            </span>
           </div>
         </section>
       </main>

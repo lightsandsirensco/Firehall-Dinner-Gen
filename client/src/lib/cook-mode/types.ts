@@ -16,6 +16,9 @@ export interface CookModeStep {
 export interface CookModeRecipe {
   title: string;
   crewSize?: number;
+  /** Recipe photo for the Cook Mode header band — never rendered behind instruction text. */
+  imageUrl?: string;
+  imageAlt?: string;
   ingredients: CookModeIngredient[];
   steps: CookModeStep[];
   /** Recipe-specific + extracted hold / interruption notes */

@@ -22,7 +22,13 @@
  */
 import Stripe from "stripe";
 import { loadProjectEnv } from "../server/lib/load-project-env.js";
-import { EXPECTED_PRICE_SPECS, priceMatchesExpectedSpec, getStripeClient } from "../server/billing/stripe-client.js";
+import {
+  EXPECTED_PRICE_SPECS,
+  FOUNDING_COUPON_SPEC,
+  couponMatchesFoundingSpec,
+  priceMatchesExpectedSpec,
+  getStripeClient,
+} from "../server/billing/stripe-client.js";
 
 loadProjectEnv();
 
@@ -138,6 +144,32 @@ async function main(): Promise<void> {
       );
     } catch (err) {
       fail(`Could not retrieve ${period} price ${priceId} in LIVE mode: ${err instanceof Error ? err.message : String(err)}`);
+    }
+  }
+
+  console.log("\n\u2500\u2500 STEP 2b: Founding offer coupon \u2500\u2500");
+  const foundingCouponId = process.env.STRIPE_COUPON_ID_FOUNDING?.trim() || "";
+  if (!foundingCouponId) {
+    warn(
+      "STRIPE_COUPON_ID_FOUNDING is not set. If billing_global_flags.founding_offer_enabled is on, annual " +
+        "checkout for new subscribers will fail closed (503) — set the coupon or switch the founding offer off first.",
+    );
+  } else {
+    try {
+      const coupon = await stripe.coupons.retrieve(foundingCouponId);
+      const result = couponMatchesFoundingSpec(coupon);
+      if (!coupon.livemode) {
+        fail(`Founding coupon ${foundingCouponId} is a TEST-mode coupon, not live.`);
+      } else if (!result.ok) {
+        fail(`Founding coupon ${foundingCouponId} does not match the founding contract: ${result.reason}`);
+      } else {
+        ok(
+          `Founding coupon ${foundingCouponId} is LIVE: $${(FOUNDING_COUPON_SPEC.amountOffCents / 100).toFixed(2)} off, ` +
+            `duration=once (first annual invoice $29.99, renewals $39.99).`,
+        );
+      }
+    } catch (err) {
+      fail(`Could not retrieve founding coupon ${foundingCouponId} in LIVE mode: ${err instanceof Error ? err.message : String(err)}`);
     }
   }
 

@@ -3,16 +3,23 @@ import { Link } from "wouter";
 import { MeSubpageShell } from "@/components/app-shell/me-subpage-shell";
 import { PlanCard } from "@/components/billing/plan-card";
 import { useAuth } from "@/lib/auth/context";
-import { useBilling, useSelectPlan, useStartProCheckout } from "@/lib/billing/hooks";
+import { useBilling, useSelectPlan, useStartProCheckout, useStartProTrial } from "@/lib/billing/hooks";
+import { proTrialStatusLabel } from "@shared/billing/pro-trial";
 import {
   trackPlanViewed,
+  trackPremiumTrialUpgradeClicked,
   trackProPaywallViewed,
   trackProPlanSelected,
   trackProUpgradeInterest,
 } from "@/lib/analytics";
 import { useToast } from "@/hooks/use-toast";
-import { PLAN_CUSTOMER_LABELS, PLANS_PAGE, type PlanBillingPeriod } from "@/lib/plans-display";
-import type { PlanCatalogEntry, PlanId } from "@shared/billing/types";
+import {
+  FOUNDING_OFFER_DISPLAY,
+  PLAN_CUSTOMER_LABELS,
+  PLANS_PAGE,
+  type PlanBillingPeriod,
+} from "@/lib/plans-display";
+import { PRO_TRIAL_DAYS, type PlanCatalogEntry, type PlanId } from "@shared/billing/types";
 import { Skeleton } from "@/components/ui/skeleton";
 
 // Customer-facing comparison is TWO choices: Free vs Firehall Meals Pro.
@@ -28,6 +35,7 @@ export default function PlansPage() {
   const billing = useBilling();
   const selectPlan = useSelectPlan();
   const startCheckout = useStartProCheckout();
+  const startTrial = useStartProTrial();
   const { toast } = useToast();
   const [plans, setPlans] = useState<PlanCatalogEntry[]>(billing.catalog);
   const [plansLoading, setPlansLoading] = useState(true);
@@ -141,6 +149,33 @@ export default function PlansPage() {
     if (planId === "hall_pro") return;
 
     if (planId === "firefighter_plus") {
+      if (billing.pro_trial_eligible) {
+        setSelecting(planId);
+        try {
+          const result = await startTrial(sourceFeature ? `plans_page_${sourceFeature}` : "plans_page");
+          if (result.ok) {
+            toast({
+              title: `Your ${PRO_TRIAL_DAYS}-day Pro trial has started`,
+              description: "No card needed — you'll go back to Free automatically when it ends.",
+            });
+          } else if (result.reason !== "sign_in_required") {
+            toast({
+              title: result.reason === "trial_used" ? "Your Pro trial was already used" : "Could not start your trial",
+              variant: result.reason === "request_failed" ? "destructive" : undefined,
+            });
+          }
+        } finally {
+          setSelecting(null);
+        }
+        return;
+      }
+      if (billing.pro_trial) {
+        trackPremiumTrialUpgradeClicked({
+          surface: "plans_page",
+          trial_status: billing.pro_trial.status,
+          days_left: billing.pro_trial.days_left,
+        });
+      }
       if (!paymentsEnabled) {
         // Real Stripe checkout isn't live yet — "Join Pro Early Access" must
         // not grant the plan or charge anyone. Record upgrade interest only.
@@ -211,7 +246,9 @@ export default function PlansPage() {
         {authenticated ? (
           <p className="text-center text-sm text-muted-foreground">
             Current plan:{" "}
-            <span className="font-medium text-foreground">{currentPlanLabel}</span>
+            <span className="font-medium text-foreground" data-testid="text-current-plan">
+              {billing.pro_trial?.status === "active" ? proTrialStatusLabel(billing.pro_trial) : currentPlanLabel}
+            </span>
           </p>
         ) : null}
 
@@ -232,14 +269,20 @@ export default function PlansPage() {
                   onBillingPeriodChange={handleBillingPeriodChange}
                   selecting={selecting}
                   paymentsEnabled={paymentsEnabled}
+                  proTrialEligible={authenticated && billing.pro_trial_eligible}
+                  onProTrial={billing.pro_trial?.status === "active"}
+                  foundingOfferEligible={billing.founding_offer_eligible}
                 />
               ))}
         </div>
 
         <p className="text-center text-xs text-muted-foreground/80 leading-relaxed max-w-lg mx-auto">
-          Firehall Meals Pro renews automatically and bills immediately at checkout — no free trial.
-          Cancel anytime from Account → Manage Billing; you keep Pro through the end of the period
-          you already paid for. See our{" "}
+          Each account can try Firehall Meals Pro free for {PRO_TRIAL_DAYS} days, once — no card needed,
+          and you go back to Free automatically when it ends. A paid Pro subscription bills immediately at
+          checkout and renews automatically; cancel anytime from Account → Manage Billing and you keep Pro
+          through the end of the period you already paid for.
+          {billing.founding_offer_eligible ? ` Founding offer on your first annual subscription: ${FOUNDING_OFFER_DISPLAY.renewalNote}` : ""}{" "}
+          See our{" "}
           <Link href="/privacy" className="text-primary hover:underline">
             Privacy Policy
           </Link>{" "}

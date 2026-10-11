@@ -5740,7 +5740,11 @@
         "lowCarb": false,
         "healthy": false,
         "estimateAvailable": true,
-        "numericFilterEligible": false
+        "calories": 845,
+        "protein": 46,
+        "carbs": 82,
+        "fat": 36,
+        "numericFilterEligible": true
       },
       "avoidTags": [
         "onions",

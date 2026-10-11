@@ -12,20 +12,20 @@
  * empty list; this component never tries to read/derive anything from it).
  */
 import { useQuery } from "@tanstack/react-query";
-import { Link, useLocation } from "wouter";
+import { Link } from "wouter";
 import { ChevronRight, Sparkles } from "lucide-react";
 import { useAuth } from "@/lib/auth/context";
-import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
+import { useFeature } from "@/lib/billing/hooks";
 import { fetchInsights } from "@/lib/insights-api";
-import { trackInsightsProTeaserClicked, trackProFeatureClicked } from "@/lib/analytics";
+import { trackInsightsProTeaserClicked } from "@/lib/analytics";
+import { useProPaywall } from "@/components/billing/pro-paywall";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 
 export function InsightsPreviewCard() {
   const { authenticated } = useAuth();
   const hasMealMemory = useFeature("meal_memory");
-  const [, setLocation] = useLocation();
-  const recordPaywall = useRecordPaywallView();
+  const { openProPaywall } = useProPaywall();
 
   const insightsQuery = useQuery({
     queryKey: ["/api/insights"],
@@ -42,9 +42,7 @@ export function InsightsPreviewCard() {
         type="button"
         onClick={() => {
           trackInsightsProTeaserClicked({ surface: "profile_preview" });
-          trackProFeatureClicked({ feature: "meal_memory", page: "/me/profile", logged_in: authenticated });
-          void recordPaywall("meal_memory", "profile_insights_teaser");
-          setLocation("/me/subscription?feature=meal_memory");
+          openProPaywall("meal_memory", "profile_insights_teaser");
         }}
         className={cn(app.cardSurface, "block w-full p-5 text-left hover-elevate active-elevate-2 touch-manipulation")}
         data-testid="insights-teaser-card"

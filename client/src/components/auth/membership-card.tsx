@@ -3,6 +3,8 @@ import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useBilling, useOpenBillingPortal } from "@/lib/billing/hooks";
 import { PLAN_DISPLAY } from "@shared/billing/types";
+import { proTrialStatusLabel } from "@shared/billing/pro-trial";
+import { trackPremiumTrialUpgradeClicked } from "@/lib/analytics";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
 
@@ -28,9 +30,13 @@ export function MembershipCard() {
   const [, navigate] = useLocation();
   const [openingPortal, setOpeningPortal] = useState(false);
 
-  const isPro = billing.effective_plan_id === "firefighter_plus";
-  const planLabel = PLAN_DISPLAY[billing.effective_plan_id]?.display_name ?? "Firehall Meals";
+  const onTrial = billing.pro_trial?.status === "active";
+  const isPro = billing.effective_plan_id === "firefighter_plus" && !onTrial;
+  const planLabel = onTrial
+    ? proTrialStatusLabel(billing.pro_trial!)
+    : PLAN_DISPLAY[billing.effective_plan_id]?.display_name ?? "Firehall Meals";
   const subscription = billing.subscription;
+  const trialEnds = onTrial ? formatDate(billing.pro_trial!.expires_at) : null;
   const renewalDate = formatDate(subscription?.current_period_end ?? subscription?.expires_at ?? null);
   const statusLabel = subscription ? STATUS_LABELS[subscription.status] : null;
 
@@ -40,8 +46,10 @@ export function MembershipCard() {
 
       <div className="flex items-center justify-between gap-3 flex-wrap">
         <div className="min-w-0">
-          <p className="text-sm font-medium text-foreground">{planLabel}</p>
-          {isPro && subscription?.cancel_at_period_end && renewalDate ? (
+          <p className="text-sm font-medium text-foreground" data-testid="text-membership-plan">{planLabel}</p>
+          {onTrial && trialEnds ? (
+            <p className="text-xs text-muted-foreground">Ends {trialEnds} · then Free, no charge</p>
+          ) : isPro && subscription?.cancel_at_period_end && renewalDate ? (
             <p className="text-xs text-muted-foreground">Cancels {renewalDate}</p>
           ) : isPro && renewalDate ? (
             <p className="text-xs text-muted-foreground">Renews {renewalDate}</p>
@@ -52,8 +60,22 @@ export function MembershipCard() {
 
         <div className="flex gap-2">
           {!isPro && (
-            <Button type="button" size="sm" onClick={() => navigate("/plans")} data-testid="button-upgrade-pro">
-              Upgrade to Pro
+            <Button
+              type="button"
+              size="sm"
+              onClick={() => {
+                if (billing.pro_trial) {
+                  trackPremiumTrialUpgradeClicked({
+                    surface: "status",
+                    trial_status: billing.pro_trial.status,
+                    days_left: billing.pro_trial.days_left,
+                  });
+                }
+                navigate("/me/subscription");
+              }}
+              data-testid="button-upgrade-pro"
+            >
+              {onTrial ? "Keep Pro" : "Upgrade to Pro"}
             </Button>
           )}
           {billing.manage_billing_available ? (

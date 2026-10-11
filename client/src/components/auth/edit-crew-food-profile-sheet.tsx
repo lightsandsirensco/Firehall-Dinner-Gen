@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useLocation } from "wouter";
 import { Loader2, Lock } from "lucide-react";
 import {
   Sheet,
@@ -14,9 +13,10 @@ import { Label } from "@/components/ui/label";
 import { ChipToggle, SingleSelectChips } from "@/components/auth/profile-chips";
 import { apiRequest } from "@/lib/queryClient";
 import { useAuth } from "@/lib/auth/context";
-import { useFeature, useRecordPaywallView } from "@/lib/billing/hooks";
+import { useFeature } from "@/lib/billing/hooks";
 import { useToast } from "@/hooks/use-toast";
-import { trackProfileUpdated, trackProFeatureClicked } from "@/lib/analytics";
+import { trackProfileUpdated } from "@/lib/analytics";
+import { useProPaywall } from "@/components/billing/pro-paywall";
 import {
   PROFILE_APPLIANCE_OPTIONS,
   PROFILE_DIETARY_OPTIONS,
@@ -26,23 +26,21 @@ import {
   PROFILE_DIFFICULTY_OPTIONS,
   PROFILE_COOK_TIME_OPTIONS,
   PROFILE_COOK_TIME_LABELS,
-  PROFILE_NUTRITION_GOAL_OPTIONS,
-  PROFILE_NUTRITION_GOAL_LABELS,
 } from "@shared/auth/constants";
 import { FOOD_PREFERENCE_DEFINITIONS } from "@shared/ingredient-preferences/definitions";
 import {
   PROFILE_NUTRITION_GOALS,
   PROFILE_NUTRITION_GOAL_KEY_LABELS,
+  PROFILE_NUTRITION_GOAL_KEY_MICROCOPY,
   PROFILE_NUTRITION_GOALS_DESCRIPTION,
-  sanitizeProfileNutritionGoals,
-  toggleProfileNutritionGoal,
+  profileNutritionGoalToList,
+  sanitizeProfileNutritionGoal,
   type ProfileNutritionGoalKey,
 } from "@shared/nutrition/profile-goals";
 
 type SpiceLevel = (typeof PROFILE_SPICE_OPTIONS)[number];
 type Difficulty = (typeof PROFILE_DIFFICULTY_OPTIONS)[number];
 type CookTime = (typeof PROFILE_COOK_TIME_OPTIONS)[number];
-type NutritionGoal = (typeof PROFILE_NUTRITION_GOAL_OPTIONS)[number];
 
 interface EditCrewFoodProfileSheetProps {
   open: boolean;
@@ -50,12 +48,11 @@ interface EditCrewFoodProfileSheetProps {
 }
 
 export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodProfileSheetProps) {
-  const { preferences, refresh, authenticated } = useAuth();
+  const { preferences, refresh } = useAuth();
   const { toast } = useToast();
-  const [, setLocation] = useLocation();
+  const { openProPaywall } = useProPaywall();
   const hasFoodPreferences = useFeature("ingredient_preferences");
   const hasNutritionGoals = useFeature("nutrition_goals");
-  const recordPaywall = useRecordPaywallView();
   const [saving, setSaving] = useState(false);
 
   const [dietary, setDietary] = useState<string[]>([]);
@@ -66,8 +63,7 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
   const [spiceLevel, setSpiceLevel] = useState<SpiceLevel | null>(null);
   const [difficulty, setDifficulty] = useState<Difficulty | null>(null);
   const [cookTime, setCookTime] = useState<CookTime | null>(null);
-  const [nutritionGoal, setNutritionGoal] = useState<NutritionGoal | null>(null);
-  const [nutritionGoals, setNutritionGoals] = useState<ProfileNutritionGoalKey[]>([]);
+  const [nutritionGoal, setNutritionGoal] = useState<ProfileNutritionGoalKey | null>(null);
 
   useEffect(() => {
     if (!open) return;
@@ -79,8 +75,7 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
     setSpiceLevel((preferences?.spice_level as SpiceLevel | null) ?? null);
     setDifficulty((preferences?.meal_difficulty as Difficulty | null) ?? null);
     setCookTime((preferences?.cook_time_preference as CookTime | null) ?? null);
-    setNutritionGoal((preferences?.nutrition_goal as NutritionGoal | null) ?? null);
-    setNutritionGoals(sanitizeProfileNutritionGoals(preferences?.nutrition_goals ?? []));
+    setNutritionGoal(sanitizeProfileNutritionGoal(preferences?.nutrition_goals ?? []));
   }, [open, preferences]);
 
   const toggleItem = (list: string[], value: string, setter: (v: string[]) => void) => {
@@ -96,15 +91,14 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
         // Server re-checks Pro entitlement independently and forces this back
         // to [] for a non-Pro account regardless of what's sent — see
         // server/auth/auth-store.ts.
-        excluded_ingredients: foodsToAvoid,
+        ...(hasFoodPreferences ? { excluded_ingredients: foodsToAvoid } : {}),
         favorite_cuisines: cuisines,
         appliance_preferences: appliances,
         spice_level: spiceLevel,
         meal_difficulty: difficulty,
         cook_time_preference: cookTime,
-        nutrition_goal: nutritionGoal,
         // Entitlement re-checked server-side, same as excluded_ingredients.
-        ...(hasNutritionGoals ? { nutrition_goals: nutritionGoals } : {}),
+        ...(hasNutritionGoals ? { nutrition_goals: profileNutritionGoalToList(nutritionGoal) } : {}),
       });
       await refresh();
       trackProfileUpdated();
@@ -178,12 +172,7 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
             ) : (
               <button
                 type="button"
-                onClick={() => {
-                  trackProFeatureClicked({ feature: "foods_to_avoid", page: "/account", logged_in: authenticated });
-                  void recordPaywall("ingredient_preferences", "account_preferences");
-                  onOpenChange(false);
-                  setLocation("/me/subscription?feature=foods_to_avoid");
-                }}
+                onClick={() => openProPaywall("foods_to_avoid", "edit_food_profile")}
                 className="w-full rounded-md border border-border/40 bg-muted/20 px-3 py-2 text-left text-xs text-muted-foreground"
                 data-testid="account-foods-to-avoid-locked"
               >
@@ -221,19 +210,9 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
             />
           </div>
 
-          <div className="space-y-2">
-            <Label>Default nutrition goal</Label>
-            <SingleSelectChips
-              options={PROFILE_NUTRITION_GOAL_OPTIONS}
-              value={nutritionGoal}
-              onChange={setNutritionGoal}
-              labels={PROFILE_NUTRITION_GOAL_LABELS}
-            />
-          </div>
-
-          <div className="space-y-2">
+          <div className="space-y-2" data-testid="account-nutrition-goal">
             <div className="flex items-center gap-1.5">
-              <Label>Nutrition Goals</Label>
+              <Label>Nutrition Goal</Label>
               {!hasNutritionGoals && (
                 <span className="inline-flex items-center gap-0.5 text-[9px] font-bold uppercase tracking-wide text-primary">
                   <Lock className="h-2.5 w-2.5" aria-hidden />
@@ -243,30 +222,35 @@ export function EditCrewFoodProfileSheet({ open, onOpenChange }: EditCrewFoodPro
             </div>
             <p className="text-xs text-muted-foreground">{PROFILE_NUTRITION_GOALS_DESCRIPTION}</p>
             {hasNutritionGoals ? (
-              <div className="flex flex-wrap gap-2">
+              <>
+                <SingleSelectChips
+                  options={PROFILE_NUTRITION_GOALS}
+                  value={nutritionGoal}
+                  onChange={setNutritionGoal}
+                  labels={PROFILE_NUTRITION_GOAL_KEY_LABELS}
+                />
+                {nutritionGoal && (
+                  <p className="text-[11px] text-muted-foreground/80" data-testid="text-nutrition-goal-microcopy">
+                    {PROFILE_NUTRITION_GOAL_KEY_MICROCOPY[nutritionGoal]}
+                  </p>
+                )}
+              </>
+            ) : (
+              <div className="flex flex-wrap gap-2" data-testid="account-nutrition-goals-locked">
                 {PROFILE_NUTRITION_GOALS.map((goal) => (
-                  <ChipToggle
+                  <button
                     key={goal}
-                    label={PROFILE_NUTRITION_GOAL_KEY_LABELS[goal]}
-                    selected={nutritionGoals.includes(goal)}
-                    onToggle={() => setNutritionGoals((prev) => toggleProfileNutritionGoal(prev, goal))}
-                  />
+                    type="button"
+                    onClick={() => openProPaywall("nutrition_goals", `edit_food_profile_goal_${goal}`)}
+                    className="inline-flex min-h-9 items-center gap-1 rounded-full border border-border/40 bg-muted/20 px-3 py-1.5 text-xs font-medium text-muted-foreground/80"
+                    aria-label={`${PROFILE_NUTRITION_GOAL_KEY_LABELS[goal]} — Firehall Meals Pro`}
+                    data-testid={`account-nutrition-goal-locked-${goal}`}
+                  >
+                    <Lock className="h-3 w-3 shrink-0" aria-hidden />
+                    {PROFILE_NUTRITION_GOAL_KEY_LABELS[goal]}
+                  </button>
                 ))}
               </div>
-            ) : (
-              <button
-                type="button"
-                onClick={() => {
-                  trackProFeatureClicked({ feature: "nutrition_goals", page: "/account", logged_in: authenticated });
-                  void recordPaywall("nutrition_goals", "account_preferences");
-                  onOpenChange(false);
-                  setLocation("/me/subscription?feature=nutrition_goals");
-                }}
-                className="w-full rounded-md border border-border/40 bg-muted/20 px-3 py-2 text-left text-xs text-muted-foreground"
-                data-testid="account-nutrition-goals-locked"
-              >
-                Upgrade to Firehall Meals Pro to shape recommendations around your nutrition goals.
-              </button>
             )}
           </div>
 

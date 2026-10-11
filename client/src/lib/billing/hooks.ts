@@ -237,6 +237,44 @@ export function useStartProCheckout() {
   );
 }
 
+/**
+ * Starts the account's one no-card personal Pro trial (explicit paywall start).
+ * Works while payments are disabled — it never touches checkout.
+ */
+export function useStartProTrial() {
+  const { authenticated, openSignIn, refresh } = useAuth();
+
+  return useCallback(
+    async (paywallSource: string) => {
+      if (!authenticated) {
+        openSignIn();
+        return { ok: false as const, reason: "sign_in_required" as const };
+      }
+      try {
+        await apiRequest("POST", "/api/billing/trial/start", { paywall_source: paywallSource });
+        await refresh();
+        return { ok: true as const };
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "";
+        await refresh();
+        if (message.includes("trial_used")) return { ok: false as const, reason: "trial_used" as const };
+        if (message.includes("already_pro")) return { ok: false as const, reason: "already_pro" as const };
+        return { ok: false as const, reason: "request_failed" as const };
+      }
+    },
+    [authenticated, openSignIn, refresh],
+  );
+}
+
+/** Records that a trial notice was shown, so it never shows again on any device. */
+export async function markProTrialNoticeSeen(notice: "ending" | "expired"): Promise<void> {
+  try {
+    await apiRequest("POST", "/api/billing/trial/notice", { notice });
+  } catch {
+    /* best-effort — worst case the notice shows once more */
+  }
+}
+
 /** Opens the Stripe Customer Portal for a Pro subscriber to manage/cancel billing. */
 export function useOpenBillingPortal() {
   return useCallback(async () => {

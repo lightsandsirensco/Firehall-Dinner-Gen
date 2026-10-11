@@ -52,6 +52,17 @@
             "note": "Use a plant-based butter/margarine."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 299,
+        "protein": 11,
+        "carbs": 44,
+        "fat": 10,
+        "numericFilterEligible": true
       }
     },
     {
@@ -89,6 +100,17 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 306,
+        "protein": 14,
+        "carbs": 35,
+        "fat": 12,
+        "numericFilterEligible": true
       }
     },
     {
@@ -128,6 +150,17 @@
           "vegan": false
         },
         "adaptable": []
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": false,
+        "estimateAvailable": true,
+        "calories": 743,
+        "protein": 29,
+        "carbs": 98,
+        "fat": 28,
+        "numericFilterEligible": true
       }
     },
     {
@@ -174,6 +207,17 @@
             "note": "Use a certified gluten-free bun/bread and toast on a separate, clean surface."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 430,
+        "protein": 24,
+        "carbs": 43,
+        "fat": 18,
+        "numericFilterEligible": true
       }
     },
     {
@@ -222,6 +266,17 @@
             "note": "Use oat, almond, or soy milk (check tree-nut/soy status of the substitute). Use a plant-based butter/margarine. Use a plant-based (pea/soy/rice) protein powder."
           }
         ]
+      },
+      "nutritionSummary": {
+        "highProtein": false,
+        "lowCarb": false,
+        "healthy": true,
+        "estimateAvailable": true,
+        "calories": 412,
+        "protein": 13,
+        "carbs": 62,
+        "fat": 13,
+        "numericFilterEligible": true
       }
     }
   ]

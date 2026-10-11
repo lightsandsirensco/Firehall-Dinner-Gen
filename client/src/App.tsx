@@ -1,6 +1,6 @@
 import { Suspense, useEffect, useRef } from "react";
 import { lazyWithRetry } from "@/lib/lazy-with-retry";
-import { Switch, Route, useLocation, Redirect } from "wouter";
+import { Switch, Route, useLocation, useSearch, Redirect } from "wouter";
 import { prefetchLikelyRoutes } from "@/lib/route-prefetch";
 import { trackAnalyticsPageView } from "@/lib/analytics-deferred";
 import { shouldShowAppShell } from "@/lib/app-nav";
@@ -10,6 +10,8 @@ import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { ProPaywallProvider } from "@/components/billing/pro-paywall";
+import { ProTrialNotices } from "@/components/billing/pro-trial-status";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { HallFeedbackProvider } from "@/lib/hall-feedback/context";
 import { AuthProvider } from "@/lib/auth/context";
@@ -17,7 +19,6 @@ import { HallMembershipProvider } from "@/lib/hall-membership/context";
 import { CloudSyncProvider } from "@/lib/sync/provider";
 import { SignInSheet } from "@/components/auth/sign-in-sheet";
 import { AuthCompleteHandler } from "@/components/auth/auth-complete-handler";
-import { OnboardingGate } from "@/components/onboarding/onboarding-gate";
 import { MeasurementSystemProvider } from "@/lib/measurement-preference";
 import { HallFeedbackShell } from "@/components/hall-feedback/hall-feedback-shell";
 import { PwaInstallPrompt } from "@/components/pwa/pwa-install-prompt";
@@ -69,7 +70,6 @@ const FirefighterRedLeadRecipePage = lazyWithRetry(() => import("@/pages/firefig
 const TopRatedRecipesPage = lazyWithRetry(() => import("@/pages/top-rated-recipes-page"));
 const HallOfFamePage = lazyWithRetry(() => import("@/pages/hall-of-fame-page"));
 const HallPrivateBetaPage = lazyWithRetry(() => import("@/pages/hall-private-beta-page"));
-const OnboardingHallPage = lazyWithRetry(() => import("@/pages/onboarding-hall-page"));
 const AccountPage = lazyWithRetry(() => import("@/pages/account-page"));
 const PlansPage = lazyWithRetry(() => import("@/pages/plans-page"));
 const AdminBillingPage = lazyWithRetry(() => import("@/pages/admin-billing"));
@@ -102,6 +102,11 @@ function RetiredGuideRedirectOr({ slug }: { slug: string }) {
   return retired.target ? <Redirect to={`/guides/${retired.target}`} /> : <NotFound />;
 }
 
+function RedirectKeepingSearch({ to }: { to: string }) {
+  const search = useSearch();
+  return <Redirect to={search ? `${to}?${search}` : to} replace />;
+}
+
 function AppRoutes() {
   const [location] = useLocation();
 
@@ -128,10 +133,13 @@ function AppRoutes() {
       <Route path="/me/subscription" component={PlansPage} />
       <Route path="/hall/settings">{() => <Redirect to="/hall" />}</Route>
       <Route path="/hall/history">{() => <Redirect to="/hall" />}</Route>
-      <Route path="/onboarding/hall" component={OnboardingHallPage} />
+      {/* Retired — the hall question led to the private-beta /hall. Onboarding now starts from "Plan my shift". */}
+      <Route path="/onboarding/hall">{() => <Redirect to="/shift" replace />}</Route>
       <Route path="/generator" component={Generator} />
-      <Route path="/shift-planner" component={ShiftPlannerPage} />
-      <Route path="/shift-planner/shop" component={ShiftListPage} />
+      <Route path="/shift" component={ShiftPlannerPage} />
+      <Route path="/list" component={ShiftListPage} />
+      <Route path="/shift-planner">{() => <RedirectKeepingSearch to="/shift" />}</Route>
+      <Route path="/shift-planner/shop">{() => <Redirect to="/list" replace />}</Route>
       <Route path="/faq" component={FaqPage} />
       <Route path="/about" component={AboutPage} />
       <Route path="/privacy" component={PrivacyPage} />
@@ -285,6 +293,7 @@ function App() {
             <HallMembershipProvider>
             <HallFeedbackProvider>
               <TooltipProvider>
+              <ProPaywallProvider>
                 <SkipToContent />
                 <Toaster />
                 <PwaOfflineBanner />
@@ -292,8 +301,9 @@ function App() {
                 <PwaInstallPrompt />
                 <AuthCompleteHandler />
                 <SignInSheet />
-                <OnboardingGate />
                 <HallFeedbackShell />
+                <ProTrialNotices />
+              </ProPaywallProvider>
               </TooltipProvider>
             </HallFeedbackProvider>
             </HallMembershipProvider>

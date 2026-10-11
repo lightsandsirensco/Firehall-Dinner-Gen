@@ -16,7 +16,12 @@ import {
   type FeedbackTag,
 } from "@shared/meal-history/types";
 import { submitMealFeedback } from "@/lib/meal-history-api";
-import { trackMealFeedbackTagSelected, trackMealMakeAgainSelected, trackMealRated } from "@/lib/analytics";
+import {
+  trackMealFeedbackTagSelected,
+  trackMealMakeAgainSelected,
+  trackMealNoteAdded,
+  trackMealRated,
+} from "@/lib/analytics";
 import { cn } from "@/lib/utils";
 
 interface MealFeedbackSheetProps {
@@ -83,13 +88,17 @@ export function MealFeedbackSheet({
       return;
     }
     setSaving(true);
+    const trimmedNote = note.trim();
     try {
       await submitMealFeedback(entryId, {
         rating: (rating as 1 | 2 | 3 | 4 | 5 | null) ?? undefined,
         make_again: makeAgain ?? undefined,
         feedback_tags: tags.length > 0 ? tags : undefined,
-        note: note.trim() ? note.trim() : undefined,
+        note: trimmedNote ? trimmedNote : undefined,
       });
+      if (trimmedNote && trimmedNote !== (initialNote ?? "").trim()) {
+        trackMealNoteAdded({ recipe_slug: recipeSlug, note_length: trimmedNote.length, meal_occasion: mealOccasion });
+      }
       onSaved?.();
     } catch {
       /* best-effort — the meal is already logged regardless of feedback save */

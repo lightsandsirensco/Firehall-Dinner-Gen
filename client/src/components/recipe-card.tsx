@@ -335,9 +335,6 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
         if (step === "save_meal" || isOnboardingMode()) {
           markFirstMealSaved(auth.user.user_id, signals);
           trackPersonalOnboardingStepCompleted("save_meal");
-          if (isOnboardingMode() && result.saved) {
-            window.setTimeout(() => navigate("/me/profile?onboarding=1"), 900);
-          }
         }
       }
       setTimeout(() => setShowConfirm(false), 2500);

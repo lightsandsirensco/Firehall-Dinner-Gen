@@ -20,7 +20,8 @@ import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
 import { BrandLogo } from "@/components/brand/brand-logo";
 import { getSavedCount, SAVED_MEALS_CHANGED_EVENT } from "@/lib/saved-meals";
 import { useAuth } from "@/lib/auth/context";
-import { HOME, TONIGHT, shouldShowAppShell } from "@/lib/app-nav";
+import { HOME, SHIFT, TONIGHT, shouldShowAppShell } from "@/lib/app-nav";
+import { useSignedInNav } from "@/hooks/use-signed-in-nav";
 
 export type SiteHeaderActivePage =
   | "home"
@@ -43,16 +44,20 @@ interface SiteHeaderProps {
 }
 
 /** Map marketing header keys → app chrome when public shell is visible. */
-function appChromeForPage(activePage: SiteHeaderActivePage): {
+function appChromeForPage(activePage: SiteHeaderActivePage, signedIn: boolean): {
   title: string;
   parentHref?: string;
   parentLabel?: string;
 } {
   switch (activePage) {
     case "generator":
-      return { title: "Pick", parentHref: TONIGHT, parentLabel: "Tonight" };
+      return signedIn
+        ? { title: "Pick Tonight", parentHref: SHIFT, parentLabel: "Shift" }
+        : { title: "Pick", parentHref: TONIGHT, parentLabel: "Tonight" };
     case "wheel":
-      return { title: "Wheel", parentHref: TONIGHT, parentLabel: "Tonight" };
+      return signedIn
+        ? { title: "Wheel", parentHref: "/explore", parentLabel: "Explore" }
+        : { title: "Wheel", parentHref: TONIGHT, parentLabel: "Tonight" };
     case "explore":
       return { title: "Explore" };
     case "guides":
@@ -87,6 +92,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
   const accountInitial = accountLabel.trim().charAt(0).toUpperCase() || "F";
   const [badgeCount, setBadgeCount] = useState(() => favCount ?? getSavedCount());
   const inAppShell = shouldShowAppShell(location);
+  const signedInNav = useSignedInNav();
   // The logo and "Home" nav item always go to the one true Home — the landing page.
   const homeHref = HOME;
 
@@ -103,7 +109,7 @@ export function SiteHeader({ activePage, favCount }: SiteHeaderProps) {
 
   /** Inside the app shell: one chrome only — brand → Home, crumbs, Home chip. No duplicate marketing nav. */
   if (inAppShell) {
-    const chrome = appChromeForPage(activePage);
+    const chrome = appChromeForPage(activePage, signedInNav);
     return (
       <AppTopBar
         title={chrome.title}

@@ -1,5 +1,7 @@
 /**
- * Personal onboarding — Generate → Save → Profile → Hall (optional).
+ * Personal onboarding progress — Generate → Save → Profile, tracked for the
+ * in-page OnboardingBanner only. Nothing redirects on it: signed-in onboarding
+ * is the schedule setup behind "Plan my shift" (./schedule-onboarding.ts).
  */
 
 import { getSavedCount } from "@/lib/saved-meals";
@@ -168,21 +170,6 @@ export function markProfileBuilt(
   return writePersonalOnboardingProgress(userId, { profile_built: true }, signals);
 }
 
-export function markWorksAtFirehall(
-  userId: string,
-  worksAtFirehall: boolean,
-  signals?: PersonalOnboardingSignals,
-): PersonalOnboardingProgress {
-  return writePersonalOnboardingProgress(
-    userId,
-    {
-      works_at_firehall: worksAtFirehall,
-      status: worksAtFirehall ? "pending" : "completed",
-    },
-    signals,
-  );
-}
-
 export function markHallConnectSkipped(
   userId: string,
   signals?: PersonalOnboardingSignals,
@@ -263,105 +250,6 @@ export function personalOnboardingStepNumber(step: PersonalOnboardingStep): numb
     case "completed":
       return 5;
   }
-}
-
-export function onboardingPathForStep(step: PersonalOnboardingStep): string {
-  switch (step) {
-    case "generate_meal":
-    case "save_meal":
-    case "profile":
-    case "hall_question":
-    case "completed":
-      // Tonight-first — momentum on the personalized dashboard, not a forced funnel.
-      return "/tonight";
-    case "connect_hall":
-      return "/tonight";
-  }
-}
-
-export function isPathAllowedForOnboardingStep(
-  location: string,
-  step: PersonalOnboardingStep,
-): boolean {
-  const path = location.split("?")[0];
-
-  // Always allow the Tonight dashboard and workspace switch — never trap users.
-  if (path === "/tonight" || path === "/home" || path === "/onboarding/hall") return true;
-
-  switch (step) {
-    case "generate_meal":
-    case "save_meal":
-      return (
-        path === "/generator" ||
-        path === "/explore" ||
-        path === "/wheel" ||
-        path === "/classics-wheel" ||
-        path.startsWith("/recipes")
-      );
-    case "profile":
-      return path === "/me/profile" || path === "/me" || path.startsWith("/me/");
-    case "hall_question":
-      return path === "/onboarding/hall" || path.startsWith("/hall");
-    case "connect_hall":
-      return (
-        path === "/hall/join" ||
-        path === "/hall/welcome" ||
-        path === "/hall/features" ||
-        path === "/hall" ||
-        path.startsWith("/hall/")
-      );
-    case "completed":
-      return true;
-  }
-}
-
-/** Soft gate: only nudge incomplete users back to Home from dead-end forced paths. */
-export function shouldSoftRedirectOnboarding(
-  location: string,
-  step: PersonalOnboardingStep,
-): boolean {
-  if (step === "completed") return false;
-  return !isPathAllowedForOnboardingStep(location, step);
-}
-
-const MARKETING_PATH_PREFIXES = [
-  "/guides",
-  "/blog",
-  "/recipes",
-  // Shop (storefront + admin's own "Preview Product" link) must always be
-  // reachable — a signed-in user mid-onboarding was otherwise silently
-  // bounced to /tonight before ever seeing a product page or checkout.
-  "/shop",
-  "/smoothies",
-  "/breakfast",
-  "/families",
-  "/package",
-  "/categories",
-  "/firefighter",
-  "/firehouse",
-  "/fire-station",
-  "/healthy-firefighter",
-  "/performance-fuel",
-  "/top-rated-recipes",
-  "/hall-of-fame",
-  "/vote",
-];
-
-const MARKETING_EXACT = new Set([
-  "/",
-  "/about",
-  "/faq",
-  "/pizza",
-  "/firefighter-red-lead-recipe",
-]);
-
-export function shouldEnforcePersonalOnboarding(location: string, authenticated = false): boolean {
-  const path = location.split("?")[0];
-  if (path === "/" && authenticated) return true;
-  if (path.startsWith("/admin")) return false;
-  if (MARKETING_EXACT.has(path)) return false;
-  if (MARKETING_PATH_PREFIXES.some((prefix) => path.startsWith(prefix))) return false;
-  return true;
 }
 
 export function shouldShowPersonalOnboardingFunnel(userId: string): boolean {

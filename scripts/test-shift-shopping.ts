@@ -64,6 +64,8 @@ function makeDeps(s: PersonalSchedule): ShiftListDeps {
     loadSchedule: async () => ({ schedule: s, overrides: [], mealPreferences: {} }),
     resolveRecipe: resolvePlannedRecipe,
     isSelectableSlug: (slug) => resolvePlannedRecipe(slug) != null,
+    canPlanAhead: async () => false,
+    canRunItBack: async () => false,
     now: () => NOW,
   };
   return { plan, lists: createMemoryShiftListRepo(), resolveShoppingRecipe };

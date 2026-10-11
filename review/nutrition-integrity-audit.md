@@ -1,6 +1,6 @@
 # Nutrition Integrity Audit — Firehall Meals
 
-Generated: 2026-09-26T19:27:10.208Z
+Generated: 2026-10-11T14:16:14.084Z
 Mode: **audit**
 
 ## Executive summary
@@ -10,12 +10,12 @@ Crew size changes ingredient quantities on recipe pages; **nutrition does not sc
 
 | Metric | Value |
 |--------|------:|
-| **Total recipes audited** | 467 |
-| **PASS** | 299 |
+| **Total recipes audited** | 462 |
+| **PASS** | 294 |
 | **FAIL** | 155 |
 | Withheld (estimate coming soon) | 13 |
 | Recipes fixed this run | 0 |
-| **Nutrition Accuracy %** (pass ÷ recipes with displayed macros) | **65.9%** |
+| **Nutrition Accuracy %** (pass ÷ recipes with displayed macros) | **65.5%** |
 
 Crew-size calculation invariant (engine): PASS
 
@@ -25,7 +25,7 @@ Crew-size calculation invariant (engine): PASS
 |---------|--------:|-----:|-----:|---------:|
 | golden 100 | 104 | 51 | 53 | 0 |
 | hall expansion | 138 | 78 | 60 | 0 |
-| performance meals | 71 | 68 | 3 | 0 |
+| performance meals | 66 | 63 | 3 | 0 |
 | breakfast | 79 | 68 | 11 | 0 |
 | bbq grill | 45 | 24 | 21 | 0 |
 | pizza night | 20 | 0 | 7 | 13 |
@@ -36,7 +36,7 @@ Crew-size calculation invariant (engine): PASS
 | Issue | Count |
 |-------|------:|
 | Suspicious calories | 93 |
-| Suspicious protein | 71 |
+| Suspicious protein | 77 |
 | Suspicious carbs | 0 |
 | Suspicious fat | 0 |
 | UI shows zero macros | 0 |
@@ -123,6 +123,12 @@ _…and 43 more._
 - `spicy-tomato-bisque-grilled-brie-toast` — 625 cal · 16g P · 74g C · 31g F
 - `steak-sandwiches` — 1400 cal · 105g P · 54g C · 84g F
 - `texas-beef-ribs` — 859 cal · 89g P · 1g C · 58g F
+- `classic-poutine-feed-crew` — 680 cal · 18g P · 72g C · 36g F
+- `firehouse-dense-bean-salad` — 390 cal · 19g P · 46g C · 16g F
+- `firehouse-lentil-chili` — 272 cal · 14g P · 40g C · 7g F
+- `pork-belly-burnt-ends` — 580 cal · 18g P · 24g C · 48g F
+- `smoked-sausage-platter` — 480 cal · 22g P · 28g C · 32g F
+- `southwest-black-bean-corn-bowls` — 458 cal · 15g P · 63g C · 19g F
 - `baked-falafel-hall-bowls` — 644 cal · 17g P · 89g C · 26g F
 - `caprese-chicken-bake` — 795 cal · 93g P · 7g C · 42g F
 - `hummus-chicken-platter` — 716 cal · 85g P · 32g C · 27g F
@@ -144,14 +150,8 @@ _…and 43 more._
 - `cast-iron-steak-fajita-sizzlers` — 1053 cal · 78g P · 74g C · 50g F
 - `charred-broccolini-lemon-tray` — 148 cal · 5g P · 14g C · 9g F
 - `firehall-antipasto-pasta-salad` — 524 cal · 21g P · 71g C · 16g F
-- `firehall-street-elote-cups` — 227 cal · 7g P · 26g C · 13g F
-- `flat-top-philly-cheesesteaks-crew` — 1077 cal · 78g P · 75g C · 50g F
-- `grilled-chicken-pesto-panini-crew` — 952 cal · 98g P · 37g C · 44g F
-- `grilled-peach-burrata-salad` — 105 cal · 7g P · 4g C · 7g F
-- `hickory-smoked-chicken-breast` — 533 cal · 85g P · 5g C · 17g F
-- `loaded-ranch-potato-salad-crew` — 575 cal · 22g P · 65g C · 25g F
 
-_…and 21 more._
+_…and 27 more._
 
 ## Recipes with suspicious carbs
 

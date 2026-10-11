@@ -138,6 +138,8 @@ export const ANALYTICS_EVENT_TYPES = [
   "meal_rated",
   "meal_make_again_selected",
   "meal_feedback_tag_selected",
+  "meal_note_added",
+  "history_paywall_viewed",
   "progress_page_viewed",
   "goal_created",
   "goal_completed",
@@ -149,6 +151,11 @@ export const ANALYTICS_EVENT_TYPES = [
   "history_personalization_disabled",
   "personalized_recipe_selected",
   "schedule_setup_started",
+  /** Progressive onboarding — the short schedule setup launched from "Plan my shift" on /shift. */
+  "schedule_onboarding_started",
+  "schedule_onboarding_completed",
+  /** params: reason (cancelled | navigated_away | page_hidden), last_step (1–4). */
+  "schedule_onboarding_abandoned",
   "schedule_created",
   "schedule_updated",
   "extra_shift_added",
@@ -163,6 +170,22 @@ export const ANALYTICS_EVENT_TYPES = [
   "shift_list_opened",
   "shift_list_item_checked",
   "shift_list_manual_item_added",
+  "future_shift_viewed",
+  "plan_ahead_paywall_viewed",
+  "future_shift_plan_created",
+  "run_it_back_clicked",
+  "run_it_back_completed",
+  "run_it_back_paywall_viewed",
+  /** Personal Pro paywall — params: feature, trigger, paywall_source. */
+  "premium_feature_clicked",
+  "premium_paywall_viewed",
+  /** Personal Pro reverse trial. started/expired are recorded server-side (once per account). */
+  "premium_trial_started",
+  "premium_trial_expired",
+  /** Client — once per remaining-days value while the trial is active. */
+  "premium_trial_day_viewed",
+  /** Client — "Keep Pro" / subscribe tapped from a trial surface (status, ending or ended notice, paywall). */
+  "premium_trial_upgrade_clicked",
 ] as const;
 
 export type AnalyticsEventType = (typeof ANALYTICS_EVENT_TYPES)[number];

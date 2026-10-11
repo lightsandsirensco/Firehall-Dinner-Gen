@@ -111,10 +111,31 @@ export interface MealHistoryEntry {
   feedback_at: string | null;
 }
 
+/** Premium recall — a recipe the crew rated highly or wanted again, aggregated over full history. */
+export interface MealHistoryFavorite {
+  recipe_slug: string;
+  title: string | null;
+  recipe_path: string | null;
+  hero_image: string | null;
+  times_cooked: number;
+  last_cooked_at: string;
+  best_rating: (1 | 2 | 3 | 4 | 5) | null;
+}
+
 export interface MealHistoryListResponse {
-  /** False when the signed-in user does not currently have the `meal_memory` entitlement. */
+  /** False when the signed-in user cannot log durable history at all (e.g. guest session). */
   entitled: boolean;
+  tier: "none" | "free" | "premium";
+  /** Visible window in days, or null for full history. */
+  window_days: number | null;
+  /** Visible entries, newest first, paged by `offset`/`limit`. */
   entries: MealHistoryEntry[];
+  /** Whether more visible entries exist past this page. */
+  has_more: boolean;
+  /** Stored entries older than the visible window — never deleted, shown again on upgrade. */
+  locked_count: number;
+  /** Premium only; empty otherwise. */
+  favorites: MealHistoryFavorite[];
 }
 
 export interface MealHistoryCreateResponse {
@@ -122,7 +143,7 @@ export interface MealHistoryCreateResponse {
   entry: MealHistoryEntry;
 }
 
-/** POST /api/meal-history/import — `entitled: false` means nothing was written (retry after upgrade). */
+/** POST /api/meal-history/import — `entitled: false` means nothing was written (e.g. guest session). */
 export interface MealHistoryImportResponse {
   entitled: boolean;
   imported: number;

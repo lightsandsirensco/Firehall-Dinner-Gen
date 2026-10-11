@@ -2,12 +2,15 @@
  * Backfills device-local cooked meals (lib/hall-history-store) into the
  * canonical Postgres user_meal_history via POST /api/meal-history/import.
  *
- * Local history is never modified or deleted — it stays as the offline /
- * Free-tier cache. The server dedupes on (user_id, client_entry_id), so a
- * retry or a second device can never double-insert; the per-account sent-id
- * set below only avoids re-sending entries the server already accepted.
+ * Runs for every signed-in user; entries older than the Free visible window
+ * are stored too (hidden until upgrade). Local history is never modified or
+ * deleted — it stays as the offline cache. The server dedupes on
+ * (user_id, client_entry_id), so a retry or a second device can never
+ * double-insert; the per-account sent-id set below only avoids re-sending
+ * entries the server already accepted.
  */
 import { getHallHistoryEntries } from "@/lib/hall-history-store";
+import { queryClient } from "@/lib/queryClient";
 import { postMealHistoryImport, type MealHistoryImportRequestEntry } from "@/lib/meal-history-api";
 import { MEAL_HISTORY_IMPORT_MAX } from "@shared/meal-history/schema";
 
@@ -78,6 +81,7 @@ export async function importLocalMealHistory(userId: string): Promise<number> {
     for (const entry of pending) sent.add(entry.client_entry_id);
     const stillLocal = new Set(getHallHistoryEntries().map((e) => e.id));
     writeSentIds(userId, new Set([...sent].filter((id) => stillLocal.has(id))));
+    if (result.imported > 0) void queryClient.invalidateQueries({ queryKey: ["/api/meal-history"] });
     return result.imported;
   } catch {
     attemptedThisSession.delete(userId);

@@ -196,12 +196,8 @@ export interface SimplifiedGeneratorFilters {
   appliances: SimplifiedApplianceId[];
   healthiness: HealthinessPreference;
   /**
-   * Nutrition Personalization — session-overridable Nutrition Goal (8 modes).
-   * Defaults to the signed-in user's saved profile `nutrition_goal` (see
-   * resolveGeneratorFilters in shared/generator-personalization.ts) but never
-   * writes back to the profile unless the user explicitly saves it there.
-   * `healthiness` above is kept in sync via `nutritionGoalToHealthiness` so
-   * existing relaxation-message/category scoring keeps working unchanged.
+   * Legacy session nutrition mode — always "no_preference" now. Nutrition goals
+   * are the Pro profile goal (shared/nutrition/profile-goals.ts), read server-side.
    */
   nutrition_goal: NutritionGoal;
   allergens: SimplifiedAllergen[];
@@ -365,9 +361,6 @@ export function formatGeneratorSummary(filters: SimplifiedGeneratorFilters): str
     `Avoid: ${formatAllergenSummary(filters.allergens)}`,
     `Diet: ${formatDietSummary(filters.diets)}`,
   ];
-  if (filters.nutrition_goal && filters.nutrition_goal !== "no_preference") {
-    lines.push(`Nutrition: ${NUTRITION_GOAL_LABELS[filters.nutrition_goal]}`);
-  }
   // Only shown once set — keeps the summary unchanged for the vast majority of
   // (free or Pro-but-unused) sessions with no foods-to-avoid preference set.
   if (filters.foodsToAvoid.length > 0) {
@@ -425,13 +418,6 @@ export function migrateLegacyFilterState(legacy: Record<string, unknown>): Simpl
     ? legacy.diets.filter((d): d is SimplifiedDiet => SIMPLIFIED_DIETS.includes(d as SimplifiedDiet))
     : [];
 
-  const legacyGoal = String(legacy.nutrition_goal || "");
-  const nutrition_goal: NutritionGoal = (NUTRITION_GOAL_OPTIONS as readonly string[]).includes(
-    legacyGoal,
-  )
-    ? (legacyGoal as NutritionGoal)
-    : defaults.nutrition_goal;
-
   return {
     crew_bucket,
     time_window: defaults.time_window,
@@ -439,7 +425,7 @@ export function migrateLegacyFilterState(legacy: Record<string, unknown>): Simpl
     protein,
     appliances: [...new Set(appliances)],
     healthiness,
-    nutrition_goal,
+    nutrition_goal: defaults.nutrition_goal,
     allergens,
     diets,
     // No legacy shape ever carried this — always starts empty on migration,

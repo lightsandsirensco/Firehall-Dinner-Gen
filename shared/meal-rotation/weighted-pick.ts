@@ -50,17 +50,33 @@ export function mergeRecentSlugSources(
   return merged.slice(-maxLength);
 }
 
-/** Pick index from weights using deterministic seed. */
-export function weightedPickIndex(weights: number[], seed: string): number {
-  const total = weights.reduce((a, b) => a + b, 0);
-  if (total <= 0) return 0;
+/** Deterministic value in [0, 1) for a seed string. */
+function seededFraction(seed: string): number {
   // Avalanche the hash (murmur3 fmix32): near-identical seeds ("…:1", "…:2") otherwise
   // land on near-identical values and the draw clusters on a few candidates.
   let h = hashSeed(seed);
   h = Math.imul(h ^ (h >>> 16), 0x85ebca6b);
   h = Math.imul(h ^ (h >>> 13), 0xc2b2ae35);
   h ^= h >>> 16;
-  let r = ((h >>> 0) / 0x100000000) * total;
+  return (h >>> 0) / 0x100000000;
+}
+
+/**
+ * Deterministic weighted order (sampling without replacement): the first item
+ * that passes any later check is a weighted draw among the items that pass.
+ */
+export function weightedShuffle<T>(items: readonly T[], weight: (item: T) => number, seedFor: (item: T) => string): T[] {
+  return items
+    .map((item) => ({ item, key: Math.log(Math.max(1e-12, seededFraction(seedFor(item)))) / Math.max(1e-9, weight(item)) }))
+    .sort((a, b) => b.key - a.key)
+    .map((k) => k.item);
+}
+
+/** Pick index from weights using deterministic seed. */
+export function weightedPickIndex(weights: number[], seed: string): number {
+  const total = weights.reduce((a, b) => a + b, 0);
+  if (total <= 0) return 0;
+  let r = seededFraction(seed) * total;
   for (let i = 0; i < weights.length; i++) {
     r -= weights[i]!;
     if (r < 0) return i;

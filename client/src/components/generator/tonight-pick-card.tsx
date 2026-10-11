@@ -1,6 +1,9 @@
 import { useMemo, useState } from "react";
-import { Clock, Shuffle, Users, UtensilsCrossed, Flame, ThumbsDown, X } from "lucide-react";
+import { Link } from "wouter";
+import { ArrowRight, Clock, Shuffle, Users, UtensilsCrossed, Flame, ThumbsDown, X } from "lucide-react";
 import type { ClientRecipeResponse } from "@shared/schema";
+import { approvedCatalogRecipePath } from "@shared/approved-catalog";
+import { isApprovedCatalogSlug } from "@shared/hall-catalog/gate";
 import {
   NOT_FEELING_IT_LABELS,
   NOT_FEELING_IT_REASONS,
@@ -10,20 +13,17 @@ import { customerProteinLabel } from "@shared/customer-facing";
 import { resolveEditorialFallbackHero } from "@shared/meal-hero-fallback";
 import { Button } from "@/components/ui/button";
 import { MealHeroImage } from "@/components/meal-hero-image";
-import { StartCookingButton } from "@/components/cook-mode/start-cooking-button";
-import { useMeasurementSystem } from "@/components/measurement-unit-toggle";
-import { clientRecipeToCookMode } from "@/lib/cook-mode/adapters";
 import { resolveMealPlate } from "@/lib/meal-plate-ui";
 import { app } from "@/lib/design-tokens";
 import { cn } from "@/lib/utils";
-import type { NutritionGoal } from "@shared/nutrition/goal-scoring";
 
 interface TonightPickCardProps {
   recipe: ClientRecipeResponse;
   crewSize: number;
   onPickAgain?: () => void;
   pickAgainDisabled?: boolean;
-  nutritionGoal?: NutritionGoal;
+  /** In-page fallback target when the pick has no catalog recipe page. */
+  recipeAnchorId?: string;
   onNotFeelingIt?: (reason: NotFeelingItReason, proteinLabel: string | null) => void;
   /** e.g. "quicker · no beef" — shown under the reasons while session nudges are active. */
   adjustingSummary?: string;
@@ -52,25 +52,23 @@ function fallbackWhy(recipe: ClientRecipeResponse): string | null {
   return first && first.length <= 140 ? first : null;
 }
 
-/** Pick Tonight decision header — image, essentials, one reason, Cook This / Pick Again. */
+/** Pick Tonight decision header — image, essentials, one reason, View Recipe / Pick Again. */
 export function TonightPickCard({
   recipe,
   crewSize,
   onPickAgain,
   pickAgainDisabled,
-  nutritionGoal,
+  recipeAnchorId,
   onNotFeelingIt,
   adjustingSummary,
   onResetAdjustments,
 }: TonightPickCardProps) {
-  const [measurementSystem] = useMeasurementSystem();
   const [reasonsOpen, setReasonsOpen] = useState(false);
   const mealPlate = useMemo(() => resolveMealPlate(recipe), [recipe]);
   const title = mealPlate?.display_title || recipe.title;
-  const cookModeRecipe = useMemo(
-    () => clientRecipeToCookMode(recipe, measurementSystem, crewSize),
-    [recipe, measurementSystem, crewSize],
-  );
+  const recipePath =
+    recipe._slug && isApprovedCatalogSlug(recipe._slug) ? approvedCatalogRecipePath(recipe._slug) : null;
+  const viewRecipeHref = recipePath ?? (recipeAnchorId ? `#${recipeAnchorId}` : null);
 
   const heroSrc =
     recipe.hero_image && recipe.hero_image_status === "ready"
@@ -95,15 +93,34 @@ export function TonightPickCard({
   return (
     <div className="space-y-4 sm:space-y-5" data-testid="tonight-pick-card">
       <div className="relative">
-        <MealHeroImage
-          src={heroSrc}
-          alt={recipe.hero_image_alt || title}
-          title={title}
-          heldLabel="Tonight's Pick"
-          variant="cinematic"
-          className="sm:max-h-[max(380px,min(540px,calc(100vh-400px)))]"
-          priority
-        />
+        {recipePath ? (
+          <Link
+            href={recipePath}
+            className="block rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            aria-label={`View recipe: ${title}`}
+            data-testid="link-tonight-hero"
+          >
+            <MealHeroImage
+              src={heroSrc}
+              alt={recipe.hero_image_alt || title}
+              title={title}
+              heldLabel="Tonight's Pick"
+              variant="cinematic"
+              className="sm:max-h-[max(380px,min(540px,calc(100vh-400px)))]"
+              priority
+            />
+          </Link>
+        ) : (
+          <MealHeroImage
+            src={heroSrc}
+            alt={recipe.hero_image_alt || title}
+            title={title}
+            heldLabel="Tonight's Pick"
+            variant="cinematic"
+            className="sm:max-h-[max(380px,min(540px,calc(100vh-400px)))]"
+            priority
+          />
+        )}
         {badge && (
           <span
             className="absolute left-3 top-3 sm:left-4 sm:top-4 inline-flex items-center gap-1.5 rounded-full bg-primary px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-primary-foreground shadow-lg shadow-black/40"
@@ -117,7 +134,13 @@ export function TonightPickCard({
 
       <div className="space-y-3">
         <h2 className={cn(app.titleMeal, "max-w-2xl text-balance")} data-testid="text-recipe-title">
-          {title}
+          {recipePath ? (
+            <Link href={recipePath} className="hover:underline underline-offset-4 decoration-primary/60">
+              {title}
+            </Link>
+          ) : (
+            title
+          )}
         </h2>
 
         <dl className={cn("grid gap-2", facts.length === 3 ? "grid-cols-3" : "grid-cols-2")}>
@@ -145,20 +168,20 @@ export function TonightPickCard({
       </div>
 
       <div className="flex gap-2">
-        {cookModeRecipe.steps.length > 0 && (
-          <div className="flex-1 min-w-0 [&>div]:w-full [&_button]:w-full">
-            <StartCookingButton
-              recipe={cookModeRecipe}
-              recipeSlug={recipe._slug}
-              recipeTags={recipe.recipe_tags}
-              source="generator_result"
-              size="lg"
-              className="min-h-12 text-base"
-              nutritionGoal={nutritionGoal}
-              showQuickLog={false}
-              label="Cook This"
-            />
-          </div>
+        {viewRecipeHref && (
+          <Button asChild size="lg" className="flex-1 min-w-0 min-h-12 gap-2 text-base touch-manipulation font-heading tracking-wide">
+            {recipePath ? (
+              <Link href={recipePath} data-testid="button-view-recipe">
+                View Recipe
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </Link>
+            ) : (
+              <a href={viewRecipeHref} data-testid="button-view-recipe">
+                View Recipe
+                <ArrowRight className="h-4 w-4" aria-hidden />
+              </a>
+            )}
+          </Button>
         )}
         {onPickAgain && (
           <Button
@@ -169,7 +192,7 @@ export function TonightPickCard({
             disabled={pickAgainDisabled}
             className={cn(
               "min-h-12 gap-2 touch-manipulation font-heading tracking-wide",
-              cookModeRecipe.steps.length > 0 ? "shrink-0 px-4" : "flex-1",
+              viewRecipeHref ? "shrink-0 px-4" : "flex-1",
             )}
             data-testid="button-pick-again"
           >

@@ -38,6 +38,15 @@ export const createCheckoutSessionSchema = z.object({
   feature: z.string().max(80).optional(),
 });
 
+export const startProTrialSchema = z.object({
+  /** Paywall surface the trial was started from (analytics only). */
+  paywall_source: z.string().trim().max(64).optional(),
+});
+
+export const proTrialNoticeSchema = z.object({
+  notice: z.enum(["ending", "expired"]),
+});
+
 export const adminSetGlobalFlagSchema = z.object({
   enabled: z.boolean(),
 });
