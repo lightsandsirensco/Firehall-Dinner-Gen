@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T20:20:56.824Z",
+  "generatedAt": "2026-10-15T02:13:09.032Z",
   "totals": {
     "recipes": 408,
     "pass": 408,
@@ -55,7 +55,7 @@
       "title": "Chimichurri Steak Tacos",
       "collection": "golden_100",
       "heroImage": "/images/golden-100/steak-tacos.jpg",
-      "heroAlt": "Skirt steak tacos on corn tortillas with chimichurri and cotija",
+      "heroAlt": "Three skirt steak tacos on charred flour tortillas topped with chimichurri, on a dark plate",
       "heroAltConfigured": true,
       "heroOnDisk": true,
       "exploreMapping": {
@@ -68,7 +68,7 @@
         "status": "correct",
         "issues": [],
         "duplicatePeers": [],
-        "heroMd5": "86163a5b8774763fea180843f85706db",
+        "heroMd5": "1857c93632cf30d1c6a1077dbacc69fa",
         "exploreEligible": true
       },
       "metadataIssues": [],
