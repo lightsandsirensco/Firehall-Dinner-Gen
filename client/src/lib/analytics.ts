@@ -1,5 +1,5 @@
 /**
- * Unified analytics — GA4 + internal product events.
+ * Unified analytics — GA4, Replit analytics, and internal product events.
  */
 
 import {
@@ -10,12 +10,19 @@ import {
   trackProductEvent,
 } from "@/lib/product-analytics";
 
+import { trackReplitEvent } from "./replit-analytics";
+
 let mealsGeneratedThisSession = 0;
 
 /** GA4 custom event (traffic + product events mirrored in GA4). */
 export function trackEvent(name: string, params?: Record<string, string | number>) {
-  if (typeof window !== "undefined" && window.gtag) {
-    window.gtag("event", name, params);
+  trackReplitEvent(name, params);
+  try {
+    if (typeof window !== "undefined" && window.gtag) {
+      window.gtag("event", name, params);
+    }
+  } catch {
+    // A third-party tracker must never prevent an app action or other analytics.
   }
 }
 
