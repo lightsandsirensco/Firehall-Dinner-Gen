@@ -406,7 +406,7 @@ export default function GuideArticlePage() {
                 Get rid of the &ldquo;What&apos;s for Dinner?&rdquo; debate
               </h2>
               <p className="mt-3 text-[15px] text-foreground/85 leading-relaxed">
-                Built by Firefighters. Tested in the Firehall. Browse crew-sized recipes, or tell Find a Meal your
+                Built by Firefighters. Tested in the Firehouse. Browse crew-sized recipes, or tell Find a Meal your
                 crew size and time and get a dinner that fits.
               </p>
               <div className="mt-4 flex flex-wrap gap-3">

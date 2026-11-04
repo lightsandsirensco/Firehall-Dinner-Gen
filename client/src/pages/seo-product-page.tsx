@@ -147,7 +147,7 @@ export default function SeoProductPage({ slug }: SeoProductPageProps) {
         </div>
 
         <p className="mt-4 max-w-2xl text-xs text-muted-foreground leading-relaxed">
-          Educational page only — private hall data (rosters, votes, pantry counts, budgets) is never
+          Educational page only — private firehouse data (rosters, votes, pantry counts, budgets) is never
           indexed or shown here.
         </p>
 

@@ -10,7 +10,7 @@ export function HomeHallVote() {
       data-testid="home-hall-section"
     >
       <h2 id="home-hall-section-heading" className="sr-only">
-        Hall Operations
+        Firehouse Operations
       </h2>
       <HallPrivateBetaNotice className="mx-auto max-w-xl" />
     </section>

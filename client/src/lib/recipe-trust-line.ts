@@ -3,10 +3,10 @@ import { customerHallPickLine } from "@shared/customer-facing";
 
 const TRUST_LINES = [
   "Crew-ready dinner for busy shifts",
-  "Practical spread for a real hall night",
+  "Practical spread for a real firehouse night",
   "Built for firefighters — not food bloggers",
   "Station dinner that actually fills the crew",
-  "Hall-tested comfort for tonight's table",
+  "Firehouse-tested comfort for tonight's table",
 ] as const;
 
 function stableIndex(key: string, length: number): number {
@@ -63,10 +63,10 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
   const cuisine = norm(rt?.cuisine || recipe.meal_plate?.cuisine_label || "");
 
   if (/parm|parmesan|meatball|lasagna/.test(title)) {
-    return "Hall classic comfort dinner";
+    return "Firehouse classic comfort dinner";
   }
   if (/chili|stew|soup|chowder/.test(title)) {
-    return "Stick-to-your-ribs spread for the hall";
+    return "Stick-to-your-ribs spread for the crew";
   }
   if (/taco|fajita|burrito|enchilada|quesadilla/.test(title)) {
     return "Crew-pleasing station dinner";
@@ -88,10 +88,10 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
     return "One-pan friendly for busy shifts";
   }
   if (/grill/.test(method + blob)) {
-    return "Straightforward grill night at the hall";
+    return "Straightforward grill night at the firehouse";
   }
   if (/slow cooker|slow-cook/.test(blob) || (mins != null && mins >= 75)) {
-    return "Worth the time when the hall slows down";
+    return "Worth the time when the crew slows down";
   }
 
   if (rt?.quick_cleanup || /quick cleanup/.test(blob)) {
@@ -102,7 +102,7 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
   }
 
   if (crew >= 10) {
-    return "Large-batch friendly for the hall";
+    return "Large-batch friendly for the crew";
   }
   if (crew >= 8) {
     return `Built for ${crew} at the table`;
@@ -115,13 +115,13 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
   }
 
   if (cuisine.includes("mediterranean") || cuisine.includes("greek")) {
-    return "Balanced crew meal — hall-friendly flavors";
+    return "Balanced crew meal — crew-friendly flavors";
   }
   if (cuisine.includes("mexican")) {
     return "Big flavors — easy to scale for the crew";
   }
   if (cuisine.includes("italian") || cuisine.includes("pasta")) {
-    return "Hall-tested pasta night";
+    return "Firehouse-tested pasta night";
   }
   if (cuisine.includes("bbq") || cuisine.includes("barbecue")) {
     return "Smokehouse spread without the fuss";
@@ -131,7 +131,7 @@ export function buildRecipeTrustLine(recipe: ClientRecipeResponse, crewSize?: nu
   }
 
   if (/comfort|mac and cheese|cheesy|casserole/.test(blob + title)) {
-    return "Hall-tested comfort food";
+    return "Firehouse-tested comfort food";
   }
   if (/lean|lighter|grilled/.test(blob) && !/comfort|cheesy/.test(blob)) {
     return "Lighter crew dinner — still satisfying";

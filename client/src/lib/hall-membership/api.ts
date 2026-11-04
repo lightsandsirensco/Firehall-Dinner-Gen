@@ -22,13 +22,13 @@ export async function fetchJoinPreview(params: {
 
 export async function fetchHallDetail(hallId: string): Promise<HallDetailPayload> {
   const res = await fetch(`/api/halls/${encodeURIComponent(hallId)}`, { credentials: "include" });
-  if (!res.ok) throw new Error("Hall not found");
+  if (!res.ok) throw new Error("Firehouse not found");
   return res.json();
 }
 
 export async function fetchMyHalls(): Promise<HallSummary[]> {
   const res = await fetch("/api/halls/mine", { credentials: "include" });
-  if (!res.ok) throw new Error("Failed to load halls");
+  if (!res.ok) throw new Error("Failed to load firehouses");
   const data = await res.json();
   return data.halls ?? [];
 }

@@ -16,7 +16,7 @@ export default function HallPrivateBetaPage() {
 
   return (
     <div className={cn(app.page, "bg-background")} data-testid="hall-private-beta-page">
-      <AppTopBar title="Hall Operations" />
+      <AppTopBar title="Firehouse Operations" />
       <main className={cn(app.main, app.mobileScreen, "flex min-h-[70vh] items-center justify-center")}>
         <HallPrivateBetaNotice
           className="w-full max-w-md"

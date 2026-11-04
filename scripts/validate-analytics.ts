@@ -10,11 +10,16 @@ import { ANALYTICS_EVENT_TYPES } from "../shared/analytics/events.js";
 import { openSqliteDatabase, releaseSqliteTimersForTests } from "../server/sqlite.js";
 import {
   bindAnalyticsDb,
-  getAnalyticsDashboard,
   getHallOfFame,
   insertAnalyticsEvents,
   insertAnalyticsTestEvents,
 } from "../server/analytics/analytics-store.js";
+import { getAnalyticsDashboard } from "../server/analytics/dashboard.js";
+
+process.env.ANALYTICS_PG_MIRROR = "0";
+delete process.env.DATABASE_URL;
+delete process.env.KLAVIYO_API_KEY;
+delete process.env.STRIPE_SECRET_KEY;
 
 const MIGRATION_SQL = fs.readFileSync(
   path.join(process.cwd(), "server", "db", "migrations", "013_analytics_events.sql"),
@@ -127,16 +132,37 @@ async function main(): Promise<void> {
     sessionId,
   );
 
-  const dash = getAnalyticsDashboard("all");
-  assert.ok(dash.summary.page_views >= 1, "page_view counted");
-  assert.ok(dash.summary.recipe_views >= 1, "recipe_view counted");
-  assert.ok(dash.summary.meal_generations >= 1, "meal_generated counted");
-  assert.ok(dash.summary.wheel_spins >= 1, "wheel_spin counted");
-  assert.ok(dash.summary.email_captures >= 1, "email_capture counted");
-  assert.ok(dash.top_viewed_recipes.length >= 1);
-  assert.ok(dash.top_explore_filters.length >= 1);
-  assert.ok(dash.top_explore_clicks.length >= 1);
-  assert.ok(dash.generation_success_rate > 0);
+  // Seeded test events are tagged and must never reach the dashboard.
+  const seededOnly = await getAnalyticsDashboard("all");
+  assert.equal(seededOnly.audience.page_views, 0, "test page_view excluded");
+  assert.equal(seededOnly.engagement.meals_generated, 0, "test meal_generated excluded");
+
+  const real = "real-visitor-1";
+  insertAnalyticsEvents(
+    [
+      { event_type: "page_view", visitor_id: real, route: "/", metadata: { traffic_source: "google", device_type: "mobile" } },
+      { event_type: "page_view", visitor_id: real, route: "/recipes/chicken-parm?token=secret", metadata: { traffic_source: "google" } },
+      { event_type: "page_view", visitor_id: real, route: "/admin/analytics", metadata: {} },
+      { event_type: "recipe_view", visitor_id: real, route: "/recipes/chicken-parm", metadata: { recipe_slug: "chicken-parm", recipe_title: "Chicken Parm" } },
+      { event_type: "meal_generated", visitor_id: real, route: "/generator", metadata: { recipe_title: "Real Meal" } },
+      { event_type: "wheel_spin", visitor_id: real, route: "/classics-wheel", metadata: { recipe_slug: "jerk-chicken", recipe_title: "Jerk Chicken" } },
+    ],
+    "real-session",
+  );
+
+  const dash = await getAnalyticsDashboard("all");
+  assert.equal(dash.audience.page_views, 2, "admin page view excluded");
+  assert.equal(dash.audience.unique_visitors, 1);
+  assert.equal(dash.audience.sessions, 1, "two quick page views = one session");
+  assert.equal(dash.audience.traffic_sources[0]?.key, "google");
+  assert.ok(dash.audience.top_pages.some((p) => p.key === "/recipes/chicken-parm"), "query string stripped");
+  assert.equal(dash.engagement.recipe_views, 1);
+  assert.equal(dash.engagement.meals_generated, 1);
+  assert.equal(dash.engagement.wheel_spins, 1);
+  assert.equal(dash.engagement.meal_generation_success_rate, 100);
+  assert.equal(dash.growth.newsletter_subscribers_total, null, "unavailable without Postgres, not 0");
+  assert.equal(dash.revenue.active_paid_subscribers, null, "unavailable without Stripe, not 0");
+  assert.ok(dash.engagement.top_viewed_recipes.length >= 1);
 
   const hof = getHallOfFame("all");
   assert.ok(hof.most_cooked.length >= 1, "meal_cooked ranked");

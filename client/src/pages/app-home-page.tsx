@@ -38,7 +38,7 @@ export default function AppHomePage() {
           href: hub.shoppingHref,
           icon: ShoppingCart,
           label: hub.pendingItems === 1 ? "1 item left to buy" : `${hub.pendingItems} items left to buy`,
-          detail: hub.runnerName ? `Runner: ${hub.runnerName}` : "Hall shopping list",
+          detail: hub.runnerName ? `Runner: ${hub.runnerName}` : "Firehouse shopping list",
         }
       : null,
   ].filter((loop): loop is NonNullable<typeof loop> => Boolean(loop));
@@ -54,7 +54,7 @@ export default function AppHomePage() {
         {hallLoops.length > 0 ? (
           <section className="space-y-2.5" aria-labelledby="tonight-hall">
             <h2 id="tonight-hall" className={cn(app.sectionLabel, "px-0.5")}>
-              {hub.hallName || "Your hall"}
+              {hub.hallName || "Your firehouse"}
             </h2>
             <ul className="overflow-hidden rounded-2xl border border-border/40 bg-card/30 divide-y divide-border/30">
               {hallLoops.map(({ id, href, icon: Icon, label, detail }) => (

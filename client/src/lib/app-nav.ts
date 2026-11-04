@@ -80,7 +80,7 @@ export const MEALS_TABS = PRIMARY_TABS;
 
 /** @deprecated Tools folded into Hall manage */
 export const HALL_TABS = [
-  { id: "hall" as const, label: "Hall", href: "/hall", testId: "tab-hall" },
+  { id: "hall" as const, label: "Firehouse", href: "/hall", testId: "tab-hall" },
   { id: "tools" as const, label: "Tools", href: "/hall/tools", testId: "tab-hall-tools" },
 ];
 
@@ -91,7 +91,7 @@ export const APP_TABS = PRIMARY_TABS;
 
 export const WORKSPACE_LABEL = {
   meals: "Tonight",
-  hall: "Hall",
+  hall: "Firehouse",
 } as const;
 
 export const WORKSPACE_HOME = {

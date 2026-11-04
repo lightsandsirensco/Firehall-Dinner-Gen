@@ -19,8 +19,10 @@ import {
   initAdminLeadsStore,
   listEmailLeads,
   markLeadKlaviyoSynced,
+  normalizeLeadSource,
   recordEmailLead,
 } from "./leads-store.js";
+import { recordConsentOptIn } from "../marketing-consent/store.js";
 import {
   bindFounderLeadsDb,
   deleteTestAccount,
@@ -520,6 +522,15 @@ export async function captureEmailLead(input: {
   klaviyo_synced?: boolean;
   marketing_consent?: boolean;
 }): Promise<void> {
+  // Postgres is the durable consent record; it must not depend on the local
+  // SQLite CRM succeeding, and a failure must never become an unhandled rejection.
+  if (input.marketing_consent) {
+    try {
+      await recordConsentOptIn({ email: input.email, source: normalizeLeadSource(input.source) });
+    } catch (err) {
+      logError("admin-users", "record marketing consent failed", err);
+    }
+  }
   try {
     await ensureStore();
     recordEmailLead(input);

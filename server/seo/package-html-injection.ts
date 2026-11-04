@@ -35,7 +35,7 @@ export function injectPackageSeoIntoHtml(html: string, origin: string, slug: str
 
   const title = `${def.displayTitle} — Crew Package | ${SEO_SITE_NAME}`;
   const description = [def.tagline, def.crewLine].filter(Boolean).join(" ").slice(0, 300) ||
-    `A curated crew package for ${def.displayTitle}, scaled for the fire hall.`;
+    `A curated crew package for ${def.displayTitle}, scaled for the firehouse.`;
 
   // Canonical → the source recipe page when this package mirrors an approved
   // catalog recipe (true for every current package). Falls back to

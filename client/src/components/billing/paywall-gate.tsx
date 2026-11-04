@@ -83,7 +83,7 @@ export function PaywallGate({
         {hallScoped
           ? compact
             ? "Hall Pro unlocks crew collaboration — ask your captain."
-            : "Hall Pro benefits the whole crew: shared list, meal history, staples, advanced vote, and grocery planning. Billed per hall."
+            : "Hall Pro benefits the whole crew: shared list, meal history, staples, advanced vote, and grocery planning. Billed per firehouse."
           : compact
             ? `Upgrade from ${PLAN_LABELS[current]} to unlock this.`
             : `You're on ${PLAN_LABELS[current]}. ${PLAN_LABELS[required]} unlocks personal tools.`}
@@ -96,7 +96,7 @@ export function PaywallGate({
           </Button>
         ) : hallScoped && targetHallId ? (
           <Button asChild size="sm">
-            <Link href={`/halls/${targetHallId}`}>Manage linked hall</Link>
+            <Link href={`/halls/${targetHallId}`}>Manage linked firehouse</Link>
           </Button>
         ) : (
           <Button asChild size="sm">

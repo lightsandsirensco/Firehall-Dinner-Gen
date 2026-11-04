@@ -41,8 +41,8 @@ const ROLE_PERMISSIONS: Record<HallRole, readonly HallPermission[]> = {
 };
 
 export const HALL_PERMISSION_LABELS: Record<HallPermission, string> = {
-  view_hall_dashboard: "View hall dashboard",
-  save_hall_favorites: "Save to hall favorites",
+  view_hall_dashboard: "View firehouse dashboard",
+  save_hall_favorites: "Save to crew favorites",
   participate_votes: "Participate in votes",
   manage_settings: "Manage settings",
   manage_members: "Manage members",

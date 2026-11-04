@@ -4,7 +4,7 @@
 export const SEO_SITE_NAME = "Firehall Meals";
 /** Domain-style spelling; only ever an `alternateName`, never the public name. */
 export const SEO_BRAND = "FirehallMeals";
-export const SEO_TAGLINE = "Built by Firefighters. Tested in the Firehall.";
+export const SEO_TAGLINE = "Built by Firefighters. Tested in the Firehouse.";
 export const SEO_MISSION =
   "Get rid of the \"What's for Dinner?\" debate every shift.";
 
@@ -12,20 +12,19 @@ export const SEO_MISSION =
 export const SEO_CANONICAL_ORIGIN = "https://www.firehallmeals.com";
 
 export const SEO_TARGET_KEYWORDS = [
-  "firefighter meals",
-  "firefighter recipes",
-  "firehall meals",
-  "fire station meals",
   "firehouse recipes",
-  "meals for firefighters",
+  "firehouse meals",
+  "firefighter recipes",
   "firefighter dinner ideas",
-  "crew meals",
-  "station meals",
+  "fire station meals",
+  "meals for firefighters",
   "firehouse cooking",
+  "firefighter meal planning",
+  "firefighter meals",
+  "crew meals",
   "healthy firefighter meals",
   "firefighter breakfast recipes",
-  "firehall recipes",
-  "firehall dinner ideas",
+  "firehall meals",
 ] as const;
 
 /**
@@ -33,7 +32,7 @@ export const SEO_TARGET_KEYWORDS = [
  * pre-JS / post-hydration title drift for crawlers.
  */
 export const SEO_DEFAULT_TITLE =
-  "Firehall Meals | Firefighter Recipes & Crew Meal Ideas";
+  "Firehall Meals | Firehouse Recipes & Firefighter Meal Ideas";
 
 /**
  * Homepage meta description. Also used for og/twitter description, the
@@ -41,14 +40,14 @@ export const SEO_DEFAULT_TITLE =
  * `client/index.html` and `vite.config.ts` (enforced by test-home-brand-seo).
  */
 export const SEO_DEFAULT_DESCRIPTION =
-  "Firefighter-tested recipes, easy crew meals, shift-friendly dinners and grocery planning built for the firehouse. Find meals your whole crew will eat.";
+  "Firehouse recipes and firefighter dinner ideas built for busy shifts — crew-sized portions, grocery lists and meal planning your whole crew will eat.";
 
 /** Homepage H1 — the hero renders HOME.heroHeadline, which must match this. */
-export const SEO_HOME_H1 = "What’s for dinner at the firehall?";
+export const SEO_HOME_H1 = "What’s for dinner at the firehouse?";
 
 /** Supporting copy directly under the homepage H1 (hero and server snapshot). */
 export const SEO_HOME_H1_SUPPORT =
-  "Easy firefighter recipes and crew meal ideas built for busy shifts, big appetites and unpredictable calls.";
+  "Easy firefighter recipes and crew meal ideas built for busy shifts, big appetites, and unpredictable calls.";
 
 export const SEO_HOME_HERO_EYEBROW = "For firefighters · Your shift · Your meals";
 

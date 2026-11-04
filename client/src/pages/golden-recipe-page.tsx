@@ -950,7 +950,7 @@ export default function GoldenRecipePageView() {
 
             {page.proTips.length > 0 && (
 
-              <RecipeSection title="Hall tips" id="recipe-tips">
+              <RecipeSection title="Firehouse tips" id="recipe-tips">
 
                 <ul className="space-y-3 text-[15px] text-muted-foreground leading-relaxed">
 

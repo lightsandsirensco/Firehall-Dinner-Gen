@@ -5,7 +5,7 @@ export async function fetchHallSupplies(hallId: string): Promise<HallSuppliesPay
   const res = await fetch(`/api/halls/${encodeURIComponent(hallId)}/supplies`, {
     credentials: "include",
   });
-  if (!res.ok) throw new Error("Failed to load hall supplies");
+  if (!res.ok) throw new Error("Failed to load firehouse supplies");
   return res.json();
 }
 

@@ -42,7 +42,7 @@ export function HallShiftsEditor({
       <div>
         <Label>Shifts</Label>
         <p className="text-xs text-muted-foreground mt-1">
-          Every hall has A–D shifts. Rename them or disable shifts your department does not use.
+          Every firehouse has A–D shifts. Rename them or disable shifts your department does not use.
         </p>
       </div>
       <div className="space-y-2">

@@ -33,7 +33,7 @@ export const SMOOTHIE_GUIDE_SOURCES: Record<string, SmoothieSourceRecord> = {
     publisher: "EatingWell",
     sourceUrl: "https://www.eatingwell.com/recipe/252875/peanut-butter-banana-smoothie/",
     inspirationTitle: "Peanut Butter Banana Smoothie",
-    adaptationNotes: "Powder optional, milk flexibility, hall blender timing",
+    adaptationNotes: "Powder optional, milk flexibility, firehouse blender timing",
   },
   "tropical-mango-greek": {
     recipeId: "tropical-mango-greek",

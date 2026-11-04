@@ -2,7 +2,7 @@
  * SQLite schema version tracking via schema_migrations table.
  */
 import type { SqliteDatabase } from "./sqlite.js";
-import { log, logError } from "./logger.js";
+import { logError } from "./logger.js";
 
 const MIGRATIONS: { version: number; name: string; sql: string }[] = [
   {
@@ -37,20 +37,14 @@ export function getMigrationStatus(db: SqliteDatabase): MigrationStatus {
   return { currentVersion, applied, pending };
 }
 
+/**
+ * Only guarantees the tracking table exists. Version numbers in this table
+ * belong to server/db/migrate.ts — recording a "v1 bootstrap" row here made
+ * that runner skip 001_curated_recipes_core on a fresh database and halt at
+ * v2, leaving every later table (analytics_events, email_leads, …) missing.
+ */
 export function runPendingMigrations(db: SqliteDatabase): MigrationStatus {
   ensureMigrationsTable(db);
-  const status = getMigrationStatus(db);
-
-  for (const migration of MIGRATIONS) {
-    if (status.applied.some((a) => a.version === migration.version)) continue;
-    db.exec(migration.sql);
-    db.prepare(`INSERT INTO schema_migrations (version, name) VALUES (?, ?)`).run(
-      migration.version,
-      migration.name,
-    );
-    log(`[sqlite] Applied migration v${migration.version} ${migration.name}`, "sqlite");
-  }
-
   return getMigrationStatus(db);
 }
 

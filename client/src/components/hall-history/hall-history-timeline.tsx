@@ -18,7 +18,7 @@ function entryHref(entry: HallHistoryEntry): string | undefined {
 
 function entryMetaLine(entry: HallHistoryEntry): string {
   if (entry.type === "hall_vote" && entry.meta?.optionCount) {
-    return `Hall Vote · ${entry.meta.optionCount} options`;
+    return `Crew Vote · ${entry.meta.optionCount} options`;
   }
   if (entry.type === "wheel_result") return "Classics Wheel";
   if (entry.type === "meal_generated") return "Hall Match";

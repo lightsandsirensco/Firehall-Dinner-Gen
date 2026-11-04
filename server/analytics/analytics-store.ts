@@ -3,9 +3,10 @@
  */
 
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
-import { GOLDEN_100_RECIPES } from "../../shared/golden-100/manifest.js";
+import { isPgConfigured } from "../db/pg-client.js";
+import { pgRun } from "../db/pg-sql.js";
+import { logError } from "../logger.js";
 import type {
-  AnalyticsDashboardPayload,
   AnalyticsEventInput,
   AnalyticsPeriod,
   AnalyticsRankedRow,
@@ -24,6 +25,64 @@ export function bindAnalyticsDb(database: SqliteDatabase): void {
   db = database;
 }
 
+export function getAnalyticsSqliteDb(): SqliteDatabase {
+  return db;
+}
+
+/**
+ * Durable Postgres copy of analytics events. Production only by default so
+ * local `npm run dev` traffic never lands in the shared database;
+ * ANALYTICS_PG_MIRROR=1 forces it on (tests), =0 forces it off.
+ */
+export function analyticsPgEnabled(): boolean {
+  const flag = process.env.ANALYTICS_PG_MIRROR?.trim();
+  if (flag === "0") return false;
+  if (!isPgConfigured()) return false;
+  return flag === "1" || process.env.NODE_ENV === "production";
+}
+
+/** High-volume plumbing events with no dashboard value. */
+const PG_MIRROR_SKIP = new Set<string>(["sync_completed"]);
+const PG_MISSING_TABLE_BACKOFF_MS = 10 * 60 * 1000;
+let pgMirrorPausedUntil = 0;
+
+async function mirrorEventsToPg(events: AnalyticsEventInput[], sessionId?: string): Promise<void> {
+  if (!analyticsPgEnabled() || Date.now() < pgMirrorPausedUntil) return;
+  const rows = events.filter((e) => !PG_MIRROR_SKIP.has(e.event_type));
+  if (!rows.length) return;
+  const params: unknown[] = [];
+  const values = rows.map((row) => {
+    params.push(
+      row.event_type,
+      sessionId ?? null,
+      row.visitor_id ?? null,
+      normalizeRoute(row.route),
+      sanitizeMetadata(row.metadata),
+    );
+    const n = params.length;
+    return `($${n - 4}, $${n - 3}, $${n - 2}, $${n - 1}, $${n}::jsonb)`;
+  });
+  try {
+    await pgRun(
+      `INSERT INTO analytics_events (event_type, session_id, visitor_id, route, metadata) VALUES ${values.join(", ")}`,
+      params,
+    );
+  } catch (err) {
+    if ((err as { code?: string })?.code === "42P01") {
+      pgMirrorPausedUntil = Date.now() + PG_MISSING_TABLE_BACKOFF_MS;
+      logError("analytics", "Postgres analytics_events missing — run `npm run db:pg:migrate`", err);
+      return;
+    }
+    logError("analytics", "Postgres analytics mirror failed", err);
+  }
+}
+
+/** Path only — query strings can carry sign-in tokens or emails. */
+function normalizeRoute(route?: string): string | null {
+  if (!route) return null;
+  return route.split(/[?#]/)[0].slice(0, 500) || "/";
+}
+
 function periodWhere(period: AnalyticsPeriod): { clause: string; params: string[] } {
   switch (period) {
     case "today":
@@ -32,6 +91,8 @@ function periodWhere(period: AnalyticsPeriod): { clause: string; params: string[
       return { clause: "occurred_at >= datetime('now', '-7 days')", params: [] };
     case "30d":
       return { clause: "occurred_at >= datetime('now', '-30 days')", params: [] };
+    case "90d":
+      return { clause: "occurred_at >= datetime('now', '-90 days')", params: [] };
     default:
       return { clause: "1=1", params: [] };
   }
@@ -56,6 +117,7 @@ export function insertAnalyticsEvents(
   sessionId?: string,
 ): number {
   if (!events.length) return 0;
+  void mirrorEventsToPg(events, sessionId);
   const stmt = db.prepare(`
     INSERT INTO analytics_events (event_type, session_id, visitor_id, route, metadata_json)
     VALUES (?, ?, ?, ?, ?)
@@ -67,7 +129,7 @@ export function insertAnalyticsEvents(
         row.event_type,
         sessionId ?? null,
         row.visitor_id ?? null,
-        row.route?.slice(0, 500) ?? null,
+        normalizeRoute(row.route),
         sanitizeMetadata(row.metadata),
       );
       inserted++;
@@ -84,18 +146,6 @@ function countEvents(period: AnalyticsPeriod, eventType: string): number {
       `SELECT COUNT(*) AS c FROM analytics_events WHERE event_type = ? AND ${clause}`,
     )
     .get(eventType) as { c: number };
-  return Number(row?.c ?? 0);
-}
-
-function countDistinct(period: AnalyticsPeriod, column: "visitor_id" | "session_id", eventType?: string): number {
-  const { clause } = periodWhere(period);
-  const typeClause = eventType ? " AND event_type = ?" : "";
-  const params = eventType ? [eventType] : [];
-  const row = db
-    .prepare(
-      `SELECT COUNT(DISTINCT ${column}) AS c FROM analytics_events WHERE ${column} IS NOT NULL AND ${clause}${typeClause}`,
-    )
-    .get(...params) as { c: number };
   return Number(row?.c ?? 0);
 }
 
@@ -206,102 +256,8 @@ export function getHallOfFame(period: AnalyticsPeriod, limit = 10): HallOfFamePa
   };
 }
 
-function getNeverViewedRecipesSample(limit = 12): AnalyticsRankedRow[] {
-  const rows = db
-    .prepare(
-      `
-      SELECT DISTINCT json_extract(metadata_json, '$.recipe_slug') AS slug
-      FROM analytics_events
-      WHERE event_type = 'recipe_view'
-        AND json_extract(metadata_json, '$.recipe_slug') IS NOT NULL
-    `,
-    )
-    .all() as Array<{ slug: string | null }>;
-
-  const viewed = new Set(rows.map((r) => r.slug).filter(Boolean));
-  return GOLDEN_100_RECIPES.filter((recipe) => !viewed.has(recipe.slug))
-    .slice(0, limit)
-    .map((recipe) => ({ key: recipe.slug, label: recipe.title, count: 0 }));
-}
-
-function topTrafficSources(period: AnalyticsPeriod, limit = 8): AnalyticsRankedRow[] {
-  const { clause } = periodWhere(period);
-  const rows = db
-    .prepare(
-      `
-      SELECT
-        COALESCE(NULLIF(json_extract(metadata_json, '$.traffic_source'), ''), 'direct') AS key,
-        COALESCE(NULLIF(json_extract(metadata_json, '$.traffic_source'), ''), 'Direct') AS label,
-        COUNT(*) AS count
-      FROM analytics_events
-      WHERE event_type = 'page_view' AND ${clause}
-      GROUP BY key
-      ORDER BY count DESC
-      LIMIT ?
-    `,
-    )
-    .all(limit) as Array<{ key: string; label: string; count: number }>;
-
-  return rows.map((r) => ({ key: r.key, label: r.label, count: Number(r.count) }));
-}
-
-export function getAnalyticsDashboard(period: AnalyticsPeriod): AnalyticsDashboardPayload {
-  const pageViews = countEvents(period, "page_view");
-  const sessions = countDistinct(period, "session_id", "page_view");
-  const uniqueVisitors = countDistinct(period, "visitor_id", "page_view");
-  const visitors = uniqueVisitors;
-
-  const returningRow = db
-    .prepare(
-      `
-      SELECT COUNT(*) AS c FROM (
-        SELECT visitor_id FROM analytics_events
-        WHERE event_type = 'page_view' AND visitor_id IS NOT NULL AND ${periodWhere(period).clause}
-        GROUP BY visitor_id
-        HAVING COUNT(DISTINCT session_id) > 1
-      )
-    `,
-    )
-    .get() as { c: number };
-
-  const genStarted = countEvents(period, "meal_generation_started");
-  const genSuccess = countEvents(period, "meal_generated");
-  const genFailed = countEvents(period, "meal_generation_failed");
-
-  return {
-    summary: {
-      period,
-      generated_at: new Date().toISOString(),
-      visitors,
-      unique_visitors: uniqueVisitors,
-      sessions,
-      returning_visitors: Number(returningRow?.c ?? 0),
-      page_views: pageViews,
-      recipe_views: countEvents(period, "recipe_view"),
-      meal_generations: genSuccess,
-      wheel_spins: countEvents(period, "wheel_spin"),
-      email_captures: countEvents(period, "email_capture"),
-      avg_pages_per_session: sessions > 0 ? Math.round((pageViews / sessions) * 10) / 10 : 0,
-    },
-    top_viewed_recipes: topByMetadataField(period, "recipe_view", "recipe_slug", "recipe_title"),
-    top_generated_meals: topByMetadataField(period, "meal_generated", "recipe_title", "recipe_title"),
-    top_shared_recipes: topByMetadataField(period, "recipe_share", "recipe_slug", "recipe_title"),
-    top_saved_recipes: topByMetadataField(period, "recipe_save", "recipe_slug", "recipe_title"),
-    top_wheel_landings: topByMetadataField(period, "wheel_spin", "recipe_slug", "recipe_title"),
-    top_searches: topByMetadataField(period, "search", "search_term", "search_term"),
-    top_explore_filters: topByMetadataField(period, "explore_filter", "filter_key", "filter_label"),
-    top_explore_categories: topByMetadataField(period, "explore_filter", "category", "category"),
-    top_explore_clicks: topByMetadataField(period, "explore_recipe_click", "recipe_slug", "recipe_title"),
-    top_traffic_sources: topTrafficSources(period),
-    never_viewed_recipes_sample: getNeverViewedRecipesSample(),
-    generation_success_rate:
-      genStarted > 0 ? Math.round((genSuccess / genStarted) * 1000) / 10 : genSuccess > 0 ? 100 : 0,
-  };
-}
-
-/** Seed test events for validation (admin-only). */
+/** Seed tagged test events (validation scripts only — never production data). */
 export function insertAnalyticsTestEvents(sessionId: string, visitorId: string): number {
-  const now = new Date().toISOString();
   return insertAnalyticsEvents(
     [
       {
@@ -369,7 +325,7 @@ export function insertAnalyticsTestEvents(sessionId: string, visitorId: string):
         visitor_id: visitorId,
         metadata: { source: "homepage", capture_type: "homepage_subscribe" },
       },
-    ],
+    ].map((e) => ({ ...e, metadata: { ...e.metadata, is_test: true } })) as AnalyticsEventInput[],
     sessionId,
   );
 }

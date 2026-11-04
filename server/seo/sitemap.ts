@@ -492,7 +492,7 @@ export function buildLlmsTxt(origin: string): string {
 
 > Firehall Meals is a meal-planning app for firefighters — crew-sized recipes, shift-tested dinners, and tools built for station kitchens where the tones can drop mid-prep.
 
-Firehall Meals publishes ${recipeCount}+ firefighter meal recipes (dinners, BBQ/smoker, breakfast, smoothies, pizza night, and healthy/performance meals) plus ${guideCount}+ guides on feeding a crew, along with planning tools like the Classics Wheel and a hall meal planner. Content is written for real fire station kitchens: crew scaling from 2–20+, beginner-friendly steps, and instructions that hold up when a call interrupts dinner.
+Firehall Meals publishes ${recipeCount}+ firefighter meal recipes (dinners, BBQ/smoker, breakfast, smoothies, pizza night, and healthy/performance meals) plus ${guideCount}+ guides on feeding a crew, along with planning tools like the Classics Wheel and a firehouse meal planner. Content is written for real fire station kitchens: crew scaling from 2–20+, beginner-friendly steps, and instructions that hold up when a call interrupts dinner.
 
 ## Docs
 
@@ -505,11 +505,11 @@ Firehall Meals publishes ${recipeCount}+ firefighter meal recipes (dinners, BBQ/
 
 - [Explore all recipes](${base}/explore): Full searchable recipe catalog
 - [Recipe families](${base}/families): Recipes grouped by dish family
-- [Classics Wheel](${base}/wheel): Spin-to-decide firehall classics
+- [Classics Wheel](${base}/wheel): Spin-to-decide firehouse classics
 - [BBQ & Smoker](${base}/firefighter-bbq-recipes): Smoker and BBQ firefighter recipes
 - [Breakfast](${base}/breakfast): Firefighter breakfast and shift-fuel recipes
 - [Smoothies](${base}/smoothies): Healthy smoothies for firefighters
-- [Pizza Night](${base}/pizza): Firehall pizza night recipes
+- [Pizza Night](${base}/pizza): Firehouse pizza night recipes
 - [Guides](${base}/guides): Articles on feeding a crew, shift nutrition, and station cooking
 
 ## Landing pages

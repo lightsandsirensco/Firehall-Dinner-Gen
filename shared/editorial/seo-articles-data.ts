@@ -717,7 +717,7 @@ export const SEO_TRAFFIC_ARTICLES = [
 
   buildSeoGuide({
     slug: "firehall-taco-night-ideas",
-    title: "Firehall Taco Night Ideas: How to Run a Taco Bar for a Crew",
+    title: "Firehouse Taco Night Ideas: How to Run a Taco Bar for a Crew",
     seoTitle: "Taco Bar for a Crowd: How Much to Make and How to Serve It",
     subtitle:
       "How much meat, tortillas and toppings for 8 or 12, taco meat that isn't greasy, proteins that hold on a line, and keeping tortillas warm.",
@@ -725,7 +725,7 @@ export const SEO_TRAFFIC_ARTICLES = [
       "Taco bar for a crowd: how much meat, tortillas and toppings for 8 to 12, taco seasoning ratios, keeping tortillas warm, and holding the line safely.",
     keywords: [
       "taco bar for a crowd",
-      "firehall taco night",
+      "firehouse taco night",
       "how much taco meat per person",
       "keeping tortillas warm",
       "taco bar quantities",

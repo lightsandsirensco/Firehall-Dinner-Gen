@@ -111,7 +111,7 @@ export function registerCatalogRoutes(app: Express): void {
     }
     const page = resolveHallRecipePage(slug);
     if (!page) {
-      return res.status(404).json({ message: "Recipe not in hall catalog" });
+      return res.status(404).json({ message: "Recipe not in firehouse catalog" });
     }
     res.setHeader("Cache-Control", "public, max-age=300, stale-while-revalidate=600");
     return res.json(sanitizeRecipeHeroSurface(page));

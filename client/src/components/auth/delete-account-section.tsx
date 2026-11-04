@@ -82,8 +82,8 @@ export function DeleteAccountSection() {
           <AlertDialogHeader>
             <AlertDialogTitle>Delete your account permanently?</AlertDialogTitle>
             <AlertDialogDescription>
-              This removes your profile, saved recipes, preferences, and hall memberships. This
-              cannot be undone. Shared hall content (like notes and canteen records other
+              This removes your profile, saved recipes, preferences, and firehouse memberships. This
+              cannot be undone. Shared firehouse content (like notes and canteen records other
               crew members rely on) is not affected.
               {isStripeSubscriber && (
                 <>

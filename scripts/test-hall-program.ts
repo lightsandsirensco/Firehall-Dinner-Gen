@@ -15,7 +15,7 @@ import {
 import { buildHallProgramSeo } from "../shared/seo/metadata.js";
 
 function main(): void {
-  assert.equal(HALL_PROGRAM_HEADLINE, "Built For Fire Halls.");
+  assert.equal(HALL_PROGRAM_HEADLINE, "Built For Firehouses.");
   assert.ok(HALL_PROGRAM_SUBHEADLINE.includes("dinner"));
 
   assert.equal(HALL_PROGRAM_HOW_IT_WORKS.length, 3);
@@ -26,7 +26,7 @@ function main(): void {
   );
 
   assert.equal(HALL_PROGRAM_BENEFITS.length, 5);
-  assert.ok(HALL_PROGRAM_BENEFITS.includes("Hall grocery planning"));
+  assert.ok(HALL_PROGRAM_BENEFITS.includes("Firehouse grocery planning"));
 
   assert.equal(HALL_PROGRAM_PRICING_TIERS.length, 3);
   assert.deepEqual(
@@ -36,7 +36,7 @@ function main(): void {
 
   const seo = buildHallProgramSeo();
   assert.equal(seo.canonicalPath, "/hall-program");
-  assert.ok(seo.title.includes("Hall Program"));
+  assert.ok(seo.title.includes("Firehouse Program"));
 
   assert.ok(ANALYTICS_EVENT_TYPES.includes("hall_program_viewed"));
   assert.ok(ANALYTICS_EVENT_TYPES.includes("hall_program_started"));

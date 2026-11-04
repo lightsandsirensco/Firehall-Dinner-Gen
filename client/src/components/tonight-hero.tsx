@@ -39,7 +39,7 @@ export function TonightHero({
       />
       <div className={cn(app.main, "relative py-8 sm:py-12 md:py-14")}>
         <p className={app.eyebrowMuted} data-testid="text-app-tagline">
-          Firefighter Built · Firehall Tested
+          Firefighter Built · Firehouse Tested
         </p>
         <h1
           className={cn(app.display, "mt-4 max-w-[14ch] sm:max-w-none")}

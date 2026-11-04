@@ -347,7 +347,7 @@ function AdvancedFilterSections({
             </SelectTrigger>
             <SelectContent className="z-[120]">
               <SelectItem value="lean">Lighter / healthy</SelectItem>
-              <SelectItem value="balanced">Hall standard</SelectItem>
+              <SelectItem value="balanced">Firehouse standard</SelectItem>
               <SelectItem value="comfort">Full comfort</SelectItem>
             </SelectContent>
           </Select>

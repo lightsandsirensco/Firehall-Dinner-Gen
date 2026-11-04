@@ -33,7 +33,7 @@ interface TonightPickCardProps {
 /** Badge when the server didn't send one (older cached responses) — real fields only. */
 function fallbackBadge(recipe: ClientRecipeResponse): string | null {
   const traits = [recipe.catalog_badge, ...(recipe.catalog_trait_badges ?? [])];
-  if (traits.includes("Hall Classic") || traits.includes("Crew Favorite")) return "Hall Favourite";
+  if (traits.includes("Hall Classic") || traits.includes("Crew Favorite")) return "Crew Favourite";
   const total = recipe.timing?.total_min ?? 0;
   if (total > 0 && total <= 45) return "Under 45 Min";
   if (recipe.budget_level === "low") return "Budget Pick";

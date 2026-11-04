@@ -29,7 +29,7 @@ export function registerHallLogbookRoutes(app: Express): void {
         const hallId = String(req.params.hallId ?? "");
         const payload = getHallLogbookPayload(hallId, req._authUserId!);
         if (!payload) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
         return res.json(payload);
       } catch (err) {
@@ -49,7 +49,7 @@ export function registerHallLogbookRoutes(app: Express): void {
         const hallId = String(req.params.hallId ?? "");
         const payload = markLogbookRead(hallId, req._authUserId!);
         if (!payload) {
-          return res.status(403).json({ message: "Not a member of this hall" });
+          return res.status(403).json({ message: "Not a member of this firehouse" });
         }
         return res.json(payload);
       } catch (err) {

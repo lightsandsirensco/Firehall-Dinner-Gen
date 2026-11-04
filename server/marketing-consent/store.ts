@@ -81,8 +81,17 @@ export async function recordConsentOptIn(input: {
      VALUES ($1, $2, $3, 1, $4, $5, NULL, now(), now())
      ON CONFLICT (email) DO UPDATE SET
        marketing_consent = 1,
-       consent_source = excluded.consent_source,
-       consent_captured_at = excluded.consent_captured_at,
+       -- Already-subscribed resubmissions keep the original signup date/source
+       -- (so they are not re-counted as new signups); re-opt-ins after an
+       -- unsubscribe start a fresh consent record.
+       consent_source = CASE
+         WHEN user_marketing_consent.marketing_consent = 1 AND user_marketing_consent.unsubscribed_at IS NULL
+           AND user_marketing_consent.consent_captured_at IS NOT NULL
+         THEN user_marketing_consent.consent_source ELSE excluded.consent_source END,
+       consent_captured_at = CASE
+         WHEN user_marketing_consent.marketing_consent = 1 AND user_marketing_consent.unsubscribed_at IS NULL
+           AND user_marketing_consent.consent_captured_at IS NOT NULL
+         THEN user_marketing_consent.consent_captured_at ELSE excluded.consent_captured_at END,
        unsubscribed_at = NULL,
        user_id = COALESCE(user_marketing_consent.user_id, excluded.user_id),
        updated_at = now()`,

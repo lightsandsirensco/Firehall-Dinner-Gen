@@ -55,7 +55,7 @@ const VIBE_BACKEND: Record<
 };
 
 export const TONIGHT_VIBE_OPTIONS: { value: TonightVibe; label: string; hint: string }[] = [
-  { value: "classic_hall", label: "Hall classic", hint: "What the crew expects on a normal night" },
+  { value: "classic_hall", label: "Firehouse classic", hint: "What the crew expects on a normal night" },
   { value: "quick_easy", label: "Quick on shift", hint: "Skillet or one-pan — in and out" },
   { value: "healthy", label: "Healthy", hint: "Lighter plates — still hearty, grilled bowls, real sides" },
   { value: "big_appetite", label: "Big appetite", hint: "Extra hearty — real portions" },

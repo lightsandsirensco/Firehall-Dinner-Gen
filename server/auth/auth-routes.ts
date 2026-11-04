@@ -225,13 +225,15 @@ export function registerAuthRoutes(app: Express): void {
       // link any pre-existing consent row (e.g. a lead who opted in before
       // creating an account) without changing its consent value. Only the
       // explicit checkbox at magic-link request time may set consent=true.
-      void linkExistingConsentToUser(consumed.email, user.user_id);
+      void linkExistingConsentToUser(consumed.email, user.user_id).catch((err) =>
+        logError("auth", "link marketing consent failed", err),
+      );
       if (consumed.wantsMarketing) {
         void recordConsentOptIn({
           email: consumed.email,
           userId: user.user_id,
           source: "account_signup",
-        });
+        }).catch((err) => logError("auth", "record marketing consent failed", err));
         void subscribeToList(consumed.email).catch(() => {});
       }
 
@@ -280,7 +282,7 @@ export function registerAuthRoutes(app: Express): void {
 
     // Sign-in itself is never marketing consent — only links a pre-existing
     // opted-in lead's consent row to this account, never sets it true.
-    if (result.user.email) void linkExistingConsentToUser(result.user.email, result.user.user_id);
+    if (result.user.email) void linkExistingConsentToUser(result.user.email, result.user.user_id).catch((err) => logError("auth", "link marketing consent failed", err));
 
     trackAuthEvent(req, result.isNew ? "account_created" : "login", { provider: "google" });
     return { kind: "signed_in", isNew: result.isNew, userId: result.user.user_id };
@@ -449,7 +451,7 @@ export function registerAuthRoutes(app: Express): void {
 
       // Sign-in itself is never marketing consent — only links a pre-existing
       // opted-in lead's consent row to this account, never sets it true.
-      if (result.user.email) void linkExistingConsentToUser(result.user.email, result.user.user_id);
+      if (result.user.email) void linkExistingConsentToUser(result.user.email, result.user.user_id).catch((err) => logError("auth", "link marketing consent failed", err));
 
       trackAuthEvent(req, result.isNew ? "account_created" : "login", { provider: "apple" });
 

@@ -26,7 +26,7 @@ const CUSTOM_MASTER_SECTIONS: Partial<Record<MasterCategoryId, ExploreSectionDef
   pizza_night: {
     id: "pizza_night",
     title: "Pizza Night",
-    subtitle: "Hall table pizza — not delivery boxes",
+    subtitle: "Firehouse table pizza — not delivery boxes",
     layout: "rail",
     priority: 85,
     poolTag: "handheld",
@@ -43,7 +43,7 @@ const CUSTOM_MASTER_SECTIONS: Partial<Record<MasterCategoryId, ExploreSectionDef
   global_flavors: {
     id: "global_flavors",
     title: "Global Flavors",
-    subtitle: "World plates that still work on a hall night",
+    subtitle: "World plates that still work on a firehouse night",
     layout: "rail",
     priority: 72,
     poolTag: "pasta",

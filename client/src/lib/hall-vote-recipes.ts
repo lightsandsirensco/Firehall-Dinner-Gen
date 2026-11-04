@@ -33,7 +33,7 @@ export function catalogPageToVoteRecipe(page: GoldenRecipePage, slug: string): C
 export function relatedSlugToVoteRecipe(related: { slug: string; title: string }): ClientRecipeResponse {
   return {
     ...buildMinimalClientRecipe(related.title),
-    why_it_fits_tonight: `Another hall favorite — ${related.title}`,
+    why_it_fits_tonight: `Another crew favorite — ${related.title}`,
     _signature: `hall-vote-related:${related.slug}`,
     _id: `hall-vote-related-${related.slug}`,
   };

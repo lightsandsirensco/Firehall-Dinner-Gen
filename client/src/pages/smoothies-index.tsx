@@ -67,10 +67,10 @@ export default function SmoothiesIndexPage() {
         <div className="relative overflow-hidden rounded-3xl border border-emerald-500/15 bg-gradient-to-br from-emerald-950/50 via-background to-zinc-950/80 p-8 sm:p-10">
           <div className="flex items-center gap-2 text-emerald-400/90">
             <Droplets className="w-4 h-4" aria-hidden />
-            <span className="text-xs uppercase tracking-widest">Station kitchen · Hall fuel</span>
+            <span className="text-xs uppercase tracking-widest">Station kitchen · Firehouse fuel</span>
           </div>
           <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl max-w-xl">
-            Hall smoothies crews actually finish
+            Firehouse smoothies crews actually finish
           </h1>
           <p className="mt-4 text-muted-foreground leading-relaxed max-w-2xl text-[15px] sm:text-base">
             Protein, recovery, breakfast, and green blends for a station blender — not a wellness
@@ -79,11 +79,11 @@ export default function SmoothiesIndexPage() {
           </p>
           <p className="mt-4 text-sm text-muted-foreground/90">
             <Link href="/guides/healthy-smoothies-at-the-hall" className="text-primary hover:underline">
-              Read the full hall guide
+              Read the full crew guide
             </Link>
             {" · "}
             <Link href="/explore" className="text-primary hover:underline">
-              All hall recipes
+              All firehouse recipes
             </Link>
           </p>
         </div>

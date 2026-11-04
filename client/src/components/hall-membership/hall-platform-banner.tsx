@@ -130,7 +130,7 @@ export function HallPlatformBanner({ className }: HallPlatformBannerProps) {
       </div>
 
       {loading ? (
-        <p className="text-xs text-muted-foreground mt-2">Loading linked hall…</p>
+        <p className="text-xs text-muted-foreground mt-2">Loading linked firehouse…</p>
       ) : null}
     </div>
   );

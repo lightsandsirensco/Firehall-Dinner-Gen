@@ -22,7 +22,7 @@ export default function HallPage() {
       favorite_count: dashboard.favoriteCount,
       hall_name_set: Boolean(
         dashboard.hallName &&
-          dashboard.hallName !== "Hall" &&
+          dashboard.hallName !== "Firehouse" &&
           dashboard.hallName !== "Linked Hall",
       ),
       meals_cooked: dashboard.stats.mealsCooked,
@@ -42,14 +42,14 @@ export default function HallPage() {
 
   if (!hasCrewHall) {
     return (
-      <HallShell title="Hall" hideSubNav testId="hall-page">
+      <HallShell title="Firehouse" hideSubNav testId="hall-page">
         <HallEmptyState />
       </HallShell>
     );
   }
 
   return (
-    <HallShell title="Hall" testId="hall-page">
+    <HallShell title="Firehouse" testId="hall-page">
       <HallPermissionGate permission="view_hall_dashboard" allowGuest={false}>
         <HallDashboardV2 />
       </HallPermissionGate>

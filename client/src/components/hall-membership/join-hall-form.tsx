@@ -86,7 +86,7 @@ export function JoinHallForm({
           })
         }
       >
-        {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : "Join this hall"}
+        {busy ? <Loader2 className="w-4 h-4 animate-spin" /> : "Join this firehouse"}
       </Button>
     );
   }
@@ -94,11 +94,11 @@ export function JoinHallForm({
   return (
     <div className={cn("space-y-6", className)}>
       <form onSubmit={(e) => void handleCodeJoin(e)} className="space-y-2">
-        <Label htmlFor="join-code">Hall or invite code</Label>
+        <Label htmlFor="join-code">Firehouse or invite code</Label>
         <div className="flex gap-2">
           <Input
             id="join-code"
-            placeholder="6-char hall code or invite"
+            placeholder="6-char firehouse code or invite"
             className="min-h-11"
             value={joinCode}
             onChange={(e) => setJoinCode(e.target.value.toUpperCase())}
@@ -115,11 +115,11 @@ export function JoinHallForm({
 
       {!compact && (
       <form onSubmit={(e) => void handleIdJoin(e)} className="space-y-2">
-        <Label htmlFor="join-hall-id">Hall ID (advanced)</Label>
+        <Label htmlFor="join-hall-id">Firehouse ID (advanced)</Label>
         <div className="flex gap-2">
           <Input
             id="join-hall-id"
-            placeholder="Hall ID"
+            placeholder="Firehouse ID"
             value={hallId}
             onChange={(e) => setHallId(e.target.value)}
           />

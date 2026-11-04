@@ -111,7 +111,7 @@ export const EXPLORE_DISCOVERY_SECTIONS: ExploreSectionDef[] = [
   {
     id: "chicken_dinners",
     title: "Chicken Dinners",
-    subtitle: "The hall's most-cooked protein",
+    subtitle: "The firehouse's most-cooked protein",
     layout: "rail",
     priority: 40,
     poolTag: "chicken",
@@ -143,7 +143,7 @@ export const EXPLORE_DISCOVERY_SECTIONS: ExploreSectionDef[] = [
   {
     id: "pasta_night",
     title: "Pasta Night",
-    subtitle: "Twirl-worthy plates for the hall",
+    subtitle: "Twirl-worthy plates for the crew",
     layout: "rail",
     priority: 50,
     poolTag: "pasta",

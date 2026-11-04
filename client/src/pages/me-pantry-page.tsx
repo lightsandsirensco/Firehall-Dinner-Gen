@@ -179,8 +179,8 @@ export default function MePantryPage() {
       />
 
       <PantrySection
-        title="Hall Pantry"
-        description="Staples this hall's canteen always keeps on hand — shared with anyone shopping from this device."
+        title="Firehouse Pantry"
+        description="Staples this firehouse's canteen always keeps on hand — shared with anyone shopping from this device."
         profile={hallPantry}
         onSetLevel={setHallStockLevel}
         onClear={clearHallStockLevel}

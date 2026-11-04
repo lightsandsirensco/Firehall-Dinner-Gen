@@ -98,7 +98,7 @@ export function GeneratorWheelHub({
         <header className="text-center mb-7 sm:mb-9 max-w-xl">
           <p className={cn(app.eyebrowMuted, "justify-center inline-flex items-center gap-2")}>
             <Sparkles className="w-3.5 h-3.5 opacity-80" aria-hidden />
-            Hall-tested · {formatMarketingRecipeCount(recipeCount)} meals
+            Firehouse-tested · {formatMarketingRecipeCount(recipeCount)} meals
           </p>
           <h1 className={cn(app.display, "mt-3")}>
             {GENERATOR.headline}

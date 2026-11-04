@@ -102,7 +102,7 @@ export function hallStreakDisplayRows(
   const rows: HallStreakDisplayRow[] = [
     {
       id: "hall-meals",
-      scopeLabel: "Hall",
+      scopeLabel: "Firehouse",
       kind: "meals",
       current: snapshot.hall.meals.current,
       longest: snapshot.hall.meals.longest,
@@ -110,14 +110,14 @@ export function hallStreakDisplayRows(
     },
     {
       id: "hall-votes",
-      scopeLabel: "Hall",
+      scopeLabel: "Firehouse",
       kind: "votes",
       current: snapshot.hall.votes.current,
       longest: snapshot.hall.votes.longest,
     },
     {
       id: "hall-wheel",
-      scopeLabel: "Hall",
+      scopeLabel: "Firehouse",
       kind: "wheel",
       current: snapshot.hall.wheel.current,
       longest: snapshot.hall.wheel.longest,

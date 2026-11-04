@@ -31,7 +31,7 @@ export function HomeSeoEditorial() {
             <p>
               Firehall Meals helps individual firefighters pick shift dinners, save meals they love,
               and cook with crew-sized portions from hundreds of firefighter-tested recipes. It is
-              free to use on your own — no hall membership required.
+              free to use on your own — no firehouse membership required.
             </p>
             <p>
               Firefighter-owned. Built for the fire service and tested on real shifts.

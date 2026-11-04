@@ -255,7 +255,7 @@ export default function FirefighterRedLeadRecipePage() {
 
             <section className="mt-12" aria-labelledby="red-lead-tips-heading">
               <h2 id="red-lead-tips-heading" className="font-heading text-xl sm:text-2xl text-foreground">
-                Firehall tips
+                Firehouse tips
               </h2>
               <dl className="mt-6 grid gap-4 sm:grid-cols-2">
                 {FIREFIGHTER_RED_LEAD_FIREHALL_TIPS.map((item) => (
@@ -274,7 +274,7 @@ export default function FirefighterRedLeadRecipePage() {
 
             <section className="mt-12" aria-labelledby="red-lead-serving-heading">
               <h2 id="red-lead-serving-heading" className="font-heading text-xl sm:text-2xl text-foreground">
-                Serve it like the hall does
+                Serve it like the crew does
               </h2>
               <p className="mt-4 text-sm sm:text-base text-muted-foreground leading-relaxed max-w-3xl">
                 Red Lead is the sauce pan in the middle of the table — not the whole breakfast. Set out the
@@ -301,7 +301,7 @@ export default function FirefighterRedLeadRecipePage() {
                 id="red-lead-breakfast-links-heading"
                 className="font-heading text-xl sm:text-2xl text-foreground"
               >
-                More firehall breakfast recipes
+                More firehouse breakfast recipes
               </h2>
               <ul className="mt-6 grid gap-3 sm:grid-cols-2">
                 {FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS.map((link) => (
@@ -322,7 +322,7 @@ export default function FirefighterRedLeadRecipePage() {
 
             <section className="mt-12" aria-labelledby="red-lead-classics-heading">
               <h2 id="red-lead-classics-heading" className="font-heading text-xl sm:text-2xl text-foreground">
-                Firehall classics for dinner shift
+                Firehouse classics for dinner shift
               </h2>
               <ul className="mt-4 flex flex-wrap gap-2">
                 {FIREFIGHTER_RED_LEAD_CLASSIC_LINKS.map((link) => (

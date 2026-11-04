@@ -111,7 +111,7 @@ function ExploreCinematicCardInner({
                   {isCurated && !recipe.catalogBadge && (
                     <Flame className="w-3 h-3 text-primary" aria-hidden />
                   )}
-                  {recommendationChip || (isCurated && !recipe.catalogBadge ? "Hall pick" : null)}
+                  {recommendationChip || (isCurated && !recipe.catalogBadge ? "Crew pick" : null)}
                 </>
               )}
             </span>

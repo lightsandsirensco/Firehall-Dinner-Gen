@@ -13,7 +13,7 @@ let db: SqliteDatabase;
 
 function getDb(): SqliteDatabase {
   if (!db) {
-    throw new Error("Hall vote store not initialized — call initHallVoteTables() first");
+    throw new Error("Crew vote store not initialized — call initHallVoteTables() first");
   }
   return db;
 }
@@ -166,8 +166,8 @@ export function getHallVoteOgMeta(voteId: string): HallVoteOgMeta | null {
   const statusLabel = row.status === "closed" ? "Results are in" : "Vote now";
 
   return {
-    title: `${row.title || "Tonight's Hall Vote"} | Firehall Meals`,
-    description: `${statusLabel} — ${optionList || "Crew dinner vote"}. Tap to pick tonight's hall meal.`,
+    title: `${row.title || "Tonight's Crew Vote"} | Firehall Meals`,
+    description: `${statusLabel} — ${optionList || "Crew dinner vote"}. Tap to pick tonight's firehouse meal.`,
     image: "/images/golden-100/chicken-parm.jpg",
     optionNames: names,
   };

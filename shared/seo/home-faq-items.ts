@@ -22,9 +22,9 @@ export const HOME_FAQ_ITEMS: FaqItem[] = [
       "Pick a shift dinner in seconds, save the ones you like, and get a shopping list scaled to your actual crew size. Every recipe has Cook Mode steps, nutrition info, and dietary filters built in, and the Classics Wheel picks something when nobody can decide. Sign in and your saved meals sync across devices.",
   },
   {
-    question: "Do I need to join a hall to use Firehall Meals?",
+    question: "Do I need to join a firehouse to use Firehall Meals?",
     answer:
-      "No. You can browse recipes, run the Generator, spin the Classics Wheel, and save favorites without linking a hall. Shared dinner votes, group grocery lists, and crew meal history are part of Hall Operations, which is still in private beta — join the waitlist for early access when it opens to your station.",
+      "No. You can browse recipes, run the Generator, spin the Classics Wheel, and save favorites without linking a firehouse. Shared dinner votes, group grocery lists, and crew meal history are part of Firehouse Operations, which is still in private beta — join the waitlist for early access when it opens to your station.",
   },
   {
     question: "What are some good meals for firefighters?",
@@ -41,7 +41,7 @@ export const HOME_FAQ_ITEMS: FaqItem[] = [
   {
     question: "What are some cheap meals for a firehouse crew?",
     answer:
-      "Chili, taco bars, pasta bakes, rice bowls and sheet-pan fajitas stretch a grocery budget the furthest — one protein, one starch, and a simple side feeds a lot of people. Most halls land somewhere around $10–15 a plate depending on the protein, less if you batch it and buy in bulk.",
+      "Chili, taco bars, pasta bakes, rice bowls and sheet-pan fajitas stretch a grocery budget the furthest — one protein, one starch, and a simple side feeds a lot of people. Most firehouses land somewhere around $10–15 a plate depending on the protein, less if you batch it and buy in bulk.",
     link: { href: "/fire-station-meals", label: "fire station meals" },
   },
   {
@@ -83,6 +83,6 @@ export const HOME_FAQ_ITEMS: FaqItem[] = [
   {
     question: "How is Firehall Meals different from a regular recipe site?",
     answer:
-      "Regular recipe sites assume a quiet kitchen and one plate. Firehall Meals is built around crew portions, honest cook times, and Cook Mode steps that survive getting pulled away mid-prep. Use it solo today — shared hall planning is rolling out through the Hall Operations private beta. Built by firefighters, tested on real shifts.",
+      "Regular recipe sites assume a quiet kitchen and one plate. Firehall Meals is built around crew portions, honest cook times, and Cook Mode steps that survive getting pulled away mid-prep. Use it solo today — shared firehouse planning is rolling out through the Firehouse Operations private beta. Built by firefighters, tested on real shifts.",
   },
 ];

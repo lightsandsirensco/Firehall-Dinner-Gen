@@ -45,6 +45,21 @@ export interface SyncRunResult {
 
 let syncTimer: ReturnType<typeof setTimeout> | null = null;
 let syncing = false;
+/**
+ * >0 while a sync writes merged data into local stores. Those stores emit
+ * their change events synchronously; without this, every sync re-triggered
+ * itself ~1.5s later, forever (constant /api/auth/sync + /saves writes).
+ */
+let applyingRemote = 0;
+
+function withChangeEventsSuppressed(fn: () => void): void {
+  applyingRemote += 1;
+  try {
+    fn();
+  } finally {
+    applyingRemote -= 1;
+  }
+}
 
 function isOnline(): boolean {
   return typeof navigator === "undefined" ? true : navigator.onLine;
@@ -75,6 +90,7 @@ function isDirty(): boolean {
 }
 
 export function scheduleCloudSync(trigger: SyncTrigger = "change", delayMs = 1500): void {
+  if (trigger === "change" && applyingRemote > 0) return;
   if (!isOnline()) {
     markDirty();
     return;
@@ -194,7 +210,7 @@ async function syncSavedRecipes(): Promise<void> {
     remote = fromSavedMealRows(data.recipes ?? []);
   }
   const merged = mergeSavedMeals(local, remote, getSavedMealTombstones());
-  applySavedMeals(merged as ReturnType<typeof getLocalSavedMeals>);
+  withChangeEventsSuppressed(() => applySavedMeals(merged as ReturnType<typeof getLocalSavedMeals>));
   await apiRequest("PUT", "/api/auth/saves", {
     recipes: toSavedMealRows(merged as ReturnType<typeof getLocalSavedMeals>),
     replace: true,
@@ -217,7 +233,7 @@ export async function runCloudSync(trigger: SyncTrigger = "background"): Promise
     const remoteRows = await pullRemoteSnapshots();
     const merged = mergeSnapshots(localRows, remoteRows);
 
-    applyMergedToLocal(merged);
+    withChangeEventsSuppressed(() => applyMergedToLocal(merged));
     await pushSnapshots(merged);
     domains.push(
       "personal_favorites",

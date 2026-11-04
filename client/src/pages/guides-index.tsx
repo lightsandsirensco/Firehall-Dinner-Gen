@@ -67,7 +67,7 @@ export default function GuidesIndexPage() {
 
         <div className="flex items-center gap-2 text-muted-foreground">
           <BookOpen className="w-4 h-4 text-primary" aria-hidden />
-          <span className="text-xs uppercase tracking-widest">Hall guides</span>
+          <span className="text-xs uppercase tracking-widest">Firehouse guides</span>
         </div>
 
         <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl">

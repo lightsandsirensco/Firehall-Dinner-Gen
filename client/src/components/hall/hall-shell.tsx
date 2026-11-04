@@ -35,9 +35,9 @@ export function HallShell({
   return (
     <div className={cn(app.page, "bg-background")} data-testid={testId ?? "hall-shell"}>
       <AppTopBar
-        title={onHallRoot ? "Hall" : section}
+        title={onHallRoot ? "Firehouse" : section}
         parentHref={onHallRoot ? undefined : "/hall"}
-        parentLabel={onHallRoot ? undefined : "Hall"}
+        parentLabel={onHallRoot ? undefined : "Firehouse"}
       />
       <main
         className={cn(
@@ -53,7 +53,7 @@ export function HallShell({
               className="text-xs font-semibold text-primary hover:underline touch-manipulation min-h-8 inline-flex items-center"
               data-testid="hall-back-manage"
             >
-              ← Hall
+              ← Firehouse
             </Link>
             <Link
               href="/tonight"

@@ -375,7 +375,7 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
       seo: buildFaqSeo(),
       jsonLd: [buildOrganizationSchema(origin), buildFaqPageSchema(HOME_FAQ_ITEMS)],
       bodyHtml: renderIndexSnapshotHtml({
-        h1: "Firefighter & Firehall Meal FAQ",
+        h1: "Firefighter & Firehouse Meal FAQ",
         intro: "Straight answers about firefighter meals, station cooking, and crew dinners on Firehall Meals.",
         sections: [],
         faqs: { heading: "FAQ", items: HOME_FAQ_ITEMS },
@@ -506,12 +506,12 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
             items: [...section.paragraphs],
           })),
           {
-            heading: "Firehall tips",
+            heading: "Firehouse tips",
             kind: "paragraph" as const,
             items: FIREFIGHTER_RED_LEAD_FIREHALL_TIPS.map((t) => `${t.title}: ${t.body}`),
           },
           {
-            heading: "Serve it like the hall does",
+            heading: "Serve it like the crew does",
             kind: "paragraph" as const,
             items: FIREFIGHTER_RED_LEAD_SERVING_SUGGESTIONS.map((t) => `${t.title}: ${t.body}`),
           },
@@ -519,11 +519,11 @@ function resolvePageSeo(origin: string, pathname: string): ResolvedPageSeo | "no
         faqs: [...FIREFIGHTER_RED_LEAD_FAQS],
         linkSections: [
           {
-            heading: "More firehall breakfast recipes",
+            heading: "More firehouse breakfast recipes",
             links: FIREFIGHTER_RED_LEAD_BREAKFAST_LINKS.map((l) => ({ label: l.label, path: l.href })),
           },
           {
-            heading: "Firehall classics for dinner shift",
+            heading: "Firehouse classics for dinner shift",
             links: FIREFIGHTER_RED_LEAD_CLASSIC_LINKS.map((l) => ({ label: l.label, path: l.href })),
           },
         ],

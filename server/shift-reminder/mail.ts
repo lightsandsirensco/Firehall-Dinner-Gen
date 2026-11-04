@@ -41,7 +41,7 @@ export function buildShiftReminderEmailHtml(input: {
 <body style="font-family:system-ui,sans-serif;line-height:1.5;color:#1a1a1a;max-width:560px;margin:0 auto;padding:24px;">
   <p>${greeting}</p>
   <h1 style="font-size:22px;margin:16px 0;">Tomorrow is shift day.</h1>
-  <p>Pick tonight&apos;s meal for the crew — or start a hall vote so everyone weighs in before ${input.shiftDateLabel}.</p>
+  <p>Pick tonight&apos;s meal for the crew — or start a crew vote so everyone weighs in before ${input.shiftDateLabel}.</p>
   <div style="margin:24px 0;">
     ${actionButton(SHIFT_REMINDER_ACTION_LABELS.generate, generateUrl)}
     ${actionButton(SHIFT_REMINDER_ACTION_LABELS.wheel, wheelUrl)}
@@ -63,7 +63,7 @@ export function buildShiftReminderEmailText(input: {
 
 Tomorrow is shift day.
 
-Pick tonight's meal for the crew — or start a hall vote before ${input.shiftDateLabel}.
+Pick tonight's meal for the crew — or start a crew vote before ${input.shiftDateLabel}.
 
 ${SHIFT_REMINDER_ACTION_LABELS.generate}: ${buildShiftReminderClickUrl(input.sendId, "generate")}
 ${SHIFT_REMINDER_ACTION_LABELS.wheel}: ${buildShiftReminderClickUrl(input.sendId, "wheel")}

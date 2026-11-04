@@ -79,7 +79,7 @@ function HallAnalyticsContent({ hallId, className }: HallAnalyticsPanelProps) {
         trackHallAnalyticsViewed(hallId);
       } catch {
         setData(null);
-        setError("Could not load hall analytics");
+        setError("Could not load firehouse analytics");
       }
     } finally {
       setLoading(false);
@@ -115,7 +115,7 @@ function HallAnalyticsContent({ hallId, className }: HallAnalyticsPanelProps) {
           className="font-heading text-lg tracking-wide flex items-center gap-2"
         >
           <BarChart3 className="w-4 h-4 text-primary" />
-          Hall analytics
+          Firehouse analytics
         </h2>
         <p className="text-sm text-muted-foreground mt-1">
           Crew activity across meals, votes, wheel, and grocery runs.

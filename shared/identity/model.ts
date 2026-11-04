@@ -171,7 +171,7 @@ export const FEATURE_OWNERSHIP: FeatureOwnership[] = [
     signed_in_individual: "full",
     hall_member: "full",
     hall_admin: "full",
-    notes: "Basic Hall Vote free on Tonight. Advanced vote (history, deadlines, shift scope) = Hall Pro.",
+    notes: "Basic Crew Vote free on Tonight. Advanced vote (history, deadlines, shift scope) = Hall Pro.",
   },
   {
     domain: "canteen",

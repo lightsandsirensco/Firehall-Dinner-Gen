@@ -141,9 +141,9 @@ export default function PrivacyPage() {
                 your devices.
               </li>
               <li>
-                Your hall membership link, if you've joined or created a Hall (a shared crew
-                workspace). Hall content (shared shopping lists, votes, canteen notes) is visible
-                to other members of that Hall — it is never public.
+                Your firehouse membership link, if you've joined or created a Firehouse (a shared crew
+                workspace). Firehouse content (shared shopping lists, votes, canteen notes) is visible
+                to other members of that Firehouse — it is never public.
               </li>
               <li>Your subscription/plan status, if you have one.</li>
             </ul>
@@ -240,7 +240,7 @@ export default function PrivacyPage() {
               You can permanently delete your account from Account settings. Deleting your account
               removes: your profile and preferences, saved recipes, shift-reminder history, your
               subscription/entitlement record, your cloud-sync data, your Firehall Meals Pro cooked-meal
-              history, your Hall membership link, and your matching marketing-lead record in our
+              history, your Firehouse membership link, and your matching marketing-lead record in our
               own database. Your account row itself is deleted.
             </p>
             <p>
@@ -259,9 +259,9 @@ export default function PrivacyPage() {
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li>
-                Shared Hall content you authored (canteen notes, shortage reports, dues history)
-                stays attached to the Hall so other members' shared records stay intact — it is
-                not publicly identifiable to you outside that Hall.
+                Shared Firehouse content you authored (canteen notes, shortage reports, dues history)
+                stays attached to the Firehouse so other members' shared records stay intact — it is
+                not publicly identifiable to you outside that Firehouse.
               </li>
               <li>
                 Our internal analytics events are keyed to a session/visitor identifier, not your
@@ -283,11 +283,11 @@ export default function PrivacyPage() {
             </ul>
           </Section>
 
-          <Section id="hall-data" title="10. Hall (crew) data">
+          <Section id="hall-data" title="10. Firehouse (crew) data">
             <p>
-              If you join or create a Hall, information you contribute there (shopping lists,
-              votes, canteen notes, shared meal history) is visible to other members of that Hall.
-              It is never made public or shown outside that Hall's membership.
+              If you join or create a Firehouse, information you contribute there (shopping lists,
+              votes, canteen notes, shared meal history) is visible to other members of that Firehouse.
+              It is never made public or shown outside that Firehouse's membership.
             </p>
           </Section>
 

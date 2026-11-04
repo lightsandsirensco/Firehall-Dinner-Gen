@@ -233,7 +233,7 @@ export const PERSONAL_ONBOARDING_STEP_LABELS: Record<
   save_meal: "Save meal",
   profile: "Build profile",
   hall_question: "Your setup",
-  connect_hall: "Connect to hall",
+  connect_hall: "Connect to firehouse",
 };
 
 export function personalOnboardingStepNumber(step: PersonalOnboardingStep): number {

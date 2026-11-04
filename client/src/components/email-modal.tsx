@@ -233,7 +233,7 @@ export function EmailModal({
               )}
 
               <p className="text-[11px] text-muted-foreground text-center leading-relaxed">
-                We&apos;ll always send this recipe. New hall meal ideas only if you check the box above.
+                We&apos;ll always send this recipe. New firehouse meal ideas only if you check the box above.
               </p>
               <div className="pt-2 border-t border-border/20 text-center">
                 <p className="text-[11px] text-muted-foreground leading-relaxed">{LIGHTS_COPY.emailNote}</p>

@@ -12,6 +12,7 @@ export const HALL_OF_FAME_PERIOD_LABELS: Record<AnalyticsPeriod, string> = {
   today: "Today",
   "7d": "This Week",
   "30d": "This Month",
+  "90d": "Last 90 Days",
   all: "All Time",
 };
 

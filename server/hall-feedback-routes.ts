@@ -48,7 +48,7 @@ export async function registerHallFeedbackRoutes(app: Express): Promise<void> {
 
       return res.json({
         ok: true,
-        message: "Got it — the hall hears you. Thanks for shaping the next shift.",
+        message: "Got it — the firehouse hears you. Thanks for shaping the next shift.",
       });
     } catch (err: unknown) {
       log(`[hall-feedback] error: ${err instanceof Error ? err.message : String(err)}`, "feedback");

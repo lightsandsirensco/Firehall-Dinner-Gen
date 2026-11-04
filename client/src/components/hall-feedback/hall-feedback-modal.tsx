@@ -50,7 +50,7 @@ export function HallFeedbackModal({ open, onOpenChange, source }: HallFeedbackMo
     e.preventDefault();
     const trimmed = message.trim();
     if (trimmed.length < 8) {
-      setErrorMsg("Tell us a little more — even one sentence helps the hall.");
+      setErrorMsg("Tell us a little more — even one sentence helps the firehouse.");
       setStatus("error");
       return;
     }

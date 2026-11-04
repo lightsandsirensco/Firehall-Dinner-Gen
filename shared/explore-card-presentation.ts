@@ -126,7 +126,7 @@ function buildHookLine(
   }
 
   if (comfort === "Comfort Food") return "Stick-to-your-ribs comfort";
-  if (comfort === "BBQ") return "Smoky hall favorite";
+  if (comfort === "BBQ") return "Smoky crew favorite";
   if (protein) return `${protein} · crew-sized portions`;
   if (recipe.readyInMinutes > 0 && recipe.readyInMinutes <= 30) {
     return `Ready in ${recipe.readyInMinutes} min`;
@@ -135,7 +135,7 @@ function buildHookLine(
     const plain = recipe.summary.replace(/<[^>]*>/g, "").trim();
     if (plain.length > 0) return plain.slice(0, 72) + (plain.length > 72 ? "…" : "");
   }
-  return "Built for the hall kitchen";
+  return "Built for the crew kitchen";
 }
 
 /** Cards that should appear in photo-first discover/search grids */

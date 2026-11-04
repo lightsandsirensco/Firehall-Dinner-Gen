@@ -61,7 +61,7 @@ const LANDING_COPY: Record<string, LandingCopy> = {
   "/firefighter-meals": {
     label: "our firefighter meals hub",
     prefix: "Looking for more like this?",
-    suffix: "rounds up the hall's most-cooked dinners.",
+    suffix: "rounds up the firehouse's most-cooked dinners.",
   },
   "/smoothies": {
     label: "our smoothies collection",

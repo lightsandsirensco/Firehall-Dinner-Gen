@@ -10,7 +10,7 @@ export async function fetchHallAnalytics(hallId: string): Promise<HallAnalyticsP
     (err as Error & { code?: string }).code = "hall_pro_required";
     throw err;
   }
-  if (!res.ok) throw new Error("Failed to load hall analytics");
+  if (!res.ok) throw new Error("Failed to load firehouse analytics");
   return res.json();
 }
 

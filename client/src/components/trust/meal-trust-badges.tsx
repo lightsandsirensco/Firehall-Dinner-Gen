@@ -31,7 +31,7 @@ export function MealTrustBadges({
   return (
     <ul
       className={cn("flex flex-wrap gap-1.5", className)}
-      aria-label="Hall meal badges"
+      aria-label="Firehouse meal badges"
     >
       {badges.map((b) => (
         <li key={b.id}>

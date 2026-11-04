@@ -34,7 +34,7 @@ export function bindHallShoppingListDb(database: SqliteDatabase): void {
 
 function getDb(): SqliteDatabase {
   if (!db) {
-    throw new Error("Hall shopping list store not initialized");
+    throw new Error("Firehouse shopping list store not initialized");
   }
   return db;
 }
@@ -114,7 +114,7 @@ function createList(hallId: string, userId: string, title?: string): HallShoppin
     `INSERT INTO hall_shopping_lists
      (list_id, hall_id, title, status, created_by_user_id, created_at, updated_at)
      VALUES (?, ?, ?, 'active', ?, ?, ?)`,
-  ).run(listId, hallId, title?.trim() || "Hall grocery run", userId, now, now);
+  ).run(listId, hallId, title?.trim() || "Firehouse grocery run", userId, now, now);
   const row = d.prepare(`SELECT * FROM hall_shopping_lists WHERE list_id = ?`).get(listId) as Record<
     string,
     unknown

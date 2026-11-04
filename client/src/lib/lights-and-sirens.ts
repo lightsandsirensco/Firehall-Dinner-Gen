@@ -1,16 +1,16 @@
 /**
  * Lights & Sirens Co. — parent firefighter lifestyle brand for Firehall Meals.
  *
- * NOTE: lightsandsirensco.com is currently offline. All user-facing links to
- * that domain have been removed/disabled (see LightsAndSirensLink, which now
- * renders as plain text, not an <a>). Social links below point at a
- * different domain and are left intact.
+ * NOTE: brand mentions via LightsAndSirensLink render as plain text, not an
+ * <a>. The only link to `website` is the understated footer credit
+ * (ParentBrandCredit in site-footer.tsx).
  */
 
 export const LIGHTS_AND_SIRENS = {
   name: "Lights & Sirens Co.",
   builtByLabel: "Built by Lights & Sirens Co.",
   firefighterOwned: "Firefighter-owned",
+  website: "https://lightsandsirensco.com",
   instagram: "https://www.instagram.com/lightsandsirens_co/",
   facebook: "https://www.facebook.com/lightsandsirensco/",
 } as const;
@@ -19,8 +19,8 @@ export const LIGHTS_COPY = {
   heroBuiltBy: "Built by Lights & Sirens Co.",
   /** Single body block — home About-style authenticity sections. */
   authenticityBody:
-    "No more standing around the hall throwing out the same five ideas every shift. Just real meals crews actually want to make — from quick busy-night dinners to firehall classics that always hit on shift.",
-  recipeStrip: "Another firehall-tested meal from Lights & Sirens Co.",
+    "No more standing around the firehouse throwing out the same five ideas every shift. Just real meals crews actually want to make — from quick busy-night dinners to firehouse classics that always hit on shift.",
+  recipeStrip: "Another firehouse-tested meal from Lights & Sirens Co.",
   wheelLine: "The classic kitchen-table gamble from Lights & Sirens Co.",
   emailNote: "From the crew at Lights & Sirens Co. — firefighter culture, gear, and meals that work on shift.",
   footerTagline: "Built by firefighters, for firefighters.",

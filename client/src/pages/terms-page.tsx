@@ -112,7 +112,7 @@ export default function TermsPage() {
           <Section id="acceptable-use" title="3. Acceptable use">
             <p>
               Don't misuse the service — no scraping the catalog at scale, no attempting to bypass
-              entitlement/paywall checks, no abusive or unlawful use of Hall collaboration
+              entitlement/paywall checks, no abusive or unlawful use of Firehouse collaboration
               features (shared shopping lists, votes, canteen notes) shared with other crew
               members.
             </p>
@@ -210,7 +210,7 @@ export default function TermsPage() {
           <Section id="free-vs-paid" title="8. Free vs. paid functionality">
             <p>
               Core features — the meal generator, the Classics Wheel, browsing the recipe catalog,
-              saving meals, Hall crew collaboration, and a meal history covering the last 30 days
+              saving meals, Firehouse crew collaboration, and a meal history covering the last 30 days
               (with ratings, notes, and recent-repeat avoidance) — are free for signed-in users.
               Firehall Meals Pro adds: advanced meal matching (nutrition-target search), the "Foods
               to Avoid" ingredient exclusion tool, and full meal memory — your complete meal

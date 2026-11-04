@@ -7,7 +7,7 @@ import { SEO_HOME_H1, SEO_HOME_H1_SUPPORT } from "@shared/seo/constants";
 
 export const BRAND_NAME = "Firehall Meals";
 
-export const BRAND_TAGLINE = "Built by Firefighters. Tested in the Firehall.";
+export const BRAND_TAGLINE = "Built by Firefighters. Tested in the Firehouse.";
 
 export const BRAND_MISSION =
   "Get rid of the \"What's for Dinner?\" debate every shift.";
@@ -31,13 +31,13 @@ export const CTA = {
   tryAnother: "Try another",
   changePicks: "Change picks",
   cookThis: "Cook this one",
-  viewPackage: "Hall package",
+  viewPackage: "Firehouse package",
   classicsWheel: "Classics Wheel",
 } as const;
 
 export const HALL_VOTE = {
   letCrewVote: "Let the crew vote",
-  startVote: "Start Hall Vote",
+  startVote: "Start Crew Vote",
   sendToCrew: "Send this to the crew",
   shareTitle: "Tonight's crew dinner vote",
   shareText: "The crew picks dinner — tap to vote:",
@@ -45,48 +45,48 @@ export const HALL_VOTE = {
 
 /** Collaboration framing — hall is optional, not the product root. */
 export const HALL_LINKED = {
-  connect: "Connect to Hall",
-  join: "Join Hall",
-  linked: "Hall",
-  linkedHalls: "Your halls",
-  create: "Create Hall",
-  manage: "Manage hall",
-  switch: "Switch hall",
-  active: "Active hall",
-  noLink: "No hall linked",
+  connect: "Connect to Firehouse",
+  join: "Join Firehouse",
+  linked: "Firehouse",
+  linkedHalls: "Your firehouses",
+  create: "Create Firehouse",
+  manage: "Manage firehouse",
+  switch: "Switch firehouse",
+  active: "Active firehouse",
+  noLink: "No firehouse linked",
   noLinkBody: "Join with a code or create one when your crew wants to collaborate.",
-  signInToConnect: "Sign in to connect to a hall.",
+  signInToConnect: "Sign in to connect to a firehouse.",
   crewTools: "Crew tools",
 } as const;
 
 export const HALL_ONBOARDING = {
-  joinTitle: "Join Hall",
+  joinTitle: "Join Firehouse",
   joinTagline: "Enter your crew code — collaboration starts on the next screen.",
   welcomeTitle: "You're connected",
   welcomeTagline: "You're linked to your crew.",
   welcomeBody: "Use shared vote, shopping list, meal history, and staples with your crew.",
-  startDinner: "Open Hall Home",
-  viewHallHome: "View Hall",
-  signInPrompt: "Sign in to join or create a hall.",
-  haveCode: "Hall or invite code",
+  startDinner: "Open Firehouse Home",
+  viewHallHome: "View Firehouse",
+  signInPrompt: "Sign in to join or create a firehouse.",
+  haveCode: "Firehouse or invite code",
 } as const;
 
 export const PERSONAL_ONBOARDING = {
   welcomeTitle: "Welcome",
-  welcomeBody: "Pick dinner in under a minute — connect a hall anytime if you cook with a crew.",
+  welcomeBody: "Pick dinner in under a minute — connect a firehouse anytime if you cook with a crew.",
   generateTitle: "Generate your first meal",
   generateBody: "Tap Pick Tonight — filters are pre-set for a fast first pick.",
   saveTitle: "Save a meal you like",
   saveBody: "Tap Save so it stays in Saved across devices.",
   profileTitle: "Add your name",
   profileBody: "Optional — helps sync and crew picks.",
-  hallTitle: "Do you cook at a fire hall?",
+  hallTitle: "Do you cook at a firehouse?",
   hallBody: "Optional next step — shared board, shopping list, and staples when your crew is ready.",
   hallYesHint: "Free to join — crew collaboration",
   hallNoLabel: "Just picking meals for now",
-  hallNoHint: "Keep picking meals. Connect a hall anytime.",
+  hallNoHint: "Keep picking meals. Connect a firehouse anytime.",
   connectSkip: "Continue without connecting",
-  connectTitle: "Connect to your hall",
+  connectTitle: "Connect to your firehouse",
   connectBody: "Enter a crew code or invite link. Skip if you're not ready.",
 } as const;
 
@@ -95,7 +95,7 @@ export const TONIGHT_HUB = {
   tagline: "Decide, vote, shop, and cook — right now.",
   sections: {
     meal: "Tonight's Meal",
-    vote: "Hall Vote",
+    vote: "Crew Vote",
     shopping: "Shopping List",
     cook: "Cook Mode",
     needAnything: "Need Anything?",
@@ -114,8 +114,8 @@ export const TONIGHT_HUB = {
   },
   hints: {
     continueSession: "Crew filters saved — pick up where you left off",
-    noHall: "Connect to a hall for shared shopping and crew vote",
-    noVote: "Start a Hall Vote so the crew can pick dinner",
+    noHall: "Connect to a firehouse for shared shopping and crew vote",
+    noVote: "Start a Crew Vote so the crew can pick dinner",
     noRecipe: "Pick a meal first",
     allStocked: "All stocked — nothing to grab",
     listItems: (n: number) => (n === 0 ? "List is empty" : `${n} item${n === 1 ? "" : "s"} to grab`),
@@ -143,12 +143,12 @@ export const COOK_MODE = {
 export const GENERATOR = {
   headline: "What's for dinner tonight?",
   headlineWithMeal: "Tonight's pick",
-  subline: "Crew size and protein — tap once. Under a minute to a hall-tested recipe.",
+  subline: "Crew size and protein — tap once. Under a minute to a firehouse-tested recipe.",
   sublineFocus: "Open the recipe, or pick again for another match.",
   loading: "Finding a match…",
   loadingAlt: "Trying another match…",
   emptyTitle: "Ready when you are",
-  emptyBody: "Tap Pick Tonight's Meal — crew-sized, hall-tested, ready to cook.",
+  emptyBody: "Tap Pick Tonight's Meal — crew-sized, firehouse-tested, ready to cook.",
   emptyHint: "Need to tweak? Expand options below.",
   wheelLink: "Can't decide? Spin the Classics Wheel →",
 } as const;
@@ -167,14 +167,14 @@ export const HOME = {
     "Pick a meal, let the crew vote, and get cooking.",
   eyebrow: "Your shift kitchen",
   subline:
-    "The meal app for firefighters — pick tonight's dinner, save what you love, and optionally link your hall for crew planning.",
+    "The meal app for firefighters — pick tonight's dinner, save what you love, and optionally link your firehouse for crew planning.",
   trust: {
     built: "Built by firefighters",
     free: "Free to cook",
     crew: "Crew-sized",
     shift: "Shift-tested",
     beginner: "Clear steps",
-    connect: "Optional hall link",
+    connect: "Optional firehouse link",
   },
   stats: {
     recipes: "Curated Recipes",
@@ -193,7 +193,7 @@ export const HOME = {
     {
       step: "02",
       title: "Let the crew vote",
-      body: "Send options to the hall. Everyone taps a pick — no more 40-minute group chat debates.",
+      body: "Send options to the crew. Everyone taps a pick — no more 40-minute group chat debates.",
     },
     {
       step: "03",
@@ -202,7 +202,7 @@ export const HOME = {
     },
   ],
   whyTitle: "Why firefighters use it",
-  whyLead: "Less debate. More dinner. Built for shift night — at home or at the hall.",
+  whyLead: "Less debate. More dinner. Built for shift night — at home or at the firehouse.",
   whyBenefits: [
     {
       title: "Ends the dinner debate",
@@ -217,13 +217,13 @@ export const HOME = {
       body: "Shopping lists sized for your crew. Grab what you need in one trip.",
     },
     {
-      title: "Works for home or hall",
-      body: "Cook solo on your shift, or link your hall when the crew wants to plan together.",
+      title: "Works for home or firehouse",
+      body: "Cook solo on your shift, or link your firehouse when the crew wants to plan together.",
     },
   ],
   hallSectionTitle: "Cooking with your crew?",
   hallSectionLead:
-    "Link your account to your hall for shared planning — free to join, optional until you're ready.",
+    "Link your account to your firehouse for shared planning — free to join, optional until you're ready.",
   hallSectionFeatures: [
     {
       title: "Connect your account",
@@ -231,21 +231,21 @@ export const HOME = {
     },
     {
       title: "Shared shopping list",
-      body: "One list for the grocery run — sized for the hall, not a single plate.",
+      body: "One list for the grocery run — sized for the crew, not a single plate.",
     },
     {
       title: "Canteen staples",
       body: "Track what's low, what's out, and what the crew needs restocked.",
     },
     {
-      title: "Hall meal history",
+      title: "Firehouse meal history",
       body: "See what the crew cooked, voted on, and wants again.",
     },
   ],
   curatedRecipesLabel: "300+ curated recipes",
   curatedRecipesCount: "300+",
   featuredTitle: "Meals firefighters actually cook",
-  featuredLead: "Hall-tested picks — browse the full catalog anytime.",
+  featuredLead: "Firehouse-tested picks — browse the full catalog anytime.",
   seoTitle: "The meal app for firefighters",
   introTitle: "Firefighter meals sized for your shift",
   ctaBandTitle: "Ready for your next shift dinner?",
@@ -267,8 +267,8 @@ export const NAV = {
   shop: "Shop",
   faq: "FAQ",
   saved: "Saved Meals",
-  hall: "Hall",
-  hallHistory: "Hall Meal History",
+  hall: "Firehouse",
+  hallHistory: "Firehouse Meal History",
   proteinDeals: "Protein Deals",
 } as const;
 
@@ -294,32 +294,32 @@ export const APP_HOME = {
   nextSaveHint: "Keeps it on Saved across devices",
   nextProfile: "Add your name",
   nextProfileHint: "Helps sync and crew picks",
-  nextHallQuestion: "Do you cook at a fire hall?",
+  nextHallQuestion: "Do you cook at a firehouse?",
   nextHallQuestionHint: "Optional — after you've picked dinner a few times",
-  nextConnectHall: "Join or create a Hall",
+  nextConnectHall: "Join or create a Firehouse",
   nextConnectHallHint: "Shared board, shopping, and staples",
   nextDismiss: "I'll explore on my own",
   resumeTitle: "Cook again",
-  hallTonight: "Tonight at the hall",
+  hallTonight: "Tonight at the firehouse",
   hallAlerts: "Needs attention",
   hallShopping: "Shopping run",
   mealsWorkspace: "What's for dinner",
   mealsWorkspaceHint: "Pick, explore, wheel, and saved meals",
-  hallWorkspace: "At the hall",
+  hallWorkspace: "At the firehouse",
   hallWorkspaceHint: "Board, dinner, shopping, staples, and tools",
-  openHallOps: "Manage the hall",
-  tryHallOps: "Connect your hall",
+  openHallOps: "Manage the firehouse",
+  tryHallOps: "Connect your firehouse",
   tryHallOpsHint: "Optional — after dinner is decided",
-  manageHall: "Manage the hall",
+  manageHall: "Manage the firehouse",
   manageHallHint: "Board, shopping, canteen, dues, and log",
   inspireTitle: "Other ways to decide",
   browseMeals: "Browse the catalog",
   browseMealsHint: "When you want to look around",
-  openHall: "Manage the hall",
+  openHall: "Manage the firehouse",
   openHallHint: "After dinner is locked",
   keepPickingMeals: "Keep picking meals",
   nextStepMeals: "Next: pick meals",
-  nextStepHall: "Next: hall",
+  nextStepHall: "Next: firehouse",
   lifecycleHint: "Pick → cook → done",
   recentlyViewed: "Recently viewed",
   continueCooking: "Continue cooking",
@@ -331,53 +331,53 @@ export const APP_HOME = {
 } as const;
 
 export const HALL_EMPTY = {
-  title: "Connect your hall",
-  subtitle: "Join with a crew code — Home stays your command center; Hall is where you manage the work.",
-  joinTitle: "Join Hall",
+  title: "Connect your firehouse",
+  subtitle: "Join with a crew code — Home stays your command center; Firehouse is where you manage the work.",
+  joinTitle: "Join Firehouse",
   joinDescription: "Enter a crew code or scan the fridge QR",
-  createTitle: "Create Hall",
+  createTitle: "Create Firehouse",
   createDescription: "Start a link for board, shopping, history, and staples",
-  createSignIn: "Sign in to create a hall for your crew",
-  learnTitle: "How the hall workflow works",
-  learnDescription: "Home surfaces what needs attention — Hall is where you manage it",
+  createSignIn: "Sign in to create a firehouse for your crew",
+  learnTitle: "How the firehouse workflow works",
+  learnDescription: "Home surfaces what needs attention — Firehouse is where you manage it",
   browseMeals: "Back to Home",
-  browseMealsHint: "Every shift starts at Home — connect a hall whenever the crew is ready",
+  browseMealsHint: "Every shift starts at Home — connect a firehouse whenever the crew is ready",
 } as const;
 
 export const HALL_PRO = {
   title: "Hall Pro",
-  tagline: "Crew collaboration for shift night — one subscription for the whole hall.",
+  tagline: "Crew collaboration for shift night — one subscription for the whole crew.",
   subtitle: "Benefits the crew, not your personal account.",
   excludesNote: "Meal planning, saved meals, and profiles belong to Firefighter Plus.",
   features: {
     sharedList: "Shared Shopping List",
-    mealHistory: "Hall Meal History",
-    staples: "Hall Staples",
-    advancedVote: "Advanced Hall Vote",
-    groceryPlanning: "Hall grocery planning",
+    mealHistory: "Firehouse Meal History",
+    staples: "Firehouse Staples",
+    advancedVote: "Advanced Crew Vote",
+    groceryPlanning: "Firehouse grocery planning",
     paymentTracker: "Canteen Payment Tracker",
   },
 } as const;
 
 export const HALL_FEATURES = {
-  title: "Connect to Hall",
+  title: "Connect to Firehouse",
   subtitle: "Free crew link — Hall Pro unlocks full collaboration.",
   proTeaser: "Hall Pro adds cloud sync, advanced vote, and crew grocery planning.",
-  voteTitle: "Hall Vote",
+  voteTitle: "Crew Vote",
   voteBody: "Basic crew vote is free. Hall Pro adds deadlines, vote history, and shift-scoped polls.",
   shoppingTitle: "Shared Shopping List",
   shoppingBody: "Hall Pro — one grocery list for the crew with runner assignment and cloud sync.",
-  historyTitle: "Hall Meal History",
+  historyTitle: "Firehouse Meal History",
   historyBody: "Hall Pro — shared meal log for what your crew cooked and voted on.",
-  staplesTitle: "Hall Staples",
-  staplesBody: "Free with hall link — track coffee, paper towels, and pantry staples together.",
-  groceryTitle: "Hall grocery planning",
+  staplesTitle: "Firehouse Staples",
+  staplesBody: "Free with firehouse link — track coffee, paper towels, and pantry staples together.",
+  groceryTitle: "Firehouse grocery planning",
   groceryBody: "Hall Pro — plan the crew grocery run with flyer deals matched to crew meals.",
   paymentTrackerTitle: "Canteen Payment Tracker",
   paymentTrackerBody:
     "Hall Pro — track monthly dues for every firefighter. Mark paid, see who's overdue, and ditch the spreadsheet.",
-  ctaJoin: "Join Hall",
-  ctaCreate: "Create Hall",
+  ctaJoin: "Join Firehouse",
+  ctaCreate: "Create Firehouse",
 } as const;
 
 export const ME_HISTORY = {
@@ -402,8 +402,8 @@ export const ME_SETTINGS = {
   measurementsHint: "Applies to cook mode and recipe ingredients.",
   account: "Account",
   editProfile: "Edit profile and shift reminders",
-  crew: "Linked hall",
-  hallSettings: "Manage linked hall — members and invites",
+  crew: "Linked firehouse",
+  hallSettings: "Manage linked firehouse — members and invites",
 } as const;
 
 export const PROTEIN_DEALS = {
@@ -430,23 +430,23 @@ export const PROTEIN_DEALS = {
   },
   matchedMeals: (label: string) => `Meals with ${label}`,
   noMatches: "No matches yet — try another protein deal.",
-  addedToList: "Added to hall shopping list",
+  addedToList: "Added to firehouse shopping list",
 } as const;
 
 export const HALL_IDENTITY = {
-  myHall: "My Hall",
+  myHall: "My Firehouse",
   members: "Members",
   canteenManager: "Canteen Manager",
   stationNotSet: "Station not set",
   departmentNotSet: "Department not set",
   cityNotSet: "City not set",
   unassignedManager: "No canteen manager assigned",
-  assignManagerInSettings: "Assign in hall settings",
-  addIdentityInSettings: "Add in hall settings",
-  noHallPhoto: "No hall photo yet",
-  hallPhoto: "Hall photo",
-  hallPhotoHint: "Paste a photo URL — your crew sees it on the hall home.",
-  motto: "Hall motto",
+  assignManagerInSettings: "Assign in firehouse settings",
+  addIdentityInSettings: "Add in firehouse settings",
+  noHallPhoto: "No firehouse photo yet",
+  hallPhoto: "Firehouse photo",
+  hallPhotoHint: "Paste a photo URL — your crew sees it on the firehouse home.",
+  motto: "Firehouse motto",
   mottoHint: "Optional — a line your crew recognizes.",
   mottoPlaceholder: "Feed the crew, fuel the shift.",
   canteenManagerLabel: "Canteen manager",
@@ -455,20 +455,20 @@ export const HALL_IDENTITY = {
 } as const;
 
 export const HALL_DASHBOARD = {
-  title: "Hall",
-  myHall: "My Hall",
+  title: "Firehouse",
+  myHall: "My Firehouse",
   subtitle: "Crew collaboration — vote, shop, and track meals together.",
   tagline: "Connected to your crew",
   tonight: "Tonight",
   /** @deprecated Use `tonight` */
   tonightsMeal: "Tonight",
-  lastMeals: "Hall Meal History",
+  lastMeals: "Firehouse Meal History",
   lastMealsCooked: "Recently cooked",
   /** @deprecated Use `lastMealsCooked` */
   recentMeals: "Recently cooked",
   hallFavorites: "Crew favorites",
   /** @deprecated Removed from dashboard */
-  lastHallVote: "Last Hall Vote",
+  lastHallVote: "Last Crew Vote",
   /** @deprecated Quick action only */
   shoppingLists: "Shopping List",
   needAnything: "Need Anything?",
@@ -482,7 +482,7 @@ export const HALL_DASHBOARD = {
   /** @deprecated */
   mostPopularMonth: "Most popular this month",
   /** @deprecated */
-  wheelStreak: "Hall streak",
+  wheelStreak: "Firehouse streak",
   wheelStreakDays: (n: number) =>
     n === 0 ? "No activity yet" : n === 1 ? "1 day" : `${n} days`,
   /** @deprecated */
@@ -491,44 +491,44 @@ export const HALL_DASHBOARD = {
   /** @deprecated Use `emptyTonight` */
   emptyTonightsMeal: "Nothing picked yet — choose tonight's meal for the crew.",
   /** @deprecated */
-  emptyLastMeal: "Start Cooking on a recipe to log your first hall meal.",
+  emptyLastMeal: "Start Cooking on a recipe to log your first firehouse meal.",
   /** @deprecated */
-  emptyLastVote: "Start a hall vote to let the crew pick dinner.",
+  emptyLastVote: "Start a crew vote to let the crew pick dinner.",
   /** @deprecated */
   emptyPopularMonth: "No cooks logged this month yet.",
   /** @deprecated */
   emptyMealsMonth: "No meals logged this month yet.",
   /** @deprecated */
-  emptyWheelHistory: "Spin the Classics Wheel to build your hall rhythm.",
+  emptyWheelHistory: "Spin the Classics Wheel to build your firehouse rhythm.",
   /** @deprecated */
   emptyShoppingLists: "One grocery runner, one list — add items from recipes or by hand.",
   emptyLastMeals: "Cook together and your crew meal history will show up here.",
   quickActions: "Crew collaboration",
-  seeFullHistory: "Full Hall Meal History",
+  seeFullHistory: "Full Crew Meal History",
   manageFavorites: "View all",
   members: "Members",
   /** @deprecated */
-  hallSummary: "Hall summary",
+  hallSummary: "Firehouse summary",
   /** @deprecated */
   stats: {
     mealsCooked: "Meals cooked",
     votesCreated: "Votes created",
     wheelSpins: "Wheel spins",
-    hallStreak: "Hall streak",
+    hallStreak: "Firehouse streak",
     mostCooked: "Most cooked meal",
   },
   actions: {
-    hallVote: "Hall Vote",
+    hallVote: "Crew Vote",
     sharedList: "Shared Shopping List",
-    mealHistory: "Hall Meal History",
-    staples: "Hall Staples",
-    groceryPlanning: "Hall grocery planning",
+    mealHistory: "Firehouse Meal History",
+    staples: "Firehouse Staples",
+    groceryPlanning: "Firehouse grocery planning",
     pickMeal: "Pick Meal",
     spinWheel: "Spin Wheel",
     shoppingList: "Shared Shopping List",
     cookMode: "Cook Mode",
     /** @deprecated Vote lives on /tonight */
-    startVote: "Hall Vote",
+    startVote: "Crew Vote",
     /** @deprecated Use `shoppingList` */
     shoppingListLegacy: "Shared Shopping List",
   },
@@ -548,13 +548,13 @@ export const SHIFT_DASHBOARD = {
   recentVotes: "Recent Votes",
   currentShoppingList: "Current Shopping List",
   emptyRecentlyCooked: "No meals logged for this shift yet — pick dinner for the crew.",
-  emptyFavorites: "Save hall classics your shift loves.",
+  emptyFavorites: "Save firehouse classics your shift loves.",
   emptyMostCooked: "Cook a few meals and your shift staple will show up here.",
   emptyWheelHistory: "Spin the wheel on a shift night to build history.",
-  emptyRecentVotes: "Start a hall vote so the crew can pick dinner together.",
-  emptyShoppingList: "No items on the hall grocery run yet.",
-  backToHall: "Hall",
-  hallSettings: "Manage hall",
+  emptyRecentVotes: "Start a crew vote so the crew can pick dinner together.",
+  emptyShoppingList: "No items on the firehouse grocery run yet.",
+  backToHall: "Firehouse",
+  hallSettings: "Manage firehouse",
   stats: {
     mealsThisMonth: "Meals this month",
     votesThisMonth: "Votes this month",
@@ -563,10 +563,10 @@ export const SHIFT_DASHBOARD = {
   streakDays: (n: number) =>
     n === 0 ? "No streak yet" : n === 1 ? "1 day" : `${n} days`,
   actions: {
-    createVote: "Create Hall Vote",
+    createVote: "Create Crew Vote",
     pickMeal: "Pick Meal",
     spinWheel: "Spin Wheel",
-    reportCanteen: "Hall Staples",
+    reportCanteen: "Firehouse Staples",
   },
   manageFavorites: "View all",
   openShoppingList: "Open list",
@@ -575,7 +575,7 @@ export const SHIFT_DASHBOARD = {
 export const HALL_CANTEEN = {
   title: "Canteen Manager",
   subtitle: "Report shortages in two taps. One Canteen Manager runs the weekly order and Costco handoff.",
-  backToHall: "Hall",
+  backToHall: "Firehouse",
   needsAttention: "Need Anything?",
   viewCanteen: "View Canteen",
   viewList: "View Canteen",
@@ -597,7 +597,7 @@ export const HALL_CANTEEN_PAYMENTS = {
   enrollAll: "Enroll all canteen members",
   enrolledToast: "Canteen members enrolled",
   markedPaidToast: "Marked as paid",
-  empty: "Enroll your hall members to start tracking canteen dues in one place.",
+  empty: "Enroll your crew members to start tracking canteen dues in one place.",
   loadError: "Payment tracker is unavailable right now.",
   noFilterResults: "No members match this filter.",
   paymentHistory: "Payment History",
@@ -612,7 +612,7 @@ export const HALL_CANTEEN_PAYMENTS = {
 } as const;
 
 export const HALL_NOTES = {
-  title: "Hall Notes",
+  title: "Firehouse Notes",
   subtitle: "Messages for whoever is buying groceries.",
   placeholder: "Grab Costco-sized coffee if possible…",
   empty: "No notes yet — leave a tip for the next grocery run.",
@@ -623,7 +623,7 @@ export const HALL_NOTES = {
 } as const;
 
 export const HALL_HISTORY = {
-  title: "Hall Meal History",
+  title: "Firehouse Meal History",
   subtitle: "What your linked crew cooked and voted on.",
   recentlyCooked: "Recently Cooked",
   cookAgain: "Cook Again",
@@ -634,23 +634,23 @@ export const HALL_HISTORY = {
   profileCrewSize: "Default crew size",
   profileHint: "Optional — shows when you log meals (e.g. A Shift).",
   wheelResults: "Last wheel picks",
-  hallVotes: "Hall Votes",
+  hallVotes: "Crew Votes",
   generatedMeals: "Hall Match picks",
-  empty: "No crew meals logged yet. Cook a recipe or start a Hall Vote.",
+  empty: "No crew meals logged yet. Cook a recipe or start a Crew Vote.",
   deviceNote: "Personal meals live under Me → Meal History. This page is for linked crew context.",
 } as const;
 
 export const SOCIAL_PROOF = {
   mealsGenerated: "Meals generated",
-  hallVotes: "Hall votes",
+  hallVotes: "Crew votes",
   recipesSaved: "Recipes saved",
 } as const;
 
 export const HALL_OF_FAME = {
   title: "Hall of Fame",
   eyebrow: "Community picks",
-  subtitle: "What crews are cooking, voting, and spinning — ranked from real hall activity.",
-  aggregateNote: "Site-wide totals for now. Hall names and badges are coming soon.",
+  subtitle: "What crews are cooking, voting, and spinning — ranked from real firehouse activity.",
+  aggregateNote: "Site-wide totals for now. Firehouse names and badges are coming soon.",
   mostCooked: "Most cooked meals",
   mostVoted: "Most voted meals",
   mostWheel: "Most spun on the wheel",
@@ -658,11 +658,11 @@ export const HALL_OF_FAME = {
   voteCount: (n: number) => `${n} vote${n === 1 ? "" : "s"}`,
   wheelCount: (n: number) => `${n} spin${n === 1 ? "" : "s"}`,
   emptyCooked: "No cooks logged yet — be the first crew on the board.",
-  emptyVoted: "No hall votes yet — start a crew vote and make the list.",
+  emptyVoted: "No crew votes yet — start a crew vote and make the list.",
   emptyWheel: "No wheel spins yet — spin the Classics Wheel to kick things off.",
   loadError: "Could not load the Hall of Fame right now.",
   ctaLead: "Want your crew on the board? Cook, vote, and spin — it all counts.",
-  myHallCta: "Connect to Hall",
+  myHallCta: "Connect to Firehouse",
 } as const;
 
 export const HALL_FAVORITES = {
@@ -696,11 +696,11 @@ export const PWA_COPY = {
 export const CLASSICS_WHEEL = {
   title: "Classics Wheel",
   subtitles: [
-    "The firehall kitchen-table gamble.",
+    "The firehouse kitchen-table gamble.",
     "When nobody can decide dinner.",
-    "Every hall ends up making these eventually.",
+    "Every firehouse ends up making these eventually.",
   ],
-  subtitle: "The firehall kitchen-table gamble.",
+  subtitle: "The firehouse kitchen-table gamble.",
   eyebrow: "Crew tradition",
   hint: "Tap Spin — lands in about 5 seconds. What lands is what you cook.",
   suspense: "Still spinning…",

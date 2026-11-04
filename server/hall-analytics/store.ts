@@ -21,7 +21,7 @@ export function bindHallAnalyticsDb(database: SqliteDatabase): void {
 
 function getDb(): SqliteDatabase {
   if (!db) {
-    throw new Error("Hall analytics store not initialized");
+    throw new Error("Firehouse analytics store not initialized");
   }
   return db;
 }
@@ -145,7 +145,7 @@ export function recordShoppingListCompleted(
   upsertHallActivity(hallId, userId, {
     event_type: "shopping_list_completed",
     external_id: listId,
-    title: title.trim() || "Hall grocery run",
+    title: title.trim() || "Firehouse grocery run",
     occurred_at: new Date().toISOString(),
   });
 }

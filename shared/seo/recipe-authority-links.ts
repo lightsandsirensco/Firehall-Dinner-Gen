@@ -46,7 +46,7 @@ export function pickRecipePillarLink(page: RecipeLinkInput): AuthorityLink {
     return { href: "/healthy-firefighter-meals", label: "Healthy firefighter meals" };
   }
   if (/bowl|burrito.?bowl|rice.?bowl/.test(h) || page.mealFormat === "bowl") {
-    return { href: "/crew-meals", label: "Crew meals for the firehall" };
+    return { href: "/crew-meals", label: "Crew meals for the firehouse" };
   }
   if (/firehouse|station|classic|comfort|chili|meatloaf|parm/.test(h)) {
     return { href: "/firehouse-meals", label: "Firehouse meals" };
@@ -100,7 +100,7 @@ export function pickRecipeGuideLink(page: RecipeLinkInput): AuthorityLink {
   if (/crew|large|feed|batch|scale/.test(h)) {
     return {
       href: guidePath("feeding-a-firehall-crew"),
-      label: "Feeding a firehall crew",
+      label: "Feeding a firehouse crew",
     };
   }
   return {

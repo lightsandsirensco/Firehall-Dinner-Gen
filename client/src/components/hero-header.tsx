@@ -116,7 +116,7 @@ export function HeroHeader({
             )}
             data-testid="text-app-tagline"
           >
-            Firefighter Built. Firehall Tested.
+            Firefighter Built. Firehouse Tested.
           </p>
         )}
 
@@ -165,7 +165,7 @@ export function HeroHeader({
                 className="px-5 py-2.5 bg-white/10 text-white border border-white/20 rounded-lg font-heading text-xs tracking-wider uppercase hover:bg-white/15 transition-colors backdrop-blur-sm"
                 data-testid="button-hero-favorites"
               >
-                Hall Favorites
+                Crew Favorites
               </button>
             </Link>
           </div>

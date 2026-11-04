@@ -62,7 +62,7 @@ export function ExploreGridCard({
             {isCurated && (
               <span className="inline-flex items-center gap-1 bg-primary/95 text-primary-foreground text-[10px] font-semibold uppercase tracking-wide px-2 py-0.5 rounded-full shadow-lg backdrop-blur-sm">
                 <Flame className="w-3 h-3 shrink-0" />
-                Hall classic
+                Firehouse classic
               </span>
             )}
             {isFirehallFallback && (

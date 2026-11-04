@@ -344,7 +344,7 @@ export async function refreshProteinDealsFromProvider(hallId: string): Promise<{
 }> {
   const postalCode = getHallPostalCode(hallId);
   if (!postalCode) {
-    throw new Error("Postal code required — set it in linked hall settings");
+    throw new Error("Postal code required — set it in linked firehouse settings");
   }
 
   if (isDealsModeDisabled()) {

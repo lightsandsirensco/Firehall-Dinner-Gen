@@ -324,10 +324,12 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       hapticSuccess();
       setSaved(true);
       setShowConfirm(true);
-      trackRecipeSave(
-        (recipe as ClientRecipeResponse & { _slug?: string })._slug ?? recipe.title.toLowerCase().replace(/\s+/g, "-"),
-        recipe.title,
-      );
+      if (result.saved) {
+        trackRecipeSave(
+          (recipe as ClientRecipeResponse & { _slug?: string })._slug ?? recipe.title.toLowerCase().replace(/\s+/g, "-"),
+          recipe.title,
+        );
+      }
       if (auth?.user?.user_id && result.saved) {
         const signals = onboardingSignalsFromAuth(auth.halls, auth.profile);
         const progress = readPersonalOnboardingProgress(auth.user.user_id, signals);
@@ -771,7 +773,7 @@ export function RecipeCard({ recipe, crewSize, onEmailClick, onShoppingListClick
       )}
 
       {recipe.pro_tips && recipe.pro_tips.length > 0 && (
-        <MealSection title="Hall tips" data-testid="section-pro-tips">
+        <MealSection title="Firehouse tips" data-testid="section-pro-tips">
           <button
             type="button"
             onClick={toggleProTips}

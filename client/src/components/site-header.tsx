@@ -72,7 +72,7 @@ function appChromeForPage(activePage: SiteHeaderActivePage, signedIn: boolean): 
     case "favorites":
       return { title: "Favorites", parentHref: "/me", parentLabel: "Me" };
     case "hall":
-      return { title: "Hall" };
+      return { title: "Firehouse" };
     case "shop":
       return { title: "Shop" };
     case "home":

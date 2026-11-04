@@ -35,28 +35,28 @@ export const RED_LEAD_PDF_COPY = {
   header: "The Official Firehall Red Lead Recipe",
   subtitle: "Tomato sauce for a proper station breakfast.",
   introduction: [
-    "Ask ten firefighters how to make Red Lead and you will probably get ten different answers. Every hall seems to have its own version, but the idea is always the same: a slow-cooked tomato sauce served with a proper station breakfast.",
+    "Ask ten firefighters how to make Red Lead and you will probably get ten different answers. Every firehouse seems to have its own version, but the idea is always the same: a slow-cooked tomato sauce served with a proper station breakfast.",
     "Red Lead is the sauce — not the whole meal. You simmer it in cast iron, set the pan in the middle of the table, and let the crew help themselves while bacon, eggs, and the rest of the spread goes around.",
     "This card is the sauce recipe only. Cook your eggs, bacon, sausage, toast, and potatoes separately.",
   ],
   whyItMatters: {
     heading: "Why Firefighters Still Make It",
     paragraphs: [
-      "Most weeks in the hall move fast. Calls, training, paperwork, gear checks — there is not much time to sit still. Sunday breakfast is different. Somebody puts coffee on, the kitchen gets warm, and the crew actually sits down.",
-      "That is when rookies hear the old stories — bad calls, funny calls, the shift before theirs. Retired guys still talk about who ran the best sauce pan. Spouses and kids show up at halls that do family mornings. It is one of the few meals where everyone is at the table at once.",
+      "Most weeks in the firehouse move fast. Calls, training, paperwork, gear checks — there is not much time to sit still. Sunday breakfast is different. Somebody puts coffee on, the kitchen gets warm, and the crew actually sits down.",
+      "That is when rookies hear the old stories — bad calls, funny calls, the shift before theirs. Retired guys still talk about who ran the best sauce pan. Spouses and kids show up at firehouses that do family mornings. It is one of the few meals where everyone is at the table at once.",
       "The food is simple. The point is the table.",
     ],
   },
   recipeIntro:
-    "This recipe makes only the Red Lead sauce. Serve it with eggs, bacon, breakfast sausage, toast, home fries or hash browns, orange juice, and coffee. Nothing fancy — just the way most halls still do it.",
+    "This recipe makes only the Red Lead sauce. Serve it with eggs, bacon, breakfast sausage, toast, home fries or hash browns, orange juice, and coffee. Nothing fancy — just the way most firehouses still do it.",
   stepsHeading: "Step-by-Step Instructions",
   stepsIntro: "Read it once before you start. Get the rest of breakfast moving before the onion hits the pan.",
-  serveHeading: "Serve It Like The Hall Does",
+  serveHeading: "Serve It Like The Crew Does",
   serveIntro:
     "Put the cast iron in the centre of the table. Everything else stays on its own platters. Pass the sauce with a spoon and let people take what they want.",
-  tipsHeading: "Firehall Tips",
+  tipsHeading: "Firehouse Tips",
   closingQuote:
-    "Every hall has its own recipe. The important part is not who is right. It is getting the crew around the table.",
+    "Every firehouse has its own recipe. The important part is not who is right. It is getting the crew around the table.",
 } as const;
 
 /** Base recipe — serves 8 hall portions of sauce (~3/4 cup each). */
@@ -69,7 +69,7 @@ export const RED_LEAD_SAUCE_INGREDIENTS: RedLeadSauceIngredient[] = [
   { name: "black pepper", amount: "1 tsp", notes: "freshly ground" },
   { name: "sugar", amount: "1/2 tsp", notes: "optional — only if the tomatoes taste sharp", optional: true },
   { name: "garlic", amount: "3 cloves", notes: "minced", optional: true },
-  { name: "hot sauce", amount: "1 tsp", notes: "optional — a lot of halls add a dash", optional: true },
+  { name: "hot sauce", amount: "1 tsp", notes: "optional — a lot of firehouses add a dash", optional: true },
 ];
 
 export const RED_LEAD_SAUCE_STEPS: RedLeadSauceStep[] = [
@@ -85,7 +85,7 @@ export const RED_LEAD_SAUCE_STEPS: RedLeadSauceStep[] = [
     number: 2,
     title: "Melt the butter and cook the onion",
     body:
-      "Set a 12-inch cast iron over medium heat. Melt the butter until it foams — not brown. Add the onion and stir every minute or so until it is soft, translucent, and just starting to colour at the edges. Some crews toss in diced green pepper here; that is up to your hall.",
+      "Set a 12-inch cast iron over medium heat. Melt the butter until it foams — not brown. Add the onion and stir every minute or so until it is soft, translucent, and just starting to colour at the edges. Some crews toss in diced green pepper here; that is up to your firehouse.",
     minutes: "8–10 min",
     visualCue: "Onion bends on the spoon with no raw white left in the middle.",
     mistake: "Turning the heat up to rush it. Burnt butter makes the whole pan taste off.",
@@ -111,7 +111,7 @@ export const RED_LEAD_SAUCE_STEPS: RedLeadSauceStep[] = [
     number: 5,
     title: "Taste it and adjust",
     body:
-      "Taste for salt and pepper. Add the pinch of sugar only if the tomatoes are sharp. A little hot sauce goes in now if your hall likes heat. Hold the pan on the lowest steady flame, or keep it in a warm oven (170°F / 75°C) with foil on top until the crew is seated.",
+      "Taste for salt and pepper. Add the pinch of sugar only if the tomatoes are sharp. A little hot sauce goes in now if your firehouse likes heat. Hold the pan on the lowest steady flame, or keep it in a warm oven (170°F / 75°C) with foil on top until the crew is seated.",
     minutes: "2 min",
     visualCue: "Savory and balanced — not flat, not sweet like candy.",
   },
@@ -121,7 +121,7 @@ export const RED_LEAD_SAUCE_STEPS: RedLeadSauceStep[] = [
     body:
       "Carry the cast iron out when the rest of the spread is ready — bacon, sausage, eggs, toast, potatoes, juice, and coffee on the go. Set the sauce in the middle. The crew serves themselves with a spoon. That is the meal.",
     minutes: "Serve right away",
-    mistake: "Trying to plate this like a restaurant dish. It is hall food — shared from the pan.",
+    mistake: "Trying to plate this like a restaurant dish. It is firehouse food — shared from the pan.",
   },
 ];
 
@@ -164,7 +164,7 @@ export const RED_LEAD_SAUCE_FIREHALL_TIPS = [
       "The sauce is better after a long simmer. If you can start it early and let it sit on low, do it. Leftovers reheated the next day are often better than the first serving.",
   },
   {
-    title: "Make it your hall's way",
+    title: "Make it your firehouse's way",
     body:
       "Some crews add green pepper with the onion. Some add a dash of hot sauce at the end. Garlic is optional. Do not overthink it — taste and adjust.",
   },

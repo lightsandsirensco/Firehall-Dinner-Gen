@@ -32,7 +32,7 @@ export function buildSmoothiesIndexSeo(count = 10): PageSeoConfig {
   return {
     title: titleWithBrand("Healthy Smoothies for Firefighters"),
     description: clipDescription(
-      `${count} hall-tested smoothies — protein, recovery, breakfast, and green blends with realistic ingredients and one-jar cleanup.`,
+      `${count} firehouse-tested smoothies — protein, recovery, breakfast, and green blends with realistic ingredients and one-jar cleanup.`,
     ),
     canonicalPath: smoothiesIndexPath(),
     ogType: "website",
@@ -69,13 +69,13 @@ export function buildBreakfastIndexSeo(): PageSeoConfig {
   return {
     title: titleWithBrand("Firefighter Breakfast & Shift Fuel"),
     description: clipDescription(
-      "Firehall classics, crew skillets, burritos, and casseroles — station breakfasts built for interruptions, not fitness blogs.",
+      "Firehouse classics, crew skillets, burritos, and casseroles — station breakfasts built for interruptions, not fitness blogs.",
     ),
     canonicalPath: breakfastIndexPath(),
     ogType: "website",
     keywords: [
       "firefighter breakfast ideas",
-      "firehall breakfast",
+      "firehouse breakfast",
       "shift breakfast",
       "crew breakfast",
       ...SEO_TARGET_KEYWORDS,
@@ -87,7 +87,7 @@ export function buildBreakfastPerformanceIndexSeo(count = 5): PageSeoConfig {
   return {
     title: titleWithBrand("Performance Breakfasts for Firefighters"),
     description: clipDescription(
-      `${count} macro-forward crew breakfasts — protein oats, parfaits, and training-day pancakes kept separate from firehall classics.`,
+      `${count} macro-forward crew breakfasts — protein oats, parfaits, and training-day pancakes kept separate from firehouse classics.`,
     ),
     canonicalPath: breakfastPerformanceIndexPath(),
     ogType: "website",
@@ -95,7 +95,7 @@ export function buildBreakfastPerformanceIndexSeo(count = 5): PageSeoConfig {
       "performance breakfast",
       "high protein breakfast firefighters",
       "training day breakfast",
-      "firehall performance meals",
+      "firehouse performance meals",
       ...SEO_TARGET_KEYWORDS,
     ],
   };
@@ -133,7 +133,7 @@ export function buildBreakfastRecipeSeo(page: BreakfastRecipePage): PageSeoConfi
     ogImage: page.heroImage,
     keywords: [
       "firefighter breakfast recipes",
-      "firehall breakfast",
+      "firehouse breakfast",
       "shift breakfast",
       ...page.tags.slice(0, 6),
       ...SEO_TARGET_KEYWORDS,
@@ -216,7 +216,7 @@ export function buildPerformanceFuelSeo(mealCount = 50, smoothieCount = 10): Pag
   return {
     title: titleWithBrand("Performance Fuel — Meals & Smoothies"),
     description: clipDescription(
-      `Performance nutrition for firefighters: ${mealCount} healthy crew dinners and ${smoothieCount} hall smoothies — recovery, protein, and shift-friendly fuel.`,
+      `Performance nutrition for firefighters: ${mealCount} healthy crew dinners and ${smoothieCount} firehouse smoothies — recovery, protein, and shift-friendly fuel.`,
     ),
     canonicalPath: performanceFuelPath(),
     ogType: "website",
@@ -243,7 +243,7 @@ export function buildPerformanceFuelRecipeSeo(
     keywords: [
       "performance meal",
       "healthy firefighter dinner",
-      "firehall nutrition",
+      "firehouse nutrition",
       title.toLowerCase(),
     ],
   };

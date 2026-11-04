@@ -67,7 +67,7 @@ export function HallWhiteboard({ hallId }: { hallId: string }) {
     <section
       className="space-y-3 rounded-2xl border border-border/50 bg-card/40 p-4"
       data-testid="hall-whiteboard"
-      aria-label="Hall whiteboard"
+      aria-label="Firehouse whiteboard"
     >
       <div>
         <h2 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">

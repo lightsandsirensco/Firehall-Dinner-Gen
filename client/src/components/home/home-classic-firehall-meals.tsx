@@ -36,7 +36,7 @@ export function HomeClassicFirehallMeals() {
             id="classic-firehall-meals-heading"
             className="font-heading text-lg sm:text-xl tracking-tight text-foreground"
           >
-            10 Classic Fire Hall Meals
+            10 Classic Firehouse Meals
           </h2>
           <p className="mt-1 text-sm text-muted-foreground leading-snug">
             The same ten dinners on the Classics Wheel — jerk, parm, chili, smash burgers, and the rest.

@@ -11,7 +11,6 @@
 import { nanoid } from "nanoid";
 import { getSharedLocalDb, type SqliteDatabase } from "../sqlite.js";
 import { runDbMigrations } from "../db/migrate.js";
-import { recordConsentOptIn } from "../marketing-consent/store.js";
 import type { AdminLeadFilter, AdminLeadRow, EmailLeadSource } from "../../shared/admin-users/types.js";
 
 let db: SqliteDatabase;
@@ -81,13 +80,6 @@ export function recordEmailLead(input: {
   const metadataJson = input.metadata ? JSON.stringify(input.metadata) : null;
   const now = new Date().toISOString();
   const consentGiven = input.marketing_consent ? 1 : 0;
-
-  // Mirror an EXPLICIT opt-in to the Postgres source of truth. Never called
-  // for consentGiven=0 — absence of a row there means "not consented".
-  // Fire-and-forget: a Postgres hiccup must never block this SQLite write.
-  if (consentGiven) {
-    void recordConsentOptIn({ email, source, capturedAt: now });
-  }
 
   if (existing) {
     // Escalate-only: a missing/false consent on a later submission never revokes

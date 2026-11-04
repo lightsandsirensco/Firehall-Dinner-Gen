@@ -244,7 +244,7 @@ export default function ClassicsWheelPage() {
 
         <div className="mt-12 pt-8 border-t border-border/30 text-center">
           <p className="text-xs text-muted-foreground mb-3 max-w-sm mx-auto leading-relaxed">
-            The meals every hall ends up making eventually — chili, burgers, tacos, and the rest.
+            The meals every firehouse ends up making eventually — chili, burgers, tacos, and the rest.
             Spin when the crew is stuck.
           </p>
           <Link

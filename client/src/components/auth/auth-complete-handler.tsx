@@ -95,7 +95,7 @@ export function AuthCompleteHandler() {
         title: hasHall ? "Welcome back" : "You're signed in",
         description: hasHall
           ? "Starting at Home — your command center for tonight's shift."
-          : "Pick dinner, or connect a hall when you're ready.",
+          : "Pick dinner, or connect a firehouse when you're ready.",
       });
       if (destination !== window.location.pathname) {
         navigate(destination);

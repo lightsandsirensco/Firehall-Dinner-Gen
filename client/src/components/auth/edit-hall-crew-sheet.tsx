@@ -60,7 +60,7 @@ export function EditHallCrewSheet({ open, onOpenChange }: EditHallCrewSheetProps
       });
       await refresh();
       trackProfileUpdated();
-      toast({ title: "Hall & crew updated", variant: "success" });
+      toast({ title: "Firehouse & crew updated", variant: "success" });
       onOpenChange(false);
     } catch {
       toast({ title: "Could not save", variant: "destructive" });
@@ -73,7 +73,7 @@ export function EditHallCrewSheet({ open, onOpenChange }: EditHallCrewSheetProps
     <Sheet open={open} onOpenChange={onOpenChange}>
       <SheetContent side="bottom" className="max-h-[92dvh] overflow-y-auto rounded-t-2xl sm:mx-auto sm:max-w-lg">
         <SheetHeader>
-          <SheetTitle>Edit hall &amp; crew</SheetTitle>
+          <SheetTitle>Edit firehouse &amp; crew</SheetTitle>
           <SheetDescription>Your default station and crew context.</SheetDescription>
         </SheetHeader>
 
@@ -94,10 +94,10 @@ export function EditHallCrewSheet({ open, onOpenChange }: EditHallCrewSheetProps
             />
           </div>
           <div className="space-y-2">
-            <Label htmlFor="edit-hall-name">Hall / station name</Label>
+            <Label htmlFor="edit-hall-name">Firehouse / station name</Label>
             <Input
               id="edit-hall-name"
-              placeholder="Add your hall or station"
+              placeholder="Add your firehouse or station"
               value={hallName}
               onChange={(e) => setHallName(e.target.value)}
             />

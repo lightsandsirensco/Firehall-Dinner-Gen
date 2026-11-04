@@ -42,7 +42,7 @@ async function ensureStore(): Promise<void> {
 
 function requireHallMember(req: AuthedRequest, res: Response, hallId: string): boolean {
   if (!memberHasPermission(hallId, req._authUserId!, "view_hall_dashboard")) {
-    res.status(403).json({ message: "Not a member of this hall" });
+    res.status(403).json({ message: "Not a member of this firehouse" });
     return false;
   }
   return true;

@@ -28,7 +28,7 @@ const FILTERS = [
   { id: "breakfast_sandwiches", label: "Sandwiches" },
   { id: "skillets", label: "Skillets" },
   { id: "bbq_breakfast", label: "BBQ Breakfast" },
-  { id: "healthy_breakfasts", label: "Healthier Hall" },
+  { id: "healthy_breakfasts", label: "Healthier Firehouse" },
 ] as const;
 
 function RecipeCard({ r, href }: { r: BreakfastIndexEntry; href: string }) {
@@ -113,7 +113,7 @@ export default function BreakfastIndexPage() {
           <span className="text-xs uppercase tracking-widest">Shift fuel</span>
         </div>
         <h1 className="mt-3 font-heading tracking-tight text-3xl sm:text-4xl">
-          Firehall breakfast
+          Firehouse breakfast
         </h1>
         <LightsAndSirensCredit variant="block" className="mt-4 max-w-lg" showFirefighterOwned />
 
@@ -153,10 +153,10 @@ export default function BreakfastIndexPage() {
           <div className="flex items-end justify-between gap-4">
             <div>
               <h2 id="classics-heading" className="font-heading text-xl">
-                Firehall classics
+                Firehouse classics
               </h2>
               <p className="mt-1 text-sm text-muted-foreground">
-                {classics.length} crew breakfasts — skillets, burritos, bakes, and hall favorites.
+                {classics.length} crew breakfasts — skillets, burritos, bakes, and crew favorites.
               </p>
             </div>
           </div>
@@ -171,7 +171,7 @@ export default function BreakfastIndexPage() {
         {healthier.length > 0 && (
           <section className="mt-12" aria-labelledby="healthier-heading">
             <h2 id="healthier-heading" className="font-heading text-xl">
-              Healthier hall breakfasts
+              Healthier firehouse breakfasts
             </h2>
             <p className="mt-1 text-sm text-muted-foreground">
               {healthier.length} lighter options that still feel like real station food.

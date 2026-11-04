@@ -11,14 +11,14 @@ const UPDATED = "2026-10-03T18:00:00.000Z";
 export const STATION_LIFESTYLE_ARTICLES = [
   buildSeoGuide({
     slug: "firehall-kitchen-culture",
-    title: "Firehall Kitchen Culture: Running a Shared Station Kitchen That Works",
-    seoTitle: "Firehall Kitchen Culture: Cooking, Cleanup and Fridge Rules",
+    title: "Firehouse Kitchen Culture: Running a Shared Station Kitchen That Works",
+    seoTitle: "Firehouse Kitchen Culture: Cooking, Cleanup and Fridge Rules",
     subtitle:
       "A fair cook rotation, cleanup in the right order, shared-fridge rules, handling allergies, and writing the crew's recipes down so they outlast transfers.",
     description:
-      "Firehall kitchen culture that works: a fair cook rotation, cleanup order, shared-fridge labeling, handling allergies, and writing recipes down.",
+      "Firehouse kitchen culture that works: a fair cook rotation, cleanup order, shared-fridge labeling, handling allergies, and writing recipes down.",
     keywords: [
-      "firehall kitchen culture",
+      "firehouse kitchen culture",
       "fire station kitchen rules",
       "shared kitchen cleaning schedule",
       "shared fridge labeling",
@@ -30,7 +30,7 @@ export const STATION_LIFESTYLE_ARTICLES = [
     readMinutes: 8,
     updatedAt: UPDATED,
     intro:
-      "A shared station kitchen works when four things are settled and written down: who cooks, who cleans, how the fridge is labeled, and how allergies are handled. The rule that fixes the most is simple: the cook never does the dishes. Most of the friction in a firehall kitchen comes from dishes left for the next shift, unlabeled containers nobody will admit to, and the same two people always cooking. Each has a simple fix, and several of them double as food-safety rules.",
+      "A shared station kitchen works when four things are settled and written down: who cooks, who cleans, how the fridge is labeled, and how allergies are handled. The rule that fixes the most is simple: the cook never does the dishes. Most of the friction in a firehouse kitchen comes from dishes left for the next shift, unlabeled containers nobody will admit to, and the same two people always cooking. Each has a simple fix, and several of them double as food-safety rules.",
     sections: [
       {
         id: "rotation",

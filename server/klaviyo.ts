@@ -116,6 +116,43 @@ async function getOrCreateList(): Promise<string> {
   return cachedListId!;
 }
 
+const LIST_COUNT_TTL_MS = 10 * 60 * 1000;
+let listCountCache: { at: number; value: number | null } | null = null;
+
+/**
+ * Read-only member count of the leads list for the admin dashboard. Never
+ * creates the list; null when Klaviyo is unconfigured or unreachable.
+ */
+export async function getKlaviyoListMemberCount(): Promise<number | null> {
+  if (!validateKlaviyoConfig().ok) return null;
+  if (listCountCache && Date.now() - listCountCache.at < LIST_COUNT_TTL_MS) return listCountCache.value;
+  let value: number | null = null;
+  try {
+    let listId = cachedListId;
+    if (!listId) {
+      const url = new URL(`${KLAVIYO_BASE}/lists/`);
+      url.searchParams.set("filter", `equals(name,"${LIST_NAME}")`);
+      const listRes = await klaviyoFetch("GET", url.toString(), undefined, "getList(readonly)");
+      listId = listRes.ok ? (listRes.data?.data?.[0]?.id ?? null) : null;
+      if (listRes.ok && !listId) value = 0;
+    }
+    if (listId) {
+      const res = await klaviyoFetch(
+        "GET",
+        `${KLAVIYO_BASE}/lists/${listId}/?additional-fields[list]=profile_count`,
+        undefined,
+        "listProfileCount",
+      );
+      const count = res.ok ? res.data?.data?.attributes?.profile_count : null;
+      value = typeof count === "number" ? count : null;
+    }
+  } catch {
+    value = null;
+  }
+  listCountCache = { at: Date.now(), value };
+  return value;
+}
+
 export async function subscribeToList(email: string): Promise<void> {
   const listId = await getOrCreateList();
 

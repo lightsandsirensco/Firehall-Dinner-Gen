@@ -37,7 +37,7 @@ export function bindHallMembershipDb(database: SqliteDatabase): void {
 
 function getDb(): SqliteDatabase {
   if (!db) {
-    throw new Error("Hall membership store not initialized — call initHallMembershipStore() first");
+    throw new Error("Firehouse membership store not initialized — call initHallMembershipStore() first");
   }
   return db;
 }

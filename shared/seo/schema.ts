@@ -173,7 +173,7 @@ export function buildHomeRecipeCollectionSchema(
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": `${absoluteUrl(origin, "/")}#recipe-collection`,
-    name: "Firefighter Recipes & Crew Meal Ideas",
+    name: "Firehouse Recipes & Firefighter Meal Ideas",
     description: SEO_DEFAULT_DESCRIPTION,
     url: absoluteUrl(origin, "/"),
     isPartOf: {

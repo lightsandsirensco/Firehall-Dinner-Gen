@@ -67,6 +67,7 @@ export function resolveTrafficSource(): string {
   if (!ref) return "direct";
   try {
     const host = new URL(ref).hostname.toLowerCase();
+    if (host === window.location.hostname.toLowerCase()) return "internal";
     if (host.includes("google.")) return "google";
     if (host.includes("instagram.")) return "instagram";
     if (host.includes("facebook.") || host.includes("fb.")) return "facebook";
@@ -76,6 +77,14 @@ export function resolveTrafficSource(): string {
   } catch {
     return "other";
   }
+}
+
+export function inferDeviceType(): "mobile" | "tablet" | "desktop" {
+  if (typeof window === "undefined") return "desktop";
+  const ua = navigator.userAgent;
+  if (/iPad|Tablet|PlayBook|Silk/i.test(ua) || (/Android/i.test(ua) && !/Mobile/i.test(ua))) return "tablet";
+  if (/Mobi|iPhone|iPod|Android/i.test(ua)) return "mobile";
+  return window.innerWidth < 768 ? "mobile" : "desktop";
 }
 
 export function inferPageName(path: string): string {
@@ -99,9 +108,11 @@ export function trackProductEvent(
   route?: string,
 ): void {
   if (typeof window === "undefined") return;
+  // Admin tooling is not site traffic.
+  if (window.location.pathname.startsWith("/admin")) return;
   const event: QueuedEvent = {
     event_type: eventType,
-    route: route ?? `${window.location.pathname}${window.location.search}`,
+    route: route ?? window.location.pathname,
     visitor_id: getAnalyticsVisitorId(),
     metadata,
   };

@@ -76,7 +76,7 @@ export function ShiftDashboard({ hallId, shiftId, className }: ShiftDashboardPro
         className="rounded-2xl border border-dashed border-border/50 bg-muted/20 px-4 py-10 text-center"
         data-testid="shift-dashboard-not-found"
       >
-        <p className="text-sm text-muted-foreground mb-4">This shift wasn&apos;t found in your linked hall.</p>
+        <p className="text-sm text-muted-foreground mb-4">This shift wasn&apos;t found in your linked firehouse.</p>
         <Link href="/hall" className="text-sm font-medium text-primary hover:underline">
           {HALL_LINKED.linked}
         </Link>
@@ -111,7 +111,7 @@ export function ShiftDashboard({ hallId, shiftId, className }: ShiftDashboardPro
         id="shift-recently-cooked"
         title={SHIFT_DASHBOARD.recentlyCooked}
         icon={<History className="w-4 h-4" />}
-        action={{ label: "Hall history", href: "/hall-history" }}
+        action={{ label: "Firehouse history", href: "/hall-history" }}
         testId="shift-recently-cooked-section"
       >
         <ShiftMealTimeline

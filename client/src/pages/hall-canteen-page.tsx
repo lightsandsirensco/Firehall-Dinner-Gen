@@ -48,7 +48,7 @@ function CanteenLocked() {
       className="rounded-2xl border border-dashed border-border/50 bg-muted/20 px-4 py-8 text-center text-sm text-muted-foreground"
       data-testid="hall-canteen-locked"
     >
-      {HALL_LINKED.connect} to track Hall Staples.{" "}
+      {HALL_LINKED.connect} to track Firehouse Staples.{" "}
       <Link href="/hall/join" className="text-primary hover:underline font-medium">
         {HALL_LINKED.join}
       </Link>
@@ -303,7 +303,7 @@ export default function HallCanteenPage() {
               <HallCanteenPaymentTrackerSection activeHallId={activeHallId} />
 
               <section className="space-y-3" data-testid="canteen-hall-staples">
-                <h2 className="font-heading text-lg tracking-wide px-0.5">Hall Staples</h2>
+                <h2 className="font-heading text-lg tracking-wide px-0.5">Firehouse Staples</h2>
                 <label className="block px-0.5">
                   <span className="text-xs text-muted-foreground">Optional shortage note (next Out / Running Low)</span>
                   <Input
@@ -451,7 +451,7 @@ export default function HallCanteenPage() {
                       className="min-h-11"
                       value={managerNote}
                       onChange={(e) => setManagerNote(e.target.value)}
-                      placeholder="e.g. Use the hall Costco membership"
+                      placeholder="e.g. Use the firehouse Costco membership"
                       maxLength={500}
                     />
                     <Button type="submit" className="min-h-11 shrink-0">

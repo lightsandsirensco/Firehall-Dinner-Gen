@@ -64,7 +64,7 @@ const LEAD_MAGNET_BENEFITS = [
 
   "Printable Red Lead PDF",
 
-  "Firehall breakfast recipes",
+  "Firehouse breakfast recipes",
 
   "New firefighter meal ideas",
 
@@ -388,7 +388,7 @@ export function RedLeadPdfCapture({
 
             <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
 
-              Get the printable PDF now — plus optional hall breakfast and meal ideas by email.
+              Get the printable PDF now — plus optional firehouse breakfast and meal ideas by email.
 
             </p>
 
@@ -527,7 +527,7 @@ export function RedLeadPdfCapture({
 
           <p className="text-[11px] text-muted-foreground leading-relaxed">
 
-            You&apos;ll get the PDF either way. Check the box above only if you also want hall breakfast ideas by
+            You&apos;ll get the PDF either way. Check the box above only if you also want firehouse breakfast ideas by
 
             email — unsubscribe anytime.
 

@@ -38,7 +38,7 @@ export function HallPrivateBetaNotice({
       <div className="space-y-2">
         <p className={cn("font-heading tracking-wide flex items-center justify-center gap-2", compact ? "text-lg" : "text-2xl sm:text-3xl")}>
           <Flame className={cn("text-primary shrink-0", compact ? "h-4 w-4" : "h-6 w-6 sm:h-7 sm:w-7")} aria-hidden />
-          Hall Operations
+          Firehouse Operations
         </p>
         <span className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-primary">
           Private Beta
@@ -51,7 +51,7 @@ export function HallPrivateBetaNotice({
           compact ? "text-sm max-w-sm" : "text-sm sm:text-base max-w-md",
         )}
       >
-        Hall Operations is on hold — not currently open for signup. Everything you need for
+        Firehouse Operations is on hold — not currently open for signup. Everything you need for
         picking, planning, and cooking tonight's meal is available right now in Firehall Meals.
       </p>
 

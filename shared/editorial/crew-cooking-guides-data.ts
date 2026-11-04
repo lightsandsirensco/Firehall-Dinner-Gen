@@ -460,7 +460,7 @@ const groceryPlanning = buildSeoGuide({
 
 const rookieMistakes = buildSeoGuide({
   slug: "rookie-cooking-mistakes",
-  title: "Rookie Cooking Mistakes at the Firehall, and How to Fix Them",
+  title: "Rookie Cooking Mistakes at the Firehouse, and How to Fix Them",
   seoTitle: "Beginner Cooking Mistakes to Avoid When Cooking for a Crowd",
   subtitle:
     "Grey ground beef, flat chili, dry chicken and a dinner that finishes in pieces: the mistakes behind most bad crew dinners, and what to do instead.",

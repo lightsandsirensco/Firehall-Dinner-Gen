@@ -14,7 +14,7 @@ export default function DiscoverPage() {
       <main className={cn(app.main, "mx-auto max-w-lg space-y-4 px-4 py-4 pb-safe-nav sm:max-w-xl sm:py-5")}>
         <header className="space-y-1 px-0.5">
           <h1 className="font-heading text-2xl tracking-wide">Discover</h1>
-          <p className="text-sm text-muted-foreground">Browse meals, spin the wheel, and find hall ideas.</p>
+          <p className="text-sm text-muted-foreground">Browse meals, spin the wheel, and find firehouse ideas.</p>
         </header>
 
         <div className="space-y-2.5">
@@ -43,7 +43,7 @@ export default function DiscoverPage() {
 
         <section className="space-y-2 pt-2">
           <p className="px-0.5 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-            Hall ideas
+            Firehouse ideas
           </p>
           <HubTile
             href="/guides"
