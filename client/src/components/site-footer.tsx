@@ -182,7 +182,7 @@ export function SiteFooter({ variant = "full", className, pbSafe = false }: Site
             </div>
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-                Lights & Sirens Co.
+                <LightsAndSirensLink variant="plain" />
               </h3>
               <ul className="mt-3 space-y-2.5">
                 {LIGHTS_FOOTER_LINKS.map((link) => (

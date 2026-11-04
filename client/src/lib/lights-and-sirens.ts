@@ -1,16 +1,15 @@
 /**
  * Lights & Sirens Co. — parent firefighter lifestyle brand for Firehall Meals.
  *
- * NOTE: brand mentions via LightsAndSirensLink render as plain text, not an
- * <a>. The only link to `website` is the understated footer credit
- * (ParentBrandCredit in site-footer.tsx).
+ * Every on-site mention links to `website` via LightsAndSirensLink /
+ * WithLightsAndSirensLinks (new tab, styled to blend into surrounding text).
  */
 
 export const LIGHTS_AND_SIRENS = {
   name: "Lights & Sirens Co.",
   builtByLabel: "Built by Lights & Sirens Co.",
   firefighterOwned: "Firefighter-owned",
-  website: "https://lightsandsirensco.com",
+  website: "https://www.lightsandsirensco.com",
   instagram: "https://www.instagram.com/lightsandsirens_co/",
   facebook: "https://www.facebook.com/lightsandsirensco/",
 } as const;
@@ -24,7 +23,8 @@ export const LIGHTS_COPY = {
   wheelLine: "The classic kitchen-table gamble from Lights & Sirens Co.",
   emailNote: "From the crew at Lights & Sirens Co. — firefighter culture, gear, and meals that work on shift.",
   footerTagline: "Built by firefighters, for firefighters.",
-  footerSub: "From the crew at Lights & Sirens Co.",
+  /** Followed by the linked brand name in the footer. */
+  footerSub: "From the crew at",
   footerBlurb: "More than recipes — firefighter culture, gear, tools, and crew life.",
 } as const;
 

@@ -5,16 +5,14 @@ import { LIGHTS_AND_SIRENS } from "@/lib/lights-and-sirens";
 type LightsAndSirensLinkProps = {
   className?: string;
   children?: ReactNode;
-  /** hero = prominent under tagline; inline = body text; badge = pill */
-  variant?: "hero" | "inline" | "badge" | "footer";
+  /**
+   * hero = prominent under tagline; inline = body text; badge = pill;
+   * plain = inherits the surrounding text styling exactly
+   */
+  variant?: "hero" | "inline" | "badge" | "footer" | "plain";
 };
 
-/**
- * Plain-text brand mention (NOT a link) — lightsandsirensco.com is
- * currently offline, so this no longer renders an <a>. Kept as a shared
- * component so every call site (nav, footer, recipe strips, etc.) updates
- * together if the destination ever comes back online.
- */
+/** Parent-brand mention — links to lightsandsirensco.com in a new tab, styled to blend in. */
 export function LightsAndSirensLink({
   className,
   children,
@@ -23,8 +21,12 @@ export function LightsAndSirensLink({
   const label = children ?? LIGHTS_AND_SIRENS.name;
 
   return (
-    <span
+    <a
+      href={LIGHTS_AND_SIRENS.website}
+      target="_blank"
+      rel="noopener noreferrer"
       className={cn(
+        "underline-offset-4 hover:underline",
         variant === "hero" &&
           "font-heading text-sm sm:text-base tracking-[0.18em] uppercase text-primary",
         variant === "inline" && "font-medium text-primary",
@@ -36,6 +38,21 @@ export function LightsAndSirensLink({
       data-testid="link-lights-and-sirens"
     >
       {label}
-    </span>
+    </a>
+  );
+}
+
+/** Renders a copy string with every "Lights & Sirens Co." linked, keeping the surrounding styling. */
+export function WithLightsAndSirensLinks({ text }: { text: string }) {
+  const parts = text.split(LIGHTS_AND_SIRENS.name);
+  return (
+    <>
+      {parts.map((part, i) => (
+        <span key={i}>
+          {part}
+          {i < parts.length - 1 && <LightsAndSirensLink variant="plain" />}
+        </span>
+      ))}
+    </>
   );
 }

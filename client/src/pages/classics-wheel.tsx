@@ -22,6 +22,7 @@ import { hapticSuccess } from "@/lib/haptics";
 import { CLASSICS_WHEEL } from "@/lib/brand-copy";
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
 import { LightsAndSirensCredit } from "@/components/brand/lights-and-sirens-credit";
+import { WithLightsAndSirensLinks } from "@/components/brand/lights-and-sirens-link";
 import { SiteFooter } from "@/components/site-footer";
 import { trackWheelSpin, trackWheelRecipeOpen } from "@/lib/analytics";
 import { recordWheelResult } from "@/lib/hall-history-store";
@@ -152,7 +153,7 @@ export default function ClassicsWheelPage() {
       <main className={cn(app.mainDetail, "flex-1 py-8 sm:py-12 pb-safe-nav max-w-[900px] hall-surface rounded-t-3xl")}>
         <LightsAndSirensCredit variant="block" className="mb-8" showFirefighterOwned />
         <p className="mb-6 text-sm text-muted-foreground leading-relaxed max-w-lg">
-          {LIGHTS_COPY.wheelLine}
+          <WithLightsAndSirensLinks text={LIGHTS_COPY.wheelLine} />
         </p>
 
         <section

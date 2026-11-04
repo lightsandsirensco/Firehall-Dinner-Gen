@@ -21,6 +21,7 @@ import {
 } from "@shared/measurements";
 import { useMeasurementSystem } from "@/lib/measurement-preference";
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
+import { WithLightsAndSirensLinks } from "@/components/brand/lights-and-sirens-link";
 
 export type EmailModalVariant = "manual" | "earned";
 
@@ -236,7 +237,7 @@ export function EmailModal({
                 We&apos;ll always send this recipe. New firehouse meal ideas only if you check the box above.
               </p>
               <div className="pt-2 border-t border-border/20 text-center">
-                <p className="text-[11px] text-muted-foreground leading-relaxed">{LIGHTS_COPY.emailNote}</p>
+                <p className="text-[11px] text-muted-foreground leading-relaxed"><WithLightsAndSirensLinks text={LIGHTS_COPY.emailNote} /></p>
                 <div className="mt-2 flex justify-center">
                   <LightsAndSirensCredit variant="compact" className="text-[11px]" />
                 </div>

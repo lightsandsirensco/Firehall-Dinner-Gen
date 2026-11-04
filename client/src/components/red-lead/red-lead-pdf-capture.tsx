@@ -43,6 +43,7 @@ import {
 import { isRedLeadPdfUnlocked, markRedLeadPdfUnlocked } from "@/lib/red-lead-lead-magnet";
 
 import { LIGHTS_COPY } from "@/lib/lights-and-sirens";
+import { WithLightsAndSirensLinks } from "@/components/brand/lights-and-sirens-link";
 
 import {
 
@@ -537,7 +538,7 @@ export function RedLeadPdfCapture({
 
             <div className="border-t border-border/20 pt-3 text-center">
 
-              <p className="text-[11px] text-muted-foreground leading-relaxed">{LIGHTS_COPY.emailNote}</p>
+              <p className="text-[11px] text-muted-foreground leading-relaxed"><WithLightsAndSirensLinks text={LIGHTS_COPY.emailNote} /></p>
 
               <div className="mt-2 flex justify-center">
 

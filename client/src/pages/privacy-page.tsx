@@ -9,6 +9,7 @@ import { getSiteOrigin } from "@/lib/seo/site-origin";
 import { buildPrivacySeo } from "@shared/seo/metadata";
 import { buildBreadcrumbListSchema, buildOrganizationSchema, buildWebSiteSchema } from "@shared/seo/schema";
 import { getSavedCount } from "@/lib/saved-meals";
+import { LightsAndSirensLink } from "@/components/brand/lights-and-sirens-link";
 
 const SUPPORT_MAILTO = "mailto:support@firehallmeals.com?subject=Privacy%20question";
 // Legal/business-notice contact — used only where a notice address would
@@ -92,7 +93,7 @@ export default function PrivacyPage() {
             <p>
               Firehall Meals is a product built and operated by{" "}
               <span className="font-medium text-foreground">1000119168 Ontario Inc.</span>, the
-              company behind the Lights &amp; Sirens Co. brand. We haven't published a public
+              company behind the <LightsAndSirensLink variant="plain" /> brand. We haven't published a public
               business mailing address at this time; for privacy-related legal or business
               notices, contact{" "}
               <a href={LEGAL_NOTICE_MAILTO} className="text-primary hover:underline">
